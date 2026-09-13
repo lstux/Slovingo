@@ -1,0 +1,66 @@
+{
+  "target_lang": {
+    "name": "slovaque",
+    "tts_code": "sk-SK",
+    "flag": "🇸🇰",
+    "css_class": "col-target",
+    "voice_hint": "slovak",
+    "headers": ["slovak", "slovaque", "slovakien", "slovakština", "slovenčina",
+                "slovencina", "slovensky", "slovenský", "slovenská", "slovenské", "sk"],
+    "header_roots": ["slovak", "slovenčina", "slovencina"]
+  },
+  "native_lang": {
+    "name": "français",
+    "tts_code": "fr-FR",
+    "flag": "🇫🇷",
+    "css_class": "col-native",
+    "headers": ["french", "français", "francais", "fr"],
+    "header_roots": ["français", "francais", "french"]
+  },
+  "site": {
+    "title": "Ahoj Slovenčina",
+    "short_name": "Ahoj SK",
+    "description": "Apprentissage du slovaque conversationnel \u2014 fiches et exercices",
+    "fiche_footer": "Mémo {target_name} \u2022 Synthèse vocale {target_tts}",
+    "storage_prefix": "slovak",
+    "url_path": "/slovak/",
+    "theme_color": "#0b4ea2",
+    "deploy_host": "lslinux.org",
+    "deploy_path": "/var/www/lslinux.org/htdocs/slovak/"
+  },
+  "categories": {
+    "Introduction": "Avant de commencer",
+    "Vocabulaire":  "Avant de commencer",
+    "Grammaire":    "Grammaire",
+    "Conjugaison":  "Conjugaison",
+    "Dialogues":    "Dialogues",
+    "Situations":   "Situations",
+    "Revisions":    "Révisions"
+  },
+  "series": {
+    "rodina":   "1 · Rodina",
+    "doma":     "2 · Doma",
+    "jedlo":    "3 · Jedlo",
+    "cas":      "4 · Čas",
+    "nakupy":   "5 · Nákupy",
+    "mesto":    "6 · Mesto",
+    "pocasie":  "7 · Počasie",
+    "tatry":    "8 · Tatry",
+    "velkanoc": "9 · Veľká noc"
+  },
+  "exercise_theme_labels": {
+    "Quotidien": "Quotidien proche",
+    "Sorties":   "Sorties",
+    "Social":    "Social",
+    "PlusLoin":  "Un peu plus loin",
+    "Rodina":    "1 · Rodina",
+    "Doma":      "2 · Doma",
+    "Jedlo":     "3 · Jedlo",
+    "Cas":       "4 · Čas",
+    "Nakupy":    "5 · Nákupy",
+    "Mesto":     "6 · Mesto",
+    "Pocasie":   "7 · Počasie",
+    "Tatry":     "8 · Tatry",
+    "VelkaNoc":  "9 · Veľká noc"
+  }
+}

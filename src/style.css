@@ -1,0 +1,973 @@
+/*
+ * style.css
+ * =========
+ *
+ * Style commun à tous les mémos slovaques.
+ * Utilisé par les fichiers HTML générés par smd2html.py et par
+ * l'index généré par publish-slovak.sh, ainsi que par exercises.html
+ * (complété par exercises.css).
+ *
+ * -----------------------------------------------------------------
+ * Système de thèmes
+ * -----------------------------------------------------------------
+ * Un thème = un jeu de variables CSS (couleurs, police, motif, photo)
+ * activé par un attribut data-theme, posé sur n'importe quel élément
+ * (body d'une fiche, ou une simple <section> dans l'index qui liste
+ * plusieurs unités). Les variables sont héritées normalement : poser
+ * data-theme sur une section ne change que ce qui est à l'intérieur.
+ *
+ * Le thème d'une fiche se déduit de son nom de fichier :
+ *     Serie_08_Tatry_01_do-hor.md  ->  data-theme="tatry"
+ * Toute fiche hors série (Introduction, Vocabulaire, Grammaire,
+ * Dialogues, Revisions, Adulte, Endy...) retombe sur "uvod", le
+ * thème neutre. Cette déduction est faite par smd2html.py (pour les
+ * fiches), par publish-slovak.sh (pour les sections de l'index) et
+ * par exercises.js (pour la session d'exercices en cours).
+ *
+ * Sans photo locale (dossier html/img/ non fourni), tout continue de
+ * fonctionner : le motif SVG et le dégradé du thème prennent le
+ * relais, rien ne casse.
+ */
+
+
+/* ==========================================================================
+   1. Tokens structurels (communs à tous les thèmes)
+   ========================================================================== */
+
+:root {
+    color-scheme: light dark;
+
+    --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+    --font-grotesk: "Space Grotesk", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+    --radius-lg: 16px;
+    --radius: 11px;
+    --radius-sm: 7px;
+    --pill: 999px;
+
+    --step-1: 1.15rem;
+    --step-2: 1.45rem;
+    --step-3: 2rem;
+    --step-4: 2.6rem;
+
+    --band-height: 220px;
+    --pattern-opacity: 0.15;
+
+    --photo-grayscale: 0.55;
+    --photo-tint: 0.72;
+    --texture-opacity: 0.05;
+
+    /* Valeurs par défaut, écrasées par chaque thème */
+    --font-display: var(--font-serif);
+    --display-weight: 700;
+    --display-spacing: -0.015em;
+    --photo: none;
+    --credit: "";
+
+    --photo-uvod:     url("img/style_uvod.jpg");
+    --photo-tatry:    url("img/style_tatry.jpg");
+    --photo-mesto:    url("img/style_mesto.jpg");
+    --photo-jedlo:    url("img/style_jedlo.jpg");
+    /* 
+      ToFind
+      
+    */
+    --photo-rodina:   url("img/style_rodina.jpg");
+    --photo-doma:     url("img/style_doma.jpg");
+    --photo-cas:      url("img/style_cas.jpg");
+    --photo-nakupy:   url("img/style_nakupy.jpg");
+    --photo-pocasie:  url("img/style_pocasie.jpg");
+    --photo-velkanoc: url("img/style_velkanoc.jpg");
+}
+
+/* Bascule manuelle clair / sombre (facultative, non utilisée par défaut :
+   color-scheme: light dark laisse le système décider). */
+html[data-mode="light"] { color-scheme: light; }
+html[data-mode="dark"]  { color-scheme: dark; }
+
+/* Coupe-circuit photo : si un jour on veut désactiver les images
+   d'un coup (ex : connexion lente), sans y toucher fiche par fiche. */
+html[data-photos="off"] { --photo: none !important; --texture-opacity: 0 !important; }
+
+
+/* ==========================================================================
+   2. Thèmes — un par unité du parcours, + "uvod" en neutre
+   ========================================================================== */
+
+/* — uvod — "avant de commencer" : introduction, vocabulaire, grammaire,
+     dialogues, révisions hors série... tout ce qui n'appartient à
+     aucune unité. Čičmany : bois sombre, chaux blanche, garance. */
+:root,
+[data-theme="uvod"] {
+    --bg:        light-dark(#f6f2ea, #15110d);
+    --surface:   light-dark(#fffdf8, #1e1811);
+    --surface-2: light-dark(#ece3d3, #2a2117);
+    --text:      light-dark(#2b2118, #f0e7d8);
+    --text-soft: light-dark(#6d5c48, #b0a08b);
+    --line:      light-dark(#ddd0ba, #382c1e);
+    --accent:    light-dark(#a8362b, #e0705f);
+    --accent-2:  light-dark(#7d6420, #cfa445);
+    --band-a:    light-dark(#a8362b, #7a2119);
+    --band-b:    light-dark(#5c2a10, #2c150c);
+    --photo: var(--photo-uvod, none);
+    --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cg fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M0 8 12 -4 24 8 36 -4 48 8'/%3E%3Cpath d='M0 24 12 12 24 24 36 12 48 24'/%3E%3Cpath d='M0 40 12 28 24 40 36 28 48 40'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* — 1 · Rodina — la famille : le foyer, la prune et l'olive. */
+[data-theme="rodina"] {
+    --bg:        light-dark(#f7f1f2, #171013);
+    --surface:   light-dark(#fffbfb, #211820);
+    --surface-2: light-dark(#ece0e3, #2c2029);
+    --text:      light-dark(#2e1f26, #f0e4e8);
+    --text-soft: light-dark(#6d5560, #ad97a2);
+    --line:      light-dark(#e0d0d4, #372833);
+    --accent:    light-dark(#8f2f52, #d9718f);
+    --accent-2:  light-dark(#5d6b31, #a8bd6a);
+    --band-a:    light-dark(#8f2f52, #4a1830);
+    --band-b:    light-dark(#4c1a3a, #240d1a);
+    --display-weight: 500;
+    --photo-tint: 0.8;
+    --photo: var(--photo-rodina, none);
+    --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cg fill='none' stroke='white' stroke-width='1.5'%3E%3Cpath d='M0 22a11 11 0 0122 0a11 11 0 0022 0'/%3E%3Cpath d='M0 44a11 11 0 0122 0a11 11 0 0022 0'/%3E%3Ccircle cx='11' cy='11' r='1.6'/%3E%3Ccircle cx='33' cy='11' r='1.6'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* — 2 · Doma — à la maison : ardoise et laiton. */
+[data-theme="doma"] {
+    --bg:        light-dark(#f0f2f4, #101418);
+    --surface:   light-dark(#fcfdfe, #182028);
+    --surface-2: light-dark(#e0e5ea, #212b33);
+    --text:      light-dark(#1f272e, #e2e9ef);
+    --text-soft: light-dark(#5a6773, #94a3af);
+    --line:      light-dark(#ccd4dc, #2a353f);
+    --accent:    light-dark(#3f5f78, #7aa6c4);
+    --accent-2:  light-dark(#9a7226, #d0a44e);
+    --band-a:    light-dark(#3f5f78, #1d3444);
+    --band-b:    light-dark(#26404f, #0d1a22);
+    --photo: var(--photo-doma, none);
+    --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cg fill='none' stroke='white' stroke-width='1.4'%3E%3Crect x='8' y='8' width='32' height='32' rx='2'/%3E%3Cpath d='M24 8v32M8 24h32'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* — 3 · Jedlo — manger : paprika, croûte, table mise. */
+[data-theme="jedlo"] {
+    --bg:        light-dark(#faf3ec, #171009);
+    --surface:   light-dark(#fffaf4, #211810);
+    --surface-2: light-dark(#f0e3d5, #2d2116);
+    --text:      light-dark(#2f2018, #f3e6d8);
+    --text-soft: light-dark(#715a49, #b49b83);
+    --line:      light-dark(#e3d3c0, #3a2b1c);
+    --accent:    light-dark(#c04a1e, #ef8352);
+    --accent-2:  light-dark(#6b7a2a, #b0c05a);
+    --band-a:    light-dark(#c04a1e, #6e2a10);
+    --band-b:    light-dark(#7a3110, #2b1108);
+    --photo: var(--photo-jedlo, none);
+    --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52'%3E%3Cg fill='none' stroke='white' stroke-width='1.4'%3E%3Ccircle cx='26' cy='26' r='15'/%3E%3Ccircle cx='26' cy='26' r='8'/%3E%3Cpath d='M6 4v9M46 4v9M6 43v6M46 43v6'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* — 4 · Čas — l'heure et les jours : cadran, graphite. */
+[data-theme="cas"] {
+    --bg:        light-dark(#eaeef2, #0b1219);
+    --surface:   light-dark(#f9fbfd, #121b23);
+    --surface-2: light-dark(#dde4ea, #1a2630);
+    --text:      light-dark(#17222b, #d5e3ec);
+    --text-soft: light-dark(#576673, #8ba0ae);
+    --line:      light-dark(#c7d1da, #23313c);
+    --accent:    light-dark(#0d4d70, #3ec9ef);
+    --accent-2:  light-dark(#b3521a, #f0a44a);
+    --band-a:    light-dark(#0d4d70, #0b283d);
+    --band-b:    light-dark(#093249, #061722);
+    --font-display: var(--font-mono);
+    --display-spacing: -0.02em;
+    --pattern-opacity: 0.22;
+    --photo: var(--photo-cas, none);
+    --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cg fill='none' stroke='white' stroke-width='1.2'%3E%3Ccircle cx='24' cy='24' r='16'/%3E%3Cpath d='M24 24V13M24 24h8'/%3E%3Cpath d='M24 5v3M24 40v3M5 24h3M40 24h3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* — 5 · Nákupy — faire les courses : l'étal, l'étiquette. */
+[data-theme="nakupy"] {
+    --bg:        light-dark(#f9f0f4, #150d12);
+    --surface:   light-dark(#fffafc, #1f141b);
+    --surface-2: light-dark(#f0dfe7, #2b1c26);
+    --text:      light-dark(#2b1a22, #f4e2ea);
+    --text-soft: light-dark(#6e5460, #b498a5);
+    --line:      light-dark(#e5d0da, #3a2733);
+    --accent:    light-dark(#b02a6e, #f070a8);
+    --accent-2:  light-dark(#a8790d, #e6b53a);
+    --band-a:    light-dark(#b02a6e, #5c1339);
+    --band-b:    light-dark(#6d1a52, #2a0a1e);
+    --font-display: var(--font-grotesk);
+    --display-spacing: -0.03em;
+    --photo: var(--photo-nakupy, none);
+    --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cg fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M-10 10 10 -10M0 40 40 0M30 50 50 30'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* — 6 · Mesto — en ville : Bratislava, béton clair, signalétique. */
+[data-theme="mesto"] {
+    --bg:        light-dark(#eef0f3, #0f1114);
+    --surface:   light-dark(#ffffff, #181b20);
+    --surface-2: light-dark(#e2e6ec, #21252c);
+    --text:      light-dark(#14171c, #e7ecf2);
+    --text-soft: light-dark(#5c6470, #97a1ae);
+    --line:      light-dark(#d3d9e1, #2b3037);
+    --accent:    light-dark(#0b5bd3, #5c9bff);
+    --accent-2:  light-dark(#d8452a, #ff7a5c);
+    --band-a:    light-dark(#0b5bd3, #10305c);
+    --band-b:    light-dark(#0c2a5c, #08131f);
+    --font-display: var(--font-grotesk);
+    --display-spacing: -0.03em;
+    --photo-grayscale: 0.7;
+    --photo: var(--photo-mesto, none);
+    --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cg fill='none' stroke='white' stroke-width='1.5'%3E%3Crect x='3' y='26' width='15' height='40'/%3E%3Crect x='23' y='12' width='13' height='54'/%3E%3Crect x='41' y='32' width='20' height='34'/%3E%3Cpath d='M23 24h13M41 44h20M3 38h15'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* — 7 · Počasie — la météo : ciel de fin d'après-midi, soleil bas. */
+[data-theme="pocasie"] {
+    --bg:        light-dark(#eff1f9, #0d0f1a);
+    --surface:   light-dark(#fcfdff, #151827);
+    --surface-2: light-dark(#e2e6f3, #1e2234);
+    --text:      light-dark(#1e2333, #e3e7f5);
+    --text-soft: light-dark(#5f667f, #99a1bd);
+    --line:      light-dark(#ced5e8, #272d42);
+    --accent:    light-dark(#3f5fc0, #8296f0);
+    --accent-2:  light-dark(#c07f0f, #ecb44e);
+    --band-a:    light-dark(#3f5fc0, #232c5c);
+    --band-b:    light-dark(#2a3a80, #0f1330);
+    --font-display: var(--font-grotesk);
+    --display-spacing: -0.03em;
+    --photo: var(--photo-pocasie, none);
+    --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cg fill='none' stroke='white' stroke-width='1.5'%3E%3Cpath d='M2 20a8 8 0 0116 0M18 20a6 6 0 0112 0'/%3E%3Cpath d='M8 30l-3 8M18 30l-3 8M28 30l-3 8'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* — 8 · Tatry — en montagne : granit, sapins, brume. */
+[data-theme="tatry"] {
+    --bg:        light-dark(#eef2ee, #0d1411);
+    --surface:   light-dark(#fafcf9, #141d18);
+    --surface-2: light-dark(#dfe7de, #1d2922);
+    --text:      light-dark(#1a2820, #dfeadf);
+    --text-soft: light-dark(#556158, #93a598);
+    --line:      light-dark(#cfdacf, #253328);
+    --accent:    light-dark(#256b47, #4fbd7c);
+    --accent-2:  light-dark(#8a5a1e, #d7a04c);
+    --band-a:    light-dark(#256b47, #123727);
+    --band-b:    light-dark(#123729, #071410);
+    --photo-grayscale: 0.4;
+    --photo: var(--photo-tatry, none);
+    --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cg fill='none' stroke='white' stroke-width='1.5'%3E%3Cpath d='M-6 46 12 18 25 37 35 21 56 46'/%3E%3Cpath d='M12 18 17 26M35 21 31 28'/%3E%3Cpath d='M-6 56 12 30 25 49'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* — 9 · Veľká noc — Pâques : l'osier tressé de la šibačka, l'œuf peint. */
+[data-theme="velkanoc"] {
+    --bg:        light-dark(#f5f5ee, #12111a);
+    --surface:   light-dark(#fefef9, #1b1926);
+    --surface-2: light-dark(#e9e9dc, #252231);
+    --text:      light-dark(#27271c, #eae8f2);
+    --text-soft: light-dark(#62624f, #a29fb4);
+    --line:      light-dark(#d9d9c8, #302d3e);
+    --accent:    light-dark(#6b46a8, #b092ea);
+    --accent-2:  light-dark(#6f8a1f, #a9c95a);
+    --band-a:    light-dark(#6b46a8, #35245a);
+    --band-b:    light-dark(#42286e, #1a1030);
+    --photo: var(--photo-velkanoc, none);
+    --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cg fill='none' stroke='white' stroke-width='1.6'%3E%3Cpath d='M0 11q11 11 22 0t22 0'/%3E%3Cpath d='M0 22q11 -11 22 0t22 0'/%3E%3Cpath d='M0 33q11 11 22 0t22 0'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/*
+ * Photos locales
+ * --------------
+ * Chaque thème lit --photo-<clef>, laissée à "none" tant qu'aucune
+ * image n'est fournie (le motif SVG + dégradé prennent le relais,
+ * rien ne casse). Pose les fichiers dans html/img/ puis renseigne
+ * les chemins ici, par exemple :
+ *
+ *     :root {
+ *         --photo-tatry:    url("img/tatry.jpg");
+ *         --photo-mesto:    url("img/mesto.jpg");
+ *         --photo-uvod:     url("img/uvod.jpg");
+ *         --photo-rodina:   url("img/rodina.jpg");
+ *     }
+ *
+ * publish-slovak.sh copie automatiquement le contenu de src/img/
+ * vers html/img/ s'il existe.
+ */
+
+
+/* ==========================================================================
+   3. Base
+   ========================================================================== */
+
+* { box-sizing: border-box; }
+
+html { background: var(--bg); }
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0 0 60px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.65;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Texture de fond : la photo du thème, très effacée et fixe.
+   Donne de la profondeur sans jamais gêner la lecture. */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: var(--photo) center / cover no-repeat fixed;
+    filter: grayscale(1) contrast(0.9);
+    opacity: var(--texture-opacity);
+    pointer-events: none;
+}
+
+.wrap {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: var(--display-weight);
+    letter-spacing: var(--display-spacing);
+    line-height: 1.15;
+}
+
+h2 { font-size: var(--step-2); margin-top: 2em; }
+h3 { font-size: var(--step-1); margin-top: 1.5em; }
+
+a { color: var(--accent); }
+
+:where(a, button, input, select, summary):focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+mark { background: Highlight; color: HighlightText; }
+
+code {
+    padding: 2px 5px;
+    border-radius: 4px;
+    background: color-mix(in srgb, var(--text) 10%, transparent);
+    font-family: var(--font-mono);
+}
+
+hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid var(--line);
+}
+
+footer {
+    max-width: 850px;
+    margin: 50px auto 0;
+    padding: 15px 20px 0;
+    opacity: 0.55;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+
+/* ==========================================================================
+   4. Bandeau d'en-tête (fiches et index)
+   ========================================================================== */
+
+.band {
+    position: relative;
+    isolation: isolate;
+    min-height: var(--band-height);
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: var(--band-b);
+    color: #fff;
+}
+
+.band__photo {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    background: var(--photo) center 60% / cover no-repeat;
+    filter: grayscale(var(--photo-grayscale)) contrast(1.05);
+}
+
+/* La teinte du thème posée en multiply : c'est elle qui fait qu'une
+   photo de montagne et une photo de ville finissent par se
+   ressembler d'un thème à l'autre. */
+.band__tint {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(155deg, var(--band-a), var(--band-b));
+    mix-blend-mode: multiply;
+    opacity: var(--photo-tint);
+}
+
+.band__pattern {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: var(--pattern);
+    opacity: var(--pattern-opacity);
+}
+
+/* Le bandeau ne s'arrête pas net : il se dissout dans la page. */
+.band::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 55%;
+    background: linear-gradient(to top, var(--bg) 2%, transparent 85%);
+    opacity: 0.35;
+}
+
+.band .wrap {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-top: 46px;
+    padding-bottom: 20px;
+}
+
+.band h1 {
+    margin: 0;
+    font-size: var(--step-4);
+    text-wrap: balance;
+    text-shadow: 0 2px 20px rgb(0 0 0 / 0.45);
+}
+
+.kicker {
+    margin: 0 0 6px;
+    font-size: 0.85rem;
+    color: color-mix(in srgb, #fff 80%, transparent);
+    text-shadow: 0 1px 10px rgb(0 0 0 / 0.5);
+}
+
+.band__credit {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    z-index: 1;
+    max-width: 55%;
+    margin: 0;
+    font-size: 0.65rem;
+    line-height: 1.3;
+    text-align: right;
+    color: rgb(255 255 255 / 0.5);
+}
+.band__credit::before { content: var(--credit); }
+
+/* Sous-titre de l'index (nombre de fiches), affiché comme un kicker
+   quand il n'y a pas de bandeau dédié. */
+.index-subtitle {
+    margin: 0 0 6px;
+    opacity: 0.7;
+    font-size: 0.95em;
+}
+
+
+/* ==========================================================================
+   5. Barre d'outils
+   ========================================================================== */
+
+.toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 0;
+    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+}
+
+.toolbar button {
+    min-height: 42px;
+    padding: 0 14px;
+    border-radius: var(--pill);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-size: 0.92rem;
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+}
+
+.toolbar button:hover { border-color: var(--accent); }
+.toolbar button:active { transform: scale(0.96); }
+
+#search {
+    flex: 1;
+    min-width: 180px;
+    min-height: 42px;
+    padding: 8px 12px;
+    border-radius: var(--pill);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+}
+
+
+/* ==========================================================================
+   6. Illustration de fiche
+   ==========================================================================
+   Syntaxe SMD :  ![texte alternatif](chemin/vers/image.jpg "légende")
+   La légende (entre guillemets) est optionnelle.
+   ========================================================================== */
+
+.fiche-illustration {
+    position: relative;
+    margin: 26px 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    isolation: isolate;
+    /* Le thème reste visible même si l'image n'a pas encore été
+       ajoutée dans html/img/ : rien ne casse, rien ne reste vide. */
+    background:
+        var(--pattern),
+        linear-gradient(155deg, var(--band-a), var(--band-b));
+    background-blend-mode: soft-light;
+    min-height: 160px;
+}
+
+.fiche-illustration img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: cover;
+}
+
+.fiche-illustration figcaption {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    margin: 0;
+    padding: 40px 16px 12px;
+    background: linear-gradient(to top, rgb(0 0 0 / 0.68), transparent);
+    color: #fff;
+    font-size: 0.85em;
+    line-height: 1.4;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .fiche-illustration { margin: 20px 0; min-height: 120px; }
+    .fiche-illustration img { max-height: 220px; }
+    .fiche-illustration figcaption { font-size: 0.8em; }
+}
+
+
+/* ==========================================================================
+   7. Translate-table (tableaux de vocabulaire)
+   ========================================================================== */
+
+.translate-table {
+    width: auto;
+    max-width: 100%;
+    margin: 20px 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.translate-table th,
+.translate-table td { padding: 10px 14px; text-align: left; }
+
+.translate-table thead th {
+    background: var(--surface-2);
+    color: var(--text-soft);
+    font-family: var(--font-body);
+    font-size: 0.8em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.translate-table thead th.col-target { color: var(--accent); }
+
+.translate-table tbody tr:not(:last-child) td { border-bottom: 1px solid var(--line); }
+
+.translate-table tbody tr:nth-child(even) { background: color-mix(in srgb, var(--text) 3%, transparent); }
+
+.translate-table tbody tr { transition: background-color .15s ease; }
+
+.translate-table tbody tr:hover { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+
+.translate-table td.col-target {
+    font-weight: 600;
+    background: color-mix(in srgb, var(--accent) 8%, transparent);
+    border-left: 3px solid color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+.translate-table tbody tr:nth-child(even) td.col-target {
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.translate-table td.col-native { color: var(--text-soft); }
+
+/* Rendue prononçable par le Javascript (colonne slovaque détectée). */
+.translate-table td.col-target.speakable { cursor: pointer; }
+.translate-table td.col-target.speakable::after {
+    content: "🔊";
+    margin-left: 8px;
+    font-size: 0.8em;
+    opacity: 0;
+    transition: opacity .15s;
+}
+.translate-table td.col-target.speakable:hover::after { opacity: 0.7; }
+
+@media (max-width: 600px) {
+    .translate-table { display: block; overflow-x: auto; white-space: nowrap; }
+}
+
+
+/* ==========================================================================
+   8. Cartes audio
+   ========================================================================== */
+
+.audio-card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 6px 12px;
+    margin: 12px 0;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 4px solid color-mix(in srgb, var(--accent) 55%, transparent);
+    border-radius: var(--radius);
+    transition: border-left-color .18s;
+}
+
+.audio-card:hover { border-left-color: var(--accent); }
+
+.audio-text {
+    grid-column: 1;
+    font-size: var(--step-1);
+    font-weight: 600;
+    cursor: pointer;
+    text-wrap: pretty;
+}
+
+.audio-spoken { display: none; }
+
+.audio-buttons { grid-column: 2; grid-row: 1; display: flex; gap: 6px; flex-shrink: 0; }
+
+.audio-buttons button {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--surface-2);
+    color: var(--text);
+    font-size: 17px;
+    cursor: pointer;
+    transition: background .15s, transform .1s;
+}
+
+.audio-buttons button:hover { background: color-mix(in srgb, var(--accent) 18%, var(--surface-2)); }
+.audio-buttons button:active { transform: scale(0.9); }
+
+.audio-translation {
+    grid-column: 1 / -1;
+    margin-top: 4px;
+    padding-left: 0;
+    opacity: 1;
+    translate: 0 0;
+    transition: opacity .2s ease, translate .2s ease, display .2s allow-discrete;
+}
+
+@starting-style {
+    .audio-card .audio-translation { opacity: 0; translate: 0 -5px; }
+}
+
+.audio-translation.hidden-translation {
+    display: none;
+    opacity: 0;
+    translate: 0 -5px;
+}
+
+.audio-translation p { margin: 5px 0; }
+
+/* Traduction naturelle (1er <p>) */
+.audio-translation p:first-of-type {
+    font-size: 0.95em;
+    color: var(--text-soft);
+}
+
+/* Décomposition mot à mot (<p> suivants) : petites pastilles plutôt
+   que des blocs empilés, plus faciles à parcourir d'un coup d'œil. */
+.audio-translation p:not(:first-of-type):not(.comments) {
+    display: inline-block;
+    margin: 4px 6px 0 0;
+    padding: 3px 9px;
+    border-radius: var(--radius-sm);
+    background: var(--surface-2);
+    font-size: 0.83em;
+    color: var(--text-soft);
+}
+
+/* Remarque grammaticale */
+.audio-translation p.comments {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    padding: 9px 12px 9px 34px;
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--accent-2);
+    background: color-mix(in srgb, var(--accent-2) 15%, transparent);
+    font-size: 0.9em;
+}
+
+.audio-translation p.comments::before {
+    content: "💡";
+    position: absolute;
+    left: 11px;
+    top: 9px;
+}
+
+
+/* ==========================================================================
+   9. Mot ou expression prononçable dans le texte ({{...}})
+   ========================================================================== */
+
+.speakable { cursor: pointer; }
+
+.speakable-hint {
+    padding: 1px 7px 2px;
+    border-radius: var(--radius-sm);
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    box-shadow: inset 0 -2px 0 color-mix(in srgb, var(--accent) 40%, transparent);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Le petit haut-parleur ne s'affiche que pour les mots/phrases
+   isolés ({{...}}), pas pour les cellules de translate-table. */
+.speakable-hint::after { content: " 🔊"; font-size: 0.75em; opacity: 0.65; }
+.speakable-hint:hover { background: color-mix(in srgb, var(--accent) 22%, transparent); }
+
+.speakable:active { transform: scale(0.97); }
+
+
+/* ==========================================================================
+   10. Index (page d'accueil)
+   ========================================================================== */
+
+.index-section { margin-top: 2em; }
+.index-section:first-of-type { margin-top: 1em; }
+
+.index-section h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0 0 0.5em;
+    font-size: var(--step-1);
+}
+
+/*
+ * Sur la page des exercices, .index-section est un <details> : le
+ * résumé (contenant le h2) devient le déclencheur cliquable pour
+ * replier/déplier l'unité — fermée par défaut (voir renderSection()
+ * dans exercises.js). Sur la page d'accueil, .index-section reste un
+ * <section> classique sans <summary> : ces règles ne s'y appliquent
+ * simplement jamais.
+ *
+ * Passer le résumé en flex (plutôt que de compter sur list-style
+ * seul) change son display effectif hors de "list-item" : ça
+ * supprime la boîte de marqueur native dans tous les moteurs, y
+ * compris ceux qui gèrent mal list-style:none sur <summary>.
+ */
+.index-section > summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.index-section > summary::-webkit-details-marker,
+.index-section > summary::marker {
+    display: none;
+    content: "";
+}
+
+.index-section > summary::before {
+    content: "▸";
+    font-size: 0.8em;
+    opacity: 0.6;
+    transition: transform 0.15s ease;
+}
+
+.index-section[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+.index-section > summary h2 {
+    margin: 0;
+}
+
+/* Le trait de couleur devant le titre d'unité annonce le thème des
+   fiches qu'elle contient — utile surtout sur la page d'accueil, où
+   plusieurs unités (donc plusieurs thèmes) se suivent. */
+.index-section h2::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 0.9em;
+    border-radius: 2px;
+    background: var(--accent);
+    flex-shrink: 0;
+}
+
+/*
+ * Score moyen des exercices d'une unité, injecté par index.js (voir
+ * progress.js pour le calcul). Couleurs volontairement fixes plutôt
+ * que dérivées du thème : leur sens (bon/moyen/faible score) doit
+ * rester lisible identiquement d'une unité à l'autre — alignées avec
+ * .exo-score-* dans exercises.css.
+ */
+.index-score-badge {
+    margin-left: auto;
+    padding: 2px 10px;
+    border-radius: var(--pill);
+    font-size: 0.75em;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.index-score-good {
+    background: color-mix(in srgb, #2e9e5b 30%, transparent);
+    color: color-mix(in srgb, #2e9e5b 75%, var(--text));
+}
+
+.index-score-mid {
+    background: color-mix(in srgb, #d68910 30%, transparent);
+    color: color-mix(in srgb, #d68910 75%, var(--text));
+}
+
+.index-score-bad {
+    background: color-mix(in srgb, #d1483c 28%, transparent);
+    color: color-mix(in srgb, #d1483c 70%, var(--text));
+}
+
+.index-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 8px;
+}
+
+.index-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px;
+    padding: 10px 13px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    line-height: 1.35;
+    transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+
+/*
+ * Sur la page des exercices, .index-card est un <button> plutôt
+ * qu'un <a> (le clic déclenche du JS, pas une navigation directe) :
+ * on efface juste les styles par défaut du bouton pour qu'il se
+ * fonde dans la grille exactement comme sur la page d'accueil.
+ */
+button.index-card {
+    appearance: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.index-card-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.index-card-theme {
+    font-size: 0.85em;
+    color: var(--text-soft);
+    white-space: nowrap;
+}
+
+/* Compteurs d'exercices (🔤 6, ✏️ 1...) et score : uniquement sur la
+   page des exercices, poussés à droite de la carte. */
+/* Compteurs d'exercices (🔤 6, ✏️ 1...) et score : sur leur propre
+   ligne, sous le titre — avec 3-4 pastilles ça ne tient jamais à
+   côté du titre dans une carte de grille, autant que ce soit
+   systématique et compact plutôt que de déborder selon les cas. */
+.index-card-badges {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.index-num {
+    display: inline-block;
+    min-width: 1.7em;
+    opacity: 0.4;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+}
+
+.index-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--accent) 20%, transparent);
+    transform: translateY(-1px);
+}
+
+.index-card:active { transform: scale(0.97); }
+
+/* Fiches encore absentes du sommaire : visibles, mais en retrait. */
+.index-unsorted h2 { opacity: 0.6; }
+.index-unsorted h2::before { background: var(--text-soft); }
+.index-unsorted .index-card { opacity: 0.7; }
+
+
+/* ==========================================================================
+   11. Adaptation mobile
+   ========================================================================== */
+
+@media (max-width: 600px) {
+    :root { --step-4: 2.1rem; --band-height: 170px; }
+    body { padding: 0 0 50px; font-size: 17px; }
+    .wrap { padding: 0 14px; }
+    .band .wrap { padding-top: 34px; }
+    .audio-card { grid-template-columns: 1fr auto; }
+}
+
+@media (max-width: 380px) {
+    :root { --band-height: 150px; }
+    body { font-size: 16px; }
+    .audio-card { gap: 8px; padding: 10px 12px; }
+    .audio-buttons button { width: 40px; height: 40px; font-size: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition-duration: 0.01ms !important; }
+}

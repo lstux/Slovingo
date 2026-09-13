@@ -1,0 +1,43 @@
+{
+  "target_lang": {
+    "name": "breton",
+    "tts_code": "br-FR",
+    "flag": "🏴",
+    "css_class": "col-target",
+    "voice_hint": "breton",
+    "headers": ["breton", "brezhoneg", "br"],
+    "header_roots": ["breton", "brezhoneg"]
+  },
+  "native_lang": {
+    "name": "français",
+    "tts_code": "fr-FR",
+    "flag": "🇫🇷",
+    "css_class": "col-native",
+    "headers": ["french", "français", "francais", "fr"],
+    "header_roots": ["français", "francais", "french"]
+  },
+  "site": {
+    "title": "Demat Brezhoneg",
+    "short_name": "Demat BZH",
+    "description": "Apprentissage du breton conversationnel \u2014 fiches et exercices",
+    "fiche_footer": "Mémo {target_name} \u2022 Synthèse vocale {target_tts}",
+    "storage_prefix": "breton",
+    "url_path": "/breton/",
+    "theme_color": "#0b3d2e",
+    "deploy_host": "lslinux.org",
+    "deploy_path": "/var/www/lslinux.org/htdocs/breton/"
+  },
+  "categories": {
+    "Introduction": "Avant de commencer",
+    "Vocabulaire":  "Avant de commencer",
+    "Grammaire":    "Grammaire",
+    "Conjugaison":  "Conjugaison",
+    "Dialogues":    "Dialogues",
+    "Situations":   "Situations",
+    "Revisions":    "Révisions",
+    "Adulte":       "Fiches perso",
+    "Endy":         "Fiches perso"
+  },
+  "series": {},
+  "exercise_theme_labels": {}
+}

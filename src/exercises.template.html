@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>__TITLE__</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="exercises.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/favicon.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="theme-color" content="__THEME_COLOR__">
+</head>
+
+<body data-theme="uvod">
+
+<header class="band">
+  <div class="band__photo"></div>
+  <div class="band__tint"></div>
+  <div class="band__pattern"></div>
+  <p class="band__credit"></p>
+  <div class="wrap">
+    <p class="kicker">S'entraîner</p>
+    <h1>🎯 Exercices</h1>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="toolbar">
+    <button onclick="window.location.href='index.html'">🏠 Accueil</button>
+    <button onclick="window.location.href='exercises.html'">🎯 Exercices</button>
+    <button id="exo-fiche-btn" class="exo-toolbar-hidden" onclick="goToFiche()">📖 Fiche</button>
+  </div>
+
+  <main id="exercise-app">
+    <p class="exo-loading">Chargement…</p>
+  </main>
+
+</div>
+
+<footer>
+__FOOTER__
+</footer>
+
+<script src="lang-config.js"></script>
+<script src="app.js"></script>
+<script src="progress.js"></script>
+<script src="exercises.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
+</body>
+
+</html>

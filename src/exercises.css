@@ -1,0 +1,534 @@
+/*
+ * exercises.css
+ * =============
+ *
+ * Styles spécifiques à exercises.html.
+ * Consomme les variables définies par style.css (couleurs, polices,
+ * rayons) — ce fichier ne redéfinit aucun token, il les applique.
+ *
+ * Le thème du <body> change dynamiquement (voir exercises.js,
+ * applyTheme()) : neutre ("uvod") sur l'écran de sélection, celui de
+ * la fiche pendant une session. Sur l'écran de sélection, chaque
+ * carte porte son propre data-theme pour un liseré de couleur
+ * individuel, repérable avant même d'avoir cliqué.
+ */
+
+.exo-loading,
+.exo-error {
+    opacity: 0.7;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.exo-error {
+    color: color-mix(in srgb, #c0392b 65%, var(--text));
+}
+
+/* ==========================================================================
+   Écran de sélection
+   ========================================================================== */
+
+.exo-selection-header h2 {
+    margin-top: 0;
+    font-family: var(--font-display);
+    font-weight: var(--display-weight);
+    letter-spacing: var(--display-spacing);
+}
+
+.exo-selection-hint {
+    margin: -6px 0 14px;
+    font-size: 0.9em;
+    color: var(--text-soft);
+}
+
+.exo-filter-label {
+    margin: 0 0 6px;
+    font-size: 0.85em;
+    opacity: 0.7;
+}
+
+.exo-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+/* Boutons "Tout / Déjà pratiquées / Non commencées / Aucune" au-dessus
+   des filtres de type/sens : des raccourcis de sélection en masse, pas
+   des filtres persistants. */
+.exo-quick-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.exo-quick-filters .chip {
+    padding: 5px 13px;
+    border-radius: var(--pill);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-size: 0.85em;
+    cursor: pointer;
+}
+
+.exo-quick-filters .chip:hover {
+    border-color: var(--accent);
+}
+
+.exo-type-filter {
+    display: flex;
+    gap: 10px;
+}
+
+.exo-type-filter label {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.exo-direction-select {
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-size: 0.85em;
+}
+
+/* Bouton "📖 Fiche" de la barre d'outils (voir exercises.html) : masqué
+   tant qu'aucune session n'est en cours (updateFicheButton() dans
+   exercises.js). */
+.exo-toolbar-hidden {
+    display: none;
+}
+
+/* Voir style.css pour .index-section / .index-grid / .index-card,
+   réutilisés tels quels depuis la page d'accueil : mêmes classes,
+   même apparence, une seule définition à maintenir. Sur l'écran de
+   sélection des exercices, .index-card est un <label> entourant une
+   case à cocher (sélection multiple) plutôt qu'un <a>/<button> de
+   navigation directe. */
+.index-card input[type="checkbox"] {
+    align-self: center;
+    margin-right: 2px;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+label.index-card {
+    cursor: pointer;
+}
+
+/* Case à cocher "série entière" dans l'en-tête d'une section — placée
+   avant le titre, ne doit pas hériter de la mise en page du <summary>
+   (voir style.css) ni déclencher son ouverture/fermeture au clic
+   (géré côté JS avec stopPropagation()). */
+.index-section > summary input[type="checkbox"] {
+    accent-color: var(--accent);
+    cursor: pointer;
+    margin-right: 4px;
+    vertical-align: -2px;
+}
+
+/* Panneau de lancement, en bas de l'écran de sélection : reste visible
+   pendant qu'on parcourt la liste des fiches, pour ne pas avoir à
+   redescendre tout en bas à chaque case cochée. */
+.exo-launch-bar {
+    position: sticky;
+    bottom: 0;
+    margin: 20px -16px 0;
+    padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -4px 12px color-mix(in srgb, var(--text) 8%, transparent);
+}
+
+.exo-launch-summary {
+    margin: 0 0 10px;
+    font-size: 0.9em;
+    color: var(--text-soft);
+}
+
+.exo-launch-qcount {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.exo-launch-qcount label {
+    font-size: 0.9em;
+    color: var(--text-soft);
+    white-space: nowrap;
+}
+
+.exo-launch-qcount input {
+    width: 70px;
+    padding: 6px 8px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+    background: var(--surface-2);
+    color: var(--text);
+    font: inherit;
+}
+
+.exo-launch-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: var(--radius);
+    border: none;
+    background: var(--accent);
+    color: var(--surface);
+    font: inherit;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.exo-launch-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Petite pastille générique (compteurs d'exercices sur une carte,
+   moyenne cumulée dans le récapitulatif de fin de session...). Pas
+   de couleur sémantique ici, contrairement à .index-score-badge. */
+.exo-badge {
+    font-size: 0.8em;
+    padding: 2px 8px;
+    border-radius: var(--pill);
+    background: var(--surface-2);
+    color: var(--text-soft);
+    white-space: nowrap;
+}
+
+.exo-reset-progress {
+    display: block;
+    margin: 20px auto 0;
+    padding: 8px 16px;
+    border-radius: var(--pill);
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--text);
+    opacity: 0.6;
+    font: inherit;
+    font-size: 0.85em;
+    cursor: pointer;
+}
+
+.exo-reset-progress:hover { opacity: 1; }
+
+/* ==========================================================================
+   Session en cours
+   ========================================================================== */
+
+.exo-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.exo-toolbar h2 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: var(--display-weight);
+    letter-spacing: var(--display-spacing);
+}
+
+.exo-mode-toggle {
+    display: flex;
+    gap: 14px;
+    font-size: 0.9em;
+}
+
+.exo-mode-toggle label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+/* Barre de progression : le suivi visuel de la session, dans les
+   couleurs du thème de la fiche en cours. */
+.exo-progress-bar {
+    height: 6px;
+    margin-bottom: 6px;
+    border-radius: var(--pill);
+    background: var(--surface-2);
+    overflow: hidden;
+}
+
+.exo-progress-bar span {
+    display: block;
+    height: 100%;
+    width: 0%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    transition: width .35s cubic-bezier(.4, 0, .2, 1);
+}
+
+.exo-progress-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    font-size: 0.85em;
+    color: var(--text-soft);
+}
+
+.exo-card {
+    border-radius: var(--radius-lg);
+    padding: 18px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+}
+
+.exo-question-label {
+    font-size: 0.85em;
+    color: var(--text-soft);
+    margin-bottom: 6px;
+}
+
+.exo-question {
+    font-family: var(--font-display);
+    font-weight: var(--display-weight);
+    letter-spacing: var(--display-spacing);
+    font-size: var(--step-3);
+    margin-bottom: 10px;
+}
+
+.exo-sentence {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.exo-blank {
+    display: inline-block;
+    min-width: 60px;
+    padding: 0 6px;
+    border-bottom: 2px solid color-mix(in srgb, var(--text) 45%, transparent);
+    font-weight: bold;
+    text-align: center;
+}
+
+.exo-audio-btn {
+    display: inline-block;
+    margin: 6px 8px 12px 0;
+    padding: 8px 14px;
+    border-radius: var(--pill);
+    border: 1px solid var(--line);
+    background: var(--surface-2);
+    color: var(--text);
+    font: inherit;
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+}
+
+.exo-audio-btn:hover { border-color: var(--accent); }
+
+.exo-audio-btn-big {
+    font-size: 1.1em;
+    padding: 12px 20px;
+}
+
+.exo-choices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.exo-choices-vertical {
+    grid-template-columns: 1fr;
+}
+
+.exo-choice {
+    padding: 12px 14px;
+    border-radius: var(--radius);
+    border: 1.5px solid var(--line);
+    background: var(--surface-2);
+    color: var(--text);
+    font: inherit;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color .14s, background .14s;
+}
+
+.exo-choice:hover:not(:disabled) {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 9%, var(--surface-2));
+}
+
+.exo-choice:disabled {
+    cursor: default;
+    opacity: 0.75;
+}
+
+/* Correct / faux : couleurs sémantiques fixes, pour la même raison
+   que les badges de score. */
+.exo-choice-correct,
+.exo-blank.exo-choice-correct {
+    background: color-mix(in srgb, #2e9e5b 22%, var(--surface));
+    border-color: color-mix(in srgb, #2e9e5b 55%, transparent);
+    opacity: 1;
+}
+
+.exo-choice-wrong,
+.exo-blank.exo-choice-wrong {
+    background: color-mix(in srgb, #d1483c 20%, var(--surface));
+    border-color: color-mix(in srgb, #d1483c 50%, transparent);
+    animation: exo-nope .3s;
+}
+
+@keyframes exo-nope {
+    25% { translate: -5px 0; }
+    50% { translate: 4px 0; }
+    75% { translate: -2px 0; }
+}
+
+.exo-type-input {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.exo-type-input input {
+    flex: 1;
+    min-width: 160px;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+}
+
+.exo-submit {
+    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+    background: var(--accent);
+    color: light-dark(#fff, #10100f);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.exo-feedback {
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+.exo-feedback-ok {
+    color: color-mix(in srgb, #2e9e5b 70%, var(--text));
+}
+
+.exo-feedback-ko {
+    color: color-mix(in srgb, #d1483c 65%, var(--text));
+}
+
+.exo-translation {
+    display: block;
+    margin-top: 4px;
+    opacity: 0.8;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.exo-next,
+.exo-secondary {
+    margin-top: 14px;
+    padding: 10px 18px;
+    border-radius: var(--pill);
+    border: 1px solid var(--line);
+    background: var(--surface-2);
+    color: var(--text);
+    font: inherit;
+    cursor: pointer;
+    transition: border-color .15s;
+}
+
+.exo-next:hover,
+.exo-secondary:hover { border-color: var(--accent); }
+
+/* ==========================================================================
+   Récapitulatif
+   ========================================================================== */
+
+.exo-summary h3 {
+    margin-top: 0;
+    font-family: var(--font-display);
+    font-weight: var(--display-weight);
+}
+
+.exo-history-line {
+    font-size: 0.9em;
+    color: var(--text-soft);
+    margin: 4px 0;
+}
+
+.exo-cumulative {
+    margin: 8px 0 4px;
+}
+
+.exo-cumulative-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+}
+
+.exo-score {
+    font-family: var(--font-display);
+    font-weight: var(--display-weight);
+    font-size: var(--step-3);
+}
+
+.exo-mistake-list {
+    padding-left: 20px;
+}
+
+.exo-mistake-list li {
+    margin: 6px 0;
+}
+
+.exo-your-answer {
+    opacity: 0.7;
+    font-size: 0.9em;
+}
+
+.exo-summary-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Mobile
+   ========================================================================== */
+
+@media (max-width: 600px) {
+    .exo-choices {
+        grid-template-columns: 1fr;
+    }
+    .exo-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .index-card-title {
+        white-space: normal;
+    }
+}

@@ -1,0 +1,35 @@
+{
+  "target_lang": {
+    "name": "anglais",
+    "tts_code": "en-GB",
+    "flag": "🇬🇧",
+    "css_class": "col-target",
+    "voice_hint": "english",
+    "headers": ["english", "anglais", "en"],
+    "header_roots": ["english", "anglais"]
+  },
+  "native_lang": {
+    "name": "français",
+    "tts_code": "fr-FR",
+    "flag": "🇫🇷",
+    "css_class": "col-native",
+    "headers": ["french", "français", "francais", "fr"],
+    "header_roots": ["français", "francais", "french"]
+  },
+  "site": {
+    "title": "Hello English (exemple)",
+    "short_name": "Hello EN",
+    "description": "Cours de démonstration — sert à vérifier que le moteur tourne",
+    "fiche_footer": "Mémo {target_name} \u2022 Synthèse vocale {target_tts}",
+    "storage_prefix": "example",
+    "url_path": "/example/",
+    "theme_color": "#6b4fa0",
+    "deploy_host": "CHANGE_MOI.example.org",
+    "deploy_path": "/var/www/CHANGE_MOI/htdocs/example/"
+  },
+  "categories": {
+    "Vocabulaire": "Vocabulaire"
+  },
+  "series": {},
+  "exercise_theme_labels": {}
+}
