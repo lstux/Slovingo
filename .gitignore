@@ -1,0 +1,8 @@
+**/__pycache__
+**/html/*
+src/cache
+# Dynamycally generated, should move to src/cache
+src/lang-config.js
+src/manifest.json
+src/service-worker.js
+src/exercises.html

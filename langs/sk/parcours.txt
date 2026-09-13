@@ -1,8 +1,132 @@
-# Sommaire pédagogique — un fichier .md par ligne, dans l'ordre où tu
-# veux qu'ils apparaissent sur la page d'accueil.
+# Parcours d'apprentissage — sommaire de l'index public
 #
-# "= Titre" ouvre une nouvelle section (regroupement visuel).
-# Une ligne vide ou commençant par "#" est ignorée.
+# Syntaxe :
+#   "= Titre"       ouvre une nouvelle unité
+#   "NomDeFiche"    ajoute la fiche (sans .md) à l'unité en cours
+#   "# ..."         commentaire, ignoré
 #
-# Remets ici ton parcours.txt existant (54 fiches) — celui-ci n'est
-# qu'un squelette vide pour ne rien écraser par erreur.
+# L'ordre de ce fichier EST l'ordre affiché sur la page d'accueil.
+# Une fiche absente d'ici apparaît quand même, en bas, dans "À classer".
+# Une fiche listée ici mais sans HTML généré est simplement ignorée
+# (avec un avertissement dans la sortie du script).
+
+
+= 🇸🇰 Avant de commencer
+Introduction_01_slovaquie
+Introduction_02_langue
+Introduction_03_prononciation
+Introduction_04_compter
+
+= 👨‍👩‍👧‍👦 1 · Rodina — la famille
+Serie_01_Rodina_01_moja-rodina
+Serie_01_Rodina_02_kolko-mas-rokov
+Serie_01_Rodina_03_praca
+Serie_01_Rodina_04_kde-byvame
+Serie_01_Rodina_05_u-babky
+Serie_01_Rodina_06_extra
+
+= 🏠 2 · Doma — à la maison
+Serie_02_Doma_01_nase-izby
+Serie_02_Doma_02_nabytok
+Serie_02_Doma_03_veci
+Serie_02_Doma_04_co-robime-doma
+Serie_02_Doma_05_na-navsteve
+Serie_02_Doma_06_extra
+
+= 🍽️ 3 · Jedlo — manger
+Serie_03_Jedlo_01_potraviny
+Serie_03_Jedlo_02_chcem-jest
+Serie_03_Jedlo_03_ake-je-to
+Serie_03_Jedlo_04_slovenske-jedla
+Serie_03_Jedlo_05_obed-u-babky
+Serie_03_Jedlo_06_extra
+
+= ⏰ 4 · Čas — l'heure et les jours
+Serie_04_Cas_01_kolko-je-hodin
+Serie_04_Cas_02_o-kolkej
+Serie_04_Cas_03_dni-v-tyzdni
+Serie_04_Cas_04_stretneme-sa
+Serie_04_Cas_05_kedy-sa-stretneme
+Serie_04_Cas_06_extra
+
+= 🛒 5 · Nákupy — faire les courses
+Serie_05_Nakupy_01_obchody
+Serie_05_Nakupy_02_farby
+Serie_05_Nakupy_03_oblecenie
+Serie_05_Nakupy_04_kolko-to-stoji
+Serie_05_Nakupy_05_v-obchode
+Serie_05_Nakupy_06_extra
+
+= 🏙️ 6 · Mesto — en ville
+Serie_06_Mesto_01_v-meste
+Serie_06_Mesto_02_doprava
+Serie_06_Mesto_03_kade-mam-ist
+Serie_06_Mesto_04_co-robime-v-meste
+Serie_06_Mesto_05_strateny-v-meste
+Serie_06_Mesto_06_extra
+
+= 🌦️ 7 · Počasie — la météo
+Serie_07_Pocasie_01_ake-je-pocasie
+Serie_07_Pocasie_02_rocne-obdobia
+Serie_07_Pocasie_03_co-si-obliect
+Serie_07_Pocasie_04_predpoved-pocasia
+Serie_07_Pocasie_05_zmena-planu
+Serie_07_Pocasie_06_extra
+
+= 🏔️ 8 · Tatry — en montagne
+Serie_08_Tatry_01_do-hor
+Serie_08_Tatry_02_vybava
+Serie_08_Tatry_03_znacky-a-narocnost
+Serie_08_Tatry_04_v-chate
+Serie_08_Tatry_05_vystup-na-krivan
+Serie_08_Tatry_06_extra
+
+= 🐣 9 · Veľká noc — Pâques
+Serie_09_VelkaNoc_01_priprava-na-velku-noc
+Serie_09_VelkaNoc_02_velkonocny-tyzden
+Serie_09_VelkaNoc_03_sibacka
+Serie_09_VelkaNoc_04_velkonocny-stol
+Serie_09_VelkaNoc_05_velkonocny-pondelok-u-babky
+Serie_09_VelkaNoc_06_extra
+
+= 📐 Annexes — Grammaire
+Grammaire_01_mots-interrogatifs
+Grammaire_02_connecteurs
+Grammaire_03_marqueurs-temporels
+Grammaire_04_intensifs
+Grammaire_05_interjections
+Grammaire_06_prepositions
+Grammaire_07_negation
+Grammaire_08_pronoms-possessifs
+Grammaire_09_verbes-modaux
+Grammaire_10_comparatifs-superlatifs
+
+= 🔄 Annexes — Conjugaison
+Conjugaison_1_Present
+Conjugaison_2_Passe
+Conjugaison_3_Aspects_verbaux
+
+= 📖 Annexes — Vocabulaire
+Vocabulaire_01_Nombres
+Vocabulaire_02_Nombres-ordinaux
+Vocabulaire_03_Temps-dates-et-heures
+Vocabulaire_10_couleurs
+Vocabulaire_11_corps
+Vocabulaire_12_vetements
+Vocabulaire_13_famille
+Vocabulaire_14_emotions
+Vocabulaire_20_meteo
+Vocabulaire_21_animaux
+Vocabulaire_22_nourriture
+Vocabulaire_23_fruits-legumes
+Vocabulaire_24_maison
+Vocabulaire_30_transports
+Vocabulaire_31_metiers
+Vocabulaire_32_fetes
+Vocabulaire_33_argent
+Vocabulaire_34_medecin
+Vocabulaire_40_adjectifs
+Vocabulaire_41_verbes
+Vocabulaire_42_ville
+Vocabulaire_43_sport
+Vocabulaire_44_ecole

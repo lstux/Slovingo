@@ -23,14 +23,14 @@
     "description": "Apprentissage du slovaque conversationnel \u2014 fiches et exercices",
     "fiche_footer": "Mémo {target_name} \u2022 Synthèse vocale {target_tts}",
     "storage_prefix": "slovak",
-    "url_path": "/slovak/",
+    "url_path": "/slovingo/sk/",
     "theme_color": "#0b4ea2",
-    "deploy_host": "lslinux.org",
-    "deploy_path": "/var/www/lslinux.org/htdocs/slovak/"
+    "deploy_host": "www.lslinux.org",
+    "deploy_path": "/var/www/lslinux.org/htdocs/slovingo/sk/"
   },
   "categories": {
     "Introduction": "Avant de commencer",
-    "Vocabulaire":  "Avant de commencer",
+    "Vocabulaire":  "Vocabulaire",
     "Grammaire":    "Grammaire",
     "Conjugaison":  "Conjugaison",
     "Dialogues":    "Dialogues",
