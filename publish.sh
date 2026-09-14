@@ -173,10 +173,10 @@ index_generator() {
 
   flush_unit() {
     if [ -n "${label}" ] && [ -s "${tmpdir}/unit" ]; then
-      printf '  <section class="index-section" data-theme="%s">\n    <h2>%s</h2>\n    <div class="index-grid">\n' \
+      printf '  <details class="index-section" data-theme="%s">\n    <summary><h2>%s</h2></summary>\n    <div class="index-grid">\n' \
         "${unit_theme:-uvod}" "${label}" >> "${tmpdir}/body"
       cat "${tmpdir}/unit" >> "${tmpdir}/body"
-      printf '    </div>\n  </section>\n\n' >> "${tmpdir}/body"
+      printf '    </div>\n  </details>\n\n' >> "${tmpdir}/body"
     fi
     : > "${tmpdir}/unit"
     unit_theme=""
@@ -274,9 +274,9 @@ EOF
   cat "${tmpdir}/body"
 
   if [ -s "${tmpdir}/rest" ]; then
-    printf '  <section class="index-section index-unsorted">\n    <h2>À classer</h2>\n    <div class="index-grid">\n'
+    printf '  <details class="index-section index-unsorted">\n    <summary><h2>À classer</h2></summary>\n    <div class="index-grid">\n'
     cat "${tmpdir}/rest"
-    printf '    </div>\n  </section>\n\n'
+    printf '    </div>\n  </details>\n\n'
   fi
 
   cat <<EOF

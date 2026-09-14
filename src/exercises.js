@@ -166,6 +166,14 @@ function speakSafe(text, rate) {
     }
 }
 
+// targetVoiceAvailable est une variable globale déclarée dans app.js
+// (partagée entre scripts classiques, pas un module) : true dès qu'une
+// voix dans la langue cible a été trouvée. typeof la protège si jamais
+// app.js n'était pas chargé sur la page.
+function ttsAvailable() {
+    return typeof targetVoiceAvailable !== "undefined" && targetVoiceAvailable;
+}
+
 // ==========================================================================
 // Repli si progress.js n'est pas chargé
 // ==========================================================================
@@ -591,8 +599,9 @@ function updateLaunchBar() {
     if (!bar) return;
 
     const selectedEntries = currentEntries.filter(entry => selectedSources.has(cardStem(entry.source)));
+    const effectiveTypes = ALL_TYPES.filter(t => activeTypes.has(t) && (t !== "listen" || ttsAvailable()));
     const pool = selectedEntries.reduce((sum, entry) => (
-        sum + ALL_TYPES.filter(t => activeTypes.has(t)).reduce((s, t) => s + (entry.counts[t] || 0), 0)
+        sum + effectiveTypes.reduce((s, t) => s + (entry.counts[t] || 0), 0)
     ), 0);
 
     const summaryEl = document.getElementById("exo-launch-summary");
@@ -638,11 +647,19 @@ function startMixedFromSelection() {
 }
 
 // Case à cocher réutilisée sur l'écran de sélection et dans une session.
+// "Écoute" est désactivée et décochée d'office s'il n'y a aucune voix
+// disponible pour la langue cible (voir ttsAvailable()) : inutile de
+// proposer des questions qu'on ne peut pas entendre.
 function renderTypeCheckboxes(selectedSet, onChange) {
     const row = el("div", { className: "exo-type-filter" });
+    const inputs = [];
     ALL_TYPES.forEach(type => {
+        const disabled = type === "listen" && !ttsAvailable();
+        if (disabled) selectedSet.delete(type);
+
         const input = el("input", { attrs: { type: "checkbox" } });
         input.checked = selectedSet.has(type);
+        input.disabled = disabled;
         input.addEventListener("change", () => {
             if (input.checked) {
                 selectedSet.add(type);
@@ -653,12 +670,31 @@ function renderTypeCheckboxes(selectedSet, onChange) {
             }
             onChange();
         });
-        const label = el("label", { attrs: { title: typeLabel(type) } }, [
+        const label = el("label", {
+            attrs: { title: disabled ? "Écoute désactivée : aucune voix disponible sur cet appareil" : typeLabel(type) },
+        }, [
             input,
             document.createTextNode(` ${typeIcon(type)}`),
         ]);
+        if (disabled) label.classList.add("exo-type-disabled");
         row.appendChild(label);
+        inputs.push({ type, input });
     });
+
+    // Cas limite : un vieux lien "?types=listen" tout seul, sur un
+    // appareil sans voix disponible, viderait selectedSet entièrement
+    // (le seul type demandé vient d'être retiré ci-dessus). On retombe
+    // sur tous les types encore utilisables plutôt que de se retrouver
+    // avec zéro type actif.
+    if (selectedSet.size === 0) {
+        inputs.forEach(({ type, input }) => {
+            if (!input.disabled) {
+                selectedSet.add(type);
+                input.checked = true;
+            }
+        });
+    }
+
     return row;
 }
 
@@ -785,6 +821,12 @@ async function startMergedSession(stems, requestedN) {
 // filtre de types actif, et (re)démarre une session dessus.
 function applyTypeFilter() {
     let pool = state.allExercises.filter(ex => activeTypes.has(ex.type));
+    // Filet de sécurité, indépendant de activeTypes : même avec un
+    // vieux lien "?types=listen" en favori, pas de question audio
+    // sans voix disponible.
+    if (!ttsAvailable()) {
+        pool = pool.filter(ex => ex.type !== "listen");
+    }
     if (qcmDirection !== "both") {
         pool = pool.filter(ex => ex.type !== "qcm" || ex.direction === qcmDirection);
     }

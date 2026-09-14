@@ -820,6 +820,23 @@ footer {
     margin: 0;
 }
 
+/*
+ * Masquage explicite du contenu d'un <details> fermé. Sans cette
+ * règle, .index-grid (display: grid, non conditionnelle un peu plus
+ * bas) écrase le masquage par défaut du navigateur pour les <details>
+ * fermés : une règle d'auteur l'emporte toujours sur une règle
+ * "user agent" par défaut, quelle que soit sa spécificité relative.
+ * Résultat sans ce correctif : seul le chevron tournait, la grille de
+ * cartes restait affichée en dessous même section repliée.
+ * Ciblé sur "details.index-section" précisément (et pas juste
+ * ".index-section") pour ne jamais toucher la section "S'entraîner"
+ * de la page d'accueil, qui reste un <section> classique toujours
+ * visible.
+ */
+details.index-section:not([open]) > .index-grid {
+    display: none;
+}
+
 /* Le trait de couleur devant le titre d'unité annonce le thème des
    fiches qu'elle contient — utile surtout sur la page d'accueil, où
    plusieurs unités (donc plusieurs thèmes) se suivent. */
