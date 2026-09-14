@@ -1,8 +1,0 @@
-# Sommaire pédagogique — un fichier .md par ligne, dans l'ordre où tu
-# veux qu'ils apparaissent sur la page d'accueil.
-#
-# "= Titre" ouvre une nouvelle section (regroupement visuel).
-# Une ligne vide ou commençant par "#" est ignorée.
-#
-# Remets ici ton parcours.txt existant (54 fiches) — celui-ci n'est
-# qu'un squelette vide pour ne rien écraser par erreur.

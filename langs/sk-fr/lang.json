@@ -22,11 +22,11 @@
     "short_name": "Ahoj SK",
     "description": "Apprentissage du slovaque conversationnel \u2014 fiches et exercices",
     "fiche_footer": "Mémo {target_name} \u2022 Synthèse vocale {target_tts}",
-    "storage_prefix": "slovak",
-    "url_path": "/slovingo/sk/",
+    "storage_prefix": "sk-fr",
+    "url_path": "/slovingo/sk-fr/",
     "theme_color": "#0b4ea2",
     "deploy_host": "www.lslinux.org",
-    "deploy_path": "/var/www/lslinux.org/htdocs/slovingo/sk/"
+    "deploy_path": "/var/www/lslinux.org/htdocs/slovingo/sk-fr/"
   },
   "categories": {
     "Introduction": "Avant de commencer",
