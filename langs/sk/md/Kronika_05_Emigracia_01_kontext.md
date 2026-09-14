@@ -1,0 +1,80 @@
+# Emigrácia (1/3) — Rozhodnutie
+
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava_Airport_passport_control_stamp.jpg?width=800 | Tampon de contrôle des passeports, aéroport de Bratislava — Wikimedia Commons
+
+Après quatre récits sur l'histoire de son pays, Andrea en raconte un dernier — le sien. Celui qui explique pourquoi elle vit aujourd'hui en France, avec Eric.
+
+---
+
+## Les personnages
+
+- 👦 Eric
+- 👩 Andrea
+
+Eric et Andrea se vouvoient.
+
+---
+
+## Le dialogue
+
+! 👦 Andrea, povedali ste, že mi to poviete nabudúce. Tak som tu.
+> Andrea, vous avez dit que vous me le diriez la prochaine fois. Alors me voilà.
+> povedali ste = vous avez dit
+> že mi to poviete nabudúce = que vous me le diriez la prochaine fois
+> Tak som tu = alors me voilà
+
+! 👩 Áno, máte pravdu. Toto je asi ten najosobnejší príbeh zo všetkých.
+> Oui, vous avez raison. C'est sans doute l'histoire la plus personnelle de toutes.
+> máte pravdu = vous avez raison
+> najosobnejší príbeh zo všetkých = l'histoire la plus personnelle de toutes
+
+! 👦 Prečo ste sa vlastne rozhodli odísť zo Slovenska?
+> Pourquoi avez-vous finalement décidé de quitter la Slovaquie ?
+> Prečo ste sa rozhodli odísť = pourquoi avez-vous décidé de partir
+> zo Slovenska = de Slovaquie
+
+! 👩 Nebol to jeden dôvod. Bola to kombinácia práce, zvedavosti a možno aj trochu nudy.
+> Ce n'était pas une seule raison. C'était une combinaison de travail, de curiosité et peut-être aussi d'un peu d'ennui.
+> Nebol to jeden dôvod = ce n'était pas une seule raison
+> kombinácia práce, zvedavosti = une combinaison de travail, de curiosité
+> a možno aj trochu nudy = et peut-être aussi d'un peu d'ennui
+
+---
+
+## Le vocabulaire de l'époque
+
+| Slovaque | Français |
+|----------|----------|
+| odchod | le départ |
+| sťahovanie | le déménagement |
+| jazyková bariéra | la barrière de la langue |
+| skúsenosť | l'expérience |
+| domov | le chez-soi, le pays natal |
+| cudzina | l'étranger (le pays étranger) |
+| návrat | le retour |
+| stesknutie | le mal du pays |
+| istota | la sécurité, la certitude |
+| odvaha | le courage |
+| náhoda | le hasard |
+| osud | le destin |
+
+---
+
+## Premiers repères
+
+! 👩 Odišla som v roku dvetisícpäť. Mala som vtedy tridsaťjeden rokov.
+> Je suis partie en 2005. J'avais alors trente et un ans.
+> Odišla som v roku dvetisícpäť = je suis partie en 2005
+> Mala som vtedy = j'avais alors
+> tridsaťjeden rokov = trente et un ans
+
+! 👦 To bol už rok po vstupe do únie.
+> C'était donc déjà un an après l'entrée dans l'union.
+> To bol už rok po = c'était déjà un an après
+> vstupe do únie = l'entrée dans l'union
+
+! 👩 Presne tak. Trochu som počkala, kým som sa naozaj rozhodla.
+> Exactement. J'ai un peu attendu avant de vraiment me décider.
+> Presne tak = exactement
+> Trochu som počkala = j'ai un peu attendu
+> kým som sa naozaj rozhodla = avant de vraiment me décider

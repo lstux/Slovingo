@@ -89,6 +89,32 @@ Serie_09_VelkaNoc_04_velkonocny-stol
 Serie_09_VelkaNoc_05_velkonocny-pondelok-u-babky
 Serie_09_VelkaNoc_06_extra
 
+= 📜 Kronika 1 · Pionieri — les camps de pionniers
+Kronika_01_Pionieri_01_kontext
+Kronika_01_Pionieri_02_recit
+Kronika_01_Pionieri_03_nostalgia-a-kritika
+
+= 📜 Kronika 2 · Nežná revolúcia — 1989
+Kronika_02_NezneRevolucia_01_kontext
+Kronika_02_NezneRevolucia_02_recit
+Kronika_02_NezneRevolucia_03_co-z-toho-zostalo
+
+= 📜 Kronika 3 · Rozdelenie — 1993
+Kronika_03_Rozdelenie_01_kontext
+Kronika_03_Rozdelenie_02_recit
+Kronika_03_Rozdelenie_03_dva-narody-jeden-pocit
+
+= 📜 Kronika 4 · Vstup do EÚ — 2004
+Kronika_04_VstupDoEU_01_kontext
+Kronika_04_VstupDoEU_02_recit
+Kronika_04_VstupDoEU_03_dvadsat-rokov-neskor
+
+= 📜 Kronika 5 · Emigrácia — le départ
+Kronika_05_Emigracia_01_kontext
+Kronika_05_Emigracia_02_recit
+Kronika_05_Emigracia_03_domov-je-tam
+
+
 = 📐 Annexes — Grammaire
 Grammaire_01_mots-interrogatifs
 Grammaire_02_connecteurs
