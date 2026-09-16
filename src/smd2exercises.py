@@ -1,30 +1,35 @@
 #!/usr/bin/env python3
+"""smd2exercises.py
 
+Generate practice exercises (qcm, fill-blank, listen) from a corpus of
+SMD sheets, in the merged l1/l2 format (see conventions-and-principles
+and areas/v2-rewrite): l1 is always the native language, l2 always the
+target language, audio is always l2.
+
+Replaces smd2exercises.py from Slovingo v1. What's new compared to v1:
+
+- Merged format: one exercise object covers both practice directions
+  (l1->l2 and l2->l1), instead of two separate entries.
+- Distractors are shape-matched: a single-word answer never gets a
+  full-sentence distractor and vice versa (see word_shape()).
+- For `series` sheets, distractors are restricted to vocabulary
+  already introduced by *earlier* series sheets ("deja vu"), falling
+  back to the whole corpus only when that pool is too thin to build a
+  full set of choices. Other categories draw from the whole corpus,
+  unrestricted by order, as v1 always did.
+- Sheets are read directly from their .md source (via smd2data's
+  parser) rather than from pre-built content.json files, so this
+  script has no ordering dependency on the content-generation step.
+
+Generation is persistent: an existing <id>.exercises.json is never
+overwritten unless --force is passed, so hand-edited exercises survive
+a re-run over the corpus.
+
+Usage:
+    python3 smd2exercises.py md_dir/ --lang lang.json -o json_dir/
 """
-smd2exercises.py
-=================
 
-Génère des exercices interactifs (QCM, phrases à trous, écoute) au format
-JSON à partir de fiches SMD (translate-tables et audio-cards).
-
-Approche générique : le script lit TOUTES les fiches passées en argument
-en une seule passe et construit un corpus global (vocabulaire + phrases +
-fréquence des mots). Chaque fiche individuelle pioche ses distracteurs et
-identifie ses "trous" grammaticaux à partir de ce corpus commun plutôt que
-de listes codées en dur : plus on ajoute de fiches, plus le résultat est
-pertinent, sans aucune maintenance de liste de mots.
-
-=> Toujours lancer le script sur l'ensemble des fiches d'un coup
-   (comme le fait déjà publish-slovak.sh pour le HTML) :
-
-    python3 smd2exercises.py md/*.md --index
-
-Ne modifie pas les fichiers .md. Ne touche pas au HTML généré par
-smd2html.py : flux totalement séparé, en sortie il produit :
-
-    NomFiche.exercises.json   (un par fiche traitée)
-    exercises-index.json      (récapitulatif, avec --index)
-"""
+from __future__ import annotations
 
 import argparse
 import json
@@ -33,644 +38,459 @@ import re
 import sys
 from collections import Counter
 from pathlib import Path
+from typing import Any, Iterable
 
-from langconfig import load_config, is_header_match
-
-# ============================================================================
-# Détection des tables (config partagée avec smd2html.py — voir lang.json)
-# ============================================================================
-
-CONFIG = load_config()
-
-
-def split_table_row(line):
-    line = line.strip()
-    if line.startswith("|"):
-        line = line[1:]
-    if line.endswith("|"):
-        line = line[:-1]
-    return [cell.strip() for cell in line.split("|")]
-
-
-def is_table_separator(line):
-    cells = split_table_row(line)
-    if not cells:
-        return False
-    return all(re.match(r'^:?-{3,}:?$', cell.strip()) for cell in cells)
-
-
-def is_target_header(text):
-    """Colonne "langue cible" (slovaque par défaut, selon lang.json)."""
-    return is_header_match(text, CONFIG["target_lang"])
-
-
-def clean_cell(text):
-    """Retire la syntaxe SMD/Markdown résiduelle d'une cellule ou d'un texte."""
-    text = re.sub(r'\{\{(.*?)\}\}', r'\1', text)
-    text = re.sub(r'\*\*(.+?)\*\*', r'\1', text)
-    text = re.sub(r'\*(.+?)\*', r'\1', text)
-    text = re.sub(r'`([^`]+)`', r'\1', text)
-    return text.strip()
-
-
-def strip_punct(word):
-    return word.strip(".,!?;:\"'()„“”«»…")
-
-
-def split_speaker(text):
-    """
-    Les fiches dialogue préfixent chaque réplique par l'émoticône du
-    personnage (ex: "☕ Dobrý deň..."). Ce n'est pas du slovaque à
-    prononcer ni un mot à retrouver : on le sépare du texte utile.
-    """
-    tokens = text.split()
-    if tokens and not any(ch.isalpha() for ch in tokens[0]):
-        return tokens[0], " ".join(tokens[1:]).strip()
-    return None, text
+from smd2data import CATEGORIES, SheetNameError, parse_sheet, parse_sheet_filename
 
 
 # ============================================================================
-# Extraction du contenu d'une fiche SMD
+# Tuning constants
 # ============================================================================
 
-def extract_content(md_text):
+MIN_TOKENS_FOR_BLANK = 3     # v1's guard: too short a sentence makes a
+                              # blank either trivial or nonsensical.
+WORD_SHAPE_MAX_TOKENS = 2     # <=2 tokens: "word"-like answer/distractor.
+                              # >2 tokens: "phrase"-like.
+QCM_CHOICES = 4               # total options shown, answer included
+                              # (so 3 distractors are generated).
+FILL_BLANK_CHOICES = 3
+LISTEN_CHOICES = 4
+FREQUENT_WORDS_CONSIDERED = 40  # how many top-frequency words feed the
+                                  # fill-blank distractor pool.
+
+
+# ============================================================================
+# Small text helpers
+# ============================================================================
+
+SPEAKABLE_MARKER_RE = re.compile(r"\[\[(.+?)\]\]")
+BOLD_RE = re.compile(r"\*\*(.+?)\*\*")
+SLUG_RE = re.compile(r"[^a-z0-9]+")
+PUNCT_CHARS = ".,!?;:\"'()„“”«»…"
+
+
+def strip_markup(text: str) -> str:
+    """Remove the [[speakable]] and **bold** markers left by smd2data,
+    so exercise text is plain and TTS-safe."""
+    text = SPEAKABLE_MARKER_RE.sub(r"\1", text)
+    text = BOLD_RE.sub(r"\1", text)
+    return text
+
+
+def strip_punct(word: str) -> str:
+    return word.strip(PUNCT_CHARS)
+
+
+def tokenize(text: str) -> list[str]:
+    return text.split()
+
+
+def word_shape(text: str) -> str:
+    """Classify an answer/distractor as 'word' or 'phrase' by length,
+    so a single vocabulary word never gets a full-sentence distractor
+    (or the reverse)."""
+    return "word" if len(tokenize(text)) <= WORD_SHAPE_MAX_TOKENS else "phrase"
+
+
+def slugify(text: str) -> str:
+    text = strip_markup(text).lower()
+    text = SLUG_RE.sub("-", text).strip("-")
+    return text or "x"
+
+
+def dedupe_keep_order(items: Iterable[str]) -> list[str]:
+    seen: set[str] = set()
+    out = []
+    for item in items:
+        key = item.lower()
+        if key not in seen:
+            seen.add(key)
+            out.append(item)
+    return out
+
+
+def dedupe_pairs(pairs: Iterable[tuple[str, str]]) -> list[tuple[str, str]]:
+    seen: set[tuple[str, str]] = set()
+    out = []
+    for l1, l2 in pairs:
+        key = (l1.lower(), l2.lower())
+        if key not in seen:
+            seen.add(key)
+            out.append((l1, l2))
+    return out
+
+
+# ============================================================================
+# Extracting exercise raw material from parsed sheet content
+# ============================================================================
+
+def extract_vocab_pairs(content: list[dict[str, Any]]) -> list[tuple[str, str]]:
+    """Return (l1, l2) pairs from every 2-column translate-table in
+    `content`. A table without a detected speakable_column, or with
+    more than 2 columns, is not vocabulary in the l1/l2 sense and is
+    skipped (e.g. the "Element/Info" table in Introduction sheets).
     """
-    Parcourt le texte SMD et en extrait :
-    - vocab_pairs : liste de tuples (slovaque, traduction) issus des
-      translate-tables
-    - sentences : liste de {"text", "translation", "speaker"} issus des
-      audio-cards
-    """
-
-    lines = md_text.splitlines()
-    vocab_pairs = []
-    sentences = []
-    index = 0
-
-    while index < len(lines):
-        stripped = lines[index].strip()
-
-        if not stripped:
-            index += 1
-            continue
-
-        # Translate-table
-        if "|" in stripped and index + 1 < len(lines) and is_table_separator(lines[index + 1]):
-            table_lines = [lines[index], lines[index + 1]]
-            index += 2
-            while index < len(lines) and "|" in lines[index] and lines[index].strip():
-                table_lines.append(lines[index])
-                index += 1
-            vocab_pairs.extend(extract_vocab_from_table(table_lines))
-            continue
-
-        # Audio-card
-        if stripped.startswith("!"):
-            raw_text = clean_cell(stripped[1:].strip())
-            speaker, audio_text = split_speaker(raw_text)
-            next_index = index + 1
-            translations = []
-            while next_index < len(lines) and lines[next_index].strip().startswith(">"):
-                translations.append(clean_cell(lines[next_index].strip()[1:].strip()))
-                next_index += 1
-            while next_index < len(lines) and lines[next_index].strip().startswith("+"):
-                next_index += 1
-            if audio_text:
-                sentences.append({
-                    "text": audio_text,
-                    "translation": translations[0] if translations else "",
-                    "speaker": speaker,
-                })
-            index = next_index
-            continue
-
-        index += 1
-
-    return vocab_pairs, sentences
-
-
-def extract_vocab_from_table(lines):
-    if len(lines) < 3:
-        return []
-
-    headers = split_table_row(lines[0])
-    target_col = -1
-    for i, header in enumerate(headers):
-        if is_target_header(header):
-            target_col = i
-            break
-    if target_col < 0:
-        return []
-
-    other_col = next((i for i in range(len(headers)) if i != target_col), -1)
-    if other_col < 0:
-        return []
-
     pairs = []
-    for line in lines[2:]:
-        cells = split_table_row(line)
-        if len(cells) <= max(target_col, other_col):
+    for block in content:
+        if block["type"] != "table" or block.get("speakable_column") is None:
             continue
-        sk = clean_cell(cells[target_col])
-        fr = clean_cell(cells[other_col])
-        if sk and fr:
-            pairs.append((sk, fr))
+        if len(block["columns"]) != 2:
+            continue
+        l2_col = block["speakable_column"]
+        l1_col = 1 - l2_col
+        for row in block["rows"]:
+            l1 = strip_markup(row[l1_col]).strip()
+            l2 = strip_markup(row[l2_col]).strip()
+            if l1 and l2:
+                pairs.append((l1, l2))
     return pairs
 
 
-def dedupe_pairs(vocab_pairs):
-    seen = set()
-    unique = []
-    for sk, fr in vocab_pairs:
-        key = sk.lower()
-        if key in seen:
+def extract_sentences(content: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Return {l1, l2, speaker} dicts from every audio-card in
+    `content` that has a natural translation (cards without one can't
+    build an l1 side and are skipped)."""
+    sentences = []
+    for block in content:
+        if block["type"] != "audio-card" or not block.get("natural"):
             continue
-        seen.add(key)
-        unique.append((sk, fr))
-    return unique
-
-
-def dedupe_keep_order(items):
-    seen = set()
-    unique = []
-    for item in items:
-        if item in seen:
-            continue
-        seen.add(item)
-        unique.append(item)
-    return unique
+        sentences.append({
+            "l1": strip_markup(block["natural"]).strip(),
+            "l2": strip_markup(block["phrase"]).strip(),
+            "speaker": block.get("speaker"),
+        })
+    return sentences
 
 
 # ============================================================================
-# Construction du corpus global (toutes les fiches passées en argument)
+# Corpus loading
 # ============================================================================
 
-def build_corpus(paths):
+def load_corpus(md_dir: Path, lang_cfg: dict[str, Any]) -> list[dict[str, Any]]:
+    """Parse every sheet in `md_dir` (filesystem order) into the raw
+    material exercises are built from. Introduction sheets are
+    excluded outright -- no exercises are generated for that category.
     """
-    Lit chaque fichier une seule fois.
-
-    Retourne :
-    - per_file : {path: (vocab_pairs, sentences)}
-    - global_pairs : vocab_pairs de toutes les fiches combinées
-    - global_sentences : sentences de toutes les fiches combinées
-    """
-    per_file = {}
-    global_pairs = []
-    global_sentences = []
-
-    for path in paths:
+    records = []
+    for path in sorted(md_dir.glob("*.md")):
+        meta = parse_sheet_filename(path)
+        if meta["category"] == "introduction":
+            continue
         md_text = path.read_text(encoding="utf-8")
-        vocab_pairs, sentences = extract_content(md_text)
-        per_file[path] = (vocab_pairs, sentences)
-        global_pairs.extend(vocab_pairs)
-        global_sentences.extend(sentences)
+        parsed = parse_sheet(md_text, lang_cfg)
+        records.append({
+            "id": meta["id"],
+            "category": meta["category"],
+            "vocab_pairs": extract_vocab_pairs(parsed["content"]),
+            "sentences": extract_sentences(parsed["content"]),
+        })
+    return records
 
-    return per_file, global_pairs, global_sentences
 
+# ============================================================================
+# Distractor selection
+# ============================================================================
 
-def build_word_frequency(sentences):
+def pick_shape_matched_distractors(
+    answer: str, primary_pool: list[str], fallback_pool: list[str], n: int
+) -> list[str] | None:
+    """Pick n distractors of the same shape (word/phrase) as `answer`.
+
+    Prefers `primary_pool` (e.g. already-seen vocabulary for a series
+    sheet); tops up from `fallback_pool` (the whole corpus) when the
+    primary pool is too thin, rather than failing outright -- mirrors
+    v1's "corpus still small" fallback. Returns None if there still
+    aren't enough candidates even after falling back.
     """
-    Fréquence de chaque mot à travers tout le corpus de phrases.
+    shape = word_shape(answer)
+    answer_l = answer.lower()
 
-    Un mot qui revient dans beaucoup de phrases différentes (pronoms,
-    prépositions, verbes courants...) est un bon candidat de "trou"
-    grammatical — sans avoir besoin d'une liste écrite à la main.
-    """
-    freq = Counter()
-    for s in sentences:
-        for token in s["text"].split():
-            word = strip_punct(token).lower()
-            if word:
-                freq[word] += 1
+    candidates = dedupe_keep_order(
+        w for w in primary_pool if w.lower() != answer_l and word_shape(w) == shape
+    )
+    if len(candidates) < n:
+        extra = dedupe_keep_order(
+            w for w in fallback_pool
+            if w.lower() != answer_l and word_shape(w) == shape and w.lower() not in {c.lower() for c in candidates}
+        )
+        candidates = candidates + extra
+
+    if len(candidates) < n:
+        return None
+    return random.sample(candidates, n)
+
+
+def build_word_frequency(texts: Iterable[str]) -> Counter:
+    freq: Counter = Counter()
+    for text in texts:
+        for token in tokenize(text):
+            freq[strip_punct(token).lower()] += 1
     return freq
 
 
-# ============================================================================
-# Génération : QCM de traduction
-# ============================================================================
+def choose_blank_index(tokens: list[str], selection_freq: Counter) -> int:
+    """Pick which word to blank: the most frequent one in the corpus
+    among candidates (skipping the first token, often capitalised and
+    sentence-specific). Falls back to the shortest word in the middle
+    of the sentence when nothing stands out (a still-small corpus).
 
-def generate_qcm(local_pairs, global_pairs, n_choices=4):
-    """
-    Génère le QCM dans les deux sens — "l2-l1" (langue cible -> langue
-    native) et "l1-l2" (langue native -> langue cible) : le choix du
-    sens à pratiquer se fait côté JavaScript, pas à la génération.
-
-    Les questions portent sur le vocabulaire de LA FICHE (local_pairs).
-    Les distracteurs sont piochés dans TOUT LE CORPUS (global_pairs), ce
-    qui permet de générer un QCM même pour une petite table, dès que le
-    reste du corpus fournit assez d'alternatives.
-    """
-    exercises = []
-    local_unique = dedupe_pairs(local_pairs)
-    global_unique = dedupe_pairs(global_pairs)
-    if not local_unique:
-        return exercises
-
-    for direction in ("l2-l1", "l1-l2"):
-        for idx, (sk, fr) in enumerate(local_unique):
-            question = sk if direction == "l2-l1" else fr
-            answer = fr if direction == "l2-l1" else sk
-
-            other_answers = dedupe_keep_order([
-                (f if direction == "l2-l1" else s)
-                for (s, f) in global_unique
-                if (f if direction == "l2-l1" else s) != answer
-            ])
-            if len(other_answers) < n_choices - 1:
-                continue  # pas encore assez de corpus pour distinguer cette réponse
-
-            distractors = random.sample(other_answers, n_choices - 1)
-            choices = distractors + [answer]
-            random.shuffle(choices)
-
-            exercises.append({
-                "id": f"qcm-{direction}-{idx}",
-                "type": "qcm",
-                "direction": direction,
-                "question": question,
-                "answer": answer,
-                "choices": choices,
-                "audio": sk,
-            })
-    return exercises
-
-
-# ============================================================================
-# Génération : phrases à trous
-# ============================================================================
-
-def choose_blank_index(tokens, freq):
-    """
-    Choisit l'indice du mot à transformer en trou :
-    le mot le plus fréquent dans le corpus global parmi les candidats
-    (on exclut le premier mot, souvent en début de phrase et capitalisé).
-
-    Si aucun mot ne se distingue (fréquence <= 1 partout, cas d'un
-    corpus encore petit), on se rabat sur le mot le plus court parmi
-    ceux du milieu de la phrase.
+    Uses corpus-wide frequency regardless of the "already seen"
+    distractor restriction: picking a grammatically common word to
+    blank is a different concern from restricting which *wrong*
+    answers are fair game.
     """
     candidates = list(range(1, len(tokens))) or [0]
-    candidate_idx = max(candidates, key=lambda i: freq.get(strip_punct(tokens[i]).lower(), 0))
-    best_freq = freq.get(strip_punct(tokens[candidate_idx]).lower(), 0)
-
-    if best_freq <= 1:
+    idx = max(candidates, key=lambda i: selection_freq.get(strip_punct(tokens[i]).lower(), 0))
+    if selection_freq.get(strip_punct(tokens[idx]).lower(), 0) <= 1:
         middle = list(range(1, len(tokens) - 1)) or candidates
-        candidate_idx = min(middle, key=lambda i: len(strip_punct(tokens[i])))
+        idx = min(middle, key=lambda i: len(strip_punct(tokens[i])))
+    return idx
 
-    return candidate_idx
+
+def pick_frequency_distractors(
+    answer: str, primary_freq: Counter, global_freq: Counter, n: int
+) -> list[str] | None:
+    """Pick n plausible fill-blank distractors: frequent words (likely
+    grammatical, so a fair trap) from `primary_freq`, topped up from
+    `global_freq` when too few, then from any word in the corpus as a
+    last resort. Returns None if still short after all fallbacks.
+    """
+    answer_l = answer.lower()
+
+    candidates = dedupe_keep_order(
+        w for w, _ in primary_freq.most_common(FREQUENT_WORDS_CONSIDERED) if w != answer_l
+    )
+    if len(candidates) < n:
+        candidates = dedupe_keep_order(
+            candidates + [w for w, _ in global_freq.most_common(FREQUENT_WORDS_CONSIDERED) if w != answer_l]
+        )
+    if len(candidates) < n:
+        candidates = dedupe_keep_order(candidates + [w for w in global_freq if w != answer_l])
+
+    if len(candidates) < n:
+        return None
+    return random.sample(candidates, n)
 
 
-def generate_fill_blank(local_sentences, freq, n_choices=3):
+# ============================================================================
+# Exercise generation
+# ============================================================================
+
+def generate_qcm(
+    sheet: dict[str, Any], primary_pairs: list[tuple[str, str]],
+    global_pairs: list[tuple[str, str]],
+) -> list[dict[str, Any]]:
+    """Build one merged qcm exercise per unique vocabulary pair of the
+    sheet. choices_l1/choices_l2 are distractors only -- the front-end
+    adds the correct l1/l2 answer and shuffles at display time, so the
+    same exercise doesn't always show options in the same order.
+    """
+    local_pairs = dedupe_pairs(sheet["vocab_pairs"])
+    if not local_pairs:
+        return []
+
+    primary = dedupe_pairs(primary_pairs)
+    glob = dedupe_pairs(global_pairs)
+
     exercises = []
+    for l1, l2 in local_pairs:
+        choices_l1 = pick_shape_matched_distractors(
+            l1,
+            primary_pool=[p_l1 for p_l1, p_l2 in primary if p_l2.lower() != l2.lower()],
+            fallback_pool=[p_l1 for p_l1, p_l2 in glob if p_l2.lower() != l2.lower()],
+            n=QCM_CHOICES - 1,
+        )
+        choices_l2 = pick_shape_matched_distractors(
+            l2,
+            primary_pool=[p_l2 for p_l1, p_l2 in primary if p_l1.lower() != l1.lower()],
+            fallback_pool=[p_l2 for p_l1, p_l2 in glob if p_l1.lower() != l1.lower()],
+            n=QCM_CHOICES - 1,
+        )
+        if choices_l1 is None or choices_l2 is None:
+            continue  # not enough corpus yet to build fair distractors
 
-    # Les mots les plus fréquents du corpus servent de vivier de
-    # distracteurs plausibles (des mots "grammaticaux" par construction,
-    # puisqu'ils reviennent dans des phrases très différentes).
-    frequent_words = [w for w, _ in freq.most_common(40)]
+        exercises.append({
+            "id": f"qcm-{slugify(l2)}",
+            "type": "qcm",
+            "l1": l1,
+            "l2": l2,
+            "choices_l1": choices_l1,
+            "choices_l2": choices_l2,
+        })
+    return exercises
 
-    for idx, s in enumerate(local_sentences):
-        tokens = s["text"].split()
-        if len(tokens) < 3:
+
+def generate_fill_blank(
+    sheet: dict[str, Any],
+    primary_sentences: list[dict[str, Any]],
+    global_sentences: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Build one merged fill-blank exercise per sentence of the sheet,
+    with an independent blank computed on each side (l1 and l2)."""
+    l1_selection_freq = build_word_frequency(s["l1"] for s in global_sentences)
+    l2_selection_freq = build_word_frequency(s["l2"] for s in global_sentences)
+    l1_primary_freq = build_word_frequency(s["l1"] for s in primary_sentences)
+    l2_primary_freq = build_word_frequency(s["l2"] for s in primary_sentences)
+    l1_global_freq = l1_selection_freq
+    l2_global_freq = l2_selection_freq
+
+    exercises = []
+    for s in sheet["sentences"]:
+        l1_blank = _build_blank(s["l1"], l1_selection_freq, l1_primary_freq, l1_global_freq)
+        l2_blank = _build_blank(s["l2"], l2_selection_freq, l2_primary_freq, l2_global_freq)
+        if l1_blank is None or l2_blank is None:
             continue
 
-        candidate_idx = choose_blank_index(tokens, freq)
-        removed = strip_punct(tokens[candidate_idx])
-        if not removed:
-            continue
-
-        display_tokens = tokens.copy()
-        display_tokens[candidate_idx] = "___"
-
-        pool = [w for w in frequent_words if w != removed.lower()]
-        if len(pool) < n_choices:
-            # corpus encore petit : on complète avec n'importe quel autre
-            # mot rencontré, mieux que de bloquer la génération
-            pool = dedupe_keep_order(pool + [w for w in freq if w != removed.lower()])
-        if len(pool) < n_choices:
-            continue
-
-        distractors = random.sample(pool, n_choices)
-        choices = distractors + [removed]
-        random.shuffle(choices)
-
-        exercise = {
-            "id": f"blank-{idx}",
+        exercises.append({
+            "id": f"blank-{slugify(s['l2'])}",
             "type": "fill-blank",
-            "tokens": display_tokens,
-            "blank_index": candidate_idx,
-            "answer": removed,
-            "choices": choices,
-            "audio": s["text"],
-            "translation": s["translation"],
-        }
-        if s.get("speaker"):
-            exercise["speaker"] = s["speaker"]
-        exercises.append(exercise)
+            "l1": s["l1"],
+            "l2": s["l2"],
+            "missing_l1": l1_blank["missing"],
+            "missing_l2": l2_blank["missing"],
+            "blank_index_l1": l1_blank["blank_index"],
+            "blank_index_l2": l2_blank["blank_index"],
+            "choices_l1": l1_blank["choices"],
+            "choices_l2": l2_blank["choices"],
+        })
     return exercises
 
 
-# ============================================================================
-# Génération : écoute et devine
-# ============================================================================
+def _build_blank(
+    text: str, selection_freq: Counter, primary_freq: Counter, global_freq: Counter
+) -> dict[str, Any] | None:
+    tokens = tokenize(text)
+    if len(tokens) < MIN_TOKENS_FOR_BLANK:
+        return None
+    idx = choose_blank_index(tokens, selection_freq)
+    missing = strip_punct(tokens[idx])
+    if not missing:
+        return None
+    choices = pick_frequency_distractors(missing, primary_freq, global_freq, FILL_BLANK_CHOICES)
+    if choices is None:
+        return None
+    return {"blank_index": idx, "missing": missing, "choices": choices}
 
-def utterances_from(vocab_pairs, sentences):
-    utterances = [{"audio": sk, "translation": fr} for sk, fr in dedupe_pairs(vocab_pairs)]
-    utterances += [
-        {"audio": s["text"], "translation": s["translation"], "speaker": s.get("speaker")}
-        for s in sentences
-    ]
-    return utterances
 
-
-def generate_listen(local_utterances, global_utterances, n_choices=4):
+def generate_listen(
+    sheet: dict[str, Any],
+    primary_sentences: list[dict[str, Any]],
+    global_sentences: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Build one listen exercise per sentence: recognise the spoken l2
+    sentence among shape-matched l2 distractors."""
     exercises = []
-    global_texts = dedupe_keep_order([u["audio"] for u in global_utterances])
-
-    for idx, u in enumerate(local_utterances):
-        others = [t for t in global_texts if t != u["audio"]]
-        if len(others) < n_choices - 1:
+    for s in sheet["sentences"]:
+        answer_l2 = s["l2"]
+        choices_l2 = pick_shape_matched_distractors(
+            answer_l2,
+            primary_pool=[p["l2"] for p in primary_sentences if p["l2"].lower() != answer_l2.lower()],
+            fallback_pool=[p["l2"] for p in global_sentences if p["l2"].lower() != answer_l2.lower()],
+            n=LISTEN_CHOICES - 1,
+        )
+        if choices_l2 is None:
             continue
 
-        distractors = random.sample(others, n_choices - 1)
-        choices = distractors + [u["audio"]]
-        random.shuffle(choices)
-
-        exercise = {
-            "id": f"listen-{idx}",
+        exercises.append({
+            "id": f"listen-{slugify(answer_l2)}",
             "type": "listen",
-            "audio": u["audio"],
-            "answer": u["audio"],
-            "choices": choices,
-            "translation": u["translation"],
-        }
-        if u.get("speaker"):
-            exercise["speaker"] = u["speaker"]
-        exercises.append(exercise)
+            "l1": s["l1"],
+            "l2": answer_l2,
+            "choices_l2": choices_l2,
+        })
     return exercises
 
 
 # ============================================================================
-# Assemblage par fiche
+# Orchestration
 # ============================================================================
 
-def build_exercises_for_file(local_pairs, local_sentences, global_pairs, global_sentences,
-                              freq, types, n_choices):
-    exercises = []
-    if "qcm" in types:
-        exercises += generate_qcm(local_pairs, global_pairs, n_choices=n_choices)
-    if "fill-blank" in types:
-        exercises += generate_fill_blank(local_sentences, freq, n_choices=n_choices - 1)
-    if "listen" in types:
-        local_utterances = utterances_from(local_pairs, local_sentences)
-        global_utterances = utterances_from(global_pairs, global_sentences)
-        exercises += generate_listen(local_utterances, global_utterances, n_choices=n_choices)
-    return exercises
+def build_exercises_for_corpus(records: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    """Generate exercises sheet by sheet, in corpus (filesystem) order.
 
+    For `series` sheets, the "already seen" pool accumulates only
+    prior series sheets, in order -- a series sheet never gets
+    distractors drawn from its own new vocabulary, nor from series
+    sheets that come later. Other categories draw from the whole
+    corpus (built upfront) regardless of position.
 
-def format_title(text):
-    text = re.sub(r'[_-]', ' ', text)
-    return (text[:1].upper() + text[1:]) if text else text
+    Returns a dict of sheet id -> {source pools not included, just
+    the "exercises" list} keyed for writing one file per sheet.
+    """
+    global_pairs = [pair for r in records for pair in r["vocab_pairs"]]
+    global_sentences = [s for r in records for s in r["sentences"]]
 
+    series_pairs_so_far: list[tuple[str, str]] = []
+    series_sentences_so_far: list[dict[str, Any]] = []
 
-def guess_category(stem):
-    prefix = stem.split("_")[0]
-    known = {
-        "Revisions": "Révisions", "Dialogues": "Dialogues", "Dialogue": "Dialogues",
-        "Grammaire": "Grammaire", "Introduction": "Introduction",
-        "Vocabulaire": "Vocabulaire", "Situations": "Situations",
-        "Serie": "Séries",
-    }
-    return known.get(prefix, "Autres")
+    output: dict[str, dict[str, Any]] = {}
 
+    for record in records:
+        is_series = record["category"] == "series"
+        primary_pairs = series_pairs_so_far if is_series else global_pairs
+        primary_sentences = series_sentences_so_far if is_series else global_sentences
 
-def guess_theme(stem):
-    parts = stem.split("_")
-    if parts[0] == "Revisions" and len(parts) >= 4:
-        return parts[1]
-    # Serie_01_Rodina_02_kolko-mas-rokov -> thème "Rodina"
-    if parts[0] == "Serie" and len(parts) >= 4:
-        return parts[2]
-    return None
+        exercises = []
+        exercises += generate_qcm(record, primary_pairs, global_pairs)
+        exercises += generate_fill_blank(record, primary_sentences, global_sentences)
+        exercises += generate_listen(record, primary_sentences, global_sentences)
 
+        output[record["id"]] = {"exercises": exercises}
 
-def guess_title(stem):
-    parts = stem.split("_")
-    if parts[0] == "Revisions" and len(parts) >= 4:
-        return format_title(parts[3])
-    if parts[0] == "Serie" and len(parts) >= 5:
-        return format_title("_".join(parts[4:]))
-    if len(parts) >= 2 and parts[0] in ("Dialogues", "Dialogue", "Grammaire",
-                                         "Introduction", "Vocabulaire", "Situations"):
-        return format_title("_".join(parts[1:]))
-    return format_title(stem)
+        if is_series:
+            series_pairs_so_far = series_pairs_so_far + record["vocab_pairs"]
+            series_sentences_so_far = series_sentences_so_far + record["sentences"]
+
+    return output
 
 
 # ============================================================================
-# Programme principal
+# CLI
 # ============================================================================
 
-def parse_parcours(path):
-    """
-    Lit un fichier de parcours (même format que celui utilisé par
-    publish-slovak.sh pour l'index principal — voir src/parcours.txt)
-    et retourne la liste ORDONNÉE des unités pédagogiques :
-
-        [{"label": "👨‍👩‍👧‍👦 1 · Rodina — la famille",
-          "files": ["Serie_01_Rodina_01_moja-rodina", ...]}, ...]
-
-    Une ligne "= Titre" ouvre une nouvelle unité ; toute autre ligne
-    non vide et non commentée ("#") ajoute une fiche (son nom sans
-    ".md") à l'unité en cours. Les fiches listées avant la première
-    unité sont ignorées (le format attend un "= Titre" en tête).
-
-    Ainsi l'écran de sélection des exercices peut se regrouper
-    exactement comme la page d'accueil, sans dupliquer le parcours :
-    un seul fichier fait foi pour les deux.
-    """
-    groups = []
-    current = None
-    for raw_line in path.read_text(encoding="utf-8").splitlines():
-        line = raw_line.strip()
-        if not line or line.startswith("#"):
-            continue
-        if line.startswith("="):
-            current = {"label": line[1:].strip(), "files": []}
-            groups.append(current)
-            continue
-        if current is None:
-            continue
-        stem = line[:-3] if line.endswith(".md") else line
-        current["files"].append(stem)
-    return groups
-
-
-def parse_types(raw):
-    if raw is None or raw.strip().lower() == "all":
-        return {"qcm", "fill-blank", "listen"}
-    valid = {"qcm", "fill-blank", "listen"}
-    chosen = {t.strip() for t in raw.split(",") if t.strip()}
-    unknown = chosen - valid
-    if unknown:
-        sys.exit(f"Erreur : type(s) inconnu(s) : {', '.join(sorted(unknown))} "
-                  f"(valides : qcm, fill-blank, listen)")
-    return chosen
-
-
-def update_index(index_path, entries, groups=None):
-    """
-    Met à jour exercises-index.json.
-
-    Format : {"entries": [...], "groups": [...]}.
-
-    - "entries" se fusionne comme avant (par "source"), pour permettre
-      des appels successifs sur des sous-ensembles de fiches (public
-      puis privé, chacun avec son propre --out-dir).
-    - "groups" (les unités du parcours) est en revanche remplacé en
-      bloc quand --parcours est fourni : il n'y a qu'un seul parcours
-      par site, pas de fusion incrémentale à faire. Si --parcours
-      n'est pas fourni sur cet appel, les groupes déjà présents dans
-      le fichier (générés par un appel précédent) sont conservés.
-
-    Migration transparente depuis l'ancien format (liste plate) :
-    un fichier existant de ce type est relu comme des "entries" sans
-    "groups".
-    """
-    existing = {"entries": [], "groups": []}
-    if index_path.exists():
-        try:
-            data = json.loads(index_path.read_text(encoding="utf-8"))
-            if isinstance(data, list):
-                existing = {"entries": data, "groups": []}
-            elif isinstance(data, dict):
-                existing = {
-                    "entries": data.get("entries", []),
-                    "groups": data.get("groups", []),
-                }
-        except (json.JSONDecodeError, OSError):
-            pass
-
-    by_source = {entry["source"]: entry for entry in existing["entries"]}
-    for entry in entries:
-        by_source[entry["source"]] = entry
-
-    merged_entries = sorted(by_source.values(), key=lambda e: (e["category"], e.get("theme") or "", e["title"]))
-    payload = {
-        "entries": merged_entries,
-        "groups": groups if groups is not None else existing["groups"],
-    }
-    index_path.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-    return len(merged_entries)
-
-
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Génère des exercices JSON (QCM, phrases à trous, écoute) depuis des fiches SMD. "
-                    "À lancer sur toutes les fiches d'un coup pour un pool de distracteurs riche."
+        description="Generate practice exercises for every sheet in a corpus."
     )
-    parser.add_argument("files", nargs="+", help="Fichier(s) .md à traiter")
+    parser.add_argument("md_dir", type=Path, help="Directory of .md sheets")
+    parser.add_argument("--lang", type=Path, required=True, help="Path to lang.json")
     parser.add_argument(
-        "--types", default="all",
-        help="Types à générer, séparés par des virgules : qcm,fill-blank,listen (défaut : all)"
-    )
-    parser.add_argument(
-        "--n-choices", type=int, default=4,
-        help="Nombre de propositions par question (défaut : 4)"
+        "-o", "--output-dir", type=Path, required=True,
+        help="Directory to write <id>.exercises.json files into",
     )
     parser.add_argument(
-        "--out-dir", type=Path, default=None,
-        help="Dossier de sortie des .exercises.json (défaut : à côté du .md)"
+        "--force", action="store_true",
+        help="Overwrite existing <id>.exercises.json files (default: skip, to preserve hand edits)",
     )
-    parser.add_argument(
-        "--index", action="store_true",
-        help="Met à jour exercises-index.json"
-    )
-    parser.add_argument(
-        "--index-file", type=Path, default=None,
-        help="Chemin de l'index (défaut : exercises-index.json dans --out-dir ou à côté du 1er .md)"
-    )
-    parser.add_argument(
-        "--parcours", type=Path, default=None,
-        help="Fichier de parcours (ex. src/parcours.txt) pour organiser l'écran de "
-             "sélection par unité pédagogique, comme la page d'accueil"
-    )
-    parser.add_argument(
-        "--seed", default=None,
-        help="Graine aléatoire (pour des sorties reproductibles, utile en test)"
-    )
-
+    parser.add_argument("--seed", type=int, help="Random seed, for reproducible test runs")
     args = parser.parse_args()
-    types = parse_types(args.types)
-
-    paths = []
-    for raw_path in args.files:
-        path = Path(raw_path)
-        if not path.exists():
-            print(f"⚠ fichier introuvable, ignoré : {path}", file=sys.stderr)
-            continue
-        paths.append(path)
-
-    if not paths:
-        sys.exit("Aucun fichier valide à traiter.")
 
     if args.seed is not None:
         random.seed(args.seed)
 
-    per_file, global_pairs, global_sentences = build_corpus(paths)
-    freq = build_word_frequency(global_sentences)
+    with args.lang.open(encoding="utf-8") as f:
+        lang_cfg = json.load(f)
 
-    print(f"Corpus : {len(paths)} fiche(s), {len(dedupe_pairs(global_pairs))} mots de vocabulaire uniques, "
-          f"{len(global_sentences)} phrases.")
+    try:
+        records = load_corpus(args.md_dir, lang_cfg)
+    except (SheetNameError, ValueError) as exc:
+        print(f"Error: {exc}", file=sys.stderr)
+        sys.exit(1)
 
-    entries = []
-    for path in paths:
-        local_pairs, local_sentences = per_file[path]
-        exercises = build_exercises_for_file(
-            local_pairs, local_sentences, global_pairs, global_sentences,
-            freq, types, args.n_choices
-        )
+    all_exercises = build_exercises_for_corpus(records)
 
-        stem = path.stem
-        title = guess_title(stem)
-        payload = {"source": path.name, "title": title, "exercises": exercises}
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    written, skipped = 0, 0
+    for sheet_id, payload in all_exercises.items():
+        out_path = args.output_dir / f"{sheet_id}.exercises.json"
+        if out_path.exists() and not args.force:
+            skipped += 1
+            continue
+        out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        written += 1
 
-        output_dir = args.out_dir if args.out_dir else path.parent
-        output_file = output_dir / f"{stem}.exercises.json"
-        output_file.write_text(
-            json.dumps(payload, ensure_ascii=False, indent=2),
-            encoding="utf-8",
-        )
-
-        counts = {}
-        for ex in exercises:
-            counts[ex["type"]] = counts.get(ex["type"], 0) + 1
-
-        entries.append({
-            "file": output_file.name,
-            "source": path.name,
-            "title": title,
-            "category": guess_category(stem),
-            "theme": guess_theme(stem),
-            "counts": counts,
-        })
-
-        total = sum(counts.values())
-        detail = ", ".join(f"{k}: {v}" for k, v in counts.items()) or "aucun exercice généré"
-        print(f"✓ {output_file.name}  ({total} exercices — {detail})")
-
-    if args.index:
-        out_dir = args.out_dir if args.out_dir else paths[0].parent
-        index_path = args.index_file if args.index_file else out_dir / "exercises-index.json"
-        groups = None
-        if args.parcours:
-            if args.parcours.exists():
-                groups = parse_parcours(args.parcours)
-            else:
-                print(f"⚠ fichier de parcours introuvable, ignoré : {args.parcours}", file=sys.stderr)
-        total_fiches = update_index(index_path, entries, groups)
-        print(f"✓ index mis à jour : {index_path} ({total_fiches} fiches référencées)")
+    print(f"Wrote {written} file(s), skipped {skipped} already-existing file(s) "
+          f"(use --force to regenerate).")
 
 
 if __name__ == "__main__":

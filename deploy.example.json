@@ -1,0 +1,7 @@
+{
+  "host": "yourhost.org",
+  "user": "user",
+  "ssh_port": 22,
+  "remote_root": "/var/www/yourhost.org/htdocs",
+  "identity_file": null
+}

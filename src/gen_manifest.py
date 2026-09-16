@@ -1,29 +1,25 @@
 #!/usr/bin/env python3
+"""gen_manifest.py
 
+Generate manifest.json (PWA manifest) from lang.json. Fields that
+depend on the course (name, description, deployment path) come from
+the config; everything else (icon list, orientation, display mode) is
+a fixed app convention, independent of the language being learned.
+
+Usage:
+    python3 gen_manifest.py --lang lang.json -o dist/manifest.json
 """
-gen_manifest.py
-===============
 
-Génère manifest.json (manifeste PWA) depuis lang.json. Les champs qui
-dépendent du cours (nom, description, chemin de déploiement) viennent
-de la config ; le reste (icônes, orientation, affichage) est une
-convention d'app fixe, indépendante de la langue apprise.
-
-Usage :
-    python3 gen_manifest.py                     # écrit sur stdout
-    python3 gen_manifest.py --out manifest.json
-"""
+from __future__ import annotations
 
 import argparse
 import json
-import sys
 from pathlib import Path
+from typing import Any
 
-from langconfig import load_config
 
-
-def build_manifest(config):
-    site = config["site"]
+def build_manifest(lang_cfg: dict[str, Any]) -> dict[str, Any]:
+    site = lang_cfg["site"]
     return {
         "name": site["title"],
         "short_name": site.get("short_name", site["title"]),
@@ -34,7 +30,7 @@ def build_manifest(config):
         "orientation": "portrait-primary",
         "background_color": site.get("theme_color", "#0b4ea2"),
         "theme_color": site.get("theme_color", "#0b4ea2"),
-        "lang": "fr",
+        "lang": lang_cfg["native_lang"]["code"],
         "icons": [
             {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
             {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
@@ -43,20 +39,18 @@ def build_manifest(config):
     }
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--out", default=None, help="Fichier de sortie (stdout par défaut)")
+    parser.add_argument("--lang", type=Path, required=True, help="Path to lang.json")
+    parser.add_argument("-o", "--output", type=Path, required=True, help="Output manifest.json path")
     args = parser.parse_args()
 
-    config = load_config()
-    manifest = build_manifest(config)
-    text = json.dumps(manifest, ensure_ascii=False, indent=2) + "\n"
+    with args.lang.open(encoding="utf-8") as f:
+        lang_cfg = json.load(f)
 
-    if args.out:
-        Path(args.out).write_text(text, encoding="utf-8")
-        print(f"✓ manifest.json généré : {args.out}", file=sys.stderr)
-    else:
-        sys.stdout.write(text)
+    manifest = build_manifest(lang_cfg)
+    args.output.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Wrote {args.output}")
 
 
 if __name__ == "__main__":
