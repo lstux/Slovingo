@@ -62,6 +62,12 @@ async function boot() {
         document.title = LANG.site.title;
     }
     applyUiLabels();
+
+    SETTINGS = loadSettings();
+    if (typeof applyExerciseDefaultsFromSettings === "function") {
+        applyExerciseDefaultsFromSettings();
+    }
+
     initializeSpeechSynthesis();
 
     document.getElementById("nav-home").addEventListener("click", () => {
@@ -69,6 +75,9 @@ async function boot() {
     });
     document.getElementById("nav-exercises").addEventListener("click", handleExercisesButtonClick);
     document.getElementById("nav-translations").addEventListener("click", toggleAllTranslations);
+    document.getElementById("nav-settings").addEventListener("click", () => {
+        window.location.hash = "#/settings";
+    });
     window.addEventListener("hashchange", route);
 
     route();
@@ -117,6 +126,8 @@ function route() {
         } else {
             renderExercisesPlaceholder();
         }
+    } else if (hash === "#/settings") {
+        renderSettingsScreen();
     } else {
         renderHome();
     }
@@ -681,14 +692,20 @@ let targetVoiceAvailable = false;
 let ttsWarningShown = false;
 
 /**
- * Find the best available voice for the target language.
- * Priority: exact tts_code -> same language prefix -> voice name
- * containing voice_hint -> none.
+ * Find the voice to speak with. If the person picked a specific one
+ * in Settings (SETTINGS.voiceURI), honor it as long as it's still
+ * available; otherwise auto-detect: exact tts_code -> same language
+ * prefix -> voice name containing voice_hint -> none.
  */
 function findTargetVoice() {
     const voices = window.speechSynthesis.getVoices();
     if (!voices.length) {
         return null;
+    }
+
+    if (SETTINGS && SETTINGS.voiceURI) {
+        const chosen = voices.find((v) => v.voiceURI === SETTINGS.voiceURI);
+        if (chosen) return chosen;
     }
 
     const ttsCode = (LANG.target_lang.tts_code || "").toLowerCase();
@@ -729,9 +746,13 @@ function showTtsWarning() {
 /**
  * Speak `text` in the target language.
  * @param {string} text
- * @param {number} [rate=0.9] 0.9 normal, 0.65 slow.
+ * @param {number} [rate] Defaults to SETTINGS.rate (the "normal"
+ *     speed from Settings) when omitted. Pass an explicit rate for
+ *     "slow" playback (SETTINGS.rate * SETTINGS.slowRatio) or the
+ *     Settings screen's live preview.
+ * @param {number} [pitch] Defaults to SETTINGS.pitch when omitted.
  */
-function speak(text, rate = 0.9) {
+function speak(text, rate, pitch) {
     if (!("speechSynthesis" in window)) {
         alert("Speech synthesis is not available on this device.");
         return;
@@ -741,11 +762,14 @@ function speak(text, rate = 0.9) {
         return;
     }
 
+    const effectiveRate = rate === undefined ? (SETTINGS ? SETTINGS.rate : 0.9) : rate;
+    const effectivePitch = pitch === undefined ? (SETTINGS ? SETTINGS.pitch : 1.0) : pitch;
+
     stopSpeaking();
     currentUtterance = new SpeechSynthesisUtterance(text);
     currentUtterance.lang = LANG.target_lang.tts_code;
-    currentUtterance.rate = rate;
-    currentUtterance.pitch = 1.0;
+    currentUtterance.rate = effectiveRate;
+    currentUtterance.pitch = effectivePitch;
     const voice = findTargetVoice();
     if (voice) {
         currentUtterance.voice = voice;
@@ -820,7 +844,7 @@ function initializeAudioCards() {
     document.querySelectorAll(".audio-card").forEach((card) => {
         const text = card.querySelector(".audio-text");
         if (!text) return;
-        text.onclick = () => speak(text.textContent.trim(), 0.9);
+        text.onclick = () => speak(text.textContent.trim());
 
         const translation = card.querySelector(".audio-translation");
         if (translation) {
@@ -849,7 +873,7 @@ function initializeSpeakableElements() {
             : `No ${LANG.target_lang.name} voice available`;
         el.addEventListener("click", () => {
             const text = el.textContent.trim();
-            if (text) speak(text, 0.9);
+            if (text) speak(text);
         });
     });
 }
@@ -960,7 +984,8 @@ function handleExercisesButtonClick() {
     if (mode === "back-to-sheet" && sheetId) {
         window.location.hash = `#/sheet/${encodeURIComponent(sheetId)}`;
     } else if (mode === "launch" && sheetId) {
-        window.location.hash = `#/exercises/session?cards=${encodeURIComponent(sheetId)}&n=12`;
+        const n = (SETTINGS && SETTINGS.defaultQuestionCount) || 12;
+        window.location.hash = `#/exercises/session?cards=${encodeURIComponent(sheetId)}&n=${n}`;
     } else {
         window.location.hash = "#/exercises";
     }

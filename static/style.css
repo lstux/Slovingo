@@ -1030,6 +1030,112 @@ button.index-card {
 
 
 /* ==========================================================================
+   10ter. Réglages (#/settings)
+   ========================================================================== */
+
+.settings-section {
+    margin: 0 0 28px;
+    padding: 16px 18px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--surface);
+}
+
+.settings-section h2 {
+    margin: 0 0 14px;
+    font-size: var(--step-1);
+}
+
+.settings-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+}
+
+.settings-row:first-of-type { border-top: none; padding-top: 0; }
+
+.settings-row > label {
+    font-weight: 600;
+    flex: 0 0 auto;
+}
+
+.settings-row select,
+.settings-row input[type="number"] {
+    font: inherit;
+    padding: 6px 10px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Un slider prend toute la largeur disponible : label au-dessus,
+   piste + valeur + bouton d'écoute sur la ligne suivante plutôt que
+   comprimés côte à côte comme les autres réglages. */
+.settings-row-slider {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+}
+
+.settings-slider-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.settings-slider-wrap input[type="range"] {
+    flex: 1;
+    accent-color: var(--accent);
+}
+
+.settings-readout {
+    flex: 0 0 auto;
+    min-width: 4.5em;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-soft);
+}
+
+.settings-test-btn {
+    flex: 0 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: border-color .15s ease;
+}
+
+.settings-test-btn:hover { border-color: var(--accent); }
+
+.settings-danger-btn {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--bg);
+    color: var(--text);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: border-color .15s ease;
+}
+
+.settings-danger-btn:hover { border-color: var(--accent); }
+.settings-danger-btn + .settings-danger-btn { margin-top: 10px; }
+
+
+/* ==========================================================================
    11. Adaptation mobile
    ========================================================================== */
 
@@ -1039,6 +1145,7 @@ button.index-card {
     .wrap { padding: 0 14px; }
     .band .wrap { padding-top: 34px; }
     .audio-card { grid-template-columns: 1fr auto; }
+    .settings-row { flex-wrap: wrap; }
 }
 
 @media (max-width: 380px) {

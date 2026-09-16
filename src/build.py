@@ -50,7 +50,7 @@ from smd2data import SheetNameError, build_sheet_json
 # Static front-end files copied as-is into dist/ -- shared across
 # every language, not generated from content.
 STATIC_FILES = [
-    "index.html", "app.js", "exercises.js", "progress.js",
+    "index.html", "app.js", "exercises.js", "progress.js", "settings.js",
     "style.css", "exercises.css",
 ]
 

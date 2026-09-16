@@ -39,15 +39,57 @@
     "sheet": "Fiche",
     "toggle_translations": "Traductions",
     "tts_unavailable": "Aucune voix {target_name} disponible sur cet appareil : la lecture audio est désactivée (plutôt ça qu'un mauvais accent 😅).",
-    "exercises_coming_soon": "Les exercices arrivent à la prochaine étape !"
+    "exercises_coming_soon": "Les exercices arrivent à la prochaine étape !",
+    "settings": "Réglages",
+    "voice": "Voix",
+    "voice_automatic": "Automatique",
+    "playback_speed": "Vitesse de lecture",
+    "slow_playback_speed": "Vitesse de lecture lente",
+    "of_normal_speed": "de la vitesse normale",
+    "settings_audio": "Audio",
+    "default_question_count": "Nombre de questions par défaut",
+    "default_direction": "Sens par défaut",
+    "default_types": "Types d'exercices par défaut",
+    "default_answer_mode": "Mode de réponse par défaut",
+    "answer_mode_choice": "Choix",
+    "answer_mode_type": "Saisie libre",
+    "settings_exercises": "Exercices",
+    "reset_progress": "🗑️ Réinitialiser ma progression",
+    "reset_progress_confirm": "Effacer tous les scores enregistrés sur cet appareil ?",
+    "reset_settings": "↩️ Réinitialiser les réglages",
+    "reset_settings_confirm": "Réinitialiser tous les réglages de cette page à leur valeur par défaut ?",
+    "settings_data": "Données",
+    "voice_pitch": "Tonalité de la voix"
   },
   "generator": {
     "target_headers": [
-      "slovak", "slovaque", "slovakien", "slovakština", "slovenčina",
-      "slovencina", "slovensky", "slovenský", "slovenská", "slovenské", "sk"
+      "slovak",
+      "slovaque",
+      "slovakien",
+      "slovakština",
+      "slovenčina",
+      "slovencina",
+      "slovensky",
+      "slovenský",
+      "slovenská",
+      "slovenské",
+      "sk"
     ],
-    "target_header_roots": ["slovak", "slovenčina", "slovencina"],
-    "native_headers": ["french", "français", "francais", "fr"],
-    "native_header_roots": ["français", "francais", "french"]
+    "target_header_roots": [
+      "slovak",
+      "slovenčina",
+      "slovencina"
+    ],
+    "native_headers": [
+      "french",
+      "français",
+      "francais",
+      "fr"
+    ],
+    "native_header_roots": [
+      "français",
+      "francais",
+      "french"
+    ]
   }
 }

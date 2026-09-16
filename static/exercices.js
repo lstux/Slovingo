@@ -102,9 +102,9 @@ function el(tag, options = {}, children = []) {
     return node;
 }
 
-function speakSafe(text, rate) {
+function speakSafe(text, rate, pitch) {
     if (typeof speak === "function") {
-        speak(text, rate);
+        speak(text, rate, pitch);
     }
 }
 
@@ -839,7 +839,7 @@ function markAnswer(container, isCorrect, view, userAnswer) {
             className: "exo-feedback-audio",
             text: "\ud83d\udd0a",
             attrs: { type: "button", "aria-label": "Listen to the pronunciation" },
-            onclick: () => speakSafe(view.audio, 0.9),
+            onclick: () => speakSafe(view.audio),
         }));
     }
 
@@ -856,7 +856,7 @@ function markAnswer(container, isCorrect, view, userAnswer) {
     }));
 
     if (canReplay) {
-        speakSafe(view.audio, 0.9);
+        speakSafe(view.audio);
     }
 }
 
@@ -943,12 +943,12 @@ function renderListen(view) {
     container.appendChild(el("button", {
         className: "exo-audio-btn exo-audio-btn-big",
         text: "\ud83d\udd0a Listen",
-        onclick: () => speakSafe(view.audio, 0.9),
+        onclick: () => speakSafe(view.audio),
     }));
     container.appendChild(el("button", {
         className: "exo-audio-btn",
         text: "\ud83d\udc22 Slowly",
-        onclick: () => speakSafe(view.audio, 0.65),
+        onclick: () => speakSafe(view.audio, SETTINGS.rate * SETTINGS.slowRatio),
     }));
 
     if (state.answerMode === "choice") {
@@ -972,7 +972,7 @@ function renderListen(view) {
         container.appendChild(renderTypeInput(container, view));
     }
 
-    speakSafe(view.audio, 0.9);
+    speakSafe(view.audio);
     return container;
 }
 

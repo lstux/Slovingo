@@ -26,6 +26,7 @@ const CORE_ASSETS = [
   SCOPE + "app.js",
   SCOPE + "exercises.js",
   SCOPE + "progress.js",
+  SCOPE + "settings.js",
   SCOPE + "style.css",
   SCOPE + "exercises.css",
   SCOPE + "lang.json",
