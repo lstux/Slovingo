@@ -1,0 +1,67 @@
+{
+  "target_lang": {
+    "name": "français",
+    "tts_code": "fr-FR",
+    "flag": "🇫🇷",
+    "css_class": "col-target",
+    "voice_hint": "french",
+    "headers": ["french", "français", "francais", "francúzsky", "francúzština",
+                "francuzstina", "francuzsky", "francúzska", "francúzske", "fr"],
+    "header_roots": ["français", "francais", "french", "francúzština", "francuzstina"]
+  },
+  "native_lang": {
+    "name": "slovenčina",
+    "tts_code": "sk-SK",
+    "flag": "🇸🇰",
+    "css_class": "col-native",
+    "headers": ["slovak", "slovaque", "slovakien", "slovenčina", "slovencina", "sk"],
+    "header_roots": ["slovenčina", "slovencina", "slovak"]
+  },
+  "site": {
+    "title": "Ahoj Francúzština",
+    "short_name": "Ahoj FR",
+    "description": "Učenie sa hovorovej francúzštiny — kartičky a cvičenia",
+    "fiche_footer": "Kartička {target_name} • Hlasová syntéza {target_tts}",
+    "storage_prefix": "fr-sk",
+    "url_path": "/slovingo/fr-sk/",
+    "theme_color": "#ee1c25",
+    "deploy_host": "www.lslinux.org",
+    "deploy_path": "/var/www/lslinux.org/htdocs/slovingo/fr-sk/"
+  },
+  "categories": {
+    "Introduction": "Predtým než začneme",
+    "Vocabulaire":  "Slovná zásoba",
+    "Grammaire":    "Gramatika",
+    "Conjugaison":  "Časovanie",
+    "Dialogues":    "Dialógy",
+    "Situations":   "Situácie",
+    "Revisions":    "Opakovanie",
+    "Kronika":      "Kroniky"
+  },
+  "series": {
+    "rodina":   "1 · Rodina",
+    "doma":     "2 · Doma",
+    "jedlo":    "3 · Jedlo",
+    "cas":      "4 · Čas",
+    "nakupy":   "5 · Nákupy",
+    "mesto":    "6 · Mesto",
+    "pocasie":  "7 · Počasie",
+    "more":     "8 · More",
+    "velkanoc": "9 · Veľká noc"
+  },
+  "exercise_theme_labels": {
+    "Quotidien": "Každodenný život",
+    "Sorties":   "Von medzi ľudí",
+    "Social":    "Spoločenské situácie",
+    "PlusLoin":  "Trochu ďalej",
+    "Rodina":    "1 · Rodina",
+    "Doma":      "2 · Doma",
+    "Jedlo":     "3 · Jedlo",
+    "Cas":       "4 · Čas",
+    "Nakupy":    "5 · Nákupy",
+    "Mesto":     "6 · Mesto",
+    "Pocasie":   "7 · Počasie",
+    "More":      "8 · More",
+    "VelkaNoc":  "9 · Veľká noc"
+  }
+}

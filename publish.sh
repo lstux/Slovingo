@@ -1,9 +1,8 @@
 #!/bin/sh
 BACKUP="${BACKUP:-false}"
 GENERATE="${GENERATE:-false}"
-PRIVATE="${PRIVATE:-true}"
 DRY_RUN="${DRY_RUN:-false}"
-LANG_DIR="${LANG_DIR:-langs/sk}"
+LANG_DIR="${LANG_DIR:-langs/sk-fr}"
 
 usage() {
   exec >&2
@@ -14,16 +13,14 @@ usage() {
   printf "  -l DIR : dossier de langue à publier (défaut : %s)\n" "${LANG_DIR}"
   printf "  -b : do backup\n"
   printf "  -g : regenerate html/json\n"
-  printf "  -n : skip private cards\n"
   printf "  -d : dry-run (skip rsync)\n"
   printf "  -h : display this help message\n"
   exit 1
 }
 
-while getopts bgndl:h opt; do case "${opt}" in
+while getopts bgdl:h opt; do case "${opt}" in
   b) BACKUP=true;;
   g) GENERATE=true;;
-  n) PRIVATE=false;;
   d) DRY_RUN=true;;
   l) LANG_DIR="${OPTARG}";;
   *) usage;;
@@ -39,14 +36,11 @@ fi
 export LANG_CONFIG_PATH="${LANG_DIR}/lang.json"
 
 MD_DIR="${LANG_DIR}/md"
-MD_PRIV="${LANG_DIR}/md/private"
 HTML_DIR="${LANG_DIR}/html"
-HTML_PRIV="${LANG_DIR}/html/private"
 PARCOURS="${LANG_DIR}/parcours.txt"
-PARCOURS_PRIV="${LANG_DIR}/parcours-prive.txt"
 BACKUPS_DIR="${LANG_DIR}/backups"
 
-mkdir -p "${MD_PRIV}" "${HTML_DIR}" "${HTML_PRIV}"
+mkdir -p "${HTML_DIR}"
 
 # ---------------------------------------------------------------------------
 # Config langue (${LANG_DIR}/lang.json — voir src/langconfig.py)
@@ -110,18 +104,7 @@ theme_key() {
 
 # Titre lisible d'une fiche à partir de son nom de base.
 card_title() {
-  printf "%s" "$1" | sed \
-    -e "s/^Introduction_[0-9]*_//" \
-    -e "s/^Conjugaison_[0-9]*_//" \
-    -e "s/^Dialogues_[^_]*_[0-9]*_//" \
-    -e "s/^Grammaire_[0-9]*_//" \
-    -e "s/^Revisions_[^_]*_[0-9]*_//" \
-    -e "s/^Serie_[0-9]*_[^_]*_[0-9]*_//" \
-    -e "s/^Situations_[0-9]*_//" \
-    -e "s/^Vocabulaire_[0-9]*_//" \
-    -e "s/^Adulte_[0-9]*_//" \
-    -e "s/^Endy_//" \
-    | format_title
+  printf "%s" "$1" | sed -e "s/^[A-Za-z0-9]\+_[0-9]*_//"| format_title
 }
 
 # ---------------------------------------------------------------------------
@@ -252,7 +235,6 @@ index_generator() {
   <div class="band__pattern"></div>
   <p class="band__credit"></p>
   <div class="wrap">
-    <p class="kicker">${total} fiches &mdash; suis l'ordre, ça marche tout seul</p>
     <h1>📚 ${pagetitle}</h1>
   </div>
 </header>
@@ -355,12 +337,6 @@ if ${GENERATE}; then
     [ -e "${f}" ] || continue
     ./src/smd2html.py "${f}" || exit 2
   done
-  if ${PRIVATE}; then
-    for f in "${MD_PRIV}"/*.md; do
-      [ -e "${f}" ] || continue
-      ./src/smd2html.py "${f}" || exit 2
-    done
-  fi
 fi
 
 if ${BACKUP}; then
@@ -373,8 +349,7 @@ if ${BACKUP}; then
 fi
 
 if ${GENERATE}; then
-  rm -f "${HTML_DIR}/"*.html "${HTML_PRIV}/"*.html
-  mkdir -p "${HTML_PRIV}"
+  rm -f "${HTML_DIR}/"*.html
 
   # Dossier vide (première utilisation, avant d'y avoir mis du contenu) :
   # on ne casse pas, on prévient juste qu'il n'y a rien à faire.
@@ -387,16 +362,6 @@ if ${GENERATE}; then
   else
     printf "  (aucune fiche .md dans %s — rien à indexer)\n" "${MD_DIR}" >&2
   fi
-
-  if ${PRIVATE}; then
-    if ls "${MD_PRIV}/"*.html >/dev/null 2>&1; then
-      mv "${MD_PRIV}/"*.html "${HTML_PRIV}/" || exit 3
-    fi
-    if ls "${MD_PRIV}/"*.md >/dev/null 2>&1; then
-      ./src/smd2exercises.py --out-dir "${HTML_PRIV}/" --index --parcours "${PARCOURS_PRIV}" \
-        "${MD_PRIV}/"*.md || exit 3
-    fi
-  fi
 fi
 
 # ---------------------------------------------------------------------------
@@ -408,12 +373,6 @@ generate_derived_assets
 index_generator "${HTML_DIR}" "${PARCOURS}" "${SITE_TITLE}" "" \
   > "${HTML_DIR}/index.html" || exit 4
 install_assets "${HTML_DIR}"
-
-if ${PRIVATE} && [ -d "${HTML_PRIV}" ]; then
-  index_generator "${HTML_PRIV}" "${PARCOURS_PRIV}" "Fiches perso" "../index.html" \
-    > "${HTML_PRIV}/index.html" || exit 4
-  install_assets "${HTML_PRIV}"
-fi
 
 # ---------------------------------------------------------------------------
 # Sync avec le serveur

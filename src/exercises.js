@@ -126,9 +126,11 @@ const ALL_TYPES = ["qcm", "fill-blank", "listen"];
 let activeTypes = new Set(ALL_TYPES);
 
 // Sens du QCM : "l2-l1" (langue cible -> native), "l1-l2" (native ->
-// cible) ou "both". "l2-l1" par défaut. Aligné avec les valeurs
-// "direction" générées par smd2exercises.py.
-let qcmDirection = "l2-l1";
+// cible) ou "both". "l1-l2" par défaut : on part du mot qu'on connaît
+// déjà (natif) pour retrouver celui qu'on apprend, plus utile à
+// l'usage que l'inverse. Aligné avec les valeurs "direction" générées
+// par smd2exercises.py.
+let qcmDirection = "l1-l2";
 
 // ==========================================================================
 // Utilitaires
@@ -638,7 +640,7 @@ function startMixedFromSelection() {
     } else {
         url.searchParams.delete("types");
     }
-    if (qcmDirection !== "l2-l1") {
+    if (qcmDirection !== "l1-l2") {
         url.searchParams.set("direction", qcmDirection);
     } else {
         url.searchParams.delete("direction");
@@ -704,8 +706,8 @@ function renderTypeCheckboxes(selectedSet, onChange) {
 function renderDirectionSelector(onChange) {
     const select = el("select", { className: "exo-direction-select" });
     const options = [
-        { value: "l2-l1", label: `${EXO_TARGET_LANG.flag}→${EXO_NATIVE_LANG.flag} ${langAbbrev(EXO_TARGET_LANG)}→${langAbbrev(EXO_NATIVE_LANG)}` },
         { value: "l1-l2", label: `${EXO_NATIVE_LANG.flag}→${EXO_TARGET_LANG.flag} ${langAbbrev(EXO_NATIVE_LANG)}→${langAbbrev(EXO_TARGET_LANG)}` },
+        { value: "l2-l1", label: `${EXO_TARGET_LANG.flag}→${EXO_NATIVE_LANG.flag} ${langAbbrev(EXO_TARGET_LANG)}→${langAbbrev(EXO_NATIVE_LANG)}` },
         { value: "both", label: "🔀 Les deux sens" },
     ];
     options.forEach(({ value, label }) => {
@@ -736,7 +738,7 @@ async function startSession() {
     }
 
     activeTypes = new Set(p.get("types") ? p.get("types").split(",") : ALL_TYPES);
-    qcmDirection = p.get("direction") || "l2-l1";
+    qcmDirection = p.get("direction") || "l1-l2";
     state.answerMode = p.get("mode") === "type" ? "type" : "choice";
     state.sessionSize = requestedN;
 
@@ -781,7 +783,7 @@ async function startSession() {
 async function startMergedSession(stems, requestedN) {
     const p = params();
     activeTypes = new Set(p.get("types") ? p.get("types").split(",") : ALL_TYPES);
-    qcmDirection = p.get("direction") || "l2-l1";
+    qcmDirection = p.get("direction") || "l1-l2";
     state.answerMode = p.get("mode") === "type" ? "type" : "choice";
     state.sessionSize = requestedN;
 
@@ -850,7 +852,7 @@ function applyTypeFilter() {
     } else {
         url.searchParams.delete("types");
     }
-    if (qcmDirection !== "l2-l1") {
+    if (qcmDirection !== "l1-l2") {
         url.searchParams.set("direction", qcmDirection);
     } else {
         url.searchParams.delete("direction");
@@ -930,6 +932,26 @@ function renderCurrent() {
     }
 }
 
+// Détermine le texte à (ré)écouter après une réponse, et null si ça
+// n'a pas de sens de le proposer (voir markAnswer()).
+function replayText(ex) {
+    if (ex.type === "qcm") {
+        // ex.answer n'est dans la langue cible (donc prononçable
+        // correctement par la voix configurée) que dans le sens
+        // langue native -> langue cible. Dans l'autre sens, c'est du
+        // texte en langue native : pas de bouton dans ce cas.
+        return ex.direction === "l1-l2" ? ex.answer : null;
+    }
+    if (ex.type === "fill-blank") {
+        // La phrase entière (celle où se trouvait le mot manquant),
+        // pas juste le mot seul — ex.audio, toujours en langue cible.
+        return ex.audio;
+    }
+    // "listen" garde ses propres gros boutons dédiés tout au long de
+    // l'exercice : pas besoin d'en dupliquer un petit ici.
+    return null;
+}
+
 function markAnswer(container, isCorrect, ex, userAnswer) {
     container.classList.add(isCorrect ? "exo-correct" : "exo-incorrect");
 
@@ -943,11 +965,26 @@ function markAnswer(container, isCorrect, ex, userAnswer) {
         state.mistakes.push({ ex, userAnswer });
     }
 
-    const feedback = el("div", { className: "exo-feedback" }, [
-        el("p", {
+    const replay = replayText(ex);
+    const canReplay = !!replay && ttsAvailable();
+
+    const feedbackLine = [
+        el("span", {
             className: isCorrect ? "exo-feedback-ok" : "exo-feedback-ko",
             text: isCorrect ? "✅ Correct !" : `❌ Raté — réponse : ${ex.answer}`,
         }),
+    ];
+    if (canReplay) {
+        feedbackLine.push(el("button", {
+            className: "exo-feedback-audio",
+            text: "🔊",
+            attrs: { type: "button", "aria-label": "Écouter la prononciation" },
+            onclick: () => speakSafe(replay, 0.9),
+        }));
+    }
+
+    const feedback = el("div", { className: "exo-feedback" }, [
+        el("p", { className: "exo-feedback-line" }, feedbackLine),
         ...(ex.translation ? [el("p", { className: "exo-translation", text: ex.translation })] : []),
     ]);
     container.appendChild(feedback);
@@ -961,6 +998,12 @@ function markAnswer(container, isCorrect, ex, userAnswer) {
         },
     });
     container.appendChild(next);
+
+    // Après "next" : si jamais speak() plante (voix inattendue...), le
+    // bouton Suivant reste malgré tout disponible.
+    if (canReplay) {
+        speakSafe(replay, 0.9);
+    }
 }
 
 // -- QCM ---------------------------------------------------------------
@@ -969,14 +1012,6 @@ function renderQcm(ex) {
     const container = el("div", { className: "exo-card exo-qcm" });
     container.appendChild(el("div", { className: "exo-question-label", text: "Traduis :" }));
     container.appendChild(el("div", { className: "exo-question", text: ex.question }));
-
-    if (ex.audio) {
-        container.appendChild(el("button", {
-            className: "exo-audio-btn",
-            text: "🔊",
-            onclick: () => speakSafe(ex.audio, 0.9),
-        }));
-    }
 
     if (state.answerMode === "choice") {
         const choicesEl = el("div", { className: "exo-choices" });
@@ -1019,12 +1054,6 @@ function renderFillBlank(ex) {
         sentence.appendChild(document.createTextNode(" "));
     });
     container.appendChild(sentence);
-
-    container.appendChild(el("button", {
-        className: "exo-audio-btn",
-        text: "🔊 Écouter la phrase",
-        onclick: () => speakSafe(ex.audio, 0.9),
-    }));
 
     if (state.answerMode === "choice") {
         const choicesEl = el("div", { className: "exo-choices" });
