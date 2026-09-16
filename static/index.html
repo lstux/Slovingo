@@ -25,7 +25,11 @@
   <p class="band__credit"></p>
   <div class="wrap">
     <p class="kicker" id="kicker"></p>
-    <h1 id="page-title">Slovingo</h1>
+    <div class="band__title-row">
+      <button id="pager-top-prev" class="pager-btn" type="button" aria-label="Previous">‹</button>
+      <h1 id="page-title">Slovingo</h1>
+      <button id="pager-top-next" class="pager-btn" type="button" aria-label="Next">›</button>
+    </div>
   </div>
 </header>
 
@@ -43,7 +47,11 @@
 
 </div>
 
-<footer>Slovingo v2</footer>
+<footer id="pager-bottom">
+  <button id="pager-bottom-prev" class="pager-btn" type="button" aria-label="Previous">‹</button>
+  <span>Slovingo v2</span>
+  <button id="pager-bottom-next" class="pager-btn" type="button" aria-label="Next">›</button>
+</footer>
 
 <script src="app.js"></script>
 <script src="progress.js"></script>

@@ -388,6 +388,31 @@ function findGroupForSheet(sheetId) {
     return DATA.groups.find((group) => group.sheets.some((sheet) => sheet.id === sheetId));
 }
 
+/**
+ * Every sheet id across every group, flattened in display order --
+ * the single continuous flow the "previous/next" pager follows,
+ * regardless of category or group boundaries.
+ * @returns {string[]}
+ */
+function flatSheetIds() {
+    return DATA.groups.flatMap((group) => group.sheets.map((sheet) => sheet.id));
+}
+
+/**
+ * The sheet immediately before/after `sheetId` in the flattened,
+ * whole-course order.
+ * @param {string} sheetId
+ * @param {1|-1} direction
+ * @returns {string|null} null at either end of the course.
+ */
+function adjacentSheetId(sheetId, direction) {
+    const ids = flatSheetIds();
+    const index = ids.indexOf(sheetId);
+    if (index === -1) return null;
+    const target = index + direction;
+    return target >= 0 && target < ids.length ? ids[target] : null;
+}
+
 /** @param {object|undefined} group @returns {string} A theme key for [data-theme]. */
 function themeForGroup(group) {
     if (group && group.category === "series" && SERIES_THEME_KEYS.has(group.subgroup)) {
@@ -417,11 +442,44 @@ function categoryLabelFor(group) {
     return (LANG.categories && LANG.categories[group.category]) || group.category;
 }
 
-/** Build the small breadcrumb line shown above a sheet's title. */
+/**
+ * Split a sheet's raw title into a kicker (breadcrumb-style context)
+ * and the actual title, on whichever dash separates them -- em dash
+ * "\u2014", en dash "\u2013", or a plain hyphen, as long as it's
+ * flanked by spaces (so a hyphenated single word like
+ * "Aspects-verbaux" is never mistaken for a separator). The corpus
+ * isn't consistent about which dash it uses from one sheet to the
+ * next, so all three are accepted.
+ *
+ * "Série Rodina (1/5) \u2014 Moja rodina" -> kicker "Série Rodina
+ * (1/5)", title "Moja rodina". A title with no such separator (e.g.
+ * most Vocabulary sheets) returns kicker: null, title unchanged.
+ *
+ * @param {string} rawTitle
+ * @returns {{kicker: string|null, title: string}}
+ */
+function splitTitle(rawTitle) {
+    const match = rawTitle.match(/^(.+?)\s+[\u2014\u2013-]\s+(.+)$/);
+    if (match) {
+        return { kicker: match[1].trim(), title: match[2].trim() };
+    }
+    return { kicker: null, title: rawTitle };
+}
+
+/**
+ * Build the small breadcrumb line shown above a sheet's title: the
+ * kicker parsed out of the sheet's own title (splitTitle()) when it
+ * has one, falling back to the series' "Subgroup - fiche NN" or the
+ * plain category label otherwise.
+ */
 function kickerFor(group, sheet) {
+    const { kicker } = splitTitle(sheet.title);
+    if (kicker) {
+        return kicker;
+    }
     if (group.category === "series") {
         const index = group.sheets.findIndex((s) => s.id === sheet.id) + 1;
-        return `${subgroupLabelFor(group)} \u00b7 fiche ${String(index).padStart(2, "0")}`;
+        return `${subgroupLabelFor(group)} - fiche ${String(index).padStart(2, "0")}`;
     }
     return categoryLabelFor(group);
 }
@@ -442,9 +500,13 @@ function renderSheet(sheetId) {
 
     applyTheme(themeForGroup(group));
     setKicker(kickerFor(group, sheet));
-    setPageTitle(sheet.title);
+    setPageTitle(splitTitle(sheet.title).title);
     updateToolbarForSheetView(true);
     setExercisesButtonMode("launch", sheet.id);
+    setPagerNav(
+        adjacentSheetId(sheet.id, -1) ? `#/sheet/${encodeURIComponent(adjacentSheetId(sheet.id, -1))}` : null,
+        adjacentSheetId(sheet.id, 1) ? `#/sheet/${encodeURIComponent(adjacentSheetId(sheet.id, 1))}` : null,
+    );
 
     const content = document.getElementById("content");
     content.innerHTML = "";
@@ -466,6 +528,7 @@ function renderNotFound(sheetId) {
     setPageTitle("404");
     updateToolbarForSheetView(false);
     setExercisesButtonMode("selection");
+    hidePagerNav();
     const content = document.getElementById("content");
     content.innerHTML = "";
     const p = document.createElement("p");
@@ -485,6 +548,7 @@ function renderHome() {
     setPageTitle((LANG.site && LANG.site.title) || "Slovingo");
     updateToolbarForSheetView(false);
     setExercisesButtonMode("selection");
+    hidePagerNav();
 
     const content = document.getElementById("content");
     content.innerHTML = "";
@@ -506,6 +570,18 @@ function renderHome() {
  * .index-section / .index-grid / .index-card markup already styled
  * in style.css for the old index/exercises selection screens.
  */
+/**
+ * Render one group as a collapsible section, mirroring the
+ * .index-section / .index-grid / .index-card markup already styled
+ * in style.css for the old index/exercises selection screens.
+ *
+ * Shows a group-average score badge, same as the exercises selection
+ * screen (see exercises.js's renderGroupSelectionSection()) -- only
+ * sheets that actually HAVE exercises count towards it, so a group
+ * with an unplayable sheet (e.g. an Annex sheet with no audio-card or
+ * translate-table to build exercises from) isn't unfairly dragged
+ * down by a sheet that can never be practiced.
+ */
 function renderGroupSection(group, nextCardNumber) {
     const section = document.createElement("details");
     section.className = "index-section";
@@ -515,7 +591,18 @@ function renderGroupSection(group, nextCardNumber) {
     const heading = document.createElement("h2");
     const categoryLabel = categoryLabelFor(group);
     const subgroupLabel = subgroupLabelFor(group);
-    heading.textContent = subgroupLabel ? `${categoryLabel} \u00b7 ${subgroupLabel}` : categoryLabel;
+    heading.textContent = subgroupLabel ? `${categoryLabel} - ${subgroupLabel}` : categoryLabel;
+
+    const scorableIds = group.sheets.filter((sheet) => EXERCISES.sheets[sheet.id]).map((sheet) => sheet.id);
+    const score = averageScore(scorableIds);
+    if (score) {
+        const badge = document.createElement("span");
+        badge.className = `index-score-badge index-score-${scoreRatioClass(score.avg, 100)}`;
+        badge.textContent = `${score.avg}%`;
+        badge.title = `${score.count}/${scorableIds.length}`;
+        heading.appendChild(badge);
+    }
+
     summary.appendChild(heading);
     section.appendChild(summary);
 
@@ -544,8 +631,17 @@ function renderSheetCard(sheet, group, nextCardNumber) {
 
     const title = document.createElement("span");
     title.className = "index-card-title";
-    title.textContent = sheet.title;
+    title.textContent = splitTitle(sheet.title).title;
     card.appendChild(title);
+
+    const progress = getSheetProgress(sheet.id);
+    if (progress && progress.last) {
+        const badge = document.createElement("span");
+        badge.className = `index-score-badge index-score-${scoreRatioClass(progress.last.score, progress.last.total)}`;
+        badge.textContent = `${progress.last.score}/${progress.last.total}`;
+        badge.title = new Date(progress.last.date).toLocaleDateString();
+        card.appendChild(badge);
+    }
 
     return card;
 }
@@ -565,6 +661,7 @@ function renderExercisesPlaceholder() {
     setPageTitle((LANG.site && LANG.site.title) || "Slovingo");
     updateToolbarForSheetView(false);
     setExercisesButtonMode("selection");
+    hidePagerNav();
 
     const content = document.getElementById("content");
     content.innerHTML = "";
@@ -786,6 +883,43 @@ function setToolbarButtons({ translations = false } = {}) {
 /** Backward-compatible alias used by the sheet/home views above. */
 function updateToolbarForSheetView(isSheet) {
     setToolbarButtons({ translations: isSheet });
+}
+
+/**
+ * Show the previous/next pager (both the top row, flanking the
+ * title, and the pair of buttons flanking the footer text) wired to
+ * the given hashes. A null hash disables that button (still visible,
+ * greyed out) rather than hiding it -- reached the start/end of the
+ * flow, not "no pager here at all" (see hidePagerNav() for that
+ * case). The footer itself (#pager-bottom) is permanent chrome and is
+ * never hidden -- only its two buttons are.
+ * @param {string|null} prevHash
+ * @param {string|null} nextHash
+ */
+function setPagerNav(prevHash, nextHash) {
+    wirePagerButton("pager-top-prev", prevHash);
+    wirePagerButton("pager-top-next", nextHash);
+    wirePagerButton("pager-bottom-prev", prevHash);
+    wirePagerButton("pager-bottom-next", nextHash);
+}
+
+/**
+ * Hide the pager's four buttons -- for views with no "previous/next"
+ * sense (home, the exercises selection screen, a mixed multi-sheet
+ * session). The title and the footer text stay exactly as they are;
+ * only the buttons around them disappear.
+ */
+function hidePagerNav() {
+    ["pager-top-prev", "pager-top-next", "pager-bottom-prev", "pager-bottom-next"].forEach((id) => {
+        document.getElementById(id).classList.add("exo-toolbar-hidden");
+    });
+}
+
+function wirePagerButton(id, hash) {
+    const btn = document.getElementById(id);
+    btn.classList.remove("exo-toolbar-hidden");
+    btn.disabled = !hash;
+    btn.onclick = hash ? () => { window.location.hash = hash; } : null;
 }
 
 /**

@@ -21,7 +21,8 @@
  *
  * Depends on app.js (speak(), targetVoiceAvailable, applyTheme(),
  * setKicker(), setPageTitle(), setToolbarButtons(),
- * setExercisesButtonMode(), themeForGroup(),
+ * setExercisesButtonMode(), setPagerNav(), hidePagerNav(),
+ * flatSheetIds(), kickerFor(), splitTitle(), themeForGroup(),
  * categoryLabelFor(), subgroupLabelFor(), escapeHtml(), LANG, DATA,
  * EXERCISES) and progress.js (loadProgressStore(), getSheetProgress(),
  * pct(), scoreRatioClass(), averageScore()). Classic scripts sharing
@@ -191,6 +192,7 @@ async function renderSelectionScreen() {
     setPageTitle((LANG.site && LANG.site.title) || "Slovingo");
     setToolbarButtons({});
     setExercisesButtonMode("selection");
+    hidePagerNav();
 
     cardCounter = 0;
     selectedSheetIds = new Set();
@@ -303,7 +305,7 @@ function renderGroupSelectionSection(group, sheets) {
 
     const categoryLabel = categoryLabelFor(group);
     const subgroupLabel = subgroupLabelFor(group);
-    const label = subgroupLabel ? `${categoryLabel} \u00b7 ${subgroupLabel}` : categoryLabel;
+    const label = subgroupLabel ? `${categoryLabel} - ${subgroupLabel}` : categoryLabel;
     const heading = el("h2", { text: `${label} (${sheets.length})` });
 
     const score = averageScore(sheets.map((s) => s.id));
@@ -373,7 +375,7 @@ function renderSelectionCard(sheet, group, numbered) {
         cardCounter += 1;
         children.push(el("span", { className: "index-num", text: String(cardCounter).padStart(2, "0") }));
     }
-    children.push(el("span", { className: "index-card-title", text: sheet.title }));
+    children.push(el("span", { className: "index-card-title", text: splitTitle(sheet.title).title }));
     children.push(el("span", { className: "index-card-badges" }, badges));
 
     const card = el("label", { className: "index-card" }, children);
@@ -426,7 +428,7 @@ function updateLaunchBar() {
 
     const summaryEl = document.getElementById("exo-launch-summary");
     if (selectedSheets.length) {
-        summaryEl.textContent = `${selectedSheets.length} sheet(s) selected \u00b7 ${pool} exercise(s) available`;
+        summaryEl.textContent = `${selectedSheets.length} sheet(s) selected - ${pool} exercise(s) available`;
     } else {
         summaryEl.textContent = "Select at least one sheet to get started.";
     }
@@ -528,6 +530,26 @@ function renderDirectionSelector(current, onChange) {
 // Starting a session
 // ============================================================================
 
+/**
+ * The nearest sheet before/after `sheetId`, in the whole-course
+ * order (see app.js's flatSheetIds()), that actually HAS exercises --
+ * skipping over sheets that don't (Introduction, or an Annex sheet
+ * with no audio-card/translate-table to build exercises from), so
+ * the pager never lands on a dead end.
+ * @param {string} sheetId
+ * @param {1|-1} direction
+ * @returns {string|null}
+ */
+function adjacentExerciseSheetId(sheetId, direction) {
+    const ids = flatSheetIds();
+    let index = ids.indexOf(sheetId) + direction;
+    while (index >= 0 && index < ids.length) {
+        if (EXERCISES.sheets[ids[index]]) return ids[index];
+        index += direction;
+    }
+    return null;
+}
+
 /** @param {URLSearchParams} query */
 function startSessionFromQuery(query) {
     const cardIds = (query.get("cards") || "").split(",").filter(Boolean);
@@ -553,16 +575,42 @@ function startSessionFromQuery(query) {
 
     state.allExercises = validIds.flatMap((id) => EXERCISES.sheets[id].exercises);
     state.sheetId = validIds.length === 1 ? validIds[0] : null;
-    state.sheetTitle = validIds.length === 1
-        ? EXERCISES.sheets[validIds[0]].title
-        : `Mixed session (${validIds.length} sheets)`;
 
     const group = state.sheetId ? findGroupForSheet(state.sheetId) : null;
     applyTheme(group ? themeForGroup(group) : "uvod");
-    setKicker("");
+
+    // Single sheet: same kicker/title split as the sheet page itself
+    // (kickerFor()/splitTitle(), both in app.js) -- "Série Rodina
+    // (1/5)" as the kicker, "Moja rodina" as the title, not the raw
+    // "Série Rodina (1/5) -- Moja rodina" string. A mixed session has
+    // no one sheet to derive a kicker from, so it keeps its own label.
+    if (state.sheetId) {
+        const rawTitle = EXERCISES.sheets[state.sheetId].title;
+        setKicker(kickerFor(group, { id: state.sheetId, title: rawTitle }));
+        state.sheetTitle = splitTitle(rawTitle).title;
+    } else {
+        setKicker("");
+        state.sheetTitle = `Mixed session (${validIds.length} sheets)`;
+    }
     setPageTitle(state.sheetTitle);
     setToolbarButtons({});
     setExercisesButtonMode(state.sheetId ? "back-to-sheet" : "selection", state.sheetId);
+
+    // Pager: only meaningful for a single-sheet session -- jumps
+    // straight to the previous/next practicable sheet's own session
+    // (12 questions, same as the "Exercises" button's direct launch),
+    // skipping the selection screen entirely. Hidden for a mixed
+    // session, same as on the selection screen itself.
+    if (state.sheetId) {
+        const prevId = adjacentExerciseSheetId(state.sheetId, -1);
+        const nextId = adjacentExerciseSheetId(state.sheetId, 1);
+        setPagerNav(
+            prevId ? `#/exercises/session?cards=${encodeURIComponent(prevId)}&n=12` : null,
+            nextId ? `#/exercises/session?cards=${encodeURIComponent(nextId)}&n=12` : null,
+        );
+    } else {
+        hidePagerNav();
+    }
 
     const content = document.getElementById("content");
     content.innerHTML = "";
