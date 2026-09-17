@@ -21,7 +21,8 @@
     "description": "Apprentissage du slovaque - fiches et exercices",
     "theme_color": "#0b4ea2",
     "storage_prefix": "sk-fr",
-    "url_path": "/slovingo/sk-fr/"
+    "url_path": "/slovingo/sk-fr/",
+    "user_name_placeholder": "Ton prénom"
   },
   "categories": {
     "introduction": "Avant de commencer",
@@ -68,6 +69,8 @@
     "theme_system": "Système par défaut",
     "theme_light": "Clair",
     "theme_dark": "Sombre",
+    "settings_profile": "Profil",
+    "profile_name": "Ton nom",
     "settings_dialogue": "Lecture de dialogues",
     "dialogue_mode": "Mode de lecture",
     "dialogue_auto": "Auto (lecture automatique de la séquence)",

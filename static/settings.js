@@ -83,6 +83,75 @@ function resetSettingsToDefaults() {
 }
 
 // ============================================================================
+// User name (profile)
+// ============================================================================
+
+function userNameKey() {
+    const prefix = (LANG && LANG.site && LANG.site.storage_prefix) || "slovingo";
+    return `${prefix}-user-name`;
+}
+
+/**
+ * Load the stored user name, defaulting to empty string.
+ * @returns {string}
+ */
+function loadUserName() {
+    try {
+        return localStorage.getItem(userNameKey()) || "";
+    } catch (err) {
+        return "";
+    }
+}
+
+/**
+ * Save user name to localStorage and update global USER_NAME.
+ * @param {string} name
+ */
+function saveUserName(name) {
+    try {
+        localStorage.setItem(userNameKey(), name);
+    } catch (err) {
+        // ignore
+    }
+    window.USER_NAME = name;
+    updateUserNameInDOM();
+}
+
+/**
+ * Update all [USER_NAME] placeholders in the DOM with the current name.
+ */
+/**
+ * Update all [USER_NAME] placeholders in the DOM with the current name.
+ * Also update all ask-user-name-input fields with the new value.
+ */
+function updateUserNameInDOM() {
+    // Update text nodes that contain [USER_NAME]
+    const walker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        null,
+        false
+    );
+
+    const nodesToUpdate = [];
+    let node;
+    while ((node = walker.nextNode())) {
+        if (node.textContent.includes("[USER_NAME]")) {
+            nodesToUpdate.push(node);
+        }
+    }
+
+    nodesToUpdate.forEach((textNode) => {
+        textNode.textContent = textNode.textContent.replace(/\[USER_NAME\]/g, window.USER_NAME || "");
+    });
+
+    // Update all ask-user-name input fields
+    document.querySelectorAll(".ask-user-name-input").forEach((input) => {
+        input.value = window.USER_NAME || "";
+    });
+}
+
+// ============================================================================
 // Theme mode (light/dark/auto)
 // ============================================================================
 
@@ -182,6 +251,7 @@ function renderSettingsScreen() {
     const content = document.getElementById("content");
     content.innerHTML = "";
 
+    content.appendChild(renderProfileSection());
     content.appendChild(renderThemeSettingsSection());
     content.appendChild(renderAudioSettingsSection());
     content.appendChild(renderDialoguePlaybackSection());
@@ -196,6 +266,35 @@ function settingsSection(titleText, children) {
     section.appendChild(el("h2", { text: titleText }));
     children.forEach((child) => section.appendChild(child));
     return section;
+}
+
+/**
+ * User profile section: name input field.
+ */
+function renderProfileSection() {
+    const rows = [];
+
+    const nameRow = el("div", { className: "settings-row" });
+    nameRow.appendChild(el("label", { text: (LANG.ui && LANG.ui.profile_name) || "Name", attrs: { for: "settings-name" } }));
+    
+    const placeholder = (LANG.site && LANG.site.user_name_placeholder) || "Your name";
+    const nameInput = el("input", { 
+        attrs: { 
+            id: "settings-name", 
+            type: "text",
+            placeholder: placeholder,
+            value: window.USER_NAME || ""
+        } 
+    });
+    
+    nameInput.addEventListener("input", () => {
+        saveUserName(nameInput.value);
+    });
+    
+    nameRow.appendChild(nameInput);
+    rows.push(nameRow);
+
+    return settingsSection((LANG.ui && LANG.ui.settings_profile) || "Profile", rows);
 }
 
 /**

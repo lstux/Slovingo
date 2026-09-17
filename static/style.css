@@ -1131,6 +1131,46 @@ button.index-card {
     color: var(--text);
 }
 
+.settings-row input[type="text"] {
+    font: inherit;
+    padding: 6px 10px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--bg);
+    color: var(--text);
+    flex: 1;
+}
+
+.settings-row input[type="text"]::placeholder {
+    color: var(--text-soft);
+    opacity: 0.6;
+}
+
+/* Inline name input for [ASK_USER_NAME] marker */
+.ask-user-name-input {
+    font: inherit;
+    padding: 4px 8px;
+    margin: 0 2px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--accent);
+    background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+    color: var(--text);
+    font-weight: 500;
+    transition: background .15s, border-color .15s;
+}
+
+.ask-user-name-input:focus {
+    outline: none;
+    background: color-mix(in srgb, var(--accent) 15%, var(--surface));
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.ask-user-name-input::placeholder {
+    color: var(--text-soft);
+    opacity: 0.6;
+}
+
 /* Un slider prend toute la largeur disponible : label au-dessus,
    piste + valeur + bouton d'écoute sur la ligne suivante plutôt que
    comprimés côte à côte comme les autres réglages. */

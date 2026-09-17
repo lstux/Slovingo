@@ -74,6 +74,11 @@ async function boot() {
         applyThemeSetting(themeMode);
     }
 
+    // Load user name from localStorage
+    if (typeof loadUserName === "function") {
+        window.USER_NAME = loadUserName();
+    }
+
     initializeSpeechSynthesis();
 
     document.getElementById("nav-home").addEventListener("click", () => {
@@ -171,8 +176,14 @@ function renderText(text) {
         return "";
     }
 
+    // Replace [USER_NAME] placeholder with the actual user name
+    let working = text.replace(/\[USER_NAME\]/g, window.USER_NAME || "");
+
+    // Mark [ASK_USER_NAME] for later DOM replacement (we'll use a sentinel)
+    working = working.replace(/\[ASK_USER_NAME\]/g, "\u0000ASK_USER_NAME\u0000");
+
     const speakables = [];
-    let working = text.replace(/\[\[(.+?)\]\]/g, (_match, inner) => {
+    working = working.replace(/\[\[(.+?)\]\]/g, (_match, inner) => {
         const index = speakables.length;
         speakables.push(inner.trim());
         return `\u0000SPEAKABLE${index}\u0000`;
@@ -187,12 +198,14 @@ function renderText(text) {
     working = working.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
     working = working.replace(/\*(.+?)\*/g, "<em>$1</em>");
 
+    // Replace sentinels back
     speakables.forEach((inner, index) => {
         const placeholder = `\u0000SPEAKABLE${index}\u0000`;
         const replacement = `<span class="speakable speakable-hint">${escapeHtml(inner)}</span>`;
         working = working.split(placeholder).join(replacement);
     });
 
+    // Keep the ASK_USER_NAME sentinel as-is for now (will be replaced after DOM insert)
     return working;
 }
 
@@ -533,6 +546,9 @@ function renderSheet(sheetId) {
     sheet.content.forEach((block) => {
         content.appendChild(renderBlock(block));
     });
+
+    // Replace [ASK_USER_NAME] sentinels with input elements
+    replaceAskUserNameInputs(content);
 
     initializeAudioCards();
     initializeDialoguePlayback(content);
@@ -1047,6 +1063,67 @@ function playDialogue(audioCards) {
     }
     
     playNextCard();
+}
+
+/**
+ * Replace [ASK_USER_NAME] sentinels in the DOM with actual input elements.
+ * Call this after appending new blocks to the DOM.
+ */
+function replaceAskUserNameInputs(containerElement) {
+    // Find all text nodes and parent elements that might contain the sentinel
+    const walker = document.createTreeWalker(
+        containerElement,
+        NodeFilter.SHOW_TEXT,
+        null,
+        false
+    );
+
+    const nodesToReplace = [];
+    let node;
+    while ((node = walker.nextNode())) {
+        if (node.textContent.includes("\u0000ASK_USER_NAME\u0000")) {
+            nodesToReplace.push(node);
+        }
+    }
+
+    nodesToReplace.forEach((textNode) => {
+        const parent = textNode.parentNode;
+        const parts = textNode.textContent.split("\u0000ASK_USER_NAME\u0000");
+        
+        // Clear the text node
+        textNode.textContent = "";
+
+        parts.forEach((part, index) => {
+            if (index > 0) {
+                // Insert input before this part
+                const input = document.createElement("input");
+                input.className = "ask-user-name-input";
+                input.type = "text";
+                input.placeholder = (LANG.site && LANG.site.user_name_placeholder) || "Your name";
+                input.value = window.USER_NAME || "";
+
+                input.addEventListener("input", () => {
+                    saveUserName(input.value);
+                });
+
+                input.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter") {
+                        saveUserName(input.value);
+                        input.blur();
+                    }
+                });
+
+                parent.insertBefore(input, textNode.nextSibling);
+            }
+
+            if (part) {
+                const newTextNode = document.createTextNode(part);
+                parent.insertBefore(newTextNode, textNode.nextSibling);
+            }
+        });
+
+        parent.removeChild(textNode);
+    });
 }
 
 /** Wire up every .speakable element currently in the DOM. */
