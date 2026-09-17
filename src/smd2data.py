@@ -35,6 +35,7 @@ CATEGORIES = ["introduction", "series", "dialog", "vocabulary", "annex"]
 
 SPEAKABLE_RE = re.compile(r"\{\{(.+?)\}\}")
 IMAGE_RE = re.compile(r"^@\s+(\S+)\s*\|\s*(.+)$")
+IMAGE_MARKDOWN_RE = re.compile(r"^!\[([^\]]*)\]\(([^\s)]+)(?:\s+[\"']([^\"']*)[\"'])?\s*\)$")
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+)$")
 UNORDERED_ITEM_RE = re.compile(r"^[-*]\s+(.+)$")
 ORDERED_ITEM_RE = re.compile(r"^\d+\.\s+(.+)$")
@@ -328,6 +329,8 @@ def parse_content(
         # after the title) is consumed separately by parse_sheet();
         # this only fires for an "@ ..." line appearing later in the
         # body, which is tolerated but not expected in current sheets.
+        # Supports both SMD format "@ url | caption" and
+        # classic Markdown format "![alt](url)" or "![alt](url "title")".
         img_match = IMAGE_RE.match(stripped)
         if img_match:
             flush_list()
@@ -335,6 +338,20 @@ def parse_content(
             blocks.append({
                 "type": "image",
                 "src": src,
+                "caption": resolve_speakable(caption),
+            })
+            index += 1
+            continue
+        
+        img_markdown_match = IMAGE_MARKDOWN_RE.match(stripped)
+        if img_markdown_match:
+            flush_list()
+            alt_text, url, title = img_markdown_match.groups()
+            # Use title if present, otherwise use alt text
+            caption = title if title else alt_text
+            blocks.append({
+                "type": "image",
+                "src": url,
                 "caption": resolve_speakable(caption),
             })
             index += 1
@@ -433,6 +450,61 @@ def parse_content(
 # Whole-sheet parsing
 # ============================================================================
 
+def mark_dialogue_sections(blocks: list[dict[str, Any]]) -> None:
+    """Mark sections that contain only audio-cards with speakers as dialogues.
+    
+    A section is dialogue if:
+    - It's bounded by H2/H3 headings (or start/end of content)
+    - It contains ONLY audio-card blocks
+    - EVERY audio-card has a non-None speaker (emoji)
+    
+    Modifies the heading block that precedes a dialogue section by adding
+    `is_dialogue_section: true`.
+    
+    Args:
+        blocks: The parsed content blocks (modified in-place).
+    """
+    i = 0
+    while i < len(blocks):
+        block = blocks[i]
+        
+        # Look for H2/H3 headings
+        if block.get("type") == "heading" and block.get("level") in (2, 3):
+            # Find the start and end of the section after this heading
+            section_start = i + 1
+            section_end = section_start
+            
+            # Find the next H2/H3 heading or end of blocks
+            while section_end < len(blocks):
+                if (blocks[section_end].get("type") == "heading" and 
+                    blocks[section_end].get("level") in (2, 3)):
+                    break
+                section_end += 1
+            
+            # Check if this section is a dialogue
+            is_dialogue = True
+            if section_start < section_end:
+                for j in range(section_start, section_end):
+                    block_j = blocks[j]
+                    # Must be an audio-card
+                    if block_j.get("type") != "audio-card":
+                        is_dialogue = False
+                        break
+                    # And must have a speaker (emoji)
+                    if not block_j.get("speaker"):
+                        is_dialogue = False
+                        break
+            else:
+                # Empty section
+                is_dialogue = False
+            
+            # Mark the heading if it's a dialogue section
+            if is_dialogue:
+                block["is_dialogue_section"] = True
+        
+        i += 1
+
+
 def parse_sheet(md_text: str, lang_cfg: dict[str, Any]) -> dict[str, Any]:
     """Parse a full SMD sheet: title, optional leading illustration, body.
 
@@ -461,11 +533,20 @@ def parse_sheet(md_text: str, lang_cfg: dict[str, Any]) -> dict[str, Any]:
     while idx < n and not lines[idx].strip():
         idx += 1
     if idx < n:
-        img_match = IMAGE_RE.match(lines[idx].strip())
+        stripped_line = lines[idx].strip()
+        img_match = IMAGE_RE.match(stripped_line)
         if img_match:
             src, caption = img_match.groups()
             image = {"src": src, "caption": resolve_speakable(caption)}
             idx += 1
+        else:
+            # Try classic Markdown format: ![alt](url) or ![alt](url "title")
+            img_markdown_match = IMAGE_MARKDOWN_RE.match(stripped_line)
+            if img_markdown_match:
+                alt_text, url, title = img_markdown_match.groups()
+                caption = title if title else alt_text
+                image = {"src": url, "caption": resolve_speakable(caption)}
+                idx += 1
 
     generator_cfg = lang_cfg.get("generator", {})
     body = "\n".join(lines[idx:])
@@ -474,6 +555,9 @@ def parse_sheet(md_text: str, lang_cfg: dict[str, Any]) -> dict[str, Any]:
         target_headers=generator_cfg.get("target_headers", []),
         target_header_roots=generator_cfg.get("target_header_roots", []),
     )
+    
+    # Mark dialogue sections (H2/H3 headings followed by only audio-cards with speakers)
+    mark_dialogue_sections(content)
 
     return {"title": title, "image": image, "content": content}
 

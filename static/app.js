@@ -68,6 +68,12 @@ async function boot() {
         applyExerciseDefaultsFromSettings();
     }
 
+    // Apply saved theme preference (light/dark/auto)
+    const themeMode = typeof loadThemeSetting === "function" ? loadThemeSetting() : "auto";
+    if (typeof applyThemeSetting === "function") {
+        applyThemeSetting(themeMode);
+    }
+
     initializeSpeechSynthesis();
 
     document.getElementById("nav-home").addEventListener("click", () => {
@@ -529,6 +535,7 @@ function renderSheet(sheetId) {
     });
 
     initializeAudioCards();
+    initializeDialoguePlayback(content);
     initializeSpeakableElements();
     updateTtsAvailability();
 }
@@ -697,14 +704,15 @@ let ttsWarningShown = false;
  * available; otherwise auto-detect: exact tts_code -> same language
  * prefix -> voice name containing voice_hint -> none.
  */
-function findTargetVoice() {
+function findTargetVoice(preferredVoiceURI) {
     const voices = window.speechSynthesis.getVoices();
     if (!voices.length) {
         return null;
     }
 
-    if (SETTINGS && SETTINGS.voiceURI) {
-        const chosen = voices.find((v) => v.voiceURI === SETTINGS.voiceURI);
+    const uri = preferredVoiceURI !== undefined ? preferredVoiceURI : (SETTINGS && SETTINGS.voiceURI);
+    if (uri) {
+        const chosen = voices.find((v) => v.voiceURI === uri);
         if (chosen) return chosen;
     }
 
@@ -748,11 +756,23 @@ function showTtsWarning() {
  * @param {string} text
  * @param {number} [rate] Defaults to SETTINGS.rate (the "normal"
  *     speed from Settings) when omitted. Pass an explicit rate for
- *     "slow" playback (SETTINGS.rate * SETTINGS.slowRatio) or the
- *     Settings screen's live preview.
+ *     "slow" playback (SETTINGS.rate * SETTINGS.slowRatio), a
+ *     character override, or the Settings screen's live preview.
  * @param {number} [pitch] Defaults to SETTINGS.pitch when omitted.
+ * @param {string} [voiceURI] Defaults to SETTINGS.voiceURI (the
+ *     global voice choice, itself "automatic" when null) when
+ *     omitted. Pass a specific voiceURI to speak as one dialogue
+ *     character (see effectiveCharacterVoice() in settings.js).
  */
-function speak(text, rate, pitch) {
+/**
+ * Speak text using Web Speech API.
+ * @param {string} text The text to speak
+ * @param {number} [rate] Playback rate (default from SETTINGS)
+ * @param {number} [pitch] Voice pitch (default from SETTINGS)
+ * @param {string} [voiceURI] Voice URI (default automatic)
+ * @param {HTMLElement} [highlightElement] Element to add .speaking class during playback
+ */
+function speak(text, rate, pitch, voiceURI, highlightElement) {
     if (!("speechSynthesis" in window)) {
         alert("Speech synthesis is not available on this device.");
         return;
@@ -770,10 +790,21 @@ function speak(text, rate, pitch) {
     currentUtterance.lang = LANG.target_lang.tts_code;
     currentUtterance.rate = effectiveRate;
     currentUtterance.pitch = effectivePitch;
-    const voice = findTargetVoice();
+    const voice = findTargetVoice(voiceURI);
     if (voice) {
         currentUtterance.voice = voice;
     }
+    
+    // Handle visual feedback: add .speaking class to the text element during playback
+    if (highlightElement) {
+        currentUtterance.onstart = () => {
+            highlightElement.classList.add("speaking");
+        };
+        currentUtterance.onend = () => {
+            highlightElement.classList.remove("speaking");
+        };
+    }
+    
     window.speechSynthesis.speak(currentUtterance);
 }
 
@@ -838,13 +869,19 @@ function toggleAllTranslations() {
 /**
  * Wire up every .audio-card currently in the DOM: click-to-speak on
  * the sentence, a toggle button for its translation, hidden by
- * default.
+ * default. Cards from a dialogue carry a `speaker` emoji
+ * (card.dataset.speaker, set by renderAudioCard()) -- their voice,
+ * rate and pitch resolve through effectiveCharacterVoice() (in
+ * settings.js), so a dialogue plays each character in their own
+ * configured voice if the person set one, and the global voice
+ * otherwise.
  */
 function initializeAudioCards() {
     document.querySelectorAll(".audio-card").forEach((card) => {
         const text = card.querySelector(".audio-text");
         if (!text) return;
-        text.onclick = () => speak(text.textContent.trim());
+        const voice = effectiveCharacterVoice(card.dataset.speaker);
+        text.onclick = () => speak(text.textContent.trim(), voice.rate, voice.pitch, voice.voiceURI, text);
 
         const translation = card.querySelector(".audio-translation");
         if (translation) {
@@ -863,6 +900,153 @@ function initializeAudioCards() {
         }
         card.appendChild(buttons);
     });
+}
+
+/**
+ * Detect dialogue sections (headings followed by only audio-cards with speakers)
+ * and add a "Play dialogue" button before the first audio-card in each section.
+ */
+function initializeDialoguePlayback(contentElement) {
+    const headings = contentElement.querySelectorAll("h2, h3");
+    
+    headings.forEach((heading) => {
+        let nextElement = heading.nextElementSibling;
+        const audioCards = [];
+        let isDialogue = true;
+        
+        // Collect all audio-cards until we hit a heading or non-audio-card
+        while (nextElement && nextElement.classList) {
+            if (nextElement.tagName.match(/^H[2-6]$/)) break;
+            if (nextElement.classList.contains("audio-card")) {
+                audioCards.push(nextElement);
+                nextElement = nextElement.nextElementSibling;
+            } else if (nextElement.classList.contains("paragraph") || 
+                       nextElement.classList.contains("list") ||
+                       nextElement.classList.contains("blockquote")) {
+                // Non-audio-card content ends the dialogue section
+                isDialogue = false;
+                break;
+            } else {
+                nextElement = nextElement.nextElementSibling;
+            }
+        }
+        
+        // Check if ALL audio-cards have speakers (are dialogue lines)
+        if (audioCards.length > 0 && isDialogue) {
+            const allHaveSpeaker = audioCards.every((card) => {
+                const textEl = card.querySelector(".audio-text");
+                // Check if the text starts with an emoji (speaker marker)
+                return textEl && /^\p{Emoji}/u.test(textEl.textContent);
+            });
+            
+            if (allHaveSpeaker) {
+                // Add "Play dialogue" button before the first audio-card
+                const playButton = document.createElement("button");
+                playButton.className = "dialogue-play-btn";
+                playButton.innerHTML = "▶ " + ((LANG.ui && LANG.ui.play_dialogue) || "Play dialogue");
+                playButton.type = "button";
+                playButton.onclick = () => playDialogue(audioCards);
+                
+                audioCards[0].insertAdjacentElement("beforebegin", playButton);
+            }
+        }
+    });
+}
+
+/**
+ * Play a sequence of audio-cards (dialogue lines) in order.
+ * Mode: "auto" = play all in sequence with pauses, "manual" = wait for user
+ */
+function playDialogue(audioCards) {
+    let currentIndex = 0;
+    let isPlaying = true;
+    let continueButton = null;
+    
+    const clearContinueButton = () => {
+        if (continueButton && continueButton.parentNode) {
+            continueButton.remove();
+        }
+        continueButton = null;
+    };
+    
+    const playNextCard = () => {
+        if (currentIndex >= audioCards.length || !isPlaying) {
+            isPlaying = false;
+            clearContinueButton();
+            if (window._dialogueCleanup) {
+                window._dialogueCleanup();
+                window._dialogueCleanup = null;
+            }
+            return;
+        }
+        
+        const card = audioCards[currentIndex];
+        const textEl = card.querySelector(".audio-text");
+        const voice = effectiveCharacterVoice(card.dataset.speaker);
+        
+        if (!textEl) {
+            currentIndex++;
+            playNextCard();
+            return;
+        }
+        
+        const text = textEl.textContent.trim();
+        
+        stopSpeaking();
+        clearContinueButton();
+        currentUtterance = new SpeechSynthesisUtterance(text);
+        currentUtterance.lang = LANG.target_lang.tts_code;
+        currentUtterance.rate = voice.rate || (SETTINGS ? SETTINGS.rate : 0.9);
+        currentUtterance.pitch = voice.pitch || (SETTINGS ? SETTINGS.pitch : 1.0);
+        
+        const voiceObj = findTargetVoice(voice.voiceURI);
+        if (voiceObj) {
+            currentUtterance.voice = voiceObj;
+        }
+        
+        textEl.classList.add("speaking");
+        
+        currentUtterance.onend = () => {
+            textEl.classList.remove("speaking");
+            currentIndex++;
+            
+            const mode = (SETTINGS && SETTINGS.dialoguePlaybackMode) || "auto";
+            const pauseDuration = (SETTINGS && SETTINGS.dialoguePauseDuration) || 2;
+            
+            if (mode === "auto") {
+                setTimeout(playNextCard, pauseDuration * 1000);
+            } else if (currentIndex < audioCards.length) {
+                // Manual mode: show "Continue" button
+                const nextCard = audioCards[currentIndex];
+                continueButton = document.createElement("button");
+                continueButton.className = "dialogue-continue-btn";
+                continueButton.textContent = (LANG.ui && LANG.ui.dialogue_continue) || "Continue (Space)";
+                continueButton.type = "button";
+                continueButton.onclick = () => playNextCard();
+                nextCard.insertAdjacentElement("beforebegin", continueButton);
+            }
+        };
+        
+        window.speechSynthesis.speak(currentUtterance);
+    };
+    
+    // Handle Space key for manual mode
+    const mode = (SETTINGS && SETTINGS.dialoguePlaybackMode) || "auto";
+    if (mode === "manual") {
+        const handleSpace = (e) => {
+            if (e.code === "Space" && isPlaying && currentIndex < audioCards.length) {
+                e.preventDefault();
+                playNextCard();
+            }
+        };
+        window.addEventListener("keydown", handleSpace);
+        window._dialogueCleanup = () => {
+            window.removeEventListener("keydown", handleSpace);
+            clearContinueButton();
+        };
+    }
+    
+    playNextCard();
 }
 
 /** Wire up every .speakable element currently in the DOM. */

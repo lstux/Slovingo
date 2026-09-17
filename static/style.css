@@ -660,6 +660,26 @@ footer {
     text-wrap: pretty;
 }
 
+/* Gentle but visible pulse during TTS playback: background + opacity */
+.audio-text.speaking {
+    animation: tts-pulse 1.2s ease-in-out infinite;
+    background: color-mix(in srgb, var(--accent) 15%, transparent);
+    border-radius: var(--radius-sm);
+    padding: 2px 6px;
+    margin: -2px -6px;
+}
+
+@keyframes tts-pulse {
+    0%, 100% { 
+        opacity: 0.8;
+        background-color: color-mix(in srgb, var(--accent) 15%, transparent);
+    }
+    50% { 
+        opacity: 1;
+        background-color: color-mix(in srgb, var(--accent) 28%, transparent);
+    }
+}
+
 .audio-spoken { display: none; }
 
 .audio-buttons { grid-column: 2; grid-row: 1; display: flex; gap: 6px; flex-shrink: 0; }
@@ -679,6 +699,45 @@ footer {
 
 .audio-buttons button:hover { background: color-mix(in srgb, var(--accent) 18%, var(--surface-2)); }
 .audio-buttons button:active { transform: scale(0.9); }
+
+/* Dialogue playback button */
+.dialogue-play-btn {
+    display: block;
+    margin: 16px 0 12px 0;
+    padding: 10px 16px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 0.95em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .15s, transform .1s;
+}
+
+.dialogue-play-btn:hover { background: color-mix(in srgb, var(--accent) 115%, var(--text)); }
+.dialogue-play-btn:active { transform: scale(0.95); }
+
+/* Continue button for manual dialogue mode */
+.dialogue-continue-btn {
+    display: inline-block;
+    margin: 12px 0;
+    padding: 8px 14px;
+    background: color-mix(in srgb, var(--accent) 85%, var(--surface-2));
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-sm);
+    font-size: 0.9em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .12s, color .12s, transform .1s;
+}
+
+.dialogue-continue-btn:hover { 
+    background: var(--accent);
+    color: white;
+}
+.dialogue-continue-btn:active { transform: scale(0.95); }
 
 .audio-translation {
     grid-column: 1 / -1;
@@ -1133,6 +1192,46 @@ button.index-card {
 
 .settings-danger-btn:hover { border-color: var(--accent); }
 .settings-danger-btn + .settings-danger-btn { margin-top: 10px; }
+
+/* One collapsible <details> per dialogue character -- keeps the page
+   manageable once there are more than a couple, reusing the same
+   .settings-row / .settings-row-slider rows as the rest of the page. */
+.settings-character {
+    border-top: 1px solid var(--line);
+    padding: 10px 0;
+}
+
+.settings-character:first-of-type { border-top: none; padding-top: 0; }
+
+.settings-character > summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+}
+
+.settings-character > summary::-webkit-details-marker,
+.settings-character > summary::marker {
+    display: none;
+    content: "";
+}
+
+.settings-character[open] > summary { margin-bottom: 6px; }
+
+.settings-reset-btn {
+    flex: 0 0 auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--bg);
+    color: var(--text-soft);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color .15s ease, opacity .15s ease;
+}
+
+.settings-reset-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--text); }
+.settings-reset-btn:disabled { opacity: 0.3; cursor: default; }
 
 
 /* ==========================================================================

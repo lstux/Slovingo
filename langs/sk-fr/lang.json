@@ -5,7 +5,8 @@
     "tts_code": "sk-SK",
     "flag": "🇸🇰",
     "css_class": "col-target",
-    "voice_hint": "slovak"
+    "voice_hint": "slovak",
+    "tts_sample_phrase": "Vitajte na Slovingu, slovačtinu sa budete učiť s radosťou!"
   },
   "native_lang": {
     "code": "fr",
@@ -59,7 +60,21 @@
     "reset_settings": "↩️ Réinitialiser les réglages",
     "reset_settings_confirm": "Réinitialiser tous les réglages de cette page à leur valeur par défaut ?",
     "settings_data": "Données",
-    "voice_pitch": "Tonalité de la voix"
+    "voice_pitch": "Tonalité de la voix",
+    "settings_characters": "Personnages",
+    "voice_use_default": "Voix par défaut",
+    "appearance": "Apparence",
+    "theme_mode": "Thème",
+    "theme_system": "Système par défaut",
+    "theme_light": "Clair",
+    "theme_dark": "Sombre",
+    "settings_dialogue": "Lecture de dialogues",
+    "dialogue_mode": "Mode de lecture",
+    "dialogue_auto": "Auto (lecture automatique de la séquence)",
+    "dialogue_manual": "Manuel (cliquer pour continuer)",
+    "dialogue_pause": "Pause entre les répliques",
+    "play_dialogue": "Lire le dialogue",
+    "dialogue_continue": "Continuer (Espace)"
   },
   "generator": {
     "target_headers": [
