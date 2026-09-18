@@ -161,6 +161,7 @@ Le petit mot **sa** est indispensable : sans lui, *prechádzať* voudrait dire t
 > Film = le film
 > bol = était
 > nudný = ennuyeux
++ « film » est un mot évident, pas encore présenté formellement dans la série.
 
 ! Máte lístky na festival?
 > Vous avez des billets pour le festival ?

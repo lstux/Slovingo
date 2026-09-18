@@ -158,7 +158,7 @@ La règle utile : **les féminins en -a passent à -u**. Les masculins d'objets 
 ! Hodiny sú na stene.
 > L'horloge est au mur.
 > Hodiny = l'horloge
-> sú = est
+> sú = sont
 > na = sur
 > stene = le mur
 + « hodiny » est toujours au pluriel, comme dvere. D'où « sú ».

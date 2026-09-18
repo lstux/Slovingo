@@ -152,6 +152,6 @@ Eric et Marek se tutoient déjà, comme dans la série Čas.
 > Le café est intéressant et proche de l'arrêt.
 > Kaviareň = le café
 > je = est
-> zaujímavá = intéressant
+> zaujímavá = intéressante
 > a = et
 > blízko zastávky = proche de l'arrêt

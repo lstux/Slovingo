@@ -1,4 +1,4 @@
-# 🇸🇰 Mémo 2 — Prononciation slovaque
+# 🇸🇰 Introduction — Prononciation slovaque
 
 > Le slovaque se lit presque comme il s'écrit.
 > Une fois les quelques lettres particulières maîtrisées, la prononciation devient beaucoup plus régulière qu'en français.
@@ -14,9 +14,8 @@ En slovaque, les signes diacritiques font partie intégrante de l'alphabet : ils
 |---|---|---|---|
 | ´ | accent aigu | dĺžeň | allonge la voyelle |
 | ˇ | accent circonflexe inversé / caron | mäkčeň | rend la consonne "douce" |
-| ¨ | tréma | dve bodky | modifie la prononciation de certaines voyelles |
+| ¨ | tréma | prehláska (familièrement "dve bodky") | modifie la prononciation de certaines voyelles |
 | ˆ | accent circonflexe | vokáň | uniquement sur ô |
-| ˘ | brève | mäkčeň (sur ĕ anciennement) | indique une modification du son |
 
 ---
 
@@ -33,7 +32,7 @@ Une voyelle longue dure environ deux fois plus longtemps.
 | e | deň | è ouvert |
 | é | méta | é long |
 | i | vidím | i comme en français |
-| í | bílý | ii long |
+| í | prší | ii long |
 | o | dom | o comme "eau" |
 | ó | tón | oo long |
 | u | ruka | ou |
@@ -61,7 +60,7 @@ Une voyelle longue dure environ deux fois plus longtemps.
 | ň | kôň | gn comme "montagne" |
 | ľ | ľudia | l mouillé |
 | r | ruka | r roulé |
-| ŕ | stŕp | r roulé long |
+| ŕ | vŕba | r roulé long |
 
 ---
 
@@ -69,49 +68,55 @@ Une voyelle longue dure environ deux fois plus longtemps.
 
 ## Č = "tch"
 
-
-
-> Č sa vyslovuje ako "tch" vo francúzskom mot "tchèque".
+! čas
+> le temps
+> čas = temps
++ Le č se prononce "tch", comme dans le mot français "tchèque".
 
 ---
 
 ## Š = "ch"
 
-
-
-> Š correspond au son "ch" français.
+! škola
+> l'école
+> škola = école
++ Le š correspond au son "ch" du français.
 
 ---
 
 ## Ž = "j"
 
-
-
-> Ž correspond au son du "j" dans "journal".
+! žena
+> une femme
+> žena = femme
++ Le ž correspond au son du "j" dans "journal".
 
 ---
 
 ## C = "ts"
 
-
-
-> C n'est jamais prononcé comme un "k" ou un "s".
+! cena
+> le prix
+> cena = prix
++ Le c n'est jamais prononcé comme un "k" ou un "s" : toujours "ts".
 
 ---
 
 ## J = "y"
 
-
-
-> Le j slovaque correspond au y français.
+! ja
+> moi / je
+> ja = moi
++ Le j slovaque correspond toujours au son "y" français, jamais au "j" de "jour".
 
 ---
 
 ## CH = son guttural
 
-
-
-> Le son est proche du "ch" allemand dans Bach.
+! chlieb
+> le pain
+> chlieb = pain
++ Le son est proche du "ch" allemand dans "Bach".
 
 ---
 
@@ -162,7 +167,9 @@ Contrairement au français, les syllabes gardent une longueur et une netteté as
 
 Le r est roulé comme dans beaucoup de langues slaves.
 
-
+! ruka
+> la main
+> ruka = main
 
 ---
 
@@ -186,13 +193,14 @@ Le slovaque ne les utilise pas.
 
 # 7. Petit entraînement de lecture
 
-Lire lentement :
+Lire lentement, en posant chaque son :
 
-
-
-
-
-
+! Dobrý deň, ako sa máte? Ďakujem, dobre.
+> Bonjour, comment allez-vous ? Merci, ça va bien.
+> Dobrý deň = bonjour
+> ako sa máte = comment vous portez-vous
+> Ďakujem, dobre = merci, bien
++ Une bonne phrase pour s'entraîner : elle contient dĺžeň (á, ý), mäkčeň (ď) et l'accent tonique sur la première syllabe de chaque mot.
 
 ---
 

@@ -8,7 +8,7 @@ Comprendre le balisage des sentiers, et parler de la difficulté du parcours. Vo
 
 ## Les nouveaux mots
 
-| Slovaky | Français |
+| Slovaque | Français |
 |----------|----------|
 | značka | le balisage, la marque |
 | červená | rouge (balisage) |
@@ -79,7 +79,7 @@ Le préfixe **naj-** devant un comparatif donne le superlatif : le plus, la plus
 > Le balisage vert est court et facile.
 > Zelená značka = le balisage vert
 > je = est
-> krátka = court
+> krátka = courte
 > a = et
 > ľahká = facile
 
@@ -135,7 +135,7 @@ Le préfixe **naj-** devant un comparatif donne le superlatif : le plus, la plus
 
 ## Vocabulaire complémentaire
 
-| Slovaky | Français |
+| Slovaque | Français |
 |----------|----------|
 | trasa | le parcours, l'itinéraire |
 | smerovník | le poteau indicateur |
@@ -178,7 +178,7 @@ Le préfixe **naj-** devant un comparatif donne le superlatif : le plus, la plus
 > L'itinéraire vers le sommet est long, mais la vue en vaut la peine.
 > Trasa na vrchol = l'itinéraire vers le sommet
 > je = est
-> dlhá = long
+> dlhá = longue
 > ale = mais
 > výhľad = la vue
 > stojí za to = en vaut la peine

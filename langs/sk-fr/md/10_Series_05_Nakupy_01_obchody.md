@@ -98,7 +98,7 @@ Après **do**, le nom passe au génitif : c'est une nouvelle terminaison, mais t
 
 **Le marché du samedi matin.** Le {{trh}} reste le rendez-vous des habitués pour les légumes de saison et le fromage de producteur, souvent devant l'église ou sur la place principale. On y négocie rarement le prix, contrairement à d'autres pays d'Europe centrale.
 
-**Consigne sur les bouteilles.** Depuis peu, les bouteilles et canettes en plastique portent une consigne remboursée au retour, {{záloha}}. Des machines dédiées trônent à l'entrée de la plupart des supermarchés.
+**Consigne sur les bouteilles.** Depuis 2022, les bouteilles et canettes en plastique portent une consigne remboursée au retour, {{záloha}}. Des machines dédiées trônent à l'entrée de la plupart des supermarchés.
 
 ---
 

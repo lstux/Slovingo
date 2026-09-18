@@ -8,7 +8,7 @@ Chaque jour de la semaine sainte porte un nom et une coutume particulière. On c
 
 ## Les nouveaux mots
 
-| Slovaky | Français |
+| Slovaque | Français |
 |----------|----------|
 | Kvetná nedeľa | le dimanche des Rameaux |
 | Zelený štvrtok | le jeudi saint |
@@ -117,7 +117,7 @@ La négation **ne-** se colle directement devant le verbe conjugué, exactement 
 
 ## 🇸🇰 Coin slovaque
 
-**Le vendredi saint est un jour officiellement férié.** Depuis peu, {{Veľký piatok}} s'ajoute au lundi de Pâques comme jour chômé, ce qui a considérablement changé le rythme de cette semaine pour beaucoup de familles slovaques.
+**Le vendredi saint est un jour officiellement férié depuis longtemps.** {{Veľký piatok}} est jour chômé en Slovaquie depuis le début des années 1990, au même titre que le lundi de Pâques — bien avant l'indépendance du pays en 1993.
 
 **Le jeudi saint marque la fin du silence des cloches.** Selon la tradition, les cloches des églises se taisent entre le Zelený štvrtok et la veillée pascale, remplacées par des crécelles en bois qu'on entend résonner dans certains villages.
 
@@ -127,7 +127,7 @@ La négation **ne-** se colle directement devant le verbe conjugué, exactement 
 
 ## Vocabulaire complémentaire
 
-| Slovaky | Français |
+| Slovaque | Français |
 |----------|----------|
 | pôst | le jeûne, le carême |
 | zvon | la cloche |

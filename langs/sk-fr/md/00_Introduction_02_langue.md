@@ -1,4 +1,4 @@
-# 🇸🇰 Mémo — Le slovaque, une langue slave
+# 🇸🇰 Introduction — Le slovaque, une langue slave
 
 Avant de plonger dans le vocabulaire et la grammaire, qui parle slovaque, d'où vient cette langue, et à quelle famille elle appartient?
 
@@ -16,7 +16,7 @@ On trouve aussi des communautés slovaques en dehors du pays :
 | Hongrie | Minorité slovaque historique |
 | République tchèque | Forte présence, intercompréhension facile |
 | États-Unis / Canada | Diaspora issue des vagues d'émigration du 19e-20e siècle |
-| Rhone-Aples | Une centaine, à vérifier :) |
+| Rhône-Alpes | Une centaine, à vérifier :) |
 | Lyon-Villeurbanne | Au moins une perle c'est sûr |
 
 Ce n'est donc pas une langue totalement confidentielle : petite en nombre, mais bien vivante et présente sur plusieurs continents.

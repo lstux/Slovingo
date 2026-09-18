@@ -66,7 +66,7 @@ Ce n'est pas une décoration : le genre décide de la forme des adjectifs, des p
 > Le salon est grand.
 > Obývačka = le salon
 > je = est
-> veľká = grand
+> veľká = grande
 + En slovaque, obývačka est féminin : d'où « veľká » et non « veľký ».
 
 ! Kde je kúpeľňa?
@@ -158,5 +158,5 @@ Ce n'est pas une décoration : le genre décide de la forme des adjectifs, des p
 > Le toit est grand.
 > Strecha = le toit
 > je = est
-> veľká = grand
+> veľká = grande
 + strecha est féminin en slovaque, alors que « toit » est masculin en français. C'est fréquent : le genre ne se traduit pas.

@@ -72,7 +72,7 @@ Comme en français, on utilise « avoir » et non « être ».
 ! Raňajky sú o siedmej.
 > Le petit-déjeuner est à sept heures.
 > Raňajky = le petit-déjeuner
-> sú = est
+> sú = sont
 > o siedmej = à sept heures
 + « raňajky » n'existe qu'au pluriel, d'où « sú » et non « je ».
 
@@ -181,6 +181,7 @@ Comme en français, on utilise « avoir » et non « être ».
 > potom = ensuite
 > pijem = je bois
 > kávu = un café
++ « káva » (le café) est un mot bonus, pas encore vu dans la série — retiens juste la phrase.
 
 ! Si smädný?
 > Tu as soif ?

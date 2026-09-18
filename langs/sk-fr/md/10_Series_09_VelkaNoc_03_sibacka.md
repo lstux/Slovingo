@@ -8,7 +8,7 @@ La coutume la plus déroutante de Pâques en Slovaquie : le lundi de Pâques, ga
 
 ## Les nouveaux mots
 
-| Slovaky | Français |
+| Slovaque | Français |
 |----------|----------|
 | šibať | fouetter (symboliquement, rituellement) |
 | poliať | arroser |
@@ -122,7 +122,7 @@ Après « dať » (donner), la personne qui reçoit se met au datif : *chlapcom*
 
 ## Vocabulaire complémentaire
 
-| Slovaky | Français |
+| Slovaque | Français |
 |----------|----------|
 | zvyk | la coutume |
 | parfum | le parfum |

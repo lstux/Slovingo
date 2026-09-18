@@ -86,7 +86,7 @@ Les féminins en -a passent à -e ou -i, les masculins prennent -e. Ne cherche p
 ! Dvere sú tam.
 > La porte est là-bas.
 > Dvere = la porte
-> sú = est
+> sú = sont
 > tam = là-bas
 + « dvere » n'existe qu'au pluriel en slovaque, comme « ciseaux » en français. D'où « sú » et non « je ».
 

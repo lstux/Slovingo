@@ -119,7 +119,7 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 ! Ovocie je čerstvé a veľmi sladké.
 > Les fruits sont frais et très sucrés.
 > Ovocie = les fruits
-> je = sont
+> je = est
 > čerstvé = frais
 > a = et
 > veľmi = très

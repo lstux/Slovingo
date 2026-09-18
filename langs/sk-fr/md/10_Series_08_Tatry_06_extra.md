@@ -8,7 +8,7 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 
 ## Tout le vocabulaire de la série
 
-| Slovaky | Français |
+| Slovaque | Français |
 |----------|----------|
 | hora | la montagne |
 | vrch | le sommet |
@@ -27,15 +27,21 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 | môcť | pouvoir |
 | turistické topánky | les chaussures de randonnée |
 | palice | les bâtons |
+| voda | l'eau |
 | jedlo | la nourriture |
 | lekárnička | la trousse de secours |
 | baterka | la lampe de poche |
 | stan | la tente |
 | spací vak | le sac de couchage |
+| oblak | le nuage |
 | únava | la fatigue |
 | sila | la force |
 | odpočinok | le repos |
 | značka | le balisage |
+| červená | rouge (balisage) |
+| modrá | bleu (balisage) |
+| žltá | jaune (balisage) |
+| zelená | vert (balisage) |
 | náročný | difficile |
 | ľahký | facile |
 | trasa | le parcours |
@@ -51,6 +57,7 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 | čaj | le thé |
 | unavený | fatigué |
 | odpočívať | se reposer |
+| by | particule du conditionnel |
 | posteľ | le lit |
 | deka | la couverture |
 | sprcha | la douche |

@@ -90,9 +90,9 @@ Les transports en commun. Et la distinction entre **ísť** (un trajet précis) 
 ! MHD je v Bratislave dobrá.
 > Les transports en commun sont bons à Bratislava.
 > MHD = les transports en commun
-> je = sont
+> je = est
 > v Bratislave = à Bratislava
-> dobrá = bons
+> dobrá = bonne
 
 ---
 

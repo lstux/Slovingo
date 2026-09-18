@@ -106,7 +106,7 @@ Le passé se forme avec le radical du verbe + **-l** (masculin) ou **-la** (fém
 
 ## Vocabulaire complémentaire
 
-| Slovaky | Français |
+| Slovaque | Français |
 |----------|----------|
 | vosk | la cire |
 | farba | la teinture, la couleur |

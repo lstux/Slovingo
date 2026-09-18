@@ -2,7 +2,7 @@
 
 @ https://commons.wikimedia.org/wiki/Special:FilePath/Map_of_the_Slovak_Diaspora_in_the_World.svg?width=800 | Carte de la diaspora slovaque dans le monde — Wikimedia Commons
 
-Après le récit, Andrea et Eric referment ensemble ce cycle d'histoires — celui qui a commencé avec un camp de pionniers dans les années 80, et se termine ici, chez eux.
+Après le récit, Andrea et Eric referment ensemble ce cycle d'histoires — celui qui a commencé avec un camp de pionniers dans les années 80, et se termine ici, sur cette question du chez-soi.
 
 ---
 
@@ -14,34 +14,48 @@ Après le récit, Andrea et Eric referment ensemble ce cycle d'histoires — cel
 
 **Le retour au pays n'est ni automatique ni perçu comme un échec.** Contrairement à certains discours plus anciens qui présentaient l'émigration comme provisoire par nature, la génération d'Andrea a normalisé l'idée qu'on puisse construire sa vie ailleurs durablement, tout en gardant un lien fort avec la Slovaquie — visites régulières, transmission de la langue, attachement culturel.
 
-**La question de la langue transmise aux enfants ou aux proches devient centrale pour cette diaspora.** Beaucoup d'émigrés slovaques en couple avec un partenaire étranger se retrouvent, comme Andrea, dans la position d'enseigner leur langue maternelle à quelqu'un qui n'a aucun lien préalable avec la Slovaquie — une situation de plus en plus courante à mesure que les mobilités européennes se banalisent.
+**Revenir s'accompagne souvent d'un choc culturel inversé.** Après plusieurs années à l'étranger, beaucoup de Slovaques de retour au pays décrivent une adaptation presque aussi longue que celle vécue à l'aller : des habitudes prises ailleurs, un regard changé sur leur propre pays, parfois même un sentiment de décalage avec des proches restés sur place. Ce phénomène, bien documenté chez les migrants de retour partout dans le monde, n'a rien d'exceptionnel — mais reste rarement anticipé avant de le vivre.
 
 ---
 
 ## Le pont avec aujourd'hui
 
-! 👩 Vieš, keď si ma dnes počúval, uvedomila som si niečo.
-> Tu sais, en m'écoutant aujourd'hui, j'ai réalisé quelque chose.
-> Vieš = tu sais
-> keď si ma počúval = quand tu m'écoutais
-> uvedomila som si niečo = j'ai réalisé quelque chose
+! 👩 Vidíte, teraz už poznáte celý môj príbeh, od tábora až po návrat domov.
+> Vous voyez, maintenant vous connaissez toute mon histoire, du camp jusqu'au retour à la maison.
+> Vidíte = vous voyez
+> teraz už poznáte = maintenant vous connaissez
+> celý môj príbeh = toute mon histoire
+> od tábora až po návrat domov = du camp jusqu'au retour à la maison
 
-! 👦 Čo si si uvedomila?
-> Qu'as-tu réalisé ?
-> Čo si si uvedomila = qu'as-tu réalisé
+! 👦 A tie príbehy mi pomohli lepšie pochopiť Slovensko, ale aj vás.
+> Et ces histoires m'ont aidé à mieux comprendre la Slovaquie, mais aussi vous.
+> mi pomohli lepšie pochopiť = m'ont aidé à mieux comprendre
+> Slovensko, ale aj vás = la Slovaquie, mais aussi vous
 
-! 👩 Že všetky tie príbehy, čo som ti povedala, ma priviedli presne sem, k tebe.
-> Que toutes ces histoires que je t'ai racontées m'ont menée exactement ici, à toi.
-> všetky tie príbehy = toutes ces histoires
-> ma priviedli = m'ont menée
-> presne sem, k tebe = exactement ici, à toi
+! 👩 To ma teší. Nie je to len história krajiny. Je to aj moja vlastná história.
+> Ça me fait plaisir. Ce n'est pas seulement l'histoire du pays. C'est aussi ma propre histoire.
+> To ma teší = ça me fait plaisir
+> Nie je to len história krajiny = ce n'est pas seulement l'histoire du pays
+> Je to aj moja vlastná história = c'est aussi ma propre histoire
 
-! 👦 A teraz sa učím tvoj jazyk, aby som tomu všetkému lepšie rozumel.
-> Et maintenant j'apprends ta langue, pour mieux comprendre tout ça.
-> sa učím tvoj jazyk = j'apprends ta langue
-> aby som tomu všetkému lepšie rozumel = pour mieux comprendre tout ça
+! 👦 A teraz, keď ste späť doma, je všetko také, aké ste si pamätali?
+> Et maintenant que vous êtes de retour chez vous, tout est-il tel que vous vous en souveniez ?
+> keď ste späť doma = maintenant que vous êtes de retour chez vous
+> je všetko také, aké ste si pamätali = tout est-il tel que vous vous en souveniez
 
-! 👩 A ja som naozaj rada, že to robíš.
-> Et je suis vraiment contente que tu le fasses.
-> som naozaj rada = je suis vraiment contente
-> že to robíš = que tu le fasses
+! 👩 Nie celkom. Ja som sa zmenila, aj Slovensko sa zmenilo. Ale je to stále domov.
+> Pas tout à fait. J'ai changé, la Slovaquie aussi a changé. Mais c'est toujours chez moi.
+> Nie celkom = pas tout à fait
+> Ja som sa zmenila = j'ai changé
+> aj Slovensko sa zmenilo = la Slovaquie aussi a changé
+> Ale je to stále domov = mais c'est toujours chez moi
+
+! 👦 Možno je domov práve to — miesto, ktoré sa mení spolu s vami.
+> Peut-être que le chez-soi c'est justement ça — un lieu qui change avec vous.
+> Možno je domov práve to = peut-être que le chez-soi c'est justement ça
+> miesto, ktoré sa mení spolu s vami = un lieu qui change avec vous
+
+! 👩 To je pekná myšlienka. Možno máte pravdu.
+> C'est une belle idée. Vous avez peut-être raison.
+> To je pekná myšlienka = c'est une belle idée
+> Možno máte pravdu = vous avez peut-être raison

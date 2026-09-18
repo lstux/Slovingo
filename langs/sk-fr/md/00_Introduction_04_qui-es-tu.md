@@ -1,4 +1,4 @@
-# 🇸🇰 Mémo 4 — Qui es-tu?
+# 🇸🇰 Introduction — Qui es-tu?
 
 En slovaque, comme en français, il y a un **tu** (tutoiement) et un **vous** (vouvoiement). C'est important de savoir les distinguer dès le départ, surtout pour bien saluer les gens ! 😊
 
@@ -25,8 +25,8 @@ Deux salutations essentielles en slovaque :
 
 ## L'échange
 
-! 👩 Ahoj! Vitajte! Ja som Andrea.
-> Salut ! Bienvenue ! Je m'appelle Andrea.
+! 👩 Dobrý deň! Vitajte! Ja som Andrea.
+> Bonjour ! Bienvenue ! Je m'appelle Andrea.
 > Ja = moi
 > som = je suis
 

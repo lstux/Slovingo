@@ -131,7 +131,7 @@ Pour la plupart des verbes imperfectifs déjà vus (*chodiť*, *pracovať*...), 
 > Le rocher est dur.
 > Skala = le rocher
 > je = est
-> tvrdá = dur
+> tvrdá = dure
 
 ! Potok je čistý.
 > Le ruisseau est propre.

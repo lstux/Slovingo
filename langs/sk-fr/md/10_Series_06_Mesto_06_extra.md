@@ -38,6 +38,8 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 | lístok | le billet |
 | stanica | la gare, la station |
 | smer | la direction |
+| choď | va |
+| choďte | allez (vouvoiement) |
 | rovno | tout droit |
 | vľavo | à gauche |
 | vpravo | à droite |

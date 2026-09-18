@@ -168,4 +168,4 @@ Eric vouvoie Babka Zuzana. Eric, Ján et Katka se tutoient.
 > ešte = encore
 > kávu = du café
 > Je = il est
-> studená = froid
+> studená = froide

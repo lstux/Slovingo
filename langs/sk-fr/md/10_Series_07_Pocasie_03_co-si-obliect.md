@@ -183,5 +183,5 @@ Comme *chcieť*, *musieť* est toujours suivi d'un infinitif : aucun mot de liai
 ! Oblečenie na zimu je drahé.
 > Les vêtements d'hiver sont chers.
 > Oblečenie na zimu = les vêtements d'hiver
-> je = sont
+> je = est
 > drahé = chers

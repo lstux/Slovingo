@@ -121,7 +121,7 @@ Aucun mot nouveau ici. Tout le vocabulaire de la série est rassemblé, puis rec
 > Mon oncle a une grande maison et un jardin.
 > Môj strýko = mon oncle
 > má = a
-> veľký = grande
+> veľký = grand
 > dom = maison
 > a = et
 > záhradu = un jardin

@@ -8,7 +8,7 @@ Le repas de Pâques, avec ses plats bien précis qu'on ne mange qu'à cette occa
 
 ## Les nouveaux mots
 
-| Slovaky | Français |
+| Slovaque | Français |
 |----------|----------|
 | baránok | l'agneau (petit, pascal) |
 | šunka | le jambon |
@@ -87,7 +87,7 @@ Ce sont exactement les mêmes mécanismes que dans la série Jedlo : les fémini
 ! Stôl bol plný jedla.
 > La table était pleine de nourriture.
 > Stôl = la table
-> bol plný = était pleine
+> bol plný = était plein
 > jedla = de nourriture
 
 ! Máme baránka z cesta, nie skutočného.
@@ -129,7 +129,7 @@ Ce sont exactement les mêmes mécanismes que dans la série Jedlo : les fémini
 
 ## Vocabulaire complémentaire
 
-| Slovaky | Français |
+| Slovaque | Français |
 |----------|----------|
 | syr | le fromage |
 | chlieb | le pain |
@@ -171,5 +171,5 @@ Ce sont exactement les mêmes mécanismes que dans la série Jedlo : les fémini
 ! Stôl bol slaný aj sladký zároveň.
 > La table était salée et sucrée à la fois.
 > Stôl = la table
-> bol slaný aj sladký = était salée et sucrée
+> bol slaný aj sladký = était salé et sucré
 > zároveň = à la fois

@@ -49,11 +49,10 @@ Ján et Eric tutoient Babka Zuzana, comme dans la série Rodina.
 > Ale robte to jemne = mais faites-le doucement
 + « jemne » veut dire doucement.
 
-! 🧒 Šibi ribi, mička!
-> Fouette-fouette, petit chat !
-> Šibi ribi = formule traditionnelle de la šibačka
-> mička = petit chat (terme affectueux)
-+ Cette formule fait partie d'un dicton traditionnel plus long, sans traduction littérale précise.
+! 🧒 Šibi, ryby, mastné ryby!
+> Fouette, poissons, poissons gras !
+> Šibi, ryby, mastné ryby = début de la comptine traditionnelle de la šibačka
++ Cette comptine se poursuit traditionnellement par « kus koláča od korbáča, ešte k tomu groš, už je toho dosť » — un gâteau pour le fouet, encore une pièce, et ça suffit. Le sens littéral n'a pas d'importance : c'est la forme rituelle qui compte.
 
 ! 👵 Dobre, dobre! Tu máte vajíčka.
 > Bien, bien ! Voici des œufs.
@@ -104,7 +103,7 @@ Ján et Eric tutoient Babka Zuzana, comme dans la série Rodina.
 
 **Demander l'accord change tout dans l'esprit de la coutume.** De plus en plus de familles, comme celle de Ján, transforment la šibačka en moment choisi et consenti plutôt qu'en surprise, avec parfum plutôt qu'eau froide et gestes symboliques plutôt qu'insistants.
 
-**Šibi ribi, la comptine impossible à traduire.** Ce petit chant traditionnel, récité en fouettant symboliquement, ressemble à une comptine enfantine plus qu'à une formule sérieuse — un peu comme certaines rimes de marelle françaises.
+**Šibi, ryby, la comptine traditionnelle.** Ce petit chant, récité en fouettant symboliquement, ressemble à une comptine enfantine plus qu'à une formule sérieuse — un peu comme certaines rimes de marelle françaises. Il existe de nombreuses variantes selon les régions.
 
 **Le débat traverse les générations d'une même famille.** Certaines babky tiennent à la coutume telle qu'elles l'ont connue, tandis que leurs petits-enfants la pratiquent souvent sous une forme adoucie. La scène d'aujourd'hui, avec parfum et consentement, est très représentative des foyers slovaques actuels.
 

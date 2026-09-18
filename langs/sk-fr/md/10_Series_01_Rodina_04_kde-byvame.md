@@ -165,7 +165,7 @@ C'est le locatif : il répond à la question « où ? » et ne s'utilise jamais 
 
 ! Moja chata je ďaleko.
 > Mon chalet est loin.
-> Moja = mon
+> Moja = ma
 > chata = chalet
 > je = est
 > ďaleko = loin

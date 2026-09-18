@@ -178,7 +178,7 @@ La couleur s'accorde toujours avec le nom qui suit, jamais avec la personne qui 
 > Cette robe est très jolie.
 > Tieto = cette
 > šaty = robe
-> sú = est
+> sú = sont
 > veľmi = très
 > pekné = jolie
 + « šaty » signifie robe, toujours au pluriel, comme nohavice.
@@ -187,6 +187,6 @@ La couleur s'accorde toujours avec le nom qui suit, jamais avec la personne qui 
 > La ceinture est noire et bon marché.
 > Opasok = la ceinture
 > je = est
-> čierny = noire
+> čierny = noir
 > a = et
 > lacný = bon marché

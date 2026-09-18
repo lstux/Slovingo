@@ -134,8 +134,8 @@ Avec « to », l'adjectif est toujours au neutre.
 ! Zelenina je čerstvá a zemiaky sú teplé.
 > Les légumes sont frais et les pommes de terre sont chaudes.
 > Zelenina = les légumes
-> je = sont
-> čerstvá = frais
+> je = est
+> čerstvá = fraîche
 > a = et
 > zemiaky = les pommes de terre
 > sú = sont
@@ -149,7 +149,7 @@ Avec « to », l'adjectif est toujours au neutre.
 
 **L'aigre est une saveur à part entière.** Le {{kyslý}} n'a rien de négatif : choucroute, soupe aigre, lait fermenté, cornichons. Une bonne partie de la cuisine repose sur des fermentations qui traversaient autrefois l'hiver.
 
-**La Kofola, cola nationale.** Créée en 1959 à partir d'un surplus de caféine issu de la torréfaction du café, cette boisson brune au goût d'herbes reste la rivale sérieuse du Coca dans le pays. Elle est nettement moins sucrée, et servie à la pression dans les bons endroits.
+**La Kofola, cola tchécoslovaque devenu incontournable en Slovaquie.** Sa recette a été mise au point en 1959 à partir d'un surplus de caféine issu de la torréfaction du café, et la boisson a été commercialisée dès 1960. Née côté tchèque, elle reste aujourd'hui une institution des deux côtés de la frontière, brune au goût d'herbes et rivale sérieuse du Coca. Elle est nettement moins sucrée, et servie à la pression dans les bons endroits.
 
 ---
 

@@ -53,7 +53,7 @@ Andrea et Ján se tutoient.
 > do múzea = au musée
 > Je vnútri = c'est à l'intérieur
 
-! 🧒 Dobrý nápad. A pojazerajme, či bude lepšie počasie na víkend.
+! 🧒 Dobrý nápad. A pozerajme, či bude lepšie počasie na víkend.
 > Bonne idée. Et regardons si le temps sera meilleur pour le week-end.
 > Dobrý nápad = bonne idée
 > pozerajme = regardons

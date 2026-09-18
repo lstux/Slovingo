@@ -8,7 +8,7 @@ Ce qu'on met dans le sac. Le verbe **môcť**, pouvoir, complète la série des 
 
 ## Les nouveaux mots
 
-| Slovaky | Français |
+| Slovaque | Français |
 |----------|----------|
 | môcť | pouvoir |
 | turistické topánky | les chaussures de randonnée |
@@ -136,7 +136,7 @@ Ce qu'on met dans le sac. Le verbe **môcť**, pouvoir, complète la série des 
 
 ## Vocabulaire complémentaire
 
-| Slovaky | Français |
+| Slovaque | Français |
 |----------|----------|
 | stan | la tente |
 | spací vak | le sac de couchage |

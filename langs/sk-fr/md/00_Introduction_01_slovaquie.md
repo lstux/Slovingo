@@ -1,4 +1,4 @@
-# 🇸🇰 Mémo — La Slovaquie en un coup d'œil
+# 🇸🇰 Introduction — La Slovaquie en un coup d'œil
 
 Avant d'apprendre la langue, un peu de contexte sur le pays lui-même : où il se situe, d'où il vient, et ce qui fait sa culture. Une fiche à parcourir tranquillement, avec des liens pour creuser si l'envie te prend.
 
@@ -42,7 +42,7 @@ Rien d'exhaustif ici, juste de quoi comprendre le fil :
 
 Quelques repères culturels pour se faire une idée du pays :
 
-- **Religion** : majoritairement catholique, avec une minorité protestante (luthérienne) non négligeable, notamment liée à l'héritage de {{Ľudovít Štúr}}.
+- **Religion** : majoritairement catholique, avec une minorité protestante (luthérienne) non négligeable.
 - **Gastronomie** : le plat national est les {{bryndzové halušky}}, des petites quenelles de pomme de terre accompagnées d'un fromage de brebis typique (bryndza) et de lardons. Autre spécialité : la {{slivovica}}, une eau-de-vie de prune assez forte, souvent servie en apéritif ou en toast.
 - **Musique et traditions** : un folklore vivace, avec costumes traditionnels colorés, danses régionales et un attachement fort à la vie de village dans certaines zones rurales.
 - **Nature** : un pays très tourné vers la randonnée et les sports de montagne, avec plusieurs parcs nationaux emblématiques (Tatras, Slovenský raj — déjà croisés dans tes fiches de voyage).

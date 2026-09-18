@@ -8,7 +8,7 @@ La halte au refuge de montagne. Première approche du **conditionnel**, pour exp
 
 ## Les nouveaux mots
 
-| Slovaky | Français |
+| Slovaque | Français |
 |----------|----------|
 | chata | le refuge, le chalet |
 | nocľah | l'hébergement pour la nuit |
@@ -17,6 +17,7 @@ La halte au refuge de montagne. Première approche du **conditionnel**, pour exp
 | unavený | fatigué |
 | odpočívať | se reposer |
 | by | particule du conditionnel |
+| hviezdy | les étoiles |
 
 ---
 
@@ -128,13 +129,12 @@ Le conditionnel se forme avec le passé du verbe (déjà croisé sous la forme *
 
 ## Vocabulaire complémentaire
 
-| Slovaky | Français |
+| Slovaque | Français |
 |----------|----------|
 | posteľ | le lit |
 | deka | la couverture |
 | sprcha | la douche |
 | rezervácia | la réservation |
-| hviezdy | les étoiles |
 | ticho | le silence |
 | pohoda | la tranquillité, le bien-être |
 

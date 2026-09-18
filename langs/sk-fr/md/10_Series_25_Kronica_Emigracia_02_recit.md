@@ -2,7 +2,7 @@
 
 @ https://commons.wikimedia.org/wiki/Special:FilePath/Tazones_Asturias.jpg?width=800 | Village côtier des Asturies, Espagne — Wikimedia Commons, CC BY-SA
 
-Andrea raconte le cœur de son histoire : l'Espagne d'abord, sans un mot d'espagnol, puis la France, onze ans plus tard.
+Andrea raconte le cœur de son histoire : l'Espagne d'abord, sans un mot d'espagnol, puis un détour inattendu par la France, avant le retour définitif en Slovaquie.
 
 ---
 
@@ -19,12 +19,12 @@ Andrea raconte le cœur de son histoire : l'Espagne d'abord, sans un mot d'espag
 > To muselo byť ťažké = ça a dû être difficile
 > začať úplne odznova = recommencer complètement à zéro
 
-! 👩 Bolo. Prvé mesiace som takmer nerozumela ničomu. Pracovala som v hoteloch, na recepcii aj v upratovaní.
-> Ça l'était. Les premiers mois je ne comprenais presque rien. Je travaillais dans des hôtels, à la réception et aussi au ménage.
+! 👩 Bolo. Prvé mesiace som takmer nerozumela ničomu. Pracovala som na recepcii v hoteloch, neskôr aj ako sprievodkyňa pre turistov.
+> Ça l'était. Les premiers mois je ne comprenais presque rien. Je travaillais à la réception d'hôtels, plus tard aussi comme guide pour les touristes.
 > Prvé mesiace = les premiers mois
 > som takmer nerozumela ničomu = je ne comprenais presque rien
-> Pracovala som v hoteloch = je travaillais dans des hôtels
-> na recepcii aj v upratovaní = à la réception et au ménage
+> Pracovala som na recepcii = je travaillais à la réception
+> neskôr aj ako sprievodkyňa = plus tard aussi comme guide
 
 ! 👦 A postupne sa to zlepšovalo?
 > Et ça s'est amélioré progressivement ?
@@ -44,51 +44,54 @@ Andrea raconte le cœur de son histoire : l'Espagne d'abord, sans un mot d'espag
 > Naučila som sa nový jazyk = j'ai appris une nouvelle langue
 > spoznala nových ľudí = rencontré de nouvelles personnes
 
-! 👦 A prečo ste potom, v roku dvetisícšestnásť, odišli do Francúzska?
-> Et pourquoi êtes-vous ensuite partie en France, en 2016 ?
-> prečo ste odišli = pourquoi êtes-vous partie
-> v roku dvetisícšestnásť = en 2016
-> do Francúzska = en France
+! 👦 A čo bolo ďalej, po Španielsku?
+> Et qu'est-ce qui s'est passé ensuite, après l'Espagne ?
+> A čo bolo ďalej = et qu'est-ce qui s'est passé ensuite
+> po Španielsku = après l'Espagne
 
-! 👩 Práca v hoteloch v Španielsku bola stále rovnaká. Chcela som skúsiť niečo iné, aj inú krajinu.
-> Le travail dans les hôtels en Espagne était toujours pareil. Je voulais essayer autre chose, aussi un autre pays.
-> Práca v hoteloch = le travail dans les hôtels
-> bola stále rovnaká = était toujours pareil
-> Chcela som skúsiť niečo iné = je voulais essayer autre chose
+! 👩 Cestou domov som sa na pár mesiacov zastavila vo Francúzsku, vo Villeurbanne, pri Lyone.
+> Sur le chemin du retour je me suis arrêtée quelques mois en France, à Villeurbanne, près de Lyon.
+> Cestou domov = sur le chemin du retour
+> som sa zastavila = je me suis arrêtée
+> na pár mesiacov = quelques mois
+> vo Villeurbanne, pri Lyone = à Villeurbanne, près de Lyon
 
-! 👩 Vo Francúzsku som robila podobné veci, hlavne upratovanie, niekedy aj v hoteloch.
-> En France je faisais des choses similaires, surtout du ménage, parfois aussi dans des hôtels.
-> som robila podobné veci = je faisais des choses similaires
-> hlavne upratovanie = surtout du ménage
-> niekedy aj v hoteloch = parfois aussi dans des hôtels
+! 👦 Vo Villeurbanne? Mohli sme sa minúť, ja som tam vtedy tiež býval!
+> À Villeurbanne ? On aurait pu se croiser, j'habitais là-bas aussi à ce moment-là !
+> Mohli sme sa minúť = on aurait pu se croiser
+> ja som tam vtedy tiež býval = j'habitais là-bas aussi à ce moment-là
 
-! 👦 A práve tak sme sa aj my dvaja stretli, však?
-> Et c'est justement comme ça qu'on s'est rencontrés tous les deux, non ?
-> práve tak = justement comme ça
-> sme sa stretli = qu'on s'est rencontrés
+! 👩 Aký malý svet! Škoda, že sme sa vtedy nestretli.
+> Comme le monde est petit ! Dommage qu'on ne se soit pas rencontrés à l'époque.
+> Aký malý svet = comme le monde est petit
+> Škoda, že sme sa nestretli = dommage qu'on ne se soit pas rencontrés
++ Clin d'œil : la région lyonnaise compte une petite communauté slovaque, comme évoqué dans les fiches d'introduction.
 
-! 👩 Presne tak. Upratovala som kancelárie, kde si vtedy pracoval.
-> Exactement. Je faisais le ménage dans les bureaux où tu travaillais à l'époque.
-> Upratovala som kancelárie = je faisais le ménage dans les bureaux
-> kde si vtedy pracoval = où tu travaillais à l'époque
+! 👩 Pracovala som tam v jednom hoteli pri stanici, len na sezónu.
+> J'y ai travaillé dans un hôtel près de la gare, juste pour la saison.
+> Pracovala som tam = j'y ai travaillé
+> v jednom hoteli pri stanici = dans un hôtel près de la gare
+> len na sezónu = juste pour la saison
 
-! 👦 Pamätám si to. Vždy si mala dobrú náladu, aj keď bolo neskoro večer.
-> Je m'en souviens. Tu avais toujours de bonne humeur, même quand c'était tard le soir.
-> Pamätám si to = je m'en souviens
-> Vždy si mala dobrú náladu = tu avais toujours de bonne humeur
-> aj keď bolo neskoro večer = même quand c'était tard le soir
+! 👦 A potom ste sa vrátili rovno na Slovensko?
+> Et ensuite vous êtes rentrée directement en Slovaquie ?
+> A potom = et ensuite
+> ste sa vrátili rovno = vous êtes rentrée directement
+> na Slovensko = en Slovaquie
 
-! 👩 A ty si bol jediný, kto sa so mnou vždy pozdravil poriadne, nie len prikývnutím.
-> Et tu étais le seul qui me disait toujours vraiment bonjour, pas juste un signe de tête.
-> jediný, kto sa pozdravil poriadne = le seul qui disait bonjour vraiment
-> nie len prikývnutím = pas juste un signe de tête
+! 👩 Áno. Po tom lete v Lyone som si povedala, že je čas vrátiť sa naozaj domov.
+> Oui. Après cet été à Lyon je me suis dit qu'il était temps de vraiment rentrer chez moi.
+> Po tom lete v Lyone = après cet été à Lyon
+> som si povedala = je me suis dit
+> je čas vrátiť sa naozaj domov = il est temps de vraiment rentrer chez moi
 
-! 👦 A odtiaľ sa to celé začalo.
-> Et c'est de là que tout a commencé.
-> odtiaľ = de là
-> sa to celé začalo = tout a commencé
+! 👦 Prečo práve vtedy?
+> Pourquoi justement à ce moment-là ?
+> Prečo práve vtedy = pourquoi justement à ce moment-là
 
-! 👩 Presne odtiaľ. A teraz ťa dokonca učím po slovensky.
-> Exactement de là. Et maintenant je t'apprends même le slovaque.
-> Presne odtiaľ = exactement de là
-> ťa dokonca učím po slovensky = je t'apprends même le slovaque
+! 👩 Bola som unavená zo sťahovania. Chýbala mi rodina, a chýbalo mi bývať naozaj doma, nie len na návšteve.
+> J'étais fatiguée de déménager. Ma famille me manquait, et il me manquait d'habiter vraiment chez moi, pas juste en visite.
+> Bola som unavená zo sťahovania = j'étais fatiguée de déménager
+> Chýbala mi rodina = ma famille me manquait
+> chýbalo mi bývať naozaj doma = il me manquait d'habiter vraiment chez moi
+> nie len na návšteve = pas juste en visite

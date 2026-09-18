@@ -150,9 +150,9 @@ Ces phrases n'ont pas de sujet : *je* suffit, suivi d'un adverbe en **-o**. C'es
 > Le ciel est bleu et clair.
 > Obloha = le ciel
 > je = est
-> modrá = bleu
+> modrá = bleue
 > a = et
-> čistá = clair
+> čistá = claire
 
 ! Po daždi je dúha.
 > Après la pluie il y a un arc-en-ciel.

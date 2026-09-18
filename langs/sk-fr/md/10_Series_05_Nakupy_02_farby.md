@@ -155,7 +155,7 @@ Comme *chutiť*, la construction est renversée : c'est l'objet qui « plaît à
 > Mám = j'ai
 > hnedé = marron
 > topánky = des chaussures
-+ « topánky » signifie chaussures, toujours au pluriel.
++ « topánka » (une chaussure) existe au singulier, contrairement à nohavice ou okuliare : ici c'est juste un pluriel ordinaire, comme en français.
 
 ! Chcem svetlú farbu, nie tmavú.
 > Je veux une couleur claire, pas foncée.

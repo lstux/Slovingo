@@ -1,4 +1,4 @@
-# 🇸🇰 Mémo 4 — Compter en slovaque
+# 🇸🇰 Introduction — Compter en slovaque
 
 Les nombres reviennent partout : l'âge, l'heure, les prix, les quantités. Tu les croiseras dans presque chaque série. Voici de quoi s'en sortir dès le départ — la liste complète (jusqu'au million !) reste dans la bibliothèque si tu veux tout voir d'un coup.
 

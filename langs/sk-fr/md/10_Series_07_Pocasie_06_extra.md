@@ -49,8 +49,10 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 | krémy na opaľovanie | la crème solaire |
 | šiltovka | la casquette |
 | ponožky | les chaussettes |
+| teplota vzduchu | la température de l'air |
 | oblečenie | les vêtements |
 | predpoveď | la prévision |
+| zajtra bude | demain il fera / il y aura |
 | slnečno | ensoleillé |
 | oblačno | nuageux |
 | daždivo | pluvieux |
@@ -62,6 +64,7 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 | výlet | l'excursion |
 | turistika | la randonnée |
 | upozornenie | l'alerte |
+| istota | la certitude |
 
 ---
 
@@ -177,7 +180,7 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 ! Krémy na opaľovanie sú dôležité v lete, slnko je silné.
 > La crème solaire est importante en été, le soleil est fort.
 > Krémy na opaľovanie = la crème solaire
-> sú = est
+> sú = sont
 > dôležité = importante
 > v lete = en été
 > slnko = le soleil

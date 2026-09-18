@@ -127,8 +127,6 @@ Fixer un rendez-vous : y aller, arriver, attendre, se retrouver. Le verbe **ís�
 
 ## 🇸🇰 Coin slovaque
 
-**On se retrouve « pod stromom ».** À Bratislava, le point de rendez-vous classique est {{pod stromom}}, « sous l'arbre », une sculpture métallique de la place Kamenné námestie. Chaque ville a le sien, et il vaut mieux le connaître avant de donner rendez-vous.
-
 **Le train plutôt que la voiture.** Le réseau ferroviaire est dense et bon marché, et les jeunes ainsi que les retraités voyagent gratuitement sur les trains nationaux depuis plusieurs années. Les gares sont donc de vrais lieux de rendez-vous.
 
 **Ísť et chodiť ne sont pas interchangeables.** {{Ísť}} décrit un trajet précis en cours ou prévu, {{chodiť}} une habitude. « J'y vais maintenant » et « j'y vais tous les mardis » n'utilisent pas le même verbe. Pour l'instant, *ísť* suffira.

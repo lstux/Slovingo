@@ -62,6 +62,7 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 | účet | l'addition |
 | zľava | la réduction |
 | akcia | la promotion |
+| drahota | la vie chère |
 | výpredaj | les soldes |
 | bankomat | le distributeur |
 | peňaženka | le portefeuille |

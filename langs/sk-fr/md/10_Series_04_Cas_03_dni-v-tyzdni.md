@@ -80,7 +80,7 @@ En slovaque, *pondelok* s'écrit en minuscule au milieu d'une phrase, comme en f
 > V piatok = vendredi
 > je = est
 > večer = la soirée
-> dlhý = longue
+> dlhý = long
 
 ! V sobotu a v nedeľu som doma.
 > Samedi et dimanche je suis à la maison.
@@ -136,7 +136,7 @@ En slovaque, *pondelok* s'écrit en minuscule au milieu d'une phrase, comme en f
 
 **Les jours sont des mots parlants.** {{Streda}} veut dire « le milieu », {{štvrtok}} vient de « quatrième » et {{piatok}} de « cinquième ». Une fois qu'on repère la logique, la semaine se retient en une soirée.
 
-**Dimanche est fermé.** Les grandes surfaces ouvrent, mais beaucoup de commerces de proximité ferment le dimanche, et certaines communes limitent l'ouverture. C'est le jour du déjeuner en famille et de la promenade.
+**Dimanche reste un jour ordinaire.** Contrairement à l'Autriche ou à l'Allemagne voisines, les commerces restent en général ouverts le dimanche en Slovaquie. C'est plutôt lors des jours fériés — une quinzaine par an — que la loi impose la fermeture des magasins.
 
 **Le calendrier affiche les prénoms.** Chaque jour porte un prénom, le {{meniny}}, imprimé sur les calendriers, annoncé à la radio et affiché dans les journaux. Le jour de son prénom se fête presque comme un anniversaire.
 

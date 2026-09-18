@@ -74,7 +74,7 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 ! Peniaze sú v taške.
 > L'argent est dans le sac.
 > Peniaze = l'argent
-> sú = est
+> sú = sont
 > v taške = dans le sac
 
 ! Sedím na gauči a čítam knihu.
@@ -167,12 +167,12 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 > ale = mais
 > dvor = la cour
 > je = est
-> veľký = grande
+> veľký = grand
 
 ! Hodiny sú nad dverami.
 > L'horloge est au-dessus de la porte.
 > Hodiny = l'horloge
-> sú = est
+> sú = sont
 > nad = au-dessus de
 > dverami = la porte
 

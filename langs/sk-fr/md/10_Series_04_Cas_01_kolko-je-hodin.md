@@ -64,7 +64,7 @@ Ils s'emploient tels quels, sans préposition, sauf *v noci*.
 
 ! Sú tri hodiny.
 > Il est trois heures.
-> Sú = il est
+> Sú = sont
 > tri = trois
 > hodiny = heures
 

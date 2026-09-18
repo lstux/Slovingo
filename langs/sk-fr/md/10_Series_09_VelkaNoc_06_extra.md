@@ -8,7 +8,7 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 
 ## Tout le vocabulaire de la série
 
-| Slovaky | Français |
+| Slovaque | Français |
 |----------|----------|
 | Veľká noc | Pâques |
 | vajíčko | l'œuf |
@@ -40,6 +40,7 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 | sviatočný | festif |
 | šibať | fouetter (symboliquement) |
 | poliať | arroser |
+| voda | l'eau |
 | chlapec | le garçon |
 | dievča | la fille |
 | odmena | la récompense |
@@ -56,10 +57,14 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 | chren | le raifort |
 | syrová nátierka | la tartinade au fromage |
 | požehnať | bénir |
+| jesť | manger |
+| stôl | la table |
 | syr | le fromage |
 | chlieb | le pain |
 | víno | le vin |
 | paska | la brioche pascale |
+| cukor | le sucre |
+| slaný | salé |
 | štipľavý | piquant |
 
 ---
