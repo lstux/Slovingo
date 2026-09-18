@@ -1,46 +1,109 @@
 {
   "target_lang": {
+    "code": "br",
     "name": "breton",
     "tts_code": "br-FR",
     "flag": "🏴",
     "css_class": "col-target",
     "voice_hint": "breton",
-    "headers": ["breton", "brezhoneg", "br"],
-    "header_roots": ["breton", "brezhoneg"]
+    "tts_sample_phrase": "Degemer mat d'ar Slovingo, ho skiant a gresk d'un urzh!"
   },
   "native_lang": {
+    "code": "fr",
     "name": "français",
     "tts_code": "fr-FR",
     "flag": "🇫🇷",
-    "css_class": "col-native",
-    "headers": ["french", "français", "francais", "fr"],
-    "header_roots": ["français", "francais", "french"]
+    "css_class": "col-native"
   },
   "site": {
     "title": "Demat Brezhoneg",
     "short_name": "Demat BZH",
-    "description": "Apprentissage du breton conversationnel \u2014 fiches et exercices",
-    "fiche_footer": "Mémo {target_name} \u2022 Synthèse vocale {target_tts}",
+    "description": "Apprentissage du breton conversationnel — fiches et exercices",
+    "theme_color": "#0b3d2e",
     "storage_prefix": "bzh-fr",
     "url_path": "/slovingo/bzh-fr/",
-    "theme_color": "#0b3d2e",
+    "user_name_default": "Yann",
+    "user_name_placeholder": "Ton prénom",
     "deploy_host": "lslinux.org",
     "deploy_path": "/var/www/lslinux.org/htdocs/slovingo/bzh-fr/"
   },
   "categories": {
-    "Introduction": "Avant de commencer",
-    "Vocabulaire":  "Vocabulaire",
-    "Grammaire":    "Grammaire",
-    "Conjugaison":  "Conjugaison",
-    "Dialogues":    "Dialogues",
-    "Situations":   "Situations",
-    "Revisions":    "Révisions"
+    "introduction": "Avant de commencer",
+    "series": "Séries",
+    "dialog": "Dialogues",
+    "vocabulary": "Vocabulaire",
+    "annex": "Annexe"
   },
-  "series": {
-    "familh": "1 \u00b7 Familh",
-    "doma": "2 \u00b7 Ti",
-    "boued": "3 \u00b7 Boued",
-    "amzer": "4 \u00b7 Amzer"
+  "subgroups": {
+    "series_familh": "Familh",
+    "series_ti": "Ti",
+    "series_boued": "Boued",
+    "series_amzer": "Amzer"
   },
-  "exercise_theme_labels": {}
+  "ui": {
+    "home": "Accueil",
+    "exercises": "Exercices",
+    "sheet": "Fiche",
+    "toggle_translations": "Traductions",
+    "tts_unavailable": "Aucune voix {target_name} disponible sur cet appareil : la lecture audio est désactivée (plutôt ça qu'un mauvais accent 😅).",
+    "exercises_coming_soon": "Les exercices arrivent à la prochaine étape !",
+    "settings": "Réglages",
+    "voice": "Voix",
+    "voice_automatic": "Automatique",
+    "playback_speed": "Vitesse de lecture",
+    "slow_playback_speed": "Vitesse de lecture lente",
+    "of_normal_speed": "de la vitesse normale",
+    "settings_audio": "Audio",
+    "default_question_count": "Nombre de questions par défaut",
+    "default_direction": "Sens par défaut",
+    "default_types": "Types d'exercices par défaut",
+    "default_answer_mode": "Mode de réponse par défaut",
+    "answer_mode_choice": "Choix",
+    "answer_mode_type": "Saisie libre",
+    "settings_exercises": "Exercices",
+    "reset_progress": "🗑️ Réinitialiser ma progression",
+    "reset_progress_confirm": "Effacer tous les scores enregistrés sur cet appareil ?",
+    "reset_settings": "↩️ Réinitialiser les réglages",
+    "reset_settings_confirm": "Réinitialiser tous les réglages de cette page à leur valeur par défaut ?",
+    "settings_data": "Données",
+    "voice_pitch": "Tonalité de la voix",
+    "settings_characters": "Personnages",
+    "voice_use_default": "Voix par défaut",
+    "appearance": "Apparence",
+    "theme_mode": "Thème",
+    "theme_system": "Système par défaut",
+    "theme_light": "Clair",
+    "theme_dark": "Sombre",
+    "settings_profile": "Profil",
+    "profile_name": "Ton nom",
+    "settings_dialogue": "Lecture de dialogues",
+    "dialogue_mode": "Mode de lecture",
+    "dialogue_auto": "Auto (lecture automatique de la séquence)",
+    "dialogue_manual": "Manuel (cliquer pour continuer)",
+    "dialogue_pause": "Pause entre les répliques",
+    "play_dialogue": "Lire le dialogue",
+    "dialogue_continue": "Continuer (Espace)"
+  },
+  "generator": {
+    "target_headers": [
+      "breton",
+      "brezhoneg",
+      "br"
+    ],
+    "target_header_roots": [
+      "breton",
+      "brezhoneg"
+    ],
+    "native_headers": [
+      "french",
+      "français",
+      "francais",
+      "fr"
+    ],
+    "native_header_roots": [
+      "français",
+      "francais",
+      "french"
+    ]
+  }
 }

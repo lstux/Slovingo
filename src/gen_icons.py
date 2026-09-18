@@ -30,6 +30,7 @@ from PIL import Image, ImageDraw, ImageFont
 EMOJI_FONT_CANDIDATES = [
     "/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf",
     "/usr/share/fonts/noto/NotoColorEmoji.ttf",
+    "/usr/share/fonts/noto-emoji/NotoColorEmoji.ttf",
     "/System/Library/Fonts/Apple Color Emoji.ttc",
     "C:\\Windows\\Fonts\\seguiemj.ttf",
 ]
