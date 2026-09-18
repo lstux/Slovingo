@@ -517,6 +517,56 @@ footer {
     font: inherit;
 }
 
+/* Bouton "▶ Continue" - entre Home et Exercises */
+.nav-continue-btn {
+    background: color-mix(in srgb, var(--accent) 12%, var(--surface)) !important;
+    border-color: var(--line) !important;
+    font-weight: 600;
+}
+
+.nav-continue-btn:hover {
+    background: color-mix(in srgb, var(--accent) 20%, var(--surface)) !important;
+    border-color: var(--accent) !important;
+}
+
+/* Streak badge - aligné à droite */
+.streak-badge {
+    margin-left: auto;
+    display: flex !important;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border-radius: var(--pill);
+    background: transparent;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+#streak-count {
+    min-width: 1.5em;
+    text-align: center;
+}
+
+/* Jauge de progression sous la toolbar - ultra-fine */
+.progress-bar-container {
+    height: 4px;
+    background: color-mix(in srgb, var(--text) 10%, transparent);
+    width: 100%;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, 
+        #e8c9b0 0%,      /* beige */
+        #f5a75c 40%,     /* orange clair */
+        #ff8c42 70%,     /* orange */
+        #d84a42 100%     /* rouge chaud */
+    );
+    transition: width 0.3s ease;
+}
+
 
 /* ==========================================================================
    6. Illustration de fiche
@@ -1288,6 +1338,16 @@ button.index-card {
     .band .wrap { padding-top: 34px; }
     .audio-card { grid-template-columns: 1fr auto; }
     .settings-row { flex-wrap: wrap; }
+
+    /* Toolbar mobile : icônes seuls, pas de texte */
+    .toolbar button span[data-ui] { display: none !important; }
+    .toolbar button { padding: 0 10px; min-width: 42px; }
+
+    /* Cacher les boutons avec la classe exo-toolbar-hidden */
+    .toolbar button.exo-toolbar-hidden { display: none !important; }
+
+    /* Streak mobile : afficher juste l'icône et le chiffre, pas "days" */
+    .streak-label { display: none; }
 }
 
 @media (max-width: 380px) {

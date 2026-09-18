@@ -723,3 +723,46 @@ function renderDataSettingsSection() {
 
     return settingsSection((LANG.ui && LANG.ui.settings_data) || "Data", [resetProgressBtn, resetSettingsBtn]);
 }
+
+// ============================================================================
+// Affichage du streak et de la jauge (page d'accueil)
+// ============================================================================
+
+/**
+ * Mettre à jour l'affichage du streak dans la toolbar.
+ * Appelé au démarrage et après chaque visite de fiche.
+ */
+function updateStreakDisplay() {
+    const streakEl = document.getElementById("streak");
+    const streakCountEl = document.getElementById("streak-count");
+    if (!streakEl || !streakCountEl) return;
+
+    const streak = typeof calculateStreak === "function" ? calculateStreak() : 0;
+    
+    if (streak > 0) {
+        streakCountEl.textContent = String(streak);
+        streakEl.style.display = "flex";
+    } else {
+        streakEl.style.display = "none";
+    }
+}
+
+/**
+ * Mettre à jour la jauge de progression globale (Séries).
+ * Appelé au démarrage et après chaque session d'exercices.
+ */
+function updateProgressBar() {
+    const barContainer = document.getElementById("progress-bar-container");
+    const bar = document.getElementById("progress-bar");
+    if (!barContainer || !bar) return;
+
+    const progress = typeof calculateSeriesProgress === "function" ? calculateSeriesProgress() : { completed: 0, total: 0 };
+    
+    if (progress.total > 0) {
+        const percentage = Math.round((progress.completed / progress.total) * 100);
+        bar.style.width = percentage + "%";
+        barContainer.style.display = "block";
+    } else {
+        barContainer.style.display = "none";
+    }
+}

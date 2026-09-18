@@ -44,6 +44,85 @@ const SERIES_THEME_KEYS = new Set([
     "mesto", "pocasie", "tatry", "velkanoc",
 ]);
 
+// ============================================================================
+// Tracking de la dernière fiche Séries (pour "Continuer")
+// ============================================================================
+
+/**
+ * Clé localStorage pour stocker la dernière fiche Séries consultée.
+ */
+function lastSeriesSheetKey() {
+    const prefix = (LANG && LANG.site && LANG.site.storage_prefix) || "slovingo";
+    return `${prefix}-last-series-sheet`;
+}
+
+/**
+ * Enregistrer la dernière fiche Séries consultée.
+ * @param {string} sheetId
+ */
+function saveLastSeriesSheet(sheetId) {
+    try {
+        localStorage.setItem(lastSeriesSheetKey(), JSON.stringify({ sheetId }));
+    } catch (err) {
+        // ignore
+    }
+}
+
+/**
+ * Récupérer la dernière fiche Séries consultée.
+ * @returns {{sheetId: string}|null}
+ */
+function getLastSeriesSheet() {
+    try {
+        const data = JSON.parse(localStorage.getItem(lastSeriesSheetKey()));
+        return data;
+    } catch (err) {
+        return null;
+    }
+}
+
+/**
+ * Mettre à jour l'affichage du bouton "▶ Continuer" sur la page d'accueil.
+ */
+function updateContinueButton() {
+    const continueBtn = document.getElementById("nav-continue");
+    if (!continueBtn) return;
+
+    const lastSheet = getLastSeriesSheet();
+    if (!lastSheet || !DATA) {
+        continueBtn.style.display = "none";
+        return;
+    }
+
+    // Trouver la fiche et son groupe
+    let targetSheet = null;
+    let targetGroup = null;
+    DATA.groups.forEach((group) => {
+        if (group.category === "series") {
+            const found = group.sheets.find((s) => s.id === lastSheet.sheetId);
+            if (found) {
+                targetSheet = found;
+                targetGroup = group;
+            }
+        }
+    });
+
+    if (!targetSheet || !targetGroup) {
+        continueBtn.style.display = "none";
+        return;
+    }
+
+    // Générer le label : "Série XX, fiche NN"
+    const subgroupLabel = targetGroup.subgroup_label || targetGroup.subgroup || "Série";
+    const sheetIndex = targetGroup.sheets.findIndex((s) => s.id === targetSheet.id) + 1;
+    const label = `${subgroupLabel} (${sheetIndex}/${targetGroup.sheets.length})`;
+
+    // Afficher le bouton et stocker l'ID de la fiche
+    continueBtn.innerHTML = `▶ <span data-ui="continue">Continue</span><span data-ui="continue-label" style="font-size: 0.85em; opacity: 0.7; margin-left: 6px;">${escapeHtml(label)}</span>`;
+    continueBtn.dataset.sheetId = targetSheet.id;
+    continueBtn.style.display = "inline-block";
+}
+
 /** Fetch the three JSON sources, wire up navigation, then route. */
 async function boot() {
     const content = document.getElementById("content");
@@ -94,7 +173,28 @@ async function boot() {
     document.getElementById("nav-settings").addEventListener("click", () => {
         window.location.hash = "#/settings";
     });
+
+    // Bouton "Continuer"
+    const continueBtn = document.getElementById("nav-continue");
+    if (continueBtn) {
+        continueBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (continueBtn.dataset.sheetId) {
+                window.location.hash = `#/sheet/${encodeURIComponent(continueBtn.dataset.sheetId)}`;
+            }
+        });
+    }
+
     window.addEventListener("hashchange", route);
+
+    // Afficher le streak, la jauge, et le bouton continuer au démarrage
+    if (typeof updateStreakDisplay === "function") {
+        updateStreakDisplay();
+    }
+    if (typeof updateProgressBar === "function") {
+        updateProgressBar();
+    }
+    updateContinueButton();
 
     route();
 }
@@ -577,6 +677,20 @@ function renderSheet(sheetId) {
     initializeDialoguePlayback(content);
     initializeSpeakableElements();
     updateTtsAvailability();
+
+    // Enregistrer cette visite (pour le streak)
+    if (typeof recordSheetVisit === "function") {
+        recordSheetVisit();
+        if (typeof updateStreakDisplay === "function") {
+            updateStreakDisplay();
+        }
+    }
+
+    // Si c'est une fiche Série, enregistrer comme dernière consultée (pour le bouton "Continuer")
+    if (group && group.category === "series") {
+        saveLastSeriesSheet(sheet.id);
+        // NE PAS appeler updateContinueButton() ici - le bouton doit rester caché sur une fiche!
+    }
 }
 
 function renderNotFound(sheetId) {
@@ -620,6 +734,15 @@ function renderHome() {
         });
         content.appendChild(section);
     });
+
+    // Mettre à jour le streak, la jauge et le bouton "Continuer" sur la page d'accueil
+    if (typeof updateStreakDisplay === "function") {
+        updateStreakDisplay();
+    }
+    if (typeof updateProgressBar === "function") {
+        updateProgressBar();
+    }
+    updateContinueButton();
 }
 
 /**
@@ -1154,13 +1277,21 @@ function setPageTitle(text) {
  * setExercisesButtonMode() below).
  * @param {{translations?: boolean}} [options]
  */
-function setToolbarButtons({ translations = false } = {}) {
+function setToolbarButtons({ translations = false, continueBtn = true } = {}) {
     document.getElementById("nav-translations").classList.toggle("exo-toolbar-hidden", !translations);
+    // Pour le bouton Continuer, utiliser style.display directement (l'inline style prend la priorité)
+    const continueBtnEl = document.getElementById("nav-continue");
+    if (continueBtnEl) {
+        continueBtnEl.style.display = continueBtn ? "inline-block" : "none";
+    }
 }
 
 /** Backward-compatible alias used by the sheet/home views above. */
 function updateToolbarForSheetView(isSheet) {
-    setToolbarButtons({ translations: isSheet });
+    setToolbarButtons({ 
+        translations: isSheet,
+        continueBtn: !isSheet  // Cacher le bouton Continuer quand on est sur une fiche
+    });
 }
 
 /**
@@ -1224,9 +1355,9 @@ function setExercisesButtonMode(mode, sheetId) {
     btn.dataset.sheetId = sheetId || "";
 
     if (mode === "back-to-sheet") {
-        btn.innerHTML = `\ud83d\udcd6 <span>${(LANG.ui && LANG.ui.sheet) || "Sheet"}</span>`;
+        btn.innerHTML = `\ud83d\udcd6 <span data-ui="sheet">${(LANG.ui && LANG.ui.sheet) || "Sheet"}</span>`;
     } else {
-        btn.innerHTML = `\ud83c\udfaf <span>${(LANG.ui && LANG.ui.exercises) || "Exercises"}</span>`;
+        btn.innerHTML = `\ud83c\udfaf <span data-ui="exercises">${(LANG.ui && LANG.ui.exercises) || "Exercises"}</span>`;
     }
 }
 

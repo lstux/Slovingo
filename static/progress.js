@@ -84,3 +84,86 @@ function averageScore(sheetIds) {
     const avg = Math.round(sum / sheetIds.length);
     return { avg, count: practicedCount };
 }
+
+// ============================================================================
+// Nouveau : Streak et progression globale
+// ============================================================================
+
+/**
+ * Clé localStorage pour stocker les visites de fiches (pour le streak).
+ * Format: { "YYYY-MM-DD": true } pour chaque jour avec au moins 1 visite.
+ */
+function lastVisitKey() {
+    const prefix = (LANG && LANG.site && LANG.site.storage_prefix) || "slovingo";
+    return `${prefix}-last-visits`;
+}
+
+/**
+ * Enregistrer une visite de fiche (appelé quand on consulte une fiche).
+ * Utilisé pour tracker le streak.
+ */
+function recordSheetVisit() {
+    try {
+        const visits = JSON.parse(localStorage.getItem(lastVisitKey())) || {};
+        const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+        visits[today] = true;
+        localStorage.setItem(lastVisitKey(), JSON.stringify(visits));
+    } catch (err) {
+        // ignore
+    }
+}
+
+/**
+ * Calculer le streak : nombre de jours consécutifs avec au moins 1 visite.
+ * On regarde en arrière à partir d'aujourd'hui.
+ * @returns {number} Nombre de jours consécutifs (0 si pas de visite aujourd'hui).
+ */
+function calculateStreak() {
+    try {
+        const visits = JSON.parse(localStorage.getItem(lastVisitKey())) || {};
+        const today = new Date();
+        let streak = 0;
+        let checkDate = new Date(today);
+
+        while (true) {
+            const dateStr = checkDate.toISOString().split('T')[0];
+            if (!visits[dateStr]) {
+                // Jour manquant : le streak s'arrête
+                break;
+            }
+            streak++;
+            checkDate.setDate(checkDate.getDate() - 1);
+        }
+
+        return streak;
+    } catch (err) {
+        return 0;
+    }
+}
+
+/**
+ * Calculer la progression globale des Séries.
+ * @returns {{completed: number, total: number}} Fiches Séries avec exos "faits" vs total.
+ */
+function calculateSeriesProgress() {
+    if (!DATA) return { completed: 0, total: 0 };
+
+    let completed = 0;
+    let total = 0;
+
+    // Parcourir tous les groupes (DATA.groups)
+    DATA.groups.forEach((group) => {
+        if (group.category === "series") {
+            group.sheets.forEach((sheet) => {
+                total++;
+                // Une fiche est "complétée" si elle a au moins 1 tentative d'exercice
+                const progress = getSheetProgress(sheet.id);
+                if (progress && progress.last) {
+                    completed++;
+                }
+            });
+        }
+    });
+
+    return { completed, total };
+}

@@ -37,9 +37,20 @@
 
   <div class="toolbar">
     <button id="nav-home">🏠 <span data-ui="home">Home</span></button>
+    <button id="nav-continue" class="nav-continue-btn" style="display: none;">
+      ▶ <span data-ui="continue">Continue</span>
+    </button>
     <button id="nav-translations" class="exo-toolbar-hidden">👀 <span data-ui="toggle_translations">Translations</span></button>
     <button id="nav-exercises">🎯 <span data-ui="exercises">Exercises</span></button>
     <button id="nav-settings">⚙️ <span data-ui="settings">Settings</span></button>
+    <div id="streak" class="streak-badge" style="display: none;">
+      🔥 <span id="streak-count">0</span><span class="streak-label" data-ui="streak_days"> days</span>
+    </div>
+  </div>
+
+  <!-- Barre de progression globale -->
+  <div id="progress-bar-container" class="progress-bar-container" style="display: none;">
+    <div id="progress-bar" class="progress-bar"></div>
   </div>
 
   <main id="content">
