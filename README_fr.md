@@ -1,3 +1,5 @@
+[README.md](English version) [README_sk.md](Slovak version)
+
 # Slovingo
 
 Apprendre une langue sans appli, sans compte, sans serveur. Juste des fiches texte, un script Python, et une page web. 
@@ -28,8 +30,8 @@ Ici tu ne dépends de personne. Pas de compte à créer, pas d'abonnement, pas d
 
 ### Cours disponibles
 
-- **[Slovaque pour francophones](https://www.lslinux.org/Slovingo/sk-fr/)** — *Ahoj Slovenčina!*
-- **[Français pour slovacophones](https://www.lslinux.org/Slovingo/fr-sk/)** — *Dis bonjour!*
+- **[Slovaque pour francophones](https://www.lslinux.org/slovingo/sk-fr/)** — *Ahoj Slovenčina!*
+- **[Français pour slovacophones](https://www.lslinux.org/slovingo/fr-sk/)** — *Dis bonjour!*
 
 Chaque cours c'est :
 
@@ -96,7 +98,7 @@ Zéro ligne de Python à toucher. Tout ce qui dépend de la langue (synthèse vo
 
 Slovingo supporte trois types de fiches :
 
-1. **Séries** — parcours progressif thématique (10 fiches = 1 semaine)
+1. **Séries** — parcours progressif thématique (5 fiches + 1 extra = 1 semaine)
 2. **Dialogues** — conversations en contexte avec personnages
 3. **Révisions** — situations quotidiennes pour recycler le vocabulaire
 
@@ -143,8 +145,6 @@ Ajouter une langue = dupliquer `langs/sk/`, renommer, modifier `lang.json`, écr
 - **[INSTALL.md](INSTALL.md)** — Installation locale, lancer le dev server, générer les pages
 - **[Format-SMD.txt](docs/Format-SMD.txt)** — Syntaxe complète du format SMD (audio-cards, tables, speakables)
 - **[Fiches-Serie.txt](docs/Fiches-Serie.txt)** — Comment structurer un parcours progressif
-- **[Fiches-Dialogue.txt](docs/Fiches-Dialogue.txt)** — Dialogues avec personnages
-- **[Fiches-Revisions.txt](docs/Fiches-Revisions.txt)** — Révisions par thème
 
 ---
 
@@ -196,16 +196,6 @@ Ouvre une issue avec :
 GPL v3 — voir [LICENSE](LICENSE).
 
 Tes fiches, tes exercices, tout ce que tu créés : à toi de choisir (CC-BY, GPL, domaine public…). Slovingo lui-même est GPL v3.
-
----
-
-## 🎓 Comment ça a commencé
-
-2021 : besoin d'apprendre le slovaque courant (A2) avant un voyage. Rien de dispo. Écrit 50 fiches, un petit script pour les convertir en HTML, et voilà. Aussi simple que ça.
-
-Quelques années plus tard : le moteur fonctionne si bien qu'on le replique pour le breton. Zéro changement de code — juste un nouveau dossier `langs/bzh/`.
-
-Le projet reste une passion perso, pas un business. Libre, sobre, et utile.
 
 ---
 
