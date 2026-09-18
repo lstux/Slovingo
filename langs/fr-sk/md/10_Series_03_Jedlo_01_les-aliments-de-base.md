@@ -94,7 +94,7 @@ Toto je úplne nová vec. Zatiaľ čo slovenčina mení koncovku slova (voda sa 
 > Nejem mäso.
 > Je ne mange pas = nejem
 > de viande = mäso
-+ Po zápore „ne...pas“ sa „du / de la / des“ jednoducho zmení na „de“ — rovnaké pravidlo, aké sme videli pri „un / une“ v sérii Rodina.
++ Po zápore „ne...pas“ sa „du / de la / des“ jednoducho zmení na „de“ — rovnaké pravidlo ako pri „un / une“.
 
 ! Nous mangeons des fruits et des légumes.
 > Jeme ovocie a zeleninu.
@@ -103,11 +103,10 @@ Toto je úplne nová vec. Zatiaľ čo slovenčina mení koncovku slova (voda sa 
 > et = a
 > des légumes = zeleninu
 
-! L'eau est bonne.
-> Voda je dobrá.
-> L'eau = voda
-> est = je
-> bonne = dobrá
+! Nous buvons de l'eau.
+> Pijeme vodu.
+> Nous buvons = pijeme
+> de l'eau = vodu
 
 ---
 

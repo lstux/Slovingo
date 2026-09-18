@@ -82,7 +82,7 @@ Francúzština nemá stredný rod, takže úloha je jednoduchšia než v sloven�
 > chaude = teplá
 > j'en veux = chcem
 > de la froide = studenú
-+ „en“ nahrádza „de l'eau“, aby sa slovo neopakovalo — podobný princíp ako zámená le/la/les, ktoré sme videli v sérii Doma.
++ „en“ nahrádza „de l'eau“, aby sa slovo neopakovalo — podobný princíp ako zámená le/la/les.
 
 ! Le fromage est acide.
 > Syr je kyslý.
@@ -176,3 +176,4 @@ Francúzština nemá stredný rod, takže úloha je jednoduchšia než v sloven�
 > Cette viande = toto mäso
 > est = je
 > mauvaise = zlé
++ « cette » = „táto/toto" (ukazovacie zámeno pred ženským slovom). Zatiaľ si len zapamätaj tento tvar.

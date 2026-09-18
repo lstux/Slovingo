@@ -92,7 +92,7 @@ Francúzsky budúci čas pre pravidelné slovesá sa tvorí veľmi systematicky:
 
 ## 🇫🇷 Francúzsky kútik
 
-**More je pre Slovákov výnimka, nie pravidlo.** Slovensko nemá pobrežie, takže cesta k moru je vždy skutočná výprava — podobne ako pre Francúza cesta do vysokých hôr. Táto séria je preto zámerne postavená ako „veľký výlet“, presne ako predtým séria o horách.
+**More je pre Slovákov výnimka, nie pravidlo.** Slovensko nemá pobrežie, takže cesta k moru je vždy skutočná výprava — podobne ako pre Francúza cesta do vysokých hôr. Táto séria je preto zámerne postavená ako „veľký výlet“.
 
 **Atlantik nie je Stredomorie.** Atlantické pobrežie pri Saint-Nazaire má chladnejšiu vodu, silnejší príliv a odliv a drsnejšie vlny než populárnejšie stredomorské pláže — dobrý tréning pre otužilcov.
 

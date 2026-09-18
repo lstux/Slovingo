@@ -27,11 +27,11 @@ Väčšina francúzskych samohlások je Slovákovi blízka, no dve sú úplne no
 |---|---|---|
 | a | chat | a ako v slovenskom „mama“ |
 | i | midi | i ako v slovenčine |
-| o | mot | o, niekedy medzi slovenským o a ô |
+| o | mot | podobné slovenskému o, mení sa medzi zatvoreným (mot) a otvorenejším (note) — slovenčina tento rozdiel nerozlišuje |
 | u | tu | **nová hláska** — pery ako na „u“, jazyk ako na „i“; slovenčina ju nemá |
 | ou | vous | u ako v slovenčine |
 | eu | peu | **nová hláska**, medzi e a o, pery zaguľatené |
-| oi | moi | „oa“ — dve hlásky spojené do jednej slabiky |
+| oi | moi | „ua“ (rýchly prechod, ako anglické w+a) spojené do jednej slabiky, nie dve oddelené hlásky |
 
 ---
 

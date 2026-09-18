@@ -79,6 +79,7 @@ Slovesá na -er strácajú v rozkazovacom spôsobe pre „tu“ koncové „s“
 ! Par où dois-je aller ?
 > Kade mám ísť?
 > Par où dois-je aller = kade mám ísť
++ « devoir » (musieť) je nové modálne sloveso — „dois-je" doslova znamená „musím ja". Zatiaľ si len zapamätaj tento tvar.
 
 ! Merci pour l'aide !
 > Ďakujem za pomoc!

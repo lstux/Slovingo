@@ -80,7 +80,7 @@ Privlastňovacie zámeno sa zhoduje s rodom podstatného mena, ktoré nasleduje 
 > de frère = brata
 > j'ai = mám
 > une sœur = sestru
-+ Po zápore « ne...pas » člen « un / une » zmizne a zmení sa jednoducho na « de ». Klasické pravidlo francúzskej negácie.
++ Po zápore « ne...pas » sa člen « un / une » pred priamym predmetom zmení jednoducho na « de » (tu: avoir + de frère). Toto pravidlo platí pre slovesá ako « avoir », nie pre « être » — « ce n'est pas un problème » si člen ponecháva.
 
 ! Ma sœur est à la maison.
 > Moja sestra je doma.

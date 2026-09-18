@@ -40,7 +40,7 @@ Miesta, na ktoré natrafíš v meste. Predložky „sur“ a „dans“ tu robia
 | au théâtre | v divadle |
 | au musée | v múzeu |
 
-Rozdelenie nie je dokonale systematické — „au théâtre“ a „au musée“ používajú „à“ namiesto „dans“ — ale vo všeobecnosti: otvorené povrchy sa spájajú so „sur“ (podobne ako slovenské „na“), uzavreté priestory so „dans“ (podobne ako slovenské „v“). Pekná zhoda oproti tomu, na čo si zvyknutý zo série Doma.
+Rozdelenie nie je dokonale systematické — „au théâtre“ a „au musée“ používajú „à“ namiesto „dans“ — ale vo všeobecnosti: otvorené povrchy sa spájajú so „sur“ (podobne ako slovenské „na“), uzavreté priestory so „dans“ (podobne ako slovenské „v“).
 
 ---
 

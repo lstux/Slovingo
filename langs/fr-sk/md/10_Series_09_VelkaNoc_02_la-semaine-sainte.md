@@ -2,7 +2,7 @@
 
 @ img/TODO_velkanoc_02.jpg | (doplniť: francúzsky kostol pred Veľkou nocou — Wikimedia Commons, CC BY-SA)
 
-Každý deň veľkonočného týždňa má svoje meno a svoj zvyk. Kombinujeme dni týždňa, ktoré poznáš zo série Čas, s pravou stranou passé composé — pomocným slovesom **être**.
+Každý deň veľkonočného týždňa má svoje meno a svoj zvyk. Kombinujeme dni týždňa s pravou stranou passé composé — pomocným slovesom **être**.
 
 ---
 

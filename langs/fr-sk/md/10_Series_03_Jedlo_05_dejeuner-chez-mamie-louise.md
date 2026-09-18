@@ -52,6 +52,7 @@ Eric vyká Mamie Louise. Eric, Karine a Chloé si tykajú.
 > Neviem. Ochutnám!
 > Je ne sais pas = neviem
 > je vais goûter = ochutnám
++ Dve nové veci naraz: « savoir » (vedieť) je nepravidelné sloveso, zatiaľ si zapamätaj len « je ne sais pas ». A « je vais » + infinitív vyjadruje blízku budúcnosť — doslova „idem ochutnať", teda „o chvíľu ochutnám".
 
 ! 👧 Moi, je ne veux pas de pot-au-feu. Je veux de la tarte !
 > Ja nechcem pot-au-feu. Chcem tartu!

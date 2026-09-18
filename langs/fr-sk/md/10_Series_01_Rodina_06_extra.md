@@ -44,7 +44,7 @@
 | le professeur / la professeure | učiteľ / učiteľka |
 | le médecin | lekár |
 | l'étudiant / l'étudiante | študent / študentka |
-| le retraité / la retraitée | dôchodca |
+| le retraité / la retraitée | dôchodca / dôchodkyňa |
 | le travail | práca |
 | l'école | škola |
 | l'hôpital | nemocnica |
@@ -65,6 +65,7 @@
 | ici | tu |
 | aussi | tiež |
 | beaucoup | veľa |
+| mais | ale |
 
 ---
 
@@ -84,10 +85,10 @@
 > il habite = býva
 > en ville = v meste
 
-! Qui habite dans cette maison ?
+! Qui habite dans la maison ?
 > Kto býva v tom dome?
 > Qui habite = kto býva
-> dans cette maison = v tom dome
+> dans la maison = v tom dome
 
 ! Ma femme travaille dans un bureau.
 > Moja manželka pracuje v kancelárii.
@@ -139,11 +140,13 @@
 > elle travaille = pracuje
 > beaucoup = veľa
 
-! Notre maison de campagne est loin.
-> Naša chata je ďaleko.
-> Notre maison de campagne = naša chata
+! Ma maison de campagne est petite, mais belle.
+> Moja chata je malá, ale pekná.
+> Ma maison de campagne = moja chata
 > est = je
-> loin = ďaleko
+> petite = malá
+> mais = ale
+> belle = pekná
 
 ! Mon ami habite dans un immeuble, tout près.
 > Môj kamarát býva v paneláku, blízko.

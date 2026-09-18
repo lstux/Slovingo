@@ -124,7 +124,7 @@ Dôležitá pasca: po „si“ (ak) francúzština NIKDY nepoužije budúci čas
 | l'excursion | výlet |
 | la randonnée | turistika |
 | l'alerte | upozornenie |
-| la certitude | istota |
+| sûr / sûre | istý |
 
 ---
 

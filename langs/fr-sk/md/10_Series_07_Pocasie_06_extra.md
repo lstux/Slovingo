@@ -63,7 +63,8 @@
 | l'excursion | výlet |
 | la randonnée | turistika |
 | l'alerte | upozornenie |
-| la certitude | istota |
+| sûr / sûre | istý |
+| mais | ale |
 
 ---
 
@@ -138,7 +139,7 @@
 > Reste à l'intérieur = zostaň vnútri
 > dehors il fait un vent très fort = vonku fúka veľmi silný vietor
 
-! La randonnée était magnifique, malgré le froid.
-> Turistika bola krásna, napriek zime.
-> La randonnée était magnifique = turistika bola krásna
+! La randonnée est magnifique, malgré le froid.
+> Turistika je krásna, napriek zime.
+> La randonnée est magnifique = turistika je krásna
 > malgré le froid = napriek zime

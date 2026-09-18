@@ -2,7 +2,7 @@
 
 @ img/TODO_mesto_02.jpg | (doplniť: električka, francúzske mesto — Wikimedia Commons, CC BY-SA)
 
-Mestská doprava. A dobrá správa, ktorú sme ti sľúbili v sérii Čas: francúzština na rozdiel od slovenčiny nepotrebuje dve rôzne slovesá pre jednorazovú cestu a zvyk.
+Mestská doprava. A dobrá správa: francúzština na rozdiel od slovenčiny nepotrebuje dve rôzne slovesá pre jednorazovú cestu a zvyk.
 
 ---
 
@@ -76,7 +76,7 @@ Zatiaľ čo slovenčina vyžaduje inštrumentál („autobusOM“), francúzšti
 > Chodíš vždy vlakom?
 > Tu prends toujours = chodíš vždy
 > le train = vlakom
-+ „prendre“ (brať) sa vo francúzštine používa aj na dopravu — „prendre le train“ znamená ísť vlakom, doslova „vziať si vlak“. Sloveso, ktoré už poznáš zo série Jedlo („je prends“).
++ „prendre“ (brať) sa vo francúzštine používa aj na dopravu — „prendre le train“ znamená ísť vlakom, doslova „vziať si vlak“.
 
 ! Le bus a dix minutes de retard.
 > Autobus mešká desať minút.

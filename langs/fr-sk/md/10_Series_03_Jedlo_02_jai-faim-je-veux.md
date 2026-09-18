@@ -118,7 +118,7 @@ Tu si francúzština a slovenčina navzájom pomáhajú: obe použijú „mať /
 
 **Bon appétit — presne rovnaký zvyk.** Presne ako slovenské {{Dobrú chuť}}, aj francúzske {{Bon appétit}} sa hovorí pred jedlom. Rozdiel: vo formálnejších kontextoch sa vo Francúzsku niekedy dokonca vynecháva, kým na Slovensku je prakticky povinné.
 
-**Obed kratší, večera dôležitejšia — pripomienka.** Ako sme videli už v sérii Doma, francúzsky obed je zvyčajne kratší a menej vydatný než slovenský, zatiaľ čo večera je hlavným jedlom dňa — presný opak slovenského zvyku.
+**Obed kratší, večera dôležitejšia.** Francúzsky obed je zvyčajne kratší a menej vydatný než slovenský, zatiaľ čo večera je hlavným jedlom dňa — presný opak slovenského zvyku.
 
 **Polievka nie je vždy povinná.** Na rozdiel od slovenského obedu, kde polievka takmer nikdy nechýba, vo Francúzsku sa polievka podáva skôr večer, a nie vždy — veľa Francúzov obeduje bez nej.
 
@@ -149,6 +149,7 @@ Tu si francúzština a slovenčina navzájom pomáhajú: obe použijú „mať /
 > Ďakujem, som plný.
 > Merci = ďakujem
 > je n'ai plus faim = som plný
++ « ne...plus » je iná zápora než « ne...pas » — znamená „už nie", nie jednoducho „nie". Doslova: „už nemám hlad".
 
 ! Je mange beaucoup, mais je bois peu.
 > Jem veľa, ale pijem málo.

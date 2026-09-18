@@ -122,6 +122,7 @@ Eric a Karine si tykajú. Eric vyká Mamie Louise.
 > Máte peknú rodinu.
 > Vous avez = máte
 > une belle famille = peknú rodinu
++ « belle » je ženský tvar od « beau » (pekný) — ďalší nepravidelný pár, podobne ako « vieux / vieille ».
 
 ---
 

@@ -63,6 +63,7 @@
 | le silence | ticho |
 | la tranquillité | pohoda |
 | le balcon | balkón |
+| mais | ale |
 
 ---
 
@@ -108,10 +109,10 @@
 > Le phare est le plus haut point = maják je najvyšší bod
 > de la côte = pobrežia
 
-! Je suis fatigué après avoir nagé toute la journée.
-> Som unavený po celodennom plávaní.
+! Je suis fatigué. Je nage depuis le matin.
+> Som unavený. Plávam od rána.
 > Je suis fatigué = som unavený
-> après avoir nagé toute la journée = po celodennom plávaní
+> je nage depuis le matin = plávam od rána
 
 ! Nous ferons du bateau demain, s'il n'y a pas trop de vent.
 > Zajtra sa poplavíme na lodi, ak nebude príliš veľa vetra.
@@ -123,9 +124,9 @@
 > Cette plage est moins connue = táto pláž je menej známa
 > mais elle est magnifique = ale je nádherná
 
-! J'ai trouvé un coquillage sur le sable.
-> Našiel som mušľu na piesku.
-> J'ai trouvé un coquillage = našiel som mušľu
+! Je trouve un coquillage sur le sable.
+> Nachádzam mušľu na piesku.
+> Je trouve un coquillage = nachádzam mušľu
 > sur le sable = na piesku
 
 ! Nous nous amusons beaucoup, mais nous avons besoin de repos.

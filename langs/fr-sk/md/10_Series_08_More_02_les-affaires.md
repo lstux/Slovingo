@@ -56,9 +56,9 @@ Vouloir, devoir a pouvoir sa tvoria rovnako ako slovenské chcieť, musieť a m�
 > un maillot de bain = plavky
 
 ! Je ne peux pas nager sans palmes.
-> Nemôžem plávať bez pluteiv.
+> Nemôžem plávať bez plutiev.
 > Je ne peux pas nager = nemôžem plávať
-> sans palmes = bez pluteiv
+> sans palmes = bez plutiev
 
 ! Tu as une serviette de plage ? Elle aide contre le sable.
 > Máš osušku? Pomáha proti piesku.

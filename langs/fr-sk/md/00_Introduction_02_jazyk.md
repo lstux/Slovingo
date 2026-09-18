@@ -84,7 +84,7 @@ Súčasná spisovná francúzština sa ustálila oveľa skôr než slovenčina: 
 > Som Slovák.
 > Je suis = som
 > slovaque = Slovák
-+ Vo francúzštine sa prídavné meno národnosti nemení podľa rodu hovoriaceho: „Je suis slovaque“ platí rovnako pre muža aj ženu, na rozdiel od slovenského Slovák / Slovenka.
++ Pozor, toto konkrétne prídavné meno sa nemení podľa rodu preto, že už v mužskom tvare končí na -e (slovaque). Väčšina ostatných prídavných mien národnosti sa mení tak ako vo francúzštine bežne: français / française, espagnol / espagnole. „Je suis slovaque“ teda platí rovnako pre muža aj ženu, ale nie je to všeobecné pravidlo — je to zvláštnosť tohto konkrétneho slova. To je aj tak rozdiel oproti slovenčine, kde Slovák / Slovenka sa mení vždy.
 
 ! J'apprends le français.
 > Učím sa francúzsky.

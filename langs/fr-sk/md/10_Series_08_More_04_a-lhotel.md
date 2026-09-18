@@ -96,20 +96,20 @@ Francúzsky kondicionál sa tvorí jednoducho — k budúcemu kmeňu slovesa (te
 > Pourrions-nous avoir une soupe chaude = mohli by sme mať teplú polievku
 > s'il vous plaît = prosím
 
-! La plage était magnifique, mais l'eau était froide.
-> Pláž bola krásna, ale voda bola studená.
-> La plage était magnifique = pláž bola krásna
-> mais l'eau était froide = ale voda bola studená
+! La plage est magnifique, mais l'eau est froide.
+> Pláž je krásna, ale voda je studená.
+> La plage est magnifique = pláž je krásna
+> mais l'eau est froide = ale voda je studená
 
 ---
 
 ## 🇫🇷 Francúzsky kútik
 
-**Rezervovať vopred sa oplatí, aj tu.** Podobne ako horské chaty v sezóne, aj hotely v La Baule v lete bývajú plne obsadené celé týždne vopred — prísť bez rezervácie znamená spoliehať sa na šťastie.
+**Rezervovať vopred sa oplatí, aj tu.** Hotely v La Baule v lete bývajú plne obsadené celé týždne vopred — prísť bez rezervácie znamená spoliehať sa na šťastie.
 
-**Výhľad na more stojí príplatok.** Na rozdiel od horských chát, kde má každý rovnaký výhľad, vo francúzskych prímorských hoteloch sa {{vue sur mer}} platí extra — a takmer vždy stojí za to.
+**Výhľad na more stojí príplatok.** Vo francúzskych prímorských hoteloch sa {{vue sur mer}} platí extra — a takmer vždy stojí za to.
 
-**Ticho pri mori znie inak než ticho v horách.** Namiesto horského ticha ponúka pobrežie svoj vlastný zvuk — šum vĺn, ktorý mnohí Francúzi považujú za najlepší spôsob, ako zaspať.
+**Ticho pri mori má svoj vlastný zvuk.** Pobrežie ponúka svoj typický zvuk — šum vĺn, ktorý mnohí Francúzi považujú za najlepší spôsob, ako zaspať.
 
 ---
 

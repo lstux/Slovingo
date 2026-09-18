@@ -2,7 +2,7 @@
 
 @ img/TODO_more_05.jpg | (doplniť: panoráma La Baule, Atlantik — Wikimedia Commons, CC BY-SA)
 
-Andrea a Karine sa stretávajú s Ericom v Saint-Nazaire na výlet sľúbený v sérii Počasie. Prejde sa tu celá slovná zásoba série. Žiadne nové slovo, okrem tých označených v poznámkach.
+Andrea a Karine sa stretávajú s Ericom v Saint-Nazaire na dlho plánovaný výlet. Prejde sa tu celá slovná zásoba série. Žiadne nové slovo, okrem tých označených v poznámkach.
 
 ---
 
@@ -23,6 +23,7 @@ Všetci si tykajú.
 > Enfin = konečne
 > les prévisions avaient raison = predpoveď mala pravdu
 > il fait beau = je slnečno
++ „avaient" je iný minulý čas (imparfait) — zatiaľ si len zapamätaj celú frázu „avoir raison" (mať pravdu).
 
 ! 👦 Tu as le maillot de bain et la crème solaire ?
 > Máš plavky a krém na opaľovanie?
@@ -89,6 +90,7 @@ Všetci si tykajú.
 > To je najkrajší výhľad, aký som kedy videl.
 > C'est le plus beau panorama = to je najkrajší výhľad
 > que j'aie jamais vu = aký som kedy videl
++ „j'aie" je konjunktív (subjonctif), veľmi pokročilý tvar, ktorý sa tu používa po superlatíve. Zatiaľ si len zapamätaj celú frázu.
 
 ! 👩 Bienvenue à la mer, Eric !
 > Vitaj pri mori, Eric!
@@ -114,10 +116,10 @@ Všetci si tykajú.
 > Je voudrais aller à la plage = chcel by som ísť na pláž
 > l'année prochaine aussi = aj budúci rok
 
-! La journée était longue, mais elle n'était pas trop fatigante.
-> Deň bol dlhý, ale nebol príliš náročný.
-> La journée était longue = deň bol dlhý
-> mais elle n'était pas trop fatigante = ale nebol príliš náročný
+! La journée est longue, mais elle n'est pas trop fatigante.
+> Deň je dlhý, ale nie je príliš náročný.
+> La journée est longue = deň je dlhý
+> mais elle n'est pas trop fatigante = ale nie je príliš náročný
 
 ! Nous pourrions dormir à l'hôtel et continuer demain matin.
 > Mohli by sme prespať v hoteli a pokračovať ráno.

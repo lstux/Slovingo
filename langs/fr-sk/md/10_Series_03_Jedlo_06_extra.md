@@ -54,6 +54,7 @@
 | goûter | ochutnať |
 | manger | jesť |
 | boire | piť |
+| mais | ale |
 | la quiche lorraine | quiche lorraine |
 | le pot-au-feu | pot-au-feu |
 | la ratatouille | ratatouille |
@@ -83,8 +84,8 @@
 > avec du beurre = s maslom
 
 ! Le cidre est sucré et froid.
-> Cider je sladký a studený.
-> Le cidre est = cider je
+> Jablčný mušt je sladký a studený.
+> Le cidre est = jablčný mušt je
 > sucré = sladký
 > et = a
 > froid = studený
@@ -171,11 +172,11 @@
 > s'il te plaît = prosím
 
 ! Les crêpes sont bonnes, mais le cidre est très fort.
-> Palacinky sú dobré, ale cider je veľmi silný.
+> Palacinky sú dobré, ale jablčný mušt je veľmi silný.
 > Les crêpes sont = palacinky sú
 > bonnes = dobré
 > mais = ale
-> le cidre est = cider je
+> le cidre est = jablčný mušt je
 > très fort = veľmi silný
 
 ! La quiche me plaît. J'en veux encore.

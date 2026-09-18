@@ -29,7 +29,7 @@
 | J'ai donné un œuf à Chloé. → Je lui ai donné un œuf. | Dal/dala som Chloé vajíčko. → Dal/dala som jej vajíčko. |
 | J'ai donné des œufs aux enfants. → Je leur ai donné des œufs. | Dal/dala som deťom vajíčka. → Dal/dala som im vajíčka. |
 
-Podobne ako zámená le/la/les (priamy predmet, séria Doma), francúzština má aj zámená pre nepriamy predmet: „lui“ (jemu/jej, jednotné číslo) a „leur“ (im, množné číslo). Presne zodpovedajú slovenskému datívu „mu/jej/im“.
+Podobne ako zámená le/la/les (priamy predmet), francúzština má aj zámená pre nepriamy predmet: „lui“ (jemu/jej, jednotné číslo) a „leur“ (im, množné číslo). Presne zodpovedajú slovenskému datívu „mu/jej/im“.
 
 ---
 
@@ -141,6 +141,7 @@ Podobne ako zámená le/la/les (priamy predmet, séria Doma), francúzština má
 > Bolo to veľmi zábavné.
 > C'était = bolo to
 > très amusant = veľmi zábavné
++ „c'était" je iný minulý čas (imparfait), nie passé composé — používa sa na opis, nie na jednorazový dej. Zatiaľ si len zapamätaj celú frázu.
 
 ! Nous avons passé un jour joyeux.
 > Strávili sme radostný deň.

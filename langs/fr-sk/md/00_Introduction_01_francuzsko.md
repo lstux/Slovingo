@@ -16,7 +16,7 @@ Francúzsko je krajina v západnej Európe, s dlhým pobrežím na Atlantiku, v 
 | Mena | euro |
 | Reliéf | najmä nížiny a plošiny, na juhovýchode vysoké pohoria |
 
-Krajinu na juhovýchode lemujú {{Alpy}} s najvyšším vrcholom {{Mont Blanc}} (4 809 m), na juhozápade {{Pyreneje}} na hranici so Španielskom. Tri najväčšie mestá krajiny sú {{Paríž}}, {{Marseille}} a {{Lyon}}.
+Krajinu na juhovýchode lemujú {{Alpy}} s najvyšším vrcholom {{Mont Blanc}} (približne 4 810 m — presná výška mierne kolíše podľa množstva snehu a ľadu na vrchole), na juhozápade {{Pyreneje}} na hranici so Španielskom. Tri najväčšie mestá krajiny sú {{Paríž}}, {{Marseille}} a {{Lyon}}.
 
 Lyon, tretie najväčšie mesto, leží na sútoku riek Rhône a Saône. Marseille, druhé najväčšie mesto, je hlavným prístavom na Stredomorí a jedným z najstarších miest krajiny.
 

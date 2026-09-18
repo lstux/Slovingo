@@ -117,7 +117,7 @@ Toto malé slovko „me/te/se“ je nevyhnutné, presne ako slovenské „sa“ 
 
 **Théâtre má vo Francúzsku dlhú tradíciu.** Francúzsko má jednu z najstarších divadelných tradícií v Európe, s inštitúciou {{Comédie-Française}} založenou už v roku 1680 — staršou než väčšina slovenských národných divadiel.
 
-**Sa/se — zvratné slovesá v oboch jazykoch.** Veľa slovies každodennej činnosti má vo francúzštine túto zvratnú časticu: {{se promener}} (prechádzať sa), ale aj {{se lever}} (vstávať, spomenuté v sérii Doma) alebo {{s'appeler}} (volať sa, spomenuté v sérii Rodina). Rozpoznať ju uľahčuje čítanie.
+**Sa/se — zvratné slovesá v oboch jazykoch.** Veľa slovies každodennej činnosti má vo francúzštine túto zvratnú časticu: {{se promener}} (prechádzať sa), ale aj {{se lever}} (vstávať) alebo {{s'appeler}} (volať sa). Rozpoznať ju uľahčuje čítanie.
 
 ---
 
@@ -147,9 +147,9 @@ Toto malé slovko „me/te/se“ je nevyhnutné, presne ako slovenské „sa“ 
 > Le concert est = koncert je
 > intéressant = zaujímavý
 
-! Le film était ennuyeux.
-> Film bol nudný.
-> Le film était = film bol
+! Le film est ennuyeux.
+> Film je nudný.
+> Le film est = film je
 > ennuyeux = nudný
 
 ! Vous avez des billets pour le festival ?

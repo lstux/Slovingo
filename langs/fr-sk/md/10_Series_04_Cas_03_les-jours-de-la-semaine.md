@@ -127,7 +127,7 @@ Pridaním „le“ pred deň sa z jednorazovej udalosti stáva pravidelný zvyk.
 
 **Nedeľa je vo Francúzsku ešte zatvorenejšia.** Väčšina obchodov je zo zákona zatvorená v nedeľu (s výnimkami ako pekárne alebo menšie obchody), podobne prísne ako na Slovensku, ak nie prísnejšie v niektorých regiónoch.
 
-**Meniny existujú, ale slávia sa menej.** Ako sme spomenuli v sérii Rodina, francúzsky kalendár tiež priraďuje meno ku každému dňu, ale osláviť svoju {{fête}} je oveľa menej rozšírené než na Slovensku.
+**Meniny existujú, ale slávia sa menej.** Francúzsky kalendár tiež priraďuje meno ku každému dňu, ale osláviť svoju {{fête}} je oveľa menej rozšírené než na Slovensku.
 
 ---
 

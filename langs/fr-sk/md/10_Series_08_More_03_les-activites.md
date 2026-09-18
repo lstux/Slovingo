@@ -2,7 +2,7 @@
 
 @ img/TODO_more_03.jpg | (doplniť: windsurfing, Atlantické pobrežie — Wikimedia Commons, CC BY-SA)
 
-Čo všetko sa dá pri mori robiť. A superlatív — konečne rovnako jednoduchý ako komparatív zo série Počasie.
+Čo všetko sa dá pri mori robiť. A superlatív — konečne rovnako jednoduchý ako komparatív.
 
 ---
 
@@ -30,7 +30,7 @@
 | la vague la plus haute | najvyššia vlna |
 | le moins cher | najlacnejší |
 
-Rovnako jednoduché ako komparatív zo série Počasie: „le plus/le moins“ pred prídavným menom, žiadna nová koncovka. Slovenská predpona „naj-“ pred komparatívom je jediný ekvivalent, ktorý budeš potrebovať.
+Rovnako jednoduché ako komparatív: „le plus/le moins“ pred prídavným menom, žiadna nová koncovka. Slovenská predpona „naj-“ pred komparatívom je jediný ekvivalent, ktorý budeš potrebovať.
 
 ### Pripomienka: komparatív + superlatív
 

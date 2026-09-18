@@ -41,7 +41,7 @@ Pri „nous achetons“ sa „è“ mení späť na „e“ — bežná pravopis
 | à la pharmacie (à + la) | do lekárne |
 | à l'épicerie (à + l') | do potravín |
 
-„à“ + „le“ sa spája do jedného slova: **au**. Podobne ako „du“ (de + le), ktoré sme videli v sérii Jedlo. „à la“ a „à l'“ sa naopak nemenia.
+„à“ + „le“ sa spája do jedného slova: **au**. Podobný princíp ako „du“ (de + le). „à la“ a „à l'“ sa naopak nemenia.
 
 ---
 

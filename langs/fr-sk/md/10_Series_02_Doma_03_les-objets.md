@@ -152,7 +152,7 @@ Slovenčina tiež pozná krátke zámená (ho, ju, ich), takže princíp ti nie 
 > Hodiny sú na stene.
 > L'horloge est = hodiny sú
 > au mur = na stene
-+ « hodiny » je v slovenčine vždy v množnom čísle, ako « dvere ». Odtiaľ « sú ».
++ « hodiny » je v slovenčine vždy v množnom čísle, ako « dvere ». Odtiaľ « sú ». Všimni si aj « au » namiesto „à le“: « à » a « le » sa vo francúzštine vždy spájajú do jedného slova « au ».
 
 ! Je cherche mes lunettes.
 > Hľadám okuliare.

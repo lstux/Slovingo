@@ -33,7 +33,7 @@ Oblečenie, veľkosti, a sloveso **essayer** (skúsiť). Tu si všimneš niečo 
 
 „y“ sa mení na „i“ pred nemým „e“ (essaie), ale zostáva „y“ pred vyslovenou samohláskou (essayons) — podobná logika ako pri „acheter“ z predošlej fiche.
 
-### Farba PO slove, nie pred ním!
+### Farba PO slove — a vlastne väčšina prídavných mien!
 
 | Francúzština | Slovenčina |
 |----------|----------|
@@ -41,7 +41,7 @@ Oblečenie, veľkosti, a sloveso **essayer** (skúsiť). Tu si všimneš niečo 
 | un pantalon noir | čierne nohavice |
 | une jupe verte | zelená sukňa |
 
-Toto je nová vec: francúzske prídavné mená zvyčajne stoja PRED podstatným menom (un petit pull), ale farby patria medzi výnimky, ktoré stoja VŽDY ZA ním. Presný opak slovenského poradia — a aj opak väčšiny ostatných francúzskych prídavných mien!
+Toto je nová vec: francúzske prídavné mená VÄČŠINOU stoja ZA podstatným menom — presný opak slovenského poradia. Farby sa touto väčšinovou logikou riadia. Výnimkou je malá skupina krátkych, veľmi bežných prídavných mien, ktoré už poznáš — « petit », « grand », « bon », « vieux », « beau » — tie naopak stoja PRED slovom (un petit pull). Farby medzi túto výnimku nepatria.
 
 ---
 
@@ -66,6 +66,7 @@ Toto je nová vec: francúzske prídavné mená zvyčajne stoja PRED podstatným
 > Táto košeľa je malá. Máte väčšiu?
 > Cette chemise est petite = táto košeľa je malá
 > vous en avez une plus grande = máte väčšiu
++ « plus » + prídavné meno = komparatív („viac veľký" = väčší). Nová konštrukcia, zapamätaj si ju zatiaľ takto.
 
 ! J'essaie le pantalon noir.
 > Skúsim čierne nohavice.

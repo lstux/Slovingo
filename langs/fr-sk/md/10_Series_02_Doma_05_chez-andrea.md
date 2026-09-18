@@ -29,6 +29,7 @@ Eric a Andrea si vykajú. Eric a Karine si tykajú.
 > Merci = ďakujem
 > vous avez = máte
 > un bel appartement = pekný byt
++ « bel » je zvláštny mužský tvar od « beau » (pekný), použitý pred samohláskou — presne ako « mon/ton/son » pred ženským slovom na samohlásku. Pred spoluhláskou by to bolo « un beau salon ».
 
 ! 👩 Il est petit. Nous avons trois pièces.
 > Je malý. Máme tri izby.
@@ -129,10 +130,10 @@ Eric a Andrea si vykajú. Eric a Karine si tykajú.
 
 ## Ešte pár viet
 
-! Merci, c'était excellent.
-> Ďakujem, bolo to výborné.
+! Merci, c'est excellent.
+> Ďakujem, je to výborné.
 > Merci = ďakujem
-> c'était = bolo to
+> c'est = je to
 > excellent = výborné
 
 ! Où sont mes lunettes ?

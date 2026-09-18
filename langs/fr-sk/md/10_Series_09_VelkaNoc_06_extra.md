@@ -62,6 +62,7 @@
 | la crème | smotana |
 | le dessert | dezert |
 | sucré | sladký |
+| mais | ale |
 
 ---
 
@@ -98,10 +99,10 @@
 > Toute la famille s'est réunie = celá rodina sa zišla
 > pour manger le gigot d'agneau = aby jedla jahňacie stehno
 
-! Nous leur avons offert du chocolat, ils étaient très contents.
-> Darovali sme im čokoládu, boli veľmi spokojní.
-> Nous leur avons offert du chocolat = darovali sme im čokoládu
-> ils étaient très contents = boli veľmi spokojní
+! Nous leur offrons du chocolat, ils sont très contents.
+> Darujeme im čokoládu, sú veľmi spokojní.
+> Nous leur offrons du chocolat = darujeme im čokoládu
+> ils sont très contents = sú veľmi spokojní
 
 ! Les cloches sont revenues de Rome le dimanche de Pâques.
 > Zvony sa vrátili z Ríma na Veľkonočnú nedeľu.
@@ -113,10 +114,10 @@
 > Cette année, nous avons caché plus d'œufs = tento rok sme schovali viac vajíčok
 > que d'habitude = ako zvyčajne
 
-! Le gâteau était sucré, mais le repas était surtout salé.
-> Koláč bol sladký, ale jedlo bolo hlavne slané.
-> Le gâteau était sucré = koláč bol sladký
-> mais le repas était surtout salé = ale jedlo bolo hlavne slané
+! Le gâteau est sucré, mais le repas est surtout salé.
+> Koláč je sladký, ale jedlo je hlavne slané.
+> Le gâteau est sucré = koláč je sladký
+> mais le repas est surtout salé = ale jedlo je hlavne slané
 
 ! Les invités sont arrivés avec des fleurs et du chocolat.
 > Hostia prišli s kvetmi a čokoládou.

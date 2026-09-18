@@ -65,6 +65,7 @@
 | les soldes | výpredaj |
 | le distributeur | bankomat |
 | le portefeuille | peňaženka |
+| mais | ale |
 
 ---
 
@@ -132,12 +133,10 @@
 > Le distributeur est fermé = bankomat je zatvorený
 > ce n'est pas possible = to nie je možné
 
-! J'ai oublié mon portefeuille à la maison.
-> Zabudol som peňaženku doma.
-> J'ai oublié = zabudol som
-> mon portefeuille = peňaženku
-> à la maison = doma
-+ „oublier“ znamená zabudnúť.
+! Je n'ai pas mon portefeuille. Il est à la maison.
+> Nemám peňaženku. Je doma.
+> Je n'ai pas mon portefeuille = nemám peňaženku
+> il est à la maison = je doma
 
 ! Je veux une réduction, parce que c'est trop cher.
 > Chcem zľavu, lebo to je príliš drahé.

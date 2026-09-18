@@ -118,7 +118,7 @@ Vo francúzštine sa slovo za predložkou vôbec nemení — na rozdiel od slove
 
 ## 🇫🇷 Francúzsky kútik
 
-**Lyon, veľké mesto na Rhône.** Lyon patrí medzi najväčšie francúzske mestá, postavené okolo rieky Rhône. Práve odtiaľ pochádza Eric — a miestne výrazy sa časom objavia aj v jeho slovenčine (a teraz aj vo francúzštine, ktorú sa učíš).
+**Lyon, veľké mesto na Rhône.** Lyon patrí medzi najväčšie francúzske mestá, postavené okolo rieky Rhône. Práve odtiaľ pochádza Eric — takže niektoré miestne lyonské výrazy sa časom objavia aj vo francúzštine, ktorú sa učíš.
 
 **Byt alebo dom — otázka regiónu.** Vo veľkých mestách ako Paríž alebo Lyon prevláda bývanie v byte ({{appartement}}), zatiaľ čo na vidieku je dom ({{maison}}) s malou záhradou skôr pravidlom. Francúzsky ekvivalent slovenského paneláku sa volá {{HLM}} — sociálne bývanie, menej rozšírené než na Slovensku.
 

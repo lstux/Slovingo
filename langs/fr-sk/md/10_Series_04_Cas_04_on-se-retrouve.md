@@ -60,6 +60,7 @@ Toto je jedna z najužitočnejších francúzskych konštrukcií: časované „
 > Idem teraz.
 > J'y vais = idem
 > maintenant = teraz
++ « y » nahrádza miesto, o ktorom sa už hovorilo (tu: kam idem) — podobný princíp ako « en », len pre miesto namiesto « de + slovo ».
 
 ! J'attends à sept heures.
 > Čakám o siedmej.

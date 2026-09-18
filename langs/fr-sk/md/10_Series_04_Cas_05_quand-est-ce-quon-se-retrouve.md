@@ -99,6 +99,7 @@ Eric a Andrea si vykajú. Andrea a Marek si tykajú.
 > Alors = tak
 > viens = príď
 > tôt = skoro
++ « viens » je rozkazovací spôsob od « venir » — nepravidelný tvar, zatiaľ si ho len zapamätaj.
 
 ---
 

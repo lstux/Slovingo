@@ -2,7 +2,7 @@
 
 @ img/TODO_pocasie_03.jpg | (doplniť: oblečenie na chladné počasie — Wikimedia Commons, CC BY-SA)
 
-Obliecť sa podľa počasia. Nájdeš tu oblečenie zo série Nákupy, sloveso **mettre**, a nový odtieň: nutnosť.
+Obliecť sa podľa počasia. Oblečenie, sloveso **mettre**, a nový odtieň: nutnosť.
 
 ---
 

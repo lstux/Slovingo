@@ -66,9 +66,9 @@ Zhrnutie: väčšina slovies ide s „avoir“ (bez zhody príčastia), malá sk
 > Nous n'avons pas mangé de viande = nejedli sme mäso
 > le vendredi saint = na Veľký piatok
 
-! La table était pleine de nourriture.
-> Stôl bol plný jedla.
-> La table était pleine = stôl bol plný
+! La table est pleine de nourriture.
+> Stôl je plný jedla.
+> La table est pleine = stôl je plný
 > de nourriture = jedla
 
 ! Nous avons un agneau en chocolat, pas un vrai.
@@ -143,7 +143,7 @@ Zhrnutie: väčšina slovies ide s „avoir“ (bez zhody príčastia), malá sk
 > J'aime la crème = mám rád smotanu
 > avec le chocolat = s čokoládou
 
-! La table était salée et sucrée à la fois.
-> Stôl bol slaný aj sladký zároveň.
-> La table était salée et sucrée = stôl bol slaný aj sladký
+! La table est salée et sucrée à la fois.
+> Stôl je slaný aj sladký zároveň.
+> La table est salée et sucrée = stôl je slaný aj sladký
 > à la fois = zároveň

@@ -54,7 +54,7 @@ Všetci si tykajú okrem vzťahu Eric–Mamie Louise, kde Eric vyká.
 ! 👧 Oui ! J'en ai trouvé trois !
 > Áno! Našla som tri!
 > Oui ! J'en ai trouvé trois = áno, našla som tri
-+ „en“ nahrádza „des œufs“ — pripomienka zámena zo série Jedlo.
++ „en“ nahrádza „des œufs“.
 
 ! 👦 Moi, je n'ai rien trouvé !
 > Ja som nenašiel nič!

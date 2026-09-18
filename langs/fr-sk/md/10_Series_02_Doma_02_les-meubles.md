@@ -152,9 +152,9 @@ Slovenčina nemá priamy ekvivalent tejto väzby — jednoducho použije „je�
 > est = je
 > dans le salon = v obývačke
 
-! Le livre est sur l'étagère.
-> Kniha je na polici.
-> Le livre = kniha
+! La télévision est sur l'étagère.
+> Televízor je na polici.
+> La télévision = televízor
 > est = je
 > sur l'étagère = na polici
 

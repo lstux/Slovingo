@@ -11,7 +11,7 @@ Eric zmeškal svoju zastávku a hľadá cestu. Náhodou stretne Mareka. Prejde s
 - 👦 Eric, stratený v meste
 - 👨 Marek, ktorého náhodou stretne
 
-Eric a Marek si už tykajú, ako v sérii Čas.
+Eric a Marek si už tykajú.
 
 ---
 

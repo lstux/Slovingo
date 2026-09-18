@@ -141,8 +141,8 @@ Dobrá správa: francúzske „il est“ sa vôbec nemení, či je hodina jedna 
 > je n'ai jamais le temps = nikdy nemám čas
 + Francúzske „ne...jamais“ funguje podobne ako slovenská dvojitá zápora „nikdy ne-“ — tu si oba jazyky navzájom rozumejú.
 
-! Hier la nuit a été longue.
-> Včera bola noc dlhá.
+! Hier, comme aujourd'hui, je n'ai pas le temps.
+> Včera, tak ako dnes, nemám čas.
 > Hier = včera
-> la nuit a été = noc bola
-> longue = dlhá
+> comme aujourd'hui = tak ako dnes
+> je n'ai pas le temps = nemám čas

@@ -48,6 +48,7 @@ Zlá správa hneď na úvod: francúzsky rod sa musí naučiť naspamäť spolu 
 > C'est = to je
 > notre = náš
 > maison = dom
++ « notre » (náš/naša) sa nemení podľa rodu — rovnaký tvar pre « notre maison » (žen. rod) aj « notre appartement » (muž. rod). Mení sa iba v množnom čísle: « nos ».
 
 ! Nous avons quatre pièces.
 > Máme štyri izby.

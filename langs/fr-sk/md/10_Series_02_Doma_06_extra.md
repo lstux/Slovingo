@@ -66,6 +66,8 @@
 | lire | čítať |
 | écrire | písať |
 | se lever | vstávať |
+| mais | ale |
+| joli | pekný |
 
 ---
 
@@ -84,11 +86,11 @@
 > je lis = čítam
 > un livre = knihu
 
-! Il y a un miroir au-dessus du lavabo.
-> Nad umývadlom je zrkadlo.
+! Il y a un miroir au-dessus de l'armoire.
+> Nad skriňou je zrkadlo.
 > Il y a = je
 > un miroir = zrkadlo
-> au-dessus du lavabo = nad umývadlom
+> au-dessus de l'armoire = nad skriňou
 
 ! Où sont les chaussons ? Dans le couloir ?
 > Kde sú papuče? Na chodbe?

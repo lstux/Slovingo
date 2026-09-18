@@ -30,7 +30,7 @@ Farby, ktoré sa zhodujú ako každé iné prídavné meno. A nové slovká **ce
 | une veste rouge (ženský rod) | červená bunda |
 | des chaussures rouges (množné číslo) | červené topánky |
 
-Rovnaké pravidlo ako v sérii Jedlo: -e pre ženský rod, -s pre množné číslo. „rouge“ už končí na -e, takže ženský tvar je zhodný s mužským.
+Rovnaké pravidlo ako pri iných prídavných menách: -e pre ženský rod, -s pre množné číslo. „rouge“ už končí na -e, takže ženský tvar je zhodný s mužským.
 
 ### Ce / cet / cette / ces — ukazovacie zámená
 

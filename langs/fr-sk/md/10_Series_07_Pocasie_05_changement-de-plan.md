@@ -56,6 +56,7 @@ Andrea a Karine si tykajú.
 ! 👩 Samedi il devrait faire beau !
 > V sobotu má byť slnečno!
 > Samedi il devrait faire beau = v sobotu má byť slnečno
++ „devrait" je podmieňovací spôsob (conditionnel) od „devoir" — vyjadruje očakávanie, „malo by byť". Nová vec, zatiaľ si ju len zapamätaj.
 
 ! 🧑 Super. On doit avoir de bons vêtements, en colline il fait toujours plus frais.
 > Super. Musíme mať dobré oblečenie, na kopcoch je vždy chladnejšie.

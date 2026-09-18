@@ -144,9 +144,9 @@ Konečne niečo jednoduchšie: francúzske „euros“ má len jeden tvar množn
 > Je to v akcii.
 > C'est en promotion = je to v akcii
 
-! Je voudrais une réduction, s'il vous plaît.
+! Je veux une réduction, s'il vous plaît.
 > Chcem zľavu, prosím.
-> Je voudrais une réduction = chcem zľavu
+> Je veux une réduction = chcem zľavu
 > s'il vous plaît = prosím
 
 ! Où est le distributeur ?

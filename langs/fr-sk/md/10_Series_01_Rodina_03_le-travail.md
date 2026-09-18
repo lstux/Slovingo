@@ -15,7 +15,7 @@ Hovoríme o tom, čo robia členovia rodiny. Dve nové slovesá, **travailler** 
 | le professeur / la professeure | učiteľ / učiteľka |
 | le médecin | lekár |
 | l'étudiant / l'étudiante | študent / študentka |
-| le retraité / la retraitée | dôchodca |
+| le retraité / la retraitée | dôchodca / dôchodkyňa |
 
 ---
 

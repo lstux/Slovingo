@@ -80,12 +80,13 @@ Slovenčina tieto vety tvorí úplne bez podmetu: „je“ + príslovka stačí.
 > Oblaky sú tmavé. Bude búrka.
 > Les nuages sont sombres = oblaky sú tmavé
 > il va y avoir un orage = bude búrka
-+ „il va y avoir“ je futur proche od „il y a“ — pripomienka konštrukcie zo série Čas.
++ „il va y avoir“ je futur proche od „il y a“.
 
 ! Aujourd'hui il fait frais, demain il fera chaud.
 > Dnes je chladno, zajtra bude teplo.
 > Aujourd'hui il fait frais = dnes je chladno
 > demain il fera chaud = zajtra bude teplo
++ „il fera“ je budúci čas (futur simple) od „il fait“ — nepravidelný tvar, zatiaľ si ho len zapamätaj.
 
 ---
 

@@ -151,15 +151,15 @@ Rovnaké pravidlo ako v prvej fiche série: po zápore sa „du / de la / des“
 ## Ešte pár viet
 
 ! Je prends un cidre.
-> Dám si cider.
+> Dám si jablčný mušt.
 > Je prends = dám si
-> un cidre = cider
+> un cidre = jablčný mušt
 
-! Je bois du chocolat chaud, pas du café.
+! Je bois du chocolat chaud, pas de café.
 > Pijem horúcu čokoládu, nie kávu.
 > Je bois = pijem
 > du chocolat chaud = horúcu čokoládu
-> pas du café = nie kávu
+> pas de café = nie kávu
 
 ! Le croissant est chaud et savoureux.
 > Croissant je teplý a chutný.

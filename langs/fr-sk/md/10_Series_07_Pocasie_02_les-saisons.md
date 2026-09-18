@@ -113,7 +113,7 @@ Dobrá správa: francúzsky komparatív je oveľa jednoduchší než slovenský 
 
 **Jeseň má vo Francúzsku tiež svoje farby, len inde.** Namiesto tatranských smrekovcov ponúka francúzsky vidiek vinice, ktoré sa na jeseň sfarbujú do červena a zlata — {{les vendanges}} (oberačka hrozna) je jeden z jesenných rituálov.
 
-**Jar sa spája s Veľkou nocou, aj tu.** Podobne ako slovenská {{jar}}, aj francúzske {{le printemps}} sa spája s Veľkou nocou a prebúdzaním prírody, hoci oslavy majú inú podobu (viac o tom v poslednej sérii).
+**Jar sa spája s Veľkou nocou, aj tu.** Podobne ako slovenská {{jar}}, aj francúzske {{le printemps}} sa spája s Veľkou nocou a prebúdzaním prírody, hoci oslavy majú inú podobu.
 
 **Zima znamená lyžovačku aj vo Francúzsku.** Francúzske Alpy patria medzi najobľúbenejšie lyžiarske destinácie na svete, podobne ako slovenské Tatry v menšom meradle — rodiny si plánujú {{les vacances d'hiver}} na lyžovanie.
 

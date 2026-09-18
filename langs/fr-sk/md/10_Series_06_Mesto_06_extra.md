@@ -64,6 +64,8 @@
 | le programme | program |
 | intéressant | zaujímavý |
 | ennuyeux | nudný |
+| le plan | mapa |
+| mais | ale |
 
 ---
 
@@ -126,10 +128,10 @@
 > La mairie est fermée = radnica je zatvorená
 > ce n'est pas possible = to nie je možné
 
-! J'ai oublié l'adresse à la maison.
-> Zabudol som adresu doma.
-> J'ai oublié l'adresse = zabudol som adresu
-> à la maison = doma
+! Je n'ai pas de plan. Il est à la maison.
+> Nemám mapu. Je doma.
+> Je n'ai pas de plan = nemám mapu
+> il est à la maison = je doma
 
 ! Je veux un plan, parce que je suis vraiment perdu.
 > Chcem mapu, lebo som naozaj stratený.

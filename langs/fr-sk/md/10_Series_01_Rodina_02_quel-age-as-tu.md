@@ -85,13 +85,13 @@ Dobrá správa: francúzske « an » sa nedelí na tri tvary ako slovenské rok/
 + V množnom čísle sa k « petit » len pridá nevýslovné « s ».
 
 ! Mon père est grand et costaud.
-> Môj otec je vysoký a veľký.
+> Môj otec je vysoký a statný.
 > Mon père = môj otec
 > est = je
 > grand = vysoký
 > et = a
-> costaud = veľký
-+ Francúzske « grand » sa používa aj pre výšku, aj pre „veľký“ všeobecne — na rozdiel od slovenčiny, kde sú to dve odlišné slová.
+> costaud = statný
++ Francúzske « grand » sa používa aj pre výšku, aj pre „veľký“ všeobecne — na rozdiel od slovenčiny, kde sú to dve odlišné slová. « costaud » presnejšie znamená „urastený, so silnou postavou“, nie hocijaké „veľký“.
 
 ---
 
@@ -169,4 +169,4 @@ Dobrá správa: francúzske « an » sa nedelí na tri tvary ako slovenské rok/
 > Aké je tvoje meno?
 > Quel est = aké je
 > ton prénom = tvoje meno
-+ « ton » je mužský tvar, « ta » ženský — rovnaká logika ako « mon / ma ».
++ « ton » je mužský tvar, « ta » ženský — rovnaká logika ako « mon / ma ». Pozor na výnimku: pred ženským slovom začínajúcim na samohlásku sa aj tak použije « ton » (nie « ta »), kvôli výslovnosti — napríklad « ton amie », nie „ta amie“. Rovnako « mon amie », nie „ma amie“.

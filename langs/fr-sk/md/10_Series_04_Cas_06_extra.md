@@ -63,6 +63,7 @@
 | le réveil | budík |
 | le bus | autobus |
 | le train | vlak |
+| mais | ale |
 
 ---
 
@@ -120,10 +121,12 @@
 > Ma montre retarde = moje hodinky meškajú
 > de cinq minutes = päť minút
 
-! Hier c'était tard. Aujourd'hui j'arrive à l'heure.
-> Včera bolo neskoro. Dnes prídem načas.
-> Hier c'était tard = včera bolo neskoro
-> aujourd'hui j'arrive à l'heure = dnes prídem načas
+! Le lundi, j'arrive tard. Aujourd'hui, j'arrive à l'heure.
+> V pondelky prichádzam neskoro. Dnes prídem načas.
+> Le lundi = v pondelky
+> j'arrive tard = prichádzam neskoro
+> aujourd'hui = dnes
+> j'arrive à l'heure = prídem načas
 
 ! On se retrouve samedi à cinq heures moins le quart.
 > Stretneme sa v sobotu o trištvrte na päť.

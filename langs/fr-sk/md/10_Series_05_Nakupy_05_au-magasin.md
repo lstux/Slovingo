@@ -68,6 +68,7 @@ Eric a Andrea si tykajú. Obaja vykajú predavačke.
 > Áno, veľkosť XL. Nech sa páči.
 > Oui, taille XL = áno, veľkosť XL
 > tenez = nech sa páči
++ « Tenez » je doslova „držte" (od « tenir »), ale ako ustálený výraz znamená „nech sa páči", keď niekomu niečo podávaš.
 
 ! 👦 C'est mieux ! Combien ça coûte ?
 > To je lepšie! Koľko to stojí?
