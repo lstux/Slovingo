@@ -1,0 +1,134 @@
+SMD (Slovingo Markdown)
+ 
+SMD est une extension légère du Markdown destinée à créer des fiches d'apprentissage des langues (initialement le slovaque).
+ 
+Il est entièrement compatible avec le Markdown classique et ajoute seulement quelques constructions spécifiques. 
+ 
+---
+ 
+1. Translate-table
+ 
+Une Translate-table est un tableau markdown classique, avec 2 colonnes minimum : mot/expression et traduction. Privilégier la langue apprise dans la première colonne, mais non obligatoire. 
+ 
+Exemple :
+ 
+| Français | Slovaque |
+|----------|-----------|
+| Bonjour | Dobrý deň |
+| Merci | Ďakujem |
+ 
+Si une colonne possède un en-tête contenant un mot désignant la langue apprise (pour le slovaque, par exemple : "Slovaque", "Slovak", "Slovenčina"...), le convertisseur ajoute automatiquement :
+ 
+class="translate-table"
+ 
+Le Javascript se charge ensuite de :
+ 
+- détecter automatiquement cette colonne
+- ajouter "class="speakable" à toutes les cellules de cette colonne
+- rendre ces cellules prononçables.
+ 
+Aucune syntaxe supplémentaire n'est nécessaire.
+ 
+---
+ 
+2. Audio-card
+ 
+Permet de représenter une phrase avec sa traduction et ses explications.
+ 
+Syntaxe :
+ 
+! Chýbaš mi.
+> Tu me manques.
+> Chýbaš = tu manques
+> mi = à moi
++ La construction est inversée par rapport au français.
+ 
+Règles :
+ 
+- une ligne commençant par "!" ouvre une nouvelle carte audio ;
+- le texte après "!" est la phrase à prononcer ;
+- le premier ">" est la traduction naturelle ;
+- les ">" suivants constituent la traduction littérale ou la décomposition de la phrase ;
+- les lignes commençant par "+" sont des remarques, explications ou notes grammaticales ;
+- plusieurs lignes ">" et "+" sont autorisées.
+ 
+Le convertisseur génère une structure HTML du type :
+ 
+<div class="audio-card">
+ 
+    <div class="audio-text">
+        ...
+    </div>
+ 
+    <div class="audio-translation">
+ 
+        <div class="natural-translation">
+            ...
+        </div>
+ 
+        <div class="literal-translation">
+            ...
+        </div>
+ 
+        <div class="notes">
+            ...
+        </div>
+ 
+    </div>
+ 
+</div>
+ 
+Le Javascript ajoute automatiquement les boutons (lecture, lecture lente, affichage des traductions...), masque les traductions par défaut et rend la phrase directement cliquable.
+ 
+---
+ 
+3. Élément speakable
+ 
+Permet de rendre prononçable un mot ou une expression au milieu d'un texte.
+ 
+Syntaxe :
+ 
+Le mot {{jeden}} signifie « un ».
+ 
+La phrase {{Ako sa máte?}} est très courante.
+ 
+Le convertisseur remplace :
+ 
+{{texte}}
+ 
+par :
+ 
+<span class="speakable">texte</span>
+ 
+Le Javascript ajoute automatiquement le comportement de lecture.
+ 
+Cette syntaxe peut être utilisée partout (paragraphes, listes, tableaux, cartes audio...).
+ 
+---
+ 
+Résumé de la syntaxe
+ 
+Syntaxe| Signification
+`| ...
+"!"| Début d'une audio-card
+premier ">"| Traduction naturelle
+autres ">"| Traduction littérale / décomposition
+"+"| Remarques, notes, explications
+"{{...}}"| Élément prononçable (speakable)
+ 
+---
+ 
+Philosophie
+ 
+Le contenu SMD reste lisible en texte brut.
+ 
+Le fichier SMD ne contient aucune information de présentation ni de comportement.
+ 
+Le convertisseur produit un HTML sémantique.
+ 
+Le CSS gère la présentation.
+ 
+Le Javascript ajoute le comportement interactif (lecture audio, boutons, affichage des traductions, recherche, etc.).
+ 
+Cette séparation permet de faire évoluer librement le rendu HTML, le CSS ou le Javascript sans modifier les fichiers SMD.
+ 

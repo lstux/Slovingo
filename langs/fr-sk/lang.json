@@ -16,8 +16,8 @@
     "css_class": "col-native"
   },
   "site": {
-    "title": "Ahoj Francúzština",
-    "short_name": "Ahoj FR",
+    "title": "Dis bonjour!",
+    "short_name": "Dis bonjour!",
     "description": "Učenie sa hovorovej francúzštiny — kartičky a cvičenia",
     "theme_color": "#ee1c25",
     "storage_prefix": "fr-sk",

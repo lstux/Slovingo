@@ -553,6 +553,7 @@ footer {
     background: color-mix(in srgb, var(--text) 10%, transparent);
     width: 100%;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .progress-bar {
@@ -566,7 +567,6 @@ footer {
     );
     transition: width 0.3s ease;
 }
-
 
 /* ==========================================================================
    6. Illustration de fiche

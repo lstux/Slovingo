@@ -6,13 +6,9 @@ Conçu pour parler couramment (A2) sans s'égarer dans les déclinaisons — et 
 
 ## 🎯 Pourquoi Slovingo
 
-Il n'existe **aucun cours slovaque-français** libre et décent ailleurs. Même chose pour le breton. Plutôt que de demander à Google de faire un truc qui existe pas, on a écrit nos fiches et un moteur pour les lire, écouter, et réviser.
+Les applications les plues connues n'ont pas de cours de Slovaque disponibles, j'avais essayé Ling qui le supporte, mais je n'étais pas tout à fait satisfait non plus. Je voulais pouvoir écouter les mots et les phrases en les lisant, créer mes propres fiches de vocabulaire ou de dialogue...
 
-Bonus : tu ne dépends de personne. Pas de compte à créer, pas d'appli fermée, pas de serveur applicatif qui peut disparaître demain. Juste des fichiers texte en Markdown, un petit script Python, et tu as ton cours.
-
----
-
-## 👀 Ça ressemble à quoi
+Ici tu ne dépends de personne. Pas de compte à créer, pas d'abonnement, pas de serveur applicatif qui peut disparaître demain. Juste des fichiers texte en Markdown, un petit script Python pour transformer le tout en un mini-site consultable hors-ligne, et tu as ton cours.
 
 **[PLACEHOLDER: Screenshot 1 — Vue d'une fiche avec tableaux de vocabulaire]**
 *Une fiche affiche vocabulaire, grammaire, audio-cards — tout cliquable et prononçable.*
@@ -33,7 +29,7 @@ Bonus : tu ne dépends de personne. Pas de compte à créer, pas d'appli fermée
 ### Cours disponibles
 
 - **[Slovaque pour francophones](https://www.lslinux.org/Slovingo/sk-fr/)** — *Ahoj Slovenčina!*
-- **Breton pour francophones** — *Demat Brezhoneg!*
+- **[Français pour slovacophones](https://www.lslinux.org/Slovingo/fr-sk/)** — *Dis bonjour!*
 
 Chaque cours c'est :
 

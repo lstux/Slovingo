@@ -1,0 +1,105 @@
+Les fiches série utilisent le format SMD. Elles sont regroupées en séries thématiques de 5 fiches progressives, complétées par une 6e fiche "extra" servant de base d'exercices.
+
+Les noms de fichier sont de la forme NN_Serie_XX_NomSerie_YY_titre.md, où XX est le numéro d'ordre de la série dans la progression générale, NomSerie son nom court, et YY le numéro de la fiche au sein de la série (le tout sur 2 chiffres).
+
+Exemple : 10_Serie_01_Rodina_03_praca.md
+
+# Objectif
+
+Donner un parcours balisé à travers le vocabulaire et la grammaire, là où les fiches isolées laissent l'apprenant sans point d'entrée. Une série se fait en une semaine sans assiduité particulière : une fiche par jour, avec deux jours de battement.
+
+Le vocabulaire est cumulatif. Chaque fiche ajoute environ 7 mots essentiels et 7 mots complémentaires, et réutilise obligatoirement ceux des fiches précédentes de la même série. La difficulté grammaticale monte d'une fiche à l'autre.
+
+Les fiches d'une série ne sont pas obligatoirement autonomes : c'est la série qui l'est. Une fiche peut donc s'appuyer sur ce qui a été vu dans les fiches précédentes de sa propre série. En revanche, aucune référence à une autre série.
+
+# Structure d'une série
+
+Fiches 01 à 04 : fiches d'apprentissage. Pas de mise en scène, pas de personnages, pas d'histoire. Des phrases autonomes qui illustrent le point du jour.
+
+Fiche 05 : la mini-histoire. Un dialogue complet suivi, avec les personnages récurrents, qui recombine tout le vocabulaire de la série. C'est l'aboutissement, et le seul endroit où l'on raconte quelque chose.
+
+Fiche 06 (extra) : aucun mot nouveau. Un grand tableau récapitulatif de tout le vocabulaire de la série, puis une quinzaine d'audio-cards recombinant les mots dans des phrases inédites. Sert de matière première à smd2exercises.py.
+
+# Format des fiches 01 à 04
+
+# Série ******* (X/5) : Titre en langue apprise
+
+Ligne d'illustration (voir section Images)
+
+Une à trois lignes annonçant le contenu de la fiche. Pas de contexte narratif.
+
+## Les nouveaux mots
+Une translate-table d'environ 7 mots, slovaque en première colonne.
+
+## La grammaire du jour
+Un ou deux points de grammaire, chacun avec un sous-titre en H3 et une translate-table d'exemples. Une phrase d'explication maximum avant ou après le tableau.
+
+## Des phrases
+Six à huit audio-cards utilisant le vocabulaire et la grammaire du jour. Pas d'émoticône : ce ne sont pas des personnages qui parlent.
+
+## On révise
+(à partir de la fiche 02) Deux à quatre audio-cards utilisant EXCLUSIVEMENT le vocabulaire des fiches précédentes de la série, éventuellement combiné à la grammaire du jour.
+
+## Coin culture
+Deux ou trois paragraphes courts sur un aspect culturel lié au thème, avec un titre en gras. Les mots en langue apprise y sont marqués {{...}} pour être prononçables.
+
+## Vocabulaire complémentaire
+Une translate-table d'environ 7 mots non utilisés plus haut.
+
+## Encore quelques phrases
+Trois à cinq audio-cards utilisant ce vocabulaire complémentaire.
+
+# Format de la fiche 05
+
+Titre, illustration, courte introduction au contexte.
+
+## Les personnages
+Liste émoticône + nom, comme les fiches dialogue.
+
+## Le dialogue
+Une suite d'audio-cards formant un échange suivi. L'émoticône du locuteur est placée DANS la audio-card, avant le texte slovaque.
+
+## Coin culture
+
+## Encore quelques phrases
+Quelques cartes de réemploi hors dialogue.
+
+Aucun mot nouveau n'est introduit sans être signalé dans une remarque.
+
+# Format de la fiche 06 (extra)
+
+Titre, illustration, une ligne d'introduction.
+
+## Tout le vocabulaire de la série
+Une grande translate-table reprenant l'intégralité du vocabulaire des fiches 01 à 05, essentiel et complémentaire.
+
+## Les phrases
+Une quinzaine d'audio-cards recombinant librement ce vocabulaire dans des phrases qui n'apparaissent pas dans les fiches précédentes.
+
+# Images
+
+Chaque fiche porte une illustration en tête. smd2html.py gère la syntaxe suivante en plus du format MD standard :
+
+@ img/fichier.jpg | Légende
+
+qui produit :
+
+<figure class="fiche-illustration">
+    <img src="img/fichier.jpg" alt="Légende">
+    <figcaption>Légende</figcaption>
+</figure>
+
+Le caractère @ est choisi pour ne pas entrer en collision avec "!" (audio-card), ">" (traduction), "+" (remarque).
+
+Les images sont prises sur Wikimedia Commons, en licence libre, via l'URL stable :
+
+https://commons.wikimedia.org/wiki/Special:FilePath/NOM_DU_FICHIER?width=800
+
+ou téléchargées en local.
+
+Workflow actuel : l'image est d'abord référencée via cette URL Commons directement dans la ligne "@", le temps de la choisir ; elle est ensuite rapatriée dans img/ et la ligne "@" mise à jour avec le chemin local (img/fichier.jpg). La légende inclut la mention de la source et de la licence tant que l'image n'est pas rapatriée.
+
+ATTENTION : si l'URL Commons est utilisée directement dans la ligne "@", les parenthèses présentes dans un nom de fichier doivent être encodées en %28 et %29.
+
+Le style de l'illustration (largeur, marges, légende) est géré par la classe .fiche-illustration dans style.css.
+
