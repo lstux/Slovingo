@@ -22,6 +22,7 @@
     "theme_color": "#0b4ea2",
     "storage_prefix": "sk-fr",
     "url_path": "/slovingo/sk-fr/",
+    "user_name_default": "Eric",
     "user_name_placeholder": "Ton prénom"
   },
   "categories": {

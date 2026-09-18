@@ -35,6 +35,7 @@ const DEFAULT_SETTINGS = {
                                     // null/absent = inherit the setting above
     dialoguePlaybackMode: "auto",  // "auto" = auto-play in sequence, "manual" = wait for click
     dialoguePauseDuration: 2,      // pause duration between dialogue lines (seconds)
+    displayFont: "grotesk",        // "serif", "mono", or "grotesk" for h2/h3 on index
 };
 
 /**
@@ -118,34 +119,18 @@ function saveUserName(name) {
 }
 
 /**
- * Update all [USER_NAME] placeholders in the DOM with the current name.
- */
-/**
- * Update all [USER_NAME] placeholders in the DOM with the current name.
- * Also update all ask-user-name-input fields with the new value.
+ * Update all [USER_NAME] displays and input fields with the current USER_NAME.
+ * This is called whenever the user changes their name, and updates the page live.
  */
 function updateUserNameInDOM() {
-    // Update text nodes that contain [USER_NAME]
-    const walker = document.createTreeWalker(
-        document.body,
-        NodeFilter.SHOW_TEXT,
-        null,
-        false
-    );
-
-    const nodesToUpdate = [];
-    let node;
-    while ((node = walker.nextNode())) {
-        if (node.textContent.includes("[USER_NAME]")) {
-            nodesToUpdate.push(node);
-        }
-    }
-
-    nodesToUpdate.forEach((textNode) => {
-        textNode.textContent = textNode.textContent.replace(/\[USER_NAME\]/g, window.USER_NAME || "");
+    const displayValue = window.USER_NAME || (LANG && LANG.site && LANG.site.user_name_default) || "";
+    
+    // Update all .user-name-display spans with the current name
+    document.querySelectorAll(".user-name-display").forEach((span) => {
+        span.textContent = displayValue;
     });
-
-    // Update all ask-user-name input fields
+    
+    // Update all ask-user-name input fields with the current value
     document.querySelectorAll(".ask-user-name-input").forEach((input) => {
         input.value = window.USER_NAME || "";
     });
@@ -196,6 +181,21 @@ function applyThemeSetting(mode) {
     } else {
         html.setAttribute("data-mode", mode);
     }
+}
+
+/**
+ * Apply the display font setting to the CSS variable on <html>.
+ * Maps "serif", "mono", "grotesk" to the corresponding --font-*.
+ * @param {string} fontKey
+ */
+function applyDisplayFontSetting(fontKey) {
+    const fontMap = {
+        "serif": "var(--font-serif)",
+        "mono": "var(--font-mono)",
+        "grotesk": "var(--font-grotesk)"
+    };
+    const cssValue = fontMap[fontKey] || fontMap["grotesk"];
+    document.documentElement.style.setProperty("--index-display-font", cssValue);
 }
 
 /**
@@ -328,6 +328,32 @@ function renderThemeSettingsSection() {
     
     themeRow.appendChild(themeSelect);
     rows.push(themeRow);
+
+    // Display font selector for index titles (h2/h3): serif, mono, or grotesk
+    const fontRow = el("div", { className: "settings-row" });
+    fontRow.appendChild(el("label", { text: (LANG.ui && LANG.ui.display_font) || "Title font", attrs: { for: "settings-display-font" } }));
+    const fontSelect = el("select", { attrs: { id: "settings-display-font" } });
+    
+    const fontOptions = [
+        { value: "serif", label: (LANG.ui && LANG.ui.font_serif) || "Serif (Fraunces)" },
+        { value: "mono", label: (LANG.ui && LANG.ui.font_mono) || "Monospace (JetBrains)" },
+        { value: "grotesk", label: (LANG.ui && LANG.ui.font_grotesk) || "Grotesk (Space Grotesk)" }
+    ];
+    
+    fontOptions.forEach(({ value, label }) => {
+        const option = el("option", { text: label, attrs: { value } });
+        fontSelect.appendChild(option);
+    });
+    
+    fontSelect.value = SETTINGS.displayFont;
+    
+    fontSelect.addEventListener("change", () => {
+        saveSettings({ displayFont: fontSelect.value });
+        applyDisplayFontSetting(fontSelect.value);
+    });
+    
+    fontRow.appendChild(fontSelect);
+    rows.push(fontRow);
 
     return settingsSection((LANG.ui && LANG.ui.appearance) || "Appearance", rows);
 }

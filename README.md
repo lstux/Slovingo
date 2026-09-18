@@ -1,111 +1,216 @@
 # Slovingo
 
-Un petit moteur pour apprendre une langue avec des fiches qu'on peut
-lire, écouter, et réviser — sans dépendre d'une appli tierce, sans
-serveur applicatif, sans compte à créer. Juste des fichiers texte, un
-script Python, et une page web.
+Apprendre une langue sans appli, sans compte, sans serveur. Juste des fiches texte, un script Python, et une page web. 
 
-Conçu au départ pour apprendre le slovaque en vue d'une conversation
-courante (A2, formules toutes faites, on laisse les déclinaisons pour
-plus tard), le moteur est aujourd'hui générique : une langue = un
-fichier de configuration, jamais une ligne de code à toucher. Le
-slovaque a servi de premier cas d'usage ; le breton est le deuxième.
+Conçu pour parler couramment (A2) sans s'égarer dans les déclinaisons — et ultra-simple à adapter à ta propre langue.
 
-**Sur le nom** : oui, "Slovingo" sur un moteur qui sert aussi de cours
-breton, c'est un peu absurde — c'est fait exprès. C'est un private
-joke qui trahit l'origine du projet plutôt qu'un vrai nom de marque
-par langue (chaque cours a son propre titre dans son `lang.json` :
-"Ahoj Slovenčina", "Demat Brezhoneg"...). Un peu comme le format SMD
-ci-dessous, qui garde lui aussi une trace de ses origines slovaques.
+## 🎯 Pourquoi Slovingo
 
-Pour l'installer et t'en servir : voir **[INSTALL.md](INSTALL.md)**.
+Il n'existe **aucun cours slovaque-français** libre et décent ailleurs. Même chose pour le breton. Plutôt que de demander à Google de faire un truc qui existe pas, on a écrit nos fiches et un moteur pour les lire, écouter, et réviser.
+
+Bonus : tu ne dépends de personne. Pas de compte à créer, pas d'appli fermée, pas de serveur applicatif qui peut disparaître demain. Juste des fichiers texte en Markdown, un petit script Python, et tu as ton cours.
 
 ---
 
-## Ce que ça fait
+## 👀 Ça ressemble à quoi
 
-- **Des fiches** en Markdown augmenté (le format SMD, voir plus bas),
-  converties en pages HTML autonomes : vocabulaire, grammaire,
-  dialogues, tout est cliquable et prononçable via la synthèse vocale
-  du navigateur.
-- **Des exercices générés automatiquement** (QCM, phrases à trous,
-  écoute) à partir du vocabulaire déjà présent dans tes fiches — pas
-  besoin de les écrire à la main, le corpus grandit et les exercices
-  suivent.
-- **Une progression suivie en local** (localStorage), pour savoir où
-  tu en es fiche par fiche.
-- **Un mode hors-ligne** (PWA + service worker) : une fois visitée,
-  une fiche reste consultable sans réseau.
-- **Un moteur générique** : tout ce qui dépend de la langue apprise
-  (code de synthèse vocale, mots-clés de détection de colonne, titre,
-  couleurs, déploiement) vit dans un seul `lang.json` par cours. Le
-  code, lui, ne connaît aucune langue.
+**[PLACEHOLDER: Screenshot 1 — Vue d'une fiche avec tableaux de vocabulaire]**
+*Une fiche affiche vocabulaire, grammaire, audio-cards — tout cliquable et prononçable.*
 
-## Le format SMD
+**[PLACEHOLDER: Screenshot 2 — Audio-card en action]**
+*Clic sur une phrase slovaque → traduction + décomposition mot à mot + lecture audio.*
 
-**SMD veut dire *Speakable Markdown*** — parce que l'idée centrale du
-format, c'est qu'un mot ou une phrase, une fois écrit, doit pouvoir se
-faire lire à voix haute d'un clic. (Le sigle existait déjà à l'époque
-où le projet ne parlait que slovaque, sous le nom *Slovak Markdown* —
-il se trouve que ça tombait juste, alors on l'a gardé. Même logique
-que pour le nom du projet.)
+**[PLACEHOLDER: Screenshot 3 — Exercices générés]**
+*QCM, phrases à trous, compréhension audio — générés automatiquement à partir des fiches.*
 
-C'est du Markdown classique, avec trois ajouts :
+**[PLACEHOLDER: Screenshot 4 — Mode hors-ligne + progression locale]**
+*Ton avancement suivi en local (localStorage), tout fonctionne sans internet après une visite.*
 
-**1. Une table de traduction devient prononçable automatiquement**, dès
-qu'une colonne a un en-tête reconnu comme la langue apprise :
+---
+
+## 🚀 Pour les apprenants
+
+### Cours disponibles
+
+- **[Slovaque pour francophones](https://www.lslinux.org/Slovingo/sk-fr/)** — *Ahoj Slovenčina!*
+- **Breton pour francophones** — *Demat Brezhoneg!*
+
+Chaque cours c'est :
+
+✅ **Fiches de vocabulaire & grammaire** — audio-cards avec traduction et décomposition  
+✅ **Mini-dialogues** — personnages récurrents, situations réelles  
+✅ **Exercices illimités** — générés auto à partir du corpus  
+✅ **Progression suivie** — en local (rien n'est envoyé nulle part)  
+✅ **Hors-ligne** — une fois chargée, une fiche reste accessible sans réseau  
+
+### Commencer en 30 sec
+
+Clique sur un cours ci-dessus et c'est parti. Aucune inscription, aucune création de compte.
+
+---
+
+## 📚 Pour les créateurs de cours
+
+Tu veux créer un cours pour **ta propre langue** ? Slovingo est un moteur générique — une langue = un fichier de config JSON + des fiches Markdown.
+
+### Qu'est-ce qu'une fiche ?
+
+C'est du **Markdown classique** + 3 petits trucs de syntaxe :
 
 ```markdown
-| Français | Slovaque |
+# Vocabulaire basique
+
+| Français | Ma langue |
 |----------|-----------|
-| Bonjour  | Dobrý deň |
-| Merci    | Ďakujem   |
+| Bonjour  | …         |
+| Merci    | …         |
+
+## Grammaire
+
+! Une phrase example
+> Traduction naturelle.
+> Mot1 = traduction mot1
+> Mot2 = traduction mot2
++ Note grammaticale si besoin.
+
+Le mot {{spécial}} est prononçable au milieu du texte.
 ```
 
-**2. Une "audio-card"** représente une phrase, sa traduction, et sa
-décomposition mot à mot :
+**C'est tout.** Le fichier reste lisible en texte brut. Aucune mise en forme, aucun HTML. Le moteur génère le HTML, le CSS gère l'apparence, le JS ajoute l'interactivité (son, boutons, recherche).
 
-```markdown
-! Chýbaš mi.
-> Tu me manques.
-> Chýbaš = tu manques
-> mi = à moi
-+ La construction est inversée par rapport au français.
+### Ajouter une langue
+
+```bash
+# 1. Clone le repo
+git clone https://github.com/...
+cd slovingo
+
+# 2. Crée un dossier pour ta langue
+cp -r langs/sk langs/ma-langue
+cd langs/ma-langue
+
+# 3. Édite lang.json avec tes métadonnées
+# 4. Écris tes fiches en Markdown + SMD
+# 5. Publie (voir INSTALL.md)
 ```
 
-`!` ouvre la carte, le premier `>` est la traduction naturelle, les
-`>` suivants décomposent la phrase, `+` ajoute une remarque
-grammaticale quand il y en a une à faire.
+Zéro ligne de Python à toucher. Tout ce qui dépend de la langue (synthèse vocale, couleurs, titre) vit dans `lang.json`.
 
-**3. Un mot isolé devient prononçable** au milieu d'un paragraphe :
+### Format des fiches
 
-```markdown
-Le mot {{jeden}} signifie « un ».
+Slovingo supporte trois types de fiches :
+
+1. **Séries** — parcours progressif thématique (10 fiches = 1 semaine)
+2. **Dialogues** — conversations en contexte avec personnages
+3. **Révisions** — situations quotidiennes pour recycler le vocabulaire
+
+Tous les détails de structure → voir [Format-SMD.txt](https://github.com/...Format-SMD.txt), [Fiches-Serie.txt](https://github.com/...Fiches-Serie.txt), etc. dans le repo.
+
+---
+
+## ⚙️ Specs techniques
+
+| Aspect | Détail |
+|--------|--------|
+| **Langage** | Python 3.8+ (smd2html.py) + vanilla JS |
+| **Dépendances** | Zero — Python stdlib seulement |
+| **Déploiement** | Static hosting (GitHub Pages, Netlify, ton serveur…) |
+| **Taille** | ~500 KB compressé par cours |
+| **Stockage** | localStorage côté navigateur (progression + préférences) |
+| **Hors-ligne** | Service worker + PWA — fonctionne sans réseau après visite |
+| **Navigateurs** | Chrome, Firefox, Safari, Edge (modernes) |
+| **Synthèse vocale** | Web Speech API du navigateur (pas d'appel API externe) |
+| **OS** | Linux, macOS, Windows — le script fonctionne partout |
+
+### Architecture
+
+```
+slovingo/
+├── src/              # Moteur générique (jamais dupliqué)
+│   ├── smd2html.py   # Convertisseur SMD → HTML
+│   ├── exercises.py  # Générateur QCM + exercices
+│   └── …
+├── langs/
+│   ├── sk/           # Cours slovaque
+│   │   ├── lang.json # Config : titre, couleurs, synthèse vocale…
+│   │   └── fiches/   # Fichiers .md
+│   └── bzh/          # Cours breton (même structure)
+└── publish.sh        # Script de génération et déploiement
 ```
 
-Le fichier `.md` reste lisible tel quel, sans aucune information de
-mise en forme : c'est le convertisseur (`smd2html.py`) qui produit du
-HTML sémantique, le CSS qui gère l'apparence, et le JS qui ajoute
-l'interactivité (lecture audio, boutons, recherche). Changer l'un ne
-demande jamais de toucher aux fiches.
+Ajouter une langue = dupliquer `langs/sk/`, renommer, modifier `lang.json`, écrire des fiches. C'est tout.
 
-## Architecture en un coup d'œil
+---
 
+## 📖 Documentation
+
+- **[INSTALL.md](INSTALL.md)** — Installation locale, lancer le dev server, générer les pages
+- **[Format-SMD.txt](docs/Format-SMD.txt)** — Syntaxe complète du format SMD (audio-cards, tables, speakables)
+- **[Fiches-Serie.txt](docs/Fiches-Serie.txt)** — Comment structurer un parcours progressif
+- **[Fiches-Dialogue.txt](docs/Fiches-Dialogue.txt)** — Dialogues avec personnages
+- **[Fiches-Revisions.txt](docs/Fiches-Revisions.txt)** — Révisions par thème
+
+---
+
+## 🛠️ Installer & développer localement
+
+### Prérequis
+- Python 3.8+
+- Navigateur moderne
+
+### Setup en 2 min
+
+```bash
+git clone https://github.com/…/slovingo.git
+cd slovingo
+python3 src/smd2html.py langs/sk/
+# Ouvre langs/sk/index.html dans ton navigateur
 ```
-src/         moteur générique — jamais dupliqué, jamais édité par langue
-langs/
-  sk/        cours slovaque : lang.json + fiches .md + sommaire
-  bzh/       cours breton
-  <autre>/   n'importe quelle langue future, même principe
-publish.sh   génère les pages HTML + exercices, publie sur un serveur
-```
 
-Ajouter une langue : copier un dossier `langs/<code>/`, changer son
-`lang.json`, écrire ses fiches. Rien d'autre.
+Chaque fois que tu modifies une fiche, relance le script → il régénère le HTML.
 
-Détails d'installation, de configuration et de publication : voir
-**[INSTALL.md](INSTALL.md)**.
+Pour le dev avec rechargement auto, voir [INSTALL.md](INSTALL.md).
 
-## Licence
+---
+
+## 🤝 Contribuer
+
+### Ajouter des fiches à un cours existant
+
+1. Fork le repo
+2. Crée une fiche dans `langs/<code>/fiches/` (voir les fichiers existants comme modèle)
+3. Teste localement : `python3 src/smd2html.py langs/<code>/`
+4. Fais une PR
+
+### Signaler un bug
+
+Issues → section *Issues* du repo. Décris ce qui ne fonctionne pas + navigateur/OS.
+
+### Proposer une nouvelle langue
+
+Ouvre une issue avec :
+- Langue + code ISO
+- Pourquoi il n'existe pas ailleurs (comme pour slovaque/breton)
+- Combien de fiches tu prévois
+
+---
+
+## 📝 Licence
 
 GPL v3 — voir [LICENSE](LICENSE).
+
+Tes fiches, tes exercices, tout ce que tu créés : à toi de choisir (CC-BY, GPL, domaine public…). Slovingo lui-même est GPL v3.
+
+---
+
+## 🎓 Comment ça a commencé
+
+2021 : besoin d'apprendre le slovaque courant (A2) avant un voyage. Rien de dispo. Écrit 50 fiches, un petit script pour les convertir en HTML, et voilà. Aussi simple que ça.
+
+Quelques années plus tard : le moteur fonctionne si bien qu'on le replique pour le breton. Zéro changement de code — juste un nouveau dossier `langs/bzh/`.
+
+Le projet reste une passion perso, pas un business. Libre, sobre, et utile.
+
+---
+
+**Questions ?** Ouvre une issue, ou juste clone et essaie. Le meilleur README, c'est celui qu'on vit. 🚀

@@ -74,6 +74,11 @@ async function boot() {
         applyThemeSetting(themeMode);
     }
 
+    // Apply saved display font preference (serif/mono/grotesk)
+    if (typeof applyDisplayFontSetting === "function") {
+        applyDisplayFontSetting(SETTINGS.displayFont || "grotesk");
+    }
+
     // Load user name from localStorage
     if (typeof loadUserName === "function") {
         window.USER_NAME = loadUserName();
@@ -176,11 +181,18 @@ function renderText(text) {
         return "";
     }
 
-    // Replace [USER_NAME] placeholder with the actual user name
-    let working = text.replace(/\[USER_NAME\]/g, window.USER_NAME || "");
+    // Get a safe fallback for USER_NAME (from LANG or empty string)
+    const userNameFallback = (LANG && LANG.site && LANG.site.user_name_default) || "";
+    const displayName = window.USER_NAME || userNameFallback;
 
-    // Mark [ASK_USER_NAME] for later DOM replacement (we'll use a sentinel)
-    working = working.replace(/\[ASK_USER_NAME\]/g, "\u0000ASK_USER_NAME\u0000");
+    // Replace [USER_NAME] placeholder with a span that can be updated live
+    let working = text.replace(/\[USER_NAME\]/g, `__USER_NAME_MARKER__${escapeHtml(displayName)}__USER_NAME_MARKER__`);
+
+    // Protect [ASK_USER_NAME] with a sentinel that survives escapeHtml
+    let askUserNameCount = 0;
+    working = working.replace(/\[ASK_USER_NAME\]/g, () => {
+        return `__ASK_USER_NAME_PLACEHOLDER_${askUserNameCount++}__`;
+    });
 
     const speakables = [];
     working = working.replace(/\[\[(.+?)\]\]/g, (_match, inner) => {
@@ -198,14 +210,25 @@ function renderText(text) {
     working = working.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
     working = working.replace(/\*(.+?)\*/g, "<em>$1</em>");
 
-    // Replace sentinels back
+    // Replace speakable sentinels back
     speakables.forEach((inner, index) => {
         const placeholder = `\u0000SPEAKABLE${index}\u0000`;
         const replacement = `<span class="speakable speakable-hint">${escapeHtml(inner)}</span>`;
         working = working.split(placeholder).join(replacement);
     });
 
-    // Keep the ASK_USER_NAME sentinel as-is for now (will be replaced after DOM insert)
+    // Replace ASK_USER_NAME sentinels back with a marker that replaceAskUserNameInputs can find
+    // Use a marker element that is findable but won't break rendering
+    for (let i = 0; i < askUserNameCount; i++) {
+        const placeholder = `__ASK_USER_NAME_PLACEHOLDER_${i}__`;
+        const replacement = `<span data-ask-user-name-marker="${i}"></span>`;
+        working = working.split(placeholder).join(replacement);
+    }
+
+    // Replace USER_NAME markers back with updateable spans
+    working = working.replace(/__USER_NAME_MARKER__(.+?)__USER_NAME_MARKER__/g, 
+        '<span class="user-name-display">$1</span>');
+
     return working;
 }
 
@@ -547,7 +570,7 @@ function renderSheet(sheetId) {
         content.appendChild(renderBlock(block));
     });
 
-    // Replace [ASK_USER_NAME] sentinels with input elements
+    // Replace [ASK_USER_NAME] marker spans with actual input elements
     replaceAskUserNameInputs(content);
 
     initializeAudioCards();
@@ -1066,63 +1089,33 @@ function playDialogue(audioCards) {
 }
 
 /**
- * Replace [ASK_USER_NAME] sentinels in the DOM with actual input elements.
+ * Replace [ASK_USER_NAME] marker spans with actual input elements.
  * Call this after appending new blocks to the DOM.
  */
 function replaceAskUserNameInputs(containerElement) {
-    // Find all text nodes and parent elements that might contain the sentinel
-    const walker = document.createTreeWalker(
-        containerElement,
-        NodeFilter.SHOW_TEXT,
-        null,
-        false
-    );
+    // Find all span markers created by renderText
+    const markers = containerElement.querySelectorAll("[data-ask-user-name-marker]");
+    
+    markers.forEach((marker) => {
+        const input = document.createElement("input");
+        input.className = "ask-user-name-input";
+        input.type = "text";
+        input.placeholder = (LANG.site && LANG.site.user_name_placeholder) || "Your name";
+        input.value = window.USER_NAME || "";
 
-    const nodesToReplace = [];
-    let node;
-    while ((node = walker.nextNode())) {
-        if (node.textContent.includes("\u0000ASK_USER_NAME\u0000")) {
-            nodesToReplace.push(node);
-        }
-    }
+        input.addEventListener("input", () => {
+            saveUserName(input.value);
+        });
 
-    nodesToReplace.forEach((textNode) => {
-        const parent = textNode.parentNode;
-        const parts = textNode.textContent.split("\u0000ASK_USER_NAME\u0000");
-        
-        // Clear the text node
-        textNode.textContent = "";
-
-        parts.forEach((part, index) => {
-            if (index > 0) {
-                // Insert input before this part
-                const input = document.createElement("input");
-                input.className = "ask-user-name-input";
-                input.type = "text";
-                input.placeholder = (LANG.site && LANG.site.user_name_placeholder) || "Your name";
-                input.value = window.USER_NAME || "";
-
-                input.addEventListener("input", () => {
-                    saveUserName(input.value);
-                });
-
-                input.addEventListener("keydown", (e) => {
-                    if (e.key === "Enter") {
-                        saveUserName(input.value);
-                        input.blur();
-                    }
-                });
-
-                parent.insertBefore(input, textNode.nextSibling);
-            }
-
-            if (part) {
-                const newTextNode = document.createTextNode(part);
-                parent.insertBefore(newTextNode, textNode.nextSibling);
+        input.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") {
+                saveUserName(input.value);
+                input.blur();
             }
         });
 
-        parent.removeChild(textNode);
+        // Replace the marker span with the input
+        marker.replaceWith(input);
     });
 }
 

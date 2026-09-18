@@ -834,6 +834,9 @@ footer {
     gap: 10px;
     margin: 0 0 0.3em;
     font-size: var(--step-1);
+    font-family: var(--index-display-font, var(--font-grotesk));
+    font-weight: 700;
+    letter-spacing: -0.03em;
 }
 
 /*
