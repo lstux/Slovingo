@@ -1,4 +1,4 @@
-[README.md](English version) [README_sk.md](Slovak version)
+[English version](README.md) [Slovak version](README_sk.md)
 
 # Slovingo
 
