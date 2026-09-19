@@ -2,7 +2,7 @@
 
 # Slovingo
 
-Uč sa jazyk bez aplikácie, bez účtu, bez servera. Len textové kartičky, skript v Pythone a webová stránka.
+Uč sa jazyk bez aplikácie, bez účtu, bez servera. Len textové kartičky, skript v Python a webová stránka.
 
 Navrhnuté tak, aby si sa vedel plynule dorozumieť (A2) bez toho, aby si sa stratil v skloňovaní — a ultra jednoduché na prispôsobenie tvojmu vlastnému jazyku.
 
@@ -10,9 +10,12 @@ Navrhnuté tak, aby si sa vedel plynule dorozumieť (A2) bez toho, aby si sa str
 
 Najznámejšie aplikácie nemajú kurz slovenčiny. Skúšal som Ling, ktorý ju podporuje, ale ani ten ma úplne nenadchol. Chcel som si slová a vety počas čítania aj počúvať a vytvárať si vlastné kartičky so slovnou zásobou či dialógmi...
 
-Tu nie si na nikom závislý. Žiadny účet, žiadne predplatné, žiadny aplikačný server, ktorý môže zajtra zmiznúť. Len textové súbory v Markdowne, malý skript v Pythone, ktorý z nich vyrobí mini-web použiteľný offline, a máš svoj kurz.
+Tu nie si na nikom závislý. Žiadny účet, žiadne predplatné, žiadny aplikačný server, ktorý môže zajtra zmiznúť. Len textové súbory v Markdowne, malý skript v Python, ktorý z nich vyrobí mini-web použiteľný offline, a máš svoj kurz.
+
+Niekoľko snímok obrazovky v mobilnej verzii :
 
 ![Some screenshots](img/screenshots.png)  
+
 - *Kartička zobrazuje slovnú zásobu, gramatiku, audio-karty — všetko sa dá kliknúť a vysloviť.*  
 - *Klik na slovenskú vetu → preklad + rozklad slovo po slove + prehratie zvuku.*  
 - *Testy s výberom odpovede, vety s medzerami, porozumenie sluchom — generované automaticky z kartičiek.*  
@@ -86,14 +89,14 @@ cd langs/môj-jazyk
 # 5. Publikuj (pozri INSTALL.md)
 ```
 
-Ani jeden riadok Pythonu netreba meniť. Všetko, čo závisí od jazyka (syntéza reči, farby, názov), žije v `lang.json`.
+Ani jeden riadok Python netreba meniť. Všetko, čo závisí od jazyka (syntéza reči, farby, názov), žije v `lang.json`.
 
 ## ⚙️ Technické špecifikácie
 
 | Aspekt | Detail |
 |--------|--------|
 | **Jazyk** | Python 3.8+ (smd2html.py) + vanilla JS |
-| **Závislosti** | Žiadne — iba štandardná knižnica Pythonu |
+| **Závislosti** | Žiadne — iba štandardná knižnica Python |
 | **Nasadenie** | Statický hosting (GitHub Pages, Netlify, tvoj server…) |
 | **Veľkosť** | ~500 KB komprimované na kurz |
 | **Úložisko** | localStorage v prehliadači (pokrok + preferencie) |
