@@ -488,8 +488,16 @@ label.index-card {
     border-color: color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
-.exo-order-answer.exo-choice-correct .exo-order-chip-answer,
+.exo-order-answer.exo-choice-correct .exo-order-chip-answer {
+    background: color-mix(in srgb, #2e9e5b 22%, var(--surface));
+    border-color: color-mix(in srgb, #2e9e5b 55%, transparent);
+    cursor: default;
+}
+
 .exo-order-answer.exo-choice-wrong .exo-order-chip-answer {
+    background: color-mix(in srgb, #d1483c 20%, var(--surface));
+    border-color: color-mix(in srgb, #d1483c 50%, transparent);
+    animation: exo-nope .3s;
     cursor: default;
 }
 

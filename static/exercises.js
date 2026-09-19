@@ -1302,16 +1302,11 @@ function renderOrder(view) {
     submit.onclick = () => {
         submit.dataset.locked = "1";
         chips.forEach((c) => { c.disabled = true; });
-        const placedChips = [...answerStrip.children];
-        placedChips.forEach((c) => { c.disabled = true; });
+        [...answerStrip.children].forEach((c) => { c.disabled = true; });
         submit.disabled = true;
         const userAnswer = placed.join(" ");
         const correct = normalizeAnswer(userAnswer) === normalizeAnswer(view.answer);
-        if (correct) {
-            placedChips.forEach((c) => c.classList.add("exo-choice-correct"));
-        } else {
-            answerStrip.classList.add("exo-choice-wrong");
-        }
+        answerStrip.classList.add(correct ? "exo-choice-correct" : "exo-choice-wrong");
         markAnswer(container, correct, view, userAnswer);
     };
 
