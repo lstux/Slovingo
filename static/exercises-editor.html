@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Éditeur d'exercices — Slovingo</title>
+<style>
+:root {
+    --bg: #f6f2ea;
+    --surface: #fffdf8;
+    --surface-2: #ece3d3;
+    --text: #2b2118;
+    --text-soft: #6d5c48;
+    --line: #ddd0ba;
+    --accent: #a8362b;
+    --accent-2: #7d6420;
+    --ok: #2e9e5b;
+    --warn: #d68910;
+    --bad: #d1483c;
+    --radius: 10px;
+    --radius-sm: 6px;
+    font-size: 15px;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #15110d;
+        --surface: #1e1811;
+        --surface-2: #2a2117;
+        --text: #f0e7d8;
+        --text-soft: #b0a08b;
+        --line: #382c1e;
+        --accent: #e0705f;
+        --accent-2: #cfa445;
+    }
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.4;
+}
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+header h1 {
+    font-size: 1.05em;
+    margin: 0;
+    margin-right: auto;
+    white-space: nowrap;
+}
+button {
+    font: inherit;
+    padding: 7px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+    background: var(--surface-2);
+    color: var(--text);
+    cursor: pointer;
+}
+button:hover:not(:disabled) { border-color: var(--accent); }
+button:disabled { opacity: 0.4; cursor: default; }
+button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+input, textarea, select {
+    font: inherit;
+    padding: 6px 9px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+}
+.layout {
+    display: grid;
+    grid-template-columns: 220px 280px 1fr;
+    gap: 0;
+    height: calc(100vh - 53px);
+}
+@media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; height: auto; }
+    #sheet-panel, #exercise-panel { max-height: 220px; }
+}
+#sheet-panel, #exercise-panel {
+    overflow-y: auto;
+    border-right: 1px solid var(--line);
+    padding: 10px;
+}
+#editor-panel {
+    overflow-y: auto;
+    padding: 16px;
+}
+.panel-title {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-soft);
+    margin: 4px 0 8px;
+}
+.sheet-row, .ex-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 8px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.92em;
+}
+.sheet-row:hover, .ex-row:hover { background: var(--surface-2); }
+.sheet-row.active, .ex-row.active { background: color-mix(in srgb, var(--accent) 16%, var(--surface-2)); }
+.sheet-row .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex: none; visibility: hidden; }
+.sheet-row.dirty .dot { visibility: visible; }
+.ex-row .ex-label { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ex-row .ex-issue { color: var(--bad); font-weight: bold; }
+.ex-filter-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.ex-filter-row label { font-size: 0.85em; cursor: pointer; }
+#exercise-search { width: 100%; margin-bottom: 8px; }
+.add-row { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 10px; }
+.add-row button { flex: 1; font-size: 0.85em; padding: 6px 4px; }
+.field-block { margin-bottom: 18px; }
+.field-block > label.field-label { display: block; font-weight: 600; margin-bottom: 4px; font-size: 0.9em; }
+.field-block input[type=text], .field-block textarea {
+    width: 100%;
+    font-size: 1.05em;
+}
+.chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    font-size: 0.88em;
+}
+.chip button {
+    padding: 0;
+    width: 16px; height: 16px;
+    border: none;
+    background: transparent;
+    color: var(--text-soft);
+    line-height: 1;
+    font-size: 1em;
+}
+.chip.token { cursor: pointer; }
+.chip.token.blanked { background: color-mix(in srgb, var(--accent) 30%, var(--surface-2)); border-color: var(--accent); font-weight: 700; }
+.chip.token .merge-hint { opacity: 0.5; font-size: 0.85em; }
+.token-list { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; margin-top: 8px; }
+.merge-btn {
+    padding: 2px 5px;
+    font-size: 0.75em;
+    opacity: 0.35;
+    border: none;
+    background: transparent;
+}
+.merge-btn:hover { opacity: 1; }
+.add-chip-input { display: flex; gap: 6px; margin-top: 8px; }
+.add-chip-input input { flex: 1; }
+.hint { font-size: 0.82em; color: var(--text-soft); margin-top: 4px; }
+#validation-banner { margin-bottom: 16px; }
+.issue {
+    padding: 7px 12px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 6px;
+    font-size: 0.9em;
+    border-left: 4px solid var(--bad);
+    background: color-mix(in srgb, var(--bad) 12%, var(--surface));
+}
+.issue.warn { border-left-color: var(--warn); background: color-mix(in srgb, var(--warn) 12%, var(--surface)); }
+.issue.ok { border-left-color: var(--ok); background: color-mix(in srgb, var(--ok) 12%, var(--surface)); color: var(--text-soft); }
+.preview-box {
+    margin-top: 24px;
+    padding: 14px 16px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--surface-2);
+}
+.preview-box h3 { margin: 0 0 10px; font-size: 0.95em; }
+.preview-dir { display: flex; gap: 8px; margin-bottom: 10px; }
+.preview-dir button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.preview-question { font-size: 1.15em; margin-bottom: 8px; }
+.preview-choice {
+    display: inline-block;
+    margin: 3px 5px 3px 0;
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    cursor: pointer;
+}
+.preview-choice.is-answer { border-color: var(--ok); }
+.preview-choice.revealed.is-answer { background: color-mix(in srgb, var(--ok) 25%, var(--surface)); }
+.preview-choice.revealed.picked:not(.is-answer) { background: color-mix(in srgb, var(--bad) 25%, var(--surface)); }
+.play-btn { padding: 4px 9px; border-radius: 999px; }
+.empty-state { color: var(--text-soft); padding: 30px 10px; text-align: center; }
+.small-btn { padding: 3px 7px; font-size: 0.8em; }
+.row-actions { display: flex; gap: 4px; margin-top: 10px; }
+.dropzone-hint { text-align: center; color: var(--text-soft); font-size: 0.85em; padding: 20px 10px; border: 1px dashed var(--line); border-radius: var(--radius); }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🛠️ Éditeur d'exercices</h1>
+    <label class="hint" style="display:flex; align-items:center; gap:4px;">
+        Code voix TTS
+        <input id="tts-code" type="text" value="sk-SK" style="width: 70px;" title="Code langue pour la synthèse vocale (ex: sk-SK)">
+    </label>
+    <button id="btn-open">📂 Ouvrir des .exercises.json</button>
+    <button id="btn-save-current" disabled>💾 Enregistrer cette fiche</button>
+    <button id="btn-save-all" class="primary" disabled>💾 Tout enregistrer</button>
+</header>
+
+<div class="layout">
+    <aside id="sheet-panel">
+        <p class="panel-title">Fiches chargées</p>
+        <div id="sheet-list"></div>
+    </aside>
+
+    <aside id="exercise-panel">
+        <p class="panel-title">Exercices</p>
+        <div id="exercise-list-container"></div>
+    </aside>
+
+    <main id="editor-panel">
+        <div id="editor-content"></div>
+    </main>
+</div>
+
+<datalist id="vocab-list"></datalist>
+
+<script src="exercises.js"></script>
+<script>
+"use strict";
+
+/*
+ * Éditeur autonome : ouvre un ou plusieurs <id>.exercises.json,
+ * permet de retoucher les exercices générés (mots proposés, phrases
+ * d'écoute...) et d'en ajouter, puis réenregistre les fichiers.
+ *
+ * Reste volontairement en dehors de dist/ : c'est un outil de travail
+ * personnel, pas quelque chose à déployer sur le site. Un seul
+ * fichier HTML, sans dépendance réseau, ouvrable par double-clic.
+ *
+ * S'appuie sur exercises.js (chargé juste au-dessus) pour tout ce qui
+ * décrit la FORME des exercices -- EXERCISE_TYPES (le registre : une
+ * entrée par type, avec son schéma de champs `fields` et sa fonction
+ * resolveView), ALL_TYPES, et orderTokensFor(). Ajouter un type
+ * d'exercice se fait dans exercises.js, jamais ici : cet éditeur ne
+ * connaît que la forme générique du registre, jamais "qcm" ou
+ * "fill-blank" par leur nom.
+ */
+
+const PUNCT_CHARS_RE = /^[.,!?;:"'()„“”«»…]+|[.,!?;:"'()„“”«»…]+$/g;
+function stripPunct(word) { return (word || "").replace(PUNCT_CHARS_RE, ""); }
+function wordShape(text) {
+    const n = (text || "").trim().split(/\s+/).filter(Boolean).length;
+    return n <= 2 ? "word" : "phrase";
+}
+function uniqLower(arr) {
+    const seen = new Set();
+    const dups = [];
+    (arr || []).forEach((v) => {
+        const k = (v || "").toLowerCase();
+        if (seen.has(k)) dups.push(v);
+        seen.add(k);
+    });
+    return dups;
+}
+
+// ============================================================================
+// State
+// ============================================================================
+
+/** sheetId -> { fileName, handle: FileSystemFileHandle|null, payload, dirty } */
+const sheets = new Map();
+let currentSheetId = null;
+let currentIndex = -1;
+let exerciseFilter = { types: new Set(ALL_TYPES), search: "" };
+let previewDirection = "l1-l2";
+const vocab = new Set();
+
+function currentSheet() { return currentSheetId ? sheets.get(currentSheetId) : null; }
+function currentExercises() { const s = currentSheet(); return s ? s.payload.exercises : []; }
+function currentExercise() {
+    const list = currentExercises();
+    return currentIndex >= 0 && currentIndex < list.length ? list[currentIndex] : null;
+}
+
+function markDirty(sheetId) {
+    const s = sheets.get(sheetId);
+    if (s) s.dirty = true;
+    renderSheetList();
+    updateSaveButtons();
+}
+
+function updateSaveButtons() {
+    const anyDirty = [...sheets.values()].some((s) => s.dirty);
+    document.getElementById("btn-save-all").disabled = !anyDirty;
+    const cur = currentSheet();
+    document.getElementById("btn-save-current").disabled = !cur || !cur.dirty;
+}
+
+// ============================================================================
+// Opening files
+// ============================================================================
+
+document.getElementById("btn-open").addEventListener("click", openFiles);
+
+async function openFiles() {
+    if (window.showOpenFilePicker) {
+        try {
+            const handles = await window.showOpenFilePicker({
+                multiple: true,
+                types: [{ description: "Exercises JSON", accept: { "application/json": [".json"] } }],
+            });
+            for (const handle of handles) {
+                const file = await handle.getFile();
+                await loadSheetFromText(file.name, await file.text(), handle);
+            }
+            afterLoad();
+            return;
+        } catch (err) {
+            if (err && err.name === "AbortError") return; // person cancelled
+            // Fall through to the <input> fallback below on any other error
+            // (e.g. the API exists but is flaky in this browser).
+        }
+    }
+    document.getElementById("fallback-file-input") || createFallbackInput();
+    document.getElementById("fallback-file-input").click();
+}
+
+function createFallbackInput() {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.multiple = true;
+    input.accept = ".json";
+    input.id = "fallback-file-input";
+    input.style.display = "none";
+    input.addEventListener("change", async () => {
+        for (const file of input.files) {
+            await loadSheetFromText(file.name, await file.text(), null);
+        }
+        input.value = "";
+        afterLoad();
+    });
+    document.body.appendChild(input);
+}
+
+async function loadSheetFromText(fileName, text, handle) {
+    let payload;
+    try {
+        payload = JSON.parse(text);
+    } catch (err) {
+        alert(`${fileName} : JSON invalide (${err.message}) -- fichier ignoré.`);
+        return;
+    }
+    if (!Array.isArray(payload.exercises)) payload.exercises = [];
+    const sheetId = fileName.replace(/\.exercises\.json$/i, "").replace(/\.json$/i, "");
+    sheets.set(sheetId, { fileName, handle, payload, dirty: false });
+}
+
+function afterLoad() {
+    rebuildVocab();
+    if (!currentSheetId && sheets.size) {
+        currentSheetId = [...sheets.keys()][0];
+        currentIndex = currentExercises().length ? 0 : -1;
+    }
+    renderSheetList();
+    renderExerciseList();
+    renderEditor();
+    updateSaveButtons();
+}
+
+function rebuildVocab() {
+    vocab.clear();
+    sheets.forEach(({ payload }) => {
+        payload.exercises.forEach((ex) => {
+            ["l1", "l2", "missing_l1", "missing_l2"].forEach((k) => { if (ex[k]) vocab.add(ex[k]); });
+            ["choices_l1", "choices_l2"].forEach((k) => { (ex[k] || []).forEach((w) => vocab.add(w)); });
+        });
+    });
+    const list = document.getElementById("vocab-list");
+    list.innerHTML = "";
+    [...vocab].sort().forEach((w) => {
+        const opt = document.createElement("option");
+        opt.value = w;
+        list.appendChild(opt);
+    });
+}
+
+// ============================================================================
+// Saving
+// ============================================================================
+
+document.getElementById("btn-save-current").addEventListener("click", () => {
+    if (currentSheetId) saveSheet(currentSheetId);
+});
+document.getElementById("btn-save-all").addEventListener("click", async () => {
+    for (const [id, s] of sheets) {
+        if (s.dirty) await saveSheet(id);
+    }
+});
+
+async function saveSheet(sheetId) {
+    const s = sheets.get(sheetId);
+    if (!s) return;
+    const text = JSON.stringify(s.payload, null, 2) + "\n";
+    if (s.handle) {
+        try {
+            const writable = await s.handle.createWritable();
+            await writable.write(text);
+            await writable.close();
+            s.dirty = false;
+            renderSheetList();
+            updateSaveButtons();
+            return;
+        } catch (err) {
+            alert(`Écriture impossible pour ${s.fileName} (${err.message}) -- téléchargement à la place.`);
+        }
+    }
+    // Fallback: trigger a download of the modified file.
+    const blob = new Blob([text], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${sheetId}.exercises.json`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+    s.dirty = false;
+    renderSheetList();
+    updateSaveButtons();
+}
+
+// ============================================================================
+// Sheet list (left column)
+// ============================================================================
+
+function renderSheetList() {
+    const container = document.getElementById("sheet-list");
+    container.innerHTML = "";
+    if (!sheets.size) {
+        container.innerHTML = '<p class="dropzone-hint">Aucune fiche ouverte.<br>Utilise « Ouvrir » ci-dessus.</p>';
+        return;
+    }
+    sheets.forEach((s, id) => {
+        const row = document.createElement("div");
+        row.className = "sheet-row" + (id === currentSheetId ? " active" : "") + (s.dirty ? " dirty" : "");
+        row.innerHTML = `<span class="dot" title="Modifications non enregistrées"></span>
+            <span style="flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${escapeHtmlLocal(id)}</span>
+            <span class="hint">${s.payload.exercises.length}</span>`;
+        row.addEventListener("click", () => {
+            currentSheetId = id;
+            currentIndex = s.payload.exercises.length ? 0 : -1;
+            renderSheetList();
+            renderExerciseList();
+            renderEditor();
+            updateSaveButtons();
+        });
+        container.appendChild(row);
+    });
+}
+
+function escapeHtmlLocal(text) {
+    const div = document.createElement("div");
+    div.textContent = text == null ? "" : String(text);
+    return div.innerHTML;
+}
+
+// ============================================================================
+// Exercise list (middle column)
+// ============================================================================
+
+function renderExerciseList() {
+    const container = document.getElementById("exercise-list-container");
+    container.innerHTML = "";
+    const sheet = currentSheet();
+    if (!sheet) {
+        container.innerHTML = '<p class="empty-state">Choisis une fiche.</p>';
+        return;
+    }
+
+    const filterRow = document.createElement("div");
+    filterRow.className = "ex-filter-row";
+    ALL_TYPES.forEach((type) => {
+        const label = document.createElement("label");
+        const box = document.createElement("input");
+        box.type = "checkbox";
+        box.checked = exerciseFilter.types.has(type);
+        box.addEventListener("change", () => {
+            if (box.checked) exerciseFilter.types.add(type); else exerciseFilter.types.delete(type);
+            renderExerciseList();
+        });
+        label.appendChild(box);
+        label.appendChild(document.createTextNode(" " + typeIcon(type)));
+        label.title = typeLabel(type);
+        filterRow.appendChild(label);
+    });
+    container.appendChild(filterRow);
+
+    const search = document.createElement("input");
+    search.id = "exercise-search";
+    search.type = "text";
+    search.placeholder = "Rechercher...";
+    search.value = exerciseFilter.search;
+    search.addEventListener("input", () => { exerciseFilter.search = search.value; renderExerciseList(); });
+    container.appendChild(search);
+
+    const addRow = document.createElement("div");
+    addRow.className = "add-row";
+    ALL_TYPES.forEach((type) => {
+        const btn = document.createElement("button");
+        btn.textContent = `+ ${typeIcon(type)}`;
+        btn.title = `Ajouter un exercice ${typeLabel(type)}`;
+        btn.addEventListener("click", () => addExercise(type));
+        addRow.appendChild(btn);
+    });
+    container.appendChild(addRow);
+
+    const list = sheet.payload.exercises;
+    const idsSeen = new Set();
+    const dupIds = new Set();
+    list.forEach((ex) => {
+        if (idsSeen.has(ex.id)) dupIds.add(ex.id);
+        idsSeen.add(ex.id);
+    });
+    if (dupIds.size) {
+        const warn = document.createElement("div");
+        warn.className = "issue";
+        warn.textContent = `⚠ Identifiants dupliqués dans cette fiche : ${[...dupIds].join(", ")}`;
+        container.appendChild(warn);
+    }
+
+    const search_ = exerciseFilter.search.trim().toLowerCase();
+    list.forEach((ex, index) => {
+        if (!exerciseFilter.types.has(ex.type)) return;
+        const haystack = `${ex.l1 || ""} ${ex.l2 || ""} ${ex.id}`.toLowerCase();
+        if (search_ && !haystack.includes(search_)) return;
+
+        const row = document.createElement("div");
+        row.className = "ex-row" + (index === currentIndex ? " active" : "");
+        const issues = validateExercise(ex);
+        const hasError = issues.some((i) => i.level === "error");
+        row.innerHTML = `<span>${typeIcon(ex.type)}</span>
+            <span class="ex-label">${escapeHtmlLocal(ex.l2 || ex.l1 || ex.id)}</span>
+            ${hasError ? '<span class="ex-issue" title="Problème détecté">!</span>' : ""}`;
+        row.addEventListener("click", () => {
+            currentIndex = index;
+            renderExerciseList();
+            renderEditor();
+        });
+        container.appendChild(row);
+    });
+}
+
+function addExercise(type) {
+    const sheet = currentSheet();
+    if (!sheet) { alert("Ouvre ou sélectionne une fiche d'abord."); return; }
+    const id = `${type}-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
+    const blank = { id, type, l1: "", l2: "" };
+    if (type === "qcm") { blank.choices_l1 = []; blank.choices_l2 = []; }
+    if (type === "fill-blank") {
+        Object.assign(blank, {
+            missing_l1: "", missing_l2: "", blank_index_l1: 0, blank_index_l2: 0,
+            choices_l1: [], choices_l2: [],
+        });
+    }
+    if (type === "listen") { blank.choices_l2 = []; }
+    if (type === "order") { blank.tokens_l1 = []; blank.tokens_l2 = []; }
+
+    const insertAt = currentIndex >= 0 ? currentIndex + 1 : sheet.payload.exercises.length;
+    sheet.payload.exercises.splice(insertAt, 0, blank);
+    currentIndex = insertAt;
+    markDirty(currentSheetId);
+    renderExerciseList();
+    renderEditor();
+}
+
+function duplicateCurrentExercise() {
+    const sheet = currentSheet();
+    const ex = currentExercise();
+    if (!sheet || !ex) return;
+    const copy = JSON.parse(JSON.stringify(ex));
+    copy.id = `${ex.type}-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
+    sheet.payload.exercises.splice(currentIndex + 1, 0, copy);
+    currentIndex += 1;
+    markDirty(currentSheetId);
+    renderExerciseList();
+    renderEditor();
+}
+
+function deleteCurrentExercise() {
+    const sheet = currentSheet();
+    if (!sheet || currentIndex < 0) return;
+    if (!confirm("Supprimer cet exercice ?")) return;
+    sheet.payload.exercises.splice(currentIndex, 1);
+    if (currentIndex >= sheet.payload.exercises.length) currentIndex = sheet.payload.exercises.length - 1;
+    markDirty(currentSheetId);
+    renderExerciseList();
+    renderEditor();
+}
+
+function moveCurrentExercise(delta) {
+    const sheet = currentSheet();
+    if (!sheet) return;
+    const list = sheet.payload.exercises;
+    const j = currentIndex + delta;
+    if (j < 0 || j >= list.length) return;
+    [list[currentIndex], list[j]] = [list[j], list[currentIndex]];
+    currentIndex = j;
+    markDirty(currentSheetId);
+    renderExerciseList();
+    renderEditor();
+}
+
+// ============================================================================
+// Validation
+// ============================================================================
+
+function checkChoices(issues, answer, choices, side, expected) {
+    if (!choices) choices = [];
+    if (choices.some((c) => (c || "").toLowerCase() === (answer || "").toLowerCase())) {
+        issues.push({ level: "error", message: `${side} : la réponse figure aussi dans ses propres distracteurs.` });
+    }
+    const dups = uniqLower(choices);
+    if (dups.length) {
+        issues.push({ level: "error", message: `${side} : distracteur(s) en double (${dups.join(", ")}).` });
+    }
+    choices.forEach((c) => {
+        if (!c || !c.trim()) issues.push({ level: "error", message: `${side} : un distracteur est vide.` });
+        else if (wordShape(c) !== wordShape(answer)) {
+            issues.push({ level: "warn", message: `${side} : « ${c} » n'a pas la même forme (mot/phrase) que la réponse.` });
+        }
+    });
+    if (expected && choices.length < expected) {
+        issues.push({ level: "warn", message: `${side} : ${choices.length} distracteur(s) au lieu de ${expected} habituellement.` });
+    }
+}
+
+function checkBlank(issues, sideLabel, sentence, missing, blankIndex, choices, expected) {
+    const tokens = (sentence || "").split(" ");
+    if (blankIndex == null || blankIndex < 0 || blankIndex >= tokens.length) {
+        issues.push({ level: "error", message: `${sideLabel} : l'index du trou (${blankIndex}) est hors de la phrase.` });
+    } else if (stripPunct(tokens[blankIndex]).toLowerCase() !== (missing || "").toLowerCase()) {
+        issues.push({
+            level: "error",
+            message: `${sideLabel} : le mot masqué (« ${missing} ») ne correspond pas au mot à cet index (« ${tokens[blankIndex]} »).`,
+        });
+    }
+    if (!missing || !missing.trim()) issues.push({ level: "error", message: `${sideLabel} : mot masqué vide.` });
+    checkChoices(issues, missing, choices, sideLabel, expected);
+}
+
+function validateExercise(ex) {
+    const issues = [];
+    if (!ex.l1 || !ex.l1.trim()) issues.push({ level: "error", message: "Phrase FR (l1) vide." });
+    if (!ex.l2 || !ex.l2.trim()) issues.push({ level: "error", message: "Phrase SK (l2) vide." });
+
+    const entry = EXERCISE_TYPES[ex.type];
+    const expected = entry && entry.expectedChoices;
+
+    if (ex.type === "qcm") {
+        checkChoices(issues, ex.l1, ex.choices_l1, "FR", expected);
+        checkChoices(issues, ex.l2, ex.choices_l2, "SK", expected);
+    } else if (ex.type === "fill-blank") {
+        checkBlank(issues, "FR", ex.l1, ex.missing_l1, ex.blank_index_l1, ex.choices_l1, expected);
+        checkBlank(issues, "SK", ex.l2, ex.missing_l2, ex.blank_index_l2, ex.choices_l2, expected);
+    } else if (ex.type === "listen") {
+        checkChoices(issues, ex.l2, ex.choices_l2, "SK", expected);
+    } else if (ex.type === "order") {
+        ["l1", "l2"].forEach((side) => {
+            const tokensKey = `tokens_${side}`;
+            const tokens = ex[tokensKey];
+            if (Array.isArray(tokens) && tokens.length) {
+                if (tokens.join(" ") !== ex[side]) {
+                    issues.push({
+                        level: "warn",
+                        message: `${side.toUpperCase()} : les jetons ne recomposent pas exactement la phrase -- utilise « Recalculer depuis le texte ».`,
+                    });
+                }
+                if (tokens.length < 3) {
+                    issues.push({ level: "warn", message: `${side.toUpperCase()} : phrase très courte, l'exercice sera trivial.` });
+                }
+            }
+        });
+    }
+    return issues;
+}
+
+function renderValidationBanner(ex) {
+    const box = document.getElementById("validation-banner");
+    if (!box) return;
+    const issues = validateExercise(ex);
+    box.innerHTML = "";
+    if (!issues.length) {
+        box.innerHTML = '<div class="issue ok">✓ Rien à signaler.</div>';
+        return;
+    }
+    issues.forEach((issue) => {
+        const div = document.createElement("div");
+        div.className = "issue" + (issue.level === "warn" ? " warn" : "");
+        div.textContent = (issue.level === "warn" ? "⚠ " : "✗ ") + issue.message;
+        box.appendChild(div);
+    });
+}
+
+// ============================================================================
+// Editor form -- generic, built from EXERCISE_TYPES[type].fields
+// ============================================================================
+
+function renderEditor() {
+    const container = document.getElementById("editor-content");
+    container.innerHTML = "";
+    const ex = currentExercise();
+    if (!ex) {
+        container.innerHTML = '<p class="empty-state">Sélectionne ou crée un exercice pour commencer.</p>';
+        return;
+    }
+
+    container.appendChild(el("div", { attrs: { id: "validation-banner" } }));
+
+    const idRow = document.createElement("div");
+    idRow.className = "hint";
+    idRow.style.marginBottom = "14px";
+    idRow.textContent = `${typeLabel(ex.type)} — id : ${ex.id}`;
+    container.appendChild(idRow);
+
+    const entry = EXERCISE_TYPES[ex.type];
+    (entry.fields || []).forEach((field) => {
+        container.appendChild(buildFieldBlock(ex, field));
+    });
+
+    const actions = document.createElement("div");
+    actions.className = "row-actions";
+    actions.appendChild(makeButton("⬆ Monter", () => moveCurrentExercise(-1)));
+    actions.appendChild(makeButton("⬇ Descendre", () => moveCurrentExercise(1)));
+    actions.appendChild(makeButton("⧉ Dupliquer", duplicateCurrentExercise));
+    actions.appendChild(makeButton("🗑 Supprimer", deleteCurrentExercise));
+    container.appendChild(actions);
+
+    container.appendChild(buildPreviewBox(ex));
+
+    renderValidationBanner(ex);
+}
+
+function makeButton(label, onclick) {
+    const b = document.createElement("button");
+    b.textContent = label;
+    b.addEventListener("click", onclick);
+    return b;
+}
+
+function onFieldChanged() {
+    markDirty(currentSheetId);
+    rebuildVocab();
+    renderExerciseList();
+    const ex = currentExercise();
+    renderValidationBanner(ex);
+    refreshPreviewBox(ex);
+}
+
+function buildFieldBlock(ex, field) {
+    const block = document.createElement("div");
+    block.className = "field-block";
+    const label = document.createElement("label");
+    label.className = "field-label";
+    label.textContent = field.label;
+    block.appendChild(label);
+
+    if (field.kind === "text") {
+        block.appendChild(buildTextInput(ex, field.key));
+    } else if (field.kind === "list") {
+        block.appendChild(buildListEditor(ex, field.key));
+    } else if (field.kind === "sentence-blank") {
+        block.appendChild(buildBlankEditor(ex, field));
+    } else if (field.kind === "sentence-tokens") {
+        block.appendChild(buildTokensEditor(ex, field));
+    }
+    return block;
+}
+
+function buildTextInput(ex, key) {
+    const input = document.createElement("input");
+    input.type = "text";
+    input.value = ex[key] || "";
+    input.addEventListener("input", () => { ex[key] = input.value; onFieldChanged(); });
+    return input;
+}
+
+function buildListEditor(ex, key) {
+    const wrap = document.createElement("div");
+    if (!Array.isArray(ex[key])) ex[key] = [];
+
+    const rows = document.createElement("div");
+    rows.className = "chip-row";
+    const redraw = () => {
+        rows.innerHTML = "";
+        ex[key].forEach((value, i) => {
+            const chip = document.createElement("span");
+            chip.className = "chip";
+            const text = document.createElement("span");
+            text.textContent = value;
+            chip.appendChild(text);
+            const del = document.createElement("button");
+            del.textContent = "✕";
+            del.title = "Retirer";
+            del.addEventListener("click", () => {
+                ex[key].splice(i, 1);
+                redraw();
+                onFieldChanged();
+            });
+            chip.appendChild(del);
+            rows.appendChild(chip);
+        });
+    };
+    redraw();
+    wrap.appendChild(rows);
+
+    const addRow = document.createElement("div");
+    addRow.className = "add-chip-input";
+    const input = document.createElement("input");
+    input.type = "text";
+    input.setAttribute("list", "vocab-list");
+    input.placeholder = "Ajouter un distracteur puis Entrée…";
+    input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && input.value.trim()) {
+            ex[key].push(input.value.trim());
+            input.value = "";
+            redraw();
+            onFieldChanged();
+        }
+    });
+    const addBtn = document.createElement("button");
+    addBtn.textContent = "+";
+    addBtn.addEventListener("click", () => {
+        if (input.value.trim()) {
+            ex[key].push(input.value.trim());
+            input.value = "";
+            redraw();
+            onFieldChanged();
+        }
+    });
+    addRow.appendChild(input);
+    addRow.appendChild(addBtn);
+    wrap.appendChild(addRow);
+    return wrap;
+}
+
+/** sentence-blank: the sentence text, then its words as clickable
+ * chips to pick the blanked one (recomputes missingKey/blankIndexKey),
+ * then the distractor list for that side. */
+function buildBlankEditor(ex, field) {
+    const wrap = document.createElement("div");
+    const sentenceInput = document.createElement("input");
+    sentenceInput.type = "text";
+    sentenceInput.value = ex[field.key] || "";
+    wrap.appendChild(sentenceInput);
+
+    const tokenList = document.createElement("div");
+    tokenList.className = "token-list";
+    wrap.appendChild(tokenList);
+
+    const redrawTokens = () => {
+        tokenList.innerHTML = "";
+        const tokens = (ex[field.key] || "").split(" ");
+        tokens.forEach((token, i) => {
+            const chip = document.createElement("button");
+            chip.type = "button";
+            chip.className = "chip token" + (i === ex[field.blankIndexKey] ? " blanked" : "");
+            chip.textContent = token || "␣";
+            chip.title = "Cliquer pour masquer ce mot";
+            chip.addEventListener("click", () => {
+                ex[field.blankIndexKey] = i;
+                ex[field.missingKey] = stripPunct(token);
+                redrawTokens();
+                onFieldChanged();
+            });
+            tokenList.appendChild(chip);
+        });
+    };
+    redrawTokens();
+
+    sentenceInput.addEventListener("input", () => {
+        ex[field.key] = sentenceInput.value;
+        // The blank index still points into the new split; only the
+        // highlighted chip and the missing word are stale until the
+        // person clicks a word again, or we recompute here if it's
+        // still in range and still matches by position.
+        redrawTokens();
+        onFieldChanged();
+    });
+
+    const missingLine = document.createElement("p");
+    missingLine.className = "hint";
+    missingLine.textContent = `Mot masqué actuel : « ${ex[field.missingKey] || ""} » (index ${ex[field.blankIndexKey]})`;
+    wrap.appendChild(missingLine);
+
+    const choicesLabel = document.createElement("label");
+    choicesLabel.className = "field-label";
+    choicesLabel.style.marginTop = "10px";
+    choicesLabel.style.display = "block";
+    choicesLabel.textContent = "Distracteurs";
+    wrap.appendChild(choicesLabel);
+    wrap.appendChild(buildListEditor(ex, field.choicesKey));
+
+    return wrap;
+}
+
+/**
+ * sentence-tokens: the sentence text, then its groups as chips with a
+ * "merge with next" control between each pair -- clicking it joins
+ * two adjacent groups into one (kept together at play time, e.g. "ne
+ * ... pas"); clicking a merged chip's ✂ splits it back into its
+ * words. The explicit tokensKey array is written only when it
+ * differs from the naive split -- an untouched sentence keeps no
+ * redundant array in the file.
+ */
+function buildTokensEditor(ex, field) {
+    const wrap = document.createElement("div");
+    const sentenceInput = document.createElement("input");
+    sentenceInput.type = "text";
+    sentenceInput.value = ex[field.key] || "";
+    wrap.appendChild(sentenceInput);
+
+    const tokenList = document.createElement("div");
+    tokenList.className = "token-list";
+    wrap.appendChild(tokenList);
+
+    function currentGroups() {
+        const naive = (ex[field.key] || "").split(" ").filter(Boolean);
+        const stored = ex[field.tokensKey];
+        if (Array.isArray(stored) && stored.length && stored.join(" ") === (ex[field.key] || "")) {
+            return stored.slice();
+        }
+        return naive;
+    }
+
+    function setGroups(groups) {
+        const naive = (ex[field.key] || "").split(" ").filter(Boolean);
+        if (groups.join(" ") === naive.join(" ")) {
+            delete ex[field.tokensKey]; // matches the naive split -- nothing extra to store
+        } else {
+            ex[field.tokensKey] = groups;
+        }
+    }
+
+    const redraw = () => {
+        tokenList.innerHTML = "";
+        const groups = currentGroups();
+        groups.forEach((group, i) => {
+            const chip = document.createElement("span");
+            chip.className = "chip token";
+            chip.textContent = group;
+            if (group.includes(" ")) {
+                const split = document.createElement("button");
+                split.textContent = "✂";
+                split.title = "Séparer ce groupe";
+                split.addEventListener("click", () => {
+                    const words = group.split(" ");
+                    const next = groups.slice(0, i).concat(words, groups.slice(i + 1));
+                    setGroups(next);
+                    redraw();
+                    onFieldChanged();
+                });
+                chip.appendChild(split);
+            }
+            tokenList.appendChild(chip);
+            if (i < groups.length - 1) {
+                const merge = document.createElement("button");
+                merge.className = "merge-btn";
+                merge.textContent = "⇄";
+                merge.title = "Fusionner avec le mot suivant (garder ensemble)";
+                merge.addEventListener("click", () => {
+                    const next = groups.slice();
+                    next.splice(i, 2, `${groups[i]} ${groups[i + 1]}`);
+                    setGroups(next);
+                    redraw();
+                    onFieldChanged();
+                });
+                tokenList.appendChild(merge);
+            }
+        });
+    };
+    redraw();
+
+    sentenceInput.addEventListener("input", () => {
+        ex[field.key] = sentenceInput.value;
+        delete ex[field.tokensKey]; // a changed sentence invalidates any custom grouping
+        redraw();
+        onFieldChanged();
+    });
+
+    const hint = document.createElement("p");
+    hint.className = "hint";
+    hint.textContent = "⇄ garde deux mots ensemble comme un seul jeton (« ne … pas ») ; ✂ les sépare à nouveau.";
+    wrap.appendChild(hint);
+
+    return wrap;
+}
+
+// ============================================================================
+// Student-side preview (read-only-ish, self-contained -- does not
+// reuse exercises.js's renderQcm()/markAnswer()/goToExercise(), which
+// are wired to a live session's DOM ids and progress recording, not
+// to a standalone preview).
+// ============================================================================
+
+function buildPreviewBox(ex) {
+    const box = document.createElement("div");
+    box.className = "preview-box";
+    box.id = "preview-box";
+    box.appendChild(el("h3", { text: "👀 Aperçu côté élève" }));
+
+    if (ex.type !== "listen") {
+        const dirRow = document.createElement("div");
+        dirRow.className = "preview-dir";
+        ["l1-l2", "l2-l1"].forEach((dir) => {
+            const b = document.createElement("button");
+            b.textContent = dir === "l1-l2" ? "FR → SK" : "SK → FR";
+            b.className = dir === previewDirection ? "active" : "";
+            b.addEventListener("click", () => { previewDirection = dir; refreshPreviewBox(currentExercise()); });
+            dirRow.appendChild(b);
+        });
+        box.appendChild(dirRow);
+    }
+
+    box.appendChild(el("div", { attrs: { id: "preview-content" } }));
+    fillPreviewContent(box.querySelector("#preview-content"), ex);
+    return box;
+}
+
+function refreshPreviewBox(ex) {
+    const box = document.getElementById("preview-box");
+    if (!box || !ex) return;
+    const parent = box.parentNode;
+    const fresh = buildPreviewBox(ex);
+    parent.replaceChild(fresh, box);
+}
+
+function speakPreview(text) {
+    if (!text || !("speechSynthesis" in window)) return;
+    const code = document.getElementById("tts-code").value.trim() || "sk-SK";
+    try { localStorage.setItem("editeur-exercices-tts-code", code); } catch (err) { /* ignore */ }
+    window.speechSynthesis.cancel();
+    const utt = new SpeechSynthesisUtterance(text);
+    utt.lang = code;
+    window.speechSynthesis.speak(utt);
+}
+
+function playButton(text) {
+    const b = document.createElement("button");
+    b.className = "play-btn";
+    b.textContent = "🔊";
+    b.title = "Écouter";
+    b.addEventListener("click", () => speakPreview(text));
+    return b;
+}
+
+function fillPreviewContent(container, ex) {
+    container.innerHTML = "";
+    let view;
+    try {
+        view = resolveView(ex, ex.type === "listen" ? "l1-l2" : previewDirection);
+    } catch (err) {
+        container.appendChild(el("p", { className: "hint", text: `Aperçu indisponible : ${err.message}` }));
+        return;
+    }
+
+    if (ex.type === "order") {
+        container.appendChild(el("p", { className: "preview-question", text: view.translation || "" }));
+        container.appendChild(document.createTextNode("Jetons (mélangés) : "));
+        container.appendChild(playButton(view.audio));
+        const bank = el("p", {}, view.tokens.map((t) => el("span", { className: "chip", text: t })));
+        container.appendChild(bank);
+        container.appendChild(el("p", { className: "hint", text: `Ordre attendu : ${view.orderedTokens.join(" ")}` }));
+        return;
+    }
+
+    if (ex.type === "fill-blank") {
+        const sentence = el("p", { className: "preview-question" });
+        view.tokens.forEach((token, i) => {
+            sentence.appendChild(document.createTextNode(i === view.blankIndex ? "___ " : token + " "));
+        });
+        container.appendChild(sentence);
+    } else {
+        container.appendChild(el("p", { className: "preview-question", text: view.question || "" }));
+    }
+
+    container.appendChild(playButton(view.audio));
+    if (view.translation) container.appendChild(el("p", { className: "hint", text: view.translation }));
+
+    const choicesBox = el("div", { style: undefined });
+    let revealed = false;
+    view.choices.forEach((choice) => {
+        const btn = document.createElement("button");
+        btn.className = "preview-choice" + (choice === view.answer ? " is-answer" : "");
+        btn.textContent = choice;
+        btn.addEventListener("click", () => {
+            revealed = true;
+            btn.classList.add("picked");
+            choicesBox.querySelectorAll(".preview-choice").forEach((b) => b.classList.add("revealed"));
+        });
+        choicesBox.appendChild(btn);
+    });
+    container.appendChild(choicesBox);
+}
+
+// ============================================================================
+// Drag & drop .json files anywhere on the page, as an alternative to
+// the "Ouvrir" button.
+// ============================================================================
+
+["dragover", "drop"].forEach((evt) => window.addEventListener(evt, (e) => e.preventDefault()));
+window.addEventListener("drop", async (e) => {
+    const files = [...(e.dataTransfer && e.dataTransfer.files ? e.dataTransfer.files : [])]
+        .filter((f) => f.name.endsWith(".json"));
+    for (const file of files) {
+        await loadSheetFromText(file.name, await file.text(), null);
+    }
+    if (files.length) afterLoad();
+});
+
+// ============================================================================
+// Boot
+// ============================================================================
+
+(function boot() {
+    try {
+        const saved = localStorage.getItem("editeur-exercices-tts-code");
+        if (saved) document.getElementById("tts-code").value = saved;
+    } catch (err) { /* ignore */ }
+    renderSheetList();
+    renderExerciseList();
+    renderEditor();
+})();
+</script>
+</body>
+</html>

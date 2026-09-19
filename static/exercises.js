@@ -1,11 +1,22 @@
 /**
  * exercises.js -- Slovingo v2 exercise engine.
  *
- * Selection screen + session for qcm / fill-blank / listen exercises,
- * consuming the merged l1/l2 format from smd2exercises.py (see
- * areas/v2-rewrite): one exercise object covers both practice
- * directions, resolved into a "view" (question/answer/choices) at
- * render time rather than stored twice.
+ * Selection screen + session for every exercise type, consuming the
+ * merged l1/l2 format from smd2exercises.py (see areas/v2-rewrite):
+ * one exercise object covers both practice directions, resolved into
+ * a "view" (question/answer/choices) at render time rather than
+ * stored twice.
+ *
+ * Types are declared ONCE, in EXERCISE_TYPES below -- everything else
+ * in this file (the pool, the filters, the checkboxes, the session
+ * player, the editor's forms) reads that registry instead of having
+ * its own hardcoded list. Adding a new exercise type (e.g. "remettre
+ * les mots dans l'ordre") means adding one entry here, not touching
+ * a dozen files: this file, the standalone editeur-exercices.html,
+ * and smd2exercises.py (which can generate the new type once it
+ * knows its data shape) are the only places a type's *data shape* is
+ * decided, and this registry is the single place that shape lives
+ * for the front-end.
  *
  * Ported from v1's exercises.js. Differences:
  *   - No separate fetch: EXERCISES/DATA are already loaded by app.js's
@@ -18,6 +29,9 @@
  *     filtering a pool that already contained two direction-tagged
  *     copies of everything -- so pool size no longer depends on the
  *     chosen direction (a genuine simplification over v1).
+ *   - Exercise types are declared in one registry (EXERCISE_TYPES)
+ *     instead of being scattered across resolveView()/renderX()/
+ *     typeLabel()/typeIcon()/ALL_TYPES.
  *
  * Depends on app.js (speak(), targetVoiceAvailable, applyTheme(),
  * setKicker(), setPageTitle(), setToolbarButtons(),
@@ -31,7 +45,122 @@
 
 "use strict";
 
-const ALL_TYPES = ["qcm", "fill-blank", "listen"];
+// ============================================================================
+// 0. Exercise type registry -- the single source of truth for what an
+//    exercise type IS: its data fields (read by editeur-exercices.html
+//    to build its forms), how a merged exercise resolves into a
+//    question/answer "view" for a given direction, and how that view
+//    renders as an interactive card during a session.
+//
+//    A `fields` schema entry describes one editable facet of the
+//    exercise's JSON shape, for a generic editor form:
+//      - kind: "text"          -- a single-line string field (l1/l2).
+//      - kind: "list"          -- an array of short strings
+//                                  (distractors): add/remove/reorder.
+//      - kind: "sentence-blank" -- a full sentence with one word
+//                                  blanked out (fill-blank): the
+//                                  sentence text (`key`), which word is
+//                                  missing (`missingKey`), its token
+//                                  index (`blankIndexKey`), and its
+//                                  distractors (`choicesKey`).
+//      - kind: "sentence-tokens" -- a full sentence (`key`) plus an
+//                                  optional explicit tokenisation
+//                                  (`tokensKey`) that can group words
+//                                  that must stay together (e.g. "ne
+//                                  ... pas"); falls back to a naive
+//                                  split(" ") of the sentence when the
+//                                  tokens array is absent.
+//    This schema is intentionally generic rather than one bespoke
+//    field per type, so the editor's form-builder is a single loop
+//    over `fields`, not one branch per exercise type.
+// ============================================================================
+
+// Expected distractor counts, mirroring the constants of the same
+// name in smd2exercises.py (QCM_CHOICES/FILL_BLANK_CHOICES/
+// LISTEN_CHOICES there include the answer itself; here they're
+// distractor-only, matching what choices_l1/choices_l2 actually
+// store). Used only by the editor's validation banner -- the player
+// itself works fine with more or fewer, so this is advisory.
+const QCM_CHOICES = 4;
+const FILL_BLANK_CHOICES = 3;
+const LISTEN_CHOICES = 4;
+
+const EXERCISE_TYPES = {
+    qcm: {
+        icon: "🔤",
+        label: "QCM",
+        expectedChoices: QCM_CHOICES - 1,
+        fields: [
+            { key: "l1", label: "Français", kind: "text" },
+            { key: "l2", label: "Slovaque", kind: "text" },
+            { key: "choices_l1", label: "Distracteurs (FR)", kind: "list" },
+            { key: "choices_l2", label: "Distracteurs (SK)", kind: "list" },
+        ],
+        resolveView: resolveQcmView,
+        render: renderQcm,
+    },
+    "fill-blank": {
+        icon: "✏️",
+        label: "Trou",
+        expectedChoices: FILL_BLANK_CHOICES,
+        fields: [
+            {
+                key: "l1", label: "Phrase (FR)", kind: "sentence-blank",
+                missingKey: "missing_l1", blankIndexKey: "blank_index_l1", choicesKey: "choices_l1",
+            },
+            {
+                key: "l2", label: "Phrase (SK)", kind: "sentence-blank",
+                missingKey: "missing_l2", blankIndexKey: "blank_index_l2", choicesKey: "choices_l2",
+            },
+        ],
+        resolveView: resolveFillBlankView,
+        render: renderFillBlank,
+    },
+    listen: {
+        icon: "🔊",
+        label: "Écoute",
+        needsVoice: true,
+        expectedChoices: LISTEN_CHOICES - 1,
+        fields: [
+            { key: "l1", label: "Traduction (FR)", kind: "text" },
+            { key: "l2", label: "Phrase (SK, écoutée)", kind: "text" },
+            { key: "choices_l2", label: "Distracteurs (SK)", kind: "list" },
+        ],
+        resolveView: resolveListenView,
+        render: renderListen,
+    },
+    order: {
+        icon: "🔀",
+        label: "Ordre",
+        fields: [
+            { key: "l1", label: "Traduction (FR)", kind: "sentence-tokens", tokensKey: "tokens_l1" },
+            { key: "l2", label: "Phrase (SK, à remettre en ordre)", kind: "sentence-tokens", tokensKey: "tokens_l2" },
+        ],
+        resolveView: resolveOrderView,
+        render: renderOrder,
+    },
+};
+
+/** Declaration order of EXERCISE_TYPES, kept stable everywhere a fixed
+ * display order matters (checkboxes, badges, summary). */
+const ALL_TYPES = Object.keys(EXERCISE_TYPES);
+
+function typeLabel(type) {
+    const entry = EXERCISE_TYPES[type];
+    return entry ? `${entry.icon} ${entry.label}` : type;
+}
+
+function typeIcon(type) {
+    return (EXERCISE_TYPES[type] && EXERCISE_TYPES[type].icon) || "❔";
+}
+
+/** Whether `type` can currently be played -- false only for a
+ * voice-dependent type (listen) when no target-language voice is
+ * available on this device. */
+function typePlayable(type) {
+    const entry = EXERCISE_TYPES[type];
+    return !(entry && entry.needsVoice && !ttsAvailable());
+}
 
 /** Session state, rebuilt each time a session starts. */
 const state = {
@@ -42,7 +171,7 @@ const state = {
     currentView: null,
     score: 0,
     mistakes: [],
-    byType: {},                 // { qcm: {correct, total}, "fill-blank": {...}, listen: {...} }
+    byType: {},                 // { qcm: {correct, total}, "fill-blank": {...}, ... }
     sheetId: null,               // single-sheet session -- progress recording key
     sheetTitle: "",
     sessionSize: 10,
@@ -111,14 +240,6 @@ function speakSafe(text, rate, pitch, voiceURI) {
 /** targetVoiceAvailable is a global declared in app.js. */
 function ttsAvailable() {
     return typeof targetVoiceAvailable !== "undefined" && targetVoiceAvailable;
-}
-
-function typeLabel(type) {
-    return { qcm: "\ud83d\udd24 QCM", "fill-blank": "\u270f\ufe0f Fill in the blank", listen: "\ud83d\udd0a Listen" }[type] || type;
-}
-
-function typeIcon(type) {
-    return { qcm: "\ud83d\udd24", "fill-blank": "\u270f\ufe0f", listen: "\ud83d\udd0a" }[type] || "\u2754";
 }
 
 // ============================================================================
@@ -407,7 +528,7 @@ function buildLaunchBar() {
 
     bar.appendChild(el("button", {
         className: "exo-launch-btn",
-        text: "\u25b6\ufe0f Start the session",
+        text: "▶️ Start the session",
         attrs: { id: "exo-launch-btn" },
         onclick: launchSession,
     }));
@@ -427,7 +548,7 @@ function updateLaunchBar() {
     if (!bar) return;
 
     const selectedSheets = [...selectedSheetIds];
-    const effectiveTypes = ALL_TYPES.filter((t) => state.activeTypes.has(t) && (t !== "listen" || ttsAvailable()));
+    const effectiveTypes = ALL_TYPES.filter((t) => state.activeTypes.has(t) && typePlayable(t));
     const pool = selectedSheets.reduce((sum, id) => {
         const counts = EXERCISES.sheets[id].counts;
         return sum + effectiveTypes.reduce((s, t) => s + (counts[t] || 0), 0);
@@ -470,15 +591,17 @@ function launchSession() {
 
 /**
  * Checkbox row shared between the selection screen and an active
- * session. "Listen" is disabled (and unchecked) whenever no
- * target-language voice is available -- no point offering questions
- * that can't be heard.
+ * session, one checkbox per entry of EXERCISE_TYPES -- adding a type
+ * to the registry adds its checkbox here automatically. A
+ * voice-dependent type (listen) is disabled (and unchecked) whenever
+ * no target-language voice is available -- no point offering
+ * questions that can't be heard.
  */
 function renderTypeCheckboxes(selectedSet, onChange) {
     const row = el("div", { className: "exo-type-filter" });
     const inputs = [];
     ALL_TYPES.forEach((type) => {
-        const disabled = type === "listen" && !ttsAvailable();
+        const disabled = !typePlayable(type);
         if (disabled) selectedSet.delete(type);
 
         const input = el("input", { attrs: { type: "checkbox" } });
@@ -520,9 +643,9 @@ function renderDirectionSelector(current, onChange) {
     const nativeAbbr = ((LANG.native_lang.tts_code || LANG.native_lang.name || "").split("-")[0]).toUpperCase();
     const targetAbbr = ((LANG.target_lang.tts_code || LANG.target_lang.name || "").split("-")[0]).toUpperCase();
     const options = [
-        { value: "l1-l2", label: `${LANG.native_lang.flag}\u2192${LANG.target_lang.flag} ${nativeAbbr}\u2192${targetAbbr}` },
-        { value: "l2-l1", label: `${LANG.target_lang.flag}\u2192${LANG.native_lang.flag} ${targetAbbr}\u2192${nativeAbbr}` },
-        { value: "both", label: "\ud83d\udd00 Both directions" },
+        { value: "l1-l2", label: `${LANG.native_lang.flag}→${LANG.target_lang.flag} ${nativeAbbr}→${targetAbbr}` },
+        { value: "l2-l1", label: `${LANG.target_lang.flag}→${LANG.native_lang.flag} ${targetAbbr}→${nativeAbbr}` },
+        { value: "both", label: "🔀 Both directions" },
     ];
     options.forEach(({ value, label }) => {
         const option = el("option", { text: label, attrs: { value } });
@@ -633,12 +756,116 @@ function startSessionFromQuery(query) {
     startPool();
 }
 
+/**
+ * Pick `n` exercises out of `pool` aiming for an even split across the
+ * types present in it, instead of a flat shuffle-then-slice (which lets
+ * whichever type happens to be biggest in the pool dominate a session).
+ *
+ * Each type gets pool.length / typeCount slots (remainder handed out to
+ * random types); a type short on exercises gives its unfilled slots back,
+ * which get redistributed round-robin to types that still have spare
+ * exercises. The picks are then interleaved (see interleaveNoRepeat) so
+ * the session doesn't run several questions of the same type in a row.
+ */
+function buildBalancedPool(pool, n) {
+    const byType = new Map();
+    for (const ex of pool) {
+        if (!byType.has(ex.type)) byType.set(ex.type, []);
+        byType.get(ex.type).push(ex);
+    }
+    const types = [...byType.keys()];
+    if (types.length <= 1) return shuffle(pool).slice(0, n);
+
+    const shuffled = new Map(types.map((t) => [t, shuffle(byType.get(t))]));
+
+    const base = Math.floor(n / types.length);
+    let remainder = n - base * types.length;
+    const quota = new Map(types.map((t) => [t, base]));
+    const order = shuffle(types);
+    for (let i = 0; i < remainder; i++) {
+        const t = order[i % order.length];
+        quota.set(t, quota.get(t) + 1);
+    }
+
+    const picked = new Map();
+    let deficit = 0;
+    for (const t of types) {
+        const avail = shuffled.get(t).length;
+        const want = quota.get(t);
+        const take = Math.min(avail, want);
+        picked.set(t, take);
+        deficit += want - take;
+    }
+
+    while (deficit > 0) {
+        let progress = false;
+        for (const t of types) {
+            if (deficit <= 0) break;
+            const avail = shuffled.get(t).length;
+            const cur = picked.get(t);
+            if (cur < avail) {
+                picked.set(t, cur + 1);
+                deficit -= 1;
+                progress = true;
+            }
+        }
+        if (!progress) break; // no type has any spare left
+    }
+
+    const buckets = new Map(types.map((t) => [t, shuffled.get(t).slice(0, picked.get(t))]));
+    return interleaveNoRepeat(buckets);
+}
+
+/**
+ * Flattens per-type buckets (each already shuffled) into one sequence,
+ * picking randomly among the types that still have exercises left but
+ * avoiding a 3rd-in-a-row of the same type whenever another type still
+ * has something to offer. When only one type has anything left, its
+ * exercises are used anyway (a run is unavoidable at that point).
+ */
+function interleaveNoRepeat(buckets, maxRun = 2) {
+    const remaining = new Map([...buckets.entries()].map(([t, arr]) => [t, arr.slice()]));
+    const result = [];
+    let lastType = null;
+    let runLength = 0;
+    let totalLeft = [...remaining.values()].reduce((sum, arr) => sum + arr.length, 0);
+
+    while (totalLeft > 0) {
+        let candidates = [...remaining.entries()].filter(([, arr]) => arr.length > 0);
+        if (runLength >= maxRun) {
+            const avoiding = candidates.filter(([t]) => t !== lastType);
+            if (avoiding.length) candidates = avoiding;
+        }
+
+        const totalWeight = candidates.reduce((sum, [, arr]) => sum + arr.length, 0);
+        let r = Math.random() * totalWeight;
+        let chosen = candidates[0];
+        for (const candidate of candidates) {
+            r -= candidate[1].length;
+            if (r <= 0) {
+                chosen = candidate;
+                break;
+            }
+        }
+
+        const [type, arr] = chosen;
+        result.push(arr.shift());
+        totalLeft--;
+        if (type === lastType) {
+            runLength++;
+        } else {
+            lastType = type;
+            runLength = 1;
+        }
+    }
+
+    return result;
+}
+
 /** Build the filtered, shuffled, sized pool for this run and show question 1. */
 function startPool() {
     let pool = state.allExercises.filter((ex) => state.activeTypes.has(ex.type));
-    if (!ttsAvailable()) {
-        pool = pool.filter((ex) => ex.type !== "listen");
-    }
+    pool = pool.filter((ex) => typePlayable(ex.type));
 
     if (!pool.length) {
         document.getElementById("exo-card-area").innerHTML =
@@ -647,7 +874,7 @@ function startPool() {
         return;
     }
 
-    state.exercises = shuffle(pool).slice(0, state.sessionSize || 10);
+    state.exercises = buildBalancedPool(pool, state.sessionSize || 10);
     state.score = 0;
     state.mistakes = [];
     state.byType = {};
@@ -657,7 +884,7 @@ function startPool() {
 
 function buildSessionToolbar() {
     const toolbar = el("div", { className: "exo-toolbar" }, [
-        el("h2", { text: `\ud83c\udfaf ${state.sheetTitle}` }),
+        el("h2", { text: `🎯 ${state.sheetTitle}` }),
     ]);
 
     const controlsRow = el("div", { className: "exo-filter-row" }, [
@@ -703,7 +930,9 @@ function buildSessionToolbar() {
 
 // ============================================================================
 // Direction resolution: turn one merged exercise into a question/answer
-// "view" for the direction currently in effect.
+// "view" for the direction currently in effect. One resolveXView()
+// function per registered type (see EXERCISE_TYPES above); resolveView()
+// itself just dispatches to whichever the exercise's type points to.
 // ============================================================================
 
 function resolveDirection(direction) {
@@ -758,10 +987,48 @@ function resolveListenView(ex) {
     };
 }
 
+/**
+ * Tokens for `sentence`, from the exercise's explicit tokenisation
+ * (`tokensField`, e.g. tokens_l2) when present -- so a generator or
+ * the editor can keep a group like "ne ... pas" together as one
+ * chip -- falling back to a naive split(" ") otherwise.
+ */
+function orderTokensFor(ex, sentenceField, tokensField) {
+    if (Array.isArray(ex[tokensField]) && ex[tokensField].length) {
+        return ex[tokensField];
+    }
+    return (ex[sentenceField] || "").split(" ").filter(Boolean);
+}
+
+/**
+ * "Remettre les mots dans l'ordre" -- rebuild the target sentence by
+ * placing its shuffled tokens (words, or hand-grouped short phrases)
+ * in the right order. Correctness compares the tokens joined by a
+ * single space to the original sentence, normalizeAnswer()'d the
+ * same way free-typed answers are -- good enough for this exercise
+ * without a second, parallel "is this sentence equal" definition.
+ */
+function resolveOrderView(ex, direction) {
+    const dir = resolveDirection(direction);
+    if (dir === "l1-l2") {
+        const tokens = orderTokensFor(ex, "l2", "tokens_l2");
+        return {
+            type: "order", direction: dir,
+            tokens: shuffle(tokens), orderedTokens: tokens,
+            answer: ex.l2, audio: ex.l2, translation: ex.l1,
+        };
+    }
+    const tokens = orderTokensFor(ex, "l1", "tokens_l1");
+    return {
+        type: "order", direction: dir,
+        tokens: shuffle(tokens), orderedTokens: tokens,
+        answer: ex.l1, audio: ex.l2, translation: ex.l2,
+    };
+}
+
 function resolveView(ex, direction) {
-    if (ex.type === "qcm") return resolveQcmView(ex, direction);
-    if (ex.type === "fill-blank") return resolveFillBlankView(ex, direction);
-    return resolveListenView(ex);
+    const entry = EXERCISE_TYPES[ex.type];
+    return entry ? entry.resolveView(ex, direction) : resolveListenView(ex);
 }
 
 // ============================================================================
@@ -802,10 +1069,8 @@ function renderCurrentView() {
     const area = document.getElementById("exo-card-area");
     area.innerHTML = "";
     const view = state.currentView;
-
-    if (view.type === "qcm") area.appendChild(renderQcm(view));
-    else if (view.type === "fill-blank") area.appendChild(renderFillBlank(view));
-    else area.appendChild(renderListen(view));
+    const entry = EXERCISE_TYPES[view.type];
+    area.appendChild(entry ? entry.render(view) : renderListen(view));
 }
 
 /**
@@ -831,13 +1096,13 @@ function markAnswer(container, isCorrect, view, userAnswer) {
     const feedbackLine = [
         el("span", {
             className: isCorrect ? "exo-feedback-ok" : "exo-feedback-ko",
-            text: isCorrect ? "\u2705 Correct!" : `\u274c Missed \u2014 answer: ${view.answer}`,
+            text: isCorrect ? "✅ Correct!" : `❌ Missed — answer: ${view.answer}`,
         }),
     ];
     if (canReplay) {
         feedbackLine.push(el("button", {
             className: "exo-feedback-audio",
-            text: "\ud83d\udd0a",
+            text: "🔊",
             attrs: { type: "button", "aria-label": "Listen to the pronunciation" },
             onclick: () => speakSafe(view.audio),
         }));
@@ -851,7 +1116,7 @@ function markAnswer(container, isCorrect, view, userAnswer) {
 
     container.appendChild(el("button", {
         className: "exo-next",
-        text: state.current + 1 < state.exercises.length ? "Next \u2192" : "See score \u2192",
+        text: state.current + 1 < state.exercises.length ? "Next →" : "See score →",
         onclick: () => goToExercise(state.current + 1),
     }));
 
@@ -942,12 +1207,12 @@ function renderListen(view) {
 
     container.appendChild(el("button", {
         className: "exo-audio-btn exo-audio-btn-big",
-        text: "\ud83d\udd0a Listen",
+        text: "🔊 Listen",
         onclick: () => speakSafe(view.audio),
     }));
     container.appendChild(el("button", {
         className: "exo-audio-btn",
-        text: "\ud83d\udc22 Slowly",
+        text: "🐢 Slowly",
         onclick: () => speakSafe(view.audio, SETTINGS.rate * SETTINGS.slowRatio),
     }));
 
@@ -976,11 +1241,87 @@ function renderListen(view) {
     return container;
 }
 
-// -- Free typing (shared by all 3 types) -----------------------------------
+// -- Remettre les mots dans l'ordre ----------------------------------------
+
+/**
+ * Click tokens (from the shuffled bank) to append them to the answer
+ * strip, in order; click a token already placed to send it back. No
+ * drag-and-drop -- works the same with a mouse, a touchscreen, or a
+ * keyboard tab+enter, and needs no extra library.
+ */
+function renderOrder(view) {
+    const container = el("div", { className: "exo-card exo-order" });
+    container.appendChild(el("div", { className: "exo-question-label", text: "Put the words in order:" }));
+    if (view.translation) {
+        container.appendChild(el("div", { className: "exo-question", text: view.translation }));
+    }
+
+    const answerStrip = el("div", { className: "exo-order-answer" });
+    const bank = el("div", { className: "exo-order-bank" });
+    const submit = el("button", { className: "exo-submit", text: "Check", attrs: { disabled: "disabled" } });
+
+    const placed = [];
+    const chips = view.tokens.map((token) => {
+        const chip = el("button", {
+            className: "exo-order-chip",
+            text: token,
+            attrs: { type: "button" },
+        });
+        chip.onclick = () => {
+            if (chip.disabled) return;
+            chip.disabled = true;
+            chip.classList.add("exo-order-chip-placed");
+            placed.push(token);
+            answerStrip.appendChild(makePlacedChip(token, chip, placed));
+            submit.disabled = placed.length !== view.tokens.length;
+        };
+        return chip;
+    });
+    chips.forEach((chip) => bank.appendChild(chip));
+
+    function makePlacedChip(token, sourceChip, placedArr) {
+        const placedChip = el("button", {
+            className: "exo-order-chip exo-order-chip-answer",
+            text: token,
+            attrs: { type: "button" },
+        });
+        placedChip.onclick = () => {
+            if (submit.disabled === false && submit.dataset.locked === "1") return;
+            const idx = placedArr.indexOf(token);
+            if (idx !== -1) placedArr.splice(idx, 1);
+            placedChip.remove();
+            sourceChip.disabled = false;
+            sourceChip.classList.remove("exo-order-chip-placed");
+            submit.disabled = placedArr.length !== view.tokens.length;
+        };
+        return placedChip;
+    }
+
+    submit.onclick = () => {
+        submit.dataset.locked = "1";
+        chips.forEach((c) => { c.disabled = true; });
+        [...answerStrip.children].forEach((c) => { c.disabled = true; });
+        submit.disabled = true;
+        const userAnswer = placed.join(" ");
+        const correct = normalizeAnswer(userAnswer) === normalizeAnswer(view.answer);
+        answerStrip.classList.add(correct ? "exo-choice-correct" : "exo-choice-wrong");
+        markAnswer(container, correct, view, userAnswer);
+    };
+
+    container.appendChild(el("div", { className: "exo-order-strip-label", text: "Your answer:" }));
+    container.appendChild(answerStrip);
+    container.appendChild(el("div", { className: "exo-order-strip-label", text: "Available words:" }));
+    container.appendChild(bank);
+    container.appendChild(submit);
+
+    return container;
+}
+
+// -- Free typing (shared by qcm/fill-blank/listen) -------------------------
 
 function renderTypeInput(container, view, onValidate) {
     const wrap = el("div", { className: "exo-type-input" });
-    const input = el("input", { attrs: { type: "text", placeholder: "Your answer\u2026", autocomplete: "off" } });
+    const input = el("input", { attrs: { type: "text", placeholder: "Your answer…", autocomplete: "off" } });
     const submit = el("button", {
         className: "exo-submit",
         text: "Check",
@@ -1056,7 +1397,7 @@ function renderSummary() {
             row.appendChild(el("span", {
                 className: "exo-badge",
                 text: `${typeIcon(type)} ${pct(stats.correct, stats.total)}%`,
-                attrs: { title: `${typeLabel(type)} \u2014 ${stats.correct}/${stats.total} over ${updated.cumulative.sessionsCount} sessions` },
+                attrs: { title: `${typeLabel(type)} — ${stats.correct}/${stats.total} over ${updated.cumulative.sessionsCount} sessions` },
             }));
         });
         cumLine.appendChild(row);
@@ -1068,7 +1409,7 @@ function renderSummary() {
         state.mistakes.forEach(({ view, userAnswer }) => {
             const label = view.type === "qcm" ? view.question : (view.audio || "");
             list.appendChild(el("li", {
-                html: `<strong>${escapeHtml(label)}</strong> \u2192 ${escapeHtml(view.answer)}` +
+                html: `<strong>${escapeHtml(label)}</strong> → ${escapeHtml(view.answer)}` +
                       (userAnswer ? ` <span class="exo-your-answer">(you: ${escapeHtml(userAnswer)})</span>` : ""),
             }));
         });
@@ -1077,13 +1418,23 @@ function renderSummary() {
     }
 
     const actions = el("div", { className: "exo-summary-actions" }, [
-        el("button", { className: "exo-next", text: "\ud83d\udd01 Start over", onclick: () => startPool() }),
+        el("button", { className: "exo-next", text: "🔁 Start over", onclick: () => startPool() }),
         el("button", {
-            className: "exo-secondary", text: "\u2b05 New selection",
+            className: "exo-secondary", text: "⬅ New selection",
             onclick: () => { window.location.hash = "#/exercises"; },
         }),
     ]);
     summary.appendChild(actions);
 
     area.appendChild(summary);
+}
+
+// Exposed for the standalone editor (editeur-exercices.html), loaded
+// via <script src="exercises.js"> next to it: the registry, plus the
+// small pure functions it reuses for validation and preview so the
+// editor never re-implements this file's rules under a second name.
+if (typeof window !== "undefined") {
+    window.EXERCISE_TYPES = EXERCISE_TYPES;
+    window.ALL_TYPES = ALL_TYPES;
+    window.orderTokensFor = orderTokensFor;
 }
