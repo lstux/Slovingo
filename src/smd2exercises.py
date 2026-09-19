@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """smd2exercises.py
 
-Generate practice exercises (qcm, fill-blank, listen) from a corpus of
+Generate practice exercises (qcm, fill-blank, listen, order) from a corpus of
 SMD sheets, in the merged l1/l2 format (see conventions-and-principles
 and areas/v2-rewrite): l1 is always the native language, l2 always the
 target language, audio is always l2.
@@ -221,10 +221,20 @@ def pick_shape_matched_distractors(
 
 
 def build_word_frequency(texts: Iterable[str]) -> Counter:
+    """Word -> occurrence count, across `texts`. A token that's pure
+    punctuation (e.g. a standalone "-" or "»") strips down to an empty
+    string and is dropped rather than counted -- left in, it could win
+    a spot among the most frequent "words" and get offered as a
+    fill-blank distractor, which is how a handful of existing
+    <id>.exercises.json files ended up with a "" in choices_l1/l2 (see
+    conventions-and-principles: bugs found during testing are fixed
+    inline)."""
     freq: Counter = Counter()
     for text in texts:
         for token in tokenize(text):
-            freq[strip_punct(token).lower()] += 1
+            word = strip_punct(token).lower()
+            if word:
+                freq[word] += 1
     return freq
 
 
@@ -401,6 +411,67 @@ def generate_listen(
     return exercises
 
 
+def generate_order(sheet: dict[str, Any]) -> list[dict[str, Any]]:
+    """Build one "put the words in order" exercise per sentence, combining
+    each sentence with another random sentence from the same sheet to create
+    a mixed pool of tokens. If a sentence is too short or no other sentence
+    is available, it becomes a single-phrase exercise.
+
+    Reconstruct l1/l2 from their own shuffled tokens (see exercises.js,
+    resolveOrderView()) -- no distractor pool needed, unlike the other
+    types, so no "primary"/"global" pools are threaded through here.
+
+    tokens_l1/tokens_l2 are a naive space split, same as the front-end's
+    own fallback when they're absent -- written out explicitly so the
+    editor has something to regroup (e.g. "ne ... pas" into one chip)
+    without having to invent the split itself.
+    """
+    exercises = []
+    sentences = sheet["sentences"]
+    valid_sentences = []  # sentences long enough to include
+
+    # Collect sentences that pass the MIN_TOKENS check
+    for s in sentences:
+        tokens_l1 = tokenize(s["l1"])
+        tokens_l2 = tokenize(s["l2"])
+        if len(tokens_l1) >= MIN_TOKENS_FOR_BLANK and len(tokens_l2) >= MIN_TOKENS_FOR_BLANK:
+            valid_sentences.append((s, tokens_l1, tokens_l2))
+
+    used_indices = set()  # track which sentences we've paired
+
+    for i, (s1, tokens_l1_a, tokens_l2_a) in enumerate(valid_sentences):
+        # Try to find another sentence to pair with
+        candidates = [j for j in range(len(valid_sentences)) if j != i and j not in used_indices]
+        if candidates:
+            j = random.choice(candidates)
+            s2, tokens_l1_b, tokens_l2_b = valid_sentences[j]
+            used_indices.add(j)
+            # Merge tokens from both sentences
+            combined_l1 = tokens_l1_a + tokens_l1_b
+            combined_l2 = tokens_l2_a + tokens_l2_b
+            combined_text_l1 = s1["l1"] + " " + s2["l1"]
+            combined_text_l2 = s1["l2"] + " " + s2["l2"]
+            ex_id = f"order-{slugify(s2['l2'])}"
+        else:
+            # Use single sentence
+            combined_l1 = tokens_l1_a
+            combined_l2 = tokens_l2_a
+            combined_text_l1 = s1["l1"]
+            combined_text_l2 = s1["l2"]
+            ex_id = f"order-{slugify(s1['l2'])}"
+
+        exercises.append({
+            "id": ex_id,
+            "type": "order",
+            "l1": combined_text_l1,
+            "l2": combined_text_l2,
+            "tokens_l1": combined_l1,
+            "tokens_l2": combined_l2,
+        })
+
+    return exercises
+
+
 # ============================================================================
 # Orchestration
 # ============================================================================
@@ -434,6 +505,7 @@ def build_exercises_for_corpus(records: list[dict[str, Any]]) -> dict[str, dict[
         exercises += generate_qcm(record, primary_pairs, global_pairs)
         exercises += generate_fill_blank(record, primary_sentences, global_sentences)
         exercises += generate_listen(record, primary_sentences, global_sentences)
+        exercises += generate_order(record)
 
         output[record["id"]] = {"exercises": exercises}
 

@@ -445,6 +445,54 @@ label.index-card {
     font: inherit;
 }
 
+/* Exercice "remettre dans l'ordre" : une piste de réponse (vide au
+   départ) et une réserve de jetons cliquables -- pas de glisser-
+   déposer, pour marcher pareil à la souris, au doigt ou au clavier. */
+.exo-order-strip-label {
+    margin: 10px 0 4px;
+    font-size: 0.8em;
+    color: var(--text-soft);
+}
+
+.exo-order-answer,
+.exo-order-bank {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    min-height: 44px;
+    padding: 8px;
+    border-radius: var(--radius);
+    border: 1px dashed var(--line);
+}
+
+.exo-order-answer { background: color-mix(in srgb, var(--accent) 5%, var(--surface)); }
+.exo-order-bank { background: var(--surface-2); border-style: solid; }
+
+.exo-order-chip {
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    cursor: pointer;
+    transition: border-color .14s, background .14s, opacity .14s;
+}
+
+.exo-order-chip:hover:not(:disabled) { border-color: var(--accent); }
+
+.exo-order-chip-placed { opacity: 0.3; cursor: default; }
+
+.exo-order-chip-answer {
+    background: color-mix(in srgb, var(--accent) 12%, var(--surface));
+    border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+.exo-order-answer.exo-choice-correct .exo-order-chip-answer,
+.exo-order-answer.exo-choice-wrong .exo-order-chip-answer {
+    cursor: default;
+}
+
 .exo-submit {
     padding: 10px 16px;
     border-radius: var(--radius-sm);
