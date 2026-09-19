@@ -16,10 +16,10 @@ Niekoľko snímok obrazovky v mobilnej verzii :
 
 ![Some screenshots](img/screenshots.png)  
 
+- *Tvoj pokrok sa ukladá lokálne (localStorage), všetko funguje bez internetu po prvej návšteve.*  
 - *Kartička zobrazuje slovnú zásobu, gramatiku, audio-karty — všetko sa dá kliknúť a vysloviť.*  
 - *Klik na slovenskú vetu → preklad + rozklad slovo po slove + prehratie zvuku.*  
 - *Testy s výberom odpovede, vety s medzerami, porozumenie sluchom — generované automaticky z kartičiek.*  
-- *Tvoj pokrok sa ukladá lokálne (localStorage), všetko funguje bez internetu po prvej návšteve.*  
 
 ---
 

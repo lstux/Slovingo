@@ -16,10 +16,10 @@ Some screenshots on mobile device :
 
 ![Some screenshots](img/screenshots.png)  
 
+- *Your progress tracked locally (localStorage), everything works without internet after a visit.*  
 - *A card displays vocabulary, grammar, audio-cards — all clickable and pronounceable.*  
 - *Click on a sentence → translation + word-by-word breakdown + audio playback.*  
 - *Multiple choice, fill-in-the-blanks, listening comprehension — auto-generated from the cards.*  
-- *Your progress tracked locally (localStorage), everything works without internet after a visit.*  
 
 ---
 
