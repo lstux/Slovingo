@@ -12,17 +12,11 @@ Najznámejšie aplikácie nemajú kurz slovenčiny. Skúšal som Ling, ktorý ju
 
 Tu nie si na nikom závislý. Žiadny účet, žiadne predplatné, žiadny aplikačný server, ktorý môže zajtra zmiznúť. Len textové súbory v Markdowne, malý skript v Pythone, ktorý z nich vyrobí mini-web použiteľný offline, a máš svoj kurz.
 
-**[Pohľad na kartičku s tabuľkami slovnej zásoby](img/screenshot_sheet.png)
-*Kartička zobrazuje slovnú zásobu, gramatiku, audio-karty — všetko sa dá kliknúť a vysloviť.*
-
-**[Audio-karta v akcii](img/screenshot_audio-card.png)
-*Klik na slovenskú vetu → preklad + rozklad slovo po slove + prehratie zvuku.*
-
-**[Vygenerované cvičenia](img/screenshot_exercises.png)
-*Testy s výberom odpovede, vety s medzerami, porozumenie sluchom — generované automaticky z kartičiek.*
-
-**[Offline režim + lokálny postup](img/screenshot_progress.png)
-*Tvoj pokrok sa ukladá lokálne (localStorage), všetko funguje bez internetu po prvej návšteve.*
+![Some screenshots](img/screenshots.png)  
+- *Kartička zobrazuje slovnú zásobu, gramatiku, audio-karty — všetko sa dá kliknúť a vysloviť.*  
+- *Klik na slovenskú vetu → preklad + rozklad slovo po slove + prehratie zvuku.*  
+- *Testy s výberom odpovede, vety s medzerami, porozumenie sluchom — generované automaticky z kartičiek.*  
+- *Tvoj pokrok sa ukladá lokálne (localStorage), všetko funguje bez internetu po prvej návšteve.*  
 
 ---
 
