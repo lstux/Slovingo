@@ -412,10 +412,10 @@ def generate_listen(
 
 
 def generate_order(sheet: dict[str, Any]) -> list[dict[str, Any]]:
-    """Build one "put the words in order" exercise per sentence, combining
-    each sentence with another random sentence from the same sheet to create
-    a mixed pool of tokens. If a sentence is too short or no other sentence
-    is available, it becomes a single-phrase exercise.
+    """Build one "put the words in order" exercise per sentence. Each exercise
+    has the target sentence as l1/l2, but tokens_l1/tokens_l2 are polluted with
+    tokens from another random sentence in the sheet, making the reordering task
+    harder (more noise to filter).
 
     Reconstruct l1/l2 from their own shuffled tokens (see exercises.js,
     resolveOrderView()) -- no distractor pool needed, unlike the other
@@ -428,7 +428,7 @@ def generate_order(sheet: dict[str, Any]) -> list[dict[str, Any]]:
     """
     exercises = []
     sentences = sheet["sentences"]
-    valid_sentences = []  # sentences long enough to include
+    valid_sentences = []  # sentences long enough to use as targets or parasites
 
     # Collect sentences that pass the MIN_TOKENS check
     for s in sentences:
@@ -437,36 +437,27 @@ def generate_order(sheet: dict[str, Any]) -> list[dict[str, Any]]:
         if len(tokens_l1) >= MIN_TOKENS_FOR_BLANK and len(tokens_l2) >= MIN_TOKENS_FOR_BLANK:
             valid_sentences.append((s, tokens_l1, tokens_l2))
 
-    used_indices = set()  # track which sentences we've paired
-
-    for i, (s1, tokens_l1_a, tokens_l2_a) in enumerate(valid_sentences):
-        # Try to find another sentence to pair with
-        candidates = [j for j in range(len(valid_sentences)) if j != i and j not in used_indices]
+    for i, (target, target_tokens_l1, target_tokens_l2) in enumerate(valid_sentences):
+        # Try to find another sentence to pollute tokens with
+        candidates = [j for j in range(len(valid_sentences)) if j != i]
         if candidates:
             j = random.choice(candidates)
-            s2, tokens_l1_b, tokens_l2_b = valid_sentences[j]
-            used_indices.add(j)
-            # Merge tokens from both sentences
-            combined_l1 = tokens_l1_a + tokens_l1_b
-            combined_l2 = tokens_l2_a + tokens_l2_b
-            combined_text_l1 = s1["l1"] + " " + s2["l1"]
-            combined_text_l2 = s1["l2"] + " " + s2["l2"]
-            ex_id = f"order-{slugify(s2['l2'])}"
+            parasite, parasite_tokens_l1, parasite_tokens_l2 = valid_sentences[j]
+            # Mix tokens: target + parasite
+            mixed_tokens_l1 = target_tokens_l1 + parasite_tokens_l1
+            mixed_tokens_l2 = target_tokens_l2 + parasite_tokens_l2
         else:
-            # Use single sentence
-            combined_l1 = tokens_l1_a
-            combined_l2 = tokens_l2_a
-            combined_text_l1 = s1["l1"]
-            combined_text_l2 = s1["l2"]
-            ex_id = f"order-{slugify(s1['l2'])}"
+            # No other sentence available, use target alone
+            mixed_tokens_l1 = target_tokens_l1
+            mixed_tokens_l2 = target_tokens_l2
 
         exercises.append({
-            "id": ex_id,
+            "id": f"order-{slugify(target['l2'])}",
             "type": "order",
-            "l1": combined_text_l1,
-            "l2": combined_text_l2,
-            "tokens_l1": combined_l1,
-            "tokens_l2": combined_l2,
+            "l1": target["l1"],
+            "l2": target["l2"],
+            "tokens_l1": mixed_tokens_l1,
+            "tokens_l2": mixed_tokens_l2,
         })
 
     return exercises

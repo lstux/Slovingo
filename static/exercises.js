@@ -1261,6 +1261,8 @@ function renderOrder(view) {
     const submit = el("button", { className: "exo-submit", text: "Check", attrs: { disabled: "disabled" } });
 
     const placed = [];
+    const MIN_PLACED_TOKENS = 3;  // Allow check only if at least this many tokens are placed
+
     const chips = view.tokens.map((token) => {
         const chip = el("button", {
             className: "exo-order-chip",
@@ -1273,7 +1275,7 @@ function renderOrder(view) {
             chip.classList.add("exo-order-chip-placed");
             placed.push(token);
             answerStrip.appendChild(makePlacedChip(token, chip, placed));
-            submit.disabled = placed.length !== view.tokens.length;
+            submit.disabled = placed.length < MIN_PLACED_TOKENS;
         };
         return chip;
     });
@@ -1292,7 +1294,7 @@ function renderOrder(view) {
             placedChip.remove();
             sourceChip.disabled = false;
             sourceChip.classList.remove("exo-order-chip-placed");
-            submit.disabled = placedArr.length !== view.tokens.length;
+            submit.disabled = placedArr.length < MIN_PLACED_TOKENS;
         };
         return placedChip;
     }
@@ -1300,11 +1302,16 @@ function renderOrder(view) {
     submit.onclick = () => {
         submit.dataset.locked = "1";
         chips.forEach((c) => { c.disabled = true; });
-        [...answerStrip.children].forEach((c) => { c.disabled = true; });
+        const placedChips = [...answerStrip.children];
+        placedChips.forEach((c) => { c.disabled = true; });
         submit.disabled = true;
         const userAnswer = placed.join(" ");
         const correct = normalizeAnswer(userAnswer) === normalizeAnswer(view.answer);
-        answerStrip.classList.add(correct ? "exo-choice-correct" : "exo-choice-wrong");
+        if (correct) {
+            placedChips.forEach((c) => c.classList.add("exo-choice-correct"));
+        } else {
+            answerStrip.classList.add("exo-choice-wrong");
+        }
         markAnswer(container, correct, view, userAnswer);
     };
 
