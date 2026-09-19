@@ -12,16 +12,16 @@ Les applications les plues connues n'ont pas de cours de Slovaque disponibles, j
 
 Ici tu ne dépends de personne. Pas de compte à créer, pas d'abonnement, pas de serveur applicatif qui peut disparaître demain. Juste des fichiers texte en Markdown, un petit script Python pour transformer le tout en un mini-site consultable hors-ligne, et tu as ton cours.
 
-**[PLACEHOLDER: Screenshot 1 — Vue d'une fiche avec tableaux de vocabulaire]**
+![Vue d'une fiche avec tableaux de vocabulaire](img/screenshot_sheet.png)
 *Une fiche affiche vocabulaire, grammaire, audio-cards — tout cliquable et prononçable.*
 
-**[PLACEHOLDER: Screenshot 2 — Audio-card en action]**
+![Audio-card en action](img/screenshot_audio-card.png)
 *Clic sur une phrase slovaque → traduction + décomposition mot à mot + lecture audio.*
 
-**[PLACEHOLDER: Screenshot 3 — Exercices générés]**
+![Exercices générés](img/screenshot_exercises.png)
 *QCM, phrases à trous, compréhension audio — générés automatiquement à partir des fiches.*
 
-**[PLACEHOLDER: Screenshot 4 — Mode hors-ligne + progression locale]**
+![Mode hors-ligne + progression locale](img/screenshot_progress.png)
 *Ton avancement suivi en local (localStorage), tout fonctionne sans internet après une visite.*
 
 ---

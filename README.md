@@ -12,16 +12,16 @@ The most well-known apps don't have Slovak courses available. I tried Ling which
 
 Here you don't depend on anyone. No account to create, no subscription, no application server that could disappear tomorrow. Just text files in Markdown, a little Python script to transform it all into a mini-site you can consult offline, and you've got your course.
 
-**[PLACEHOLDER: Screenshot 1 — View of a card with vocabulary tables]**
+![View of a card with vocabulary tables](img/screenshot_sheet.png)
 *A card displays vocabulary, grammar, audio-cards — all clickable and pronounceable.*
 
-**[PLACEHOLDER: Screenshot 2 — Audio-card in action]**
+![Audio-card in action](img/screenshot_audio-card.png)
 *Click on a Slovak sentence → translation + word-by-word breakdown + audio playback.*
 
-**[PLACEHOLDER: Screenshot 3 — Generated exercises]**
+![Generated exercises](img/screenshot_exercises.png)
 *Multiple choice, fill-in-the-blanks, listening comprehension — auto-generated from the cards.*
 
-**[PLACEHOLDER: Screenshot 4 — Offline mode + local progress]**
+![Offline mode + local progress](img/screenshot_progress.png)
 *Your progress tracked locally (localStorage), everything works without internet after a visit.*
 
 ---
