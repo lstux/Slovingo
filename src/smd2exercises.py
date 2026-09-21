@@ -172,12 +172,30 @@ def load_corpus(md_dir: Path, lang_cfg: dict[str, Any]) -> list[dict[str, Any]]:
     """Parse every sheet in `md_dir` (filesystem order) into the raw
     material exercises are built from. Introduction sheets are
     excluded outright -- no exercises are generated for that category.
+
+    Also checks for an accompanying {id}.exercises.json file next to each
+    .md sheet. If present, it can override exercise generation (mode:
+    "replace") or supplement it (mode: "append", the default).
     """
     records = []
     for path in sorted(md_dir.glob("*.md")):
         meta = parse_sheet_filename(path)
         if meta["category"] == "introduction":
             continue
+
+        # Check for accompanying .exercises.json file
+        exercises_json_path = path.parent / f"{path.stem}.exercises.json"
+        manual_exercises = None
+        manual_mode = "replace"
+        if exercises_json_path.exists():
+            try:
+                with exercises_json_path.open(encoding="utf-8") as f:
+                    manual_data = json.load(f)
+                    manual_exercises = manual_data.get("exercises", [])
+                    manual_mode = manual_data.get("mode", "replace")
+            except (json.JSONDecodeError, OSError) as e:
+                print(f"Warning: Could not load {exercises_json_path}: {e}", file=sys.stderr)
+
         md_text = path.read_text(encoding="utf-8")
         parsed = parse_sheet(md_text, lang_cfg)
         records.append({
@@ -185,6 +203,8 @@ def load_corpus(md_dir: Path, lang_cfg: dict[str, Any]) -> list[dict[str, Any]]:
             "category": meta["category"],
             "vocab_pairs": extract_vocab_pairs(parsed["content"]),
             "sentences": extract_sentences(parsed["content"]),
+            "manual_exercises": manual_exercises,
+            "manual_mode": manual_mode if manual_exercises else "replace",
         })
     return records
 
@@ -542,6 +562,12 @@ def build_exercises_for_corpus(records: list[dict[str, Any]]) -> dict[str, dict[
     sheets that come later. Other categories draw from the whole
     corpus (built upfront) regardless of position.
 
+    Manual exercises (from {id}.exercises.json) are handled via the
+    "manual_mode" field:
+    - "replace": use ONLY manual exercises, skip automatic generation
+    - "append": generate exercises normally, then extend with manual ones
+    - default is "replace" if manual exercises exist and mode is unspecified
+
     Returns a dict of sheet id -> {source pools not included, just
     the "exercises" list} keyed for writing one file per sheet.
     """
@@ -559,12 +585,26 @@ def build_exercises_for_corpus(records: list[dict[str, Any]]) -> dict[str, dict[
         primary_sentences = series_sentences_so_far if is_series else global_sentences
 
         exercises = []
-        exercises += generate_qcm(record, primary_pairs, global_pairs)
-        exercises += generate_fill_blank(record, primary_sentences, global_sentences)
-        exercises += generate_listen(record, primary_sentences, global_sentences)
-        exercises += generate_order(record)
-        exercises += generate_match_vocab(record, primary_pairs, global_pairs)
-        exercises += generate_match_sentences(record, primary_sentences, global_sentences)
+
+        # Check for manual exercises first
+        manual_exercises = record.get("manual_exercises")
+        manual_mode = record.get("manual_mode", "replace")
+
+        if manual_exercises and manual_mode == "replace":
+            # Replace mode: use ONLY manual exercises, skip generation
+            exercises = manual_exercises
+        else:
+            # Generate exercises normally
+            exercises += generate_qcm(record, primary_pairs, global_pairs)
+            exercises += generate_fill_blank(record, primary_sentences, global_sentences)
+            exercises += generate_listen(record, primary_sentences, global_sentences)
+            exercises += generate_order(record)
+            exercises += generate_match_vocab(record, primary_pairs, global_pairs)
+            exercises += generate_match_sentences(record, primary_sentences, global_sentences)
+
+            # Append mode: extend with manual exercises if present
+            if manual_exercises and manual_mode == "append":
+                exercises.extend(manual_exercises)
 
         output[record["id"]] = {"exercises": exercises}
 
