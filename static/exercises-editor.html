@@ -582,7 +582,7 @@ function addExercise(type) {
             choices_l1: [], choices_l2: [],
         });
     }
-    if (type === "listen") { blank.choices_l2 = []; }
+    if (type === "listen") { blank.choices_l1 = []; }
     if (type === "order") { blank.tokens_l1 = []; blank.tokens_l2 = []; }
 
     const insertAt = currentIndex >= 0 ? currentIndex + 1 : sheet.payload.exercises.length;
@@ -689,7 +689,7 @@ function validateExercise(ex) {
         checkBlank(issues, "FR", ex.l1, ex.missing_l1, ex.blank_index_l1, ex.choices_l1, expected);
         checkBlank(issues, "SK", ex.l2, ex.missing_l2, ex.blank_index_l2, ex.choices_l2, expected);
     } else if (ex.type === "listen") {
-        checkChoices(issues, ex.l2, ex.choices_l2, "SK", expected);
+        checkChoices(issues, ex.l1, ex.choices_l1, "FR", expected);
     } else if (ex.type === "order") {
         ["l1", "l2"].forEach((side) => {
             const tokensKey = `tokens_${side}`;
