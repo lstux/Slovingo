@@ -990,12 +990,27 @@ function resolveFillBlankView(ex, direction) {
 }
 
 function resolveListenView(ex) {
-    return {
-        type: "listen", direction: null,
-        audio: ex.l2, answer: ex.l1,
-        choices: shuffle([ex.l1, ...ex.choices_l1]),
-        translation: ex.l1,
-    };
+    // Backward compatibility: if choices_l1 exists (new format),
+    // listen for l1 (French). Otherwise fall back to old format (choices_l2, listen for l2).
+    const hasChoicesL1 = Array.isArray(ex.choices_l1) && ex.choices_l1.length > 0;
+
+    if (hasChoicesL1) {
+        // New format: listen l2, answer in l1 (French translation)
+        return {
+            type: "listen", direction: null,
+            audio: ex.l2, answer: ex.l1,
+            choices: shuffle([ex.l1, ...ex.choices_l1]),
+            translation: ex.l2,
+        };
+    } else {
+        // Fallback to old format: listen l2, answer in l2 (Slovak sentence)
+        return {
+            type: "listen", direction: null,
+            audio: ex.l2, answer: ex.l2,
+            choices: shuffle([ex.l2, ...ex.choices_l2]),
+            translation: ex.l1,
+        };
+    }
 }
 
 /**
