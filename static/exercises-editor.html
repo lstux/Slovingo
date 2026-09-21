@@ -550,7 +550,13 @@ function renderExerciseList() {
 
         const row = document.createElement("div");
         row.className = "ex-row" + (index === currentIndex ? " active" : "");
-        const issues = validateExercise(ex);
+        let issues = [];
+        try {
+            issues = validateExercise(ex);
+        } catch (err) {
+            console.error(`Erreur lors de la validation de l'exercice #${index}:`, err);
+            issues = [{ level: "error", message: `Erreur de validation: ${err.message}` }];
+        }
         const hasError = issues.some((i) => i.level === "error");
         row.innerHTML = `<span>${typeIcon(ex.type)}</span>
             <span class="ex-label">${escapeHtmlLocal(ex.l2 || ex.l1 || ex.id)}</span>
@@ -630,7 +636,8 @@ function moveCurrentExercise(delta) {
 
 function checkChoices(issues, answer, choices, side, expected) {
     if (!choices) choices = [];
-    if (choices.some((c) => (c || "").toLowerCase() === (answer || "").toLowerCase())) {
+    const answerStr = typeof answer === "string" ? answer : "";
+    if (choices.some((c) => (c || "").toLowerCase() === answerStr.toLowerCase())) {
         issues.push({ level: "error", message: `${side} : la réponse figure aussi dans ses propres distracteurs.` });
     }
     const dups = uniqLower(choices);
@@ -638,9 +645,10 @@ function checkChoices(issues, answer, choices, side, expected) {
         issues.push({ level: "error", message: `${side} : distracteur(s) en double (${dups.join(", ")}).` });
     }
     choices.forEach((c) => {
-        if (!c || !c.trim()) issues.push({ level: "error", message: `${side} : un distracteur est vide.` });
-        else if (wordShape(c) !== wordShape(answer)) {
-            issues.push({ level: "warn", message: `${side} : « ${c} » n'a pas la même forme (mot/phrase) que la réponse.` });
+        const cStr = typeof c === "string" ? c : "";
+        if (!cStr.trim()) issues.push({ level: "error", message: `${side} : un distracteur est vide.` });
+        else if (wordShape(cStr) !== wordShape(answerStr)) {
+            issues.push({ level: "warn", message: `${side} : « ${cStr} » n'a pas la même forme (mot/phrase) que la réponse.` });
         }
     });
     if (expected && choices.length < expected) {
@@ -649,23 +657,27 @@ function checkChoices(issues, answer, choices, side, expected) {
 }
 
 function checkBlank(issues, sideLabel, sentence, missing, blankIndex, choices, expected) {
-    const tokens = (sentence || "").split(" ");
+    const sentenceStr = typeof sentence === "string" ? sentence : "";
+    const missingStr = typeof missing === "string" ? missing : "";
+    const tokens = sentenceStr.split(" ");
     if (blankIndex == null || blankIndex < 0 || blankIndex >= tokens.length) {
         issues.push({ level: "error", message: `${sideLabel} : l'index du trou (${blankIndex}) est hors de la phrase.` });
-    } else if (stripPunct(tokens[blankIndex]).toLowerCase() !== (missing || "").toLowerCase()) {
+    } else if (stripPunct(tokens[blankIndex]).toLowerCase() !== missingStr.toLowerCase()) {
         issues.push({
             level: "error",
-            message: `${sideLabel} : le mot masqué (« ${missing} ») ne correspond pas au mot à cet index (« ${tokens[blankIndex]} »).`,
+            message: `${sideLabel} : le mot masqué (« ${missingStr} ») ne correspond pas au mot à cet index (« ${tokens[blankIndex]} »).`,
         });
     }
-    if (!missing || !missing.trim()) issues.push({ level: "error", message: `${sideLabel} : mot masqué vide.` });
-    checkChoices(issues, missing, choices, sideLabel, expected);
+    if (!missingStr.trim()) issues.push({ level: "error", message: `${sideLabel} : mot masqué vide.` });
+    checkChoices(issues, missingStr, choices, sideLabel, expected);
 }
 
 function validateExercise(ex) {
     const issues = [];
-    if (!ex.l1 || !ex.l1.trim()) issues.push({ level: "error", message: "Phrase FR (l1) vide." });
-    if (!ex.l2 || !ex.l2.trim()) issues.push({ level: "error", message: "Phrase SK (l2) vide." });
+    const l1 = typeof ex.l1 === "string" ? ex.l1 : "";
+    const l2 = typeof ex.l2 === "string" ? ex.l2 : "";
+    if (!l1.trim()) issues.push({ level: "error", message: "Phrase FR (l1) vide." });
+    if (!l2.trim()) issues.push({ level: "error", message: "Phrase SK (l2) vide." });
 
     const entry = EXERCISE_TYPES[ex.type];
     const expected = entry && entry.expectedChoices;
@@ -728,30 +740,51 @@ function renderEditor() {
         return;
     }
 
-    container.appendChild(el("div", { attrs: { id: "validation-banner" } }));
+    try {
+        // Check if required globals are available
+        if (typeof EXERCISE_TYPES === "undefined") {
+            throw new Error("EXERCISE_TYPES non défini (exercises.js n'a peut-être pas chargé correctement)");
+        }
+        if (typeof typeLabel !== "function") {
+            throw new Error("typeLabel() n'est pas disponible");
+        }
+        if (typeof el !== "function") {
+            throw new Error("el() n'est pas disponible");
+        }
 
-    const idRow = document.createElement("div");
-    idRow.className = "hint";
-    idRow.style.marginBottom = "14px";
-    idRow.textContent = `${typeLabel(ex.type)} — id : ${ex.id}`;
-    container.appendChild(idRow);
+        container.appendChild(el("div", { attrs: { id: "validation-banner" } }));
 
-    const entry = EXERCISE_TYPES[ex.type];
-    (entry.fields || []).forEach((field) => {
-        container.appendChild(buildFieldBlock(ex, field));
-    });
+        const idRow = document.createElement("div");
+        idRow.className = "hint";
+        idRow.style.marginBottom = "14px";
+        idRow.textContent = `${typeLabel(ex.type)} — id : ${ex.id}`;
+        container.appendChild(idRow);
 
-    const actions = document.createElement("div");
-    actions.className = "row-actions";
-    actions.appendChild(makeButton("⬆ Monter", () => moveCurrentExercise(-1)));
-    actions.appendChild(makeButton("⬇ Descendre", () => moveCurrentExercise(1)));
-    actions.appendChild(makeButton("⧉ Dupliquer", duplicateCurrentExercise));
-    actions.appendChild(makeButton("🗑 Supprimer", deleteCurrentExercise));
-    container.appendChild(actions);
+        const entry = EXERCISE_TYPES[ex.type];
+        if (!entry) {
+            container.appendChild(el("p", { className: "empty-state", text: `Type d'exercice inconnu : « ${ex.type} »` }));
+            return;
+        }
 
-    container.appendChild(buildPreviewBox(ex));
+        (entry.fields || []).forEach((field) => {
+            container.appendChild(buildFieldBlock(ex, field));
+        });
 
-    renderValidationBanner(ex);
+        const actions = document.createElement("div");
+        actions.className = "row-actions";
+        actions.appendChild(makeButton("⬆ Monter", () => moveCurrentExercise(-1)));
+        actions.appendChild(makeButton("⬇ Descendre", () => moveCurrentExercise(1)));
+        actions.appendChild(makeButton("⧉ Dupliquer", duplicateCurrentExercise));
+        actions.appendChild(makeButton("🗑 Supprimer", deleteCurrentExercise));
+        container.appendChild(actions);
+
+        container.appendChild(buildPreviewBox(ex));
+
+        renderValidationBanner(ex);
+    } catch (err) {
+        console.error("Erreur lors du rendu de l'éditeur :", err);
+        container.innerHTML = `<p class="empty-state" style="white-space: pre-wrap; color: var(--bad);">Erreur :\n${err.message}</p>`;
+    }
 }
 
 function makeButton(label, onclick) {
@@ -778,14 +811,29 @@ function buildFieldBlock(ex, field) {
     label.textContent = field.label;
     block.appendChild(label);
 
-    if (field.kind === "text") {
-        block.appendChild(buildTextInput(ex, field.key));
-    } else if (field.kind === "list") {
-        block.appendChild(buildListEditor(ex, field.key));
-    } else if (field.kind === "sentence-blank") {
-        block.appendChild(buildBlankEditor(ex, field));
-    } else if (field.kind === "sentence-tokens") {
-        block.appendChild(buildTokensEditor(ex, field));
+    try {
+        if (field.kind === "text") {
+            block.appendChild(buildTextInput(ex, field.key));
+        } else if (field.kind === "list") {
+            block.appendChild(buildListEditor(ex, field.key));
+        } else if (field.kind === "sentence-blank") {
+            block.appendChild(buildBlankEditor(ex, field));
+        } else if (field.kind === "sentence-tokens") {
+            block.appendChild(buildTokensEditor(ex, field));
+        } else {
+            const err = document.createElement("p");
+            err.className = "hint";
+            err.style.color = "var(--bad)";
+            err.textContent = `Type de champ inconnu : « ${field.kind} »`;
+            block.appendChild(err);
+        }
+    } catch (err) {
+        console.error(`Erreur lors du rendu du champ « ${field.label} » :`, err);
+        const errorDiv = document.createElement("p");
+        errorDiv.className = "hint";
+        errorDiv.style.color = "var(--bad)";
+        errorDiv.textContent = `Erreur : ${err.message}`;
+        block.appendChild(errorDiv);
     }
     return block;
 }
@@ -1036,7 +1084,12 @@ function buildPreviewBox(ex) {
     }
 
     box.appendChild(el("div", { attrs: { id: "preview-content" } }));
-    fillPreviewContent(box.querySelector("#preview-content"), ex);
+    try {
+        fillPreviewContent(box.querySelector("#preview-content"), ex);
+    } catch (err) {
+        console.error("Erreur lors du rendu de l'aperçu :", err);
+        box.querySelector("#preview-content").innerHTML = `<p class="hint" style="color: var(--bad);">Erreur dans l'aperçu : ${err.message}</p>`;
+    }
     return box;
 }
 

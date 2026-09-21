@@ -1,6 +1,6 @@
 # 🇸🇰 Introduction — La Slovaquie en un coup d'œil
 
-Avant d'apprendre la langue, un peu de contexte sur le pays lui-même : où il se situe, d'où il vient, et ce qui fait sa culture. Une fiche à parcourir tranquillement, avec des liens pour creuser si l'envie te prend.
+Avant d'apprendre la langue, un peu de contexte sur le pays lui-même : où il se situe, d'où il vient, et ce qui fait sa culture.
 
 ---
 
@@ -18,7 +18,7 @@ La Slovaquie est un pays d'Europe centrale, sans accès à la mer, niché entre 
 
 Le pays est occupé aux quatre cinquièmes par des massifs montagneux, dont les {{Vysoké Tatry}} (Hautes Tatras), le point culminant du pays et le plus haut sommet des Carpates. Le Danube, deuxième fleuve d'Europe, traverse le sud-ouest du pays et longe Bratislava.
 
-Deuxième ville du pays, {{Košice}} se situe à l'est, à l'opposé géographique de la capitale — un trajet que tu connais déjà si tu as suivi le dialogue Bratislava–Košice !
+Deuxième ville du pays, {{Košice}} se situe à l'est, à l'opposé géographique de la capitale.
 
 ---
 
@@ -45,7 +45,7 @@ Quelques repères culturels pour se faire une idée du pays :
 - **Religion** : majoritairement catholique, avec une minorité protestante (luthérienne) non négligeable.
 - **Gastronomie** : le plat national est les {{bryndzové halušky}}, des petites quenelles de pomme de terre accompagnées d'un fromage de brebis typique (bryndza) et de lardons. Autre spécialité : la {{slivovica}}, une eau-de-vie de prune assez forte, souvent servie en apéritif ou en toast.
 - **Musique et traditions** : un folklore vivace, avec costumes traditionnels colorés, danses régionales et un attachement fort à la vie de village dans certaines zones rurales.
-- **Nature** : un pays très tourné vers la randonnée et les sports de montagne, avec plusieurs parcs nationaux emblématiques (Tatras, Slovenský raj — déjà croisés dans tes fiches de voyage).
+- **Nature** : un pays très tourné vers la randonnée et les sports de montagne, avec plusieurs parcs nationaux emblématiques (Tatras, Slovenský raj).
 
 ---
 
@@ -76,13 +76,3 @@ Quelques pages Wikipédia pour approfondir chaque aspect :
 - [Bratislava](https://fr.wikipedia.org/wiki/Bratislava)
 - [Košice](https://fr.wikipedia.org/wiki/Ko%C5%A1ice)
 - [Ľudovít Štúr](https://fr.wikipedia.org/wiki/%C4%BDudov%C3%ADt_%C5%A0t%C3%BAr)
-
----
-
-# À retenir
-
-✅ Pays d'Europe centrale, sans accès à la mer, très montagneux  
-✅ Capitale : Bratislava — deuxième ville : Košice  
-✅ Indépendante depuis 1993, membre de l'UE depuis 2004  
-✅ Plat national : bryndzové halušky  
-✅ Une histoire longtemps liée à la Hongrie, puis à la Tchécoslovaquie

@@ -201,17 +201,3 @@ Lire lentement, en posant chaque son :
 > ako sa máte = comment vous portez-vous
 > Ďakujem, dobre = merci, bien
 + Une bonne phrase pour s'entraîner : elle contient dĺžeň (á, ý), mäkčeň (ď) et l'accent tonique sur la première syllabe de chaque mot.
-
----
-
-# À retenir
-
-✅ Une lettre = presque toujours un son  
-✅ L'accent tonique est sur la première syllabe  
-✅ Les accents changent la prononciation  
-✅ č = tch  
-✅ š = ch  
-✅ ž = j  
-✅ j = y  
-✅ ch = son guttural  
-✅ r = roulé

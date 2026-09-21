@@ -55,6 +55,8 @@ QCM_CHOICES = 4               # total options shown, answer included
                               # (so 3 distractors are generated).
 FILL_BLANK_CHOICES = 3
 LISTEN_CHOICES = 4
+MATCH_ITEMS = 4               # nominal number of items in a match exercise
+MATCH_ITEMS_MIN = 3           # minimum acceptable
 FREQUENT_WORDS_CONSIDERED = 40  # how many top-frequency words feed the
                                   # fill-blank distractor pool.
 
@@ -388,25 +390,25 @@ def generate_listen(
     global_sentences: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
     """Build one listen exercise per sentence: recognise the spoken l2
-    sentence among shape-matched l2 distractors."""
+    sentence's translation (l1) among shape-matched l1 distractors."""
     exercises = []
     for s in sheet["sentences"]:
-        answer_l2 = s["l2"]
-        choices_l2 = pick_shape_matched_distractors(
-            answer_l2,
-            primary_pool=[p["l2"] for p in primary_sentences if p["l2"].lower() != answer_l2.lower()],
-            fallback_pool=[p["l2"] for p in global_sentences if p["l2"].lower() != answer_l2.lower()],
+        answer_l1 = s["l1"]
+        choices_l1 = pick_shape_matched_distractors(
+            answer_l1,
+            primary_pool=[p["l1"] for p in primary_sentences if p["l1"].lower() != answer_l1.lower()],
+            fallback_pool=[p["l1"] for p in global_sentences if p["l1"].lower() != answer_l1.lower()],
             n=LISTEN_CHOICES - 1,
         )
-        if choices_l2 is None:
+        if choices_l1 is None:
             continue
 
         exercises.append({
-            "id": f"listen-{slugify(answer_l2)}",
+            "id": f"listen-{slugify(s['l2'])}",
             "type": "listen",
-            "l1": s["l1"],
-            "l2": answer_l2,
-            "choices_l2": choices_l2,
+            "l1": answer_l1,
+            "l2": s["l2"],
+            "choices_l1": choices_l1,
         })
     return exercises
 
@@ -463,6 +465,70 @@ def generate_order(sheet: dict[str, Any]) -> list[dict[str, Any]]:
     return exercises
 
 
+def generate_match_vocab(
+    sheet: dict[str, Any], primary_pairs: list[tuple[str, str]],
+    global_pairs: list[tuple[str, str]],
+) -> list[dict[str, Any]]:
+    """Build one or more match exercises from vocabulary pairs.
+
+    Groups MATCH_ITEMS pairs (4 nominally, 3-4 acceptable) into one exercise.
+    If a sheet has 4+ pairs, creates one exercise per group of 4; if 3 pairs,
+    creates one exercise with 3 items. Skips if fewer than MATCH_ITEMS_MIN.
+    """
+    local_pairs = dedupe_pairs(sheet["vocab_pairs"])
+    if len(local_pairs) < MATCH_ITEMS_MIN:
+        return []
+
+    exercises = []
+    # Create one exercise per MATCH_ITEMS-sized group (or fewer at the end)
+    pairs_to_use = local_pairs[:MATCH_ITEMS] if len(local_pairs) >= MATCH_ITEMS else local_pairs
+
+    if len(pairs_to_use) >= MATCH_ITEMS_MIN:
+        l1_items = [l1 for l1, l2 in pairs_to_use]
+        l2_items = [l2 for l1, l2 in pairs_to_use]
+
+        exercises.append({
+            "id": f"match-{slugify(l2_items[0])}-vocab",
+            "type": "match",
+            "l1": l1_items,
+            "l2": l2_items,
+        })
+
+    return exercises
+
+
+def generate_match_sentences(
+    sheet: dict[str, Any], primary_sentences: list[dict[str, Any]],
+    global_sentences: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Build one or more match exercises from sentences.
+
+    Groups MATCH_ITEMS sentences (4 nominally, 3-4 acceptable) into one exercise.
+    If a sheet has 4+ sentences, creates one exercise per group of 4; if 3 sentences,
+    creates one exercise with 3 items. Skips if fewer than MATCH_ITEMS_MIN.
+    """
+    sentences = sheet["sentences"]
+    if len(sentences) < MATCH_ITEMS_MIN:
+        return []
+
+    exercises = []
+    # Create one exercise per MATCH_ITEMS-sized group (or fewer at the end)
+    sentences_to_use = sentences[:MATCH_ITEMS] if len(sentences) >= MATCH_ITEMS else sentences
+
+    if len(sentences_to_use) >= MATCH_ITEMS_MIN:
+        l1_items = [s["l1"] for s in sentences_to_use]
+        l2_items = [s["l2"] for s in sentences_to_use]
+
+        exercises.append({
+            "id": f"match-{slugify(l2_items[0])}-sentences",
+            "type": "match",
+            "l1": l1_items,
+            "l2": l2_items,
+        })
+
+    return exercises
+
+
 # ============================================================================
 # Orchestration
 # ============================================================================
@@ -497,6 +563,8 @@ def build_exercises_for_corpus(records: list[dict[str, Any]]) -> dict[str, dict[
         exercises += generate_fill_blank(record, primary_sentences, global_sentences)
         exercises += generate_listen(record, primary_sentences, global_sentences)
         exercises += generate_order(record)
+        exercises += generate_match_vocab(record, primary_pairs, global_pairs)
+        exercises += generate_match_sentences(record, primary_sentences, global_sentences)
 
         output[record["id"]] = {"exercises": exercises}
 

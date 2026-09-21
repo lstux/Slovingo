@@ -16,10 +16,10 @@ On trouve aussi des communautés slovaques en dehors du pays :
 | Hongrie | Minorité slovaque historique |
 | République tchèque | Forte présence, intercompréhension facile |
 | États-Unis / Canada | Diaspora issue des vagues d'émigration du 19e-20e siècle |
-| Rhône-Alpes | Une centaine, à vérifier :) |
-| Lyon-Villeurbanne | Au moins une perle c'est sûr |
+| Rhône-Alpes | Une centaine (il paraît, à vérifier :D ) |
+| Lyon | Au moins une perle |
 
-Ce n'est donc pas une langue totalement confidentielle : petite en nombre, mais bien vivante et présente sur plusieurs continents.
+Ce n'est donc pas une langue totalement confidentielle : petite en nombre, mais bien vivante.
 
 ---
 
@@ -69,10 +69,7 @@ Quelques emprunts amusants pour se faire une oreille :
 | Français | Origine | Sens d'origine |
 |---|---|---|
 | Robot | Tchèque/slovaque *robota* | Travail forcé, corvée |
-| Frontière | — | (faux-ami à surveiller : *hranica* en slovaque, sans lien) |
 | Pistolet | Tchèque *píšťala* | Petit sifflet / arme à feu ancienne |
-
-Rien d'essentiel à retenir ici, juste de quoi nourrir la curiosité.
 
 ---
 
@@ -94,13 +91,3 @@ Le slovaque standard tel qu'on le connaît aujourd'hui s'est fixé au 19e siècl
 > J'apprends le slovaque.
 > Učím sa = j'apprends (verbe pronominal)
 > slovenčinu = le slovaque (à l'accusatif)
-
----
-
-# À retenir
-
-✅ Environ 5 millions de locuteurs, principalement en Slovaquie  
-✅ Langue slave occidentale, cousine proche du tchèque  
-✅ Intercompréhension forte avec le tchèque  
-✅ Alphabet latin + signes diacritiques (détails dans la fiche prononciation)  
-✅ Standardisée au 19e siècle

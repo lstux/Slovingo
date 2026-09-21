@@ -84,6 +84,7 @@
 const QCM_CHOICES = 4;
 const FILL_BLANK_CHOICES = 3;
 const LISTEN_CHOICES = 4;
+const MATCH_ITEMS = 4;
 
 const EXERCISE_TYPES = {
     qcm: {
@@ -124,7 +125,7 @@ const EXERCISE_TYPES = {
         fields: [
             { key: "l1", label: "Traduction (FR)", kind: "text" },
             { key: "l2", label: "Phrase (SK, écoutée)", kind: "text" },
-            { key: "choices_l2", label: "Distracteurs (SK)", kind: "list" },
+            { key: "choices_l1", label: "Distracteurs (FR)", kind: "list" },
         ],
         resolveView: resolveListenView,
         render: renderListen,
@@ -138,6 +139,16 @@ const EXERCISE_TYPES = {
         ],
         resolveView: resolveOrderView,
         render: renderOrder,
+    },
+    match: {
+        icon: "🔗",
+        label: "Matching",
+        fields: [
+            { key: "l1", label: "Items (FR)", kind: "list" },
+            { key: "l2", label: "Items (SK)", kind: "list" },
+        ],
+        resolveView: resolveMatchView,
+        render: renderMatch,
     },
 };
 
@@ -981,8 +992,8 @@ function resolveFillBlankView(ex, direction) {
 function resolveListenView(ex) {
     return {
         type: "listen", direction: null,
-        audio: ex.l2, answer: ex.l2,
-        choices: shuffle([ex.l2, ...ex.choices_l2]),
+        audio: ex.l2, answer: ex.l1,
+        choices: shuffle([ex.l1, ...ex.choices_l1]),
         translation: ex.l1,
     };
 }
@@ -1023,6 +1034,29 @@ function resolveOrderView(ex, direction) {
         type: "order", direction: dir,
         tokens: shuffle(tokens), orderedTokens: tokens,
         answer: ex.l1, audio: ex.l2, translation: ex.l2,
+    };
+}
+
+/**
+ * Match pairs exercise: match items from one language to their
+ * translations in the other. Shuffles the target items and creates
+ * a mapping of correct answers.
+ */
+function resolveMatchView(ex, direction) {
+    const dir = resolveDirection(direction);
+    if (dir === "l1-l2") {
+        return {
+            type: "match", direction: dir,
+            sourceItems: ex.l1, targetItems: shuffle(ex.l2),
+            correctPairs: ex.l1.map((l1, idx) => ({ source: l1, target: ex.l2[idx] })),
+            audio: ex.l2 && ex.l2[0],
+        };
+    }
+    return {
+        type: "match", direction: dir,
+        sourceItems: ex.l2, targetItems: shuffle(ex.l1),
+        correctPairs: ex.l2.map((l2, idx) => ({ source: l2, target: ex.l1[idx] })),
+        audio: ex.l2 && ex.l2[0],
     };
 }
 
@@ -1319,6 +1353,213 @@ function renderOrder(view) {
     return container;
 }
 
+// -- Matching pairs -------------------------------------------------------
+
+/**
+ * Drag target items from the right to match them with source items
+ * on the left. Items move (not copy): the bank empties as items are placed.
+ * When dropping into an occupied slot, the existing item returns to the bank.
+ * Correct matches are locked and highlighted when all pairs are made.
+ */
+function renderMatch(view) {
+    const container = el("div", { className: "exo-card exo-match" });
+    container.appendChild(el("div", { className: "exo-question-label", text: "Drag the pairs:" }));
+
+    const matchGrid = el("div", { className: "exo-match-grid" });
+    const leftColumn = el("div", { className: "exo-match-column exo-match-left" });
+    const rightBank = el("div", { className: "exo-match-bank" });
+
+    const submit = el("button", { className: "exo-submit", text: "Check", attrs: { disabled: "disabled" } });
+
+    const matches = new Map();  // leftIdx -> { item: targetItem, correctIdx, element: DOM }
+    const targetItemsToIndex = new Map();  // target text -> correct source index
+    const bankItems = new Map();  // targetItem -> DOM element (in bank)
+    const draggingItem = { element: null, source: null };  // track what's being dragged and where from
+
+    // Build index mapping
+    view.correctPairs.forEach((pair, idx) => {
+        targetItemsToIndex.set(pair.target, idx);
+    });
+
+    // Left column: source items with drop zones
+    view.sourceItems.forEach((sourceItem, leftIdx) => {
+        const pair = el("div", { className: "exo-match-pair" });
+
+        const source = el("div", {
+            className: "exo-match-item exo-match-item-left",
+            text: sourceItem,
+        });
+        pair.appendChild(source);
+
+        // Drop zone (initially empty, receives dragged items)
+        const dropZone = el("div", { className: "exo-match-drop-zone" });
+        dropZone.dataset.leftIdx = leftIdx;
+
+        dropZone.ondragover = (e) => {
+            e.preventDefault();
+            dropZone.classList.add("exo-match-drop-active");
+        };
+        dropZone.ondragleave = () => {
+            dropZone.classList.remove("exo-match-drop-active");
+        };
+        dropZone.ondrop = (e) => {
+            e.preventDefault();
+            dropZone.classList.remove("exo-match-drop-active");
+
+            if (!draggingItem.element) return;
+            const targetItem = draggingItem.element.textContent;
+            const correctIdx = targetItemsToIndex.get(targetItem);
+
+            // If there's an existing match in this slot, return it to the bank
+            if (matches.has(leftIdx)) {
+                const prevMatch = matches.get(leftIdx);
+                const prevItem = prevMatch.item;
+
+                // Create new bank item for the displaced item
+                const restoredBankItem = el("div", {
+                    className: "exo-match-item exo-match-item-right",
+                    text: prevItem,
+                });
+                restoredBankItem.draggable = true;
+                restoredBankItem.ondragstart = (e) => {
+                    draggingItem.element = restoredBankItem;
+                    draggingItem.source = "bank";
+                    restoredBankItem.classList.add("exo-match-dragging");
+                    e.dataTransfer.effectAllowed = "move";
+                };
+                restoredBankItem.ondragend = () => {
+                    restoredBankItem.classList.remove("exo-match-dragging");
+                };
+
+                rightBank.appendChild(restoredBankItem);
+                bankItems.set(prevItem, restoredBankItem);
+
+                // Remove the old matched element
+                prevMatch.element.remove();
+            }
+
+            // Remove the item from the bank if it's there
+            if (draggingItem.source === "bank" && bankItems.has(targetItem)) {
+                const bankItem = bankItems.get(targetItem);
+                bankItem.remove();
+                bankItems.delete(targetItem);
+            }
+
+            // Create matched item in drop zone
+            const matched = el("div", {
+                className: "exo-match-item exo-match-item-matched",
+                text: targetItem,
+            });
+            matched.draggable = true;
+            matched.ondragstart = (e) => {
+                draggingItem.element = matched;
+                draggingItem.source = leftIdx;  // remember this came from a drop zone
+                matched.classList.add("exo-match-dragging");
+                e.dataTransfer.effectAllowed = "move";
+            };
+            matched.ondragend = () => {
+                matched.classList.remove("exo-match-dragging");
+            };
+
+            dropZone.appendChild(matched);
+            matches.set(leftIdx, { item: targetItem, correctIdx, element: matched });
+            draggingItem.element = null;
+            draggingItem.source = null;
+
+            // Enable submit if all matched
+            if (matches.size === view.sourceItems.length) {
+                submit.disabled = false;
+            }
+        };
+        pair.appendChild(dropZone);
+        leftColumn.appendChild(pair);
+    });
+
+    // Right bank: draggable target items
+    const HOLD_DELAY = 500; // ms before drag starts on mobile
+    view.targetItems.forEach((targetItem) => {
+        const item = el("div", {
+            className: "exo-match-item exo-match-item-right",
+            text: targetItem,
+        });
+        item.draggable = true;
+        let holdTimeout = null;
+
+        item.ondragstart = (e) => {
+            draggingItem.element = item;
+            draggingItem.source = "bank";
+            item.classList.add("exo-match-dragging");
+            e.dataTransfer.effectAllowed = "move";
+        };
+        item.ondragend = () => {
+            item.classList.remove("exo-match-dragging");
+            if (holdTimeout) clearTimeout(holdTimeout);
+        };
+
+        // Mobile support: add hold-to-drag delay
+        item.ontouchstart = (e) => {
+            holdTimeout = setTimeout(() => {
+                // Simulate drag start after delay
+                item.classList.add("exo-match-dragging");
+            }, HOLD_DELAY);
+        };
+        item.ontouchend = () => {
+            if (holdTimeout) clearTimeout(holdTimeout);
+            item.classList.remove("exo-match-dragging");
+        };
+
+        rightBank.appendChild(item);
+        bankItems.set(targetItem, item);
+    });
+
+    submit.onclick = () => {
+        // Check all matches
+        let correct = true;
+        matches.forEach((matchData, leftIdx) => {
+            const isCorrectMatch = matchData.correctIdx === leftIdx;
+            if (!isCorrectMatch) correct = false;
+        });
+
+        // Check that all pairs are filled
+        if (matches.size !== view.sourceItems.length) correct = false;
+
+        // Highlight results (show correct/wrong pairs)
+        leftColumn.querySelectorAll(".exo-match-drop-zone").forEach((zone, idx) => {
+            const matchData = matches.get(idx);
+            if (matchData) {
+                const matched = zone.querySelector(".exo-match-item-matched");
+                if (matched) {
+                    // Clear previous feedback classes
+                    matched.classList.remove("exo-choice-correct", "exo-choice-wrong");
+                    if (matchData.correctIdx === idx) {
+                        matched.classList.add("exo-choice-correct");
+                    } else {
+                        matched.classList.add("exo-choice-wrong");
+                    }
+                }
+            }
+        });
+
+        // Disable further interaction (same for correct or wrong)
+        submit.disabled = true;
+        rightBank.querySelectorAll(".exo-match-item-right").forEach((item) => {
+            item.draggable = false;
+        });
+
+        // Always show feedback and next button
+        const userAnswer = `${matches.size}/${view.sourceItems.length} pairs`;
+        markAnswer(container, correct, view, userAnswer);
+    };
+
+    matchGrid.appendChild(leftColumn);
+    container.appendChild(matchGrid);
+    container.appendChild(el("div", { className: "exo-match-bank-label", text: "Drag these:" }));
+    container.appendChild(rightBank);
+    container.appendChild(submit);
+
+    return container;
+}
+
 // -- Free typing (shared by qcm/fill-blank/listen) -------------------------
 
 function renderTypeInput(container, view, onValidate) {
@@ -1406,9 +1647,11 @@ function renderSummary() {
         summary.appendChild(cumLine);
     }
 
-    if (state.mistakes.length) {
+    // Filter out match exercises from review (they're practice-only)
+    const reviewMistakes = state.mistakes.filter(({ view }) => view.type !== "match");
+    if (reviewMistakes.length) {
         const list = el("ul", { className: "exo-mistake-list" });
-        state.mistakes.forEach(({ view, userAnswer }) => {
+        reviewMistakes.forEach(({ view, userAnswer }) => {
             const label = view.type === "qcm" ? view.question : (view.audio || "");
             list.appendChild(el("li", {
                 html: `<strong>${escapeHtml(label)}</strong> → ${escapeHtml(view.answer)}` +
