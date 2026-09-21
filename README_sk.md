@@ -55,10 +55,10 @@ Je to **klasický Markdown** + 3 malé syntaktické vychytávky:
 ```markdown
 # Základná slovná zásoba
 
-| Francúzština | Môj jazyk |
+| Môj jazyk | Slovenčina |
 |--------------|-----------|
-| Bonjour      | …         |
-| Merci        | …         |
+| …         | Dobrý deň |
+| …         | Ďakujem |
 
 ## Gramatika
 

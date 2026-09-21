@@ -55,10 +55,10 @@ It's **regular Markdown** + 3 small syntax tricks:
 ```markdown
 # Basic vocabulary
 
-| French | My language |
+| Learn french | Native |
 |--------|-------------|
-| Hello  | …           |
-| Thanks | …           |
+| Bonjour | …           |
+| Merci | …           |
 
 ## Grammar
 

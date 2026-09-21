@@ -55,10 +55,10 @@ C'est du **Markdown classique** + 3 petits trucs de syntaxe :
 ```markdown
 # Vocabulaire basique
 
-| Français | Ma langue |
+| Langue apprise | Français |
 |----------|-----------|
-| Bonjour  | …         |
-| Merci    | …         |
+| …         | Bonjour  |
+| …         | Merci    |
 
 ## Grammaire
 
