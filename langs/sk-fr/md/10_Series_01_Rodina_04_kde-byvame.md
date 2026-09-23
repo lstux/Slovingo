@@ -30,6 +30,7 @@ Dernière fiche d'apprentissage avant le dialogue. On situe la famille : le verb
 | ty bývaš | tu habites |
 | on / ona býva | il / elle habite |
 | my bývame | nous habitons |
+| vy bývate | vous habitez |
 | oni bývajú | ils / elles habitent |
 
 ### Après « v », le mot change

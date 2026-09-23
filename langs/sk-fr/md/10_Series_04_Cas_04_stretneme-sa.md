@@ -30,6 +30,7 @@ Fixer un rendez-vous : y aller, arriver, attendre, se retrouver. Le verbe **ís�
 | ty ideš | tu vas |
 | on / ona ide | il / elle va |
 | my ideme | nous allons |
+| vy idete | vous allez |
 | oni idú | ils / elles vont |
 
 ### Arriver — prísť
@@ -40,6 +41,8 @@ Fixer un rendez-vous : y aller, arriver, attendre, se retrouver. Le verbe **ís�
 | ty prídeš | tu arrives |
 | on / ona príde | il / elle arrive |
 | my prídeme | nous arrivons |
+| vy prídete | vous arrivez |
+| oni prídu | ils / elles arrivent |
 
 *Prísť* est *ísť* avec le préfixe **prí-**, et la conjugaison suit le même moule.
 

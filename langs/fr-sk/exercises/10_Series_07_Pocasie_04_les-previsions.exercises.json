@@ -1,0 +1,1460 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-la-pr-vision",
+      "type": "qcm",
+      "l1": "predpoveď",
+      "l2": "la prévision",
+      "choices_l1": [
+        "teplý",
+        "dúha",
+        "Svieti slnko."
+      ],
+      "choices_l2": [
+        "la pluie",
+        "les feuilles",
+        "la température"
+      ]
+    },
+    {
+      "id": "qcm-ensoleill",
+      "type": "qcm",
+      "l1": "slnečno",
+      "l2": "ensoleillé",
+      "choices_l1": [
+        "ročné obdobie",
+        "mráz",
+        "oblačno"
+      ],
+      "choices_l2": [
+        "Il neige.",
+        "la pluie",
+        "la canicule"
+      ]
+    },
+    {
+      "id": "qcm-nuageux",
+      "type": "qcm",
+      "l1": "oblačno",
+      "l2": "nuageux",
+      "choices_l1": [
+        "Bude slnečno.",
+        "obloha",
+        "vietor"
+      ],
+      "choices_l2": [
+        "le soleil",
+        "la température",
+        "le ciel"
+      ]
+    },
+    {
+      "id": "qcm-pluvieux",
+      "type": "qcm",
+      "l1": "daždivo",
+      "l2": "pluvieux",
+      "choices_l1": [
+        "starý",
+        "zábavný",
+        "najvyšší"
+      ],
+      "choices_l2": [
+        "intéressant",
+        "la fatigue",
+        "fatigué"
+      ]
+    },
+    {
+      "id": "qcm-changer",
+      "type": "qcm",
+      "l1": "meniť",
+      "l2": "changer",
+      "choices_l1": [
+        "pracuje",
+        "vidieť",
+        "otvárať"
+      ],
+      "choices_l2": [
+        "ranger, nettoyer",
+        "coûter",
+        "chercher"
+      ]
+    },
+    {
+      "id": "qcm-le-plan",
+      "type": "qcm",
+      "l1": "plán",
+      "l2": "le plan",
+      "choices_l1": [
+        "fontána",
+        "program",
+        "prekvapenie"
+      ],
+      "choices_l2": [
+        "l'assiette",
+        "le livre",
+        "la surprise"
+      ]
+    },
+    {
+      "id": "qcm-esp-rer",
+      "type": "qcm",
+      "l1": "dúfať",
+      "l2": "espérer",
+      "choices_l1": [
+        "nemám",
+        "ide",
+        "idem"
+      ],
+      "choices_l2": [
+        "écouter",
+        "s'appeler",
+        "lire"
+      ]
+    },
+    {
+      "id": "qcm-il-fera-beau",
+      "type": "qcm",
+      "l1": "Bude slnečno.",
+      "l2": "Il fera beau.",
+      "choices_l1": [
+        "plný",
+        "únava",
+        "voľný"
+      ],
+      "choices_l2": [
+        "C'est près d'ici.",
+        "salé / salée",
+        "petit / petite"
+      ]
+    },
+    {
+      "id": "qcm-il-fera-nuageux",
+      "type": "qcm",
+      "l1": "Bude oblačno.",
+      "l2": "Il fera nuageux.",
+      "choices_l1": [
+        "tráva",
+        "prší",
+        "búrka"
+      ],
+      "choices_l2": [
+        "chaud / chaude",
+        "Le soleil brille.",
+        "S'il pleut, nous resterons à la maison."
+      ]
+    },
+    {
+      "id": "qcm-il-pleuvra",
+      "type": "qcm",
+      "l1": "Bude pršať.",
+      "l2": "Il pleuvra.",
+      "choices_l1": [
+        "studený",
+        "upozornenie",
+        "predpoveď"
+      ],
+      "choices_l2": [
+        "l'orage",
+        "la pluie",
+        "l'arc-en-ciel"
+      ]
+    },
+    {
+      "id": "qcm-il-y-aura-un-orage",
+      "type": "qcm",
+      "l1": "Bude búrka.",
+      "l2": "Il y aura un orage.",
+      "choices_l1": [
+        "dážď",
+        "slnečno",
+        "kvet"
+      ],
+      "choices_l2": [
+        "Il fait froid.",
+        "la température de l'air",
+        "Il fera nuageux."
+      ]
+    },
+    {
+      "id": "qcm-s-il-pleut-nous-resterons-la-maison",
+      "type": "qcm",
+      "l1": "Ak bude pršať, zostaneme doma.",
+      "l2": "S'il pleut, nous resterons à la maison.",
+      "choices_l1": [
+        "ratatouille (dusená provensálska zelenina)",
+        "Je to za rohom.",
+        "kamarát / kamarátka"
+      ],
+      "choices_l2": [
+        "les lunettes de soleil",
+        "Il fera nuageux.",
+        "Il y aura un orage."
+      ]
+    },
+    {
+      "id": "qcm-s-il-fait-beau-nous-sortirons",
+      "type": "qcm",
+      "l1": "Ak bude slnečno, pôjdeme von.",
+      "l2": "S'il fait beau, nous sortirons.",
+      "choices_l1": [
+        "Je to blízko.",
+        "je mladý / je mladá",
+        "je starý / je stará"
+      ],
+      "choices_l2": [
+        "frais / fraîche",
+        "grand / grande",
+        "petit / petite"
+      ]
+    },
+    {
+      "id": "qcm-rester",
+      "type": "qcm",
+      "l1": "zostať",
+      "l2": "rester",
+      "choices_l1": [
+        "máte",
+        "chcieť",
+        "prechádzam sa"
+      ],
+      "choices_l2": [
+        "dormir",
+        "trouver",
+        "préparer"
+      ]
+    },
+    {
+      "id": "qcm-dehors",
+      "type": "qcm",
+      "l1": "vonku",
+      "l2": "dehors",
+      "choices_l1": [
+        "nie",
+        "na pošte",
+        "kupuje"
+      ],
+      "choices_l2": [
+        "nous cherchons",
+        "nous devons",
+        "à"
+      ]
+    },
+    {
+      "id": "qcm-l-int-rieur",
+      "type": "qcm",
+      "l1": "vnútri",
+      "l2": "à l'intérieur",
+      "choices_l1": [
+        "si",
+        "naj-",
+        "táto bunda"
+      ],
+      "choices_l2": [
+        "dehors",
+        "tu dois",
+        "ma"
+      ]
+    },
+    {
+      "id": "qcm-l-excursion",
+      "type": "qcm",
+      "l1": "výlet",
+      "l2": "l'excursion",
+      "choices_l1": [
+        "piesku",
+        "rezervácia",
+        "mušľa"
+      ],
+      "choices_l2": [
+        "la glacière",
+        "l'île",
+        "la piscine"
+      ]
+    },
+    {
+      "id": "qcm-la-randonn-e",
+      "type": "qcm",
+      "l1": "turistika",
+      "l2": "la randonnée",
+      "choices_l1": [
+        "slnečník",
+        "plavčík",
+        "pláž"
+      ],
+      "choices_l2": [
+        "la tente",
+        "la côte",
+        "bronzer"
+      ]
+    },
+    {
+      "id": "qcm-l-alerte",
+      "type": "qcm",
+      "l1": "upozornenie",
+      "l2": "l'alerte",
+      "choices_l1": [
+        "predpoveď",
+        "obloha",
+        "stupeň"
+      ],
+      "choices_l2": [
+        "la prévision",
+        "la fleur",
+        "le ciel"
+      ]
+    },
+    {
+      "id": "qcm-s-r-s-re",
+      "type": "qcm",
+      "l1": "istý",
+      "l2": "sûr / sûre",
+      "choices_l1": [
+        "s",
+        "ja som",
+        "tento"
+      ],
+      "choices_l2": [
+        "plus long que",
+        "ce sera facile",
+        "Je vais arriver."
+      ]
+    },
+    {
+      "id": "blank-quelles-sont-les-pr-visions-pour-demain",
+      "type": "fill-blank",
+      "l1": "Aká je predpoveď na zajtra?",
+      "l2": "Quelles sont les prévisions pour demain ?",
+      "missing_l1": "je",
+      "missing_l2": "les",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "to",
+        "v dome",
+        "na moste"
+      ],
+      "choices_l2": [
+        "beaucoup",
+        "et",
+        "le prénom"
+      ]
+    },
+    {
+      "id": "blank-demain-il-fera-beau",
+      "type": "fill-blank",
+      "l1": "Zajtra bude slnečno.",
+      "l2": "Demain il fera beau.",
+      "missing_l1": "bude",
+      "missing_l2": "il",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "musím",
+        "bývajú",
+        "budem"
+      ],
+      "choices_l2": [
+        "ça",
+        "je cherche",
+        "c'est"
+      ]
+    },
+    {
+      "id": "blank-l-apr-s-midi-il-fera-nuageux",
+      "type": "fill-blank",
+      "l1": "Poobede bude oblačno.",
+      "l2": "L'après-midi il fera nuageux.",
+      "missing_l1": "bude",
+      "missing_l2": "il",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "chcú",
+        "budú",
+        "otvárať"
+      ],
+      "choices_l2": [
+        "le plus...",
+        "tu vas",
+        "sont"
+      ]
+    },
+    {
+      "id": "blank-le-soir-il-va-pleuvoir",
+      "type": "fill-blank",
+      "l1": "Večer bude pršať.",
+      "l2": "Le soir il va pleuvoir.",
+      "missing_l1": "bude",
+      "missing_l2": "il",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "vidí",
+        "budem plávať",
+        "pracujem"
+      ],
+      "choices_l2": [
+        "mon",
+        "as-tu",
+        "et"
+      ]
+    },
+    {
+      "id": "blank-s-il-pleut-nous-resterons-la-maison",
+      "type": "fill-blank",
+      "l1": "Ak bude pršať, zostaneme doma.",
+      "l2": "S'il pleut, nous resterons à la maison.",
+      "missing_l1": "bude",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "zdobiť",
+        "skúšam",
+        "darovať"
+      ],
+      "choices_l2": [
+        "vous",
+        "ma",
+        "je serai"
+      ]
+    },
+    {
+      "id": "blank-s-il-fait-beau-nous-irons-au-parc",
+      "type": "fill-blank",
+      "l1": "Ak bude slnečno, pôjdeme do parku.",
+      "l2": "S'il fait beau, nous irons au parc.",
+      "missing_l1": "do",
+      "missing_l2": "nous",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "to",
+        "by",
+        "kedy"
+      ],
+      "choices_l2": [
+        "quand",
+        "sont",
+        "je serai"
+      ]
+    },
+    {
+      "id": "blank-le-temps-change-chaque-jour",
+      "type": "fill-blank",
+      "l1": "Počasie sa mení každý deň.",
+      "l2": "Le temps change chaque jour.",
+      "missing_l1": "sa",
+      "missing_l2": "temps",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "oblečieme si",
+        "do lekárne",
+        "tiež"
+      ],
+      "choices_l2": [
+        "la saison",
+        "la prévision",
+        "Il neige."
+      ]
+    },
+    {
+      "id": "blank-nous-devons-changer-de-plan-il-va-y-avoir-un-orage",
+      "type": "fill-blank",
+      "l1": "Musíme meniť plán, bude búrka.",
+      "l2": "Nous devons changer de plan, il va y avoir un orage.",
+      "missing_l1": "bude",
+      "missing_l2": "de",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "letieť",
+        "Chcem plávať.",
+        "Stretneme sa."
+      ],
+      "choices_l2": [
+        "nous pourrions",
+        "c'est",
+        "tu peux"
+      ]
+    },
+    {
+      "id": "blank-demain-il-fera-froid-tu-dois-porter-un-manteau",
+      "type": "fill-blank",
+      "l1": "Zajtra bude zima, musíš nosiť kabát.",
+      "l2": "Demain il fera froid, tu dois porter un manteau.",
+      "missing_l1": "bude",
+      "missing_l2": "il",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "bývaš",
+        "vidí",
+        "Musíme"
+      ],
+      "choices_l2": [
+        "à l'intérieur",
+        "ma",
+        "ensemble"
+      ]
+    },
+    {
+      "id": "blank-s-il-fait-chaud-je-ne-porterai-pas-de-pull",
+      "type": "fill-blank",
+      "l1": "Ak bude teplo, nebudem nosiť sveter.",
+      "l2": "S'il fait chaud, je ne porterai pas de pull.",
+      "missing_l1": "bude",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "pozerať",
+        "pracovať",
+        "ideš"
+      ],
+      "choices_l2": [
+        "ma",
+        "beaucoup",
+        "tu bois"
+      ]
+    },
+    {
+      "id": "blank-en-automne-les-pr-visions-sont-souvent-pluvieuses",
+      "type": "fill-blank",
+      "l1": "Na jeseň je predpoveď často daždivá.",
+      "l2": "En automne les prévisions sont souvent pluvieuses.",
+      "missing_l1": "je",
+      "missing_l2": "les",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "kupuje",
+        "za rohom",
+        "ja som"
+      ],
+      "choices_l2": [
+        "avec",
+        "ici",
+        "pas"
+      ]
+    },
+    {
+      "id": "blank-nous-resterons-l-int-rieur-dehors-il-pleut",
+      "type": "fill-blank",
+      "l1": "Zostaneme vnútri, vonku prší.",
+      "l2": "Nous resterons à l'intérieur, dehors il pleut.",
+      "missing_l1": "prší",
+      "missing_l2": "à",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "vietor",
+        "hmla",
+        "Fúka vietor."
+      ],
+      "choices_l2": [
+        "pas",
+        "environ",
+        "C'est bon."
+      ]
+    },
+    {
+      "id": "blank-nous-planifions-une-excursion-mais-le-temps-n-est-pas-s-r",
+      "type": "fill-blank",
+      "l1": "Plánujeme výlet, ale počasie nie je isté.",
+      "l2": "Nous planifions une excursion, mais le temps n'est pas sûr.",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 5,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "na moste",
+        "ďalej",
+        "to"
+      ],
+      "choices_l2": [
+        "tu travailles",
+        "nous marcherons",
+        "je cherche"
+      ]
+    },
+    {
+      "id": "blank-il-y-a-une-alerte-orage",
+      "type": "fill-blank",
+      "l1": "Je upozornenie na búrku.",
+      "l2": "Il y a une alerte orage.",
+      "missing_l1": "na",
+      "missing_l2": "a",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "z",
+        "v dome",
+        "vyšší ako"
+      ],
+      "choices_l2": [
+        "chaque",
+        "très",
+        "je mange"
+      ]
+    },
+    {
+      "id": "blank-la-randonn-e-est-magnifique-s-il-fait-beau",
+      "type": "fill-blank",
+      "l1": "Turistika je krásna, ak je slnečno.",
+      "l2": "La randonnée est magnifique, s'il fait beau.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sú",
+        "tiež",
+        "Koľko"
+      ],
+      "choices_l2": [
+        "nous allons",
+        "tu mets",
+        "tu veux"
+      ]
+    },
+    {
+      "id": "blank-je-n-en-suis-pas-s-r-mais-il-fera-sans-doute-beau",
+      "type": "fill-blank",
+      "l1": "Nemám istotu, ale asi bude pekne.",
+      "l2": "Je n'en suis pas sûr, mais il fera sans doute beau.",
+      "missing_l1": "ale",
+      "missing_l2": "il",
+      "blank_index_l1": 2,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "s",
+        "som",
+        "Kde"
+      ],
+      "choices_l2": [
+        "nous marcherons",
+        "qui",
+        "à l'intérieur"
+      ]
+    },
+    {
+      "id": "listen-quelles-sont-les-pr-visions-pour-demain",
+      "type": "listen",
+      "l1": "Aká je predpoveď na zajtra?",
+      "l2": "Quelles sont les prévisions pour demain ?",
+      "choices_l2": [
+        "Que fais-tu ?",
+        "J'ai soif. Tu prends un chocolat chaud ?",
+        "Les assiettes sont dans l'armoire, dans la cuisine."
+      ],
+      "choices_l1": [
+        "Na jeseň padá lístie.",
+        "Nad dverami sú hodiny.",
+        "Hodiny sú na stene."
+      ]
+    },
+    {
+      "id": "listen-demain-il-fera-beau",
+      "type": "listen",
+      "l1": "Zajtra bude slnečno.",
+      "l2": "Demain il fera beau.",
+      "choices_l2": [
+        "Nous mangeons des fruits et des légumes.",
+        "Le matin, j'ai le temps.",
+        "Oui ! À cinq heures, devant l'église."
+      ],
+      "choices_l1": [
+        "Lekáreň je dnes zatvorená.",
+        "Budík zvoní o pol šiestej ráno.",
+        "Dobre. Stretneme sa v sobotu ráno na stanici."
+      ]
+    },
+    {
+      "id": "listen-l-apr-s-midi-il-fera-nuageux",
+      "type": "listen",
+      "l1": "Poobede bude oblačno.",
+      "l2": "L'après-midi il fera nuageux.",
+      "choices_l2": [
+        "Bonjour, Eric. Entrez, je vous en prie.",
+        "Quand commences-tu ? À huit heures ?",
+        "Je veux une couleur claire, pas foncée."
+      ],
+      "choices_l1": [
+        "Zostaneme vnútri, vonku prší.",
+        "Fúka silný vietor.",
+        "Zostaň vnútri, vonku fúka veľmi silný vietor."
+      ]
+    },
+    {
+      "id": "listen-le-soir-il-va-pleuvoir",
+      "type": "listen",
+      "l1": "Večer bude pršať.",
+      "l2": "Le soir il va pleuvoir.",
+      "choices_l2": [
+        "Tu vois cette statue ?",
+        "J'habite à Lyon.",
+        "Le ciel est bleu et clair."
+      ],
+      "choices_l1": [
+        "Hmla je dnes ráno hustá, nič nevidno.",
+        "Po búrke je často dúha.",
+        "Na jeseň padá lístie."
+      ]
+    },
+    {
+      "id": "listen-s-il-pleut-nous-resterons-la-maison",
+      "type": "listen",
+      "l1": "Ak bude pršať, zostaneme doma.",
+      "l2": "S'il pleut, nous resterons à la maison.",
+      "choices_l2": [
+        "Quelle est ta saison préférée ?",
+        "Il y a du brouillard, je ne vois rien.",
+        "J'ai un fils et une fille."
+      ],
+      "choices_l1": [
+        "Prší. Nemám dáždnik.",
+        "Je teplo a svieti slnko.",
+        "Musím si obuť čižmy, je sneh."
+      ]
+    },
+    {
+      "id": "listen-s-il-fait-beau-nous-irons-au-parc",
+      "type": "listen",
+      "l1": "Ak bude slnečno, pôjdeme do parku.",
+      "l2": "S'il fait beau, nous irons au parc.",
+      "choices_l2": [
+        "Eric, c'est ma famille.",
+        "Maintenant il est cinq heures.",
+        "L'addition, s'il vous plaît."
+      ],
+      "choices_l1": [
+        "Jablčný mušt je sladký a studený.",
+        "Pot-au-feu je horúci. Chceš vodu?",
+        "Je veľmi teplo, je to takmer horúčava."
+      ]
+    },
+    {
+      "id": "listen-le-temps-change-chaque-jour",
+      "type": "listen",
+      "l1": "Počasie sa mení každý deň.",
+      "l2": "Le temps change chaque jour.",
+      "choices_l2": [
+        "Je lis un livre dans le salon.",
+        "Jeudi, je commence à huit heures.",
+        "Où est la gare ? Elle est loin ?"
+      ],
+      "choices_l1": [
+        "Bazén je v pondelok zatvorený.",
+        "Hmla je dnes ráno hustá, nič nevidno.",
+        "Veselú Veľkú noc, všetci!"
+      ]
+    },
+    {
+      "id": "listen-nous-devons-changer-de-plan-il-va-y-avoir-un-orage",
+      "type": "listen",
+      "l1": "Musíme meniť plán, bude búrka.",
+      "l2": "Nous devons changer de plan, il va y avoir un orage.",
+      "choices_l2": [
+        "La quiche me plaît. J'en veux encore.",
+        "Les enfants boivent du lait au dîner.",
+        "Voici mon père et voici ma maman."
+      ],
+      "choices_l1": [
+        "Musíš mať krém na opaľovanie, slnko je silné.",
+        "Prší. Nemám dáždnik.",
+        "Je veľmi teplo, je to takmer horúčava."
+      ]
+    },
+    {
+      "id": "listen-demain-il-fera-froid-tu-dois-porter-un-manteau",
+      "type": "listen",
+      "l1": "Zajtra bude zima, musíš nosiť kabát.",
+      "l2": "Demain il fera froid, tu dois porter un manteau.",
+      "choices_l2": [
+        "Je paie par carte.",
+        "Je veux ce tee-shirt rouge. Combien coûte-t-il ?",
+        "Les fruits sont frais et très sucrés."
+      ],
+      "choices_l1": [
+        "Zajtra má byť daždivo, tak zostaneme doma.",
+        "Aké je dnes počasie?",
+        "Večer som doma."
+      ]
+    },
+    {
+      "id": "listen-s-il-fait-chaud-je-ne-porterai-pas-de-pull",
+      "type": "listen",
+      "l1": "Ak bude teplo, nebudem nosiť sveter.",
+      "l2": "S'il fait chaud, je ne porterai pas de pull.",
+      "choices_l2": [
+        "Maman cuisine dans la cuisine.",
+        "Je n'ai pas mon portefeuille !",
+        "Mes enfants sont dans la chambre."
+      ],
+      "choices_l1": [
+        "Opasok je čierny a lacný.",
+        "Toto modré tričko je pekné. Chcete skúsiť?",
+        "Oblečenie na zimu je drahé."
+      ]
+    },
+    {
+      "id": "listen-en-automne-les-pr-visions-sont-souvent-pluvieuses",
+      "type": "listen",
+      "l1": "Na jeseň je predpoveď často daždivá.",
+      "l2": "En automne les prévisions sont souvent pluvieuses.",
+      "choices_l2": [
+        "J'écris et je ne regarde pas la télévision.",
+        "En hiver je porte une écharpe et des gants.",
+        "J'aime cette couleur, mais la taille n'est pas bonne."
+      ],
+      "choices_l1": [
+        "Vstávam a zatváram okno. Je zima.",
+        "Teraz jem ryžu a zeleninu.",
+        "Darovali im čokoládu na Veľkú noc."
+      ]
+    },
+    {
+      "id": "listen-nous-resterons-l-int-rieur-dehors-il-pleut",
+      "type": "listen",
+      "l1": "Zostaneme vnútri, vonku prší.",
+      "l2": "Nous resterons à l'intérieur, dehors il pleut.",
+      "choices_l2": [
+        "Six heures et demie, c'est six heures trente ?",
+        "Le vendredi, le soir est long.",
+        "Je commence à sept heures."
+      ],
+      "choices_l1": [
+        "Poobede bude oblačno.",
+        "Musím si obuť čižmy, je sneh.",
+        "Zostaň vnútri, vonku fúka veľmi silný vietor."
+      ]
+    },
+    {
+      "id": "listen-nous-planifions-une-excursion-mais-le-temps-n-est-pas-s-r",
+      "type": "listen",
+      "l1": "Plánujeme výlet, ale počasie nie je isté.",
+      "l2": "Nous planifions une excursion, mais le temps n'est pas sûr.",
+      "choices_l2": [
+        "J'écris et je ne regarde pas la télévision.",
+        "La rue est longue.",
+        "Le déjeuner est à midi."
+      ],
+      "choices_l1": [
+        "Oblaky sú tmavé. Bude búrka.",
+        "Jablčný mušt je sladký a studený.",
+        "Obloha je oblačná, asi bude pršať."
+      ]
+    },
+    {
+      "id": "listen-il-y-a-une-alerte-orage",
+      "type": "listen",
+      "l1": "Je upozornenie na búrku.",
+      "l2": "Il y a une alerte orage.",
+      "choices_l2": [
+        "Je prends une quiche lorraine.",
+        "Ma maison de campagne est loin.",
+        "J'ai faim, mais la viande n'est pas bonne."
+      ],
+      "choices_l1": [
+        "Tento čokoládový zvon je obrovský!",
+        "Je pol šiestej.",
+        "Tráva je zelená a mokrá."
+      ]
+    },
+    {
+      "id": "listen-la-randonn-e-est-magnifique-s-il-fait-beau",
+      "type": "listen",
+      "l1": "Turistika je krásna, ak je slnečno.",
+      "l2": "La randonnée est magnifique, s'il fait beau.",
+      "choices_l2": [
+        "Où est la cabine d'essayage ?",
+        "Le café est brûlant.",
+        "C'est un peu petit. Vous en avez un plus grand ?"
+      ],
+      "choices_l1": [
+        "Prší. Nemám dáždnik.",
+        "V sobotu má byť slnečno!",
+        "V zime je silný mráz."
+      ]
+    },
+    {
+      "id": "listen-je-n-en-suis-pas-s-r-mais-il-fera-sans-doute-beau",
+      "type": "listen",
+      "l1": "Nemám istotu, ale asi bude pekne.",
+      "l2": "Je n'en suis pas sûr, mais il fera sans doute beau.",
+      "choices_l2": [
+        "J'ai soif. Tu prends un chocolat chaud ?",
+        "Où est le distributeur ?",
+        "Un croissant et un café au lait, s'il te plaît."
+      ],
+      "choices_l1": [
+        "Prepáčte, kde je pošta?",
+        "Kedy máš stretnutie?",
+        "Oddychujem na posteli."
+      ]
+    },
+    {
+      "id": "order-quelles-sont-les-pr-visions-pour-demain",
+      "type": "order",
+      "l1": "Aká je predpoveď na zajtra?",
+      "l2": "Quelles sont les prévisions pour demain ?",
+      "tokens_l1": [
+        "Aká",
+        "je",
+        "predpoveď",
+        "na",
+        "zajtra?",
+        "Na",
+        "jeseň",
+        "je",
+        "predpoveď",
+        "často",
+        "daždivá."
+      ],
+      "tokens_l2": [
+        "Quelles",
+        "sont",
+        "les",
+        "prévisions",
+        "pour",
+        "demain",
+        "?",
+        "En",
+        "automne",
+        "les",
+        "prévisions",
+        "sont",
+        "souvent",
+        "pluvieuses."
+      ]
+    },
+    {
+      "id": "order-demain-il-fera-beau",
+      "type": "order",
+      "l1": "Zajtra bude slnečno.",
+      "l2": "Demain il fera beau.",
+      "tokens_l1": [
+        "Zajtra",
+        "bude",
+        "slnečno.",
+        "Musíme",
+        "meniť",
+        "plán,",
+        "bude",
+        "búrka."
+      ],
+      "tokens_l2": [
+        "Demain",
+        "il",
+        "fera",
+        "beau.",
+        "Nous",
+        "devons",
+        "changer",
+        "de",
+        "plan,",
+        "il",
+        "va",
+        "y",
+        "avoir",
+        "un",
+        "orage."
+      ]
+    },
+    {
+      "id": "order-l-apr-s-midi-il-fera-nuageux",
+      "type": "order",
+      "l1": "Poobede bude oblačno.",
+      "l2": "L'après-midi il fera nuageux.",
+      "tokens_l1": [
+        "Poobede",
+        "bude",
+        "oblačno.",
+        "Zajtra",
+        "bude",
+        "slnečno."
+      ],
+      "tokens_l2": [
+        "L'après-midi",
+        "il",
+        "fera",
+        "nuageux.",
+        "Demain",
+        "il",
+        "fera",
+        "beau."
+      ]
+    },
+    {
+      "id": "order-le-soir-il-va-pleuvoir",
+      "type": "order",
+      "l1": "Večer bude pršať.",
+      "l2": "Le soir il va pleuvoir.",
+      "tokens_l1": [
+        "Večer",
+        "bude",
+        "pršať.",
+        "Zajtra",
+        "bude",
+        "slnečno."
+      ],
+      "tokens_l2": [
+        "Le",
+        "soir",
+        "il",
+        "va",
+        "pleuvoir.",
+        "Demain",
+        "il",
+        "fera",
+        "beau."
+      ]
+    },
+    {
+      "id": "order-s-il-pleut-nous-resterons-la-maison",
+      "type": "order",
+      "l1": "Ak bude pršať, zostaneme doma.",
+      "l2": "S'il pleut, nous resterons à la maison.",
+      "tokens_l1": [
+        "Ak",
+        "bude",
+        "pršať,",
+        "zostaneme",
+        "doma.",
+        "Ak",
+        "bude",
+        "slnečno,",
+        "pôjdeme",
+        "do",
+        "parku."
+      ],
+      "tokens_l2": [
+        "S'il",
+        "pleut,",
+        "nous",
+        "resterons",
+        "à",
+        "la",
+        "maison.",
+        "S'il",
+        "fait",
+        "beau,",
+        "nous",
+        "irons",
+        "au",
+        "parc."
+      ]
+    },
+    {
+      "id": "order-s-il-fait-beau-nous-irons-au-parc",
+      "type": "order",
+      "l1": "Ak bude slnečno, pôjdeme do parku.",
+      "l2": "S'il fait beau, nous irons au parc.",
+      "tokens_l1": [
+        "Ak",
+        "bude",
+        "slnečno,",
+        "pôjdeme",
+        "do",
+        "parku.",
+        "Zostaneme",
+        "vnútri,",
+        "vonku",
+        "prší."
+      ],
+      "tokens_l2": [
+        "S'il",
+        "fait",
+        "beau,",
+        "nous",
+        "irons",
+        "au",
+        "parc.",
+        "Nous",
+        "resterons",
+        "à",
+        "l'intérieur,",
+        "dehors",
+        "il",
+        "pleut."
+      ]
+    },
+    {
+      "id": "order-le-temps-change-chaque-jour",
+      "type": "order",
+      "l1": "Počasie sa mení každý deň.",
+      "l2": "Le temps change chaque jour.",
+      "tokens_l1": [
+        "Počasie",
+        "sa",
+        "mení",
+        "každý",
+        "deň.",
+        "Ak",
+        "bude",
+        "pršať,",
+        "zostaneme",
+        "doma."
+      ],
+      "tokens_l2": [
+        "Le",
+        "temps",
+        "change",
+        "chaque",
+        "jour.",
+        "S'il",
+        "pleut,",
+        "nous",
+        "resterons",
+        "à",
+        "la",
+        "maison."
+      ]
+    },
+    {
+      "id": "order-nous-devons-changer-de-plan-il-va-y-avoir-un-orage",
+      "type": "order",
+      "l1": "Musíme meniť plán, bude búrka.",
+      "l2": "Nous devons changer de plan, il va y avoir un orage.",
+      "tokens_l1": [
+        "Musíme",
+        "meniť",
+        "plán,",
+        "bude",
+        "búrka.",
+        "Plánujeme",
+        "výlet,",
+        "ale",
+        "počasie",
+        "nie",
+        "je",
+        "isté."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "devons",
+        "changer",
+        "de",
+        "plan,",
+        "il",
+        "va",
+        "y",
+        "avoir",
+        "un",
+        "orage.",
+        "Nous",
+        "planifions",
+        "une",
+        "excursion,",
+        "mais",
+        "le",
+        "temps",
+        "n'est",
+        "pas",
+        "sûr."
+      ]
+    },
+    {
+      "id": "order-demain-il-fera-froid-tu-dois-porter-un-manteau",
+      "type": "order",
+      "l1": "Zajtra bude zima, musíš nosiť kabát.",
+      "l2": "Demain il fera froid, tu dois porter un manteau.",
+      "tokens_l1": [
+        "Zajtra",
+        "bude",
+        "zima,",
+        "musíš",
+        "nosiť",
+        "kabát.",
+        "Nemám",
+        "istotu,",
+        "ale",
+        "asi",
+        "bude",
+        "pekne."
+      ],
+      "tokens_l2": [
+        "Demain",
+        "il",
+        "fera",
+        "froid,",
+        "tu",
+        "dois",
+        "porter",
+        "un",
+        "manteau.",
+        "Je",
+        "n'en",
+        "suis",
+        "pas",
+        "sûr,",
+        "mais",
+        "il",
+        "fera",
+        "sans",
+        "doute",
+        "beau."
+      ]
+    },
+    {
+      "id": "order-s-il-fait-chaud-je-ne-porterai-pas-de-pull",
+      "type": "order",
+      "l1": "Ak bude teplo, nebudem nosiť sveter.",
+      "l2": "S'il fait chaud, je ne porterai pas de pull.",
+      "tokens_l1": [
+        "Ak",
+        "bude",
+        "teplo,",
+        "nebudem",
+        "nosiť",
+        "sveter.",
+        "Ak",
+        "bude",
+        "pršať,",
+        "zostaneme",
+        "doma."
+      ],
+      "tokens_l2": [
+        "S'il",
+        "fait",
+        "chaud,",
+        "je",
+        "ne",
+        "porterai",
+        "pas",
+        "de",
+        "pull.",
+        "S'il",
+        "pleut,",
+        "nous",
+        "resterons",
+        "à",
+        "la",
+        "maison."
+      ]
+    },
+    {
+      "id": "order-en-automne-les-pr-visions-sont-souvent-pluvieuses",
+      "type": "order",
+      "l1": "Na jeseň je predpoveď často daždivá.",
+      "l2": "En automne les prévisions sont souvent pluvieuses.",
+      "tokens_l1": [
+        "Na",
+        "jeseň",
+        "je",
+        "predpoveď",
+        "často",
+        "daždivá.",
+        "Turistika",
+        "je",
+        "krásna,",
+        "ak",
+        "je",
+        "slnečno."
+      ],
+      "tokens_l2": [
+        "En",
+        "automne",
+        "les",
+        "prévisions",
+        "sont",
+        "souvent",
+        "pluvieuses.",
+        "La",
+        "randonnée",
+        "est",
+        "magnifique,",
+        "s'il",
+        "fait",
+        "beau."
+      ]
+    },
+    {
+      "id": "order-nous-resterons-l-int-rieur-dehors-il-pleut",
+      "type": "order",
+      "l1": "Zostaneme vnútri, vonku prší.",
+      "l2": "Nous resterons à l'intérieur, dehors il pleut.",
+      "tokens_l1": [
+        "Zostaneme",
+        "vnútri,",
+        "vonku",
+        "prší.",
+        "Nemám",
+        "istotu,",
+        "ale",
+        "asi",
+        "bude",
+        "pekne."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "resterons",
+        "à",
+        "l'intérieur,",
+        "dehors",
+        "il",
+        "pleut.",
+        "Je",
+        "n'en",
+        "suis",
+        "pas",
+        "sûr,",
+        "mais",
+        "il",
+        "fera",
+        "sans",
+        "doute",
+        "beau."
+      ]
+    },
+    {
+      "id": "order-nous-planifions-une-excursion-mais-le-temps-n-est-pas-s-r",
+      "type": "order",
+      "l1": "Plánujeme výlet, ale počasie nie je isté.",
+      "l2": "Nous planifions une excursion, mais le temps n'est pas sûr.",
+      "tokens_l1": [
+        "Plánujeme",
+        "výlet,",
+        "ale",
+        "počasie",
+        "nie",
+        "je",
+        "isté.",
+        "Je",
+        "upozornenie",
+        "na",
+        "búrku."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "planifions",
+        "une",
+        "excursion,",
+        "mais",
+        "le",
+        "temps",
+        "n'est",
+        "pas",
+        "sûr.",
+        "Il",
+        "y",
+        "a",
+        "une",
+        "alerte",
+        "orage."
+      ]
+    },
+    {
+      "id": "order-il-y-a-une-alerte-orage",
+      "type": "order",
+      "l1": "Je upozornenie na búrku.",
+      "l2": "Il y a une alerte orage.",
+      "tokens_l1": [
+        "Je",
+        "upozornenie",
+        "na",
+        "búrku.",
+        "Zostaneme",
+        "vnútri,",
+        "vonku",
+        "prší."
+      ],
+      "tokens_l2": [
+        "Il",
+        "y",
+        "a",
+        "une",
+        "alerte",
+        "orage.",
+        "Nous",
+        "resterons",
+        "à",
+        "l'intérieur,",
+        "dehors",
+        "il",
+        "pleut."
+      ]
+    },
+    {
+      "id": "order-la-randonn-e-est-magnifique-s-il-fait-beau",
+      "type": "order",
+      "l1": "Turistika je krásna, ak je slnečno.",
+      "l2": "La randonnée est magnifique, s'il fait beau.",
+      "tokens_l1": [
+        "Turistika",
+        "je",
+        "krásna,",
+        "ak",
+        "je",
+        "slnečno.",
+        "Plánujeme",
+        "výlet,",
+        "ale",
+        "počasie",
+        "nie",
+        "je",
+        "isté."
+      ],
+      "tokens_l2": [
+        "La",
+        "randonnée",
+        "est",
+        "magnifique,",
+        "s'il",
+        "fait",
+        "beau.",
+        "Nous",
+        "planifions",
+        "une",
+        "excursion,",
+        "mais",
+        "le",
+        "temps",
+        "n'est",
+        "pas",
+        "sûr."
+      ]
+    },
+    {
+      "id": "order-je-n-en-suis-pas-s-r-mais-il-fera-sans-doute-beau",
+      "type": "order",
+      "l1": "Nemám istotu, ale asi bude pekne.",
+      "l2": "Je n'en suis pas sûr, mais il fera sans doute beau.",
+      "tokens_l1": [
+        "Nemám",
+        "istotu,",
+        "ale",
+        "asi",
+        "bude",
+        "pekne.",
+        "Zostaneme",
+        "vnútri,",
+        "vonku",
+        "prší."
+      ],
+      "tokens_l2": [
+        "Je",
+        "n'en",
+        "suis",
+        "pas",
+        "sûr,",
+        "mais",
+        "il",
+        "fera",
+        "sans",
+        "doute",
+        "beau.",
+        "Nous",
+        "resterons",
+        "à",
+        "l'intérieur,",
+        "dehors",
+        "il",
+        "pleut."
+      ]
+    }
+  ]
+}

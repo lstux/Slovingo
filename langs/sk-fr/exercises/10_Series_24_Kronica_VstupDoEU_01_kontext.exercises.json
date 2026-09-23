@@ -1,0 +1,952 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-eur-pska-nia",
+      "type": "qcm",
+      "l1": "l'Union européenne",
+      "l2": "Európska únia",
+      "choices_l1": [
+        "le citoyen",
+        "l'étranger",
+        "l'entrée, l'adhésion"
+      ],
+      "choices_l2": [
+        "príležitosť",
+        "pracovný trh",
+        "povolenie"
+      ]
+    },
+    {
+      "id": "qcm-vstup",
+      "type": "qcm",
+      "l1": "l'entrée, l'adhésion",
+      "l2": "vstup",
+      "choices_l1": [
+        "l'opportunité",
+        "l'Union européenne",
+        "le passeport"
+      ],
+      "choices_l2": [
+        "koruna",
+        "štandard",
+        "Európska únia"
+      ]
+    },
+    {
+      "id": "qcm-pas",
+      "type": "qcm",
+      "l1": "le passeport",
+      "l2": "pas",
+      "choices_l1": [
+        "le citoyen",
+        "l'entrée, l'adhésion",
+        "l'opportunité"
+      ],
+      "choices_l2": [
+        "koruna",
+        "povolenie",
+        "pracovný trh"
+      ]
+    },
+    {
+      "id": "qcm-hranica",
+      "type": "qcm",
+      "l1": "la frontière",
+      "l2": "hranica",
+      "choices_l1": [
+        "l'entrée, l'adhésion",
+        "l'opportunité",
+        "l'étranger"
+      ],
+      "choices_l2": [
+        "pracovný trh",
+        "príležitosť",
+        "pas"
+      ]
+    },
+    {
+      "id": "qcm-pracovn-trh",
+      "type": "qcm",
+      "l1": "le marché du travail",
+      "l2": "pracovný trh",
+      "choices_l1": [
+        "l'autorisation, le permis",
+        "la couronne (ancienne monnaie)",
+        "la norme, le standard"
+      ],
+      "choices_l2": [
+        "pas",
+        "Európska únia",
+        "koruna"
+      ]
+    },
+    {
+      "id": "qcm-povolenie",
+      "type": "qcm",
+      "l1": "l'autorisation, le permis",
+      "l2": "povolenie",
+      "choices_l1": [
+        "le marché du travail",
+        "la couronne (ancienne monnaie)",
+        "la norme, le standard"
+      ],
+      "choices_l2": [
+        "príležitosť",
+        "občan",
+        "pracovný trh"
+      ]
+    },
+    {
+      "id": "qcm-euro",
+      "type": "qcm",
+      "l1": "l'euro",
+      "l2": "euro",
+      "choices_l1": [
+        "le citoyen",
+        "l'entrée, l'adhésion",
+        "le passeport"
+      ],
+      "choices_l2": [
+        "štandard",
+        "Európska únia",
+        "pas"
+      ]
+    },
+    {
+      "id": "qcm-koruna",
+      "type": "qcm",
+      "l1": "la couronne (ancienne monnaie)",
+      "l2": "koruna",
+      "choices_l1": [
+        "le marché du travail",
+        "l'autorisation, le permis",
+        "la norme, le standard"
+      ],
+      "choices_l2": [
+        "vstup",
+        "občan",
+        "pas"
+      ]
+    },
+    {
+      "id": "qcm-pr-le-itos",
+      "type": "qcm",
+      "l1": "l'opportunité",
+      "l2": "príležitosť",
+      "choices_l1": [
+        "l'étranger",
+        "l'Union européenne",
+        "le citoyen"
+      ],
+      "choices_l2": [
+        "pracovný trh",
+        "povolenie",
+        "vstup"
+      ]
+    },
+    {
+      "id": "qcm-zahrani-ie",
+      "type": "qcm",
+      "l1": "l'étranger",
+      "l2": "zahraničie",
+      "choices_l1": [
+        "l'opportunité",
+        "le citoyen",
+        "le passeport"
+      ],
+      "choices_l2": [
+        "pracovný trh",
+        "Európska únia",
+        "príležitosť"
+      ]
+    },
+    {
+      "id": "qcm-tandard",
+      "type": "qcm",
+      "l1": "la norme, le standard",
+      "l2": "štandard",
+      "choices_l1": [
+        "le marché du travail",
+        "l'autorisation, le permis",
+        "la couronne (ancienne monnaie)"
+      ],
+      "choices_l2": [
+        "pracovný trh",
+        "Európska únia",
+        "povolenie"
+      ]
+    },
+    {
+      "id": "qcm-ob-an",
+      "type": "qcm",
+      "l1": "le citoyen",
+      "l2": "občan",
+      "choices_l1": [
+        "l'étranger",
+        "l'opportunité",
+        "le passeport"
+      ],
+      "choices_l2": [
+        "vstup",
+        "povolenie",
+        "pracovný trh"
+      ]
+    },
+    {
+      "id": "blank-andrea-tento-pas-vyzer-inak-ako-ten-o-m-te-teraz-je-star",
+      "type": "fill-blank",
+      "l1": "Andrea, ce passeport a l'air différent de celui que vous avez maintenant. Il est plus ancien ?",
+      "l2": "Andrea, tento pas vyzerá inak ako ten, čo máte teraz. Je starší?",
+      "missing_l1": "est",
+      "missing_l2": "Je",
+      "blank_index_l1": 13,
+      "blank_index_l2": 10,
+      "choices_l1": [
+        "c'était",
+        "était",
+        "sommes"
+      ],
+      "choices_l2": [
+        "budú",
+        "som",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-no-to-je-e-te-spred-vstupu-do-eur-pskej-nie-mala-som-vtedy-tridsa-rokov",
+      "type": "fill-blank",
+      "l1": "Oui, c'est encore d'avant l'entrée dans l'Union européenne. J'avais trente ans à l'époque.",
+      "l2": "Áno, to je ešte spred vstupu do Európskej únie. Mala som vtedy tridsať rokov.",
+      "missing_l1": "à",
+      "missing_l2": "je",
+      "blank_index_l1": 11,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "chez",
+        "sans",
+        "de"
+      ],
+      "choices_l2": [
+        "boli",
+        "budem",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-to-bolo-v-roku-dvetis-c-tyri-v-ak",
+      "type": "fill-blank",
+      "l1": "C'était en 2004, non ?",
+      "l2": "To bolo v roku dvetisícštyri, však?",
+      "missing_l1": "en",
+      "missing_l2": "v",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "se",
+        "y",
+        "me"
+      ],
+      "choices_l2": [
+        "medzi",
+        "pred",
+        "od"
+      ]
+    },
+    {
+      "id": "blank-presne-tak-prv-ho-m-ja-pam-t-m-si-ten-de-ve-mi-dobre",
+      "type": "fill-blank",
+      "l1": "Exactement. Le 1er mai. Je me souviens très bien de ce jour-là.",
+      "l2": "Presne tak. Prvého mája. Pamätám si ten deň veľmi dobre.",
+      "missing_l1": "Le",
+      "missing_l2": "si",
+      "blank_index_l1": 1,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "Les",
+        "2004",
+        "mai"
+      ],
+      "choices_l2": [
+        "bol",
+        "budú",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-v-t-ch-rokoch-sa-ve-a-hovorilo-o-pr-le-itostiach-v-zahrani",
+      "type": "fill-blank",
+      "l1": "Dans ces années-là, on parlait beaucoup des opportunités à l'étranger.",
+      "l2": "V tých rokoch sa veľa hovorilo o príležitostiach v zahraničí.",
+      "missing_l1": "à",
+      "missing_l2": "v",
+      "blank_index_l1": 8,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "loin",
+        "par",
+        "sur"
+      ],
+      "choices_l2": [
+        "po",
+        "pri",
+        "z"
+      ]
+    },
+    {
+      "id": "blank-bola-to-hlavne-ekonomick-n-dej-alebo-aj-nie-o-in",
+      "type": "fill-blank",
+      "l1": "C'était surtout un espoir économique, ou aussi autre chose ?",
+      "l2": "Bola to hlavne ekonomická nádej, alebo aj niečo iné?",
+      "missing_l1": "un",
+      "missing_l2": "to",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "mai",
+        "une",
+        "2004"
+      ],
+      "choices_l2": [
+        "tá",
+        "Toto",
+        "My"
+      ]
+    },
+    {
+      "id": "blank-obidve-veci-peniaze-ale-aj-pocit-e-kone-ne-patr-me-k-eur-pe",
+      "type": "fill-blank",
+      "l1": "Les deux choses. L'argent, mais aussi le sentiment qu'on appartenait enfin à l'Europe.",
+      "l2": "Obidve veci. Peniaze, ale aj pocit, že konečne patríme k Európe.",
+      "missing_l1": "le",
+      "missing_l2": "ale",
+      "blank_index_l1": 6,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "2004",
+        "la",
+        "mai"
+      ],
+      "choices_l2": [
+        "a",
+        "alebo",
+        "však"
+      ]
+    },
+    {
+      "id": "blank-ale-nebolo-to-hne-jednoduch-nie-v-etky-krajiny-hne-otvorili-svoj-pracovn-trh",
+      "type": "fill-blank",
+      "l1": "Mais ce n'était pas simple tout de suite. Tous les pays n'ont pas immédiatement ouvert leur marché du travail.",
+      "l2": "Ale nebolo to hneď jednoduché. Nie všetky krajiny hneď otvorili svoj pracovný trh.",
+      "missing_l1": "de",
+      "missing_l2": "to",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "chez",
+        "dans",
+        "loin"
+      ],
+      "choices_l2": [
+        "vy",
+        "Toto",
+        "My"
+      ]
+    },
+    {
+      "id": "listen-andrea-tento-pas-vyzer-inak-ako-ten-o-m-te-teraz-je-star",
+      "type": "listen",
+      "l1": "Andrea, ce passeport a l'air différent de celui que vous avez maintenant. Il est plus ancien ?",
+      "l2": "Andrea, tento pas vyzerá inak ako ten, čo máte teraz. Je starší?",
+      "choices_l1": [
+        "Mais ce n'était pas simple tout de suite. Tous les pays n'ont pas immédiatement ouvert leur marché du travail.",
+        "C'était en 2004, non ?",
+        "Dans ces années-là, on parlait beaucoup des opportunités à l'étranger."
+      ],
+      "choices_l2": [
+        "Bola to hlavne ekonomická nádej, alebo aj niečo iné?",
+        "Ale nebolo to hneď jednoduché. Nie všetky krajiny hneď otvorili svoj pracovný trh.",
+        "Presne tak. Prvého mája. Pamätám si ten deň veľmi dobre."
+      ]
+    },
+    {
+      "id": "listen-no-to-je-e-te-spred-vstupu-do-eur-pskej-nie-mala-som-vtedy-tridsa-rokov",
+      "type": "listen",
+      "l1": "Oui, c'est encore d'avant l'entrée dans l'Union européenne. J'avais trente ans à l'époque.",
+      "l2": "Áno, to je ešte spred vstupu do Európskej únie. Mala som vtedy tridsať rokov.",
+      "choices_l1": [
+        "Dans ces années-là, on parlait beaucoup des opportunités à l'étranger.",
+        "Mais ce n'était pas simple tout de suite. Tous les pays n'ont pas immédiatement ouvert leur marché du travail.",
+        "Andrea, ce passeport a l'air différent de celui que vous avez maintenant. Il est plus ancien ?"
+      ],
+      "choices_l2": [
+        "To bolo v roku dvetisícštyri, však?",
+        "Ale nebolo to hneď jednoduché. Nie všetky krajiny hneď otvorili svoj pracovný trh.",
+        "V tých rokoch sa veľa hovorilo o príležitostiach v zahraničí."
+      ]
+    },
+    {
+      "id": "listen-to-bolo-v-roku-dvetis-c-tyri-v-ak",
+      "type": "listen",
+      "l1": "C'était en 2004, non ?",
+      "l2": "To bolo v roku dvetisícštyri, však?",
+      "choices_l1": [
+        "Oui, c'est encore d'avant l'entrée dans l'Union européenne. J'avais trente ans à l'époque.",
+        "C'était surtout un espoir économique, ou aussi autre chose ?",
+        "Dans ces années-là, on parlait beaucoup des opportunités à l'étranger."
+      ],
+      "choices_l2": [
+        "Andrea, tento pas vyzerá inak ako ten, čo máte teraz. Je starší?",
+        "V tých rokoch sa veľa hovorilo o príležitostiach v zahraničí.",
+        "Obidve veci. Peniaze, ale aj pocit, že konečne patríme k Európe."
+      ]
+    },
+    {
+      "id": "listen-presne-tak-prv-ho-m-ja-pam-t-m-si-ten-de-ve-mi-dobre",
+      "type": "listen",
+      "l1": "Exactement. Le 1er mai. Je me souviens très bien de ce jour-là.",
+      "l2": "Presne tak. Prvého mája. Pamätám si ten deň veľmi dobre.",
+      "choices_l1": [
+        "Dans ces années-là, on parlait beaucoup des opportunités à l'étranger.",
+        "Mais ce n'était pas simple tout de suite. Tous les pays n'ont pas immédiatement ouvert leur marché du travail.",
+        "Andrea, ce passeport a l'air différent de celui que vous avez maintenant. Il est plus ancien ?"
+      ],
+      "choices_l2": [
+        "V tých rokoch sa veľa hovorilo o príležitostiach v zahraničí.",
+        "Andrea, tento pas vyzerá inak ako ten, čo máte teraz. Je starší?",
+        "Bola to hlavne ekonomická nádej, alebo aj niečo iné?"
+      ]
+    },
+    {
+      "id": "listen-v-t-ch-rokoch-sa-ve-a-hovorilo-o-pr-le-itostiach-v-zahrani",
+      "type": "listen",
+      "l1": "Dans ces années-là, on parlait beaucoup des opportunités à l'étranger.",
+      "l2": "V tých rokoch sa veľa hovorilo o príležitostiach v zahraničí.",
+      "choices_l1": [
+        "Les deux choses. L'argent, mais aussi le sentiment qu'on appartenait enfin à l'Europe.",
+        "Exactement. Le 1er mai. Je me souviens très bien de ce jour-là.",
+        "Oui, c'est encore d'avant l'entrée dans l'Union européenne. J'avais trente ans à l'époque."
+      ],
+      "choices_l2": [
+        "Ale nebolo to hneď jednoduché. Nie všetky krajiny hneď otvorili svoj pracovný trh.",
+        "Bola to hlavne ekonomická nádej, alebo aj niečo iné?",
+        "Obidve veci. Peniaze, ale aj pocit, že konečne patríme k Európe."
+      ]
+    },
+    {
+      "id": "listen-bola-to-hlavne-ekonomick-n-dej-alebo-aj-nie-o-in",
+      "type": "listen",
+      "l1": "C'était surtout un espoir économique, ou aussi autre chose ?",
+      "l2": "Bola to hlavne ekonomická nádej, alebo aj niečo iné?",
+      "choices_l1": [
+        "Exactement. Le 1er mai. Je me souviens très bien de ce jour-là.",
+        "Les deux choses. L'argent, mais aussi le sentiment qu'on appartenait enfin à l'Europe.",
+        "Dans ces années-là, on parlait beaucoup des opportunités à l'étranger."
+      ],
+      "choices_l2": [
+        "Áno, to je ešte spred vstupu do Európskej únie. Mala som vtedy tridsať rokov.",
+        "V tých rokoch sa veľa hovorilo o príležitostiach v zahraničí.",
+        "Obidve veci. Peniaze, ale aj pocit, že konečne patríme k Európe."
+      ]
+    },
+    {
+      "id": "listen-obidve-veci-peniaze-ale-aj-pocit-e-kone-ne-patr-me-k-eur-pe",
+      "type": "listen",
+      "l1": "Les deux choses. L'argent, mais aussi le sentiment qu'on appartenait enfin à l'Europe.",
+      "l2": "Obidve veci. Peniaze, ale aj pocit, že konečne patríme k Európe.",
+      "choices_l1": [
+        "Mais ce n'était pas simple tout de suite. Tous les pays n'ont pas immédiatement ouvert leur marché du travail.",
+        "C'était surtout un espoir économique, ou aussi autre chose ?",
+        "Exactement. Le 1er mai. Je me souviens très bien de ce jour-là."
+      ],
+      "choices_l2": [
+        "V tých rokoch sa veľa hovorilo o príležitostiach v zahraničí.",
+        "Bola to hlavne ekonomická nádej, alebo aj niečo iné?",
+        "Áno, to je ešte spred vstupu do Európskej únie. Mala som vtedy tridsať rokov."
+      ]
+    },
+    {
+      "id": "listen-ale-nebolo-to-hne-jednoduch-nie-v-etky-krajiny-hne-otvorili-svoj-pracovn-trh",
+      "type": "listen",
+      "l1": "Mais ce n'était pas simple tout de suite. Tous les pays n'ont pas immédiatement ouvert leur marché du travail.",
+      "l2": "Ale nebolo to hneď jednoduché. Nie všetky krajiny hneď otvorili svoj pracovný trh.",
+      "choices_l1": [
+        "Les deux choses. L'argent, mais aussi le sentiment qu'on appartenait enfin à l'Europe.",
+        "C'était en 2004, non ?",
+        "Dans ces années-là, on parlait beaucoup des opportunités à l'étranger."
+      ],
+      "choices_l2": [
+        "Andrea, tento pas vyzerá inak ako ten, čo máte teraz. Je starší?",
+        "Presne tak. Prvého mája. Pamätám si ten deň veľmi dobre.",
+        "V tých rokoch sa veľa hovorilo o príležitostiach v zahraničí."
+      ]
+    },
+    {
+      "id": "order-andrea-tento-pas-vyzer-inak-ako-ten-o-m-te-teraz-je-star",
+      "type": "order",
+      "l1": "Andrea, ce passeport a l'air différent de celui que vous avez maintenant. Il est plus ancien ?",
+      "l2": "Andrea, tento pas vyzerá inak ako ten, čo máte teraz. Je starší?",
+      "tokens_l1": [
+        "Andrea,",
+        "ce",
+        "passeport",
+        "a",
+        "l'air",
+        "différent",
+        "de",
+        "celui",
+        "que",
+        "vous",
+        "avez",
+        "maintenant.",
+        "Il",
+        "est",
+        "plus",
+        "ancien",
+        "?",
+        "Oui,",
+        "c'est",
+        "encore",
+        "d'avant",
+        "l'entrée",
+        "dans",
+        "l'Union",
+        "européenne.",
+        "J'avais",
+        "trente",
+        "ans",
+        "à",
+        "l'époque."
+      ],
+      "tokens_l2": [
+        "Andrea,",
+        "tento",
+        "pas",
+        "vyzerá",
+        "inak",
+        "ako",
+        "ten,",
+        "čo",
+        "máte",
+        "teraz.",
+        "Je",
+        "starší?",
+        "Áno,",
+        "to",
+        "je",
+        "ešte",
+        "spred",
+        "vstupu",
+        "do",
+        "Európskej",
+        "únie.",
+        "Mala",
+        "som",
+        "vtedy",
+        "tridsať",
+        "rokov."
+      ]
+    },
+    {
+      "id": "order-no-to-je-e-te-spred-vstupu-do-eur-pskej-nie-mala-som-vtedy-tridsa-rokov",
+      "type": "order",
+      "l1": "Oui, c'est encore d'avant l'entrée dans l'Union européenne. J'avais trente ans à l'époque.",
+      "l2": "Áno, to je ešte spred vstupu do Európskej únie. Mala som vtedy tridsať rokov.",
+      "tokens_l1": [
+        "Oui,",
+        "c'est",
+        "encore",
+        "d'avant",
+        "l'entrée",
+        "dans",
+        "l'Union",
+        "européenne.",
+        "J'avais",
+        "trente",
+        "ans",
+        "à",
+        "l'époque.",
+        "Dans",
+        "ces",
+        "années-là,",
+        "on",
+        "parlait",
+        "beaucoup",
+        "des",
+        "opportunités",
+        "à",
+        "l'étranger."
+      ],
+      "tokens_l2": [
+        "Áno,",
+        "to",
+        "je",
+        "ešte",
+        "spred",
+        "vstupu",
+        "do",
+        "Európskej",
+        "únie.",
+        "Mala",
+        "som",
+        "vtedy",
+        "tridsať",
+        "rokov.",
+        "V",
+        "tých",
+        "rokoch",
+        "sa",
+        "veľa",
+        "hovorilo",
+        "o",
+        "príležitostiach",
+        "v",
+        "zahraničí."
+      ]
+    },
+    {
+      "id": "order-to-bolo-v-roku-dvetis-c-tyri-v-ak",
+      "type": "order",
+      "l1": "C'était en 2004, non ?",
+      "l2": "To bolo v roku dvetisícštyri, však?",
+      "tokens_l1": [
+        "C'était",
+        "en",
+        "2004,",
+        "non",
+        "?",
+        "C'était",
+        "surtout",
+        "un",
+        "espoir",
+        "économique,",
+        "ou",
+        "aussi",
+        "autre",
+        "chose",
+        "?"
+      ],
+      "tokens_l2": [
+        "To",
+        "bolo",
+        "v",
+        "roku",
+        "dvetisícštyri,",
+        "však?",
+        "Bola",
+        "to",
+        "hlavne",
+        "ekonomická",
+        "nádej,",
+        "alebo",
+        "aj",
+        "niečo",
+        "iné?"
+      ]
+    },
+    {
+      "id": "order-presne-tak-prv-ho-m-ja-pam-t-m-si-ten-de-ve-mi-dobre",
+      "type": "order",
+      "l1": "Exactement. Le 1er mai. Je me souviens très bien de ce jour-là.",
+      "l2": "Presne tak. Prvého mája. Pamätám si ten deň veľmi dobre.",
+      "tokens_l1": [
+        "Exactement.",
+        "Le",
+        "1er",
+        "mai.",
+        "Je",
+        "me",
+        "souviens",
+        "très",
+        "bien",
+        "de",
+        "ce",
+        "jour-là.",
+        "Mais",
+        "ce",
+        "n'était",
+        "pas",
+        "simple",
+        "tout",
+        "de",
+        "suite.",
+        "Tous",
+        "les",
+        "pays",
+        "n'ont",
+        "pas",
+        "immédiatement",
+        "ouvert",
+        "leur",
+        "marché",
+        "du",
+        "travail."
+      ],
+      "tokens_l2": [
+        "Presne",
+        "tak.",
+        "Prvého",
+        "mája.",
+        "Pamätám",
+        "si",
+        "ten",
+        "deň",
+        "veľmi",
+        "dobre.",
+        "Ale",
+        "nebolo",
+        "to",
+        "hneď",
+        "jednoduché.",
+        "Nie",
+        "všetky",
+        "krajiny",
+        "hneď",
+        "otvorili",
+        "svoj",
+        "pracovný",
+        "trh."
+      ]
+    },
+    {
+      "id": "order-v-t-ch-rokoch-sa-ve-a-hovorilo-o-pr-le-itostiach-v-zahrani",
+      "type": "order",
+      "l1": "Dans ces années-là, on parlait beaucoup des opportunités à l'étranger.",
+      "l2": "V tých rokoch sa veľa hovorilo o príležitostiach v zahraničí.",
+      "tokens_l1": [
+        "Dans",
+        "ces",
+        "années-là,",
+        "on",
+        "parlait",
+        "beaucoup",
+        "des",
+        "opportunités",
+        "à",
+        "l'étranger.",
+        "Exactement.",
+        "Le",
+        "1er",
+        "mai.",
+        "Je",
+        "me",
+        "souviens",
+        "très",
+        "bien",
+        "de",
+        "ce",
+        "jour-là."
+      ],
+      "tokens_l2": [
+        "V",
+        "tých",
+        "rokoch",
+        "sa",
+        "veľa",
+        "hovorilo",
+        "o",
+        "príležitostiach",
+        "v",
+        "zahraničí.",
+        "Presne",
+        "tak.",
+        "Prvého",
+        "mája.",
+        "Pamätám",
+        "si",
+        "ten",
+        "deň",
+        "veľmi",
+        "dobre."
+      ]
+    },
+    {
+      "id": "order-bola-to-hlavne-ekonomick-n-dej-alebo-aj-nie-o-in",
+      "type": "order",
+      "l1": "C'était surtout un espoir économique, ou aussi autre chose ?",
+      "l2": "Bola to hlavne ekonomická nádej, alebo aj niečo iné?",
+      "tokens_l1": [
+        "C'était",
+        "surtout",
+        "un",
+        "espoir",
+        "économique,",
+        "ou",
+        "aussi",
+        "autre",
+        "chose",
+        "?",
+        "C'était",
+        "en",
+        "2004,",
+        "non",
+        "?"
+      ],
+      "tokens_l2": [
+        "Bola",
+        "to",
+        "hlavne",
+        "ekonomická",
+        "nádej,",
+        "alebo",
+        "aj",
+        "niečo",
+        "iné?",
+        "To",
+        "bolo",
+        "v",
+        "roku",
+        "dvetisícštyri,",
+        "však?"
+      ]
+    },
+    {
+      "id": "order-obidve-veci-peniaze-ale-aj-pocit-e-kone-ne-patr-me-k-eur-pe",
+      "type": "order",
+      "l1": "Les deux choses. L'argent, mais aussi le sentiment qu'on appartenait enfin à l'Europe.",
+      "l2": "Obidve veci. Peniaze, ale aj pocit, že konečne patríme k Európe.",
+      "tokens_l1": [
+        "Les",
+        "deux",
+        "choses.",
+        "L'argent,",
+        "mais",
+        "aussi",
+        "le",
+        "sentiment",
+        "qu'on",
+        "appartenait",
+        "enfin",
+        "à",
+        "l'Europe.",
+        "Exactement.",
+        "Le",
+        "1er",
+        "mai.",
+        "Je",
+        "me",
+        "souviens",
+        "très",
+        "bien",
+        "de",
+        "ce",
+        "jour-là."
+      ],
+      "tokens_l2": [
+        "Obidve",
+        "veci.",
+        "Peniaze,",
+        "ale",
+        "aj",
+        "pocit,",
+        "že",
+        "konečne",
+        "patríme",
+        "k",
+        "Európe.",
+        "Presne",
+        "tak.",
+        "Prvého",
+        "mája.",
+        "Pamätám",
+        "si",
+        "ten",
+        "deň",
+        "veľmi",
+        "dobre."
+      ]
+    },
+    {
+      "id": "order-ale-nebolo-to-hne-jednoduch-nie-v-etky-krajiny-hne-otvorili-svoj-pracovn-trh",
+      "type": "order",
+      "l1": "Mais ce n'était pas simple tout de suite. Tous les pays n'ont pas immédiatement ouvert leur marché du travail.",
+      "l2": "Ale nebolo to hneď jednoduché. Nie všetky krajiny hneď otvorili svoj pracovný trh.",
+      "tokens_l1": [
+        "Mais",
+        "ce",
+        "n'était",
+        "pas",
+        "simple",
+        "tout",
+        "de",
+        "suite.",
+        "Tous",
+        "les",
+        "pays",
+        "n'ont",
+        "pas",
+        "immédiatement",
+        "ouvert",
+        "leur",
+        "marché",
+        "du",
+        "travail.",
+        "C'était",
+        "surtout",
+        "un",
+        "espoir",
+        "économique,",
+        "ou",
+        "aussi",
+        "autre",
+        "chose",
+        "?"
+      ],
+      "tokens_l2": [
+        "Ale",
+        "nebolo",
+        "to",
+        "hneď",
+        "jednoduché.",
+        "Nie",
+        "všetky",
+        "krajiny",
+        "hneď",
+        "otvorili",
+        "svoj",
+        "pracovný",
+        "trh.",
+        "Bola",
+        "to",
+        "hlavne",
+        "ekonomická",
+        "nádej,",
+        "alebo",
+        "aj",
+        "niečo",
+        "iné?"
+      ]
+    },
+    {
+      "id": "match-eur-pska-nia-vocab",
+      "type": "match",
+      "l1": [
+        "l'Union européenne",
+        "l'entrée, l'adhésion",
+        "le passeport",
+        "la frontière"
+      ],
+      "l2": [
+        "Európska únia",
+        "vstup",
+        "pas",
+        "hranica"
+      ]
+    },
+    {
+      "id": "match-andrea-tento-pas-vyzer-inak-ako-ten-o-m-te-teraz-je-star-sentences",
+      "type": "match",
+      "l1": [
+        "Andrea, ce passeport a l'air différent de celui que vous avez maintenant. Il est plus ancien ?",
+        "Oui, c'est encore d'avant l'entrée dans l'Union européenne. J'avais trente ans à l'époque.",
+        "C'était en 2004, non ?",
+        "Exactement. Le 1er mai. Je me souviens très bien de ce jour-là."
+      ],
+      "l2": [
+        "Andrea, tento pas vyzerá inak ako ten, čo máte teraz. Je starší?",
+        "Áno, to je ešte spred vstupu do Európskej únie. Mala som vtedy tridsať rokov.",
+        "To bolo v roku dvetisícštyri, však?",
+        "Presne tak. Prvého mája. Pamätám si ten deň veľmi dobre."
+      ]
+    }
+  ]
+}

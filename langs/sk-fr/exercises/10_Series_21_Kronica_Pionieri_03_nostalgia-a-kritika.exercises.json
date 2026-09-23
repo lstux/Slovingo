@@ -1,0 +1,471 @@
+{
+  "exercises": [
+    {
+      "id": "blank-dnes-existuj-aj-in-t-bory-ale-plne-in-bez-politiky",
+      "type": "fill-blank",
+      "l1": "Aujourd'hui il existe aussi d'autres camps, mais complètement différents, sans politique.",
+      "l2": "Dnes existujú aj iné tábory, ale úplne iné, bez politiky.",
+      "missing_l1": "il",
+      "missing_l2": "ale",
+      "blank_index_l1": 1,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "Nous",
+        "On",
+        "vous"
+      ],
+      "choices_l2": [
+        "aj",
+        "však",
+        "a"
+      ]
+    },
+    {
+      "id": "blank-poslali-by-ste-tam-svoje-die-a-keby-ste-ho-mali",
+      "type": "fill-blank",
+      "l1": "Enverriez-vous votre enfant là-bas, si vous en aviez un ?",
+      "l2": "Poslali by ste tam svoje dieťa, keby ste ho mali?",
+      "missing_l1": "un",
+      "missing_l2": "ste",
+      "blank_index_l1": 8,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "mère",
+        "des",
+        "une"
+      ],
+      "choices_l2": [
+        "bol",
+        "som",
+        "si"
+      ]
+    },
+    {
+      "id": "blank-na-podobn-t-bor-no-pre-o-nie-ale-bez-tej-ideol-gie-samozrejme",
+      "type": "fill-blank",
+      "l1": "Dans un camp similaire, oui, pourquoi pas. Mais sans cette idéologie, bien sûr.",
+      "l2": "Na podobný tábor, áno, prečo nie. Ale bez tej ideológie, samozrejme.",
+      "missing_l1": "un",
+      "missing_l2": "Ale",
+      "blank_index_l1": 1,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "une",
+        "mère",
+        "des"
+      ],
+      "choices_l2": [
+        "lebo",
+        "aj",
+        "však"
+      ]
+    },
+    {
+      "id": "blank-s-mojou-mamou-o-tom-hovor-me-inak-ako-s-kamar-tkami-z-t-bora",
+      "type": "fill-blank",
+      "l1": "J'en parle différemment avec ma mère qu'avec mes copines de camp.",
+      "l2": "S mojou mamou o tom hovoríme inak ako s kamarátkami z tábora.",
+      "missing_l1": "de",
+      "missing_l2": "o",
+      "blank_index_l1": 9,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "près",
+        "sur",
+        "pour"
+      ],
+      "choices_l2": [
+        "po",
+        "od",
+        "za"
+      ]
+    },
+    {
+      "id": "blank-akujem-e-ste-mi-to-porozpr-vali-teraz-to-ch-pem-ove-a-lep-ie",
+      "type": "fill-blank",
+      "l1": "Merci de m'avoir raconté ça. Maintenant je comprends beaucoup mieux.",
+      "l2": "Ďakujem, že ste mi to porozprávali. Teraz to chápem oveľa lepšie.",
+      "missing_l1": "je",
+      "missing_l2": "to",
+      "blank_index_l1": 6,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "On",
+        "Ils",
+        "Tu"
+      ],
+      "choices_l2": [
+        "ten",
+        "My",
+        "vy"
+      ]
+    },
+    {
+      "id": "listen-dnes-existuj-aj-in-t-bory-ale-plne-in-bez-politiky",
+      "type": "listen",
+      "l1": "Aujourd'hui il existe aussi d'autres camps, mais complètement différents, sans politique.",
+      "l2": "Dnes existujú aj iné tábory, ale úplne iné, bez politiky.",
+      "choices_l1": [
+        "Merci de m'avoir raconté ça. Maintenant je comprends beaucoup mieux.",
+        "Enverriez-vous votre enfant là-bas, si vous en aviez un ?",
+        "J'en parle différemment avec ma mère qu'avec mes copines de camp."
+      ],
+      "choices_l2": [
+        "Na podobný tábor, áno, prečo nie. Ale bez tej ideológie, samozrejme.",
+        "Poslali by ste tam svoje dieťa, keby ste ho mali?",
+        "S mojou mamou o tom hovoríme inak ako s kamarátkami z tábora."
+      ]
+    },
+    {
+      "id": "listen-poslali-by-ste-tam-svoje-die-a-keby-ste-ho-mali",
+      "type": "listen",
+      "l1": "Enverriez-vous votre enfant là-bas, si vous en aviez un ?",
+      "l2": "Poslali by ste tam svoje dieťa, keby ste ho mali?",
+      "choices_l1": [
+        "Dans un camp similaire, oui, pourquoi pas. Mais sans cette idéologie, bien sûr.",
+        "J'en parle différemment avec ma mère qu'avec mes copines de camp.",
+        "Merci de m'avoir raconté ça. Maintenant je comprends beaucoup mieux."
+      ],
+      "choices_l2": [
+        "S mojou mamou o tom hovoríme inak ako s kamarátkami z tábora.",
+        "Dnes existujú aj iné tábory, ale úplne iné, bez politiky.",
+        "Ďakujem, že ste mi to porozprávali. Teraz to chápem oveľa lepšie."
+      ]
+    },
+    {
+      "id": "listen-na-podobn-t-bor-no-pre-o-nie-ale-bez-tej-ideol-gie-samozrejme",
+      "type": "listen",
+      "l1": "Dans un camp similaire, oui, pourquoi pas. Mais sans cette idéologie, bien sûr.",
+      "l2": "Na podobný tábor, áno, prečo nie. Ale bez tej ideológie, samozrejme.",
+      "choices_l1": [
+        "Aujourd'hui il existe aussi d'autres camps, mais complètement différents, sans politique.",
+        "J'en parle différemment avec ma mère qu'avec mes copines de camp.",
+        "Merci de m'avoir raconté ça. Maintenant je comprends beaucoup mieux."
+      ],
+      "choices_l2": [
+        "Poslali by ste tam svoje dieťa, keby ste ho mali?",
+        "Ďakujem, že ste mi to porozprávali. Teraz to chápem oveľa lepšie.",
+        "Dnes existujú aj iné tábory, ale úplne iné, bez politiky."
+      ]
+    },
+    {
+      "id": "listen-s-mojou-mamou-o-tom-hovor-me-inak-ako-s-kamar-tkami-z-t-bora",
+      "type": "listen",
+      "l1": "J'en parle différemment avec ma mère qu'avec mes copines de camp.",
+      "l2": "S mojou mamou o tom hovoríme inak ako s kamarátkami z tábora.",
+      "choices_l1": [
+        "Aujourd'hui il existe aussi d'autres camps, mais complètement différents, sans politique.",
+        "Merci de m'avoir raconté ça. Maintenant je comprends beaucoup mieux.",
+        "Enverriez-vous votre enfant là-bas, si vous en aviez un ?"
+      ],
+      "choices_l2": [
+        "Dnes existujú aj iné tábory, ale úplne iné, bez politiky.",
+        "Poslali by ste tam svoje dieťa, keby ste ho mali?",
+        "Na podobný tábor, áno, prečo nie. Ale bez tej ideológie, samozrejme."
+      ]
+    },
+    {
+      "id": "listen-akujem-e-ste-mi-to-porozpr-vali-teraz-to-ch-pem-ove-a-lep-ie",
+      "type": "listen",
+      "l1": "Merci de m'avoir raconté ça. Maintenant je comprends beaucoup mieux.",
+      "l2": "Ďakujem, že ste mi to porozprávali. Teraz to chápem oveľa lepšie.",
+      "choices_l1": [
+        "Enverriez-vous votre enfant là-bas, si vous en aviez un ?",
+        "J'en parle différemment avec ma mère qu'avec mes copines de camp.",
+        "Dans un camp similaire, oui, pourquoi pas. Mais sans cette idéologie, bien sûr."
+      ],
+      "choices_l2": [
+        "S mojou mamou o tom hovoríme inak ako s kamarátkami z tábora.",
+        "Na podobný tábor, áno, prečo nie. Ale bez tej ideológie, samozrejme.",
+        "Dnes existujú aj iné tábory, ale úplne iné, bez politiky."
+      ]
+    },
+    {
+      "id": "order-dnes-existuj-aj-in-t-bory-ale-plne-in-bez-politiky",
+      "type": "order",
+      "l1": "Aujourd'hui il existe aussi d'autres camps, mais complètement différents, sans politique.",
+      "l2": "Dnes existujú aj iné tábory, ale úplne iné, bez politiky.",
+      "tokens_l1": [
+        "Aujourd'hui",
+        "il",
+        "existe",
+        "aussi",
+        "d'autres",
+        "camps,",
+        "mais",
+        "complètement",
+        "différents,",
+        "sans",
+        "politique.",
+        "J'en",
+        "parle",
+        "différemment",
+        "avec",
+        "ma",
+        "mère",
+        "qu'avec",
+        "mes",
+        "copines",
+        "de",
+        "camp."
+      ],
+      "tokens_l2": [
+        "Dnes",
+        "existujú",
+        "aj",
+        "iné",
+        "tábory,",
+        "ale",
+        "úplne",
+        "iné,",
+        "bez",
+        "politiky.",
+        "S",
+        "mojou",
+        "mamou",
+        "o",
+        "tom",
+        "hovoríme",
+        "inak",
+        "ako",
+        "s",
+        "kamarátkami",
+        "z",
+        "tábora."
+      ]
+    },
+    {
+      "id": "order-poslali-by-ste-tam-svoje-die-a-keby-ste-ho-mali",
+      "type": "order",
+      "l1": "Enverriez-vous votre enfant là-bas, si vous en aviez un ?",
+      "l2": "Poslali by ste tam svoje dieťa, keby ste ho mali?",
+      "tokens_l1": [
+        "Enverriez-vous",
+        "votre",
+        "enfant",
+        "là-bas,",
+        "si",
+        "vous",
+        "en",
+        "aviez",
+        "un",
+        "?",
+        "Dans",
+        "un",
+        "camp",
+        "similaire,",
+        "oui,",
+        "pourquoi",
+        "pas.",
+        "Mais",
+        "sans",
+        "cette",
+        "idéologie,",
+        "bien",
+        "sûr."
+      ],
+      "tokens_l2": [
+        "Poslali",
+        "by",
+        "ste",
+        "tam",
+        "svoje",
+        "dieťa,",
+        "keby",
+        "ste",
+        "ho",
+        "mali?",
+        "Na",
+        "podobný",
+        "tábor,",
+        "áno,",
+        "prečo",
+        "nie.",
+        "Ale",
+        "bez",
+        "tej",
+        "ideológie,",
+        "samozrejme."
+      ]
+    },
+    {
+      "id": "order-na-podobn-t-bor-no-pre-o-nie-ale-bez-tej-ideol-gie-samozrejme",
+      "type": "order",
+      "l1": "Dans un camp similaire, oui, pourquoi pas. Mais sans cette idéologie, bien sûr.",
+      "l2": "Na podobný tábor, áno, prečo nie. Ale bez tej ideológie, samozrejme.",
+      "tokens_l1": [
+        "Dans",
+        "un",
+        "camp",
+        "similaire,",
+        "oui,",
+        "pourquoi",
+        "pas.",
+        "Mais",
+        "sans",
+        "cette",
+        "idéologie,",
+        "bien",
+        "sûr.",
+        "Aujourd'hui",
+        "il",
+        "existe",
+        "aussi",
+        "d'autres",
+        "camps,",
+        "mais",
+        "complètement",
+        "différents,",
+        "sans",
+        "politique."
+      ],
+      "tokens_l2": [
+        "Na",
+        "podobný",
+        "tábor,",
+        "áno,",
+        "prečo",
+        "nie.",
+        "Ale",
+        "bez",
+        "tej",
+        "ideológie,",
+        "samozrejme.",
+        "Dnes",
+        "existujú",
+        "aj",
+        "iné",
+        "tábory,",
+        "ale",
+        "úplne",
+        "iné,",
+        "bez",
+        "politiky."
+      ]
+    },
+    {
+      "id": "order-s-mojou-mamou-o-tom-hovor-me-inak-ako-s-kamar-tkami-z-t-bora",
+      "type": "order",
+      "l1": "J'en parle différemment avec ma mère qu'avec mes copines de camp.",
+      "l2": "S mojou mamou o tom hovoríme inak ako s kamarátkami z tábora.",
+      "tokens_l1": [
+        "J'en",
+        "parle",
+        "différemment",
+        "avec",
+        "ma",
+        "mère",
+        "qu'avec",
+        "mes",
+        "copines",
+        "de",
+        "camp.",
+        "Enverriez-vous",
+        "votre",
+        "enfant",
+        "là-bas,",
+        "si",
+        "vous",
+        "en",
+        "aviez",
+        "un",
+        "?"
+      ],
+      "tokens_l2": [
+        "S",
+        "mojou",
+        "mamou",
+        "o",
+        "tom",
+        "hovoríme",
+        "inak",
+        "ako",
+        "s",
+        "kamarátkami",
+        "z",
+        "tábora.",
+        "Poslali",
+        "by",
+        "ste",
+        "tam",
+        "svoje",
+        "dieťa,",
+        "keby",
+        "ste",
+        "ho",
+        "mali?"
+      ]
+    },
+    {
+      "id": "order-akujem-e-ste-mi-to-porozpr-vali-teraz-to-ch-pem-ove-a-lep-ie",
+      "type": "order",
+      "l1": "Merci de m'avoir raconté ça. Maintenant je comprends beaucoup mieux.",
+      "l2": "Ďakujem, že ste mi to porozprávali. Teraz to chápem oveľa lepšie.",
+      "tokens_l1": [
+        "Merci",
+        "de",
+        "m'avoir",
+        "raconté",
+        "ça.",
+        "Maintenant",
+        "je",
+        "comprends",
+        "beaucoup",
+        "mieux.",
+        "Dans",
+        "un",
+        "camp",
+        "similaire,",
+        "oui,",
+        "pourquoi",
+        "pas.",
+        "Mais",
+        "sans",
+        "cette",
+        "idéologie,",
+        "bien",
+        "sûr."
+      ],
+      "tokens_l2": [
+        "Ďakujem,",
+        "že",
+        "ste",
+        "mi",
+        "to",
+        "porozprávali.",
+        "Teraz",
+        "to",
+        "chápem",
+        "oveľa",
+        "lepšie.",
+        "Na",
+        "podobný",
+        "tábor,",
+        "áno,",
+        "prečo",
+        "nie.",
+        "Ale",
+        "bez",
+        "tej",
+        "ideológie,",
+        "samozrejme."
+      ]
+    },
+    {
+      "id": "match-dnes-existuj-aj-in-t-bory-ale-plne-in-bez-politiky-sentences",
+      "type": "match",
+      "l1": [
+        "Aujourd'hui il existe aussi d'autres camps, mais complètement différents, sans politique.",
+        "Enverriez-vous votre enfant là-bas, si vous en aviez un ?",
+        "Dans un camp similaire, oui, pourquoi pas. Mais sans cette idéologie, bien sûr.",
+        "J'en parle différemment avec ma mère qu'avec mes copines de camp."
+      ],
+      "l2": [
+        "Dnes existujú aj iné tábory, ale úplne iné, bez politiky.",
+        "Poslali by ste tam svoje dieťa, keby ste ho mali?",
+        "Na podobný tábor, áno, prečo nie. Ale bez tej ideológie, samozrejme.",
+        "S mojou mamou o tom hovoríme inak ako s kamarátkami z tábora."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1270 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-le-bus",
+      "type": "qcm",
+      "l1": "autobus",
+      "l2": "le bus",
+      "choices_l1": [
+        "bývať",
+        "piješ",
+        "stretnutie"
+      ],
+      "choices_l2": [
+        "nous buvons",
+        "rassasié",
+        "dimanche"
+      ]
+    },
+    {
+      "id": "qcm-le-tram",
+      "type": "qcm",
+      "l1": "električka",
+      "l2": "le tram",
+      "choices_l1": [
+        "rok",
+        "peniaze",
+        "karta"
+      ],
+      "choices_l2": [
+        "le fils",
+        "l'assiette",
+        "à l'heure"
+      ]
+    },
+    {
+      "id": "qcm-le-train",
+      "type": "qcm",
+      "l1": "vlak",
+      "l2": "le train",
+      "choices_l1": [
+        "pot-au-feu",
+        "ty si",
+        "jeme"
+      ],
+      "choices_l2": [
+        "le réveil",
+        "le bureau",
+        "les enfants"
+      ]
+    },
+    {
+      "id": "qcm-l-arr-t",
+      "type": "qcm",
+      "l1": "zastávka",
+      "l2": "l'arrêt",
+      "choices_l1": [
+        "teplý",
+        "chce",
+        "nohavice"
+      ],
+      "choices_l2": [
+        "la soif",
+        "le savon",
+        "l'armoire"
+      ]
+    },
+    {
+      "id": "qcm-le-ticket",
+      "type": "qcm",
+      "l1": "cestovný lístok",
+      "l2": "le ticket",
+      "choices_l1": [
+        "tmavý",
+        "oddychovať",
+        "kuchyňa"
+      ],
+      "choices_l2": [
+        "l'enfant",
+        "les fruits",
+        "la caisse"
+      ]
+    },
+    {
+      "id": "qcm-d-habitude",
+      "type": "qcm",
+      "l1": "zvyčajne",
+      "l2": "d'habitude",
+      "choices_l1": [
+        "manžel",
+        "platiť",
+        "zatvárať"
+      ],
+      "choices_l2": [
+        "le mois",
+        "dimanche",
+        "cher"
+      ]
+    },
+    {
+      "id": "qcm-les-transports-en-commun",
+      "type": "qcm",
+      "l1": "MHD",
+      "l2": "les transports en commun",
+      "choices_l1": [
+        "spolu",
+        "málo",
+        "predavač"
+      ],
+      "choices_l2": [
+        "sur la place",
+        "chaud / chaude",
+        "cinq heures et quart (5:15)"
+      ]
+    },
+    {
+      "id": "qcm-je-vais-au-travail-teraz-jedenkr-t",
+      "type": "qcm",
+      "l1": "Idem do práce.",
+      "l2": "Je vais au travail. (teraz, jedenkrát)",
+      "choices_l1": [
+        "obývačka (v slovenčine ženský rod)",
+        "Aké je to?",
+        "trištvrte na šesť"
+      ],
+      "choices_l2": [
+        "il / elle a",
+        "le café au lait",
+        "Nous allons nous retrouver."
+      ]
+    },
+    {
+      "id": "qcm-d-habitude-je-vais-au-travail-en-bus-zvyk",
+      "type": "qcm",
+      "l1": "Chodím do práce autobusom.",
+      "l2": "D'habitude, je vais au travail en bus. (zvyk)",
+      "choices_l1": [
+        "voda je dobrá",
+        "To sú izby.",
+        "Nie je to dobré."
+      ],
+      "choices_l2": [
+        "le retraité / la retraitée",
+        "J'ai le livre. → Je l'ai.",
+        "le jus de fruits"
+      ]
+    },
+    {
+      "id": "qcm-en-bus",
+      "type": "qcm",
+      "l1": "autobusom",
+      "l2": "en bus",
+      "choices_l1": [
+        "jem",
+        "trh",
+        "hľadám"
+      ],
+      "choices_l2": [
+        "chercher",
+        "j'ai",
+        "C'est bon."
+      ]
+    },
+    {
+      "id": "qcm-en-tram",
+      "type": "qcm",
+      "l1": "električkou",
+      "l2": "en tram",
+      "choices_l1": [
+        "noc",
+        "ulica",
+        "zrkadlo"
+      ],
+      "choices_l2": [
+        "la bibliothèque",
+        "la tante",
+        "je vais"
+      ]
+    },
+    {
+      "id": "qcm-en-train",
+      "type": "qcm",
+      "l1": "vlakom",
+      "l2": "en train",
+      "choices_l1": [
+        "Nemám hlad.",
+        "voda",
+        "ešte"
+      ],
+      "choices_l2": [
+        "précisément",
+        "le pont",
+        "bon marché"
+      ]
+    },
+    {
+      "id": "qcm-pied",
+      "type": "qcm",
+      "l1": "pešo",
+      "l2": "à pied",
+      "choices_l1": [
+        "zelený",
+        "potraviny",
+        "raňajky"
+      ],
+      "choices_l2": [
+        "l'enfant",
+        "l'école",
+        "mardi"
+      ]
+    },
+    {
+      "id": "qcm-le-v-lo",
+      "type": "qcm",
+      "l1": "bicykel",
+      "l2": "le vélo",
+      "choices_l1": [
+        "drahota",
+        "variť",
+        "dvor"
+      ],
+      "choices_l2": [
+        "l'anniversaire",
+        "samedi",
+        "demain"
+      ]
+    },
+    {
+      "id": "qcm-la-voiture",
+      "type": "qcm",
+      "l1": "auto",
+      "l2": "la voiture",
+      "choices_l1": [
+        "v divadle",
+        "stretnutie",
+        "hodiny"
+      ],
+      "choices_l2": [
+        "cuisiner",
+        "j'habite",
+        "tu cherches"
+      ]
+    },
+    {
+      "id": "qcm-le-taxi",
+      "type": "qcm",
+      "l1": "taxík",
+      "l2": "le taxi",
+      "choices_l1": [
+        "peňaženka",
+        "umývať",
+        "ale"
+      ],
+      "choices_l2": [
+        "la pomme",
+        "nous achetons",
+        "aussi"
+      ]
+    },
+    {
+      "id": "qcm-le-billet",
+      "type": "qcm",
+      "l1": "lístok",
+      "l2": "le billet",
+      "choices_l1": [
+        "fontána",
+        "okno",
+        "bratranec"
+      ],
+      "choices_l2": [
+        "qui",
+        "la chemise",
+        "le bonnet"
+      ]
+    },
+    {
+      "id": "qcm-la-gare",
+      "type": "qcm",
+      "l1": "stanica",
+      "l2": "la gare",
+      "choices_l1": [
+        "neskoro",
+        "ryža",
+        "ty si"
+      ],
+      "choices_l2": [
+        "la caisse",
+        "tu es",
+        "cuisiner"
+      ]
+    },
+    {
+      "id": "qcm-la-direction",
+      "type": "qcm",
+      "l1": "smer",
+      "l2": "la direction",
+      "choices_l1": [
+        "pekáreň",
+        "byt",
+        "dom"
+      ],
+      "choices_l2": [
+        "l'hôpital",
+        "le mari",
+        "le centime"
+      ]
+    },
+    {
+      "id": "blank-d-habitude-je-vais-au-travail-en-bus",
+      "type": "fill-blank",
+      "l1": "Chodím do práce autobusom.",
+      "l2": "D'habitude, je vais au travail en bus.",
+      "missing_l1": "do",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "nemám",
+        "mi",
+        "otec"
+      ],
+      "choices_l2": [
+        "suis",
+        "plaît",
+        "est"
+      ]
+    },
+    {
+      "id": "blank-aujourd-hui-j-y-vais-pied",
+      "type": "fill-blank",
+      "l1": "Dnes idem pešo.",
+      "l2": "Aujourd'hui, j'y vais à pied.",
+      "missing_l1": "idem",
+      "missing_l2": "à",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "áno",
+        "je",
+        "v"
+      ],
+      "choices_l2": [
+        "est",
+        "sur",
+        "et"
+      ]
+    },
+    {
+      "id": "blank-o-est-l-arr-t",
+      "type": "fill-blank",
+      "l1": "Kde je zastávka?",
+      "l2": "Où est l'arrêt ?",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "sú",
+        "máte",
+        "som"
+      ],
+      "choices_l2": [
+        "le",
+        "ma",
+        "veux"
+      ]
+    },
+    {
+      "id": "blank-je-veux-un-ticket",
+      "type": "fill-blank",
+      "l1": "Chcem cestovný lístok.",
+      "l2": "Je veux un ticket.",
+      "missing_l1": "cestovný",
+      "missing_l2": "un",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "môj",
+        "ja",
+        "nie"
+      ],
+      "choices_l2": [
+        "s'il",
+        "je",
+        "enfants"
+      ]
+    },
+    {
+      "id": "blank-le-tram-part-cinq-heures",
+      "type": "fill-blank",
+      "l1": "Električka ide o piatej.",
+      "l2": "Le tram part à cinq heures.",
+      "missing_l1": "o",
+      "missing_l2": "à",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "sa",
+        "kde",
+        "som"
+      ],
+      "choices_l2": [
+        "une",
+        "vous",
+        "pas"
+      ]
+    },
+    {
+      "id": "blank-tu-prends-toujours-le-train",
+      "type": "fill-blank",
+      "l1": "Chodíš vždy vlakom?",
+      "l2": "Tu prends toujours le train ?",
+      "missing_l1": "vždy",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "sa",
+        "koľko",
+        "deti"
+      ],
+      "choices_l2": [
+        "cette",
+        "ma",
+        "je"
+      ]
+    },
+    {
+      "id": "blank-le-bus-a-dix-minutes-de-retard",
+      "type": "fill-blank",
+      "l1": "Autobus mešká desať minút.",
+      "l2": "Le bus a dix minutes de retard.",
+      "missing_l1": "desať",
+      "missing_l2": "de",
+      "blank_index_l1": 2,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "má",
+        "o",
+        "babka"
+      ],
+      "choices_l2": [
+        "sont",
+        "maison",
+        "n'ai"
+      ]
+    },
+    {
+      "id": "blank-les-transports-en-commun-sont-bons-lyon",
+      "type": "fill-blank",
+      "l1": "MHD je v Lyone dobrá.",
+      "l2": "Les transports en commun sont bons à Lyon.",
+      "missing_l1": "je",
+      "missing_l2": "à",
+      "blank_index_l1": 1,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "dnes",
+        "nemám",
+        "babka"
+      ],
+      "choices_l2": [
+        "la",
+        "me",
+        "vous"
+      ]
+    },
+    {
+      "id": "blank-je-vais-au-parc-tous-les-jours",
+      "type": "fill-blank",
+      "l1": "Chodím do parku každý deň.",
+      "l2": "Je vais au parc tous les jours.",
+      "missing_l1": "do",
+      "missing_l2": "les",
+      "blank_index_l1": 1,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "nemám",
+        "moja",
+        "o"
+      ],
+      "choices_l2": [
+        "un",
+        "la",
+        "sont"
+      ]
+    },
+    {
+      "id": "blank-je-vais-sur-la-place-tu-viens-avec-moi",
+      "type": "fill-blank",
+      "l1": "Idem na námestie. Ideš so mnou?",
+      "l2": "Je vais sur la place. Tu viens avec moi ?",
+      "missing_l1": "na",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "o",
+        "prídem",
+        "máte"
+      ],
+      "choices_l2": [
+        "le",
+        "cette",
+        "vais"
+      ]
+    },
+    {
+      "id": "blank-le-mus-e-est-ferm-d-habitude-on-y-va-le-samedi",
+      "type": "fill-blank",
+      "l1": "Múzeum je zatvorené. Chodíme tam v sobotu.",
+      "l2": "Le musée est fermé. D'habitude, on y va le samedi.",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "ale",
+        "na",
+        "môj"
+      ],
+      "choices_l2": [
+        "de",
+        "je",
+        "dans"
+      ]
+    },
+    {
+      "id": "blank-je-vais-l-cole-pied",
+      "type": "fill-blank",
+      "l1": "Chodím do školy pešo.",
+      "l2": "Je vais à l'école à pied.",
+      "missing_l1": "do",
+      "missing_l2": "à",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "môj",
+        "býva",
+        "moja"
+      ],
+      "choices_l2": [
+        "nous",
+        "sur",
+        "vais"
+      ]
+    },
+    {
+      "id": "blank-j-ai-un-v-lo-mais-aujourd-hui-j-y-vais-en-voiture",
+      "type": "fill-blank",
+      "l1": "Mám bicykel, ale dnes idem autom.",
+      "l2": "J'ai un vélo, mais aujourd'hui j'y vais en voiture.",
+      "missing_l1": "ale",
+      "missing_l2": "un",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "nie",
+        "prídem",
+        "rokov"
+      ],
+      "choices_l2": [
+        "mon",
+        "une",
+        "c'est"
+      ]
+    },
+    {
+      "id": "blank-quelle-est-la-direction",
+      "type": "fill-blank",
+      "l1": "Aký je smer?",
+      "l2": "Quelle est la direction ?",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "kuchyni",
+        "ja",
+        "siedmej"
+      ],
+      "choices_l2": [
+        "les",
+        "il",
+        "du"
+      ]
+    },
+    {
+      "id": "blank-la-gare-est-loin-prends-le-tram",
+      "type": "fill-blank",
+      "l1": "Stanica je ďaleko, choď električkou.",
+      "l2": "La gare est loin, prends le tram.",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "sa",
+        "má",
+        "otec"
+      ],
+      "choices_l2": [
+        "est",
+        "pas",
+        "suis"
+      ]
+    },
+    {
+      "id": "listen-d-habitude-je-vais-au-travail-en-bus",
+      "type": "listen",
+      "l1": "Chodím do práce autobusom.",
+      "l2": "D'habitude, je vais au travail en bus.",
+      "choices_l2": [
+        "La lampe est sur la table.",
+        "Les toilettes sont dans le couloir.",
+        "La cave est petite et vieille."
+      ]
+    },
+    {
+      "id": "listen-aujourd-hui-j-y-vais-pied",
+      "type": "listen",
+      "l1": "Dnes idem pešo.",
+      "l2": "Aujourd'hui, j'y vais à pied.",
+      "choices_l2": [
+        "Je lis un livre dans le salon.",
+        "J'achète du pain à la boulangerie.",
+        "Ça me plaît."
+      ]
+    },
+    {
+      "id": "listen-o-est-l-arr-t",
+      "type": "listen",
+      "l1": "Kde je zastávka?",
+      "l2": "Où est l'arrêt ?",
+      "choices_l2": [
+        "C'est bon marché.",
+        "J'ouvre la fenêtre.",
+        "Les enfants sont dans la cour."
+      ]
+    },
+    {
+      "id": "listen-je-veux-un-ticket",
+      "type": "listen",
+      "l1": "Chcem cestovný lístok.",
+      "l2": "Je veux un ticket.",
+      "choices_l2": [
+        "Je veux ce tee-shirt jaune.",
+        "Le lundi, j'arrive tard. Aujourd'hui, j'arrive à l'heure.",
+        "Je veux acheter un tee-shirt."
+      ]
+    },
+    {
+      "id": "listen-le-tram-part-cinq-heures",
+      "type": "listen",
+      "l1": "Električka ide o piatej.",
+      "l2": "Le tram part à cinq heures.",
+      "choices_l2": [
+        "Ma sœur a deux ans.",
+        "Un moment, s'il te plaît.",
+        "Le lit est dans la chambre."
+      ]
+    },
+    {
+      "id": "listen-tu-prends-toujours-le-train",
+      "type": "listen",
+      "l1": "Chodíš vždy vlakom?",
+      "l2": "Tu prends toujours le train ?",
+      "choices_l2": [
+        "J'ai un fils et une fille.",
+        "J'ai trente ans.",
+        "Et vous, Eric ? Que faites-vous ?"
+      ]
+    },
+    {
+      "id": "listen-le-bus-a-dix-minutes-de-retard",
+      "type": "listen",
+      "l1": "Autobus mešká desať minút.",
+      "l2": "Le bus a dix minutes de retard.",
+      "choices_l2": [
+        "La vendeuse est très gentille.",
+        "Mercredi après-midi, j'ai le temps.",
+        "Je suis professeur. Je travaille dans une école."
+      ]
+    },
+    {
+      "id": "listen-les-transports-en-commun-sont-bons-lyon",
+      "type": "listen",
+      "l1": "MHD je v Lyone dobrá.",
+      "l2": "Les transports en commun sont bons à Lyon.",
+      "choices_l2": [
+        "Je veux une couleur claire, pas foncée.",
+        "Où sont mes lunettes ?",
+        "Le samedi, je ne me lève jamais tôt."
+      ]
+    },
+    {
+      "id": "listen-je-vais-au-parc-tous-les-jours",
+      "type": "listen",
+      "l1": "Chodím do parku každý deň.",
+      "l2": "Je vais au parc tous les jours.",
+      "choices_l2": [
+        "Je n'ai pas mon portefeuille. Il est à la maison.",
+        "Les toilettes sont dans le couloir.",
+        "Le pot-au-feu est chaud et salé."
+      ]
+    },
+    {
+      "id": "listen-je-vais-sur-la-place-tu-viens-avec-moi",
+      "type": "listen",
+      "l1": "Idem na námestie. Ideš so mnou?",
+      "l2": "Je vais sur la place. Tu viens avec moi ?",
+      "choices_l2": [
+        "Je lave l'assiette.",
+        "Notre balcon est petit, mais la cour est grande.",
+        "Les enfants boivent du lait au dîner."
+      ]
+    },
+    {
+      "id": "listen-le-mus-e-est-ferm-d-habitude-on-y-va-le-samedi",
+      "type": "listen",
+      "l1": "Múzeum je zatvorené. Chodíme tam v sobotu.",
+      "l2": "Le musée est fermé. D'habitude, on y va le samedi.",
+      "choices_l2": [
+        "Oui, où est la cabine ?",
+        "Où est le panier ?",
+        "La lampe est sur la table, mais le livre est sur l'étagère."
+      ]
+    },
+    {
+      "id": "listen-je-vais-l-cole-pied",
+      "type": "listen",
+      "l1": "Chodím do školy pešo.",
+      "l2": "Je vais à l'école à pied.",
+      "choices_l2": [
+        "J'arrive à huit heures moins le quart.",
+        "Mon frère habite tout près.",
+        "Combien coûtent les chaussures ?"
+      ]
+    },
+    {
+      "id": "listen-j-ai-un-v-lo-mais-aujourd-hui-j-y-vais-en-voiture",
+      "type": "listen",
+      "l1": "Mám bicykel, ale dnes idem autom.",
+      "l2": "J'ai un vélo, mais aujourd'hui j'y vais en voiture.",
+      "choices_l2": [
+        "J'ai deux enfants. Ils sont petits.",
+        "J'ai beaucoup de travail.",
+        "Les enfants ne mangent pas de ratatouille."
+      ]
+    },
+    {
+      "id": "listen-je-vais-appeler-un-taxi",
+      "type": "listen",
+      "l1": "Zavolám taxík.",
+      "l2": "Je vais appeler un taxi.",
+      "choices_l2": [
+        "Nous cherchons les clés. Nous les cherchons depuis une heure !",
+        "J'attends déjà depuis vingt minutes.",
+        "Où sont mes lunettes ?"
+      ]
+    },
+    {
+      "id": "listen-quelle-est-la-direction",
+      "type": "listen",
+      "l1": "Aký je smer?",
+      "l2": "Quelle est la direction ?",
+      "choices_l2": [
+        "N'attends pas, je suis en retard.",
+        "Je vais à la pharmacie.",
+        "Quelle est la date aujourd'hui ?"
+      ]
+    },
+    {
+      "id": "listen-la-gare-est-loin-prends-le-tram",
+      "type": "listen",
+      "l1": "Stanica je ďaleko, choď električkou.",
+      "l2": "La gare est loin, prends le tram.",
+      "choices_l2": [
+        "Moi, je ne veux pas de pot-au-feu. Je veux de la tarte !",
+        "Mon père est professeur aussi !",
+        "C'est bon marché ! Achète aussi le vert."
+      ]
+    },
+    {
+      "id": "order-d-habitude-je-vais-au-travail-en-bus",
+      "type": "order",
+      "l1": "Chodím do práce autobusom.",
+      "l2": "D'habitude, je vais au travail en bus.",
+      "tokens_l1": [
+        "Chodím",
+        "do",
+        "práce",
+        "autobusom.",
+        "Idem",
+        "na",
+        "námestie.",
+        "Ideš",
+        "so",
+        "mnou?"
+      ],
+      "tokens_l2": [
+        "D'habitude,",
+        "je",
+        "vais",
+        "au",
+        "travail",
+        "en",
+        "bus.",
+        "Je",
+        "vais",
+        "sur",
+        "la",
+        "place.",
+        "Tu",
+        "viens",
+        "avec",
+        "moi",
+        "?"
+      ]
+    },
+    {
+      "id": "order-aujourd-hui-j-y-vais-pied",
+      "type": "order",
+      "l1": "Dnes idem pešo.",
+      "l2": "Aujourd'hui, j'y vais à pied.",
+      "tokens_l1": [
+        "Dnes",
+        "idem",
+        "pešo.",
+        "Chodíš",
+        "vždy",
+        "vlakom?"
+      ],
+      "tokens_l2": [
+        "Aujourd'hui,",
+        "j'y",
+        "vais",
+        "à",
+        "pied.",
+        "Tu",
+        "prends",
+        "toujours",
+        "le",
+        "train",
+        "?"
+      ]
+    },
+    {
+      "id": "order-o-est-l-arr-t",
+      "type": "order",
+      "l1": "Kde je zastávka?",
+      "l2": "Où est l'arrêt ?",
+      "tokens_l1": [
+        "Kde",
+        "je",
+        "zastávka?",
+        "Chodím",
+        "do",
+        "školy",
+        "pešo."
+      ],
+      "tokens_l2": [
+        "Où",
+        "est",
+        "l'arrêt",
+        "?",
+        "Je",
+        "vais",
+        "à",
+        "l'école",
+        "à",
+        "pied."
+      ]
+    },
+    {
+      "id": "order-je-veux-un-ticket",
+      "type": "order",
+      "l1": "Chcem cestovný lístok.",
+      "l2": "Je veux un ticket.",
+      "tokens_l1": [
+        "Chcem",
+        "cestovný",
+        "lístok.",
+        "MHD",
+        "je",
+        "v",
+        "Lyone",
+        "dobrá."
+      ],
+      "tokens_l2": [
+        "Je",
+        "veux",
+        "un",
+        "ticket.",
+        "Les",
+        "transports",
+        "en",
+        "commun",
+        "sont",
+        "bons",
+        "à",
+        "Lyon."
+      ]
+    },
+    {
+      "id": "order-le-tram-part-cinq-heures",
+      "type": "order",
+      "l1": "Električka ide o piatej.",
+      "l2": "Le tram part à cinq heures.",
+      "tokens_l1": [
+        "Električka",
+        "ide",
+        "o",
+        "piatej.",
+        "Chodím",
+        "do",
+        "parku",
+        "každý",
+        "deň."
+      ],
+      "tokens_l2": [
+        "Le",
+        "tram",
+        "part",
+        "à",
+        "cinq",
+        "heures.",
+        "Je",
+        "vais",
+        "au",
+        "parc",
+        "tous",
+        "les",
+        "jours."
+      ]
+    },
+    {
+      "id": "order-tu-prends-toujours-le-train",
+      "type": "order",
+      "l1": "Chodíš vždy vlakom?",
+      "l2": "Tu prends toujours le train ?",
+      "tokens_l1": [
+        "Chodíš",
+        "vždy",
+        "vlakom?",
+        "Múzeum",
+        "je",
+        "zatvorené.",
+        "Chodíme",
+        "tam",
+        "v",
+        "sobotu."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "prends",
+        "toujours",
+        "le",
+        "train",
+        "?",
+        "Le",
+        "musée",
+        "est",
+        "fermé.",
+        "D'habitude,",
+        "on",
+        "y",
+        "va",
+        "le",
+        "samedi."
+      ]
+    },
+    {
+      "id": "order-le-bus-a-dix-minutes-de-retard",
+      "type": "order",
+      "l1": "Autobus mešká desať minút.",
+      "l2": "Le bus a dix minutes de retard.",
+      "tokens_l1": [
+        "Autobus",
+        "mešká",
+        "desať",
+        "minút.",
+        "Idem",
+        "na",
+        "námestie.",
+        "Ideš",
+        "so",
+        "mnou?"
+      ],
+      "tokens_l2": [
+        "Le",
+        "bus",
+        "a",
+        "dix",
+        "minutes",
+        "de",
+        "retard.",
+        "Je",
+        "vais",
+        "sur",
+        "la",
+        "place.",
+        "Tu",
+        "viens",
+        "avec",
+        "moi",
+        "?"
+      ]
+    },
+    {
+      "id": "order-les-transports-en-commun-sont-bons-lyon",
+      "type": "order",
+      "l1": "MHD je v Lyone dobrá.",
+      "l2": "Les transports en commun sont bons à Lyon.",
+      "tokens_l1": [
+        "MHD",
+        "je",
+        "v",
+        "Lyone",
+        "dobrá.",
+        "Chodíš",
+        "vždy",
+        "vlakom?"
+      ],
+      "tokens_l2": [
+        "Les",
+        "transports",
+        "en",
+        "commun",
+        "sont",
+        "bons",
+        "à",
+        "Lyon.",
+        "Tu",
+        "prends",
+        "toujours",
+        "le",
+        "train",
+        "?"
+      ]
+    },
+    {
+      "id": "order-je-vais-au-parc-tous-les-jours",
+      "type": "order",
+      "l1": "Chodím do parku každý deň.",
+      "l2": "Je vais au parc tous les jours.",
+      "tokens_l1": [
+        "Chodím",
+        "do",
+        "parku",
+        "každý",
+        "deň.",
+        "Kde",
+        "je",
+        "zastávka?"
+      ],
+      "tokens_l2": [
+        "Je",
+        "vais",
+        "au",
+        "parc",
+        "tous",
+        "les",
+        "jours.",
+        "Où",
+        "est",
+        "l'arrêt",
+        "?"
+      ]
+    },
+    {
+      "id": "order-je-vais-sur-la-place-tu-viens-avec-moi",
+      "type": "order",
+      "l1": "Idem na námestie. Ideš so mnou?",
+      "l2": "Je vais sur la place. Tu viens avec moi ?",
+      "tokens_l1": [
+        "Idem",
+        "na",
+        "námestie.",
+        "Ideš",
+        "so",
+        "mnou?",
+        "Dnes",
+        "idem",
+        "pešo."
+      ],
+      "tokens_l2": [
+        "Je",
+        "vais",
+        "sur",
+        "la",
+        "place.",
+        "Tu",
+        "viens",
+        "avec",
+        "moi",
+        "?",
+        "Aujourd'hui,",
+        "j'y",
+        "vais",
+        "à",
+        "pied."
+      ]
+    },
+    {
+      "id": "order-le-mus-e-est-ferm-d-habitude-on-y-va-le-samedi",
+      "type": "order",
+      "l1": "Múzeum je zatvorené. Chodíme tam v sobotu.",
+      "l2": "Le musée est fermé. D'habitude, on y va le samedi.",
+      "tokens_l1": [
+        "Múzeum",
+        "je",
+        "zatvorené.",
+        "Chodíme",
+        "tam",
+        "v",
+        "sobotu.",
+        "Aký",
+        "je",
+        "smer?"
+      ],
+      "tokens_l2": [
+        "Le",
+        "musée",
+        "est",
+        "fermé.",
+        "D'habitude,",
+        "on",
+        "y",
+        "va",
+        "le",
+        "samedi.",
+        "Quelle",
+        "est",
+        "la",
+        "direction",
+        "?"
+      ]
+    },
+    {
+      "id": "order-je-vais-l-cole-pied",
+      "type": "order",
+      "l1": "Chodím do školy pešo.",
+      "l2": "Je vais à l'école à pied.",
+      "tokens_l1": [
+        "Chodím",
+        "do",
+        "školy",
+        "pešo.",
+        "Chodím",
+        "do",
+        "parku",
+        "každý",
+        "deň."
+      ],
+      "tokens_l2": [
+        "Je",
+        "vais",
+        "à",
+        "l'école",
+        "à",
+        "pied.",
+        "Je",
+        "vais",
+        "au",
+        "parc",
+        "tous",
+        "les",
+        "jours."
+      ]
+    },
+    {
+      "id": "order-j-ai-un-v-lo-mais-aujourd-hui-j-y-vais-en-voiture",
+      "type": "order",
+      "l1": "Mám bicykel, ale dnes idem autom.",
+      "l2": "J'ai un vélo, mais aujourd'hui j'y vais en voiture.",
+      "tokens_l1": [
+        "Mám",
+        "bicykel,",
+        "ale",
+        "dnes",
+        "idem",
+        "autom.",
+        "Chodíš",
+        "vždy",
+        "vlakom?"
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "un",
+        "vélo,",
+        "mais",
+        "aujourd'hui",
+        "j'y",
+        "vais",
+        "en",
+        "voiture.",
+        "Tu",
+        "prends",
+        "toujours",
+        "le",
+        "train",
+        "?"
+      ]
+    },
+    {
+      "id": "order-quelle-est-la-direction",
+      "type": "order",
+      "l1": "Aký je smer?",
+      "l2": "Quelle est la direction ?",
+      "tokens_l1": [
+        "Aký",
+        "je",
+        "smer?",
+        "Chodím",
+        "do",
+        "parku",
+        "každý",
+        "deň."
+      ],
+      "tokens_l2": [
+        "Quelle",
+        "est",
+        "la",
+        "direction",
+        "?",
+        "Je",
+        "vais",
+        "au",
+        "parc",
+        "tous",
+        "les",
+        "jours."
+      ]
+    },
+    {
+      "id": "order-la-gare-est-loin-prends-le-tram",
+      "type": "order",
+      "l1": "Stanica je ďaleko, choď električkou.",
+      "l2": "La gare est loin, prends le tram.",
+      "tokens_l1": [
+        "Stanica",
+        "je",
+        "ďaleko,",
+        "choď",
+        "električkou.",
+        "Chodím",
+        "do",
+        "parku",
+        "každý",
+        "deň."
+      ],
+      "tokens_l2": [
+        "La",
+        "gare",
+        "est",
+        "loin,",
+        "prends",
+        "le",
+        "tram.",
+        "Je",
+        "vais",
+        "au",
+        "parc",
+        "tous",
+        "les",
+        "jours."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1139 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-rodina",
+      "type": "qcm",
+      "l1": "la famille",
+      "l2": "rodina",
+      "choices_l1": [
+        "le grand-père",
+        "la sœur",
+        "la grand-mère"
+      ],
+      "choices_l2": [
+        "dedko",
+        "sestra",
+        "rodičia"
+      ]
+    },
+    {
+      "id": "qcm-mama",
+      "type": "qcm",
+      "l1": "la maman",
+      "l2": "mama",
+      "choices_l1": [
+        "le fils",
+        "la sœur",
+        "la famille"
+      ],
+      "choices_l2": [
+        "manželka",
+        "rodina",
+        "dcéra"
+      ]
+    },
+    {
+      "id": "qcm-otec",
+      "type": "qcm",
+      "l1": "le père",
+      "l2": "otec",
+      "choices_l1": [
+        "la sœur",
+        "le mari",
+        "la famille"
+      ],
+      "choices_l2": [
+        "syn",
+        "mama",
+        "rodina"
+      ]
+    },
+    {
+      "id": "qcm-brat",
+      "type": "qcm",
+      "l1": "le frère",
+      "l2": "brat",
+      "choices_l1": [
+        "le grand-père",
+        "la sœur",
+        "la famille"
+      ],
+      "choices_l2": [
+        "dcéra",
+        "dedko",
+        "manžel"
+      ]
+    },
+    {
+      "id": "qcm-sestra",
+      "type": "qcm",
+      "l1": "la sœur",
+      "l2": "sestra",
+      "choices_l1": [
+        "la famille",
+        "le frère",
+        "les parents"
+      ],
+      "choices_l2": [
+        "dcéra",
+        "dedko",
+        "rodičia"
+      ]
+    },
+    {
+      "id": "qcm-babka",
+      "type": "qcm",
+      "l1": "la grand-mère",
+      "l2": "babka",
+      "choices_l1": [
+        "l'épouse",
+        "le père",
+        "la sœur"
+      ],
+      "choices_l2": [
+        "mama",
+        "sestra",
+        "dcéra"
+      ]
+    },
+    {
+      "id": "qcm-dedko",
+      "type": "qcm",
+      "l1": "le grand-père",
+      "l2": "dedko",
+      "choices_l1": [
+        "le mari",
+        "la grand-mère",
+        "la famille"
+      ],
+      "choices_l2": [
+        "sestra",
+        "otec",
+        "manžel"
+      ]
+    },
+    {
+      "id": "qcm-m-j-brat",
+      "type": "qcm",
+      "l1": "mon frère (masculin)",
+      "l2": "môj brat",
+      "choices_l1": [
+        "il / elle a",
+        "la fille (de quelqu'un)",
+        "il / elle est"
+      ],
+      "choices_l2": [
+        "moja sestra",
+        "moje meno",
+        "kto"
+      ]
+    },
+    {
+      "id": "qcm-moja-sestra",
+      "type": "qcm",
+      "l1": "ma sœur (féminin)",
+      "l2": "moja sestra",
+      "choices_l1": [
+        "mon frère (masculin)",
+        "il / elle a",
+        "la fille (de quelqu'un)"
+      ],
+      "choices_l2": [
+        "môj brat",
+        "moje meno",
+        "kto"
+      ]
+    },
+    {
+      "id": "qcm-moje-meno",
+      "type": "qcm",
+      "l1": "mon prénom (neutre)",
+      "l2": "moje meno",
+      "choices_l1": [
+        "ma sœur (féminin)",
+        "il / elle est",
+        "il / elle a"
+      ],
+      "choices_l2": [
+        "môj brat",
+        "moja sestra",
+        "kto"
+      ]
+    },
+    {
+      "id": "qcm-ja-som",
+      "type": "qcm",
+      "l1": "je suis",
+      "l2": "ja som",
+      "choices_l1": [
+        "j'ai",
+        "tu as",
+        "s'appeler"
+      ],
+      "choices_l2": [
+        "ja mám",
+        "ty si",
+        "ty máš"
+      ]
+    },
+    {
+      "id": "qcm-ty-si",
+      "type": "qcm",
+      "l1": "tu es",
+      "l2": "ty si",
+      "choices_l1": [
+        "je suis",
+        "tu as",
+        "j'ai"
+      ],
+      "choices_l2": [
+        "ty máš",
+        "ja mám",
+        "ja som"
+      ]
+    },
+    {
+      "id": "qcm-on-ona-je",
+      "type": "qcm",
+      "l1": "il / elle est",
+      "l2": "on / ona je",
+      "choices_l1": [
+        "la fille (de quelqu'un)",
+        "ma sœur (féminin)",
+        "mon prénom (neutre)"
+      ],
+      "choices_l2": [
+        "mesto → v meste",
+        "Bratislava → v Bratislave",
+        "dom → v dome"
+      ]
+    },
+    {
+      "id": "qcm-ja-m-m",
+      "type": "qcm",
+      "l1": "j'ai",
+      "l2": "ja mám",
+      "choices_l1": [
+        "tu es",
+        "je suis",
+        "s'appeler"
+      ],
+      "choices_l2": [
+        "ja som",
+        "ty máš",
+        "ty si"
+      ]
+    },
+    {
+      "id": "qcm-ty-m",
+      "type": "qcm",
+      "l1": "tu as",
+      "l2": "ty máš",
+      "choices_l1": [
+        "s'appeler",
+        "j'ai",
+        "tu es"
+      ],
+      "choices_l2": [
+        "ja som",
+        "ja mám",
+        "volať sa"
+      ]
+    },
+    {
+      "id": "qcm-on-ona-m",
+      "type": "qcm",
+      "l1": "il / elle a",
+      "l2": "on / ona má",
+      "choices_l1": [
+        "la fille (de quelqu'un)",
+        "il / elle est",
+        "ma sœur (féminin)"
+      ],
+      "choices_l2": [
+        "on / ona je",
+        "Bratislava → v Bratislave",
+        "on / ona robí"
+      ]
+    },
+    {
+      "id": "qcm-kto",
+      "type": "qcm",
+      "l1": "qui",
+      "l2": "kto",
+      "choices_l1": [
+        "la sœur",
+        "la famille",
+        "je suis"
+      ],
+      "choices_l2": [
+        "môj brat",
+        "moja sestra",
+        "moje meno"
+      ]
+    },
+    {
+      "id": "qcm-vola-sa",
+      "type": "qcm",
+      "l1": "s'appeler",
+      "l2": "volať sa",
+      "choices_l1": [
+        "tu as",
+        "tu es",
+        "j'ai"
+      ],
+      "choices_l2": [
+        "ja som",
+        "ty si",
+        "ty máš"
+      ]
+    },
+    {
+      "id": "qcm-rodi-ia",
+      "type": "qcm",
+      "l1": "les parents",
+      "l2": "rodičia",
+      "choices_l1": [
+        "le fils",
+        "la sœur",
+        "le frère"
+      ],
+      "choices_l2": [
+        "syn",
+        "babka",
+        "dcéra"
+      ]
+    },
+    {
+      "id": "qcm-syn",
+      "type": "qcm",
+      "l1": "le fils",
+      "l2": "syn",
+      "choices_l1": [
+        "la famille",
+        "la grand-mère",
+        "la maman"
+      ],
+      "choices_l2": [
+        "mama",
+        "dedko",
+        "babka"
+      ]
+    },
+    {
+      "id": "qcm-dc-ra",
+      "type": "qcm",
+      "l1": "la fille (de quelqu'un)",
+      "l2": "dcéra",
+      "choices_l1": [
+        "mon frère (masculin)",
+        "ma sœur (féminin)",
+        "mon prénom (neutre)"
+      ],
+      "choices_l2": [
+        "otec",
+        "dedko",
+        "rodina"
+      ]
+    },
+    {
+      "id": "qcm-man-el",
+      "type": "qcm",
+      "l1": "le mari",
+      "l2": "manžel",
+      "choices_l1": [
+        "l'épouse",
+        "la famille",
+        "la grand-mère"
+      ],
+      "choices_l2": [
+        "manželka",
+        "sestra",
+        "syn"
+      ]
+    },
+    {
+      "id": "qcm-man-elka",
+      "type": "qcm",
+      "l1": "l'épouse",
+      "l2": "manželka",
+      "choices_l1": [
+        "la maman",
+        "le grand-père",
+        "le mari"
+      ],
+      "choices_l2": [
+        "dcéra",
+        "babka",
+        "rodičia"
+      ]
+    },
+    {
+      "id": "blank-to-je-moja-rodina",
+      "type": "fill-blank",
+      "l1": "C'est ma famille.",
+      "l2": "To je moja rodina.",
+      "missing_l1": "ma",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Notre",
+        "mon",
+        "ton"
+      ],
+      "choices_l2": [
+        "Bude",
+        "sme",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-to-je-m-j-otec-a-to-je-moja-mama",
+      "type": "fill-blank",
+      "l1": "Voici mon père et voici ma maman.",
+      "l2": "To je môj otec a to je moja mama.",
+      "missing_l1": "et",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "ou",
+        "ni",
+        "mais"
+      ],
+      "choices_l2": [
+        "si",
+        "ste",
+        "bol"
+      ]
+    },
+    {
+      "id": "blank-nem-m-brata-m-m-sestru",
+      "type": "fill-blank",
+      "l1": "Je n'ai pas de frère. J'ai une sœur.",
+      "l2": "Nemám brata. Mám sestru.",
+      "missing_l1": "de",
+      "missing_l2": "Mám",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "à",
+        "près",
+        "loin"
+      ],
+      "choices_l2": [
+        "Máš",
+        "má",
+        "Nemám"
+      ]
+    },
+    {
+      "id": "blank-moja-sestra-je-doma",
+      "type": "fill-blank",
+      "l1": "Ma sœur est à la maison.",
+      "l2": "Moja sestra je doma.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "mon",
+        "de",
+        "sont"
+      ],
+      "choices_l2": [
+        "si",
+        "budem",
+        "som"
+      ]
+    },
+    {
+      "id": "blank-moja-babka-sa-vol-zuzana",
+      "type": "fill-blank",
+      "l1": "Ma grand-mère s'appelle Zuzana.",
+      "l2": "Moja babka sa volá Zuzana.",
+      "missing_l1": "grand-mère",
+      "missing_l2": "sa",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "frère",
+        "maman",
+        "Voici"
+      ],
+      "choices_l2": [
+        "Ja",
+        "vy",
+        "To"
+      ]
+    },
+    {
+      "id": "blank-m-j-dedko-a-moja-babka",
+      "type": "fill-blank",
+      "l1": "Mon grand-père et ma grand-mère.",
+      "l2": "Môj dedko a moja babka.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "mais",
+        "ni",
+        "Donc"
+      ],
+      "choices_l2": [
+        "však",
+        "ale",
+        "alebo"
+      ]
+    },
+    {
+      "id": "blank-kto-je-to",
+      "type": "fill-blank",
+      "l1": "Qui est-ce ?",
+      "l2": "Kto je to?",
+      "missing_l1": "est-ce",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "C'est",
+        "sont",
+        "est"
+      ],
+      "choices_l2": [
+        "som",
+        "budem",
+        "sú"
+      ]
+    },
+    {
+      "id": "blank-to-s-moji-rodi-ia",
+      "type": "fill-blank",
+      "l1": "Ce sont mes parents.",
+      "l2": "To sú moji rodičia.",
+      "missing_l1": "sont",
+      "missing_l2": "sú",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "est",
+        "est-ce",
+        "C'est"
+      ],
+      "choices_l2": [
+        "ste",
+        "som",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-m-m-syna-a-dc-ru",
+      "type": "fill-blank",
+      "l1": "J'ai un fils et une fille.",
+      "l2": "Mám syna a dcéru.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "mais",
+        "ou",
+        "Donc"
+      ],
+      "choices_l2": [
+        "lebo",
+        "ale",
+        "aj"
+      ]
+    },
+    {
+      "id": "blank-ako-sa-vol",
+      "type": "fill-blank",
+      "l1": "Comment t'appelles-tu ?",
+      "l2": "Ako sa voláš?",
+      "missing_l1": "t'appelles-tu",
+      "missing_l2": "sa",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Où",
+        "Comment",
+        "Qui"
+      ],
+      "choices_l2": [
+        "Ja",
+        "vy",
+        "To"
+      ]
+    },
+    {
+      "id": "blank-m-j-man-el-sa-vol-jozef",
+      "type": "fill-blank",
+      "l1": "Mon mari s'appelle Jozef.",
+      "l2": "Môj manžel sa volá Jozef.",
+      "missing_l1": "s'appelle",
+      "missing_l2": "sa",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "grand-père",
+        "t'appelles-tu",
+        "Comment"
+      ],
+      "choices_l2": [
+        "vy",
+        "Ja",
+        "To"
+      ]
+    },
+    {
+      "id": "listen-to-je-moja-rodina",
+      "type": "listen",
+      "l1": "C'est ma famille.",
+      "l2": "To je moja rodina.",
+      "choices_l1": [
+        "Comment t'appelles-tu ?",
+        "J'ai un fils et une fille.",
+        "Mon grand-père et ma grand-mère."
+      ],
+      "choices_l2": [
+        "Mám syna a dcéru.",
+        "Nemám brata. Mám sestru.",
+        "Môj dedko a moja babka."
+      ]
+    },
+    {
+      "id": "listen-to-je-m-j-otec-a-to-je-moja-mama",
+      "type": "listen",
+      "l1": "Voici mon père et voici ma maman.",
+      "l2": "To je môj otec a to je moja mama.",
+      "choices_l1": [
+        "Ce sont mes parents.",
+        "Ma sœur est à la maison.",
+        "Mon mari s'appelle Jozef."
+      ],
+      "choices_l2": [
+        "Môj dedko a moja babka.",
+        "To sú moji rodičia.",
+        "Môj manžel sa volá Jozef."
+      ]
+    },
+    {
+      "id": "listen-m-brata",
+      "type": "listen",
+      "l1": "Tu as un frère ?",
+      "l2": "Máš brata?",
+      "choices_l1": [
+        "C'est ma famille.",
+        "Mon grand-père et ma grand-mère.",
+        "Mon mari s'appelle Jozef."
+      ],
+      "choices_l2": [
+        "Čo robíš?",
+        "Kde bývate?",
+        "Bývame spolu."
+      ]
+    },
+    {
+      "id": "listen-nem-m-brata-m-m-sestru",
+      "type": "listen",
+      "l1": "Je n'ai pas de frère. J'ai une sœur.",
+      "l2": "Nemám brata. Mám sestru.",
+      "choices_l1": [
+        "Mon mari s'appelle Jozef.",
+        "Ce sont mes parents.",
+        "Qui est-ce ?"
+      ],
+      "choices_l2": [
+        "Môj dedko a moja babka.",
+        "Mám syna a dcéru.",
+        "To je moja rodina."
+      ]
+    },
+    {
+      "id": "listen-moja-sestra-je-doma",
+      "type": "listen",
+      "l1": "Ma sœur est à la maison.",
+      "l2": "Moja sestra je doma.",
+      "choices_l1": [
+        "Mon mari s'appelle Jozef.",
+        "Mon grand-père et ma grand-mère.",
+        "Ce sont mes parents."
+      ],
+      "choices_l2": [
+        "Kto je to?",
+        "Môj dedko a moja babka.",
+        "Moja babka sa volá Zuzana."
+      ]
+    },
+    {
+      "id": "listen-moja-babka-sa-vol-zuzana",
+      "type": "listen",
+      "l1": "Ma grand-mère s'appelle Zuzana.",
+      "l2": "Moja babka sa volá Zuzana.",
+      "choices_l1": [
+        "Je n'ai pas de frère. J'ai une sœur.",
+        "J'ai un fils et une fille.",
+        "Ce sont mes parents."
+      ],
+      "choices_l2": [
+        "Kto je to?",
+        "Nemám brata. Mám sestru.",
+        "Ako sa voláš?"
+      ]
+    },
+    {
+      "id": "listen-m-j-dedko-a-moja-babka",
+      "type": "listen",
+      "l1": "Mon grand-père et ma grand-mère.",
+      "l2": "Môj dedko a moja babka.",
+      "choices_l1": [
+        "Ma sœur est à la maison.",
+        "J'ai un fils et une fille.",
+        "Ce sont mes parents."
+      ],
+      "choices_l2": [
+        "To je môj otec a to je moja mama.",
+        "To sú moji rodičia.",
+        "Nemám brata. Mám sestru."
+      ]
+    },
+    {
+      "id": "listen-kto-je-to",
+      "type": "listen",
+      "l1": "Qui est-ce ?",
+      "l2": "Kto je to?",
+      "choices_l1": [
+        "Tu as un frère ?",
+        "Ce sont mes parents.",
+        "C'est ma famille."
+      ],
+      "choices_l2": [
+        "Moja sestra je doma.",
+        "Môj manžel sa volá Jozef.",
+        "Mám syna a dcéru."
+      ]
+    },
+    {
+      "id": "listen-to-s-moji-rodi-ia",
+      "type": "listen",
+      "l1": "Ce sont mes parents.",
+      "l2": "To sú moji rodičia.",
+      "choices_l1": [
+        "Ma sœur est à la maison.",
+        "Ma grand-mère s'appelle Zuzana.",
+        "C'est ma famille."
+      ],
+      "choices_l2": [
+        "To je môj otec a to je moja mama.",
+        "Mám syna a dcéru.",
+        "To je moja rodina."
+      ]
+    },
+    {
+      "id": "listen-m-m-syna-a-dc-ru",
+      "type": "listen",
+      "l1": "J'ai un fils et une fille.",
+      "l2": "Mám syna a dcéru.",
+      "choices_l1": [
+        "Tu as un frère ?",
+        "Ma sœur est à la maison.",
+        "Je n'ai pas de frère. J'ai une sœur."
+      ],
+      "choices_l2": [
+        "Moja sestra je doma.",
+        "Ako sa voláš?",
+        "Môj manžel sa volá Jozef."
+      ]
+    },
+    {
+      "id": "listen-ako-sa-vol",
+      "type": "listen",
+      "l1": "Comment t'appelles-tu ?",
+      "l2": "Ako sa voláš?",
+      "choices_l1": [
+        "Ma grand-mère s'appelle Zuzana.",
+        "Mon grand-père et ma grand-mère.",
+        "C'est ma famille."
+      ],
+      "choices_l2": [
+        "Moja sestra je doma.",
+        "Môj dedko a moja babka.",
+        "To je môj otec a to je moja mama."
+      ]
+    },
+    {
+      "id": "listen-m-j-man-el-sa-vol-jozef",
+      "type": "listen",
+      "l1": "Mon mari s'appelle Jozef.",
+      "l2": "Môj manžel sa volá Jozef.",
+      "choices_l1": [
+        "Mon grand-père et ma grand-mère.",
+        "Ma sœur est à la maison.",
+        "J'ai un fils et une fille."
+      ],
+      "choices_l2": [
+        "Moja babka sa volá Zuzana.",
+        "Ako sa voláš?",
+        "To je môj otec a to je moja mama."
+      ]
+    },
+    {
+      "id": "order-to-je-moja-rodina",
+      "type": "order",
+      "l1": "C'est ma famille.",
+      "l2": "To je moja rodina.",
+      "tokens_l1": [
+        "C'est",
+        "ma",
+        "famille.",
+        "Ma",
+        "sœur",
+        "est",
+        "à",
+        "la",
+        "maison."
+      ],
+      "tokens_l2": [
+        "To",
+        "je",
+        "moja",
+        "rodina.",
+        "Moja",
+        "sestra",
+        "je",
+        "doma."
+      ]
+    },
+    {
+      "id": "order-to-je-m-j-otec-a-to-je-moja-mama",
+      "type": "order",
+      "l1": "Voici mon père et voici ma maman.",
+      "l2": "To je môj otec a to je moja mama.",
+      "tokens_l1": [
+        "Voici",
+        "mon",
+        "père",
+        "et",
+        "voici",
+        "ma",
+        "maman.",
+        "Mon",
+        "grand-père",
+        "et",
+        "ma",
+        "grand-mère."
+      ],
+      "tokens_l2": [
+        "To",
+        "je",
+        "môj",
+        "otec",
+        "a",
+        "to",
+        "je",
+        "moja",
+        "mama.",
+        "Môj",
+        "dedko",
+        "a",
+        "moja",
+        "babka."
+      ]
+    },
+    {
+      "id": "order-nem-m-brata-m-m-sestru",
+      "type": "order",
+      "l1": "Je n'ai pas de frère. J'ai une sœur.",
+      "l2": "Nemám brata. Mám sestru.",
+      "tokens_l1": [
+        "Je",
+        "n'ai",
+        "pas",
+        "de",
+        "frère.",
+        "J'ai",
+        "une",
+        "sœur.",
+        "Comment",
+        "t'appelles-tu",
+        "?"
+      ],
+      "tokens_l2": [
+        "Nemám",
+        "brata.",
+        "Mám",
+        "sestru.",
+        "Ako",
+        "sa",
+        "voláš?"
+      ]
+    },
+    {
+      "id": "order-moja-sestra-je-doma",
+      "type": "order",
+      "l1": "Ma sœur est à la maison.",
+      "l2": "Moja sestra je doma.",
+      "tokens_l1": [
+        "Ma",
+        "sœur",
+        "est",
+        "à",
+        "la",
+        "maison.",
+        "Je",
+        "n'ai",
+        "pas",
+        "de",
+        "frère.",
+        "J'ai",
+        "une",
+        "sœur."
+      ],
+      "tokens_l2": [
+        "Moja",
+        "sestra",
+        "je",
+        "doma.",
+        "Nemám",
+        "brata.",
+        "Mám",
+        "sestru."
+      ]
+    },
+    {
+      "id": "order-moja-babka-sa-vol-zuzana",
+      "type": "order",
+      "l1": "Ma grand-mère s'appelle Zuzana.",
+      "l2": "Moja babka sa volá Zuzana.",
+      "tokens_l1": [
+        "Ma",
+        "grand-mère",
+        "s'appelle",
+        "Zuzana.",
+        "Ce",
+        "sont",
+        "mes",
+        "parents."
+      ],
+      "tokens_l2": [
+        "Moja",
+        "babka",
+        "sa",
+        "volá",
+        "Zuzana.",
+        "To",
+        "sú",
+        "moji",
+        "rodičia."
+      ]
+    },
+    {
+      "id": "order-m-j-dedko-a-moja-babka",
+      "type": "order",
+      "l1": "Mon grand-père et ma grand-mère.",
+      "l2": "Môj dedko a moja babka.",
+      "tokens_l1": [
+        "Mon",
+        "grand-père",
+        "et",
+        "ma",
+        "grand-mère.",
+        "Mon",
+        "mari",
+        "s'appelle",
+        "Jozef."
+      ],
+      "tokens_l2": [
+        "Môj",
+        "dedko",
+        "a",
+        "moja",
+        "babka.",
+        "Môj",
+        "manžel",
+        "sa",
+        "volá",
+        "Jozef."
+      ]
+    },
+    {
+      "id": "order-kto-je-to",
+      "type": "order",
+      "l1": "Qui est-ce ?",
+      "l2": "Kto je to?",
+      "tokens_l1": [
+        "Qui",
+        "est-ce",
+        "?",
+        "Je",
+        "n'ai",
+        "pas",
+        "de",
+        "frère.",
+        "J'ai",
+        "une",
+        "sœur."
+      ],
+      "tokens_l2": [
+        "Kto",
+        "je",
+        "to?",
+        "Nemám",
+        "brata.",
+        "Mám",
+        "sestru."
+      ]
+    },
+    {
+      "id": "order-to-s-moji-rodi-ia",
+      "type": "order",
+      "l1": "Ce sont mes parents.",
+      "l2": "To sú moji rodičia.",
+      "tokens_l1": [
+        "Ce",
+        "sont",
+        "mes",
+        "parents.",
+        "J'ai",
+        "un",
+        "fils",
+        "et",
+        "une",
+        "fille."
+      ],
+      "tokens_l2": [
+        "To",
+        "sú",
+        "moji",
+        "rodičia.",
+        "Mám",
+        "syna",
+        "a",
+        "dcéru."
+      ]
+    },
+    {
+      "id": "order-m-m-syna-a-dc-ru",
+      "type": "order",
+      "l1": "J'ai un fils et une fille.",
+      "l2": "Mám syna a dcéru.",
+      "tokens_l1": [
+        "J'ai",
+        "un",
+        "fils",
+        "et",
+        "une",
+        "fille.",
+        "Ma",
+        "grand-mère",
+        "s'appelle",
+        "Zuzana."
+      ],
+      "tokens_l2": [
+        "Mám",
+        "syna",
+        "a",
+        "dcéru.",
+        "Moja",
+        "babka",
+        "sa",
+        "volá",
+        "Zuzana."
+      ]
+    },
+    {
+      "id": "order-ako-sa-vol",
+      "type": "order",
+      "l1": "Comment t'appelles-tu ?",
+      "l2": "Ako sa voláš?",
+      "tokens_l1": [
+        "Comment",
+        "t'appelles-tu",
+        "?",
+        "Voici",
+        "mon",
+        "père",
+        "et",
+        "voici",
+        "ma",
+        "maman."
+      ],
+      "tokens_l2": [
+        "Ako",
+        "sa",
+        "voláš?",
+        "To",
+        "je",
+        "môj",
+        "otec",
+        "a",
+        "to",
+        "je",
+        "moja",
+        "mama."
+      ]
+    },
+    {
+      "id": "order-m-j-man-el-sa-vol-jozef",
+      "type": "order",
+      "l1": "Mon mari s'appelle Jozef.",
+      "l2": "Môj manžel sa volá Jozef.",
+      "tokens_l1": [
+        "Mon",
+        "mari",
+        "s'appelle",
+        "Jozef.",
+        "Ce",
+        "sont",
+        "mes",
+        "parents."
+      ],
+      "tokens_l2": [
+        "Môj",
+        "manžel",
+        "sa",
+        "volá",
+        "Jozef.",
+        "To",
+        "sú",
+        "moji",
+        "rodičia."
+      ]
+    },
+    {
+      "id": "match-rodina-vocab",
+      "type": "match",
+      "l1": [
+        "la famille",
+        "la maman",
+        "le père",
+        "le frère"
+      ],
+      "l2": [
+        "rodina",
+        "mama",
+        "otec",
+        "brat"
+      ]
+    },
+    {
+      "id": "match-to-je-moja-rodina-sentences",
+      "type": "match",
+      "l1": [
+        "C'est ma famille.",
+        "Voici mon père et voici ma maman.",
+        "Tu as un frère ?",
+        "Je n'ai pas de frère. J'ai une sœur."
+      ],
+      "l2": [
+        "To je moja rodina.",
+        "To je môj otec a to je moja mama.",
+        "Máš brata?",
+        "Nemám brata. Mám sestru."
+      ]
+    }
+  ]
+}

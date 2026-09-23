@@ -1,0 +1,1551 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-m-c",
+      "type": "qcm",
+      "l1": "pouvoir",
+      "l2": "môcť",
+      "choices_l1": [
+        "je peux",
+        "tu peux",
+        "nous pouvons"
+      ],
+      "choices_l2": [
+        "my môžeme",
+        "ja môžem",
+        "oni môžu"
+      ]
+    },
+    {
+      "id": "qcm-turistick-top-nky",
+      "type": "qcm",
+      "l1": "les chaussures de randonnée",
+      "l2": "turistické topánky",
+      "choices_l1": [
+        "la trousse de secours",
+        "la lampe de poche",
+        "le sac de couchage"
+      ],
+      "choices_l2": [
+        "spací vak",
+        "palice",
+        "stan"
+      ]
+    },
+    {
+      "id": "qcm-palice",
+      "type": "qcm",
+      "l1": "les bâtons",
+      "l2": "palice",
+      "choices_l1": [
+        "la fatigue",
+        "le repos",
+        "la nourriture"
+      ],
+      "choices_l2": [
+        "baterka",
+        "spací vak",
+        "turistické topánky"
+      ]
+    },
+    {
+      "id": "qcm-voda",
+      "type": "qcm",
+      "l1": "l'eau",
+      "l2": "voda",
+      "choices_l1": [
+        "la tente",
+        "la nourriture",
+        "le repos"
+      ],
+      "choices_l2": [
+        "odpočinok",
+        "baterka",
+        "turistické topánky"
+      ]
+    },
+    {
+      "id": "qcm-jedlo",
+      "type": "qcm",
+      "l1": "la nourriture",
+      "l2": "jedlo",
+      "choices_l1": [
+        "la force",
+        "la tente",
+        "les bâtons"
+      ],
+      "choices_l2": [
+        "lekárnička",
+        "turistické topánky",
+        "sila"
+      ]
+    },
+    {
+      "id": "qcm-lek-rni-ka",
+      "type": "qcm",
+      "l1": "la trousse de secours",
+      "l2": "lekárnička",
+      "choices_l1": [
+        "les chaussures de randonnée",
+        "la lampe de poche",
+        "le sac de couchage"
+      ],
+      "choices_l2": [
+        "stan",
+        "palice",
+        "turistické topánky"
+      ]
+    },
+    {
+      "id": "qcm-baterka",
+      "type": "qcm",
+      "l1": "la lampe de poche",
+      "l2": "baterka",
+      "choices_l1": [
+        "les chaussures de randonnée",
+        "la trousse de secours",
+        "le sac de couchage"
+      ],
+      "choices_l2": [
+        "palice",
+        "spací vak",
+        "sila"
+      ]
+    },
+    {
+      "id": "qcm-ja-m-em",
+      "type": "qcm",
+      "l1": "je peux",
+      "l2": "ja môžem",
+      "choices_l1": [
+        "pouvoir",
+        "tu peux",
+        "nous pouvons"
+      ],
+      "choices_l2": [
+        "ty môžeš",
+        "môcť",
+        "my môžeme"
+      ]
+    },
+    {
+      "id": "qcm-ty-m-e",
+      "type": "qcm",
+      "l1": "tu peux",
+      "l2": "ty môžeš",
+      "choices_l1": [
+        "pouvoir",
+        "je peux",
+        "nous pouvons"
+      ],
+      "choices_l2": [
+        "my môžeme",
+        "oni môžu",
+        "môcť"
+      ]
+    },
+    {
+      "id": "qcm-on-ona-m-e",
+      "type": "qcm",
+      "l1": "il / elle peut",
+      "l2": "on / ona môže",
+      "choices_l1": [
+        "Je veux aller au sommet.",
+        "ils / elles peuvent",
+        "le sac de couchage"
+      ],
+      "choices_l2": [
+        "Chcem ísť na vrch.",
+        "Musím mať vodu.",
+        "Môžem ísť sám?"
+      ]
+    },
+    {
+      "id": "qcm-my-m-eme",
+      "type": "qcm",
+      "l1": "nous pouvons",
+      "l2": "my môžeme",
+      "choices_l1": [
+        "pouvoir",
+        "je peux",
+        "tu peux"
+      ],
+      "choices_l2": [
+        "môcť",
+        "ty môžeš",
+        "oni môžu"
+      ]
+    },
+    {
+      "id": "qcm-oni-m-u",
+      "type": "qcm",
+      "l1": "ils / elles peuvent",
+      "l2": "oni môžu",
+      "choices_l1": [
+        "il / elle peut",
+        "Je dois avoir de l'eau.",
+        "Je veux aller au sommet."
+      ],
+      "choices_l2": [
+        "ja môžem",
+        "ty môžeš",
+        "my môžeme"
+      ]
+    },
+    {
+      "id": "qcm-chcem-s-na-vrch",
+      "type": "qcm",
+      "l1": "Je veux aller au sommet.",
+      "l2": "Chcem ísť na vrch.",
+      "choices_l1": [
+        "les chaussures de randonnée",
+        "ils / elles peuvent",
+        "Puis-je y aller seul ?"
+      ],
+      "choices_l2": [
+        "Musím mať vodu.",
+        "Môžem ísť sám?",
+        "on / ona môže"
+      ]
+    },
+    {
+      "id": "qcm-mus-m-ma-vodu",
+      "type": "qcm",
+      "l1": "Je dois avoir de l'eau.",
+      "l2": "Musím mať vodu.",
+      "choices_l1": [
+        "Puis-je y aller seul ?",
+        "la trousse de secours",
+        "la lampe de poche"
+      ],
+      "choices_l2": [
+        "Chcem ísť na vrch.",
+        "Môžem ísť sám?",
+        "on / ona môže"
+      ]
+    },
+    {
+      "id": "qcm-m-em-s-s-m",
+      "type": "qcm",
+      "l1": "Puis-je y aller seul ?",
+      "l2": "Môžem ísť sám?",
+      "choices_l1": [
+        "Je dois avoir de l'eau.",
+        "la trousse de secours",
+        "les chaussures de randonnée"
+      ],
+      "choices_l2": [
+        "Chcem ísť na vrch.",
+        "Musím mať vodu.",
+        "on / ona môže"
+      ]
+    },
+    {
+      "id": "qcm-stan",
+      "type": "qcm",
+      "l1": "la tente",
+      "l2": "stan",
+      "choices_l1": [
+        "la nourriture",
+        "la fatigue",
+        "le repos"
+      ],
+      "choices_l2": [
+        "turistické topánky",
+        "spací vak",
+        "lekárnička"
+      ]
+    },
+    {
+      "id": "qcm-spac-vak",
+      "type": "qcm",
+      "l1": "le sac de couchage",
+      "l2": "spací vak",
+      "choices_l1": [
+        "les chaussures de randonnée",
+        "la trousse de secours",
+        "la lampe de poche"
+      ],
+      "choices_l2": [
+        "únava",
+        "jedlo",
+        "stan"
+      ]
+    },
+    {
+      "id": "qcm-kompas",
+      "type": "qcm",
+      "l1": "la boussole",
+      "l2": "kompas",
+      "choices_l1": [
+        "la force",
+        "la nourriture",
+        "les bâtons"
+      ],
+      "choices_l2": [
+        "baterka",
+        "sila",
+        "lekárnička"
+      ]
+    },
+    {
+      "id": "qcm-oblak",
+      "type": "qcm",
+      "l1": "le nuage",
+      "l2": "oblak",
+      "choices_l1": [
+        "la tente",
+        "la fatigue",
+        "le repos"
+      ],
+      "choices_l2": [
+        "baterka",
+        "turistické topánky",
+        "odpočinok"
+      ]
+    },
+    {
+      "id": "qcm-nava",
+      "type": "qcm",
+      "l1": "la fatigue",
+      "l2": "únava",
+      "choices_l1": [
+        "la force",
+        "les bâtons",
+        "le repos"
+      ],
+      "choices_l2": [
+        "turistické topánky",
+        "jedlo",
+        "sila"
+      ]
+    },
+    {
+      "id": "qcm-sila",
+      "type": "qcm",
+      "l1": "la force",
+      "l2": "sila",
+      "choices_l1": [
+        "la tente",
+        "le repos",
+        "les bâtons"
+      ],
+      "choices_l2": [
+        "baterka",
+        "spací vak",
+        "turistické topánky"
+      ]
+    },
+    {
+      "id": "qcm-odpo-inok",
+      "type": "qcm",
+      "l1": "le repos",
+      "l2": "odpočinok",
+      "choices_l1": [
+        "la nourriture",
+        "la fatigue",
+        "la tente"
+      ],
+      "choices_l2": [
+        "spací vak",
+        "palice",
+        "baterka"
+      ]
+    },
+    {
+      "id": "blank-m-em-s-s-tebou",
+      "type": "fill-blank",
+      "l1": "Puis-je venir avec toi ?",
+      "l2": "Môžem ísť s tebou?",
+      "missing_l1": "avec",
+      "missing_l2": "ísť",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "pour",
+        "par",
+        "près"
+      ],
+      "choices_l2": [
+        "Chodím",
+        "ide",
+        "ideš"
+      ]
+    },
+    {
+      "id": "blank-mus-ma-turistick-top-nky",
+      "type": "fill-blank",
+      "l1": "Tu dois avoir des chaussures de randonnée.",
+      "l2": "Musíš mať turistické topánky.",
+      "missing_l1": "de",
+      "missing_l2": "mať",
+      "blank_index_l1": 5,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "loin",
+        "sans",
+        "près"
+      ],
+      "choices_l2": [
+        "vody",
+        "spať",
+        "vak"
+      ]
+    },
+    {
+      "id": "blank-nem-em-s-bez-vody",
+      "type": "fill-blank",
+      "l1": "Je ne peux pas y aller sans eau.",
+      "l2": "Nemôžem ísť bez vody.",
+      "missing_l1": "pas",
+      "missing_l2": "ísť",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "nord",
+        "sens",
+        "ne"
+      ],
+      "choices_l2": [
+        "Prídem",
+        "ideš",
+        "idem"
+      ]
+    },
+    {
+      "id": "blank-m-palice-pom-haj-v-kopci",
+      "type": "fill-blank",
+      "l1": "Tu as des bâtons ? Ils aident dans la montée.",
+      "l2": "Máš palice? Pomáhajú v kopci.",
+      "missing_l1": "la",
+      "missing_l2": "v",
+      "blank_index_l1": 8,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "nord",
+        "le",
+        "toi"
+      ],
+      "choices_l2": [
+        "k",
+        "z",
+        "bez"
+      ]
+    },
+    {
+      "id": "blank-m-m-jedlo-a-vodu-v-batohu",
+      "type": "fill-blank",
+      "l1": "J'ai de la nourriture et de l'eau dans le sac.",
+      "l2": "Mám jedlo a vodu v batohu.",
+      "missing_l1": "la",
+      "missing_l2": "v",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "le",
+        "eau",
+        "peux"
+      ],
+      "choices_l2": [
+        "k",
+        "z",
+        "bez"
+      ]
+    },
+    {
+      "id": "blank-mus-me-ma-lek-rni-ku",
+      "type": "fill-blank",
+      "l1": "Nous devons avoir une trousse de secours.",
+      "l2": "Musíme mať lekárničku.",
+      "missing_l1": "de",
+      "missing_l2": "mať",
+      "blank_index_l1": 5,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "dans",
+        "près",
+        "par"
+      ],
+      "choices_l2": [
+        "vak",
+        "vody",
+        "bez"
+      ]
+    },
+    {
+      "id": "blank-baterka-je-d-le-it-ak-budeme-neskoro",
+      "type": "fill-blank",
+      "l1": "La lampe de poche est importante, si nous sommes en retard.",
+      "l2": "Baterka je dôležitá, ak budeme neskoro.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "est-ce",
+        "sont",
+        "était"
+      ],
+      "choices_l2": [
+        "bola",
+        "ste",
+        "som"
+      ]
+    },
+    {
+      "id": "blank-m-e-nies-mapu",
+      "type": "fill-blank",
+      "l1": "Peux-tu porter la carte ?",
+      "l2": "Môžeš niesť mapu?",
+      "missing_l1": "la",
+      "missing_l2": "mapu",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "peux",
+        "Les",
+        "nord"
+      ],
+      "choices_l2": [
+        "stan",
+        "silu",
+        "bez"
+      ]
+    },
+    {
+      "id": "blank-mus-me-ma-vodu-a-jedlo-lebo-chodn-k-je-dlh",
+      "type": "fill-blank",
+      "l1": "Nous devons avoir de l'eau et de la nourriture, parce que le sentier est long.",
+      "l2": "Musíme mať vodu a jedlo, lebo chodník je dlhý.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 7,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "Les",
+        "peux",
+        "toi"
+      ],
+      "choices_l2": [
+        "sú",
+        "budú",
+        "budem"
+      ]
+    },
+    {
+      "id": "blank-m-eme-s-do-doliny-potom-na-vrch",
+      "type": "fill-blank",
+      "l1": "Nous pouvons aller dans la vallée, puis au sommet.",
+      "l2": "Môžeme ísť do doliny, potom na vrch.",
+      "missing_l1": "la",
+      "missing_l2": "na",
+      "blank_index_l1": 4,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "peux",
+        "Les",
+        "nord"
+      ],
+      "choices_l2": [
+        "z",
+        "bez",
+        "k"
+      ]
+    },
+    {
+      "id": "blank-chcem-vidie-jazero-ale-mus-m-ma-dobr-top-nky",
+      "type": "fill-blank",
+      "l1": "Je veux voir le lac, mais je dois avoir de bonnes chaussures.",
+      "l2": "Chcem vidieť jazero, ale musím mať dobré topánky.",
+      "missing_l1": "le",
+      "missing_l2": "ale",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "toi",
+        "Les",
+        "eau"
+      ],
+      "choices_l2": [
+        "lebo",
+        "aj",
+        "alebo"
+      ]
+    },
+    {
+      "id": "blank-nem-me-stan-budeme-spa-v-chate",
+      "type": "fill-blank",
+      "l1": "Nous n'avons pas de tente, nous dormirons dans le refuge.",
+      "l2": "Nemáme stan, budeme spať v chate.",
+      "missing_l1": "le",
+      "missing_l2": "v",
+      "blank_index_l1": 8,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "toi",
+        "sens",
+        "nord"
+      ],
+      "choices_l2": [
+        "bez",
+        "z",
+        "k"
+      ]
+    },
+    {
+      "id": "blank-spac-vak-je-tepl",
+      "type": "fill-blank",
+      "l1": "Le sac de couchage est chaud.",
+      "l2": "Spací vak je teplý.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sommes",
+        "C'est",
+        "était"
+      ],
+      "choices_l2": [
+        "bola",
+        "si",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-c-tim-navu-potrebujem-odpo-inok",
+      "type": "fill-blank",
+      "l1": "Je sens la fatigue, j'ai besoin de repos.",
+      "l2": "Cítim únavu, potrebujem odpočinok.",
+      "missing_l1": "la",
+      "missing_l2": "potrebujem",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "le",
+        "nord",
+        "Les"
+      ],
+      "choices_l2": [
+        "lekárničku",
+        "kopci",
+        "batohu"
+      ]
+    },
+    {
+      "id": "blank-nem-m-silu-s-alej",
+      "type": "fill-blank",
+      "l1": "Je n'ai pas la force d'aller plus loin.",
+      "l2": "Nemám silu ísť ďalej.",
+      "missing_l1": "la",
+      "missing_l2": "ísť",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "toi",
+        "sens",
+        "Les"
+      ],
+      "choices_l2": [
+        "idem",
+        "Chodíš",
+        "ideš"
+      ]
+    },
+    {
+      "id": "blank-kompas-ukazuje-sever",
+      "type": "fill-blank",
+      "l1": "La boussole indique le nord.",
+      "l2": "Kompas ukazuje sever.",
+      "missing_l1": "le",
+      "missing_l2": "ukazuje",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "sens",
+        "eau",
+        "toi"
+      ],
+      "choices_l2": [
+        "lekárničku",
+        "Baterka",
+        "tebou"
+      ]
+    },
+    {
+      "id": "listen-m-em-s-s-tebou",
+      "type": "listen",
+      "l1": "Puis-je venir avec toi ?",
+      "l2": "Môžem ísť s tebou?",
+      "choices_l1": [
+        "J'ai de la nourriture et de l'eau dans le sac.",
+        "Nous n'avons pas de tente, nous dormirons dans le refuge.",
+        "Nous devons avoir de l'eau et de la nourriture, parce que le sentier est long."
+      ],
+      "choices_l2": [
+        "Môžeš niesť mapu?",
+        "Máš palice? Pomáhajú v kopci.",
+        "Nemôžem ísť bez vody."
+      ]
+    },
+    {
+      "id": "listen-mus-ma-turistick-top-nky",
+      "type": "listen",
+      "l1": "Tu dois avoir des chaussures de randonnée.",
+      "l2": "Musíš mať turistické topánky.",
+      "choices_l1": [
+        "Peux-tu porter la carte ?",
+        "Nous devons avoir de l'eau et de la nourriture, parce que le sentier est long.",
+        "Tu as des bâtons ? Ils aident dans la montée."
+      ],
+      "choices_l2": [
+        "Musíme mať lekárničku.",
+        "Baterka je dôležitá, ak budeme neskoro.",
+        "Mám jedlo a vodu v batohu."
+      ]
+    },
+    {
+      "id": "listen-nem-em-s-bez-vody",
+      "type": "listen",
+      "l1": "Je ne peux pas y aller sans eau.",
+      "l2": "Nemôžem ísť bez vody.",
+      "choices_l1": [
+        "La lampe de poche est importante, si nous sommes en retard.",
+        "Nous devons avoir une trousse de secours.",
+        "Peux-tu porter la carte ?"
+      ],
+      "choices_l2": [
+        "Môžeme ísť do doliny, potom na vrch.",
+        "Chcem vidieť jazero, ale musím mať dobré topánky.",
+        "Baterka je dôležitá, ak budeme neskoro."
+      ]
+    },
+    {
+      "id": "listen-m-palice-pom-haj-v-kopci",
+      "type": "listen",
+      "l1": "Tu as des bâtons ? Ils aident dans la montée.",
+      "l2": "Máš palice? Pomáhajú v kopci.",
+      "choices_l1": [
+        "Nous devons avoir de l'eau et de la nourriture, parce que le sentier est long.",
+        "Je veux voir le lac, mais je dois avoir de bonnes chaussures.",
+        "Nous devons avoir une trousse de secours."
+      ],
+      "choices_l2": [
+        "Musíš mať turistické topánky.",
+        "Nemôžem ísť bez vody.",
+        "Musíme mať lekárničku."
+      ]
+    },
+    {
+      "id": "listen-m-m-jedlo-a-vodu-v-batohu",
+      "type": "listen",
+      "l1": "J'ai de la nourriture et de l'eau dans le sac.",
+      "l2": "Mám jedlo a vodu v batohu.",
+      "choices_l1": [
+        "Nous devons avoir une trousse de secours.",
+        "Tu dois avoir des chaussures de randonnée.",
+        "La lampe de poche est importante, si nous sommes en retard."
+      ],
+      "choices_l2": [
+        "Máš palice? Pomáhajú v kopci.",
+        "Musíš mať turistické topánky.",
+        "Spací vak je teplý."
+      ]
+    },
+    {
+      "id": "listen-mus-me-ma-lek-rni-ku",
+      "type": "listen",
+      "l1": "Nous devons avoir une trousse de secours.",
+      "l2": "Musíme mať lekárničku.",
+      "choices_l1": [
+        "Je veux voir le lac, mais je dois avoir de bonnes chaussures.",
+        "Je ne peux pas y aller sans eau.",
+        "Nous n'avons pas de tente, nous dormirons dans le refuge."
+      ],
+      "choices_l2": [
+        "Chcem vidieť jazero, ale musím mať dobré topánky.",
+        "Musíme mať vodu a jedlo, lebo chodník je dlhý.",
+        "Nemôžem ísť bez vody."
+      ]
+    },
+    {
+      "id": "listen-baterka-je-d-le-it-ak-budeme-neskoro",
+      "type": "listen",
+      "l1": "La lampe de poche est importante, si nous sommes en retard.",
+      "l2": "Baterka je dôležitá, ak budeme neskoro.",
+      "choices_l1": [
+        "Nous n'avons pas de tente, nous dormirons dans le refuge.",
+        "Nous devons avoir de l'eau et de la nourriture, parce que le sentier est long.",
+        "Tu dois avoir des chaussures de randonnée."
+      ],
+      "choices_l2": [
+        "Mám jedlo a vodu v batohu.",
+        "Máš palice? Pomáhajú v kopci.",
+        "Chcem vidieť jazero, ale musím mať dobré topánky."
+      ]
+    },
+    {
+      "id": "listen-m-e-nies-mapu",
+      "type": "listen",
+      "l1": "Peux-tu porter la carte ?",
+      "l2": "Môžeš niesť mapu?",
+      "choices_l1": [
+        "Nous pouvons aller dans la vallée, puis au sommet.",
+        "Le sac de couchage est chaud.",
+        "Nous devons avoir une trousse de secours."
+      ],
+      "choices_l2": [
+        "Nemáme stan, budeme spať v chate.",
+        "Môžeme ísť do doliny, potom na vrch.",
+        "Musíme mať vodu a jedlo, lebo chodník je dlhý."
+      ]
+    },
+    {
+      "id": "listen-mus-me-ma-vodu-a-jedlo-lebo-chodn-k-je-dlh",
+      "type": "listen",
+      "l1": "Nous devons avoir de l'eau et de la nourriture, parce que le sentier est long.",
+      "l2": "Musíme mať vodu a jedlo, lebo chodník je dlhý.",
+      "choices_l1": [
+        "Je veux voir le lac, mais je dois avoir de bonnes chaussures.",
+        "Nous devons avoir une trousse de secours.",
+        "Tu as des bâtons ? Ils aident dans la montée."
+      ],
+      "choices_l2": [
+        "Spací vak je teplý.",
+        "Baterka je dôležitá, ak budeme neskoro.",
+        "Musíme mať lekárničku."
+      ]
+    },
+    {
+      "id": "listen-m-eme-s-do-doliny-potom-na-vrch",
+      "type": "listen",
+      "l1": "Nous pouvons aller dans la vallée, puis au sommet.",
+      "l2": "Môžeme ísť do doliny, potom na vrch.",
+      "choices_l1": [
+        "Nous devons avoir une trousse de secours.",
+        "Tu dois avoir des chaussures de randonnée.",
+        "Je veux voir le lac, mais je dois avoir de bonnes chaussures."
+      ],
+      "choices_l2": [
+        "Chcem vidieť jazero, ale musím mať dobré topánky.",
+        "Máš palice? Pomáhajú v kopci.",
+        "Musíme mať vodu a jedlo, lebo chodník je dlhý."
+      ]
+    },
+    {
+      "id": "listen-chcem-vidie-jazero-ale-mus-m-ma-dobr-top-nky",
+      "type": "listen",
+      "l1": "Je veux voir le lac, mais je dois avoir de bonnes chaussures.",
+      "l2": "Chcem vidieť jazero, ale musím mať dobré topánky.",
+      "choices_l1": [
+        "Puis-je venir avec toi ?",
+        "La lampe de poche est importante, si nous sommes en retard.",
+        "Le sac de couchage est chaud."
+      ],
+      "choices_l2": [
+        "Mám jedlo a vodu v batohu.",
+        "Môžeš niesť mapu?",
+        "Môžem ísť s tebou?"
+      ]
+    },
+    {
+      "id": "listen-nem-me-stan-budeme-spa-v-chate",
+      "type": "listen",
+      "l1": "Nous n'avons pas de tente, nous dormirons dans le refuge.",
+      "l2": "Nemáme stan, budeme spať v chate.",
+      "choices_l1": [
+        "Peux-tu porter la carte ?",
+        "Nous pouvons aller dans la vallée, puis au sommet.",
+        "Je veux voir le lac, mais je dois avoir de bonnes chaussures."
+      ],
+      "choices_l2": [
+        "Mám jedlo a vodu v batohu.",
+        "Môžem ísť s tebou?",
+        "Môžeme ísť do doliny, potom na vrch."
+      ]
+    },
+    {
+      "id": "listen-spac-vak-je-tepl",
+      "type": "listen",
+      "l1": "Le sac de couchage est chaud.",
+      "l2": "Spací vak je teplý.",
+      "choices_l1": [
+        "Tu as des bâtons ? Ils aident dans la montée.",
+        "Je ne peux pas y aller sans eau.",
+        "Nous devons avoir de l'eau et de la nourriture, parce que le sentier est long."
+      ],
+      "choices_l2": [
+        "Baterka je dôležitá, ak budeme neskoro.",
+        "Musíme mať lekárničku.",
+        "Nemáme stan, budeme spať v chate."
+      ]
+    },
+    {
+      "id": "listen-c-tim-navu-potrebujem-odpo-inok",
+      "type": "listen",
+      "l1": "Je sens la fatigue, j'ai besoin de repos.",
+      "l2": "Cítim únavu, potrebujem odpočinok.",
+      "choices_l1": [
+        "Nous devons avoir de l'eau et de la nourriture, parce que le sentier est long.",
+        "Peux-tu porter la carte ?",
+        "Tu dois avoir des chaussures de randonnée."
+      ],
+      "choices_l2": [
+        "Musíš mať turistické topánky.",
+        "Chcem vidieť jazero, ale musím mať dobré topánky.",
+        "Máš palice? Pomáhajú v kopci."
+      ]
+    },
+    {
+      "id": "listen-nem-m-silu-s-alej",
+      "type": "listen",
+      "l1": "Je n'ai pas la force d'aller plus loin.",
+      "l2": "Nemám silu ísť ďalej.",
+      "choices_l1": [
+        "Je ne peux pas y aller sans eau.",
+        "Puis-je venir avec toi ?",
+        "J'ai de la nourriture et de l'eau dans le sac."
+      ],
+      "choices_l2": [
+        "Mám jedlo a vodu v batohu.",
+        "Musíme mať vodu a jedlo, lebo chodník je dlhý.",
+        "Nemôžem ísť bez vody."
+      ]
+    },
+    {
+      "id": "listen-kompas-ukazuje-sever",
+      "type": "listen",
+      "l1": "La boussole indique le nord.",
+      "l2": "Kompas ukazuje sever.",
+      "choices_l1": [
+        "Nous n'avons pas de tente, nous dormirons dans le refuge.",
+        "Peux-tu porter la carte ?",
+        "Puis-je venir avec toi ?"
+      ],
+      "choices_l2": [
+        "Nemáme stan, budeme spať v chate.",
+        "Musíme mať vodu a jedlo, lebo chodník je dlhý.",
+        "Musíme mať lekárničku."
+      ]
+    },
+    {
+      "id": "order-m-em-s-s-tebou",
+      "type": "order",
+      "l1": "Puis-je venir avec toi ?",
+      "l2": "Môžem ísť s tebou?",
+      "tokens_l1": [
+        "Puis-je",
+        "venir",
+        "avec",
+        "toi",
+        "?",
+        "Nous",
+        "pouvons",
+        "aller",
+        "dans",
+        "la",
+        "vallée,",
+        "puis",
+        "au",
+        "sommet."
+      ],
+      "tokens_l2": [
+        "Môžem",
+        "ísť",
+        "s",
+        "tebou?",
+        "Môžeme",
+        "ísť",
+        "do",
+        "doliny,",
+        "potom",
+        "na",
+        "vrch."
+      ]
+    },
+    {
+      "id": "order-mus-ma-turistick-top-nky",
+      "type": "order",
+      "l1": "Tu dois avoir des chaussures de randonnée.",
+      "l2": "Musíš mať turistické topánky.",
+      "tokens_l1": [
+        "Tu",
+        "dois",
+        "avoir",
+        "des",
+        "chaussures",
+        "de",
+        "randonnée.",
+        "Je",
+        "n'ai",
+        "pas",
+        "la",
+        "force",
+        "d'aller",
+        "plus",
+        "loin."
+      ],
+      "tokens_l2": [
+        "Musíš",
+        "mať",
+        "turistické",
+        "topánky.",
+        "Nemám",
+        "silu",
+        "ísť",
+        "ďalej."
+      ]
+    },
+    {
+      "id": "order-nem-em-s-bez-vody",
+      "type": "order",
+      "l1": "Je ne peux pas y aller sans eau.",
+      "l2": "Nemôžem ísť bez vody.",
+      "tokens_l1": [
+        "Je",
+        "ne",
+        "peux",
+        "pas",
+        "y",
+        "aller",
+        "sans",
+        "eau.",
+        "J'ai",
+        "de",
+        "la",
+        "nourriture",
+        "et",
+        "de",
+        "l'eau",
+        "dans",
+        "le",
+        "sac."
+      ],
+      "tokens_l2": [
+        "Nemôžem",
+        "ísť",
+        "bez",
+        "vody.",
+        "Mám",
+        "jedlo",
+        "a",
+        "vodu",
+        "v",
+        "batohu."
+      ]
+    },
+    {
+      "id": "order-m-palice-pom-haj-v-kopci",
+      "type": "order",
+      "l1": "Tu as des bâtons ? Ils aident dans la montée.",
+      "l2": "Máš palice? Pomáhajú v kopci.",
+      "tokens_l1": [
+        "Tu",
+        "as",
+        "des",
+        "bâtons",
+        "?",
+        "Ils",
+        "aident",
+        "dans",
+        "la",
+        "montée.",
+        "Nous",
+        "pouvons",
+        "aller",
+        "dans",
+        "la",
+        "vallée,",
+        "puis",
+        "au",
+        "sommet."
+      ],
+      "tokens_l2": [
+        "Máš",
+        "palice?",
+        "Pomáhajú",
+        "v",
+        "kopci.",
+        "Môžeme",
+        "ísť",
+        "do",
+        "doliny,",
+        "potom",
+        "na",
+        "vrch."
+      ]
+    },
+    {
+      "id": "order-m-m-jedlo-a-vodu-v-batohu",
+      "type": "order",
+      "l1": "J'ai de la nourriture et de l'eau dans le sac.",
+      "l2": "Mám jedlo a vodu v batohu.",
+      "tokens_l1": [
+        "J'ai",
+        "de",
+        "la",
+        "nourriture",
+        "et",
+        "de",
+        "l'eau",
+        "dans",
+        "le",
+        "sac.",
+        "Je",
+        "n'ai",
+        "pas",
+        "la",
+        "force",
+        "d'aller",
+        "plus",
+        "loin."
+      ],
+      "tokens_l2": [
+        "Mám",
+        "jedlo",
+        "a",
+        "vodu",
+        "v",
+        "batohu.",
+        "Nemám",
+        "silu",
+        "ísť",
+        "ďalej."
+      ]
+    },
+    {
+      "id": "order-mus-me-ma-lek-rni-ku",
+      "type": "order",
+      "l1": "Nous devons avoir une trousse de secours.",
+      "l2": "Musíme mať lekárničku.",
+      "tokens_l1": [
+        "Nous",
+        "devons",
+        "avoir",
+        "une",
+        "trousse",
+        "de",
+        "secours.",
+        "Tu",
+        "as",
+        "des",
+        "bâtons",
+        "?",
+        "Ils",
+        "aident",
+        "dans",
+        "la",
+        "montée."
+      ],
+      "tokens_l2": [
+        "Musíme",
+        "mať",
+        "lekárničku.",
+        "Máš",
+        "palice?",
+        "Pomáhajú",
+        "v",
+        "kopci."
+      ]
+    },
+    {
+      "id": "order-baterka-je-d-le-it-ak-budeme-neskoro",
+      "type": "order",
+      "l1": "La lampe de poche est importante, si nous sommes en retard.",
+      "l2": "Baterka je dôležitá, ak budeme neskoro.",
+      "tokens_l1": [
+        "La",
+        "lampe",
+        "de",
+        "poche",
+        "est",
+        "importante,",
+        "si",
+        "nous",
+        "sommes",
+        "en",
+        "retard.",
+        "Je",
+        "veux",
+        "voir",
+        "le",
+        "lac,",
+        "mais",
+        "je",
+        "dois",
+        "avoir",
+        "de",
+        "bonnes",
+        "chaussures."
+      ],
+      "tokens_l2": [
+        "Baterka",
+        "je",
+        "dôležitá,",
+        "ak",
+        "budeme",
+        "neskoro.",
+        "Chcem",
+        "vidieť",
+        "jazero,",
+        "ale",
+        "musím",
+        "mať",
+        "dobré",
+        "topánky."
+      ]
+    },
+    {
+      "id": "order-m-e-nies-mapu",
+      "type": "order",
+      "l1": "Peux-tu porter la carte ?",
+      "l2": "Môžeš niesť mapu?",
+      "tokens_l1": [
+        "Peux-tu",
+        "porter",
+        "la",
+        "carte",
+        "?",
+        "Je",
+        "ne",
+        "peux",
+        "pas",
+        "y",
+        "aller",
+        "sans",
+        "eau."
+      ],
+      "tokens_l2": [
+        "Môžeš",
+        "niesť",
+        "mapu?",
+        "Nemôžem",
+        "ísť",
+        "bez",
+        "vody."
+      ]
+    },
+    {
+      "id": "order-mus-me-ma-vodu-a-jedlo-lebo-chodn-k-je-dlh",
+      "type": "order",
+      "l1": "Nous devons avoir de l'eau et de la nourriture, parce que le sentier est long.",
+      "l2": "Musíme mať vodu a jedlo, lebo chodník je dlhý.",
+      "tokens_l1": [
+        "Nous",
+        "devons",
+        "avoir",
+        "de",
+        "l'eau",
+        "et",
+        "de",
+        "la",
+        "nourriture,",
+        "parce",
+        "que",
+        "le",
+        "sentier",
+        "est",
+        "long.",
+        "Je",
+        "ne",
+        "peux",
+        "pas",
+        "y",
+        "aller",
+        "sans",
+        "eau."
+      ],
+      "tokens_l2": [
+        "Musíme",
+        "mať",
+        "vodu",
+        "a",
+        "jedlo,",
+        "lebo",
+        "chodník",
+        "je",
+        "dlhý.",
+        "Nemôžem",
+        "ísť",
+        "bez",
+        "vody."
+      ]
+    },
+    {
+      "id": "order-m-eme-s-do-doliny-potom-na-vrch",
+      "type": "order",
+      "l1": "Nous pouvons aller dans la vallée, puis au sommet.",
+      "l2": "Môžeme ísť do doliny, potom na vrch.",
+      "tokens_l1": [
+        "Nous",
+        "pouvons",
+        "aller",
+        "dans",
+        "la",
+        "vallée,",
+        "puis",
+        "au",
+        "sommet.",
+        "Puis-je",
+        "venir",
+        "avec",
+        "toi",
+        "?"
+      ],
+      "tokens_l2": [
+        "Môžeme",
+        "ísť",
+        "do",
+        "doliny,",
+        "potom",
+        "na",
+        "vrch.",
+        "Môžem",
+        "ísť",
+        "s",
+        "tebou?"
+      ]
+    },
+    {
+      "id": "order-chcem-vidie-jazero-ale-mus-m-ma-dobr-top-nky",
+      "type": "order",
+      "l1": "Je veux voir le lac, mais je dois avoir de bonnes chaussures.",
+      "l2": "Chcem vidieť jazero, ale musím mať dobré topánky.",
+      "tokens_l1": [
+        "Je",
+        "veux",
+        "voir",
+        "le",
+        "lac,",
+        "mais",
+        "je",
+        "dois",
+        "avoir",
+        "de",
+        "bonnes",
+        "chaussures.",
+        "J'ai",
+        "de",
+        "la",
+        "nourriture",
+        "et",
+        "de",
+        "l'eau",
+        "dans",
+        "le",
+        "sac."
+      ],
+      "tokens_l2": [
+        "Chcem",
+        "vidieť",
+        "jazero,",
+        "ale",
+        "musím",
+        "mať",
+        "dobré",
+        "topánky.",
+        "Mám",
+        "jedlo",
+        "a",
+        "vodu",
+        "v",
+        "batohu."
+      ]
+    },
+    {
+      "id": "order-nem-me-stan-budeme-spa-v-chate",
+      "type": "order",
+      "l1": "Nous n'avons pas de tente, nous dormirons dans le refuge.",
+      "l2": "Nemáme stan, budeme spať v chate.",
+      "tokens_l1": [
+        "Nous",
+        "n'avons",
+        "pas",
+        "de",
+        "tente,",
+        "nous",
+        "dormirons",
+        "dans",
+        "le",
+        "refuge.",
+        "Le",
+        "sac",
+        "de",
+        "couchage",
+        "est",
+        "chaud."
+      ],
+      "tokens_l2": [
+        "Nemáme",
+        "stan,",
+        "budeme",
+        "spať",
+        "v",
+        "chate.",
+        "Spací",
+        "vak",
+        "je",
+        "teplý."
+      ]
+    },
+    {
+      "id": "order-spac-vak-je-tepl",
+      "type": "order",
+      "l1": "Le sac de couchage est chaud.",
+      "l2": "Spací vak je teplý.",
+      "tokens_l1": [
+        "Le",
+        "sac",
+        "de",
+        "couchage",
+        "est",
+        "chaud.",
+        "La",
+        "boussole",
+        "indique",
+        "le",
+        "nord."
+      ],
+      "tokens_l2": [
+        "Spací",
+        "vak",
+        "je",
+        "teplý.",
+        "Kompas",
+        "ukazuje",
+        "sever."
+      ]
+    },
+    {
+      "id": "order-c-tim-navu-potrebujem-odpo-inok",
+      "type": "order",
+      "l1": "Je sens la fatigue, j'ai besoin de repos.",
+      "l2": "Cítim únavu, potrebujem odpočinok.",
+      "tokens_l1": [
+        "Je",
+        "sens",
+        "la",
+        "fatigue,",
+        "j'ai",
+        "besoin",
+        "de",
+        "repos.",
+        "Nous",
+        "n'avons",
+        "pas",
+        "de",
+        "tente,",
+        "nous",
+        "dormirons",
+        "dans",
+        "le",
+        "refuge."
+      ],
+      "tokens_l2": [
+        "Cítim",
+        "únavu,",
+        "potrebujem",
+        "odpočinok.",
+        "Nemáme",
+        "stan,",
+        "budeme",
+        "spať",
+        "v",
+        "chate."
+      ]
+    },
+    {
+      "id": "order-nem-m-silu-s-alej",
+      "type": "order",
+      "l1": "Je n'ai pas la force d'aller plus loin.",
+      "l2": "Nemám silu ísť ďalej.",
+      "tokens_l1": [
+        "Je",
+        "n'ai",
+        "pas",
+        "la",
+        "force",
+        "d'aller",
+        "plus",
+        "loin.",
+        "Tu",
+        "dois",
+        "avoir",
+        "des",
+        "chaussures",
+        "de",
+        "randonnée."
+      ],
+      "tokens_l2": [
+        "Nemám",
+        "silu",
+        "ísť",
+        "ďalej.",
+        "Musíš",
+        "mať",
+        "turistické",
+        "topánky."
+      ]
+    },
+    {
+      "id": "order-kompas-ukazuje-sever",
+      "type": "order",
+      "l1": "La boussole indique le nord.",
+      "l2": "Kompas ukazuje sever.",
+      "tokens_l1": [
+        "La",
+        "boussole",
+        "indique",
+        "le",
+        "nord.",
+        "Le",
+        "sac",
+        "de",
+        "couchage",
+        "est",
+        "chaud."
+      ],
+      "tokens_l2": [
+        "Kompas",
+        "ukazuje",
+        "sever.",
+        "Spací",
+        "vak",
+        "je",
+        "teplý."
+      ]
+    },
+    {
+      "id": "match-m-c-vocab",
+      "type": "match",
+      "l1": [
+        "pouvoir",
+        "les chaussures de randonnée",
+        "les bâtons",
+        "l'eau"
+      ],
+      "l2": [
+        "môcť",
+        "turistické topánky",
+        "palice",
+        "voda"
+      ]
+    },
+    {
+      "id": "match-m-em-s-s-tebou-sentences",
+      "type": "match",
+      "l1": [
+        "Puis-je venir avec toi ?",
+        "Tu dois avoir des chaussures de randonnée.",
+        "Je ne peux pas y aller sans eau.",
+        "Tu as des bâtons ? Ils aident dans la montée."
+      ],
+      "l2": [
+        "Môžem ísť s tebou?",
+        "Musíš mať turistické topánky.",
+        "Nemôžem ísť bez vody.",
+        "Máš palice? Pomáhajú v kopci."
+      ]
+    }
+  ]
+}

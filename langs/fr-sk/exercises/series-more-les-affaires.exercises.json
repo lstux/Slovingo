@@ -1,0 +1,1372 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-pouvoir",
+      "type": "qcm",
+      "l1": "môcť",
+      "l2": "pouvoir",
+      "choices_l1": [
+        "malá sestra",
+        "bude",
+        "zelenina"
+      ],
+      "choices_l2": [
+        "très",
+        "la chaise",
+        "la tante"
+      ]
+    },
+    {
+      "id": "qcm-le-maillot-de-bain",
+      "type": "qcm",
+      "l1": "plavky",
+      "l2": "le maillot de bain",
+      "choices_l1": [
+        "televízor",
+        "ideš",
+        "šiltovka"
+      ],
+      "choices_l2": [
+        "Il fait froid.",
+        "froid / froide",
+        "un salon (mužský rod)"
+      ]
+    },
+    {
+      "id": "qcm-la-serviette-de-plage",
+      "type": "qcm",
+      "l1": "osuška",
+      "l2": "la serviette de plage",
+      "choices_l1": [
+        "smäd",
+        "čierny",
+        "slaný"
+      ],
+      "choices_l2": [
+        "une petite sœur",
+        "manger du pain",
+        "C'est devant l'église."
+      ]
+    },
+    {
+      "id": "qcm-le-seau",
+      "type": "qcm",
+      "l1": "vedierko",
+      "l2": "le seau",
+      "choices_l1": [
+        "ješ",
+        "navštíviť",
+        "musí"
+      ],
+      "choices_l2": [
+        "la baguette",
+        "la bière",
+        "la cuisine"
+      ]
+    },
+    {
+      "id": "qcm-le-parasol",
+      "type": "qcm",
+      "l1": "slnečník",
+      "l2": "le parasol",
+      "choices_l1": [
+        "kľúč",
+        "lampa",
+        "vnútri"
+      ],
+      "choices_l2": [
+        "la cuisine",
+        "tu veux",
+        "l'imperméable"
+      ]
+    },
+    {
+      "id": "qcm-la-glaci-re",
+      "type": "qcm",
+      "l1": "chladiaci box",
+      "l2": "la glacière",
+      "choices_l1": [
+        "hodiny",
+        "tráva",
+        "mesto"
+      ],
+      "choices_l2": [
+        "déjà",
+        "longtemps",
+        "tu achètes"
+      ]
+    },
+    {
+      "id": "qcm-les-palmes",
+      "type": "qcm",
+      "l1": "plutvy",
+      "l2": "les palmes",
+      "choices_l1": [
+        "trochu",
+        "byt",
+        "Je chladno."
+      ],
+      "choices_l2": [
+        "beaucoup",
+        "quand",
+        "rose"
+      ]
+    },
+    {
+      "id": "qcm-je-peux",
+      "type": "qcm",
+      "l1": "môžem",
+      "l2": "je peux",
+      "choices_l1": [
+        "drahota",
+        "piatok",
+        "taxík"
+      ],
+      "choices_l2": [
+        "acide",
+        "joli",
+        "le pull"
+      ]
+    },
+    {
+      "id": "qcm-tu-peux",
+      "type": "qcm",
+      "l1": "môžeš",
+      "l2": "tu peux",
+      "choices_l1": [
+        "oddychovať",
+        "streda",
+        "autobus"
+      ],
+      "choices_l2": [
+        "un an",
+        "le verre",
+        "dehors"
+      ]
+    },
+    {
+      "id": "qcm-il-elle-peut",
+      "type": "qcm",
+      "l1": "môže",
+      "l2": "il / elle peut",
+      "choices_l1": [
+        "presne",
+        "mäso",
+        "rok"
+      ],
+      "choices_l2": [
+        "il / elle essaie",
+        "Je prends du vin.",
+        "Comment c'est ?"
+      ]
+    },
+    {
+      "id": "qcm-nous-pouvons",
+      "type": "qcm",
+      "l1": "môžeme",
+      "l2": "nous pouvons",
+      "choices_l1": [
+        "panelák",
+        "dnes",
+        "malý"
+      ],
+      "choices_l2": [
+        "C'est cher.",
+        "la gare",
+        "rassasié"
+      ]
+    },
+    {
+      "id": "qcm-je-veux-nager",
+      "type": "qcm",
+      "l1": "Chcem plávať.",
+      "l2": "Je veux nager.",
+      "choices_l1": [
+        "bývame",
+        "výlet",
+        "lekár"
+      ],
+      "choices_l2": [
+        "la salle de bain",
+        "ils / elles mangent",
+        "la crème solaire"
+      ]
+    },
+    {
+      "id": "qcm-je-dois-avoir-un-maillot-de-bain",
+      "type": "qcm",
+      "l1": "Musím mať plavky.",
+      "l2": "Je dois avoir un maillot de bain.",
+      "choices_l1": [
+        "Je to pred kostolom.",
+        "Nie je tam posteľ.",
+        "Ak bude slnečno, pôjdeme von."
+      ],
+      "choices_l2": [
+        "ces chaussures (množné číslo)",
+        "Je prends une quiche.",
+        "une jupe verte"
+      ]
+    },
+    {
+      "id": "qcm-je-peux-nager-seul",
+      "type": "qcm",
+      "l1": "Môžem plávať sám?",
+      "l2": "Je peux nager seul ?",
+      "choices_l1": [
+        "Idem do práce.",
+        "Musíme mať dáždnik.",
+        "Chodím do práce autobusom."
+      ],
+      "choices_l2": [
+        "la crème solaire",
+        "Je cherche la clé. → Je la cherche.",
+        "il / elle mange"
+      ]
+    },
+    {
+      "id": "qcm-la-tente",
+      "type": "qcm",
+      "l1": "stan",
+      "l2": "la tente",
+      "choices_l1": [
+        "hľadá",
+        "kupovať",
+        "na stole"
+      ],
+      "choices_l2": [
+        "la cour",
+        "l'enfant",
+        "en train"
+      ]
+    },
+    {
+      "id": "qcm-le-sac-de-couchage",
+      "type": "qcm",
+      "l1": "spací vak",
+      "l2": "le sac de couchage",
+      "choices_l1": [
+        "zľava",
+        "pozerať",
+        "idem"
+      ],
+      "choices_l2": [
+        "un petit frère",
+        "sur le pont",
+        "boire de l'eau"
+      ]
+    },
+    {
+      "id": "qcm-la-fatigue",
+      "type": "qcm",
+      "l1": "únava",
+      "l2": "la fatigue",
+      "choices_l1": [
+        "košeľa",
+        "na ulici",
+        "Stretneme sa."
+      ],
+      "choices_l2": [
+        "en hiver",
+        "la mer",
+        "le pull"
+      ]
+    },
+    {
+      "id": "qcm-la-force",
+      "type": "qcm",
+      "l1": "sila",
+      "l2": "la force",
+      "choices_l1": [
+        "plný",
+        "ešte",
+        "čierne nohavice"
+      ],
+      "choices_l2": [
+        "le ciel",
+        "à Lyon",
+        "travailler"
+      ]
+    },
+    {
+      "id": "qcm-le-repos",
+      "type": "qcm",
+      "l1": "odpočinok",
+      "l2": "le repos",
+      "choices_l1": [
+        "mesto",
+        "stretnutie",
+        "daždivo"
+      ],
+      "choices_l2": [
+        "Il neige.",
+        "la tarte",
+        "jamais"
+      ]
+    },
+    {
+      "id": "qcm-se-baigner",
+      "type": "qcm",
+      "l1": "kúpať sa",
+      "l2": "se baigner",
+      "choices_l1": [
+        "piatok",
+        "ideme",
+        "tento sveter"
+      ],
+      "choices_l2": [
+        "acide",
+        "j'habite",
+        "écouter"
+      ]
+    },
+    {
+      "id": "qcm-bronzer",
+      "type": "qcm",
+      "l1": "opaľovať sa",
+      "l2": "bronzer",
+      "choices_l1": [
+        "telefón",
+        "narodeniny",
+        "stolička"
+      ],
+      "choices_l2": [
+        "l'enfant",
+        "je dois",
+        "se reposer"
+      ]
+    },
+    {
+      "id": "blank-je-peux-venir-avec-toi",
+      "type": "fill-blank",
+      "l1": "Môžem ísť s tebou?",
+      "l2": "Je peux venir avec toi ?",
+      "missing_l1": "ísť",
+      "missing_l2": "avec",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "prosím",
+        "bude",
+        "som"
+      ],
+      "choices_l2": [
+        "à",
+        "veux",
+        "vais"
+      ]
+    },
+    {
+      "id": "blank-tu-dois-avoir-un-maillot-de-bain",
+      "type": "fill-blank",
+      "l1": "Musíš mať plavky.",
+      "l2": "Tu dois avoir un maillot de bain.",
+      "missing_l1": "mať",
+      "missing_l2": "de",
+      "blank_index_l1": 1,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "deň",
+        "ale",
+        "a"
+      ],
+      "choices_l2": [
+        "tu",
+        "la",
+        "du"
+      ]
+    },
+    {
+      "id": "blank-je-ne-peux-pas-nager-sans-palmes",
+      "type": "fill-blank",
+      "l1": "Nemôžem plávať bez plutiev.",
+      "l2": "Je ne peux pas nager sans palmes.",
+      "missing_l1": "plávať",
+      "missing_l2": "pas",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "ja",
+        "moja",
+        "kde"
+      ],
+      "choices_l2": [
+        "je",
+        "une",
+        "les"
+      ]
+    },
+    {
+      "id": "blank-tu-as-une-serviette-de-plage-elle-aide-contre-le-sable",
+      "type": "fill-blank",
+      "l1": "Máš osušku? Pomáha proti piesku.",
+      "l2": "Tu as une serviette de plage ? Elle aide contre le sable.",
+      "missing_l1": "piesku",
+      "missing_l2": "le",
+      "blank_index_l1": 4,
+      "blank_index_l2": 10,
+      "choices_l1": [
+        "nemám",
+        "máte",
+        "o"
+      ],
+      "choices_l2": [
+        "c'est",
+        "la",
+        "de"
+      ]
+    },
+    {
+      "id": "blank-j-ai-le-seau-et-le-parasol-dans-le-sac",
+      "type": "fill-blank",
+      "l1": "Mám vedierko a slnečník v taške.",
+      "l2": "J'ai le seau et le parasol dans le sac.",
+      "missing_l1": "v",
+      "missing_l2": "le",
+      "blank_index_l1": 4,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "veľmi",
+        "sú",
+        "si"
+      ],
+      "choices_l2": [
+        "et",
+        "je",
+        "une"
+      ]
+    },
+    {
+      "id": "blank-nous-devons-avoir-une-glaci-re",
+      "type": "fill-blank",
+      "l1": "Musíme mať chladiaci box.",
+      "l2": "Nous devons avoir une glacière.",
+      "missing_l1": "mať",
+      "missing_l2": "une",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "moja",
+        "zajtra",
+        "siedmej"
+      ],
+      "choices_l2": [
+        "y",
+        "au",
+        "le"
+      ]
+    },
+    {
+      "id": "blank-tu-peux-porter-le-parasol",
+      "type": "fill-blank",
+      "l1": "Môžeš niesť slnečník?",
+      "l2": "Tu peux porter le parasol ?",
+      "missing_l1": "slnečník",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "čas",
+        "mi",
+        "ja"
+      ],
+      "choices_l2": [
+        "mon",
+        "sont",
+        "ne"
+      ]
+    },
+    {
+      "id": "blank-nous-devons-avoir-de-l-eau-et-de-la-cr-me-solaire-parce-que-la-plage-est-loin",
+      "type": "fill-blank",
+      "l1": "Musíme mať vodu a krém na opaľovanie, lebo pláž je ďaleko.",
+      "l2": "Nous devons avoir de l'eau et de la crème solaire, parce que la plage est loin.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 9,
+      "blank_index_l2": 14,
+      "choices_l1": [
+        "chcem",
+        "toto",
+        "o"
+      ],
+      "choices_l2": [
+        "suis",
+        "s'il",
+        "un"
+      ]
+    },
+    {
+      "id": "blank-nous-pouvons-aller-la-mer-puis-la-plage",
+      "type": "fill-blank",
+      "l1": "Môžeme ísť k moru, potom na pláž.",
+      "l2": "Nous pouvons aller à la mer, puis à la plage.",
+      "missing_l1": "na",
+      "missing_l2": "la",
+      "blank_index_l1": 5,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "mi",
+        "máte",
+        "deň"
+      ],
+      "choices_l2": [
+        "ma",
+        "et",
+        "s'il"
+      ]
+    },
+    {
+      "id": "blank-je-veux-voir-le-phare-mais-je-dois-avoir-de-bonnes-chaussures",
+      "type": "fill-blank",
+      "l1": "Chcem vidieť maják, ale musím mať dobré topánky.",
+      "l2": "Je veux voir le phare, mais je dois avoir de bonnes chaussures.",
+      "missing_l1": "ale",
+      "missing_l2": "le",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "deň",
+        "si",
+        "v"
+      ],
+      "choices_l2": [
+        "cette",
+        "où",
+        "s'il"
+      ]
+    },
+    {
+      "id": "blank-nous-n-avons-pas-de-tente-nous-dormirons-l-h-tel",
+      "type": "fill-blank",
+      "l1": "Nemáme stan, budeme spať v hoteli.",
+      "l2": "Nous n'avons pas de tente, nous dormirons à l'hôtel.",
+      "missing_l1": "v",
+      "missing_l2": "de",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "moja",
+        "môj",
+        "to"
+      ],
+      "choices_l2": [
+        "nous",
+        "un",
+        "du"
+      ]
+    },
+    {
+      "id": "blank-le-sac-de-couchage-est-chaud",
+      "type": "fill-blank",
+      "l1": "Spací vak je teplý.",
+      "l2": "Le sac de couchage est chaud.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "to",
+        "bude",
+        "moja"
+      ],
+      "choices_l2": [
+        "mon",
+        "une",
+        "du"
+      ]
+    },
+    {
+      "id": "blank-je-sens-la-fatigue-j-ai-besoin-de-repos",
+      "type": "fill-blank",
+      "l1": "Cítim únavu, potrebujem odpočinok.",
+      "l2": "Je sens la fatigue, j'ai besoin de repos.",
+      "missing_l1": "odpočinok",
+      "missing_l2": "la",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "čas",
+        "nemám",
+        "si"
+      ],
+      "choices_l2": [
+        "mon",
+        "s'il",
+        "et"
+      ]
+    },
+    {
+      "id": "blank-je-veux-me-baigner-mais-l-eau-est-froide",
+      "type": "fill-blank",
+      "l1": "Chcem sa kúpať, ale voda je studená.",
+      "l2": "Je veux me baigner, mais l'eau est froide.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 5,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "a",
+        "moja",
+        "máte"
+      ],
+      "choices_l2": [
+        "la",
+        "nous",
+        "y"
+      ]
+    },
+    {
+      "id": "blank-nous-allons-bronzer-sur-la-plage",
+      "type": "fill-blank",
+      "l1": "Ideme sa opaľovať na pláži.",
+      "l2": "Nous allons bronzer sur la plage.",
+      "missing_l1": "na",
+      "missing_l2": "la",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "toto",
+        "bude",
+        "mám"
+      ],
+      "choices_l2": [
+        "pas",
+        "en",
+        "du"
+      ]
+    },
+    {
+      "id": "listen-je-peux-venir-avec-toi",
+      "type": "listen",
+      "l1": "Môžem ísť s tebou?",
+      "l2": "Je peux venir avec toi ?",
+      "choices_l2": [
+        "Moi, je vais sans doute être en retard. Le bus est toujours en retard.",
+        "Mercredi, je n'ai pas le temps.",
+        "La banque est à côté du musée, après le coin."
+      ]
+    },
+    {
+      "id": "listen-tu-dois-avoir-un-maillot-de-bain",
+      "type": "listen",
+      "l1": "Musíš mať plavky.",
+      "l2": "Tu dois avoir un maillot de bain.",
+      "choices_l2": [
+        "En colline, tu dois avoir des vêtements chauds et un parapluie.",
+        "Nous avons un balcon et un garage.",
+        "Cette veste est chère."
+      ]
+    },
+    {
+      "id": "listen-je-ne-peux-pas-nager-sans-palmes",
+      "type": "listen",
+      "l1": "Nemôžem plávať bez plutiev.",
+      "l2": "Je ne peux pas nager sans palmes.",
+      "choices_l2": [
+        "Le week-end, j'ai le temps.",
+        "Quel est le programme ce soir ?",
+        "Le dimanche, je suis toujours en retard."
+      ]
+    },
+    {
+      "id": "listen-tu-as-une-serviette-de-plage-elle-aide-contre-le-sable",
+      "type": "listen",
+      "l1": "Máš osušku? Pomáha proti piesku.",
+      "l2": "Tu as une serviette de plage ? Elle aide contre le sable.",
+      "choices_l2": [
+        "J'attends ici depuis longtemps.",
+        "Je veux ce pull rouge.",
+        "Hier, comme aujourd'hui, je n'ai pas le temps."
+      ]
+    },
+    {
+      "id": "listen-j-ai-le-seau-et-le-parasol-dans-le-sac",
+      "type": "listen",
+      "l1": "Mám vedierko a slnečník v taške.",
+      "l2": "J'ai le seau et le parasol dans le sac.",
+      "choices_l2": [
+        "C'est après le coin.",
+        "Le bus a dix minutes de retard.",
+        "Papa mange de la viande."
+      ]
+    },
+    {
+      "id": "listen-nous-devons-avoir-une-glaci-re",
+      "type": "listen",
+      "l1": "Musíme mať chladiaci box.",
+      "l2": "Nous devons avoir une glacière.",
+      "choices_l2": [
+        "Le trottoir est étroit.",
+        "S'il fait beau demain, nous irons nous promener dans le parc.",
+        "Le pot-au-feu est chaud et salé."
+      ]
+    },
+    {
+      "id": "listen-tu-peux-porter-le-parasol",
+      "type": "listen",
+      "l1": "Môžeš niesť slnečník?",
+      "l2": "Tu peux porter le parasol ?",
+      "choices_l2": [
+        "Je bois du vin, pas de bière.",
+        "Une quiche lorraine. Elle est chaude, attention.",
+        "Je cherche le téléphone. Il n'est pas dans l'armoire."
+      ]
+    },
+    {
+      "id": "listen-nous-devons-avoir-de-l-eau-et-de-la-cr-me-solaire-parce-que-la-plage-est-loin",
+      "type": "listen",
+      "l1": "Musíme mať vodu a krém na opaľovanie, lebo pláž je ďaleko.",
+      "l2": "Nous devons avoir de l'eau et de la crème solaire, parce que la plage est loin.",
+      "choices_l2": [
+        "Maman cuisine dans la cuisine.",
+        "Maman cuisine et moi je lave les verres.",
+        "Notre appartement est petit, mais joli."
+      ]
+    },
+    {
+      "id": "listen-nous-pouvons-aller-la-mer-puis-la-plage",
+      "type": "listen",
+      "l1": "Môžeme ísť k moru, potom na pláž.",
+      "l2": "Nous pouvons aller à la mer, puis à la plage.",
+      "choices_l2": [
+        "Ma sœur a deux ans.",
+        "Combien coûtent les chaussures ?",
+        "Les enfants sont dans le parc."
+      ]
+    },
+    {
+      "id": "listen-je-veux-voir-le-phare-mais-je-dois-avoir-de-bonnes-chaussures",
+      "type": "listen",
+      "l1": "Chcem vidieť maják, ale musím mať dobré topánky.",
+      "l2": "Je veux voir le phare, mais je dois avoir de bonnes chaussures.",
+      "choices_l2": [
+        "J'habite à Lyon, dans un appartement. Et vous ?",
+        "Ma fille a cinq ans.",
+        "Je prendrai une veste et des gants."
+      ]
+    },
+    {
+      "id": "listen-nous-n-avons-pas-de-tente-nous-dormirons-l-h-tel",
+      "type": "listen",
+      "l1": "Nemáme stan, budeme spať v hoteli.",
+      "l2": "Nous n'avons pas de tente, nous dormirons à l'hôtel.",
+      "choices_l2": [
+        "Chaque saison est différente.",
+        "Je range la pièce.",
+        "Nous devons y aller tôt, il va y avoir un orage."
+      ]
+    },
+    {
+      "id": "listen-le-sac-de-couchage-est-chaud",
+      "type": "listen",
+      "l1": "Spací vak je teplý.",
+      "l2": "Le sac de couchage est chaud.",
+      "choices_l2": [
+        "J'habite à Lyon.",
+        "Je rencontre un ami au café.",
+        "Le couteau et l'assiette sont sur la table."
+      ]
+    },
+    {
+      "id": "listen-je-sens-la-fatigue-j-ai-besoin-de-repos",
+      "type": "listen",
+      "l1": "Cítim únavu, potrebujem odpočinok.",
+      "l2": "Je sens la fatigue, j'ai besoin de repos.",
+      "choices_l2": [
+        "Où est la cabine d'essayage ?",
+        "Le lait est froid.",
+        "Je veux une réduction, parce que c'est trop cher."
+      ]
+    },
+    {
+      "id": "listen-je-veux-me-baigner-mais-l-eau-est-froide",
+      "type": "listen",
+      "l1": "Chcem sa kúpať, ale voda je studená.",
+      "l2": "Je veux me baigner, mais l'eau est froide.",
+      "choices_l2": [
+        "Il y a une île là-bas.",
+        "En été il y a parfois une canicule.",
+        "Quelle est la direction ?"
+      ]
+    },
+    {
+      "id": "listen-nous-allons-bronzer-sur-la-plage",
+      "type": "listen",
+      "l1": "Ideme sa opaľovať na pláži.",
+      "l2": "Nous allons bronzer sur la plage.",
+      "choices_l2": [
+        "Aujourd'hui il fait plus frais qu'hier.",
+        "Lundi, je commence à sept heures du matin.",
+        "En été je porte des lunettes de soleil."
+      ]
+    },
+    {
+      "id": "order-je-peux-venir-avec-toi",
+      "type": "order",
+      "l1": "Môžem ísť s tebou?",
+      "l2": "Je peux venir avec toi ?",
+      "tokens_l1": [
+        "Môžem",
+        "ísť",
+        "s",
+        "tebou?",
+        "Máš",
+        "osušku?",
+        "Pomáha",
+        "proti",
+        "piesku."
+      ],
+      "tokens_l2": [
+        "Je",
+        "peux",
+        "venir",
+        "avec",
+        "toi",
+        "?",
+        "Tu",
+        "as",
+        "une",
+        "serviette",
+        "de",
+        "plage",
+        "?",
+        "Elle",
+        "aide",
+        "contre",
+        "le",
+        "sable."
+      ]
+    },
+    {
+      "id": "order-tu-dois-avoir-un-maillot-de-bain",
+      "type": "order",
+      "l1": "Musíš mať plavky.",
+      "l2": "Tu dois avoir un maillot de bain.",
+      "tokens_l1": [
+        "Musíš",
+        "mať",
+        "plavky.",
+        "Chcem",
+        "vidieť",
+        "maják,",
+        "ale",
+        "musím",
+        "mať",
+        "dobré",
+        "topánky."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "dois",
+        "avoir",
+        "un",
+        "maillot",
+        "de",
+        "bain.",
+        "Je",
+        "veux",
+        "voir",
+        "le",
+        "phare,",
+        "mais",
+        "je",
+        "dois",
+        "avoir",
+        "de",
+        "bonnes",
+        "chaussures."
+      ]
+    },
+    {
+      "id": "order-je-ne-peux-pas-nager-sans-palmes",
+      "type": "order",
+      "l1": "Nemôžem plávať bez plutiev.",
+      "l2": "Je ne peux pas nager sans palmes.",
+      "tokens_l1": [
+        "Nemôžem",
+        "plávať",
+        "bez",
+        "plutiev.",
+        "Spací",
+        "vak",
+        "je",
+        "teplý."
+      ],
+      "tokens_l2": [
+        "Je",
+        "ne",
+        "peux",
+        "pas",
+        "nager",
+        "sans",
+        "palmes.",
+        "Le",
+        "sac",
+        "de",
+        "couchage",
+        "est",
+        "chaud."
+      ]
+    },
+    {
+      "id": "order-tu-as-une-serviette-de-plage-elle-aide-contre-le-sable",
+      "type": "order",
+      "l1": "Máš osušku? Pomáha proti piesku.",
+      "l2": "Tu as une serviette de plage ? Elle aide contre le sable.",
+      "tokens_l1": [
+        "Máš",
+        "osušku?",
+        "Pomáha",
+        "proti",
+        "piesku.",
+        "Nemáme",
+        "stan,",
+        "budeme",
+        "spať",
+        "v",
+        "hoteli."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "as",
+        "une",
+        "serviette",
+        "de",
+        "plage",
+        "?",
+        "Elle",
+        "aide",
+        "contre",
+        "le",
+        "sable.",
+        "Nous",
+        "n'avons",
+        "pas",
+        "de",
+        "tente,",
+        "nous",
+        "dormirons",
+        "à",
+        "l'hôtel."
+      ]
+    },
+    {
+      "id": "order-j-ai-le-seau-et-le-parasol-dans-le-sac",
+      "type": "order",
+      "l1": "Mám vedierko a slnečník v taške.",
+      "l2": "J'ai le seau et le parasol dans le sac.",
+      "tokens_l1": [
+        "Mám",
+        "vedierko",
+        "a",
+        "slnečník",
+        "v",
+        "taške.",
+        "Ideme",
+        "sa",
+        "opaľovať",
+        "na",
+        "pláži."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "le",
+        "seau",
+        "et",
+        "le",
+        "parasol",
+        "dans",
+        "le",
+        "sac.",
+        "Nous",
+        "allons",
+        "bronzer",
+        "sur",
+        "la",
+        "plage."
+      ]
+    },
+    {
+      "id": "order-nous-devons-avoir-une-glaci-re",
+      "type": "order",
+      "l1": "Musíme mať chladiaci box.",
+      "l2": "Nous devons avoir une glacière.",
+      "tokens_l1": [
+        "Musíme",
+        "mať",
+        "chladiaci",
+        "box.",
+        "Môžeme",
+        "ísť",
+        "k",
+        "moru,",
+        "potom",
+        "na",
+        "pláž."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "devons",
+        "avoir",
+        "une",
+        "glacière.",
+        "Nous",
+        "pouvons",
+        "aller",
+        "à",
+        "la",
+        "mer,",
+        "puis",
+        "à",
+        "la",
+        "plage."
+      ]
+    },
+    {
+      "id": "order-tu-peux-porter-le-parasol",
+      "type": "order",
+      "l1": "Môžeš niesť slnečník?",
+      "l2": "Tu peux porter le parasol ?",
+      "tokens_l1": [
+        "Môžeš",
+        "niesť",
+        "slnečník?",
+        "Môžeme",
+        "ísť",
+        "k",
+        "moru,",
+        "potom",
+        "na",
+        "pláž."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "peux",
+        "porter",
+        "le",
+        "parasol",
+        "?",
+        "Nous",
+        "pouvons",
+        "aller",
+        "à",
+        "la",
+        "mer,",
+        "puis",
+        "à",
+        "la",
+        "plage."
+      ]
+    },
+    {
+      "id": "order-nous-devons-avoir-de-l-eau-et-de-la-cr-me-solaire-parce-que-la-plage-est-loin",
+      "type": "order",
+      "l1": "Musíme mať vodu a krém na opaľovanie, lebo pláž je ďaleko.",
+      "l2": "Nous devons avoir de l'eau et de la crème solaire, parce que la plage est loin.",
+      "tokens_l1": [
+        "Musíme",
+        "mať",
+        "vodu",
+        "a",
+        "krém",
+        "na",
+        "opaľovanie,",
+        "lebo",
+        "pláž",
+        "je",
+        "ďaleko.",
+        "Mám",
+        "vedierko",
+        "a",
+        "slnečník",
+        "v",
+        "taške."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "devons",
+        "avoir",
+        "de",
+        "l'eau",
+        "et",
+        "de",
+        "la",
+        "crème",
+        "solaire,",
+        "parce",
+        "que",
+        "la",
+        "plage",
+        "est",
+        "loin.",
+        "J'ai",
+        "le",
+        "seau",
+        "et",
+        "le",
+        "parasol",
+        "dans",
+        "le",
+        "sac."
+      ]
+    },
+    {
+      "id": "order-nous-pouvons-aller-la-mer-puis-la-plage",
+      "type": "order",
+      "l1": "Môžeme ísť k moru, potom na pláž.",
+      "l2": "Nous pouvons aller à la mer, puis à la plage.",
+      "tokens_l1": [
+        "Môžeme",
+        "ísť",
+        "k",
+        "moru,",
+        "potom",
+        "na",
+        "pláž.",
+        "Chcem",
+        "vidieť",
+        "maják,",
+        "ale",
+        "musím",
+        "mať",
+        "dobré",
+        "topánky."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "pouvons",
+        "aller",
+        "à",
+        "la",
+        "mer,",
+        "puis",
+        "à",
+        "la",
+        "plage.",
+        "Je",
+        "veux",
+        "voir",
+        "le",
+        "phare,",
+        "mais",
+        "je",
+        "dois",
+        "avoir",
+        "de",
+        "bonnes",
+        "chaussures."
+      ]
+    },
+    {
+      "id": "order-je-veux-voir-le-phare-mais-je-dois-avoir-de-bonnes-chaussures",
+      "type": "order",
+      "l1": "Chcem vidieť maják, ale musím mať dobré topánky.",
+      "l2": "Je veux voir le phare, mais je dois avoir de bonnes chaussures.",
+      "tokens_l1": [
+        "Chcem",
+        "vidieť",
+        "maják,",
+        "ale",
+        "musím",
+        "mať",
+        "dobré",
+        "topánky.",
+        "Nemôžem",
+        "plávať",
+        "bez",
+        "plutiev."
+      ],
+      "tokens_l2": [
+        "Je",
+        "veux",
+        "voir",
+        "le",
+        "phare,",
+        "mais",
+        "je",
+        "dois",
+        "avoir",
+        "de",
+        "bonnes",
+        "chaussures.",
+        "Je",
+        "ne",
+        "peux",
+        "pas",
+        "nager",
+        "sans",
+        "palmes."
+      ]
+    },
+    {
+      "id": "order-nous-n-avons-pas-de-tente-nous-dormirons-l-h-tel",
+      "type": "order",
+      "l1": "Nemáme stan, budeme spať v hoteli.",
+      "l2": "Nous n'avons pas de tente, nous dormirons à l'hôtel.",
+      "tokens_l1": [
+        "Nemáme",
+        "stan,",
+        "budeme",
+        "spať",
+        "v",
+        "hoteli.",
+        "Mám",
+        "vedierko",
+        "a",
+        "slnečník",
+        "v",
+        "taške."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "n'avons",
+        "pas",
+        "de",
+        "tente,",
+        "nous",
+        "dormirons",
+        "à",
+        "l'hôtel.",
+        "J'ai",
+        "le",
+        "seau",
+        "et",
+        "le",
+        "parasol",
+        "dans",
+        "le",
+        "sac."
+      ]
+    },
+    {
+      "id": "order-le-sac-de-couchage-est-chaud",
+      "type": "order",
+      "l1": "Spací vak je teplý.",
+      "l2": "Le sac de couchage est chaud.",
+      "tokens_l1": [
+        "Spací",
+        "vak",
+        "je",
+        "teplý.",
+        "Ideme",
+        "sa",
+        "opaľovať",
+        "na",
+        "pláži."
+      ],
+      "tokens_l2": [
+        "Le",
+        "sac",
+        "de",
+        "couchage",
+        "est",
+        "chaud.",
+        "Nous",
+        "allons",
+        "bronzer",
+        "sur",
+        "la",
+        "plage."
+      ]
+    },
+    {
+      "id": "order-je-sens-la-fatigue-j-ai-besoin-de-repos",
+      "type": "order",
+      "l1": "Cítim únavu, potrebujem odpočinok.",
+      "l2": "Je sens la fatigue, j'ai besoin de repos.",
+      "tokens_l1": [
+        "Cítim",
+        "únavu,",
+        "potrebujem",
+        "odpočinok.",
+        "Nemôžem",
+        "plávať",
+        "bez",
+        "plutiev."
+      ],
+      "tokens_l2": [
+        "Je",
+        "sens",
+        "la",
+        "fatigue,",
+        "j'ai",
+        "besoin",
+        "de",
+        "repos.",
+        "Je",
+        "ne",
+        "peux",
+        "pas",
+        "nager",
+        "sans",
+        "palmes."
+      ]
+    },
+    {
+      "id": "order-je-veux-me-baigner-mais-l-eau-est-froide",
+      "type": "order",
+      "l1": "Chcem sa kúpať, ale voda je studená.",
+      "l2": "Je veux me baigner, mais l'eau est froide.",
+      "tokens_l1": [
+        "Chcem",
+        "sa",
+        "kúpať,",
+        "ale",
+        "voda",
+        "je",
+        "studená.",
+        "Môžem",
+        "ísť",
+        "s",
+        "tebou?"
+      ],
+      "tokens_l2": [
+        "Je",
+        "veux",
+        "me",
+        "baigner,",
+        "mais",
+        "l'eau",
+        "est",
+        "froide.",
+        "Je",
+        "peux",
+        "venir",
+        "avec",
+        "toi",
+        "?"
+      ]
+    },
+    {
+      "id": "order-nous-allons-bronzer-sur-la-plage",
+      "type": "order",
+      "l1": "Ideme sa opaľovať na pláži.",
+      "l2": "Nous allons bronzer sur la plage.",
+      "tokens_l1": [
+        "Ideme",
+        "sa",
+        "opaľovať",
+        "na",
+        "pláži.",
+        "Musíme",
+        "mať",
+        "chladiaci",
+        "box."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "allons",
+        "bronzer",
+        "sur",
+        "la",
+        "plage.",
+        "Nous",
+        "devons",
+        "avoir",
+        "une",
+        "glacière."
+      ]
+    }
+  ]
+}

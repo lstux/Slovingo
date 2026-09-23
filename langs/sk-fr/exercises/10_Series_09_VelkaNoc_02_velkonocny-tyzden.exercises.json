@@ -1,0 +1,1447 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-kvetn-nede-a",
+      "type": "qcm",
+      "l1": "le dimanche des Rameaux",
+      "l2": "Kvetná nedeľa",
+      "choices_l1": [
+        "le lundi de Pâques",
+        "le jeudi saint",
+        "le dimanche de Pâques"
+      ],
+      "choices_l2": [
+        "tradícia",
+        "zvon",
+        "omša"
+      ]
+    },
+    {
+      "id": "qcm-zelen-tvrtok",
+      "type": "qcm",
+      "l1": "le jeudi saint",
+      "l2": "Zelený štvrtok",
+      "choices_l1": [
+        "le jeûne, le carême",
+        "le lundi de Pâques",
+        "le vendredi saint"
+      ],
+      "choices_l2": [
+        "Biela sobota",
+        "Kvetná nedeľa",
+        "tradícia"
+      ]
+    },
+    {
+      "id": "qcm-ve-k-piatok",
+      "type": "qcm",
+      "l1": "le vendredi saint",
+      "l2": "Veľký piatok",
+      "choices_l1": [
+        "le jeudi saint",
+        "le dimanche de Pâques",
+        "le samedi saint"
+      ],
+      "choices_l2": [
+        "kňaz",
+        "zvon",
+        "omša"
+      ]
+    },
+    {
+      "id": "qcm-biela-sobota",
+      "type": "qcm",
+      "l1": "le samedi saint",
+      "l2": "Biela sobota",
+      "choices_l1": [
+        "le jeûne, le carême",
+        "le lundi de Pâques",
+        "le jeudi saint"
+      ],
+      "choices_l2": [
+        "Veľkonočný pondelok",
+        "Veľký piatok",
+        "omša"
+      ]
+    },
+    {
+      "id": "qcm-ve-kono-n-nede-a",
+      "type": "qcm",
+      "l1": "le dimanche de Pâques",
+      "l2": "Veľkonočná nedeľa",
+      "choices_l1": [
+        "le vendredi saint",
+        "le jeûne, le carême",
+        "le dimanche des Rameaux"
+      ],
+      "choices_l2": [
+        "zvon",
+        "kňaz",
+        "pôst"
+      ]
+    },
+    {
+      "id": "qcm-ve-kono-n-pondelok",
+      "type": "qcm",
+      "l1": "le lundi de Pâques",
+      "l2": "Veľkonočný pondelok",
+      "choices_l1": [
+        "le vendredi saint",
+        "le jeudi saint",
+        "le jeûne, le carême"
+      ],
+      "choices_l2": [
+        "Veľký piatok",
+        "kňaz",
+        "Veľkonočná nedeľa"
+      ]
+    },
+    {
+      "id": "qcm-upratova",
+      "type": "qcm",
+      "l1": "ranger, nettoyer",
+      "l2": "upratovať",
+      "choices_l1": [
+        "célébrer",
+        "la messe",
+        "la cloche"
+      ],
+      "choices_l2": [
+        "Kvetná nedeľa",
+        "pôst",
+        "zvon"
+      ]
+    },
+    {
+      "id": "qcm-na-zelen-tvrtok-sme-upratovali",
+      "type": "qcm",
+      "l1": "Le jeudi saint nous avons rangé.",
+      "l2": "Na Zelený štvrtok sme upratovali.",
+      "choices_l1": [
+        "Je n'ai pas teint d'œufs.",
+        "Nous n'avons pas rangé.",
+        "Le vendredi saint nous avons jeûné."
+      ],
+      "choices_l2": [
+        "Na Veľký piatok sme sa postili.",
+        "Na Bielu sobotu sme piekli.",
+        "Nefarbil som vajíčka."
+      ]
+    },
+    {
+      "id": "qcm-na-ve-k-piatok-sme-sa-postili",
+      "type": "qcm",
+      "l1": "Le vendredi saint nous avons jeûné.",
+      "l2": "Na Veľký piatok sme sa postili.",
+      "choices_l1": [
+        "Le jeudi saint nous avons rangé.",
+        "Nous n'avons pas rangé.",
+        "Je n'ai pas teint d'œufs."
+      ],
+      "choices_l2": [
+        "Na Zelený štvrtok sme upratovali.",
+        "Na Bielu sobotu sme piekli.",
+        "Nefarbil som vajíčka."
+      ]
+    },
+    {
+      "id": "qcm-na-bielu-sobotu-sme-piekli",
+      "type": "qcm",
+      "l1": "Le samedi saint nous avons fait de la pâtisserie.",
+      "l2": "Na Bielu sobotu sme piekli.",
+      "choices_l1": [
+        "Je n'ai pas teint d'œufs.",
+        "Nous n'avons pas rangé.",
+        "Le jeudi saint nous avons rangé."
+      ],
+      "choices_l2": [
+        "Na Zelený štvrtok sme upratovali.",
+        "Na Veľký piatok sme sa postili.",
+        "Nefarbil som vajíčka."
+      ]
+    },
+    {
+      "id": "qcm-nefarbil-som-vaj-ka",
+      "type": "qcm",
+      "l1": "Je n'ai pas teint d'œufs.",
+      "l2": "Nefarbil som vajíčka.",
+      "choices_l1": [
+        "Nous n'avons pas rangé.",
+        "Le samedi saint nous avons fait de la pâtisserie.",
+        "Le vendredi saint nous avons jeûné."
+      ],
+      "choices_l2": [
+        "Na Zelený štvrtok sme upratovali.",
+        "Na Veľký piatok sme sa postili.",
+        "Na Bielu sobotu sme piekli."
+      ]
+    },
+    {
+      "id": "qcm-neupratovali-sme",
+      "type": "qcm",
+      "l1": "Nous n'avons pas rangé.",
+      "l2": "Neupratovali sme.",
+      "choices_l1": [
+        "Le vendredi saint nous avons jeûné.",
+        "Je n'ai pas teint d'œufs.",
+        "Le jeudi saint nous avons rangé."
+      ],
+      "choices_l2": [
+        "pôst",
+        "Veľkonočná nedeľa",
+        "Biela sobota"
+      ]
+    },
+    {
+      "id": "qcm-p-st",
+      "type": "qcm",
+      "l1": "le jeûne, le carême",
+      "l2": "pôst",
+      "choices_l1": [
+        "le jeudi saint",
+        "le samedi saint",
+        "le lundi de Pâques"
+      ],
+      "choices_l2": [
+        "omša",
+        "tradícia",
+        "Veľký piatok"
+      ]
+    },
+    {
+      "id": "qcm-zvon",
+      "type": "qcm",
+      "l1": "la cloche",
+      "l2": "zvon",
+      "choices_l1": [
+        "la messe",
+        "le prêtre",
+        "la tradition"
+      ],
+      "choices_l2": [
+        "Zelený štvrtok",
+        "Veľkonočná nedeľa",
+        "kňaz"
+      ]
+    },
+    {
+      "id": "qcm-om-a",
+      "type": "qcm",
+      "l1": "la messe",
+      "l2": "omša",
+      "choices_l1": [
+        "la cloche",
+        "le prêtre",
+        "la tradition"
+      ],
+      "choices_l2": [
+        "Biela sobota",
+        "pôst",
+        "Veľkonočný pondelok"
+      ]
+    },
+    {
+      "id": "qcm-k-az",
+      "type": "qcm",
+      "l1": "le prêtre",
+      "l2": "kňaz",
+      "choices_l1": [
+        "la cloche",
+        "la messe",
+        "la tradition"
+      ],
+      "choices_l2": [
+        "omša",
+        "Biela sobota",
+        "zvon"
+      ]
+    },
+    {
+      "id": "qcm-trad-cia",
+      "type": "qcm",
+      "l1": "la tradition",
+      "l2": "tradícia",
+      "choices_l1": [
+        "la cloche",
+        "la messe",
+        "le prêtre"
+      ],
+      "choices_l2": [
+        "Veľký piatok",
+        "kňaz",
+        "omša"
+      ]
+    },
+    {
+      "id": "qcm-oslavova",
+      "type": "qcm",
+      "l1": "célébrer",
+      "l2": "oslavovať",
+      "choices_l1": [
+        "la cloche",
+        "la tradition",
+        "ranger, nettoyer"
+      ],
+      "choices_l2": [
+        "omša",
+        "pôst",
+        "Veľkonočná nedeľa"
+      ]
+    },
+    {
+      "id": "qcm-sviato-n",
+      "type": "qcm",
+      "l1": "festif",
+      "l2": "sviatočný",
+      "choices_l1": [
+        "la messe",
+        "la cloche",
+        "ranger, nettoyer"
+      ],
+      "choices_l2": [
+        "Biela sobota",
+        "tradícia",
+        "Kvetná nedeľa"
+      ]
+    },
+    {
+      "id": "blank-na-kvetn-nede-u-sme-i-li-do-kostola",
+      "type": "fill-blank",
+      "l1": "Le dimanche des Rameaux nous sommes allés à l'église.",
+      "l2": "Na Kvetnú nedeľu sme išli do kostola.",
+      "missing_l1": "à",
+      "missing_l2": "sme",
+      "blank_index_l1": 7,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "sur",
+        "avec",
+        "sans"
+      ],
+      "choices_l2": [
+        "budem",
+        "bola",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-na-zelen-tvrtok-som-upratoval-cel-dom",
+      "type": "fill-blank",
+      "l1": "Le jeudi saint j'ai rangé toute la maison.",
+      "l2": "Na Zelený štvrtok som upratoval celý dom.",
+      "missing_l1": "la",
+      "missing_l2": "som",
+      "blank_index_l1": 6,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "tues",
+        "Les",
+        "fête"
+      ],
+      "choices_l2": [
+        "Bude",
+        "ste",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-na-ve-k-piatok-sme-nejedli-m-so",
+      "type": "fill-blank",
+      "l1": "Le vendredi saint nous n'avons pas mangé de viande.",
+      "l2": "Na Veľký piatok sme nejedli mäso.",
+      "missing_l1": "de",
+      "missing_l2": "sme",
+      "blank_index_l1": 7,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "près",
+        "Sous",
+        "avec"
+      ],
+      "choices_l2": [
+        "boli",
+        "budeme",
+        "som"
+      ]
+    },
+    {
+      "id": "blank-na-bielu-sobotu-mama-piekla-kol-e",
+      "type": "fill-blank",
+      "l1": "Le samedi saint maman a fait de la pâtisserie.",
+      "l2": "Na Bielu sobotu mama piekla koláče.",
+      "missing_l1": "la",
+      "missing_l2": "sobotu",
+      "blank_index_l1": 7,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "fête",
+        "tues",
+        "Les"
+      ],
+      "choices_l2": [
+        "Zvony",
+        "Zelený",
+        "tradícia"
+      ]
+    },
+    {
+      "id": "blank-na-ve-kono-n-nede-u-sme-boli-v-kostole",
+      "type": "fill-blank",
+      "l1": "Le dimanche de Pâques nous avons été à l'église.",
+      "l2": "Na Veľkonočnú nedeľu sme boli v kostole.",
+      "missing_l1": "de",
+      "missing_l2": "v",
+      "blank_index_l1": 2,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "pour",
+        "avec",
+        "par"
+      ],
+      "choices_l2": [
+        "po",
+        "o",
+        "bez"
+      ]
+    },
+    {
+      "id": "blank-ve-kono-n-pondelok-je-in-ako-ostatn-dni",
+      "type": "fill-blank",
+      "l1": "Le lundi de Pâques est différent des autres jours.",
+      "l2": "Veľkonočný pondelok je iný ako ostatné dni.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "êtes",
+        "C'est",
+        "était"
+      ],
+      "choices_l2": [
+        "som",
+        "ste",
+        "budem"
+      ]
+    },
+    {
+      "id": "blank-neupratovali-sme-v-era-upratujeme-dnes",
+      "type": "fill-blank",
+      "l1": "Nous n'avons pas rangé hier, nous rangeons aujourd'hui.",
+      "l2": "Neupratovali sme včera, upratujeme dnes.",
+      "missing_l1": "nous",
+      "missing_l2": "sme",
+      "blank_index_l1": 5,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Tu",
+        "Il",
+        "elles"
+      ],
+      "choices_l2": [
+        "budem",
+        "boli",
+        "bola"
+      ]
+    },
+    {
+      "id": "blank-o-si-robil-na-zelen-tvrtok",
+      "type": "fill-blank",
+      "l1": "Qu'as-tu fait le jeudi saint ?",
+      "l2": "Čo si robil na Zelený štvrtok?",
+      "missing_l1": "le",
+      "missing_l2": "na",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "fête",
+        "la",
+        "Les"
+      ],
+      "choices_l2": [
+        "bez",
+        "pred",
+        "medzi"
+      ]
+    },
+    {
+      "id": "blank-farbili-sme-vaj-ka-na-bielu-sobotu-nie-na-ve-k-piatok",
+      "type": "fill-blank",
+      "l1": "Nous avons teint les œufs le samedi saint, pas le vendredi saint.",
+      "l2": "Farbili sme vajíčka na Bielu sobotu, nie na Veľký piatok.",
+      "missing_l1": "le",
+      "missing_l2": "na",
+      "blank_index_l1": 5,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "tues",
+        "Les",
+        "fête"
+      ],
+      "choices_l2": [
+        "bez",
+        "Vo",
+        "do"
+      ]
+    },
+    {
+      "id": "blank-zdobili-sme-ko-k-a-pripravili-sme-kol-e",
+      "type": "fill-blank",
+      "l1": "Nous avons décoré le panier et préparé de la pâtisserie.",
+      "l2": "Zdobili sme košík a pripravili sme koláče.",
+      "missing_l1": "la",
+      "missing_l2": "a",
+      "blank_index_l1": 8,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "le",
+        "Les",
+        "tues"
+      ],
+      "choices_l2": [
+        "aj",
+        "však",
+        "ale"
+      ]
+    },
+    {
+      "id": "blank-zvony-ml-ali-cel-t-de",
+      "type": "fill-blank",
+      "l1": "Les cloches se sont tues toute la semaine.",
+      "l2": "Zvony mlčali celý týždeň.",
+      "missing_l1": "la",
+      "missing_l2": "celý",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "tues",
+        "Les",
+        "le"
+      ],
+      "choices_l2": [
+        "boli",
+        "išli",
+        "omšu"
+      ]
+    },
+    {
+      "id": "blank-k-az-sl-il-om-u-na-ve-kono-n-nede-u",
+      "type": "fill-blank",
+      "l1": "Le prêtre a célébré la messe le dimanche de Pâques.",
+      "l2": "Kňaz slúžil omšu na Veľkonočnú nedeľu.",
+      "missing_l1": "la",
+      "missing_l2": "na",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Les",
+        "le",
+        "fête"
+      ],
+      "choices_l2": [
+        "s",
+        "Vo",
+        "za"
+      ]
+    },
+    {
+      "id": "blank-t-to-trad-cia-je-ve-mi-star",
+      "type": "fill-blank",
+      "l1": "Cette tradition est très ancienne.",
+      "l2": "Táto tradícia je veľmi stará.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sommes",
+        "c'était",
+        "êtes"
+      ],
+      "choices_l2": [
+        "Bude",
+        "budú",
+        "bol"
+      ]
+    },
+    {
+      "id": "blank-oslavovali-sme-s-celou-rodinou",
+      "type": "fill-blank",
+      "l1": "Nous avons célébré avec toute la famille.",
+      "l2": "Oslavovali sme s celou rodinou.",
+      "missing_l1": "la",
+      "missing_l2": "sme",
+      "blank_index_l1": 5,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "le",
+        "tues",
+        "Les"
+      ],
+      "choices_l2": [
+        "budú",
+        "ste",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-sviato-n-obed-bol-v-born",
+      "type": "fill-blank",
+      "l1": "Le déjeuner de fête était excellent.",
+      "l2": "Sviatočný obed bol výborný.",
+      "missing_l1": "de",
+      "missing_l2": "bol",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Sous",
+        "chez",
+        "par"
+      ],
+      "choices_l2": [
+        "sú",
+        "budem",
+        "Bude"
+      ]
+    },
+    {
+      "id": "listen-na-kvetn-nede-u-sme-i-li-do-kostola",
+      "type": "listen",
+      "l1": "Le dimanche des Rameaux nous sommes allés à l'église.",
+      "l2": "Na Kvetnú nedeľu sme išli do kostola.",
+      "choices_l1": [
+        "Le dimanche de Pâques nous avons été à l'église.",
+        "Le lundi de Pâques est différent des autres jours.",
+        "Qu'as-tu fait le jeudi saint ?"
+      ],
+      "choices_l2": [
+        "Zvony mlčali celý týždeň.",
+        "Na Veľkonočnú nedeľu sme boli v kostole.",
+        "Na Bielu sobotu mama piekla koláče."
+      ]
+    },
+    {
+      "id": "listen-na-zelen-tvrtok-som-upratoval-cel-dom",
+      "type": "listen",
+      "l1": "Le jeudi saint j'ai rangé toute la maison.",
+      "l2": "Na Zelený štvrtok som upratoval celý dom.",
+      "choices_l1": [
+        "Nous avons teint les œufs le samedi saint, pas le vendredi saint.",
+        "Le vendredi saint nous n'avons pas mangé de viande.",
+        "Nous avons décoré le panier et préparé de la pâtisserie."
+      ],
+      "choices_l2": [
+        "Na Veľkonočnú nedeľu sme boli v kostole.",
+        "Na Bielu sobotu mama piekla koláče.",
+        "Neupratovali sme včera, upratujeme dnes."
+      ]
+    },
+    {
+      "id": "listen-na-ve-k-piatok-sme-nejedli-m-so",
+      "type": "listen",
+      "l1": "Le vendredi saint nous n'avons pas mangé de viande.",
+      "l2": "Na Veľký piatok sme nejedli mäso.",
+      "choices_l1": [
+        "Le lundi de Pâques est différent des autres jours.",
+        "Le prêtre a célébré la messe le dimanche de Pâques.",
+        "Nous avons teint les œufs le samedi saint, pas le vendredi saint."
+      ],
+      "choices_l2": [
+        "Na Bielu sobotu mama piekla koláče.",
+        "Na Kvetnú nedeľu sme išli do kostola.",
+        "Na Zelený štvrtok som upratoval celý dom."
+      ]
+    },
+    {
+      "id": "listen-na-bielu-sobotu-mama-piekla-kol-e",
+      "type": "listen",
+      "l1": "Le samedi saint maman a fait de la pâtisserie.",
+      "l2": "Na Bielu sobotu mama piekla koláče.",
+      "choices_l1": [
+        "Nous avons décoré le panier et préparé de la pâtisserie.",
+        "Le lundi de Pâques est différent des autres jours.",
+        "Le dimanche de Pâques nous avons été à l'église."
+      ],
+      "choices_l2": [
+        "Neupratovali sme včera, upratujeme dnes.",
+        "Zdobili sme košík a pripravili sme koláče.",
+        "Farbili sme vajíčka na Bielu sobotu, nie na Veľký piatok."
+      ]
+    },
+    {
+      "id": "listen-na-ve-kono-n-nede-u-sme-boli-v-kostole",
+      "type": "listen",
+      "l1": "Le dimanche de Pâques nous avons été à l'église.",
+      "l2": "Na Veľkonočnú nedeľu sme boli v kostole.",
+      "choices_l1": [
+        "Nous avons décoré le panier et préparé de la pâtisserie.",
+        "Le jeudi saint j'ai rangé toute la maison.",
+        "Cette tradition est très ancienne."
+      ],
+      "choices_l2": [
+        "Na Kvetnú nedeľu sme išli do kostola.",
+        "Na Zelený štvrtok som upratoval celý dom.",
+        "Zvony mlčali celý týždeň."
+      ]
+    },
+    {
+      "id": "listen-ve-kono-n-pondelok-je-in-ako-ostatn-dni",
+      "type": "listen",
+      "l1": "Le lundi de Pâques est différent des autres jours.",
+      "l2": "Veľkonočný pondelok je iný ako ostatné dni.",
+      "choices_l1": [
+        "Le dimanche de Pâques nous avons été à l'église.",
+        "Le vendredi saint nous n'avons pas mangé de viande.",
+        "Le samedi saint maman a fait de la pâtisserie."
+      ],
+      "choices_l2": [
+        "Zvony mlčali celý týždeň.",
+        "Farbili sme vajíčka na Bielu sobotu, nie na Veľký piatok.",
+        "Zdobili sme košík a pripravili sme koláče."
+      ]
+    },
+    {
+      "id": "listen-neupratovali-sme-v-era-upratujeme-dnes",
+      "type": "listen",
+      "l1": "Nous n'avons pas rangé hier, nous rangeons aujourd'hui.",
+      "l2": "Neupratovali sme včera, upratujeme dnes.",
+      "choices_l1": [
+        "Le jeudi saint j'ai rangé toute la maison.",
+        "Le dimanche de Pâques nous avons été à l'église.",
+        "Le samedi saint maman a fait de la pâtisserie."
+      ],
+      "choices_l2": [
+        "Kňaz slúžil omšu na Veľkonočnú nedeľu.",
+        "Farbili sme vajíčka na Bielu sobotu, nie na Veľký piatok.",
+        "Na Zelený štvrtok som upratoval celý dom."
+      ]
+    },
+    {
+      "id": "listen-o-si-robil-na-zelen-tvrtok",
+      "type": "listen",
+      "l1": "Qu'as-tu fait le jeudi saint ?",
+      "l2": "Čo si robil na Zelený štvrtok?",
+      "choices_l1": [
+        "Le samedi saint maman a fait de la pâtisserie.",
+        "Nous n'avons pas rangé hier, nous rangeons aujourd'hui.",
+        "Le vendredi saint nous n'avons pas mangé de viande."
+      ],
+      "choices_l2": [
+        "Neupratovali sme včera, upratujeme dnes.",
+        "Zvony mlčali celý týždeň.",
+        "Táto tradícia je veľmi stará."
+      ]
+    },
+    {
+      "id": "listen-farbili-sme-vaj-ka-na-bielu-sobotu-nie-na-ve-k-piatok",
+      "type": "listen",
+      "l1": "Nous avons teint les œufs le samedi saint, pas le vendredi saint.",
+      "l2": "Farbili sme vajíčka na Bielu sobotu, nie na Veľký piatok.",
+      "choices_l1": [
+        "Nous avons décoré le panier et préparé de la pâtisserie.",
+        "Le samedi saint maman a fait de la pâtisserie.",
+        "Cette tradition est très ancienne."
+      ],
+      "choices_l2": [
+        "Zvony mlčali celý týždeň.",
+        "Na Veľkonočnú nedeľu sme boli v kostole.",
+        "Zdobili sme košík a pripravili sme koláče."
+      ]
+    },
+    {
+      "id": "listen-zdobili-sme-ko-k-a-pripravili-sme-kol-e",
+      "type": "listen",
+      "l1": "Nous avons décoré le panier et préparé de la pâtisserie.",
+      "l2": "Zdobili sme košík a pripravili sme koláče.",
+      "choices_l1": [
+        "Le dimanche de Pâques nous avons été à l'église.",
+        "Le dimanche des Rameaux nous sommes allés à l'église.",
+        "Le jeudi saint j'ai rangé toute la maison."
+      ],
+      "choices_l2": [
+        "Farbili sme vajíčka na Bielu sobotu, nie na Veľký piatok.",
+        "Kňaz slúžil omšu na Veľkonočnú nedeľu.",
+        "Neupratovali sme včera, upratujeme dnes."
+      ]
+    },
+    {
+      "id": "listen-zvony-ml-ali-cel-t-de",
+      "type": "listen",
+      "l1": "Les cloches se sont tues toute la semaine.",
+      "l2": "Zvony mlčali celý týždeň.",
+      "choices_l1": [
+        "Le jeudi saint j'ai rangé toute la maison.",
+        "Le vendredi saint nous n'avons pas mangé de viande.",
+        "Le lundi de Pâques est différent des autres jours."
+      ],
+      "choices_l2": [
+        "Čo si robil na Zelený štvrtok?",
+        "Neupratovali sme včera, upratujeme dnes.",
+        "Na Kvetnú nedeľu sme išli do kostola."
+      ]
+    },
+    {
+      "id": "listen-k-az-sl-il-om-u-na-ve-kono-n-nede-u",
+      "type": "listen",
+      "l1": "Le prêtre a célébré la messe le dimanche de Pâques.",
+      "l2": "Kňaz slúžil omšu na Veľkonočnú nedeľu.",
+      "choices_l1": [
+        "Nous avons teint les œufs le samedi saint, pas le vendredi saint.",
+        "Le jeudi saint j'ai rangé toute la maison.",
+        "Les cloches se sont tues toute la semaine."
+      ],
+      "choices_l2": [
+        "Na Kvetnú nedeľu sme išli do kostola.",
+        "Táto tradícia je veľmi stará.",
+        "Zvony mlčali celý týždeň."
+      ]
+    },
+    {
+      "id": "listen-t-to-trad-cia-je-ve-mi-star",
+      "type": "listen",
+      "l1": "Cette tradition est très ancienne.",
+      "l2": "Táto tradícia je veľmi stará.",
+      "choices_l1": [
+        "Nous avons décoré le panier et préparé de la pâtisserie.",
+        "Le samedi saint maman a fait de la pâtisserie.",
+        "Nous avons teint les œufs le samedi saint, pas le vendredi saint."
+      ],
+      "choices_l2": [
+        "Na Veľký piatok sme nejedli mäso.",
+        "Na Zelený štvrtok som upratoval celý dom.",
+        "Farbili sme vajíčka na Bielu sobotu, nie na Veľký piatok."
+      ]
+    },
+    {
+      "id": "listen-oslavovali-sme-s-celou-rodinou",
+      "type": "listen",
+      "l1": "Nous avons célébré avec toute la famille.",
+      "l2": "Oslavovali sme s celou rodinou.",
+      "choices_l1": [
+        "Le jeudi saint j'ai rangé toute la maison.",
+        "Nous avons décoré le panier et préparé de la pâtisserie.",
+        "Le prêtre a célébré la messe le dimanche de Pâques."
+      ],
+      "choices_l2": [
+        "Na Bielu sobotu mama piekla koláče.",
+        "Farbili sme vajíčka na Bielu sobotu, nie na Veľký piatok.",
+        "Na Veľký piatok sme nejedli mäso."
+      ]
+    },
+    {
+      "id": "listen-sviato-n-obed-bol-v-born",
+      "type": "listen",
+      "l1": "Le déjeuner de fête était excellent.",
+      "l2": "Sviatočný obed bol výborný.",
+      "choices_l1": [
+        "Le prêtre a célébré la messe le dimanche de Pâques.",
+        "Les cloches se sont tues toute la semaine.",
+        "Nous avons décoré le panier et préparé de la pâtisserie."
+      ],
+      "choices_l2": [
+        "Na Veľký piatok sme nejedli mäso.",
+        "Zdobili sme košík a pripravili sme koláče.",
+        "Na Zelený štvrtok som upratoval celý dom."
+      ]
+    },
+    {
+      "id": "order-na-kvetn-nede-u-sme-i-li-do-kostola",
+      "type": "order",
+      "l1": "Le dimanche des Rameaux nous sommes allés à l'église.",
+      "l2": "Na Kvetnú nedeľu sme išli do kostola.",
+      "tokens_l1": [
+        "Le",
+        "dimanche",
+        "des",
+        "Rameaux",
+        "nous",
+        "sommes",
+        "allés",
+        "à",
+        "l'église.",
+        "Cette",
+        "tradition",
+        "est",
+        "très",
+        "ancienne."
+      ],
+      "tokens_l2": [
+        "Na",
+        "Kvetnú",
+        "nedeľu",
+        "sme",
+        "išli",
+        "do",
+        "kostola.",
+        "Táto",
+        "tradícia",
+        "je",
+        "veľmi",
+        "stará."
+      ]
+    },
+    {
+      "id": "order-na-zelen-tvrtok-som-upratoval-cel-dom",
+      "type": "order",
+      "l1": "Le jeudi saint j'ai rangé toute la maison.",
+      "l2": "Na Zelený štvrtok som upratoval celý dom.",
+      "tokens_l1": [
+        "Le",
+        "jeudi",
+        "saint",
+        "j'ai",
+        "rangé",
+        "toute",
+        "la",
+        "maison.",
+        "Qu'as-tu",
+        "fait",
+        "le",
+        "jeudi",
+        "saint",
+        "?"
+      ],
+      "tokens_l2": [
+        "Na",
+        "Zelený",
+        "štvrtok",
+        "som",
+        "upratoval",
+        "celý",
+        "dom.",
+        "Čo",
+        "si",
+        "robil",
+        "na",
+        "Zelený",
+        "štvrtok?"
+      ]
+    },
+    {
+      "id": "order-na-ve-k-piatok-sme-nejedli-m-so",
+      "type": "order",
+      "l1": "Le vendredi saint nous n'avons pas mangé de viande.",
+      "l2": "Na Veľký piatok sme nejedli mäso.",
+      "tokens_l1": [
+        "Le",
+        "vendredi",
+        "saint",
+        "nous",
+        "n'avons",
+        "pas",
+        "mangé",
+        "de",
+        "viande.",
+        "Cette",
+        "tradition",
+        "est",
+        "très",
+        "ancienne."
+      ],
+      "tokens_l2": [
+        "Na",
+        "Veľký",
+        "piatok",
+        "sme",
+        "nejedli",
+        "mäso.",
+        "Táto",
+        "tradícia",
+        "je",
+        "veľmi",
+        "stará."
+      ]
+    },
+    {
+      "id": "order-na-bielu-sobotu-mama-piekla-kol-e",
+      "type": "order",
+      "l1": "Le samedi saint maman a fait de la pâtisserie.",
+      "l2": "Na Bielu sobotu mama piekla koláče.",
+      "tokens_l1": [
+        "Le",
+        "samedi",
+        "saint",
+        "maman",
+        "a",
+        "fait",
+        "de",
+        "la",
+        "pâtisserie.",
+        "Le",
+        "lundi",
+        "de",
+        "Pâques",
+        "est",
+        "différent",
+        "des",
+        "autres",
+        "jours."
+      ],
+      "tokens_l2": [
+        "Na",
+        "Bielu",
+        "sobotu",
+        "mama",
+        "piekla",
+        "koláče.",
+        "Veľkonočný",
+        "pondelok",
+        "je",
+        "iný",
+        "ako",
+        "ostatné",
+        "dni."
+      ]
+    },
+    {
+      "id": "order-na-ve-kono-n-nede-u-sme-boli-v-kostole",
+      "type": "order",
+      "l1": "Le dimanche de Pâques nous avons été à l'église.",
+      "l2": "Na Veľkonočnú nedeľu sme boli v kostole.",
+      "tokens_l1": [
+        "Le",
+        "dimanche",
+        "de",
+        "Pâques",
+        "nous",
+        "avons",
+        "été",
+        "à",
+        "l'église.",
+        "Cette",
+        "tradition",
+        "est",
+        "très",
+        "ancienne."
+      ],
+      "tokens_l2": [
+        "Na",
+        "Veľkonočnú",
+        "nedeľu",
+        "sme",
+        "boli",
+        "v",
+        "kostole.",
+        "Táto",
+        "tradícia",
+        "je",
+        "veľmi",
+        "stará."
+      ]
+    },
+    {
+      "id": "order-ve-kono-n-pondelok-je-in-ako-ostatn-dni",
+      "type": "order",
+      "l1": "Le lundi de Pâques est différent des autres jours.",
+      "l2": "Veľkonočný pondelok je iný ako ostatné dni.",
+      "tokens_l1": [
+        "Le",
+        "lundi",
+        "de",
+        "Pâques",
+        "est",
+        "différent",
+        "des",
+        "autres",
+        "jours.",
+        "Le",
+        "vendredi",
+        "saint",
+        "nous",
+        "n'avons",
+        "pas",
+        "mangé",
+        "de",
+        "viande."
+      ],
+      "tokens_l2": [
+        "Veľkonočný",
+        "pondelok",
+        "je",
+        "iný",
+        "ako",
+        "ostatné",
+        "dni.",
+        "Na",
+        "Veľký",
+        "piatok",
+        "sme",
+        "nejedli",
+        "mäso."
+      ]
+    },
+    {
+      "id": "order-neupratovali-sme-v-era-upratujeme-dnes",
+      "type": "order",
+      "l1": "Nous n'avons pas rangé hier, nous rangeons aujourd'hui.",
+      "l2": "Neupratovali sme včera, upratujeme dnes.",
+      "tokens_l1": [
+        "Nous",
+        "n'avons",
+        "pas",
+        "rangé",
+        "hier,",
+        "nous",
+        "rangeons",
+        "aujourd'hui.",
+        "Le",
+        "lundi",
+        "de",
+        "Pâques",
+        "est",
+        "différent",
+        "des",
+        "autres",
+        "jours."
+      ],
+      "tokens_l2": [
+        "Neupratovali",
+        "sme",
+        "včera,",
+        "upratujeme",
+        "dnes.",
+        "Veľkonočný",
+        "pondelok",
+        "je",
+        "iný",
+        "ako",
+        "ostatné",
+        "dni."
+      ]
+    },
+    {
+      "id": "order-o-si-robil-na-zelen-tvrtok",
+      "type": "order",
+      "l1": "Qu'as-tu fait le jeudi saint ?",
+      "l2": "Čo si robil na Zelený štvrtok?",
+      "tokens_l1": [
+        "Qu'as-tu",
+        "fait",
+        "le",
+        "jeudi",
+        "saint",
+        "?",
+        "Nous",
+        "avons",
+        "célébré",
+        "avec",
+        "toute",
+        "la",
+        "famille."
+      ],
+      "tokens_l2": [
+        "Čo",
+        "si",
+        "robil",
+        "na",
+        "Zelený",
+        "štvrtok?",
+        "Oslavovali",
+        "sme",
+        "s",
+        "celou",
+        "rodinou."
+      ]
+    },
+    {
+      "id": "order-farbili-sme-vaj-ka-na-bielu-sobotu-nie-na-ve-k-piatok",
+      "type": "order",
+      "l1": "Nous avons teint les œufs le samedi saint, pas le vendredi saint.",
+      "l2": "Farbili sme vajíčka na Bielu sobotu, nie na Veľký piatok.",
+      "tokens_l1": [
+        "Nous",
+        "avons",
+        "teint",
+        "les",
+        "œufs",
+        "le",
+        "samedi",
+        "saint,",
+        "pas",
+        "le",
+        "vendredi",
+        "saint.",
+        "Le",
+        "vendredi",
+        "saint",
+        "nous",
+        "n'avons",
+        "pas",
+        "mangé",
+        "de",
+        "viande."
+      ],
+      "tokens_l2": [
+        "Farbili",
+        "sme",
+        "vajíčka",
+        "na",
+        "Bielu",
+        "sobotu,",
+        "nie",
+        "na",
+        "Veľký",
+        "piatok.",
+        "Na",
+        "Veľký",
+        "piatok",
+        "sme",
+        "nejedli",
+        "mäso."
+      ]
+    },
+    {
+      "id": "order-zdobili-sme-ko-k-a-pripravili-sme-kol-e",
+      "type": "order",
+      "l1": "Nous avons décoré le panier et préparé de la pâtisserie.",
+      "l2": "Zdobili sme košík a pripravili sme koláče.",
+      "tokens_l1": [
+        "Nous",
+        "avons",
+        "décoré",
+        "le",
+        "panier",
+        "et",
+        "préparé",
+        "de",
+        "la",
+        "pâtisserie.",
+        "Le",
+        "lundi",
+        "de",
+        "Pâques",
+        "est",
+        "différent",
+        "des",
+        "autres",
+        "jours."
+      ],
+      "tokens_l2": [
+        "Zdobili",
+        "sme",
+        "košík",
+        "a",
+        "pripravili",
+        "sme",
+        "koláče.",
+        "Veľkonočný",
+        "pondelok",
+        "je",
+        "iný",
+        "ako",
+        "ostatné",
+        "dni."
+      ]
+    },
+    {
+      "id": "order-zvony-ml-ali-cel-t-de",
+      "type": "order",
+      "l1": "Les cloches se sont tues toute la semaine.",
+      "l2": "Zvony mlčali celý týždeň.",
+      "tokens_l1": [
+        "Les",
+        "cloches",
+        "se",
+        "sont",
+        "tues",
+        "toute",
+        "la",
+        "semaine.",
+        "Nous",
+        "avons",
+        "célébré",
+        "avec",
+        "toute",
+        "la",
+        "famille."
+      ],
+      "tokens_l2": [
+        "Zvony",
+        "mlčali",
+        "celý",
+        "týždeň.",
+        "Oslavovali",
+        "sme",
+        "s",
+        "celou",
+        "rodinou."
+      ]
+    },
+    {
+      "id": "order-k-az-sl-il-om-u-na-ve-kono-n-nede-u",
+      "type": "order",
+      "l1": "Le prêtre a célébré la messe le dimanche de Pâques.",
+      "l2": "Kňaz slúžil omšu na Veľkonočnú nedeľu.",
+      "tokens_l1": [
+        "Le",
+        "prêtre",
+        "a",
+        "célébré",
+        "la",
+        "messe",
+        "le",
+        "dimanche",
+        "de",
+        "Pâques.",
+        "Nous",
+        "avons",
+        "célébré",
+        "avec",
+        "toute",
+        "la",
+        "famille."
+      ],
+      "tokens_l2": [
+        "Kňaz",
+        "slúžil",
+        "omšu",
+        "na",
+        "Veľkonočnú",
+        "nedeľu.",
+        "Oslavovali",
+        "sme",
+        "s",
+        "celou",
+        "rodinou."
+      ]
+    },
+    {
+      "id": "order-t-to-trad-cia-je-ve-mi-star",
+      "type": "order",
+      "l1": "Cette tradition est très ancienne.",
+      "l2": "Táto tradícia je veľmi stará.",
+      "tokens_l1": [
+        "Cette",
+        "tradition",
+        "est",
+        "très",
+        "ancienne.",
+        "Le",
+        "déjeuner",
+        "de",
+        "fête",
+        "était",
+        "excellent."
+      ],
+      "tokens_l2": [
+        "Táto",
+        "tradícia",
+        "je",
+        "veľmi",
+        "stará.",
+        "Sviatočný",
+        "obed",
+        "bol",
+        "výborný."
+      ]
+    },
+    {
+      "id": "order-oslavovali-sme-s-celou-rodinou",
+      "type": "order",
+      "l1": "Nous avons célébré avec toute la famille.",
+      "l2": "Oslavovali sme s celou rodinou.",
+      "tokens_l1": [
+        "Nous",
+        "avons",
+        "célébré",
+        "avec",
+        "toute",
+        "la",
+        "famille.",
+        "Les",
+        "cloches",
+        "se",
+        "sont",
+        "tues",
+        "toute",
+        "la",
+        "semaine."
+      ],
+      "tokens_l2": [
+        "Oslavovali",
+        "sme",
+        "s",
+        "celou",
+        "rodinou.",
+        "Zvony",
+        "mlčali",
+        "celý",
+        "týždeň."
+      ]
+    },
+    {
+      "id": "order-sviato-n-obed-bol-v-born",
+      "type": "order",
+      "l1": "Le déjeuner de fête était excellent.",
+      "l2": "Sviatočný obed bol výborný.",
+      "tokens_l1": [
+        "Le",
+        "déjeuner",
+        "de",
+        "fête",
+        "était",
+        "excellent.",
+        "Nous",
+        "avons",
+        "teint",
+        "les",
+        "œufs",
+        "le",
+        "samedi",
+        "saint,",
+        "pas",
+        "le",
+        "vendredi",
+        "saint."
+      ],
+      "tokens_l2": [
+        "Sviatočný",
+        "obed",
+        "bol",
+        "výborný.",
+        "Farbili",
+        "sme",
+        "vajíčka",
+        "na",
+        "Bielu",
+        "sobotu,",
+        "nie",
+        "na",
+        "Veľký",
+        "piatok."
+      ]
+    },
+    {
+      "id": "match-kvetn-nede-a-vocab",
+      "type": "match",
+      "l1": [
+        "le dimanche des Rameaux",
+        "le jeudi saint",
+        "le vendredi saint",
+        "le samedi saint"
+      ],
+      "l2": [
+        "Kvetná nedeľa",
+        "Zelený štvrtok",
+        "Veľký piatok",
+        "Biela sobota"
+      ]
+    },
+    {
+      "id": "match-na-kvetn-nede-u-sme-i-li-do-kostola-sentences",
+      "type": "match",
+      "l1": [
+        "Le dimanche des Rameaux nous sommes allés à l'église.",
+        "Le jeudi saint j'ai rangé toute la maison.",
+        "Le vendredi saint nous n'avons pas mangé de viande.",
+        "Le samedi saint maman a fait de la pâtisserie."
+      ],
+      "l2": [
+        "Na Kvetnú nedeľu sme išli do kostola.",
+        "Na Zelený štvrtok som upratoval celý dom.",
+        "Na Veľký piatok sme nejedli mäso.",
+        "Na Bielu sobotu mama piekla koláče."
+      ]
+    }
+  ]
+}

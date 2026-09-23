@@ -1,5 +1,7 @@
 # 🇸🇰 Introduction — La Slovaquie en un coup d'œil
 
+@ https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Relief_Map_of_Slovakia_Kraje.png/1920px-Relief_Map_of_Slovakia_Kraje.png | Carte administrative de la Slovaquie — Wikimedia Commons
+
 Avant d'apprendre la langue, un peu de contexte sur le pays lui-même : où il se situe, d'où il vient, et ce qui fait sa culture.
 
 ---

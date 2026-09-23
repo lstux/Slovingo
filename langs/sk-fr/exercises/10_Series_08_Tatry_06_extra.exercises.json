@@ -1,0 +1,2181 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-hora",
+      "type": "qcm",
+      "l1": "la montagne",
+      "l2": "hora",
+      "choices_l1": [
+        "la vue",
+        "le balisage",
+        "le parcours"
+      ],
+      "choices_l2": [
+        "medveď",
+        "skala",
+        "kompas"
+      ]
+    },
+    {
+      "id": "qcm-vrch",
+      "type": "qcm",
+      "l1": "le sommet",
+      "l2": "vrch",
+      "choices_l1": [
+        "l'hébergement",
+        "le parcours",
+        "le refuge"
+      ],
+      "choices_l2": [
+        "mapa",
+        "les",
+        "potok"
+      ]
+    },
+    {
+      "id": "qcm-dolina",
+      "type": "qcm",
+      "l1": "la vallée",
+      "l2": "dolina",
+      "choices_l1": [
+        "la vue",
+        "le parcours",
+        "l'hébergement"
+      ],
+      "choices_l2": [
+        "mapa",
+        "štít",
+        "kompas"
+      ]
+    },
+    {
+      "id": "qcm-les",
+      "type": "qcm",
+      "l1": "la forêt",
+      "l2": "les",
+      "choices_l1": [
+        "l'hébergement",
+        "la vue",
+        "le balisage"
+      ],
+      "choices_l2": [
+        "hora",
+        "potok",
+        "medveď"
+      ]
+    },
+    {
+      "id": "qcm-jazero",
+      "type": "qcm",
+      "l1": "le lac",
+      "l2": "jazero",
+      "choices_l1": [
+        "la vue",
+        "le balisage",
+        "l'hébergement"
+      ],
+      "choices_l2": [
+        "medveď",
+        "kamzík",
+        "kompas"
+      ]
+    },
+    {
+      "id": "qcm-chodn-k",
+      "type": "qcm",
+      "l1": "le sentier",
+      "l2": "chodník",
+      "choices_l1": [
+        "le refuge",
+        "la tranquillité",
+        "la vue"
+      ],
+      "choices_l2": [
+        "kamzík",
+        "vrch",
+        "hora"
+      ]
+    },
+    {
+      "id": "qcm-batoh",
+      "type": "qcm",
+      "l1": "le sac à dos",
+      "l2": "batoh",
+      "choices_l1": [
+        "le sommet (point culminant)",
+        "la vue, le panorama",
+        "la lampe de poche"
+      ],
+      "choices_l2": [
+        "skala",
+        "štít",
+        "potok"
+      ]
+    },
+    {
+      "id": "qcm-t-t",
+      "type": "qcm",
+      "l1": "le pic",
+      "l2": "štít",
+      "choices_l1": [
+        "la vue",
+        "l'hébergement",
+        "la tranquillité"
+      ],
+      "choices_l2": [
+        "kompas",
+        "skala",
+        "jazero"
+      ]
+    },
+    {
+      "id": "qcm-skala",
+      "type": "qcm",
+      "l1": "le rocher",
+      "l2": "skala",
+      "choices_l1": [
+        "l'hébergement",
+        "la vue",
+        "le refuge"
+      ],
+      "choices_l2": [
+        "les",
+        "batoh",
+        "štít"
+      ]
+    },
+    {
+      "id": "qcm-potok",
+      "type": "qcm",
+      "l1": "le ruisseau",
+      "l2": "potok",
+      "choices_l1": [
+        "le parcours",
+        "l'hébergement",
+        "la vue"
+      ],
+      "choices_l2": [
+        "kompas",
+        "vrch",
+        "medveď"
+      ]
+    },
+    {
+      "id": "qcm-medve",
+      "type": "qcm",
+      "l1": "l'ours",
+      "l2": "medveď",
+      "choices_l1": [
+        "le refuge",
+        "la vue",
+        "le balisage"
+      ],
+      "choices_l2": [
+        "mapa",
+        "potok",
+        "dolina"
+      ]
+    },
+    {
+      "id": "qcm-kamz-k",
+      "type": "qcm",
+      "l1": "le chamois",
+      "l2": "kamzík",
+      "choices_l1": [
+        "l'hébergement",
+        "la tranquillité",
+        "la vue"
+      ],
+      "choices_l2": [
+        "skala",
+        "štít",
+        "les"
+      ]
+    },
+    {
+      "id": "qcm-mapa",
+      "type": "qcm",
+      "l1": "la carte",
+      "l2": "mapa",
+      "choices_l1": [
+        "l'hébergement",
+        "le balisage",
+        "le parcours"
+      ],
+      "choices_l2": [
+        "kompas",
+        "jazero",
+        "hora"
+      ]
+    },
+    {
+      "id": "qcm-kompas",
+      "type": "qcm",
+      "l1": "la boussole",
+      "l2": "kompas",
+      "choices_l1": [
+        "la vue",
+        "l'hébergement",
+        "le balisage"
+      ],
+      "choices_l2": [
+        "hora",
+        "kamzík",
+        "batoh"
+      ]
+    },
+    {
+      "id": "qcm-m-c",
+      "type": "qcm",
+      "l1": "pouvoir",
+      "l2": "môcť",
+      "choices_l1": [
+        "le refuge",
+        "l'hébergement",
+        "difficile"
+      ],
+      "choices_l2": [
+        "oni budú",
+        "ty budeš",
+        "oni môžu"
+      ]
+    },
+    {
+      "id": "qcm-turistick-top-nky",
+      "type": "qcm",
+      "l1": "les chaussures de randonnée",
+      "l2": "turistické topánky",
+      "choices_l1": [
+        "l'hébergement pour la nuit",
+        "le sommet (point culminant)",
+        "le balisage, la marque"
+      ],
+      "choices_l2": [
+        "hora",
+        "potok",
+        "kamzík"
+      ]
+    },
+    {
+      "id": "qcm-palice",
+      "type": "qcm",
+      "l1": "les bâtons",
+      "l2": "palice",
+      "choices_l1": [
+        "la tranquillité",
+        "le refuge",
+        "la vue"
+      ],
+      "choices_l2": [
+        "hora",
+        "les",
+        "potok"
+      ]
+    },
+    {
+      "id": "qcm-voda",
+      "type": "qcm",
+      "l1": "l'eau",
+      "l2": "voda",
+      "choices_l1": [
+        "le balisage",
+        "le parcours",
+        "la tranquillité"
+      ],
+      "choices_l2": [
+        "batoh",
+        "potok",
+        "hora"
+      ]
+    },
+    {
+      "id": "qcm-jedlo",
+      "type": "qcm",
+      "l1": "la nourriture",
+      "l2": "jedlo",
+      "choices_l1": [
+        "l'hébergement",
+        "le balisage",
+        "le refuge"
+      ],
+      "choices_l2": [
+        "štít",
+        "potok",
+        "dolina"
+      ]
+    },
+    {
+      "id": "qcm-lek-rni-ka",
+      "type": "qcm",
+      "l1": "la trousse de secours",
+      "l2": "lekárnička",
+      "choices_l1": [
+        "le poteau indicateur",
+        "le sac à dos",
+        "les chaussures de randonnée"
+      ],
+      "choices_l2": [
+        "les",
+        "dolina",
+        "hora"
+      ]
+    },
+    {
+      "id": "qcm-baterka",
+      "type": "qcm",
+      "l1": "la lampe de poche",
+      "l2": "baterka",
+      "choices_l1": [
+        "le sommet (point culminant)",
+        "le sac de couchage",
+        "le refuge, le chalet"
+      ],
+      "choices_l2": [
+        "kamzík",
+        "dolina",
+        "skala"
+      ]
+    },
+    {
+      "id": "qcm-stan",
+      "type": "qcm",
+      "l1": "la tente",
+      "l2": "stan",
+      "choices_l1": [
+        "le refuge",
+        "le balisage",
+        "le parcours"
+      ],
+      "choices_l2": [
+        "batoh",
+        "mapa",
+        "dolina"
+      ]
+    },
+    {
+      "id": "qcm-spac-vak",
+      "type": "qcm",
+      "l1": "le sac de couchage",
+      "l2": "spací vak",
+      "choices_l1": [
+        "l'hébergement pour la nuit",
+        "le refuge, le chalet",
+        "le balisage, la marque"
+      ],
+      "choices_l2": [
+        "vrch",
+        "les",
+        "skala"
+      ]
+    },
+    {
+      "id": "qcm-oblak",
+      "type": "qcm",
+      "l1": "le nuage",
+      "l2": "oblak",
+      "choices_l1": [
+        "la tranquillité",
+        "la vue",
+        "l'hébergement"
+      ],
+      "choices_l2": [
+        "skala",
+        "hora",
+        "potok"
+      ]
+    },
+    {
+      "id": "qcm-nava",
+      "type": "qcm",
+      "l1": "la fatigue",
+      "l2": "únava",
+      "choices_l1": [
+        "l'hébergement",
+        "le balisage",
+        "le parcours"
+      ],
+      "choices_l2": [
+        "dolina",
+        "hora",
+        "kamzík"
+      ]
+    },
+    {
+      "id": "qcm-sila",
+      "type": "qcm",
+      "l1": "la force",
+      "l2": "sila",
+      "choices_l1": [
+        "le parcours",
+        "la tranquillité",
+        "le refuge"
+      ],
+      "choices_l2": [
+        "potok",
+        "jazero",
+        "vrch"
+      ]
+    },
+    {
+      "id": "qcm-odpo-inok",
+      "type": "qcm",
+      "l1": "le repos",
+      "l2": "odpočinok",
+      "choices_l1": [
+        "le refuge",
+        "la tranquillité",
+        "le parcours"
+      ],
+      "choices_l2": [
+        "potok",
+        "vrch",
+        "jazero"
+      ]
+    },
+    {
+      "id": "qcm-zna-ka",
+      "type": "qcm",
+      "l1": "le balisage",
+      "l2": "značka",
+      "choices_l1": [
+        "la vue",
+        "l'hébergement",
+        "le parcours"
+      ],
+      "choices_l2": [
+        "mapa",
+        "medveď",
+        "dolina"
+      ]
+    },
+    {
+      "id": "qcm-erven",
+      "type": "qcm",
+      "l1": "rouge (balisage)",
+      "l2": "červená",
+      "choices_l1": [
+        "la tranquillité",
+        "l'hébergement",
+        "le balisage"
+      ],
+      "choices_l2": [
+        "unavený",
+        "modrá",
+        "opatrne"
+      ]
+    },
+    {
+      "id": "qcm-modr",
+      "type": "qcm",
+      "l1": "bleu (balisage)",
+      "l2": "modrá",
+      "choices_l1": [
+        "difficile",
+        "le parcours",
+        "la vue"
+      ],
+      "choices_l2": [
+        "ľahký",
+        "by",
+        "náročný"
+      ]
+    },
+    {
+      "id": "qcm-lt",
+      "type": "qcm",
+      "l1": "jaune (balisage)",
+      "l2": "žltá",
+      "choices_l1": [
+        "le parcours",
+        "la vue",
+        "difficile"
+      ],
+      "choices_l2": [
+        "modrá",
+        "strmý",
+        "opatrne"
+      ]
+    },
+    {
+      "id": "qcm-zelen",
+      "type": "qcm",
+      "l1": "vert (balisage)",
+      "l2": "zelená",
+      "choices_l1": [
+        "la tranquillité",
+        "l'hébergement",
+        "le balisage"
+      ],
+      "choices_l2": [
+        "červená",
+        "žltá",
+        "opatrne"
+      ]
+    },
+    {
+      "id": "qcm-n-ro-n",
+      "type": "qcm",
+      "l1": "difficile",
+      "l2": "náročný",
+      "choices_l1": [
+        "le balisage",
+        "la tranquillité",
+        "la vue"
+      ],
+      "choices_l2": [
+        "by",
+        "červená",
+        "unavený"
+      ]
+    },
+    {
+      "id": "qcm-ahk",
+      "type": "qcm",
+      "l1": "facile",
+      "l2": "ľahký",
+      "choices_l1": [
+        "la tranquillité",
+        "le parcours",
+        "la vue"
+      ],
+      "choices_l2": [
+        "strmý",
+        "žltá",
+        "červená"
+      ]
+    },
+    {
+      "id": "qcm-trasa",
+      "type": "qcm",
+      "l1": "le parcours",
+      "l2": "trasa",
+      "choices_l1": [
+        "la tranquillité",
+        "le refuge",
+        "le balisage"
+      ],
+      "choices_l2": [
+        "dolina",
+        "mapa",
+        "les"
+      ]
+    },
+    {
+      "id": "qcm-smerovn-k",
+      "type": "qcm",
+      "l1": "le poteau indicateur",
+      "l2": "smerovník",
+      "choices_l1": [
+        "le sac de couchage",
+        "l'hébergement pour la nuit",
+        "la trousse de secours"
+      ],
+      "choices_l2": [
+        "batoh",
+        "potok",
+        "hora"
+      ]
+    },
+    {
+      "id": "qcm-vrchol",
+      "type": "qcm",
+      "l1": "le sommet (point culminant)",
+      "l2": "vrchol",
+      "choices_l1": [
+        "le sac de couchage",
+        "la vue, le panorama",
+        "les chaussures de randonnée"
+      ],
+      "choices_l2": [
+        "medveď",
+        "kamzík",
+        "hora"
+      ]
+    },
+    {
+      "id": "qcm-v-h-ad",
+      "type": "qcm",
+      "l1": "la vue",
+      "l2": "výhľad",
+      "choices_l1": [
+        "le parcours",
+        "l'hébergement",
+        "le balisage"
+      ],
+      "choices_l2": [
+        "kamzík",
+        "mapa",
+        "štít"
+      ]
+    },
+    {
+      "id": "qcm-strm",
+      "type": "qcm",
+      "l1": "raide",
+      "l2": "strmý",
+      "choices_l1": [
+        "l'hébergement",
+        "le parcours",
+        "le balisage"
+      ],
+      "choices_l2": [
+        "červená",
+        "náročný",
+        "unavený"
+      ]
+    },
+    {
+      "id": "qcm-opatrne",
+      "type": "qcm",
+      "l1": "prudemment",
+      "l2": "opatrne",
+      "choices_l1": [
+        "l'hébergement",
+        "le balisage",
+        "la tranquillité"
+      ],
+      "choices_l2": [
+        "náročný",
+        "by",
+        "zelená"
+      ]
+    },
+    {
+      "id": "qcm-z-kaz",
+      "type": "qcm",
+      "l1": "l'interdiction",
+      "l2": "zákaz",
+      "choices_l1": [
+        "la tranquillité",
+        "la vue",
+        "le balisage"
+      ],
+      "choices_l2": [
+        "dolina",
+        "hora",
+        "skala"
+      ]
+    },
+    {
+      "id": "qcm-chata",
+      "type": "qcm",
+      "l1": "le refuge",
+      "l2": "chata",
+      "choices_l1": [
+        "le balisage",
+        "la tranquillité",
+        "la vue"
+      ],
+      "choices_l2": [
+        "potok",
+        "vrch",
+        "les"
+      ]
+    },
+    {
+      "id": "qcm-noc-ah",
+      "type": "qcm",
+      "l1": "l'hébergement",
+      "l2": "nocľah",
+      "choices_l1": [
+        "la tranquillité",
+        "le refuge",
+        "la vue"
+      ],
+      "choices_l2": [
+        "mapa",
+        "dolina",
+        "hora"
+      ]
+    },
+    {
+      "id": "qcm-polievka",
+      "type": "qcm",
+      "l1": "la soupe",
+      "l2": "polievka",
+      "choices_l1": [
+        "le balisage",
+        "l'hébergement",
+        "la vue"
+      ],
+      "choices_l2": [
+        "štít",
+        "jazero",
+        "hora"
+      ]
+    },
+    {
+      "id": "qcm-aj",
+      "type": "qcm",
+      "l1": "le thé",
+      "l2": "čaj",
+      "choices_l1": [
+        "le balisage",
+        "l'hébergement",
+        "la tranquillité"
+      ],
+      "choices_l2": [
+        "dolina",
+        "batoh",
+        "les"
+      ]
+    },
+    {
+      "id": "qcm-unaven",
+      "type": "qcm",
+      "l1": "fatigué",
+      "l2": "unavený",
+      "choices_l1": [
+        "la tranquillité",
+        "la vue",
+        "l'hébergement"
+      ],
+      "choices_l2": [
+        "náročný",
+        "červená",
+        "ľahký"
+      ]
+    },
+    {
+      "id": "qcm-odpo-va",
+      "type": "qcm",
+      "l1": "se reposer",
+      "l2": "odpočívať",
+      "choices_l1": [
+        "le parcours",
+        "la tranquillité",
+        "l'hébergement"
+      ],
+      "choices_l2": [
+        "ja budem",
+        "my budeme",
+        "oni budú"
+      ]
+    },
+    {
+      "id": "qcm-by",
+      "type": "qcm",
+      "l1": "particule du conditionnel",
+      "l2": "by",
+      "choices_l1": [
+        "la trousse de secours",
+        "ce sera difficile",
+        "le sac à dos"
+      ],
+      "choices_l2": [
+        "modrá",
+        "červená",
+        "ľahký"
+      ]
+    },
+    {
+      "id": "qcm-poste",
+      "type": "qcm",
+      "l1": "le lit",
+      "l2": "posteľ",
+      "choices_l1": [
+        "le refuge",
+        "la vue",
+        "la tranquillité"
+      ],
+      "choices_l2": [
+        "kamzík",
+        "hora",
+        "jazero"
+      ]
+    },
+    {
+      "id": "qcm-deka",
+      "type": "qcm",
+      "l1": "la couverture",
+      "l2": "deka",
+      "choices_l1": [
+        "la tranquillité",
+        "le parcours",
+        "le refuge"
+      ],
+      "choices_l2": [
+        "mapa",
+        "batoh",
+        "potok"
+      ]
+    },
+    {
+      "id": "qcm-sprcha",
+      "type": "qcm",
+      "l1": "la douche",
+      "l2": "sprcha",
+      "choices_l1": [
+        "la vue",
+        "le balisage",
+        "la tranquillité"
+      ],
+      "choices_l2": [
+        "vrch",
+        "štít",
+        "dolina"
+      ]
+    },
+    {
+      "id": "qcm-rezerv-cia",
+      "type": "qcm",
+      "l1": "la réservation",
+      "l2": "rezervácia",
+      "choices_l1": [
+        "la vue",
+        "la tranquillité",
+        "le balisage"
+      ],
+      "choices_l2": [
+        "vrch",
+        "jazero",
+        "potok"
+      ]
+    },
+    {
+      "id": "qcm-hviezdy",
+      "type": "qcm",
+      "l1": "les étoiles",
+      "l2": "hviezdy",
+      "choices_l1": [
+        "le parcours",
+        "l'hébergement",
+        "le balisage"
+      ],
+      "choices_l2": [
+        "skala",
+        "jazero",
+        "štít"
+      ]
+    },
+    {
+      "id": "qcm-ticho",
+      "type": "qcm",
+      "l1": "le silence",
+      "l2": "ticho",
+      "choices_l1": [
+        "l'hébergement",
+        "le balisage",
+        "le parcours"
+      ],
+      "choices_l2": [
+        "jazero",
+        "potok",
+        "skala"
+      ]
+    },
+    {
+      "id": "qcm-pohoda",
+      "type": "qcm",
+      "l1": "la tranquillité",
+      "l2": "pohoda",
+      "choices_l1": [
+        "le parcours",
+        "le refuge",
+        "le balisage"
+      ],
+      "choices_l2": [
+        "batoh",
+        "skala",
+        "les"
+      ]
+    },
+    {
+      "id": "blank-idem-do-h-r-s-batohom-palicami-a-mapou",
+      "type": "fill-blank",
+      "l1": "Je vais en montagne avec un sac à dos, des bâtons et une carte.",
+      "l2": "Idem do hôr s batohom, palicami a mapou.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 11,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "ou",
+        "Donc",
+        "mais"
+      ],
+      "choices_l2": [
+        "aj",
+        "lebo",
+        "alebo"
+      ]
+    },
+    {
+      "id": "blank-trasa-je-n-ro-n-ale-v-h-ad-z-vrcholu-stoj-za-to",
+      "type": "fill-blank",
+      "l1": "Le parcours est difficile, mais la vue depuis le sommet en vaut la peine.",
+      "l2": "Trasa je náročná, ale výhľad z vrcholu stojí za to.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 5,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "le",
+        "Les",
+        "sacs"
+      ],
+      "choices_l2": [
+        "bol",
+        "Bude",
+        "budem"
+      ]
+    },
+    {
+      "id": "blank-mus-me-ma-lek-rni-ku-a-baterku-ak-bude-tma",
+      "type": "fill-blank",
+      "l1": "Nous devons avoir une trousse de secours et une lampe, s'il fait nuit.",
+      "l2": "Musíme mať lekárničku a baterku, ak bude tma.",
+      "missing_l1": "de",
+      "missing_l2": "a",
+      "blank_index_l1": 5,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Sous",
+        "à",
+        "par"
+      ],
+      "choices_l2": [
+        "ale",
+        "alebo",
+        "aj"
+      ]
+    },
+    {
+      "id": "blank-chodn-k-vedie-cez-les-popri-potoku",
+      "type": "fill-blank",
+      "l1": "Le sentier passe à travers la forêt le long du ruisseau.",
+      "l2": "Chodník vedie cez les popri potoku.",
+      "missing_l1": "la",
+      "missing_l2": "cez",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Les",
+        "le",
+        "sacs"
+      ],
+      "choices_l2": [
+        "z",
+        "bez",
+        "k"
+      ]
+    },
+    {
+      "id": "blank-vid-m-kamz-ka-na-skale",
+      "type": "fill-blank",
+      "l1": "Je vois un chamois sur le rocher !",
+      "l2": "Vidím kamzíka na skale!",
+      "missing_l1": "le",
+      "missing_l2": "na",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sacs",
+        "la",
+        "Les"
+      ],
+      "choices_l2": [
+        "z",
+        "k",
+        "bez"
+      ]
+    },
+    {
+      "id": "blank-sme-unaven-chceli-by-sme-odpo-va-v-chate-a-ma-tepl-aj",
+      "type": "fill-blank",
+      "l1": "Nous sommes fatigués, nous voudrions nous reposer au refuge et avoir un thé chaud.",
+      "l2": "Sme unavení, chceli by sme odpočívať v chate a mať teplý čaj.",
+      "missing_l1": "et",
+      "missing_l2": "v",
+      "blank_index_l1": 9,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "mais",
+        "ni",
+        "Donc"
+      ],
+      "choices_l2": [
+        "z",
+        "k",
+        "bez"
+      ]
+    },
+    {
+      "id": "blank-modr-zna-ka-je-ah-ia-ako-erven-ale-dlh-ia",
+      "type": "fill-blank",
+      "l1": "Le balisage bleu est plus facile que le rouge, mais plus long.",
+      "l2": "Modrá značka je ľahšia ako červená, ale dlhšia.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 7,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sacs",
+        "Les",
+        "la"
+      ],
+      "choices_l2": [
+        "ste",
+        "budú",
+        "bol"
+      ]
+    },
+    {
+      "id": "blank-m-me-rezerv-ciu-na-dve-postele-a-spacie-vaky",
+      "type": "fill-blank",
+      "l1": "Nous avons une réservation pour deux lits et des sacs de couchage.",
+      "l2": "Máme rezerváciu na dve postele a spacie vaky.",
+      "missing_l1": "de",
+      "missing_l2": "a",
+      "blank_index_l1": 10,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "près",
+        "sur",
+        "Sous"
+      ],
+      "choices_l2": [
+        "lebo",
+        "alebo",
+        "aj"
+      ]
+    },
+    {
+      "id": "blank-smerovn-k-ukazuje-trasu-k-jazeru",
+      "type": "fill-blank",
+      "l1": "Le poteau indicateur montre l'itinéraire vers le lac.",
+      "l2": "Smerovník ukazuje trasu k jazeru.",
+      "missing_l1": "le",
+      "missing_l2": "k",
+      "blank_index_l1": 6,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Les",
+        "la",
+        "sacs"
+      ],
+      "choices_l2": [
+        "pred",
+        "na",
+        "po"
+      ]
+    },
+    {
+      "id": "blank-nem-eme-s-alej-je-tu-z-kaz-vstupu",
+      "type": "fill-blank",
+      "l1": "Nous ne pouvons pas continuer, il y a interdiction d'entrer ici.",
+      "l2": "Nemôžeme ísť ďalej, je tu zákaz vstupu.",
+      "missing_l1": "il",
+      "missing_l2": "je",
+      "blank_index_l1": 5,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "vous",
+        "On",
+        "elles"
+      ],
+      "choices_l2": [
+        "budem",
+        "bola",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-v-noci-s-v-hor-ch-kr-sne-hviezdy-a-ve-k-ticho",
+      "type": "fill-blank",
+      "l1": "La nuit en montagne il y a de belles étoiles et un grand silence.",
+      "l2": "V noci sú v horách krásne hviezdy a veľké ticho.",
+      "missing_l1": "de",
+      "missing_l2": "v",
+      "blank_index_l1": 7,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "dans",
+        "chez",
+        "sans"
+      ],
+      "choices_l2": [
+        "k",
+        "bez",
+        "z"
+      ]
+    },
+    {
+      "id": "blank-c-tim-navu-ale-aj-ve-k-pohodu",
+      "type": "fill-blank",
+      "l1": "Je ressens la fatigue, mais aussi une grande tranquillité.",
+      "l2": "Cítim únavu, ale aj veľkú pohodu.",
+      "missing_l1": "la",
+      "missing_l2": "ale",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "le",
+        "Les",
+        "sacs"
+      ],
+      "choices_l2": [
+        "lebo",
+        "a",
+        "však"
+      ]
+    },
+    {
+      "id": "blank-skala-je-strm-cho-te-opatrne-a-pomaly",
+      "type": "fill-blank",
+      "l1": "Le rocher est raide, allez prudemment et lentement.",
+      "l2": "Skala je strmá, choďte opatrne a pomaly.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "êtes",
+        "C'est",
+        "c'était"
+      ],
+      "choices_l2": [
+        "som",
+        "sú",
+        "ste"
+      ]
+    },
+    {
+      "id": "blank-batoh-je-a-k-lebo-m-m-jedlo-vodu-a-stan",
+      "type": "fill-blank",
+      "l1": "Le sac à dos est lourd, parce que j'ai de la nourriture, de l'eau et une tente.",
+      "l2": "Batoh je ťažký, lebo mám jedlo, vodu a stan.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 10,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Les",
+        "sacs",
+        "le"
+      ],
+      "choices_l2": [
+        "bol",
+        "budem",
+        "ste"
+      ]
+    },
+    {
+      "id": "blank-toto-bola-najkraj-ia-trasa-ak-sme-videli",
+      "type": "fill-blank",
+      "l1": "C'était le plus beau parcours que nous ayons vu.",
+      "l2": "Toto bola najkrajšia trasa, akú sme videli.",
+      "missing_l1": "le",
+      "missing_l2": "sme",
+      "blank_index_l1": 1,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "sacs",
+        "Les",
+        "la"
+      ],
+      "choices_l2": [
+        "sú",
+        "Bude",
+        "je"
+      ]
+    },
+    {
+      "id": "listen-idem-do-h-r-s-batohom-palicami-a-mapou",
+      "type": "listen",
+      "l1": "Je vais en montagne avec un sac à dos, des bâtons et une carte.",
+      "l2": "Idem do hôr s batohom, palicami a mapou.",
+      "choices_l1": [
+        "Nous avons une réservation pour deux lits et des sacs de couchage.",
+        "Je ressens la fatigue, mais aussi une grande tranquillité.",
+        "La nuit en montagne il y a de belles étoiles et un grand silence."
+      ],
+      "choices_l2": [
+        "Vidím kamzíka na skale!",
+        "Cítim únavu, ale aj veľkú pohodu.",
+        "Trasa je náročná, ale výhľad z vrcholu stojí za to."
+      ]
+    },
+    {
+      "id": "listen-trasa-je-n-ro-n-ale-v-h-ad-z-vrcholu-stoj-za-to",
+      "type": "listen",
+      "l1": "Le parcours est difficile, mais la vue depuis le sommet en vaut la peine.",
+      "l2": "Trasa je náročná, ale výhľad z vrcholu stojí za to.",
+      "choices_l1": [
+        "Le balisage bleu est plus facile que le rouge, mais plus long.",
+        "Nous devons avoir une trousse de secours et une lampe, s'il fait nuit.",
+        "Le poteau indicateur montre l'itinéraire vers le lac."
+      ],
+      "choices_l2": [
+        "Smerovník ukazuje trasu k jazeru.",
+        "V noci sú v horách krásne hviezdy a veľké ticho.",
+        "Cítim únavu, ale aj veľkú pohodu."
+      ]
+    },
+    {
+      "id": "listen-mus-me-ma-lek-rni-ku-a-baterku-ak-bude-tma",
+      "type": "listen",
+      "l1": "Nous devons avoir une trousse de secours et une lampe, s'il fait nuit.",
+      "l2": "Musíme mať lekárničku a baterku, ak bude tma.",
+      "choices_l1": [
+        "Je vois un chamois sur le rocher !",
+        "La nuit en montagne il y a de belles étoiles et un grand silence.",
+        "Je ressens la fatigue, mais aussi une grande tranquillité."
+      ],
+      "choices_l2": [
+        "Trasa je náročná, ale výhľad z vrcholu stojí za to.",
+        "V noci sú v horách krásne hviezdy a veľké ticho.",
+        "Vidím kamzíka na skale!"
+      ]
+    },
+    {
+      "id": "listen-chodn-k-vedie-cez-les-popri-potoku",
+      "type": "listen",
+      "l1": "Le sentier passe à travers la forêt le long du ruisseau.",
+      "l2": "Chodník vedie cez les popri potoku.",
+      "choices_l1": [
+        "Nous ne pouvons pas continuer, il y a interdiction d'entrer ici.",
+        "Le poteau indicateur montre l'itinéraire vers le lac.",
+        "Nous devons avoir une trousse de secours et une lampe, s'il fait nuit."
+      ],
+      "choices_l2": [
+        "Nemôžeme ísť ďalej, je tu zákaz vstupu.",
+        "Musíme mať lekárničku a baterku, ak bude tma.",
+        "Smerovník ukazuje trasu k jazeru."
+      ]
+    },
+    {
+      "id": "listen-vid-m-kamz-ka-na-skale",
+      "type": "listen",
+      "l1": "Je vois un chamois sur le rocher !",
+      "l2": "Vidím kamzíka na skale!",
+      "choices_l1": [
+        "Le balisage bleu est plus facile que le rouge, mais plus long.",
+        "Le poteau indicateur montre l'itinéraire vers le lac.",
+        "Nous ne pouvons pas continuer, il y a interdiction d'entrer ici."
+      ],
+      "choices_l2": [
+        "Musíme mať lekárničku a baterku, ak bude tma.",
+        "Chodník vedie cez les popri potoku.",
+        "Nemôžeme ísť ďalej, je tu zákaz vstupu."
+      ]
+    },
+    {
+      "id": "listen-sme-unaven-chceli-by-sme-odpo-va-v-chate-a-ma-tepl-aj",
+      "type": "listen",
+      "l1": "Nous sommes fatigués, nous voudrions nous reposer au refuge et avoir un thé chaud.",
+      "l2": "Sme unavení, chceli by sme odpočívať v chate a mať teplý čaj.",
+      "choices_l1": [
+        "Le poteau indicateur montre l'itinéraire vers le lac.",
+        "Le balisage bleu est plus facile que le rouge, mais plus long.",
+        "Je vois un chamois sur le rocher !"
+      ],
+      "choices_l2": [
+        "Trasa je náročná, ale výhľad z vrcholu stojí za to.",
+        "Nemôžeme ísť ďalej, je tu zákaz vstupu.",
+        "Skala je strmá, choďte opatrne a pomaly."
+      ]
+    },
+    {
+      "id": "listen-modr-zna-ka-je-ah-ia-ako-erven-ale-dlh-ia",
+      "type": "listen",
+      "l1": "Le balisage bleu est plus facile que le rouge, mais plus long.",
+      "l2": "Modrá značka je ľahšia ako červená, ale dlhšia.",
+      "choices_l1": [
+        "Le poteau indicateur montre l'itinéraire vers le lac.",
+        "Nous devons avoir une trousse de secours et une lampe, s'il fait nuit.",
+        "Le sentier passe à travers la forêt le long du ruisseau."
+      ],
+      "choices_l2": [
+        "Trasa je náročná, ale výhľad z vrcholu stojí za to.",
+        "V noci sú v horách krásne hviezdy a veľké ticho.",
+        "Chodník vedie cez les popri potoku."
+      ]
+    },
+    {
+      "id": "listen-m-me-rezerv-ciu-na-dve-postele-a-spacie-vaky",
+      "type": "listen",
+      "l1": "Nous avons une réservation pour deux lits et des sacs de couchage.",
+      "l2": "Máme rezerváciu na dve postele a spacie vaky.",
+      "choices_l1": [
+        "Le rocher est raide, allez prudemment et lentement.",
+        "Le parcours est difficile, mais la vue depuis le sommet en vaut la peine.",
+        "Je vais en montagne avec un sac à dos, des bâtons et une carte."
+      ],
+      "choices_l2": [
+        "Skala je strmá, choďte opatrne a pomaly.",
+        "Chodník vedie cez les popri potoku.",
+        "Trasa je náročná, ale výhľad z vrcholu stojí za to."
+      ]
+    },
+    {
+      "id": "listen-smerovn-k-ukazuje-trasu-k-jazeru",
+      "type": "listen",
+      "l1": "Le poteau indicateur montre l'itinéraire vers le lac.",
+      "l2": "Smerovník ukazuje trasu k jazeru.",
+      "choices_l1": [
+        "Je vois un chamois sur le rocher !",
+        "Le rocher est raide, allez prudemment et lentement.",
+        "Nous sommes fatigués, nous voudrions nous reposer au refuge et avoir un thé chaud."
+      ],
+      "choices_l2": [
+        "Trasa je náročná, ale výhľad z vrcholu stojí za to.",
+        "Musíme mať lekárničku a baterku, ak bude tma.",
+        "Vidím kamzíka na skale!"
+      ]
+    },
+    {
+      "id": "listen-nem-eme-s-alej-je-tu-z-kaz-vstupu",
+      "type": "listen",
+      "l1": "Nous ne pouvons pas continuer, il y a interdiction d'entrer ici.",
+      "l2": "Nemôžeme ísť ďalej, je tu zákaz vstupu.",
+      "choices_l1": [
+        "Le poteau indicateur montre l'itinéraire vers le lac.",
+        "Je ressens la fatigue, mais aussi une grande tranquillité.",
+        "Je vois un chamois sur le rocher !"
+      ],
+      "choices_l2": [
+        "Musíme mať lekárničku a baterku, ak bude tma.",
+        "Idem do hôr s batohom, palicami a mapou.",
+        "V noci sú v horách krásne hviezdy a veľké ticho."
+      ]
+    },
+    {
+      "id": "listen-v-noci-s-v-hor-ch-kr-sne-hviezdy-a-ve-k-ticho",
+      "type": "listen",
+      "l1": "La nuit en montagne il y a de belles étoiles et un grand silence.",
+      "l2": "V noci sú v horách krásne hviezdy a veľké ticho.",
+      "choices_l1": [
+        "Le sentier passe à travers la forêt le long du ruisseau.",
+        "Le balisage bleu est plus facile que le rouge, mais plus long.",
+        "Je vois un chamois sur le rocher !"
+      ],
+      "choices_l2": [
+        "Nemôžeme ísť ďalej, je tu zákaz vstupu.",
+        "Musíme mať lekárničku a baterku, ak bude tma.",
+        "Cítim únavu, ale aj veľkú pohodu."
+      ]
+    },
+    {
+      "id": "listen-c-tim-navu-ale-aj-ve-k-pohodu",
+      "type": "listen",
+      "l1": "Je ressens la fatigue, mais aussi une grande tranquillité.",
+      "l2": "Cítim únavu, ale aj veľkú pohodu.",
+      "choices_l1": [
+        "Le parcours est difficile, mais la vue depuis le sommet en vaut la peine.",
+        "Je vois un chamois sur le rocher !",
+        "Je vais en montagne avec un sac à dos, des bâtons et une carte."
+      ],
+      "choices_l2": [
+        "Skala je strmá, choďte opatrne a pomaly.",
+        "Chodník vedie cez les popri potoku.",
+        "Nemôžeme ísť ďalej, je tu zákaz vstupu."
+      ]
+    },
+    {
+      "id": "listen-skala-je-strm-cho-te-opatrne-a-pomaly",
+      "type": "listen",
+      "l1": "Le rocher est raide, allez prudemment et lentement.",
+      "l2": "Skala je strmá, choďte opatrne a pomaly.",
+      "choices_l1": [
+        "Nous devons avoir une trousse de secours et une lampe, s'il fait nuit.",
+        "Nous ne pouvons pas continuer, il y a interdiction d'entrer ici.",
+        "Je vois un chamois sur le rocher !"
+      ],
+      "choices_l2": [
+        "V noci sú v horách krásne hviezdy a veľké ticho.",
+        "Nemôžeme ísť ďalej, je tu zákaz vstupu.",
+        "Trasa je náročná, ale výhľad z vrcholu stojí za to."
+      ]
+    },
+    {
+      "id": "listen-batoh-je-a-k-lebo-m-m-jedlo-vodu-a-stan",
+      "type": "listen",
+      "l1": "Le sac à dos est lourd, parce que j'ai de la nourriture, de l'eau et une tente.",
+      "l2": "Batoh je ťažký, lebo mám jedlo, vodu a stan.",
+      "choices_l1": [
+        "Je vais en montagne avec un sac à dos, des bâtons et une carte.",
+        "Nous ne pouvons pas continuer, il y a interdiction d'entrer ici.",
+        "Le sentier passe à travers la forêt le long du ruisseau."
+      ],
+      "choices_l2": [
+        "Trasa je náročná, ale výhľad z vrcholu stojí za to.",
+        "V noci sú v horách krásne hviezdy a veľké ticho.",
+        "Musíme mať lekárničku a baterku, ak bude tma."
+      ]
+    },
+    {
+      "id": "listen-toto-bola-najkraj-ia-trasa-ak-sme-videli",
+      "type": "listen",
+      "l1": "C'était le plus beau parcours que nous ayons vu.",
+      "l2": "Toto bola najkrajšia trasa, akú sme videli.",
+      "choices_l1": [
+        "Nous ne pouvons pas continuer, il y a interdiction d'entrer ici.",
+        "Le parcours est difficile, mais la vue depuis le sommet en vaut la peine.",
+        "La nuit en montagne il y a de belles étoiles et un grand silence."
+      ],
+      "choices_l2": [
+        "Trasa je náročná, ale výhľad z vrcholu stojí za to.",
+        "Musíme mať lekárničku a baterku, ak bude tma.",
+        "Máme rezerváciu na dve postele a spacie vaky."
+      ]
+    },
+    {
+      "id": "order-idem-do-h-r-s-batohom-palicami-a-mapou",
+      "type": "order",
+      "l1": "Je vais en montagne avec un sac à dos, des bâtons et une carte.",
+      "l2": "Idem do hôr s batohom, palicami a mapou.",
+      "tokens_l1": [
+        "Je",
+        "vais",
+        "en",
+        "montagne",
+        "avec",
+        "un",
+        "sac",
+        "à",
+        "dos,",
+        "des",
+        "bâtons",
+        "et",
+        "une",
+        "carte.",
+        "Le",
+        "rocher",
+        "est",
+        "raide,",
+        "allez",
+        "prudemment",
+        "et",
+        "lentement."
+      ],
+      "tokens_l2": [
+        "Idem",
+        "do",
+        "hôr",
+        "s",
+        "batohom,",
+        "palicami",
+        "a",
+        "mapou.",
+        "Skala",
+        "je",
+        "strmá,",
+        "choďte",
+        "opatrne",
+        "a",
+        "pomaly."
+      ]
+    },
+    {
+      "id": "order-trasa-je-n-ro-n-ale-v-h-ad-z-vrcholu-stoj-za-to",
+      "type": "order",
+      "l1": "Le parcours est difficile, mais la vue depuis le sommet en vaut la peine.",
+      "l2": "Trasa je náročná, ale výhľad z vrcholu stojí za to.",
+      "tokens_l1": [
+        "Le",
+        "parcours",
+        "est",
+        "difficile,",
+        "mais",
+        "la",
+        "vue",
+        "depuis",
+        "le",
+        "sommet",
+        "en",
+        "vaut",
+        "la",
+        "peine.",
+        "Je",
+        "vois",
+        "un",
+        "chamois",
+        "sur",
+        "le",
+        "rocher",
+        "!"
+      ],
+      "tokens_l2": [
+        "Trasa",
+        "je",
+        "náročná,",
+        "ale",
+        "výhľad",
+        "z",
+        "vrcholu",
+        "stojí",
+        "za",
+        "to.",
+        "Vidím",
+        "kamzíka",
+        "na",
+        "skale!"
+      ]
+    },
+    {
+      "id": "order-mus-me-ma-lek-rni-ku-a-baterku-ak-bude-tma",
+      "type": "order",
+      "l1": "Nous devons avoir une trousse de secours et une lampe, s'il fait nuit.",
+      "l2": "Musíme mať lekárničku a baterku, ak bude tma.",
+      "tokens_l1": [
+        "Nous",
+        "devons",
+        "avoir",
+        "une",
+        "trousse",
+        "de",
+        "secours",
+        "et",
+        "une",
+        "lampe,",
+        "s'il",
+        "fait",
+        "nuit.",
+        "Nous",
+        "sommes",
+        "fatigués,",
+        "nous",
+        "voudrions",
+        "nous",
+        "reposer",
+        "au",
+        "refuge",
+        "et",
+        "avoir",
+        "un",
+        "thé",
+        "chaud."
+      ],
+      "tokens_l2": [
+        "Musíme",
+        "mať",
+        "lekárničku",
+        "a",
+        "baterku,",
+        "ak",
+        "bude",
+        "tma.",
+        "Sme",
+        "unavení,",
+        "chceli",
+        "by",
+        "sme",
+        "odpočívať",
+        "v",
+        "chate",
+        "a",
+        "mať",
+        "teplý",
+        "čaj."
+      ]
+    },
+    {
+      "id": "order-chodn-k-vedie-cez-les-popri-potoku",
+      "type": "order",
+      "l1": "Le sentier passe à travers la forêt le long du ruisseau.",
+      "l2": "Chodník vedie cez les popri potoku.",
+      "tokens_l1": [
+        "Le",
+        "sentier",
+        "passe",
+        "à",
+        "travers",
+        "la",
+        "forêt",
+        "le",
+        "long",
+        "du",
+        "ruisseau.",
+        "Le",
+        "sac",
+        "à",
+        "dos",
+        "est",
+        "lourd,",
+        "parce",
+        "que",
+        "j'ai",
+        "de",
+        "la",
+        "nourriture,",
+        "de",
+        "l'eau",
+        "et",
+        "une",
+        "tente."
+      ],
+      "tokens_l2": [
+        "Chodník",
+        "vedie",
+        "cez",
+        "les",
+        "popri",
+        "potoku.",
+        "Batoh",
+        "je",
+        "ťažký,",
+        "lebo",
+        "mám",
+        "jedlo,",
+        "vodu",
+        "a",
+        "stan."
+      ]
+    },
+    {
+      "id": "order-vid-m-kamz-ka-na-skale",
+      "type": "order",
+      "l1": "Je vois un chamois sur le rocher !",
+      "l2": "Vidím kamzíka na skale!",
+      "tokens_l1": [
+        "Je",
+        "vois",
+        "un",
+        "chamois",
+        "sur",
+        "le",
+        "rocher",
+        "!",
+        "Le",
+        "poteau",
+        "indicateur",
+        "montre",
+        "l'itinéraire",
+        "vers",
+        "le",
+        "lac."
+      ],
+      "tokens_l2": [
+        "Vidím",
+        "kamzíka",
+        "na",
+        "skale!",
+        "Smerovník",
+        "ukazuje",
+        "trasu",
+        "k",
+        "jazeru."
+      ]
+    },
+    {
+      "id": "order-sme-unaven-chceli-by-sme-odpo-va-v-chate-a-ma-tepl-aj",
+      "type": "order",
+      "l1": "Nous sommes fatigués, nous voudrions nous reposer au refuge et avoir un thé chaud.",
+      "l2": "Sme unavení, chceli by sme odpočívať v chate a mať teplý čaj.",
+      "tokens_l1": [
+        "Nous",
+        "sommes",
+        "fatigués,",
+        "nous",
+        "voudrions",
+        "nous",
+        "reposer",
+        "au",
+        "refuge",
+        "et",
+        "avoir",
+        "un",
+        "thé",
+        "chaud.",
+        "Je",
+        "ressens",
+        "la",
+        "fatigue,",
+        "mais",
+        "aussi",
+        "une",
+        "grande",
+        "tranquillité."
+      ],
+      "tokens_l2": [
+        "Sme",
+        "unavení,",
+        "chceli",
+        "by",
+        "sme",
+        "odpočívať",
+        "v",
+        "chate",
+        "a",
+        "mať",
+        "teplý",
+        "čaj.",
+        "Cítim",
+        "únavu,",
+        "ale",
+        "aj",
+        "veľkú",
+        "pohodu."
+      ]
+    },
+    {
+      "id": "order-modr-zna-ka-je-ah-ia-ako-erven-ale-dlh-ia",
+      "type": "order",
+      "l1": "Le balisage bleu est plus facile que le rouge, mais plus long.",
+      "l2": "Modrá značka je ľahšia ako červená, ale dlhšia.",
+      "tokens_l1": [
+        "Le",
+        "balisage",
+        "bleu",
+        "est",
+        "plus",
+        "facile",
+        "que",
+        "le",
+        "rouge,",
+        "mais",
+        "plus",
+        "long.",
+        "Nous",
+        "sommes",
+        "fatigués,",
+        "nous",
+        "voudrions",
+        "nous",
+        "reposer",
+        "au",
+        "refuge",
+        "et",
+        "avoir",
+        "un",
+        "thé",
+        "chaud."
+      ],
+      "tokens_l2": [
+        "Modrá",
+        "značka",
+        "je",
+        "ľahšia",
+        "ako",
+        "červená,",
+        "ale",
+        "dlhšia.",
+        "Sme",
+        "unavení,",
+        "chceli",
+        "by",
+        "sme",
+        "odpočívať",
+        "v",
+        "chate",
+        "a",
+        "mať",
+        "teplý",
+        "čaj."
+      ]
+    },
+    {
+      "id": "order-m-me-rezerv-ciu-na-dve-postele-a-spacie-vaky",
+      "type": "order",
+      "l1": "Nous avons une réservation pour deux lits et des sacs de couchage.",
+      "l2": "Máme rezerváciu na dve postele a spacie vaky.",
+      "tokens_l1": [
+        "Nous",
+        "avons",
+        "une",
+        "réservation",
+        "pour",
+        "deux",
+        "lits",
+        "et",
+        "des",
+        "sacs",
+        "de",
+        "couchage.",
+        "Nous",
+        "devons",
+        "avoir",
+        "une",
+        "trousse",
+        "de",
+        "secours",
+        "et",
+        "une",
+        "lampe,",
+        "s'il",
+        "fait",
+        "nuit."
+      ],
+      "tokens_l2": [
+        "Máme",
+        "rezerváciu",
+        "na",
+        "dve",
+        "postele",
+        "a",
+        "spacie",
+        "vaky.",
+        "Musíme",
+        "mať",
+        "lekárničku",
+        "a",
+        "baterku,",
+        "ak",
+        "bude",
+        "tma."
+      ]
+    },
+    {
+      "id": "order-smerovn-k-ukazuje-trasu-k-jazeru",
+      "type": "order",
+      "l1": "Le poteau indicateur montre l'itinéraire vers le lac.",
+      "l2": "Smerovník ukazuje trasu k jazeru.",
+      "tokens_l1": [
+        "Le",
+        "poteau",
+        "indicateur",
+        "montre",
+        "l'itinéraire",
+        "vers",
+        "le",
+        "lac.",
+        "Je",
+        "ressens",
+        "la",
+        "fatigue,",
+        "mais",
+        "aussi",
+        "une",
+        "grande",
+        "tranquillité."
+      ],
+      "tokens_l2": [
+        "Smerovník",
+        "ukazuje",
+        "trasu",
+        "k",
+        "jazeru.",
+        "Cítim",
+        "únavu,",
+        "ale",
+        "aj",
+        "veľkú",
+        "pohodu."
+      ]
+    },
+    {
+      "id": "order-nem-eme-s-alej-je-tu-z-kaz-vstupu",
+      "type": "order",
+      "l1": "Nous ne pouvons pas continuer, il y a interdiction d'entrer ici.",
+      "l2": "Nemôžeme ísť ďalej, je tu zákaz vstupu.",
+      "tokens_l1": [
+        "Nous",
+        "ne",
+        "pouvons",
+        "pas",
+        "continuer,",
+        "il",
+        "y",
+        "a",
+        "interdiction",
+        "d'entrer",
+        "ici.",
+        "La",
+        "nuit",
+        "en",
+        "montagne",
+        "il",
+        "y",
+        "a",
+        "de",
+        "belles",
+        "étoiles",
+        "et",
+        "un",
+        "grand",
+        "silence."
+      ],
+      "tokens_l2": [
+        "Nemôžeme",
+        "ísť",
+        "ďalej,",
+        "je",
+        "tu",
+        "zákaz",
+        "vstupu.",
+        "V",
+        "noci",
+        "sú",
+        "v",
+        "horách",
+        "krásne",
+        "hviezdy",
+        "a",
+        "veľké",
+        "ticho."
+      ]
+    },
+    {
+      "id": "order-v-noci-s-v-hor-ch-kr-sne-hviezdy-a-ve-k-ticho",
+      "type": "order",
+      "l1": "La nuit en montagne il y a de belles étoiles et un grand silence.",
+      "l2": "V noci sú v horách krásne hviezdy a veľké ticho.",
+      "tokens_l1": [
+        "La",
+        "nuit",
+        "en",
+        "montagne",
+        "il",
+        "y",
+        "a",
+        "de",
+        "belles",
+        "étoiles",
+        "et",
+        "un",
+        "grand",
+        "silence.",
+        "C'était",
+        "le",
+        "plus",
+        "beau",
+        "parcours",
+        "que",
+        "nous",
+        "ayons",
+        "vu."
+      ],
+      "tokens_l2": [
+        "V",
+        "noci",
+        "sú",
+        "v",
+        "horách",
+        "krásne",
+        "hviezdy",
+        "a",
+        "veľké",
+        "ticho.",
+        "Toto",
+        "bola",
+        "najkrajšia",
+        "trasa,",
+        "akú",
+        "sme",
+        "videli."
+      ]
+    },
+    {
+      "id": "order-c-tim-navu-ale-aj-ve-k-pohodu",
+      "type": "order",
+      "l1": "Je ressens la fatigue, mais aussi une grande tranquillité.",
+      "l2": "Cítim únavu, ale aj veľkú pohodu.",
+      "tokens_l1": [
+        "Je",
+        "ressens",
+        "la",
+        "fatigue,",
+        "mais",
+        "aussi",
+        "une",
+        "grande",
+        "tranquillité.",
+        "Nous",
+        "ne",
+        "pouvons",
+        "pas",
+        "continuer,",
+        "il",
+        "y",
+        "a",
+        "interdiction",
+        "d'entrer",
+        "ici."
+      ],
+      "tokens_l2": [
+        "Cítim",
+        "únavu,",
+        "ale",
+        "aj",
+        "veľkú",
+        "pohodu.",
+        "Nemôžeme",
+        "ísť",
+        "ďalej,",
+        "je",
+        "tu",
+        "zákaz",
+        "vstupu."
+      ]
+    },
+    {
+      "id": "order-skala-je-strm-cho-te-opatrne-a-pomaly",
+      "type": "order",
+      "l1": "Le rocher est raide, allez prudemment et lentement.",
+      "l2": "Skala je strmá, choďte opatrne a pomaly.",
+      "tokens_l1": [
+        "Le",
+        "rocher",
+        "est",
+        "raide,",
+        "allez",
+        "prudemment",
+        "et",
+        "lentement.",
+        "Le",
+        "balisage",
+        "bleu",
+        "est",
+        "plus",
+        "facile",
+        "que",
+        "le",
+        "rouge,",
+        "mais",
+        "plus",
+        "long."
+      ],
+      "tokens_l2": [
+        "Skala",
+        "je",
+        "strmá,",
+        "choďte",
+        "opatrne",
+        "a",
+        "pomaly.",
+        "Modrá",
+        "značka",
+        "je",
+        "ľahšia",
+        "ako",
+        "červená,",
+        "ale",
+        "dlhšia."
+      ]
+    },
+    {
+      "id": "order-batoh-je-a-k-lebo-m-m-jedlo-vodu-a-stan",
+      "type": "order",
+      "l1": "Le sac à dos est lourd, parce que j'ai de la nourriture, de l'eau et une tente.",
+      "l2": "Batoh je ťažký, lebo mám jedlo, vodu a stan.",
+      "tokens_l1": [
+        "Le",
+        "sac",
+        "à",
+        "dos",
+        "est",
+        "lourd,",
+        "parce",
+        "que",
+        "j'ai",
+        "de",
+        "la",
+        "nourriture,",
+        "de",
+        "l'eau",
+        "et",
+        "une",
+        "tente.",
+        "Nous",
+        "sommes",
+        "fatigués,",
+        "nous",
+        "voudrions",
+        "nous",
+        "reposer",
+        "au",
+        "refuge",
+        "et",
+        "avoir",
+        "un",
+        "thé",
+        "chaud."
+      ],
+      "tokens_l2": [
+        "Batoh",
+        "je",
+        "ťažký,",
+        "lebo",
+        "mám",
+        "jedlo,",
+        "vodu",
+        "a",
+        "stan.",
+        "Sme",
+        "unavení,",
+        "chceli",
+        "by",
+        "sme",
+        "odpočívať",
+        "v",
+        "chate",
+        "a",
+        "mať",
+        "teplý",
+        "čaj."
+      ]
+    },
+    {
+      "id": "order-toto-bola-najkraj-ia-trasa-ak-sme-videli",
+      "type": "order",
+      "l1": "C'était le plus beau parcours que nous ayons vu.",
+      "l2": "Toto bola najkrajšia trasa, akú sme videli.",
+      "tokens_l1": [
+        "C'était",
+        "le",
+        "plus",
+        "beau",
+        "parcours",
+        "que",
+        "nous",
+        "ayons",
+        "vu.",
+        "Le",
+        "poteau",
+        "indicateur",
+        "montre",
+        "l'itinéraire",
+        "vers",
+        "le",
+        "lac."
+      ],
+      "tokens_l2": [
+        "Toto",
+        "bola",
+        "najkrajšia",
+        "trasa,",
+        "akú",
+        "sme",
+        "videli.",
+        "Smerovník",
+        "ukazuje",
+        "trasu",
+        "k",
+        "jazeru."
+      ]
+    },
+    {
+      "id": "match-hora-vocab",
+      "type": "match",
+      "l1": [
+        "la montagne",
+        "le sommet",
+        "la vallée",
+        "la forêt"
+      ],
+      "l2": [
+        "hora",
+        "vrch",
+        "dolina",
+        "les"
+      ]
+    },
+    {
+      "id": "match-idem-do-h-r-s-batohom-palicami-a-mapou-sentences",
+      "type": "match",
+      "l1": [
+        "Je vais en montagne avec un sac à dos, des bâtons et une carte.",
+        "Le parcours est difficile, mais la vue depuis le sommet en vaut la peine.",
+        "Nous devons avoir une trousse de secours et une lampe, s'il fait nuit.",
+        "Le sentier passe à travers la forêt le long du ruisseau."
+      ],
+      "l2": [
+        "Idem do hôr s batohom, palicami a mapou.",
+        "Trasa je náročná, ale výhľad z vrcholu stojí za to.",
+        "Musíme mať lekárničku a baterku, ak bude tma.",
+        "Chodník vedie cez les popri potoku."
+      ]
+    }
+  ]
+}

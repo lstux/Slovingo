@@ -1,0 +1,1207 @@
+{
+  "exercises": [
+    {
+      "id": "blank-servez-vous-bon-app-tit",
+      "type": "fill-blank",
+      "l1": "Poslúžte si. Dobrú chuť!",
+      "l2": "Servez-vous. Bon appétit !",
+      "missing_l1": "si",
+      "missing_l2": "Bon",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "stole",
+        "môj",
+        "sestra"
+      ],
+      "choices_l2": [
+        "cuisine",
+        "j'ai",
+        "à"
+      ]
+    },
+    {
+      "id": "blank-merci-qu-est-ce-que-c-est",
+      "type": "fill-blank",
+      "l1": "Ďakujem. Čo je to?",
+      "l2": "Merci. Qu'est-ce que c'est ?",
+      "missing_l1": "je",
+      "missing_l2": "c'est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "môj",
+        "babka",
+        "dedine"
+      ],
+      "choices_l2": [
+        "un",
+        "les",
+        "du"
+      ]
+    },
+    {
+      "id": "blank-une-quiche-lorraine-elle-est-chaude-attention",
+      "type": "fill-blank",
+      "l1": "Quiche lorraine. Je teplá, pozor.",
+      "l2": "Une quiche lorraine. Elle est chaude, attention.",
+      "missing_l1": "Je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "býva",
+        "som",
+        "nemám"
+      ],
+      "choices_l2": [
+        "elle",
+        "frère",
+        "cuisine"
+      ]
+    },
+    {
+      "id": "blank-c-est-tr-s-savoureux",
+      "type": "fill-blank",
+      "l1": "Je to veľmi chutné.",
+      "l2": "C'est très savoureux.",
+      "missing_l1": "to",
+      "missing_l2": "très",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "prosím",
+        "ja",
+        "sú"
+      ],
+      "choices_l2": [
+        "ma",
+        "ne",
+        "une"
+      ]
+    },
+    {
+      "id": "blank-ensuite-il-y-a-du-pot-au-feu-tu-aimes-la-viande",
+      "type": "fill-blank",
+      "l1": "Potom je pot-au-feu. Máš rád mäso?",
+      "l2": "Ensuite il y a du pot-au-feu. Tu aimes la viande ?",
+      "missing_l1": "je",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "moja",
+        "deti",
+        "máme"
+      ],
+      "choices_l2": [
+        "ma",
+        "mes",
+        "maman"
+      ]
+    },
+    {
+      "id": "blank-moi-je-ne-veux-pas-de-pot-au-feu-je-veux-de-la-tarte",
+      "type": "fill-blank",
+      "l1": "Ja nechcem pot-au-feu. Chcem tartu!",
+      "l2": "Moi, je ne veux pas de pot-au-feu. Je veux de la tarte !",
+      "missing_l1": "Chcem",
+      "missing_l2": "la",
+      "blank_index_l1": 3,
+      "blank_index_l2": 10,
+      "choices_l1": [
+        "rodičia",
+        "kuchyni",
+        "dedine"
+      ],
+      "choices_l2": [
+        "maman",
+        "mais",
+        "sœur"
+      ]
+    },
+    {
+      "id": "blank-d-abord-le-d-jeuner-ensuite-la-tarte",
+      "type": "fill-blank",
+      "l1": "Najprv obed, potom tarta.",
+      "l2": "D'abord le déjeuner, ensuite la tarte.",
+      "missing_l1": "potom",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "chcem",
+        "rodičia",
+        "v"
+      ],
+      "choices_l2": [
+        "la",
+        "un",
+        "enfants"
+      ]
+    },
+    {
+      "id": "blank-eric-vous-prenez-du-vin-ou-de-l-eau",
+      "type": "fill-blank",
+      "l1": "Eric, dáte si víno alebo vodu?",
+      "l2": "Eric, vous prenez du vin ou de l'eau ?",
+      "missing_l1": "si",
+      "missing_l2": "de",
+      "blank_index_l1": 2,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "dedine",
+        "prosím",
+        "na"
+      ],
+      "choices_l2": [
+        "où",
+        "mes",
+        "maman"
+      ]
+    },
+    {
+      "id": "blank-de-l-eau-s-il-vous-pla-t-j-ai-soif",
+      "type": "fill-blank",
+      "l1": "Vodu, prosím. Mám smäd.",
+      "l2": "De l'eau, s'il vous plaît. J'ai soif.",
+      "missing_l1": "Mám",
+      "missing_l2": "J'ai",
+      "blank_index_l1": 2,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "sestra",
+        "kde",
+        "máme"
+      ],
+      "choices_l2": [
+        "un",
+        "mon",
+        "vous"
+      ]
+    },
+    {
+      "id": "blank-moi-je-prends-du-vin-sant",
+      "type": "fill-blank",
+      "l1": "Ja si dám víno. Na zdravie!",
+      "l2": "Moi, je prends du vin. Santé !",
+      "missing_l1": "Na",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "mama",
+        "dedine",
+        "je"
+      ],
+      "choices_l2": [
+        "grand-mère",
+        "elle",
+        "nous"
+      ]
+    },
+    {
+      "id": "blank-vous-voulez-encore-de-la-quiche",
+      "type": "fill-blank",
+      "l1": "Chcete ešte quiche?",
+      "l2": "Vous voulez encore de la quiche ?",
+      "missing_l1": "ešte",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "je",
+        "deti",
+        "sa"
+      ],
+      "choices_l2": [
+        "vous",
+        "les",
+        "tu"
+      ]
+    },
+    {
+      "id": "blank-non-merci-je-n-ai-plus-faim",
+      "type": "fill-blank",
+      "l1": "Nie, ďakujem. Som plný.",
+      "l2": "Non, merci. Je n'ai plus faim.",
+      "missing_l1": "Som",
+      "missing_l2": "Je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "hľadám",
+        "bývam",
+        "tu"
+      ],
+      "choices_l2": [
+        "maison",
+        "un",
+        "sont"
+      ]
+    },
+    {
+      "id": "blank-encore-un-peu-vous-n-avez-pas-faim",
+      "type": "fill-blank",
+      "l1": "Ešte trochu. Nie ste hladný?",
+      "l2": "Encore un peu. Vous n'avez pas faim ?",
+      "missing_l1": "Nie",
+      "missing_l2": "un",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "deti",
+        "mama",
+        "dedine"
+      ],
+      "choices_l2": [
+        "mon",
+        "sœur",
+        "le"
+      ]
+    },
+    {
+      "id": "blank-mamie-dit-toujours-encore-un-peu",
+      "type": "fill-blank",
+      "l1": "Babka vždy hovorí \"ešte trochu\"!",
+      "l2": "Mamie dit toujours « encore un peu » !",
+      "missing_l1": "ešte",
+      "missing_l2": "un",
+      "blank_index_l1": 3,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "ale",
+        "to",
+        "moji"
+      ],
+      "choices_l2": [
+        "où",
+        "les",
+        "ma"
+      ]
+    },
+    {
+      "id": "blank-je-prends-du-pot-au-feu-et-une-bi-re",
+      "type": "fill-blank",
+      "l1": "Dám si pot-au-feu a pivo.",
+      "l2": "Je prends du pot-au-feu et une bière.",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "moja",
+        "je",
+        "býva"
+      ],
+      "choices_l2": [
+        "maman",
+        "ma",
+        "la"
+      ]
+    },
+    {
+      "id": "blank-j-aime-le-fromage-mais-je-n-aime-pas-le-lait",
+      "type": "fill-blank",
+      "l1": "Mám rád syr, ale nemám rád mlieko.",
+      "l2": "J'aime le fromage, mais je n'aime pas le lait.",
+      "missing_l1": "ale",
+      "missing_l2": "le",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "a",
+        "rodičia",
+        "mama"
+      ],
+      "choices_l2": [
+        "où",
+        "grand-mère",
+        "travaille"
+      ]
+    },
+    {
+      "id": "blank-la-quiche-est-sal-e-et-un-peu-acide",
+      "type": "fill-blank",
+      "l1": "Quiche je slaná a trochu kyslá.",
+      "l2": "La quiche est salée et un peu acide.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "moja",
+        "sa",
+        "sú"
+      ],
+      "choices_l2": [
+        "mon",
+        "de",
+        "ans"
+      ]
+    },
+    {
+      "id": "blank-je-veux-encore-du-caf-il-est-froid",
+      "type": "fill-blank",
+      "l1": "Chcem ešte kávu. Je studená.",
+      "l2": "Je veux encore du café. Il est froid.",
+      "missing_l1": "Je",
+      "missing_l2": "est",
+      "blank_index_l1": 3,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "rokov",
+        "otec",
+        "to"
+      ],
+      "choices_l2": [
+        "un",
+        "les",
+        "cuisine"
+      ]
+    },
+    {
+      "id": "listen-servez-vous-bon-app-tit",
+      "type": "listen",
+      "l1": "Poslúžte si. Dobrú chuť!",
+      "l2": "Servez-vous. Bon appétit !",
+      "choices_l2": [
+        "Les enfants sont dans la cour.",
+        "Nous avons un balcon et un garage.",
+        "Je cherche le téléphone. Il est dans le salon ?"
+      ]
+    },
+    {
+      "id": "listen-merci-qu-est-ce-que-c-est",
+      "type": "listen",
+      "l1": "Ďakujem. Čo je to?",
+      "l2": "Merci. Qu'est-ce que c'est ?",
+      "choices_l2": [
+        "Je cherche le téléphone. Il est dans le salon ?",
+        "Mon père est grand et costaud.",
+        "Les enfants boivent du lait froid."
+      ]
+    },
+    {
+      "id": "listen-une-quiche-lorraine-elle-est-chaude-attention",
+      "type": "listen",
+      "l1": "Quiche lorraine. Je teplá, pozor.",
+      "l2": "Une quiche lorraine. Elle est chaude, attention.",
+      "choices_l2": [
+        "Bonjour. Moi, c'est Louise.",
+        "Le lit est dans la chambre.",
+        "J'habite à Lyon."
+      ]
+    },
+    {
+      "id": "listen-c-est-tr-s-savoureux",
+      "type": "listen",
+      "l1": "Je to veľmi chutné.",
+      "l2": "C'est très savoureux.",
+      "choices_l2": [
+        "J'écoute et je n'écris pas.",
+        "Je cherche mes lunettes.",
+        "Et moi, je range le salon !"
+      ]
+    },
+    {
+      "id": "listen-ensuite-il-y-a-du-pot-au-feu-tu-aimes-la-viande",
+      "type": "listen",
+      "l1": "Potom je pot-au-feu. Máš rád mäso?",
+      "l2": "Ensuite il y a du pot-au-feu. Tu aimes la viande ?",
+      "choices_l2": [
+        "Le réfrigérateur est dans la cuisine.",
+        "Tu manges du fromage ?",
+        "La lampe est sur la table."
+      ]
+    },
+    {
+      "id": "listen-je-ne-sais-pas-je-vais-go-ter",
+      "type": "listen",
+      "l1": "Neviem. Ochutnám!",
+      "l2": "Je ne sais pas. Je vais goûter !",
+      "choices_l2": [
+        "Notre maison est grande, mais les pièces sont petites.",
+        "Et vous, Eric ? Que faites-vous ?",
+        "Ma sœur est médecin."
+      ]
+    },
+    {
+      "id": "listen-moi-je-ne-veux-pas-de-pot-au-feu-je-veux-de-la-tarte",
+      "type": "listen",
+      "l1": "Ja nechcem pot-au-feu. Chcem tartu!",
+      "l2": "Moi, je ne veux pas de pot-au-feu. Je veux de la tarte !",
+      "choices_l2": [
+        "Maman cuisine dans la cuisine.",
+        "Où est mon téléphone ?",
+        "Tu veux encore de la soupe ?"
+      ]
+    },
+    {
+      "id": "listen-d-abord-le-d-jeuner-ensuite-la-tarte",
+      "type": "listen",
+      "l1": "Najprv obed, potom tarta.",
+      "l2": "D'abord le déjeuner, ensuite la tarte.",
+      "choices_l2": [
+        "Je me repose sur le lit et j'écoute.",
+        "Je cuisine. Nous déjeunons à midi.",
+        "Je cherche mes lunettes."
+      ]
+    },
+    {
+      "id": "listen-eric-vous-prenez-du-vin-ou-de-l-eau",
+      "type": "listen",
+      "l1": "Eric, dáte si víno alebo vodu?",
+      "l2": "Eric, vous prenez du vin ou de l'eau ?",
+      "choices_l2": [
+        "Mon père et ma maman habitent ensemble à la campagne.",
+        "Il y a une chaise dans la cuisine.",
+        "Le salon est grand."
+      ]
+    },
+    {
+      "id": "listen-de-l-eau-s-il-vous-pla-t-j-ai-soif",
+      "type": "listen",
+      "l1": "Vodu, prosím. Mám smäd.",
+      "l2": "De l'eau, s'il vous plaît. J'ai soif.",
+      "choices_l2": [
+        "Mes parents travaillent.",
+        "Mon fils est étudiant. Il habite en ville.",
+        "L'eau est chaude. J'en veux de la froide."
+      ]
+    },
+    {
+      "id": "listen-moi-je-prends-du-vin-sant",
+      "type": "listen",
+      "l1": "Ja si dám víno. Na zdravie!",
+      "l2": "Moi, je prends du vin. Santé !",
+      "choices_l2": [
+        "Je lave les verres et les assiettes.",
+        "Je cherche la clé.",
+        "Mon ami habite dans un immeuble, tout près."
+      ]
+    },
+    {
+      "id": "listen-vous-voulez-encore-de-la-quiche",
+      "type": "listen",
+      "l1": "Chcete ešte quiche?",
+      "l2": "Vous voulez encore de la quiche ?",
+      "choices_l2": [
+        "J'ai beaucoup de travail.",
+        "Il y a des chaussons ici ?",
+        "Ma sœur est médecin et elle habite en ville."
+      ]
+    },
+    {
+      "id": "listen-non-merci-je-n-ai-plus-faim",
+      "type": "listen",
+      "l1": "Nie, ďakujem. Som plný.",
+      "l2": "Non, merci. Je n'ai plus faim.",
+      "choices_l2": [
+        "Chloé ! Va dans le jardin.",
+        "Il y a une horloge au-dessus de la porte.",
+        "Ma maman a cinquante ans."
+      ]
+    },
+    {
+      "id": "listen-encore-un-peu-vous-n-avez-pas-faim",
+      "type": "listen",
+      "l1": "Ešte trochu. Nie ste hladný?",
+      "l2": "Encore un peu. Vous n'avez pas faim ?",
+      "choices_l2": [
+        "Ma fille a cinq ans.",
+        "Tu veux encore de la soupe ?",
+        "Je cherche le téléphone. Il n'est pas dans l'armoire."
+      ]
+    },
+    {
+      "id": "listen-mamie-dit-toujours-encore-un-peu",
+      "type": "listen",
+      "l1": "Babka vždy hovorí \"ešte trochu\"!",
+      "l2": "Mamie dit toujours « encore un peu » !",
+      "choices_l2": [
+        "J'ai un fils et une fille.",
+        "Je cherche mes lunettes.",
+        "Où habites-tu ?"
+      ]
+    },
+    {
+      "id": "listen-je-prends-du-pot-au-feu-et-une-bi-re",
+      "type": "listen",
+      "l1": "Dám si pot-au-feu a pivo.",
+      "l2": "Je prends du pot-au-feu et une bière.",
+      "choices_l2": [
+        "J'habite à Lyon.",
+        "Qui est-ce ?",
+        "Je me repose sur le lit et j'écoute."
+      ]
+    },
+    {
+      "id": "listen-j-aime-le-fromage-mais-je-n-aime-pas-le-lait",
+      "type": "listen",
+      "l1": "Mám rád syr, ale nemám rád mlieko.",
+      "l2": "J'aime le fromage, mais je n'aime pas le lait.",
+      "choices_l2": [
+        "Je cherche le sac. Je le cherche partout.",
+        "Mon frère est étudiant. Il ne travaille pas.",
+        "Je cherche la clé, mais elle n'est pas sur la table."
+      ]
+    },
+    {
+      "id": "listen-la-quiche-est-sal-e-et-un-peu-acide",
+      "type": "listen",
+      "l1": "Quiche je slaná a trochu kyslá.",
+      "l2": "La quiche est salée et un peu acide.",
+      "choices_l2": [
+        "Ma sœur a deux ans.",
+        "Bonjour. Moi, c'est Louise.",
+        "Je ferme la porte."
+      ]
+    },
+    {
+      "id": "listen-je-veux-encore-du-caf-il-est-froid",
+      "type": "listen",
+      "l1": "Chcem ešte kávu. Je studená.",
+      "l2": "Je veux encore du café. Il est froid.",
+      "choices_l2": [
+        "Mon grand-père et ma grand-mère.",
+        "Salut Chloé. Quel âge a ta sœur ?",
+        "Mon fils est étudiant. Il habite en ville."
+      ]
+    },
+    {
+      "id": "order-servez-vous-bon-app-tit",
+      "type": "order",
+      "l1": "Poslúžte si. Dobrú chuť!",
+      "l2": "Servez-vous. Bon appétit !",
+      "tokens_l1": [
+        "Poslúžte",
+        "si.",
+        "Dobrú",
+        "chuť!",
+        "Vodu,",
+        "prosím.",
+        "Mám",
+        "smäd."
+      ],
+      "tokens_l2": [
+        "Servez-vous.",
+        "Bon",
+        "appétit",
+        "!",
+        "De",
+        "l'eau,",
+        "s'il",
+        "vous",
+        "plaît.",
+        "J'ai",
+        "soif."
+      ]
+    },
+    {
+      "id": "order-merci-qu-est-ce-que-c-est",
+      "type": "order",
+      "l1": "Ďakujem. Čo je to?",
+      "l2": "Merci. Qu'est-ce que c'est ?",
+      "tokens_l1": [
+        "Ďakujem.",
+        "Čo",
+        "je",
+        "to?",
+        "Nie,",
+        "ďakujem.",
+        "Som",
+        "plný."
+      ],
+      "tokens_l2": [
+        "Merci.",
+        "Qu'est-ce",
+        "que",
+        "c'est",
+        "?",
+        "Non,",
+        "merci.",
+        "Je",
+        "n'ai",
+        "plus",
+        "faim."
+      ]
+    },
+    {
+      "id": "order-une-quiche-lorraine-elle-est-chaude-attention",
+      "type": "order",
+      "l1": "Quiche lorraine. Je teplá, pozor.",
+      "l2": "Une quiche lorraine. Elle est chaude, attention.",
+      "tokens_l1": [
+        "Quiche",
+        "lorraine.",
+        "Je",
+        "teplá,",
+        "pozor.",
+        "Ja",
+        "nechcem",
+        "pot-au-feu.",
+        "Chcem",
+        "tartu!"
+      ],
+      "tokens_l2": [
+        "Une",
+        "quiche",
+        "lorraine.",
+        "Elle",
+        "est",
+        "chaude,",
+        "attention.",
+        "Moi,",
+        "je",
+        "ne",
+        "veux",
+        "pas",
+        "de",
+        "pot-au-feu.",
+        "Je",
+        "veux",
+        "de",
+        "la",
+        "tarte",
+        "!"
+      ]
+    },
+    {
+      "id": "order-c-est-tr-s-savoureux",
+      "type": "order",
+      "l1": "Je to veľmi chutné.",
+      "l2": "C'est très savoureux.",
+      "tokens_l1": [
+        "Je",
+        "to",
+        "veľmi",
+        "chutné.",
+        "Dám",
+        "si",
+        "pot-au-feu",
+        "a",
+        "pivo."
+      ],
+      "tokens_l2": [
+        "C'est",
+        "très",
+        "savoureux.",
+        "Je",
+        "prends",
+        "du",
+        "pot-au-feu",
+        "et",
+        "une",
+        "bière."
+      ]
+    },
+    {
+      "id": "order-ensuite-il-y-a-du-pot-au-feu-tu-aimes-la-viande",
+      "type": "order",
+      "l1": "Potom je pot-au-feu. Máš rád mäso?",
+      "l2": "Ensuite il y a du pot-au-feu. Tu aimes la viande ?",
+      "tokens_l1": [
+        "Potom",
+        "je",
+        "pot-au-feu.",
+        "Máš",
+        "rád",
+        "mäso?",
+        "Najprv",
+        "obed,",
+        "potom",
+        "tarta."
+      ],
+      "tokens_l2": [
+        "Ensuite",
+        "il",
+        "y",
+        "a",
+        "du",
+        "pot-au-feu.",
+        "Tu",
+        "aimes",
+        "la",
+        "viande",
+        "?",
+        "D'abord",
+        "le",
+        "déjeuner,",
+        "ensuite",
+        "la",
+        "tarte."
+      ]
+    },
+    {
+      "id": "order-moi-je-ne-veux-pas-de-pot-au-feu-je-veux-de-la-tarte",
+      "type": "order",
+      "l1": "Ja nechcem pot-au-feu. Chcem tartu!",
+      "l2": "Moi, je ne veux pas de pot-au-feu. Je veux de la tarte !",
+      "tokens_l1": [
+        "Ja",
+        "nechcem",
+        "pot-au-feu.",
+        "Chcem",
+        "tartu!",
+        "Chcem",
+        "ešte",
+        "kávu.",
+        "Je",
+        "studená."
+      ],
+      "tokens_l2": [
+        "Moi,",
+        "je",
+        "ne",
+        "veux",
+        "pas",
+        "de",
+        "pot-au-feu.",
+        "Je",
+        "veux",
+        "de",
+        "la",
+        "tarte",
+        "!",
+        "Je",
+        "veux",
+        "encore",
+        "du",
+        "café.",
+        "Il",
+        "est",
+        "froid."
+      ]
+    },
+    {
+      "id": "order-d-abord-le-d-jeuner-ensuite-la-tarte",
+      "type": "order",
+      "l1": "Najprv obed, potom tarta.",
+      "l2": "D'abord le déjeuner, ensuite la tarte.",
+      "tokens_l1": [
+        "Najprv",
+        "obed,",
+        "potom",
+        "tarta.",
+        "Vodu,",
+        "prosím.",
+        "Mám",
+        "smäd."
+      ],
+      "tokens_l2": [
+        "D'abord",
+        "le",
+        "déjeuner,",
+        "ensuite",
+        "la",
+        "tarte.",
+        "De",
+        "l'eau,",
+        "s'il",
+        "vous",
+        "plaît.",
+        "J'ai",
+        "soif."
+      ]
+    },
+    {
+      "id": "order-eric-vous-prenez-du-vin-ou-de-l-eau",
+      "type": "order",
+      "l1": "Eric, dáte si víno alebo vodu?",
+      "l2": "Eric, vous prenez du vin ou de l'eau ?",
+      "tokens_l1": [
+        "Eric,",
+        "dáte",
+        "si",
+        "víno",
+        "alebo",
+        "vodu?",
+        "Poslúžte",
+        "si.",
+        "Dobrú",
+        "chuť!"
+      ],
+      "tokens_l2": [
+        "Eric,",
+        "vous",
+        "prenez",
+        "du",
+        "vin",
+        "ou",
+        "de",
+        "l'eau",
+        "?",
+        "Servez-vous.",
+        "Bon",
+        "appétit",
+        "!"
+      ]
+    },
+    {
+      "id": "order-de-l-eau-s-il-vous-pla-t-j-ai-soif",
+      "type": "order",
+      "l1": "Vodu, prosím. Mám smäd.",
+      "l2": "De l'eau, s'il vous plaît. J'ai soif.",
+      "tokens_l1": [
+        "Vodu,",
+        "prosím.",
+        "Mám",
+        "smäd.",
+        "Eric,",
+        "dáte",
+        "si",
+        "víno",
+        "alebo",
+        "vodu?"
+      ],
+      "tokens_l2": [
+        "De",
+        "l'eau,",
+        "s'il",
+        "vous",
+        "plaît.",
+        "J'ai",
+        "soif.",
+        "Eric,",
+        "vous",
+        "prenez",
+        "du",
+        "vin",
+        "ou",
+        "de",
+        "l'eau",
+        "?"
+      ]
+    },
+    {
+      "id": "order-moi-je-prends-du-vin-sant",
+      "type": "order",
+      "l1": "Ja si dám víno. Na zdravie!",
+      "l2": "Moi, je prends du vin. Santé !",
+      "tokens_l1": [
+        "Ja",
+        "si",
+        "dám",
+        "víno.",
+        "Na",
+        "zdravie!",
+        "Chcem",
+        "ešte",
+        "kávu.",
+        "Je",
+        "studená."
+      ],
+      "tokens_l2": [
+        "Moi,",
+        "je",
+        "prends",
+        "du",
+        "vin.",
+        "Santé",
+        "!",
+        "Je",
+        "veux",
+        "encore",
+        "du",
+        "café.",
+        "Il",
+        "est",
+        "froid."
+      ]
+    },
+    {
+      "id": "order-vous-voulez-encore-de-la-quiche",
+      "type": "order",
+      "l1": "Chcete ešte quiche?",
+      "l2": "Vous voulez encore de la quiche ?",
+      "tokens_l1": [
+        "Chcete",
+        "ešte",
+        "quiche?",
+        "Mám",
+        "rád",
+        "syr,",
+        "ale",
+        "nemám",
+        "rád",
+        "mlieko."
+      ],
+      "tokens_l2": [
+        "Vous",
+        "voulez",
+        "encore",
+        "de",
+        "la",
+        "quiche",
+        "?",
+        "J'aime",
+        "le",
+        "fromage,",
+        "mais",
+        "je",
+        "n'aime",
+        "pas",
+        "le",
+        "lait."
+      ]
+    },
+    {
+      "id": "order-non-merci-je-n-ai-plus-faim",
+      "type": "order",
+      "l1": "Nie, ďakujem. Som plný.",
+      "l2": "Non, merci. Je n'ai plus faim.",
+      "tokens_l1": [
+        "Nie,",
+        "ďakujem.",
+        "Som",
+        "plný.",
+        "Potom",
+        "je",
+        "pot-au-feu.",
+        "Máš",
+        "rád",
+        "mäso?"
+      ],
+      "tokens_l2": [
+        "Non,",
+        "merci.",
+        "Je",
+        "n'ai",
+        "plus",
+        "faim.",
+        "Ensuite",
+        "il",
+        "y",
+        "a",
+        "du",
+        "pot-au-feu.",
+        "Tu",
+        "aimes",
+        "la",
+        "viande",
+        "?"
+      ]
+    },
+    {
+      "id": "order-encore-un-peu-vous-n-avez-pas-faim",
+      "type": "order",
+      "l1": "Ešte trochu. Nie ste hladný?",
+      "l2": "Encore un peu. Vous n'avez pas faim ?",
+      "tokens_l1": [
+        "Ešte",
+        "trochu.",
+        "Nie",
+        "ste",
+        "hladný?",
+        "Nie,",
+        "ďakujem.",
+        "Som",
+        "plný."
+      ],
+      "tokens_l2": [
+        "Encore",
+        "un",
+        "peu.",
+        "Vous",
+        "n'avez",
+        "pas",
+        "faim",
+        "?",
+        "Non,",
+        "merci.",
+        "Je",
+        "n'ai",
+        "plus",
+        "faim."
+      ]
+    },
+    {
+      "id": "order-mamie-dit-toujours-encore-un-peu",
+      "type": "order",
+      "l1": "Babka vždy hovorí \"ešte trochu\"!",
+      "l2": "Mamie dit toujours « encore un peu » !",
+      "tokens_l1": [
+        "Babka",
+        "vždy",
+        "hovorí",
+        "\"ešte",
+        "trochu\"!",
+        "Chcete",
+        "ešte",
+        "quiche?"
+      ],
+      "tokens_l2": [
+        "Mamie",
+        "dit",
+        "toujours",
+        "«",
+        "encore",
+        "un",
+        "peu",
+        "»",
+        "!",
+        "Vous",
+        "voulez",
+        "encore",
+        "de",
+        "la",
+        "quiche",
+        "?"
+      ]
+    },
+    {
+      "id": "order-je-prends-du-pot-au-feu-et-une-bi-re",
+      "type": "order",
+      "l1": "Dám si pot-au-feu a pivo.",
+      "l2": "Je prends du pot-au-feu et une bière.",
+      "tokens_l1": [
+        "Dám",
+        "si",
+        "pot-au-feu",
+        "a",
+        "pivo.",
+        "Vodu,",
+        "prosím.",
+        "Mám",
+        "smäd."
+      ],
+      "tokens_l2": [
+        "Je",
+        "prends",
+        "du",
+        "pot-au-feu",
+        "et",
+        "une",
+        "bière.",
+        "De",
+        "l'eau,",
+        "s'il",
+        "vous",
+        "plaît.",
+        "J'ai",
+        "soif."
+      ]
+    },
+    {
+      "id": "order-j-aime-le-fromage-mais-je-n-aime-pas-le-lait",
+      "type": "order",
+      "l1": "Mám rád syr, ale nemám rád mlieko.",
+      "l2": "J'aime le fromage, mais je n'aime pas le lait.",
+      "tokens_l1": [
+        "Mám",
+        "rád",
+        "syr,",
+        "ale",
+        "nemám",
+        "rád",
+        "mlieko.",
+        "Ja",
+        "nechcem",
+        "pot-au-feu.",
+        "Chcem",
+        "tartu!"
+      ],
+      "tokens_l2": [
+        "J'aime",
+        "le",
+        "fromage,",
+        "mais",
+        "je",
+        "n'aime",
+        "pas",
+        "le",
+        "lait.",
+        "Moi,",
+        "je",
+        "ne",
+        "veux",
+        "pas",
+        "de",
+        "pot-au-feu.",
+        "Je",
+        "veux",
+        "de",
+        "la",
+        "tarte",
+        "!"
+      ]
+    },
+    {
+      "id": "order-la-quiche-est-sal-e-et-un-peu-acide",
+      "type": "order",
+      "l1": "Quiche je slaná a trochu kyslá.",
+      "l2": "La quiche est salée et un peu acide.",
+      "tokens_l1": [
+        "Quiche",
+        "je",
+        "slaná",
+        "a",
+        "trochu",
+        "kyslá.",
+        "Chcem",
+        "ešte",
+        "kávu.",
+        "Je",
+        "studená."
+      ],
+      "tokens_l2": [
+        "La",
+        "quiche",
+        "est",
+        "salée",
+        "et",
+        "un",
+        "peu",
+        "acide.",
+        "Je",
+        "veux",
+        "encore",
+        "du",
+        "café.",
+        "Il",
+        "est",
+        "froid."
+      ]
+    },
+    {
+      "id": "order-je-veux-encore-du-caf-il-est-froid",
+      "type": "order",
+      "l1": "Chcem ešte kávu. Je studená.",
+      "l2": "Je veux encore du café. Il est froid.",
+      "tokens_l1": [
+        "Chcem",
+        "ešte",
+        "kávu.",
+        "Je",
+        "studená.",
+        "Mám",
+        "rád",
+        "syr,",
+        "ale",
+        "nemám",
+        "rád",
+        "mlieko."
+      ],
+      "tokens_l2": [
+        "Je",
+        "veux",
+        "encore",
+        "du",
+        "café.",
+        "Il",
+        "est",
+        "froid.",
+        "J'aime",
+        "le",
+        "fromage,",
+        "mais",
+        "je",
+        "n'aime",
+        "pas",
+        "le",
+        "lait."
+      ]
+    }
+  ]
+}

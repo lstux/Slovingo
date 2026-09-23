@@ -1,0 +1,965 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-eskoslovensko",
+      "type": "qcm",
+      "l1": "la Tchécoslovaquie",
+      "l2": "Československo",
+      "choices_l1": [
+        "la décision",
+        "la frontière",
+        "l'État"
+      ],
+      "choices_l2": [
+        "občianstvo",
+        "Slováci",
+        "Česi"
+      ]
+    },
+    {
+      "id": "qcm-rozdelenie",
+      "type": "qcm",
+      "l1": "la séparation, la scission",
+      "l2": "rozdelenie",
+      "choices_l1": [
+        "le parti communiste",
+        "le chez-soi, le pays natal",
+        "le marché du travail"
+      ],
+      "choices_l2": [
+        "hranica",
+        "Česi",
+        "politik"
+      ]
+    },
+    {
+      "id": "qcm-samostatnos",
+      "type": "qcm",
+      "l1": "l'indépendance",
+      "l2": "samostatnosť",
+      "choices_l1": [
+        "les Slovaques",
+        "le référendum",
+        "la citoyenneté"
+      ],
+      "choices_l2": [
+        "referendum",
+        "občianstvo",
+        "rozdelenie"
+      ]
+    },
+    {
+      "id": "qcm-hranica",
+      "type": "qcm",
+      "l1": "la frontière",
+      "l2": "hranica",
+      "choices_l1": [
+        "le référendum",
+        "l'indépendance",
+        "les Tchèques"
+      ],
+      "choices_l2": [
+        "občianstvo",
+        "Slováci",
+        "samostatnosť"
+      ]
+    },
+    {
+      "id": "qcm-politik",
+      "type": "qcm",
+      "l1": "le politicien",
+      "l2": "politik",
+      "choices_l1": [
+        "le référendum",
+        "l'indépendance",
+        "les Tchèques"
+      ],
+      "choices_l2": [
+        "Česi",
+        "hranica",
+        "Slováci"
+      ]
+    },
+    {
+      "id": "qcm-referendum",
+      "type": "qcm",
+      "l1": "le référendum",
+      "l2": "referendum",
+      "choices_l1": [
+        "la frontière",
+        "la décision",
+        "le politicien"
+      ],
+      "choices_l2": [
+        "politik",
+        "štát",
+        "rozdelenie"
+      ]
+    },
+    {
+      "id": "qcm-t-t",
+      "type": "qcm",
+      "l1": "l'État",
+      "l2": "štát",
+      "choices_l1": [
+        "la frontière",
+        "les Tchèques",
+        "le référendum"
+      ],
+      "choices_l2": [
+        "občianstvo",
+        "Česi",
+        "rozdelenie"
+      ]
+    },
+    {
+      "id": "qcm-ob-ianstvo",
+      "type": "qcm",
+      "l1": "la citoyenneté",
+      "l2": "občianstvo",
+      "choices_l1": [
+        "le politicien",
+        "la décision",
+        "la frontière"
+      ],
+      "choices_l2": [
+        "Česi",
+        "politik",
+        "referendum"
+      ]
+    },
+    {
+      "id": "qcm-esi",
+      "type": "qcm",
+      "l1": "les Tchèques",
+      "l2": "Česi",
+      "choices_l1": [
+        "la citoyenneté",
+        "l'indépendance",
+        "la frontière"
+      ],
+      "choices_l2": [
+        "občianstvo",
+        "Československo",
+        "politik"
+      ]
+    },
+    {
+      "id": "qcm-slov-ci",
+      "type": "qcm",
+      "l1": "les Slovaques",
+      "l2": "Slováci",
+      "choices_l1": [
+        "le politicien",
+        "le référendum",
+        "les Tchèques"
+      ],
+      "choices_l2": [
+        "rozdelenie",
+        "referendum",
+        "Československo"
+      ]
+    },
+    {
+      "id": "qcm-zrazu",
+      "type": "qcm",
+      "l1": "soudainement",
+      "l2": "zrazu",
+      "choices_l1": [
+        "les Slovaques",
+        "la citoyenneté",
+        "le référendum"
+      ],
+      "choices_l2": [
+        "hranica",
+        "Slováci",
+        "občianstvo"
+      ]
+    },
+    {
+      "id": "qcm-rozhodnutie",
+      "type": "qcm",
+      "l1": "la décision",
+      "l2": "rozhodnutie",
+      "choices_l1": [
+        "le politicien",
+        "la frontière",
+        "le référendum"
+      ],
+      "choices_l2": [
+        "Česi",
+        "politik",
+        "Slováci"
+      ]
+    },
+    {
+      "id": "blank-andrea-na-tejto-starej-mape-je-eskoslovensko-kedy-presne-zaniklo",
+      "type": "fill-blank",
+      "l1": "Andrea, sur cette vieille carte il y a la Tchécoslovaquie. Quand exactement a-t-elle disparu ?",
+      "l2": "Andrea, na tejto starej mape je Československo. Kedy presne zaniklo?",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 8,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "l'un",
+        "le",
+        "Les"
+      ],
+      "choices_l2": [
+        "boli",
+        "budem",
+        "sú"
+      ]
+    },
+    {
+      "id": "blank-prv-ho-janu-ra-dev-desiattri-mala-som-vtedy-dev-tn-s-rokov",
+      "type": "fill-blank",
+      "l1": "Le 1er janvier 93. J'avais dix-neuf ans à l'époque.",
+      "l2": "Prvého januára deväťdesiattri. Mala som vtedy devätnásť rokov.",
+      "missing_l1": "à",
+      "missing_l2": "som",
+      "blank_index_l1": 7,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "dans",
+        "loin",
+        "sur"
+      ],
+      "choices_l2": [
+        "sú",
+        "bola",
+        "boli"
+      ]
+    },
+    {
+      "id": "blank-to-bolo-len-tri-roky-po-revol-cii-v-ak",
+      "type": "fill-blank",
+      "l1": "C'était seulement trois ans après la révolution, non ?",
+      "l2": "To bolo len tri roky po revolúcii, však?",
+      "missing_l1": "la",
+      "missing_l2": "bolo",
+      "blank_index_l1": 5,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "pays",
+        "seul",
+        "le"
+      ],
+      "choices_l2": [
+        "My",
+        "však",
+        "nás"
+      ]
+    },
+    {
+      "id": "blank-presne-tak-v-etko-sa-dialo-ve-mi-r-chlo-za-sebou",
+      "type": "fill-blank",
+      "l1": "Exactement. Tout s'est passé très vite l'un après l'autre.",
+      "l2": "Presne tak. Všetko sa dialo veľmi rýchlo za sebou.",
+      "missing_l1": "très",
+      "missing_l2": "sa",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "tard",
+        "tout",
+        "beaucoup"
+      ],
+      "choices_l2": [
+        "tá",
+        "Toto",
+        "To"
+      ]
+    },
+    {
+      "id": "blank-nikto-sa-n-s-oby-ajn-ch-ud-na-ni-nep-tal-nebolo-referendum",
+      "type": "fill-blank",
+      "l1": "Personne ne nous a rien demandé, à nous, les gens ordinaires. Il n'y a pas eu de référendum.",
+      "l2": "Nikto sa nás, obyčajných ľudí, na nič nepýtal. Nebolo referendum.",
+      "missing_l1": "de",
+      "missing_l2": "na",
+      "blank_index_l1": 16,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "loin",
+        "sur",
+        "avec"
+      ],
+      "choices_l2": [
+        "do",
+        "zo",
+        "o"
+      ]
+    },
+    {
+      "id": "blank-to-ma-prekvapuje-tak-d-le-it-vec-rozhodli-len-politici",
+      "type": "fill-blank",
+      "l1": "Ça me surprend. Une chose aussi importante a été décidée seulement par les politiciens ?",
+      "l2": "To ma prekvapuje. Takú dôležitú vec rozhodli len politici?",
+      "missing_l1": "les",
+      "missing_l2": "len",
+      "blank_index_l1": 12,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "le",
+        "seul",
+        "eu"
+      ],
+      "choices_l2": [
+        "ešte",
+        "vždy",
+        "veľa"
+      ]
+    },
+    {
+      "id": "blank-presne-tak-sa-to-stalo-a-ve-a-ud-to-prekvapilo-rovnako-ako-v-s",
+      "type": "fill-blank",
+      "l1": "C'est exactement ce qui s'est passé. Et ça a surpris beaucoup de gens, tout comme vous.",
+      "l2": "Presne tak sa to stalo. A veľa ľudí to prekvapilo rovnako ako vás.",
+      "missing_l1": "de",
+      "missing_l2": "A",
+      "blank_index_l1": 11,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "Sous",
+        "dans",
+        "chez"
+      ],
+      "choices_l2": [
+        "lebo",
+        "aj",
+        "však"
+      ]
+    },
+    {
+      "id": "blank-my-sme-si-zvykli-na-jednu-krajinu-a-zrazu-boli-dve",
+      "type": "fill-blank",
+      "l1": "Nous nous étions habitués à un seul pays. Et soudain il y en avait deux.",
+      "l2": "My sme si zvykli na jednu krajinu. A zrazu boli dve.",
+      "missing_l1": "Et",
+      "missing_l2": "A",
+      "blank_index_l1": 8,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "ni",
+        "ou",
+        "mais"
+      ],
+      "choices_l2": [
+        "však",
+        "alebo",
+        "ale"
+      ]
+    },
+    {
+      "id": "listen-andrea-na-tejto-starej-mape-je-eskoslovensko-kedy-presne-zaniklo",
+      "type": "listen",
+      "l1": "Andrea, sur cette vieille carte il y a la Tchécoslovaquie. Quand exactement a-t-elle disparu ?",
+      "l2": "Andrea, na tejto starej mape je Československo. Kedy presne zaniklo?",
+      "choices_l1": [
+        "Nous nous étions habitués à un seul pays. Et soudain il y en avait deux.",
+        "Le 1er janvier 93. J'avais dix-neuf ans à l'époque.",
+        "Ça me surprend. Une chose aussi importante a été décidée seulement par les politiciens ?"
+      ],
+      "choices_l2": [
+        "To bolo len tri roky po revolúcii, však?",
+        "Prvého januára deväťdesiattri. Mala som vtedy devätnásť rokov.",
+        "Presne tak sa to stalo. A veľa ľudí to prekvapilo rovnako ako vás."
+      ]
+    },
+    {
+      "id": "listen-prv-ho-janu-ra-dev-desiattri-mala-som-vtedy-dev-tn-s-rokov",
+      "type": "listen",
+      "l1": "Le 1er janvier 93. J'avais dix-neuf ans à l'époque.",
+      "l2": "Prvého januára deväťdesiattri. Mala som vtedy devätnásť rokov.",
+      "choices_l1": [
+        "Exactement. Tout s'est passé très vite l'un après l'autre.",
+        "C'était seulement trois ans après la révolution, non ?",
+        "Andrea, sur cette vieille carte il y a la Tchécoslovaquie. Quand exactement a-t-elle disparu ?"
+      ],
+      "choices_l2": [
+        "My sme si zvykli na jednu krajinu. A zrazu boli dve.",
+        "To bolo len tri roky po revolúcii, však?",
+        "Andrea, na tejto starej mape je Československo. Kedy presne zaniklo?"
+      ]
+    },
+    {
+      "id": "listen-to-bolo-len-tri-roky-po-revol-cii-v-ak",
+      "type": "listen",
+      "l1": "C'était seulement trois ans après la révolution, non ?",
+      "l2": "To bolo len tri roky po revolúcii, však?",
+      "choices_l1": [
+        "Nous nous étions habitués à un seul pays. Et soudain il y en avait deux.",
+        "Ça me surprend. Une chose aussi importante a été décidée seulement par les politiciens ?",
+        "Exactement. Tout s'est passé très vite l'un après l'autre."
+      ],
+      "choices_l2": [
+        "Presne tak. Všetko sa dialo veľmi rýchlo za sebou.",
+        "Presne tak sa to stalo. A veľa ľudí to prekvapilo rovnako ako vás.",
+        "To ma prekvapuje. Takú dôležitú vec rozhodli len politici?"
+      ]
+    },
+    {
+      "id": "listen-presne-tak-v-etko-sa-dialo-ve-mi-r-chlo-za-sebou",
+      "type": "listen",
+      "l1": "Exactement. Tout s'est passé très vite l'un après l'autre.",
+      "l2": "Presne tak. Všetko sa dialo veľmi rýchlo za sebou.",
+      "choices_l1": [
+        "C'était seulement trois ans après la révolution, non ?",
+        "Andrea, sur cette vieille carte il y a la Tchécoslovaquie. Quand exactement a-t-elle disparu ?",
+        "C'est exactement ce qui s'est passé. Et ça a surpris beaucoup de gens, tout comme vous."
+      ],
+      "choices_l2": [
+        "To bolo len tri roky po revolúcii, však?",
+        "Presne tak sa to stalo. A veľa ľudí to prekvapilo rovnako ako vás.",
+        "Nikto sa nás, obyčajných ľudí, na nič nepýtal. Nebolo referendum."
+      ]
+    },
+    {
+      "id": "listen-nikto-sa-n-s-oby-ajn-ch-ud-na-ni-nep-tal-nebolo-referendum",
+      "type": "listen",
+      "l1": "Personne ne nous a rien demandé, à nous, les gens ordinaires. Il n'y a pas eu de référendum.",
+      "l2": "Nikto sa nás, obyčajných ľudí, na nič nepýtal. Nebolo referendum.",
+      "choices_l1": [
+        "Nous nous étions habitués à un seul pays. Et soudain il y en avait deux.",
+        "Le 1er janvier 93. J'avais dix-neuf ans à l'époque.",
+        "Ça me surprend. Une chose aussi importante a été décidée seulement par les politiciens ?"
+      ],
+      "choices_l2": [
+        "Andrea, na tejto starej mape je Československo. Kedy presne zaniklo?",
+        "To bolo len tri roky po revolúcii, však?",
+        "Prvého januára deväťdesiattri. Mala som vtedy devätnásť rokov."
+      ]
+    },
+    {
+      "id": "listen-to-ma-prekvapuje-tak-d-le-it-vec-rozhodli-len-politici",
+      "type": "listen",
+      "l1": "Ça me surprend. Une chose aussi importante a été décidée seulement par les politiciens ?",
+      "l2": "To ma prekvapuje. Takú dôležitú vec rozhodli len politici?",
+      "choices_l1": [
+        "Andrea, sur cette vieille carte il y a la Tchécoslovaquie. Quand exactement a-t-elle disparu ?",
+        "C'était seulement trois ans après la révolution, non ?",
+        "Nous nous étions habitués à un seul pays. Et soudain il y en avait deux."
+      ],
+      "choices_l2": [
+        "To bolo len tri roky po revolúcii, však?",
+        "Andrea, na tejto starej mape je Československo. Kedy presne zaniklo?",
+        "Presne tak sa to stalo. A veľa ľudí to prekvapilo rovnako ako vás."
+      ]
+    },
+    {
+      "id": "listen-presne-tak-sa-to-stalo-a-ve-a-ud-to-prekvapilo-rovnako-ako-v-s",
+      "type": "listen",
+      "l1": "C'est exactement ce qui s'est passé. Et ça a surpris beaucoup de gens, tout comme vous.",
+      "l2": "Presne tak sa to stalo. A veľa ľudí to prekvapilo rovnako ako vás.",
+      "choices_l1": [
+        "C'était seulement trois ans après la révolution, non ?",
+        "Nous nous étions habitués à un seul pays. Et soudain il y en avait deux.",
+        "Exactement. Tout s'est passé très vite l'un après l'autre."
+      ],
+      "choices_l2": [
+        "Presne tak. Všetko sa dialo veľmi rýchlo za sebou.",
+        "To ma prekvapuje. Takú dôležitú vec rozhodli len politici?",
+        "Prvého januára deväťdesiattri. Mala som vtedy devätnásť rokov."
+      ]
+    },
+    {
+      "id": "listen-my-sme-si-zvykli-na-jednu-krajinu-a-zrazu-boli-dve",
+      "type": "listen",
+      "l1": "Nous nous étions habitués à un seul pays. Et soudain il y en avait deux.",
+      "l2": "My sme si zvykli na jednu krajinu. A zrazu boli dve.",
+      "choices_l1": [
+        "C'était seulement trois ans après la révolution, non ?",
+        "C'est exactement ce qui s'est passé. Et ça a surpris beaucoup de gens, tout comme vous.",
+        "Exactement. Tout s'est passé très vite l'un après l'autre."
+      ],
+      "choices_l2": [
+        "To ma prekvapuje. Takú dôležitú vec rozhodli len politici?",
+        "Presne tak. Všetko sa dialo veľmi rýchlo za sebou.",
+        "Andrea, na tejto starej mape je Československo. Kedy presne zaniklo?"
+      ]
+    },
+    {
+      "id": "order-andrea-na-tejto-starej-mape-je-eskoslovensko-kedy-presne-zaniklo",
+      "type": "order",
+      "l1": "Andrea, sur cette vieille carte il y a la Tchécoslovaquie. Quand exactement a-t-elle disparu ?",
+      "l2": "Andrea, na tejto starej mape je Československo. Kedy presne zaniklo?",
+      "tokens_l1": [
+        "Andrea,",
+        "sur",
+        "cette",
+        "vieille",
+        "carte",
+        "il",
+        "y",
+        "a",
+        "la",
+        "Tchécoslovaquie.",
+        "Quand",
+        "exactement",
+        "a-t-elle",
+        "disparu",
+        "?",
+        "Ça",
+        "me",
+        "surprend.",
+        "Une",
+        "chose",
+        "aussi",
+        "importante",
+        "a",
+        "été",
+        "décidée",
+        "seulement",
+        "par",
+        "les",
+        "politiciens",
+        "?"
+      ],
+      "tokens_l2": [
+        "Andrea,",
+        "na",
+        "tejto",
+        "starej",
+        "mape",
+        "je",
+        "Československo.",
+        "Kedy",
+        "presne",
+        "zaniklo?",
+        "To",
+        "ma",
+        "prekvapuje.",
+        "Takú",
+        "dôležitú",
+        "vec",
+        "rozhodli",
+        "len",
+        "politici?"
+      ]
+    },
+    {
+      "id": "order-prv-ho-janu-ra-dev-desiattri-mala-som-vtedy-dev-tn-s-rokov",
+      "type": "order",
+      "l1": "Le 1er janvier 93. J'avais dix-neuf ans à l'époque.",
+      "l2": "Prvého januára deväťdesiattri. Mala som vtedy devätnásť rokov.",
+      "tokens_l1": [
+        "Le",
+        "1er",
+        "janvier",
+        "93.",
+        "J'avais",
+        "dix-neuf",
+        "ans",
+        "à",
+        "l'époque.",
+        "Ça",
+        "me",
+        "surprend.",
+        "Une",
+        "chose",
+        "aussi",
+        "importante",
+        "a",
+        "été",
+        "décidée",
+        "seulement",
+        "par",
+        "les",
+        "politiciens",
+        "?"
+      ],
+      "tokens_l2": [
+        "Prvého",
+        "januára",
+        "deväťdesiattri.",
+        "Mala",
+        "som",
+        "vtedy",
+        "devätnásť",
+        "rokov.",
+        "To",
+        "ma",
+        "prekvapuje.",
+        "Takú",
+        "dôležitú",
+        "vec",
+        "rozhodli",
+        "len",
+        "politici?"
+      ]
+    },
+    {
+      "id": "order-to-bolo-len-tri-roky-po-revol-cii-v-ak",
+      "type": "order",
+      "l1": "C'était seulement trois ans après la révolution, non ?",
+      "l2": "To bolo len tri roky po revolúcii, však?",
+      "tokens_l1": [
+        "C'était",
+        "seulement",
+        "trois",
+        "ans",
+        "après",
+        "la",
+        "révolution,",
+        "non",
+        "?",
+        "Ça",
+        "me",
+        "surprend.",
+        "Une",
+        "chose",
+        "aussi",
+        "importante",
+        "a",
+        "été",
+        "décidée",
+        "seulement",
+        "par",
+        "les",
+        "politiciens",
+        "?"
+      ],
+      "tokens_l2": [
+        "To",
+        "bolo",
+        "len",
+        "tri",
+        "roky",
+        "po",
+        "revolúcii,",
+        "však?",
+        "To",
+        "ma",
+        "prekvapuje.",
+        "Takú",
+        "dôležitú",
+        "vec",
+        "rozhodli",
+        "len",
+        "politici?"
+      ]
+    },
+    {
+      "id": "order-presne-tak-v-etko-sa-dialo-ve-mi-r-chlo-za-sebou",
+      "type": "order",
+      "l1": "Exactement. Tout s'est passé très vite l'un après l'autre.",
+      "l2": "Presne tak. Všetko sa dialo veľmi rýchlo za sebou.",
+      "tokens_l1": [
+        "Exactement.",
+        "Tout",
+        "s'est",
+        "passé",
+        "très",
+        "vite",
+        "l'un",
+        "après",
+        "l'autre.",
+        "Personne",
+        "ne",
+        "nous",
+        "a",
+        "rien",
+        "demandé,",
+        "à",
+        "nous,",
+        "les",
+        "gens",
+        "ordinaires.",
+        "Il",
+        "n'y",
+        "a",
+        "pas",
+        "eu",
+        "de",
+        "référendum."
+      ],
+      "tokens_l2": [
+        "Presne",
+        "tak.",
+        "Všetko",
+        "sa",
+        "dialo",
+        "veľmi",
+        "rýchlo",
+        "za",
+        "sebou.",
+        "Nikto",
+        "sa",
+        "nás,",
+        "obyčajných",
+        "ľudí,",
+        "na",
+        "nič",
+        "nepýtal.",
+        "Nebolo",
+        "referendum."
+      ]
+    },
+    {
+      "id": "order-nikto-sa-n-s-oby-ajn-ch-ud-na-ni-nep-tal-nebolo-referendum",
+      "type": "order",
+      "l1": "Personne ne nous a rien demandé, à nous, les gens ordinaires. Il n'y a pas eu de référendum.",
+      "l2": "Nikto sa nás, obyčajných ľudí, na nič nepýtal. Nebolo referendum.",
+      "tokens_l1": [
+        "Personne",
+        "ne",
+        "nous",
+        "a",
+        "rien",
+        "demandé,",
+        "à",
+        "nous,",
+        "les",
+        "gens",
+        "ordinaires.",
+        "Il",
+        "n'y",
+        "a",
+        "pas",
+        "eu",
+        "de",
+        "référendum.",
+        "Nous",
+        "nous",
+        "étions",
+        "habitués",
+        "à",
+        "un",
+        "seul",
+        "pays.",
+        "Et",
+        "soudain",
+        "il",
+        "y",
+        "en",
+        "avait",
+        "deux."
+      ],
+      "tokens_l2": [
+        "Nikto",
+        "sa",
+        "nás,",
+        "obyčajných",
+        "ľudí,",
+        "na",
+        "nič",
+        "nepýtal.",
+        "Nebolo",
+        "referendum.",
+        "My",
+        "sme",
+        "si",
+        "zvykli",
+        "na",
+        "jednu",
+        "krajinu.",
+        "A",
+        "zrazu",
+        "boli",
+        "dve."
+      ]
+    },
+    {
+      "id": "order-to-ma-prekvapuje-tak-d-le-it-vec-rozhodli-len-politici",
+      "type": "order",
+      "l1": "Ça me surprend. Une chose aussi importante a été décidée seulement par les politiciens ?",
+      "l2": "To ma prekvapuje. Takú dôležitú vec rozhodli len politici?",
+      "tokens_l1": [
+        "Ça",
+        "me",
+        "surprend.",
+        "Une",
+        "chose",
+        "aussi",
+        "importante",
+        "a",
+        "été",
+        "décidée",
+        "seulement",
+        "par",
+        "les",
+        "politiciens",
+        "?",
+        "Le",
+        "1er",
+        "janvier",
+        "93.",
+        "J'avais",
+        "dix-neuf",
+        "ans",
+        "à",
+        "l'époque."
+      ],
+      "tokens_l2": [
+        "To",
+        "ma",
+        "prekvapuje.",
+        "Takú",
+        "dôležitú",
+        "vec",
+        "rozhodli",
+        "len",
+        "politici?",
+        "Prvého",
+        "januára",
+        "deväťdesiattri.",
+        "Mala",
+        "som",
+        "vtedy",
+        "devätnásť",
+        "rokov."
+      ]
+    },
+    {
+      "id": "order-presne-tak-sa-to-stalo-a-ve-a-ud-to-prekvapilo-rovnako-ako-v-s",
+      "type": "order",
+      "l1": "C'est exactement ce qui s'est passé. Et ça a surpris beaucoup de gens, tout comme vous.",
+      "l2": "Presne tak sa to stalo. A veľa ľudí to prekvapilo rovnako ako vás.",
+      "tokens_l1": [
+        "C'est",
+        "exactement",
+        "ce",
+        "qui",
+        "s'est",
+        "passé.",
+        "Et",
+        "ça",
+        "a",
+        "surpris",
+        "beaucoup",
+        "de",
+        "gens,",
+        "tout",
+        "comme",
+        "vous.",
+        "Exactement.",
+        "Tout",
+        "s'est",
+        "passé",
+        "très",
+        "vite",
+        "l'un",
+        "après",
+        "l'autre."
+      ],
+      "tokens_l2": [
+        "Presne",
+        "tak",
+        "sa",
+        "to",
+        "stalo.",
+        "A",
+        "veľa",
+        "ľudí",
+        "to",
+        "prekvapilo",
+        "rovnako",
+        "ako",
+        "vás.",
+        "Presne",
+        "tak.",
+        "Všetko",
+        "sa",
+        "dialo",
+        "veľmi",
+        "rýchlo",
+        "za",
+        "sebou."
+      ]
+    },
+    {
+      "id": "order-my-sme-si-zvykli-na-jednu-krajinu-a-zrazu-boli-dve",
+      "type": "order",
+      "l1": "Nous nous étions habitués à un seul pays. Et soudain il y en avait deux.",
+      "l2": "My sme si zvykli na jednu krajinu. A zrazu boli dve.",
+      "tokens_l1": [
+        "Nous",
+        "nous",
+        "étions",
+        "habitués",
+        "à",
+        "un",
+        "seul",
+        "pays.",
+        "Et",
+        "soudain",
+        "il",
+        "y",
+        "en",
+        "avait",
+        "deux.",
+        "Ça",
+        "me",
+        "surprend.",
+        "Une",
+        "chose",
+        "aussi",
+        "importante",
+        "a",
+        "été",
+        "décidée",
+        "seulement",
+        "par",
+        "les",
+        "politiciens",
+        "?"
+      ],
+      "tokens_l2": [
+        "My",
+        "sme",
+        "si",
+        "zvykli",
+        "na",
+        "jednu",
+        "krajinu.",
+        "A",
+        "zrazu",
+        "boli",
+        "dve.",
+        "To",
+        "ma",
+        "prekvapuje.",
+        "Takú",
+        "dôležitú",
+        "vec",
+        "rozhodli",
+        "len",
+        "politici?"
+      ]
+    },
+    {
+      "id": "match-eskoslovensko-vocab",
+      "type": "match",
+      "l1": [
+        "la Tchécoslovaquie",
+        "la séparation, la scission",
+        "l'indépendance",
+        "la frontière"
+      ],
+      "l2": [
+        "Československo",
+        "rozdelenie",
+        "samostatnosť",
+        "hranica"
+      ]
+    },
+    {
+      "id": "match-andrea-na-tejto-starej-mape-je-eskoslovensko-kedy-presne-zaniklo-sentences",
+      "type": "match",
+      "l1": [
+        "Andrea, sur cette vieille carte il y a la Tchécoslovaquie. Quand exactement a-t-elle disparu ?",
+        "Le 1er janvier 93. J'avais dix-neuf ans à l'époque.",
+        "C'était seulement trois ans après la révolution, non ?",
+        "Exactement. Tout s'est passé très vite l'un après l'autre."
+      ],
+      "l2": [
+        "Andrea, na tejto starej mape je Československo. Kedy presne zaniklo?",
+        "Prvého januára deväťdesiattri. Mala som vtedy devätnásť rokov.",
+        "To bolo len tri roky po revolúcii, však?",
+        "Presne tak. Všetko sa dialo veľmi rýchlo za sebou."
+      ]
+    }
+  ]
+}

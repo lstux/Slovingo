@@ -98,7 +98,7 @@ Toto je jedna z najužitočnejších francúzskych konštrukcií: časované „
 > On se retrouve = stretneme sa
 > vendredi = v piatok
 > à six heures et demie = o pol siedmej
-+ Pozor na pascu z fiche 2 — „six heures et demie“ je pol siedmej, nie pol šiestej.
++ Pozor na pascu — „six heures et demie“ je pol siedmej, nie pol šiestej.
 
 ! Je vais arriver vers deux heures. Attends, s'il te plaît.
 > Prídem asi o druhej. Čakaj, prosím.

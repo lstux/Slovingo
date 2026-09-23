@@ -1,0 +1,1303 @@
+{
+  "exercises": [
+    {
+      "id": "blank-ak-je-predpove-na-zajtra",
+      "type": "fill-blank",
+      "l1": "Quelles sont les prévisions pour demain ?",
+      "l2": "Aká je predpoveď na zajtra?",
+      "missing_l1": "les",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "le",
+        "si",
+        "sera"
+      ],
+      "choices_l2": [
+        "Bude",
+        "sme",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-zle-bude-pr-a-cel-de",
+      "type": "fill-blank",
+      "l1": "Mauvaises. Il va pleuvoir toute la journée.",
+      "l2": "Zle. Bude pršať celý deň.",
+      "missing_l1": "la",
+      "missing_l2": "Bude",
+      "blank_index_l1": 5,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "sera",
+        "si",
+        "Les"
+      ],
+      "choices_l2": [
+        "si",
+        "ste",
+        "bol"
+      ]
+    },
+    {
+      "id": "blank-ale-mali-sme-s-na-turistiku",
+      "type": "fill-blank",
+      "l1": "Mais on devait aller randonner !",
+      "l2": "Ale mali sme ísť na turistiku!",
+      "missing_l1": "on",
+      "missing_l2": "na",
+      "blank_index_l1": 1,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "Nous",
+        "Tu",
+        "Il"
+      ],
+      "choices_l2": [
+        "v",
+        "medzi",
+        "pred"
+      ]
+    },
+    {
+      "id": "blank-ja-viem-mus-me-meni-pl-n",
+      "type": "fill-blank",
+      "l1": "Je sais. Nous devons changer de plan.",
+      "l2": "Ja viem. Musíme meniť plán.",
+      "missing_l1": "de",
+      "missing_l2": "Musíme",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "par",
+        "près",
+        "sur"
+      ],
+      "choices_l2": [
+        "nebude",
+        "urobíme",
+        "daždivo"
+      ]
+    },
+    {
+      "id": "blank-ak-bude-pr-a-o-urob-me",
+      "type": "fill-blank",
+      "l1": "S'il pleut, qu'allons-nous faire ?",
+      "l2": "Ak bude pršať, čo urobíme?",
+      "missing_l1": "pleut",
+      "missing_l2": "čo",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "raison",
+        "devait",
+        "toute"
+      ],
+      "choices_l2": [
+        "byť",
+        "celý",
+        "viem"
+      ]
+    },
+    {
+      "id": "blank-m-eme-s-do-m-zea-je-vn-tri",
+      "type": "fill-blank",
+      "l1": "Nous pouvons aller au musée. C'est à l'intérieur.",
+      "l2": "Môžeme ísť do múzea. Je vnútri.",
+      "missing_l1": "à",
+      "missing_l2": "Je",
+      "blank_index_l1": 6,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "loin",
+        "avec",
+        "chez"
+      ],
+      "choices_l2": [
+        "sme",
+        "Bude",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-dobr-n-pad-a-pozerajme-i-bude-lep-ie-po-asie-na-v-kend",
+      "type": "fill-blank",
+      "l1": "Bonne idée. Et regardons si le temps sera meilleur pour le week-end.",
+      "l2": "Dobrý nápad. A pozerajme, či bude lepšie počasie na víkend.",
+      "missing_l1": "le",
+      "missing_l2": "A",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "si",
+        "sera",
+        "la"
+      ],
+      "choices_l2": [
+        "aj",
+        "alebo",
+        "lebo"
+      ]
+    },
+    {
+      "id": "blank-v-sobotu-m-by-slne-no",
+      "type": "fill-blank",
+      "l1": "Samedi il devrait faire beau !",
+      "l2": "V sobotu má byť slnečno!",
+      "missing_l1": "il",
+      "missing_l2": "má",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Elle",
+        "vous",
+        "Ils"
+      ],
+      "choices_l2": [
+        "Máš",
+        "Mám",
+        "Nemám"
+      ]
+    },
+    {
+      "id": "blank-super-mus-me-ma-dobr-oble-enie-v-hor-ch-je-v-dy-chladnej-ie",
+      "type": "fill-blank",
+      "l1": "Super. Nous devons avoir de bons vêtements, en montagne il fait toujours plus frais.",
+      "l2": "Super. Musíme mať dobré oblečenie, v horách je vždy chladnejšie.",
+      "missing_l1": "de",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "sur",
+        "avec",
+        "à"
+      ],
+      "choices_l2": [
+        "Bude",
+        "sme",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-vezmem-si-bundu-a-rukavice",
+      "type": "fill-blank",
+      "l1": "Je prendrai une veste et des gants.",
+      "l2": "Vezmem si bundu a rukavice.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "ni",
+        "mais",
+        "ou"
+      ],
+      "choices_l2": [
+        "však",
+        "ale",
+        "alebo"
+      ]
+    },
+    {
+      "id": "blank-a-ja-slne-n-okuliare-ak-bude-slne-no",
+      "type": "fill-blank",
+      "l1": "Et moi des lunettes de soleil, s'il fait beau.",
+      "l2": "A ja slnečné okuliare, ak bude slnečno.",
+      "missing_l1": "de",
+      "missing_l2": "bude",
+      "blank_index_l1": 4,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "à",
+        "pour",
+        "loin"
+      ],
+      "choices_l2": [
+        "si",
+        "boli",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-dobre-stretneme-sa-v-sobotu-r-no-na-stanici",
+      "type": "fill-blank",
+      "l1": "D'accord. On se retrouve samedi matin à la gare.",
+      "l2": "Dobre. Stretneme sa v sobotu ráno na stanici.",
+      "missing_l1": "la",
+      "missing_l2": "v",
+      "blank_index_l1": 7,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "le",
+        "sera",
+        "si"
+      ],
+      "choices_l2": [
+        "s",
+        "za",
+        "Cez"
+      ]
+    },
+    {
+      "id": "blank-d-fam-e-predpove-bude-ma-pravdu",
+      "type": "fill-blank",
+      "l1": "J'espère que les prévisions auront raison !",
+      "l2": "Dúfam, že predpoveď bude mať pravdu!",
+      "missing_l1": "les",
+      "missing_l2": "bude",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "le",
+        "si",
+        "la"
+      ],
+      "choices_l2": [
+        "bola",
+        "bol",
+        "boli"
+      ]
+    },
+    {
+      "id": "blank-ak-bude-obla-no-nebude-pr-li-hor-co",
+      "type": "fill-blank",
+      "l1": "S'il fait nuageux, il ne fera pas trop chaud.",
+      "l2": "Ak bude oblačno, nebude príliš horúco.",
+      "missing_l1": "il",
+      "missing_l2": "bude",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Elle",
+        "Je",
+        "Ils"
+      ],
+      "choices_l2": [
+        "je",
+        "budú",
+        "bola"
+      ]
+    },
+    {
+      "id": "blank-zajtra-m-by-da-divo-tak-zostaneme-doma",
+      "type": "fill-blank",
+      "l1": "Demain il devrait pleuvoir, alors nous resterons à la maison.",
+      "l2": "Zajtra má byť daždivo, tak zostaneme doma.",
+      "missing_l1": "la",
+      "missing_l2": "má",
+      "blank_index_l1": 8,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Les",
+        "sera",
+        "le"
+      ],
+      "choices_l2": [
+        "Nemáme",
+        "Mám",
+        "Máš"
+      ]
+    },
+    {
+      "id": "blank-v-hor-ch-mus-ma-tepl-oble-enie-a-d-dnik",
+      "type": "fill-blank",
+      "l1": "En montagne tu dois avoir des vêtements chauds et un parapluie.",
+      "l2": "V horách musíš mať teplé oblečenie a dáždnik.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 8,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "mais",
+        "Donc",
+        "ni"
+      ],
+      "choices_l2": [
+        "lebo",
+        "však",
+        "ale"
+      ]
+    },
+    {
+      "id": "blank-toto-leto-bolo-teplej-ie-ako-minul",
+      "type": "fill-blank",
+      "l1": "Cet été a été plus chaud que le précédent.",
+      "l2": "Toto leto bolo teplejšie ako minulé.",
+      "missing_l1": "le",
+      "missing_l2": "ako",
+      "blank_index_l1": 7,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "la",
+        "si",
+        "Les"
+      ],
+      "choices_l2": [
+        "Teraz",
+        "zajtra",
+        "vždy"
+      ]
+    },
+    {
+      "id": "listen-ak-je-predpove-na-zajtra",
+      "type": "listen",
+      "l1": "Quelles sont les prévisions pour demain ?",
+      "l2": "Aká je predpoveď na zajtra?",
+      "choices_l1": [
+        "Nous pouvons aller au musée. C'est à l'intérieur.",
+        "Je prendrai une veste et des gants.",
+        "S'il pleut, qu'allons-nous faire ?"
+      ],
+      "choices_l2": [
+        "A ja slnečné okuliare, ak bude slnečno.",
+        "Ak bude pršať, čo urobíme?",
+        "Zle. Bude pršať celý deň."
+      ]
+    },
+    {
+      "id": "listen-zle-bude-pr-a-cel-de",
+      "type": "listen",
+      "l1": "Mauvaises. Il va pleuvoir toute la journée.",
+      "l2": "Zle. Bude pršať celý deň.",
+      "choices_l1": [
+        "Bonne idée. Et regardons si le temps sera meilleur pour le week-end.",
+        "Je prendrai une veste et des gants.",
+        "J'espère que les prévisions auront raison !"
+      ],
+      "choices_l2": [
+        "Môžeme ísť do múzea. Je vnútri.",
+        "Dúfam, že predpoveď bude mať pravdu!",
+        "Ak bude pršať, čo urobíme?"
+      ]
+    },
+    {
+      "id": "listen-ale-mali-sme-s-na-turistiku",
+      "type": "listen",
+      "l1": "Mais on devait aller randonner !",
+      "l2": "Ale mali sme ísť na turistiku!",
+      "choices_l1": [
+        "Et moi des lunettes de soleil, s'il fait beau.",
+        "Samedi il devrait faire beau !",
+        "Bonne idée. Et regardons si le temps sera meilleur pour le week-end."
+      ],
+      "choices_l2": [
+        "Super. Musíme mať dobré oblečenie, v horách je vždy chladnejšie.",
+        "Vezmem si bundu a rukavice.",
+        "Ak bude pršať, čo urobíme?"
+      ]
+    },
+    {
+      "id": "listen-ja-viem-mus-me-meni-pl-n",
+      "type": "listen",
+      "l1": "Je sais. Nous devons changer de plan.",
+      "l2": "Ja viem. Musíme meniť plán.",
+      "choices_l1": [
+        "D'accord. On se retrouve samedi matin à la gare.",
+        "Mauvaises. Il va pleuvoir toute la journée.",
+        "Et moi des lunettes de soleil, s'il fait beau."
+      ],
+      "choices_l2": [
+        "Dobrý nápad. A pozerajme, či bude lepšie počasie na víkend.",
+        "Ak bude oblačno, nebude príliš horúco.",
+        "V sobotu má byť slnečno!"
+      ]
+    },
+    {
+      "id": "listen-ak-bude-pr-a-o-urob-me",
+      "type": "listen",
+      "l1": "S'il pleut, qu'allons-nous faire ?",
+      "l2": "Ak bude pršať, čo urobíme?",
+      "choices_l1": [
+        "Samedi il devrait faire beau !",
+        "J'espère que les prévisions auront raison !",
+        "Super. Nous devons avoir de bons vêtements, en montagne il fait toujours plus frais."
+      ],
+      "choices_l2": [
+        "Môžeme ísť do múzea. Je vnútri.",
+        "Dobre. Stretneme sa v sobotu ráno na stanici.",
+        "Dúfam, že predpoveď bude mať pravdu!"
+      ]
+    },
+    {
+      "id": "listen-m-eme-s-do-m-zea-je-vn-tri",
+      "type": "listen",
+      "l1": "Nous pouvons aller au musée. C'est à l'intérieur.",
+      "l2": "Môžeme ísť do múzea. Je vnútri.",
+      "choices_l1": [
+        "J'espère que les prévisions auront raison !",
+        "S'il pleut, qu'allons-nous faire ?",
+        "D'accord. On se retrouve samedi matin à la gare."
+      ],
+      "choices_l2": [
+        "Dúfam, že predpoveď bude mať pravdu!",
+        "Ale mali sme ísť na turistiku!",
+        "Ak bude pršať, čo urobíme?"
+      ]
+    },
+    {
+      "id": "listen-dobr-n-pad-a-pozerajme-i-bude-lep-ie-po-asie-na-v-kend",
+      "type": "listen",
+      "l1": "Bonne idée. Et regardons si le temps sera meilleur pour le week-end.",
+      "l2": "Dobrý nápad. A pozerajme, či bude lepšie počasie na víkend.",
+      "choices_l1": [
+        "J'espère que les prévisions auront raison !",
+        "Je sais. Nous devons changer de plan.",
+        "S'il fait nuageux, il ne fera pas trop chaud."
+      ],
+      "choices_l2": [
+        "A ja slnečné okuliare, ak bude slnečno.",
+        "Vezmem si bundu a rukavice.",
+        "V sobotu má byť slnečno!"
+      ]
+    },
+    {
+      "id": "listen-v-sobotu-m-by-slne-no",
+      "type": "listen",
+      "l1": "Samedi il devrait faire beau !",
+      "l2": "V sobotu má byť slnečno!",
+      "choices_l1": [
+        "Bonne idée. Et regardons si le temps sera meilleur pour le week-end.",
+        "Nous pouvons aller au musée. C'est à l'intérieur.",
+        "Je prendrai une veste et des gants."
+      ],
+      "choices_l2": [
+        "Ja viem. Musíme meniť plán.",
+        "Zle. Bude pršať celý deň.",
+        "A ja slnečné okuliare, ak bude slnečno."
+      ]
+    },
+    {
+      "id": "listen-super-mus-me-ma-dobr-oble-enie-v-hor-ch-je-v-dy-chladnej-ie",
+      "type": "listen",
+      "l1": "Super. Nous devons avoir de bons vêtements, en montagne il fait toujours plus frais.",
+      "l2": "Super. Musíme mať dobré oblečenie, v horách je vždy chladnejšie.",
+      "choices_l1": [
+        "D'accord. On se retrouve samedi matin à la gare.",
+        "J'espère que les prévisions auront raison !",
+        "Je prendrai une veste et des gants."
+      ],
+      "choices_l2": [
+        "V sobotu má byť slnečno!",
+        "Dobrý nápad. A pozerajme, či bude lepšie počasie na víkend.",
+        "Vezmem si bundu a rukavice."
+      ]
+    },
+    {
+      "id": "listen-vezmem-si-bundu-a-rukavice",
+      "type": "listen",
+      "l1": "Je prendrai une veste et des gants.",
+      "l2": "Vezmem si bundu a rukavice.",
+      "choices_l1": [
+        "S'il fait nuageux, il ne fera pas trop chaud.",
+        "J'espère que les prévisions auront raison !",
+        "Mais on devait aller randonner !"
+      ],
+      "choices_l2": [
+        "Super. Musíme mať dobré oblečenie, v horách je vždy chladnejšie.",
+        "Ja viem. Musíme meniť plán.",
+        "V sobotu má byť slnečno!"
+      ]
+    },
+    {
+      "id": "listen-a-ja-slne-n-okuliare-ak-bude-slne-no",
+      "type": "listen",
+      "l1": "Et moi des lunettes de soleil, s'il fait beau.",
+      "l2": "A ja slnečné okuliare, ak bude slnečno.",
+      "choices_l1": [
+        "Mais on devait aller randonner !",
+        "Je prendrai une veste et des gants.",
+        "Super. Nous devons avoir de bons vêtements, en montagne il fait toujours plus frais."
+      ],
+      "choices_l2": [
+        "Zle. Bude pršať celý deň.",
+        "Dobre. Stretneme sa v sobotu ráno na stanici.",
+        "Ale mali sme ísť na turistiku!"
+      ]
+    },
+    {
+      "id": "listen-dobre-stretneme-sa-v-sobotu-r-no-na-stanici",
+      "type": "listen",
+      "l1": "D'accord. On se retrouve samedi matin à la gare.",
+      "l2": "Dobre. Stretneme sa v sobotu ráno na stanici.",
+      "choices_l1": [
+        "Et moi des lunettes de soleil, s'il fait beau.",
+        "Mauvaises. Il va pleuvoir toute la journée.",
+        "Mais on devait aller randonner !"
+      ],
+      "choices_l2": [
+        "A ja slnečné okuliare, ak bude slnečno.",
+        "Zle. Bude pršať celý deň.",
+        "Ja viem. Musíme meniť plán."
+      ]
+    },
+    {
+      "id": "listen-d-fam-e-predpove-bude-ma-pravdu",
+      "type": "listen",
+      "l1": "J'espère que les prévisions auront raison !",
+      "l2": "Dúfam, že predpoveď bude mať pravdu!",
+      "choices_l1": [
+        "Super. Nous devons avoir de bons vêtements, en montagne il fait toujours plus frais.",
+        "S'il fait nuageux, il ne fera pas trop chaud.",
+        "Je prendrai une veste et des gants."
+      ],
+      "choices_l2": [
+        "Môžeme ísť do múzea. Je vnútri.",
+        "Ja viem. Musíme meniť plán.",
+        "Dobrý nápad. A pozerajme, či bude lepšie počasie na víkend."
+      ]
+    },
+    {
+      "id": "listen-ak-bude-obla-no-nebude-pr-li-hor-co",
+      "type": "listen",
+      "l1": "S'il fait nuageux, il ne fera pas trop chaud.",
+      "l2": "Ak bude oblačno, nebude príliš horúco.",
+      "choices_l1": [
+        "J'espère que les prévisions auront raison !",
+        "Et moi des lunettes de soleil, s'il fait beau.",
+        "Mauvaises. Il va pleuvoir toute la journée."
+      ],
+      "choices_l2": [
+        "Ale mali sme ísť na turistiku!",
+        "Zle. Bude pršať celý deň.",
+        "A ja slnečné okuliare, ak bude slnečno."
+      ]
+    },
+    {
+      "id": "listen-zajtra-m-by-da-divo-tak-zostaneme-doma",
+      "type": "listen",
+      "l1": "Demain il devrait pleuvoir, alors nous resterons à la maison.",
+      "l2": "Zajtra má byť daždivo, tak zostaneme doma.",
+      "choices_l1": [
+        "Bonne idée. Et regardons si le temps sera meilleur pour le week-end.",
+        "Et moi des lunettes de soleil, s'il fait beau.",
+        "J'espère que les prévisions auront raison !"
+      ],
+      "choices_l2": [
+        "Dobre. Stretneme sa v sobotu ráno na stanici.",
+        "A ja slnečné okuliare, ak bude slnečno.",
+        "Super. Musíme mať dobré oblečenie, v horách je vždy chladnejšie."
+      ]
+    },
+    {
+      "id": "listen-v-hor-ch-mus-ma-tepl-oble-enie-a-d-dnik",
+      "type": "listen",
+      "l1": "En montagne tu dois avoir des vêtements chauds et un parapluie.",
+      "l2": "V horách musíš mať teplé oblečenie a dáždnik.",
+      "choices_l1": [
+        "Mauvaises. Il va pleuvoir toute la journée.",
+        "Je sais. Nous devons changer de plan.",
+        "Mais on devait aller randonner !"
+      ],
+      "choices_l2": [
+        "Ale mali sme ísť na turistiku!",
+        "V sobotu má byť slnečno!",
+        "Zle. Bude pršať celý deň."
+      ]
+    },
+    {
+      "id": "listen-toto-leto-bolo-teplej-ie-ako-minul",
+      "type": "listen",
+      "l1": "Cet été a été plus chaud que le précédent.",
+      "l2": "Toto leto bolo teplejšie ako minulé.",
+      "choices_l1": [
+        "S'il pleut, qu'allons-nous faire ?",
+        "Super. Nous devons avoir de bons vêtements, en montagne il fait toujours plus frais.",
+        "Nous pouvons aller au musée. C'est à l'intérieur."
+      ],
+      "choices_l2": [
+        "Dobrý nápad. A pozerajme, či bude lepšie počasie na víkend.",
+        "V sobotu má byť slnečno!",
+        "Môžeme ísť do múzea. Je vnútri."
+      ]
+    },
+    {
+      "id": "order-ak-je-predpove-na-zajtra",
+      "type": "order",
+      "l1": "Quelles sont les prévisions pour demain ?",
+      "l2": "Aká je predpoveď na zajtra?",
+      "tokens_l1": [
+        "Quelles",
+        "sont",
+        "les",
+        "prévisions",
+        "pour",
+        "demain",
+        "?",
+        "En",
+        "montagne",
+        "tu",
+        "dois",
+        "avoir",
+        "des",
+        "vêtements",
+        "chauds",
+        "et",
+        "un",
+        "parapluie."
+      ],
+      "tokens_l2": [
+        "Aká",
+        "je",
+        "predpoveď",
+        "na",
+        "zajtra?",
+        "V",
+        "horách",
+        "musíš",
+        "mať",
+        "teplé",
+        "oblečenie",
+        "a",
+        "dáždnik."
+      ]
+    },
+    {
+      "id": "order-zle-bude-pr-a-cel-de",
+      "type": "order",
+      "l1": "Mauvaises. Il va pleuvoir toute la journée.",
+      "l2": "Zle. Bude pršať celý deň.",
+      "tokens_l1": [
+        "Mauvaises.",
+        "Il",
+        "va",
+        "pleuvoir",
+        "toute",
+        "la",
+        "journée.",
+        "Mais",
+        "on",
+        "devait",
+        "aller",
+        "randonner",
+        "!"
+      ],
+      "tokens_l2": [
+        "Zle.",
+        "Bude",
+        "pršať",
+        "celý",
+        "deň.",
+        "Ale",
+        "mali",
+        "sme",
+        "ísť",
+        "na",
+        "turistiku!"
+      ]
+    },
+    {
+      "id": "order-ale-mali-sme-s-na-turistiku",
+      "type": "order",
+      "l1": "Mais on devait aller randonner !",
+      "l2": "Ale mali sme ísť na turistiku!",
+      "tokens_l1": [
+        "Mais",
+        "on",
+        "devait",
+        "aller",
+        "randonner",
+        "!",
+        "Demain",
+        "il",
+        "devrait",
+        "pleuvoir,",
+        "alors",
+        "nous",
+        "resterons",
+        "à",
+        "la",
+        "maison."
+      ],
+      "tokens_l2": [
+        "Ale",
+        "mali",
+        "sme",
+        "ísť",
+        "na",
+        "turistiku!",
+        "Zajtra",
+        "má",
+        "byť",
+        "daždivo,",
+        "tak",
+        "zostaneme",
+        "doma."
+      ]
+    },
+    {
+      "id": "order-ja-viem-mus-me-meni-pl-n",
+      "type": "order",
+      "l1": "Je sais. Nous devons changer de plan.",
+      "l2": "Ja viem. Musíme meniť plán.",
+      "tokens_l1": [
+        "Je",
+        "sais.",
+        "Nous",
+        "devons",
+        "changer",
+        "de",
+        "plan.",
+        "Quelles",
+        "sont",
+        "les",
+        "prévisions",
+        "pour",
+        "demain",
+        "?"
+      ],
+      "tokens_l2": [
+        "Ja",
+        "viem.",
+        "Musíme",
+        "meniť",
+        "plán.",
+        "Aká",
+        "je",
+        "predpoveď",
+        "na",
+        "zajtra?"
+      ]
+    },
+    {
+      "id": "order-ak-bude-pr-a-o-urob-me",
+      "type": "order",
+      "l1": "S'il pleut, qu'allons-nous faire ?",
+      "l2": "Ak bude pršať, čo urobíme?",
+      "tokens_l1": [
+        "S'il",
+        "pleut,",
+        "qu'allons-nous",
+        "faire",
+        "?",
+        "Mais",
+        "on",
+        "devait",
+        "aller",
+        "randonner",
+        "!"
+      ],
+      "tokens_l2": [
+        "Ak",
+        "bude",
+        "pršať,",
+        "čo",
+        "urobíme?",
+        "Ale",
+        "mali",
+        "sme",
+        "ísť",
+        "na",
+        "turistiku!"
+      ]
+    },
+    {
+      "id": "order-m-eme-s-do-m-zea-je-vn-tri",
+      "type": "order",
+      "l1": "Nous pouvons aller au musée. C'est à l'intérieur.",
+      "l2": "Môžeme ísť do múzea. Je vnútri.",
+      "tokens_l1": [
+        "Nous",
+        "pouvons",
+        "aller",
+        "au",
+        "musée.",
+        "C'est",
+        "à",
+        "l'intérieur.",
+        "D'accord.",
+        "On",
+        "se",
+        "retrouve",
+        "samedi",
+        "matin",
+        "à",
+        "la",
+        "gare."
+      ],
+      "tokens_l2": [
+        "Môžeme",
+        "ísť",
+        "do",
+        "múzea.",
+        "Je",
+        "vnútri.",
+        "Dobre.",
+        "Stretneme",
+        "sa",
+        "v",
+        "sobotu",
+        "ráno",
+        "na",
+        "stanici."
+      ]
+    },
+    {
+      "id": "order-dobr-n-pad-a-pozerajme-i-bude-lep-ie-po-asie-na-v-kend",
+      "type": "order",
+      "l1": "Bonne idée. Et regardons si le temps sera meilleur pour le week-end.",
+      "l2": "Dobrý nápad. A pozerajme, či bude lepšie počasie na víkend.",
+      "tokens_l1": [
+        "Bonne",
+        "idée.",
+        "Et",
+        "regardons",
+        "si",
+        "le",
+        "temps",
+        "sera",
+        "meilleur",
+        "pour",
+        "le",
+        "week-end.",
+        "Mauvaises.",
+        "Il",
+        "va",
+        "pleuvoir",
+        "toute",
+        "la",
+        "journée."
+      ],
+      "tokens_l2": [
+        "Dobrý",
+        "nápad.",
+        "A",
+        "pozerajme,",
+        "či",
+        "bude",
+        "lepšie",
+        "počasie",
+        "na",
+        "víkend.",
+        "Zle.",
+        "Bude",
+        "pršať",
+        "celý",
+        "deň."
+      ]
+    },
+    {
+      "id": "order-v-sobotu-m-by-slne-no",
+      "type": "order",
+      "l1": "Samedi il devrait faire beau !",
+      "l2": "V sobotu má byť slnečno!",
+      "tokens_l1": [
+        "Samedi",
+        "il",
+        "devrait",
+        "faire",
+        "beau",
+        "!",
+        "S'il",
+        "pleut,",
+        "qu'allons-nous",
+        "faire",
+        "?"
+      ],
+      "tokens_l2": [
+        "V",
+        "sobotu",
+        "má",
+        "byť",
+        "slnečno!",
+        "Ak",
+        "bude",
+        "pršať,",
+        "čo",
+        "urobíme?"
+      ]
+    },
+    {
+      "id": "order-super-mus-me-ma-dobr-oble-enie-v-hor-ch-je-v-dy-chladnej-ie",
+      "type": "order",
+      "l1": "Super. Nous devons avoir de bons vêtements, en montagne il fait toujours plus frais.",
+      "l2": "Super. Musíme mať dobré oblečenie, v horách je vždy chladnejšie.",
+      "tokens_l1": [
+        "Super.",
+        "Nous",
+        "devons",
+        "avoir",
+        "de",
+        "bons",
+        "vêtements,",
+        "en",
+        "montagne",
+        "il",
+        "fait",
+        "toujours",
+        "plus",
+        "frais.",
+        "Quelles",
+        "sont",
+        "les",
+        "prévisions",
+        "pour",
+        "demain",
+        "?"
+      ],
+      "tokens_l2": [
+        "Super.",
+        "Musíme",
+        "mať",
+        "dobré",
+        "oblečenie,",
+        "v",
+        "horách",
+        "je",
+        "vždy",
+        "chladnejšie.",
+        "Aká",
+        "je",
+        "predpoveď",
+        "na",
+        "zajtra?"
+      ]
+    },
+    {
+      "id": "order-vezmem-si-bundu-a-rukavice",
+      "type": "order",
+      "l1": "Je prendrai une veste et des gants.",
+      "l2": "Vezmem si bundu a rukavice.",
+      "tokens_l1": [
+        "Je",
+        "prendrai",
+        "une",
+        "veste",
+        "et",
+        "des",
+        "gants.",
+        "S'il",
+        "pleut,",
+        "qu'allons-nous",
+        "faire",
+        "?"
+      ],
+      "tokens_l2": [
+        "Vezmem",
+        "si",
+        "bundu",
+        "a",
+        "rukavice.",
+        "Ak",
+        "bude",
+        "pršať,",
+        "čo",
+        "urobíme?"
+      ]
+    },
+    {
+      "id": "order-a-ja-slne-n-okuliare-ak-bude-slne-no",
+      "type": "order",
+      "l1": "Et moi des lunettes de soleil, s'il fait beau.",
+      "l2": "A ja slnečné okuliare, ak bude slnečno.",
+      "tokens_l1": [
+        "Et",
+        "moi",
+        "des",
+        "lunettes",
+        "de",
+        "soleil,",
+        "s'il",
+        "fait",
+        "beau.",
+        "Bonne",
+        "idée.",
+        "Et",
+        "regardons",
+        "si",
+        "le",
+        "temps",
+        "sera",
+        "meilleur",
+        "pour",
+        "le",
+        "week-end."
+      ],
+      "tokens_l2": [
+        "A",
+        "ja",
+        "slnečné",
+        "okuliare,",
+        "ak",
+        "bude",
+        "slnečno.",
+        "Dobrý",
+        "nápad.",
+        "A",
+        "pozerajme,",
+        "či",
+        "bude",
+        "lepšie",
+        "počasie",
+        "na",
+        "víkend."
+      ]
+    },
+    {
+      "id": "order-dobre-stretneme-sa-v-sobotu-r-no-na-stanici",
+      "type": "order",
+      "l1": "D'accord. On se retrouve samedi matin à la gare.",
+      "l2": "Dobre. Stretneme sa v sobotu ráno na stanici.",
+      "tokens_l1": [
+        "D'accord.",
+        "On",
+        "se",
+        "retrouve",
+        "samedi",
+        "matin",
+        "à",
+        "la",
+        "gare.",
+        "Demain",
+        "il",
+        "devrait",
+        "pleuvoir,",
+        "alors",
+        "nous",
+        "resterons",
+        "à",
+        "la",
+        "maison."
+      ],
+      "tokens_l2": [
+        "Dobre.",
+        "Stretneme",
+        "sa",
+        "v",
+        "sobotu",
+        "ráno",
+        "na",
+        "stanici.",
+        "Zajtra",
+        "má",
+        "byť",
+        "daždivo,",
+        "tak",
+        "zostaneme",
+        "doma."
+      ]
+    },
+    {
+      "id": "order-d-fam-e-predpove-bude-ma-pravdu",
+      "type": "order",
+      "l1": "J'espère que les prévisions auront raison !",
+      "l2": "Dúfam, že predpoveď bude mať pravdu!",
+      "tokens_l1": [
+        "J'espère",
+        "que",
+        "les",
+        "prévisions",
+        "auront",
+        "raison",
+        "!",
+        "Bonne",
+        "idée.",
+        "Et",
+        "regardons",
+        "si",
+        "le",
+        "temps",
+        "sera",
+        "meilleur",
+        "pour",
+        "le",
+        "week-end."
+      ],
+      "tokens_l2": [
+        "Dúfam,",
+        "že",
+        "predpoveď",
+        "bude",
+        "mať",
+        "pravdu!",
+        "Dobrý",
+        "nápad.",
+        "A",
+        "pozerajme,",
+        "či",
+        "bude",
+        "lepšie",
+        "počasie",
+        "na",
+        "víkend."
+      ]
+    },
+    {
+      "id": "order-ak-bude-obla-no-nebude-pr-li-hor-co",
+      "type": "order",
+      "l1": "S'il fait nuageux, il ne fera pas trop chaud.",
+      "l2": "Ak bude oblačno, nebude príliš horúco.",
+      "tokens_l1": [
+        "S'il",
+        "fait",
+        "nuageux,",
+        "il",
+        "ne",
+        "fera",
+        "pas",
+        "trop",
+        "chaud.",
+        "Cet",
+        "été",
+        "a",
+        "été",
+        "plus",
+        "chaud",
+        "que",
+        "le",
+        "précédent."
+      ],
+      "tokens_l2": [
+        "Ak",
+        "bude",
+        "oblačno,",
+        "nebude",
+        "príliš",
+        "horúco.",
+        "Toto",
+        "leto",
+        "bolo",
+        "teplejšie",
+        "ako",
+        "minulé."
+      ]
+    },
+    {
+      "id": "order-zajtra-m-by-da-divo-tak-zostaneme-doma",
+      "type": "order",
+      "l1": "Demain il devrait pleuvoir, alors nous resterons à la maison.",
+      "l2": "Zajtra má byť daždivo, tak zostaneme doma.",
+      "tokens_l1": [
+        "Demain",
+        "il",
+        "devrait",
+        "pleuvoir,",
+        "alors",
+        "nous",
+        "resterons",
+        "à",
+        "la",
+        "maison.",
+        "Je",
+        "sais.",
+        "Nous",
+        "devons",
+        "changer",
+        "de",
+        "plan."
+      ],
+      "tokens_l2": [
+        "Zajtra",
+        "má",
+        "byť",
+        "daždivo,",
+        "tak",
+        "zostaneme",
+        "doma.",
+        "Ja",
+        "viem.",
+        "Musíme",
+        "meniť",
+        "plán."
+      ]
+    },
+    {
+      "id": "order-v-hor-ch-mus-ma-tepl-oble-enie-a-d-dnik",
+      "type": "order",
+      "l1": "En montagne tu dois avoir des vêtements chauds et un parapluie.",
+      "l2": "V horách musíš mať teplé oblečenie a dáždnik.",
+      "tokens_l1": [
+        "En",
+        "montagne",
+        "tu",
+        "dois",
+        "avoir",
+        "des",
+        "vêtements",
+        "chauds",
+        "et",
+        "un",
+        "parapluie.",
+        "Quelles",
+        "sont",
+        "les",
+        "prévisions",
+        "pour",
+        "demain",
+        "?"
+      ],
+      "tokens_l2": [
+        "V",
+        "horách",
+        "musíš",
+        "mať",
+        "teplé",
+        "oblečenie",
+        "a",
+        "dáždnik.",
+        "Aká",
+        "je",
+        "predpoveď",
+        "na",
+        "zajtra?"
+      ]
+    },
+    {
+      "id": "order-toto-leto-bolo-teplej-ie-ako-minul",
+      "type": "order",
+      "l1": "Cet été a été plus chaud que le précédent.",
+      "l2": "Toto leto bolo teplejšie ako minulé.",
+      "tokens_l1": [
+        "Cet",
+        "été",
+        "a",
+        "été",
+        "plus",
+        "chaud",
+        "que",
+        "le",
+        "précédent.",
+        "S'il",
+        "fait",
+        "nuageux,",
+        "il",
+        "ne",
+        "fera",
+        "pas",
+        "trop",
+        "chaud."
+      ],
+      "tokens_l2": [
+        "Toto",
+        "leto",
+        "bolo",
+        "teplejšie",
+        "ako",
+        "minulé.",
+        "Ak",
+        "bude",
+        "oblačno,",
+        "nebude",
+        "príliš",
+        "horúco."
+      ]
+    },
+    {
+      "id": "match-ak-je-predpove-na-zajtra-sentences",
+      "type": "match",
+      "l1": [
+        "Quelles sont les prévisions pour demain ?",
+        "Mauvaises. Il va pleuvoir toute la journée.",
+        "Mais on devait aller randonner !",
+        "Je sais. Nous devons changer de plan."
+      ],
+      "l2": [
+        "Aká je predpoveď na zajtra?",
+        "Zle. Bude pršať celý deň.",
+        "Ale mali sme ísť na turistiku!",
+        "Ja viem. Musíme meniť plán."
+      ]
+    }
+  ]
+}

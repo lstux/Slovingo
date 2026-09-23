@@ -1,0 +1,1449 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-tri-ko",
+      "type": "qcm",
+      "l1": "le tee-shirt",
+      "l2": "tričko",
+      "choices_l1": [
+        "les chaussures",
+        "la chemise",
+        "le bonnet"
+      ],
+      "choices_l2": [
+        "čierne nohavice",
+        "veľkosť",
+        "nohavice"
+      ]
+    },
+    {
+      "id": "qcm-ko-e-a",
+      "type": "qcm",
+      "l1": "la chemise",
+      "l2": "košeľa",
+      "choices_l1": [
+        "les chaussures",
+        "la ceinture",
+        "la taille"
+      ],
+      "choices_l2": [
+        "veľkosť",
+        "sukňa",
+        "bunda"
+      ]
+    },
+    {
+      "id": "qcm-nohavice",
+      "type": "qcm",
+      "l1": "le pantalon",
+      "l2": "nohavice",
+      "choices_l1": [
+        "la jupe",
+        "la ceinture",
+        "la taille"
+      ],
+      "choices_l2": [
+        "čierne nohavice",
+        "topánky",
+        "košeľa"
+      ]
+    },
+    {
+      "id": "qcm-suk-a",
+      "type": "qcm",
+      "l1": "la jupe",
+      "l2": "sukňa",
+      "choices_l1": [
+        "le bonnet",
+        "le tee-shirt",
+        "le pantalon"
+      ],
+      "choices_l2": [
+        "šaty",
+        "červené tričko",
+        "tričko"
+      ]
+    },
+    {
+      "id": "qcm-top-nky",
+      "type": "qcm",
+      "l1": "les chaussures",
+      "l2": "topánky",
+      "choices_l1": [
+        "la chemise",
+        "le pull",
+        "la jupe"
+      ],
+      "choices_l2": [
+        "šaty",
+        "nohavice",
+        "sveter"
+      ]
+    },
+    {
+      "id": "qcm-ve-kos",
+      "type": "qcm",
+      "l1": "la taille",
+      "l2": "veľkosť",
+      "choices_l1": [
+        "la veste",
+        "le bonnet",
+        "la jupe"
+      ],
+      "choices_l2": [
+        "červené tričko",
+        "košeľa",
+        "nohavice"
+      ]
+    },
+    {
+      "id": "qcm-sk-si",
+      "type": "qcm",
+      "l1": "essayer",
+      "l2": "skúsiť",
+      "choices_l1": [
+        "j'essaie",
+        "tu essaies",
+        "cher"
+      ],
+      "choices_l2": [
+        "ja skúsim",
+        "ty skúsiš",
+        "drahý"
+      ]
+    },
+    {
+      "id": "qcm-ja-sk-sim",
+      "type": "qcm",
+      "l1": "j'essaie",
+      "l2": "ja skúsim",
+      "choices_l1": [
+        "essayer",
+        "tu essaies",
+        "cher"
+      ],
+      "choices_l2": [
+        "skúsiť",
+        "ty skúsiš",
+        "drahý"
+      ]
+    },
+    {
+      "id": "qcm-ty-sk-si",
+      "type": "qcm",
+      "l1": "tu essaies",
+      "l2": "ty skúsiš",
+      "choices_l1": [
+        "essayer",
+        "j'essaie",
+        "cher"
+      ],
+      "choices_l2": [
+        "skúsiť",
+        "ja skúsim",
+        "drahý"
+      ]
+    },
+    {
+      "id": "qcm-on-ona-sk-si",
+      "type": "qcm",
+      "l1": "il / elle essaie",
+      "l2": "on / ona skúsi",
+      "choices_l1": [
+        "une jupe verte",
+        "un tee-shirt rouge",
+        "un pantalon noir"
+      ],
+      "choices_l2": [
+        "Koľko to stojí?",
+        "Nepáči sa mi to.",
+        "To je lacné."
+      ]
+    },
+    {
+      "id": "qcm-erven-tri-ko",
+      "type": "qcm",
+      "l1": "un tee-shirt rouge",
+      "l2": "červené tričko",
+      "choices_l1": [
+        "une chemise bleue",
+        "un pantalon noir",
+        "une jupe verte"
+      ],
+      "choices_l2": [
+        "sveter",
+        "čierne nohavice",
+        "veľkosť"
+      ]
+    },
+    {
+      "id": "qcm-modr-ko-e-a",
+      "type": "qcm",
+      "l1": "une chemise bleue",
+      "l2": "modrá košeľa",
+      "choices_l1": [
+        "un tee-shirt rouge",
+        "un pantalon noir",
+        "une jupe verte"
+      ],
+      "choices_l2": [
+        "košeľa",
+        "červené tričko",
+        "šaty"
+      ]
+    },
+    {
+      "id": "qcm-ierne-nohavice",
+      "type": "qcm",
+      "l1": "un pantalon noir",
+      "l2": "čierne nohavice",
+      "choices_l1": [
+        "un tee-shirt rouge",
+        "une chemise bleue",
+        "une jupe verte"
+      ],
+      "choices_l2": [
+        "sukňa",
+        "nohavice",
+        "tričko"
+      ]
+    },
+    {
+      "id": "qcm-zelen-suk-a",
+      "type": "qcm",
+      "l1": "une jupe verte",
+      "l2": "zelená sukňa",
+      "choices_l1": [
+        "un tee-shirt rouge",
+        "une chemise bleue",
+        "un pantalon noir"
+      ],
+      "choices_l2": [
+        "bunda",
+        "topánky",
+        "šaty"
+      ]
+    },
+    {
+      "id": "qcm-bunda",
+      "type": "qcm",
+      "l1": "la veste",
+      "l2": "bunda",
+      "choices_l1": [
+        "la robe",
+        "la ceinture",
+        "le pantalon"
+      ],
+      "choices_l2": [
+        "šaty",
+        "nohavice",
+        "sveter"
+      ]
+    },
+    {
+      "id": "qcm-sveter",
+      "type": "qcm",
+      "l1": "le pull",
+      "l2": "sveter",
+      "choices_l1": [
+        "le pantalon",
+        "la chemise",
+        "le bonnet"
+      ],
+      "choices_l2": [
+        "veľkosť",
+        "šaty",
+        "košeľa"
+      ]
+    },
+    {
+      "id": "qcm-aty",
+      "type": "qcm",
+      "l1": "la robe",
+      "l2": "šaty",
+      "choices_l1": [
+        "la chemise",
+        "la ceinture",
+        "la jupe"
+      ],
+      "choices_l2": [
+        "zelená sukňa",
+        "nohavice",
+        "topánky"
+      ]
+    },
+    {
+      "id": "qcm-iapka",
+      "type": "qcm",
+      "l1": "le bonnet",
+      "l2": "čiapka",
+      "choices_l1": [
+        "la taille",
+        "le tee-shirt",
+        "la robe"
+      ],
+      "choices_l2": [
+        "sveter",
+        "čierne nohavice",
+        "bunda"
+      ]
+    },
+    {
+      "id": "qcm-opasok",
+      "type": "qcm",
+      "l1": "la ceinture",
+      "l2": "opasok",
+      "choices_l1": [
+        "les chaussures",
+        "le pantalon",
+        "le tee-shirt"
+      ],
+      "choices_l2": [
+        "modrá košeľa",
+        "bunda",
+        "sukňa"
+      ]
+    },
+    {
+      "id": "qcm-lacn",
+      "type": "qcm",
+      "l1": "bon marché",
+      "l2": "lacný",
+      "choices_l1": [
+        "la robe",
+        "le pantalon",
+        "la chemise"
+      ],
+      "choices_l2": [
+        "skúsiť",
+        "košeľa",
+        "topánky"
+      ]
+    },
+    {
+      "id": "qcm-drah",
+      "type": "qcm",
+      "l1": "cher",
+      "l2": "drahý",
+      "choices_l1": [
+        "essayer",
+        "j'essaie",
+        "tu essaies"
+      ],
+      "choices_l2": [
+        "skúsiť",
+        "ja skúsim",
+        "ty skúsiš"
+      ]
+    },
+    {
+      "id": "blank-chcem-sk-si-toto-tri-ko",
+      "type": "fill-blank",
+      "l1": "Je veux essayer ce tee-shirt.",
+      "l2": "Chcem skúsiť toto tričko.",
+      "missing_l1": "veux",
+      "missing_l2": "toto",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "voulons",
+        "veulent",
+        "voulez"
+      ],
+      "choices_l2": [
+        "tá",
+        "vy",
+        "My"
+      ]
+    },
+    {
+      "id": "blank-ak-ve-kos-m-te",
+      "type": "fill-blank",
+      "l1": "Quelle taille avez-vous ?",
+      "l2": "Akú veľkosť máte?",
+      "missing_l1": "taille",
+      "missing_l2": "máte",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "veste",
+        "J'essaie",
+        "essayer"
+      ],
+      "choices_l2": [
+        "Nemám",
+        "Nemáš",
+        "má"
+      ]
+    },
+    {
+      "id": "blank-m-m-ve-kos-m",
+      "type": "fill-blank",
+      "l1": "J'ai la taille M.",
+      "l2": "Mám veľkosť M.",
+      "missing_l1": "la",
+      "missing_l2": "veľkosť",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Ces",
+        "robe",
+        "pull"
+      ],
+      "choices_l2": [
+        "lacný",
+        "čierne",
+        "drahá"
+      ]
+    },
+    {
+      "id": "blank-t-to-ko-e-a-je-mal-m-te-v-iu",
+      "type": "fill-blank",
+      "l1": "Cette chemise est petite. Vous en avez une plus grande ?",
+      "l2": "Táto košeľa je malá. Máte väčšiu?",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "est-ce",
+        "était",
+        "es"
+      ],
+      "choices_l2": [
+        "si",
+        "Bude",
+        "bol"
+      ]
+    },
+    {
+      "id": "blank-sk-sim-ierne-nohavice",
+      "type": "fill-blank",
+      "l1": "J'essaie le pantalon noir.",
+      "l2": "Skúsim čierne nohavice.",
+      "missing_l1": "le",
+      "missing_l2": "čierne",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Ces",
+        "jupe",
+        "la"
+      ],
+      "choices_l2": [
+        "skúsiť",
+        "čiernu",
+        "sukňa"
+      ]
+    },
+    {
+      "id": "blank-kde-je-sk-obn-kab-nka",
+      "type": "fill-blank",
+      "l1": "Où est la cabine d'essayage ?",
+      "l2": "Kde je skúšobná kabínka?",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "le",
+        "M",
+        "Les"
+      ],
+      "choices_l2": [
+        "si",
+        "budeme",
+        "ste"
+      ]
+    },
+    {
+      "id": "blank-tieto-top-nky-s-pohodln",
+      "type": "fill-blank",
+      "l1": "Ces chaussures sont confortables.",
+      "l2": "Tieto topánky sú pohodlné.",
+      "missing_l1": "sont",
+      "missing_l2": "sú",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "c'était",
+        "es",
+        "sommes"
+      ],
+      "choices_l2": [
+        "budú",
+        "budeme",
+        "bol"
+      ]
+    },
+    {
+      "id": "blank-zelen-suk-a-sa-mi-p-i",
+      "type": "fill-blank",
+      "l1": "La jupe verte me plaît.",
+      "l2": "Zelená sukňa sa mi páči.",
+      "missing_l1": "me",
+      "missing_l2": "sa",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "te",
+        "se",
+        "en"
+      ],
+      "choices_l2": [
+        "Toto",
+        "tá",
+        "To"
+      ]
+    },
+    {
+      "id": "blank-kupujem-modr-tri-ko-a-ierne-nohavice",
+      "type": "fill-blank",
+      "l1": "J'achète un tee-shirt bleu et un pantalon noir.",
+      "l2": "Kupujem modré tričko a čierne nohavice.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "ou",
+        "mais",
+        "Donc"
+      ],
+      "choices_l2": [
+        "lebo",
+        "aj",
+        "ale"
+      ]
+    },
+    {
+      "id": "blank-sk-sim-to-v-obchode-v-sobotu",
+      "type": "fill-blank",
+      "l1": "Je vais essayer ça au magasin samedi.",
+      "l2": "Skúsim to v obchode v sobotu.",
+      "missing_l1": "au",
+      "missing_l2": "v",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Ces",
+        "M",
+        "du"
+      ],
+      "choices_l2": [
+        "bez",
+        "o",
+        "od"
+      ]
+    },
+    {
+      "id": "blank-p-i-sa-mi-t-to-farba-ale-ve-kos-nie-je-dobr",
+      "type": "fill-blank",
+      "l1": "J'aime cette couleur, mais la taille n'est pas bonne.",
+      "l2": "Páči sa mi táto farba, ale veľkosť nie je dobrá.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "Les",
+        "robe",
+        "jupe"
+      ],
+      "choices_l2": [
+        "sú",
+        "sme",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-t-to-bunda-je-drah",
+      "type": "fill-blank",
+      "l1": "Cette veste est chère.",
+      "l2": "Táto bunda je drahá.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "es",
+        "sont",
+        "C'est"
+      ],
+      "choices_l2": [
+        "budem",
+        "bol",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-chcem-lacn-sveter",
+      "type": "fill-blank",
+      "l1": "Je veux un pull bon marché.",
+      "l2": "Chcem lacný sveter.",
+      "missing_l1": "un",
+      "missing_l2": "sveter",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "une",
+        "M",
+        "Ces"
+      ],
+      "choices_l2": [
+        "skúsiť",
+        "nohavice",
+        "kabínka"
+      ]
+    },
+    {
+      "id": "blank-m-te-iernu-iapku",
+      "type": "fill-blank",
+      "l1": "Vous avez un bonnet noir ?",
+      "l2": "Máte čiernu čiapku?",
+      "missing_l1": "un",
+      "missing_l2": "čiernu",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "jupe",
+        "des",
+        "M"
+      ],
+      "choices_l2": [
+        "sukňa",
+        "nohavice",
+        "skúšobná"
+      ]
+    },
+    {
+      "id": "blank-tieto-aty-s-ve-mi-pekn",
+      "type": "fill-blank",
+      "l1": "Cette robe est très jolie.",
+      "l2": "Tieto šaty sú veľmi pekné.",
+      "missing_l1": "est",
+      "missing_l2": "sú",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "es",
+        "êtes",
+        "c'était"
+      ],
+      "choices_l2": [
+        "Bude",
+        "som",
+        "ste"
+      ]
+    },
+    {
+      "id": "blank-opasok-je-ierny-a-lacn",
+      "type": "fill-blank",
+      "l1": "La ceinture est noire et bon marché.",
+      "l2": "Opasok je čierny a lacný.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "C'est",
+        "est-ce",
+        "sont"
+      ],
+      "choices_l2": [
+        "sme",
+        "si",
+        "bol"
+      ]
+    },
+    {
+      "id": "listen-chcem-sk-si-toto-tri-ko",
+      "type": "listen",
+      "l1": "Je veux essayer ce tee-shirt.",
+      "l2": "Chcem skúsiť toto tričko.",
+      "choices_l1": [
+        "Je veux un pull bon marché.",
+        "J'ai la taille M.",
+        "Je vais essayer ça au magasin samedi."
+      ],
+      "choices_l2": [
+        "Táto košeľa je malá. Máte väčšiu?",
+        "Mám veľkosť M.",
+        "Táto bunda je drahá."
+      ]
+    },
+    {
+      "id": "listen-ak-ve-kos-m-te",
+      "type": "listen",
+      "l1": "Quelle taille avez-vous ?",
+      "l2": "Akú veľkosť máte?",
+      "choices_l1": [
+        "J'achète un tee-shirt bleu et un pantalon noir.",
+        "J'ai la taille M.",
+        "Ces chaussures sont confortables."
+      ],
+      "choices_l2": [
+        "Zelená sukňa sa mi páči.",
+        "Kde je skúšobná kabínka?",
+        "Táto bunda je drahá."
+      ]
+    },
+    {
+      "id": "listen-m-m-ve-kos-m",
+      "type": "listen",
+      "l1": "J'ai la taille M.",
+      "l2": "Mám veľkosť M.",
+      "choices_l1": [
+        "Où est la cabine d'essayage ?",
+        "J'achète un tee-shirt bleu et un pantalon noir.",
+        "Quelle taille avez-vous ?"
+      ],
+      "choices_l2": [
+        "Skúsim čierne nohavice.",
+        "Zelená sukňa sa mi páči.",
+        "Akú veľkosť máte?"
+      ]
+    },
+    {
+      "id": "listen-t-to-ko-e-a-je-mal-m-te-v-iu",
+      "type": "listen",
+      "l1": "Cette chemise est petite. Vous en avez une plus grande ?",
+      "l2": "Táto košeľa je malá. Máte väčšiu?",
+      "choices_l1": [
+        "Je veux essayer ce tee-shirt.",
+        "J'essaie le pantalon noir.",
+        "Ces chaussures sont confortables."
+      ],
+      "choices_l2": [
+        "Skúsim to v obchode v sobotu.",
+        "Zelená sukňa sa mi páči.",
+        "Kupujem modré tričko a čierne nohavice."
+      ]
+    },
+    {
+      "id": "listen-sk-sim-ierne-nohavice",
+      "type": "listen",
+      "l1": "J'essaie le pantalon noir.",
+      "l2": "Skúsim čierne nohavice.",
+      "choices_l1": [
+        "Cette veste est chère.",
+        "Où est la cabine d'essayage ?",
+        "Cette chemise est petite. Vous en avez une plus grande ?"
+      ],
+      "choices_l2": [
+        "Táto košeľa je malá. Máte väčšiu?",
+        "Mám veľkosť M.",
+        "Zelená sukňa sa mi páči."
+      ]
+    },
+    {
+      "id": "listen-kde-je-sk-obn-kab-nka",
+      "type": "listen",
+      "l1": "Où est la cabine d'essayage ?",
+      "l2": "Kde je skúšobná kabínka?",
+      "choices_l1": [
+        "J'aime cette couleur, mais la taille n'est pas bonne.",
+        "Cette veste est chère.",
+        "Je veux essayer ce tee-shirt."
+      ],
+      "choices_l2": [
+        "Tieto topánky sú pohodlné.",
+        "Zelená sukňa sa mi páči.",
+        "Páči sa mi táto farba, ale veľkosť nie je dobrá."
+      ]
+    },
+    {
+      "id": "listen-tieto-top-nky-s-pohodln",
+      "type": "listen",
+      "l1": "Ces chaussures sont confortables.",
+      "l2": "Tieto topánky sú pohodlné.",
+      "choices_l1": [
+        "La jupe verte me plaît.",
+        "J'aime cette couleur, mais la taille n'est pas bonne.",
+        "Je veux essayer ce tee-shirt."
+      ],
+      "choices_l2": [
+        "Kupujem modré tričko a čierne nohavice.",
+        "Páči sa mi táto farba, ale veľkosť nie je dobrá.",
+        "Skúsim čierne nohavice."
+      ]
+    },
+    {
+      "id": "listen-zelen-suk-a-sa-mi-p-i",
+      "type": "listen",
+      "l1": "La jupe verte me plaît.",
+      "l2": "Zelená sukňa sa mi páči.",
+      "choices_l1": [
+        "Cette chemise est petite. Vous en avez une plus grande ?",
+        "Cette veste est chère.",
+        "Quelle taille avez-vous ?"
+      ],
+      "choices_l2": [
+        "Táto košeľa je malá. Máte väčšiu?",
+        "Mám veľkosť M.",
+        "Páči sa mi táto farba, ale veľkosť nie je dobrá."
+      ]
+    },
+    {
+      "id": "listen-kupujem-modr-tri-ko-a-ierne-nohavice",
+      "type": "listen",
+      "l1": "J'achète un tee-shirt bleu et un pantalon noir.",
+      "l2": "Kupujem modré tričko a čierne nohavice.",
+      "choices_l1": [
+        "Ces chaussures sont confortables.",
+        "Je vais essayer ça au magasin samedi.",
+        "Je veux essayer ce tee-shirt."
+      ],
+      "choices_l2": [
+        "Táto košeľa je malá. Máte väčšiu?",
+        "Akú veľkosť máte?",
+        "Mám veľkosť M."
+      ]
+    },
+    {
+      "id": "listen-sk-sim-to-v-obchode-v-sobotu",
+      "type": "listen",
+      "l1": "Je vais essayer ça au magasin samedi.",
+      "l2": "Skúsim to v obchode v sobotu.",
+      "choices_l1": [
+        "Quelle taille avez-vous ?",
+        "J'ai la taille M.",
+        "Cette chemise est petite. Vous en avez une plus grande ?"
+      ],
+      "choices_l2": [
+        "Skúsim čierne nohavice.",
+        "Zelená sukňa sa mi páči.",
+        "Kupujem modré tričko a čierne nohavice."
+      ]
+    },
+    {
+      "id": "listen-p-i-sa-mi-t-to-farba-ale-ve-kos-nie-je-dobr",
+      "type": "listen",
+      "l1": "J'aime cette couleur, mais la taille n'est pas bonne.",
+      "l2": "Páči sa mi táto farba, ale veľkosť nie je dobrá.",
+      "choices_l1": [
+        "Je vais essayer ça au magasin samedi.",
+        "Ces chaussures sont confortables.",
+        "Où est la cabine d'essayage ?"
+      ],
+      "choices_l2": [
+        "Táto bunda je drahá.",
+        "Skúsim to v obchode v sobotu.",
+        "Zelená sukňa sa mi páči."
+      ]
+    },
+    {
+      "id": "listen-t-to-bunda-je-drah",
+      "type": "listen",
+      "l1": "Cette veste est chère.",
+      "l2": "Táto bunda je drahá.",
+      "choices_l1": [
+        "Quelle taille avez-vous ?",
+        "Je veux un pull bon marché.",
+        "Cette chemise est petite. Vous en avez une plus grande ?"
+      ],
+      "choices_l2": [
+        "Akú veľkosť máte?",
+        "Tieto topánky sú pohodlné.",
+        "Skúsim to v obchode v sobotu."
+      ]
+    },
+    {
+      "id": "listen-chcem-lacn-sveter",
+      "type": "listen",
+      "l1": "Je veux un pull bon marché.",
+      "l2": "Chcem lacný sveter.",
+      "choices_l1": [
+        "Je veux essayer ce tee-shirt.",
+        "Où est la cabine d'essayage ?",
+        "J'essaie le pantalon noir."
+      ],
+      "choices_l2": [
+        "Skúsim to v obchode v sobotu.",
+        "Zelená sukňa sa mi páči.",
+        "Kupujem modré tričko a čierne nohavice."
+      ]
+    },
+    {
+      "id": "listen-m-te-iernu-iapku",
+      "type": "listen",
+      "l1": "Vous avez un bonnet noir ?",
+      "l2": "Máte čiernu čiapku?",
+      "choices_l1": [
+        "J'essaie le pantalon noir.",
+        "Cette veste est chère.",
+        "J'aime cette couleur, mais la taille n'est pas bonne."
+      ],
+      "choices_l2": [
+        "Chcem skúsiť toto tričko.",
+        "Zelená sukňa sa mi páči.",
+        "Tieto topánky sú pohodlné."
+      ]
+    },
+    {
+      "id": "listen-tieto-aty-s-ve-mi-pekn",
+      "type": "listen",
+      "l1": "Cette robe est très jolie.",
+      "l2": "Tieto šaty sú veľmi pekné.",
+      "choices_l1": [
+        "J'aime cette couleur, mais la taille n'est pas bonne.",
+        "Ces chaussures sont confortables.",
+        "J'essaie le pantalon noir."
+      ],
+      "choices_l2": [
+        "Zelená sukňa sa mi páči.",
+        "Táto košeľa je malá. Máte väčšiu?",
+        "Skúsim to v obchode v sobotu."
+      ]
+    },
+    {
+      "id": "listen-opasok-je-ierny-a-lacn",
+      "type": "listen",
+      "l1": "La ceinture est noire et bon marché.",
+      "l2": "Opasok je čierny a lacný.",
+      "choices_l1": [
+        "La jupe verte me plaît.",
+        "Cette chemise est petite. Vous en avez une plus grande ?",
+        "Où est la cabine d'essayage ?"
+      ],
+      "choices_l2": [
+        "Páči sa mi táto farba, ale veľkosť nie je dobrá.",
+        "Zelená sukňa sa mi páči.",
+        "Mám veľkosť M."
+      ]
+    },
+    {
+      "id": "order-chcem-sk-si-toto-tri-ko",
+      "type": "order",
+      "l1": "Je veux essayer ce tee-shirt.",
+      "l2": "Chcem skúsiť toto tričko.",
+      "tokens_l1": [
+        "Je",
+        "veux",
+        "essayer",
+        "ce",
+        "tee-shirt.",
+        "J'achète",
+        "un",
+        "tee-shirt",
+        "bleu",
+        "et",
+        "un",
+        "pantalon",
+        "noir."
+      ],
+      "tokens_l2": [
+        "Chcem",
+        "skúsiť",
+        "toto",
+        "tričko.",
+        "Kupujem",
+        "modré",
+        "tričko",
+        "a",
+        "čierne",
+        "nohavice."
+      ]
+    },
+    {
+      "id": "order-ak-ve-kos-m-te",
+      "type": "order",
+      "l1": "Quelle taille avez-vous ?",
+      "l2": "Akú veľkosť máte?",
+      "tokens_l1": [
+        "Quelle",
+        "taille",
+        "avez-vous",
+        "?",
+        "La",
+        "ceinture",
+        "est",
+        "noire",
+        "et",
+        "bon",
+        "marché."
+      ],
+      "tokens_l2": [
+        "Akú",
+        "veľkosť",
+        "máte?",
+        "Opasok",
+        "je",
+        "čierny",
+        "a",
+        "lacný."
+      ]
+    },
+    {
+      "id": "order-m-m-ve-kos-m",
+      "type": "order",
+      "l1": "J'ai la taille M.",
+      "l2": "Mám veľkosť M.",
+      "tokens_l1": [
+        "J'ai",
+        "la",
+        "taille",
+        "M.",
+        "Je",
+        "veux",
+        "essayer",
+        "ce",
+        "tee-shirt."
+      ],
+      "tokens_l2": [
+        "Mám",
+        "veľkosť",
+        "M.",
+        "Chcem",
+        "skúsiť",
+        "toto",
+        "tričko."
+      ]
+    },
+    {
+      "id": "order-t-to-ko-e-a-je-mal-m-te-v-iu",
+      "type": "order",
+      "l1": "Cette chemise est petite. Vous en avez une plus grande ?",
+      "l2": "Táto košeľa je malá. Máte väčšiu?",
+      "tokens_l1": [
+        "Cette",
+        "chemise",
+        "est",
+        "petite.",
+        "Vous",
+        "en",
+        "avez",
+        "une",
+        "plus",
+        "grande",
+        "?",
+        "Je",
+        "vais",
+        "essayer",
+        "ça",
+        "au",
+        "magasin",
+        "samedi."
+      ],
+      "tokens_l2": [
+        "Táto",
+        "košeľa",
+        "je",
+        "malá.",
+        "Máte",
+        "väčšiu?",
+        "Skúsim",
+        "to",
+        "v",
+        "obchode",
+        "v",
+        "sobotu."
+      ]
+    },
+    {
+      "id": "order-sk-sim-ierne-nohavice",
+      "type": "order",
+      "l1": "J'essaie le pantalon noir.",
+      "l2": "Skúsim čierne nohavice.",
+      "tokens_l1": [
+        "J'essaie",
+        "le",
+        "pantalon",
+        "noir.",
+        "Ces",
+        "chaussures",
+        "sont",
+        "confortables."
+      ],
+      "tokens_l2": [
+        "Skúsim",
+        "čierne",
+        "nohavice.",
+        "Tieto",
+        "topánky",
+        "sú",
+        "pohodlné."
+      ]
+    },
+    {
+      "id": "order-kde-je-sk-obn-kab-nka",
+      "type": "order",
+      "l1": "Où est la cabine d'essayage ?",
+      "l2": "Kde je skúšobná kabínka?",
+      "tokens_l1": [
+        "Où",
+        "est",
+        "la",
+        "cabine",
+        "d'essayage",
+        "?",
+        "La",
+        "ceinture",
+        "est",
+        "noire",
+        "et",
+        "bon",
+        "marché."
+      ],
+      "tokens_l2": [
+        "Kde",
+        "je",
+        "skúšobná",
+        "kabínka?",
+        "Opasok",
+        "je",
+        "čierny",
+        "a",
+        "lacný."
+      ]
+    },
+    {
+      "id": "order-tieto-top-nky-s-pohodln",
+      "type": "order",
+      "l1": "Ces chaussures sont confortables.",
+      "l2": "Tieto topánky sú pohodlné.",
+      "tokens_l1": [
+        "Ces",
+        "chaussures",
+        "sont",
+        "confortables.",
+        "J'achète",
+        "un",
+        "tee-shirt",
+        "bleu",
+        "et",
+        "un",
+        "pantalon",
+        "noir."
+      ],
+      "tokens_l2": [
+        "Tieto",
+        "topánky",
+        "sú",
+        "pohodlné.",
+        "Kupujem",
+        "modré",
+        "tričko",
+        "a",
+        "čierne",
+        "nohavice."
+      ]
+    },
+    {
+      "id": "order-zelen-suk-a-sa-mi-p-i",
+      "type": "order",
+      "l1": "La jupe verte me plaît.",
+      "l2": "Zelená sukňa sa mi páči.",
+      "tokens_l1": [
+        "La",
+        "jupe",
+        "verte",
+        "me",
+        "plaît.",
+        "Cette",
+        "veste",
+        "est",
+        "chère."
+      ],
+      "tokens_l2": [
+        "Zelená",
+        "sukňa",
+        "sa",
+        "mi",
+        "páči.",
+        "Táto",
+        "bunda",
+        "je",
+        "drahá."
+      ]
+    },
+    {
+      "id": "order-kupujem-modr-tri-ko-a-ierne-nohavice",
+      "type": "order",
+      "l1": "J'achète un tee-shirt bleu et un pantalon noir.",
+      "l2": "Kupujem modré tričko a čierne nohavice.",
+      "tokens_l1": [
+        "J'achète",
+        "un",
+        "tee-shirt",
+        "bleu",
+        "et",
+        "un",
+        "pantalon",
+        "noir.",
+        "La",
+        "ceinture",
+        "est",
+        "noire",
+        "et",
+        "bon",
+        "marché."
+      ],
+      "tokens_l2": [
+        "Kupujem",
+        "modré",
+        "tričko",
+        "a",
+        "čierne",
+        "nohavice.",
+        "Opasok",
+        "je",
+        "čierny",
+        "a",
+        "lacný."
+      ]
+    },
+    {
+      "id": "order-sk-sim-to-v-obchode-v-sobotu",
+      "type": "order",
+      "l1": "Je vais essayer ça au magasin samedi.",
+      "l2": "Skúsim to v obchode v sobotu.",
+      "tokens_l1": [
+        "Je",
+        "vais",
+        "essayer",
+        "ça",
+        "au",
+        "magasin",
+        "samedi.",
+        "Cette",
+        "robe",
+        "est",
+        "très",
+        "jolie."
+      ],
+      "tokens_l2": [
+        "Skúsim",
+        "to",
+        "v",
+        "obchode",
+        "v",
+        "sobotu.",
+        "Tieto",
+        "šaty",
+        "sú",
+        "veľmi",
+        "pekné."
+      ]
+    },
+    {
+      "id": "order-p-i-sa-mi-t-to-farba-ale-ve-kos-nie-je-dobr",
+      "type": "order",
+      "l1": "J'aime cette couleur, mais la taille n'est pas bonne.",
+      "l2": "Páči sa mi táto farba, ale veľkosť nie je dobrá.",
+      "tokens_l1": [
+        "J'aime",
+        "cette",
+        "couleur,",
+        "mais",
+        "la",
+        "taille",
+        "n'est",
+        "pas",
+        "bonne.",
+        "Cette",
+        "veste",
+        "est",
+        "chère."
+      ],
+      "tokens_l2": [
+        "Páči",
+        "sa",
+        "mi",
+        "táto",
+        "farba,",
+        "ale",
+        "veľkosť",
+        "nie",
+        "je",
+        "dobrá.",
+        "Táto",
+        "bunda",
+        "je",
+        "drahá."
+      ]
+    },
+    {
+      "id": "order-t-to-bunda-je-drah",
+      "type": "order",
+      "l1": "Cette veste est chère.",
+      "l2": "Táto bunda je drahá.",
+      "tokens_l1": [
+        "Cette",
+        "veste",
+        "est",
+        "chère.",
+        "La",
+        "ceinture",
+        "est",
+        "noire",
+        "et",
+        "bon",
+        "marché."
+      ],
+      "tokens_l2": [
+        "Táto",
+        "bunda",
+        "je",
+        "drahá.",
+        "Opasok",
+        "je",
+        "čierny",
+        "a",
+        "lacný."
+      ]
+    },
+    {
+      "id": "order-chcem-lacn-sveter",
+      "type": "order",
+      "l1": "Je veux un pull bon marché.",
+      "l2": "Chcem lacný sveter.",
+      "tokens_l1": [
+        "Je",
+        "veux",
+        "un",
+        "pull",
+        "bon",
+        "marché.",
+        "Où",
+        "est",
+        "la",
+        "cabine",
+        "d'essayage",
+        "?"
+      ],
+      "tokens_l2": [
+        "Chcem",
+        "lacný",
+        "sveter.",
+        "Kde",
+        "je",
+        "skúšobná",
+        "kabínka?"
+      ]
+    },
+    {
+      "id": "order-m-te-iernu-iapku",
+      "type": "order",
+      "l1": "Vous avez un bonnet noir ?",
+      "l2": "Máte čiernu čiapku?",
+      "tokens_l1": [
+        "Vous",
+        "avez",
+        "un",
+        "bonnet",
+        "noir",
+        "?",
+        "La",
+        "jupe",
+        "verte",
+        "me",
+        "plaît."
+      ],
+      "tokens_l2": [
+        "Máte",
+        "čiernu",
+        "čiapku?",
+        "Zelená",
+        "sukňa",
+        "sa",
+        "mi",
+        "páči."
+      ]
+    },
+    {
+      "id": "order-tieto-aty-s-ve-mi-pekn",
+      "type": "order",
+      "l1": "Cette robe est très jolie.",
+      "l2": "Tieto šaty sú veľmi pekné.",
+      "tokens_l1": [
+        "Cette",
+        "robe",
+        "est",
+        "très",
+        "jolie.",
+        "La",
+        "jupe",
+        "verte",
+        "me",
+        "plaît."
+      ],
+      "tokens_l2": [
+        "Tieto",
+        "šaty",
+        "sú",
+        "veľmi",
+        "pekné.",
+        "Zelená",
+        "sukňa",
+        "sa",
+        "mi",
+        "páči."
+      ]
+    },
+    {
+      "id": "order-opasok-je-ierny-a-lacn",
+      "type": "order",
+      "l1": "La ceinture est noire et bon marché.",
+      "l2": "Opasok je čierny a lacný.",
+      "tokens_l1": [
+        "La",
+        "ceinture",
+        "est",
+        "noire",
+        "et",
+        "bon",
+        "marché.",
+        "Cette",
+        "robe",
+        "est",
+        "très",
+        "jolie."
+      ],
+      "tokens_l2": [
+        "Opasok",
+        "je",
+        "čierny",
+        "a",
+        "lacný.",
+        "Tieto",
+        "šaty",
+        "sú",
+        "veľmi",
+        "pekné."
+      ]
+    },
+    {
+      "id": "match-tri-ko-vocab",
+      "type": "match",
+      "l1": [
+        "le tee-shirt",
+        "la chemise",
+        "le pantalon",
+        "la jupe"
+      ],
+      "l2": [
+        "tričko",
+        "košeľa",
+        "nohavice",
+        "sukňa"
+      ]
+    },
+    {
+      "id": "match-chcem-sk-si-toto-tri-ko-sentences",
+      "type": "match",
+      "l1": [
+        "Je veux essayer ce tee-shirt.",
+        "Quelle taille avez-vous ?",
+        "J'ai la taille M.",
+        "Cette chemise est petite. Vous en avez une plus grande ?"
+      ],
+      "l2": [
+        "Chcem skúsiť toto tričko.",
+        "Akú veľkosť máte?",
+        "Mám veľkosť M.",
+        "Táto košeľa je malá. Máte väčšiu?"
+      ]
+    }
+  ]
+}

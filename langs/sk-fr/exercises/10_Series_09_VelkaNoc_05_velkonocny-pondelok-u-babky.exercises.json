@@ -1,0 +1,1253 @@
+{
+  "exercises": [
+    {
+      "id": "blank-babka-pri-li-sme-na-iba-ku",
+      "type": "fill-blank",
+      "l1": "Grand-mère, nous sommes venus pour la šibačka !",
+      "l2": "Babka, prišli sme na šibačku!",
+      "missing_l1": "la",
+      "missing_l2": "na",
+      "blank_index_l1": 5,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "le",
+        "gras",
+        "peur"
+      ],
+      "choices_l2": [
+        "zo",
+        "pri",
+        "bez"
+      ]
+    },
+    {
+      "id": "blank-kone-ne-u-som-pripravila-vaj-ka",
+      "type": "fill-blank",
+      "l1": "Enfin ! J'ai déjà préparé les œufs.",
+      "l2": "Konečne! Už som pripravila vajíčka.",
+      "missing_l1": "les",
+      "missing_l2": "som",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "le",
+        "peur",
+        "gras"
+      ],
+      "choices_l2": [
+        "si",
+        "budem",
+        "bol"
+      ]
+    },
+    {
+      "id": "blank-m-m-trochu-strach-je-to-bolestiv",
+      "type": "fill-blank",
+      "l1": "J'ai un peu peur. C'est douloureux ?",
+      "l2": "Mám trochu strach. Je to bolestivé?",
+      "missing_l1": "un",
+      "missing_l2": "Je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "peur",
+        "gras",
+        "aime"
+      ],
+      "choices_l2": [
+        "budem",
+        "sme",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-nie-je-to-len-symbolick-babka-to-m-rada",
+      "type": "fill-blank",
+      "l1": "Non, c'est seulement symbolique. Grand-mère aime ça.",
+      "l2": "Nie, je to len symbolické. Babka to má rada.",
+      "missing_l1": "c'est",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "est-ce",
+        "es",
+        "suis"
+      ],
+      "choices_l2": [
+        "Bude",
+        "bola",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-no-je-to-na-a-trad-cia-ale-robte-to-jemne",
+      "type": "fill-blank",
+      "l1": "Oui, c'est notre tradition. Mais faites-le doucement !",
+      "l2": "Áno, je to naša tradícia. Ale robte to jemne!",
+      "missing_l1": "Mais",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "ni",
+        "ou",
+        "et"
+      ],
+      "choices_l2": [
+        "bol",
+        "budeme",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-ibi-ryby-mastn-ryby",
+      "type": "fill-blank",
+      "l1": "Fouette, poissons, poissons gras !",
+      "l2": "Šibi, ryby, mastné ryby!",
+      "missing_l1": "poissons",
+      "missing_l2": "ryby",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "symbolique",
+        "douloureux",
+        "doucement"
+      ],
+      "choices_l2": [
+        "teba",
+        "dnu",
+        "Poď"
+      ]
+    },
+    {
+      "id": "blank-dobre-dobre-tu-m-te-vaj-ka",
+      "type": "fill-blank",
+      "l1": "Bien, bien ! Voici des œufs.",
+      "l2": "Dobre, dobre! Tu máte vajíčka.",
+      "missing_l1": "des",
+      "missing_l2": "máte",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "gras",
+        "une",
+        "aime"
+      ],
+      "choices_l2": [
+        "Nemáme",
+        "Mám",
+        "Máš"
+      ]
+    },
+    {
+      "id": "blank-akujeme-a-toto-je-pre-teba-parfum-nie-voda",
+      "type": "fill-blank",
+      "l1": "Merci ! Et voici du parfum pour toi, pas de l'eau.",
+      "l2": "Ďakujeme! A toto je pre teba parfum, nie voda.",
+      "missing_l1": "de",
+      "missing_l2": "je",
+      "blank_index_l1": 9,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "pour",
+        "par",
+        "sur"
+      ],
+      "choices_l2": [
+        "bola",
+        "ste",
+        "bol"
+      ]
+    },
+    {
+      "id": "blank-ak-si-mil-eric-po-dnu-urobila-som-kol",
+      "type": "fill-blank",
+      "l1": "Comme tu es gentil, Eric ! Entre, j'ai fait un gâteau.",
+      "l2": "Aký si milý, Eric! Poď dnu, urobila som koláč.",
+      "missing_l1": "un",
+      "missing_l2": "som",
+      "blank_index_l1": 9,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "des",
+        "peur",
+        "une"
+      ],
+      "choices_l2": [
+        "bol",
+        "je",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-babka-o-si-robila-na-bielu-sobotu",
+      "type": "fill-blank",
+      "l1": "Grand-mère, qu'as-tu fait le samedi saint ?",
+      "l2": "Babka, čo si robila na Bielu sobotu?",
+      "missing_l1": "le",
+      "missing_l2": "na",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "Les",
+        "peur",
+        "gras"
+      ],
+      "choices_l2": [
+        "zo",
+        "s",
+        "Cez"
+      ]
+    },
+    {
+      "id": "blank-piekla-som-bar-nka-a-pripravila-som-chren",
+      "type": "fill-blank",
+      "l1": "J'ai fait cuire l'agneau et préparé le raifort.",
+      "l2": "Piekla som baránka a pripravila som chren.",
+      "missing_l1": "le",
+      "missing_l2": "a",
+      "blank_index_l1": 6,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "la",
+        "peur",
+        "aime"
+      ],
+      "choices_l2": [
+        "však",
+        "lebo",
+        "alebo"
+      ]
+    },
+    {
+      "id": "blank-samozrejme-sadnite-si-chlapci",
+      "type": "fill-blank",
+      "l1": "Bien sûr ! Asseyez-vous, les garçons.",
+      "l2": "Samozrejme! Sadnite si, chlapci.",
+      "missing_l1": "les",
+      "missing_l2": "si",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "peur",
+        "aime",
+        "gras"
+      ],
+      "choices_l2": [
+        "som",
+        "boli",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-na-ve-kono-n-pondelok-sme-nav-t-vili-cel-rodinu",
+      "type": "fill-blank",
+      "l1": "Le lundi de Pâques nous avons rendu visite à toute la famille.",
+      "l2": "Na Veľkonočný pondelok sme navštívili celú rodinu.",
+      "missing_l1": "la",
+      "missing_l2": "sme",
+      "blank_index_l1": 10,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Les",
+        "gras",
+        "peur"
+      ],
+      "choices_l2": [
+        "Bude",
+        "budeme",
+        "som"
+      ]
+    },
+    {
+      "id": "blank-babka-n-m-dala-vaj-ka-a-kol-ako-odmenu",
+      "type": "fill-blank",
+      "l1": "Grand-mère nous a donné des œufs et du gâteau comme récompense.",
+      "l2": "Babka nám dala vajíčka a koláč ako odmenu.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 6,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "ou",
+        "Donc",
+        "ni"
+      ],
+      "choices_l2": [
+        "alebo",
+        "však",
+        "lebo"
+      ]
+    },
+    {
+      "id": "blank-tento-zvyk-sa-men-ale-rodina-je-st-le-spolu",
+      "type": "fill-blank",
+      "l1": "Cette coutume change, mais la famille reste toujours ensemble.",
+      "l2": "Tento zvyk sa mení, ale rodina je stále spolu.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "gras",
+        "aime",
+        "Les"
+      ],
+      "choices_l2": [
+        "budem",
+        "budeme",
+        "si"
+      ]
+    },
+    {
+      "id": "blank-bar-nok-bol-sladk-a-chren-bol-ve-mi-tip-av",
+      "type": "fill-blank",
+      "l1": "L'agneau était sucré et le raifort était très piquant.",
+      "l2": "Baránok bol sladký a chren bol veľmi štipľavý.",
+      "missing_l1": "le",
+      "missing_l2": "a",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "gras",
+        "aime",
+        "Les"
+      ],
+      "choices_l2": [
+        "však",
+        "lebo",
+        "aj"
+      ]
+    },
+    {
+      "id": "listen-babka-pri-li-sme-na-iba-ku",
+      "type": "listen",
+      "l1": "Grand-mère, nous sommes venus pour la šibačka !",
+      "l2": "Babka, prišli sme na šibačku!",
+      "choices_l1": [
+        "J'ai fait cuire l'agneau et préparé le raifort.",
+        "Grand-mère, qu'as-tu fait le samedi saint ?",
+        "Enfin ! J'ai déjà préparé les œufs."
+      ],
+      "choices_l2": [
+        "Piekla som baránka a pripravila som chren.",
+        "Babka, čo si robila na Bielu sobotu?",
+        "Samozrejme! Sadnite si, chlapci."
+      ]
+    },
+    {
+      "id": "listen-kone-ne-u-som-pripravila-vaj-ka",
+      "type": "listen",
+      "l1": "Enfin ! J'ai déjà préparé les œufs.",
+      "l2": "Konečne! Už som pripravila vajíčka.",
+      "choices_l1": [
+        "Grand-mère, nous sommes venus pour la šibačka !",
+        "Non, c'est seulement symbolique. Grand-mère aime ça.",
+        "Merci ! Et voici du parfum pour toi, pas de l'eau."
+      ],
+      "choices_l2": [
+        "Mám trochu strach. Je to bolestivé?",
+        "Aký si milý, Eric! Poď dnu, urobila som koláč.",
+        "Babka, prišli sme na šibačku!"
+      ]
+    },
+    {
+      "id": "listen-m-m-trochu-strach-je-to-bolestiv",
+      "type": "listen",
+      "l1": "J'ai un peu peur. C'est douloureux ?",
+      "l2": "Mám trochu strach. Je to bolestivé?",
+      "choices_l1": [
+        "Bien, bien ! Voici des œufs.",
+        "Grand-mère, nous sommes venus pour la šibačka !",
+        "Comme tu es gentil, Eric ! Entre, j'ai fait un gâteau."
+      ],
+      "choices_l2": [
+        "Babka, čo si robila na Bielu sobotu?",
+        "Nie, je to len symbolické. Babka to má rada.",
+        "Áno, je to naša tradícia. Ale robte to jemne!"
+      ]
+    },
+    {
+      "id": "listen-nie-je-to-len-symbolick-babka-to-m-rada",
+      "type": "listen",
+      "l1": "Non, c'est seulement symbolique. Grand-mère aime ça.",
+      "l2": "Nie, je to len symbolické. Babka to má rada.",
+      "choices_l1": [
+        "Grand-mère, qu'as-tu fait le samedi saint ?",
+        "Merci ! Et voici du parfum pour toi, pas de l'eau.",
+        "J'ai un peu peur. C'est douloureux ?"
+      ],
+      "choices_l2": [
+        "Babka, prišli sme na šibačku!",
+        "Ďakujeme! A toto je pre teba parfum, nie voda.",
+        "Aký si milý, Eric! Poď dnu, urobila som koláč."
+      ]
+    },
+    {
+      "id": "listen-no-je-to-na-a-trad-cia-ale-robte-to-jemne",
+      "type": "listen",
+      "l1": "Oui, c'est notre tradition. Mais faites-le doucement !",
+      "l2": "Áno, je to naša tradícia. Ale robte to jemne!",
+      "choices_l1": [
+        "Bien sûr ! Asseyez-vous, les garçons.",
+        "Non, c'est seulement symbolique. Grand-mère aime ça.",
+        "Enfin ! J'ai déjà préparé les œufs."
+      ],
+      "choices_l2": [
+        "Samozrejme! Sadnite si, chlapci.",
+        "Aký si milý, Eric! Poď dnu, urobila som koláč.",
+        "Ďakujeme! A toto je pre teba parfum, nie voda."
+      ]
+    },
+    {
+      "id": "listen-ibi-ryby-mastn-ryby",
+      "type": "listen",
+      "l1": "Fouette, poissons, poissons gras !",
+      "l2": "Šibi, ryby, mastné ryby!",
+      "choices_l1": [
+        "Merci ! Et voici du parfum pour toi, pas de l'eau.",
+        "Bien, bien ! Voici des œufs.",
+        "Enfin ! J'ai déjà préparé les œufs."
+      ],
+      "choices_l2": [
+        "Babka, prišli sme na šibačku!",
+        "Áno, je to naša tradícia. Ale robte to jemne!",
+        "Mám trochu strach. Je to bolestivé?"
+      ]
+    },
+    {
+      "id": "listen-dobre-dobre-tu-m-te-vaj-ka",
+      "type": "listen",
+      "l1": "Bien, bien ! Voici des œufs.",
+      "l2": "Dobre, dobre! Tu máte vajíčka.",
+      "choices_l1": [
+        "Non, c'est seulement symbolique. Grand-mère aime ça.",
+        "Bien sûr ! Asseyez-vous, les garçons.",
+        "J'ai fait cuire l'agneau et préparé le raifort."
+      ],
+      "choices_l2": [
+        "Nie, je to len symbolické. Babka to má rada.",
+        "Konečne! Už som pripravila vajíčka.",
+        "Na Veľkonočný pondelok sme navštívili celú rodinu."
+      ]
+    },
+    {
+      "id": "listen-akujeme-a-toto-je-pre-teba-parfum-nie-voda",
+      "type": "listen",
+      "l1": "Merci ! Et voici du parfum pour toi, pas de l'eau.",
+      "l2": "Ďakujeme! A toto je pre teba parfum, nie voda.",
+      "choices_l1": [
+        "Comme tu es gentil, Eric ! Entre, j'ai fait un gâteau.",
+        "Bien sûr ! Asseyez-vous, les garçons.",
+        "J'ai fait cuire l'agneau et préparé le raifort."
+      ],
+      "choices_l2": [
+        "Samozrejme! Sadnite si, chlapci.",
+        "Babka, prišli sme na šibačku!",
+        "Dobre, dobre! Tu máte vajíčka."
+      ]
+    },
+    {
+      "id": "listen-ak-si-mil-eric-po-dnu-urobila-som-kol",
+      "type": "listen",
+      "l1": "Comme tu es gentil, Eric ! Entre, j'ai fait un gâteau.",
+      "l2": "Aký si milý, Eric! Poď dnu, urobila som koláč.",
+      "choices_l1": [
+        "J'ai fait cuire l'agneau et préparé le raifort.",
+        "Le lundi de Pâques nous avons rendu visite à toute la famille.",
+        "Bien sûr ! Asseyez-vous, les garçons."
+      ],
+      "choices_l2": [
+        "Mám trochu strach. Je to bolestivé?",
+        "Konečne! Už som pripravila vajíčka.",
+        "Babka, prišli sme na šibačku!"
+      ]
+    },
+    {
+      "id": "listen-babka-o-si-robila-na-bielu-sobotu",
+      "type": "listen",
+      "l1": "Grand-mère, qu'as-tu fait le samedi saint ?",
+      "l2": "Babka, čo si robila na Bielu sobotu?",
+      "choices_l1": [
+        "Non, c'est seulement symbolique. Grand-mère aime ça.",
+        "Enfin ! J'ai déjà préparé les œufs.",
+        "Merci ! Et voici du parfum pour toi, pas de l'eau."
+      ],
+      "choices_l2": [
+        "Dobre, dobre! Tu máte vajíčka.",
+        "Áno, je to naša tradícia. Ale robte to jemne!",
+        "Aký si milý, Eric! Poď dnu, urobila som koláč."
+      ]
+    },
+    {
+      "id": "listen-piekla-som-bar-nka-a-pripravila-som-chren",
+      "type": "listen",
+      "l1": "J'ai fait cuire l'agneau et préparé le raifort.",
+      "l2": "Piekla som baránka a pripravila som chren.",
+      "choices_l1": [
+        "Enfin ! J'ai déjà préparé les œufs.",
+        "Oui, c'est notre tradition. Mais faites-le doucement !",
+        "Grand-mère, qu'as-tu fait le samedi saint ?"
+      ],
+      "choices_l2": [
+        "Ďakujeme! A toto je pre teba parfum, nie voda.",
+        "Samozrejme! Sadnite si, chlapci.",
+        "Áno, je to naša tradícia. Ale robte to jemne!"
+      ]
+    },
+    {
+      "id": "listen-m-em-ochutna",
+      "type": "listen",
+      "l1": "Puis-je goûter ?",
+      "l2": "Môžem ochutnať?",
+      "choices_l1": [
+        "Comme tu es gentil, Eric ! Entre, j'ai fait un gâteau.",
+        "Grand-mère, nous sommes venus pour la šibačka !",
+        "Bien sûr ! Asseyez-vous, les garçons."
+      ],
+      "choices_l2": [
+        "Máš brata?",
+        "Čo robíš?",
+        "Bývame spolu."
+      ]
+    },
+    {
+      "id": "listen-samozrejme-sadnite-si-chlapci",
+      "type": "listen",
+      "l1": "Bien sûr ! Asseyez-vous, les garçons.",
+      "l2": "Samozrejme! Sadnite si, chlapci.",
+      "choices_l1": [
+        "Grand-mère, qu'as-tu fait le samedi saint ?",
+        "Bien, bien ! Voici des œufs.",
+        "Grand-mère, nous sommes venus pour la šibačka !"
+      ],
+      "choices_l2": [
+        "Babka, čo si robila na Bielu sobotu?",
+        "Šibi, ryby, mastné ryby!",
+        "Nie, je to len symbolické. Babka to má rada."
+      ]
+    },
+    {
+      "id": "listen-na-ve-kono-n-pondelok-sme-nav-t-vili-cel-rodinu",
+      "type": "listen",
+      "l1": "Le lundi de Pâques nous avons rendu visite à toute la famille.",
+      "l2": "Na Veľkonočný pondelok sme navštívili celú rodinu.",
+      "choices_l1": [
+        "Oui, c'est notre tradition. Mais faites-le doucement !",
+        "Grand-mère, nous sommes venus pour la šibačka !",
+        "Bien, bien ! Voici des œufs."
+      ],
+      "choices_l2": [
+        "Aký si milý, Eric! Poď dnu, urobila som koláč.",
+        "Mám trochu strach. Je to bolestivé?",
+        "Ďakujeme! A toto je pre teba parfum, nie voda."
+      ]
+    },
+    {
+      "id": "listen-babka-n-m-dala-vaj-ka-a-kol-ako-odmenu",
+      "type": "listen",
+      "l1": "Grand-mère nous a donné des œufs et du gâteau comme récompense.",
+      "l2": "Babka nám dala vajíčka a koláč ako odmenu.",
+      "choices_l1": [
+        "Oui, c'est notre tradition. Mais faites-le doucement !",
+        "Grand-mère, nous sommes venus pour la šibačka !",
+        "Comme tu es gentil, Eric ! Entre, j'ai fait un gâteau."
+      ],
+      "choices_l2": [
+        "Ďakujeme! A toto je pre teba parfum, nie voda.",
+        "Konečne! Už som pripravila vajíčka.",
+        "Babka, čo si robila na Bielu sobotu?"
+      ]
+    },
+    {
+      "id": "listen-tento-zvyk-sa-men-ale-rodina-je-st-le-spolu",
+      "type": "listen",
+      "l1": "Cette coutume change, mais la famille reste toujours ensemble.",
+      "l2": "Tento zvyk sa mení, ale rodina je stále spolu.",
+      "choices_l1": [
+        "Enfin ! J'ai déjà préparé les œufs.",
+        "Non, c'est seulement symbolique. Grand-mère aime ça.",
+        "Comme tu es gentil, Eric ! Entre, j'ai fait un gâteau."
+      ],
+      "choices_l2": [
+        "Šibi, ryby, mastné ryby!",
+        "Babka, prišli sme na šibačku!",
+        "Aký si milý, Eric! Poď dnu, urobila som koláč."
+      ]
+    },
+    {
+      "id": "listen-bar-nok-bol-sladk-a-chren-bol-ve-mi-tip-av",
+      "type": "listen",
+      "l1": "L'agneau était sucré et le raifort était très piquant.",
+      "l2": "Baránok bol sladký a chren bol veľmi štipľavý.",
+      "choices_l1": [
+        "Oui, c'est notre tradition. Mais faites-le doucement !",
+        "Grand-mère, nous sommes venus pour la šibačka !",
+        "Comme tu es gentil, Eric ! Entre, j'ai fait un gâteau."
+      ],
+      "choices_l2": [
+        "Babka, prišli sme na šibačku!",
+        "Babka, čo si robila na Bielu sobotu?",
+        "Nie, je to len symbolické. Babka to má rada."
+      ]
+    },
+    {
+      "id": "order-babka-pri-li-sme-na-iba-ku",
+      "type": "order",
+      "l1": "Grand-mère, nous sommes venus pour la šibačka !",
+      "l2": "Babka, prišli sme na šibačku!",
+      "tokens_l1": [
+        "Grand-mère,",
+        "nous",
+        "sommes",
+        "venus",
+        "pour",
+        "la",
+        "šibačka",
+        "!",
+        "Oui,",
+        "c'est",
+        "notre",
+        "tradition.",
+        "Mais",
+        "faites-le",
+        "doucement",
+        "!"
+      ],
+      "tokens_l2": [
+        "Babka,",
+        "prišli",
+        "sme",
+        "na",
+        "šibačku!",
+        "Áno,",
+        "je",
+        "to",
+        "naša",
+        "tradícia.",
+        "Ale",
+        "robte",
+        "to",
+        "jemne!"
+      ]
+    },
+    {
+      "id": "order-kone-ne-u-som-pripravila-vaj-ka",
+      "type": "order",
+      "l1": "Enfin ! J'ai déjà préparé les œufs.",
+      "l2": "Konečne! Už som pripravila vajíčka.",
+      "tokens_l1": [
+        "Enfin",
+        "!",
+        "J'ai",
+        "déjà",
+        "préparé",
+        "les",
+        "œufs.",
+        "J'ai",
+        "fait",
+        "cuire",
+        "l'agneau",
+        "et",
+        "préparé",
+        "le",
+        "raifort."
+      ],
+      "tokens_l2": [
+        "Konečne!",
+        "Už",
+        "som",
+        "pripravila",
+        "vajíčka.",
+        "Piekla",
+        "som",
+        "baránka",
+        "a",
+        "pripravila",
+        "som",
+        "chren."
+      ]
+    },
+    {
+      "id": "order-m-m-trochu-strach-je-to-bolestiv",
+      "type": "order",
+      "l1": "J'ai un peu peur. C'est douloureux ?",
+      "l2": "Mám trochu strach. Je to bolestivé?",
+      "tokens_l1": [
+        "J'ai",
+        "un",
+        "peu",
+        "peur.",
+        "C'est",
+        "douloureux",
+        "?",
+        "Cette",
+        "coutume",
+        "change,",
+        "mais",
+        "la",
+        "famille",
+        "reste",
+        "toujours",
+        "ensemble."
+      ],
+      "tokens_l2": [
+        "Mám",
+        "trochu",
+        "strach.",
+        "Je",
+        "to",
+        "bolestivé?",
+        "Tento",
+        "zvyk",
+        "sa",
+        "mení,",
+        "ale",
+        "rodina",
+        "je",
+        "stále",
+        "spolu."
+      ]
+    },
+    {
+      "id": "order-nie-je-to-len-symbolick-babka-to-m-rada",
+      "type": "order",
+      "l1": "Non, c'est seulement symbolique. Grand-mère aime ça.",
+      "l2": "Nie, je to len symbolické. Babka to má rada.",
+      "tokens_l1": [
+        "Non,",
+        "c'est",
+        "seulement",
+        "symbolique.",
+        "Grand-mère",
+        "aime",
+        "ça.",
+        "Merci",
+        "!",
+        "Et",
+        "voici",
+        "du",
+        "parfum",
+        "pour",
+        "toi,",
+        "pas",
+        "de",
+        "l'eau."
+      ],
+      "tokens_l2": [
+        "Nie,",
+        "je",
+        "to",
+        "len",
+        "symbolické.",
+        "Babka",
+        "to",
+        "má",
+        "rada.",
+        "Ďakujeme!",
+        "A",
+        "toto",
+        "je",
+        "pre",
+        "teba",
+        "parfum,",
+        "nie",
+        "voda."
+      ]
+    },
+    {
+      "id": "order-no-je-to-na-a-trad-cia-ale-robte-to-jemne",
+      "type": "order",
+      "l1": "Oui, c'est notre tradition. Mais faites-le doucement !",
+      "l2": "Áno, je to naša tradícia. Ale robte to jemne!",
+      "tokens_l1": [
+        "Oui,",
+        "c'est",
+        "notre",
+        "tradition.",
+        "Mais",
+        "faites-le",
+        "doucement",
+        "!",
+        "Le",
+        "lundi",
+        "de",
+        "Pâques",
+        "nous",
+        "avons",
+        "rendu",
+        "visite",
+        "à",
+        "toute",
+        "la",
+        "famille."
+      ],
+      "tokens_l2": [
+        "Áno,",
+        "je",
+        "to",
+        "naša",
+        "tradícia.",
+        "Ale",
+        "robte",
+        "to",
+        "jemne!",
+        "Na",
+        "Veľkonočný",
+        "pondelok",
+        "sme",
+        "navštívili",
+        "celú",
+        "rodinu."
+      ]
+    },
+    {
+      "id": "order-ibi-ryby-mastn-ryby",
+      "type": "order",
+      "l1": "Fouette, poissons, poissons gras !",
+      "l2": "Šibi, ryby, mastné ryby!",
+      "tokens_l1": [
+        "Fouette,",
+        "poissons,",
+        "poissons",
+        "gras",
+        "!",
+        "Bien",
+        "sûr",
+        "!",
+        "Asseyez-vous,",
+        "les",
+        "garçons."
+      ],
+      "tokens_l2": [
+        "Šibi,",
+        "ryby,",
+        "mastné",
+        "ryby!",
+        "Samozrejme!",
+        "Sadnite",
+        "si,",
+        "chlapci."
+      ]
+    },
+    {
+      "id": "order-dobre-dobre-tu-m-te-vaj-ka",
+      "type": "order",
+      "l1": "Bien, bien ! Voici des œufs.",
+      "l2": "Dobre, dobre! Tu máte vajíčka.",
+      "tokens_l1": [
+        "Bien,",
+        "bien",
+        "!",
+        "Voici",
+        "des",
+        "œufs.",
+        "Enfin",
+        "!",
+        "J'ai",
+        "déjà",
+        "préparé",
+        "les",
+        "œufs."
+      ],
+      "tokens_l2": [
+        "Dobre,",
+        "dobre!",
+        "Tu",
+        "máte",
+        "vajíčka.",
+        "Konečne!",
+        "Už",
+        "som",
+        "pripravila",
+        "vajíčka."
+      ]
+    },
+    {
+      "id": "order-akujeme-a-toto-je-pre-teba-parfum-nie-voda",
+      "type": "order",
+      "l1": "Merci ! Et voici du parfum pour toi, pas de l'eau.",
+      "l2": "Ďakujeme! A toto je pre teba parfum, nie voda.",
+      "tokens_l1": [
+        "Merci",
+        "!",
+        "Et",
+        "voici",
+        "du",
+        "parfum",
+        "pour",
+        "toi,",
+        "pas",
+        "de",
+        "l'eau.",
+        "Cette",
+        "coutume",
+        "change,",
+        "mais",
+        "la",
+        "famille",
+        "reste",
+        "toujours",
+        "ensemble."
+      ],
+      "tokens_l2": [
+        "Ďakujeme!",
+        "A",
+        "toto",
+        "je",
+        "pre",
+        "teba",
+        "parfum,",
+        "nie",
+        "voda.",
+        "Tento",
+        "zvyk",
+        "sa",
+        "mení,",
+        "ale",
+        "rodina",
+        "je",
+        "stále",
+        "spolu."
+      ]
+    },
+    {
+      "id": "order-ak-si-mil-eric-po-dnu-urobila-som-kol",
+      "type": "order",
+      "l1": "Comme tu es gentil, Eric ! Entre, j'ai fait un gâteau.",
+      "l2": "Aký si milý, Eric! Poď dnu, urobila som koláč.",
+      "tokens_l1": [
+        "Comme",
+        "tu",
+        "es",
+        "gentil,",
+        "Eric",
+        "!",
+        "Entre,",
+        "j'ai",
+        "fait",
+        "un",
+        "gâteau.",
+        "Enfin",
+        "!",
+        "J'ai",
+        "déjà",
+        "préparé",
+        "les",
+        "œufs."
+      ],
+      "tokens_l2": [
+        "Aký",
+        "si",
+        "milý,",
+        "Eric!",
+        "Poď",
+        "dnu,",
+        "urobila",
+        "som",
+        "koláč.",
+        "Konečne!",
+        "Už",
+        "som",
+        "pripravila",
+        "vajíčka."
+      ]
+    },
+    {
+      "id": "order-babka-o-si-robila-na-bielu-sobotu",
+      "type": "order",
+      "l1": "Grand-mère, qu'as-tu fait le samedi saint ?",
+      "l2": "Babka, čo si robila na Bielu sobotu?",
+      "tokens_l1": [
+        "Grand-mère,",
+        "qu'as-tu",
+        "fait",
+        "le",
+        "samedi",
+        "saint",
+        "?",
+        "Fouette,",
+        "poissons,",
+        "poissons",
+        "gras",
+        "!"
+      ],
+      "tokens_l2": [
+        "Babka,",
+        "čo",
+        "si",
+        "robila",
+        "na",
+        "Bielu",
+        "sobotu?",
+        "Šibi,",
+        "ryby,",
+        "mastné",
+        "ryby!"
+      ]
+    },
+    {
+      "id": "order-piekla-som-bar-nka-a-pripravila-som-chren",
+      "type": "order",
+      "l1": "J'ai fait cuire l'agneau et préparé le raifort.",
+      "l2": "Piekla som baránka a pripravila som chren.",
+      "tokens_l1": [
+        "J'ai",
+        "fait",
+        "cuire",
+        "l'agneau",
+        "et",
+        "préparé",
+        "le",
+        "raifort.",
+        "Enfin",
+        "!",
+        "J'ai",
+        "déjà",
+        "préparé",
+        "les",
+        "œufs."
+      ],
+      "tokens_l2": [
+        "Piekla",
+        "som",
+        "baránka",
+        "a",
+        "pripravila",
+        "som",
+        "chren.",
+        "Konečne!",
+        "Už",
+        "som",
+        "pripravila",
+        "vajíčka."
+      ]
+    },
+    {
+      "id": "order-samozrejme-sadnite-si-chlapci",
+      "type": "order",
+      "l1": "Bien sûr ! Asseyez-vous, les garçons.",
+      "l2": "Samozrejme! Sadnite si, chlapci.",
+      "tokens_l1": [
+        "Bien",
+        "sûr",
+        "!",
+        "Asseyez-vous,",
+        "les",
+        "garçons.",
+        "Non,",
+        "c'est",
+        "seulement",
+        "symbolique.",
+        "Grand-mère",
+        "aime",
+        "ça."
+      ],
+      "tokens_l2": [
+        "Samozrejme!",
+        "Sadnite",
+        "si,",
+        "chlapci.",
+        "Nie,",
+        "je",
+        "to",
+        "len",
+        "symbolické.",
+        "Babka",
+        "to",
+        "má",
+        "rada."
+      ]
+    },
+    {
+      "id": "order-na-ve-kono-n-pondelok-sme-nav-t-vili-cel-rodinu",
+      "type": "order",
+      "l1": "Le lundi de Pâques nous avons rendu visite à toute la famille.",
+      "l2": "Na Veľkonočný pondelok sme navštívili celú rodinu.",
+      "tokens_l1": [
+        "Le",
+        "lundi",
+        "de",
+        "Pâques",
+        "nous",
+        "avons",
+        "rendu",
+        "visite",
+        "à",
+        "toute",
+        "la",
+        "famille.",
+        "L'agneau",
+        "était",
+        "sucré",
+        "et",
+        "le",
+        "raifort",
+        "était",
+        "très",
+        "piquant."
+      ],
+      "tokens_l2": [
+        "Na",
+        "Veľkonočný",
+        "pondelok",
+        "sme",
+        "navštívili",
+        "celú",
+        "rodinu.",
+        "Baránok",
+        "bol",
+        "sladký",
+        "a",
+        "chren",
+        "bol",
+        "veľmi",
+        "štipľavý."
+      ]
+    },
+    {
+      "id": "order-babka-n-m-dala-vaj-ka-a-kol-ako-odmenu",
+      "type": "order",
+      "l1": "Grand-mère nous a donné des œufs et du gâteau comme récompense.",
+      "l2": "Babka nám dala vajíčka a koláč ako odmenu.",
+      "tokens_l1": [
+        "Grand-mère",
+        "nous",
+        "a",
+        "donné",
+        "des",
+        "œufs",
+        "et",
+        "du",
+        "gâteau",
+        "comme",
+        "récompense.",
+        "Enfin",
+        "!",
+        "J'ai",
+        "déjà",
+        "préparé",
+        "les",
+        "œufs."
+      ],
+      "tokens_l2": [
+        "Babka",
+        "nám",
+        "dala",
+        "vajíčka",
+        "a",
+        "koláč",
+        "ako",
+        "odmenu.",
+        "Konečne!",
+        "Už",
+        "som",
+        "pripravila",
+        "vajíčka."
+      ]
+    },
+    {
+      "id": "order-tento-zvyk-sa-men-ale-rodina-je-st-le-spolu",
+      "type": "order",
+      "l1": "Cette coutume change, mais la famille reste toujours ensemble.",
+      "l2": "Tento zvyk sa mení, ale rodina je stále spolu.",
+      "tokens_l1": [
+        "Cette",
+        "coutume",
+        "change,",
+        "mais",
+        "la",
+        "famille",
+        "reste",
+        "toujours",
+        "ensemble.",
+        "Grand-mère,",
+        "qu'as-tu",
+        "fait",
+        "le",
+        "samedi",
+        "saint",
+        "?"
+      ],
+      "tokens_l2": [
+        "Tento",
+        "zvyk",
+        "sa",
+        "mení,",
+        "ale",
+        "rodina",
+        "je",
+        "stále",
+        "spolu.",
+        "Babka,",
+        "čo",
+        "si",
+        "robila",
+        "na",
+        "Bielu",
+        "sobotu?"
+      ]
+    },
+    {
+      "id": "order-bar-nok-bol-sladk-a-chren-bol-ve-mi-tip-av",
+      "type": "order",
+      "l1": "L'agneau était sucré et le raifort était très piquant.",
+      "l2": "Baránok bol sladký a chren bol veľmi štipľavý.",
+      "tokens_l1": [
+        "L'agneau",
+        "était",
+        "sucré",
+        "et",
+        "le",
+        "raifort",
+        "était",
+        "très",
+        "piquant.",
+        "Oui,",
+        "c'est",
+        "notre",
+        "tradition.",
+        "Mais",
+        "faites-le",
+        "doucement",
+        "!"
+      ],
+      "tokens_l2": [
+        "Baránok",
+        "bol",
+        "sladký",
+        "a",
+        "chren",
+        "bol",
+        "veľmi",
+        "štipľavý.",
+        "Áno,",
+        "je",
+        "to",
+        "naša",
+        "tradícia.",
+        "Ale",
+        "robte",
+        "to",
+        "jemne!"
+      ]
+    },
+    {
+      "id": "match-babka-pri-li-sme-na-iba-ku-sentences",
+      "type": "match",
+      "l1": [
+        "Grand-mère, nous sommes venus pour la šibačka !",
+        "Enfin ! J'ai déjà préparé les œufs.",
+        "J'ai un peu peur. C'est douloureux ?",
+        "Non, c'est seulement symbolique. Grand-mère aime ça."
+      ],
+      "l2": [
+        "Babka, prišli sme na šibačku!",
+        "Konečne! Už som pripravila vajíčka.",
+        "Mám trochu strach. Je to bolestivé?",
+        "Nie, je to len symbolické. Babka to má rada."
+      ]
+    }
+  ]
+}

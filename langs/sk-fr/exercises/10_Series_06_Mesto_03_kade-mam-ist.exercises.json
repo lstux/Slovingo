@@ -1,0 +1,1434 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-cho",
+      "type": "qcm",
+      "l1": "va",
+      "l2": "choď",
+      "choices_l1": [
+        "en arrière",
+        "allez (vouvoiement)",
+        "tout droit"
+      ],
+      "choices_l2": [
+        "ďalej",
+        "rovno",
+        "priamo"
+      ]
+    },
+    {
+      "id": "qcm-cho-te",
+      "type": "qcm",
+      "l1": "allez (vouvoiement)",
+      "l2": "choďte",
+      "choices_l1": [
+        "va",
+        "tout droit",
+        "à gauche"
+      ],
+      "choices_l2": [
+        "ďalej",
+        "priamo",
+        "naspäť"
+      ]
+    },
+    {
+      "id": "qcm-rovno",
+      "type": "qcm",
+      "l1": "tout droit",
+      "l2": "rovno",
+      "choices_l1": [
+        "en arrière",
+        "juste, directement",
+        "va"
+      ],
+      "choices_l2": [
+        "vľavo",
+        "za rohom",
+        "vpravo"
+      ]
+    },
+    {
+      "id": "qcm-v-avo",
+      "type": "qcm",
+      "l1": "à gauche",
+      "l2": "vľavo",
+      "choices_l1": [
+        "va",
+        "tout droit",
+        "à droite"
+      ],
+      "choices_l2": [
+        "choďte",
+        "priamo",
+        "za rohom"
+      ]
+    },
+    {
+      "id": "qcm-vpravo",
+      "type": "qcm",
+      "l1": "à droite",
+      "l2": "vpravo",
+      "choices_l1": [
+        "plus loin",
+        "tout droit",
+        "en arrière"
+      ],
+      "choices_l2": [
+        "vľavo",
+        "priamo",
+        "za rohom"
+      ]
+    },
+    {
+      "id": "qcm-za-rohom",
+      "type": "qcm",
+      "l1": "après le coin",
+      "l2": "za rohom",
+      "choices_l1": [
+        "C'est devant l'église.",
+        "C'est à côté de la banque.",
+        "C'est après le coin."
+      ],
+      "choices_l2": [
+        "ďalej",
+        "priamo",
+        "rovno"
+      ]
+    },
+    {
+      "id": "qcm-priamo",
+      "type": "qcm",
+      "l1": "juste, directement",
+      "l2": "priamo",
+      "choices_l1": [
+        "en arrière",
+        "tout droit",
+        "va"
+      ],
+      "choices_l2": [
+        "rovno",
+        "vpravo",
+        "choďte"
+      ]
+    },
+    {
+      "id": "qcm-cho",
+      "type": "qcm",
+      "l1": "Va ! (tutoiement)",
+      "l2": "Choď!",
+      "choices_l1": [
+        "Allez tout droit !",
+        "Allez ! (vouvoiement)",
+        "C'est à côté de la banque."
+      ],
+      "choices_l2": [
+        "Choďte!",
+        "Zabočte vľavo!",
+        "Choďte rovno!"
+      ]
+    },
+    {
+      "id": "qcm-cho-te",
+      "type": "qcm",
+      "l1": "Allez ! (vouvoiement)",
+      "l2": "Choďte!",
+      "choices_l1": [
+        "C'est à côté de la banque.",
+        "Tournez à gauche !",
+        "Va ! (tutoiement)"
+      ],
+      "choices_l2": [
+        "Choď!",
+        "Zabočte vľavo!",
+        "Choďte rovno!"
+      ]
+    },
+    {
+      "id": "qcm-zabo-te-v-avo",
+      "type": "qcm",
+      "l1": "Tournez à gauche !",
+      "l2": "Zabočte vľavo!",
+      "choices_l1": [
+        "Allez tout droit !",
+        "C'est à côté de la banque.",
+        "Allez ! (vouvoiement)"
+      ],
+      "choices_l2": [
+        "Choď!",
+        "Choďte!",
+        "Choďte rovno!"
+      ]
+    },
+    {
+      "id": "qcm-cho-te-rovno",
+      "type": "qcm",
+      "l1": "Allez tout droit !",
+      "l2": "Choďte rovno!",
+      "choices_l1": [
+        "C'est après le coin.",
+        "Allez ! (vouvoiement)",
+        "C'est devant l'église."
+      ],
+      "choices_l2": [
+        "Choď!",
+        "Choďte!",
+        "Zabočte vľavo!"
+      ]
+    },
+    {
+      "id": "qcm-je-to-za-rohom",
+      "type": "qcm",
+      "l1": "C'est après le coin.",
+      "l2": "Je to za rohom.",
+      "choices_l1": [
+        "Allez tout droit !",
+        "C'est à côté de la banque.",
+        "Allez ! (vouvoiement)"
+      ],
+      "choices_l2": [
+        "Je to vedľa banky.",
+        "Je to pred kostolom.",
+        "Je to blízko."
+      ]
+    },
+    {
+      "id": "qcm-je-to-ved-a-banky",
+      "type": "qcm",
+      "l1": "C'est à côté de la banque.",
+      "l2": "Je to vedľa banky.",
+      "choices_l1": [
+        "Va ! (tutoiement)",
+        "C'est devant l'église.",
+        "Allez ! (vouvoiement)"
+      ],
+      "choices_l2": [
+        "Je to za rohom.",
+        "Je to pred kostolom.",
+        "Je to blízko."
+      ]
+    },
+    {
+      "id": "qcm-je-to-pred-kostolom",
+      "type": "qcm",
+      "l1": "C'est devant l'église.",
+      "l2": "Je to pred kostolom.",
+      "choices_l1": [
+        "C'est près d'ici.",
+        "C'est après le coin.",
+        "Allez ! (vouvoiement)"
+      ],
+      "choices_l2": [
+        "Je to za rohom.",
+        "Je to vedľa banky.",
+        "Je to blízko."
+      ]
+    },
+    {
+      "id": "qcm-je-to-bl-zko",
+      "type": "qcm",
+      "l1": "C'est près d'ici.",
+      "l2": "Je to blízko.",
+      "choices_l1": [
+        "Tournez à gauche !",
+        "Va ! (tutoiement)",
+        "C'est à côté de la banque."
+      ],
+      "choices_l2": [
+        "Je to za rohom.",
+        "Je to vedľa banky.",
+        "Je to pred kostolom."
+      ]
+    },
+    {
+      "id": "qcm-roh",
+      "type": "qcm",
+      "l1": "le coin",
+      "l2": "roh",
+      "choices_l1": [
+        "le carrefour",
+        "les feux",
+        "le trottoir"
+      ],
+      "choices_l2": [
+        "križovatka",
+        "svetlá",
+        "chodník"
+      ]
+    },
+    {
+      "id": "qcm-smer",
+      "type": "qcm",
+      "l1": "la direction",
+      "l2": "smer",
+      "choices_l1": [
+        "le carrefour",
+        "les feux",
+        "le trottoir"
+      ],
+      "choices_l2": [
+        "chodník",
+        "svetlá",
+        "roh"
+      ]
+    },
+    {
+      "id": "qcm-alej",
+      "type": "qcm",
+      "l1": "plus loin",
+      "l2": "ďalej",
+      "choices_l1": [
+        "en arrière",
+        "à gauche",
+        "va"
+      ],
+      "choices_l2": [
+        "naspäť",
+        "priamo",
+        "vľavo"
+      ]
+    },
+    {
+      "id": "qcm-nasp",
+      "type": "qcm",
+      "l1": "en arrière",
+      "l2": "naspäť",
+      "choices_l1": [
+        "juste, directement",
+        "plus loin",
+        "allez (vouvoiement)"
+      ],
+      "choices_l2": [
+        "choďte",
+        "priamo",
+        "rovno"
+      ]
+    },
+    {
+      "id": "qcm-kri-ovatka",
+      "type": "qcm",
+      "l1": "le carrefour",
+      "l2": "križovatka",
+      "choices_l1": [
+        "le coin",
+        "les feux",
+        "le trottoir"
+      ],
+      "choices_l2": [
+        "roh",
+        "svetlá",
+        "chodník"
+      ]
+    },
+    {
+      "id": "qcm-svetl",
+      "type": "qcm",
+      "l1": "les feux",
+      "l2": "svetlá",
+      "choices_l1": [
+        "le coin",
+        "le carrefour",
+        "le trottoir"
+      ],
+      "choices_l2": [
+        "roh",
+        "križovatka",
+        "chodník"
+      ]
+    },
+    {
+      "id": "qcm-chodn-k",
+      "type": "qcm",
+      "l1": "le trottoir",
+      "l2": "chodník",
+      "choices_l1": [
+        "le coin",
+        "le carrefour",
+        "les feux"
+      ],
+      "choices_l2": [
+        "roh",
+        "križovatka",
+        "svetlá"
+      ]
+    },
+    {
+      "id": "blank-prep-te-kde-je-po-ta",
+      "type": "fill-blank",
+      "l1": "Excusez-moi, où est la poste ?",
+      "l2": "Prepáčte, kde je pošta?",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "pour",
+        "puis",
+        "feux"
+      ],
+      "choices_l2": [
+        "budeme",
+        "boli",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-cho-te-rovno-a-potom-v-avo",
+      "type": "fill-blank",
+      "l1": "Allez tout droit puis à gauche.",
+      "l2": "Choďte rovno a potom vľavo.",
+      "missing_l1": "à",
+      "missing_l2": "a",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sur",
+        "dans",
+        "pour"
+      ],
+      "choices_l2": [
+        "však",
+        "aj",
+        "ale"
+      ]
+    },
+    {
+      "id": "blank-je-to-za-rohom",
+      "type": "fill-blank",
+      "l1": "C'est après le coin.",
+      "l2": "Je to za rohom.",
+      "missing_l1": "le",
+      "missing_l2": "to",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Les",
+        "feux",
+        "pour"
+      ],
+      "choices_l2": [
+        "Ja",
+        "My",
+        "vy"
+      ]
+    },
+    {
+      "id": "blank-cho-vpravo-nie-v-avo",
+      "type": "fill-blank",
+      "l1": "Va à droite, pas à gauche !",
+      "l2": "Choď vpravo, nie vľavo!",
+      "missing_l1": "à",
+      "missing_l2": "nie",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "pour",
+        "par",
+        "chez"
+      ],
+      "choices_l2": [
+        "Kade",
+        "za",
+        "pred"
+      ]
+    },
+    {
+      "id": "blank-m-zeum-je-priamo-pred-vami",
+      "type": "fill-blank",
+      "l1": "Le musée est juste devant vous.",
+      "l2": "Múzeum je priamo pred vami.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "sont",
+        "sommes",
+        "es"
+      ],
+      "choices_l2": [
+        "budem",
+        "ste",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-zast-vka-je-bl-zko-cho-te-rovno",
+      "type": "fill-blank",
+      "l1": "L'arrêt est proche, allez tout droit.",
+      "l2": "Zastávka je blízko, choďte rovno.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "sont",
+        "êtes",
+        "était"
+      ],
+      "choices_l2": [
+        "budem",
+        "si",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-kade-m-m-s",
+      "type": "fill-blank",
+      "l1": "Par où dois-je aller ?",
+      "l2": "Kade mám ísť?",
+      "missing_l1": "où",
+      "missing_l2": "mám",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Quand",
+        "Comment",
+        "Que"
+      ],
+      "choices_l2": [
+        "Nemám",
+        "Nemáme",
+        "Máš"
+      ]
+    },
+    {
+      "id": "blank-akujem-za-pomoc",
+      "type": "fill-blank",
+      "l1": "Merci pour l'aide !",
+      "l2": "Ďakujem za pomoc!",
+      "missing_l1": "pour",
+      "missing_l2": "za",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "sur",
+        "par",
+        "chez"
+      ],
+      "choices_l2": [
+        "so",
+        "pred",
+        "pri"
+      ]
+    },
+    {
+      "id": "blank-prep-te-kde-je-zast-vka-autobusu",
+      "type": "fill-blank",
+      "l1": "Excusez-moi, où est l'arrêt de bus ?",
+      "l2": "Prepáčte, kde je zastávka autobusu?",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "c'était",
+        "C'est",
+        "est-ce"
+      ],
+      "choices_l2": [
+        "som",
+        "sú",
+        "budem"
+      ]
+    },
+    {
+      "id": "blank-cho-te-rovno-kostol-je-na-n-mest",
+      "type": "fill-blank",
+      "l1": "Allez tout droit, l'église est sur la place.",
+      "l2": "Choďte rovno, kostol je na námestí.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 6,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "pour",
+        "coin",
+        "puis"
+      ],
+      "choices_l2": [
+        "bol",
+        "budem",
+        "sú"
+      ]
+    },
+    {
+      "id": "blank-banka-je-ved-a-m-zea-za-rohom",
+      "type": "fill-blank",
+      "l1": "La banque est à côté du musée, après le coin.",
+      "l2": "Banka je vedľa múzea, za rohom.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 8,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "feux",
+        "pour",
+        "puis"
+      ],
+      "choices_l2": [
+        "si",
+        "budeme",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-na-kri-ovatke-cho-te-vpravo",
+      "type": "fill-blank",
+      "l1": "Au carrefour, allez à droite.",
+      "l2": "Na križovatke choďte vpravo.",
+      "missing_l1": "à",
+      "missing_l2": "choďte",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "loin",
+        "sur",
+        "pour"
+      ],
+      "choices_l2": [
+        "kúsok",
+        "múzea",
+        "priamo"
+      ]
+    },
+    {
+      "id": "blank-svetl-s-erven",
+      "type": "fill-blank",
+      "l1": "Les feux sont rouges.",
+      "l2": "Svetlá sú červené.",
+      "missing_l1": "sont",
+      "missing_l2": "sú",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "était",
+        "c'était",
+        "C'est"
+      ],
+      "choices_l2": [
+        "bola",
+        "je",
+        "si"
+      ]
+    },
+    {
+      "id": "blank-cho-te-e-te-k-sok-alej",
+      "type": "fill-blank",
+      "l1": "Allez encore un peu plus loin.",
+      "l2": "Choďte ešte kúsok ďalej.",
+      "missing_l1": "un",
+      "missing_l2": "ešte",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "coin",
+        "une",
+        "puis"
+      ],
+      "choices_l2": [
+        "skoro",
+        "potom",
+        "presne"
+      ]
+    },
+    {
+      "id": "blank-vr-te-sa-nasp",
+      "type": "fill-blank",
+      "l1": "Retournez en arrière.",
+      "l2": "Vráťte sa naspäť.",
+      "missing_l1": "en",
+      "missing_l2": "sa",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "se",
+        "y",
+        "te"
+      ],
+      "choices_l2": [
+        "ten",
+        "To",
+        "vy"
+      ]
+    },
+    {
+      "id": "blank-chodn-k-je-zky",
+      "type": "fill-blank",
+      "l1": "Le trottoir est étroit.",
+      "l2": "Chodník je úzky.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "êtes",
+        "suis",
+        "c'était"
+      ],
+      "choices_l2": [
+        "bola",
+        "si",
+        "som"
+      ]
+    },
+    {
+      "id": "listen-prep-te-kde-je-po-ta",
+      "type": "listen",
+      "l1": "Excusez-moi, où est la poste ?",
+      "l2": "Prepáčte, kde je pošta?",
+      "choices_l1": [
+        "C'est après le coin.",
+        "Par où dois-je aller ?",
+        "Allez tout droit, l'église est sur la place."
+      ],
+      "choices_l2": [
+        "Na križovatke choďte vpravo.",
+        "Svetlá sú červené.",
+        "Choďte rovno a potom vľavo."
+      ]
+    },
+    {
+      "id": "listen-cho-te-rovno-a-potom-v-avo",
+      "type": "listen",
+      "l1": "Allez tout droit puis à gauche.",
+      "l2": "Choďte rovno a potom vľavo.",
+      "choices_l1": [
+        "Au carrefour, allez à droite.",
+        "Excusez-moi, où est l'arrêt de bus ?",
+        "Allez tout droit, l'église est sur la place."
+      ],
+      "choices_l2": [
+        "Zastávka je blízko, choďte rovno.",
+        "Ďakujem za pomoc!",
+        "Prepáčte, kde je zastávka autobusu?"
+      ]
+    },
+    {
+      "id": "listen-je-to-za-rohom",
+      "type": "listen",
+      "l1": "C'est après le coin.",
+      "l2": "Je to za rohom.",
+      "choices_l1": [
+        "Excusez-moi, où est la poste ?",
+        "Le musée est juste devant vous.",
+        "Allez tout droit puis à gauche."
+      ],
+      "choices_l2": [
+        "Prepáčte, kde je pošta?",
+        "Choďte rovno, kostol je na námestí.",
+        "Na križovatke choďte vpravo."
+      ]
+    },
+    {
+      "id": "listen-cho-vpravo-nie-v-avo",
+      "type": "listen",
+      "l1": "Va à droite, pas à gauche !",
+      "l2": "Choď vpravo, nie vľavo!",
+      "choices_l1": [
+        "L'arrêt est proche, allez tout droit.",
+        "Excusez-moi, où est la poste ?",
+        "Par où dois-je aller ?"
+      ],
+      "choices_l2": [
+        "Kade mám ísť?",
+        "Je to za rohom.",
+        "Choďte rovno a potom vľavo."
+      ]
+    },
+    {
+      "id": "listen-m-zeum-je-priamo-pred-vami",
+      "type": "listen",
+      "l1": "Le musée est juste devant vous.",
+      "l2": "Múzeum je priamo pred vami.",
+      "choices_l1": [
+        "Merci pour l'aide !",
+        "Excusez-moi, où est l'arrêt de bus ?",
+        "Les feux sont rouges."
+      ],
+      "choices_l2": [
+        "Na križovatke choďte vpravo.",
+        "Kade mám ísť?",
+        "Choď vpravo, nie vľavo!"
+      ]
+    },
+    {
+      "id": "listen-zast-vka-je-bl-zko-cho-te-rovno",
+      "type": "listen",
+      "l1": "L'arrêt est proche, allez tout droit.",
+      "l2": "Zastávka je blízko, choďte rovno.",
+      "choices_l1": [
+        "Par où dois-je aller ?",
+        "C'est après le coin.",
+        "Excusez-moi, où est l'arrêt de bus ?"
+      ],
+      "choices_l2": [
+        "Choď vpravo, nie vľavo!",
+        "Svetlá sú červené.",
+        "Prepáčte, kde je zastávka autobusu?"
+      ]
+    },
+    {
+      "id": "listen-kade-m-m-s",
+      "type": "listen",
+      "l1": "Par où dois-je aller ?",
+      "l2": "Kade mám ísť?",
+      "choices_l1": [
+        "La banque est à côté du musée, après le coin.",
+        "C'est après le coin.",
+        "Les feux sont rouges."
+      ],
+      "choices_l2": [
+        "Choď vpravo, nie vľavo!",
+        "Na križovatke choďte vpravo.",
+        "Je to za rohom."
+      ]
+    },
+    {
+      "id": "listen-akujem-za-pomoc",
+      "type": "listen",
+      "l1": "Merci pour l'aide !",
+      "l2": "Ďakujem za pomoc!",
+      "choices_l1": [
+        "Les feux sont rouges.",
+        "Par où dois-je aller ?",
+        "Allez tout droit puis à gauche."
+      ],
+      "choices_l2": [
+        "Na križovatke choďte vpravo.",
+        "Zastávka je blízko, choďte rovno.",
+        "Prepáčte, kde je zastávka autobusu?"
+      ]
+    },
+    {
+      "id": "listen-prep-te-kde-je-zast-vka-autobusu",
+      "type": "listen",
+      "l1": "Excusez-moi, où est l'arrêt de bus ?",
+      "l2": "Prepáčte, kde je zastávka autobusu?",
+      "choices_l1": [
+        "Excusez-moi, où est la poste ?",
+        "Merci pour l'aide !",
+        "Allez tout droit, l'église est sur la place."
+      ],
+      "choices_l2": [
+        "Choď vpravo, nie vľavo!",
+        "Kade mám ísť?",
+        "Na križovatke choďte vpravo."
+      ]
+    },
+    {
+      "id": "listen-cho-te-rovno-kostol-je-na-n-mest",
+      "type": "listen",
+      "l1": "Allez tout droit, l'église est sur la place.",
+      "l2": "Choďte rovno, kostol je na námestí.",
+      "choices_l1": [
+        "Allez tout droit puis à gauche.",
+        "L'arrêt est proche, allez tout droit.",
+        "Merci pour l'aide !"
+      ],
+      "choices_l2": [
+        "Prepáčte, kde je pošta?",
+        "Zastávka je blízko, choďte rovno.",
+        "Ďakujem za pomoc!"
+      ]
+    },
+    {
+      "id": "listen-banka-je-ved-a-m-zea-za-rohom",
+      "type": "listen",
+      "l1": "La banque est à côté du musée, après le coin.",
+      "l2": "Banka je vedľa múzea, za rohom.",
+      "choices_l1": [
+        "Les feux sont rouges.",
+        "C'est après le coin.",
+        "Allez tout droit, l'église est sur la place."
+      ],
+      "choices_l2": [
+        "Na križovatke choďte vpravo.",
+        "Múzeum je priamo pred vami.",
+        "Kade mám ísť?"
+      ]
+    },
+    {
+      "id": "listen-na-kri-ovatke-cho-te-vpravo",
+      "type": "listen",
+      "l1": "Au carrefour, allez à droite.",
+      "l2": "Na križovatke choďte vpravo.",
+      "choices_l1": [
+        "Excusez-moi, où est la poste ?",
+        "Le musée est juste devant vous.",
+        "Merci pour l'aide !"
+      ],
+      "choices_l2": [
+        "Prepáčte, kde je zastávka autobusu?",
+        "Kade mám ísť?",
+        "Je to za rohom."
+      ]
+    },
+    {
+      "id": "listen-svetl-s-erven",
+      "type": "listen",
+      "l1": "Les feux sont rouges.",
+      "l2": "Svetlá sú červené.",
+      "choices_l1": [
+        "La banque est à côté du musée, après le coin.",
+        "Excusez-moi, où est l'arrêt de bus ?",
+        "Au carrefour, allez à droite."
+      ],
+      "choices_l2": [
+        "Na križovatke choďte vpravo.",
+        "Choďte rovno a potom vľavo.",
+        "Choďte rovno, kostol je na námestí."
+      ]
+    },
+    {
+      "id": "listen-cho-te-e-te-k-sok-alej",
+      "type": "listen",
+      "l1": "Allez encore un peu plus loin.",
+      "l2": "Choďte ešte kúsok ďalej.",
+      "choices_l1": [
+        "Merci pour l'aide !",
+        "L'arrêt est proche, allez tout droit.",
+        "Va à droite, pas à gauche !"
+      ],
+      "choices_l2": [
+        "Banka je vedľa múzea, za rohom.",
+        "Prepáčte, kde je zastávka autobusu?",
+        "Choď vpravo, nie vľavo!"
+      ]
+    },
+    {
+      "id": "listen-vr-te-sa-nasp",
+      "type": "listen",
+      "l1": "Retournez en arrière.",
+      "l2": "Vráťte sa naspäť.",
+      "choices_l1": [
+        "Va à droite, pas à gauche !",
+        "Au carrefour, allez à droite.",
+        "Par où dois-je aller ?"
+      ],
+      "choices_l2": [
+        "Choďte rovno, kostol je na námestí.",
+        "Prepáčte, kde je zastávka autobusu?",
+        "Prepáčte, kde je pošta?"
+      ]
+    },
+    {
+      "id": "listen-chodn-k-je-zky",
+      "type": "listen",
+      "l1": "Le trottoir est étroit.",
+      "l2": "Chodník je úzky.",
+      "choices_l1": [
+        "Au carrefour, allez à droite.",
+        "Va à droite, pas à gauche !",
+        "Par où dois-je aller ?"
+      ],
+      "choices_l2": [
+        "Prepáčte, kde je zastávka autobusu?",
+        "Múzeum je priamo pred vami.",
+        "Banka je vedľa múzea, za rohom."
+      ]
+    },
+    {
+      "id": "order-prep-te-kde-je-po-ta",
+      "type": "order",
+      "l1": "Excusez-moi, où est la poste ?",
+      "l2": "Prepáčte, kde je pošta?",
+      "tokens_l1": [
+        "Excusez-moi,",
+        "où",
+        "est",
+        "la",
+        "poste",
+        "?",
+        "Au",
+        "carrefour,",
+        "allez",
+        "à",
+        "droite."
+      ],
+      "tokens_l2": [
+        "Prepáčte,",
+        "kde",
+        "je",
+        "pošta?",
+        "Na",
+        "križovatke",
+        "choďte",
+        "vpravo."
+      ]
+    },
+    {
+      "id": "order-cho-te-rovno-a-potom-v-avo",
+      "type": "order",
+      "l1": "Allez tout droit puis à gauche.",
+      "l2": "Choďte rovno a potom vľavo.",
+      "tokens_l1": [
+        "Allez",
+        "tout",
+        "droit",
+        "puis",
+        "à",
+        "gauche.",
+        "Excusez-moi,",
+        "où",
+        "est",
+        "l'arrêt",
+        "de",
+        "bus",
+        "?"
+      ],
+      "tokens_l2": [
+        "Choďte",
+        "rovno",
+        "a",
+        "potom",
+        "vľavo.",
+        "Prepáčte,",
+        "kde",
+        "je",
+        "zastávka",
+        "autobusu?"
+      ]
+    },
+    {
+      "id": "order-je-to-za-rohom",
+      "type": "order",
+      "l1": "C'est après le coin.",
+      "l2": "Je to za rohom.",
+      "tokens_l1": [
+        "C'est",
+        "après",
+        "le",
+        "coin.",
+        "Merci",
+        "pour",
+        "l'aide",
+        "!"
+      ],
+      "tokens_l2": [
+        "Je",
+        "to",
+        "za",
+        "rohom.",
+        "Ďakujem",
+        "za",
+        "pomoc!"
+      ]
+    },
+    {
+      "id": "order-cho-vpravo-nie-v-avo",
+      "type": "order",
+      "l1": "Va à droite, pas à gauche !",
+      "l2": "Choď vpravo, nie vľavo!",
+      "tokens_l1": [
+        "Va",
+        "à",
+        "droite,",
+        "pas",
+        "à",
+        "gauche",
+        "!",
+        "Au",
+        "carrefour,",
+        "allez",
+        "à",
+        "droite."
+      ],
+      "tokens_l2": [
+        "Choď",
+        "vpravo,",
+        "nie",
+        "vľavo!",
+        "Na",
+        "križovatke",
+        "choďte",
+        "vpravo."
+      ]
+    },
+    {
+      "id": "order-m-zeum-je-priamo-pred-vami",
+      "type": "order",
+      "l1": "Le musée est juste devant vous.",
+      "l2": "Múzeum je priamo pred vami.",
+      "tokens_l1": [
+        "Le",
+        "musée",
+        "est",
+        "juste",
+        "devant",
+        "vous.",
+        "Merci",
+        "pour",
+        "l'aide",
+        "!"
+      ],
+      "tokens_l2": [
+        "Múzeum",
+        "je",
+        "priamo",
+        "pred",
+        "vami.",
+        "Ďakujem",
+        "za",
+        "pomoc!"
+      ]
+    },
+    {
+      "id": "order-zast-vka-je-bl-zko-cho-te-rovno",
+      "type": "order",
+      "l1": "L'arrêt est proche, allez tout droit.",
+      "l2": "Zastávka je blízko, choďte rovno.",
+      "tokens_l1": [
+        "L'arrêt",
+        "est",
+        "proche,",
+        "allez",
+        "tout",
+        "droit.",
+        "Va",
+        "à",
+        "droite,",
+        "pas",
+        "à",
+        "gauche",
+        "!"
+      ],
+      "tokens_l2": [
+        "Zastávka",
+        "je",
+        "blízko,",
+        "choďte",
+        "rovno.",
+        "Choď",
+        "vpravo,",
+        "nie",
+        "vľavo!"
+      ]
+    },
+    {
+      "id": "order-kade-m-m-s",
+      "type": "order",
+      "l1": "Par où dois-je aller ?",
+      "l2": "Kade mám ísť?",
+      "tokens_l1": [
+        "Par",
+        "où",
+        "dois-je",
+        "aller",
+        "?",
+        "Allez",
+        "tout",
+        "droit,",
+        "l'église",
+        "est",
+        "sur",
+        "la",
+        "place."
+      ],
+      "tokens_l2": [
+        "Kade",
+        "mám",
+        "ísť?",
+        "Choďte",
+        "rovno,",
+        "kostol",
+        "je",
+        "na",
+        "námestí."
+      ]
+    },
+    {
+      "id": "order-akujem-za-pomoc",
+      "type": "order",
+      "l1": "Merci pour l'aide !",
+      "l2": "Ďakujem za pomoc!",
+      "tokens_l1": [
+        "Merci",
+        "pour",
+        "l'aide",
+        "!",
+        "L'arrêt",
+        "est",
+        "proche,",
+        "allez",
+        "tout",
+        "droit."
+      ],
+      "tokens_l2": [
+        "Ďakujem",
+        "za",
+        "pomoc!",
+        "Zastávka",
+        "je",
+        "blízko,",
+        "choďte",
+        "rovno."
+      ]
+    },
+    {
+      "id": "order-prep-te-kde-je-zast-vka-autobusu",
+      "type": "order",
+      "l1": "Excusez-moi, où est l'arrêt de bus ?",
+      "l2": "Prepáčte, kde je zastávka autobusu?",
+      "tokens_l1": [
+        "Excusez-moi,",
+        "où",
+        "est",
+        "l'arrêt",
+        "de",
+        "bus",
+        "?",
+        "Allez",
+        "encore",
+        "un",
+        "peu",
+        "plus",
+        "loin."
+      ],
+      "tokens_l2": [
+        "Prepáčte,",
+        "kde",
+        "je",
+        "zastávka",
+        "autobusu?",
+        "Choďte",
+        "ešte",
+        "kúsok",
+        "ďalej."
+      ]
+    },
+    {
+      "id": "order-cho-te-rovno-kostol-je-na-n-mest",
+      "type": "order",
+      "l1": "Allez tout droit, l'église est sur la place.",
+      "l2": "Choďte rovno, kostol je na námestí.",
+      "tokens_l1": [
+        "Allez",
+        "tout",
+        "droit,",
+        "l'église",
+        "est",
+        "sur",
+        "la",
+        "place.",
+        "Merci",
+        "pour",
+        "l'aide",
+        "!"
+      ],
+      "tokens_l2": [
+        "Choďte",
+        "rovno,",
+        "kostol",
+        "je",
+        "na",
+        "námestí.",
+        "Ďakujem",
+        "za",
+        "pomoc!"
+      ]
+    },
+    {
+      "id": "order-banka-je-ved-a-m-zea-za-rohom",
+      "type": "order",
+      "l1": "La banque est à côté du musée, après le coin.",
+      "l2": "Banka je vedľa múzea, za rohom.",
+      "tokens_l1": [
+        "La",
+        "banque",
+        "est",
+        "à",
+        "côté",
+        "du",
+        "musée,",
+        "après",
+        "le",
+        "coin.",
+        "Le",
+        "musée",
+        "est",
+        "juste",
+        "devant",
+        "vous."
+      ],
+      "tokens_l2": [
+        "Banka",
+        "je",
+        "vedľa",
+        "múzea,",
+        "za",
+        "rohom.",
+        "Múzeum",
+        "je",
+        "priamo",
+        "pred",
+        "vami."
+      ]
+    },
+    {
+      "id": "order-na-kri-ovatke-cho-te-vpravo",
+      "type": "order",
+      "l1": "Au carrefour, allez à droite.",
+      "l2": "Na križovatke choďte vpravo.",
+      "tokens_l1": [
+        "Au",
+        "carrefour,",
+        "allez",
+        "à",
+        "droite.",
+        "Allez",
+        "tout",
+        "droit",
+        "puis",
+        "à",
+        "gauche."
+      ],
+      "tokens_l2": [
+        "Na",
+        "križovatke",
+        "choďte",
+        "vpravo.",
+        "Choďte",
+        "rovno",
+        "a",
+        "potom",
+        "vľavo."
+      ]
+    },
+    {
+      "id": "order-svetl-s-erven",
+      "type": "order",
+      "l1": "Les feux sont rouges.",
+      "l2": "Svetlá sú červené.",
+      "tokens_l1": [
+        "Les",
+        "feux",
+        "sont",
+        "rouges.",
+        "C'est",
+        "après",
+        "le",
+        "coin."
+      ],
+      "tokens_l2": [
+        "Svetlá",
+        "sú",
+        "červené.",
+        "Je",
+        "to",
+        "za",
+        "rohom."
+      ]
+    },
+    {
+      "id": "order-cho-te-e-te-k-sok-alej",
+      "type": "order",
+      "l1": "Allez encore un peu plus loin.",
+      "l2": "Choďte ešte kúsok ďalej.",
+      "tokens_l1": [
+        "Allez",
+        "encore",
+        "un",
+        "peu",
+        "plus",
+        "loin.",
+        "Merci",
+        "pour",
+        "l'aide",
+        "!"
+      ],
+      "tokens_l2": [
+        "Choďte",
+        "ešte",
+        "kúsok",
+        "ďalej.",
+        "Ďakujem",
+        "za",
+        "pomoc!"
+      ]
+    },
+    {
+      "id": "order-vr-te-sa-nasp",
+      "type": "order",
+      "l1": "Retournez en arrière.",
+      "l2": "Vráťte sa naspäť.",
+      "tokens_l1": [
+        "Retournez",
+        "en",
+        "arrière.",
+        "Le",
+        "trottoir",
+        "est",
+        "étroit."
+      ],
+      "tokens_l2": [
+        "Vráťte",
+        "sa",
+        "naspäť.",
+        "Chodník",
+        "je",
+        "úzky."
+      ]
+    },
+    {
+      "id": "order-chodn-k-je-zky",
+      "type": "order",
+      "l1": "Le trottoir est étroit.",
+      "l2": "Chodník je úzky.",
+      "tokens_l1": [
+        "Le",
+        "trottoir",
+        "est",
+        "étroit.",
+        "Allez",
+        "tout",
+        "droit",
+        "puis",
+        "à",
+        "gauche."
+      ],
+      "tokens_l2": [
+        "Chodník",
+        "je",
+        "úzky.",
+        "Choďte",
+        "rovno",
+        "a",
+        "potom",
+        "vľavo."
+      ]
+    },
+    {
+      "id": "match-cho-vocab",
+      "type": "match",
+      "l1": [
+        "va",
+        "allez (vouvoiement)",
+        "tout droit",
+        "à gauche"
+      ],
+      "l2": [
+        "choď",
+        "choďte",
+        "rovno",
+        "vľavo"
+      ]
+    },
+    {
+      "id": "match-prep-te-kde-je-po-ta-sentences",
+      "type": "match",
+      "l1": [
+        "Excusez-moi, où est la poste ?",
+        "Allez tout droit puis à gauche.",
+        "C'est après le coin.",
+        "Va à droite, pas à gauche !"
+      ],
+      "l2": [
+        "Prepáčte, kde je pošta?",
+        "Choďte rovno a potom vľavo.",
+        "Je to za rohom.",
+        "Choď vpravo, nie vľavo!"
+      ]
+    }
+  ]
+}

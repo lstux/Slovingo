@@ -1,0 +1,1016 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-revol-cia",
+      "type": "qcm",
+      "l1": "la révolution",
+      "l2": "revolúcia",
+      "choices_l1": [
+        "la manifestation",
+        "l'espoir",
+        "la liberté"
+      ],
+      "choices_l2": [
+        "komunistická strana",
+        "nádej",
+        "zmena"
+      ]
+    },
+    {
+      "id": "qcm-demon-tr-cia",
+      "type": "qcm",
+      "l1": "la manifestation",
+      "l2": "demonštrácia",
+      "choices_l1": [
+        "la peur",
+        "la liberté",
+        "la banderole"
+      ],
+      "choices_l2": [
+        "komunistická strana",
+        "revolúcia",
+        "nádej"
+      ]
+    },
+    {
+      "id": "qcm-sloboda",
+      "type": "qcm",
+      "l1": "la liberté",
+      "l2": "sloboda",
+      "choices_l1": [
+        "le changement",
+        "la révolution",
+        "les clés"
+      ],
+      "choices_l2": [
+        "demonštrácia",
+        "kľúče",
+        "nádej"
+      ]
+    },
+    {
+      "id": "qcm-strach",
+      "type": "qcm",
+      "l1": "la peur",
+      "l2": "strach",
+      "choices_l1": [
+        "la révolution",
+        "la liberté",
+        "la banderole"
+      ],
+      "choices_l2": [
+        "demonštrácia",
+        "revolúcia",
+        "komunistická strana"
+      ]
+    },
+    {
+      "id": "qcm-n-dej",
+      "type": "qcm",
+      "l1": "l'espoir",
+      "l2": "nádej",
+      "choices_l1": [
+        "la manifestation",
+        "la révolution",
+        "la peur"
+      ],
+      "choices_l2": [
+        "revolúcia",
+        "kľúče",
+        "transparent"
+      ]
+    },
+    {
+      "id": "qcm-tudent-tudentka",
+      "type": "qcm",
+      "l1": "l'étudiant / l'étudiante",
+      "l2": "študent / študentka",
+      "choices_l1": [
+        "la barrière de la langue",
+        "sonner (une cloche, ici : agiter)",
+        "la petite équipe (au sein d'un oddiel)"
+      ],
+      "choices_l2": [
+        "pionier / pionierka",
+        "plášť do dažďa",
+        "krémy na opaľovanie"
+      ]
+    },
+    {
+      "id": "qcm-komunistick-strana",
+      "type": "qcm",
+      "l1": "le parti communiste",
+      "l2": "komunistická strana",
+      "choices_l1": [
+        "l'étudiant / l'étudiante",
+        "la norme, le standard",
+        "l'animateur, le chef"
+      ],
+      "choices_l2": [
+        "nádej",
+        "demonštrácia",
+        "sloboda"
+      ]
+    },
+    {
+      "id": "qcm-k-e",
+      "type": "qcm",
+      "l1": "les clés",
+      "l2": "kľúče",
+      "choices_l1": [
+        "la peur",
+        "la banderole",
+        "la révolution"
+      ],
+      "choices_l2": [
+        "zmena",
+        "sloboda",
+        "komunistická strana"
+      ]
+    },
+    {
+      "id": "qcm-zvoni",
+      "type": "qcm",
+      "l1": "sonner (une cloche, ici : agiter)",
+      "l2": "zvoniť",
+      "choices_l1": [
+        "pionnier / pionnière",
+        "le badge, l'insigne",
+        "l'étudiant / l'étudiante"
+      ],
+      "choices_l2": [
+        "revolúcia",
+        "kľúče",
+        "nádej"
+      ]
+    },
+    {
+      "id": "qcm-transparent",
+      "type": "qcm",
+      "l1": "la banderole",
+      "l2": "transparent",
+      "choices_l1": [
+        "la liberté",
+        "les clés",
+        "le changement"
+      ],
+      "choices_l2": [
+        "demonštrácia",
+        "strach",
+        "sloboda"
+      ]
+    },
+    {
+      "id": "qcm-n-mestie",
+      "type": "qcm",
+      "l1": "la place",
+      "l2": "námestie",
+      "choices_l1": [
+        "la révolution",
+        "la banderole",
+        "la peur"
+      ],
+      "choices_l2": [
+        "zmena",
+        "komunistická strana",
+        "revolúcia"
+      ]
+    },
+    {
+      "id": "qcm-zmena",
+      "type": "qcm",
+      "l1": "le changement",
+      "l2": "zmena",
+      "choices_l1": [
+        "la banderole",
+        "la manifestation",
+        "les clés"
+      ],
+      "choices_l2": [
+        "nádej",
+        "komunistická strana",
+        "kľúče"
+      ]
+    },
+    {
+      "id": "blank-andrea-pre-o-je-sedemn-sty-november-sviatok-nikdy-som-sa-v-s-na-to-nep-tal",
+      "type": "fill-blank",
+      "l1": "Andrea, pourquoi le 17 novembre est-il férié ? Je ne vous l'ai jamais demandé.",
+      "l2": "Andrea, prečo je sedemnásty november sviatok? Nikdy som sa vás na to nepýtal.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "chez",
+        "voix",
+        "17"
+      ],
+      "choices_l2": [
+        "budeme",
+        "sú",
+        "ste"
+      ]
+    },
+    {
+      "id": "blank-to-je-de-ne-nej-revol-cie-mala-som-vtedy-p-tn-s-rokov",
+      "type": "fill-blank",
+      "l1": "C'est le jour de la Révolution de velours. J'avais quinze ans à l'époque.",
+      "l2": "To je deň Nežnej revolúcie. Mala som vtedy pätnásť rokov.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "vécu",
+        "télé",
+        "voix"
+      ],
+      "choices_l2": [
+        "Bude",
+        "bol",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-p-tn-s-to-ste-to-za-ili-naozaj-ako-t-ned-erka",
+      "type": "fill-blank",
+      "l1": "Quinze ans ? Vous l'avez donc vécu vraiment comme une adolescente.",
+      "l2": "Pätnásť? To ste to zažili naozaj ako tínedžerka.",
+      "missing_l1": "Vous",
+      "missing_l2": "To",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Elle",
+        "Ils",
+        "Je"
+      ],
+      "choices_l2": [
+        "vy",
+        "ten",
+        "My"
+      ]
+    },
+    {
+      "id": "blank-no-a-bolo-to-ve-mi-zvl-tne-obdobie-nikto-poriadne-nevedel-o-sa-deje",
+      "type": "fill-blank",
+      "l1": "Oui, et c'était une période très étrange. Personne ne savait vraiment ce qui se passait.",
+      "l2": "Áno, a bolo to veľmi zvláštne obdobie. Nikto poriadne nevedel, čo sa deje.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "ou",
+        "ni",
+        "mais"
+      ],
+      "choices_l2": [
+        "ale",
+        "aj",
+        "alebo"
+      ]
+    },
+    {
+      "id": "blank-v-etko-sa-za-alo-v-prahe-sedemn-steho-novembra-ale-r-chlo-sa-to-roz-rilo-aj-k-n-m",
+      "type": "fill-blank",
+      "l1": "Tout a commencé à Prague, le 17 novembre. Mais ça s'est vite répandu jusqu'à chez nous aussi.",
+      "l2": "Všetko sa začalo v Prahe, sedemnásteho novembra. Ale rýchlo sa to rozšírilo aj k nám.",
+      "missing_l1": "le",
+      "missing_l2": "v",
+      "blank_index_l1": 5,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Les",
+        "vécu",
+        "la"
+      ],
+      "choices_l2": [
+        "Vo",
+        "od",
+        "po"
+      ]
+    },
+    {
+      "id": "blank-a-vy-ste-to-sledovali-v-telev-zii-alebo-ste-boli-priamo-tam",
+      "type": "fill-blank",
+      "l1": "Et vous l'avez suivi à la télé, ou vous étiez directement là-bas ?",
+      "l2": "A vy ste to sledovali v televízii, alebo ste boli priamo tam?",
+      "missing_l1": "la",
+      "missing_l2": "v",
+      "blank_index_l1": 5,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "l'ai",
+        "Les",
+        "chez"
+      ],
+      "choices_l2": [
+        "bez",
+        "po",
+        "pri"
+      ]
+    },
+    {
+      "id": "blank-obidve-veci-najprv-telev-zia-potom-aj-ja-sama-na-n-mest",
+      "type": "fill-blank",
+      "l1": "Les deux choses. D'abord la télé, ensuite moi aussi sur la place.",
+      "l2": "Obidve veci. Najprv televízia, potom aj ja sama na námestí.",
+      "missing_l1": "la",
+      "missing_l2": "na",
+      "blank_index_l1": 4,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "vécu",
+        "chez",
+        "dont"
+      ],
+      "choices_l2": [
+        "od",
+        "s",
+        "pri"
+      ]
+    },
+    {
+      "id": "blank-doma-sa-o-tom-ve-mi-nehovorilo-aspo-nie-nahlas-to-bol-ten-strach-o-ktorom-v-m-hovor-m",
+      "type": "fill-blank",
+      "l1": "À la maison on n'en parlait pas beaucoup, du moins pas à voix haute. C'était cette peur dont je vous parle.",
+      "l2": "Doma sa o tom veľmi nehovorilo, aspoň nie nahlas. To bol ten strach, o ktorom vám hovorím.",
+      "missing_l1": "la",
+      "missing_l2": "To",
+      "blank_index_l1": 1,
+      "blank_index_l2": 9,
+      "choices_l1": [
+        "le",
+        "17",
+        "dont"
+      ],
+      "choices_l2": [
+        "ten",
+        "sa",
+        "vy"
+      ]
+    },
+    {
+      "id": "listen-andrea-pre-o-je-sedemn-sty-november-sviatok-nikdy-som-sa-v-s-na-to-nep-tal",
+      "type": "listen",
+      "l1": "Andrea, pourquoi le 17 novembre est-il férié ? Je ne vous l'ai jamais demandé.",
+      "l2": "Andrea, prečo je sedemnásty november sviatok? Nikdy som sa vás na to nepýtal.",
+      "choices_l1": [
+        "C'est le jour de la Révolution de velours. J'avais quinze ans à l'époque.",
+        "Oui, et c'était une période très étrange. Personne ne savait vraiment ce qui se passait.",
+        "Quinze ans ? Vous l'avez donc vécu vraiment comme une adolescente."
+      ],
+      "choices_l2": [
+        "Áno, a bolo to veľmi zvláštne obdobie. Nikto poriadne nevedel, čo sa deje.",
+        "Všetko sa začalo v Prahe, sedemnásteho novembra. Ale rýchlo sa to rozšírilo aj k nám.",
+        "Obidve veci. Najprv televízia, potom aj ja sama na námestí."
+      ]
+    },
+    {
+      "id": "listen-to-je-de-ne-nej-revol-cie-mala-som-vtedy-p-tn-s-rokov",
+      "type": "listen",
+      "l1": "C'est le jour de la Révolution de velours. J'avais quinze ans à l'époque.",
+      "l2": "To je deň Nežnej revolúcie. Mala som vtedy pätnásť rokov.",
+      "choices_l1": [
+        "Andrea, pourquoi le 17 novembre est-il férié ? Je ne vous l'ai jamais demandé.",
+        "À la maison on n'en parlait pas beaucoup, du moins pas à voix haute. C'était cette peur dont je vous parle.",
+        "Tout a commencé à Prague, le 17 novembre. Mais ça s'est vite répandu jusqu'à chez nous aussi."
+      ],
+      "choices_l2": [
+        "Doma sa o tom veľmi nehovorilo, aspoň nie nahlas. To bol ten strach, o ktorom vám hovorím.",
+        "A vy ste to sledovali v televízii, alebo ste boli priamo tam?",
+        "Všetko sa začalo v Prahe, sedemnásteho novembra. Ale rýchlo sa to rozšírilo aj k nám."
+      ]
+    },
+    {
+      "id": "listen-p-tn-s-to-ste-to-za-ili-naozaj-ako-t-ned-erka",
+      "type": "listen",
+      "l1": "Quinze ans ? Vous l'avez donc vécu vraiment comme une adolescente.",
+      "l2": "Pätnásť? To ste to zažili naozaj ako tínedžerka.",
+      "choices_l1": [
+        "Et vous l'avez suivi à la télé, ou vous étiez directement là-bas ?",
+        "Oui, et c'était une période très étrange. Personne ne savait vraiment ce qui se passait.",
+        "C'est le jour de la Révolution de velours. J'avais quinze ans à l'époque."
+      ],
+      "choices_l2": [
+        "To je deň Nežnej revolúcie. Mala som vtedy pätnásť rokov.",
+        "Áno, a bolo to veľmi zvláštne obdobie. Nikto poriadne nevedel, čo sa deje.",
+        "Obidve veci. Najprv televízia, potom aj ja sama na námestí."
+      ]
+    },
+    {
+      "id": "listen-no-a-bolo-to-ve-mi-zvl-tne-obdobie-nikto-poriadne-nevedel-o-sa-deje",
+      "type": "listen",
+      "l1": "Oui, et c'était une période très étrange. Personne ne savait vraiment ce qui se passait.",
+      "l2": "Áno, a bolo to veľmi zvláštne obdobie. Nikto poriadne nevedel, čo sa deje.",
+      "choices_l1": [
+        "C'est le jour de la Révolution de velours. J'avais quinze ans à l'époque.",
+        "À la maison on n'en parlait pas beaucoup, du moins pas à voix haute. C'était cette peur dont je vous parle.",
+        "Quinze ans ? Vous l'avez donc vécu vraiment comme une adolescente."
+      ],
+      "choices_l2": [
+        "Andrea, prečo je sedemnásty november sviatok? Nikdy som sa vás na to nepýtal.",
+        "A vy ste to sledovali v televízii, alebo ste boli priamo tam?",
+        "Doma sa o tom veľmi nehovorilo, aspoň nie nahlas. To bol ten strach, o ktorom vám hovorím."
+      ]
+    },
+    {
+      "id": "listen-v-etko-sa-za-alo-v-prahe-sedemn-steho-novembra-ale-r-chlo-sa-to-roz-rilo-aj-k-n-m",
+      "type": "listen",
+      "l1": "Tout a commencé à Prague, le 17 novembre. Mais ça s'est vite répandu jusqu'à chez nous aussi.",
+      "l2": "Všetko sa začalo v Prahe, sedemnásteho novembra. Ale rýchlo sa to rozšírilo aj k nám.",
+      "choices_l1": [
+        "Et vous l'avez suivi à la télé, ou vous étiez directement là-bas ?",
+        "À la maison on n'en parlait pas beaucoup, du moins pas à voix haute. C'était cette peur dont je vous parle.",
+        "Les deux choses. D'abord la télé, ensuite moi aussi sur la place."
+      ],
+      "choices_l2": [
+        "Obidve veci. Najprv televízia, potom aj ja sama na námestí.",
+        "Pätnásť? To ste to zažili naozaj ako tínedžerka.",
+        "A vy ste to sledovali v televízii, alebo ste boli priamo tam?"
+      ]
+    },
+    {
+      "id": "listen-a-vy-ste-to-sledovali-v-telev-zii-alebo-ste-boli-priamo-tam",
+      "type": "listen",
+      "l1": "Et vous l'avez suivi à la télé, ou vous étiez directement là-bas ?",
+      "l2": "A vy ste to sledovali v televízii, alebo ste boli priamo tam?",
+      "choices_l1": [
+        "Andrea, pourquoi le 17 novembre est-il férié ? Je ne vous l'ai jamais demandé.",
+        "À la maison on n'en parlait pas beaucoup, du moins pas à voix haute. C'était cette peur dont je vous parle.",
+        "C'est le jour de la Révolution de velours. J'avais quinze ans à l'époque."
+      ],
+      "choices_l2": [
+        "Obidve veci. Najprv televízia, potom aj ja sama na námestí.",
+        "Pätnásť? To ste to zažili naozaj ako tínedžerka.",
+        "Áno, a bolo to veľmi zvláštne obdobie. Nikto poriadne nevedel, čo sa deje."
+      ]
+    },
+    {
+      "id": "listen-obidve-veci-najprv-telev-zia-potom-aj-ja-sama-na-n-mest",
+      "type": "listen",
+      "l1": "Les deux choses. D'abord la télé, ensuite moi aussi sur la place.",
+      "l2": "Obidve veci. Najprv televízia, potom aj ja sama na námestí.",
+      "choices_l1": [
+        "Oui, et c'était une période très étrange. Personne ne savait vraiment ce qui se passait.",
+        "Andrea, pourquoi le 17 novembre est-il férié ? Je ne vous l'ai jamais demandé.",
+        "Et vous l'avez suivi à la télé, ou vous étiez directement là-bas ?"
+      ],
+      "choices_l2": [
+        "Andrea, prečo je sedemnásty november sviatok? Nikdy som sa vás na to nepýtal.",
+        "To je deň Nežnej revolúcie. Mala som vtedy pätnásť rokov.",
+        "Všetko sa začalo v Prahe, sedemnásteho novembra. Ale rýchlo sa to rozšírilo aj k nám."
+      ]
+    },
+    {
+      "id": "listen-doma-sa-o-tom-ve-mi-nehovorilo-aspo-nie-nahlas-to-bol-ten-strach-o-ktorom-v-m-hovor-m",
+      "type": "listen",
+      "l1": "À la maison on n'en parlait pas beaucoup, du moins pas à voix haute. C'était cette peur dont je vous parle.",
+      "l2": "Doma sa o tom veľmi nehovorilo, aspoň nie nahlas. To bol ten strach, o ktorom vám hovorím.",
+      "choices_l1": [
+        "Quinze ans ? Vous l'avez donc vécu vraiment comme une adolescente.",
+        "Les deux choses. D'abord la télé, ensuite moi aussi sur la place.",
+        "Oui, et c'était une période très étrange. Personne ne savait vraiment ce qui se passait."
+      ],
+      "choices_l2": [
+        "Áno, a bolo to veľmi zvláštne obdobie. Nikto poriadne nevedel, čo sa deje.",
+        "Všetko sa začalo v Prahe, sedemnásteho novembra. Ale rýchlo sa to rozšírilo aj k nám.",
+        "To je deň Nežnej revolúcie. Mala som vtedy pätnásť rokov."
+      ]
+    },
+    {
+      "id": "order-andrea-pre-o-je-sedemn-sty-november-sviatok-nikdy-som-sa-v-s-na-to-nep-tal",
+      "type": "order",
+      "l1": "Andrea, pourquoi le 17 novembre est-il férié ? Je ne vous l'ai jamais demandé.",
+      "l2": "Andrea, prečo je sedemnásty november sviatok? Nikdy som sa vás na to nepýtal.",
+      "tokens_l1": [
+        "Andrea,",
+        "pourquoi",
+        "le",
+        "17",
+        "novembre",
+        "est-il",
+        "férié",
+        "?",
+        "Je",
+        "ne",
+        "vous",
+        "l'ai",
+        "jamais",
+        "demandé.",
+        "Tout",
+        "a",
+        "commencé",
+        "à",
+        "Prague,",
+        "le",
+        "17",
+        "novembre.",
+        "Mais",
+        "ça",
+        "s'est",
+        "vite",
+        "répandu",
+        "jusqu'à",
+        "chez",
+        "nous",
+        "aussi."
+      ],
+      "tokens_l2": [
+        "Andrea,",
+        "prečo",
+        "je",
+        "sedemnásty",
+        "november",
+        "sviatok?",
+        "Nikdy",
+        "som",
+        "sa",
+        "vás",
+        "na",
+        "to",
+        "nepýtal.",
+        "Všetko",
+        "sa",
+        "začalo",
+        "v",
+        "Prahe,",
+        "sedemnásteho",
+        "novembra.",
+        "Ale",
+        "rýchlo",
+        "sa",
+        "to",
+        "rozšírilo",
+        "aj",
+        "k",
+        "nám."
+      ]
+    },
+    {
+      "id": "order-to-je-de-ne-nej-revol-cie-mala-som-vtedy-p-tn-s-rokov",
+      "type": "order",
+      "l1": "C'est le jour de la Révolution de velours. J'avais quinze ans à l'époque.",
+      "l2": "To je deň Nežnej revolúcie. Mala som vtedy pätnásť rokov.",
+      "tokens_l1": [
+        "C'est",
+        "le",
+        "jour",
+        "de",
+        "la",
+        "Révolution",
+        "de",
+        "velours.",
+        "J'avais",
+        "quinze",
+        "ans",
+        "à",
+        "l'époque.",
+        "Et",
+        "vous",
+        "l'avez",
+        "suivi",
+        "à",
+        "la",
+        "télé,",
+        "ou",
+        "vous",
+        "étiez",
+        "directement",
+        "là-bas",
+        "?"
+      ],
+      "tokens_l2": [
+        "To",
+        "je",
+        "deň",
+        "Nežnej",
+        "revolúcie.",
+        "Mala",
+        "som",
+        "vtedy",
+        "pätnásť",
+        "rokov.",
+        "A",
+        "vy",
+        "ste",
+        "to",
+        "sledovali",
+        "v",
+        "televízii,",
+        "alebo",
+        "ste",
+        "boli",
+        "priamo",
+        "tam?"
+      ]
+    },
+    {
+      "id": "order-p-tn-s-to-ste-to-za-ili-naozaj-ako-t-ned-erka",
+      "type": "order",
+      "l1": "Quinze ans ? Vous l'avez donc vécu vraiment comme une adolescente.",
+      "l2": "Pätnásť? To ste to zažili naozaj ako tínedžerka.",
+      "tokens_l1": [
+        "Quinze",
+        "ans",
+        "?",
+        "Vous",
+        "l'avez",
+        "donc",
+        "vécu",
+        "vraiment",
+        "comme",
+        "une",
+        "adolescente.",
+        "Les",
+        "deux",
+        "choses.",
+        "D'abord",
+        "la",
+        "télé,",
+        "ensuite",
+        "moi",
+        "aussi",
+        "sur",
+        "la",
+        "place."
+      ],
+      "tokens_l2": [
+        "Pätnásť?",
+        "To",
+        "ste",
+        "to",
+        "zažili",
+        "naozaj",
+        "ako",
+        "tínedžerka.",
+        "Obidve",
+        "veci.",
+        "Najprv",
+        "televízia,",
+        "potom",
+        "aj",
+        "ja",
+        "sama",
+        "na",
+        "námestí."
+      ]
+    },
+    {
+      "id": "order-no-a-bolo-to-ve-mi-zvl-tne-obdobie-nikto-poriadne-nevedel-o-sa-deje",
+      "type": "order",
+      "l1": "Oui, et c'était une période très étrange. Personne ne savait vraiment ce qui se passait.",
+      "l2": "Áno, a bolo to veľmi zvláštne obdobie. Nikto poriadne nevedel, čo sa deje.",
+      "tokens_l1": [
+        "Oui,",
+        "et",
+        "c'était",
+        "une",
+        "période",
+        "très",
+        "étrange.",
+        "Personne",
+        "ne",
+        "savait",
+        "vraiment",
+        "ce",
+        "qui",
+        "se",
+        "passait.",
+        "Les",
+        "deux",
+        "choses.",
+        "D'abord",
+        "la",
+        "télé,",
+        "ensuite",
+        "moi",
+        "aussi",
+        "sur",
+        "la",
+        "place."
+      ],
+      "tokens_l2": [
+        "Áno,",
+        "a",
+        "bolo",
+        "to",
+        "veľmi",
+        "zvláštne",
+        "obdobie.",
+        "Nikto",
+        "poriadne",
+        "nevedel,",
+        "čo",
+        "sa",
+        "deje.",
+        "Obidve",
+        "veci.",
+        "Najprv",
+        "televízia,",
+        "potom",
+        "aj",
+        "ja",
+        "sama",
+        "na",
+        "námestí."
+      ]
+    },
+    {
+      "id": "order-v-etko-sa-za-alo-v-prahe-sedemn-steho-novembra-ale-r-chlo-sa-to-roz-rilo-aj-k-n-m",
+      "type": "order",
+      "l1": "Tout a commencé à Prague, le 17 novembre. Mais ça s'est vite répandu jusqu'à chez nous aussi.",
+      "l2": "Všetko sa začalo v Prahe, sedemnásteho novembra. Ale rýchlo sa to rozšírilo aj k nám.",
+      "tokens_l1": [
+        "Tout",
+        "a",
+        "commencé",
+        "à",
+        "Prague,",
+        "le",
+        "17",
+        "novembre.",
+        "Mais",
+        "ça",
+        "s'est",
+        "vite",
+        "répandu",
+        "jusqu'à",
+        "chez",
+        "nous",
+        "aussi.",
+        "Quinze",
+        "ans",
+        "?",
+        "Vous",
+        "l'avez",
+        "donc",
+        "vécu",
+        "vraiment",
+        "comme",
+        "une",
+        "adolescente."
+      ],
+      "tokens_l2": [
+        "Všetko",
+        "sa",
+        "začalo",
+        "v",
+        "Prahe,",
+        "sedemnásteho",
+        "novembra.",
+        "Ale",
+        "rýchlo",
+        "sa",
+        "to",
+        "rozšírilo",
+        "aj",
+        "k",
+        "nám.",
+        "Pätnásť?",
+        "To",
+        "ste",
+        "to",
+        "zažili",
+        "naozaj",
+        "ako",
+        "tínedžerka."
+      ]
+    },
+    {
+      "id": "order-a-vy-ste-to-sledovali-v-telev-zii-alebo-ste-boli-priamo-tam",
+      "type": "order",
+      "l1": "Et vous l'avez suivi à la télé, ou vous étiez directement là-bas ?",
+      "l2": "A vy ste to sledovali v televízii, alebo ste boli priamo tam?",
+      "tokens_l1": [
+        "Et",
+        "vous",
+        "l'avez",
+        "suivi",
+        "à",
+        "la",
+        "télé,",
+        "ou",
+        "vous",
+        "étiez",
+        "directement",
+        "là-bas",
+        "?",
+        "Les",
+        "deux",
+        "choses.",
+        "D'abord",
+        "la",
+        "télé,",
+        "ensuite",
+        "moi",
+        "aussi",
+        "sur",
+        "la",
+        "place."
+      ],
+      "tokens_l2": [
+        "A",
+        "vy",
+        "ste",
+        "to",
+        "sledovali",
+        "v",
+        "televízii,",
+        "alebo",
+        "ste",
+        "boli",
+        "priamo",
+        "tam?",
+        "Obidve",
+        "veci.",
+        "Najprv",
+        "televízia,",
+        "potom",
+        "aj",
+        "ja",
+        "sama",
+        "na",
+        "námestí."
+      ]
+    },
+    {
+      "id": "order-obidve-veci-najprv-telev-zia-potom-aj-ja-sama-na-n-mest",
+      "type": "order",
+      "l1": "Les deux choses. D'abord la télé, ensuite moi aussi sur la place.",
+      "l2": "Obidve veci. Najprv televízia, potom aj ja sama na námestí.",
+      "tokens_l1": [
+        "Les",
+        "deux",
+        "choses.",
+        "D'abord",
+        "la",
+        "télé,",
+        "ensuite",
+        "moi",
+        "aussi",
+        "sur",
+        "la",
+        "place.",
+        "Tout",
+        "a",
+        "commencé",
+        "à",
+        "Prague,",
+        "le",
+        "17",
+        "novembre.",
+        "Mais",
+        "ça",
+        "s'est",
+        "vite",
+        "répandu",
+        "jusqu'à",
+        "chez",
+        "nous",
+        "aussi."
+      ],
+      "tokens_l2": [
+        "Obidve",
+        "veci.",
+        "Najprv",
+        "televízia,",
+        "potom",
+        "aj",
+        "ja",
+        "sama",
+        "na",
+        "námestí.",
+        "Všetko",
+        "sa",
+        "začalo",
+        "v",
+        "Prahe,",
+        "sedemnásteho",
+        "novembra.",
+        "Ale",
+        "rýchlo",
+        "sa",
+        "to",
+        "rozšírilo",
+        "aj",
+        "k",
+        "nám."
+      ]
+    },
+    {
+      "id": "order-doma-sa-o-tom-ve-mi-nehovorilo-aspo-nie-nahlas-to-bol-ten-strach-o-ktorom-v-m-hovor-m",
+      "type": "order",
+      "l1": "À la maison on n'en parlait pas beaucoup, du moins pas à voix haute. C'était cette peur dont je vous parle.",
+      "l2": "Doma sa o tom veľmi nehovorilo, aspoň nie nahlas. To bol ten strach, o ktorom vám hovorím.",
+      "tokens_l1": [
+        "À",
+        "la",
+        "maison",
+        "on",
+        "n'en",
+        "parlait",
+        "pas",
+        "beaucoup,",
+        "du",
+        "moins",
+        "pas",
+        "à",
+        "voix",
+        "haute.",
+        "C'était",
+        "cette",
+        "peur",
+        "dont",
+        "je",
+        "vous",
+        "parle.",
+        "Tout",
+        "a",
+        "commencé",
+        "à",
+        "Prague,",
+        "le",
+        "17",
+        "novembre.",
+        "Mais",
+        "ça",
+        "s'est",
+        "vite",
+        "répandu",
+        "jusqu'à",
+        "chez",
+        "nous",
+        "aussi."
+      ],
+      "tokens_l2": [
+        "Doma",
+        "sa",
+        "o",
+        "tom",
+        "veľmi",
+        "nehovorilo,",
+        "aspoň",
+        "nie",
+        "nahlas.",
+        "To",
+        "bol",
+        "ten",
+        "strach,",
+        "o",
+        "ktorom",
+        "vám",
+        "hovorím.",
+        "Všetko",
+        "sa",
+        "začalo",
+        "v",
+        "Prahe,",
+        "sedemnásteho",
+        "novembra.",
+        "Ale",
+        "rýchlo",
+        "sa",
+        "to",
+        "rozšírilo",
+        "aj",
+        "k",
+        "nám."
+      ]
+    },
+    {
+      "id": "match-revol-cia-vocab",
+      "type": "match",
+      "l1": [
+        "la révolution",
+        "la manifestation",
+        "la liberté",
+        "la peur"
+      ],
+      "l2": [
+        "revolúcia",
+        "demonštrácia",
+        "sloboda",
+        "strach"
+      ]
+    },
+    {
+      "id": "match-andrea-pre-o-je-sedemn-sty-november-sviatok-nikdy-som-sa-v-s-na-to-nep-tal-sentences",
+      "type": "match",
+      "l1": [
+        "Andrea, pourquoi le 17 novembre est-il férié ? Je ne vous l'ai jamais demandé.",
+        "C'est le jour de la Révolution de velours. J'avais quinze ans à l'époque.",
+        "Quinze ans ? Vous l'avez donc vécu vraiment comme une adolescente.",
+        "Oui, et c'était une période très étrange. Personne ne savait vraiment ce qui se passait."
+      ],
+      "l2": [
+        "Andrea, prečo je sedemnásty november sviatok? Nikdy som sa vás na to nepýtal.",
+        "To je deň Nežnej revolúcie. Mala som vtedy pätnásť rokov.",
+        "Pätnásť? To ste to zažili naozaj ako tínedžerka.",
+        "Áno, a bolo to veľmi zvláštne obdobie. Nikto poriadne nevedel, čo sa deje."
+      ]
+    }
+  ]
+}

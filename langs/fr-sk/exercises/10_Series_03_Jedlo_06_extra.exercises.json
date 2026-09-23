@@ -1,0 +1,2188 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-le-pain",
+      "type": "qcm",
+      "l1": "chlieb",
+      "l2": "le pain",
+      "choices_l1": [
+        "ješ",
+        "koláč",
+        "ovocný džús"
+      ],
+      "choices_l2": [
+        "la boucherie",
+        "les fruits",
+        "J'ai faim."
+      ]
+    },
+    {
+      "id": "qcm-le-lait",
+      "type": "qcm",
+      "l1": "mlieko",
+      "l2": "le lait",
+      "choices_l1": [
+        "zemiaky",
+        "horúca čokoláda",
+        "pivo"
+      ],
+      "choices_l2": [
+        "la baguette",
+        "la ratatouille",
+        "manger"
+      ]
+    },
+    {
+      "id": "qcm-l-eau",
+      "type": "qcm",
+      "l1": "voda",
+      "l2": "l'eau",
+      "choices_l1": [
+        "jesť ovocie",
+        "mäso",
+        "obed"
+      ],
+      "choices_l2": [
+        "le café",
+        "le sel",
+        "le dessert"
+      ]
+    },
+    {
+      "id": "qcm-le-fromage",
+      "type": "qcm",
+      "l1": "syr",
+      "l2": "le fromage",
+      "choices_l1": [
+        "smotana",
+        "palacinky",
+        "chlieb"
+      ],
+      "choices_l2": [
+        "la crème",
+        "les légumes",
+        "la soupe"
+      ]
+    },
+    {
+      "id": "qcm-la-viande",
+      "type": "qcm",
+      "l1": "mäso",
+      "l2": "la viande",
+      "choices_l1": [
+        "slaný",
+        "pekáreň",
+        "polievka"
+      ],
+      "choices_l2": [
+        "le fromage",
+        "boire",
+        "manger"
+      ]
+    },
+    {
+      "id": "qcm-les-fruits",
+      "type": "qcm",
+      "l1": "ovocie",
+      "l2": "les fruits",
+      "choices_l1": [
+        "večera",
+        "zelená fazuľka",
+        "slaný"
+      ],
+      "choices_l2": [
+        "l'épicerie",
+        "la poule",
+        "la pomme"
+      ]
+    },
+    {
+      "id": "qcm-les-l-gumes",
+      "type": "qcm",
+      "l1": "zelenina",
+      "l2": "les légumes",
+      "choices_l1": [
+        "horúca čokoláda",
+        "piť",
+        "jem"
+      ],
+      "choices_l2": [
+        "l'œuf",
+        "le sel",
+        "la crème"
+      ]
+    },
+    {
+      "id": "qcm-le-beurre",
+      "type": "qcm",
+      "l1": "maslo",
+      "l2": "le beurre",
+      "choices_l1": [
+        "večera",
+        "cukor",
+        "vajíčko"
+      ],
+      "choices_l2": [
+        "la soif",
+        "la ratatouille",
+        "la soupe"
+      ]
+    },
+    {
+      "id": "qcm-l-uf",
+      "type": "qcm",
+      "l1": "vajce",
+      "l2": "l'œuf",
+      "choices_l1": [
+        "Mám smäd.",
+        "pijú",
+        "vajíčka"
+      ],
+      "choices_l2": [
+        "le sucre",
+        "les flageolets",
+        "le lait"
+      ]
+    },
+    {
+      "id": "qcm-le-sucre",
+      "type": "qcm",
+      "l1": "cukor",
+      "l2": "le sucre",
+      "choices_l1": [
+        "Mám smäd.",
+        "biela káva",
+        "palacinky"
+      ],
+      "choices_l2": [
+        "manger",
+        "les crêpes",
+        "le petit-déjeuner"
+      ]
+    },
+    {
+      "id": "qcm-le-sel",
+      "type": "qcm",
+      "l1": "soľ",
+      "l2": "le sel",
+      "choices_l1": [
+        "zelenina",
+        "hlad",
+        "večera"
+      ],
+      "choices_l2": [
+        "le pot-au-feu",
+        "la faim",
+        "boire"
+      ]
+    },
+    {
+      "id": "qcm-le-riz",
+      "type": "qcm",
+      "l1": "ryža",
+      "l2": "le riz",
+      "choices_l1": [
+        "smotana",
+        "raňajky",
+        "tarta"
+      ],
+      "choices_l2": [
+        "sucré",
+        "l'eau",
+        "le chocolat"
+      ]
+    },
+    {
+      "id": "qcm-les-pommes-de-terre",
+      "type": "qcm",
+      "l1": "zemiaky",
+      "l2": "les pommes de terre",
+      "choices_l1": [
+        "jablčný mušt",
+        "jedlo",
+        "jesť"
+      ],
+      "choices_l2": [
+        "manger du pain",
+        "manger des fruits",
+        "Je prends une quiche."
+      ]
+    },
+    {
+      "id": "qcm-la-soupe",
+      "type": "qcm",
+      "l1": "polievka",
+      "l2": "la soupe",
+      "choices_l1": [
+        "piť",
+        "fazuľky flageolet",
+        "biela káva"
+      ],
+      "choices_l2": [
+        "le sel",
+        "le sucre",
+        "l'œuf"
+      ]
+    },
+    {
+      "id": "qcm-vouloir",
+      "type": "qcm",
+      "l1": "chcieť",
+      "l2": "vouloir",
+      "choices_l1": [
+        "skúšam",
+        "počúvať",
+        "robia"
+      ],
+      "choices_l2": [
+        "coûter",
+        "cuisiner",
+        "pouvoir"
+      ]
+    },
+    {
+      "id": "qcm-le-petit-d-jeuner",
+      "type": "qcm",
+      "l1": "raňajky",
+      "l2": "le petit-déjeuner",
+      "choices_l1": [
+        "horúca čokoláda",
+        "pije",
+        "smotana"
+      ],
+      "choices_l2": [
+        "le croissant",
+        "le dessert",
+        "la crème"
+      ]
+    },
+    {
+      "id": "qcm-le-d-jeuner",
+      "type": "qcm",
+      "l1": "obed",
+      "l2": "le déjeuner",
+      "choices_l1": [
+        "jesť mäso",
+        "vajíčka",
+        "biela káva"
+      ],
+      "choices_l2": [
+        "la pomme",
+        "le fromage",
+        "le beurre"
+      ]
+    },
+    {
+      "id": "qcm-le-d-ner",
+      "type": "qcm",
+      "l1": "večera",
+      "l2": "le dîner",
+      "choices_l1": [
+        "smäd",
+        "quiche lorraine",
+        "jeme"
+      ],
+      "choices_l2": [
+        "le riz",
+        "le sel",
+        "la boulangerie"
+      ]
+    },
+    {
+      "id": "qcm-la-faim",
+      "type": "qcm",
+      "l1": "hlad",
+      "l2": "la faim",
+      "choices_l1": [
+        "kyslý",
+        "syr",
+        "dezert"
+      ],
+      "choices_l2": [
+        "la poule",
+        "goûter",
+        "le café"
+      ]
+    },
+    {
+      "id": "qcm-la-soif",
+      "type": "qcm",
+      "l1": "smäd",
+      "l2": "la soif",
+      "choices_l1": [
+        "maslo",
+        "bageta",
+        "pot-au-feu"
+      ],
+      "choices_l2": [
+        "l'œuf",
+        "la baguette",
+        "le pot-au-feu"
+      ]
+    },
+    {
+      "id": "qcm-affam",
+      "type": "qcm",
+      "l1": "hladný",
+      "l2": "affamé",
+      "choices_l1": [
+        "ticho",
+        "blízko",
+        "tmavý"
+      ],
+      "choices_l2": [
+        "amusant",
+        "près",
+        "la tranquillité"
+      ]
+    },
+    {
+      "id": "qcm-assoiff",
+      "type": "qcm",
+      "l1": "smädný",
+      "l2": "assoiffé",
+      "choices_l1": [
+        "mladý",
+        "radostný",
+        "ďaleko"
+      ],
+      "choices_l2": [
+        "Bon",
+        "pluvieux",
+        "préféré"
+      ]
+    },
+    {
+      "id": "qcm-rassasi",
+      "type": "qcm",
+      "l1": "plný",
+      "l2": "rassasié",
+      "choices_l1": [
+        "celý",
+        "čerstvý",
+        "ticho"
+      ],
+      "choices_l2": [
+        "affamé",
+        "le silence",
+        "préféré"
+      ]
+    },
+    {
+      "id": "qcm-peu",
+      "type": "qcm",
+      "l1": "málo",
+      "l2": "peu",
+      "choices_l1": [
+        "to",
+        "na",
+        "kupuješ"
+      ],
+      "choices_l2": [
+        "à l'intérieur",
+        "tu manges",
+        "tu as"
+      ]
+    },
+    {
+      "id": "qcm-beaucoup",
+      "type": "qcm",
+      "l1": "veľa",
+      "l2": "beaucoup",
+      "choices_l1": [
+        "k",
+        "ďalej",
+        "nie"
+      ],
+      "choices_l2": [
+        "sont",
+        "as",
+        "je dois"
+      ]
+    },
+    {
+      "id": "qcm-maintenant",
+      "type": "qcm",
+      "l1": "teraz",
+      "l2": "maintenant",
+      "choices_l1": [
+        "o siedmej",
+        "stretnutie",
+        "Veľkonočný pondelok"
+      ],
+      "choices_l2": [
+        "le mois",
+        "la minute",
+        "l'après-midi"
+      ]
+    },
+    {
+      "id": "qcm-ensuite",
+      "type": "qcm",
+      "l1": "potom",
+      "l2": "ensuite",
+      "choices_l1": [
+        "pol",
+        "hodina",
+        "minúta"
+      ],
+      "choices_l2": [
+        "le mois",
+        "toujours",
+        "le week-end"
+      ]
+    },
+    {
+      "id": "qcm-encore",
+      "type": "qcm",
+      "l1": "ešte",
+      "l2": "encore",
+      "choices_l1": [
+        "o piatej",
+        "ráno",
+        "skoro"
+      ],
+      "choices_l2": [
+        "souvent",
+        "la date",
+        "en hiver"
+      ]
+    },
+    {
+      "id": "qcm-bon-bonne",
+      "type": "qcm",
+      "l1": "dobrý",
+      "l2": "bon / bonne",
+      "choices_l1": [
+        "starý",
+        "istý",
+        "plný"
+      ],
+      "choices_l2": [
+        "C'est près d'ici.",
+        "mauvais / mauvaise",
+        "Il fera beau."
+      ]
+    },
+    {
+      "id": "qcm-savoureux-savoureuse",
+      "type": "qcm",
+      "l1": "chutný",
+      "l2": "savoureux / savoureuse",
+      "choices_l1": [
+        "presne",
+        "tmavý",
+        "pohoda"
+      ],
+      "choices_l2": [
+        "il est jeune / elle est jeune",
+        "Il fera beau.",
+        "vieux / vieille"
+      ]
+    },
+    {
+      "id": "qcm-sucr-sucr-e",
+      "type": "qcm",
+      "l1": "sladký",
+      "l2": "sucré / sucrée",
+      "choices_l1": [
+        "pije",
+        "smotana",
+        "jesť"
+      ],
+      "choices_l2": [
+        "la cloche en chocolat",
+        "les haricots verts",
+        "Tu prends un café ?"
+      ]
+    },
+    {
+      "id": "qcm-sal-sal-e",
+      "type": "qcm",
+      "l1": "slaný",
+      "l2": "salé / salée",
+      "choices_l1": [
+        "malé",
+        "malý",
+        "daždivo"
+      ],
+      "choices_l2": [
+        "mauvais / mauvaise",
+        "il est jeune / elle est jeune",
+        "bon / bonne"
+      ]
+    },
+    {
+      "id": "qcm-acide",
+      "type": "qcm",
+      "l1": "kyslý",
+      "l2": "acide",
+      "choices_l1": [
+        "bezpečný",
+        "čerstvý",
+        "malý"
+      ],
+      "choices_l2": [
+        "ouvert",
+        "rassasié",
+        "pluvieux"
+      ]
+    },
+    {
+      "id": "qcm-chaud-chaude",
+      "type": "qcm",
+      "l1": "teplý",
+      "l2": "chaud / chaude",
+      "choices_l1": [
+        "počasie",
+        "tráva",
+        "obloha"
+      ],
+      "choices_l2": [
+        "froid / froide",
+        "moins chaud que",
+        "Il fait très chaud."
+      ]
+    },
+    {
+      "id": "qcm-froid-froide",
+      "type": "qcm",
+      "l1": "studený",
+      "l2": "froid / froide",
+      "choices_l1": [
+        "stupeň",
+        "ročné obdobie",
+        "hmla"
+      ],
+      "choices_l2": [
+        "Il fait chaud.",
+        "Il fera nuageux.",
+        "Le soleil brille."
+      ]
+    },
+    {
+      "id": "qcm-br-lant-br-lante",
+      "type": "qcm",
+      "l1": "horúci",
+      "l2": "brûlant / brûlante",
+      "choices_l1": [
+        "pokojný",
+        "radostný",
+        "voľný"
+      ],
+      "choices_l2": [
+        "bon / bonne",
+        "Il fera beau.",
+        "petit / petite"
+      ]
+    },
+    {
+      "id": "qcm-frais-fra-che",
+      "type": "qcm",
+      "l1": "čerstvý",
+      "l2": "frais / fraîche",
+      "choices_l1": [
+        "bezpečný",
+        "nebezpečný",
+        "únava"
+      ],
+      "choices_l2": [
+        "C'est près d'ici.",
+        "vieux / vieille",
+        "il est jeune / elle est jeune"
+      ]
+    },
+    {
+      "id": "qcm-mauvais-mauvaise",
+      "type": "qcm",
+      "l1": "zlý",
+      "l2": "mauvais / mauvaise",
+      "choices_l1": [
+        "pekný",
+        "bezpečný",
+        "ticho"
+      ],
+      "choices_l2": [
+        "Il fera beau.",
+        "il est jeune / elle est jeune",
+        "bon / bonne"
+      ]
+    },
+    {
+      "id": "qcm-tr-s",
+      "type": "qcm",
+      "l1": "veľmi",
+      "l2": "très",
+      "choices_l1": [
+        "na",
+        "Zostala doma.",
+        "trochu"
+      ],
+      "choices_l2": [
+        "je mets",
+        "a",
+        "cette"
+      ]
+    },
+    {
+      "id": "qcm-un-peu",
+      "type": "qcm",
+      "l1": "trochu",
+      "l2": "un peu",
+      "choices_l1": [
+        "kedy",
+        "sme",
+        "studenejší ako"
+      ],
+      "choices_l2": [
+        "vous",
+        "de",
+        "environ"
+      ]
+    },
+    {
+      "id": "qcm-plaire-au-go-t",
+      "type": "qcm",
+      "l1": "chutiť",
+      "l2": "plaire au goût",
+      "choices_l1": [
+        "jablko",
+        "minerálka",
+        "jablčný mušt"
+      ],
+      "choices_l2": [
+        "la cloche en chocolat",
+        "la crème solaire",
+        "le pain est bon (mužský)"
+      ]
+    },
+    {
+      "id": "qcm-go-ter",
+      "type": "qcm",
+      "l1": "ochutnať",
+      "l2": "goûter",
+      "choices_l1": [
+        "chutiť",
+        "smotana",
+        "mäso"
+      ],
+      "choices_l2": [
+        "le lait",
+        "le pot-au-feu",
+        "le verre"
+      ]
+    },
+    {
+      "id": "qcm-manger",
+      "type": "qcm",
+      "l1": "jesť",
+      "l2": "manger",
+      "choices_l1": [
+        "koláč",
+        "palacinky",
+        "syr"
+      ],
+      "choices_l2": [
+        "le dessert",
+        "boire",
+        "le dîner"
+      ]
+    },
+    {
+      "id": "qcm-boire",
+      "type": "qcm",
+      "l1": "piť",
+      "l2": "boire",
+      "choices_l1": [
+        "biela káva",
+        "dezert",
+        "jahňacie stehno"
+      ],
+      "choices_l2": [
+        "le sucre",
+        "le lait",
+        "la tarte"
+      ]
+    },
+    {
+      "id": "qcm-mais",
+      "type": "qcm",
+      "l1": "ale",
+      "l2": "mais",
+      "choices_l1": [
+        "tieto topánky",
+        "ty máš",
+        "do potravín"
+      ],
+      "choices_l2": [
+        "tu vois",
+        "à l'intérieur",
+        "ce serait"
+      ]
+    },
+    {
+      "id": "qcm-la-quiche-lorraine",
+      "type": "qcm",
+      "l1": "quiche lorraine",
+      "l2": "la quiche lorraine",
+      "choices_l1": [
+        "minerálka",
+        "jesť",
+        "zelenina"
+      ],
+      "choices_l2": [
+        "Je n'ai pas faim.",
+        "Je prends une bière.",
+        "manger de la viande"
+      ]
+    },
+    {
+      "id": "qcm-le-pot-au-feu",
+      "type": "qcm",
+      "l1": "pot-au-feu",
+      "l2": "le pot-au-feu",
+      "choices_l1": [
+        "syr",
+        "pijú",
+        "fazuľky flageolet"
+      ],
+      "choices_l2": [
+        "l'eau",
+        "la ratatouille",
+        "le dîner"
+      ]
+    },
+    {
+      "id": "qcm-la-ratatouille",
+      "type": "qcm",
+      "l1": "ratatouille",
+      "l2": "la ratatouille",
+      "choices_l1": [
+        "chlieb",
+        "jesť chlieb",
+        "croissant"
+      ],
+      "choices_l2": [
+        "la viande",
+        "le café",
+        "le cidre"
+      ]
+    },
+    {
+      "id": "qcm-la-tarte",
+      "type": "qcm",
+      "l1": "tarta",
+      "l2": "la tarte",
+      "choices_l1": [
+        "jedlo",
+        "mäso",
+        "zelenina"
+      ],
+      "choices_l2": [
+        "boire",
+        "le petit-déjeuner",
+        "goûter"
+      ]
+    },
+    {
+      "id": "qcm-la-baguette",
+      "type": "qcm",
+      "l1": "bageta",
+      "l2": "la baguette",
+      "choices_l1": [
+        "víno",
+        "ryža",
+        "pije"
+      ],
+      "choices_l2": [
+        "les fruits",
+        "le cidre",
+        "la crème"
+      ]
+    },
+    {
+      "id": "qcm-la-bi-re",
+      "type": "qcm",
+      "l1": "pivo",
+      "l2": "la bière",
+      "choices_l1": [
+        "jesť mäso",
+        "Mám smäd.",
+        "kyslý"
+      ],
+      "choices_l2": [
+        "la ratatouille",
+        "la crème",
+        "la poule"
+      ]
+    },
+    {
+      "id": "qcm-le-vin",
+      "type": "qcm",
+      "l1": "víno",
+      "l2": "le vin",
+      "choices_l1": [
+        "jem",
+        "koláč",
+        "ryža"
+      ],
+      "choices_l2": [
+        "le pot-au-feu",
+        "les flageolets",
+        "la boucherie"
+      ]
+    },
+    {
+      "id": "qcm-les-cr-pes",
+      "type": "qcm",
+      "l1": "palacinky",
+      "l2": "les crêpes",
+      "choices_l1": [
+        "kyslý",
+        "zelenina",
+        "chutiť"
+      ],
+      "choices_l2": [
+        "l'eau",
+        "le dessert",
+        "la poule"
+      ]
+    },
+    {
+      "id": "qcm-le-croissant",
+      "type": "qcm",
+      "l1": "croissant",
+      "l2": "le croissant",
+      "choices_l1": [
+        "pot-au-feu",
+        "ovocie",
+        "jablčný mušt"
+      ],
+      "choices_l2": [
+        "la ratatouille",
+        "le café",
+        "le fromage"
+      ]
+    },
+    {
+      "id": "qcm-le-caf-au-lait",
+      "type": "qcm",
+      "l1": "biela káva",
+      "l2": "le café au lait",
+      "choices_l1": [
+        "pijú",
+        "obed",
+        "pivo"
+      ],
+      "choices_l2": [
+        "le pain est bon (mužský)",
+        "Tu prends un café ?",
+        "Je prends du vin."
+      ]
+    },
+    {
+      "id": "qcm-le-chocolat-chaud",
+      "type": "qcm",
+      "l1": "horúca čokoláda",
+      "l2": "le chocolat chaud",
+      "choices_l1": [
+        "predpoveď",
+        "kvet",
+        "sneh"
+      ],
+      "choices_l2": [
+        "Il fera nuageux.",
+        "plus froid que",
+        "Il y aura un orage."
+      ]
+    },
+    {
+      "id": "qcm-l-eau-min-rale",
+      "type": "qcm",
+      "l1": "minerálka",
+      "l2": "l'eau minérale",
+      "choices_l1": [
+        "zelenina",
+        "pekáreň",
+        "soľ"
+      ],
+      "choices_l2": [
+        "la ratatouille",
+        "le petit-déjeuner",
+        "la boulangerie"
+      ]
+    },
+    {
+      "id": "qcm-le-jus-de-fruits",
+      "type": "qcm",
+      "l1": "ovocný džús",
+      "l2": "le jus de fruits",
+      "choices_l1": [
+        "croissant",
+        "vajíčka",
+        "smotana"
+      ],
+      "choices_l2": [
+        "Je prends une quiche.",
+        "sucré / sucrée",
+        "manger du pain"
+      ]
+    },
+    {
+      "id": "qcm-le-cidre",
+      "type": "qcm",
+      "l1": "jablčný mušt",
+      "l2": "le cidre",
+      "choices_l1": [
+        "pijeme",
+        "croissant",
+        "zemiaky"
+      ],
+      "choices_l2": [
+        "le chocolat",
+        "manger",
+        "les flageolets"
+      ]
+    },
+    {
+      "id": "blank-au-petit-d-jeuner-je-mange-un-uf-et-du-pain-avec-du-beurre",
+      "type": "fill-blank",
+      "l1": "Na raňajky jem vajce a chlieb s maslom.",
+      "l2": "Au petit-déjeuner, je mange un œuf et du pain avec du beurre.",
+      "missing_l1": "a",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "hľadám",
+        "vyšší ako",
+        "naspäť"
+      ],
+      "choices_l2": [
+        "je nagerai",
+        "et",
+        "tu essaies"
+      ]
+    },
+    {
+      "id": "blank-le-cidre-est-sucr-et-froid",
+      "type": "fill-blank",
+      "l1": "Jablčný mušt je sladký a studený.",
+      "l2": "Le cidre est sucré et froid.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "oblečieme si",
+        "tu",
+        "Je horúco."
+      ],
+      "choices_l2": [
+        "je serai",
+        "tu manges",
+        "je cherche"
+      ]
+    },
+    {
+      "id": "blank-je-prends-une-soupe-et-ensuite-un-pot-au-feu",
+      "type": "fill-blank",
+      "l1": "Dám si polievku a potom pot-au-feu.",
+      "l2": "Je prends une soupe et ensuite un pot-au-feu.",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "s",
+        "do lekárne",
+        "sa"
+      ],
+      "choices_l2": [
+        "le prénom",
+        "nous cherchons",
+        "a"
+      ]
+    },
+    {
+      "id": "blank-les-pommes-de-terre-sont-chaudes-mais-la-viande-est-froide",
+      "type": "fill-blank",
+      "l1": "Zemiaky sú teplé, ale mäso je studené.",
+      "l2": "Les pommes de terre sont chaudes, mais la viande est froide.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 5,
+      "blank_index_l2": 9,
+      "choices_l1": [
+        "hľadám",
+        "na námestí",
+        "tento"
+      ],
+      "choices_l2": [
+        "nous buvons",
+        "de",
+        "tu"
+      ]
+    },
+    {
+      "id": "blank-je-ne-veux-pas-de-vin-je-veux-de-l-eau-min-rale",
+      "type": "fill-blank",
+      "l1": "Nechcem víno. Chcem minerálku.",
+      "l2": "Je ne veux pas de vin. Je veux de l'eau minérale.",
+      "missing_l1": "Chcem",
+      "missing_l2": "Je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "meškať",
+        "čítať",
+        "pozerať"
+      ],
+      "choices_l2": [
+        "de",
+        "nous devons",
+        "tu"
+      ]
+    },
+    {
+      "id": "blank-les-fruits-sont-frais-et-tr-s-sucr-s",
+      "type": "fill-blank",
+      "l1": "Ovocie je čerstvé a veľmi sladké.",
+      "l2": "Les fruits sont frais et très sucrés.",
+      "missing_l1": "je",
+      "missing_l2": "et",
+      "blank_index_l1": 1,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "táto bunda",
+        "tu",
+        "naj-"
+      ],
+      "choices_l2": [
+        "beaucoup",
+        "nous cherchons",
+        "Quelle"
+      ]
+    },
+    {
+      "id": "blank-les-enfants-boivent-du-lait-au-d-ner",
+      "type": "fill-blank",
+      "l1": "Deti pijú mlieko na večeru.",
+      "l2": "Les enfants boivent du lait au dîner.",
+      "missing_l1": "na",
+      "missing_l2": "du",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "oblečiem si",
+        "po",
+        "Je teplo."
+      ],
+      "choices_l2": [
+        "tu travailles",
+        "je mange",
+        "tu es"
+      ]
+    },
+    {
+      "id": "blank-le-pot-au-feu-est-br-lant-attention",
+      "type": "fill-blank",
+      "l1": "Pot-au-feu je horúci. Pozor!",
+      "l2": "Le pot-au-feu est brûlant. Attention !",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "toto",
+        "hľadám",
+        "prosím"
+      ],
+      "choices_l2": [
+        "as-tu",
+        "un peu",
+        "tu bois"
+      ]
+    },
+    {
+      "id": "blank-j-ai-soif-tu-prends-un-chocolat-chaud",
+      "type": "fill-blank",
+      "l1": "Mám smäd. Dáš si horúcu čokoládu?",
+      "l2": "J'ai soif. Tu prends un chocolat chaud ?",
+      "missing_l1": "si",
+      "missing_l2": "un",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "na",
+        "vyšší ako",
+        "Koľko"
+      ],
+      "choices_l2": [
+        "Combien",
+        "ici",
+        "se"
+      ]
+    },
+    {
+      "id": "blank-un-peu-de-sel-s-il-te-pla-t",
+      "type": "fill-blank",
+      "l1": "Trochu soli, prosím.",
+      "l2": "Un peu de sel, s'il te plaît.",
+      "missing_l1": "prosím",
+      "missing_l2": "de",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sme",
+        "on išiel",
+        "málo"
+      ],
+      "choices_l2": [
+        "s'appelle",
+        "nous allons",
+        "je nagerai"
+      ]
+    },
+    {
+      "id": "blank-la-tarte-est-savoureuse-mais-il-y-en-a-beaucoup",
+      "type": "fill-blank",
+      "l1": "Tarta je chutná, ale je toho veľa.",
+      "l2": "La tarte est savoureuse, mais il y en a beaucoup.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "za",
+        "sú",
+        "za rohom"
+      ],
+      "choices_l2": [
+        "le plus...",
+        "nous devons",
+        "je peux"
+      ]
+    },
+    {
+      "id": "blank-maintenant-je-mange-du-riz-et-des-l-gumes",
+      "type": "fill-blank",
+      "l1": "Teraz jem ryžu a zeleninu.",
+      "l2": "Maintenant je mange du riz et des légumes.",
+      "missing_l1": "a",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "oblečie si",
+        "Je teplo.",
+        "studenejší ako"
+      ],
+      "choices_l2": [
+        "tu achètes",
+        "du",
+        "où"
+      ]
+    },
+    {
+      "id": "blank-go-te-le-fromage-il-est-sal",
+      "type": "fill-blank",
+      "l1": "Ochutnaj syr! Je slaný.",
+      "l2": "Goûte le fromage ! Il est salé.",
+      "missing_l1": "Je",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "v dome",
+        "o",
+        "má"
+      ],
+      "choices_l2": [
+        "nous devons",
+        "mais",
+        "tu"
+      ]
+    },
+    {
+      "id": "blank-je-n-ai-pas-faim-mais-j-ai-soif",
+      "type": "fill-blank",
+      "l1": "Nie som hladný, ale som smädný.",
+      "l2": "Je n'ai pas faim, mais j'ai soif.",
+      "missing_l1": "ale",
+      "missing_l2": "pas",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "studenejší ako",
+        "ja mám",
+        "na"
+      ],
+      "choices_l2": [
+        "qui",
+        "environ",
+        "je mets"
+      ]
+    },
+    {
+      "id": "blank-un-croissant-et-un-caf-au-lait-s-il-te-pla-t",
+      "type": "fill-blank",
+      "l1": "Croissant a bielu kávu, prosím.",
+      "l2": "Un croissant et un café au lait, s'il te plaît.",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ja",
+        "naspäť",
+        "meno"
+      ],
+      "choices_l2": [
+        "nous voulons",
+        "je voudrais",
+        "tu dois"
+      ]
+    },
+    {
+      "id": "blank-les-cr-pes-sont-bonnes-mais-le-cidre-est-tr-s-fort",
+      "type": "fill-blank",
+      "l1": "Palacinky sú dobré, ale jablčný mušt je veľmi silný.",
+      "l2": "Les crêpes sont bonnes, mais le cidre est très fort.",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 6,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "ale",
+        "Koľko",
+        "vonku"
+      ],
+      "choices_l2": [
+        "où",
+        "quand",
+        "je dois"
+      ]
+    },
+    {
+      "id": "blank-la-quiche-me-pla-t-j-en-veux-encore",
+      "type": "fill-blank",
+      "l1": "Quiche mi chutí. Chcem ešte.",
+      "l2": "La quiche me plaît. J'en veux encore.",
+      "missing_l1": "Chcem",
+      "missing_l2": "veux",
+      "blank_index_l1": 3,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "robiť",
+        "prechádza sa",
+        "schovať"
+      ],
+      "choices_l2": [
+        "vouloir",
+        "ranger",
+        "avons"
+      ]
+    },
+    {
+      "id": "listen-au-petit-d-jeuner-je-mange-un-uf-et-du-pain-avec-du-beurre",
+      "type": "listen",
+      "l1": "Na raňajky jem vajce a chlieb s maslom.",
+      "l2": "Au petit-déjeuner, je mange un œuf et du pain avec du beurre.",
+      "choices_l2": [
+        "Il y a un miroir au-dessus de l'armoire.",
+        "Mon frère travaille dans un magasin.",
+        "Ma grand-mère est vieille et ma sœur est jeune."
+      ],
+      "choices_l1": [
+        "Áno! A mám aj vodu a jedlo v taške.",
+        "Nechcem víno. Chcem minerálku.",
+        "Máme ryžu a zemiaky."
+      ]
+    },
+    {
+      "id": "listen-le-cidre-est-sucr-et-froid",
+      "type": "listen",
+      "l1": "Jablčný mušt je sladký a studený.",
+      "l2": "Le cidre est sucré et froid.",
+      "choices_l2": [
+        "Mes parents sont retraités. Ils habitent tout près.",
+        "Voici mon père et voici ma maman.",
+        "Je me lève et j'ouvre la fenêtre."
+      ],
+      "choices_l1": [
+        "Dúfam, že predpoveď bude mať pravdu!",
+        "Musíš mať dáždnik, prší.",
+        "Konečne! Predpoveď mala pravdu, je slnečno."
+      ]
+    },
+    {
+      "id": "listen-je-prends-une-soupe-et-ensuite-un-pot-au-feu",
+      "type": "listen",
+      "l1": "Dám si polievku a potom pot-au-feu.",
+      "l2": "Je prends une soupe et ensuite un pot-au-feu.",
+      "choices_l2": [
+        "J'ai soif. Je veux du lait.",
+        "J'ai faim. Je prends du pot-au-feu et du pain.",
+        "Je travaille à l'école."
+      ],
+      "choices_l1": [
+        "Mrzne. Cesta je klzká.",
+        "V noci je ticho.",
+        "Záchod je na chodbe."
+      ]
+    },
+    {
+      "id": "listen-les-pommes-de-terre-sont-chaudes-mais-la-viande-est-froide",
+      "type": "listen",
+      "l1": "Zemiaky sú teplé, ale mäso je studené.",
+      "l2": "Les pommes de terre sont chaudes, mais la viande est froide.",
+      "choices_l2": [
+        "L'œuf est dans l'assiette.",
+        "J'habite à Lyon, dans un appartement. Et vous ?",
+        "Ma maman est dans la cuisine."
+      ],
+      "choices_l1": [
+        "Mám smäd. Chcem mlieko.",
+        "Mám hlad, ale mäso nie je dobré.",
+        "Syr je kyslý."
+      ]
+    },
+    {
+      "id": "listen-je-ne-veux-pas-de-vin-je-veux-de-l-eau-min-rale",
+      "type": "listen",
+      "l1": "Nechcem víno. Chcem minerálku.",
+      "l2": "Je ne veux pas de vin. Je veux de l'eau minérale.",
+      "choices_l2": [
+        "Je mange de la soupe.",
+        "Je n'ai pas de frère, mais j'ai deux sœurs.",
+        "Les enfants aident à la maison."
+      ],
+      "choices_l1": [
+        "Oranžové jablko je sladké.",
+        "Chcem sa kúpať, ale voda je studená.",
+        "Dáš si ratatouille?"
+      ]
+    },
+    {
+      "id": "listen-les-fruits-sont-frais-et-tr-s-sucr-s",
+      "type": "listen",
+      "l1": "Ovocie je čerstvé a veľmi sladké.",
+      "l2": "Les fruits sont frais et très sucrés.",
+      "choices_l2": [
+        "Le pot-au-feu est chaud et salé.",
+        "L'œuf est dans l'assiette.",
+        "Mon cousin est jeune. Il a dix-huit ans."
+      ],
+      "choices_l1": [
+        "Kedy máš narodeniny?",
+        "Pri mori je vzduch čistý a ticho krásne.",
+        "Áno, je to naša tradícia. Poďte, hľadajte dobre!"
+      ]
+    },
+    {
+      "id": "listen-les-enfants-boivent-du-lait-au-d-ner",
+      "type": "listen",
+      "l1": "Deti pijú mlieko na večeru.",
+      "l2": "Les enfants boivent du lait au dîner.",
+      "choices_l2": [
+        "Je ne sais pas. Je vais goûter !",
+        "Les enfants veulent des fruits.",
+        "C'est très savoureux !"
+      ],
+      "choices_l1": [
+        "Na Bielu sobotu mama piekla koláče.",
+        "Môj otec je učiteľ.",
+        "Otec upratuje pivnicu a garáž."
+      ]
+    },
+    {
+      "id": "listen-le-pot-au-feu-est-br-lant-attention",
+      "type": "listen",
+      "l1": "Pot-au-feu je horúci. Pozor!",
+      "l2": "Le pot-au-feu est brûlant. Attention !",
+      "choices_l2": [
+        "Je lave les verres et les assiettes.",
+        "Je n'ai pas de frère. J'ai une sœur.",
+        "Je ne sais pas. Je vais goûter !"
+      ],
+      "choices_l1": [
+        "Zostaneme vnútri, vonku prší.",
+        "Musíš mať dáždnik, prší.",
+        "Poobede bude oblačno."
+      ]
+    },
+    {
+      "id": "listen-j-ai-soif-tu-prends-un-chocolat-chaud",
+      "type": "listen",
+      "l1": "Mám smäd. Dáš si horúcu čokoládu?",
+      "l2": "J'ai soif. Tu prends un chocolat chaud ?",
+      "choices_l2": [
+        "Cette viande est mauvaise.",
+        "Je lave l'assiette.",
+        "Maman cuisine dans la cuisine."
+      ],
+      "choices_l1": [
+        "Mlieko je studené.",
+        "Pijem víno, nie pivo.",
+        "Zdobili ste vajíčka spolu?"
+      ]
+    },
+    {
+      "id": "listen-un-peu-de-sel-s-il-te-pla-t",
+      "type": "listen",
+      "l1": "Trochu soli, prosím.",
+      "l2": "Un peu de sel, s'il te plaît.",
+      "choices_l2": [
+        "L'enfant dort dans la chambre.",
+        "Je travaille à l'école.",
+        "J'ai deux enfants. Ils sont petits."
+      ],
+      "choices_l1": [
+        "Sliepka a zajac sú symboly Veľkej noci.",
+        "Našiel som vajíčko! A je obrovské!",
+        "Toto mäso je zlé."
+      ]
+    },
+    {
+      "id": "listen-la-tarte-est-savoureuse-mais-il-y-en-a-beaucoup",
+      "type": "listen",
+      "l1": "Tarta je chutná, ale je toho veľa.",
+      "l2": "La tarte est savoureuse, mais il y en a beaucoup.",
+      "choices_l2": [
+        "Le canapé est dans le salon.",
+        "Nous avons quatre verres et quatre assiettes.",
+        "J'ai faim. Je prends du pot-au-feu et du pain."
+      ],
+      "choices_l1": [
+        "Na Bielu sobotu sme pripravili jahňacie stehno a vajíčka.",
+        "Koláč je sladký, ale jedlo je hlavne slané.",
+        "Raňajky sú o siedmej."
+      ]
+    },
+    {
+      "id": "listen-maintenant-je-mange-du-riz-et-des-l-gumes",
+      "type": "listen",
+      "l1": "Teraz jem ryžu a zeleninu.",
+      "l2": "Maintenant je mange du riz et des légumes.",
+      "choices_l2": [
+        "Le fromage est acide.",
+        "La baguette est fraîche.",
+        "Et vous, Eric ? Que faites-vous ?"
+      ],
+      "choices_l1": [
+        "Dobrý deň. Ja som Louise.",
+        "Na jeseň je predpoveď často daždivá.",
+        "Dnes mám čas, zajtra nie."
+      ]
+    },
+    {
+      "id": "listen-go-te-le-fromage-il-est-sal",
+      "type": "listen",
+      "l1": "Ochutnaj syr! Je slaný.",
+      "l2": "Goûte le fromage ! Il est salé.",
+      "choices_l2": [
+        "L'horloge est au mur.",
+        "La quiche est très savoureuse.",
+        "J'ai trente ans."
+      ],
+      "choices_l1": [
+        "Ovocný džús je veľmi sladký.",
+        "Najprv obed, potom tarta.",
+        "Mám hlad. Dám si pot-au-feu a chlieb."
+      ]
+    },
+    {
+      "id": "listen-je-n-ai-pas-faim-mais-j-ai-soif",
+      "type": "listen",
+      "l1": "Nie som hladný, ale som smädný.",
+      "l2": "Je n'ai pas faim, mais j'ai soif.",
+      "choices_l2": [
+        "Vous voulez de l'eau minérale ?",
+        "Je mange de la soupe.",
+        "Le couteau est dans la cuisine."
+      ],
+      "choices_l1": [
+        "Film je nudný.",
+        "Košík je plný, vozík je prázdny.",
+        "Si voľný v sobotu?"
+      ]
+    },
+    {
+      "id": "listen-un-croissant-et-un-caf-au-lait-s-il-te-pla-t",
+      "type": "listen",
+      "l1": "Croissant a bielu kávu, prosím.",
+      "l2": "Un croissant et un café au lait, s'il te plaît.",
+      "choices_l2": [
+        "La chambre est là-bas.",
+        "Les enfants aident à la maison.",
+        "Papa est assis sur le canapé et regarde la télévision."
+      ],
+      "choices_l1": [
+        "Syr je kyslý.",
+        "Obed je o dvanástej.",
+        "Koláč je sladký, ale jedlo je hlavne slané."
+      ]
+    },
+    {
+      "id": "listen-les-cr-pes-sont-bonnes-mais-le-cidre-est-tr-s-fort",
+      "type": "listen",
+      "l1": "Palacinky sú dobré, ale jablčný mušt je veľmi silný.",
+      "l2": "Les crêpes sont bonnes, mais le cidre est très fort.",
+      "choices_l2": [
+        "Moi, c'est Chloé ! J'ai huit ans.",
+        "Le pot-au-feu est chaud et salé.",
+        "Les fruits sont sucrés."
+      ],
+      "choices_l1": [
+        "Chcete ešte quiche?",
+        "Obed je o dvanástej.",
+        "Na Bielu sobotu sme ozdobili košík a pripravili jedlo."
+      ]
+    },
+    {
+      "id": "listen-la-quiche-me-pla-t-j-en-veux-encore",
+      "type": "listen",
+      "l1": "Quiche mi chutí. Chcem ešte.",
+      "l2": "La quiche me plaît. J'en veux encore.",
+      "choices_l2": [
+        "Mon frère travaille dans un magasin.",
+        "Mes enfants sont petits.",
+        "Je me lève et j'ouvre la fenêtre."
+      ],
+      "choices_l1": [
+        "Vodu, prosím. Mám smäd.",
+        "Potom je pot-au-feu. Máš rád mäso?",
+        "Syr príde po hlavnom jedle."
+      ]
+    },
+    {
+      "id": "order-au-petit-d-jeuner-je-mange-un-uf-et-du-pain-avec-du-beurre",
+      "type": "order",
+      "l1": "Na raňajky jem vajce a chlieb s maslom.",
+      "l2": "Au petit-déjeuner, je mange un œuf et du pain avec du beurre.",
+      "tokens_l1": [
+        "Na",
+        "raňajky",
+        "jem",
+        "vajce",
+        "a",
+        "chlieb",
+        "s",
+        "maslom.",
+        "Zemiaky",
+        "sú",
+        "teplé,",
+        "ale",
+        "mäso",
+        "je",
+        "studené."
+      ],
+      "tokens_l2": [
+        "Au",
+        "petit-déjeuner,",
+        "je",
+        "mange",
+        "un",
+        "œuf",
+        "et",
+        "du",
+        "pain",
+        "avec",
+        "du",
+        "beurre.",
+        "Les",
+        "pommes",
+        "de",
+        "terre",
+        "sont",
+        "chaudes,",
+        "mais",
+        "la",
+        "viande",
+        "est",
+        "froide."
+      ]
+    },
+    {
+      "id": "order-le-cidre-est-sucr-et-froid",
+      "type": "order",
+      "l1": "Jablčný mušt je sladký a studený.",
+      "l2": "Le cidre est sucré et froid.",
+      "tokens_l1": [
+        "Jablčný",
+        "mušt",
+        "je",
+        "sladký",
+        "a",
+        "studený.",
+        "Pot-au-feu",
+        "je",
+        "horúci.",
+        "Pozor!"
+      ],
+      "tokens_l2": [
+        "Le",
+        "cidre",
+        "est",
+        "sucré",
+        "et",
+        "froid.",
+        "Le",
+        "pot-au-feu",
+        "est",
+        "brûlant.",
+        "Attention",
+        "!"
+      ]
+    },
+    {
+      "id": "order-je-prends-une-soupe-et-ensuite-un-pot-au-feu",
+      "type": "order",
+      "l1": "Dám si polievku a potom pot-au-feu.",
+      "l2": "Je prends une soupe et ensuite un pot-au-feu.",
+      "tokens_l1": [
+        "Dám",
+        "si",
+        "polievku",
+        "a",
+        "potom",
+        "pot-au-feu.",
+        "Nechcem",
+        "víno.",
+        "Chcem",
+        "minerálku."
+      ],
+      "tokens_l2": [
+        "Je",
+        "prends",
+        "une",
+        "soupe",
+        "et",
+        "ensuite",
+        "un",
+        "pot-au-feu.",
+        "Je",
+        "ne",
+        "veux",
+        "pas",
+        "de",
+        "vin.",
+        "Je",
+        "veux",
+        "de",
+        "l'eau",
+        "minérale."
+      ]
+    },
+    {
+      "id": "order-les-pommes-de-terre-sont-chaudes-mais-la-viande-est-froide",
+      "type": "order",
+      "l1": "Zemiaky sú teplé, ale mäso je studené.",
+      "l2": "Les pommes de terre sont chaudes, mais la viande est froide.",
+      "tokens_l1": [
+        "Zemiaky",
+        "sú",
+        "teplé,",
+        "ale",
+        "mäso",
+        "je",
+        "studené.",
+        "Nechcem",
+        "víno.",
+        "Chcem",
+        "minerálku."
+      ],
+      "tokens_l2": [
+        "Les",
+        "pommes",
+        "de",
+        "terre",
+        "sont",
+        "chaudes,",
+        "mais",
+        "la",
+        "viande",
+        "est",
+        "froide.",
+        "Je",
+        "ne",
+        "veux",
+        "pas",
+        "de",
+        "vin.",
+        "Je",
+        "veux",
+        "de",
+        "l'eau",
+        "minérale."
+      ]
+    },
+    {
+      "id": "order-je-ne-veux-pas-de-vin-je-veux-de-l-eau-min-rale",
+      "type": "order",
+      "l1": "Nechcem víno. Chcem minerálku.",
+      "l2": "Je ne veux pas de vin. Je veux de l'eau minérale.",
+      "tokens_l1": [
+        "Nechcem",
+        "víno.",
+        "Chcem",
+        "minerálku.",
+        "Deti",
+        "pijú",
+        "mlieko",
+        "na",
+        "večeru."
+      ],
+      "tokens_l2": [
+        "Je",
+        "ne",
+        "veux",
+        "pas",
+        "de",
+        "vin.",
+        "Je",
+        "veux",
+        "de",
+        "l'eau",
+        "minérale.",
+        "Les",
+        "enfants",
+        "boivent",
+        "du",
+        "lait",
+        "au",
+        "dîner."
+      ]
+    },
+    {
+      "id": "order-les-fruits-sont-frais-et-tr-s-sucr-s",
+      "type": "order",
+      "l1": "Ovocie je čerstvé a veľmi sladké.",
+      "l2": "Les fruits sont frais et très sucrés.",
+      "tokens_l1": [
+        "Ovocie",
+        "je",
+        "čerstvé",
+        "a",
+        "veľmi",
+        "sladké.",
+        "Pot-au-feu",
+        "je",
+        "horúci.",
+        "Pozor!"
+      ],
+      "tokens_l2": [
+        "Les",
+        "fruits",
+        "sont",
+        "frais",
+        "et",
+        "très",
+        "sucrés.",
+        "Le",
+        "pot-au-feu",
+        "est",
+        "brûlant.",
+        "Attention",
+        "!"
+      ]
+    },
+    {
+      "id": "order-les-enfants-boivent-du-lait-au-d-ner",
+      "type": "order",
+      "l1": "Deti pijú mlieko na večeru.",
+      "l2": "Les enfants boivent du lait au dîner.",
+      "tokens_l1": [
+        "Deti",
+        "pijú",
+        "mlieko",
+        "na",
+        "večeru.",
+        "Teraz",
+        "jem",
+        "ryžu",
+        "a",
+        "zeleninu."
+      ],
+      "tokens_l2": [
+        "Les",
+        "enfants",
+        "boivent",
+        "du",
+        "lait",
+        "au",
+        "dîner.",
+        "Maintenant",
+        "je",
+        "mange",
+        "du",
+        "riz",
+        "et",
+        "des",
+        "légumes."
+      ]
+    },
+    {
+      "id": "order-le-pot-au-feu-est-br-lant-attention",
+      "type": "order",
+      "l1": "Pot-au-feu je horúci. Pozor!",
+      "l2": "Le pot-au-feu est brûlant. Attention !",
+      "tokens_l1": [
+        "Pot-au-feu",
+        "je",
+        "horúci.",
+        "Pozor!",
+        "Mám",
+        "smäd.",
+        "Dáš",
+        "si",
+        "horúcu",
+        "čokoládu?"
+      ],
+      "tokens_l2": [
+        "Le",
+        "pot-au-feu",
+        "est",
+        "brûlant.",
+        "Attention",
+        "!",
+        "J'ai",
+        "soif.",
+        "Tu",
+        "prends",
+        "un",
+        "chocolat",
+        "chaud",
+        "?"
+      ]
+    },
+    {
+      "id": "order-j-ai-soif-tu-prends-un-chocolat-chaud",
+      "type": "order",
+      "l1": "Mám smäd. Dáš si horúcu čokoládu?",
+      "l2": "J'ai soif. Tu prends un chocolat chaud ?",
+      "tokens_l1": [
+        "Mám",
+        "smäd.",
+        "Dáš",
+        "si",
+        "horúcu",
+        "čokoládu?",
+        "Jablčný",
+        "mušt",
+        "je",
+        "sladký",
+        "a",
+        "studený."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "soif.",
+        "Tu",
+        "prends",
+        "un",
+        "chocolat",
+        "chaud",
+        "?",
+        "Le",
+        "cidre",
+        "est",
+        "sucré",
+        "et",
+        "froid."
+      ]
+    },
+    {
+      "id": "order-un-peu-de-sel-s-il-te-pla-t",
+      "type": "order",
+      "l1": "Trochu soli, prosím.",
+      "l2": "Un peu de sel, s'il te plaît.",
+      "tokens_l1": [
+        "Trochu",
+        "soli,",
+        "prosím.",
+        "Pot-au-feu",
+        "je",
+        "horúci.",
+        "Pozor!"
+      ],
+      "tokens_l2": [
+        "Un",
+        "peu",
+        "de",
+        "sel,",
+        "s'il",
+        "te",
+        "plaît.",
+        "Le",
+        "pot-au-feu",
+        "est",
+        "brûlant.",
+        "Attention",
+        "!"
+      ]
+    },
+    {
+      "id": "order-la-tarte-est-savoureuse-mais-il-y-en-a-beaucoup",
+      "type": "order",
+      "l1": "Tarta je chutná, ale je toho veľa.",
+      "l2": "La tarte est savoureuse, mais il y en a beaucoup.",
+      "tokens_l1": [
+        "Tarta",
+        "je",
+        "chutná,",
+        "ale",
+        "je",
+        "toho",
+        "veľa.",
+        "Dám",
+        "si",
+        "polievku",
+        "a",
+        "potom",
+        "pot-au-feu."
+      ],
+      "tokens_l2": [
+        "La",
+        "tarte",
+        "est",
+        "savoureuse,",
+        "mais",
+        "il",
+        "y",
+        "en",
+        "a",
+        "beaucoup.",
+        "Je",
+        "prends",
+        "une",
+        "soupe",
+        "et",
+        "ensuite",
+        "un",
+        "pot-au-feu."
+      ]
+    },
+    {
+      "id": "order-maintenant-je-mange-du-riz-et-des-l-gumes",
+      "type": "order",
+      "l1": "Teraz jem ryžu a zeleninu.",
+      "l2": "Maintenant je mange du riz et des légumes.",
+      "tokens_l1": [
+        "Teraz",
+        "jem",
+        "ryžu",
+        "a",
+        "zeleninu.",
+        "Deti",
+        "pijú",
+        "mlieko",
+        "na",
+        "večeru."
+      ],
+      "tokens_l2": [
+        "Maintenant",
+        "je",
+        "mange",
+        "du",
+        "riz",
+        "et",
+        "des",
+        "légumes.",
+        "Les",
+        "enfants",
+        "boivent",
+        "du",
+        "lait",
+        "au",
+        "dîner."
+      ]
+    },
+    {
+      "id": "order-go-te-le-fromage-il-est-sal",
+      "type": "order",
+      "l1": "Ochutnaj syr! Je slaný.",
+      "l2": "Goûte le fromage ! Il est salé.",
+      "tokens_l1": [
+        "Ochutnaj",
+        "syr!",
+        "Je",
+        "slaný.",
+        "Dám",
+        "si",
+        "polievku",
+        "a",
+        "potom",
+        "pot-au-feu."
+      ],
+      "tokens_l2": [
+        "Goûte",
+        "le",
+        "fromage",
+        "!",
+        "Il",
+        "est",
+        "salé.",
+        "Je",
+        "prends",
+        "une",
+        "soupe",
+        "et",
+        "ensuite",
+        "un",
+        "pot-au-feu."
+      ]
+    },
+    {
+      "id": "order-je-n-ai-pas-faim-mais-j-ai-soif",
+      "type": "order",
+      "l1": "Nie som hladný, ale som smädný.",
+      "l2": "Je n'ai pas faim, mais j'ai soif.",
+      "tokens_l1": [
+        "Nie",
+        "som",
+        "hladný,",
+        "ale",
+        "som",
+        "smädný.",
+        "Ovocie",
+        "je",
+        "čerstvé",
+        "a",
+        "veľmi",
+        "sladké."
+      ],
+      "tokens_l2": [
+        "Je",
+        "n'ai",
+        "pas",
+        "faim,",
+        "mais",
+        "j'ai",
+        "soif.",
+        "Les",
+        "fruits",
+        "sont",
+        "frais",
+        "et",
+        "très",
+        "sucrés."
+      ]
+    },
+    {
+      "id": "order-un-croissant-et-un-caf-au-lait-s-il-te-pla-t",
+      "type": "order",
+      "l1": "Croissant a bielu kávu, prosím.",
+      "l2": "Un croissant et un café au lait, s'il te plaît.",
+      "tokens_l1": [
+        "Croissant",
+        "a",
+        "bielu",
+        "kávu,",
+        "prosím.",
+        "Nie",
+        "som",
+        "hladný,",
+        "ale",
+        "som",
+        "smädný."
+      ],
+      "tokens_l2": [
+        "Un",
+        "croissant",
+        "et",
+        "un",
+        "café",
+        "au",
+        "lait,",
+        "s'il",
+        "te",
+        "plaît.",
+        "Je",
+        "n'ai",
+        "pas",
+        "faim,",
+        "mais",
+        "j'ai",
+        "soif."
+      ]
+    },
+    {
+      "id": "order-les-cr-pes-sont-bonnes-mais-le-cidre-est-tr-s-fort",
+      "type": "order",
+      "l1": "Palacinky sú dobré, ale jablčný mušt je veľmi silný.",
+      "l2": "Les crêpes sont bonnes, mais le cidre est très fort.",
+      "tokens_l1": [
+        "Palacinky",
+        "sú",
+        "dobré,",
+        "ale",
+        "jablčný",
+        "mušt",
+        "je",
+        "veľmi",
+        "silný.",
+        "Ochutnaj",
+        "syr!",
+        "Je",
+        "slaný."
+      ],
+      "tokens_l2": [
+        "Les",
+        "crêpes",
+        "sont",
+        "bonnes,",
+        "mais",
+        "le",
+        "cidre",
+        "est",
+        "très",
+        "fort.",
+        "Goûte",
+        "le",
+        "fromage",
+        "!",
+        "Il",
+        "est",
+        "salé."
+      ]
+    },
+    {
+      "id": "order-la-quiche-me-pla-t-j-en-veux-encore",
+      "type": "order",
+      "l1": "Quiche mi chutí. Chcem ešte.",
+      "l2": "La quiche me plaît. J'en veux encore.",
+      "tokens_l1": [
+        "Quiche",
+        "mi",
+        "chutí.",
+        "Chcem",
+        "ešte.",
+        "Dám",
+        "si",
+        "polievku",
+        "a",
+        "potom",
+        "pot-au-feu."
+      ],
+      "tokens_l2": [
+        "La",
+        "quiche",
+        "me",
+        "plaît.",
+        "J'en",
+        "veux",
+        "encore.",
+        "Je",
+        "prends",
+        "une",
+        "soupe",
+        "et",
+        "ensuite",
+        "un",
+        "pot-au-feu."
+      ]
+    }
+  ]
+}

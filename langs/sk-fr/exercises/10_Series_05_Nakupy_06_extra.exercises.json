@@ -1,0 +1,2101 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-obchod",
+      "type": "qcm",
+      "l1": "le magasin",
+      "l2": "obchod",
+      "choices_l1": [
+        "la boucherie",
+        "l'addition",
+        "le marché"
+      ],
+      "choices_l2": [
+        "pekáreň",
+        "vozík",
+        "košík"
+      ]
+    },
+    {
+      "id": "qcm-potraviny",
+      "type": "qcm",
+      "l1": "l'épicerie",
+      "l2": "potraviny",
+      "choices_l1": [
+        "la couleur",
+        "le chariot",
+        "l'addition"
+      ],
+      "choices_l2": [
+        "lekáreň",
+        "košík",
+        "mäsiarstvo"
+      ]
+    },
+    {
+      "id": "qcm-pek-re",
+      "type": "qcm",
+      "l1": "la boulangerie",
+      "l2": "pekáreň",
+      "choices_l1": [
+        "la couleur",
+        "le vendeur",
+        "la caisse"
+      ],
+      "choices_l2": [
+        "vozík",
+        "košík",
+        "potraviny"
+      ]
+    },
+    {
+      "id": "qcm-m-siarstvo",
+      "type": "qcm",
+      "l1": "la boucherie",
+      "l2": "mäsiarstvo",
+      "choices_l1": [
+        "la caisse",
+        "l'épicerie",
+        "la pomme"
+      ],
+      "choices_l2": [
+        "pokladňa",
+        "potraviny",
+        "pekáreň"
+      ]
+    },
+    {
+      "id": "qcm-lek-re",
+      "type": "qcm",
+      "l1": "la pharmacie",
+      "l2": "lekáreň",
+      "choices_l1": [
+        "la couleur",
+        "le vendeur",
+        "la pomme"
+      ],
+      "choices_l2": [
+        "červený svetr",
+        "trh",
+        "mäsiarstvo"
+      ]
+    },
+    {
+      "id": "qcm-trh",
+      "type": "qcm",
+      "l1": "le marché",
+      "l2": "trh",
+      "choices_l1": [
+        "la boucherie",
+        "la vendeuse",
+        "l'épicerie"
+      ],
+      "choices_l2": [
+        "predavač",
+        "košík",
+        "lekáreň"
+      ]
+    },
+    {
+      "id": "qcm-kupova",
+      "type": "qcm",
+      "l1": "acheter",
+      "l2": "kupovať",
+      "choices_l1": [
+        "essayer",
+        "j'essaie",
+        "coûter"
+      ],
+      "choices_l2": [
+        "drahý",
+        "platiť",
+        "ja kupujem"
+      ]
+    },
+    {
+      "id": "qcm-poklad-a",
+      "type": "qcm",
+      "l1": "la caisse",
+      "l2": "pokladňa",
+      "choices_l1": [
+        "la pharmacie",
+        "la boucherie",
+        "la couleur"
+      ],
+      "choices_l2": [
+        "vozík",
+        "predavač",
+        "trh"
+      ]
+    },
+    {
+      "id": "qcm-ko-k",
+      "type": "qcm",
+      "l1": "le panier",
+      "l2": "košík",
+      "choices_l1": [
+        "la boucherie",
+        "le vendeur",
+        "la pharmacie"
+      ],
+      "choices_l2": [
+        "predavač",
+        "pekáreň",
+        "lekáreň"
+      ]
+    },
+    {
+      "id": "qcm-voz-k",
+      "type": "qcm",
+      "l1": "le chariot",
+      "l2": "vozík",
+      "choices_l1": [
+        "la couleur",
+        "la caisse",
+        "la pharmacie"
+      ],
+      "choices_l2": [
+        "potraviny",
+        "predavač",
+        "pokladňa"
+      ]
+    },
+    {
+      "id": "qcm-predava",
+      "type": "qcm",
+      "l1": "le vendeur",
+      "l2": "predavač",
+      "choices_l1": [
+        "la boucherie",
+        "la pomme",
+        "la couleur"
+      ],
+      "choices_l2": [
+        "trh",
+        "pekáreň",
+        "červená taška"
+      ]
+    },
+    {
+      "id": "qcm-predava-ka",
+      "type": "qcm",
+      "l1": "la vendeuse",
+      "l2": "predavačka",
+      "choices_l1": [
+        "le panier",
+        "le vendeur",
+        "la pomme"
+      ],
+      "choices_l2": [
+        "lekáreň",
+        "mäsiarstvo",
+        "trh"
+      ]
+    },
+    {
+      "id": "qcm-otvoren",
+      "type": "qcm",
+      "l1": "ouvert",
+      "l2": "otvorené",
+      "choices_l1": [
+        "rouge",
+        "orange",
+        "marron"
+      ],
+      "choices_l2": [
+        "lacný",
+        "zatvorené",
+        "biely"
+      ]
+    },
+    {
+      "id": "qcm-zatvoren",
+      "type": "qcm",
+      "l1": "fermé",
+      "l2": "zatvorené",
+      "choices_l1": [
+        "foncé",
+        "l'addition",
+        "marron"
+      ],
+      "choices_l2": [
+        "zelený",
+        "otvorené",
+        "tmavý"
+      ]
+    },
+    {
+      "id": "qcm-erven",
+      "type": "qcm",
+      "l1": "rouge",
+      "l2": "červený",
+      "choices_l1": [
+        "vert",
+        "foncé",
+        "ouvert"
+      ],
+      "choices_l2": [
+        "oranžový",
+        "zelený",
+        "modrý"
+      ]
+    },
+    {
+      "id": "qcm-modr",
+      "type": "qcm",
+      "l1": "bleu",
+      "l2": "modrý",
+      "choices_l1": [
+        "l'addition",
+        "blanc",
+        "ouvert"
+      ],
+      "choices_l2": [
+        "zelený",
+        "zatvorené",
+        "lacný"
+      ]
+    },
+    {
+      "id": "qcm-zelen",
+      "type": "qcm",
+      "l1": "vert",
+      "l2": "zelený",
+      "choices_l1": [
+        "jaune",
+        "ouvert",
+        "foncé"
+      ],
+      "choices_l2": [
+        "zatvorené",
+        "hnedý",
+        "sivý"
+      ]
+    },
+    {
+      "id": "qcm-lt",
+      "type": "qcm",
+      "l1": "jaune",
+      "l2": "žltý",
+      "choices_l1": [
+        "fermé",
+        "rose",
+        "orange"
+      ],
+      "choices_l2": [
+        "modrý",
+        "červený",
+        "ružový"
+      ]
+    },
+    {
+      "id": "qcm-ierny",
+      "type": "qcm",
+      "l1": "noir",
+      "l2": "čierny",
+      "choices_l1": [
+        "acheter",
+        "cher",
+        "coûter"
+      ],
+      "choices_l2": [
+        "platiť",
+        "svetlý",
+        "ty kupuješ"
+      ]
+    },
+    {
+      "id": "qcm-biely",
+      "type": "qcm",
+      "l1": "blanc",
+      "l2": "biely",
+      "choices_l1": [
+        "vert",
+        "orange",
+        "rose"
+      ],
+      "choices_l2": [
+        "modrý",
+        "lacný",
+        "tmavý"
+      ]
+    },
+    {
+      "id": "qcm-farba",
+      "type": "qcm",
+      "l1": "la couleur",
+      "l2": "farba",
+      "choices_l1": [
+        "le marché",
+        "la caisse",
+        "le panier"
+      ],
+      "choices_l2": [
+        "mäsiarstvo",
+        "predavač",
+        "potraviny"
+      ]
+    },
+    {
+      "id": "qcm-oran-ov",
+      "type": "qcm",
+      "l1": "orange",
+      "l2": "oranžový",
+      "choices_l1": [
+        "bleu",
+        "blanc",
+        "rose"
+      ],
+      "choices_l2": [
+        "červený",
+        "tmavý",
+        "žltý"
+      ]
+    },
+    {
+      "id": "qcm-ru-ov",
+      "type": "qcm",
+      "l1": "rose",
+      "l2": "ružový",
+      "choices_l1": [
+        "rouge",
+        "blanc",
+        "gris"
+      ],
+      "choices_l2": [
+        "oranžový",
+        "sivý",
+        "zatvorené"
+      ]
+    },
+    {
+      "id": "qcm-hned",
+      "type": "qcm",
+      "l1": "marron",
+      "l2": "hnedý",
+      "choices_l1": [
+        "l'addition",
+        "vert",
+        "foncé"
+      ],
+      "choices_l2": [
+        "lacný",
+        "biely",
+        "modrý"
+      ]
+    },
+    {
+      "id": "qcm-siv",
+      "type": "qcm",
+      "l1": "gris",
+      "l2": "sivý",
+      "choices_l1": [
+        "l'addition",
+        "fermé",
+        "rose"
+      ],
+      "choices_l2": [
+        "oranžový",
+        "tmavý",
+        "zatvorené"
+      ]
+    },
+    {
+      "id": "qcm-tmav",
+      "type": "qcm",
+      "l1": "foncé",
+      "l2": "tmavý",
+      "choices_l1": [
+        "vert",
+        "jaune",
+        "fermé"
+      ],
+      "choices_l2": [
+        "ružový",
+        "oranžový",
+        "otvorené"
+      ]
+    },
+    {
+      "id": "qcm-svetl",
+      "type": "qcm",
+      "l1": "clair",
+      "l2": "svetlý",
+      "choices_l1": [
+        "coûter",
+        "j'achète",
+        "tu achètes"
+      ],
+      "choices_l2": [
+        "ty skúsiš",
+        "drahý",
+        "kupovať"
+      ]
+    },
+    {
+      "id": "qcm-jablko",
+      "type": "qcm",
+      "l1": "la pomme",
+      "l2": "jablko",
+      "choices_l1": [
+        "la pharmacie",
+        "la boucherie",
+        "l'addition"
+      ],
+      "choices_l2": [
+        "lekáreň",
+        "vozík",
+        "mäsiarstvo"
+      ]
+    },
+    {
+      "id": "qcm-tri-ko",
+      "type": "qcm",
+      "l1": "le tee-shirt",
+      "l2": "tričko",
+      "choices_l1": [
+        "la pharmacie",
+        "la couleur",
+        "la boucherie"
+      ],
+      "choices_l2": [
+        "červený svetr",
+        "potraviny",
+        "predavač"
+      ]
+    },
+    {
+      "id": "qcm-ko-e-a",
+      "type": "qcm",
+      "l1": "la chemise",
+      "l2": "košeľa",
+      "choices_l1": [
+        "la boulangerie",
+        "le panier",
+        "le marché"
+      ],
+      "choices_l2": [
+        "vozík",
+        "lekáreň",
+        "potraviny"
+      ]
+    },
+    {
+      "id": "qcm-nohavice",
+      "type": "qcm",
+      "l1": "le pantalon",
+      "l2": "nohavice",
+      "choices_l1": [
+        "l'addition",
+        "la caisse",
+        "la pharmacie"
+      ],
+      "choices_l2": [
+        "košík",
+        "trh",
+        "vozík"
+      ]
+    },
+    {
+      "id": "qcm-suk-a",
+      "type": "qcm",
+      "l1": "la jupe",
+      "l2": "sukňa",
+      "choices_l1": [
+        "la boulangerie",
+        "le panier",
+        "l'addition"
+      ],
+      "choices_l2": [
+        "vozík",
+        "lekáreň",
+        "pokladňa"
+      ]
+    },
+    {
+      "id": "qcm-top-nky",
+      "type": "qcm",
+      "l1": "les chaussures",
+      "l2": "topánky",
+      "choices_l1": [
+        "la caisse",
+        "la couleur",
+        "l'addition"
+      ],
+      "choices_l2": [
+        "predavač",
+        "farba",
+        "košík"
+      ]
+    },
+    {
+      "id": "qcm-ve-kos",
+      "type": "qcm",
+      "l1": "la taille",
+      "l2": "veľkosť",
+      "choices_l1": [
+        "la couleur",
+        "le marché",
+        "la caisse"
+      ],
+      "choices_l2": [
+        "červený svetr",
+        "predavačka",
+        "lekáreň"
+      ]
+    },
+    {
+      "id": "qcm-sk-si",
+      "type": "qcm",
+      "l1": "essayer",
+      "l2": "skúsiť",
+      "choices_l1": [
+        "nous achetons",
+        "payer",
+        "coûter"
+      ],
+      "choices_l2": [
+        "my kupujeme",
+        "čierny",
+        "ty kupuješ"
+      ]
+    },
+    {
+      "id": "qcm-bunda",
+      "type": "qcm",
+      "l1": "la veste",
+      "l2": "bunda",
+      "choices_l1": [
+        "la boulangerie",
+        "le vendeur",
+        "la vendeuse"
+      ],
+      "choices_l2": [
+        "košík",
+        "pokladňa",
+        "červený svetr"
+      ]
+    },
+    {
+      "id": "qcm-sveter",
+      "type": "qcm",
+      "l1": "le pull",
+      "l2": "sveter",
+      "choices_l1": [
+        "la caisse",
+        "le panier",
+        "le vendeur"
+      ],
+      "choices_l2": [
+        "pokladňa",
+        "predavač",
+        "predavačka"
+      ]
+    },
+    {
+      "id": "qcm-aty",
+      "type": "qcm",
+      "l1": "la robe",
+      "l2": "šaty",
+      "choices_l1": [
+        "la pharmacie",
+        "le panier",
+        "le chariot"
+      ],
+      "choices_l2": [
+        "trh",
+        "mäsiarstvo",
+        "predavač"
+      ]
+    },
+    {
+      "id": "qcm-iapka",
+      "type": "qcm",
+      "l1": "le bonnet",
+      "l2": "čiapka",
+      "choices_l1": [
+        "la boulangerie",
+        "la boucherie",
+        "le vendeur"
+      ],
+      "choices_l2": [
+        "lekáreň",
+        "pokladňa",
+        "trh"
+      ]
+    },
+    {
+      "id": "qcm-opasok",
+      "type": "qcm",
+      "l1": "la ceinture",
+      "l2": "opasok",
+      "choices_l1": [
+        "l'épicerie",
+        "la vendeuse",
+        "la couleur"
+      ],
+      "choices_l2": [
+        "potraviny",
+        "predavač",
+        "košík"
+      ]
+    },
+    {
+      "id": "qcm-lacn",
+      "type": "qcm",
+      "l1": "bon marché",
+      "l2": "lacný",
+      "choices_l1": [
+        "jaune",
+        "ouvert",
+        "vert"
+      ],
+      "choices_l2": [
+        "oranžový",
+        "biely",
+        "hnedý"
+      ]
+    },
+    {
+      "id": "qcm-drah",
+      "type": "qcm",
+      "l1": "cher",
+      "l2": "drahý",
+      "choices_l1": [
+        "j'achète",
+        "clair",
+        "essayer"
+      ],
+      "choices_l2": [
+        "ja skúsim",
+        "čierny",
+        "svetlý"
+      ]
+    },
+    {
+      "id": "qcm-st",
+      "type": "qcm",
+      "l1": "coûter",
+      "l2": "stáť",
+      "choices_l1": [
+        "payer",
+        "tu essaies",
+        "j'achète"
+      ],
+      "choices_l2": [
+        "čierny",
+        "skúsiť",
+        "ty kupuješ"
+      ]
+    },
+    {
+      "id": "qcm-cena",
+      "type": "qcm",
+      "l1": "le prix",
+      "l2": "cena",
+      "choices_l1": [
+        "la boulangerie",
+        "l'addition",
+        "le vendeur"
+      ],
+      "choices_l2": [
+        "košík",
+        "lekáreň",
+        "trh"
+      ]
+    },
+    {
+      "id": "qcm-euro",
+      "type": "qcm",
+      "l1": "l'euro",
+      "l2": "euro",
+      "choices_l1": [
+        "la boulangerie",
+        "l'addition",
+        "le chariot"
+      ],
+      "choices_l2": [
+        "červený svetr",
+        "vozík",
+        "predavač"
+      ]
+    },
+    {
+      "id": "qcm-cent",
+      "type": "qcm",
+      "l1": "le centime",
+      "l2": "cent",
+      "choices_l1": [
+        "le marché",
+        "le chariot",
+        "l'addition"
+      ],
+      "choices_l2": [
+        "červený svetr",
+        "lekáreň",
+        "vozík"
+      ]
+    },
+    {
+      "id": "qcm-plati",
+      "type": "qcm",
+      "l1": "payer",
+      "l2": "platiť",
+      "choices_l1": [
+        "clair",
+        "coûter",
+        "j'essaie"
+      ],
+      "choices_l2": [
+        "skúsiť",
+        "my kupujeme",
+        "drahý"
+      ]
+    },
+    {
+      "id": "qcm-hotovos",
+      "type": "qcm",
+      "l1": "l'argent liquide",
+      "l2": "hotovosť",
+      "choices_l1": [
+        "la pharmacie",
+        "la caisse",
+        "la boucherie"
+      ],
+      "choices_l2": [
+        "farba",
+        "mäsiarstvo",
+        "pekáreň"
+      ]
+    },
+    {
+      "id": "qcm-karta",
+      "type": "qcm",
+      "l1": "la carte",
+      "l2": "karta",
+      "choices_l1": [
+        "le panier",
+        "la vendeuse",
+        "la boucherie"
+      ],
+      "choices_l2": [
+        "košík",
+        "predavačka",
+        "farba"
+      ]
+    },
+    {
+      "id": "qcm-et",
+      "type": "qcm",
+      "l1": "l'addition",
+      "l2": "účet",
+      "choices_l1": [
+        "la boulangerie",
+        "l'épicerie",
+        "la vendeuse"
+      ],
+      "choices_l2": [
+        "červený svetr",
+        "pokladňa",
+        "predavačka"
+      ]
+    },
+    {
+      "id": "qcm-z-ava",
+      "type": "qcm",
+      "l1": "la réduction",
+      "l2": "zľava",
+      "choices_l1": [
+        "l'addition",
+        "le vendeur",
+        "la pharmacie"
+      ],
+      "choices_l2": [
+        "červený svetr",
+        "košík",
+        "predavač"
+      ]
+    },
+    {
+      "id": "qcm-akcia",
+      "type": "qcm",
+      "l1": "la promotion",
+      "l2": "akcia",
+      "choices_l1": [
+        "le panier",
+        "la pharmacie",
+        "la boulangerie"
+      ],
+      "choices_l2": [
+        "pekáreň",
+        "farba",
+        "predavačka"
+      ]
+    },
+    {
+      "id": "qcm-drahota",
+      "type": "qcm",
+      "l1": "la vie chère",
+      "l2": "drahota",
+      "choices_l1": [
+        "un tee-shirt rouge",
+        "l'addition, la facture",
+        "un pull rouge (masculin)"
+      ],
+      "choices_l2": [
+        "červený svetr",
+        "predavač",
+        "predavačka"
+      ]
+    },
+    {
+      "id": "qcm-v-predaj",
+      "type": "qcm",
+      "l1": "les soldes",
+      "l2": "výpredaj",
+      "choices_l1": [
+        "la pharmacie",
+        "le marché",
+        "l'épicerie"
+      ],
+      "choices_l2": [
+        "mäsiarstvo",
+        "vozík",
+        "predavač"
+      ]
+    },
+    {
+      "id": "qcm-bankomat",
+      "type": "qcm",
+      "l1": "le distributeur",
+      "l2": "bankomat",
+      "choices_l1": [
+        "l'addition",
+        "le panier",
+        "le marché"
+      ],
+      "choices_l2": [
+        "mäsiarstvo",
+        "predavač",
+        "vozík"
+      ]
+    },
+    {
+      "id": "qcm-pe-a-enka",
+      "type": "qcm",
+      "l1": "le portefeuille",
+      "l2": "peňaženka",
+      "choices_l1": [
+        "le marché",
+        "le panier",
+        "l'épicerie"
+      ],
+      "choices_l2": [
+        "vozík",
+        "potraviny",
+        "pekáreň"
+      ]
+    },
+    {
+      "id": "blank-idem-do-potrav-n-k-pi-chlieb-a-jablk",
+      "type": "fill-blank",
+      "l1": "Je vais à l'épicerie acheter du pain et des pommes.",
+      "l2": "Idem do potravín kúpiť chlieb a jablká.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 7,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "ni",
+        "Donc",
+        "ou"
+      ],
+      "choices_l2": [
+        "lebo",
+        "ale",
+        "alebo"
+      ]
+    },
+    {
+      "id": "blank-t-to-suk-a-je-pekn-ale-drah",
+      "type": "fill-blank",
+      "l1": "Cette jupe est jolie, mais chère.",
+      "l2": "Táto sukňa je pekná, ale drahá.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sont",
+        "es",
+        "est-ce"
+      ],
+      "choices_l2": [
+        "si",
+        "bol",
+        "budem"
+      ]
+    },
+    {
+      "id": "blank-ko-ko-stoj-tento-sveter-je-v-akcii",
+      "type": "fill-blank",
+      "l1": "Combien coûte ce pull ? Il est en promotion ?",
+      "l2": "Koľko stojí tento sveter? Je v akcii?",
+      "missing_l1": "est",
+      "missing_l2": "Je",
+      "blank_index_l1": 6,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "sont",
+        "est-ce",
+        "suis"
+      ],
+      "choices_l2": [
+        "budem",
+        "budú",
+        "sú"
+      ]
+    },
+    {
+      "id": "blank-kupujem-m-so-v-m-siarstve-a-syr-v-potravin-ch",
+      "type": "fill-blank",
+      "l1": "J'achète la viande à la boucherie et le fromage à l'épicerie.",
+      "l2": "Kupujem mäso v mäsiarstve a syr v potravinách.",
+      "missing_l1": "la",
+      "missing_l2": "v",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "vide",
+        "tous",
+        "le"
+      ],
+      "choices_l2": [
+        "od",
+        "po",
+        "o"
+      ]
+    },
+    {
+      "id": "blank-chcem-iernu-bundu-nie-hned",
+      "type": "fill-blank",
+      "l1": "Je veux une veste noire, pas marron.",
+      "l2": "Chcem čiernu bundu, nie hnedú.",
+      "missing_l1": "pas",
+      "missing_l2": "nie",
+      "blank_index_l1": 5,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "lieu",
+        "tous",
+        "ne"
+      ],
+      "choices_l2": [
+        "lebo",
+        "nové",
+        "preč"
+      ]
+    },
+    {
+      "id": "blank-plat-m-kartou-nem-m-hotovos",
+      "type": "fill-blank",
+      "l1": "Je paie par carte, je n'ai pas de liquide.",
+      "l2": "Platím kartou, nemám hotovosť.",
+      "missing_l1": "je",
+      "missing_l2": "nemám",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "On",
+        "Nous",
+        "vous"
+      ],
+      "choices_l2": [
+        "Máme",
+        "má",
+        "Mám"
+      ]
+    },
+    {
+      "id": "blank-predava-ka-je-mil-a-obchod-je-otvoren-do-smej",
+      "type": "fill-blank",
+      "l1": "La vendeuse est gentille et le magasin est ouvert jusqu'à huit heures.",
+      "l2": "Predavačka je milá a obchod je otvorený do ôsmej.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 5,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "la",
+        "tous",
+        "lieu"
+      ],
+      "choices_l2": [
+        "Bude",
+        "budem",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-sk-sim-top-nky-vo-ve-kosti-tyridsa",
+      "type": "fill-blank",
+      "l1": "J'essaie les chaussures en taille quarante.",
+      "l2": "Skúsim topánky vo veľkosti štyridsať.",
+      "missing_l1": "en",
+      "missing_l2": "vo",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "se",
+        "me",
+        "y"
+      ],
+      "choices_l2": [
+        "z",
+        "bez",
+        "medzi"
+      ]
+    },
+    {
+      "id": "blank-trh-je-v-sobotu-obchod-je-otvoren-ka-d-de",
+      "type": "fill-blank",
+      "l1": "Le marché a lieu le samedi, le magasin est ouvert tous les jours.",
+      "l2": "Trh je v sobotu, obchod je otvorený každý deň.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "lieu",
+        "tous",
+        "vide"
+      ],
+      "choices_l2": [
+        "budú",
+        "boli",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-nep-i-sa-mi-t-to-farba-m-te-to-v-modrej",
+      "type": "fill-blank",
+      "l1": "Cette couleur ne me plaît pas. Vous l'avez en bleu ?",
+      "l2": "Nepáči sa mi táto farba. Máte to v modrej?",
+      "missing_l1": "en",
+      "missing_l2": "v",
+      "blank_index_l1": 8,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "se",
+        "me",
+        "y"
+      ],
+      "choices_l2": [
+        "medzi",
+        "Cez",
+        "na"
+      ]
+    },
+    {
+      "id": "blank-bankomat-je-zatvoren-to-nie-je-mo-n",
+      "type": "fill-blank",
+      "l1": "Le distributeur est fermé ? Ce n'est pas possible !",
+      "l2": "Bankomat je zatvorený? To nie je možné!",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "est-ce",
+        "es",
+        "êtes"
+      ],
+      "choices_l2": [
+        "si",
+        "budem",
+        "bol"
+      ]
+    },
+    {
+      "id": "blank-zabudol-som-pe-a-enku-doma",
+      "type": "fill-blank",
+      "l1": "J'ai oublié mon portefeuille à la maison.",
+      "l2": "Zabudol som peňaženku doma.",
+      "missing_l1": "la",
+      "missing_l2": "som",
+      "blank_index_l1": 5,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "le",
+        "trop",
+        "Les"
+      ],
+      "choices_l2": [
+        "Bude",
+        "ste",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-chcem-z-avu-lebo-to-je-pr-li-drah",
+      "type": "fill-blank",
+      "l1": "Je veux une réduction, parce que c'est trop cher.",
+      "l2": "Chcem zľavu, lebo to je príliš drahé.",
+      "missing_l1": "une",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "un",
+        "lieu",
+        "trop"
+      ],
+      "choices_l2": [
+        "budú",
+        "Bude",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-ko-k-je-pln-voz-k-je-pr-zdny",
+      "type": "fill-blank",
+      "l1": "Le panier est plein, le chariot est vide.",
+      "l2": "Košík je plný, vozík je prázdny.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "lieu",
+        "la",
+        "trop"
+      ],
+      "choices_l2": [
+        "Bude",
+        "budeme",
+        "sú"
+      ]
+    },
+    {
+      "id": "blank-k-pim-si-nov-top-nky-a-star-pe-a-enku-d-m-pre",
+      "type": "fill-blank",
+      "l1": "Je vais m'acheter de nouvelles chaussures et je vais jeter mon vieux portefeuille.",
+      "l2": "Kúpim si nové topánky a starú peňaženku dám preč.",
+      "missing_l1": "je",
+      "missing_l2": "a",
+      "blank_index_l1": 7,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "Ils",
+        "Tu",
+        "On"
+      ],
+      "choices_l2": [
+        "však",
+        "lebo",
+        "alebo"
+      ]
+    },
+    {
+      "id": "listen-idem-do-potrav-n-k-pi-chlieb-a-jablk",
+      "type": "listen",
+      "l1": "Je vais à l'épicerie acheter du pain et des pommes.",
+      "l2": "Idem do potravín kúpiť chlieb a jablká.",
+      "choices_l1": [
+        "La vendeuse est gentille et le magasin est ouvert jusqu'à huit heures.",
+        "Le marché a lieu le samedi, le magasin est ouvert tous les jours.",
+        "J'essaie les chaussures en taille quarante."
+      ],
+      "choices_l2": [
+        "Zabudol som peňaženku doma.",
+        "Chcem čiernu bundu, nie hnedú.",
+        "Kupujem mäso v mäsiarstve a syr v potravinách."
+      ]
+    },
+    {
+      "id": "listen-t-to-suk-a-je-pekn-ale-drah",
+      "type": "listen",
+      "l1": "Cette jupe est jolie, mais chère.",
+      "l2": "Táto sukňa je pekná, ale drahá.",
+      "choices_l1": [
+        "Combien coûte ce pull ? Il est en promotion ?",
+        "Le distributeur est fermé ? Ce n'est pas possible !",
+        "Cette couleur ne me plaît pas. Vous l'avez en bleu ?"
+      ],
+      "choices_l2": [
+        "Platím kartou, nemám hotovosť.",
+        "Bankomat je zatvorený? To nie je možné!",
+        "Kupujem mäso v mäsiarstve a syr v potravinách."
+      ]
+    },
+    {
+      "id": "listen-ko-ko-stoj-tento-sveter-je-v-akcii",
+      "type": "listen",
+      "l1": "Combien coûte ce pull ? Il est en promotion ?",
+      "l2": "Koľko stojí tento sveter? Je v akcii?",
+      "choices_l1": [
+        "Le marché a lieu le samedi, le magasin est ouvert tous les jours.",
+        "Je veux une réduction, parce que c'est trop cher.",
+        "J'achète la viande à la boucherie et le fromage à l'épicerie."
+      ],
+      "choices_l2": [
+        "Idem do potravín kúpiť chlieb a jablká.",
+        "Táto sukňa je pekná, ale drahá.",
+        "Zabudol som peňaženku doma."
+      ]
+    },
+    {
+      "id": "listen-kupujem-m-so-v-m-siarstve-a-syr-v-potravin-ch",
+      "type": "listen",
+      "l1": "J'achète la viande à la boucherie et le fromage à l'épicerie.",
+      "l2": "Kupujem mäso v mäsiarstve a syr v potravinách.",
+      "choices_l1": [
+        "Je veux une réduction, parce que c'est trop cher.",
+        "Le distributeur est fermé ? Ce n'est pas possible !",
+        "Cette jupe est jolie, mais chère."
+      ],
+      "choices_l2": [
+        "Platím kartou, nemám hotovosť.",
+        "Nepáči sa mi táto farba. Máte to v modrej?",
+        "Skúsim topánky vo veľkosti štyridsať."
+      ]
+    },
+    {
+      "id": "listen-chcem-iernu-bundu-nie-hned",
+      "type": "listen",
+      "l1": "Je veux une veste noire, pas marron.",
+      "l2": "Chcem čiernu bundu, nie hnedú.",
+      "choices_l1": [
+        "Je veux une réduction, parce que c'est trop cher.",
+        "J'achète la viande à la boucherie et le fromage à l'épicerie.",
+        "Je vais à l'épicerie acheter du pain et des pommes."
+      ],
+      "choices_l2": [
+        "Platím kartou, nemám hotovosť.",
+        "Chcem zľavu, lebo to je príliš drahé.",
+        "Trh je v sobotu, obchod je otvorený každý deň."
+      ]
+    },
+    {
+      "id": "listen-plat-m-kartou-nem-m-hotovos",
+      "type": "listen",
+      "l1": "Je paie par carte, je n'ai pas de liquide.",
+      "l2": "Platím kartou, nemám hotovosť.",
+      "choices_l1": [
+        "Le distributeur est fermé ? Ce n'est pas possible !",
+        "Je vais à l'épicerie acheter du pain et des pommes.",
+        "La vendeuse est gentille et le magasin est ouvert jusqu'à huit heures."
+      ],
+      "choices_l2": [
+        "Koľko stojí tento sveter? Je v akcii?",
+        "Bankomat je zatvorený? To nie je možné!",
+        "Chcem čiernu bundu, nie hnedú."
+      ]
+    },
+    {
+      "id": "listen-predava-ka-je-mil-a-obchod-je-otvoren-do-smej",
+      "type": "listen",
+      "l1": "La vendeuse est gentille et le magasin est ouvert jusqu'à huit heures.",
+      "l2": "Predavačka je milá a obchod je otvorený do ôsmej.",
+      "choices_l1": [
+        "Le marché a lieu le samedi, le magasin est ouvert tous les jours.",
+        "Je vais à l'épicerie acheter du pain et des pommes.",
+        "Le distributeur est fermé ? Ce n'est pas possible !"
+      ],
+      "choices_l2": [
+        "Trh je v sobotu, obchod je otvorený každý deň.",
+        "Táto sukňa je pekná, ale drahá.",
+        "Nepáči sa mi táto farba. Máte to v modrej?"
+      ]
+    },
+    {
+      "id": "listen-sk-sim-top-nky-vo-ve-kosti-tyridsa",
+      "type": "listen",
+      "l1": "J'essaie les chaussures en taille quarante.",
+      "l2": "Skúsim topánky vo veľkosti štyridsať.",
+      "choices_l1": [
+        "Je veux une veste noire, pas marron.",
+        "Le marché a lieu le samedi, le magasin est ouvert tous les jours.",
+        "Combien coûte ce pull ? Il est en promotion ?"
+      ],
+      "choices_l2": [
+        "Táto sukňa je pekná, ale drahá.",
+        "Platím kartou, nemám hotovosť.",
+        "Koľko stojí tento sveter? Je v akcii?"
+      ]
+    },
+    {
+      "id": "listen-trh-je-v-sobotu-obchod-je-otvoren-ka-d-de",
+      "type": "listen",
+      "l1": "Le marché a lieu le samedi, le magasin est ouvert tous les jours.",
+      "l2": "Trh je v sobotu, obchod je otvorený každý deň.",
+      "choices_l1": [
+        "Le distributeur est fermé ? Ce n'est pas possible !",
+        "Je veux une réduction, parce que c'est trop cher.",
+        "J'essaie les chaussures en taille quarante."
+      ],
+      "choices_l2": [
+        "Chcem čiernu bundu, nie hnedú.",
+        "Idem do potravín kúpiť chlieb a jablká.",
+        "Kupujem mäso v mäsiarstve a syr v potravinách."
+      ]
+    },
+    {
+      "id": "listen-nep-i-sa-mi-t-to-farba-m-te-to-v-modrej",
+      "type": "listen",
+      "l1": "Cette couleur ne me plaît pas. Vous l'avez en bleu ?",
+      "l2": "Nepáči sa mi táto farba. Máte to v modrej?",
+      "choices_l1": [
+        "Je veux une veste noire, pas marron.",
+        "Cette jupe est jolie, mais chère.",
+        "La vendeuse est gentille et le magasin est ouvert jusqu'à huit heures."
+      ],
+      "choices_l2": [
+        "Táto sukňa je pekná, ale drahá.",
+        "Platím kartou, nemám hotovosť.",
+        "Chcem čiernu bundu, nie hnedú."
+      ]
+    },
+    {
+      "id": "listen-bankomat-je-zatvoren-to-nie-je-mo-n",
+      "type": "listen",
+      "l1": "Le distributeur est fermé ? Ce n'est pas possible !",
+      "l2": "Bankomat je zatvorený? To nie je možné!",
+      "choices_l1": [
+        "La vendeuse est gentille et le magasin est ouvert jusqu'à huit heures.",
+        "Je vais à l'épicerie acheter du pain et des pommes.",
+        "J'essaie les chaussures en taille quarante."
+      ],
+      "choices_l2": [
+        "Skúsim topánky vo veľkosti štyridsať.",
+        "Táto sukňa je pekná, ale drahá.",
+        "Platím kartou, nemám hotovosť."
+      ]
+    },
+    {
+      "id": "listen-zabudol-som-pe-a-enku-doma",
+      "type": "listen",
+      "l1": "J'ai oublié mon portefeuille à la maison.",
+      "l2": "Zabudol som peňaženku doma.",
+      "choices_l1": [
+        "Je veux une veste noire, pas marron.",
+        "Le marché a lieu le samedi, le magasin est ouvert tous les jours.",
+        "Combien coûte ce pull ? Il est en promotion ?"
+      ],
+      "choices_l2": [
+        "Platím kartou, nemám hotovosť.",
+        "Chcem zľavu, lebo to je príliš drahé.",
+        "Skúsim topánky vo veľkosti štyridsať."
+      ]
+    },
+    {
+      "id": "listen-chcem-z-avu-lebo-to-je-pr-li-drah",
+      "type": "listen",
+      "l1": "Je veux une réduction, parce que c'est trop cher.",
+      "l2": "Chcem zľavu, lebo to je príliš drahé.",
+      "choices_l1": [
+        "Combien coûte ce pull ? Il est en promotion ?",
+        "Cette jupe est jolie, mais chère.",
+        "Je paie par carte, je n'ai pas de liquide."
+      ],
+      "choices_l2": [
+        "Zabudol som peňaženku doma.",
+        "Bankomat je zatvorený? To nie je možné!",
+        "Nepáči sa mi táto farba. Máte to v modrej?"
+      ]
+    },
+    {
+      "id": "listen-ko-k-je-pln-voz-k-je-pr-zdny",
+      "type": "listen",
+      "l1": "Le panier est plein, le chariot est vide.",
+      "l2": "Košík je plný, vozík je prázdny.",
+      "choices_l1": [
+        "Je vais à l'épicerie acheter du pain et des pommes.",
+        "J'essaie les chaussures en taille quarante.",
+        "Je veux une veste noire, pas marron."
+      ],
+      "choices_l2": [
+        "Chcem čiernu bundu, nie hnedú.",
+        "Koľko stojí tento sveter? Je v akcii?",
+        "Idem do potravín kúpiť chlieb a jablká."
+      ]
+    },
+    {
+      "id": "listen-k-pim-si-nov-top-nky-a-star-pe-a-enku-d-m-pre",
+      "type": "listen",
+      "l1": "Je vais m'acheter de nouvelles chaussures et je vais jeter mon vieux portefeuille.",
+      "l2": "Kúpim si nové topánky a starú peňaženku dám preč.",
+      "choices_l1": [
+        "Combien coûte ce pull ? Il est en promotion ?",
+        "Le marché a lieu le samedi, le magasin est ouvert tous les jours.",
+        "La vendeuse est gentille et le magasin est ouvert jusqu'à huit heures."
+      ],
+      "choices_l2": [
+        "Táto sukňa je pekná, ale drahá.",
+        "Trh je v sobotu, obchod je otvorený každý deň.",
+        "Kupujem mäso v mäsiarstve a syr v potravinách."
+      ]
+    },
+    {
+      "id": "order-idem-do-potrav-n-k-pi-chlieb-a-jablk",
+      "type": "order",
+      "l1": "Je vais à l'épicerie acheter du pain et des pommes.",
+      "l2": "Idem do potravín kúpiť chlieb a jablká.",
+      "tokens_l1": [
+        "Je",
+        "vais",
+        "à",
+        "l'épicerie",
+        "acheter",
+        "du",
+        "pain",
+        "et",
+        "des",
+        "pommes.",
+        "Le",
+        "marché",
+        "a",
+        "lieu",
+        "le",
+        "samedi,",
+        "le",
+        "magasin",
+        "est",
+        "ouvert",
+        "tous",
+        "les",
+        "jours."
+      ],
+      "tokens_l2": [
+        "Idem",
+        "do",
+        "potravín",
+        "kúpiť",
+        "chlieb",
+        "a",
+        "jablká.",
+        "Trh",
+        "je",
+        "v",
+        "sobotu,",
+        "obchod",
+        "je",
+        "otvorený",
+        "každý",
+        "deň."
+      ]
+    },
+    {
+      "id": "order-t-to-suk-a-je-pekn-ale-drah",
+      "type": "order",
+      "l1": "Cette jupe est jolie, mais chère.",
+      "l2": "Táto sukňa je pekná, ale drahá.",
+      "tokens_l1": [
+        "Cette",
+        "jupe",
+        "est",
+        "jolie,",
+        "mais",
+        "chère.",
+        "Je",
+        "veux",
+        "une",
+        "réduction,",
+        "parce",
+        "que",
+        "c'est",
+        "trop",
+        "cher."
+      ],
+      "tokens_l2": [
+        "Táto",
+        "sukňa",
+        "je",
+        "pekná,",
+        "ale",
+        "drahá.",
+        "Chcem",
+        "zľavu,",
+        "lebo",
+        "to",
+        "je",
+        "príliš",
+        "drahé."
+      ]
+    },
+    {
+      "id": "order-ko-ko-stoj-tento-sveter-je-v-akcii",
+      "type": "order",
+      "l1": "Combien coûte ce pull ? Il est en promotion ?",
+      "l2": "Koľko stojí tento sveter? Je v akcii?",
+      "tokens_l1": [
+        "Combien",
+        "coûte",
+        "ce",
+        "pull",
+        "?",
+        "Il",
+        "est",
+        "en",
+        "promotion",
+        "?",
+        "Je",
+        "veux",
+        "une",
+        "veste",
+        "noire,",
+        "pas",
+        "marron."
+      ],
+      "tokens_l2": [
+        "Koľko",
+        "stojí",
+        "tento",
+        "sveter?",
+        "Je",
+        "v",
+        "akcii?",
+        "Chcem",
+        "čiernu",
+        "bundu,",
+        "nie",
+        "hnedú."
+      ]
+    },
+    {
+      "id": "order-kupujem-m-so-v-m-siarstve-a-syr-v-potravin-ch",
+      "type": "order",
+      "l1": "J'achète la viande à la boucherie et le fromage à l'épicerie.",
+      "l2": "Kupujem mäso v mäsiarstve a syr v potravinách.",
+      "tokens_l1": [
+        "J'achète",
+        "la",
+        "viande",
+        "à",
+        "la",
+        "boucherie",
+        "et",
+        "le",
+        "fromage",
+        "à",
+        "l'épicerie.",
+        "Je",
+        "veux",
+        "une",
+        "réduction,",
+        "parce",
+        "que",
+        "c'est",
+        "trop",
+        "cher."
+      ],
+      "tokens_l2": [
+        "Kupujem",
+        "mäso",
+        "v",
+        "mäsiarstve",
+        "a",
+        "syr",
+        "v",
+        "potravinách.",
+        "Chcem",
+        "zľavu,",
+        "lebo",
+        "to",
+        "je",
+        "príliš",
+        "drahé."
+      ]
+    },
+    {
+      "id": "order-chcem-iernu-bundu-nie-hned",
+      "type": "order",
+      "l1": "Je veux une veste noire, pas marron.",
+      "l2": "Chcem čiernu bundu, nie hnedú.",
+      "tokens_l1": [
+        "Je",
+        "veux",
+        "une",
+        "veste",
+        "noire,",
+        "pas",
+        "marron.",
+        "La",
+        "vendeuse",
+        "est",
+        "gentille",
+        "et",
+        "le",
+        "magasin",
+        "est",
+        "ouvert",
+        "jusqu'à",
+        "huit",
+        "heures."
+      ],
+      "tokens_l2": [
+        "Chcem",
+        "čiernu",
+        "bundu,",
+        "nie",
+        "hnedú.",
+        "Predavačka",
+        "je",
+        "milá",
+        "a",
+        "obchod",
+        "je",
+        "otvorený",
+        "do",
+        "ôsmej."
+      ]
+    },
+    {
+      "id": "order-plat-m-kartou-nem-m-hotovos",
+      "type": "order",
+      "l1": "Je paie par carte, je n'ai pas de liquide.",
+      "l2": "Platím kartou, nemám hotovosť.",
+      "tokens_l1": [
+        "Je",
+        "paie",
+        "par",
+        "carte,",
+        "je",
+        "n'ai",
+        "pas",
+        "de",
+        "liquide.",
+        "Cette",
+        "jupe",
+        "est",
+        "jolie,",
+        "mais",
+        "chère."
+      ],
+      "tokens_l2": [
+        "Platím",
+        "kartou,",
+        "nemám",
+        "hotovosť.",
+        "Táto",
+        "sukňa",
+        "je",
+        "pekná,",
+        "ale",
+        "drahá."
+      ]
+    },
+    {
+      "id": "order-predava-ka-je-mil-a-obchod-je-otvoren-do-smej",
+      "type": "order",
+      "l1": "La vendeuse est gentille et le magasin est ouvert jusqu'à huit heures.",
+      "l2": "Predavačka je milá a obchod je otvorený do ôsmej.",
+      "tokens_l1": [
+        "La",
+        "vendeuse",
+        "est",
+        "gentille",
+        "et",
+        "le",
+        "magasin",
+        "est",
+        "ouvert",
+        "jusqu'à",
+        "huit",
+        "heures.",
+        "Je",
+        "vais",
+        "à",
+        "l'épicerie",
+        "acheter",
+        "du",
+        "pain",
+        "et",
+        "des",
+        "pommes."
+      ],
+      "tokens_l2": [
+        "Predavačka",
+        "je",
+        "milá",
+        "a",
+        "obchod",
+        "je",
+        "otvorený",
+        "do",
+        "ôsmej.",
+        "Idem",
+        "do",
+        "potravín",
+        "kúpiť",
+        "chlieb",
+        "a",
+        "jablká."
+      ]
+    },
+    {
+      "id": "order-sk-sim-top-nky-vo-ve-kosti-tyridsa",
+      "type": "order",
+      "l1": "J'essaie les chaussures en taille quarante.",
+      "l2": "Skúsim topánky vo veľkosti štyridsať.",
+      "tokens_l1": [
+        "J'essaie",
+        "les",
+        "chaussures",
+        "en",
+        "taille",
+        "quarante.",
+        "Le",
+        "panier",
+        "est",
+        "plein,",
+        "le",
+        "chariot",
+        "est",
+        "vide."
+      ],
+      "tokens_l2": [
+        "Skúsim",
+        "topánky",
+        "vo",
+        "veľkosti",
+        "štyridsať.",
+        "Košík",
+        "je",
+        "plný,",
+        "vozík",
+        "je",
+        "prázdny."
+      ]
+    },
+    {
+      "id": "order-trh-je-v-sobotu-obchod-je-otvoren-ka-d-de",
+      "type": "order",
+      "l1": "Le marché a lieu le samedi, le magasin est ouvert tous les jours.",
+      "l2": "Trh je v sobotu, obchod je otvorený každý deň.",
+      "tokens_l1": [
+        "Le",
+        "marché",
+        "a",
+        "lieu",
+        "le",
+        "samedi,",
+        "le",
+        "magasin",
+        "est",
+        "ouvert",
+        "tous",
+        "les",
+        "jours.",
+        "Je",
+        "veux",
+        "une",
+        "veste",
+        "noire,",
+        "pas",
+        "marron."
+      ],
+      "tokens_l2": [
+        "Trh",
+        "je",
+        "v",
+        "sobotu,",
+        "obchod",
+        "je",
+        "otvorený",
+        "každý",
+        "deň.",
+        "Chcem",
+        "čiernu",
+        "bundu,",
+        "nie",
+        "hnedú."
+      ]
+    },
+    {
+      "id": "order-nep-i-sa-mi-t-to-farba-m-te-to-v-modrej",
+      "type": "order",
+      "l1": "Cette couleur ne me plaît pas. Vous l'avez en bleu ?",
+      "l2": "Nepáči sa mi táto farba. Máte to v modrej?",
+      "tokens_l1": [
+        "Cette",
+        "couleur",
+        "ne",
+        "me",
+        "plaît",
+        "pas.",
+        "Vous",
+        "l'avez",
+        "en",
+        "bleu",
+        "?",
+        "Je",
+        "paie",
+        "par",
+        "carte,",
+        "je",
+        "n'ai",
+        "pas",
+        "de",
+        "liquide."
+      ],
+      "tokens_l2": [
+        "Nepáči",
+        "sa",
+        "mi",
+        "táto",
+        "farba.",
+        "Máte",
+        "to",
+        "v",
+        "modrej?",
+        "Platím",
+        "kartou,",
+        "nemám",
+        "hotovosť."
+      ]
+    },
+    {
+      "id": "order-bankomat-je-zatvoren-to-nie-je-mo-n",
+      "type": "order",
+      "l1": "Le distributeur est fermé ? Ce n'est pas possible !",
+      "l2": "Bankomat je zatvorený? To nie je možné!",
+      "tokens_l1": [
+        "Le",
+        "distributeur",
+        "est",
+        "fermé",
+        "?",
+        "Ce",
+        "n'est",
+        "pas",
+        "possible",
+        "!",
+        "Combien",
+        "coûte",
+        "ce",
+        "pull",
+        "?",
+        "Il",
+        "est",
+        "en",
+        "promotion",
+        "?"
+      ],
+      "tokens_l2": [
+        "Bankomat",
+        "je",
+        "zatvorený?",
+        "To",
+        "nie",
+        "je",
+        "možné!",
+        "Koľko",
+        "stojí",
+        "tento",
+        "sveter?",
+        "Je",
+        "v",
+        "akcii?"
+      ]
+    },
+    {
+      "id": "order-zabudol-som-pe-a-enku-doma",
+      "type": "order",
+      "l1": "J'ai oublié mon portefeuille à la maison.",
+      "l2": "Zabudol som peňaženku doma.",
+      "tokens_l1": [
+        "J'ai",
+        "oublié",
+        "mon",
+        "portefeuille",
+        "à",
+        "la",
+        "maison.",
+        "Je",
+        "vais",
+        "à",
+        "l'épicerie",
+        "acheter",
+        "du",
+        "pain",
+        "et",
+        "des",
+        "pommes."
+      ],
+      "tokens_l2": [
+        "Zabudol",
+        "som",
+        "peňaženku",
+        "doma.",
+        "Idem",
+        "do",
+        "potravín",
+        "kúpiť",
+        "chlieb",
+        "a",
+        "jablká."
+      ]
+    },
+    {
+      "id": "order-chcem-z-avu-lebo-to-je-pr-li-drah",
+      "type": "order",
+      "l1": "Je veux une réduction, parce que c'est trop cher.",
+      "l2": "Chcem zľavu, lebo to je príliš drahé.",
+      "tokens_l1": [
+        "Je",
+        "veux",
+        "une",
+        "réduction,",
+        "parce",
+        "que",
+        "c'est",
+        "trop",
+        "cher.",
+        "Cette",
+        "jupe",
+        "est",
+        "jolie,",
+        "mais",
+        "chère."
+      ],
+      "tokens_l2": [
+        "Chcem",
+        "zľavu,",
+        "lebo",
+        "to",
+        "je",
+        "príliš",
+        "drahé.",
+        "Táto",
+        "sukňa",
+        "je",
+        "pekná,",
+        "ale",
+        "drahá."
+      ]
+    },
+    {
+      "id": "order-ko-k-je-pln-voz-k-je-pr-zdny",
+      "type": "order",
+      "l1": "Le panier est plein, le chariot est vide.",
+      "l2": "Košík je plný, vozík je prázdny.",
+      "tokens_l1": [
+        "Le",
+        "panier",
+        "est",
+        "plein,",
+        "le",
+        "chariot",
+        "est",
+        "vide.",
+        "Je",
+        "veux",
+        "une",
+        "veste",
+        "noire,",
+        "pas",
+        "marron."
+      ],
+      "tokens_l2": [
+        "Košík",
+        "je",
+        "plný,",
+        "vozík",
+        "je",
+        "prázdny.",
+        "Chcem",
+        "čiernu",
+        "bundu,",
+        "nie",
+        "hnedú."
+      ]
+    },
+    {
+      "id": "order-k-pim-si-nov-top-nky-a-star-pe-a-enku-d-m-pre",
+      "type": "order",
+      "l1": "Je vais m'acheter de nouvelles chaussures et je vais jeter mon vieux portefeuille.",
+      "l2": "Kúpim si nové topánky a starú peňaženku dám preč.",
+      "tokens_l1": [
+        "Je",
+        "vais",
+        "m'acheter",
+        "de",
+        "nouvelles",
+        "chaussures",
+        "et",
+        "je",
+        "vais",
+        "jeter",
+        "mon",
+        "vieux",
+        "portefeuille.",
+        "Le",
+        "marché",
+        "a",
+        "lieu",
+        "le",
+        "samedi,",
+        "le",
+        "magasin",
+        "est",
+        "ouvert",
+        "tous",
+        "les",
+        "jours."
+      ],
+      "tokens_l2": [
+        "Kúpim",
+        "si",
+        "nové",
+        "topánky",
+        "a",
+        "starú",
+        "peňaženku",
+        "dám",
+        "preč.",
+        "Trh",
+        "je",
+        "v",
+        "sobotu,",
+        "obchod",
+        "je",
+        "otvorený",
+        "každý",
+        "deň."
+      ]
+    },
+    {
+      "id": "match-obchod-vocab",
+      "type": "match",
+      "l1": [
+        "le magasin",
+        "l'épicerie",
+        "la boulangerie",
+        "la boucherie"
+      ],
+      "l2": [
+        "obchod",
+        "potraviny",
+        "pekáreň",
+        "mäsiarstvo"
+      ]
+    },
+    {
+      "id": "match-idem-do-potrav-n-k-pi-chlieb-a-jablk-sentences",
+      "type": "match",
+      "l1": [
+        "Je vais à l'épicerie acheter du pain et des pommes.",
+        "Cette jupe est jolie, mais chère.",
+        "Combien coûte ce pull ? Il est en promotion ?",
+        "J'achète la viande à la boucherie et le fromage à l'épicerie."
+      ],
+      "l2": [
+        "Idem do potravín kúpiť chlieb a jablká.",
+        "Táto sukňa je pekná, ale drahá.",
+        "Koľko stojí tento sveter? Je v akcii?",
+        "Kupujem mäso v mäsiarstve a syr v potravinách."
+      ]
+    }
+  ]
+}

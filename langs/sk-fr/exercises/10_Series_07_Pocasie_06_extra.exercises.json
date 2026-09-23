@@ -1,0 +1,2158 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-po-asie",
+      "type": "qcm",
+      "l1": "le temps (météo)",
+      "l2": "počasie",
+      "choices_l1": [
+        "la crème solaire",
+        "les lunettes de soleil",
+        "le plan, le projet"
+      ],
+      "choices_l2": [
+        "stupeň",
+        "dáždnik",
+        "búrka"
+      ]
+    },
+    {
+      "id": "qcm-slnko",
+      "type": "qcm",
+      "l1": "le soleil",
+      "l2": "slnko",
+      "choices_l1": [
+        "la neige",
+        "le parapluie",
+        "l'orage"
+      ],
+      "choices_l2": [
+        "oblak",
+        "dáždnik",
+        "teplota"
+      ]
+    },
+    {
+      "id": "qcm-d",
+      "type": "qcm",
+      "l1": "la pluie",
+      "l2": "dážď",
+      "choices_l1": [
+        "l'alerte",
+        "le nuage",
+        "l'orage"
+      ],
+      "choices_l2": [
+        "búrka",
+        "stupeň",
+        "vietor"
+      ]
+    },
+    {
+      "id": "qcm-sneh",
+      "type": "qcm",
+      "l1": "la neige",
+      "l2": "sneh",
+      "choices_l1": [
+        "la température",
+        "le plan",
+        "l'arc-en-ciel"
+      ],
+      "choices_l2": [
+        "stupeň",
+        "teplota",
+        "dúha"
+      ]
+    },
+    {
+      "id": "qcm-vietor",
+      "type": "qcm",
+      "l1": "le vent",
+      "l2": "vietor",
+      "choices_l1": [
+        "le soleil",
+        "le plan",
+        "le nuage"
+      ],
+      "choices_l2": [
+        "teplota",
+        "oblak",
+        "hmla"
+      ]
+    },
+    {
+      "id": "qcm-oblak",
+      "type": "qcm",
+      "l1": "le nuage",
+      "l2": "oblak",
+      "choices_l1": [
+        "le degré",
+        "la neige",
+        "la température"
+      ],
+      "choices_l2": [
+        "vietor",
+        "počasie",
+        "hmla"
+      ]
+    },
+    {
+      "id": "qcm-b-rka",
+      "type": "qcm",
+      "l1": "l'orage",
+      "l2": "búrka",
+      "choices_l1": [
+        "le soleil",
+        "le parapluie",
+        "la neige"
+      ],
+      "choices_l2": [
+        "teplota",
+        "hmla",
+        "stupeň"
+      ]
+    },
+    {
+      "id": "qcm-d-dnik",
+      "type": "qcm",
+      "l1": "le parapluie",
+      "l2": "dáždnik",
+      "choices_l1": [
+        "l'orage",
+        "le nuage",
+        "le soleil"
+      ],
+      "choices_l2": [
+        "búrka",
+        "dážď",
+        "hmla"
+      ]
+    },
+    {
+      "id": "qcm-mrzn",
+      "type": "qcm",
+      "l1": "geler",
+      "l2": "mrznúť",
+      "choices_l1": [
+        "nous devons",
+        "l'alerte",
+        "devoir"
+      ],
+      "choices_l2": [
+        "my musíme",
+        "obliecť si",
+        "musieť"
+      ]
+    },
+    {
+      "id": "qcm-teplota",
+      "type": "qcm",
+      "l1": "la température",
+      "l2": "teplota",
+      "choices_l1": [
+        "le plan",
+        "l'alerte",
+        "le parapluie"
+      ],
+      "choices_l2": [
+        "počasie",
+        "obloha",
+        "dáždnik"
+      ]
+    },
+    {
+      "id": "qcm-stupe",
+      "type": "qcm",
+      "l1": "le degré",
+      "l2": "stupeň",
+      "choices_l1": [
+        "l'alerte",
+        "le plan",
+        "le vent"
+      ],
+      "choices_l2": [
+        "oblak",
+        "dáždnik",
+        "počasie"
+      ]
+    },
+    {
+      "id": "qcm-hmla",
+      "type": "qcm",
+      "l1": "le brouillard",
+      "l2": "hmla",
+      "choices_l1": [
+        "la neige",
+        "la température",
+        "le degré"
+      ],
+      "choices_l2": [
+        "stupeň",
+        "búrka",
+        "teplota"
+      ]
+    },
+    {
+      "id": "qcm-d-ha",
+      "type": "qcm",
+      "l1": "l'arc-en-ciel",
+      "l2": "dúha",
+      "choices_l1": [
+        "le plan",
+        "le nuage",
+        "le parapluie"
+      ],
+      "choices_l2": [
+        "hmla",
+        "teplota",
+        "obloha"
+      ]
+    },
+    {
+      "id": "qcm-obloha",
+      "type": "qcm",
+      "l1": "le ciel",
+      "l2": "obloha",
+      "choices_l1": [
+        "le brouillard",
+        "l'orage",
+        "la neige"
+      ],
+      "choices_l2": [
+        "búrka",
+        "dúha",
+        "teplota"
+      ]
+    },
+    {
+      "id": "qcm-jar",
+      "type": "qcm",
+      "l1": "le printemps",
+      "l2": "jar",
+      "choices_l1": [
+        "la pluie",
+        "l'alerte",
+        "le vent"
+      ],
+      "choices_l2": [
+        "sneh",
+        "hmla",
+        "vietor"
+      ]
+    },
+    {
+      "id": "qcm-leto",
+      "type": "qcm",
+      "l1": "l'été",
+      "l2": "leto",
+      "choices_l1": [
+        "le plan",
+        "la neige",
+        "le parapluie"
+      ],
+      "choices_l2": [
+        "teplota",
+        "oblak",
+        "dúha"
+      ]
+    },
+    {
+      "id": "qcm-jese",
+      "type": "qcm",
+      "l1": "l'automne",
+      "l2": "jeseň",
+      "choices_l1": [
+        "le soleil",
+        "le nuage",
+        "le plan"
+      ],
+      "choices_l2": [
+        "stupeň",
+        "oblak",
+        "teplota"
+      ]
+    },
+    {
+      "id": "qcm-zima",
+      "type": "qcm",
+      "l1": "l'hiver",
+      "l2": "zima",
+      "choices_l1": [
+        "la pluie",
+        "le vent",
+        "l'alerte"
+      ],
+      "choices_l2": [
+        "sneh",
+        "oblak",
+        "teplota"
+      ]
+    },
+    {
+      "id": "qcm-ro-n-obdobie",
+      "type": "qcm",
+      "l1": "la saison",
+      "l2": "ročné obdobie",
+      "choices_l1": [
+        "le degré",
+        "le nuage",
+        "l'alerte"
+      ],
+      "choices_l2": [
+        "hmla",
+        "dážď",
+        "sneh"
+      ]
+    },
+    {
+      "id": "qcm-ob-ben",
+      "type": "qcm",
+      "l1": "préféré",
+      "l2": "obľúbený",
+      "choices_l1": [
+        "en été",
+        "chaque",
+        "ensoleillé"
+      ],
+      "choices_l2": [
+        "na jar",
+        "v zime",
+        "každý"
+      ]
+    },
+    {
+      "id": "qcm-ka-d",
+      "type": "qcm",
+      "l1": "chaque",
+      "l2": "každý",
+      "choices_l1": [
+        "l'alerte",
+        "nuageux",
+        "en été"
+      ],
+      "choices_l2": [
+        "daždivo",
+        "v lete",
+        "zajtra bude"
+      ]
+    },
+    {
+      "id": "qcm-l-stie",
+      "type": "qcm",
+      "l1": "les feuilles",
+      "l2": "lístie",
+      "choices_l1": [
+        "le soleil",
+        "le plan",
+        "la neige"
+      ],
+      "choices_l2": [
+        "búrka",
+        "počasie",
+        "dážď"
+      ]
+    },
+    {
+      "id": "qcm-kvet",
+      "type": "qcm",
+      "l1": "la fleur",
+      "l2": "kvet",
+      "choices_l1": [
+        "le parapluie",
+        "le brouillard",
+        "le soleil"
+      ],
+      "choices_l2": [
+        "stupeň",
+        "dáždnik",
+        "slnko"
+      ]
+    },
+    {
+      "id": "qcm-tr-va",
+      "type": "qcm",
+      "l1": "l'herbe",
+      "l2": "tráva",
+      "choices_l1": [
+        "le vent",
+        "le brouillard",
+        "la neige"
+      ],
+      "choices_l2": [
+        "hmla",
+        "slnko",
+        "dúha"
+      ]
+    },
+    {
+      "id": "qcm-hor-ava",
+      "type": "qcm",
+      "l1": "la canicule",
+      "l2": "horúčava",
+      "choices_l1": [
+        "la température",
+        "le parapluie",
+        "le vent"
+      ],
+      "choices_l2": [
+        "sneh",
+        "počasie",
+        "hmla"
+      ]
+    },
+    {
+      "id": "qcm-mr-z",
+      "type": "qcm",
+      "l1": "le gel",
+      "l2": "mráz",
+      "choices_l1": [
+        "l'orage",
+        "le vent",
+        "le brouillard"
+      ],
+      "choices_l2": [
+        "dúha",
+        "vietor",
+        "dážď"
+      ]
+    },
+    {
+      "id": "qcm-de",
+      "type": "qcm",
+      "l1": "le jour",
+      "l2": "deň",
+      "choices_l1": [
+        "le parapluie",
+        "le degré",
+        "l'alerte"
+      ],
+      "choices_l2": [
+        "slnko",
+        "počasie",
+        "sneh"
+      ]
+    },
+    {
+      "id": "qcm-noc",
+      "type": "qcm",
+      "l1": "la nuit",
+      "l2": "noc",
+      "choices_l1": [
+        "la neige",
+        "le vent",
+        "l'orage"
+      ],
+      "choices_l2": [
+        "stupeň",
+        "dáždnik",
+        "teplota"
+      ]
+    },
+    {
+      "id": "qcm-obliec-si",
+      "type": "qcm",
+      "l1": "mettre, enfiler",
+      "l2": "obliecť si",
+      "choices_l1": [
+        "nous devons",
+        "devoir",
+        "rester"
+      ],
+      "choices_l2": [
+        "meniť",
+        "my musíme",
+        "ja musím"
+      ]
+    },
+    {
+      "id": "qcm-kab-t",
+      "type": "qcm",
+      "l1": "le manteau",
+      "l2": "kabát",
+      "choices_l1": [
+        "la température",
+        "l'alerte",
+        "le vent"
+      ],
+      "choices_l2": [
+        "teplota",
+        "dúha",
+        "počasie"
+      ]
+    },
+    {
+      "id": "qcm-l",
+      "type": "qcm",
+      "l1": "l'écharpe",
+      "l2": "šál",
+      "choices_l1": [
+        "l'orage",
+        "la neige",
+        "la pluie"
+      ],
+      "choices_l2": [
+        "sneh",
+        "búrka",
+        "vietor"
+      ]
+    },
+    {
+      "id": "qcm-rukavice",
+      "type": "qcm",
+      "l1": "les gants",
+      "l2": "rukavice",
+      "choices_l1": [
+        "le soleil",
+        "le brouillard",
+        "le plan"
+      ],
+      "choices_l2": [
+        "slnko",
+        "sneh",
+        "vietor"
+      ]
+    },
+    {
+      "id": "qcm-slne-n-okuliare",
+      "type": "qcm",
+      "l1": "les lunettes de soleil",
+      "l2": "slnečné okuliare",
+      "choices_l1": [
+        "le temps (météo)",
+        "la crème solaire",
+        "la température de l'air"
+      ],
+      "choices_l2": [
+        "sneh",
+        "oblak",
+        "slnko"
+      ]
+    },
+    {
+      "id": "qcm-musie",
+      "type": "qcm",
+      "l1": "devoir",
+      "l2": "musieť",
+      "choices_l1": [
+        "le plan",
+        "geler",
+        "rester"
+      ],
+      "choices_l2": [
+        "obliecť si",
+        "ty musíš",
+        "zostať"
+      ]
+    },
+    {
+      "id": "qcm-i-my",
+      "type": "qcm",
+      "l1": "les bottes",
+      "l2": "čižmy",
+      "choices_l1": [
+        "le brouillard",
+        "le vent",
+        "la température"
+      ],
+      "choices_l2": [
+        "sneh",
+        "búrka",
+        "dúha"
+      ]
+    },
+    {
+      "id": "qcm-pl-do-da-a",
+      "type": "qcm",
+      "l1": "l'imperméable",
+      "l2": "plášť do dažďa",
+      "choices_l1": [
+        "le degré",
+        "le vent",
+        "la pluie"
+      ],
+      "choices_l2": [
+        "on / ona musí",
+        "Ak bude pršať, zostaneme doma.",
+        "Ak bude slnečno, pôjdeme von."
+      ]
+    },
+    {
+      "id": "qcm-kr-my-na-opa-ovanie",
+      "type": "qcm",
+      "l1": "la crème solaire",
+      "l2": "krémy na opaľovanie",
+      "choices_l1": [
+        "les lunettes de soleil",
+        "le plan, le projet",
+        "la température de l'air"
+      ],
+      "choices_l2": [
+        "Musíš si obliecť kabát.",
+        "Musíme mať dáždnik.",
+        "studený → studenejší"
+      ]
+    },
+    {
+      "id": "qcm-iltovka",
+      "type": "qcm",
+      "l1": "la casquette",
+      "l2": "šiltovka",
+      "choices_l1": [
+        "la neige",
+        "le parapluie",
+        "le vent"
+      ],
+      "choices_l2": [
+        "vietor",
+        "počasie",
+        "dáždnik"
+      ]
+    },
+    {
+      "id": "qcm-pono-ky",
+      "type": "qcm",
+      "l1": "les chaussettes",
+      "l2": "ponožky",
+      "choices_l1": [
+        "le nuage",
+        "le soleil",
+        "le brouillard"
+      ],
+      "choices_l2": [
+        "stupeň",
+        "hmla",
+        "dážď"
+      ]
+    },
+    {
+      "id": "qcm-teplota-vzduchu",
+      "type": "qcm",
+      "l1": "la température de l'air",
+      "l2": "teplota vzduchu",
+      "choices_l1": [
+        "les lunettes de soleil",
+        "la crème solaire",
+        "le plan, le projet"
+      ],
+      "choices_l2": [
+        "oblak",
+        "dáždnik",
+        "hmla"
+      ]
+    },
+    {
+      "id": "qcm-oble-enie",
+      "type": "qcm",
+      "l1": "les vêtements",
+      "l2": "oblečenie",
+      "choices_l1": [
+        "la température",
+        "l'orage",
+        "le parapluie"
+      ],
+      "choices_l2": [
+        "dáždnik",
+        "oblak",
+        "dážď"
+      ]
+    },
+    {
+      "id": "qcm-predpove",
+      "type": "qcm",
+      "l1": "la prévision",
+      "l2": "predpoveď",
+      "choices_l1": [
+        "le parapluie",
+        "le plan",
+        "le nuage"
+      ],
+      "choices_l2": [
+        "dúha",
+        "búrka",
+        "dážď"
+      ]
+    },
+    {
+      "id": "qcm-zajtra-bude",
+      "type": "qcm",
+      "l1": "demain il fera / il y aura",
+      "l2": "zajtra bude",
+      "choices_l1": [
+        "Il fait froid.",
+        "Il y a du vent.",
+        "chaud → plus chaud"
+      ],
+      "choices_l2": [
+        "na jar",
+        "slnečno",
+        "každý"
+      ]
+    },
+    {
+      "id": "qcm-slne-no",
+      "type": "qcm",
+      "l1": "ensoleillé",
+      "l2": "slnečno",
+      "choices_l1": [
+        "en automne",
+        "au printemps",
+        "en hiver"
+      ],
+      "choices_l2": [
+        "daždivo",
+        "v lete",
+        "vonku"
+      ]
+    },
+    {
+      "id": "qcm-obla-no",
+      "type": "qcm",
+      "l1": "nuageux",
+      "l2": "oblačno",
+      "choices_l1": [
+        "chaque",
+        "le plan",
+        "dehors"
+      ],
+      "choices_l2": [
+        "každý",
+        "v zime",
+        "zajtra bude"
+      ]
+    },
+    {
+      "id": "qcm-da-divo",
+      "type": "qcm",
+      "l1": "pluvieux",
+      "l2": "daždivo",
+      "choices_l1": [
+        "en été",
+        "en automne",
+        "chaque"
+      ],
+      "choices_l2": [
+        "slnečno",
+        "každý",
+        "na jar"
+      ]
+    },
+    {
+      "id": "qcm-meni",
+      "type": "qcm",
+      "l1": "changer",
+      "l2": "meniť",
+      "choices_l1": [
+        "le plan",
+        "je dois",
+        "tu dois"
+      ],
+      "choices_l2": [
+        "musieť",
+        "obliecť si",
+        "ja musím"
+      ]
+    },
+    {
+      "id": "qcm-pl-n",
+      "type": "qcm",
+      "l1": "le plan",
+      "l2": "plán",
+      "choices_l1": [
+        "le degré",
+        "le soleil",
+        "le vent"
+      ],
+      "choices_l2": [
+        "búrka",
+        "oblak",
+        "dúha"
+      ]
+    },
+    {
+      "id": "qcm-zosta",
+      "type": "qcm",
+      "l1": "rester",
+      "l2": "zostať",
+      "choices_l1": [
+        "changer",
+        "le plan",
+        "devoir"
+      ],
+      "choices_l2": [
+        "mrznúť",
+        "ty musíš",
+        "ja musím"
+      ]
+    },
+    {
+      "id": "qcm-vonku",
+      "type": "qcm",
+      "l1": "dehors",
+      "l2": "vonku",
+      "choices_l1": [
+        "pluvieux",
+        "en été",
+        "préféré"
+      ],
+      "choices_l2": [
+        "zajtra bude",
+        "v zime",
+        "každý"
+      ]
+    },
+    {
+      "id": "qcm-vn-tri",
+      "type": "qcm",
+      "l1": "à l'intérieur",
+      "l2": "vnútri",
+      "choices_l1": [
+        "en été",
+        "chaque",
+        "au printemps"
+      ],
+      "choices_l2": [
+        "na jeseň",
+        "oblačno",
+        "na jar"
+      ]
+    },
+    {
+      "id": "qcm-v-let",
+      "type": "qcm",
+      "l1": "l'excursion",
+      "l2": "výlet",
+      "choices_l1": [
+        "la neige",
+        "la température",
+        "le plan"
+      ],
+      "choices_l2": [
+        "oblak",
+        "dáždnik",
+        "stupeň"
+      ]
+    },
+    {
+      "id": "qcm-turistika",
+      "type": "qcm",
+      "l1": "la randonnée",
+      "l2": "turistika",
+      "choices_l1": [
+        "l'alerte",
+        "le degré",
+        "la pluie"
+      ],
+      "choices_l2": [
+        "dúha",
+        "teplota",
+        "stupeň"
+      ]
+    },
+    {
+      "id": "qcm-upozornenie",
+      "type": "qcm",
+      "l1": "l'alerte",
+      "l2": "upozornenie",
+      "choices_l1": [
+        "l'arc-en-ciel",
+        "le vent",
+        "la neige"
+      ],
+      "choices_l2": [
+        "počasie",
+        "teplota",
+        "vietor"
+      ]
+    },
+    {
+      "id": "qcm-istota",
+      "type": "qcm",
+      "l1": "la certitude",
+      "l2": "istota",
+      "choices_l1": [
+        "le degré",
+        "la température",
+        "le plan"
+      ],
+      "choices_l2": [
+        "stupeň",
+        "počasie",
+        "búrka"
+      ]
+    },
+    {
+      "id": "blank-na-jar-pr-asto-tak-v-dy-nos-m-d-dnik",
+      "type": "fill-blank",
+      "l1": "Au printemps il pleut souvent, alors je porte toujours un parapluie.",
+      "l2": "Na jar prší často, tak vždy nosím dáždnik.",
+      "missing_l1": "je",
+      "missing_l2": "tak",
+      "blank_index_l1": 6,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "Tu",
+        "vous",
+        "Ce"
+      ],
+      "choices_l2": [
+        "veľa",
+        "asi",
+        "vždy"
+      ]
+    },
+    {
+      "id": "blank-toto-leto-je-hor-ava-teplota-je-tridsa-stup-ov",
+      "type": "fill-blank",
+      "l1": "Cet été il fait canicule, la température est de trente degrés.",
+      "l2": "Toto leto je horúčava, teplota je tridsať stupňov.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "le",
+        "Les",
+        "aura"
+      ],
+      "choices_l2": [
+        "sme",
+        "Bude",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-v-zime-mus-m-nosi-kab-t-l-a-rukavice",
+      "type": "fill-blank",
+      "l1": "En hiver je dois porter un manteau, une écharpe et des gants.",
+      "l2": "V zime musím nosiť kabát, šál a rukavice.",
+      "missing_l1": "je",
+      "missing_l2": "a",
+      "blank_index_l1": 2,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "vous",
+        "On",
+        "Elle"
+      ],
+      "choices_l2": [
+        "lebo",
+        "ale",
+        "aj"
+      ]
+    },
+    {
+      "id": "blank-ak-bude-slne-no-na-v-kend-p-jdeme-na-turistiku",
+      "type": "fill-blank",
+      "l1": "S'il fait beau le week-end, nous irons randonner.",
+      "l2": "Ak bude slnečno na víkend, pôjdeme na turistiku.",
+      "missing_l1": "le",
+      "missing_l2": "na",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "aura",
+        "Les",
+        "la"
+      ],
+      "choices_l2": [
+        "zo",
+        "o",
+        "Cez"
+      ]
+    },
+    {
+      "id": "blank-na-jese-pad-l-stie-a-oblaky-s-tmav-ie",
+      "type": "fill-blank",
+      "l1": "En automne les feuilles tombent et les nuages sont plus sombres.",
+      "l2": "Na jeseň padá lístie a oblaky sú tmavšie.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 5,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "Donc",
+        "ou",
+        "ni"
+      ],
+      "choices_l2": [
+        "lebo",
+        "ale",
+        "alebo"
+      ]
+    },
+    {
+      "id": "blank-predpove-hovor-e-zajtra-bude-b-rka",
+      "type": "fill-blank",
+      "l1": "Les prévisions disent que demain il y aura un orage.",
+      "l2": "Predpoveď hovorí, že zajtra bude búrka.",
+      "missing_l1": "un",
+      "missing_l2": "bude",
+      "blank_index_l1": 8,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "des",
+        "une",
+        "aura"
+      ],
+      "choices_l2": [
+        "som",
+        "bol",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-mus-me-zosta-vn-tri-vonku-mrzne",
+      "type": "fill-blank",
+      "l1": "Nous devons rester à l'intérieur, dehors il gèle.",
+      "l2": "Musíme zostať vnútri, vonku mrzne.",
+      "missing_l1": "à",
+      "missing_l2": "vonku",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "sans",
+        "pour",
+        "chez"
+      ],
+      "choices_l2": [
+        "búrke",
+        "oblohe",
+        "cesty"
+      ]
+    },
+    {
+      "id": "blank-ob-ben-ro-n-obdobie-mojej-sestry-je-jar-lebo-kvitn-kvety",
+      "type": "fill-blank",
+      "l1": "La saison préférée de ma sœur est le printemps, parce que les fleurs fleurissent.",
+      "l2": "Obľúbené ročné obdobie mojej sestry je jar, lebo kvitnú kvety.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 7,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "Les",
+        "la",
+        "aura"
+      ],
+      "choices_l2": [
+        "budú",
+        "Bude",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-je-hmla-tak-mus-me-meni-pl-n-v-letu",
+      "type": "fill-blank",
+      "l1": "Il y a du brouillard, alors nous devons changer le plan de l'excursion.",
+      "l2": "Je hmla, tak musíme meniť plán výletu.",
+      "missing_l1": "le",
+      "missing_l2": "tak",
+      "blank_index_l1": 9,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Les",
+        "aura",
+        "la"
+      ],
+      "choices_l2": [
+        "asi",
+        "trochu",
+        "Ako"
+      ]
+    },
+    {
+      "id": "blank-v-hor-ch-je-v-dy-chladnej-ie-tak-beriem-iltovku-a-bundu",
+      "type": "fill-blank",
+      "l1": "En montagne il fait toujours plus frais, alors je prends une casquette et une veste.",
+      "l2": "V horách je vždy chladnejšie, tak beriem šiltovku a bundu.",
+      "missing_l1": "je",
+      "missing_l2": "je",
+      "blank_index_l1": 8,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Nous",
+        "Ce",
+        "Elle"
+      ],
+      "choices_l2": [
+        "budú",
+        "Bude",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-po-b-rke-je-kr-sna-d-ha-na-oblohe",
+      "type": "fill-blank",
+      "l1": "Après l'orage il y a un bel arc-en-ciel dans le ciel.",
+      "l2": "Po búrke je krásna dúha na oblohe.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 9,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "la",
+        "aura",
+        "Les"
+      ],
+      "choices_l2": [
+        "Bude",
+        "sme",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-je-upozornenie-na-sneh-cesty-bud-nebezpe-n",
+      "type": "fill-blank",
+      "l1": "Il y a une alerte neige, les routes seront dangereuses.",
+      "l2": "Je upozornenie na sneh, cesty budú nebezpečné.",
+      "missing_l1": "les",
+      "missing_l2": "na",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "la",
+        "le",
+        "aura"
+      ],
+      "choices_l2": [
+        "do",
+        "pri",
+        "zo"
+      ]
+    },
+    {
+      "id": "blank-nemus-nosi-pl-do-da-a-dnes-je-slne-no",
+      "type": "fill-blank",
+      "l1": "Tu n'as pas besoin de porter un imperméable, aujourd'hui il fait beau.",
+      "l2": "Nemusíš nosiť plášť do dažďa, dnes je slnečno.",
+      "missing_l1": "de",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "avec",
+        "sur",
+        "à"
+      ],
+      "choices_l2": [
+        "sme",
+        "Bude",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-kr-my-na-opa-ovanie-s-d-le-it-v-lete-slnko-je-siln",
+      "type": "fill-blank",
+      "l1": "La crème solaire est importante en été, le soleil est fort.",
+      "l2": "Krémy na opaľovanie sú dôležité v lete, slnko je silné.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 7,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "Les",
+        "aura",
+        "la"
+      ],
+      "choices_l2": [
+        "Bude",
+        "sme",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-toto-ro-n-obdobie-je-kraj-ie-ako-minul",
+      "type": "fill-blank",
+      "l1": "Cette saison est plus belle que la précédente.",
+      "l2": "Toto ročné obdobie je krajšie ako minulé.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 6,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Les",
+        "le",
+        "aura"
+      ],
+      "choices_l2": [
+        "Bude",
+        "sme",
+        "budú"
+      ]
+    },
+    {
+      "id": "listen-na-jar-pr-asto-tak-v-dy-nos-m-d-dnik",
+      "type": "listen",
+      "l1": "Au printemps il pleut souvent, alors je porte toujours un parapluie.",
+      "l2": "Na jar prší často, tak vždy nosím dáždnik.",
+      "choices_l1": [
+        "Tu n'as pas besoin de porter un imperméable, aujourd'hui il fait beau.",
+        "Il y a une alerte neige, les routes seront dangereuses.",
+        "Après l'orage il y a un bel arc-en-ciel dans le ciel."
+      ],
+      "choices_l2": [
+        "Po búrke je krásna dúha na oblohe.",
+        "Je upozornenie na sneh, cesty budú nebezpečné.",
+        "Musíme zostať vnútri, vonku mrzne."
+      ]
+    },
+    {
+      "id": "listen-toto-leto-je-hor-ava-teplota-je-tridsa-stup-ov",
+      "type": "listen",
+      "l1": "Cet été il fait canicule, la température est de trente degrés.",
+      "l2": "Toto leto je horúčava, teplota je tridsať stupňov.",
+      "choices_l1": [
+        "Les prévisions disent que demain il y aura un orage.",
+        "Nous devons rester à l'intérieur, dehors il gèle.",
+        "En automne les feuilles tombent et les nuages sont plus sombres."
+      ],
+      "choices_l2": [
+        "Musíme zostať vnútri, vonku mrzne.",
+        "Po búrke je krásna dúha na oblohe.",
+        "Nemusíš nosiť plášť do dažďa, dnes je slnečno."
+      ]
+    },
+    {
+      "id": "listen-v-zime-mus-m-nosi-kab-t-l-a-rukavice",
+      "type": "listen",
+      "l1": "En hiver je dois porter un manteau, une écharpe et des gants.",
+      "l2": "V zime musím nosiť kabát, šál a rukavice.",
+      "choices_l1": [
+        "La saison préférée de ma sœur est le printemps, parce que les fleurs fleurissent.",
+        "Tu n'as pas besoin de porter un imperméable, aujourd'hui il fait beau.",
+        "Cet été il fait canicule, la température est de trente degrés."
+      ],
+      "choices_l2": [
+        "Je upozornenie na sneh, cesty budú nebezpečné.",
+        "Na jar prší často, tak vždy nosím dáždnik.",
+        "Toto leto je horúčava, teplota je tridsať stupňov."
+      ]
+    },
+    {
+      "id": "listen-ak-bude-slne-no-na-v-kend-p-jdeme-na-turistiku",
+      "type": "listen",
+      "l1": "S'il fait beau le week-end, nous irons randonner.",
+      "l2": "Ak bude slnečno na víkend, pôjdeme na turistiku.",
+      "choices_l1": [
+        "Nous devons rester à l'intérieur, dehors il gèle.",
+        "Tu n'as pas besoin de porter un imperméable, aujourd'hui il fait beau.",
+        "Il y a du brouillard, alors nous devons changer le plan de l'excursion."
+      ],
+      "choices_l2": [
+        "Po búrke je krásna dúha na oblohe.",
+        "Musíme zostať vnútri, vonku mrzne.",
+        "Predpoveď hovorí, že zajtra bude búrka."
+      ]
+    },
+    {
+      "id": "listen-na-jese-pad-l-stie-a-oblaky-s-tmav-ie",
+      "type": "listen",
+      "l1": "En automne les feuilles tombent et les nuages sont plus sombres.",
+      "l2": "Na jeseň padá lístie a oblaky sú tmavšie.",
+      "choices_l1": [
+        "Nous devons rester à l'intérieur, dehors il gèle.",
+        "S'il fait beau le week-end, nous irons randonner.",
+        "La saison préférée de ma sœur est le printemps, parce que les fleurs fleurissent."
+      ],
+      "choices_l2": [
+        "Nemusíš nosiť plášť do dažďa, dnes je slnečno.",
+        "Na jar prší často, tak vždy nosím dáždnik.",
+        "V horách je vždy chladnejšie, tak beriem šiltovku a bundu."
+      ]
+    },
+    {
+      "id": "listen-predpove-hovor-e-zajtra-bude-b-rka",
+      "type": "listen",
+      "l1": "Les prévisions disent que demain il y aura un orage.",
+      "l2": "Predpoveď hovorí, že zajtra bude búrka.",
+      "choices_l1": [
+        "Après l'orage il y a un bel arc-en-ciel dans le ciel.",
+        "S'il fait beau le week-end, nous irons randonner.",
+        "En montagne il fait toujours plus frais, alors je prends une casquette et une veste."
+      ],
+      "choices_l2": [
+        "Nemusíš nosiť plášť do dažďa, dnes je slnečno.",
+        "Na jar prší často, tak vždy nosím dáždnik.",
+        "Po búrke je krásna dúha na oblohe."
+      ]
+    },
+    {
+      "id": "listen-mus-me-zosta-vn-tri-vonku-mrzne",
+      "type": "listen",
+      "l1": "Nous devons rester à l'intérieur, dehors il gèle.",
+      "l2": "Musíme zostať vnútri, vonku mrzne.",
+      "choices_l1": [
+        "En hiver je dois porter un manteau, une écharpe et des gants.",
+        "Cet été il fait canicule, la température est de trente degrés.",
+        "Il y a une alerte neige, les routes seront dangereuses."
+      ],
+      "choices_l2": [
+        "Na jar prší často, tak vždy nosím dáždnik.",
+        "V horách je vždy chladnejšie, tak beriem šiltovku a bundu.",
+        "Je upozornenie na sneh, cesty budú nebezpečné."
+      ]
+    },
+    {
+      "id": "listen-ob-ben-ro-n-obdobie-mojej-sestry-je-jar-lebo-kvitn-kvety",
+      "type": "listen",
+      "l1": "La saison préférée de ma sœur est le printemps, parce que les fleurs fleurissent.",
+      "l2": "Obľúbené ročné obdobie mojej sestry je jar, lebo kvitnú kvety.",
+      "choices_l1": [
+        "Il y a du brouillard, alors nous devons changer le plan de l'excursion.",
+        "Les prévisions disent que demain il y aura un orage.",
+        "En montagne il fait toujours plus frais, alors je prends une casquette et une veste."
+      ],
+      "choices_l2": [
+        "V horách je vždy chladnejšie, tak beriem šiltovku a bundu.",
+        "Je upozornenie na sneh, cesty budú nebezpečné.",
+        "Nemusíš nosiť plášť do dažďa, dnes je slnečno."
+      ]
+    },
+    {
+      "id": "listen-je-hmla-tak-mus-me-meni-pl-n-v-letu",
+      "type": "listen",
+      "l1": "Il y a du brouillard, alors nous devons changer le plan de l'excursion.",
+      "l2": "Je hmla, tak musíme meniť plán výletu.",
+      "choices_l1": [
+        "Après l'orage il y a un bel arc-en-ciel dans le ciel.",
+        "Les prévisions disent que demain il y aura un orage.",
+        "En montagne il fait toujours plus frais, alors je prends une casquette et une veste."
+      ],
+      "choices_l2": [
+        "Ak bude slnečno na víkend, pôjdeme na turistiku.",
+        "V horách je vždy chladnejšie, tak beriem šiltovku a bundu.",
+        "Po búrke je krásna dúha na oblohe."
+      ]
+    },
+    {
+      "id": "listen-v-hor-ch-je-v-dy-chladnej-ie-tak-beriem-iltovku-a-bundu",
+      "type": "listen",
+      "l1": "En montagne il fait toujours plus frais, alors je prends une casquette et une veste.",
+      "l2": "V horách je vždy chladnejšie, tak beriem šiltovku a bundu.",
+      "choices_l1": [
+        "Il y a une alerte neige, les routes seront dangereuses.",
+        "La saison préférée de ma sœur est le printemps, parce que les fleurs fleurissent.",
+        "En hiver je dois porter un manteau, une écharpe et des gants."
+      ],
+      "choices_l2": [
+        "Predpoveď hovorí, že zajtra bude búrka.",
+        "Na jeseň padá lístie a oblaky sú tmavšie.",
+        "Po búrke je krásna dúha na oblohe."
+      ]
+    },
+    {
+      "id": "listen-po-b-rke-je-kr-sna-d-ha-na-oblohe",
+      "type": "listen",
+      "l1": "Après l'orage il y a un bel arc-en-ciel dans le ciel.",
+      "l2": "Po búrke je krásna dúha na oblohe.",
+      "choices_l1": [
+        "Il y a une alerte neige, les routes seront dangereuses.",
+        "Les prévisions disent que demain il y aura un orage.",
+        "Au printemps il pleut souvent, alors je porte toujours un parapluie."
+      ],
+      "choices_l2": [
+        "Predpoveď hovorí, že zajtra bude búrka.",
+        "Na jeseň padá lístie a oblaky sú tmavšie.",
+        "V horách je vždy chladnejšie, tak beriem šiltovku a bundu."
+      ]
+    },
+    {
+      "id": "listen-je-upozornenie-na-sneh-cesty-bud-nebezpe-n",
+      "type": "listen",
+      "l1": "Il y a une alerte neige, les routes seront dangereuses.",
+      "l2": "Je upozornenie na sneh, cesty budú nebezpečné.",
+      "choices_l1": [
+        "Tu n'as pas besoin de porter un imperméable, aujourd'hui il fait beau.",
+        "S'il fait beau le week-end, nous irons randonner.",
+        "Les prévisions disent que demain il y aura un orage."
+      ],
+      "choices_l2": [
+        "Je hmla, tak musíme meniť plán výletu.",
+        "Musíme zostať vnútri, vonku mrzne.",
+        "Predpoveď hovorí, že zajtra bude búrka."
+      ]
+    },
+    {
+      "id": "listen-nemus-nosi-pl-do-da-a-dnes-je-slne-no",
+      "type": "listen",
+      "l1": "Tu n'as pas besoin de porter un imperméable, aujourd'hui il fait beau.",
+      "l2": "Nemusíš nosiť plášť do dažďa, dnes je slnečno.",
+      "choices_l1": [
+        "Après l'orage il y a un bel arc-en-ciel dans le ciel.",
+        "En hiver je dois porter un manteau, une écharpe et des gants.",
+        "Au printemps il pleut souvent, alors je porte toujours un parapluie."
+      ],
+      "choices_l2": [
+        "Obľúbené ročné obdobie mojej sestry je jar, lebo kvitnú kvety.",
+        "Musíme zostať vnútri, vonku mrzne.",
+        "Je hmla, tak musíme meniť plán výletu."
+      ]
+    },
+    {
+      "id": "listen-kr-my-na-opa-ovanie-s-d-le-it-v-lete-slnko-je-siln",
+      "type": "listen",
+      "l1": "La crème solaire est importante en été, le soleil est fort.",
+      "l2": "Krémy na opaľovanie sú dôležité v lete, slnko je silné.",
+      "choices_l1": [
+        "S'il fait beau le week-end, nous irons randonner.",
+        "En hiver je dois porter un manteau, une écharpe et des gants.",
+        "Il y a du brouillard, alors nous devons changer le plan de l'excursion."
+      ],
+      "choices_l2": [
+        "V horách je vždy chladnejšie, tak beriem šiltovku a bundu.",
+        "Po búrke je krásna dúha na oblohe.",
+        "Je hmla, tak musíme meniť plán výletu."
+      ]
+    },
+    {
+      "id": "listen-toto-ro-n-obdobie-je-kraj-ie-ako-minul",
+      "type": "listen",
+      "l1": "Cette saison est plus belle que la précédente.",
+      "l2": "Toto ročné obdobie je krajšie ako minulé.",
+      "choices_l1": [
+        "Cet été il fait canicule, la température est de trente degrés.",
+        "En montagne il fait toujours plus frais, alors je prends une casquette et une veste.",
+        "En hiver je dois porter un manteau, une écharpe et des gants."
+      ],
+      "choices_l2": [
+        "V zime musím nosiť kabát, šál a rukavice.",
+        "Ak bude slnečno na víkend, pôjdeme na turistiku.",
+        "Na jeseň padá lístie a oblaky sú tmavšie."
+      ]
+    },
+    {
+      "id": "order-na-jar-pr-asto-tak-v-dy-nos-m-d-dnik",
+      "type": "order",
+      "l1": "Au printemps il pleut souvent, alors je porte toujours un parapluie.",
+      "l2": "Na jar prší často, tak vždy nosím dáždnik.",
+      "tokens_l1": [
+        "Au",
+        "printemps",
+        "il",
+        "pleut",
+        "souvent,",
+        "alors",
+        "je",
+        "porte",
+        "toujours",
+        "un",
+        "parapluie.",
+        "Il",
+        "y",
+        "a",
+        "du",
+        "brouillard,",
+        "alors",
+        "nous",
+        "devons",
+        "changer",
+        "le",
+        "plan",
+        "de",
+        "l'excursion."
+      ],
+      "tokens_l2": [
+        "Na",
+        "jar",
+        "prší",
+        "často,",
+        "tak",
+        "vždy",
+        "nosím",
+        "dáždnik.",
+        "Je",
+        "hmla,",
+        "tak",
+        "musíme",
+        "meniť",
+        "plán",
+        "výletu."
+      ]
+    },
+    {
+      "id": "order-toto-leto-je-hor-ava-teplota-je-tridsa-stup-ov",
+      "type": "order",
+      "l1": "Cet été il fait canicule, la température est de trente degrés.",
+      "l2": "Toto leto je horúčava, teplota je tridsať stupňov.",
+      "tokens_l1": [
+        "Cet",
+        "été",
+        "il",
+        "fait",
+        "canicule,",
+        "la",
+        "température",
+        "est",
+        "de",
+        "trente",
+        "degrés.",
+        "En",
+        "automne",
+        "les",
+        "feuilles",
+        "tombent",
+        "et",
+        "les",
+        "nuages",
+        "sont",
+        "plus",
+        "sombres."
+      ],
+      "tokens_l2": [
+        "Toto",
+        "leto",
+        "je",
+        "horúčava,",
+        "teplota",
+        "je",
+        "tridsať",
+        "stupňov.",
+        "Na",
+        "jeseň",
+        "padá",
+        "lístie",
+        "a",
+        "oblaky",
+        "sú",
+        "tmavšie."
+      ]
+    },
+    {
+      "id": "order-v-zime-mus-m-nosi-kab-t-l-a-rukavice",
+      "type": "order",
+      "l1": "En hiver je dois porter un manteau, une écharpe et des gants.",
+      "l2": "V zime musím nosiť kabát, šál a rukavice.",
+      "tokens_l1": [
+        "En",
+        "hiver",
+        "je",
+        "dois",
+        "porter",
+        "un",
+        "manteau,",
+        "une",
+        "écharpe",
+        "et",
+        "des",
+        "gants.",
+        "Cette",
+        "saison",
+        "est",
+        "plus",
+        "belle",
+        "que",
+        "la",
+        "précédente."
+      ],
+      "tokens_l2": [
+        "V",
+        "zime",
+        "musím",
+        "nosiť",
+        "kabát,",
+        "šál",
+        "a",
+        "rukavice.",
+        "Toto",
+        "ročné",
+        "obdobie",
+        "je",
+        "krajšie",
+        "ako",
+        "minulé."
+      ]
+    },
+    {
+      "id": "order-ak-bude-slne-no-na-v-kend-p-jdeme-na-turistiku",
+      "type": "order",
+      "l1": "S'il fait beau le week-end, nous irons randonner.",
+      "l2": "Ak bude slnečno na víkend, pôjdeme na turistiku.",
+      "tokens_l1": [
+        "S'il",
+        "fait",
+        "beau",
+        "le",
+        "week-end,",
+        "nous",
+        "irons",
+        "randonner.",
+        "En",
+        "automne",
+        "les",
+        "feuilles",
+        "tombent",
+        "et",
+        "les",
+        "nuages",
+        "sont",
+        "plus",
+        "sombres."
+      ],
+      "tokens_l2": [
+        "Ak",
+        "bude",
+        "slnečno",
+        "na",
+        "víkend,",
+        "pôjdeme",
+        "na",
+        "turistiku.",
+        "Na",
+        "jeseň",
+        "padá",
+        "lístie",
+        "a",
+        "oblaky",
+        "sú",
+        "tmavšie."
+      ]
+    },
+    {
+      "id": "order-na-jese-pad-l-stie-a-oblaky-s-tmav-ie",
+      "type": "order",
+      "l1": "En automne les feuilles tombent et les nuages sont plus sombres.",
+      "l2": "Na jeseň padá lístie a oblaky sú tmavšie.",
+      "tokens_l1": [
+        "En",
+        "automne",
+        "les",
+        "feuilles",
+        "tombent",
+        "et",
+        "les",
+        "nuages",
+        "sont",
+        "plus",
+        "sombres.",
+        "Cet",
+        "été",
+        "il",
+        "fait",
+        "canicule,",
+        "la",
+        "température",
+        "est",
+        "de",
+        "trente",
+        "degrés."
+      ],
+      "tokens_l2": [
+        "Na",
+        "jeseň",
+        "padá",
+        "lístie",
+        "a",
+        "oblaky",
+        "sú",
+        "tmavšie.",
+        "Toto",
+        "leto",
+        "je",
+        "horúčava,",
+        "teplota",
+        "je",
+        "tridsať",
+        "stupňov."
+      ]
+    },
+    {
+      "id": "order-predpove-hovor-e-zajtra-bude-b-rka",
+      "type": "order",
+      "l1": "Les prévisions disent que demain il y aura un orage.",
+      "l2": "Predpoveď hovorí, že zajtra bude búrka.",
+      "tokens_l1": [
+        "Les",
+        "prévisions",
+        "disent",
+        "que",
+        "demain",
+        "il",
+        "y",
+        "aura",
+        "un",
+        "orage.",
+        "Il",
+        "y",
+        "a",
+        "une",
+        "alerte",
+        "neige,",
+        "les",
+        "routes",
+        "seront",
+        "dangereuses."
+      ],
+      "tokens_l2": [
+        "Predpoveď",
+        "hovorí,",
+        "že",
+        "zajtra",
+        "bude",
+        "búrka.",
+        "Je",
+        "upozornenie",
+        "na",
+        "sneh,",
+        "cesty",
+        "budú",
+        "nebezpečné."
+      ]
+    },
+    {
+      "id": "order-mus-me-zosta-vn-tri-vonku-mrzne",
+      "type": "order",
+      "l1": "Nous devons rester à l'intérieur, dehors il gèle.",
+      "l2": "Musíme zostať vnútri, vonku mrzne.",
+      "tokens_l1": [
+        "Nous",
+        "devons",
+        "rester",
+        "à",
+        "l'intérieur,",
+        "dehors",
+        "il",
+        "gèle.",
+        "Il",
+        "y",
+        "a",
+        "du",
+        "brouillard,",
+        "alors",
+        "nous",
+        "devons",
+        "changer",
+        "le",
+        "plan",
+        "de",
+        "l'excursion."
+      ],
+      "tokens_l2": [
+        "Musíme",
+        "zostať",
+        "vnútri,",
+        "vonku",
+        "mrzne.",
+        "Je",
+        "hmla,",
+        "tak",
+        "musíme",
+        "meniť",
+        "plán",
+        "výletu."
+      ]
+    },
+    {
+      "id": "order-ob-ben-ro-n-obdobie-mojej-sestry-je-jar-lebo-kvitn-kvety",
+      "type": "order",
+      "l1": "La saison préférée de ma sœur est le printemps, parce que les fleurs fleurissent.",
+      "l2": "Obľúbené ročné obdobie mojej sestry je jar, lebo kvitnú kvety.",
+      "tokens_l1": [
+        "La",
+        "saison",
+        "préférée",
+        "de",
+        "ma",
+        "sœur",
+        "est",
+        "le",
+        "printemps,",
+        "parce",
+        "que",
+        "les",
+        "fleurs",
+        "fleurissent.",
+        "Nous",
+        "devons",
+        "rester",
+        "à",
+        "l'intérieur,",
+        "dehors",
+        "il",
+        "gèle."
+      ],
+      "tokens_l2": [
+        "Obľúbené",
+        "ročné",
+        "obdobie",
+        "mojej",
+        "sestry",
+        "je",
+        "jar,",
+        "lebo",
+        "kvitnú",
+        "kvety.",
+        "Musíme",
+        "zostať",
+        "vnútri,",
+        "vonku",
+        "mrzne."
+      ]
+    },
+    {
+      "id": "order-je-hmla-tak-mus-me-meni-pl-n-v-letu",
+      "type": "order",
+      "l1": "Il y a du brouillard, alors nous devons changer le plan de l'excursion.",
+      "l2": "Je hmla, tak musíme meniť plán výletu.",
+      "tokens_l1": [
+        "Il",
+        "y",
+        "a",
+        "du",
+        "brouillard,",
+        "alors",
+        "nous",
+        "devons",
+        "changer",
+        "le",
+        "plan",
+        "de",
+        "l'excursion.",
+        "La",
+        "saison",
+        "préférée",
+        "de",
+        "ma",
+        "sœur",
+        "est",
+        "le",
+        "printemps,",
+        "parce",
+        "que",
+        "les",
+        "fleurs",
+        "fleurissent."
+      ],
+      "tokens_l2": [
+        "Je",
+        "hmla,",
+        "tak",
+        "musíme",
+        "meniť",
+        "plán",
+        "výletu.",
+        "Obľúbené",
+        "ročné",
+        "obdobie",
+        "mojej",
+        "sestry",
+        "je",
+        "jar,",
+        "lebo",
+        "kvitnú",
+        "kvety."
+      ]
+    },
+    {
+      "id": "order-v-hor-ch-je-v-dy-chladnej-ie-tak-beriem-iltovku-a-bundu",
+      "type": "order",
+      "l1": "En montagne il fait toujours plus frais, alors je prends une casquette et une veste.",
+      "l2": "V horách je vždy chladnejšie, tak beriem šiltovku a bundu.",
+      "tokens_l1": [
+        "En",
+        "montagne",
+        "il",
+        "fait",
+        "toujours",
+        "plus",
+        "frais,",
+        "alors",
+        "je",
+        "prends",
+        "une",
+        "casquette",
+        "et",
+        "une",
+        "veste.",
+        "Les",
+        "prévisions",
+        "disent",
+        "que",
+        "demain",
+        "il",
+        "y",
+        "aura",
+        "un",
+        "orage."
+      ],
+      "tokens_l2": [
+        "V",
+        "horách",
+        "je",
+        "vždy",
+        "chladnejšie,",
+        "tak",
+        "beriem",
+        "šiltovku",
+        "a",
+        "bundu.",
+        "Predpoveď",
+        "hovorí,",
+        "že",
+        "zajtra",
+        "bude",
+        "búrka."
+      ]
+    },
+    {
+      "id": "order-po-b-rke-je-kr-sna-d-ha-na-oblohe",
+      "type": "order",
+      "l1": "Après l'orage il y a un bel arc-en-ciel dans le ciel.",
+      "l2": "Po búrke je krásna dúha na oblohe.",
+      "tokens_l1": [
+        "Après",
+        "l'orage",
+        "il",
+        "y",
+        "a",
+        "un",
+        "bel",
+        "arc-en-ciel",
+        "dans",
+        "le",
+        "ciel.",
+        "Au",
+        "printemps",
+        "il",
+        "pleut",
+        "souvent,",
+        "alors",
+        "je",
+        "porte",
+        "toujours",
+        "un",
+        "parapluie."
+      ],
+      "tokens_l2": [
+        "Po",
+        "búrke",
+        "je",
+        "krásna",
+        "dúha",
+        "na",
+        "oblohe.",
+        "Na",
+        "jar",
+        "prší",
+        "často,",
+        "tak",
+        "vždy",
+        "nosím",
+        "dáždnik."
+      ]
+    },
+    {
+      "id": "order-je-upozornenie-na-sneh-cesty-bud-nebezpe-n",
+      "type": "order",
+      "l1": "Il y a une alerte neige, les routes seront dangereuses.",
+      "l2": "Je upozornenie na sneh, cesty budú nebezpečné.",
+      "tokens_l1": [
+        "Il",
+        "y",
+        "a",
+        "une",
+        "alerte",
+        "neige,",
+        "les",
+        "routes",
+        "seront",
+        "dangereuses.",
+        "Nous",
+        "devons",
+        "rester",
+        "à",
+        "l'intérieur,",
+        "dehors",
+        "il",
+        "gèle."
+      ],
+      "tokens_l2": [
+        "Je",
+        "upozornenie",
+        "na",
+        "sneh,",
+        "cesty",
+        "budú",
+        "nebezpečné.",
+        "Musíme",
+        "zostať",
+        "vnútri,",
+        "vonku",
+        "mrzne."
+      ]
+    },
+    {
+      "id": "order-nemus-nosi-pl-do-da-a-dnes-je-slne-no",
+      "type": "order",
+      "l1": "Tu n'as pas besoin de porter un imperméable, aujourd'hui il fait beau.",
+      "l2": "Nemusíš nosiť plášť do dažďa, dnes je slnečno.",
+      "tokens_l1": [
+        "Tu",
+        "n'as",
+        "pas",
+        "besoin",
+        "de",
+        "porter",
+        "un",
+        "imperméable,",
+        "aujourd'hui",
+        "il",
+        "fait",
+        "beau.",
+        "La",
+        "crème",
+        "solaire",
+        "est",
+        "importante",
+        "en",
+        "été,",
+        "le",
+        "soleil",
+        "est",
+        "fort."
+      ],
+      "tokens_l2": [
+        "Nemusíš",
+        "nosiť",
+        "plášť",
+        "do",
+        "dažďa,",
+        "dnes",
+        "je",
+        "slnečno.",
+        "Krémy",
+        "na",
+        "opaľovanie",
+        "sú",
+        "dôležité",
+        "v",
+        "lete,",
+        "slnko",
+        "je",
+        "silné."
+      ]
+    },
+    {
+      "id": "order-kr-my-na-opa-ovanie-s-d-le-it-v-lete-slnko-je-siln",
+      "type": "order",
+      "l1": "La crème solaire est importante en été, le soleil est fort.",
+      "l2": "Krémy na opaľovanie sú dôležité v lete, slnko je silné.",
+      "tokens_l1": [
+        "La",
+        "crème",
+        "solaire",
+        "est",
+        "importante",
+        "en",
+        "été,",
+        "le",
+        "soleil",
+        "est",
+        "fort.",
+        "En",
+        "automne",
+        "les",
+        "feuilles",
+        "tombent",
+        "et",
+        "les",
+        "nuages",
+        "sont",
+        "plus",
+        "sombres."
+      ],
+      "tokens_l2": [
+        "Krémy",
+        "na",
+        "opaľovanie",
+        "sú",
+        "dôležité",
+        "v",
+        "lete,",
+        "slnko",
+        "je",
+        "silné.",
+        "Na",
+        "jeseň",
+        "padá",
+        "lístie",
+        "a",
+        "oblaky",
+        "sú",
+        "tmavšie."
+      ]
+    },
+    {
+      "id": "order-toto-ro-n-obdobie-je-kraj-ie-ako-minul",
+      "type": "order",
+      "l1": "Cette saison est plus belle que la précédente.",
+      "l2": "Toto ročné obdobie je krajšie ako minulé.",
+      "tokens_l1": [
+        "Cette",
+        "saison",
+        "est",
+        "plus",
+        "belle",
+        "que",
+        "la",
+        "précédente.",
+        "S'il",
+        "fait",
+        "beau",
+        "le",
+        "week-end,",
+        "nous",
+        "irons",
+        "randonner."
+      ],
+      "tokens_l2": [
+        "Toto",
+        "ročné",
+        "obdobie",
+        "je",
+        "krajšie",
+        "ako",
+        "minulé.",
+        "Ak",
+        "bude",
+        "slnečno",
+        "na",
+        "víkend,",
+        "pôjdeme",
+        "na",
+        "turistiku."
+      ]
+    },
+    {
+      "id": "match-po-asie-vocab",
+      "type": "match",
+      "l1": [
+        "le temps (météo)",
+        "le soleil",
+        "la pluie",
+        "la neige"
+      ],
+      "l2": [
+        "počasie",
+        "slnko",
+        "dážď",
+        "sneh"
+      ]
+    },
+    {
+      "id": "match-na-jar-pr-asto-tak-v-dy-nos-m-d-dnik-sentences",
+      "type": "match",
+      "l1": [
+        "Au printemps il pleut souvent, alors je porte toujours un parapluie.",
+        "Cet été il fait canicule, la température est de trente degrés.",
+        "En hiver je dois porter un manteau, une écharpe et des gants.",
+        "S'il fait beau le week-end, nous irons randonner."
+      ],
+      "l2": [
+        "Na jar prší často, tak vždy nosím dáždnik.",
+        "Toto leto je horúčava, teplota je tridsať stupňov.",
+        "V zime musím nosiť kabát, šál a rukavice.",
+        "Ak bude slnečno na víkend, pôjdeme na turistiku."
+      ]
+    }
+  ]
+}

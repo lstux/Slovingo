@@ -94,4 +94,3 @@ Toto je dôležitá pasca. Na rozdiel od slovenčiny, ktorá pri dátumoch VŽDY
 > le premier janvier = prvého januára
 + Jediná výnimka: prvý deň mesiaca sa vždy vyjadruje radovou číslovkou „premier“, nikdy „un“.
 
-(Kompletné fungovanie dátumov nájdeš vo fiche „Čas a dátumy“.)

@@ -1,0 +1,1461 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-jar",
+      "type": "qcm",
+      "l1": "le printemps",
+      "l2": "jar",
+      "choices_l1": [
+        "l'herbe",
+        "l'hiver",
+        "les feuilles"
+      ],
+      "choices_l2": [
+        "tráva",
+        "jeseň",
+        "ročné obdobie"
+      ]
+    },
+    {
+      "id": "qcm-leto",
+      "type": "qcm",
+      "l1": "l'été",
+      "l2": "leto",
+      "choices_l1": [
+        "les feuilles",
+        "l'herbe",
+        "le jour"
+      ],
+      "choices_l2": [
+        "jar",
+        "kvet",
+        "ročné obdobie"
+      ]
+    },
+    {
+      "id": "qcm-jese",
+      "type": "qcm",
+      "l1": "l'automne",
+      "l2": "jeseň",
+      "choices_l1": [
+        "l'été",
+        "la fleur",
+        "l'herbe"
+      ],
+      "choices_l2": [
+        "tráva",
+        "leto",
+        "kvet"
+      ]
+    },
+    {
+      "id": "qcm-zima",
+      "type": "qcm",
+      "l1": "l'hiver",
+      "l2": "zima",
+      "choices_l1": [
+        "le printemps",
+        "la fleur",
+        "l'automne"
+      ],
+      "choices_l2": [
+        "mráz",
+        "tráva",
+        "jeseň"
+      ]
+    },
+    {
+      "id": "qcm-ro-n-obdobie",
+      "type": "qcm",
+      "l1": "la saison",
+      "l2": "ročné obdobie",
+      "choices_l1": [
+        "les feuilles",
+        "l'herbe",
+        "l'hiver"
+      ],
+      "choices_l2": [
+        "leto",
+        "horúčava",
+        "jar"
+      ]
+    },
+    {
+      "id": "qcm-ob-ben",
+      "type": "qcm",
+      "l1": "préféré",
+      "l2": "obľúbený",
+      "choices_l1": [
+        "en hiver",
+        "chaque",
+        "au printemps"
+      ],
+      "choices_l2": [
+        "v zime",
+        "každý",
+        "na jar"
+      ]
+    },
+    {
+      "id": "qcm-ka-d",
+      "type": "qcm",
+      "l1": "chaque",
+      "l2": "každý",
+      "choices_l1": [
+        "préféré",
+        "au printemps",
+        "en été"
+      ],
+      "choices_l2": [
+        "obľúbený",
+        "na jeseň",
+        "v zime"
+      ]
+    },
+    {
+      "id": "qcm-na-jar",
+      "type": "qcm",
+      "l1": "au printemps",
+      "l2": "na jar",
+      "choices_l1": [
+        "en automne",
+        "en hiver",
+        "en été"
+      ],
+      "choices_l2": [
+        "každý",
+        "na jeseň",
+        "v lete"
+      ]
+    },
+    {
+      "id": "qcm-v-lete",
+      "type": "qcm",
+      "l1": "en été",
+      "l2": "v lete",
+      "choices_l1": [
+        "au printemps",
+        "chaque",
+        "préféré"
+      ],
+      "choices_l2": [
+        "obľúbený",
+        "na jeseň",
+        "na jar"
+      ]
+    },
+    {
+      "id": "qcm-na-jese",
+      "type": "qcm",
+      "l1": "en automne",
+      "l2": "na jeseň",
+      "choices_l1": [
+        "chaque",
+        "au printemps",
+        "préféré"
+      ],
+      "choices_l2": [
+        "na jar",
+        "v lete",
+        "každý"
+      ]
+    },
+    {
+      "id": "qcm-v-zime",
+      "type": "qcm",
+      "l1": "en hiver",
+      "l2": "v zime",
+      "choices_l1": [
+        "en automne",
+        "en été",
+        "chaque"
+      ],
+      "choices_l2": [
+        "každý",
+        "na jeseň",
+        "v lete"
+      ]
+    },
+    {
+      "id": "qcm-tepl-teplej",
+      "type": "qcm",
+      "l1": "chaud → plus chaud",
+      "l2": "teplý → teplejší",
+      "choices_l1": [
+        "Je dois y aller.",
+        "Il y a du vent.",
+        "froid → plus froid"
+      ],
+      "choices_l2": [
+        "Musíš si obliecť kabát.",
+        "Ak bude slnečno, pôjdeme von.",
+        "krátky → kratší"
+      ]
+    },
+    {
+      "id": "qcm-studen-studenej",
+      "type": "qcm",
+      "l1": "froid → plus froid",
+      "l2": "studený → studenejší",
+      "choices_l1": [
+        "Il fait chaud.",
+        "les lunettes de soleil",
+        "Il fait très chaud."
+      ],
+      "choices_l2": [
+        "Ak bude slnečno, pôjdeme von.",
+        "on / ona musí",
+        "teplý → teplejší"
+      ]
+    },
+    {
+      "id": "qcm-kr-tky-krat",
+      "type": "qcm",
+      "l1": "court → plus court",
+      "l2": "krátky → kratší",
+      "choices_l1": [
+        "Le soleil brille.",
+        "Il y a du vent.",
+        "Je dois y aller."
+      ],
+      "choices_l2": [
+        "on / ona musí",
+        "Musíme mať dáždnik.",
+        "plášť do dažďa"
+      ]
+    },
+    {
+      "id": "qcm-l-stie",
+      "type": "qcm",
+      "l1": "les feuilles",
+      "l2": "lístie",
+      "choices_l1": [
+        "l'herbe",
+        "le gel",
+        "l'été"
+      ],
+      "choices_l2": [
+        "zima",
+        "deň",
+        "tráva"
+      ]
+    },
+    {
+      "id": "qcm-kvet",
+      "type": "qcm",
+      "l1": "la fleur",
+      "l2": "kvet",
+      "choices_l1": [
+        "l'automne",
+        "la saison",
+        "le printemps"
+      ],
+      "choices_l2": [
+        "mráz",
+        "zima",
+        "ročné obdobie"
+      ]
+    },
+    {
+      "id": "qcm-tr-va",
+      "type": "qcm",
+      "l1": "l'herbe",
+      "l2": "tráva",
+      "choices_l1": [
+        "la fleur",
+        "l'été",
+        "l'hiver"
+      ],
+      "choices_l2": [
+        "ročné obdobie",
+        "kvet",
+        "mráz"
+      ]
+    },
+    {
+      "id": "qcm-hor-ava",
+      "type": "qcm",
+      "l1": "la canicule",
+      "l2": "horúčava",
+      "choices_l1": [
+        "la saison",
+        "le jour",
+        "le gel"
+      ],
+      "choices_l2": [
+        "jar",
+        "kvet",
+        "mráz"
+      ]
+    },
+    {
+      "id": "qcm-mr-z",
+      "type": "qcm",
+      "l1": "le gel",
+      "l2": "mráz",
+      "choices_l1": [
+        "la saison",
+        "la canicule",
+        "la fleur"
+      ],
+      "choices_l2": [
+        "lístie",
+        "kvet",
+        "tráva"
+      ]
+    },
+    {
+      "id": "qcm-de",
+      "type": "qcm",
+      "l1": "le jour",
+      "l2": "deň",
+      "choices_l1": [
+        "la fleur",
+        "le printemps",
+        "la canicule"
+      ],
+      "choices_l2": [
+        "tráva",
+        "mráz",
+        "jar"
+      ]
+    },
+    {
+      "id": "qcm-noc",
+      "type": "qcm",
+      "l1": "la nuit",
+      "l2": "noc",
+      "choices_l1": [
+        "l'herbe",
+        "le gel",
+        "le printemps"
+      ],
+      "choices_l2": [
+        "mráz",
+        "tráva",
+        "deň"
+      ]
+    },
+    {
+      "id": "blank-ak-je-tvoje-ob-ben-ro-n-obdobie",
+      "type": "fill-blank",
+      "l1": "Quelle est ta saison préférée ?",
+      "l2": "Aké je tvoje obľúbené ročné obdobie?",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "suis",
+        "C'est",
+        "êtes"
+      ],
+      "choices_l2": [
+        "Bude",
+        "sme",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-na-jar-je-teplej-ie-ako-v-zime",
+      "type": "fill-blank",
+      "l1": "Au printemps il fait plus chaud qu'en hiver.",
+      "l2": "Na jar je teplejšie ako v zime.",
+      "missing_l1": "il",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "elles",
+        "Nous",
+        "Tu"
+      ],
+      "choices_l2": [
+        "budú",
+        "Bude",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-v-lete-s-dni-dlh-ie",
+      "type": "fill-blank",
+      "l1": "En été les jours sont plus longs.",
+      "l2": "V lete sú dni dlhšie.",
+      "missing_l1": "les",
+      "missing_l2": "sú",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "la",
+        "Cet",
+        "le"
+      ],
+      "choices_l2": [
+        "sme",
+        "Bude",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-na-jese-pr-asto",
+      "type": "fill-blank",
+      "l1": "En automne il pleut souvent.",
+      "l2": "Na jeseň prší často.",
+      "missing_l1": "il",
+      "missing_l2": "prší",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "On",
+        "Ils",
+        "vous"
+      ],
+      "choices_l2": [
+        "mráz",
+        "leto",
+        "lete"
+      ]
+    },
+    {
+      "id": "blank-v-zime-je-noc-dlh-ia-ako-de",
+      "type": "fill-blank",
+      "l1": "En hiver la nuit est plus longue que le jour.",
+      "l2": "V zime je noc dlhšia ako deň.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Les",
+        "gel",
+        "le"
+      ],
+      "choices_l2": [
+        "sme",
+        "budú",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-ka-d-ro-n-obdobie-je-in",
+      "type": "fill-blank",
+      "l1": "Chaque saison est différente.",
+      "l2": "Každé ročné obdobie je iné.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "es",
+        "C'est",
+        "êtes"
+      ],
+      "choices_l2": [
+        "sme",
+        "Bude",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-toto-leto-je-teplej-ie-ako-minul",
+      "type": "fill-blank",
+      "l1": "Cet été est plus chaud que le précédent.",
+      "l2": "Toto leto je teplejšie ako minulé.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Les",
+        "ta",
+        "la"
+      ],
+      "choices_l2": [
+        "Bude",
+        "budú",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-v-zime-sne-ale-na-jar-svieti-slnko",
+      "type": "fill-blank",
+      "l1": "En hiver il neige, mais au printemps le soleil brille.",
+      "l2": "V zime sneží, ale na jar svieti slnko.",
+      "missing_l1": "le",
+      "missing_l2": "na",
+      "blank_index_l1": 7,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "ta",
+        "Cet",
+        "gel"
+      ],
+      "choices_l2": [
+        "po",
+        "v",
+        "za"
+      ]
+    },
+    {
+      "id": "blank-dnes-je-chladnej-ie-ako-v-era",
+      "type": "fill-blank",
+      "l1": "Aujourd'hui il fait plus frais qu'hier.",
+      "l2": "Dnes je chladnejšie ako včera.",
+      "missing_l1": "il",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Tu",
+        "On",
+        "Ils"
+      ],
+      "choices_l2": [
+        "sme",
+        "Bude",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-m-m-r-d-jese-lebo-farby-s-pekn",
+      "type": "fill-blank",
+      "l1": "J'aime l'automne, parce que les couleurs sont belles.",
+      "l2": "Mám rád jeseň, lebo farby sú pekné.",
+      "missing_l1": "les",
+      "missing_l2": "sú",
+      "blank_index_l1": 4,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "la",
+        "le",
+        "Cet"
+      ],
+      "choices_l2": [
+        "sme",
+        "budú",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-na-jese-pad-l-stie",
+      "type": "fill-blank",
+      "l1": "En automne les feuilles tombent.",
+      "l2": "Na jeseň padá lístie.",
+      "missing_l1": "les",
+      "missing_l2": "jeseň",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Cet",
+        "la",
+        "le"
+      ],
+      "choices_l2": [
+        "kvitnú",
+        "horúčava",
+        "obdobie"
+      ]
+    },
+    {
+      "id": "blank-na-jar-kvitn-kvety",
+      "type": "fill-blank",
+      "l1": "Au printemps les fleurs fleurissent.",
+      "l2": "Na jar kvitnú kvety.",
+      "missing_l1": "les",
+      "missing_l2": "jar",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "le",
+        "la",
+        "gel"
+      ],
+      "choices_l2": [
+        "mráz",
+        "iné",
+        "lete"
+      ]
+    },
+    {
+      "id": "blank-v-lete-je-niekedy-hor-ava",
+      "type": "fill-blank",
+      "l1": "En été il y a parfois une canicule.",
+      "l2": "V lete je niekedy horúčava.",
+      "missing_l1": "il",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Nous",
+        "Ce",
+        "On"
+      ],
+      "choices_l2": [
+        "sme",
+        "budú",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-tr-va-je-zelen-a-mokr",
+      "type": "fill-blank",
+      "l1": "L'herbe est verte et mouillée.",
+      "l2": "Tráva je zelená a mokrá.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "sont",
+        "C'est",
+        "es"
+      ],
+      "choices_l2": [
+        "Bude",
+        "budú",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-v-zime-je-siln-mr-z",
+      "type": "fill-blank",
+      "l1": "En hiver il y a un fort gel.",
+      "l2": "V zime je silný mráz.",
+      "missing_l1": "un",
+      "missing_l2": "je",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ta",
+        "gel",
+        "une"
+      ],
+      "choices_l2": [
+        "sme",
+        "Bude",
+        "budú"
+      ]
+    },
+    {
+      "id": "listen-ak-je-tvoje-ob-ben-ro-n-obdobie",
+      "type": "listen",
+      "l1": "Quelle est ta saison préférée ?",
+      "l2": "Aké je tvoje obľúbené ročné obdobie?",
+      "choices_l1": [
+        "En automne les feuilles tombent.",
+        "Cet été est plus chaud que le précédent.",
+        "Aujourd'hui il fait plus frais qu'hier."
+      ],
+      "choices_l2": [
+        "Na jar je teplejšie ako v zime.",
+        "Toto leto je teplejšie ako minulé.",
+        "V lete sú dni dlhšie."
+      ]
+    },
+    {
+      "id": "listen-m-m-r-d-leto",
+      "type": "listen",
+      "l1": "J'aime l'été.",
+      "l2": "Mám rád leto.",
+      "choices_l1": [
+        "Goûte !",
+        "J'ai faim.",
+        "Lundi après-midi."
+      ],
+      "choices_l2": [
+        "Na jar je teplejšie ako v zime.",
+        "Na jeseň padá lístie.",
+        "V zime sneží, ale na jar svieti slnko."
+      ]
+    },
+    {
+      "id": "listen-na-jar-je-teplej-ie-ako-v-zime",
+      "type": "listen",
+      "l1": "Au printemps il fait plus chaud qu'en hiver.",
+      "l2": "Na jar je teplejšie ako v zime.",
+      "choices_l1": [
+        "Cet été est plus chaud que le précédent.",
+        "Quelle est ta saison préférée ?",
+        "En été il y a parfois une canicule."
+      ],
+      "choices_l2": [
+        "Na jeseň padá lístie.",
+        "Každé ročné obdobie je iné.",
+        "Toto leto je teplejšie ako minulé."
+      ]
+    },
+    {
+      "id": "listen-v-lete-s-dni-dlh-ie",
+      "type": "listen",
+      "l1": "En été les jours sont plus longs.",
+      "l2": "V lete sú dni dlhšie.",
+      "choices_l1": [
+        "Au printemps les fleurs fleurissent.",
+        "En automne il pleut souvent.",
+        "Aujourd'hui il fait plus frais qu'hier."
+      ],
+      "choices_l2": [
+        "V lete je niekedy horúčava.",
+        "Mám rád jeseň, lebo farby sú pekné.",
+        "Na jeseň padá lístie."
+      ]
+    },
+    {
+      "id": "listen-na-jese-pr-asto",
+      "type": "listen",
+      "l1": "En automne il pleut souvent.",
+      "l2": "Na jeseň prší často.",
+      "choices_l1": [
+        "En hiver la nuit est plus longue que le jour.",
+        "En hiver il neige, mais au printemps le soleil brille.",
+        "Cet été est plus chaud que le précédent."
+      ],
+      "choices_l2": [
+        "Toto leto je teplejšie ako minulé.",
+        "V lete je niekedy horúčava.",
+        "Aké je tvoje obľúbené ročné obdobie?"
+      ]
+    },
+    {
+      "id": "listen-v-zime-je-noc-dlh-ia-ako-de",
+      "type": "listen",
+      "l1": "En hiver la nuit est plus longue que le jour.",
+      "l2": "V zime je noc dlhšia ako deň.",
+      "choices_l1": [
+        "En été les jours sont plus longs.",
+        "En été il y a parfois une canicule.",
+        "Au printemps il fait plus chaud qu'en hiver."
+      ],
+      "choices_l2": [
+        "Každé ročné obdobie je iné.",
+        "Na jeseň padá lístie.",
+        "Toto leto je teplejšie ako minulé."
+      ]
+    },
+    {
+      "id": "listen-ka-d-ro-n-obdobie-je-in",
+      "type": "listen",
+      "l1": "Chaque saison est différente.",
+      "l2": "Každé ročné obdobie je iné.",
+      "choices_l1": [
+        "En été il y a parfois une canicule.",
+        "J'aime l'automne, parce que les couleurs sont belles.",
+        "En automne les feuilles tombent."
+      ],
+      "choices_l2": [
+        "V lete je niekedy horúčava.",
+        "Mám rád jeseň, lebo farby sú pekné.",
+        "Na jar kvitnú kvety."
+      ]
+    },
+    {
+      "id": "listen-toto-leto-je-teplej-ie-ako-minul",
+      "type": "listen",
+      "l1": "Cet été est plus chaud que le précédent.",
+      "l2": "Toto leto je teplejšie ako minulé.",
+      "choices_l1": [
+        "Chaque saison est différente.",
+        "En été il y a parfois une canicule.",
+        "J'aime l'automne, parce que les couleurs sont belles."
+      ],
+      "choices_l2": [
+        "Mám rád jeseň, lebo farby sú pekné.",
+        "V lete sú dni dlhšie.",
+        "Na jeseň prší často."
+      ]
+    },
+    {
+      "id": "listen-v-zime-sne-ale-na-jar-svieti-slnko",
+      "type": "listen",
+      "l1": "En hiver il neige, mais au printemps le soleil brille.",
+      "l2": "V zime sneží, ale na jar svieti slnko.",
+      "choices_l1": [
+        "Au printemps les fleurs fleurissent.",
+        "Quelle est ta saison préférée ?",
+        "Au printemps il fait plus chaud qu'en hiver."
+      ],
+      "choices_l2": [
+        "Mám rád jeseň, lebo farby sú pekné.",
+        "Dnes je chladnejšie ako včera.",
+        "Na jeseň padá lístie."
+      ]
+    },
+    {
+      "id": "listen-dnes-je-chladnej-ie-ako-v-era",
+      "type": "listen",
+      "l1": "Aujourd'hui il fait plus frais qu'hier.",
+      "l2": "Dnes je chladnejšie ako včera.",
+      "choices_l1": [
+        "En hiver il neige, mais au printemps le soleil brille.",
+        "En automne les feuilles tombent.",
+        "En été il y a parfois une canicule."
+      ],
+      "choices_l2": [
+        "V lete sú dni dlhšie.",
+        "Aké je tvoje obľúbené ročné obdobie?",
+        "V lete je niekedy horúčava."
+      ]
+    },
+    {
+      "id": "listen-m-m-r-d-jese-lebo-farby-s-pekn",
+      "type": "listen",
+      "l1": "J'aime l'automne, parce que les couleurs sont belles.",
+      "l2": "Mám rád jeseň, lebo farby sú pekné.",
+      "choices_l1": [
+        "Au printemps il fait plus chaud qu'en hiver.",
+        "En hiver la nuit est plus longue que le jour.",
+        "En hiver il neige, mais au printemps le soleil brille."
+      ],
+      "choices_l2": [
+        "Dnes je chladnejšie ako včera.",
+        "Na jar je teplejšie ako v zime.",
+        "V lete je niekedy horúčava."
+      ]
+    },
+    {
+      "id": "listen-na-jese-pad-l-stie",
+      "type": "listen",
+      "l1": "En automne les feuilles tombent.",
+      "l2": "Na jeseň padá lístie.",
+      "choices_l1": [
+        "En hiver il neige, mais au printemps le soleil brille.",
+        "J'aime l'automne, parce que les couleurs sont belles.",
+        "Au printemps il fait plus chaud qu'en hiver."
+      ],
+      "choices_l2": [
+        "V zime je noc dlhšia ako deň.",
+        "Každé ročné obdobie je iné.",
+        "Aké je tvoje obľúbené ročné obdobie?"
+      ]
+    },
+    {
+      "id": "listen-na-jar-kvitn-kvety",
+      "type": "listen",
+      "l1": "Au printemps les fleurs fleurissent.",
+      "l2": "Na jar kvitnú kvety.",
+      "choices_l1": [
+        "En automne il pleut souvent.",
+        "Quelle est ta saison préférée ?",
+        "En hiver la nuit est plus longue que le jour."
+      ],
+      "choices_l2": [
+        "V lete sú dni dlhšie.",
+        "Každé ročné obdobie je iné.",
+        "V zime je noc dlhšia ako deň."
+      ]
+    },
+    {
+      "id": "listen-v-lete-je-niekedy-hor-ava",
+      "type": "listen",
+      "l1": "En été il y a parfois une canicule.",
+      "l2": "V lete je niekedy horúčava.",
+      "choices_l1": [
+        "Aujourd'hui il fait plus frais qu'hier.",
+        "En hiver la nuit est plus longue que le jour.",
+        "Quelle est ta saison préférée ?"
+      ],
+      "choices_l2": [
+        "Na jeseň padá lístie.",
+        "V lete sú dni dlhšie.",
+        "V zime je noc dlhšia ako deň."
+      ]
+    },
+    {
+      "id": "listen-tr-va-je-zelen-a-mokr",
+      "type": "listen",
+      "l1": "L'herbe est verte et mouillée.",
+      "l2": "Tráva je zelená a mokrá.",
+      "choices_l1": [
+        "Quelle est ta saison préférée ?",
+        "En hiver la nuit est plus longue que le jour.",
+        "Cet été est plus chaud que le précédent."
+      ],
+      "choices_l2": [
+        "V zime je noc dlhšia ako deň.",
+        "Na jeseň padá lístie.",
+        "Aké je tvoje obľúbené ročné obdobie?"
+      ]
+    },
+    {
+      "id": "listen-v-zime-je-siln-mr-z",
+      "type": "listen",
+      "l1": "En hiver il y a un fort gel.",
+      "l2": "V zime je silný mráz.",
+      "choices_l1": [
+        "Chaque saison est différente.",
+        "En hiver il neige, mais au printemps le soleil brille.",
+        "En automne les feuilles tombent."
+      ],
+      "choices_l2": [
+        "Dnes je chladnejšie ako včera.",
+        "Aké je tvoje obľúbené ročné obdobie?",
+        "Na jeseň padá lístie."
+      ]
+    },
+    {
+      "id": "order-ak-je-tvoje-ob-ben-ro-n-obdobie",
+      "type": "order",
+      "l1": "Quelle est ta saison préférée ?",
+      "l2": "Aké je tvoje obľúbené ročné obdobie?",
+      "tokens_l1": [
+        "Quelle",
+        "est",
+        "ta",
+        "saison",
+        "préférée",
+        "?",
+        "Cet",
+        "été",
+        "est",
+        "plus",
+        "chaud",
+        "que",
+        "le",
+        "précédent."
+      ],
+      "tokens_l2": [
+        "Aké",
+        "je",
+        "tvoje",
+        "obľúbené",
+        "ročné",
+        "obdobie?",
+        "Toto",
+        "leto",
+        "je",
+        "teplejšie",
+        "ako",
+        "minulé."
+      ]
+    },
+    {
+      "id": "order-na-jar-je-teplej-ie-ako-v-zime",
+      "type": "order",
+      "l1": "Au printemps il fait plus chaud qu'en hiver.",
+      "l2": "Na jar je teplejšie ako v zime.",
+      "tokens_l1": [
+        "Au",
+        "printemps",
+        "il",
+        "fait",
+        "plus",
+        "chaud",
+        "qu'en",
+        "hiver.",
+        "En",
+        "hiver",
+        "il",
+        "y",
+        "a",
+        "un",
+        "fort",
+        "gel."
+      ],
+      "tokens_l2": [
+        "Na",
+        "jar",
+        "je",
+        "teplejšie",
+        "ako",
+        "v",
+        "zime.",
+        "V",
+        "zime",
+        "je",
+        "silný",
+        "mráz."
+      ]
+    },
+    {
+      "id": "order-v-lete-s-dni-dlh-ie",
+      "type": "order",
+      "l1": "En été les jours sont plus longs.",
+      "l2": "V lete sú dni dlhšie.",
+      "tokens_l1": [
+        "En",
+        "été",
+        "les",
+        "jours",
+        "sont",
+        "plus",
+        "longs.",
+        "En",
+        "hiver",
+        "il",
+        "neige,",
+        "mais",
+        "au",
+        "printemps",
+        "le",
+        "soleil",
+        "brille."
+      ],
+      "tokens_l2": [
+        "V",
+        "lete",
+        "sú",
+        "dni",
+        "dlhšie.",
+        "V",
+        "zime",
+        "sneží,",
+        "ale",
+        "na",
+        "jar",
+        "svieti",
+        "slnko."
+      ]
+    },
+    {
+      "id": "order-na-jese-pr-asto",
+      "type": "order",
+      "l1": "En automne il pleut souvent.",
+      "l2": "Na jeseň prší často.",
+      "tokens_l1": [
+        "En",
+        "automne",
+        "il",
+        "pleut",
+        "souvent.",
+        "En",
+        "hiver",
+        "il",
+        "neige,",
+        "mais",
+        "au",
+        "printemps",
+        "le",
+        "soleil",
+        "brille."
+      ],
+      "tokens_l2": [
+        "Na",
+        "jeseň",
+        "prší",
+        "často.",
+        "V",
+        "zime",
+        "sneží,",
+        "ale",
+        "na",
+        "jar",
+        "svieti",
+        "slnko."
+      ]
+    },
+    {
+      "id": "order-v-zime-je-noc-dlh-ia-ako-de",
+      "type": "order",
+      "l1": "En hiver la nuit est plus longue que le jour.",
+      "l2": "V zime je noc dlhšia ako deň.",
+      "tokens_l1": [
+        "En",
+        "hiver",
+        "la",
+        "nuit",
+        "est",
+        "plus",
+        "longue",
+        "que",
+        "le",
+        "jour.",
+        "L'herbe",
+        "est",
+        "verte",
+        "et",
+        "mouillée."
+      ],
+      "tokens_l2": [
+        "V",
+        "zime",
+        "je",
+        "noc",
+        "dlhšia",
+        "ako",
+        "deň.",
+        "Tráva",
+        "je",
+        "zelená",
+        "a",
+        "mokrá."
+      ]
+    },
+    {
+      "id": "order-ka-d-ro-n-obdobie-je-in",
+      "type": "order",
+      "l1": "Chaque saison est différente.",
+      "l2": "Každé ročné obdobie je iné.",
+      "tokens_l1": [
+        "Chaque",
+        "saison",
+        "est",
+        "différente.",
+        "Quelle",
+        "est",
+        "ta",
+        "saison",
+        "préférée",
+        "?"
+      ],
+      "tokens_l2": [
+        "Každé",
+        "ročné",
+        "obdobie",
+        "je",
+        "iné.",
+        "Aké",
+        "je",
+        "tvoje",
+        "obľúbené",
+        "ročné",
+        "obdobie?"
+      ]
+    },
+    {
+      "id": "order-toto-leto-je-teplej-ie-ako-minul",
+      "type": "order",
+      "l1": "Cet été est plus chaud que le précédent.",
+      "l2": "Toto leto je teplejšie ako minulé.",
+      "tokens_l1": [
+        "Cet",
+        "été",
+        "est",
+        "plus",
+        "chaud",
+        "que",
+        "le",
+        "précédent.",
+        "En",
+        "été",
+        "les",
+        "jours",
+        "sont",
+        "plus",
+        "longs."
+      ],
+      "tokens_l2": [
+        "Toto",
+        "leto",
+        "je",
+        "teplejšie",
+        "ako",
+        "minulé.",
+        "V",
+        "lete",
+        "sú",
+        "dni",
+        "dlhšie."
+      ]
+    },
+    {
+      "id": "order-v-zime-sne-ale-na-jar-svieti-slnko",
+      "type": "order",
+      "l1": "En hiver il neige, mais au printemps le soleil brille.",
+      "l2": "V zime sneží, ale na jar svieti slnko.",
+      "tokens_l1": [
+        "En",
+        "hiver",
+        "il",
+        "neige,",
+        "mais",
+        "au",
+        "printemps",
+        "le",
+        "soleil",
+        "brille.",
+        "En",
+        "hiver",
+        "il",
+        "y",
+        "a",
+        "un",
+        "fort",
+        "gel."
+      ],
+      "tokens_l2": [
+        "V",
+        "zime",
+        "sneží,",
+        "ale",
+        "na",
+        "jar",
+        "svieti",
+        "slnko.",
+        "V",
+        "zime",
+        "je",
+        "silný",
+        "mráz."
+      ]
+    },
+    {
+      "id": "order-dnes-je-chladnej-ie-ako-v-era",
+      "type": "order",
+      "l1": "Aujourd'hui il fait plus frais qu'hier.",
+      "l2": "Dnes je chladnejšie ako včera.",
+      "tokens_l1": [
+        "Aujourd'hui",
+        "il",
+        "fait",
+        "plus",
+        "frais",
+        "qu'hier.",
+        "En",
+        "été",
+        "il",
+        "y",
+        "a",
+        "parfois",
+        "une",
+        "canicule."
+      ],
+      "tokens_l2": [
+        "Dnes",
+        "je",
+        "chladnejšie",
+        "ako",
+        "včera.",
+        "V",
+        "lete",
+        "je",
+        "niekedy",
+        "horúčava."
+      ]
+    },
+    {
+      "id": "order-m-m-r-d-jese-lebo-farby-s-pekn",
+      "type": "order",
+      "l1": "J'aime l'automne, parce que les couleurs sont belles.",
+      "l2": "Mám rád jeseň, lebo farby sú pekné.",
+      "tokens_l1": [
+        "J'aime",
+        "l'automne,",
+        "parce",
+        "que",
+        "les",
+        "couleurs",
+        "sont",
+        "belles.",
+        "Au",
+        "printemps",
+        "il",
+        "fait",
+        "plus",
+        "chaud",
+        "qu'en",
+        "hiver."
+      ],
+      "tokens_l2": [
+        "Mám",
+        "rád",
+        "jeseň,",
+        "lebo",
+        "farby",
+        "sú",
+        "pekné.",
+        "Na",
+        "jar",
+        "je",
+        "teplejšie",
+        "ako",
+        "v",
+        "zime."
+      ]
+    },
+    {
+      "id": "order-na-jese-pad-l-stie",
+      "type": "order",
+      "l1": "En automne les feuilles tombent.",
+      "l2": "Na jeseň padá lístie.",
+      "tokens_l1": [
+        "En",
+        "automne",
+        "les",
+        "feuilles",
+        "tombent.",
+        "Au",
+        "printemps",
+        "les",
+        "fleurs",
+        "fleurissent."
+      ],
+      "tokens_l2": [
+        "Na",
+        "jeseň",
+        "padá",
+        "lístie.",
+        "Na",
+        "jar",
+        "kvitnú",
+        "kvety."
+      ]
+    },
+    {
+      "id": "order-na-jar-kvitn-kvety",
+      "type": "order",
+      "l1": "Au printemps les fleurs fleurissent.",
+      "l2": "Na jar kvitnú kvety.",
+      "tokens_l1": [
+        "Au",
+        "printemps",
+        "les",
+        "fleurs",
+        "fleurissent.",
+        "J'aime",
+        "l'automne,",
+        "parce",
+        "que",
+        "les",
+        "couleurs",
+        "sont",
+        "belles."
+      ],
+      "tokens_l2": [
+        "Na",
+        "jar",
+        "kvitnú",
+        "kvety.",
+        "Mám",
+        "rád",
+        "jeseň,",
+        "lebo",
+        "farby",
+        "sú",
+        "pekné."
+      ]
+    },
+    {
+      "id": "order-v-lete-je-niekedy-hor-ava",
+      "type": "order",
+      "l1": "En été il y a parfois une canicule.",
+      "l2": "V lete je niekedy horúčava.",
+      "tokens_l1": [
+        "En",
+        "été",
+        "il",
+        "y",
+        "a",
+        "parfois",
+        "une",
+        "canicule.",
+        "Quelle",
+        "est",
+        "ta",
+        "saison",
+        "préférée",
+        "?"
+      ],
+      "tokens_l2": [
+        "V",
+        "lete",
+        "je",
+        "niekedy",
+        "horúčava.",
+        "Aké",
+        "je",
+        "tvoje",
+        "obľúbené",
+        "ročné",
+        "obdobie?"
+      ]
+    },
+    {
+      "id": "order-tr-va-je-zelen-a-mokr",
+      "type": "order",
+      "l1": "L'herbe est verte et mouillée.",
+      "l2": "Tráva je zelená a mokrá.",
+      "tokens_l1": [
+        "L'herbe",
+        "est",
+        "verte",
+        "et",
+        "mouillée.",
+        "Cet",
+        "été",
+        "est",
+        "plus",
+        "chaud",
+        "que",
+        "le",
+        "précédent."
+      ],
+      "tokens_l2": [
+        "Tráva",
+        "je",
+        "zelená",
+        "a",
+        "mokrá.",
+        "Toto",
+        "leto",
+        "je",
+        "teplejšie",
+        "ako",
+        "minulé."
+      ]
+    },
+    {
+      "id": "order-v-zime-je-siln-mr-z",
+      "type": "order",
+      "l1": "En hiver il y a un fort gel.",
+      "l2": "V zime je silný mráz.",
+      "tokens_l1": [
+        "En",
+        "hiver",
+        "il",
+        "y",
+        "a",
+        "un",
+        "fort",
+        "gel.",
+        "En",
+        "automne",
+        "il",
+        "pleut",
+        "souvent."
+      ],
+      "tokens_l2": [
+        "V",
+        "zime",
+        "je",
+        "silný",
+        "mráz.",
+        "Na",
+        "jeseň",
+        "prší",
+        "často."
+      ]
+    },
+    {
+      "id": "match-jar-vocab",
+      "type": "match",
+      "l1": [
+        "le printemps",
+        "l'été",
+        "l'automne",
+        "l'hiver"
+      ],
+      "l2": [
+        "jar",
+        "leto",
+        "jeseň",
+        "zima"
+      ]
+    },
+    {
+      "id": "match-ak-je-tvoje-ob-ben-ro-n-obdobie-sentences",
+      "type": "match",
+      "l1": [
+        "Quelle est ta saison préférée ?",
+        "J'aime l'été.",
+        "Au printemps il fait plus chaud qu'en hiver.",
+        "En été les jours sont plus longs."
+      ],
+      "l2": [
+        "Aké je tvoje obľúbené ročné obdobie?",
+        "Mám rád leto.",
+        "Na jar je teplejšie ako v zime.",
+        "V lete sú dni dlhšie."
+      ]
+    }
+  ]
+}

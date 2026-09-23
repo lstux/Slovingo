@@ -138,7 +138,7 @@ Podobne ako dni v týždni, aj mesiace sa vo francúzštine píšu s malým zač
 
 ! Mon anniversaire est le six août.
 > Moje narodeniny sú šiesteho augusta.
-+ Pripomienka z fiche o radových číslovkách: francúzsky dátum používa základnú číslovku „six“, nie radovú.
++ Pripomienka: francúzsky dátum používa základnú číslovku „six“, nie radovú — na rozdiel od slovenčiny.
 
 ---
 
@@ -186,4 +186,4 @@ Povedať hodinu so štvrťami:
 - **Pol a štvrť majú opačnú logiku**: francúzske „cinq heures et demie“ pomenúva hodinu, ktorá PREŠLA (päť), zatiaľ čo slovenské „pol šiestej“ pomenúva hodinu, ktorá PRICHÁDZA (šiesta). Obe znamenajú 5:30, ale francúzske číslo je vždy o jedno nižšie, než by napovedala slovenská logika.
 - Dni a mesiace sa píšu s malým začiatočným písmenom, rovnako ako v slovenčine.
 - Pri dátumoch sa používa základná číslovka, nie radová — okrem „le premier“ (prvého).
-- „quatre-vingts“ (80) a „quatre-vingt-dix“ (90) nemajú v bežnej francúzštine pravidelný tvar — pozri fiche o číslach.
+- „quatre-vingts“ (80) a „quatre-vingt-dix“ (90) nemajú v bežnej francúzštine pravidelný tvar — francúzština tu počíta po dvadsiatkach namiesto pravidelných desiatok.

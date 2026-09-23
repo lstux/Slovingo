@@ -254,6 +254,269 @@ function ttsAvailable() {
 }
 
 // ============================================================================
+// Random Variable System (RANDOM, SHUFFLE)
+// ============================================================================
+// Processes RANDOM(id, [min,] max[, step]) and SHUFFLE_id in exercise fields.
+// Each exercise gets one cache: values are generated once per display,
+// rerolled if the user navigates back to the same exercise.
+// ============================================================================
+
+// Regex patterns for detection
+const RANDOM_DECL_REGEX = /RANDOM\s*\(\s*(\w+)\s*(?:,\s*(-?\d+(?:\.\d+)?)\s*)?(?:,\s*(-?\d+(?:\.\d+)?)\s*)?(?:,\s*(-?\d+(?:\.\d+)?))?\s*\)/g;
+const RANDOM_REF_REGEX = /RANDOM_(\w+)/g;
+const SHUFFLE_REF_REGEX = /SHUFFLE_(\w+)/g;
+
+class RandomVariableContext {
+    constructor() {
+        this.variables = {};       // {id: value}
+        this.steps = {};           // {id: step}
+        this.declared = new Set(); // ids seen in RANDOM(...)
+        this.distractors = {};     // {id: [already generated]}
+    }
+}
+
+/**
+ * Parse all RANDOM declarations and references in the combined text of an
+ * exercise. Returns a context with validated declarations, or throws on error.
+ */
+function parseRandomDeclarations(allText) {
+    const context = new RandomVariableContext();
+    const declarations = [];
+    const randomIds = new Set();
+    const shuffleIds = new Set();
+
+    let match;
+
+    // Pass 1: collect all RANDOM declarations
+    const declRegex = new RegExp(RANDOM_DECL_REGEX);
+    while ((match = declRegex.exec(allText)) !== null) {
+        const id = match[1];
+        const arg1 = match[2] ? parseFloat(match[2]) : null;
+        const arg2 = match[3] ? parseFloat(match[3]) : null;
+        const step = match[4] ? parseFloat(match[4]) : null;
+
+        // Interpret args: RANDOM(id, max) vs RANDOM(id, min, max)
+        let min, max;
+        if (arg2 === null) {
+            min = 0;
+            max = arg1;
+        } else {
+            min = arg1;
+            max = arg2;
+        }
+
+        declarations.push({ id, min, max, step: step ?? 1 });
+        randomIds.add(id);
+    }
+
+    // Pass 2: collect all RANDOM_id references
+    const refRegex = new RegExp(RANDOM_REF_REGEX);
+    while ((match = refRegex.exec(allText)) !== null) {
+        randomIds.add(match[1]);
+    }
+
+    // Pass 3: collect all SHUFFLE_id references
+    const shuffleRegex = new RegExp(SHUFFLE_REF_REGEX);
+    while ((match = shuffleRegex.exec(allText)) !== null) {
+        shuffleIds.add(match[1]);
+    }
+
+    // Pass 4: validate
+    for (const decl of declarations) {
+        if (context.declared.has(decl.id)) {
+            throw new Error(`Duplicate random variable declaration: ${decl.id}`);
+        }
+        context.declared.add(decl.id);
+    }
+
+    for (const refId of randomIds) {
+        if (!context.declared.has(refId)) {
+            throw new Error(`Undefined random variable: ${refId}`);
+        }
+    }
+
+    for (const shuffleId of shuffleIds) {
+        if (!context.declared.has(shuffleId)) {
+            throw new Error(`Undefined shuffle variable: ${shuffleId}`);
+        }
+    }
+
+    return { context, declarations };
+}
+
+/**
+ * Generate a single random value in [min, max] respecting step.
+ */
+function generateRandomValue(min, max, step) {
+    const isFloat = !Number.isInteger(step);
+    const range = max - min;
+    const numSteps = Math.floor(range / step);
+    const randomStepIndex = Math.floor(Math.random() * (numSteps + 1));
+    const value = min + randomStepIndex * step;
+
+    // Clamp to max (in case of float rounding)
+    if (value > max) return max;
+    return isFloat ? value : Math.round(value);
+}
+
+/**
+ * Generate all RANDOM values for the exercise. Each gets its own cache slot
+ * and a distractor pool (lazy-loaded by SHUFFLE).
+ */
+function generateRandomValues(declarations) {
+    const context = new RandomVariableContext();
+
+    for (const { id, min, max, step } of declarations) {
+        let actualMin = min;
+        let actualMax = max;
+
+        // Swap if min > max
+        if (actualMin > actualMax) {
+            [actualMin, actualMax] = [actualMax, actualMin];
+        }
+
+        // Fix step=0 → step=1 (silent fix, no error)
+        let actualStep = step || 1;
+        if (actualStep === 0) {
+            actualStep = 1;
+        }
+
+        const value = generateRandomValue(actualMin, actualMax, actualStep);
+        context.variables[id] = value;
+        context.steps[id] = actualStep;
+        context.distractors[id] = []; // Empty pool, lazy-loaded on demand
+    }
+
+    return context;
+}
+
+/**
+ * Generate one plausible distractor around a value using strategies:
+ * ±1, ±step, ±2*step, ±0.5*step (if float).
+ */
+function generateOneDistractor(value, step) {
+    const isFloat = !Number.isInteger(step);
+    const strategies = [
+        () => value + (Math.random() > 0.5 ? 1 : -1),
+        () => value + (Math.random() > 0.5 ? step : -step),
+        () => value + (Math.random() > 0.5 ? 2 * step : -2 * step),
+    ];
+
+    if (isFloat) {
+        strategies.push(() => value + 0.5 * step * (Math.random() > 0.5 ? 1 : -1));
+    }
+
+    const strategy = strategies[Math.floor(Math.random() * strategies.length)];
+    let distractor = strategy();
+
+    // Round if needed
+    if (!Number.isInteger(step)) {
+        distractor = Math.round(distractor * 100) / 100;
+    } else {
+        distractor = Math.round(distractor);
+    }
+
+    return distractor;
+}
+
+/**
+ * Get the next unique distractor for an id. Lazy-generates on demand,
+ * ensuring no duplicates (retries up to 100 times).
+ */
+function getNextDistractor(context, id) {
+    if (!context.variables.hasOwnProperty(id)) {
+        throw new Error(`Undefined shuffle variable: ${id}`);
+    }
+
+    let newDistractor;
+    const maxAttempts = 100;
+    let attempts = 0;
+
+    do {
+        newDistractor = generateOneDistractor(context.variables[id], context.steps[id]);
+        attempts++;
+    } while (context.distractors[id].includes(newDistractor) && attempts < maxAttempts);
+
+    if (attempts >= maxAttempts) {
+        console.warn(`Could not generate unique distractor for ${id} after ${maxAttempts} attempts`);
+    }
+
+    context.distractors[id].push(newDistractor);
+    return newDistractor;
+}
+
+/**
+ * Substitute all RANDOM(...), RANDOM_id, and SHUFFLE_id in a string.
+ */
+function substituteRandomVariables(text, context) {
+    if (typeof text !== 'string') return text;
+
+    // Replace RANDOM(...) declarations with their values
+    text = text.replace(RANDOM_DECL_REGEX, (match, id) => {
+        return String(context.variables[id]);
+    });
+
+    // Replace RANDOM_id references
+    text = text.replace(RANDOM_REF_REGEX, (match, id) => {
+        return String(context.variables[id]);
+    });
+
+    // Replace SHUFFLE_id references (lazy, unique)
+    text = text.replace(SHUFFLE_REF_REGEX, (match, id) => {
+        return String(getNextDistractor(context, id));
+    });
+
+    return text;
+}
+
+/**
+ * Main entry point: process all RANDOM/SHUFFLE in an exercise.
+ * Scans all text/list fields, generates values once, substitutes everywhere.
+ */
+function processRandomVariablesInExercise(exercise) {
+    try {
+        // Fields that can contain RANDOM/SHUFFLE markers (string or string[])
+        const textFields = [
+            'l1', 'l2', 'missing_l1', 'missing_l2',
+            'choices_l1', 'choices_l2', 'tokens_l1', 'tokens_l2',
+        ];
+
+        // Combine all text for parsing (one pass across all fields)
+        const allText = textFields
+            .map(field => exercise[field])
+            .filter(val => val !== undefined && val !== null && (typeof val === 'string' || Array.isArray(val)))
+            .flatMap(val => Array.isArray(val) ? val : [val])
+            .join(' ');
+
+        // Parse and validate
+        const { context, declarations } = parseRandomDeclarations(allText);
+
+        // Generate all values once
+        const filledContext = generateRandomValues(declarations);
+
+        // Substitute in each field
+        const processed = { ...exercise };
+        for (const field of textFields) {
+            if (field in processed) {
+                const value = processed[field];
+                if (typeof value === 'string') {
+                    processed[field] = substituteRandomVariables(value, filledContext);
+                } else if (Array.isArray(value)) {
+                    processed[field] = value.map(item =>
+                        typeof item === 'string' ? substituteRandomVariables(item, filledContext) : item
+                    );
+                }
+            }
+        }
+
+        return processed;
+    } catch (error) {
+        console.error(`Error processing random variables in exercise: ${error.message}`);
+        throw error;
+    }
+}
+
+// ============================================================================
 // Router entry point (called from app.js's route())
 // ============================================================================
 
@@ -668,6 +931,35 @@ function renderDirectionSelector(current, onChange) {
 }
 
 // ============================================================================
+// Exercise expansion (count field)
+// ============================================================================
+/**
+ * Expand exercises with count > 1 into multiple independent copies.
+ * Each copy will generate its own RANDOM values when displayed, making
+ * it useful for dynamic exercises: count: 5 means 5 fresh questions.
+ *
+ * @param {object[]} exercises
+ * @returns {object[]} flattened with count-expanded copies
+ */
+function expandExerciseCount(exercises) {
+    return exercises.flatMap((ex) => {
+        const count = parseInt(ex.count || 1, 10);
+        if (isNaN(count) || count < 1) {
+            console.warn(`Invalid count for exercise ${ex.id}: ${ex.count}, using 1`);
+            return [ex];
+        }
+
+        const expanded = [];
+        for (let i = 0; i < count; i++) {
+            // Shallow copy: each instance is independent
+            // (RANDOM values regenerate on each display)
+            expanded.push({ ...ex });
+        }
+        return expanded;
+    });
+}
+
+// ============================================================================
 // Starting a session
 // ============================================================================
 
@@ -715,6 +1007,8 @@ function startSessionFromQuery(query) {
     }
 
     state.allExercises = validIds.flatMap((id) => EXERCISES.sheets[id].exercises);
+    // Expand exercises with count > 1 (each copy will get fresh RANDOM values)
+    state.allExercises = expandExerciseCount(state.allExercises);
     state.sheetId = validIds.length === 1 ? validIds[0] : null;
 
     const group = state.sheetId ? findGroupForSheet(state.sheetId) : null;
@@ -1089,6 +1383,10 @@ function resolveView(ex, direction) {
  * choices) once -- the resolved view is kept in state.currentView so
  * that toggling the answer mode (choice/free typing) re-renders the
  * SAME question instead of re-rolling a fresh "both" direction.
+ *
+ * NEW: Process RANDOM/SHUFFLE variables in the exercise before resolving.
+ * This ensures random values are generated once per display, and rerolled
+ * if the user navigates back to this exercise.
  */
 function goToExercise(index) {
     state.current = index;
@@ -1096,8 +1394,16 @@ function goToExercise(index) {
         renderSummary();
         return;
     }
-    state.currentView = resolveView(state.exercises[index], state.direction);
-    renderCurrentView();
+    try {
+        const processedExercise = processRandomVariablesInExercise(state.exercises[index]);
+        state.currentView = resolveView(processedExercise, state.direction);
+        renderCurrentView();
+    } catch (error) {
+        // RANDOM/SHUFFLE error: show user-facing message
+        const area = document.getElementById("exo-card-area");
+        area.innerHTML = `<p class="exo-error">❌ Exercise error: ${escapeHtml(error.message)}</p>`;
+        console.error(`Exercise processing error at index ${index}:`, error);
+    }
 }
 
 function updateProgress() {

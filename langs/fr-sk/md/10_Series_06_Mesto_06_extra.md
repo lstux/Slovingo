@@ -64,7 +64,6 @@
 | le programme | program |
 | intéressant | zaujímavý |
 | ennuyeux | nudný |
-| le plan | mapa |
 | mais | ale |
 
 ---
@@ -118,24 +117,24 @@
 > Le marché a lieu le samedi = trh je v sobotu
 > la bibliothèque est ouverte tous les jours = knižnica je otvorená každý deň
 
-! Cette direction ne me plaît pas. Vous avez un plan ?
-> Tento smer sa mi nepáči. Máte mapu?
+! Cette direction ne me plaît pas. Je suis perdu.
+> Tento smer sa mi nepáči. Som stratený.
 > Cette direction ne me plaît pas = tento smer sa mi nepáči
-> vous avez un plan = máte mapu
+> je suis perdu = som stratený
 
 ! La mairie est fermée ? Ce n'est pas possible !
 > Radnica je zatvorená? To nie je možné!
 > La mairie est fermée = radnica je zatvorená
 > ce n'est pas possible = to nie je možné
 
-! Je n'ai pas de plan. Il est à la maison.
-> Nemám mapu. Je doma.
-> Je n'ai pas de plan = nemám mapu
+! Je n'ai pas de vélo. Il est à la maison.
+> Nemám bicykel. Je doma.
+> Je n'ai pas de vélo = nemám bicykel
 > il est à la maison = je doma
 
-! Je veux un plan, parce que je suis vraiment perdu.
-> Chcem mapu, lebo som naozaj stratený.
-> Je veux un plan = chcem mapu
+! Je veux de l'aide, parce que je suis vraiment perdu.
+> Chcem pomoc, lebo som naozaj stratený.
+> Je veux de l'aide = chcem pomoc
 > parce que je suis vraiment perdu = lebo som naozaj stratený
 
 ! Le parc est plein de monde, la rue est vide.

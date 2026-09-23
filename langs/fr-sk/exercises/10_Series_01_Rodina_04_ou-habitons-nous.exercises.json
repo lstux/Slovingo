@@ -1,0 +1,1231 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-habiter",
+      "type": "qcm",
+      "l1": "bývať",
+      "l2": "habiter",
+      "choices_l1": [
+        "vidieť",
+        "nemám",
+        "stretnúť"
+      ],
+      "choices_l2": [
+        "trouvé",
+        "dormir",
+        "voir"
+      ]
+    },
+    {
+      "id": "qcm-la-ville",
+      "type": "qcm",
+      "l1": "mesto",
+      "l2": "la ville",
+      "choices_l1": [
+        "vľavo",
+        "rovno",
+        "MHD"
+      ],
+      "choices_l2": [
+        "la bibliothèque",
+        "la mairie",
+        "le carrefour"
+      ]
+    },
+    {
+      "id": "qcm-la-campagne",
+      "type": "qcm",
+      "l1": "dedina, vidiek",
+      "l2": "la campagne",
+      "choices_l1": [
+        "ulica",
+        "v Lyone",
+        "auto"
+      ],
+      "choices_l2": [
+        "l'école",
+        "l'exposition",
+        "à droite"
+      ]
+    },
+    {
+      "id": "qcm-la-maison",
+      "type": "qcm",
+      "l1": "dom",
+      "l2": "la maison",
+      "choices_l1": [
+        "chata",
+        "garáž",
+        "strecha"
+      ],
+      "choices_l2": [
+        "maison",
+        "le garage",
+        "la chambre"
+      ]
+    },
+    {
+      "id": "qcm-l-appartement",
+      "type": "qcm",
+      "l1": "byt",
+      "l2": "l'appartement",
+      "choices_l1": [
+        "v spálni",
+        "doma",
+        "chata"
+      ],
+      "choices_l2": [
+        "le garage",
+        "l'entrée",
+        "la fenêtre"
+      ]
+    },
+    {
+      "id": "qcm-ensemble",
+      "type": "qcm",
+      "l1": "spolu",
+      "l2": "ensemble",
+      "choices_l1": [
+        "Je horúco.",
+        "táto bunda",
+        "tú"
+      ],
+      "choices_l2": [
+        "pour",
+        "ici",
+        "nous marcherons"
+      ]
+    },
+    {
+      "id": "qcm-pr-s",
+      "type": "qcm",
+      "l1": "blízko",
+      "l2": "près",
+      "choices_l1": [
+        "svetlý",
+        "ďaleko",
+        "ticho"
+      ],
+      "choices_l2": [
+        "joli",
+        "plus loin",
+        "fermé"
+      ]
+    },
+    {
+      "id": "qcm-j-habite",
+      "type": "qcm",
+      "l1": "bývam",
+      "l2": "j'habite",
+      "choices_l1": [
+        "bývame",
+        "pozerať",
+        "stretnúť sa"
+      ],
+      "choices_l2": [
+        "travailler",
+        "célébrer",
+        "va"
+      ]
+    },
+    {
+      "id": "qcm-tu-habites",
+      "type": "qcm",
+      "l1": "bývaš",
+      "l2": "tu habites",
+      "choices_l1": [
+        "na moste",
+        "hľadáme",
+        "ďalej"
+      ],
+      "choices_l2": [
+        "tu essaies",
+        "pas",
+        "avec"
+      ]
+    },
+    {
+      "id": "qcm-il-elle-habite",
+      "type": "qcm",
+      "l1": "býva",
+      "l2": "il / elle habite",
+      "choices_l1": [
+        "ale",
+        "na stoličke",
+        "sú"
+      ],
+      "choices_l2": [
+        "il / elle doit",
+        "il / elle fait",
+        "le plus haut"
+      ]
+    },
+    {
+      "id": "qcm-nous-habitons",
+      "type": "qcm",
+      "l1": "bývame",
+      "l2": "nous habitons",
+      "choices_l1": [
+        "sú",
+        "Je horúco.",
+        "ty máš"
+      ],
+      "choices_l2": [
+        "tu dois",
+        "as-tu",
+        "des"
+      ]
+    },
+    {
+      "id": "qcm-ils-elles-habitent",
+      "type": "qcm",
+      "l1": "bývajú",
+      "l2": "ils / elles habitent",
+      "choices_l1": [
+        "za",
+        "kupuješ",
+        "v byte"
+      ],
+      "choices_l2": [
+        "Je cherche la clé. → Je la cherche.",
+        "sûr / sûre",
+        "il / elle est"
+      ]
+    },
+    {
+      "id": "qcm-lyon",
+      "type": "qcm",
+      "l1": "v Lyone",
+      "l2": "à Lyon",
+      "choices_l1": [
+        "toto",
+        "by",
+        "priamo"
+      ],
+      "choices_l2": [
+        "ma",
+        "ce serait",
+        "la"
+      ]
+    },
+    {
+      "id": "qcm-dans-une-maison",
+      "type": "qcm",
+      "l1": "v dome",
+      "l2": "dans une maison",
+      "choices_l1": [
+        "Ďakujem",
+        "asi",
+        "veľmi"
+      ],
+      "choices_l2": [
+        "Je vais arriver.",
+        "tout de suite",
+        "il / elle habite"
+      ]
+    },
+    {
+      "id": "qcm-dans-un-appartement",
+      "type": "qcm",
+      "l1": "v byte",
+      "l2": "dans un appartement",
+      "choices_l1": [
+        "hľadá",
+        "za",
+        "on išiel"
+      ],
+      "choices_l2": [
+        "ils / elles habitent",
+        "dans une maison",
+        "Je cherche les clés. → Je les cherche."
+      ]
+    },
+    {
+      "id": "qcm-en-ville",
+      "type": "qcm",
+      "l1": "v meste",
+      "l2": "en ville",
+      "choices_l1": [
+        "na trh",
+        "cestovný",
+        "električka"
+      ],
+      "choices_l2": [
+        "l'hôpital",
+        "en train",
+        "la ville"
+      ]
+    },
+    {
+      "id": "qcm-la-pi-ce-la-chambre",
+      "type": "qcm",
+      "l1": "izba",
+      "l2": "la pièce / la chambre",
+      "choices_l1": [
+        "doma",
+        "okno",
+        "byt"
+      ],
+      "choices_l2": [
+        "une salle de bain (ženský rod)",
+        "Je voudrais une chambre.",
+        "la chambre (à coucher)"
+      ]
+    },
+    {
+      "id": "qcm-la-cuisine",
+      "type": "qcm",
+      "l1": "kuchyňa",
+      "l2": "la cuisine",
+      "choices_l1": [
+        "panelák",
+        "záhrada",
+        "spálňa"
+      ],
+      "choices_l2": [
+        "les toilettes",
+        "la cave",
+        "le garage"
+      ]
+    },
+    {
+      "id": "qcm-le-jardin",
+      "type": "qcm",
+      "l1": "záhrada",
+      "l2": "le jardin",
+      "choices_l1": [
+        "dvere",
+        "doma",
+        "spálňa"
+      ],
+      "choices_l2": [
+        "la cour",
+        "l'appartement",
+        "la buanderie"
+      ]
+    },
+    {
+      "id": "qcm-l-immeuble",
+      "type": "qcm",
+      "l1": "panelák",
+      "l2": "l'immeuble",
+      "choices_l1": [
+        "obývačka",
+        "izba",
+        "terasa"
+      ],
+      "choices_l2": [
+        "la porte",
+        "la chambre",
+        "maison"
+      ]
+    },
+    {
+      "id": "qcm-la-maison-de-campagne",
+      "type": "qcm",
+      "l1": "chata",
+      "l2": "la maison de campagne",
+      "choices_l1": [
+        "predsieň",
+        "strecha",
+        "kuchyňa"
+      ],
+      "choices_l2": [
+        "dans la chambre",
+        "Ce sont des pièces.",
+        "Nous voudrions une chambre avec vue sur mer."
+      ]
+    },
+    {
+      "id": "qcm-loin",
+      "type": "qcm",
+      "l1": "ďaleko",
+      "l2": "loin",
+      "choices_l1": [
+        "daždivo",
+        "tmavý",
+        "istý"
+      ],
+      "choices_l2": [
+        "la tranquillité",
+        "libre",
+        "préféré"
+      ]
+    },
+    {
+      "id": "qcm-ici",
+      "type": "qcm",
+      "l1": "tu",
+      "l2": "ici",
+      "choices_l1": [
+        "na moste",
+        "trochu",
+        "tú"
+      ],
+      "choices_l2": [
+        "tu fais",
+        "très",
+        "tout"
+      ]
+    },
+    {
+      "id": "blank-j-habite-lyon",
+      "type": "fill-blank",
+      "l1": "Bývam v Lyone.",
+      "l2": "J'habite à Lyon.",
+      "missing_l1": "v",
+      "missing_l2": "à",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "si",
+        "ja",
+        "priamo"
+      ],
+      "choices_l2": [
+        "je veux",
+        "la",
+        "nous voyons"
+      ]
+    },
+    {
+      "id": "blank-j-habite-dans-un-appartement",
+      "type": "fill-blank",
+      "l1": "Bývam v byte.",
+      "l2": "J'habite dans un appartement.",
+      "missing_l1": "v",
+      "missing_l2": "un",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "vonku",
+        "na námestí",
+        "priamo"
+      ],
+      "choices_l2": [
+        "pour",
+        "J'ai",
+        "ma"
+      ]
+    },
+    {
+      "id": "blank-mes-parents-habitent-dans-une-maison",
+      "type": "fill-blank",
+      "l1": "Moji rodičia bývajú v dome.",
+      "l2": "Mes parents habitent dans une maison.",
+      "missing_l1": "v",
+      "missing_l2": "dans",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "vnútri",
+        "sme",
+        "má"
+      ],
+      "choices_l2": [
+        "aussi",
+        "tu mets",
+        "tu habites"
+      ]
+    },
+    {
+      "id": "blank-ma-grand-m-re-habite-la-campagne",
+      "type": "fill-blank",
+      "l1": "Moja babka býva na dedine.",
+      "l2": "Ma grand-mère habite à la campagne.",
+      "missing_l1": "na",
+      "missing_l2": "la",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "trochu",
+        "ja mám",
+        "do"
+      ],
+      "choices_l2": [
+        "est",
+        "des",
+        "une"
+      ]
+    },
+    {
+      "id": "blank-mon-fr-re-habite-tout-pr-s",
+      "type": "fill-blank",
+      "l1": "Môj brat býva blízko.",
+      "l2": "Mon frère habite tout près.",
+      "missing_l1": "býva",
+      "missing_l2": "tout",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "začínať",
+        "skúsiť",
+        "musí"
+      ],
+      "choices_l2": [
+        "on",
+        "en arrière",
+        "quand"
+      ]
+    },
+    {
+      "id": "blank-ma-s-ur-est-m-decin-et-elle-habite-en-ville",
+      "type": "fill-blank",
+      "l1": "Moja sestra je lekárka a býva v meste.",
+      "l2": "Ma sœur est médecin et elle habite en ville.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "vonku",
+        "asi",
+        "kto"
+      ],
+      "choices_l2": [
+        "avec",
+        "nous devons",
+        "je mange"
+      ]
+    },
+    {
+      "id": "blank-mes-parents-habitent-la-campagne-ils-sont-vieux",
+      "type": "fill-blank",
+      "l1": "Moji rodičia bývajú na dedine. Sú starí.",
+      "l2": "Mes parents habitent à la campagne. Ils sont vieux.",
+      "missing_l1": "na",
+      "missing_l2": "la",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "nič",
+        "nie",
+        "veľmi"
+      ],
+      "choices_l2": [
+        "C'est bon.",
+        "tu",
+        "c'est"
+      ]
+    },
+    {
+      "id": "blank-j-ai-deux-enfants-nous-habitons-ensemble",
+      "type": "fill-blank",
+      "l1": "Mám dve deti. Bývame spolu.",
+      "l2": "J'ai deux enfants. Nous habitons ensemble.",
+      "missing_l1": "deti",
+      "missing_l2": "Nous",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "manžel",
+        "dieťa",
+        "mama"
+      ],
+      "choices_l2": [
+        "nous marcherons",
+        "nous mangeons",
+        "tu veux"
+      ]
+    },
+    {
+      "id": "blank-j-habite-dans-un-immeuble",
+      "type": "fill-blank",
+      "l1": "Bývam v paneláku.",
+      "l2": "J'habite dans un immeuble.",
+      "missing_l1": "v",
+      "missing_l2": "un",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "oblečieme si",
+        "hľadáš",
+        "to"
+      ],
+      "choices_l2": [
+        "tu",
+        "je nagerai",
+        "a"
+      ]
+    },
+    {
+      "id": "blank-ma-maison-de-campagne-est-loin",
+      "type": "fill-blank",
+      "l1": "Moja chata je ďaleko.",
+      "l2": "Ma maison de campagne est loin.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "na moste",
+        "Zostala doma.",
+        "vnútri"
+      ],
+      "choices_l2": [
+        "je serai",
+        "le",
+        "je peux"
+      ]
+    },
+    {
+      "id": "blank-ma-maman-est-dans-la-cuisine",
+      "type": "fill-blank",
+      "l1": "Moja mama je v kuchyni.",
+      "l2": "Ma maman est dans la cuisine.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "kupuješ",
+        "do lekárne",
+        "asi"
+      ],
+      "choices_l2": [
+        "tu vois",
+        "ensemble",
+        "nous pouvons"
+      ]
+    },
+    {
+      "id": "blank-les-enfants-sont-dans-le-jardin",
+      "type": "fill-blank",
+      "l1": "Deti sú v záhrade.",
+      "l2": "Les enfants sont dans le jardin.",
+      "missing_l1": "v",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "v byte",
+        "vonku",
+        "do potravín"
+      ],
+      "choices_l2": [
+        "à Lyon",
+        "tu achètes",
+        "je travaille"
+      ]
+    },
+    {
+      "id": "listen-o-habites-tu",
+      "type": "listen",
+      "l1": "Kde bývaš?",
+      "l2": "Où habites-tu ?",
+      "choices_l2": [
+        "As-tu un frère ?",
+        "Ma sœur est médecin.",
+        "Mes parents travaillent."
+      ],
+      "choices_l1": [
+        "Kde bývate?",
+        "Čo hľadáš?",
+        "Čo robíš?"
+      ]
+    },
+    {
+      "id": "listen-j-habite-lyon",
+      "type": "listen",
+      "l1": "Bývam v Lyone.",
+      "l2": "J'habite à Lyon.",
+      "choices_l2": [
+        "Voici mon père et voici ma maman.",
+        "Mes parents travaillent.",
+        "J'ai un fils et une fille."
+      ],
+      "choices_l1": [
+        "Upratujem obývačku a kuchyňu.",
+        "Kedy máš narodeniny?",
+        "Mohli by sme tu prespať?"
+      ]
+    },
+    {
+      "id": "listen-j-habite-dans-un-appartement",
+      "type": "listen",
+      "l1": "Bývam v byte.",
+      "l2": "J'habite dans un appartement.",
+      "choices_l2": [
+        "Ma sœur est à la maison.",
+        "Ma maman est professeure.",
+        "Je travaille à l'école."
+      ],
+      "choices_l1": [
+        "Musíme zmeniť plány, je upozornenie na búrku.",
+        "Pripravil si všetko?",
+        "Hľadám kľúč, ale nie je na stole."
+      ]
+    },
+    {
+      "id": "listen-mes-parents-habitent-dans-une-maison",
+      "type": "listen",
+      "l1": "Moji rodičia bývajú v dome.",
+      "l2": "Mes parents habitent dans une maison.",
+      "choices_l2": [
+        "Ma tante est médecin. Elle a quarante ans.",
+        "Ma maman a cinquante ans.",
+        "J'ai un petit enfant."
+      ],
+      "choices_l1": [
+        "Moja babka je stará, ale robí veľa v záhrade.",
+        "Deti stavajú hrad z piesku.",
+        "Eric, to je moja rodina."
+      ]
+    },
+    {
+      "id": "listen-ma-grand-m-re-habite-la-campagne",
+      "type": "listen",
+      "l1": "Moja babka býva na dedine.",
+      "l2": "Ma grand-mère habite à la campagne.",
+      "choices_l2": [
+        "Mon père est grand et costaud.",
+        "Qui est-ce ?",
+        "Que fais-tu ?"
+      ],
+      "choices_l1": [
+        "Deti sú v parku.",
+        "Môj dedko a moja babka.",
+        "Mama varí a ja umývam poháre."
+      ]
+    },
+    {
+      "id": "listen-nous-habitons-ensemble",
+      "type": "listen",
+      "l1": "Bývame spolu.",
+      "l2": "Nous habitons ensemble.",
+      "choices_l2": [
+        "Que fais-tu ?",
+        "As-tu un frère ?",
+        "J'ai un frère. Il a trois ans."
+      ],
+      "choices_l1": [
+        "Čo kupuješ?",
+        "Kde pracuješ?",
+        "Čo hľadáš?"
+      ]
+    },
+    {
+      "id": "listen-mon-fr-re-habite-tout-pr-s",
+      "type": "listen",
+      "l1": "Môj brat býva blízko.",
+      "l2": "Mon frère habite tout près.",
+      "choices_l2": [
+        "Mes enfants sont petits.",
+        "Ma tante s'appelle Ève.",
+        "Mon père est professeur."
+      ],
+      "choices_l1": [
+        "Na Bielu sobotu mama piekla koláče.",
+        "Deti farbili vajíčka na žlto a na červeno.",
+        "Deti sú v spálni."
+      ]
+    },
+    {
+      "id": "listen-ma-s-ur-est-m-decin-et-elle-habite-en-ville",
+      "type": "listen",
+      "l1": "Moja sestra je lekárka a býva v meste.",
+      "l2": "Ma sœur est médecin et elle habite en ville.",
+      "choices_l2": [
+        "Mon mari s'appelle Marc.",
+        "Ma tante s'appelle Ève.",
+        "Ma tante est médecin. Elle a quarante ans."
+      ],
+      "choices_l1": [
+        "Deti nejedia ratatouille.",
+        "Moja babka býva na dedine a moja teta býva v meste.",
+        "Deti pijú mlieko."
+      ]
+    },
+    {
+      "id": "listen-mes-parents-habitent-la-campagne-ils-sont-vieux",
+      "type": "listen",
+      "l1": "Moji rodičia bývajú na dedine. Sú starí.",
+      "l2": "Mes parents habitent à la campagne. Ils sont vieux.",
+      "choices_l2": [
+        "Moi aussi, je suis professeur.",
+        "Comment tu t'appelles ?",
+        "C'est ma famille."
+      ],
+      "choices_l1": [
+        "Otec je mäso.",
+        "Eric, to je moja rodina.",
+        "Deti nejedia ratatouille."
+      ]
+    },
+    {
+      "id": "listen-j-ai-deux-enfants-nous-habitons-ensemble",
+      "type": "listen",
+      "l1": "Mám dve deti. Bývame spolu.",
+      "l2": "J'ai deux enfants. Nous habitons ensemble.",
+      "choices_l2": [
+        "Je travaille à l'école.",
+        "Où travailles-tu ?",
+        "Ma grand-mère est vieille et ma sœur est jeune."
+      ],
+      "choices_l1": [
+        "Mám dve deti. Sú malé.",
+        "Máme štyri izby.",
+        "Moja mama má päťdesiat rokov."
+      ]
+    },
+    {
+      "id": "listen-j-habite-dans-un-immeuble",
+      "type": "listen",
+      "l1": "Bývam v paneláku.",
+      "l2": "J'habite dans un immeuble.",
+      "choices_l2": [
+        "J'ai trente ans.",
+        "Quel âge as-tu ?",
+        "C'est mon ami."
+      ],
+      "choices_l1": [
+        "Skala je nebezpečná.",
+        "Ja som nenašiel nič!",
+        "Koľko vajíčok si jej dal/dala?"
+      ]
+    },
+    {
+      "id": "listen-ma-maison-de-campagne-est-loin",
+      "type": "listen",
+      "l1": "Moja chata je ďaleko.",
+      "l2": "Ma maison de campagne est loin.",
+      "choices_l2": [
+        "J'ai un petit enfant.",
+        "Où travailles-tu ?",
+        "Ma grand-mère est vieille et ma sœur est jeune."
+      ],
+      "choices_l1": [
+        "Prístav je plný lodí.",
+        "Som unavený. Môžeme si oddýchnuť?",
+        "Film je nudný."
+      ]
+    },
+    {
+      "id": "listen-ma-maman-est-dans-la-cuisine",
+      "type": "listen",
+      "l1": "Moja mama je v kuchyni.",
+      "l2": "Ma maman est dans la cuisine.",
+      "choices_l2": [
+        "Comment tu t'appelles ?",
+        "Mon père est grand et costaud.",
+        "Mon mari s'appelle Marc."
+      ],
+      "choices_l1": [
+        "Moji rodičia bývajú na dedine. Sú starí.",
+        "Deti pijú mlieko.",
+        "Moja sestra je lekárka a býva v meste."
+      ]
+    },
+    {
+      "id": "listen-les-enfants-sont-dans-le-jardin",
+      "type": "listen",
+      "l1": "Deti sú v záhrade.",
+      "l2": "Les enfants sont dans le jardin.",
+      "choices_l2": [
+        "Mon frère travaille dans un magasin.",
+        "J'ai beaucoup de travail.",
+        "Ma sœur travaille à l'hôpital."
+      ],
+      "choices_l1": [
+        "Moja teta sa volá Eva.",
+        "Deti sú v spálni.",
+        "Moja babka býva na dedine a moja teta býva v meste."
+      ]
+    },
+    {
+      "id": "listen-j-habite-ici",
+      "type": "listen",
+      "l1": "Bývam tu.",
+      "l2": "J'habite ici.",
+      "choices_l2": [
+        "J'aime l'été.",
+        "Goûte !",
+        "Lundi après-midi."
+      ],
+      "choices_l1": [
+        "Kde bývaš?",
+        "Kde bývate?",
+        "Čo robíš?"
+      ]
+    },
+    {
+      "id": "order-j-habite-lyon",
+      "type": "order",
+      "l1": "Bývam v Lyone.",
+      "l2": "J'habite à Lyon.",
+      "tokens_l1": [
+        "Bývam",
+        "v",
+        "Lyone.",
+        "Mám",
+        "dve",
+        "deti.",
+        "Bývame",
+        "spolu."
+      ],
+      "tokens_l2": [
+        "J'habite",
+        "à",
+        "Lyon.",
+        "J'ai",
+        "deux",
+        "enfants.",
+        "Nous",
+        "habitons",
+        "ensemble."
+      ]
+    },
+    {
+      "id": "order-j-habite-dans-un-appartement",
+      "type": "order",
+      "l1": "Bývam v byte.",
+      "l2": "J'habite dans un appartement.",
+      "tokens_l1": [
+        "Bývam",
+        "v",
+        "byte.",
+        "Moja",
+        "babka",
+        "býva",
+        "na",
+        "dedine."
+      ],
+      "tokens_l2": [
+        "J'habite",
+        "dans",
+        "un",
+        "appartement.",
+        "Ma",
+        "grand-mère",
+        "habite",
+        "à",
+        "la",
+        "campagne."
+      ]
+    },
+    {
+      "id": "order-mes-parents-habitent-dans-une-maison",
+      "type": "order",
+      "l1": "Moji rodičia bývajú v dome.",
+      "l2": "Mes parents habitent dans une maison.",
+      "tokens_l1": [
+        "Moji",
+        "rodičia",
+        "bývajú",
+        "v",
+        "dome.",
+        "Mám",
+        "dve",
+        "deti.",
+        "Bývame",
+        "spolu."
+      ],
+      "tokens_l2": [
+        "Mes",
+        "parents",
+        "habitent",
+        "dans",
+        "une",
+        "maison.",
+        "J'ai",
+        "deux",
+        "enfants.",
+        "Nous",
+        "habitons",
+        "ensemble."
+      ]
+    },
+    {
+      "id": "order-ma-grand-m-re-habite-la-campagne",
+      "type": "order",
+      "l1": "Moja babka býva na dedine.",
+      "l2": "Ma grand-mère habite à la campagne.",
+      "tokens_l1": [
+        "Moja",
+        "babka",
+        "býva",
+        "na",
+        "dedine.",
+        "Moja",
+        "chata",
+        "je",
+        "ďaleko."
+      ],
+      "tokens_l2": [
+        "Ma",
+        "grand-mère",
+        "habite",
+        "à",
+        "la",
+        "campagne.",
+        "Ma",
+        "maison",
+        "de",
+        "campagne",
+        "est",
+        "loin."
+      ]
+    },
+    {
+      "id": "order-mon-fr-re-habite-tout-pr-s",
+      "type": "order",
+      "l1": "Môj brat býva blízko.",
+      "l2": "Mon frère habite tout près.",
+      "tokens_l1": [
+        "Môj",
+        "brat",
+        "býva",
+        "blízko.",
+        "Moja",
+        "chata",
+        "je",
+        "ďaleko."
+      ],
+      "tokens_l2": [
+        "Mon",
+        "frère",
+        "habite",
+        "tout",
+        "près.",
+        "Ma",
+        "maison",
+        "de",
+        "campagne",
+        "est",
+        "loin."
+      ]
+    },
+    {
+      "id": "order-ma-s-ur-est-m-decin-et-elle-habite-en-ville",
+      "type": "order",
+      "l1": "Moja sestra je lekárka a býva v meste.",
+      "l2": "Ma sœur est médecin et elle habite en ville.",
+      "tokens_l1": [
+        "Moja",
+        "sestra",
+        "je",
+        "lekárka",
+        "a",
+        "býva",
+        "v",
+        "meste.",
+        "Môj",
+        "brat",
+        "býva",
+        "blízko."
+      ],
+      "tokens_l2": [
+        "Ma",
+        "sœur",
+        "est",
+        "médecin",
+        "et",
+        "elle",
+        "habite",
+        "en",
+        "ville.",
+        "Mon",
+        "frère",
+        "habite",
+        "tout",
+        "près."
+      ]
+    },
+    {
+      "id": "order-mes-parents-habitent-la-campagne-ils-sont-vieux",
+      "type": "order",
+      "l1": "Moji rodičia bývajú na dedine. Sú starí.",
+      "l2": "Mes parents habitent à la campagne. Ils sont vieux.",
+      "tokens_l1": [
+        "Moji",
+        "rodičia",
+        "bývajú",
+        "na",
+        "dedine.",
+        "Sú",
+        "starí.",
+        "Deti",
+        "sú",
+        "v",
+        "záhrade."
+      ],
+      "tokens_l2": [
+        "Mes",
+        "parents",
+        "habitent",
+        "à",
+        "la",
+        "campagne.",
+        "Ils",
+        "sont",
+        "vieux.",
+        "Les",
+        "enfants",
+        "sont",
+        "dans",
+        "le",
+        "jardin."
+      ]
+    },
+    {
+      "id": "order-j-ai-deux-enfants-nous-habitons-ensemble",
+      "type": "order",
+      "l1": "Mám dve deti. Bývame spolu.",
+      "l2": "J'ai deux enfants. Nous habitons ensemble.",
+      "tokens_l1": [
+        "Mám",
+        "dve",
+        "deti.",
+        "Bývame",
+        "spolu.",
+        "Moja",
+        "babka",
+        "býva",
+        "na",
+        "dedine."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "deux",
+        "enfants.",
+        "Nous",
+        "habitons",
+        "ensemble.",
+        "Ma",
+        "grand-mère",
+        "habite",
+        "à",
+        "la",
+        "campagne."
+      ]
+    },
+    {
+      "id": "order-j-habite-dans-un-immeuble",
+      "type": "order",
+      "l1": "Bývam v paneláku.",
+      "l2": "J'habite dans un immeuble.",
+      "tokens_l1": [
+        "Bývam",
+        "v",
+        "paneláku.",
+        "Moja",
+        "babka",
+        "býva",
+        "na",
+        "dedine."
+      ],
+      "tokens_l2": [
+        "J'habite",
+        "dans",
+        "un",
+        "immeuble.",
+        "Ma",
+        "grand-mère",
+        "habite",
+        "à",
+        "la",
+        "campagne."
+      ]
+    },
+    {
+      "id": "order-ma-maison-de-campagne-est-loin",
+      "type": "order",
+      "l1": "Moja chata je ďaleko.",
+      "l2": "Ma maison de campagne est loin.",
+      "tokens_l1": [
+        "Moja",
+        "chata",
+        "je",
+        "ďaleko.",
+        "Moji",
+        "rodičia",
+        "bývajú",
+        "v",
+        "dome."
+      ],
+      "tokens_l2": [
+        "Ma",
+        "maison",
+        "de",
+        "campagne",
+        "est",
+        "loin.",
+        "Mes",
+        "parents",
+        "habitent",
+        "dans",
+        "une",
+        "maison."
+      ]
+    },
+    {
+      "id": "order-ma-maman-est-dans-la-cuisine",
+      "type": "order",
+      "l1": "Moja mama je v kuchyni.",
+      "l2": "Ma maman est dans la cuisine.",
+      "tokens_l1": [
+        "Moja",
+        "mama",
+        "je",
+        "v",
+        "kuchyni.",
+        "Moja",
+        "sestra",
+        "je",
+        "lekárka",
+        "a",
+        "býva",
+        "v",
+        "meste."
+      ],
+      "tokens_l2": [
+        "Ma",
+        "maman",
+        "est",
+        "dans",
+        "la",
+        "cuisine.",
+        "Ma",
+        "sœur",
+        "est",
+        "médecin",
+        "et",
+        "elle",
+        "habite",
+        "en",
+        "ville."
+      ]
+    },
+    {
+      "id": "order-les-enfants-sont-dans-le-jardin",
+      "type": "order",
+      "l1": "Deti sú v záhrade.",
+      "l2": "Les enfants sont dans le jardin.",
+      "tokens_l1": [
+        "Deti",
+        "sú",
+        "v",
+        "záhrade.",
+        "Mám",
+        "dve",
+        "deti.",
+        "Bývame",
+        "spolu."
+      ],
+      "tokens_l2": [
+        "Les",
+        "enfants",
+        "sont",
+        "dans",
+        "le",
+        "jardin.",
+        "J'ai",
+        "deux",
+        "enfants.",
+        "Nous",
+        "habitons",
+        "ensemble."
+      ]
+    }
+  ]
+}

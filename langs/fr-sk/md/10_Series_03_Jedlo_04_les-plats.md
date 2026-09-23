@@ -40,7 +40,7 @@ Francúzske „je prends“ (od slovesa prendre, brať) funguje presne ako slove
 | Je prends du vin. | Dám si víno. |
 | Je ne prends pas de vin. | Nedám si víno. |
 
-Rovnaké pravidlo ako v prvej fiche série: po zápore sa „du / de la / des“ zmení jednoducho na „de“.
+Rovnaké pravidlo ako pri partitívnom člene: po zápore sa „du / de la / des“ zmení jednoducho na „de“.
 
 ---
 
@@ -90,7 +90,7 @@ Rovnaké pravidlo ako v prvej fiche série: po zápore sa „du / de la / des“
 > Bageta je čerstvá.
 > La baguette est = bageta je
 > fraîche = čerstvá
-+ „fraîche“ je nepravidelný ženský tvar od „frais“ (spomenuté už v predošlej fiche).
++ „fraîche“ je nepravidelný ženský tvar od „frais“.
 
 ---
 

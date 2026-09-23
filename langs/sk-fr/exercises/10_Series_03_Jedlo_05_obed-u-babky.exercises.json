@@ -1,0 +1,1314 @@
+{
+  "exercises": [
+    {
+      "id": "blank-nech-sa-p-i-dobr-chu",
+      "type": "fill-blank",
+      "l1": "Servez-vous. Bon appétit !",
+      "l2": "Nech sa páči. Dobrú chuť!",
+      "missing_l1": "Bon",
+      "missing_l2": "sa",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "sais",
+        "dit",
+        "Non"
+      ],
+      "choices_l2": [
+        "My",
+        "Ja",
+        "vy"
+      ]
+    },
+    {
+      "id": "blank-akujem-o-je-to",
+      "type": "fill-blank",
+      "l1": "Merci. Qu'est-ce que c'est ?",
+      "l2": "Ďakujem. Čo je to?",
+      "missing_l1": "c'est",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "es",
+        "est-ce",
+        "suis"
+      ],
+      "choices_l2": [
+        "bola",
+        "bol",
+        "som"
+      ]
+    },
+    {
+      "id": "blank-kapustnica-je-tepl-pozor",
+      "type": "fill-blank",
+      "l1": "De la soupe de choucroute. Elle est chaude, attention.",
+      "l2": "Kapustnica. Je teplá, pozor.",
+      "missing_l1": "la",
+      "missing_l2": "Je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "sais",
+        "vais",
+        "Non"
+      ],
+      "choices_l2": [
+        "boli",
+        "som",
+        "budem"
+      ]
+    },
+    {
+      "id": "blank-je-to-ve-mi-chutn",
+      "type": "fill-blank",
+      "l1": "C'est très savoureux.",
+      "l2": "Je to veľmi chutné.",
+      "missing_l1": "très",
+      "missing_l2": "to",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "toujours",
+        "peu",
+        "Maintenant"
+      ],
+      "choices_l2": [
+        "Ja",
+        "Toto",
+        "tá"
+      ]
+    },
+    {
+      "id": "blank-potom-s-halu-ky-m-r-d-bryndzu",
+      "type": "fill-blank",
+      "l1": "Ensuite il y a des halušky. Tu aimes la bryndza ?",
+      "l2": "Potom sú halušky. Máš rád bryndzu?",
+      "missing_l1": "la",
+      "missing_l2": "sú",
+      "blank_index_l1": 8,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "le",
+        "Les",
+        "ou"
+      ],
+      "choices_l2": [
+        "je",
+        "ste",
+        "boli"
+      ]
+    },
+    {
+      "id": "blank-ja-nechcem-halu-ky-chcem-kol",
+      "type": "fill-blank",
+      "l1": "Moi je ne veux pas de halušky. Je veux du gâteau !",
+      "l2": "Ja nechcem halušky. Chcem koláč!",
+      "missing_l1": "je",
+      "missing_l2": "Chcem",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Tu",
+        "Nous",
+        "Il"
+      ],
+      "choices_l2": [
+        "Môžeš",
+        "Môžem",
+        "Musím"
+      ]
+    },
+    {
+      "id": "blank-najprv-obed-potom-kol",
+      "type": "fill-blank",
+      "l1": "D'abord le déjeuner, ensuite le gâteau.",
+      "l2": "Najprv obed, potom koláč.",
+      "missing_l1": "le",
+      "missing_l2": "potom",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "vais",
+        "la",
+        "dit"
+      ],
+      "choices_l2": [
+        "vždy",
+        "ešte",
+        "Teraz"
+      ]
+    },
+    {
+      "id": "blank-eric-d-te-si-pivo-alebo-vodu",
+      "type": "fill-blank",
+      "l1": "Eric, vous prenez une bière ou de l'eau ?",
+      "l2": "Eric, dáte si pivo alebo vodu?",
+      "missing_l1": "de",
+      "missing_l2": "si",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "à",
+        "sur",
+        "avec"
+      ],
+      "choices_l2": [
+        "bol",
+        "bola",
+        "sú"
+      ]
+    },
+    {
+      "id": "blank-vodu-pros-m-m-m-sm-d",
+      "type": "fill-blank",
+      "l1": "De l'eau, s'il vous plaît. J'ai soif.",
+      "l2": "Vodu, prosím. Mám smäd.",
+      "missing_l1": "vous",
+      "missing_l2": "Mám",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Ils",
+        "Nous",
+        "elles"
+      ],
+      "choices_l2": [
+        "Máte",
+        "Nemáme",
+        "Nemáš"
+      ]
+    },
+    {
+      "id": "blank-ja-si-d-m-pivo-na-zdravie",
+      "type": "fill-blank",
+      "l1": "Moi je prends une bière. Santé !",
+      "l2": "Ja si dám pivo. Na zdravie!",
+      "missing_l1": "je",
+      "missing_l2": "Na",
+      "blank_index_l1": 1,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "Ce",
+        "vous",
+        "Nous"
+      ],
+      "choices_l2": [
+        "zo",
+        "pri",
+        "Vo"
+      ]
+    },
+    {
+      "id": "blank-chcete-e-te-polievku",
+      "type": "fill-blank",
+      "l1": "Vous voulez encore de la soupe ?",
+      "l2": "Chcete ešte polievku?",
+      "missing_l1": "la",
+      "missing_l2": "ešte",
+      "blank_index_l1": 4,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Non",
+        "Les",
+        "ou"
+      ],
+      "choices_l2": [
+        "trochu",
+        "málo",
+        "Teraz"
+      ]
+    },
+    {
+      "id": "blank-nie-akujem-som-pln",
+      "type": "fill-blank",
+      "l1": "Non, merci. Je n'ai plus faim.",
+      "l2": "Nie, ďakujem. Som plný.",
+      "missing_l1": "Je",
+      "missing_l2": "Som",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "elles",
+        "On",
+        "Elle"
+      ],
+      "choices_l2": [
+        "ste",
+        "je",
+        "si"
+      ]
+    },
+    {
+      "id": "blank-e-te-trochu-nie-ste-hladn",
+      "type": "fill-blank",
+      "l1": "Encore un peu. Vous n'avez pas faim ?",
+      "l2": "Ešte trochu. Nie ste hladný?",
+      "missing_l1": "un",
+      "missing_l2": "Nie",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "vais",
+        "des",
+        "ou"
+      ],
+      "choices_l2": [
+        "chuť",
+        "vždy",
+        "nikdy"
+      ]
+    },
+    {
+      "id": "blank-babka-v-dy-hovor-e-te-trochu",
+      "type": "fill-blank",
+      "l1": "Grand-mère dit toujours « encore un peu » !",
+      "l2": "Babka vždy hovorí \"ešte trochu\"!",
+      "missing_l1": "un",
+      "missing_l2": "ešte",
+      "blank_index_l1": 5,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "sais",
+        "dit",
+        "une"
+      ],
+      "choices_l2": [
+        "Teraz",
+        "trochu",
+        "vždy"
+      ]
+    },
+    {
+      "id": "blank-d-m-si-gul-a-pivo",
+      "type": "fill-blank",
+      "l1": "Je prends un goulash et une bière.",
+      "l2": "Dám si guláš a pivo.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "ou",
+        "ni",
+        "Donc"
+      ],
+      "choices_l2": [
+        "alebo",
+        "lebo",
+        "ale"
+      ]
+    },
+    {
+      "id": "blank-m-m-r-d-syr-ale-nem-m-r-d-mlieko",
+      "type": "fill-blank",
+      "l1": "J'aime le fromage, mais je n'aime pas le lait.",
+      "l2": "Mám rád syr, ale nemám rád mlieko.",
+      "missing_l1": "le",
+      "missing_l2": "ale",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "la",
+        "Les",
+        "vais"
+      ],
+      "choices_l2": [
+        "a",
+        "aj",
+        "lebo"
+      ]
+    },
+    {
+      "id": "blank-kapustnica-je-slan-a-trochu-kysl",
+      "type": "fill-blank",
+      "l1": "La soupe de choucroute est salée et un peu acide.",
+      "l2": "Kapustnica je slaná a trochu kyslá.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "C'est",
+        "sommes",
+        "es"
+      ],
+      "choices_l2": [
+        "boli",
+        "bol",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-chcem-e-te-k-vu-je-studen",
+      "type": "fill-blank",
+      "l1": "Je veux encore du café. Il est froid.",
+      "l2": "Chcem ešte kávu. Je studená.",
+      "missing_l1": "est",
+      "missing_l2": "Je",
+      "blank_index_l1": 6,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "sommes",
+        "c'était",
+        "C'est"
+      ],
+      "choices_l2": [
+        "ste",
+        "budú",
+        "budeme"
+      ]
+    },
+    {
+      "id": "listen-nech-sa-p-i-dobr-chu",
+      "type": "listen",
+      "l1": "Servez-vous. Bon appétit !",
+      "l2": "Nech sa páči. Dobrú chuť!",
+      "choices_l1": [
+        "C'est très savoureux.",
+        "D'abord le déjeuner, ensuite le gâteau.",
+        "Ensuite il y a des halušky. Tu aimes la bryndza ?"
+      ],
+      "choices_l2": [
+        "Ďakujem. Čo je to?",
+        "Je to veľmi chutné.",
+        "Eric, dáte si pivo alebo vodu?"
+      ]
+    },
+    {
+      "id": "listen-akujem-o-je-to",
+      "type": "listen",
+      "l1": "Merci. Qu'est-ce que c'est ?",
+      "l2": "Ďakujem. Čo je to?",
+      "choices_l1": [
+        "Ensuite il y a des halušky. Tu aimes la bryndza ?",
+        "De la soupe de choucroute. Elle est chaude, attention.",
+        "C'est très savoureux."
+      ],
+      "choices_l2": [
+        "Je to veľmi chutné.",
+        "Ja si dám pivo. Na zdravie!",
+        "Kapustnica. Je teplá, pozor."
+      ]
+    },
+    {
+      "id": "listen-kapustnica-je-tepl-pozor",
+      "type": "listen",
+      "l1": "De la soupe de choucroute. Elle est chaude, attention.",
+      "l2": "Kapustnica. Je teplá, pozor.",
+      "choices_l1": [
+        "Non, merci. Je n'ai plus faim.",
+        "Vous voulez encore de la soupe ?",
+        "Ensuite il y a des halušky. Tu aimes la bryndza ?"
+      ],
+      "choices_l2": [
+        "Ja si dám pivo. Na zdravie!",
+        "Potom sú halušky. Máš rád bryndzu?",
+        "Vodu, prosím. Mám smäd."
+      ]
+    },
+    {
+      "id": "listen-je-to-ve-mi-chutn",
+      "type": "listen",
+      "l1": "C'est très savoureux.",
+      "l2": "Je to veľmi chutné.",
+      "choices_l1": [
+        "De l'eau, s'il vous plaît. J'ai soif.",
+        "Moi je ne veux pas de halušky. Je veux du gâteau !",
+        "Eric, vous prenez une bière ou de l'eau ?"
+      ],
+      "choices_l2": [
+        "Vodu, prosím. Mám smäd.",
+        "Potom sú halušky. Máš rád bryndzu?",
+        "Chcete ešte polievku?"
+      ]
+    },
+    {
+      "id": "listen-potom-s-halu-ky-m-r-d-bryndzu",
+      "type": "listen",
+      "l1": "Ensuite il y a des halušky. Tu aimes la bryndza ?",
+      "l2": "Potom sú halušky. Máš rád bryndzu?",
+      "choices_l1": [
+        "Encore un peu. Vous n'avez pas faim ?",
+        "Merci. Qu'est-ce que c'est ?",
+        "De l'eau, s'il vous plaît. J'ai soif."
+      ],
+      "choices_l2": [
+        "Najprv obed, potom koláč.",
+        "Kapustnica. Je teplá, pozor.",
+        "Ešte trochu. Nie ste hladný?"
+      ]
+    },
+    {
+      "id": "listen-neviem-ochutn-m",
+      "type": "listen",
+      "l1": "Je ne sais pas. Je vais goûter !",
+      "l2": "Neviem. Ochutnám!",
+      "choices_l1": [
+        "De l'eau, s'il vous plaît. J'ai soif.",
+        "Non, merci. Je n'ai plus faim.",
+        "Ensuite il y a des halušky. Tu aimes la bryndza ?"
+      ],
+      "choices_l2": [
+        "Chcem jesť.",
+        "Ješ syr?",
+        "Mám hlad."
+      ]
+    },
+    {
+      "id": "listen-ja-nechcem-halu-ky-chcem-kol",
+      "type": "listen",
+      "l1": "Moi je ne veux pas de halušky. Je veux du gâteau !",
+      "l2": "Ja nechcem halušky. Chcem koláč!",
+      "choices_l1": [
+        "Ensuite il y a des halušky. Tu aimes la bryndza ?",
+        "D'abord le déjeuner, ensuite le gâteau.",
+        "Eric, vous prenez une bière ou de l'eau ?"
+      ],
+      "choices_l2": [
+        "Kapustnica. Je teplá, pozor.",
+        "Ja si dám pivo. Na zdravie!",
+        "Nech sa páči. Dobrú chuť!"
+      ]
+    },
+    {
+      "id": "listen-najprv-obed-potom-kol",
+      "type": "listen",
+      "l1": "D'abord le déjeuner, ensuite le gâteau.",
+      "l2": "Najprv obed, potom koláč.",
+      "choices_l1": [
+        "Moi je ne veux pas de halušky. Je veux du gâteau !",
+        "Non, merci. Je n'ai plus faim.",
+        "Ensuite il y a des halušky. Tu aimes la bryndza ?"
+      ],
+      "choices_l2": [
+        "Kapustnica. Je teplá, pozor.",
+        "Ešte trochu. Nie ste hladný?",
+        "Vodu, prosím. Mám smäd."
+      ]
+    },
+    {
+      "id": "listen-eric-d-te-si-pivo-alebo-vodu",
+      "type": "listen",
+      "l1": "Eric, vous prenez une bière ou de l'eau ?",
+      "l2": "Eric, dáte si pivo alebo vodu?",
+      "choices_l1": [
+        "Moi je prends une bière. Santé !",
+        "Moi je ne veux pas de halušky. Je veux du gâteau !",
+        "Merci. Qu'est-ce que c'est ?"
+      ],
+      "choices_l2": [
+        "Vodu, prosím. Mám smäd.",
+        "Ďakujem. Čo je to?",
+        "Ja nechcem halušky. Chcem koláč!"
+      ]
+    },
+    {
+      "id": "listen-vodu-pros-m-m-m-sm-d",
+      "type": "listen",
+      "l1": "De l'eau, s'il vous plaît. J'ai soif.",
+      "l2": "Vodu, prosím. Mám smäd.",
+      "choices_l1": [
+        "Ensuite il y a des halušky. Tu aimes la bryndza ?",
+        "Moi je ne veux pas de halušky. Je veux du gâteau !",
+        "Moi je prends une bière. Santé !"
+      ],
+      "choices_l2": [
+        "Ešte trochu. Nie ste hladný?",
+        "Eric, dáte si pivo alebo vodu?",
+        "Chcete ešte polievku?"
+      ]
+    },
+    {
+      "id": "listen-ja-si-d-m-pivo-na-zdravie",
+      "type": "listen",
+      "l1": "Moi je prends une bière. Santé !",
+      "l2": "Ja si dám pivo. Na zdravie!",
+      "choices_l1": [
+        "Ensuite il y a des halušky. Tu aimes la bryndza ?",
+        "Vous voulez encore de la soupe ?",
+        "Merci. Qu'est-ce que c'est ?"
+      ],
+      "choices_l2": [
+        "Potom sú halušky. Máš rád bryndzu?",
+        "Najprv obed, potom koláč.",
+        "Ešte trochu. Nie ste hladný?"
+      ]
+    },
+    {
+      "id": "listen-chcete-e-te-polievku",
+      "type": "listen",
+      "l1": "Vous voulez encore de la soupe ?",
+      "l2": "Chcete ešte polievku?",
+      "choices_l1": [
+        "De l'eau, s'il vous plaît. J'ai soif.",
+        "Ensuite il y a des halušky. Tu aimes la bryndza ?",
+        "Moi je prends une bière. Santé !"
+      ],
+      "choices_l2": [
+        "Vodu, prosím. Mám smäd.",
+        "Nech sa páči. Dobrú chuť!",
+        "Ďakujem. Čo je to?"
+      ]
+    },
+    {
+      "id": "listen-nie-akujem-som-pln",
+      "type": "listen",
+      "l1": "Non, merci. Je n'ai plus faim.",
+      "l2": "Nie, ďakujem. Som plný.",
+      "choices_l1": [
+        "De la soupe de choucroute. Elle est chaude, attention.",
+        "Encore un peu. Vous n'avez pas faim ?",
+        "Eric, vous prenez une bière ou de l'eau ?"
+      ],
+      "choices_l2": [
+        "Najprv obed, potom koláč.",
+        "Vodu, prosím. Mám smäd.",
+        "Ešte trochu. Nie ste hladný?"
+      ]
+    },
+    {
+      "id": "listen-e-te-trochu-nie-ste-hladn",
+      "type": "listen",
+      "l1": "Encore un peu. Vous n'avez pas faim ?",
+      "l2": "Ešte trochu. Nie ste hladný?",
+      "choices_l1": [
+        "C'est très savoureux.",
+        "D'abord le déjeuner, ensuite le gâteau.",
+        "Moi je prends une bière. Santé !"
+      ],
+      "choices_l2": [
+        "Kapustnica. Je teplá, pozor.",
+        "Eric, dáte si pivo alebo vodu?",
+        "Najprv obed, potom koláč."
+      ]
+    },
+    {
+      "id": "listen-babka-v-dy-hovor-e-te-trochu",
+      "type": "listen",
+      "l1": "Grand-mère dit toujours « encore un peu » !",
+      "l2": "Babka vždy hovorí \"ešte trochu\"!",
+      "choices_l1": [
+        "De l'eau, s'il vous plaît. J'ai soif.",
+        "Ensuite il y a des halušky. Tu aimes la bryndza ?",
+        "Moi je prends une bière. Santé !"
+      ],
+      "choices_l2": [
+        "Potom sú halušky. Máš rád bryndzu?",
+        "Ja si dám pivo. Na zdravie!",
+        "Ja nechcem halušky. Chcem koláč!"
+      ]
+    },
+    {
+      "id": "listen-d-m-si-gul-a-pivo",
+      "type": "listen",
+      "l1": "Je prends un goulash et une bière.",
+      "l2": "Dám si guláš a pivo.",
+      "choices_l1": [
+        "Ensuite il y a des halušky. Tu aimes la bryndza ?",
+        "C'est très savoureux.",
+        "De l'eau, s'il vous plaît. J'ai soif."
+      ],
+      "choices_l2": [
+        "Je to veľmi chutné.",
+        "Ja si dám pivo. Na zdravie!",
+        "Kapustnica. Je teplá, pozor."
+      ]
+    },
+    {
+      "id": "listen-m-m-r-d-syr-ale-nem-m-r-d-mlieko",
+      "type": "listen",
+      "l1": "J'aime le fromage, mais je n'aime pas le lait.",
+      "l2": "Mám rád syr, ale nemám rád mlieko.",
+      "choices_l1": [
+        "Moi je ne veux pas de halušky. Je veux du gâteau !",
+        "C'est très savoureux.",
+        "Eric, vous prenez une bière ou de l'eau ?"
+      ],
+      "choices_l2": [
+        "Ďakujem. Čo je to?",
+        "Ja si dám pivo. Na zdravie!",
+        "Kapustnica. Je teplá, pozor."
+      ]
+    },
+    {
+      "id": "listen-kapustnica-je-slan-a-trochu-kysl",
+      "type": "listen",
+      "l1": "La soupe de choucroute est salée et un peu acide.",
+      "l2": "Kapustnica je slaná a trochu kyslá.",
+      "choices_l1": [
+        "D'abord le déjeuner, ensuite le gâteau.",
+        "Vous voulez encore de la soupe ?",
+        "Merci. Qu'est-ce que c'est ?"
+      ],
+      "choices_l2": [
+        "Najprv obed, potom koláč.",
+        "Potom sú halušky. Máš rád bryndzu?",
+        "Vodu, prosím. Mám smäd."
+      ]
+    },
+    {
+      "id": "listen-chcem-e-te-k-vu-je-studen",
+      "type": "listen",
+      "l1": "Je veux encore du café. Il est froid.",
+      "l2": "Chcem ešte kávu. Je studená.",
+      "choices_l1": [
+        "Non, merci. Je n'ai plus faim.",
+        "Ensuite il y a des halušky. Tu aimes la bryndza ?",
+        "C'est très savoureux."
+      ],
+      "choices_l2": [
+        "Ja si dám pivo. Na zdravie!",
+        "Chcete ešte polievku?",
+        "Eric, dáte si pivo alebo vodu?"
+      ]
+    },
+    {
+      "id": "order-nech-sa-p-i-dobr-chu",
+      "type": "order",
+      "l1": "Servez-vous. Bon appétit !",
+      "l2": "Nech sa páči. Dobrú chuť!",
+      "tokens_l1": [
+        "Servez-vous.",
+        "Bon",
+        "appétit",
+        "!",
+        "Je",
+        "prends",
+        "un",
+        "goulash",
+        "et",
+        "une",
+        "bière."
+      ],
+      "tokens_l2": [
+        "Nech",
+        "sa",
+        "páči.",
+        "Dobrú",
+        "chuť!",
+        "Dám",
+        "si",
+        "guláš",
+        "a",
+        "pivo."
+      ]
+    },
+    {
+      "id": "order-akujem-o-je-to",
+      "type": "order",
+      "l1": "Merci. Qu'est-ce que c'est ?",
+      "l2": "Ďakujem. Čo je to?",
+      "tokens_l1": [
+        "Merci.",
+        "Qu'est-ce",
+        "que",
+        "c'est",
+        "?",
+        "De",
+        "la",
+        "soupe",
+        "de",
+        "choucroute.",
+        "Elle",
+        "est",
+        "chaude,",
+        "attention."
+      ],
+      "tokens_l2": [
+        "Ďakujem.",
+        "Čo",
+        "je",
+        "to?",
+        "Kapustnica.",
+        "Je",
+        "teplá,",
+        "pozor."
+      ]
+    },
+    {
+      "id": "order-kapustnica-je-tepl-pozor",
+      "type": "order",
+      "l1": "De la soupe de choucroute. Elle est chaude, attention.",
+      "l2": "Kapustnica. Je teplá, pozor.",
+      "tokens_l1": [
+        "De",
+        "la",
+        "soupe",
+        "de",
+        "choucroute.",
+        "Elle",
+        "est",
+        "chaude,",
+        "attention.",
+        "Non,",
+        "merci.",
+        "Je",
+        "n'ai",
+        "plus",
+        "faim."
+      ],
+      "tokens_l2": [
+        "Kapustnica.",
+        "Je",
+        "teplá,",
+        "pozor.",
+        "Nie,",
+        "ďakujem.",
+        "Som",
+        "plný."
+      ]
+    },
+    {
+      "id": "order-je-to-ve-mi-chutn",
+      "type": "order",
+      "l1": "C'est très savoureux.",
+      "l2": "Je to veľmi chutné.",
+      "tokens_l1": [
+        "C'est",
+        "très",
+        "savoureux.",
+        "Je",
+        "prends",
+        "un",
+        "goulash",
+        "et",
+        "une",
+        "bière."
+      ],
+      "tokens_l2": [
+        "Je",
+        "to",
+        "veľmi",
+        "chutné.",
+        "Dám",
+        "si",
+        "guláš",
+        "a",
+        "pivo."
+      ]
+    },
+    {
+      "id": "order-potom-s-halu-ky-m-r-d-bryndzu",
+      "type": "order",
+      "l1": "Ensuite il y a des halušky. Tu aimes la bryndza ?",
+      "l2": "Potom sú halušky. Máš rád bryndzu?",
+      "tokens_l1": [
+        "Ensuite",
+        "il",
+        "y",
+        "a",
+        "des",
+        "halušky.",
+        "Tu",
+        "aimes",
+        "la",
+        "bryndza",
+        "?",
+        "C'est",
+        "très",
+        "savoureux."
+      ],
+      "tokens_l2": [
+        "Potom",
+        "sú",
+        "halušky.",
+        "Máš",
+        "rád",
+        "bryndzu?",
+        "Je",
+        "to",
+        "veľmi",
+        "chutné."
+      ]
+    },
+    {
+      "id": "order-ja-nechcem-halu-ky-chcem-kol",
+      "type": "order",
+      "l1": "Moi je ne veux pas de halušky. Je veux du gâteau !",
+      "l2": "Ja nechcem halušky. Chcem koláč!",
+      "tokens_l1": [
+        "Moi",
+        "je",
+        "ne",
+        "veux",
+        "pas",
+        "de",
+        "halušky.",
+        "Je",
+        "veux",
+        "du",
+        "gâteau",
+        "!",
+        "Servez-vous.",
+        "Bon",
+        "appétit",
+        "!"
+      ],
+      "tokens_l2": [
+        "Ja",
+        "nechcem",
+        "halušky.",
+        "Chcem",
+        "koláč!",
+        "Nech",
+        "sa",
+        "páči.",
+        "Dobrú",
+        "chuť!"
+      ]
+    },
+    {
+      "id": "order-najprv-obed-potom-kol",
+      "type": "order",
+      "l1": "D'abord le déjeuner, ensuite le gâteau.",
+      "l2": "Najprv obed, potom koláč.",
+      "tokens_l1": [
+        "D'abord",
+        "le",
+        "déjeuner,",
+        "ensuite",
+        "le",
+        "gâteau.",
+        "C'est",
+        "très",
+        "savoureux."
+      ],
+      "tokens_l2": [
+        "Najprv",
+        "obed,",
+        "potom",
+        "koláč.",
+        "Je",
+        "to",
+        "veľmi",
+        "chutné."
+      ]
+    },
+    {
+      "id": "order-eric-d-te-si-pivo-alebo-vodu",
+      "type": "order",
+      "l1": "Eric, vous prenez une bière ou de l'eau ?",
+      "l2": "Eric, dáte si pivo alebo vodu?",
+      "tokens_l1": [
+        "Eric,",
+        "vous",
+        "prenez",
+        "une",
+        "bière",
+        "ou",
+        "de",
+        "l'eau",
+        "?",
+        "Je",
+        "veux",
+        "encore",
+        "du",
+        "café.",
+        "Il",
+        "est",
+        "froid."
+      ],
+      "tokens_l2": [
+        "Eric,",
+        "dáte",
+        "si",
+        "pivo",
+        "alebo",
+        "vodu?",
+        "Chcem",
+        "ešte",
+        "kávu.",
+        "Je",
+        "studená."
+      ]
+    },
+    {
+      "id": "order-vodu-pros-m-m-m-sm-d",
+      "type": "order",
+      "l1": "De l'eau, s'il vous plaît. J'ai soif.",
+      "l2": "Vodu, prosím. Mám smäd.",
+      "tokens_l1": [
+        "De",
+        "l'eau,",
+        "s'il",
+        "vous",
+        "plaît.",
+        "J'ai",
+        "soif.",
+        "Grand-mère",
+        "dit",
+        "toujours",
+        "«",
+        "encore",
+        "un",
+        "peu",
+        "»",
+        "!"
+      ],
+      "tokens_l2": [
+        "Vodu,",
+        "prosím.",
+        "Mám",
+        "smäd.",
+        "Babka",
+        "vždy",
+        "hovorí",
+        "\"ešte",
+        "trochu\"!"
+      ]
+    },
+    {
+      "id": "order-ja-si-d-m-pivo-na-zdravie",
+      "type": "order",
+      "l1": "Moi je prends une bière. Santé !",
+      "l2": "Ja si dám pivo. Na zdravie!",
+      "tokens_l1": [
+        "Moi",
+        "je",
+        "prends",
+        "une",
+        "bière.",
+        "Santé",
+        "!",
+        "De",
+        "la",
+        "soupe",
+        "de",
+        "choucroute.",
+        "Elle",
+        "est",
+        "chaude,",
+        "attention."
+      ],
+      "tokens_l2": [
+        "Ja",
+        "si",
+        "dám",
+        "pivo.",
+        "Na",
+        "zdravie!",
+        "Kapustnica.",
+        "Je",
+        "teplá,",
+        "pozor."
+      ]
+    },
+    {
+      "id": "order-chcete-e-te-polievku",
+      "type": "order",
+      "l1": "Vous voulez encore de la soupe ?",
+      "l2": "Chcete ešte polievku?",
+      "tokens_l1": [
+        "Vous",
+        "voulez",
+        "encore",
+        "de",
+        "la",
+        "soupe",
+        "?",
+        "Moi",
+        "je",
+        "ne",
+        "veux",
+        "pas",
+        "de",
+        "halušky.",
+        "Je",
+        "veux",
+        "du",
+        "gâteau",
+        "!"
+      ],
+      "tokens_l2": [
+        "Chcete",
+        "ešte",
+        "polievku?",
+        "Ja",
+        "nechcem",
+        "halušky.",
+        "Chcem",
+        "koláč!"
+      ]
+    },
+    {
+      "id": "order-nie-akujem-som-pln",
+      "type": "order",
+      "l1": "Non, merci. Je n'ai plus faim.",
+      "l2": "Nie, ďakujem. Som plný.",
+      "tokens_l1": [
+        "Non,",
+        "merci.",
+        "Je",
+        "n'ai",
+        "plus",
+        "faim.",
+        "Je",
+        "veux",
+        "encore",
+        "du",
+        "café.",
+        "Il",
+        "est",
+        "froid."
+      ],
+      "tokens_l2": [
+        "Nie,",
+        "ďakujem.",
+        "Som",
+        "plný.",
+        "Chcem",
+        "ešte",
+        "kávu.",
+        "Je",
+        "studená."
+      ]
+    },
+    {
+      "id": "order-e-te-trochu-nie-ste-hladn",
+      "type": "order",
+      "l1": "Encore un peu. Vous n'avez pas faim ?",
+      "l2": "Ešte trochu. Nie ste hladný?",
+      "tokens_l1": [
+        "Encore",
+        "un",
+        "peu.",
+        "Vous",
+        "n'avez",
+        "pas",
+        "faim",
+        "?",
+        "Moi",
+        "je",
+        "ne",
+        "veux",
+        "pas",
+        "de",
+        "halušky.",
+        "Je",
+        "veux",
+        "du",
+        "gâteau",
+        "!"
+      ],
+      "tokens_l2": [
+        "Ešte",
+        "trochu.",
+        "Nie",
+        "ste",
+        "hladný?",
+        "Ja",
+        "nechcem",
+        "halušky.",
+        "Chcem",
+        "koláč!"
+      ]
+    },
+    {
+      "id": "order-babka-v-dy-hovor-e-te-trochu",
+      "type": "order",
+      "l1": "Grand-mère dit toujours « encore un peu » !",
+      "l2": "Babka vždy hovorí \"ešte trochu\"!",
+      "tokens_l1": [
+        "Grand-mère",
+        "dit",
+        "toujours",
+        "«",
+        "encore",
+        "un",
+        "peu",
+        "»",
+        "!",
+        "Servez-vous.",
+        "Bon",
+        "appétit",
+        "!"
+      ],
+      "tokens_l2": [
+        "Babka",
+        "vždy",
+        "hovorí",
+        "\"ešte",
+        "trochu\"!",
+        "Nech",
+        "sa",
+        "páči.",
+        "Dobrú",
+        "chuť!"
+      ]
+    },
+    {
+      "id": "order-d-m-si-gul-a-pivo",
+      "type": "order",
+      "l1": "Je prends un goulash et une bière.",
+      "l2": "Dám si guláš a pivo.",
+      "tokens_l1": [
+        "Je",
+        "prends",
+        "un",
+        "goulash",
+        "et",
+        "une",
+        "bière.",
+        "J'aime",
+        "le",
+        "fromage,",
+        "mais",
+        "je",
+        "n'aime",
+        "pas",
+        "le",
+        "lait."
+      ],
+      "tokens_l2": [
+        "Dám",
+        "si",
+        "guláš",
+        "a",
+        "pivo.",
+        "Mám",
+        "rád",
+        "syr,",
+        "ale",
+        "nemám",
+        "rád",
+        "mlieko."
+      ]
+    },
+    {
+      "id": "order-m-m-r-d-syr-ale-nem-m-r-d-mlieko",
+      "type": "order",
+      "l1": "J'aime le fromage, mais je n'aime pas le lait.",
+      "l2": "Mám rád syr, ale nemám rád mlieko.",
+      "tokens_l1": [
+        "J'aime",
+        "le",
+        "fromage,",
+        "mais",
+        "je",
+        "n'aime",
+        "pas",
+        "le",
+        "lait.",
+        "Ensuite",
+        "il",
+        "y",
+        "a",
+        "des",
+        "halušky.",
+        "Tu",
+        "aimes",
+        "la",
+        "bryndza",
+        "?"
+      ],
+      "tokens_l2": [
+        "Mám",
+        "rád",
+        "syr,",
+        "ale",
+        "nemám",
+        "rád",
+        "mlieko.",
+        "Potom",
+        "sú",
+        "halušky.",
+        "Máš",
+        "rád",
+        "bryndzu?"
+      ]
+    },
+    {
+      "id": "order-kapustnica-je-slan-a-trochu-kysl",
+      "type": "order",
+      "l1": "La soupe de choucroute est salée et un peu acide.",
+      "l2": "Kapustnica je slaná a trochu kyslá.",
+      "tokens_l1": [
+        "La",
+        "soupe",
+        "de",
+        "choucroute",
+        "est",
+        "salée",
+        "et",
+        "un",
+        "peu",
+        "acide.",
+        "Moi",
+        "je",
+        "ne",
+        "veux",
+        "pas",
+        "de",
+        "halušky.",
+        "Je",
+        "veux",
+        "du",
+        "gâteau",
+        "!"
+      ],
+      "tokens_l2": [
+        "Kapustnica",
+        "je",
+        "slaná",
+        "a",
+        "trochu",
+        "kyslá.",
+        "Ja",
+        "nechcem",
+        "halušky.",
+        "Chcem",
+        "koláč!"
+      ]
+    },
+    {
+      "id": "order-chcem-e-te-k-vu-je-studen",
+      "type": "order",
+      "l1": "Je veux encore du café. Il est froid.",
+      "l2": "Chcem ešte kávu. Je studená.",
+      "tokens_l1": [
+        "Je",
+        "veux",
+        "encore",
+        "du",
+        "café.",
+        "Il",
+        "est",
+        "froid.",
+        "Servez-vous.",
+        "Bon",
+        "appétit",
+        "!"
+      ],
+      "tokens_l2": [
+        "Chcem",
+        "ešte",
+        "kávu.",
+        "Je",
+        "studená.",
+        "Nech",
+        "sa",
+        "páči.",
+        "Dobrú",
+        "chuť!"
+      ]
+    },
+    {
+      "id": "match-nech-sa-p-i-dobr-chu-sentences",
+      "type": "match",
+      "l1": [
+        "Servez-vous. Bon appétit !",
+        "Merci. Qu'est-ce que c'est ?",
+        "De la soupe de choucroute. Elle est chaude, attention.",
+        "C'est très savoureux."
+      ],
+      "l2": [
+        "Nech sa páči. Dobrú chuť!",
+        "Ďakujem. Čo je to?",
+        "Kapustnica. Je teplá, pozor.",
+        "Je to veľmi chutné."
+      ]
+    }
+  ]
+}

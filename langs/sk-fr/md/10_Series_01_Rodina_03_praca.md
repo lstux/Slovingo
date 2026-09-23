@@ -29,6 +29,8 @@ On dit ce que font les gens de la famille. Deux nouveaux verbes, **pracovať** e
 | ja pracujem | je travaille |
 | ty pracuješ | tu travailles |
 | on / ona pracuje | il / elle travaille |
+| my pracujeme | nous travaillons |
+| vy pracujete | vous travaillez |
 | oni pracujú | ils / elles travaillent |
 
 Le radical change : *pracov-* devient *pracuj-*. Tous les verbes en **-ovať** fonctionnent ainsi.
@@ -40,6 +42,8 @@ Le radical change : *pracov-* devient *pracuj-*. Tous les verbes en **-ovať** f
 | ja robím | je fais |
 | ty robíš | tu fais |
 | on / ona robí | il / elle fait |
+| my robíme | nous faisons |
+| vy robíte | vous faites |
 | oni robia | ils / elles font |
 
 ---

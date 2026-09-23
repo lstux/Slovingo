@@ -30,6 +30,7 @@ Première fiche de la série la plus attendue : la montagne. Le vocabulaire de b
 | ty budeš | tu seras |
 | on / ona bude | il / elle sera |
 | my budeme | nous serons |
+| vy budete | vous serez |
 | oni budú | ils / elles seront |
 
 C'est ce même *budem* qu'on a croisé dans les séries Čas et Počasie (*budem meškať*, *bude pršať*). Il sert aussi de brique pour construire le futur des autres verbes.

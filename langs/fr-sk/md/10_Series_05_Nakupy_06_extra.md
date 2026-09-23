@@ -117,9 +117,9 @@
 > ces chaussures = topánky
 > en taille quarante = vo veľkosti štyridsať
 
-! Le marché a lieu le samedi, le magasin est ouvert tous les jours.
-> Trh je v sobotu, obchod je otvorený každý deň.
-> Le marché a lieu le samedi = trh je v sobotu
+! Le marché a lieu chaque samedi, le magasin est ouvert tous les jours.
+> Trh je každú sobotu, obchod je otvorený každý deň.
+> Le marché a lieu chaque samedi = trh je každú sobotu
 > le magasin est ouvert tous les jours = obchod je otvorený každý deň
 + „chaque“ znamená každý.
 

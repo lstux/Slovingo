@@ -1,0 +1,1463 @@
+{
+  "exercises": [
+    {
+      "id": "blank-mamie-nous-sommes-venus-pour-la-chasse-aux-ufs",
+      "type": "fill-blank",
+      "l1": "Mamie, prišli sme na hľadanie vajíčok!",
+      "l2": "Mamie, nous sommes venus pour la chasse aux œufs !",
+      "missing_l1": "na",
+      "missing_l2": "la",
+      "blank_index_l1": 3,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "tieto topánky",
+        "Ďakujem",
+        "do lekárne"
+      ],
+      "choices_l2": [
+        "a",
+        "je suis",
+        "une"
+      ]
+    },
+    {
+      "id": "blank-enfin-j-ai-d-j-cach-les-ufs-dans-le-jardin",
+      "type": "fill-blank",
+      "l1": "Konečne! Už som schovala vajíčka v záhrade.",
+      "l2": "Enfin ! J'ai déjà caché les œufs dans le jardin.",
+      "missing_l1": "v",
+      "missing_l2": "le",
+      "blank_index_l1": 5,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "oni išli",
+        "má",
+        "veľmi"
+      ],
+      "choices_l2": [
+        "du",
+        "tu seras",
+        "mon"
+      ]
+    },
+    {
+      "id": "blank-j-ai-un-peu-peur-de-ne-rien-trouver",
+      "type": "fill-blank",
+      "l1": "Trochu sa bojím, že nič nenájdem!",
+      "l2": "J'ai un peu peur de ne rien trouver !",
+      "missing_l1": "sa",
+      "missing_l2": "de",
+      "blank_index_l1": 1,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "kto",
+        "Zostala doma.",
+        "trochu"
+      ],
+      "choices_l2": [
+        "je fais",
+        "avec",
+        "C'est bon."
+      ]
+    },
+    {
+      "id": "blank-ne-t-inqui-te-pas-c-est-facile",
+      "type": "fill-blank",
+      "l1": "Neboj sa, je to jednoduché!",
+      "l2": "Ne t'inquiète pas, c'est facile !",
+      "missing_l1": "je",
+      "missing_l2": "pas",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sú",
+        "má",
+        "z"
+      ],
+      "choices_l2": [
+        "le plus...",
+        "tu habites",
+        "avec"
+      ]
+    },
+    {
+      "id": "blank-oui-c-est-notre-tradition-allez-cherchez-bien",
+      "type": "fill-blank",
+      "l1": "Áno, je to naša tradícia. Poďte, hľadajte dobre!",
+      "l2": "Oui, c'est notre tradition. Allez, cherchez bien !",
+      "missing_l1": "je",
+      "missing_l2": "c'est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "hľadáme",
+        "Zostala doma.",
+        "si"
+      ],
+      "choices_l2": [
+        "mais",
+        "dans",
+        "une"
+      ]
+    },
+    {
+      "id": "blank-chlo-tu-as-trouv-un-uf",
+      "type": "fill-blank",
+      "l1": "Chloé, našla si vajíčko?",
+      "l2": "Chloé, tu as trouvé un œuf ?",
+      "missing_l1": "si",
+      "missing_l2": "un",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "do potravín",
+        "trochu",
+        "za rohom"
+      ],
+      "choices_l2": [
+        "tu peux",
+        "en",
+        "mon"
+      ]
+    },
+    {
+      "id": "blank-oui-j-en-ai-trouv-trois",
+      "type": "fill-blank",
+      "l1": "Áno! Našla som tri!",
+      "l2": "Oui ! J'en ai trouvé trois !",
+      "missing_l1": "som",
+      "missing_l2": "trouvé",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "na stoličke",
+        "naspäť",
+        "ona išla"
+      ],
+      "choices_l2": [
+        "préparé (préparer)",
+        "visiter",
+        "attendre"
+      ]
+    },
+    {
+      "id": "blank-moi-je-n-ai-rien-trouv",
+      "type": "fill-blank",
+      "l1": "Ja som nenašiel nič!",
+      "l2": "Moi, je n'ai rien trouvé !",
+      "missing_l1": "som",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "za",
+        "k",
+        "si"
+      ],
+      "choices_l2": [
+        "ensemble",
+        "beaucoup",
+        "nous voulons"
+      ]
+    },
+    {
+      "id": "blank-regarde-derri-re-la-statue-dans-le-jardin",
+      "type": "fill-blank",
+      "l1": "Pozri za sochou, v záhrade.",
+      "l2": "Regarde derrière la statue, dans le jardin.",
+      "missing_l1": "v",
+      "missing_l2": "le",
+      "blank_index_l1": 3,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "na stole",
+        "ty si",
+        "kedy"
+      ],
+      "choices_l2": [
+        "mon",
+        "une",
+        "aussi"
+      ]
+    },
+    {
+      "id": "blank-j-ai-trouv-un-uf-et-il-est-norme",
+      "type": "fill-blank",
+      "l1": "Našiel som vajíčko! A je obrovské!",
+      "l2": "J'ai trouvé un œuf ! Et il est énorme !",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 4,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "Kde",
+        "ja som",
+        "sa"
+      ],
+      "choices_l2": [
+        "tu essaies",
+        "C'est bon.",
+        "tu veux"
+      ]
+    },
+    {
+      "id": "blank-bravo-eric-je-te-l-ai-cach-celui-l",
+      "type": "fill-blank",
+      "l1": "Bravo, Eric! Schovala som ti práve toto.",
+      "l2": "Bravo, Eric ! Je te l'ai caché, celui-là.",
+      "missing_l1": "som",
+      "missing_l2": "Je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "on išiel",
+        "Ďakujem",
+        "veľa"
+      ],
+      "choices_l2": [
+        "ici",
+        "je cherche",
+        "je dois"
+      ]
+    },
+    {
+      "id": "blank-on-lui-a-donn-le-plus-bel-uf-elle-l-a-bien-m-rit",
+      "type": "fill-blank",
+      "l1": "Dali sme jej najkrajšie vajíčko, dobre si ho zaslúžila.",
+      "l2": "On lui a donné le plus bel œuf, elle l'a bien mérité.",
+      "missing_l1": "sme",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "každý",
+        "oblečiem si",
+        "priamo"
+      ],
+      "choices_l2": [
+        "je voudrais",
+        "pas",
+        "nous buvons"
+      ]
+    },
+    {
+      "id": "blank-venez-j-ai-pr-par-le-gigot-on-se-r-unit-table",
+      "type": "fill-blank",
+      "l1": "Poďte, pripravila som jahňacie stehno. Zíďme sa pri stole!",
+      "l2": "Venez, j'ai préparé le gigot. On se réunit à table !",
+      "missing_l1": "sa",
+      "missing_l2": "le",
+      "blank_index_l1": 6,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "nie",
+        "toto",
+        "za"
+      ],
+      "choices_l2": [
+        "je voudrais",
+        "je mets",
+        "tu essaies"
+      ]
+    },
+    {
+      "id": "blank-merci-mamie-c-tait-une-belle-journ-e",
+      "type": "fill-blank",
+      "l1": "Ďakujem, Mamie. Bol to krásny deň.",
+      "l2": "Merci, Mamie. C'était une belle journée.",
+      "missing_l1": "to",
+      "missing_l2": "une",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "ony išli",
+        "vnútri",
+        "ale"
+      ],
+      "choices_l2": [
+        "tu seras",
+        "nous pouvons",
+        "je suis"
+      ]
+    },
+    {
+      "id": "blank-joyeuses-p-ques-tout-le-monde",
+      "type": "fill-blank",
+      "l1": "Veselú Veľkú noc, všetci!",
+      "l2": "Joyeuses Pâques, tout le monde !",
+      "missing_l1": "noc",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "pondelok",
+        "utorok",
+        "sobotu"
+      ],
+      "choices_l2": [
+        "le prénom",
+        "ma",
+        "ici"
+      ]
+    },
+    {
+      "id": "blank-le-lundi-de-p-ques-nous-avons-rendu-visite-toute-la-famille",
+      "type": "fill-blank",
+      "l1": "Na veľkonočný pondelok sme navštívili celú rodinu.",
+      "l2": "Le lundi de Pâques nous avons rendu visite à toute la famille.",
+      "missing_l1": "sme",
+      "missing_l2": "la",
+      "blank_index_l1": 3,
+      "blank_index_l2": 10,
+      "choices_l1": [
+        "sa",
+        "hľadáme",
+        "na"
+      ],
+      "choices_l2": [
+        "nous mettons",
+        "C'est bon.",
+        "tu seras"
+      ]
+    },
+    {
+      "id": "blank-mamie-nous-a-donn-des-ufs-et-un-g-teau-comme-r-compense",
+      "type": "fill-blank",
+      "l1": "Mamie nám dala vajíčka a koláč ako odmenu.",
+      "l2": "Mamie nous a donné des œufs et un gâteau comme récompense.",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 4,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "na ulici",
+        "každý",
+        "za rohom"
+      ],
+      "choices_l2": [
+        "aussi",
+        "tu",
+        "beaucoup"
+      ]
+    },
+    {
+      "id": "blank-cette-tradition-change-mais-la-famille-reste-toujours-ensemble",
+      "type": "fill-blank",
+      "l1": "Táto tradícia sa mení, ale rodina je stále spolu.",
+      "l2": "Cette tradition change, mais la famille reste toujours ensemble.",
+      "missing_l1": "je",
+      "missing_l2": "la",
+      "blank_index_l1": 6,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "vyšší ako",
+        "na",
+        "na stole"
+      ],
+      "choices_l2": [
+        "nous voyons",
+        "tu dois",
+        "tu habites"
+      ]
+    },
+    {
+      "id": "blank-le-gigot-tait-d-licieux-et-le-chocolat-tait-excellent",
+      "type": "fill-blank",
+      "l1": "Jahňacie stehno bolo výborné a čokoláda bola vynikajúca.",
+      "l2": "Le gigot était délicieux et le chocolat était excellent.",
+      "missing_l1": "a",
+      "missing_l2": "le",
+      "blank_index_l1": 4,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "si",
+        "hľadám",
+        "Koľko"
+      ],
+      "choices_l2": [
+        "très",
+        "une",
+        "je bois"
+      ]
+    },
+    {
+      "id": "listen-mamie-nous-sommes-venus-pour-la-chasse-aux-ufs",
+      "type": "listen",
+      "l1": "Mamie, prišli sme na hľadanie vajíčok!",
+      "l2": "Mamie, nous sommes venus pour la chasse aux œufs !",
+      "choices_l2": [
+        "C'est mieux ! Combien ça coûte ?",
+        "Cette crique est la plus calme de la côte.",
+        "Où est la cabine d'essayage ?"
+      ],
+      "choices_l1": [
+        "Ideš do potravín?",
+        "Zvony sa vrátili z Ríma na Veľkonočnú nedeľu.",
+        "Ideme do reštaurácie."
+      ]
+    },
+    {
+      "id": "listen-enfin-j-ai-d-j-cach-les-ufs-dans-le-jardin",
+      "type": "listen",
+      "l1": "Konečne! Už som schovala vajíčka v záhrade.",
+      "l2": "Enfin ! J'ai déjà caché les œufs dans le jardin.",
+      "choices_l2": [
+        "La rue est longue.",
+        "Papa mange de la viande.",
+        "La cuisine est petite."
+      ],
+      "choices_l1": [
+        "Mäso kupujem v mäsiarstve.",
+        "Čokoláda sa roztopila na slnku.",
+        "Nemám hlad. Nechcem jesť."
+      ]
+    },
+    {
+      "id": "listen-j-ai-un-peu-peur-de-ne-rien-trouver",
+      "type": "listen",
+      "l1": "Trochu sa bojím, že nič nenájdem!",
+      "l2": "J'ai un peu peur de ne rien trouver !",
+      "choices_l2": [
+        "La nuit, on voit les étoiles depuis le balcon.",
+        "Nous allons au théâtre.",
+        "Nous pouvons aller à la mer, puis à la plage."
+      ],
+      "choices_l1": [
+        "Môžem ísť s tebou?",
+        "Chceš ísť do kina?",
+        "Mohli by sme mať teplú polievku, prosím?"
+      ]
+    },
+    {
+      "id": "listen-ne-t-inqui-te-pas-c-est-facile",
+      "type": "listen",
+      "l1": "Neboj sa, je to jednoduché!",
+      "l2": "Ne t'inquiète pas, c'est facile !",
+      "choices_l2": [
+        "La fontaine est sur la place.",
+        "Maman est dans le salon.",
+        "Les enfants regardent la télévision dans le salon."
+      ],
+      "choices_l1": [
+        "Čo robíš, Andrea?",
+        "Oddychujem na posteli.",
+        "Moja chata je malá, ale pekná."
+      ]
+    },
+    {
+      "id": "listen-oui-c-est-notre-tradition-allez-cherchez-bien",
+      "type": "listen",
+      "l1": "Áno, je to naša tradícia. Poďte, hľadajte dobre!",
+      "l2": "Oui, c'est notre tradition. Allez, cherchez bien !",
+      "choices_l2": [
+        "Allons-y ! Je veux être à la plage avant midi.",
+        "Le matin, je suis toujours à la maison.",
+        "À cinq heures."
+      ],
+      "choices_l1": [
+        "Jedli sme jahňacie stehno a čokoládu.",
+        "Kde je pošta?",
+        "V hoteli je teplo a útulno."
+      ]
+    },
+    {
+      "id": "listen-chlo-tu-as-trouv-un-uf",
+      "type": "listen",
+      "l1": "Chloé, našla si vajíčko?",
+      "l2": "Chloé, tu as trouvé un œuf ?",
+      "choices_l2": [
+        "Je veux encore de l'eau, s'il te plaît.",
+        "Bleu ou vert. Pas noir.",
+        "La quiche est salée et un peu acide."
+      ],
+      "choices_l1": [
+        "Mám rád syr, ale nemám rád mlieko.",
+        "Dáš si ratatouille?",
+        "Na raňajky jem vajce a chlieb s maslom."
+      ]
+    },
+    {
+      "id": "listen-oui-j-en-ai-trouv-trois",
+      "type": "listen",
+      "l1": "Áno! Našla som tri!",
+      "l2": "Oui ! J'en ai trouvé trois !",
+      "choices_l2": [
+        "J'arrive tout de suite.",
+        "C'est en promotion.",
+        "S'il fait chaud, je ne porterai pas de pull."
+      ],
+      "choices_l1": [
+        "Je trištvrte na deväť.",
+        "Nohavice stoja dvadsať eur. To je drahé!",
+        "Môj brat má jeden rok."
+      ]
+    },
+    {
+      "id": "listen-moi-je-n-ai-rien-trouv",
+      "type": "listen",
+      "l1": "Ja som nenašiel nič!",
+      "l2": "Moi, je n'ai rien trouvé !",
+      "choices_l2": [
+        "Nous pouvons aller à la mer, puis à la plage.",
+        "Les enfants nagent et construisent un château de sable.",
+        "Excusez-moi, où est la poste ?"
+      ],
+      "choices_l1": [
+        "Áno, tu je pekné miesto. Dajme si vodu.",
+        "Pri mori je krásne ticho.",
+        "Nemám istotu, ale asi bude pekne."
+      ]
+    },
+    {
+      "id": "listen-regarde-derri-re-la-statue-dans-le-jardin",
+      "type": "listen",
+      "l1": "Pozri za sochou, v záhrade.",
+      "l2": "Regarde derrière la statue, dans le jardin.",
+      "choices_l2": [
+        "Aujourd'hui c'est jeudi. Il est deux heures et demie.",
+        "Qu'est-ce que je dois mettre aujourd'hui ?",
+        "S'il fait chaud, je ne porterai pas de pull."
+      ],
+      "choices_l1": [
+        "Vidíš tú sochu?",
+        "Je pol šiestej.",
+        "Socha je pri kostole."
+      ]
+    },
+    {
+      "id": "listen-j-ai-trouv-un-uf-et-il-est-norme",
+      "type": "listen",
+      "l1": "Našiel som vajíčko! A je obrovské!",
+      "l2": "J'ai trouvé un œuf ! Et il est énorme !",
+      "choices_l2": [
+        "C'était très amusant.",
+        "Je cherche mes lunettes.",
+        "D'habitude, je vais au travail en bus."
+      ],
+      "choices_l1": [
+        "Toto mäso je zlé.",
+        "Nechcem víno. Chcem minerálku.",
+        "Mamie nám dala vajíčka a koláč ako odmenu."
+      ]
+    },
+    {
+      "id": "listen-bravo-eric-je-te-l-ai-cach-celui-l",
+      "type": "listen",
+      "l1": "Bravo, Eric! Schovala som ti práve toto.",
+      "l2": "Bravo, Eric ! Je te l'ai caché, celui-là.",
+      "choices_l2": [
+        "Le jeudi saint j'ai rangé toute la maison.",
+        "Les pommes de terre sont chaudes, mais la viande est froide.",
+        "On se retrouve vendredi à six heures et demie."
+      ],
+      "choices_l1": [
+        "Poznáš príliv a odliv?",
+        "Jeme ovocie a zeleninu.",
+        "Je to veľmi chutné."
+      ]
+    },
+    {
+      "id": "listen-on-lui-a-donn-le-plus-bel-uf-elle-l-a-bien-m-rit",
+      "type": "listen",
+      "l1": "Dali sme jej najkrajšie vajíčko, dobre si ho zaslúžila.",
+      "l2": "On lui a donné le plus bel œuf, elle l'a bien mérité.",
+      "choices_l2": [
+        "On se retrouve samedi à cinq heures moins le quart.",
+        "Cette pomme orange est sucrée.",
+        "La fenêtre est grande."
+      ],
+      "choices_l1": [
+        "Obed je o dvanástej.",
+        "Konečne! Už som schovala vajíčka v záhrade.",
+        "Nechcem víno. Chcem minerálku."
+      ]
+    },
+    {
+      "id": "listen-venez-j-ai-pr-par-le-gigot-on-se-r-unit-table",
+      "type": "listen",
+      "l1": "Poďte, pripravila som jahňacie stehno. Zíďme sa pri stole!",
+      "l2": "Venez, j'ai préparé le gigot. On se réunit à table !",
+      "choices_l2": [
+        "Je veux ce tee-shirt jaune.",
+        "Mon frère a un an.",
+        "Tu as une serviette de plage ? Elle aide contre le sable."
+      ],
+      "choices_l1": [
+        "Kde je môj telefón?",
+        "Chladnička je v kuchyni, blízko okna.",
+        "Áno, prosím. Sadnite si na gauč."
+      ]
+    },
+    {
+      "id": "listen-merci-mamie-c-tait-une-belle-journ-e",
+      "type": "listen",
+      "l1": "Ďakujem, Mamie. Bol to krásny deň.",
+      "l2": "Merci, Mamie. C'était une belle journée.",
+      "choices_l2": [
+        "Le cidre est sucré et froid.",
+        "Je sens la fatigue, j'ai besoin de repos.",
+        "Cette cloche en chocolat est immense !"
+      ],
+      "choices_l1": [
+        "Koľko je hodín? Je pol siedmej.",
+        "Na Veľký piatok sme nejedli mäso.",
+        "Na veľkonočný pondelok deti hľadajú vajíčka v záhrade."
+      ]
+    },
+    {
+      "id": "listen-joyeuses-p-ques-tout-le-monde",
+      "type": "listen",
+      "l1": "Veselú Veľkú noc, všetci!",
+      "l2": "Joyeuses Pâques, tout le monde !",
+      "choices_l2": [
+        "Ma femme travaille dans un bureau.",
+        "Je paie par carte, je n'ai pas de liquide.",
+        "Je ne sais pas. Je vais goûter !"
+      ],
+      "choices_l1": [
+        "V piatok je sviatok.",
+        "Na jeseň často prší a padá lístie.",
+        "Super. Musíme mať dobré oblečenie, na kopcoch je vždy chladnejšie."
+      ]
+    },
+    {
+      "id": "listen-le-lundi-de-p-ques-nous-avons-rendu-visite-toute-la-famille",
+      "type": "listen",
+      "l1": "Na veľkonočný pondelok sme navštívili celú rodinu.",
+      "l2": "Le lundi de Pâques nous avons rendu visite à toute la famille.",
+      "choices_l2": [
+        "La poule et le lapin sont des symboles de Pâques.",
+        "J'ai donné les plus beaux œufs à ma sœur.",
+        "Bonne idée. Et regardons si le temps sera meilleur pour le week-end."
+      ],
+      "choices_l1": [
+        "Zajtra bude slnečno.",
+        "Super. Musíme mať dobré oblečenie, na kopcoch je vždy chladnejšie.",
+        "Dobrý deň, Eric. Poďte ďalej, prosím."
+      ]
+    },
+    {
+      "id": "listen-mamie-nous-a-donn-des-ufs-et-un-g-teau-comme-r-compense",
+      "type": "listen",
+      "l1": "Mamie nám dala vajíčka a koláč ako odmenu.",
+      "l2": "Mamie nous a donné des œufs et un gâteau comme récompense.",
+      "choices_l2": [
+        "Les enfants aident à la maison.",
+        "En hiver il y a un fort gel.",
+        "Qui habite dans la maison ?"
+      ],
+      "choices_l1": [
+        "Kňaz požehnal jedlo pred obedom.",
+        "Chlieb je čerstvý a dobrý.",
+        "Nemám hlad. Nechcem jesť."
+      ]
+    },
+    {
+      "id": "listen-cette-tradition-change-mais-la-famille-reste-toujours-ensemble",
+      "type": "listen",
+      "l1": "Táto tradícia sa mení, ale rodina je stále spolu.",
+      "l2": "Cette tradition change, mais la famille reste toujours ensemble.",
+      "choices_l2": [
+        "Nous avons un balcon et un garage.",
+        "Tu lui as donné combien d'œufs ?",
+        "Chaque saison est différente."
+      ],
+      "choices_l1": [
+        "Môj dedko je dôchodca.",
+        "Deti sú v záhrade.",
+        "Deti sú spokojné, našli všetky vajíčka."
+      ]
+    },
+    {
+      "id": "listen-le-gigot-tait-d-licieux-et-le-chocolat-tait-excellent",
+      "type": "listen",
+      "l1": "Jahňacie stehno bolo výborné a čokoláda bola vynikajúca.",
+      "l2": "Le gigot était délicieux et le chocolat était excellent.",
+      "choices_l2": [
+        "Il y a du brouillard, je ne vois rien.",
+        "Elle est arrivée tôt et elle a aidé à préparer la table.",
+        "Je veux ce tee-shirt jaune."
+      ],
+      "choices_l1": [
+        "Potom je pot-au-feu. Máš rád mäso?",
+        "Ja si dám víno. Na zdravie!",
+        "Syr príde po hlavnom jedle."
+      ]
+    },
+    {
+      "id": "order-mamie-nous-sommes-venus-pour-la-chasse-aux-ufs",
+      "type": "order",
+      "l1": "Mamie, prišli sme na hľadanie vajíčok!",
+      "l2": "Mamie, nous sommes venus pour la chasse aux œufs !",
+      "tokens_l1": [
+        "Mamie,",
+        "prišli",
+        "sme",
+        "na",
+        "hľadanie",
+        "vajíčok!",
+        "Našiel",
+        "som",
+        "vajíčko!",
+        "A",
+        "je",
+        "obrovské!"
+      ],
+      "tokens_l2": [
+        "Mamie,",
+        "nous",
+        "sommes",
+        "venus",
+        "pour",
+        "la",
+        "chasse",
+        "aux",
+        "œufs",
+        "!",
+        "J'ai",
+        "trouvé",
+        "un",
+        "œuf",
+        "!",
+        "Et",
+        "il",
+        "est",
+        "énorme",
+        "!"
+      ]
+    },
+    {
+      "id": "order-enfin-j-ai-d-j-cach-les-ufs-dans-le-jardin",
+      "type": "order",
+      "l1": "Konečne! Už som schovala vajíčka v záhrade.",
+      "l2": "Enfin ! J'ai déjà caché les œufs dans le jardin.",
+      "tokens_l1": [
+        "Konečne!",
+        "Už",
+        "som",
+        "schovala",
+        "vajíčka",
+        "v",
+        "záhrade.",
+        "Našiel",
+        "som",
+        "vajíčko!",
+        "A",
+        "je",
+        "obrovské!"
+      ],
+      "tokens_l2": [
+        "Enfin",
+        "!",
+        "J'ai",
+        "déjà",
+        "caché",
+        "les",
+        "œufs",
+        "dans",
+        "le",
+        "jardin.",
+        "J'ai",
+        "trouvé",
+        "un",
+        "œuf",
+        "!",
+        "Et",
+        "il",
+        "est",
+        "énorme",
+        "!"
+      ]
+    },
+    {
+      "id": "order-j-ai-un-peu-peur-de-ne-rien-trouver",
+      "type": "order",
+      "l1": "Trochu sa bojím, že nič nenájdem!",
+      "l2": "J'ai un peu peur de ne rien trouver !",
+      "tokens_l1": [
+        "Trochu",
+        "sa",
+        "bojím,",
+        "že",
+        "nič",
+        "nenájdem!",
+        "Jahňacie",
+        "stehno",
+        "bolo",
+        "výborné",
+        "a",
+        "čokoláda",
+        "bola",
+        "vynikajúca."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "un",
+        "peu",
+        "peur",
+        "de",
+        "ne",
+        "rien",
+        "trouver",
+        "!",
+        "Le",
+        "gigot",
+        "était",
+        "délicieux",
+        "et",
+        "le",
+        "chocolat",
+        "était",
+        "excellent."
+      ]
+    },
+    {
+      "id": "order-ne-t-inqui-te-pas-c-est-facile",
+      "type": "order",
+      "l1": "Neboj sa, je to jednoduché!",
+      "l2": "Ne t'inquiète pas, c'est facile !",
+      "tokens_l1": [
+        "Neboj",
+        "sa,",
+        "je",
+        "to",
+        "jednoduché!",
+        "Dali",
+        "sme",
+        "jej",
+        "najkrajšie",
+        "vajíčko,",
+        "dobre",
+        "si",
+        "ho",
+        "zaslúžila."
+      ],
+      "tokens_l2": [
+        "Ne",
+        "t'inquiète",
+        "pas,",
+        "c'est",
+        "facile",
+        "!",
+        "On",
+        "lui",
+        "a",
+        "donné",
+        "le",
+        "plus",
+        "bel",
+        "œuf,",
+        "elle",
+        "l'a",
+        "bien",
+        "mérité."
+      ]
+    },
+    {
+      "id": "order-oui-c-est-notre-tradition-allez-cherchez-bien",
+      "type": "order",
+      "l1": "Áno, je to naša tradícia. Poďte, hľadajte dobre!",
+      "l2": "Oui, c'est notre tradition. Allez, cherchez bien !",
+      "tokens_l1": [
+        "Áno,",
+        "je",
+        "to",
+        "naša",
+        "tradícia.",
+        "Poďte,",
+        "hľadajte",
+        "dobre!",
+        "Táto",
+        "tradícia",
+        "sa",
+        "mení,",
+        "ale",
+        "rodina",
+        "je",
+        "stále",
+        "spolu."
+      ],
+      "tokens_l2": [
+        "Oui,",
+        "c'est",
+        "notre",
+        "tradition.",
+        "Allez,",
+        "cherchez",
+        "bien",
+        "!",
+        "Cette",
+        "tradition",
+        "change,",
+        "mais",
+        "la",
+        "famille",
+        "reste",
+        "toujours",
+        "ensemble."
+      ]
+    },
+    {
+      "id": "order-chlo-tu-as-trouv-un-uf",
+      "type": "order",
+      "l1": "Chloé, našla si vajíčko?",
+      "l2": "Chloé, tu as trouvé un œuf ?",
+      "tokens_l1": [
+        "Chloé,",
+        "našla",
+        "si",
+        "vajíčko?",
+        "Pozri",
+        "za",
+        "sochou,",
+        "v",
+        "záhrade."
+      ],
+      "tokens_l2": [
+        "Chloé,",
+        "tu",
+        "as",
+        "trouvé",
+        "un",
+        "œuf",
+        "?",
+        "Regarde",
+        "derrière",
+        "la",
+        "statue,",
+        "dans",
+        "le",
+        "jardin."
+      ]
+    },
+    {
+      "id": "order-oui-j-en-ai-trouv-trois",
+      "type": "order",
+      "l1": "Áno! Našla som tri!",
+      "l2": "Oui ! J'en ai trouvé trois !",
+      "tokens_l1": [
+        "Áno!",
+        "Našla",
+        "som",
+        "tri!",
+        "Áno,",
+        "je",
+        "to",
+        "naša",
+        "tradícia.",
+        "Poďte,",
+        "hľadajte",
+        "dobre!"
+      ],
+      "tokens_l2": [
+        "Oui",
+        "!",
+        "J'en",
+        "ai",
+        "trouvé",
+        "trois",
+        "!",
+        "Oui,",
+        "c'est",
+        "notre",
+        "tradition.",
+        "Allez,",
+        "cherchez",
+        "bien",
+        "!"
+      ]
+    },
+    {
+      "id": "order-moi-je-n-ai-rien-trouv",
+      "type": "order",
+      "l1": "Ja som nenašiel nič!",
+      "l2": "Moi, je n'ai rien trouvé !",
+      "tokens_l1": [
+        "Ja",
+        "som",
+        "nenašiel",
+        "nič!",
+        "Áno,",
+        "je",
+        "to",
+        "naša",
+        "tradícia.",
+        "Poďte,",
+        "hľadajte",
+        "dobre!"
+      ],
+      "tokens_l2": [
+        "Moi,",
+        "je",
+        "n'ai",
+        "rien",
+        "trouvé",
+        "!",
+        "Oui,",
+        "c'est",
+        "notre",
+        "tradition.",
+        "Allez,",
+        "cherchez",
+        "bien",
+        "!"
+      ]
+    },
+    {
+      "id": "order-regarde-derri-re-la-statue-dans-le-jardin",
+      "type": "order",
+      "l1": "Pozri za sochou, v záhrade.",
+      "l2": "Regarde derrière la statue, dans le jardin.",
+      "tokens_l1": [
+        "Pozri",
+        "za",
+        "sochou,",
+        "v",
+        "záhrade.",
+        "Ja",
+        "som",
+        "nenašiel",
+        "nič!"
+      ],
+      "tokens_l2": [
+        "Regarde",
+        "derrière",
+        "la",
+        "statue,",
+        "dans",
+        "le",
+        "jardin.",
+        "Moi,",
+        "je",
+        "n'ai",
+        "rien",
+        "trouvé",
+        "!"
+      ]
+    },
+    {
+      "id": "order-j-ai-trouv-un-uf-et-il-est-norme",
+      "type": "order",
+      "l1": "Našiel som vajíčko! A je obrovské!",
+      "l2": "J'ai trouvé un œuf ! Et il est énorme !",
+      "tokens_l1": [
+        "Našiel",
+        "som",
+        "vajíčko!",
+        "A",
+        "je",
+        "obrovské!",
+        "Mamie,",
+        "prišli",
+        "sme",
+        "na",
+        "hľadanie",
+        "vajíčok!"
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "trouvé",
+        "un",
+        "œuf",
+        "!",
+        "Et",
+        "il",
+        "est",
+        "énorme",
+        "!",
+        "Mamie,",
+        "nous",
+        "sommes",
+        "venus",
+        "pour",
+        "la",
+        "chasse",
+        "aux",
+        "œufs",
+        "!"
+      ]
+    },
+    {
+      "id": "order-bravo-eric-je-te-l-ai-cach-celui-l",
+      "type": "order",
+      "l1": "Bravo, Eric! Schovala som ti práve toto.",
+      "l2": "Bravo, Eric ! Je te l'ai caché, celui-là.",
+      "tokens_l1": [
+        "Bravo,",
+        "Eric!",
+        "Schovala",
+        "som",
+        "ti",
+        "práve",
+        "toto.",
+        "Trochu",
+        "sa",
+        "bojím,",
+        "že",
+        "nič",
+        "nenájdem!"
+      ],
+      "tokens_l2": [
+        "Bravo,",
+        "Eric",
+        "!",
+        "Je",
+        "te",
+        "l'ai",
+        "caché,",
+        "celui-là.",
+        "J'ai",
+        "un",
+        "peu",
+        "peur",
+        "de",
+        "ne",
+        "rien",
+        "trouver",
+        "!"
+      ]
+    },
+    {
+      "id": "order-on-lui-a-donn-le-plus-bel-uf-elle-l-a-bien-m-rit",
+      "type": "order",
+      "l1": "Dali sme jej najkrajšie vajíčko, dobre si ho zaslúžila.",
+      "l2": "On lui a donné le plus bel œuf, elle l'a bien mérité.",
+      "tokens_l1": [
+        "Dali",
+        "sme",
+        "jej",
+        "najkrajšie",
+        "vajíčko,",
+        "dobre",
+        "si",
+        "ho",
+        "zaslúžila.",
+        "Ďakujem,",
+        "Mamie.",
+        "Bol",
+        "to",
+        "krásny",
+        "deň."
+      ],
+      "tokens_l2": [
+        "On",
+        "lui",
+        "a",
+        "donné",
+        "le",
+        "plus",
+        "bel",
+        "œuf,",
+        "elle",
+        "l'a",
+        "bien",
+        "mérité.",
+        "Merci,",
+        "Mamie.",
+        "C'était",
+        "une",
+        "belle",
+        "journée."
+      ]
+    },
+    {
+      "id": "order-venez-j-ai-pr-par-le-gigot-on-se-r-unit-table",
+      "type": "order",
+      "l1": "Poďte, pripravila som jahňacie stehno. Zíďme sa pri stole!",
+      "l2": "Venez, j'ai préparé le gigot. On se réunit à table !",
+      "tokens_l1": [
+        "Poďte,",
+        "pripravila",
+        "som",
+        "jahňacie",
+        "stehno.",
+        "Zíďme",
+        "sa",
+        "pri",
+        "stole!",
+        "Bravo,",
+        "Eric!",
+        "Schovala",
+        "som",
+        "ti",
+        "práve",
+        "toto."
+      ],
+      "tokens_l2": [
+        "Venez,",
+        "j'ai",
+        "préparé",
+        "le",
+        "gigot.",
+        "On",
+        "se",
+        "réunit",
+        "à",
+        "table",
+        "!",
+        "Bravo,",
+        "Eric",
+        "!",
+        "Je",
+        "te",
+        "l'ai",
+        "caché,",
+        "celui-là."
+      ]
+    },
+    {
+      "id": "order-merci-mamie-c-tait-une-belle-journ-e",
+      "type": "order",
+      "l1": "Ďakujem, Mamie. Bol to krásny deň.",
+      "l2": "Merci, Mamie. C'était une belle journée.",
+      "tokens_l1": [
+        "Ďakujem,",
+        "Mamie.",
+        "Bol",
+        "to",
+        "krásny",
+        "deň.",
+        "Poďte,",
+        "pripravila",
+        "som",
+        "jahňacie",
+        "stehno.",
+        "Zíďme",
+        "sa",
+        "pri",
+        "stole!"
+      ],
+      "tokens_l2": [
+        "Merci,",
+        "Mamie.",
+        "C'était",
+        "une",
+        "belle",
+        "journée.",
+        "Venez,",
+        "j'ai",
+        "préparé",
+        "le",
+        "gigot.",
+        "On",
+        "se",
+        "réunit",
+        "à",
+        "table",
+        "!"
+      ]
+    },
+    {
+      "id": "order-joyeuses-p-ques-tout-le-monde",
+      "type": "order",
+      "l1": "Veselú Veľkú noc, všetci!",
+      "l2": "Joyeuses Pâques, tout le monde !",
+      "tokens_l1": [
+        "Veselú",
+        "Veľkú",
+        "noc,",
+        "všetci!",
+        "Našiel",
+        "som",
+        "vajíčko!",
+        "A",
+        "je",
+        "obrovské!"
+      ],
+      "tokens_l2": [
+        "Joyeuses",
+        "Pâques,",
+        "tout",
+        "le",
+        "monde",
+        "!",
+        "J'ai",
+        "trouvé",
+        "un",
+        "œuf",
+        "!",
+        "Et",
+        "il",
+        "est",
+        "énorme",
+        "!"
+      ]
+    },
+    {
+      "id": "order-le-lundi-de-p-ques-nous-avons-rendu-visite-toute-la-famille",
+      "type": "order",
+      "l1": "Na veľkonočný pondelok sme navštívili celú rodinu.",
+      "l2": "Le lundi de Pâques nous avons rendu visite à toute la famille.",
+      "tokens_l1": [
+        "Na",
+        "veľkonočný",
+        "pondelok",
+        "sme",
+        "navštívili",
+        "celú",
+        "rodinu.",
+        "Mamie",
+        "nám",
+        "dala",
+        "vajíčka",
+        "a",
+        "koláč",
+        "ako",
+        "odmenu."
+      ],
+      "tokens_l2": [
+        "Le",
+        "lundi",
+        "de",
+        "Pâques",
+        "nous",
+        "avons",
+        "rendu",
+        "visite",
+        "à",
+        "toute",
+        "la",
+        "famille.",
+        "Mamie",
+        "nous",
+        "a",
+        "donné",
+        "des",
+        "œufs",
+        "et",
+        "un",
+        "gâteau",
+        "comme",
+        "récompense."
+      ]
+    },
+    {
+      "id": "order-mamie-nous-a-donn-des-ufs-et-un-g-teau-comme-r-compense",
+      "type": "order",
+      "l1": "Mamie nám dala vajíčka a koláč ako odmenu.",
+      "l2": "Mamie nous a donné des œufs et un gâteau comme récompense.",
+      "tokens_l1": [
+        "Mamie",
+        "nám",
+        "dala",
+        "vajíčka",
+        "a",
+        "koláč",
+        "ako",
+        "odmenu.",
+        "Táto",
+        "tradícia",
+        "sa",
+        "mení,",
+        "ale",
+        "rodina",
+        "je",
+        "stále",
+        "spolu."
+      ],
+      "tokens_l2": [
+        "Mamie",
+        "nous",
+        "a",
+        "donné",
+        "des",
+        "œufs",
+        "et",
+        "un",
+        "gâteau",
+        "comme",
+        "récompense.",
+        "Cette",
+        "tradition",
+        "change,",
+        "mais",
+        "la",
+        "famille",
+        "reste",
+        "toujours",
+        "ensemble."
+      ]
+    },
+    {
+      "id": "order-cette-tradition-change-mais-la-famille-reste-toujours-ensemble",
+      "type": "order",
+      "l1": "Táto tradícia sa mení, ale rodina je stále spolu.",
+      "l2": "Cette tradition change, mais la famille reste toujours ensemble.",
+      "tokens_l1": [
+        "Táto",
+        "tradícia",
+        "sa",
+        "mení,",
+        "ale",
+        "rodina",
+        "je",
+        "stále",
+        "spolu.",
+        "Áno,",
+        "je",
+        "to",
+        "naša",
+        "tradícia.",
+        "Poďte,",
+        "hľadajte",
+        "dobre!"
+      ],
+      "tokens_l2": [
+        "Cette",
+        "tradition",
+        "change,",
+        "mais",
+        "la",
+        "famille",
+        "reste",
+        "toujours",
+        "ensemble.",
+        "Oui,",
+        "c'est",
+        "notre",
+        "tradition.",
+        "Allez,",
+        "cherchez",
+        "bien",
+        "!"
+      ]
+    },
+    {
+      "id": "order-le-gigot-tait-d-licieux-et-le-chocolat-tait-excellent",
+      "type": "order",
+      "l1": "Jahňacie stehno bolo výborné a čokoláda bola vynikajúca.",
+      "l2": "Le gigot était délicieux et le chocolat était excellent.",
+      "tokens_l1": [
+        "Jahňacie",
+        "stehno",
+        "bolo",
+        "výborné",
+        "a",
+        "čokoláda",
+        "bola",
+        "vynikajúca.",
+        "Ja",
+        "som",
+        "nenašiel",
+        "nič!"
+      ],
+      "tokens_l2": [
+        "Le",
+        "gigot",
+        "était",
+        "délicieux",
+        "et",
+        "le",
+        "chocolat",
+        "était",
+        "excellent.",
+        "Moi,",
+        "je",
+        "n'ai",
+        "rien",
+        "trouvé",
+        "!"
+      ]
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# 🇫🇷 Memo 2 — Výslovnosť francúzštiny
+# 🇫🇷 Memo — Výslovnosť francúzštiny
 
 > Francúzsky pravopis je oveľa menej pravidelný než slovenský — veľa písmen sa vôbec nevyslovuje.
 > Dobrá správa: keď raz pochopíš základné pravidlá, čítanie sa stane celkom predvídateľné.

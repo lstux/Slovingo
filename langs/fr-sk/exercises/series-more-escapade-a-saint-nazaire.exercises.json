@@ -1,0 +1,1363 @@
+{
+  "exercises": [
+    {
+      "id": "blank-enfin-les-pr-visions-avaient-raison-il-fait-beau",
+      "type": "fill-blank",
+      "l1": "Konečne! Predpoveď mala pravdu, je slnečno.",
+      "l2": "Enfin ! Les prévisions avaient raison, il fait beau.",
+      "missing_l1": "je",
+      "missing_l2": "il",
+      "blank_index_l1": 4,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "toto",
+        "siedmej",
+        "do"
+      ],
+      "choices_l2": [
+        "veux",
+        "heures",
+        "un"
+      ]
+    },
+    {
+      "id": "blank-tu-as-le-maillot-de-bain-et-la-cr-me-solaire",
+      "type": "fill-blank",
+      "l1": "Máš plavky a krém na opaľovanie?",
+      "l2": "Tu as le maillot de bain et la crème solaire ?",
+      "missing_l1": "na",
+      "missing_l2": "le",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "chcem",
+        "toto",
+        "si"
+      ],
+      "choices_l2": [
+        "y",
+        "à",
+        "vais"
+      ]
+    },
+    {
+      "id": "blank-oui-et-aussi-une-serviette-nous-devons-tre-pr-ts",
+      "type": "fill-blank",
+      "l1": "Áno, a aj osušku. Musíme byť pripravení.",
+      "l2": "Oui, et aussi une serviette. Nous devons être prêts.",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "máte",
+        "potom",
+        "je"
+      ],
+      "choices_l2": [
+        "n'ai",
+        "c'est",
+        "au"
+      ]
+    },
+    {
+      "id": "blank-la-plage-de-la-baule-c-est-plus-loin-mais-la-plage-est-plus-belle",
+      "type": "fill-blank",
+      "l1": "Na pláž do La Baule. Je to ďalej, ale pláž je krajšia.",
+      "l2": "À la plage de La Baule. C'est plus loin, mais la plage est plus belle.",
+      "missing_l1": "Je",
+      "missing_l2": "est",
+      "blank_index_l1": 5,
+      "blank_index_l2": 12,
+      "choices_l1": [
+        "toto",
+        "sú",
+        "mi"
+      ],
+      "choices_l2": [
+        "je",
+        "heures",
+        "plus"
+      ]
+    },
+    {
+      "id": "blank-eric-tu-sais-nager",
+      "type": "fill-blank",
+      "l1": "Eric, vieš plávať?",
+      "l2": "Eric, tu sais nager ?",
+      "missing_l1": "plávať",
+      "missing_l2": "tu",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "a",
+        "mám",
+        "idem"
+      ],
+      "choices_l2": [
+        "à",
+        "le",
+        "cette"
+      ]
+    },
+    {
+      "id": "blank-oui-et-j-ai-aussi-de-l-eau-et-de-la-nourriture-dans-le-sac",
+      "type": "fill-blank",
+      "l1": "Áno! A mám aj vodu a jedlo v taške.",
+      "l2": "Oui ! Et j'ai aussi de l'eau et de la nourriture dans le sac.",
+      "missing_l1": "v",
+      "missing_l2": "le",
+      "blank_index_l1": 7,
+      "blank_index_l2": 12,
+      "choices_l1": [
+        "sobotu",
+        "zajtra",
+        "má"
+      ],
+      "choices_l2": [
+        "j'ai",
+        "un",
+        "en"
+      ]
+    },
+    {
+      "id": "blank-allons-y-je-veux-tre-la-plage-avant-midi",
+      "type": "fill-blank",
+      "l1": "Poďme! Chcem byť na pláži pred obedom.",
+      "l2": "Allons-y ! Je veux être à la plage avant midi.",
+      "missing_l1": "na",
+      "missing_l2": "la",
+      "blank_index_l1": 3,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "zajtra",
+        "moja",
+        "má"
+      ],
+      "choices_l2": [
+        "j'ai",
+        "il",
+        "à"
+      ]
+    },
+    {
+      "id": "blank-les-vagues-sont-hautes",
+      "type": "fill-blank",
+      "l1": "Vlny sú vysoké!",
+      "l2": "Les vagues sont hautes !",
+      "missing_l1": "sú",
+      "missing_l2": "sont",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "som",
+        "sobotu",
+        "ešte"
+      ],
+      "choices_l2": [
+        "où",
+        "y",
+        "une"
+      ]
+    },
+    {
+      "id": "blank-nage-lentement-et-prudemment-ce-n-est-pas-une-comp-tition",
+      "type": "fill-blank",
+      "l1": "Plávaj pomaly a opatrne. Nie je to súťaž.",
+      "l2": "Nage lentement et prudemment. Ce n'est pas une compétition.",
+      "missing_l1": "je",
+      "missing_l2": "et",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "deti",
+        "mám",
+        "ale"
+      ],
+      "choices_l2": [
+        "chaud",
+        "de",
+        "est"
+      ]
+    },
+    {
+      "id": "blank-je-suis-fatigu-nous-pouvons-nous-reposer",
+      "type": "fill-blank",
+      "l1": "Som unavený. Môžeme si oddýchnuť?",
+      "l2": "Je suis fatigué. Nous pouvons nous reposer ?",
+      "missing_l1": "si",
+      "missing_l2": "Nous",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "siedmej",
+        "idem",
+        "toto"
+      ],
+      "choices_l2": [
+        "je",
+        "ma",
+        "fait"
+      ]
+    },
+    {
+      "id": "blank-oui-ici-il-y-a-un-bel-endroit-prenons-de-l-eau",
+      "type": "fill-blank",
+      "l1": "Áno, tu je pekné miesto. Dajme si vodu.",
+      "l2": "Oui, ici il y a un bel endroit. Prenons de l'eau.",
+      "missing_l1": "je",
+      "missing_l2": "de",
+      "blank_index_l1": 2,
+      "blank_index_l2": 9,
+      "choices_l1": [
+        "bude",
+        "mi",
+        "idem"
+      ],
+      "choices_l2": [
+        "est",
+        "n'ai",
+        "veux"
+      ]
+    },
+    {
+      "id": "blank-regarde-on-voit-le-phare-et-toute-la-baie",
+      "type": "fill-blank",
+      "l1": "Pozri! Vidno maják a celý záliv!",
+      "l2": "Regarde ! On voit le phare et toute la baie !",
+      "missing_l1": "a",
+      "missing_l2": "le",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "veľmi",
+        "kde",
+        "sa"
+      ],
+      "choices_l2": [
+        "sur",
+        "dans",
+        "est"
+      ]
+    },
+    {
+      "id": "blank-c-est-le-plus-beau-panorama-que-j-aie-jamais-vu",
+      "type": "fill-blank",
+      "l1": "To je najkrajší výhľad, aký som kedy videl.",
+      "l2": "C'est le plus beau panorama que j'aie jamais vu.",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "babka",
+        "máte",
+        "tu"
+      ],
+      "choices_l2": [
+        "ne",
+        "une",
+        "du"
+      ]
+    },
+    {
+      "id": "blank-bienvenue-la-mer-eric",
+      "type": "fill-blank",
+      "l1": "Vitaj pri mori, Eric!",
+      "l2": "Bienvenue à la mer, Eric !",
+      "missing_l1": "Eric",
+      "missing_l2": "la",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sobotu",
+        "nemám",
+        "ešte"
+      ],
+      "choices_l2": [
+        "vous",
+        "plus",
+        "un"
+      ]
+    },
+    {
+      "id": "blank-je-voudrais-aller-la-plage-l-ann-e-prochaine-aussi",
+      "type": "fill-blank",
+      "l1": "Chcel by som ísť na pláž aj budúci rok.",
+      "l2": "Je voudrais aller à la plage l'année prochaine aussi.",
+      "missing_l1": "na",
+      "missing_l2": "la",
+      "blank_index_l1": 4,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "v",
+        "siedmej",
+        "deň"
+      ],
+      "choices_l2": [
+        "chaud",
+        "en",
+        "c'est"
+      ]
+    },
+    {
+      "id": "blank-la-journ-e-est-longue-mais-elle-n-est-pas-trop-fatigante",
+      "type": "fill-blank",
+      "l1": "Deň je dlhý, ale nie je príliš náročný.",
+      "l2": "La journée est longue, mais elle n'est pas trop fatigante.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "na",
+        "deň",
+        "deti"
+      ],
+      "choices_l2": [
+        "du",
+        "sur",
+        "cette"
+      ]
+    },
+    {
+      "id": "blank-nous-pourrions-dormir-l-h-tel-et-continuer-demain-matin",
+      "type": "fill-blank",
+      "l1": "Mohli by sme prespať v hoteli a pokračovať ráno.",
+      "l2": "Nous pourrions dormir à l'hôtel et continuer demain matin.",
+      "missing_l1": "v",
+      "missing_l2": "et",
+      "blank_index_l1": 4,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "mi",
+        "si",
+        "ja"
+      ],
+      "choices_l2": [
+        "à",
+        "nous",
+        "y"
+      ]
+    },
+    {
+      "id": "blank-pr-s-de-la-mer-l-air-est-pur-et-le-silence-magnifique",
+      "type": "fill-blank",
+      "l1": "Pri mori je vzduch čistý a ticho krásne.",
+      "l2": "Près de la mer, l'air est pur et le silence magnifique.",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "ešte",
+        "som",
+        "dnes"
+      ],
+      "choices_l2": [
+        "sont",
+        "en",
+        "est"
+      ]
+    },
+    {
+      "id": "listen-enfin-les-pr-visions-avaient-raison-il-fait-beau",
+      "type": "listen",
+      "l1": "Konečne! Predpoveď mala pravdu, je slnečno.",
+      "l2": "Enfin ! Les prévisions avaient raison, il fait beau.",
+      "choices_l2": [
+        "Je suis professeur. Je travaille dans une école.",
+        "Où est la salle de bain ?",
+        "Mon frère travaille dans un magasin."
+      ]
+    },
+    {
+      "id": "listen-tu-as-le-maillot-de-bain-et-la-cr-me-solaire",
+      "type": "listen",
+      "l1": "Máš plavky a krém na opaľovanie?",
+      "l2": "Tu as le maillot de bain et la crème solaire ?",
+      "choices_l2": [
+        "Où est la gare ? Elle est loin ?",
+        "Bonne idée ! Sur la place il y a un joli café.",
+        "Je suis fatigué. Je veux me reposer."
+      ]
+    },
+    {
+      "id": "listen-oui-et-aussi-une-serviette-nous-devons-tre-pr-ts",
+      "type": "listen",
+      "l1": "Áno, a aj osušku. Musíme byť pripravení.",
+      "l2": "Oui, et aussi une serviette. Nous devons être prêts.",
+      "choices_l2": [
+        "Allez tout droit, le cinéma est à côté du théâtre.",
+        "Nous devons avoir de l'eau et de la crème solaire, parce que la plage est loin.",
+        "Les fruits sont sucrés."
+      ]
+    },
+    {
+      "id": "listen-on-va-o",
+      "type": "listen",
+      "l1": "Kam ideme?",
+      "l2": "On va où ?",
+      "choices_l2": [
+        "Où est mon téléphone ?",
+        "Papa est assis sur le canapé et regarde la télévision.",
+        "Excusez-moi, où est la poste ?"
+      ]
+    },
+    {
+      "id": "listen-la-plage-de-la-baule-c-est-plus-loin-mais-la-plage-est-plus-belle",
+      "type": "listen",
+      "l1": "Na pláž do La Baule. Je to ďalej, ale pláž je krajšia.",
+      "l2": "À la plage de La Baule. C'est plus loin, mais la plage est plus belle.",
+      "choices_l2": [
+        "Au petit-déjeuner, je mange du pain et du fromage.",
+        "Merci, c'est excellent.",
+        "Nous avons un balcon et un garage."
+      ]
+    },
+    {
+      "id": "listen-eric-tu-sais-nager",
+      "type": "listen",
+      "l1": "Eric, vieš plávať?",
+      "l2": "Eric, tu sais nager ?",
+      "choices_l2": [
+        "J'habite dans un immeuble.",
+        "Il est déjà tard.",
+        "Le déjeuner est à midi."
+      ]
+    },
+    {
+      "id": "listen-oui-et-j-ai-aussi-de-l-eau-et-de-la-nourriture-dans-le-sac",
+      "type": "listen",
+      "l1": "Áno! A mám aj vodu a jedlo v taške.",
+      "l2": "Oui ! Et j'ai aussi de l'eau et de la nourriture dans le sac.",
+      "choices_l2": [
+        "Je veux acheter un tee-shirt.",
+        "Où est la salle de bain ?",
+        "Je ne dors pas. J'écoute."
+      ]
+    },
+    {
+      "id": "listen-allons-y-je-veux-tre-la-plage-avant-midi",
+      "type": "listen",
+      "l1": "Poďme! Chcem byť na pláži pred obedom.",
+      "l2": "Allons-y ! Je veux être à la plage avant midi.",
+      "choices_l2": [
+        "Je paie en liquide, pas par carte.",
+        "Les pommes de terre sont chaudes, mais la viande est froide.",
+        "Merci pour l'aide !"
+      ]
+    },
+    {
+      "id": "listen-les-vagues-sont-hautes",
+      "type": "listen",
+      "l1": "Vlny sú vysoké!",
+      "l2": "Les vagues sont hautes !",
+      "choices_l2": [
+        "Je veux ce tee-shirt rouge. Combien coûte-t-il ?",
+        "Ma cousine s'appelle Marie.",
+        "Le port est plein de bateaux."
+      ]
+    },
+    {
+      "id": "listen-nage-lentement-et-prudemment-ce-n-est-pas-une-comp-tition",
+      "type": "listen",
+      "l1": "Plávaj pomaly a opatrne. Nie je to súťaž.",
+      "l2": "Nage lentement et prudemment. Ce n'est pas une compétition.",
+      "choices_l2": [
+        "Moi, je ne veux pas de pot-au-feu. Je veux de la tarte !",
+        "Nous devons avoir une glacière.",
+        "Au petit-déjeuner, je mange un œuf et du pain avec du beurre."
+      ]
+    },
+    {
+      "id": "listen-je-suis-fatigu-nous-pouvons-nous-reposer",
+      "type": "listen",
+      "l1": "Som unavený. Môžeme si oddýchnuť?",
+      "l2": "Je suis fatigué. Nous pouvons nous reposer ?",
+      "choices_l2": [
+        "Le trottoir est étroit.",
+        "La plage est belle.",
+        "Dans l'hôtel il fait chaud et c'est confortable."
+      ]
+    },
+    {
+      "id": "listen-oui-ici-il-y-a-un-bel-endroit-prenons-de-l-eau",
+      "type": "listen",
+      "l1": "Áno, tu je pekné miesto. Dajme si vodu.",
+      "l2": "Oui, ici il y a un bel endroit. Prenons de l'eau.",
+      "choices_l2": [
+        "Le réfrigérateur est dans la cuisine, près de la fenêtre.",
+        "Qu'est-ce que tu achètes ?",
+        "Ce tee-shirt bleu est joli. Vous voulez essayer ?"
+      ]
+    },
+    {
+      "id": "listen-regarde-on-voit-le-phare-et-toute-la-baie",
+      "type": "listen",
+      "l1": "Pozri! Vidno maják a celý záliv!",
+      "l2": "Regarde ! On voit le phare et toute la baie !",
+      "choices_l2": [
+        "Le pot-au-feu est brûlant. Tu veux de l'eau ?",
+        "Le week-end, j'ai le temps.",
+        "Nous allons au café tous les jours."
+      ]
+    },
+    {
+      "id": "listen-c-est-le-plus-beau-panorama-que-j-aie-jamais-vu",
+      "type": "listen",
+      "l1": "To je najkrajší výhľad, aký som kedy videl.",
+      "l2": "C'est le plus beau panorama que j'aie jamais vu.",
+      "choices_l2": [
+        "As-tu un frère ?",
+        "Les fruits sont frais et très sucrés.",
+        "Mon ami est médecin. Il travaille à l'hôpital."
+      ]
+    },
+    {
+      "id": "listen-bienvenue-la-mer-eric",
+      "type": "listen",
+      "l1": "Vitaj pri mori, Eric!",
+      "l2": "Bienvenue à la mer, Eric !",
+      "choices_l2": [
+        "Merci, c'est excellent.",
+        "Les chaussettes sont mouillées !",
+        "Je suis en retard. Je vais arriver à huit heures et quart."
+      ]
+    },
+    {
+      "id": "listen-je-voudrais-aller-la-plage-l-ann-e-prochaine-aussi",
+      "type": "listen",
+      "l1": "Chcel by som ísť na pláž aj budúci rok.",
+      "l2": "Je voudrais aller à la plage l'année prochaine aussi.",
+      "choices_l2": [
+        "La télévision est sur l'étagère.",
+        "J'aime l'automne, parce que les couleurs sont belles.",
+        "Je ne cuisine pas. Je n'ai pas le temps."
+      ]
+    },
+    {
+      "id": "listen-la-journ-e-est-longue-mais-elle-n-est-pas-trop-fatigante",
+      "type": "listen",
+      "l1": "Deň je dlhý, ale nie je príliš náročný.",
+      "l2": "La journée est longue, mais elle n'est pas trop fatigante.",
+      "choices_l2": [
+        "Ma maman a cinquante ans.",
+        "En automne les prévisions sont souvent pluvieuses.",
+        "Nous devons avoir une glacière."
+      ]
+    },
+    {
+      "id": "listen-nous-pourrions-dormir-l-h-tel-et-continuer-demain-matin",
+      "type": "listen",
+      "l1": "Mohli by sme prespať v hoteli a pokračovať ráno.",
+      "l2": "Nous pourrions dormir à l'hôtel et continuer demain matin.",
+      "choices_l2": [
+        "Quelle est la date aujourd'hui ? Regarde le calendrier.",
+        "Allez tout droit, le cinéma est à côté du théâtre.",
+        "On peut aller au musée. C'est à l'intérieur."
+      ]
+    },
+    {
+      "id": "listen-pr-s-de-la-mer-l-air-est-pur-et-le-silence-magnifique",
+      "type": "listen",
+      "l1": "Pri mori je vzduch čistý a ticho krásne.",
+      "l2": "Près de la mer, l'air est pur et le silence magnifique.",
+      "choices_l2": [
+        "À cinq heures.",
+        "Je cherche la clé. Elle n'est pas dans le sac.",
+        "L'eau est chaude. J'en veux de la froide."
+      ]
+    },
+    {
+      "id": "order-enfin-les-pr-visions-avaient-raison-il-fait-beau",
+      "type": "order",
+      "l1": "Konečne! Predpoveď mala pravdu, je slnečno.",
+      "l2": "Enfin ! Les prévisions avaient raison, il fait beau.",
+      "tokens_l1": [
+        "Konečne!",
+        "Predpoveď",
+        "mala",
+        "pravdu,",
+        "je",
+        "slnečno.",
+        "Pri",
+        "mori",
+        "je",
+        "vzduch",
+        "čistý",
+        "a",
+        "ticho",
+        "krásne."
+      ],
+      "tokens_l2": [
+        "Enfin",
+        "!",
+        "Les",
+        "prévisions",
+        "avaient",
+        "raison,",
+        "il",
+        "fait",
+        "beau.",
+        "Près",
+        "de",
+        "la",
+        "mer,",
+        "l'air",
+        "est",
+        "pur",
+        "et",
+        "le",
+        "silence",
+        "magnifique."
+      ]
+    },
+    {
+      "id": "order-tu-as-le-maillot-de-bain-et-la-cr-me-solaire",
+      "type": "order",
+      "l1": "Máš plavky a krém na opaľovanie?",
+      "l2": "Tu as le maillot de bain et la crème solaire ?",
+      "tokens_l1": [
+        "Máš",
+        "plavky",
+        "a",
+        "krém",
+        "na",
+        "opaľovanie?",
+        "Pri",
+        "mori",
+        "je",
+        "vzduch",
+        "čistý",
+        "a",
+        "ticho",
+        "krásne."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "as",
+        "le",
+        "maillot",
+        "de",
+        "bain",
+        "et",
+        "la",
+        "crème",
+        "solaire",
+        "?",
+        "Près",
+        "de",
+        "la",
+        "mer,",
+        "l'air",
+        "est",
+        "pur",
+        "et",
+        "le",
+        "silence",
+        "magnifique."
+      ]
+    },
+    {
+      "id": "order-oui-et-aussi-une-serviette-nous-devons-tre-pr-ts",
+      "type": "order",
+      "l1": "Áno, a aj osušku. Musíme byť pripravení.",
+      "l2": "Oui, et aussi une serviette. Nous devons être prêts.",
+      "tokens_l1": [
+        "Áno,",
+        "a",
+        "aj",
+        "osušku.",
+        "Musíme",
+        "byť",
+        "pripravení.",
+        "Som",
+        "unavený.",
+        "Môžeme",
+        "si",
+        "oddýchnuť?"
+      ],
+      "tokens_l2": [
+        "Oui,",
+        "et",
+        "aussi",
+        "une",
+        "serviette.",
+        "Nous",
+        "devons",
+        "être",
+        "prêts.",
+        "Je",
+        "suis",
+        "fatigué.",
+        "Nous",
+        "pouvons",
+        "nous",
+        "reposer",
+        "?"
+      ]
+    },
+    {
+      "id": "order-la-plage-de-la-baule-c-est-plus-loin-mais-la-plage-est-plus-belle",
+      "type": "order",
+      "l1": "Na pláž do La Baule. Je to ďalej, ale pláž je krajšia.",
+      "l2": "À la plage de La Baule. C'est plus loin, mais la plage est plus belle.",
+      "tokens_l1": [
+        "Na",
+        "pláž",
+        "do",
+        "La",
+        "Baule.",
+        "Je",
+        "to",
+        "ďalej,",
+        "ale",
+        "pláž",
+        "je",
+        "krajšia.",
+        "Pozri!",
+        "Vidno",
+        "maják",
+        "a",
+        "celý",
+        "záliv!"
+      ],
+      "tokens_l2": [
+        "À",
+        "la",
+        "plage",
+        "de",
+        "La",
+        "Baule.",
+        "C'est",
+        "plus",
+        "loin,",
+        "mais",
+        "la",
+        "plage",
+        "est",
+        "plus",
+        "belle.",
+        "Regarde",
+        "!",
+        "On",
+        "voit",
+        "le",
+        "phare",
+        "et",
+        "toute",
+        "la",
+        "baie",
+        "!"
+      ]
+    },
+    {
+      "id": "order-eric-tu-sais-nager",
+      "type": "order",
+      "l1": "Eric, vieš plávať?",
+      "l2": "Eric, tu sais nager ?",
+      "tokens_l1": [
+        "Eric,",
+        "vieš",
+        "plávať?",
+        "Chcel",
+        "by",
+        "som",
+        "ísť",
+        "na",
+        "pláž",
+        "aj",
+        "budúci",
+        "rok."
+      ],
+      "tokens_l2": [
+        "Eric,",
+        "tu",
+        "sais",
+        "nager",
+        "?",
+        "Je",
+        "voudrais",
+        "aller",
+        "à",
+        "la",
+        "plage",
+        "l'année",
+        "prochaine",
+        "aussi."
+      ]
+    },
+    {
+      "id": "order-oui-et-j-ai-aussi-de-l-eau-et-de-la-nourriture-dans-le-sac",
+      "type": "order",
+      "l1": "Áno! A mám aj vodu a jedlo v taške.",
+      "l2": "Oui ! Et j'ai aussi de l'eau et de la nourriture dans le sac.",
+      "tokens_l1": [
+        "Áno!",
+        "A",
+        "mám",
+        "aj",
+        "vodu",
+        "a",
+        "jedlo",
+        "v",
+        "taške.",
+        "Áno,",
+        "tu",
+        "je",
+        "pekné",
+        "miesto.",
+        "Dajme",
+        "si",
+        "vodu."
+      ],
+      "tokens_l2": [
+        "Oui",
+        "!",
+        "Et",
+        "j'ai",
+        "aussi",
+        "de",
+        "l'eau",
+        "et",
+        "de",
+        "la",
+        "nourriture",
+        "dans",
+        "le",
+        "sac.",
+        "Oui,",
+        "ici",
+        "il",
+        "y",
+        "a",
+        "un",
+        "bel",
+        "endroit.",
+        "Prenons",
+        "de",
+        "l'eau."
+      ]
+    },
+    {
+      "id": "order-allons-y-je-veux-tre-la-plage-avant-midi",
+      "type": "order",
+      "l1": "Poďme! Chcem byť na pláži pred obedom.",
+      "l2": "Allons-y ! Je veux être à la plage avant midi.",
+      "tokens_l1": [
+        "Poďme!",
+        "Chcem",
+        "byť",
+        "na",
+        "pláži",
+        "pred",
+        "obedom.",
+        "Plávaj",
+        "pomaly",
+        "a",
+        "opatrne.",
+        "Nie",
+        "je",
+        "to",
+        "súťaž."
+      ],
+      "tokens_l2": [
+        "Allons-y",
+        "!",
+        "Je",
+        "veux",
+        "être",
+        "à",
+        "la",
+        "plage",
+        "avant",
+        "midi.",
+        "Nage",
+        "lentement",
+        "et",
+        "prudemment.",
+        "Ce",
+        "n'est",
+        "pas",
+        "une",
+        "compétition."
+      ]
+    },
+    {
+      "id": "order-les-vagues-sont-hautes",
+      "type": "order",
+      "l1": "Vlny sú vysoké!",
+      "l2": "Les vagues sont hautes !",
+      "tokens_l1": [
+        "Vlny",
+        "sú",
+        "vysoké!",
+        "To",
+        "je",
+        "najkrajší",
+        "výhľad,",
+        "aký",
+        "som",
+        "kedy",
+        "videl."
+      ],
+      "tokens_l2": [
+        "Les",
+        "vagues",
+        "sont",
+        "hautes",
+        "!",
+        "C'est",
+        "le",
+        "plus",
+        "beau",
+        "panorama",
+        "que",
+        "j'aie",
+        "jamais",
+        "vu."
+      ]
+    },
+    {
+      "id": "order-nage-lentement-et-prudemment-ce-n-est-pas-une-comp-tition",
+      "type": "order",
+      "l1": "Plávaj pomaly a opatrne. Nie je to súťaž.",
+      "l2": "Nage lentement et prudemment. Ce n'est pas une compétition.",
+      "tokens_l1": [
+        "Plávaj",
+        "pomaly",
+        "a",
+        "opatrne.",
+        "Nie",
+        "je",
+        "to",
+        "súťaž.",
+        "Chcel",
+        "by",
+        "som",
+        "ísť",
+        "na",
+        "pláž",
+        "aj",
+        "budúci",
+        "rok."
+      ],
+      "tokens_l2": [
+        "Nage",
+        "lentement",
+        "et",
+        "prudemment.",
+        "Ce",
+        "n'est",
+        "pas",
+        "une",
+        "compétition.",
+        "Je",
+        "voudrais",
+        "aller",
+        "à",
+        "la",
+        "plage",
+        "l'année",
+        "prochaine",
+        "aussi."
+      ]
+    },
+    {
+      "id": "order-je-suis-fatigu-nous-pouvons-nous-reposer",
+      "type": "order",
+      "l1": "Som unavený. Môžeme si oddýchnuť?",
+      "l2": "Je suis fatigué. Nous pouvons nous reposer ?",
+      "tokens_l1": [
+        "Som",
+        "unavený.",
+        "Môžeme",
+        "si",
+        "oddýchnuť?",
+        "Pri",
+        "mori",
+        "je",
+        "vzduch",
+        "čistý",
+        "a",
+        "ticho",
+        "krásne."
+      ],
+      "tokens_l2": [
+        "Je",
+        "suis",
+        "fatigué.",
+        "Nous",
+        "pouvons",
+        "nous",
+        "reposer",
+        "?",
+        "Près",
+        "de",
+        "la",
+        "mer,",
+        "l'air",
+        "est",
+        "pur",
+        "et",
+        "le",
+        "silence",
+        "magnifique."
+      ]
+    },
+    {
+      "id": "order-oui-ici-il-y-a-un-bel-endroit-prenons-de-l-eau",
+      "type": "order",
+      "l1": "Áno, tu je pekné miesto. Dajme si vodu.",
+      "l2": "Oui, ici il y a un bel endroit. Prenons de l'eau.",
+      "tokens_l1": [
+        "Áno,",
+        "tu",
+        "je",
+        "pekné",
+        "miesto.",
+        "Dajme",
+        "si",
+        "vodu.",
+        "Mohli",
+        "by",
+        "sme",
+        "prespať",
+        "v",
+        "hoteli",
+        "a",
+        "pokračovať",
+        "ráno."
+      ],
+      "tokens_l2": [
+        "Oui,",
+        "ici",
+        "il",
+        "y",
+        "a",
+        "un",
+        "bel",
+        "endroit.",
+        "Prenons",
+        "de",
+        "l'eau.",
+        "Nous",
+        "pourrions",
+        "dormir",
+        "à",
+        "l'hôtel",
+        "et",
+        "continuer",
+        "demain",
+        "matin."
+      ]
+    },
+    {
+      "id": "order-regarde-on-voit-le-phare-et-toute-la-baie",
+      "type": "order",
+      "l1": "Pozri! Vidno maják a celý záliv!",
+      "l2": "Regarde ! On voit le phare et toute la baie !",
+      "tokens_l1": [
+        "Pozri!",
+        "Vidno",
+        "maják",
+        "a",
+        "celý",
+        "záliv!",
+        "Áno,",
+        "a",
+        "aj",
+        "osušku.",
+        "Musíme",
+        "byť",
+        "pripravení."
+      ],
+      "tokens_l2": [
+        "Regarde",
+        "!",
+        "On",
+        "voit",
+        "le",
+        "phare",
+        "et",
+        "toute",
+        "la",
+        "baie",
+        "!",
+        "Oui,",
+        "et",
+        "aussi",
+        "une",
+        "serviette.",
+        "Nous",
+        "devons",
+        "être",
+        "prêts."
+      ]
+    },
+    {
+      "id": "order-c-est-le-plus-beau-panorama-que-j-aie-jamais-vu",
+      "type": "order",
+      "l1": "To je najkrajší výhľad, aký som kedy videl.",
+      "l2": "C'est le plus beau panorama que j'aie jamais vu.",
+      "tokens_l1": [
+        "To",
+        "je",
+        "najkrajší",
+        "výhľad,",
+        "aký",
+        "som",
+        "kedy",
+        "videl.",
+        "Áno,",
+        "tu",
+        "je",
+        "pekné",
+        "miesto.",
+        "Dajme",
+        "si",
+        "vodu."
+      ],
+      "tokens_l2": [
+        "C'est",
+        "le",
+        "plus",
+        "beau",
+        "panorama",
+        "que",
+        "j'aie",
+        "jamais",
+        "vu.",
+        "Oui,",
+        "ici",
+        "il",
+        "y",
+        "a",
+        "un",
+        "bel",
+        "endroit.",
+        "Prenons",
+        "de",
+        "l'eau."
+      ]
+    },
+    {
+      "id": "order-bienvenue-la-mer-eric",
+      "type": "order",
+      "l1": "Vitaj pri mori, Eric!",
+      "l2": "Bienvenue à la mer, Eric !",
+      "tokens_l1": [
+        "Vitaj",
+        "pri",
+        "mori,",
+        "Eric!",
+        "To",
+        "je",
+        "najkrajší",
+        "výhľad,",
+        "aký",
+        "som",
+        "kedy",
+        "videl."
+      ],
+      "tokens_l2": [
+        "Bienvenue",
+        "à",
+        "la",
+        "mer,",
+        "Eric",
+        "!",
+        "C'est",
+        "le",
+        "plus",
+        "beau",
+        "panorama",
+        "que",
+        "j'aie",
+        "jamais",
+        "vu."
+      ]
+    },
+    {
+      "id": "order-je-voudrais-aller-la-plage-l-ann-e-prochaine-aussi",
+      "type": "order",
+      "l1": "Chcel by som ísť na pláž aj budúci rok.",
+      "l2": "Je voudrais aller à la plage l'année prochaine aussi.",
+      "tokens_l1": [
+        "Chcel",
+        "by",
+        "som",
+        "ísť",
+        "na",
+        "pláž",
+        "aj",
+        "budúci",
+        "rok.",
+        "Áno,",
+        "a",
+        "aj",
+        "osušku.",
+        "Musíme",
+        "byť",
+        "pripravení."
+      ],
+      "tokens_l2": [
+        "Je",
+        "voudrais",
+        "aller",
+        "à",
+        "la",
+        "plage",
+        "l'année",
+        "prochaine",
+        "aussi.",
+        "Oui,",
+        "et",
+        "aussi",
+        "une",
+        "serviette.",
+        "Nous",
+        "devons",
+        "être",
+        "prêts."
+      ]
+    },
+    {
+      "id": "order-la-journ-e-est-longue-mais-elle-n-est-pas-trop-fatigante",
+      "type": "order",
+      "l1": "Deň je dlhý, ale nie je príliš náročný.",
+      "l2": "La journée est longue, mais elle n'est pas trop fatigante.",
+      "tokens_l1": [
+        "Deň",
+        "je",
+        "dlhý,",
+        "ale",
+        "nie",
+        "je",
+        "príliš",
+        "náročný.",
+        "Mohli",
+        "by",
+        "sme",
+        "prespať",
+        "v",
+        "hoteli",
+        "a",
+        "pokračovať",
+        "ráno."
+      ],
+      "tokens_l2": [
+        "La",
+        "journée",
+        "est",
+        "longue,",
+        "mais",
+        "elle",
+        "n'est",
+        "pas",
+        "trop",
+        "fatigante.",
+        "Nous",
+        "pourrions",
+        "dormir",
+        "à",
+        "l'hôtel",
+        "et",
+        "continuer",
+        "demain",
+        "matin."
+      ]
+    },
+    {
+      "id": "order-nous-pourrions-dormir-l-h-tel-et-continuer-demain-matin",
+      "type": "order",
+      "l1": "Mohli by sme prespať v hoteli a pokračovať ráno.",
+      "l2": "Nous pourrions dormir à l'hôtel et continuer demain matin.",
+      "tokens_l1": [
+        "Mohli",
+        "by",
+        "sme",
+        "prespať",
+        "v",
+        "hoteli",
+        "a",
+        "pokračovať",
+        "ráno.",
+        "Áno,",
+        "a",
+        "aj",
+        "osušku.",
+        "Musíme",
+        "byť",
+        "pripravení."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "pourrions",
+        "dormir",
+        "à",
+        "l'hôtel",
+        "et",
+        "continuer",
+        "demain",
+        "matin.",
+        "Oui,",
+        "et",
+        "aussi",
+        "une",
+        "serviette.",
+        "Nous",
+        "devons",
+        "être",
+        "prêts."
+      ]
+    },
+    {
+      "id": "order-pr-s-de-la-mer-l-air-est-pur-et-le-silence-magnifique",
+      "type": "order",
+      "l1": "Pri mori je vzduch čistý a ticho krásne.",
+      "l2": "Près de la mer, l'air est pur et le silence magnifique.",
+      "tokens_l1": [
+        "Pri",
+        "mori",
+        "je",
+        "vzduch",
+        "čistý",
+        "a",
+        "ticho",
+        "krásne.",
+        "Pozri!",
+        "Vidno",
+        "maják",
+        "a",
+        "celý",
+        "záliv!"
+      ],
+      "tokens_l2": [
+        "Près",
+        "de",
+        "la",
+        "mer,",
+        "l'air",
+        "est",
+        "pur",
+        "et",
+        "le",
+        "silence",
+        "magnifique.",
+        "Regarde",
+        "!",
+        "On",
+        "voit",
+        "le",
+        "phare",
+        "et",
+        "toute",
+        "la",
+        "baie",
+        "!"
+      ]
+    }
+  ]
+}

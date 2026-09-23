@@ -1,4 +1,4 @@
-# 🇫🇷 Memo 4 — Počítanie po francúzsky
+# 🇫🇷 Memo — Počítanie po francúzsky
 
 Čísla sa hodia všade: vek, čas, ceny, množstvá. Tu je základ na rozbeh — kompletná tabuľka (až do milióna!) zostáva v knižnici, ak chceš vidieť všetko naraz. A áno, francúzske čísla majú od 70 vyššie svoje slávne zvláštnosti — priprav sa.
 

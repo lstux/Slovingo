@@ -30,6 +30,7 @@ Les aliments de base, et les deux verbes qui vont avec : **jesť** (manger) et *
 | ty ješ | tu manges |
 | on / ona je | il / elle mange |
 | my jeme | nous mangeons |
+| vy jete | vous mangez |
 | oni jedia | ils / elles mangent |
 
 ### Boire — piť
@@ -40,6 +41,7 @@ Les aliments de base, et les deux verbes qui vont avec : **jesť** (manger) et *
 | ty piješ | tu bois |
 | on / ona pije | il / elle boit |
 | my pijeme | nous buvons |
+| vy pijete | vous buvez |
 | oni pijú | ils / elles boivent |
 
 ---

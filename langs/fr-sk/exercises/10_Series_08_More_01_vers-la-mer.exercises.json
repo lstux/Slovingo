@@ -1,0 +1,1105 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-la-mer",
+      "type": "qcm",
+      "l1": "more",
+      "l2": "la mer",
+      "choices_l1": [
+        "piesku",
+        "ostrov",
+        "piesok"
+      ],
+      "choices_l2": [
+        "le coquillage",
+        "le port",
+        "la crique"
+      ]
+    },
+    {
+      "id": "qcm-la-plage",
+      "type": "qcm",
+      "l1": "pláž",
+      "l2": "la plage",
+      "choices_l1": [
+        "zátoka",
+        "piesok",
+        "útes"
+      ],
+      "choices_l2": [
+        "la falaise",
+        "la glacière",
+        "bronzer"
+      ]
+    },
+    {
+      "id": "qcm-la-vague",
+      "type": "qcm",
+      "l1": "vlna",
+      "l2": "la vague",
+      "choices_l1": [
+        "piesku",
+        "more",
+        "plutvy"
+      ],
+      "choices_l2": [
+        "la tente",
+        "la falaise",
+        "le bateau"
+      ]
+    },
+    {
+      "id": "qcm-le-sable",
+      "type": "qcm",
+      "l1": "piesok",
+      "l2": "le sable",
+      "choices_l1": [
+        "prístav",
+        "windsurfing",
+        "maják"
+      ],
+      "choices_l2": [
+        "la vague",
+        "le courant",
+        "le seau"
+      ]
+    },
+    {
+      "id": "qcm-le-phare",
+      "type": "qcm",
+      "l1": "maják",
+      "l2": "le phare",
+      "choices_l1": [
+        "turistika",
+        "piesok",
+        "príliv, odliv"
+      ],
+      "choices_l2": [
+        "le parapluie",
+        "le courant",
+        "la réservation"
+      ]
+    },
+    {
+      "id": "qcm-la-mar-e",
+      "type": "qcm",
+      "l1": "príliv, odliv",
+      "l2": "la marée",
+      "choices_l1": [
+        "chladiaci box",
+        "stan",
+        "recepcia"
+      ],
+      "choices_l2": [
+        "l'île",
+        "la falaise",
+        "l'excursion"
+      ]
+    },
+    {
+      "id": "qcm-le-coquillage",
+      "type": "qcm",
+      "l1": "mušľa",
+      "l2": "le coquillage",
+      "choices_l1": [
+        "stan",
+        "plávať",
+        "more"
+      ],
+      "choices_l2": [
+        "le port",
+        "la mer",
+        "le bateau"
+      ]
+    },
+    {
+      "id": "qcm-je-serai",
+      "type": "qcm",
+      "l1": "budem",
+      "l2": "je serai",
+      "choices_l1": [
+        "ja som",
+        "každý",
+        "k"
+      ],
+      "choices_l2": [
+        "tu dois",
+        "nous cherchons",
+        "Quelle"
+      ]
+    },
+    {
+      "id": "qcm-tu-seras",
+      "type": "qcm",
+      "l1": "budeš",
+      "l2": "tu seras",
+      "choices_l1": [
+        "ony išli",
+        "hľadám",
+        "na ulici"
+      ],
+      "choices_l2": [
+        "à l'intérieur",
+        "la",
+        "tu travailles"
+      ]
+    },
+    {
+      "id": "qcm-il-elle-sera",
+      "type": "qcm",
+      "l1": "bude",
+      "l2": "il / elle sera",
+      "choices_l1": [
+        "teplejší ako",
+        "ja",
+        "sa"
+      ],
+      "choices_l2": [
+        "il / elle doit",
+        "Ça coûte combien ?",
+        "il / elle voit"
+      ]
+    },
+    {
+      "id": "qcm-nous-serons",
+      "type": "qcm",
+      "l1": "budeme",
+      "l2": "nous serons",
+      "choices_l1": [
+        "Zostala doma.",
+        "je",
+        "ona išla"
+      ],
+      "choices_l2": [
+        "tu vois",
+        "ici",
+        "dans"
+      ]
+    },
+    {
+      "id": "qcm-ils-elles-seront",
+      "type": "qcm",
+      "l1": "budú",
+      "l2": "ils / elles seront",
+      "choices_l1": [
+        "hľadám",
+        "v dome",
+        "na námestí"
+      ],
+      "choices_l2": [
+        "il / elle sera",
+        "il / elle se promène",
+        "Comment c'est ?"
+      ]
+    },
+    {
+      "id": "qcm-je-nagerai",
+      "type": "qcm",
+      "l1": "budem plávať",
+      "l2": "je nagerai",
+      "choices_l1": [
+        "Ďakujem",
+        "je",
+        "z"
+      ],
+      "choices_l2": [
+        "tu",
+        "tu seras",
+        "tu habites"
+      ]
+    },
+    {
+      "id": "qcm-nous-marcherons",
+      "type": "qcm",
+      "l1": "budeme kráčať",
+      "l2": "nous marcherons",
+      "choices_l1": [
+        "som",
+        "ja",
+        "toto"
+      ],
+      "choices_l2": [
+        "ensemble",
+        "se",
+        "je voudrais"
+      ]
+    },
+    {
+      "id": "qcm-ce-sera-facile",
+      "type": "qcm",
+      "l1": "bude to ľahké",
+      "l2": "ce sera facile",
+      "choices_l1": [
+        "krémy na opaľovanie",
+        "on / ona je",
+        "Hľadám kľúče. → Hľadám ich."
+      ],
+      "choices_l2": [
+        "ils / elles seront",
+        "j'ouvre, tu ouvres, il ouvre",
+        "Je dois avoir un maillot de bain."
+      ]
+    },
+    {
+      "id": "qcm-le-port",
+      "type": "qcm",
+      "l1": "prístav",
+      "l2": "le port",
+      "choices_l1": [
+        "turistika",
+        "najkrajšia pláž",
+        "plutvy"
+      ],
+      "choices_l2": [
+        "le phare",
+        "la marée",
+        "l'hôtel"
+      ]
+    },
+    {
+      "id": "qcm-le-bateau",
+      "type": "qcm",
+      "l1": "loď",
+      "l2": "le bateau",
+      "choices_l1": [
+        "prístav",
+        "chladiaci box",
+        "výlet"
+      ],
+      "choices_l2": [
+        "le port",
+        "le courant",
+        "nagerai"
+      ]
+    },
+    {
+      "id": "qcm-la-mouette",
+      "type": "qcm",
+      "l1": "čajka",
+      "l2": "la mouette",
+      "choices_l1": [
+        "skala",
+        "loď",
+        "spací vak"
+      ],
+      "choices_l2": [
+        "la falaise",
+        "le phare",
+        "nagerai"
+      ]
+    },
+    {
+      "id": "qcm-le-rocher",
+      "type": "qcm",
+      "l1": "skala",
+      "l2": "le rocher",
+      "choices_l1": [
+        "najvyššia vlna",
+        "hotel",
+        "ostrov"
+      ],
+      "choices_l2": [
+        "l'hôtel",
+        "l'excursion",
+        "bronzer"
+      ]
+    },
+    {
+      "id": "qcm-l-le",
+      "type": "qcm",
+      "l1": "ostrov",
+      "l2": "l'île",
+      "choices_l1": [
+        "zátoka",
+        "mušľa",
+        "potápať sa"
+      ],
+      "choices_l2": [
+        "l'excursion",
+        "le phare",
+        "le sable"
+      ]
+    },
+    {
+      "id": "qcm-la-c-te",
+      "type": "qcm",
+      "l1": "pobrežie",
+      "l2": "la côte",
+      "choices_l1": [
+        "najvyššia vlna",
+        "bazén",
+        "loď"
+      ],
+      "choices_l2": [
+        "la crique",
+        "le port",
+        "le coquillage"
+      ]
+    },
+    {
+      "id": "qcm-le-vent",
+      "type": "qcm",
+      "l1": "vietor",
+      "l2": "le vent",
+      "choices_l1": [
+        "zime",
+        "Prší.",
+        "dážď"
+      ],
+      "choices_l2": [
+        "les feuilles",
+        "la fleur",
+        "l'herbe"
+      ]
+    },
+    {
+      "id": "blank-nous-allons-la-mer",
+      "type": "fill-blank",
+      "l1": "Ideme k moru.",
+      "l2": "Nous allons à la mer.",
+      "missing_l1": "k",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "hľadáš",
+        "nie",
+        "na pošte"
+      ],
+      "choices_l2": [
+        "je mange",
+        "en",
+        "ce serait"
+      ]
+    },
+    {
+      "id": "blank-la-plage-est-belle",
+      "type": "fill-blank",
+      "l1": "Pláž je krásna.",
+      "l2": "La plage est belle.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "s",
+        "ony išli",
+        "k"
+      ],
+      "choices_l2": [
+        "du",
+        "pour",
+        "ça"
+      ]
+    },
+    {
+      "id": "blank-les-vagues-sont-hautes",
+      "type": "fill-blank",
+      "l1": "Vlny sú vysoké.",
+      "l2": "Les vagues sont hautes.",
+      "missing_l1": "sú",
+      "missing_l2": "sont",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "toto",
+        "do lekárne",
+        "studenejší ako"
+      ],
+      "choices_l2": [
+        "je travaille",
+        "je mange",
+        "tout"
+      ]
+    },
+    {
+      "id": "blank-le-sable-est-chaud",
+      "type": "fill-blank",
+      "l1": "Piesok je teplý.",
+      "l2": "Le sable est chaud.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "k",
+        "tento",
+        "ako"
+      ],
+      "choices_l2": [
+        "ce serait",
+        "mais",
+        "je cherche"
+      ]
+    },
+    {
+      "id": "blank-le-phare-est-vieux",
+      "type": "fill-blank",
+      "l1": "Maják je starý.",
+      "l2": "Le phare est vieux.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "na stole",
+        "oblečieme si",
+        "do potravín"
+      ],
+      "choices_l2": [
+        "nous mettons",
+        "des",
+        "tu essaies"
+      ]
+    },
+    {
+      "id": "blank-tu-connais-la-mar-e",
+      "type": "fill-blank",
+      "l1": "Poznáš príliv a odliv?",
+      "l2": "Tu connais la marée ?",
+      "missing_l1": "a",
+      "missing_l2": "la",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ony išli",
+        "vnútri",
+        "na stoličke"
+      ],
+      "choices_l2": [
+        "tu dois",
+        "tu vas",
+        "une"
+      ]
+    },
+    {
+      "id": "blank-je-nagerai-vite",
+      "type": "fill-blank",
+      "l1": "Budem plávať rýchlo.",
+      "l2": "Je nagerai vite.",
+      "missing_l1": "plávať",
+      "missing_l2": "nagerai",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "potápať sa",
+        "najvyššia vlna",
+        "vedierko"
+      ],
+      "choices_l2": [
+        "le sable",
+        "le rocher",
+        "la falaise"
+      ]
+    },
+    {
+      "id": "blank-demain-nous-serons-la-plage",
+      "type": "fill-blank",
+      "l1": "Zajtra budeme na pláži.",
+      "l2": "Demain nous serons à la plage.",
+      "missing_l1": "na",
+      "missing_l2": "la",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "tento",
+        "Kde",
+        "každý"
+      ],
+      "choices_l2": [
+        "je suis",
+        "un",
+        "des"
+      ]
+    },
+    {
+      "id": "blank-le-port-est-plein-de-bateaux",
+      "type": "fill-blank",
+      "l1": "Prístav je plný lodí.",
+      "l2": "Le port est plein de bateaux.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "nič",
+        "to",
+        "priamo"
+      ],
+      "choices_l2": [
+        "du",
+        "chaque",
+        "dans"
+      ]
+    },
+    {
+      "id": "blank-le-rocher-est-dangereux",
+      "type": "fill-blank",
+      "l1": "Skala je nebezpečná.",
+      "l2": "Le rocher est dangereux.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "si",
+        "kupuješ",
+        "s"
+      ],
+      "choices_l2": [
+        "mon",
+        "plaît",
+        "tu travailles"
+      ]
+    },
+    {
+      "id": "blank-il-y-a-une-le-l-bas",
+      "type": "fill-blank",
+      "l1": "Tam je ostrov.",
+      "l2": "Il y a une île là-bas.",
+      "missing_l1": "je",
+      "missing_l2": "a",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ja",
+        "kto",
+        "na moste"
+      ],
+      "choices_l2": [
+        "plaît",
+        "dehors",
+        "mon"
+      ]
+    },
+    {
+      "id": "blank-la-c-te-est-longue",
+      "type": "fill-blank",
+      "l1": "Pobrežie je dlhé.",
+      "l2": "La côte est longue.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Kde",
+        "ako",
+        "naspäť"
+      ],
+      "choices_l2": [
+        "Nous",
+        "nous mangeons",
+        "plus"
+      ]
+    },
+    {
+      "id": "listen-nous-allons-la-mer",
+      "type": "listen",
+      "l1": "Ideme k moru.",
+      "l2": "Nous allons à la mer.",
+      "choices_l2": [
+        "Je vais au magasin. Je veux ce sac bleu.",
+        "Je suis professeur. Je travaille dans une école.",
+        "D'accord. On se retrouve samedi matin à la gare."
+      ],
+      "choices_l1": [
+        "Viem plávať, ale neviem sa potápať.",
+        "Recepcia je otvorená do polnoci.",
+        "Táto zátoka je najpokojnejšia na pobreží."
+      ]
+    },
+    {
+      "id": "listen-la-plage-est-belle",
+      "type": "listen",
+      "l1": "Pláž je krásna.",
+      "l2": "La plage est belle.",
+      "choices_l2": [
+        "La rue est longue.",
+        "Mon frère habite tout près.",
+        "Il fait chaud et ensoleillé, mais il y aura des nuages ce soir."
+      ],
+      "choices_l1": [
+        "Tam je ostrov.",
+        "Chceš skúsiť windsurfing?",
+        "Maják je starý."
+      ]
+    },
+    {
+      "id": "listen-les-vagues-sont-hautes",
+      "type": "listen",
+      "l1": "Vlny sú vysoké.",
+      "l2": "Les vagues sont hautes.",
+      "choices_l2": [
+        "Ma cousine s'appelle Marie.",
+        "Je n'ai pas de frère, mais j'ai deux sœurs.",
+        "Demain il fera froid, tu dois porter un manteau."
+      ],
+      "choices_l1": [
+        "Poobede nemám čas.",
+        "V noci vidno hviezdy z balkóna.",
+        "Chcel by som vidieť hviezdy z pláže."
+      ]
+    },
+    {
+      "id": "listen-le-sable-est-chaud",
+      "type": "listen",
+      "l1": "Piesok je teplý.",
+      "l2": "Le sable est chaud.",
+      "choices_l2": [
+        "J'achète du pain à la boulangerie.",
+        "Je cherche le téléphone. Il est dans le salon ?",
+        "J'ai soif. Tu prends un chocolat chaud ?"
+      ],
+      "choices_l1": [
+        "Musíš mať plavky.",
+        "Plavčík dozerá na pláž.",
+        "Tam je ostrov."
+      ]
+    },
+    {
+      "id": "listen-le-phare-est-vieux",
+      "type": "listen",
+      "l1": "Maják je starý.",
+      "l2": "Le phare est vieux.",
+      "choices_l2": [
+        "La télévision est sur l'étagère.",
+        "Dans le couloir. Les toilettes sont là aussi.",
+        "Merci, je n'ai plus faim."
+      ],
+      "choices_l1": [
+        "Chceš skúsiť windsurfing?",
+        "Plavčík dozerá na pláž.",
+        "Piesok je teplý."
+      ]
+    },
+    {
+      "id": "listen-tu-connais-la-mar-e",
+      "type": "listen",
+      "l1": "Poznáš príliv a odliv?",
+      "l2": "Tu connais la marée ?",
+      "choices_l2": [
+        "Vers six heures et demie du soir.",
+        "On se retrouve mercredi ?",
+        "J'habite dans un appartement."
+      ],
+      "choices_l1": [
+        "Pri mori je vzduch čistý a ticho krásne.",
+        "Máte lístky na festival?",
+        "Chloé! Choď do záhrady."
+      ]
+    },
+    {
+      "id": "listen-je-nagerai-vite",
+      "type": "listen",
+      "l1": "Budem plávať rýchlo.",
+      "l2": "Je nagerai vite.",
+      "choices_l2": [
+        "Allez encore un peu plus loin.",
+        "Eric, c'est ma famille.",
+        "Lundi, je commence à sept heures du matin."
+      ],
+      "choices_l1": [
+        "Umývam poháre a taniere.",
+        "Páči sa mi zelená farba, ale nie žltá.",
+        "Idem do múzea pozrieť si tú výstavu."
+      ]
+    },
+    {
+      "id": "listen-demain-nous-serons-la-plage",
+      "type": "listen",
+      "l1": "Zajtra budeme na pláži.",
+      "l2": "Demain nous serons à la plage.",
+      "choices_l2": [
+        "La vendeuse est très gentille.",
+        "Il est une heure.",
+        "Par où dois-je aller ?"
+      ],
+      "choices_l1": [
+        "Večer bude pršať.",
+        "Čo si mám dnes obliecť?",
+        "Asi o pol siedmej večer."
+      ]
+    },
+    {
+      "id": "listen-le-port-est-plein-de-bateaux",
+      "type": "listen",
+      "l1": "Prístav je plný lodí.",
+      "l2": "Le port est plein de bateaux.",
+      "choices_l2": [
+        "Tu as soif ?",
+        "Je vais m'acheter de nouvelles chaussures et je vais jeter mon vieux portefeuille.",
+        "Alors viens tôt !"
+      ],
+      "choices_l1": [
+        "Nie, ďakujem. Som plný.",
+        "Je to ďaleko pešo?",
+        "Kaviareň je zaujímavá a blízko zastávky."
+      ]
+    },
+    {
+      "id": "listen-les-mouettes-crient",
+      "type": "listen",
+      "l1": "Čajky kričia.",
+      "l2": "Les mouettes crient.",
+      "choices_l2": [
+        "Qu'est-ce que je dois mettre aujourd'hui ?",
+        "Je me lève et je ferme la fenêtre. Il fait froid.",
+        "Je cherche la clé."
+      ],
+      "choices_l1": [
+        "Otváram okno.",
+        "O koľkej?",
+        "Umývam tanier."
+      ]
+    },
+    {
+      "id": "listen-le-rocher-est-dangereux",
+      "type": "listen",
+      "l1": "Skala je nebezpečná.",
+      "l2": "Le rocher est dangereux.",
+      "choices_l2": [
+        "As-tu un frère ?",
+        "Excusez-moi, où est l'arrêt de bus ?",
+        "Les enfants ne mangent pas de ratatouille."
+      ],
+      "choices_l1": [
+        "Zdobili sme košík a pripravili sme koláče.",
+        "Dám si polievku a potom pot-au-feu.",
+        "Prídem asi o druhej. Čakaj, prosím."
+      ]
+    },
+    {
+      "id": "listen-il-y-a-une-le-l-bas",
+      "type": "listen",
+      "l1": "Tam je ostrov.",
+      "l2": "Il y a une île là-bas.",
+      "choices_l2": [
+        "Je veux voir la statue et la fontaine sur la place.",
+        "Le cidre est sucré et froid.",
+        "Allez tout droit, le cinéma est à côté du théâtre."
+      ],
+      "choices_l1": [
+        "Pláž je krásna.",
+        "Viem plávať, ale neviem sa potápať.",
+        "Táto pláž je krajšia, ale tamtá je lacnejšia."
+      ]
+    },
+    {
+      "id": "listen-la-c-te-est-longue",
+      "type": "listen",
+      "l1": "Pobrežie je dlhé.",
+      "l2": "La côte est longue.",
+      "choices_l2": [
+        "Les chaussettes sont mouillées !",
+        "Je veux ce tee-shirt jaune.",
+        "Je ne mange pas de viande."
+      ],
+      "choices_l1": [
+        "Chceš skúsiť windsurfing?",
+        "Táto zátoka je pokojnejšia ako hlavná pláž.",
+        "Musíme mať vodu a krém na opaľovanie, lebo pláž je ďaleko."
+      ]
+    },
+    {
+      "id": "order-nous-allons-la-mer",
+      "type": "order",
+      "l1": "Ideme k moru.",
+      "l2": "Nous allons à la mer.",
+      "tokens_l1": [
+        "Ideme",
+        "k",
+        "moru.",
+        "Pobrežie",
+        "je",
+        "dlhé."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "allons",
+        "à",
+        "la",
+        "mer.",
+        "La",
+        "côte",
+        "est",
+        "longue."
+      ]
+    },
+    {
+      "id": "order-la-plage-est-belle",
+      "type": "order",
+      "l1": "Pláž je krásna.",
+      "l2": "La plage est belle.",
+      "tokens_l1": [
+        "Pláž",
+        "je",
+        "krásna.",
+        "Maják",
+        "je",
+        "starý."
+      ],
+      "tokens_l2": [
+        "La",
+        "plage",
+        "est",
+        "belle.",
+        "Le",
+        "phare",
+        "est",
+        "vieux."
+      ]
+    },
+    {
+      "id": "order-les-vagues-sont-hautes",
+      "type": "order",
+      "l1": "Vlny sú vysoké.",
+      "l2": "Les vagues sont hautes.",
+      "tokens_l1": [
+        "Vlny",
+        "sú",
+        "vysoké.",
+        "Pláž",
+        "je",
+        "krásna."
+      ],
+      "tokens_l2": [
+        "Les",
+        "vagues",
+        "sont",
+        "hautes.",
+        "La",
+        "plage",
+        "est",
+        "belle."
+      ]
+    },
+    {
+      "id": "order-le-sable-est-chaud",
+      "type": "order",
+      "l1": "Piesok je teplý.",
+      "l2": "Le sable est chaud.",
+      "tokens_l1": [
+        "Piesok",
+        "je",
+        "teplý.",
+        "Budem",
+        "plávať",
+        "rýchlo."
+      ],
+      "tokens_l2": [
+        "Le",
+        "sable",
+        "est",
+        "chaud.",
+        "Je",
+        "nagerai",
+        "vite."
+      ]
+    },
+    {
+      "id": "order-le-phare-est-vieux",
+      "type": "order",
+      "l1": "Maják je starý.",
+      "l2": "Le phare est vieux.",
+      "tokens_l1": [
+        "Maják",
+        "je",
+        "starý.",
+        "Tam",
+        "je",
+        "ostrov."
+      ],
+      "tokens_l2": [
+        "Le",
+        "phare",
+        "est",
+        "vieux.",
+        "Il",
+        "y",
+        "a",
+        "une",
+        "île",
+        "là-bas."
+      ]
+    },
+    {
+      "id": "order-tu-connais-la-mar-e",
+      "type": "order",
+      "l1": "Poznáš príliv a odliv?",
+      "l2": "Tu connais la marée ?",
+      "tokens_l1": [
+        "Poznáš",
+        "príliv",
+        "a",
+        "odliv?",
+        "Ideme",
+        "k",
+        "moru."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "connais",
+        "la",
+        "marée",
+        "?",
+        "Nous",
+        "allons",
+        "à",
+        "la",
+        "mer."
+      ]
+    },
+    {
+      "id": "order-je-nagerai-vite",
+      "type": "order",
+      "l1": "Budem plávať rýchlo.",
+      "l2": "Je nagerai vite.",
+      "tokens_l1": [
+        "Budem",
+        "plávať",
+        "rýchlo.",
+        "Pláž",
+        "je",
+        "krásna."
+      ],
+      "tokens_l2": [
+        "Je",
+        "nagerai",
+        "vite.",
+        "La",
+        "plage",
+        "est",
+        "belle."
+      ]
+    },
+    {
+      "id": "order-demain-nous-serons-la-plage",
+      "type": "order",
+      "l1": "Zajtra budeme na pláži.",
+      "l2": "Demain nous serons à la plage.",
+      "tokens_l1": [
+        "Zajtra",
+        "budeme",
+        "na",
+        "pláži.",
+        "Piesok",
+        "je",
+        "teplý."
+      ],
+      "tokens_l2": [
+        "Demain",
+        "nous",
+        "serons",
+        "à",
+        "la",
+        "plage.",
+        "Le",
+        "sable",
+        "est",
+        "chaud."
+      ]
+    },
+    {
+      "id": "order-le-port-est-plein-de-bateaux",
+      "type": "order",
+      "l1": "Prístav je plný lodí.",
+      "l2": "Le port est plein de bateaux.",
+      "tokens_l1": [
+        "Prístav",
+        "je",
+        "plný",
+        "lodí.",
+        "Tam",
+        "je",
+        "ostrov."
+      ],
+      "tokens_l2": [
+        "Le",
+        "port",
+        "est",
+        "plein",
+        "de",
+        "bateaux.",
+        "Il",
+        "y",
+        "a",
+        "une",
+        "île",
+        "là-bas."
+      ]
+    },
+    {
+      "id": "order-le-rocher-est-dangereux",
+      "type": "order",
+      "l1": "Skala je nebezpečná.",
+      "l2": "Le rocher est dangereux.",
+      "tokens_l1": [
+        "Skala",
+        "je",
+        "nebezpečná.",
+        "Vlny",
+        "sú",
+        "vysoké."
+      ],
+      "tokens_l2": [
+        "Le",
+        "rocher",
+        "est",
+        "dangereux.",
+        "Les",
+        "vagues",
+        "sont",
+        "hautes."
+      ]
+    },
+    {
+      "id": "order-il-y-a-une-le-l-bas",
+      "type": "order",
+      "l1": "Tam je ostrov.",
+      "l2": "Il y a une île là-bas.",
+      "tokens_l1": [
+        "Tam",
+        "je",
+        "ostrov.",
+        "Budem",
+        "plávať",
+        "rýchlo."
+      ],
+      "tokens_l2": [
+        "Il",
+        "y",
+        "a",
+        "une",
+        "île",
+        "là-bas.",
+        "Je",
+        "nagerai",
+        "vite."
+      ]
+    },
+    {
+      "id": "order-la-c-te-est-longue",
+      "type": "order",
+      "l1": "Pobrežie je dlhé.",
+      "l2": "La côte est longue.",
+      "tokens_l1": [
+        "Pobrežie",
+        "je",
+        "dlhé.",
+        "Piesok",
+        "je",
+        "teplý."
+      ],
+      "tokens_l2": [
+        "La",
+        "côte",
+        "est",
+        "longue.",
+        "Le",
+        "sable",
+        "est",
+        "chaud."
+      ]
+    }
+  ]
+}

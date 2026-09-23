@@ -1,0 +1,1358 @@
+{
+  "exercises": [
+    {
+      "id": "blank-eric-to-je-moja-rodina",
+      "type": "fill-blank",
+      "l1": "Eric, voici ma famille.",
+      "l2": "Eric, to je moja rodina.",
+      "missing_l1": "ma",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Notre",
+        "ton",
+        "mes"
+      ],
+      "choices_l2": [
+        "budú",
+        "sú",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-dobr-de-ja-som-zuzana",
+      "type": "fill-blank",
+      "l1": "Bonjour. Moi, je suis Zuzana.",
+      "l2": "Dobrý deň. Ja som Zuzana.",
+      "missing_l1": "je",
+      "missing_l2": "som",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Ce",
+        "Elle",
+        "Tu"
+      ],
+      "choices_l2": [
+        "bola",
+        "budem",
+        "je"
+      ]
+    },
+    {
+      "id": "blank-to-je-moja-babka-b-va-tu-na-dedine",
+      "type": "fill-blank",
+      "l1": "C'est ma grand-mère. Elle habite ici, au village.",
+      "l2": "To je moja babka. Býva tu, na dedine.",
+      "missing_l1": "au",
+      "missing_l2": "je",
+      "blank_index_l1": 6,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "mais",
+        "huit",
+        "du"
+      ],
+      "choices_l2": [
+        "budeme",
+        "si",
+        "budem"
+      ]
+    },
+    {
+      "id": "blank-ja-som-katka-m-m-osem-rokov",
+      "type": "fill-blank",
+      "l1": "Moi, je suis Katka ! J'ai huit ans.",
+      "l2": "Ja som Katka! Mám osem rokov.",
+      "missing_l1": "je",
+      "missing_l2": "som",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Tu",
+        "Elle",
+        "Ils"
+      ],
+      "choices_l2": [
+        "budeme",
+        "je",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-ahoj-katka-ko-ko-rokov-m-tvoj-brat",
+      "type": "fill-blank",
+      "l1": "Salut Katka. Quel âge a ton frère ?",
+      "l2": "Ahoj Katka. Koľko rokov má tvoj brat?",
+      "missing_l1": "a",
+      "missing_l2": "má",
+      "blank_index_l1": 4,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "avons",
+        "ont",
+        "avez"
+      ],
+      "choices_l2": [
+        "Máš",
+        "Mám",
+        "Máte"
+      ]
+    },
+    {
+      "id": "blank-j-n-m-dvadsa-rokov-je-tudent",
+      "type": "fill-blank",
+      "l1": "Ján a vingt ans. Il est étudiant.",
+      "l2": "Ján má dvadsať rokov. Je študent.",
+      "missing_l1": "est",
+      "missing_l2": "Je",
+      "blank_index_l1": 5,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "est-ce",
+        "suis",
+        "sont"
+      ],
+      "choices_l2": [
+        "budem",
+        "sme",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-a-vy-eric-o-rob-te",
+      "type": "fill-blank",
+      "l1": "Et vous, Eric ? Que faites-vous ?",
+      "l2": "A vy, Eric? Čo robíte?",
+      "missing_l1": "vous",
+      "missing_l2": "Čo",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Il",
+        "Je",
+        "Ils"
+      ],
+      "choices_l2": [
+        "ale",
+        "Choď",
+        "do"
+      ]
+    },
+    {
+      "id": "blank-som-u-ite-pracujem-v-kole",
+      "type": "fill-blank",
+      "l1": "Je suis professeur. Je travaille dans une école.",
+      "l2": "Som učiteľ. Pracujem v škole.",
+      "missing_l1": "Je",
+      "missing_l2": "v",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "vous",
+        "Ils",
+        "Tu"
+      ],
+      "choices_l2": [
+        "o",
+        "bez",
+        "pred"
+      ]
+    },
+    {
+      "id": "blank-m-j-otec-je-tie-u-ite",
+      "type": "fill-blank",
+      "l1": "Mon père est professeur aussi !",
+      "l2": "Môj otec je tiež učiteľ!",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "C'est",
+        "sont",
+        "suis"
+      ],
+      "choices_l2": [
+        "Bude",
+        "sú",
+        "budem"
+      ]
+    },
+    {
+      "id": "blank-b-vam-v-bratislave-v-byte-a-vy",
+      "type": "fill-blank",
+      "l1": "J'habite à Bratislava, dans un appartement. Et vous ?",
+      "l2": "Bývam v Bratislave, v byte. A vy?",
+      "missing_l1": "Et",
+      "missing_l2": "v",
+      "blank_index_l1": 6,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "mais",
+        "ou",
+        "ni"
+      ],
+      "choices_l2": [
+        "medzi",
+        "za",
+        "o"
+      ]
+    },
+    {
+      "id": "blank-b-vam-tu-v-dome-m-m-z-hradu",
+      "type": "fill-blank",
+      "l1": "J'habite ici, dans une maison. J'ai un jardin.",
+      "l2": "Bývam tu, v dome. Mám záhradu.",
+      "missing_l1": "un",
+      "missing_l2": "v",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Va",
+        "Eric",
+        "vous"
+      ],
+      "choices_l2": [
+        "Vo",
+        "Cez",
+        "o"
+      ]
+    },
+    {
+      "id": "blank-babka-je-star-ale-pracuje-ve-a",
+      "type": "fill-blank",
+      "l1": "Grand-mère est vieille, mais elle travaille beaucoup !",
+      "l2": "Babka je stará, ale pracuje veľa!",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "suis",
+        "est-ce",
+        "C'est"
+      ],
+      "choices_l2": [
+        "si",
+        "bola",
+        "boli"
+      ]
+    },
+    {
+      "id": "blank-katka-cho-do-z-hrady",
+      "type": "fill-blank",
+      "l1": "Katka ! Va dans le jardin.",
+      "l2": "Katka! Choď do záhrady.",
+      "missing_l1": "le",
+      "missing_l2": "do",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Va",
+        "avez",
+        "la"
+      ],
+      "choices_l2": [
+        "v",
+        "zo",
+        "za"
+      ]
+    },
+    {
+      "id": "blank-m-te-pekn-rodinu",
+      "type": "fill-blank",
+      "l1": "Vous avez une belle famille.",
+      "l2": "Máte peknú rodinu.",
+      "missing_l1": "une",
+      "missing_l2": "rodinu",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "vous",
+        "Eric",
+        "un"
+      ],
+      "choices_l2": [
+        "záhradu",
+        "bývate",
+        "Katka"
+      ]
+    },
+    {
+      "id": "blank-moja-babka-b-va-na-dedine-a-moja-teta-b-va-v-meste",
+      "type": "fill-blank",
+      "l1": "Ma grand-mère habite au village et ma tante habite en ville.",
+      "l2": "Moja babka býva na dedine a moja teta býva v meste.",
+      "missing_l1": "et",
+      "missing_l2": "v",
+      "blank_index_l1": 5,
+      "blank_index_l2": 9,
+      "choices_l1": [
+        "Donc",
+        "mais",
+        "ni"
+      ],
+      "choices_l2": [
+        "od",
+        "po",
+        "zo"
+      ]
+    },
+    {
+      "id": "blank-m-j-kamar-t-je-lek-r-pracuje-v-nemocnici",
+      "type": "fill-blank",
+      "l1": "Mon ami est médecin. Il travaille à l'hôpital.",
+      "l2": "Môj kamarát je lekár. Pracuje v nemocnici.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "suis",
+        "est-ce",
+        "sont"
+      ],
+      "choices_l2": [
+        "bola",
+        "som",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-m-m-dve-deti-s-mal",
+      "type": "fill-blank",
+      "l1": "J'ai deux enfants. Ils sont petits.",
+      "l2": "Mám dve deti. Sú malé.",
+      "missing_l1": "sont",
+      "missing_l2": "Sú",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "suis",
+        "est",
+        "C'est"
+      ],
+      "choices_l2": [
+        "budú",
+        "Bude",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-moji-rodi-ia-s-d-chodcovia-b-vaj-bl-zko",
+      "type": "fill-blank",
+      "l1": "Mes parents sont retraités. Ils habitent tout près.",
+      "l2": "Moji rodičia sú dôchodcovia. Bývajú blízko.",
+      "missing_l1": "sont",
+      "missing_l2": "sú",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "C'est",
+        "suis",
+        "est-ce"
+      ],
+      "choices_l2": [
+        "budeme",
+        "budú",
+        "som"
+      ]
+    },
+    {
+      "id": "listen-eric-to-je-moja-rodina",
+      "type": "listen",
+      "l1": "Eric, voici ma famille.",
+      "l2": "Eric, to je moja rodina.",
+      "choices_l1": [
+        "Je suis professeur. Je travaille dans une école.",
+        "Et vous, Eric ? Que faites-vous ?",
+        "J'habite ici, dans une maison. J'ai un jardin."
+      ],
+      "choices_l2": [
+        "To je moja babka. Býva tu, na dedine.",
+        "Dobrý deň. Ja som Zuzana.",
+        "Ja som Katka! Mám osem rokov."
+      ]
+    },
+    {
+      "id": "listen-dobr-de",
+      "type": "listen",
+      "l1": "Bonjour.",
+      "l2": "Dobrý deň.",
+      "choices_l1": [
+        "J'aime l'été.",
+        "Lundi après-midi.",
+        "J'ai faim."
+      ],
+      "choices_l2": [
+        "Kde pracuješ?",
+        "Kde bývaš?",
+        "Čo robíš?"
+      ]
+    },
+    {
+      "id": "listen-dobr-de-ja-som-zuzana",
+      "type": "listen",
+      "l1": "Bonjour. Moi, je suis Zuzana.",
+      "l2": "Dobrý deň. Ja som Zuzana.",
+      "choices_l1": [
+        "Mon père est professeur aussi !",
+        "C'est ma grand-mère. Elle habite ici, au village.",
+        "J'habite à Bratislava, dans un appartement. Et vous ?"
+      ],
+      "choices_l2": [
+        "Som učiteľ. Pracujem v škole.",
+        "Môj otec je tiež učiteľ!",
+        "Eric, to je moja rodina."
+      ]
+    },
+    {
+      "id": "listen-to-je-moja-babka-b-va-tu-na-dedine",
+      "type": "listen",
+      "l1": "C'est ma grand-mère. Elle habite ici, au village.",
+      "l2": "To je moja babka. Býva tu, na dedine.",
+      "choices_l1": [
+        "Mon père est professeur aussi !",
+        "Salut Katka. Quel âge a ton frère ?",
+        "J'habite à Bratislava, dans un appartement. Et vous ?"
+      ],
+      "choices_l2": [
+        "Ján má dvadsať rokov. Je študent.",
+        "Dobrý deň. Ja som Zuzana.",
+        "Ja som Katka! Mám osem rokov."
+      ]
+    },
+    {
+      "id": "listen-ja-som-katka-m-m-osem-rokov",
+      "type": "listen",
+      "l1": "Moi, je suis Katka ! J'ai huit ans.",
+      "l2": "Ja som Katka! Mám osem rokov.",
+      "choices_l1": [
+        "C'est ma grand-mère. Elle habite ici, au village.",
+        "Katka ! Va dans le jardin.",
+        "Ján a vingt ans. Il est étudiant."
+      ],
+      "choices_l2": [
+        "Eric, to je moja rodina.",
+        "A vy, Eric? Čo robíte?",
+        "Katka! Choď do záhrady."
+      ]
+    },
+    {
+      "id": "listen-ahoj-katka-ko-ko-rokov-m-tvoj-brat",
+      "type": "listen",
+      "l1": "Salut Katka. Quel âge a ton frère ?",
+      "l2": "Ahoj Katka. Koľko rokov má tvoj brat?",
+      "choices_l1": [
+        "Eric, voici ma famille.",
+        "J'habite ici, dans une maison. J'ai un jardin.",
+        "Moi, je suis Katka ! J'ai huit ans."
+      ],
+      "choices_l2": [
+        "Eric, to je moja rodina.",
+        "Môj otec je tiež učiteľ!",
+        "Katka! Choď do záhrady."
+      ]
+    },
+    {
+      "id": "listen-j-n-m-dvadsa-rokov-je-tudent",
+      "type": "listen",
+      "l1": "Ján a vingt ans. Il est étudiant.",
+      "l2": "Ján má dvadsať rokov. Je študent.",
+      "choices_l1": [
+        "Katka ! Va dans le jardin.",
+        "Salut Katka. Quel âge a ton frère ?",
+        "C'est ma grand-mère. Elle habite ici, au village."
+      ],
+      "choices_l2": [
+        "Môj otec je tiež učiteľ!",
+        "Bývam tu, v dome. Mám záhradu.",
+        "Bývam v Bratislave, v byte. A vy?"
+      ]
+    },
+    {
+      "id": "listen-a-vy-eric-o-rob-te",
+      "type": "listen",
+      "l1": "Et vous, Eric ? Que faites-vous ?",
+      "l2": "A vy, Eric? Čo robíte?",
+      "choices_l1": [
+        "J'habite à Bratislava, dans un appartement. Et vous ?",
+        "Moi, je suis Katka ! J'ai huit ans.",
+        "Grand-mère est vieille, mais elle travaille beaucoup !"
+      ],
+      "choices_l2": [
+        "Ján má dvadsať rokov. Je študent.",
+        "To je moja babka. Býva tu, na dedine.",
+        "Bývam v Bratislave, v byte. A vy?"
+      ]
+    },
+    {
+      "id": "listen-som-u-ite-pracujem-v-kole",
+      "type": "listen",
+      "l1": "Je suis professeur. Je travaille dans une école.",
+      "l2": "Som učiteľ. Pracujem v škole.",
+      "choices_l1": [
+        "Mon père est professeur aussi !",
+        "Grand-mère est vieille, mais elle travaille beaucoup !",
+        "Katka ! Va dans le jardin."
+      ],
+      "choices_l2": [
+        "Babka je stará, ale pracuje veľa!",
+        "Bývam v Bratislave, v byte. A vy?",
+        "Ahoj Katka. Koľko rokov má tvoj brat?"
+      ]
+    },
+    {
+      "id": "listen-m-j-otec-je-tie-u-ite",
+      "type": "listen",
+      "l1": "Mon père est professeur aussi !",
+      "l2": "Môj otec je tiež učiteľ!",
+      "choices_l1": [
+        "C'est ma grand-mère. Elle habite ici, au village.",
+        "Katka ! Va dans le jardin.",
+        "Et vous, Eric ? Que faites-vous ?"
+      ],
+      "choices_l2": [
+        "Ja som Katka! Mám osem rokov.",
+        "To je moja babka. Býva tu, na dedine.",
+        "Bývam v Bratislave, v byte. A vy?"
+      ]
+    },
+    {
+      "id": "listen-kde-b-vate",
+      "type": "listen",
+      "l1": "Où habitez-vous ?",
+      "l2": "Kde bývate?",
+      "choices_l1": [
+        "Grand-mère est vieille, mais elle travaille beaucoup !",
+        "J'habite à Bratislava, dans un appartement. Et vous ?",
+        "C'est ma grand-mère. Elle habite ici, au village."
+      ],
+      "choices_l2": [
+        "Bývame spolu.",
+        "Dobrý deň.",
+        "Bývam tu."
+      ]
+    },
+    {
+      "id": "listen-b-vam-v-bratislave-v-byte-a-vy",
+      "type": "listen",
+      "l1": "J'habite à Bratislava, dans un appartement. Et vous ?",
+      "l2": "Bývam v Bratislave, v byte. A vy?",
+      "choices_l1": [
+        "C'est ma grand-mère. Elle habite ici, au village.",
+        "Katka ! Va dans le jardin.",
+        "Salut Katka. Quel âge a ton frère ?"
+      ],
+      "choices_l2": [
+        "Dobrý deň. Ja som Zuzana.",
+        "Ján má dvadsať rokov. Je študent.",
+        "Som učiteľ. Pracujem v škole."
+      ]
+    },
+    {
+      "id": "listen-b-vam-tu-v-dome-m-m-z-hradu",
+      "type": "listen",
+      "l1": "J'habite ici, dans une maison. J'ai un jardin.",
+      "l2": "Bývam tu, v dome. Mám záhradu.",
+      "choices_l1": [
+        "Katka ! Va dans le jardin.",
+        "C'est ma grand-mère. Elle habite ici, au village.",
+        "Et vous, Eric ? Que faites-vous ?"
+      ],
+      "choices_l2": [
+        "Môj otec je tiež učiteľ!",
+        "Dobrý deň. Ja som Zuzana.",
+        "Ján má dvadsať rokov. Je študent."
+      ]
+    },
+    {
+      "id": "listen-babka-je-star-ale-pracuje-ve-a",
+      "type": "listen",
+      "l1": "Grand-mère est vieille, mais elle travaille beaucoup !",
+      "l2": "Babka je stará, ale pracuje veľa!",
+      "choices_l1": [
+        "Salut Katka. Quel âge a ton frère ?",
+        "C'est ma grand-mère. Elle habite ici, au village.",
+        "Mon père est professeur aussi !"
+      ],
+      "choices_l2": [
+        "Bývam tu, v dome. Mám záhradu.",
+        "Eric, to je moja rodina.",
+        "Dobrý deň. Ja som Zuzana."
+      ]
+    },
+    {
+      "id": "listen-katka-cho-do-z-hrady",
+      "type": "listen",
+      "l1": "Katka ! Va dans le jardin.",
+      "l2": "Katka! Choď do záhrady.",
+      "choices_l1": [
+        "Ján a vingt ans. Il est étudiant.",
+        "Grand-mère est vieille, mais elle travaille beaucoup !",
+        "Salut Katka. Quel âge a ton frère ?"
+      ],
+      "choices_l2": [
+        "Bývam tu, v dome. Mám záhradu.",
+        "Eric, to je moja rodina.",
+        "Som učiteľ. Pracujem v škole."
+      ]
+    },
+    {
+      "id": "listen-m-te-pekn-rodinu",
+      "type": "listen",
+      "l1": "Vous avez une belle famille.",
+      "l2": "Máte peknú rodinu.",
+      "choices_l1": [
+        "Salut Katka. Quel âge a ton frère ?",
+        "J'habite à Bratislava, dans un appartement. Et vous ?",
+        "Mon père est professeur aussi !"
+      ],
+      "choices_l2": [
+        "Dobrý deň. Ja som Zuzana.",
+        "To je moja babka. Býva tu, na dedine.",
+        "Eric, to je moja rodina."
+      ]
+    },
+    {
+      "id": "listen-moja-babka-b-va-na-dedine-a-moja-teta-b-va-v-meste",
+      "type": "listen",
+      "l1": "Ma grand-mère habite au village et ma tante habite en ville.",
+      "l2": "Moja babka býva na dedine a moja teta býva v meste.",
+      "choices_l1": [
+        "Moi, je suis Katka ! J'ai huit ans.",
+        "Eric, voici ma famille.",
+        "Mon père est professeur aussi !"
+      ],
+      "choices_l2": [
+        "Ahoj Katka. Koľko rokov má tvoj brat?",
+        "Ján má dvadsať rokov. Je študent.",
+        "To je moja babka. Býva tu, na dedine."
+      ]
+    },
+    {
+      "id": "listen-m-j-kamar-t-je-lek-r-pracuje-v-nemocnici",
+      "type": "listen",
+      "l1": "Mon ami est médecin. Il travaille à l'hôpital.",
+      "l2": "Môj kamarát je lekár. Pracuje v nemocnici.",
+      "choices_l1": [
+        "Et vous, Eric ? Que faites-vous ?",
+        "Eric, voici ma famille.",
+        "J'habite à Bratislava, dans un appartement. Et vous ?"
+      ],
+      "choices_l2": [
+        "Môj otec je tiež učiteľ!",
+        "Som učiteľ. Pracujem v škole.",
+        "Eric, to je moja rodina."
+      ]
+    },
+    {
+      "id": "listen-m-m-dve-deti-s-mal",
+      "type": "listen",
+      "l1": "J'ai deux enfants. Ils sont petits.",
+      "l2": "Mám dve deti. Sú malé.",
+      "choices_l1": [
+        "Moi, je suis Katka ! J'ai huit ans.",
+        "Mon père est professeur aussi !",
+        "Salut Katka. Quel âge a ton frère ?"
+      ],
+      "choices_l2": [
+        "Môj otec je tiež učiteľ!",
+        "Babka je stará, ale pracuje veľa!",
+        "A vy, Eric? Čo robíte?"
+      ]
+    },
+    {
+      "id": "listen-moji-rodi-ia-s-d-chodcovia-b-vaj-bl-zko",
+      "type": "listen",
+      "l1": "Mes parents sont retraités. Ils habitent tout près.",
+      "l2": "Moji rodičia sú dôchodcovia. Bývajú blízko.",
+      "choices_l1": [
+        "J'habite ici, dans une maison. J'ai un jardin.",
+        "Eric, voici ma famille.",
+        "Bonjour. Moi, je suis Zuzana."
+      ],
+      "choices_l2": [
+        "Dobrý deň. Ja som Zuzana.",
+        "Ahoj Katka. Koľko rokov má tvoj brat?",
+        "Ja som Katka! Mám osem rokov."
+      ]
+    },
+    {
+      "id": "order-eric-to-je-moja-rodina",
+      "type": "order",
+      "l1": "Eric, voici ma famille.",
+      "l2": "Eric, to je moja rodina.",
+      "tokens_l1": [
+        "Eric,",
+        "voici",
+        "ma",
+        "famille.",
+        "Bonjour.",
+        "Moi,",
+        "je",
+        "suis",
+        "Zuzana."
+      ],
+      "tokens_l2": [
+        "Eric,",
+        "to",
+        "je",
+        "moja",
+        "rodina.",
+        "Dobrý",
+        "deň.",
+        "Ja",
+        "som",
+        "Zuzana."
+      ]
+    },
+    {
+      "id": "order-dobr-de-ja-som-zuzana",
+      "type": "order",
+      "l1": "Bonjour. Moi, je suis Zuzana.",
+      "l2": "Dobrý deň. Ja som Zuzana.",
+      "tokens_l1": [
+        "Bonjour.",
+        "Moi,",
+        "je",
+        "suis",
+        "Zuzana.",
+        "Ma",
+        "grand-mère",
+        "habite",
+        "au",
+        "village",
+        "et",
+        "ma",
+        "tante",
+        "habite",
+        "en",
+        "ville."
+      ],
+      "tokens_l2": [
+        "Dobrý",
+        "deň.",
+        "Ja",
+        "som",
+        "Zuzana.",
+        "Moja",
+        "babka",
+        "býva",
+        "na",
+        "dedine",
+        "a",
+        "moja",
+        "teta",
+        "býva",
+        "v",
+        "meste."
+      ]
+    },
+    {
+      "id": "order-to-je-moja-babka-b-va-tu-na-dedine",
+      "type": "order",
+      "l1": "C'est ma grand-mère. Elle habite ici, au village.",
+      "l2": "To je moja babka. Býva tu, na dedine.",
+      "tokens_l1": [
+        "C'est",
+        "ma",
+        "grand-mère.",
+        "Elle",
+        "habite",
+        "ici,",
+        "au",
+        "village.",
+        "Moi,",
+        "je",
+        "suis",
+        "Katka",
+        "!",
+        "J'ai",
+        "huit",
+        "ans."
+      ],
+      "tokens_l2": [
+        "To",
+        "je",
+        "moja",
+        "babka.",
+        "Býva",
+        "tu,",
+        "na",
+        "dedine.",
+        "Ja",
+        "som",
+        "Katka!",
+        "Mám",
+        "osem",
+        "rokov."
+      ]
+    },
+    {
+      "id": "order-ja-som-katka-m-m-osem-rokov",
+      "type": "order",
+      "l1": "Moi, je suis Katka ! J'ai huit ans.",
+      "l2": "Ja som Katka! Mám osem rokov.",
+      "tokens_l1": [
+        "Moi,",
+        "je",
+        "suis",
+        "Katka",
+        "!",
+        "J'ai",
+        "huit",
+        "ans.",
+        "Grand-mère",
+        "est",
+        "vieille,",
+        "mais",
+        "elle",
+        "travaille",
+        "beaucoup",
+        "!"
+      ],
+      "tokens_l2": [
+        "Ja",
+        "som",
+        "Katka!",
+        "Mám",
+        "osem",
+        "rokov.",
+        "Babka",
+        "je",
+        "stará,",
+        "ale",
+        "pracuje",
+        "veľa!"
+      ]
+    },
+    {
+      "id": "order-ahoj-katka-ko-ko-rokov-m-tvoj-brat",
+      "type": "order",
+      "l1": "Salut Katka. Quel âge a ton frère ?",
+      "l2": "Ahoj Katka. Koľko rokov má tvoj brat?",
+      "tokens_l1": [
+        "Salut",
+        "Katka.",
+        "Quel",
+        "âge",
+        "a",
+        "ton",
+        "frère",
+        "?",
+        "Katka",
+        "!",
+        "Va",
+        "dans",
+        "le",
+        "jardin."
+      ],
+      "tokens_l2": [
+        "Ahoj",
+        "Katka.",
+        "Koľko",
+        "rokov",
+        "má",
+        "tvoj",
+        "brat?",
+        "Katka!",
+        "Choď",
+        "do",
+        "záhrady."
+      ]
+    },
+    {
+      "id": "order-j-n-m-dvadsa-rokov-je-tudent",
+      "type": "order",
+      "l1": "Ján a vingt ans. Il est étudiant.",
+      "l2": "Ján má dvadsať rokov. Je študent.",
+      "tokens_l1": [
+        "Ján",
+        "a",
+        "vingt",
+        "ans.",
+        "Il",
+        "est",
+        "étudiant.",
+        "Vous",
+        "avez",
+        "une",
+        "belle",
+        "famille."
+      ],
+      "tokens_l2": [
+        "Ján",
+        "má",
+        "dvadsať",
+        "rokov.",
+        "Je",
+        "študent.",
+        "Máte",
+        "peknú",
+        "rodinu."
+      ]
+    },
+    {
+      "id": "order-a-vy-eric-o-rob-te",
+      "type": "order",
+      "l1": "Et vous, Eric ? Que faites-vous ?",
+      "l2": "A vy, Eric? Čo robíte?",
+      "tokens_l1": [
+        "Et",
+        "vous,",
+        "Eric",
+        "?",
+        "Que",
+        "faites-vous",
+        "?",
+        "Vous",
+        "avez",
+        "une",
+        "belle",
+        "famille."
+      ],
+      "tokens_l2": [
+        "A",
+        "vy,",
+        "Eric?",
+        "Čo",
+        "robíte?",
+        "Máte",
+        "peknú",
+        "rodinu."
+      ]
+    },
+    {
+      "id": "order-som-u-ite-pracujem-v-kole",
+      "type": "order",
+      "l1": "Je suis professeur. Je travaille dans une école.",
+      "l2": "Som učiteľ. Pracujem v škole.",
+      "tokens_l1": [
+        "Je",
+        "suis",
+        "professeur.",
+        "Je",
+        "travaille",
+        "dans",
+        "une",
+        "école.",
+        "Salut",
+        "Katka.",
+        "Quel",
+        "âge",
+        "a",
+        "ton",
+        "frère",
+        "?"
+      ],
+      "tokens_l2": [
+        "Som",
+        "učiteľ.",
+        "Pracujem",
+        "v",
+        "škole.",
+        "Ahoj",
+        "Katka.",
+        "Koľko",
+        "rokov",
+        "má",
+        "tvoj",
+        "brat?"
+      ]
+    },
+    {
+      "id": "order-m-j-otec-je-tie-u-ite",
+      "type": "order",
+      "l1": "Mon père est professeur aussi !",
+      "l2": "Môj otec je tiež učiteľ!",
+      "tokens_l1": [
+        "Mon",
+        "père",
+        "est",
+        "professeur",
+        "aussi",
+        "!",
+        "C'est",
+        "ma",
+        "grand-mère.",
+        "Elle",
+        "habite",
+        "ici,",
+        "au",
+        "village."
+      ],
+      "tokens_l2": [
+        "Môj",
+        "otec",
+        "je",
+        "tiež",
+        "učiteľ!",
+        "To",
+        "je",
+        "moja",
+        "babka.",
+        "Býva",
+        "tu,",
+        "na",
+        "dedine."
+      ]
+    },
+    {
+      "id": "order-b-vam-v-bratislave-v-byte-a-vy",
+      "type": "order",
+      "l1": "J'habite à Bratislava, dans un appartement. Et vous ?",
+      "l2": "Bývam v Bratislave, v byte. A vy?",
+      "tokens_l1": [
+        "J'habite",
+        "à",
+        "Bratislava,",
+        "dans",
+        "un",
+        "appartement.",
+        "Et",
+        "vous",
+        "?",
+        "Moi,",
+        "je",
+        "suis",
+        "Katka",
+        "!",
+        "J'ai",
+        "huit",
+        "ans."
+      ],
+      "tokens_l2": [
+        "Bývam",
+        "v",
+        "Bratislave,",
+        "v",
+        "byte.",
+        "A",
+        "vy?",
+        "Ja",
+        "som",
+        "Katka!",
+        "Mám",
+        "osem",
+        "rokov."
+      ]
+    },
+    {
+      "id": "order-b-vam-tu-v-dome-m-m-z-hradu",
+      "type": "order",
+      "l1": "J'habite ici, dans une maison. J'ai un jardin.",
+      "l2": "Bývam tu, v dome. Mám záhradu.",
+      "tokens_l1": [
+        "J'habite",
+        "ici,",
+        "dans",
+        "une",
+        "maison.",
+        "J'ai",
+        "un",
+        "jardin.",
+        "Salut",
+        "Katka.",
+        "Quel",
+        "âge",
+        "a",
+        "ton",
+        "frère",
+        "?"
+      ],
+      "tokens_l2": [
+        "Bývam",
+        "tu,",
+        "v",
+        "dome.",
+        "Mám",
+        "záhradu.",
+        "Ahoj",
+        "Katka.",
+        "Koľko",
+        "rokov",
+        "má",
+        "tvoj",
+        "brat?"
+      ]
+    },
+    {
+      "id": "order-babka-je-star-ale-pracuje-ve-a",
+      "type": "order",
+      "l1": "Grand-mère est vieille, mais elle travaille beaucoup !",
+      "l2": "Babka je stará, ale pracuje veľa!",
+      "tokens_l1": [
+        "Grand-mère",
+        "est",
+        "vieille,",
+        "mais",
+        "elle",
+        "travaille",
+        "beaucoup",
+        "!",
+        "Je",
+        "suis",
+        "professeur.",
+        "Je",
+        "travaille",
+        "dans",
+        "une",
+        "école."
+      ],
+      "tokens_l2": [
+        "Babka",
+        "je",
+        "stará,",
+        "ale",
+        "pracuje",
+        "veľa!",
+        "Som",
+        "učiteľ.",
+        "Pracujem",
+        "v",
+        "škole."
+      ]
+    },
+    {
+      "id": "order-katka-cho-do-z-hrady",
+      "type": "order",
+      "l1": "Katka ! Va dans le jardin.",
+      "l2": "Katka! Choď do záhrady.",
+      "tokens_l1": [
+        "Katka",
+        "!",
+        "Va",
+        "dans",
+        "le",
+        "jardin.",
+        "Et",
+        "vous,",
+        "Eric",
+        "?",
+        "Que",
+        "faites-vous",
+        "?"
+      ],
+      "tokens_l2": [
+        "Katka!",
+        "Choď",
+        "do",
+        "záhrady.",
+        "A",
+        "vy,",
+        "Eric?",
+        "Čo",
+        "robíte?"
+      ]
+    },
+    {
+      "id": "order-m-te-pekn-rodinu",
+      "type": "order",
+      "l1": "Vous avez une belle famille.",
+      "l2": "Máte peknú rodinu.",
+      "tokens_l1": [
+        "Vous",
+        "avez",
+        "une",
+        "belle",
+        "famille.",
+        "Ján",
+        "a",
+        "vingt",
+        "ans.",
+        "Il",
+        "est",
+        "étudiant."
+      ],
+      "tokens_l2": [
+        "Máte",
+        "peknú",
+        "rodinu.",
+        "Ján",
+        "má",
+        "dvadsať",
+        "rokov.",
+        "Je",
+        "študent."
+      ]
+    },
+    {
+      "id": "order-moja-babka-b-va-na-dedine-a-moja-teta-b-va-v-meste",
+      "type": "order",
+      "l1": "Ma grand-mère habite au village et ma tante habite en ville.",
+      "l2": "Moja babka býva na dedine a moja teta býva v meste.",
+      "tokens_l1": [
+        "Ma",
+        "grand-mère",
+        "habite",
+        "au",
+        "village",
+        "et",
+        "ma",
+        "tante",
+        "habite",
+        "en",
+        "ville.",
+        "Vous",
+        "avez",
+        "une",
+        "belle",
+        "famille."
+      ],
+      "tokens_l2": [
+        "Moja",
+        "babka",
+        "býva",
+        "na",
+        "dedine",
+        "a",
+        "moja",
+        "teta",
+        "býva",
+        "v",
+        "meste.",
+        "Máte",
+        "peknú",
+        "rodinu."
+      ]
+    },
+    {
+      "id": "order-m-j-kamar-t-je-lek-r-pracuje-v-nemocnici",
+      "type": "order",
+      "l1": "Mon ami est médecin. Il travaille à l'hôpital.",
+      "l2": "Môj kamarát je lekár. Pracuje v nemocnici.",
+      "tokens_l1": [
+        "Mon",
+        "ami",
+        "est",
+        "médecin.",
+        "Il",
+        "travaille",
+        "à",
+        "l'hôpital.",
+        "C'est",
+        "ma",
+        "grand-mère.",
+        "Elle",
+        "habite",
+        "ici,",
+        "au",
+        "village."
+      ],
+      "tokens_l2": [
+        "Môj",
+        "kamarát",
+        "je",
+        "lekár.",
+        "Pracuje",
+        "v",
+        "nemocnici.",
+        "To",
+        "je",
+        "moja",
+        "babka.",
+        "Býva",
+        "tu,",
+        "na",
+        "dedine."
+      ]
+    },
+    {
+      "id": "order-m-m-dve-deti-s-mal",
+      "type": "order",
+      "l1": "J'ai deux enfants. Ils sont petits.",
+      "l2": "Mám dve deti. Sú malé.",
+      "tokens_l1": [
+        "J'ai",
+        "deux",
+        "enfants.",
+        "Ils",
+        "sont",
+        "petits.",
+        "Ma",
+        "grand-mère",
+        "habite",
+        "au",
+        "village",
+        "et",
+        "ma",
+        "tante",
+        "habite",
+        "en",
+        "ville."
+      ],
+      "tokens_l2": [
+        "Mám",
+        "dve",
+        "deti.",
+        "Sú",
+        "malé.",
+        "Moja",
+        "babka",
+        "býva",
+        "na",
+        "dedine",
+        "a",
+        "moja",
+        "teta",
+        "býva",
+        "v",
+        "meste."
+      ]
+    },
+    {
+      "id": "order-moji-rodi-ia-s-d-chodcovia-b-vaj-bl-zko",
+      "type": "order",
+      "l1": "Mes parents sont retraités. Ils habitent tout près.",
+      "l2": "Moji rodičia sú dôchodcovia. Bývajú blízko.",
+      "tokens_l1": [
+        "Mes",
+        "parents",
+        "sont",
+        "retraités.",
+        "Ils",
+        "habitent",
+        "tout",
+        "près.",
+        "J'ai",
+        "deux",
+        "enfants.",
+        "Ils",
+        "sont",
+        "petits."
+      ],
+      "tokens_l2": [
+        "Moji",
+        "rodičia",
+        "sú",
+        "dôchodcovia.",
+        "Bývajú",
+        "blízko.",
+        "Mám",
+        "dve",
+        "deti.",
+        "Sú",
+        "malé."
+      ]
+    },
+    {
+      "id": "match-eric-to-je-moja-rodina-sentences",
+      "type": "match",
+      "l1": [
+        "Eric, voici ma famille.",
+        "Bonjour.",
+        "Bonjour. Moi, je suis Zuzana.",
+        "C'est ma grand-mère. Elle habite ici, au village."
+      ],
+      "l2": [
+        "Eric, to je moja rodina.",
+        "Dobrý deň.",
+        "Dobrý deň. Ja som Zuzana.",
+        "To je moja babka. Býva tu, na dedine."
+      ]
+    }
+  ]
+}

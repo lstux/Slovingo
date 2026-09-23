@@ -1,0 +1,1322 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-voir",
+      "type": "qcm",
+      "l1": "vidieť",
+      "l2": "voir",
+      "choices_l1": [
+        "v parku",
+        "MHD",
+        "hodina"
+      ],
+      "choices_l2": [
+        "vendredi",
+        "le savon",
+        "la vendeuse"
+      ]
+    },
+    {
+      "id": "qcm-visiter",
+      "type": "qcm",
+      "l1": "navštíviť",
+      "l2": "visiter",
+      "choices_l1": [
+        "tu",
+        "ešte",
+        "bazén"
+      ],
+      "choices_l2": [
+        "regarder",
+        "tu travailles",
+        "la terrasse"
+      ]
+    },
+    {
+      "id": "qcm-se-promener",
+      "type": "qcm",
+      "l1": "prechádzať sa",
+      "l2": "se promener",
+      "choices_l1": [
+        "záhrada",
+        "mladý",
+        "čierny"
+      ],
+      "choices_l2": [
+        "chercher",
+        "le frère",
+        "acide"
+      ]
+    },
+    {
+      "id": "qcm-rencontrer",
+      "type": "qcm",
+      "l1": "stretnúť",
+      "l2": "rencontrer",
+      "choices_l1": [
+        "predavačka",
+        "čierne nohavice",
+        "čakať"
+      ],
+      "choices_l2": [
+        "la cuisine",
+        "la fontaine",
+        "le réveil"
+      ]
+    },
+    {
+      "id": "qcm-le-caf",
+      "type": "qcm",
+      "l1": "kaviareň",
+      "l2": "le café",
+      "choices_l1": [
+        "na stole",
+        "pijem",
+        "babka"
+      ],
+      "choices_l2": [
+        "la serviette",
+        "la demie",
+        "un peu"
+      ]
+    },
+    {
+      "id": "qcm-le-restaurant",
+      "type": "qcm",
+      "l1": "reštaurácia",
+      "l2": "le restaurant",
+      "choices_l1": [
+        "oddychovať",
+        "kľúč",
+        "modrý"
+      ],
+      "choices_l2": [
+        "les toilettes",
+        "dans l'église",
+        "très"
+      ]
+    },
+    {
+      "id": "qcm-le-cin-ma",
+      "type": "qcm",
+      "l1": "kino",
+      "l2": "le cinéma",
+      "choices_l1": [
+        "polica",
+        "biela káva",
+        "bývam"
+      ],
+      "choices_l2": [
+        "le distributeur",
+        "le balcon",
+        "l'épicerie"
+      ]
+    },
+    {
+      "id": "qcm-je-vois",
+      "type": "qcm",
+      "l1": "vidím",
+      "l2": "je vois",
+      "choices_l1": [
+        "hodiny",
+        "polica",
+        "zabočte!"
+      ],
+      "choices_l2": [
+        "le garage",
+        "le billet",
+        "C'est bon."
+      ]
+    },
+    {
+      "id": "qcm-tu-vois",
+      "type": "qcm",
+      "l1": "vidíš",
+      "l2": "tu vois",
+      "choices_l1": [
+        "divadlo",
+        "mladý",
+        "pivo"
+      ],
+      "choices_l2": [
+        "les crêpes",
+        "orange",
+        "le vélo"
+      ]
+    },
+    {
+      "id": "qcm-il-elle-voit",
+      "type": "qcm",
+      "l1": "vidí",
+      "l2": "il / elle voit",
+      "choices_l1": [
+        "asi",
+        "kupujeme",
+        "predsieň"
+      ],
+      "choices_l2": [
+        "Je vais au travail. (teraz, jedenkrát)",
+        "l'addition / la facture",
+        "Comment c'est ?"
+      ]
+    },
+    {
+      "id": "qcm-nous-voyons",
+      "type": "qcm",
+      "l1": "vidíme",
+      "l2": "nous voyons",
+      "choices_l1": [
+        "otvárať",
+        "ty si",
+        "chlieb"
+      ],
+      "choices_l2": [
+        "à Lyon",
+        "tu travailles",
+        "écrire"
+      ]
+    },
+    {
+      "id": "qcm-je-me-prom-ne",
+      "type": "qcm",
+      "l1": "prechádzam sa",
+      "l2": "je me promène",
+      "choices_l1": [
+        "ja som",
+        "raňajky",
+        "volať sa"
+      ],
+      "choices_l2": [
+        "bon / bonne",
+        "C'est devant l'église.",
+        "Il y a une table."
+      ]
+    },
+    {
+      "id": "qcm-tu-te-prom-nes",
+      "type": "qcm",
+      "l1": "prechádzaš sa",
+      "l2": "tu te promènes",
+      "choices_l1": [
+        "mydlo",
+        "poobede",
+        "vľavo"
+      ],
+      "choices_l2": [
+        "être en retard",
+        "Je prends une quiche.",
+        "Tu prends un café ?"
+      ]
+    },
+    {
+      "id": "qcm-il-elle-se-prom-ne",
+      "type": "qcm",
+      "l1": "prechádza sa",
+      "l2": "il / elle se promène",
+      "choices_l1": [
+        "chce",
+        "potom",
+        "môj brat"
+      ],
+      "choices_l2": [
+        "bon / bonne",
+        "il / elle travaille",
+        "Je vais arriver."
+      ]
+    },
+    {
+      "id": "qcm-l-exposition",
+      "type": "qcm",
+      "l1": "výstava",
+      "l2": "l'exposition",
+      "choices_l1": [
+        "skúšam",
+        "jem",
+        "zabočte!"
+      ],
+      "choices_l2": [
+        "les parents",
+        "le téléphone",
+        "le calendrier"
+      ]
+    },
+    {
+      "id": "qcm-le-concert",
+      "type": "qcm",
+      "l1": "koncert",
+      "l2": "le concert",
+      "choices_l1": [
+        "otvárať",
+        "roh",
+        "sladký"
+      ],
+      "choices_l2": [
+        "le beurre",
+        "j'achète",
+        "à droite"
+      ]
+    },
+    {
+      "id": "qcm-le-festival",
+      "type": "qcm",
+      "l1": "festival",
+      "l2": "le festival",
+      "choices_l1": [
+        "lekáreň",
+        "zelený",
+        "na stoličke"
+      ],
+      "choices_l2": [
+        "je veux",
+        "la bibliothèque",
+        "j'achète"
+      ]
+    },
+    {
+      "id": "qcm-le-billet",
+      "type": "qcm",
+      "l1": "lístok",
+      "l2": "le billet",
+      "choices_l1": [
+        "obývačka",
+        "ty máš",
+        "cukor"
+      ],
+      "choices_l2": [
+        "tourner",
+        "ma sœur",
+        "la lampe"
+      ]
+    },
+    {
+      "id": "qcm-le-programme",
+      "type": "qcm",
+      "l1": "program",
+      "l2": "le programme",
+      "choices_l1": [
+        "pracujú",
+        "pracuje",
+        "jedno euro"
+      ],
+      "choices_l2": [
+        "la bibliothèque",
+        "j'habite",
+        "tourner"
+      ]
+    },
+    {
+      "id": "qcm-int-ressant",
+      "type": "qcm",
+      "l1": "zaujímavý",
+      "l2": "intéressant",
+      "choices_l1": [
+        "vlakom",
+        "sivý",
+        "v sobotu"
+      ],
+      "choices_l2": [
+        "tôt",
+        "la semaine",
+        "toujours"
+      ]
+    },
+    {
+      "id": "qcm-ennuyeux",
+      "type": "qcm",
+      "l1": "nudný",
+      "l2": "ennuyeux",
+      "choices_l1": [
+        "okuliare",
+        "meno",
+        "narodeniny"
+      ],
+      "choices_l2": [
+        "blanc",
+        "attendre",
+        "la viande"
+      ]
+    },
+    {
+      "id": "blank-je-vois-l-glise-et-le-mus-e",
+      "type": "fill-blank",
+      "l1": "Vidím kostol a múzeum.",
+      "l2": "Je vois l'église et le musée.",
+      "missing_l1": "a",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "na",
+        "dnes",
+        "idem"
+      ],
+      "choices_l2": [
+        "a",
+        "vais",
+        "mais"
+      ]
+    },
+    {
+      "id": "blank-nous-voulons-visiter-le-th-tre",
+      "type": "fill-blank",
+      "l1": "Chceme navštíviť divadlo.",
+      "l2": "Nous voulons visiter le théâtre.",
+      "missing_l1": "navštíviť",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "sa",
+        "sú",
+        "môj"
+      ],
+      "choices_l2": [
+        "où",
+        "n'ai",
+        "un"
+      ]
+    },
+    {
+      "id": "blank-je-me-prom-ne-dans-le-parc",
+      "type": "fill-blank",
+      "l1": "Prechádzam sa v parku.",
+      "l2": "Je me promène dans le parc.",
+      "missing_l1": "v",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "na",
+        "mama",
+        "dnes"
+      ],
+      "choices_l2": [
+        "une",
+        "et",
+        "pas"
+      ]
+    },
+    {
+      "id": "blank-je-rencontre-un-ami-au-caf",
+      "type": "fill-blank",
+      "l1": "Stretávam kamaráta v kaviarni.",
+      "l2": "Je rencontre un ami au café.",
+      "missing_l1": "v",
+      "missing_l2": "un",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "na",
+        "rokov",
+        "si"
+      ],
+      "choices_l2": [
+        "cuisine",
+        "enfants",
+        "de"
+      ]
+    },
+    {
+      "id": "blank-nous-allons-au-restaurant",
+      "type": "fill-blank",
+      "l1": "Ideme do reštaurácie.",
+      "l2": "Nous allons au restaurant.",
+      "missing_l1": "do",
+      "missing_l2": "au",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "idem",
+        "dnes",
+        "sú"
+      ],
+      "choices_l2": [
+        "sont",
+        "à",
+        "je"
+      ]
+    },
+    {
+      "id": "blank-tu-veux-aller-au-cin-ma",
+      "type": "fill-blank",
+      "l1": "Chceš ísť do kina?",
+      "l2": "Tu veux aller au cinéma ?",
+      "missing_l1": "do",
+      "missing_l2": "veux",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "mi",
+        "nie",
+        "čas"
+      ],
+      "choices_l2": [
+        "vais",
+        "et",
+        "le"
+      ]
+    },
+    {
+      "id": "blank-tu-vois-cette-statue",
+      "type": "fill-blank",
+      "l1": "Vidíš tú sochu?",
+      "l2": "Tu vois cette statue ?",
+      "missing_l1": "tú",
+      "missing_l2": "cette",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "môj",
+        "o",
+        "nie"
+      ],
+      "choices_l2": [
+        "tu",
+        "un",
+        "de"
+      ]
+    },
+    {
+      "id": "blank-nous-nous-promenons-dans-la-ville",
+      "type": "fill-blank",
+      "l1": "Prechádzame sa po meste.",
+      "l2": "Nous nous promenons dans la ville.",
+      "missing_l1": "sa",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "na",
+        "som",
+        "ešte"
+      ],
+      "choices_l2": [
+        "cette",
+        "je",
+        "mais"
+      ]
+    },
+    {
+      "id": "blank-nous-allons-au-caf-tous-les-jours",
+      "type": "fill-blank",
+      "l1": "Chodíme do kaviarne každý deň.",
+      "l2": "Nous allons au café tous les jours.",
+      "missing_l1": "do",
+      "missing_l2": "les",
+      "blank_index_l1": 1,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "máte",
+        "prídem",
+        "o"
+      ],
+      "choices_l2": [
+        "le",
+        "est",
+        "n'ai"
+      ]
+    },
+    {
+      "id": "blank-allez-tout-droit-le-cin-ma-est-c-t-du-th-tre",
+      "type": "fill-blank",
+      "l1": "Choďte rovno, kino je vedľa divadla.",
+      "l2": "Allez tout droit, le cinéma est à côté du théâtre.",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "mama",
+        "prosím",
+        "mi"
+      ],
+      "choices_l2": [
+        "mais",
+        "enfants",
+        "vais"
+      ]
+    },
+    {
+      "id": "blank-je-te-retrouve-sur-la-place-cinq-heures",
+      "type": "fill-blank",
+      "l1": "Stretnem ťa na námestí o piatej.",
+      "l2": "Je te retrouve sur la place à cinq heures.",
+      "missing_l1": "na",
+      "missing_l2": "la",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "prídem",
+        "máte",
+        "v"
+      ],
+      "choices_l2": [
+        "en",
+        "maison",
+        "un"
+      ]
+    },
+    {
+      "id": "blank-nous-voulons-aller-l-exposition",
+      "type": "fill-blank",
+      "l1": "Chceme ísť na výstavu.",
+      "l2": "Nous voulons aller à l'exposition.",
+      "missing_l1": "na",
+      "missing_l2": "à",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "sa",
+        "prídem",
+        "moja"
+      ],
+      "choices_l2": [
+        "du",
+        "cuisine",
+        "sont"
+      ]
+    },
+    {
+      "id": "blank-le-concert-est-int-ressant",
+      "type": "fill-blank",
+      "l1": "Koncert je zaujímavý.",
+      "l2": "Le concert est intéressant.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "a",
+        "deti",
+        "sú"
+      ],
+      "choices_l2": [
+        "veux",
+        "un",
+        "ne"
+      ]
+    },
+    {
+      "id": "blank-le-film-est-ennuyeux",
+      "type": "fill-blank",
+      "l1": "Film je nudný.",
+      "l2": "Le film est ennuyeux.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "môj",
+        "deti",
+        "otec"
+      ],
+      "choices_l2": [
+        "suis",
+        "cuisine",
+        "en"
+      ]
+    },
+    {
+      "id": "blank-vous-avez-des-billets-pour-le-festival",
+      "type": "fill-blank",
+      "l1": "Máte lístky na festival?",
+      "l2": "Vous avez des billets pour le festival ?",
+      "missing_l1": "na",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "máte",
+        "dnes",
+        "chcem"
+      ],
+      "choices_l2": [
+        "ma",
+        "de",
+        "enfants"
+      ]
+    },
+    {
+      "id": "blank-quel-est-le-programme-ce-soir",
+      "type": "fill-blank",
+      "l1": "Aký je program dnes večer?",
+      "l2": "Quel est le programme ce soir ?",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ja",
+        "na",
+        "koľko"
+      ],
+      "choices_l2": [
+        "heures",
+        "il",
+        "dans"
+      ]
+    },
+    {
+      "id": "listen-je-vois-l-glise-et-le-mus-e",
+      "type": "listen",
+      "l1": "Vidím kostol a múzeum.",
+      "l2": "Je vois l'église et le musée.",
+      "choices_l2": [
+        "Je n'ai pas de frère. J'ai une sœur.",
+        "Aujourd'hui j'ai le temps, demain non.",
+        "Les fruits sont frais et très sucrés."
+      ]
+    },
+    {
+      "id": "listen-nous-voulons-visiter-le-th-tre",
+      "type": "listen",
+      "l1": "Chceme navštíviť divadlo.",
+      "l2": "Nous voulons visiter le théâtre.",
+      "choices_l2": [
+        "L'eau est chaude. J'en veux de la froide.",
+        "Où est le panier ?",
+        "Je veux encore de l'eau, s'il te plaît."
+      ]
+    },
+    {
+      "id": "listen-je-me-prom-ne-dans-le-parc",
+      "type": "listen",
+      "l1": "Prechádzam sa v parku.",
+      "l2": "Je me promène dans le parc.",
+      "choices_l2": [
+        "Le week-end, j'ai le temps.",
+        "Je paie par carte.",
+        "C'est bon marché."
+      ]
+    },
+    {
+      "id": "listen-je-rencontre-un-ami-au-caf",
+      "type": "listen",
+      "l1": "Stretávam kamaráta v kaviarni.",
+      "l2": "Je rencontre un ami au café.",
+      "choices_l2": [
+        "Le couteau est dans la cuisine.",
+        "J'aime cette couleur, mais la taille n'est pas bonne.",
+        "Du pain et du beurre, s'il te plaît."
+      ]
+    },
+    {
+      "id": "listen-nous-allons-au-restaurant",
+      "type": "listen",
+      "l1": "Ideme do reštaurácie.",
+      "l2": "Nous allons au restaurant.",
+      "choices_l2": [
+        "L'après-midi, je n'ai pas le temps, mais le soir oui.",
+        "Oui, je vous en prie. Asseyez-vous sur le canapé.",
+        "Je veux du vin, s'il te plaît."
+      ]
+    },
+    {
+      "id": "listen-tu-veux-aller-au-cin-ma",
+      "type": "listen",
+      "l1": "Chceš ísť do kina?",
+      "l2": "Tu veux aller au cinéma ?",
+      "choices_l2": [
+        "Mes enfants sont petits.",
+        "J'arrive à huit heures moins le quart.",
+        "Le panier est plein, le chariot est vide."
+      ]
+    },
+    {
+      "id": "listen-tu-vois-cette-statue",
+      "type": "listen",
+      "l1": "Vidíš tú sochu?",
+      "l2": "Tu vois cette statue ?",
+      "choices_l2": [
+        "Mon père est grand et costaud.",
+        "Le miroir est dans la salle de bain.",
+        "Vous avez un bonnet noir ?"
+      ]
+    },
+    {
+      "id": "listen-nous-nous-promenons-dans-la-ville",
+      "type": "listen",
+      "l1": "Prechádzame sa po meste.",
+      "l2": "Nous nous promenons dans la ville.",
+      "choices_l2": [
+        "Vous l'avez en noir ?",
+        "Oui. Lavez les verres, s'il vous plaît.",
+        "L'année a douze mois."
+      ]
+    },
+    {
+      "id": "listen-nous-allons-au-caf-tous-les-jours",
+      "type": "listen",
+      "l1": "Chodíme do kaviarne každý deň.",
+      "l2": "Nous allons au café tous les jours.",
+      "choices_l2": [
+        "Quel âge as-tu ?",
+        "Je prends une soupe et ensuite un pot-au-feu.",
+        "D'habitude, je vais au travail en bus."
+      ]
+    },
+    {
+      "id": "listen-allez-tout-droit-le-cin-ma-est-c-t-du-th-tre",
+      "type": "listen",
+      "l1": "Choďte rovno, kino je vedľa divadla.",
+      "l2": "Allez tout droit, le cinéma est à côté du théâtre.",
+      "choices_l2": [
+        "Bleu ou vert. Pas noir.",
+        "Le bus a dix minutes de retard.",
+        "Je vais appeler un taxi."
+      ]
+    },
+    {
+      "id": "listen-je-te-retrouve-sur-la-place-cinq-heures",
+      "type": "listen",
+      "l1": "Stretnem ťa na námestí o piatej.",
+      "l2": "Je te retrouve sur la place à cinq heures.",
+      "choices_l2": [
+        "Ma maman est professeure.",
+        "Je veux manger.",
+        "Le croissant est chaud et savoureux."
+      ]
+    },
+    {
+      "id": "listen-nous-voulons-aller-l-exposition",
+      "type": "listen",
+      "l1": "Chceme ísť na výstavu.",
+      "l2": "Nous voulons aller à l'exposition.",
+      "choices_l2": [
+        "Je cherche mes lunettes.",
+        "Excusez-moi, où est la poste ?",
+        "Quand as-tu ton rendez-vous ?"
+      ]
+    },
+    {
+      "id": "listen-le-concert-est-int-ressant",
+      "type": "listen",
+      "l1": "Koncert je zaujímavý.",
+      "l2": "Le concert est intéressant.",
+      "choices_l2": [
+        "C'est notre maison.",
+        "Ma maman a cinquante ans.",
+        "La lampe est sur la table, mais le livre est sur l'étagère."
+      ]
+    },
+    {
+      "id": "listen-le-film-est-ennuyeux",
+      "type": "listen",
+      "l1": "Film je nudný.",
+      "l2": "Le film est ennuyeux.",
+      "choices_l2": [
+        "La baguette est fraîche.",
+        "Mon mari s'appelle Marc.",
+        "J'achète un tee-shirt bleu et un pantalon noir."
+      ]
+    },
+    {
+      "id": "listen-vous-avez-des-billets-pour-le-festival",
+      "type": "listen",
+      "l1": "Máte lístky na festival?",
+      "l2": "Vous avez des billets pour le festival ?",
+      "choices_l2": [
+        "Mon oncle a une grande maison et un jardin.",
+        "Oui, exactement. Pas sept heures trente !",
+        "Nous cherchons les clés. Nous les cherchons depuis une heure !"
+      ]
+    },
+    {
+      "id": "listen-quel-est-le-programme-ce-soir",
+      "type": "listen",
+      "l1": "Aký je program dnes večer?",
+      "l2": "Quel est le programme ce soir ?",
+      "choices_l2": [
+        "Salut Chloé. Quel âge a ta sœur ?",
+        "La nuit, c'est calme.",
+        "Je cuisine. Nous déjeunons à midi."
+      ]
+    },
+    {
+      "id": "order-je-vois-l-glise-et-le-mus-e",
+      "type": "order",
+      "l1": "Vidím kostol a múzeum.",
+      "l2": "Je vois l'église et le musée.",
+      "tokens_l1": [
+        "Vidím",
+        "kostol",
+        "a",
+        "múzeum.",
+        "Koncert",
+        "je",
+        "zaujímavý."
+      ],
+      "tokens_l2": [
+        "Je",
+        "vois",
+        "l'église",
+        "et",
+        "le",
+        "musée.",
+        "Le",
+        "concert",
+        "est",
+        "intéressant."
+      ]
+    },
+    {
+      "id": "order-nous-voulons-visiter-le-th-tre",
+      "type": "order",
+      "l1": "Chceme navštíviť divadlo.",
+      "l2": "Nous voulons visiter le théâtre.",
+      "tokens_l1": [
+        "Chceme",
+        "navštíviť",
+        "divadlo.",
+        "Vidím",
+        "kostol",
+        "a",
+        "múzeum."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "voulons",
+        "visiter",
+        "le",
+        "théâtre.",
+        "Je",
+        "vois",
+        "l'église",
+        "et",
+        "le",
+        "musée."
+      ]
+    },
+    {
+      "id": "order-je-me-prom-ne-dans-le-parc",
+      "type": "order",
+      "l1": "Prechádzam sa v parku.",
+      "l2": "Je me promène dans le parc.",
+      "tokens_l1": [
+        "Prechádzam",
+        "sa",
+        "v",
+        "parku.",
+        "Prechádzame",
+        "sa",
+        "po",
+        "meste."
+      ],
+      "tokens_l2": [
+        "Je",
+        "me",
+        "promène",
+        "dans",
+        "le",
+        "parc.",
+        "Nous",
+        "nous",
+        "promenons",
+        "dans",
+        "la",
+        "ville."
+      ]
+    },
+    {
+      "id": "order-je-rencontre-un-ami-au-caf",
+      "type": "order",
+      "l1": "Stretávam kamaráta v kaviarni.",
+      "l2": "Je rencontre un ami au café.",
+      "tokens_l1": [
+        "Stretávam",
+        "kamaráta",
+        "v",
+        "kaviarni.",
+        "Prechádzam",
+        "sa",
+        "v",
+        "parku."
+      ],
+      "tokens_l2": [
+        "Je",
+        "rencontre",
+        "un",
+        "ami",
+        "au",
+        "café.",
+        "Je",
+        "me",
+        "promène",
+        "dans",
+        "le",
+        "parc."
+      ]
+    },
+    {
+      "id": "order-nous-allons-au-restaurant",
+      "type": "order",
+      "l1": "Ideme do reštaurácie.",
+      "l2": "Nous allons au restaurant.",
+      "tokens_l1": [
+        "Ideme",
+        "do",
+        "reštaurácie.",
+        "Chceme",
+        "ísť",
+        "na",
+        "výstavu."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "allons",
+        "au",
+        "restaurant.",
+        "Nous",
+        "voulons",
+        "aller",
+        "à",
+        "l'exposition."
+      ]
+    },
+    {
+      "id": "order-tu-veux-aller-au-cin-ma",
+      "type": "order",
+      "l1": "Chceš ísť do kina?",
+      "l2": "Tu veux aller au cinéma ?",
+      "tokens_l1": [
+        "Chceš",
+        "ísť",
+        "do",
+        "kina?",
+        "Chceme",
+        "ísť",
+        "na",
+        "výstavu."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "veux",
+        "aller",
+        "au",
+        "cinéma",
+        "?",
+        "Nous",
+        "voulons",
+        "aller",
+        "à",
+        "l'exposition."
+      ]
+    },
+    {
+      "id": "order-tu-vois-cette-statue",
+      "type": "order",
+      "l1": "Vidíš tú sochu?",
+      "l2": "Tu vois cette statue ?",
+      "tokens_l1": [
+        "Vidíš",
+        "tú",
+        "sochu?",
+        "Chodíme",
+        "do",
+        "kaviarne",
+        "každý",
+        "deň."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "vois",
+        "cette",
+        "statue",
+        "?",
+        "Nous",
+        "allons",
+        "au",
+        "café",
+        "tous",
+        "les",
+        "jours."
+      ]
+    },
+    {
+      "id": "order-nous-nous-promenons-dans-la-ville",
+      "type": "order",
+      "l1": "Prechádzame sa po meste.",
+      "l2": "Nous nous promenons dans la ville.",
+      "tokens_l1": [
+        "Prechádzame",
+        "sa",
+        "po",
+        "meste.",
+        "Choďte",
+        "rovno,",
+        "kino",
+        "je",
+        "vedľa",
+        "divadla."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "nous",
+        "promenons",
+        "dans",
+        "la",
+        "ville.",
+        "Allez",
+        "tout",
+        "droit,",
+        "le",
+        "cinéma",
+        "est",
+        "à",
+        "côté",
+        "du",
+        "théâtre."
+      ]
+    },
+    {
+      "id": "order-nous-allons-au-caf-tous-les-jours",
+      "type": "order",
+      "l1": "Chodíme do kaviarne každý deň.",
+      "l2": "Nous allons au café tous les jours.",
+      "tokens_l1": [
+        "Chodíme",
+        "do",
+        "kaviarne",
+        "každý",
+        "deň.",
+        "Vidíš",
+        "tú",
+        "sochu?"
+      ],
+      "tokens_l2": [
+        "Nous",
+        "allons",
+        "au",
+        "café",
+        "tous",
+        "les",
+        "jours.",
+        "Tu",
+        "vois",
+        "cette",
+        "statue",
+        "?"
+      ]
+    },
+    {
+      "id": "order-allez-tout-droit-le-cin-ma-est-c-t-du-th-tre",
+      "type": "order",
+      "l1": "Choďte rovno, kino je vedľa divadla.",
+      "l2": "Allez tout droit, le cinéma est à côté du théâtre.",
+      "tokens_l1": [
+        "Choďte",
+        "rovno,",
+        "kino",
+        "je",
+        "vedľa",
+        "divadla.",
+        "Chceme",
+        "navštíviť",
+        "divadlo."
+      ],
+      "tokens_l2": [
+        "Allez",
+        "tout",
+        "droit,",
+        "le",
+        "cinéma",
+        "est",
+        "à",
+        "côté",
+        "du",
+        "théâtre.",
+        "Nous",
+        "voulons",
+        "visiter",
+        "le",
+        "théâtre."
+      ]
+    },
+    {
+      "id": "order-je-te-retrouve-sur-la-place-cinq-heures",
+      "type": "order",
+      "l1": "Stretnem ťa na námestí o piatej.",
+      "l2": "Je te retrouve sur la place à cinq heures.",
+      "tokens_l1": [
+        "Stretnem",
+        "ťa",
+        "na",
+        "námestí",
+        "o",
+        "piatej.",
+        "Prechádzame",
+        "sa",
+        "po",
+        "meste."
+      ],
+      "tokens_l2": [
+        "Je",
+        "te",
+        "retrouve",
+        "sur",
+        "la",
+        "place",
+        "à",
+        "cinq",
+        "heures.",
+        "Nous",
+        "nous",
+        "promenons",
+        "dans",
+        "la",
+        "ville."
+      ]
+    },
+    {
+      "id": "order-nous-voulons-aller-l-exposition",
+      "type": "order",
+      "l1": "Chceme ísť na výstavu.",
+      "l2": "Nous voulons aller à l'exposition.",
+      "tokens_l1": [
+        "Chceme",
+        "ísť",
+        "na",
+        "výstavu.",
+        "Stretnem",
+        "ťa",
+        "na",
+        "námestí",
+        "o",
+        "piatej."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "voulons",
+        "aller",
+        "à",
+        "l'exposition.",
+        "Je",
+        "te",
+        "retrouve",
+        "sur",
+        "la",
+        "place",
+        "à",
+        "cinq",
+        "heures."
+      ]
+    },
+    {
+      "id": "order-le-concert-est-int-ressant",
+      "type": "order",
+      "l1": "Koncert je zaujímavý.",
+      "l2": "Le concert est intéressant.",
+      "tokens_l1": [
+        "Koncert",
+        "je",
+        "zaujímavý.",
+        "Film",
+        "je",
+        "nudný."
+      ],
+      "tokens_l2": [
+        "Le",
+        "concert",
+        "est",
+        "intéressant.",
+        "Le",
+        "film",
+        "est",
+        "ennuyeux."
+      ]
+    },
+    {
+      "id": "order-le-film-est-ennuyeux",
+      "type": "order",
+      "l1": "Film je nudný.",
+      "l2": "Le film est ennuyeux.",
+      "tokens_l1": [
+        "Film",
+        "je",
+        "nudný.",
+        "Stretávam",
+        "kamaráta",
+        "v",
+        "kaviarni."
+      ],
+      "tokens_l2": [
+        "Le",
+        "film",
+        "est",
+        "ennuyeux.",
+        "Je",
+        "rencontre",
+        "un",
+        "ami",
+        "au",
+        "café."
+      ]
+    },
+    {
+      "id": "order-vous-avez-des-billets-pour-le-festival",
+      "type": "order",
+      "l1": "Máte lístky na festival?",
+      "l2": "Vous avez des billets pour le festival ?",
+      "tokens_l1": [
+        "Máte",
+        "lístky",
+        "na",
+        "festival?",
+        "Chodíme",
+        "do",
+        "kaviarne",
+        "každý",
+        "deň."
+      ],
+      "tokens_l2": [
+        "Vous",
+        "avez",
+        "des",
+        "billets",
+        "pour",
+        "le",
+        "festival",
+        "?",
+        "Nous",
+        "allons",
+        "au",
+        "café",
+        "tous",
+        "les",
+        "jours."
+      ]
+    },
+    {
+      "id": "order-quel-est-le-programme-ce-soir",
+      "type": "order",
+      "l1": "Aký je program dnes večer?",
+      "l2": "Quel est le programme ce soir ?",
+      "tokens_l1": [
+        "Aký",
+        "je",
+        "program",
+        "dnes",
+        "večer?",
+        "Vidím",
+        "kostol",
+        "a",
+        "múzeum."
+      ],
+      "tokens_l2": [
+        "Quel",
+        "est",
+        "le",
+        "programme",
+        "ce",
+        "soir",
+        "?",
+        "Je",
+        "vois",
+        "l'église",
+        "et",
+        "le",
+        "musée."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1319 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-rouge",
+      "type": "qcm",
+      "l1": "červený",
+      "l2": "rouge",
+      "choices_l1": [
+        "potraviny",
+        "chlieb",
+        "sesternica"
+      ],
+      "choices_l2": [
+        "s'appeler",
+        "précisément",
+        "le couteau"
+      ]
+    },
+    {
+      "id": "qcm-bleu",
+      "type": "qcm",
+      "l1": "modrý",
+      "l2": "bleu",
+      "choices_l1": [
+        "vozík",
+        "mladý",
+        "jedia"
+      ],
+      "choices_l2": [
+        "aussi",
+        "la soupe",
+        "nous allons"
+      ]
+    },
+    {
+      "id": "qcm-vert",
+      "type": "qcm",
+      "l1": "zelený",
+      "l2": "vert",
+      "choices_l1": [
+        "hlad",
+        "palacinky",
+        "vo štvrtok"
+      ],
+      "choices_l2": [
+        "être assis",
+        "l'horloge",
+        "la cour"
+      ]
+    },
+    {
+      "id": "qcm-jaune",
+      "type": "qcm",
+      "l1": "žltý",
+      "l2": "jaune",
+      "choices_l1": [
+        "robiť",
+        "idú",
+        "pivnica"
+      ],
+      "choices_l2": [
+        "l'école",
+        "le verre",
+        "beaucoup"
+      ]
+    },
+    {
+      "id": "qcm-noir",
+      "type": "qcm",
+      "l1": "čierny",
+      "l2": "noir",
+      "choices_l1": [
+        "ty si",
+        "hodiny",
+        "sesternica"
+      ],
+      "choices_l2": [
+        "nous habitons",
+        "la caisse",
+        "acide"
+      ]
+    },
+    {
+      "id": "qcm-blanc",
+      "type": "qcm",
+      "l1": "biely",
+      "l2": "blanc",
+      "choices_l1": [
+        "chlieb",
+        "soľ",
+        "ja mám"
+      ],
+      "choices_l2": [
+        "aider",
+        "la clé",
+        "loin"
+      ]
+    },
+    {
+      "id": "qcm-la-couleur",
+      "type": "qcm",
+      "l1": "farba",
+      "l2": "la couleur",
+      "choices_l1": [
+        "veľa",
+        "stolička",
+        "polievka"
+      ],
+      "choices_l2": [
+        "samedi",
+        "la cuisine",
+        "le téléphone"
+      ]
+    },
+    {
+      "id": "qcm-un-pull-rouge-mu-sk-rod",
+      "type": "qcm",
+      "l1": "červený sveter",
+      "l2": "un pull rouge (mužský rod)",
+      "choices_l1": [
+        "kúpeľňa",
+        "garáž",
+        "babka"
+      ],
+      "choices_l2": [
+        "mauvais / mauvaise",
+        "il / elle est",
+        "sucré / sucrée"
+      ]
+    },
+    {
+      "id": "qcm-une-veste-rouge-ensk-rod",
+      "type": "qcm",
+      "l1": "červená bunda",
+      "l2": "une veste rouge (ženský rod)",
+      "choices_l1": [
+        "quiche lorraine",
+        "ochutnať",
+        "pol"
+      ],
+      "choices_l2": [
+        "je ne dors pas",
+        "une petite sœur",
+        "mauvais / mauvaise"
+      ]
+    },
+    {
+      "id": "qcm-des-chaussures-rouges-mno-n-slo",
+      "type": "qcm",
+      "l1": "červené topánky",
+      "l2": "des chaussures rouges (množné číslo)",
+      "choices_l1": [
+        "lekáreň",
+        "studený",
+        "spolu"
+      ],
+      "choices_l2": [
+        "à deux heures",
+        "au marché (à + le)",
+        "vieux / vieille"
+      ]
+    },
+    {
+      "id": "qcm-ce-pull-mu-sk-rod",
+      "type": "qcm",
+      "l1": "tento sveter",
+      "l2": "ce pull (mužský rod)",
+      "choices_l1": [
+        "palacinky",
+        "tarta",
+        "hodiny"
+      ],
+      "choices_l2": [
+        "Il est dix heures.",
+        "à une heure",
+        "savoureux / savoureuse"
+      ]
+    },
+    {
+      "id": "qcm-cet-imperm-able-mu-sk-rod-pred-samohl-skou",
+      "type": "qcm",
+      "l1": "tento plášť do dažďa",
+      "l2": "cet imperméable (mužský rod pred samohláskou)",
+      "choices_l1": [
+        "V pondelok pracujem.",
+        "Aké je to?",
+        "Sú dve hodiny."
+      ],
+      "choices_l2": [
+        "petit / petite",
+        "Ce sont des pièces.",
+        "Il est cinq heures."
+      ]
+    },
+    {
+      "id": "qcm-cette-veste-ensk-rod",
+      "type": "qcm",
+      "l1": "táto bunda",
+      "l2": "cette veste (ženský rod)",
+      "choices_l1": [
+        "jeme",
+        "rok",
+        "sviatok"
+      ],
+      "choices_l2": [
+        "le retraité / la retraitée",
+        "plaire au goût",
+        "j'ouvre, tu ouvres, il ouvre"
+      ]
+    },
+    {
+      "id": "qcm-ces-chaussures-mno-n-slo",
+      "type": "qcm",
+      "l1": "tieto topánky",
+      "l2": "ces chaussures (množné číslo)",
+      "choices_l1": [
+        "v nedeľu",
+        "kniha",
+        "variť"
+      ],
+      "choices_l2": [
+        "arriver / venir",
+        "Ce sont des pièces.",
+        "sur la table"
+      ]
+    },
+    {
+      "id": "qcm-orange",
+      "type": "qcm",
+      "l1": "oranžový",
+      "l2": "orange",
+      "choices_l1": [
+        "zrkadlo",
+        "hodiny",
+        "pivo"
+      ],
+      "choices_l2": [
+        "l'assiette",
+        "la fille",
+        "tu cherches"
+      ]
+    },
+    {
+      "id": "qcm-rose",
+      "type": "qcm",
+      "l1": "ružový",
+      "l2": "rose",
+      "choices_l1": [
+        "kupuješ",
+        "otvorené",
+        "dcéra"
+      ],
+      "choices_l2": [
+        "nous mangeons",
+        "J'ai soif.",
+        "le sac"
+      ]
+    },
+    {
+      "id": "qcm-marron",
+      "type": "qcm",
+      "l1": "hnedý",
+      "l2": "marron",
+      "choices_l1": [
+        "pracujem",
+        "zrkadlo",
+        "chutný"
+      ],
+      "choices_l2": [
+        "le magasin",
+        "le calendrier",
+        "assoiffé"
+      ]
+    },
+    {
+      "id": "qcm-gris",
+      "type": "qcm",
+      "l1": "sivý",
+      "l2": "gris",
+      "choices_l1": [
+        "chodba",
+        "upratovať",
+        "ja mám"
+      ],
+      "choices_l2": [
+        "l'étagère",
+        "ouvert",
+        "aller"
+      ]
+    },
+    {
+      "id": "qcm-fonc",
+      "type": "qcm",
+      "l1": "tmavý",
+      "l2": "foncé",
+      "choices_l1": [
+        "prísť",
+        "ty máš",
+        "dva roky"
+      ],
+      "choices_l2": [
+        "les enfants",
+        "mon frère",
+        "manger"
+      ]
+    },
+    {
+      "id": "qcm-clair",
+      "type": "qcm",
+      "l1": "svetlý",
+      "l2": "clair",
+      "choices_l1": [
+        "čítať",
+        "jem",
+        "v dome"
+      ],
+      "choices_l2": [
+        "le réveil",
+        "habiter",
+        "la maman"
+      ]
+    },
+    {
+      "id": "qcm-la-pomme",
+      "type": "qcm",
+      "l1": "jablko",
+      "l2": "la pomme",
+      "choices_l1": [
+        "o piatej",
+        "spolu",
+        "mesiac"
+      ],
+      "choices_l2": [
+        "la pharmacie",
+        "être assis",
+        "le calendrier"
+      ]
+    },
+    {
+      "id": "blank-je-veux-ce-pull-rouge",
+      "type": "fill-blank",
+      "l1": "Chcem tento červený sveter.",
+      "l2": "Je veux ce pull rouge.",
+      "missing_l1": "tento",
+      "missing_l2": "veux",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "tu",
+        "kde",
+        "dnes"
+      ],
+      "choices_l2": [
+        "suis",
+        "et",
+        "travaille"
+      ]
+    },
+    {
+      "id": "blank-tu-as-cette-veste-bleue",
+      "type": "fill-blank",
+      "l1": "Máš túto modrú bundu?",
+      "l2": "Tu as cette veste bleue ?",
+      "missing_l1": "modrú",
+      "missing_l2": "cette",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "nemám",
+        "ale",
+        "ešte"
+      ],
+      "choices_l2": [
+        "heures",
+        "c'est",
+        "en"
+      ]
+    },
+    {
+      "id": "blank-cette-chemise-est-verte",
+      "type": "fill-blank",
+      "l1": "Táto košeľa je zelená.",
+      "l2": "Cette chemise est verte.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "mama",
+        "kuchyni",
+        "ja"
+      ],
+      "choices_l2": [
+        "suis",
+        "c'est",
+        "où"
+      ]
+    },
+    {
+      "id": "blank-je-veux-ce-tee-shirt-jaune",
+      "type": "fill-blank",
+      "l1": "Chcem toto žlté tričko.",
+      "l2": "Je veux ce tee-shirt jaune.",
+      "missing_l1": "toto",
+      "missing_l2": "veux",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "mama",
+        "ešte",
+        "som"
+      ],
+      "choices_l2": [
+        "c'est",
+        "elle",
+        "temps"
+      ]
+    },
+    {
+      "id": "blank-vous-l-avez-en-noir",
+      "type": "fill-blank",
+      "l1": "Máte to v čiernej?",
+      "l2": "Vous l'avez en noir ?",
+      "missing_l1": "v",
+      "missing_l2": "en",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ja",
+        "sú",
+        "hľadám"
+      ],
+      "choices_l2": [
+        "un",
+        "suis",
+        "a"
+      ]
+    },
+    {
+      "id": "blank-la-couleur-blanche-est-jolie",
+      "type": "fill-blank",
+      "l1": "Biela farba je pekná.",
+      "l2": "La couleur blanche est jolie.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "kuchyni",
+        "sa",
+        "to"
+      ],
+      "choices_l2": [
+        "veux",
+        "en",
+        "dans"
+      ]
+    },
+    {
+      "id": "blank-a-me-pla-t",
+      "type": "fill-blank",
+      "l1": "Páči sa mi to.",
+      "l2": "Ça me plaît.",
+      "missing_l1": "sa",
+      "missing_l2": "plaît",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "v",
+        "kde",
+        "a"
+      ],
+      "choices_l2": [
+        "mon",
+        "cuisine",
+        "mais"
+      ]
+    },
+    {
+      "id": "blank-cette-couleur-ne-me-pla-t-pas",
+      "type": "fill-blank",
+      "l1": "Nepáči sa mi tá farba.",
+      "l2": "Cette couleur ne me plaît pas.",
+      "missing_l1": "sa",
+      "missing_l2": "pas",
+      "blank_index_l1": 1,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "pot-au-feu",
+        "má",
+        "rokov"
+      ],
+      "choices_l2": [
+        "mon",
+        "en",
+        "où"
+      ]
+    },
+    {
+      "id": "blank-je-vais-au-magasin-je-veux-ce-sac-bleu",
+      "type": "fill-blank",
+      "l1": "Idem do obchodu. Chcem túto modrú tašku.",
+      "l2": "Je vais au magasin. Je veux ce sac bleu.",
+      "missing_l1": "Chcem",
+      "missing_l2": "Je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "pot-au-feu",
+        "sa",
+        "nemám"
+      ],
+      "choices_l2": [
+        "de",
+        "n'ai",
+        "temps"
+      ]
+    },
+    {
+      "id": "blank-j-ach-te-des-pommes-rouges-au-march",
+      "type": "fill-blank",
+      "l1": "Kupujem červené jablká na trhu.",
+      "l2": "J'achète des pommes rouges au marché.",
+      "missing_l1": "na",
+      "missing_l2": "au",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "si",
+        "môj",
+        "otec"
+      ],
+      "choices_l2": [
+        "en",
+        "enfants",
+        "heures"
+      ]
+    },
+    {
+      "id": "blank-j-aime-la-couleur-verte-mais-pas-la-jaune",
+      "type": "fill-blank",
+      "l1": "Páči sa mi zelená farba, ale nie žltá.",
+      "l2": "J'aime la couleur verte, mais pas la jaune.",
+      "missing_l1": "sa",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "si",
+        "na",
+        "mama"
+      ],
+      "choices_l2": [
+        "temps",
+        "mon",
+        "enfants"
+      ]
+    },
+    {
+      "id": "blank-j-ai-des-chaussures-marron",
+      "type": "fill-blank",
+      "l1": "Mám hnedé topánky.",
+      "l2": "J'ai des chaussures marron.",
+      "missing_l1": "topánky",
+      "missing_l2": "des",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "mama",
+        "rokov",
+        "ešte"
+      ],
+      "choices_l2": [
+        "vous",
+        "ne",
+        "de"
+      ]
+    },
+    {
+      "id": "blank-je-veux-une-couleur-claire-pas-fonc-e",
+      "type": "fill-blank",
+      "l1": "Chcem svetlú farbu, nie tmavú.",
+      "l2": "Je veux une couleur claire, pas foncée.",
+      "missing_l1": "nie",
+      "missing_l2": "pas",
+      "blank_index_l1": 3,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "prídem",
+        "je",
+        "môj"
+      ],
+      "choices_l2": [
+        "tu",
+        "il",
+        "vous"
+      ]
+    },
+    {
+      "id": "blank-cette-voiture-grise-est-belle",
+      "type": "fill-blank",
+      "l1": "Sivé auto je pekné.",
+      "l2": "Cette voiture grise est belle.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "prosím",
+        "si",
+        "pol"
+      ],
+      "choices_l2": [
+        "veux",
+        "mon",
+        "la"
+      ]
+    },
+    {
+      "id": "blank-ce-sac-rose-me-pla-t",
+      "type": "fill-blank",
+      "l1": "Ružová taška sa mi páči.",
+      "l2": "Ce sac rose me plaît.",
+      "missing_l1": "sa",
+      "missing_l2": "plaît",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "o",
+        "prídem",
+        "nemám"
+      ],
+      "choices_l2": [
+        "la",
+        "mais",
+        "a"
+      ]
+    },
+    {
+      "id": "blank-cette-pomme-orange-est-sucr-e",
+      "type": "fill-blank",
+      "l1": "Oranžové jablko je sladké.",
+      "l2": "Cette pomme orange est sucrée.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "a",
+        "mama",
+        "chcem"
+      ],
+      "choices_l2": [
+        "travaille",
+        "ma",
+        "vous"
+      ]
+    },
+    {
+      "id": "listen-je-veux-ce-pull-rouge",
+      "type": "listen",
+      "l1": "Chcem tento červený sveter.",
+      "l2": "Je veux ce pull rouge.",
+      "choices_l2": [
+        "La porte est là-bas.",
+        "Jeudi, je commence à huit heures.",
+        "Six heures et demie, c'est six heures trente ?"
+      ]
+    },
+    {
+      "id": "listen-tu-as-cette-veste-bleue",
+      "type": "listen",
+      "l1": "Máš túto modrú bundu?",
+      "l2": "Tu as cette veste bleue ?",
+      "choices_l2": [
+        "Le réfrigérateur est dans la cuisine.",
+        "Eric, vous prenez du vin ou de l'eau ?",
+        "J'ai faim. Je prends du pot-au-feu et du pain."
+      ]
+    },
+    {
+      "id": "listen-cette-chemise-est-verte",
+      "type": "listen",
+      "l1": "Táto košeľa je zelená.",
+      "l2": "Cette chemise est verte.",
+      "choices_l2": [
+        "Où travailles-tu ?",
+        "As-tu un frère ?",
+        "De l'eau, s'il vous plaît. J'ai soif."
+      ]
+    },
+    {
+      "id": "listen-je-veux-ce-tee-shirt-jaune",
+      "type": "listen",
+      "l1": "Chcem toto žlté tričko.",
+      "l2": "Je veux ce tee-shirt jaune.",
+      "choices_l2": [
+        "Je n'ai pas de frère, mais j'ai deux sœurs.",
+        "Ma grand-mère habite à la campagne.",
+        "C'est ma famille."
+      ]
+    },
+    {
+      "id": "listen-vous-l-avez-en-noir",
+      "type": "listen",
+      "l1": "Máte to v čiernej?",
+      "l2": "Vous l'avez en noir ?",
+      "choices_l2": [
+        "À quelle heure ?",
+        "Le croissant est chaud et savoureux.",
+        "J'ai le livre. Je l'ai ici."
+      ]
+    },
+    {
+      "id": "listen-la-couleur-blanche-est-jolie",
+      "type": "listen",
+      "l1": "Biela farba je pekná.",
+      "l2": "La couleur blanche est jolie.",
+      "choices_l2": [
+        "Mon père est professeur aussi !",
+        "Ma sœur travaille à l'hôpital.",
+        "Il y a des chaussons ici ?"
+      ]
+    },
+    {
+      "id": "listen-a-me-pla-t",
+      "type": "listen",
+      "l1": "Páči sa mi to.",
+      "l2": "Ça me plaît.",
+      "choices_l2": [
+        "Jeudi matin, j'y vais tôt.",
+        "Tu veux de l'eau ?",
+        "Je me repose sur le lit."
+      ]
+    },
+    {
+      "id": "listen-cette-couleur-ne-me-pla-t-pas",
+      "type": "listen",
+      "l1": "Nepáči sa mi tá farba.",
+      "l2": "Cette couleur ne me plaît pas.",
+      "choices_l2": [
+        "Ma sœur est médecin.",
+        "Je ne veux pas de vin. Je veux de l'eau minérale.",
+        "Le jus de fruits est très sucré."
+      ]
+    },
+    {
+      "id": "listen-je-vais-au-magasin-je-veux-ce-sac-bleu",
+      "type": "listen",
+      "l1": "Idem do obchodu. Chcem túto modrú tašku.",
+      "l2": "Je vais au magasin. Je veux ce sac bleu.",
+      "choices_l2": [
+        "Ma tante est médecin. Elle a quarante ans.",
+        "Nous cherchons les clés. Nous les cherchons depuis une heure !",
+        "D'abord le déjeuner, ensuite la tarte."
+      ]
+    },
+    {
+      "id": "listen-j-ach-te-des-pommes-rouges-au-march",
+      "type": "listen",
+      "l1": "Kupujem červené jablká na trhu.",
+      "l2": "J'achète des pommes rouges au marché.",
+      "choices_l2": [
+        "Mercredi oui. Mais pas tôt.",
+        "Je ne sais pas. Je vais goûter !",
+        "Le train arrive à l'heure."
+      ]
+    },
+    {
+      "id": "listen-j-aime-la-couleur-verte-mais-pas-la-jaune",
+      "type": "listen",
+      "l1": "Páči sa mi zelená farba, ale nie žltá.",
+      "l2": "J'aime la couleur verte, mais pas la jaune.",
+      "choices_l2": [
+        "Bonjour. Moi, c'est Louise.",
+        "Où habitez-vous ?",
+        "Mon grand-père est retraité et il est ici."
+      ]
+    },
+    {
+      "id": "listen-j-ai-des-chaussures-marron",
+      "type": "listen",
+      "l1": "Mám hnedé topánky.",
+      "l2": "J'ai des chaussures marron.",
+      "choices_l2": [
+        "L'argent est dans le sac.",
+        "Non, merci. Je n'ai plus faim.",
+        "Les enfants sont dans la cour."
+      ]
+    },
+    {
+      "id": "listen-je-veux-une-couleur-claire-pas-fonc-e",
+      "type": "listen",
+      "l1": "Chcem svetlú farbu, nie tmavú.",
+      "l2": "Je veux une couleur claire, pas foncée.",
+      "choices_l2": [
+        "Oui. Lavez les verres, s'il vous plaît.",
+        "Je vais au magasin.",
+        "Le lait est froid."
+      ]
+    },
+    {
+      "id": "listen-cette-voiture-grise-est-belle",
+      "type": "listen",
+      "l1": "Sivé auto je pekné.",
+      "l2": "Cette voiture grise est belle.",
+      "choices_l2": [
+        "Le matin, je suis toujours à la maison.",
+        "Je me lève et j'ouvre la fenêtre.",
+        "Maintenant je mange, ensuite je bois un café."
+      ]
+    },
+    {
+      "id": "listen-ce-sac-rose-me-pla-t",
+      "type": "listen",
+      "l1": "Ružová taška sa mi páči.",
+      "l2": "Ce sac rose me plaît.",
+      "choices_l2": [
+        "Mon frère est étudiant. Il ne travaille pas.",
+        "Merci. Vous avez un bel appartement.",
+        "Je me lève et je ferme la fenêtre. Il fait froid."
+      ]
+    },
+    {
+      "id": "listen-cette-pomme-orange-est-sucr-e",
+      "type": "listen",
+      "l1": "Oranžové jablko je sladké.",
+      "l2": "Cette pomme orange est sucrée.",
+      "choices_l2": [
+        "J'arrive à huit heures moins le quart.",
+        "Il est neuf heures moins le quart.",
+        "Je range la pièce."
+      ]
+    },
+    {
+      "id": "order-je-veux-ce-pull-rouge",
+      "type": "order",
+      "l1": "Chcem tento červený sveter.",
+      "l2": "Je veux ce pull rouge.",
+      "tokens_l1": [
+        "Chcem",
+        "tento",
+        "červený",
+        "sveter.",
+        "Chcem",
+        "svetlú",
+        "farbu,",
+        "nie",
+        "tmavú."
+      ],
+      "tokens_l2": [
+        "Je",
+        "veux",
+        "ce",
+        "pull",
+        "rouge.",
+        "Je",
+        "veux",
+        "une",
+        "couleur",
+        "claire,",
+        "pas",
+        "foncée."
+      ]
+    },
+    {
+      "id": "order-tu-as-cette-veste-bleue",
+      "type": "order",
+      "l1": "Máš túto modrú bundu?",
+      "l2": "Tu as cette veste bleue ?",
+      "tokens_l1": [
+        "Máš",
+        "túto",
+        "modrú",
+        "bundu?",
+        "Sivé",
+        "auto",
+        "je",
+        "pekné."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "as",
+        "cette",
+        "veste",
+        "bleue",
+        "?",
+        "Cette",
+        "voiture",
+        "grise",
+        "est",
+        "belle."
+      ]
+    },
+    {
+      "id": "order-cette-chemise-est-verte",
+      "type": "order",
+      "l1": "Táto košeľa je zelená.",
+      "l2": "Cette chemise est verte.",
+      "tokens_l1": [
+        "Táto",
+        "košeľa",
+        "je",
+        "zelená.",
+        "Chcem",
+        "tento",
+        "červený",
+        "sveter."
+      ],
+      "tokens_l2": [
+        "Cette",
+        "chemise",
+        "est",
+        "verte.",
+        "Je",
+        "veux",
+        "ce",
+        "pull",
+        "rouge."
+      ]
+    },
+    {
+      "id": "order-je-veux-ce-tee-shirt-jaune",
+      "type": "order",
+      "l1": "Chcem toto žlté tričko.",
+      "l2": "Je veux ce tee-shirt jaune.",
+      "tokens_l1": [
+        "Chcem",
+        "toto",
+        "žlté",
+        "tričko.",
+        "Oranžové",
+        "jablko",
+        "je",
+        "sladké."
+      ],
+      "tokens_l2": [
+        "Je",
+        "veux",
+        "ce",
+        "tee-shirt",
+        "jaune.",
+        "Cette",
+        "pomme",
+        "orange",
+        "est",
+        "sucrée."
+      ]
+    },
+    {
+      "id": "order-vous-l-avez-en-noir",
+      "type": "order",
+      "l1": "Máte to v čiernej?",
+      "l2": "Vous l'avez en noir ?",
+      "tokens_l1": [
+        "Máte",
+        "to",
+        "v",
+        "čiernej?",
+        "Kupujem",
+        "červené",
+        "jablká",
+        "na",
+        "trhu."
+      ],
+      "tokens_l2": [
+        "Vous",
+        "l'avez",
+        "en",
+        "noir",
+        "?",
+        "J'achète",
+        "des",
+        "pommes",
+        "rouges",
+        "au",
+        "marché."
+      ]
+    },
+    {
+      "id": "order-la-couleur-blanche-est-jolie",
+      "type": "order",
+      "l1": "Biela farba je pekná.",
+      "l2": "La couleur blanche est jolie.",
+      "tokens_l1": [
+        "Biela",
+        "farba",
+        "je",
+        "pekná.",
+        "Oranžové",
+        "jablko",
+        "je",
+        "sladké."
+      ],
+      "tokens_l2": [
+        "La",
+        "couleur",
+        "blanche",
+        "est",
+        "jolie.",
+        "Cette",
+        "pomme",
+        "orange",
+        "est",
+        "sucrée."
+      ]
+    },
+    {
+      "id": "order-a-me-pla-t",
+      "type": "order",
+      "l1": "Páči sa mi to.",
+      "l2": "Ça me plaît.",
+      "tokens_l1": [
+        "Páči",
+        "sa",
+        "mi",
+        "to.",
+        "Chcem",
+        "svetlú",
+        "farbu,",
+        "nie",
+        "tmavú."
+      ],
+      "tokens_l2": [
+        "Ça",
+        "me",
+        "plaît.",
+        "Je",
+        "veux",
+        "une",
+        "couleur",
+        "claire,",
+        "pas",
+        "foncée."
+      ]
+    },
+    {
+      "id": "order-cette-couleur-ne-me-pla-t-pas",
+      "type": "order",
+      "l1": "Nepáči sa mi tá farba.",
+      "l2": "Cette couleur ne me plaît pas.",
+      "tokens_l1": [
+        "Nepáči",
+        "sa",
+        "mi",
+        "tá",
+        "farba.",
+        "Ružová",
+        "taška",
+        "sa",
+        "mi",
+        "páči."
+      ],
+      "tokens_l2": [
+        "Cette",
+        "couleur",
+        "ne",
+        "me",
+        "plaît",
+        "pas.",
+        "Ce",
+        "sac",
+        "rose",
+        "me",
+        "plaît."
+      ]
+    },
+    {
+      "id": "order-je-vais-au-magasin-je-veux-ce-sac-bleu",
+      "type": "order",
+      "l1": "Idem do obchodu. Chcem túto modrú tašku.",
+      "l2": "Je vais au magasin. Je veux ce sac bleu.",
+      "tokens_l1": [
+        "Idem",
+        "do",
+        "obchodu.",
+        "Chcem",
+        "túto",
+        "modrú",
+        "tašku.",
+        "Chcem",
+        "svetlú",
+        "farbu,",
+        "nie",
+        "tmavú."
+      ],
+      "tokens_l2": [
+        "Je",
+        "vais",
+        "au",
+        "magasin.",
+        "Je",
+        "veux",
+        "ce",
+        "sac",
+        "bleu.",
+        "Je",
+        "veux",
+        "une",
+        "couleur",
+        "claire,",
+        "pas",
+        "foncée."
+      ]
+    },
+    {
+      "id": "order-j-ach-te-des-pommes-rouges-au-march",
+      "type": "order",
+      "l1": "Kupujem červené jablká na trhu.",
+      "l2": "J'achète des pommes rouges au marché.",
+      "tokens_l1": [
+        "Kupujem",
+        "červené",
+        "jablká",
+        "na",
+        "trhu.",
+        "Chcem",
+        "toto",
+        "žlté",
+        "tričko."
+      ],
+      "tokens_l2": [
+        "J'achète",
+        "des",
+        "pommes",
+        "rouges",
+        "au",
+        "marché.",
+        "Je",
+        "veux",
+        "ce",
+        "tee-shirt",
+        "jaune."
+      ]
+    },
+    {
+      "id": "order-j-aime-la-couleur-verte-mais-pas-la-jaune",
+      "type": "order",
+      "l1": "Páči sa mi zelená farba, ale nie žltá.",
+      "l2": "J'aime la couleur verte, mais pas la jaune.",
+      "tokens_l1": [
+        "Páči",
+        "sa",
+        "mi",
+        "zelená",
+        "farba,",
+        "ale",
+        "nie",
+        "žltá.",
+        "Chcem",
+        "svetlú",
+        "farbu,",
+        "nie",
+        "tmavú."
+      ],
+      "tokens_l2": [
+        "J'aime",
+        "la",
+        "couleur",
+        "verte,",
+        "mais",
+        "pas",
+        "la",
+        "jaune.",
+        "Je",
+        "veux",
+        "une",
+        "couleur",
+        "claire,",
+        "pas",
+        "foncée."
+      ]
+    },
+    {
+      "id": "order-j-ai-des-chaussures-marron",
+      "type": "order",
+      "l1": "Mám hnedé topánky.",
+      "l2": "J'ai des chaussures marron.",
+      "tokens_l1": [
+        "Mám",
+        "hnedé",
+        "topánky.",
+        "Kupujem",
+        "červené",
+        "jablká",
+        "na",
+        "trhu."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "des",
+        "chaussures",
+        "marron.",
+        "J'achète",
+        "des",
+        "pommes",
+        "rouges",
+        "au",
+        "marché."
+      ]
+    },
+    {
+      "id": "order-je-veux-une-couleur-claire-pas-fonc-e",
+      "type": "order",
+      "l1": "Chcem svetlú farbu, nie tmavú.",
+      "l2": "Je veux une couleur claire, pas foncée.",
+      "tokens_l1": [
+        "Chcem",
+        "svetlú",
+        "farbu,",
+        "nie",
+        "tmavú.",
+        "Sivé",
+        "auto",
+        "je",
+        "pekné."
+      ],
+      "tokens_l2": [
+        "Je",
+        "veux",
+        "une",
+        "couleur",
+        "claire,",
+        "pas",
+        "foncée.",
+        "Cette",
+        "voiture",
+        "grise",
+        "est",
+        "belle."
+      ]
+    },
+    {
+      "id": "order-cette-voiture-grise-est-belle",
+      "type": "order",
+      "l1": "Sivé auto je pekné.",
+      "l2": "Cette voiture grise est belle.",
+      "tokens_l1": [
+        "Sivé",
+        "auto",
+        "je",
+        "pekné.",
+        "Kupujem",
+        "červené",
+        "jablká",
+        "na",
+        "trhu."
+      ],
+      "tokens_l2": [
+        "Cette",
+        "voiture",
+        "grise",
+        "est",
+        "belle.",
+        "J'achète",
+        "des",
+        "pommes",
+        "rouges",
+        "au",
+        "marché."
+      ]
+    },
+    {
+      "id": "order-ce-sac-rose-me-pla-t",
+      "type": "order",
+      "l1": "Ružová taška sa mi páči.",
+      "l2": "Ce sac rose me plaît.",
+      "tokens_l1": [
+        "Ružová",
+        "taška",
+        "sa",
+        "mi",
+        "páči.",
+        "Chcem",
+        "tento",
+        "červený",
+        "sveter."
+      ],
+      "tokens_l2": [
+        "Ce",
+        "sac",
+        "rose",
+        "me",
+        "plaît.",
+        "Je",
+        "veux",
+        "ce",
+        "pull",
+        "rouge."
+      ]
+    },
+    {
+      "id": "order-cette-pomme-orange-est-sucr-e",
+      "type": "order",
+      "l1": "Oranžové jablko je sladké.",
+      "l2": "Cette pomme orange est sucrée.",
+      "tokens_l1": [
+        "Oranžové",
+        "jablko",
+        "je",
+        "sladké.",
+        "Mám",
+        "hnedé",
+        "topánky."
+      ],
+      "tokens_l2": [
+        "Cette",
+        "pomme",
+        "orange",
+        "est",
+        "sucrée.",
+        "J'ai",
+        "des",
+        "chaussures",
+        "marron."
+      ]
+    }
+  ]
+}

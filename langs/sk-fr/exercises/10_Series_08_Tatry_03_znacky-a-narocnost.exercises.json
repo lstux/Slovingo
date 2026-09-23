@@ -1,0 +1,1504 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-zna-ka",
+      "type": "qcm",
+      "l1": "le balisage, la marque",
+      "l2": "značka",
+      "choices_l1": [
+        "le sommet (point culminant)",
+        "le parcours le plus difficile",
+        "le poteau indicateur"
+      ],
+      "choices_l2": [
+        "výhľad",
+        "trasa",
+        "Najnáročnejšia trasa"
+      ]
+    },
+    {
+      "id": "qcm-erven",
+      "type": "qcm",
+      "l1": "rouge (balisage)",
+      "l2": "červená",
+      "choices_l1": [
+        "vert (balisage)",
+        "raide",
+        "bleu (balisage)"
+      ],
+      "choices_l2": [
+        "opatrne",
+        "žltá",
+        "náročný"
+      ]
+    },
+    {
+      "id": "qcm-modr",
+      "type": "qcm",
+      "l1": "bleu (balisage)",
+      "l2": "modrá",
+      "choices_l1": [
+        "rouge (balisage)",
+        "raide",
+        "prudemment"
+      ],
+      "choices_l2": [
+        "opatrne",
+        "náročný",
+        "strmý"
+      ]
+    },
+    {
+      "id": "qcm-lt",
+      "type": "qcm",
+      "l1": "jaune (balisage)",
+      "l2": "žltá",
+      "choices_l1": [
+        "prudemment",
+        "rouge (balisage)",
+        "facile"
+      ],
+      "choices_l2": [
+        "strmý",
+        "opatrne",
+        "zelená"
+      ]
+    },
+    {
+      "id": "qcm-zelen",
+      "type": "qcm",
+      "l1": "vert (balisage)",
+      "l2": "zelená",
+      "choices_l1": [
+        "bleu (balisage)",
+        "difficile, exigeant",
+        "prudemment"
+      ],
+      "choices_l2": [
+        "ľahký",
+        "strmý",
+        "opatrne"
+      ]
+    },
+    {
+      "id": "qcm-n-ro-n",
+      "type": "qcm",
+      "l1": "difficile, exigeant",
+      "l2": "náročný",
+      "choices_l1": [
+        "bleu (balisage)",
+        "prudemment",
+        "raide"
+      ],
+      "choices_l2": [
+        "zelená",
+        "opatrne",
+        "červená"
+      ]
+    },
+    {
+      "id": "qcm-ahk",
+      "type": "qcm",
+      "l1": "facile",
+      "l2": "ľahký",
+      "choices_l1": [
+        "rouge (balisage)",
+        "vert (balisage)",
+        "raide"
+      ],
+      "choices_l2": [
+        "náročný",
+        "modrá",
+        "červená"
+      ]
+    },
+    {
+      "id": "qcm-idem-po-ervenej-zna-ke",
+      "type": "qcm",
+      "l1": "Je suis le balisage rouge.",
+      "l2": "Idem po červenej značke.",
+      "choices_l1": [
+        "C'est plus facile.",
+        "Suis le bleu.",
+        "C'est plus difficile."
+      ],
+      "choices_l2": [
+        "Toto je ľahšie.",
+        "Toto je náročnejšie.",
+        "Choď po modrej."
+      ]
+    },
+    {
+      "id": "qcm-cho-po-modrej",
+      "type": "qcm",
+      "l1": "Suis le bleu.",
+      "l2": "Choď po modrej.",
+      "choices_l1": [
+        "C'est plus facile.",
+        "Ce parcours est jaune.",
+        "C'est plus difficile."
+      ],
+      "choices_l2": [
+        "Táto trasa je žltá.",
+        "Toto je náročnejšie.",
+        "Toto je ľahšie."
+      ]
+    },
+    {
+      "id": "qcm-t-to-trasa-je-lt",
+      "type": "qcm",
+      "l1": "Ce parcours est jaune.",
+      "l2": "Táto trasa je žltá.",
+      "choices_l1": [
+        "C'est plus facile.",
+        "Suis le bleu.",
+        "Je suis le balisage rouge."
+      ],
+      "choices_l2": [
+        "Toto je ľahšie.",
+        "Idem po červenej značke.",
+        "Toto je náročnejšie."
+      ]
+    },
+    {
+      "id": "qcm-toto-je-ah-ie",
+      "type": "qcm",
+      "l1": "C'est plus facile.",
+      "l2": "Toto je ľahšie.",
+      "choices_l1": [
+        "Ce parcours est jaune.",
+        "Je suis le balisage rouge.",
+        "C'est plus difficile."
+      ],
+      "choices_l2": [
+        "Táto trasa je žltá.",
+        "Choď po modrej.",
+        "Idem po červenej značke."
+      ]
+    },
+    {
+      "id": "qcm-toto-je-n-ro-nej-ie",
+      "type": "qcm",
+      "l1": "C'est plus difficile.",
+      "l2": "Toto je náročnejšie.",
+      "choices_l1": [
+        "C'est plus facile.",
+        "Je suis le balisage rouge.",
+        "Suis le bleu."
+      ],
+      "choices_l2": [
+        "Idem po červenej značke.",
+        "Toto je ľahšie.",
+        "Táto trasa je žltá."
+      ]
+    },
+    {
+      "id": "qcm-najn-ro-nej-ia-trasa",
+      "type": "qcm",
+      "l1": "le parcours le plus difficile",
+      "l2": "Najnáročnejšia trasa",
+      "choices_l1": [
+        "le parcours, l'itinéraire",
+        "la vue, le panorama",
+        "le sommet (point culminant)"
+      ],
+      "choices_l2": [
+        "smerovník",
+        "vrchol",
+        "značka"
+      ]
+    },
+    {
+      "id": "qcm-trasa",
+      "type": "qcm",
+      "l1": "le parcours, l'itinéraire",
+      "l2": "trasa",
+      "choices_l1": [
+        "le poteau indicateur",
+        "le balisage, la marque",
+        "le sommet (point culminant)"
+      ],
+      "choices_l2": [
+        "Najnáročnejšia trasa",
+        "výhľad",
+        "zákaz"
+      ]
+    },
+    {
+      "id": "qcm-smerovn-k",
+      "type": "qcm",
+      "l1": "le poteau indicateur",
+      "l2": "smerovník",
+      "choices_l1": [
+        "la vue, le panorama",
+        "le parcours le plus difficile",
+        "le balisage, la marque"
+      ],
+      "choices_l2": [
+        "značka",
+        "trasa",
+        "vrchol"
+      ]
+    },
+    {
+      "id": "qcm-vrchol",
+      "type": "qcm",
+      "l1": "le sommet (point culminant)",
+      "l2": "vrchol",
+      "choices_l1": [
+        "la vue, le panorama",
+        "le parcours le plus difficile",
+        "le parcours, l'itinéraire"
+      ],
+      "choices_l2": [
+        "Najnáročnejšia trasa",
+        "značka",
+        "trasa"
+      ]
+    },
+    {
+      "id": "qcm-v-h-ad",
+      "type": "qcm",
+      "l1": "la vue, le panorama",
+      "l2": "výhľad",
+      "choices_l1": [
+        "le poteau indicateur",
+        "le parcours le plus difficile",
+        "le parcours, l'itinéraire"
+      ],
+      "choices_l2": [
+        "trasa",
+        "smerovník",
+        "značka"
+      ]
+    },
+    {
+      "id": "qcm-strm",
+      "type": "qcm",
+      "l1": "raide",
+      "l2": "strmý",
+      "choices_l1": [
+        "prudemment",
+        "bleu (balisage)",
+        "jaune (balisage)"
+      ],
+      "choices_l2": [
+        "opatrne",
+        "ľahký",
+        "zelená"
+      ]
+    },
+    {
+      "id": "qcm-opatrne",
+      "type": "qcm",
+      "l1": "prudemment",
+      "l2": "opatrne",
+      "choices_l1": [
+        "vert (balisage)",
+        "rouge (balisage)",
+        "jaune (balisage)"
+      ],
+      "choices_l2": [
+        "žltá",
+        "modrá",
+        "strmý"
+      ]
+    },
+    {
+      "id": "qcm-z-kaz",
+      "type": "qcm",
+      "l1": "l'interdiction",
+      "l2": "zákaz",
+      "choices_l1": [
+        "difficile, exigeant",
+        "rouge (balisage)",
+        "prudemment"
+      ],
+      "choices_l2": [
+        "značka",
+        "trasa",
+        "výhľad"
+      ]
+    },
+    {
+      "id": "blank-idem-po-ervenej-zna-ke",
+      "type": "fill-blank",
+      "l1": "Je suis le balisage rouge.",
+      "l2": "Idem po červenej značke.",
+      "missing_l1": "le",
+      "missing_l2": "po",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "vue",
+        "vaut",
+        "la"
+      ],
+      "choices_l2": [
+        "bez",
+        "k",
+        "z"
+      ]
+    },
+    {
+      "id": "blank-t-to-trasa-je-n-ro-n",
+      "type": "fill-blank",
+      "l1": "Ce parcours est difficile.",
+      "l2": "Táto trasa je náročná.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sont",
+        "c'était",
+        "êtes"
+      ],
+      "choices_l2": [
+        "budem",
+        "bola",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-modr-zna-ka-je-ah-ia",
+      "type": "fill-blank",
+      "l1": "Le balisage bleu est plus facile.",
+      "l2": "Modrá značka je ľahšia.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "était",
+        "est-ce",
+        "sont"
+      ],
+      "choices_l2": [
+        "Bude",
+        "sme",
+        "bol"
+      ]
+    },
+    {
+      "id": "blank-kade-ide-lt-zna-ka",
+      "type": "fill-blank",
+      "l1": "Par où passe le balisage jaune ?",
+      "l2": "Kade ide žltá značka?",
+      "missing_l1": "le",
+      "missing_l2": "ide",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "vue",
+        "Les",
+        "vaut"
+      ],
+      "choices_l2": [
+        "idem",
+        "ideš",
+        "Chodím"
+      ]
+    },
+    {
+      "id": "blank-toto-je-najn-ro-nej-ia-trasa-v-hor-ch",
+      "type": "fill-blank",
+      "l1": "C'est le parcours le plus difficile de la montagne.",
+      "l2": "Toto je najnáročnejšia trasa v horách.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 7,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Les",
+        "le",
+        "vaut"
+      ],
+      "choices_l2": [
+        "budem",
+        "sme",
+        "ste"
+      ]
+    },
+    {
+      "id": "blank-zelen-zna-ka-je-kr-tka-a-ahk",
+      "type": "fill-blank",
+      "l1": "Le balisage vert est court et facile.",
+      "l2": "Zelená značka je krátka a ľahká.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "suis",
+        "C'est",
+        "sommes"
+      ],
+      "choices_l2": [
+        "sú",
+        "boli",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-nevid-m-iadnu-zna-ku",
+      "type": "fill-blank",
+      "l1": "Je ne vois aucun balisage !",
+      "l2": "Nevidím žiadnu značku!",
+      "missing_l1": "ne",
+      "missing_l2": "žiadnu",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "vue",
+        "vaut",
+        "pas"
+      ],
+      "choices_l2": [
+        "zákaz",
+        "červenej",
+        "ľahšia"
+      ]
+    },
+    {
+      "id": "blank-mus-me-sledova-zna-ky-pozorne",
+      "type": "fill-blank",
+      "l1": "Nous devons suivre les balisages attentivement.",
+      "l2": "Musíme sledovať značky pozorne.",
+      "missing_l1": "les",
+      "missing_l2": "značky",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "vue",
+        "le",
+        "vaut"
+      ],
+      "choices_l2": [
+        "opatrne",
+        "vrcholu",
+        "strmá"
+      ]
+    },
+    {
+      "id": "blank-chceme-s-po-ervenej-ale-je-pr-li-n-ro-n",
+      "type": "fill-blank",
+      "l1": "Nous voulons suivre le rouge, mais c'est trop difficile.",
+      "l2": "Chceme ísť po červenej, ale je príliš náročná.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "Les",
+        "la",
+        "vaut"
+      ],
+      "choices_l2": [
+        "sú",
+        "Bude",
+        "budem"
+      ]
+    },
+    {
+      "id": "blank-mus-me-ma-mapu-lebo-trasa-je-dlh-a-n-ro-n",
+      "type": "fill-blank",
+      "l1": "Nous devons avoir une carte, parce que le parcours est long et difficile.",
+      "l2": "Musíme mať mapu, lebo trasa je dlhá a náročná.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 7,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "vaut",
+        "vue",
+        "Les"
+      ],
+      "choices_l2": [
+        "bol",
+        "budem",
+        "boli"
+      ]
+    },
+    {
+      "id": "blank-m-eme-s-po-zelenej-je-ah-ia-ako-modr",
+      "type": "fill-blank",
+      "l1": "Nous pouvons suivre le vert, il est plus facile que le bleu.",
+      "l2": "Môžeme ísť po zelenej, je ľahšia ako modrá.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "Les",
+        "vue",
+        "vaut"
+      ],
+      "choices_l2": [
+        "sme",
+        "budem",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-smerovn-k-ukazuje-dve-trasy",
+      "type": "fill-blank",
+      "l1": "Le poteau indicateur montre deux itinéraires.",
+      "l2": "Smerovník ukazuje dve trasy.",
+      "missing_l1": "deux",
+      "missing_l2": "dve",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "vue",
+        "peux",
+        "haut"
+      ],
+      "choices_l2": [
+        "Vrch",
+        "keď",
+        "bez"
+      ]
+    },
+    {
+      "id": "blank-v-h-ad-z-vrcholu-je-n-dhern",
+      "type": "fill-blank",
+      "l1": "La vue depuis le sommet est magnifique.",
+      "l2": "Výhľad z vrcholu je nádherný.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Les",
+        "vaut",
+        "la"
+      ],
+      "choices_l2": [
+        "som",
+        "bola",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-cesta-je-strm-cho-te-opatrne",
+      "type": "fill-blank",
+      "l1": "Le chemin est raide, allez prudemment.",
+      "l2": "Cesta je strmá, choďte opatrne.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "était",
+        "est-ce",
+        "suis"
+      ],
+      "choices_l2": [
+        "som",
+        "sú",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-tu-je-z-kaz-vstupu",
+      "type": "fill-blank",
+      "l1": "Ici il y a interdiction d'entrer.",
+      "l2": "Tu je zákaz vstupu.",
+      "missing_l1": "il",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "vous",
+        "On",
+        "Nous"
+      ],
+      "choices_l2": [
+        "si",
+        "sú",
+        "boli"
+      ]
+    },
+    {
+      "id": "blank-trasa-na-vrchol-je-dlh-ale-v-h-ad-stoj-za-to",
+      "type": "fill-blank",
+      "l1": "L'itinéraire vers le sommet est long, mais la vue en vaut la peine.",
+      "l2": "Trasa na vrchol je dlhá, ale výhľad stojí za to.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 7,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Les",
+        "vaut",
+        "le"
+      ],
+      "choices_l2": [
+        "som",
+        "budú",
+        "bola"
+      ]
+    },
+    {
+      "id": "listen-idem-po-ervenej-zna-ke",
+      "type": "listen",
+      "l1": "Je suis le balisage rouge.",
+      "l2": "Idem po červenej značke.",
+      "choices_l1": [
+        "Nous voulons suivre le rouge, mais c'est trop difficile.",
+        "Le balisage bleu est plus facile.",
+        "Nous pouvons suivre le vert, il est plus facile que le bleu."
+      ],
+      "choices_l2": [
+        "Nevidím žiadnu značku!",
+        "Smerovník ukazuje dve trasy.",
+        "Zelená značka je krátka a ľahká."
+      ]
+    },
+    {
+      "id": "listen-t-to-trasa-je-n-ro-n",
+      "type": "listen",
+      "l1": "Ce parcours est difficile.",
+      "l2": "Táto trasa je náročná.",
+      "choices_l1": [
+        "Je ne vois aucun balisage !",
+        "Nous pouvons suivre le vert, il est plus facile que le bleu.",
+        "Le balisage vert est court et facile."
+      ],
+      "choices_l2": [
+        "Kade ide žltá značka?",
+        "Musíme mať mapu, lebo trasa je dlhá a náročná.",
+        "Idem po červenej značke."
+      ]
+    },
+    {
+      "id": "listen-modr-zna-ka-je-ah-ia",
+      "type": "listen",
+      "l1": "Le balisage bleu est plus facile.",
+      "l2": "Modrá značka je ľahšia.",
+      "choices_l1": [
+        "C'est le parcours le plus difficile de la montagne.",
+        "Le balisage vert est court et facile.",
+        "Nous devons suivre les balisages attentivement."
+      ],
+      "choices_l2": [
+        "Chceme ísť po červenej, ale je príliš náročná.",
+        "Smerovník ukazuje dve trasy.",
+        "Táto trasa je náročná."
+      ]
+    },
+    {
+      "id": "listen-kade-ide-lt-zna-ka",
+      "type": "listen",
+      "l1": "Par où passe le balisage jaune ?",
+      "l2": "Kade ide žltá značka?",
+      "choices_l1": [
+        "Ce parcours est difficile.",
+        "Nous pouvons suivre le vert, il est plus facile que le bleu.",
+        "Nous devons avoir une carte, parce que le parcours est long et difficile."
+      ],
+      "choices_l2": [
+        "Zelená značka je krátka a ľahká.",
+        "Táto trasa je náročná.",
+        "Modrá značka je ľahšia."
+      ]
+    },
+    {
+      "id": "listen-toto-je-najn-ro-nej-ia-trasa-v-hor-ch",
+      "type": "listen",
+      "l1": "C'est le parcours le plus difficile de la montagne.",
+      "l2": "Toto je najnáročnejšia trasa v horách.",
+      "choices_l1": [
+        "Je suis le balisage rouge.",
+        "Nous voulons suivre le rouge, mais c'est trop difficile.",
+        "Par où passe le balisage jaune ?"
+      ],
+      "choices_l2": [
+        "Táto trasa je náročná.",
+        "Musíme sledovať značky pozorne.",
+        "Smerovník ukazuje dve trasy."
+      ]
+    },
+    {
+      "id": "listen-zelen-zna-ka-je-kr-tka-a-ahk",
+      "type": "listen",
+      "l1": "Le balisage vert est court et facile.",
+      "l2": "Zelená značka je krátka a ľahká.",
+      "choices_l1": [
+        "Le balisage bleu est plus facile.",
+        "C'est le parcours le plus difficile de la montagne.",
+        "Par où passe le balisage jaune ?"
+      ],
+      "choices_l2": [
+        "Kade ide žltá značka?",
+        "Smerovník ukazuje dve trasy.",
+        "Musíme sledovať značky pozorne."
+      ]
+    },
+    {
+      "id": "listen-nevid-m-iadnu-zna-ku",
+      "type": "listen",
+      "l1": "Je ne vois aucun balisage !",
+      "l2": "Nevidím žiadnu značku!",
+      "choices_l1": [
+        "Nous pouvons suivre le vert, il est plus facile que le bleu.",
+        "Le balisage bleu est plus facile.",
+        "Nous devons avoir une carte, parce que le parcours est long et difficile."
+      ],
+      "choices_l2": [
+        "Zelená značka je krátka a ľahká.",
+        "Idem po červenej značke.",
+        "Musíme sledovať značky pozorne."
+      ]
+    },
+    {
+      "id": "listen-mus-me-sledova-zna-ky-pozorne",
+      "type": "listen",
+      "l1": "Nous devons suivre les balisages attentivement.",
+      "l2": "Musíme sledovať značky pozorne.",
+      "choices_l1": [
+        "Je ne vois aucun balisage !",
+        "Par où passe le balisage jaune ?",
+        "Nous devons avoir une carte, parce que le parcours est long et difficile."
+      ],
+      "choices_l2": [
+        "Môžeme ísť po zelenej, je ľahšia ako modrá.",
+        "Idem po červenej značke.",
+        "Nevidím žiadnu značku!"
+      ]
+    },
+    {
+      "id": "listen-chceme-s-po-ervenej-ale-je-pr-li-n-ro-n",
+      "type": "listen",
+      "l1": "Nous voulons suivre le rouge, mais c'est trop difficile.",
+      "l2": "Chceme ísť po červenej, ale je príliš náročná.",
+      "choices_l1": [
+        "Le poteau indicateur montre deux itinéraires.",
+        "Le balisage vert est court et facile.",
+        "Nous devons suivre les balisages attentivement."
+      ],
+      "choices_l2": [
+        "Musíme sledovať značky pozorne.",
+        "Táto trasa je náročná.",
+        "Kade ide žltá značka?"
+      ]
+    },
+    {
+      "id": "listen-mus-me-ma-mapu-lebo-trasa-je-dlh-a-n-ro-n",
+      "type": "listen",
+      "l1": "Nous devons avoir une carte, parce que le parcours est long et difficile.",
+      "l2": "Musíme mať mapu, lebo trasa je dlhá a náročná.",
+      "choices_l1": [
+        "C'est le parcours le plus difficile de la montagne.",
+        "Le balisage bleu est plus facile.",
+        "Nous pouvons suivre le vert, il est plus facile que le bleu."
+      ],
+      "choices_l2": [
+        "Zelená značka je krátka a ľahká.",
+        "Kade ide žltá značka?",
+        "Modrá značka je ľahšia."
+      ]
+    },
+    {
+      "id": "listen-m-eme-s-po-zelenej-je-ah-ia-ako-modr",
+      "type": "listen",
+      "l1": "Nous pouvons suivre le vert, il est plus facile que le bleu.",
+      "l2": "Môžeme ísť po zelenej, je ľahšia ako modrá.",
+      "choices_l1": [
+        "Le poteau indicateur montre deux itinéraires.",
+        "Ce parcours est difficile.",
+        "Je ne vois aucun balisage !"
+      ],
+      "choices_l2": [
+        "Toto je najnáročnejšia trasa v horách.",
+        "Musíme mať mapu, lebo trasa je dlhá a náročná.",
+        "Výhľad z vrcholu je nádherný."
+      ]
+    },
+    {
+      "id": "listen-smerovn-k-ukazuje-dve-trasy",
+      "type": "listen",
+      "l1": "Le poteau indicateur montre deux itinéraires.",
+      "l2": "Smerovník ukazuje dve trasy.",
+      "choices_l1": [
+        "Nous voulons suivre le rouge, mais c'est trop difficile.",
+        "Par où passe le balisage jaune ?",
+        "Le balisage bleu est plus facile."
+      ],
+      "choices_l2": [
+        "Môžeme ísť po zelenej, je ľahšia ako modrá.",
+        "Musíme mať mapu, lebo trasa je dlhá a náročná.",
+        "Táto trasa je náročná."
+      ]
+    },
+    {
+      "id": "listen-v-h-ad-z-vrcholu-je-n-dhern",
+      "type": "listen",
+      "l1": "La vue depuis le sommet est magnifique.",
+      "l2": "Výhľad z vrcholu je nádherný.",
+      "choices_l1": [
+        "Nous devons suivre les balisages attentivement.",
+        "Je ne vois aucun balisage !",
+        "Le balisage vert est court et facile."
+      ],
+      "choices_l2": [
+        "Chceme ísť po červenej, ale je príliš náročná.",
+        "Zelená značka je krátka a ľahká.",
+        "Smerovník ukazuje dve trasy."
+      ]
+    },
+    {
+      "id": "listen-cesta-je-strm-cho-te-opatrne",
+      "type": "listen",
+      "l1": "Le chemin est raide, allez prudemment.",
+      "l2": "Cesta je strmá, choďte opatrne.",
+      "choices_l1": [
+        "Ce parcours est difficile.",
+        "Je suis le balisage rouge.",
+        "Nous devons avoir une carte, parce que le parcours est long et difficile."
+      ],
+      "choices_l2": [
+        "Idem po červenej značke.",
+        "Zelená značka je krátka a ľahká.",
+        "Táto trasa je náročná."
+      ]
+    },
+    {
+      "id": "listen-tu-je-z-kaz-vstupu",
+      "type": "listen",
+      "l1": "Ici il y a interdiction d'entrer.",
+      "l2": "Tu je zákaz vstupu.",
+      "choices_l1": [
+        "C'est le parcours le plus difficile de la montagne.",
+        "Ce parcours est difficile.",
+        "Nous devons avoir une carte, parce que le parcours est long et difficile."
+      ],
+      "choices_l2": [
+        "Táto trasa je náročná.",
+        "Kade ide žltá značka?",
+        "Nevidím žiadnu značku!"
+      ]
+    },
+    {
+      "id": "listen-trasa-na-vrchol-je-dlh-ale-v-h-ad-stoj-za-to",
+      "type": "listen",
+      "l1": "L'itinéraire vers le sommet est long, mais la vue en vaut la peine.",
+      "l2": "Trasa na vrchol je dlhá, ale výhľad stojí za to.",
+      "choices_l1": [
+        "Par où passe le balisage jaune ?",
+        "Je suis le balisage rouge.",
+        "Nous pouvons suivre le vert, il est plus facile que le bleu."
+      ],
+      "choices_l2": [
+        "Musíme mať mapu, lebo trasa je dlhá a náročná.",
+        "Chceme ísť po červenej, ale je príliš náročná.",
+        "Táto trasa je náročná."
+      ]
+    },
+    {
+      "id": "order-idem-po-ervenej-zna-ke",
+      "type": "order",
+      "l1": "Je suis le balisage rouge.",
+      "l2": "Idem po červenej značke.",
+      "tokens_l1": [
+        "Je",
+        "suis",
+        "le",
+        "balisage",
+        "rouge.",
+        "Par",
+        "où",
+        "passe",
+        "le",
+        "balisage",
+        "jaune",
+        "?"
+      ],
+      "tokens_l2": [
+        "Idem",
+        "po",
+        "červenej",
+        "značke.",
+        "Kade",
+        "ide",
+        "žltá",
+        "značka?"
+      ]
+    },
+    {
+      "id": "order-t-to-trasa-je-n-ro-n",
+      "type": "order",
+      "l1": "Ce parcours est difficile.",
+      "l2": "Táto trasa je náročná.",
+      "tokens_l1": [
+        "Ce",
+        "parcours",
+        "est",
+        "difficile.",
+        "Nous",
+        "devons",
+        "avoir",
+        "une",
+        "carte,",
+        "parce",
+        "que",
+        "le",
+        "parcours",
+        "est",
+        "long",
+        "et",
+        "difficile."
+      ],
+      "tokens_l2": [
+        "Táto",
+        "trasa",
+        "je",
+        "náročná.",
+        "Musíme",
+        "mať",
+        "mapu,",
+        "lebo",
+        "trasa",
+        "je",
+        "dlhá",
+        "a",
+        "náročná."
+      ]
+    },
+    {
+      "id": "order-modr-zna-ka-je-ah-ia",
+      "type": "order",
+      "l1": "Le balisage bleu est plus facile.",
+      "l2": "Modrá značka je ľahšia.",
+      "tokens_l1": [
+        "Le",
+        "balisage",
+        "bleu",
+        "est",
+        "plus",
+        "facile.",
+        "Ce",
+        "parcours",
+        "est",
+        "difficile."
+      ],
+      "tokens_l2": [
+        "Modrá",
+        "značka",
+        "je",
+        "ľahšia.",
+        "Táto",
+        "trasa",
+        "je",
+        "náročná."
+      ]
+    },
+    {
+      "id": "order-kade-ide-lt-zna-ka",
+      "type": "order",
+      "l1": "Par où passe le balisage jaune ?",
+      "l2": "Kade ide žltá značka?",
+      "tokens_l1": [
+        "Par",
+        "où",
+        "passe",
+        "le",
+        "balisage",
+        "jaune",
+        "?",
+        "Je",
+        "ne",
+        "vois",
+        "aucun",
+        "balisage",
+        "!"
+      ],
+      "tokens_l2": [
+        "Kade",
+        "ide",
+        "žltá",
+        "značka?",
+        "Nevidím",
+        "žiadnu",
+        "značku!"
+      ]
+    },
+    {
+      "id": "order-toto-je-najn-ro-nej-ia-trasa-v-hor-ch",
+      "type": "order",
+      "l1": "C'est le parcours le plus difficile de la montagne.",
+      "l2": "Toto je najnáročnejšia trasa v horách.",
+      "tokens_l1": [
+        "C'est",
+        "le",
+        "parcours",
+        "le",
+        "plus",
+        "difficile",
+        "de",
+        "la",
+        "montagne.",
+        "Nous",
+        "devons",
+        "suivre",
+        "les",
+        "balisages",
+        "attentivement."
+      ],
+      "tokens_l2": [
+        "Toto",
+        "je",
+        "najnáročnejšia",
+        "trasa",
+        "v",
+        "horách.",
+        "Musíme",
+        "sledovať",
+        "značky",
+        "pozorne."
+      ]
+    },
+    {
+      "id": "order-zelen-zna-ka-je-kr-tka-a-ahk",
+      "type": "order",
+      "l1": "Le balisage vert est court et facile.",
+      "l2": "Zelená značka je krátka a ľahká.",
+      "tokens_l1": [
+        "Le",
+        "balisage",
+        "vert",
+        "est",
+        "court",
+        "et",
+        "facile.",
+        "Le",
+        "chemin",
+        "est",
+        "raide,",
+        "allez",
+        "prudemment."
+      ],
+      "tokens_l2": [
+        "Zelená",
+        "značka",
+        "je",
+        "krátka",
+        "a",
+        "ľahká.",
+        "Cesta",
+        "je",
+        "strmá,",
+        "choďte",
+        "opatrne."
+      ]
+    },
+    {
+      "id": "order-nevid-m-iadnu-zna-ku",
+      "type": "order",
+      "l1": "Je ne vois aucun balisage !",
+      "l2": "Nevidím žiadnu značku!",
+      "tokens_l1": [
+        "Je",
+        "ne",
+        "vois",
+        "aucun",
+        "balisage",
+        "!",
+        "La",
+        "vue",
+        "depuis",
+        "le",
+        "sommet",
+        "est",
+        "magnifique."
+      ],
+      "tokens_l2": [
+        "Nevidím",
+        "žiadnu",
+        "značku!",
+        "Výhľad",
+        "z",
+        "vrcholu",
+        "je",
+        "nádherný."
+      ]
+    },
+    {
+      "id": "order-mus-me-sledova-zna-ky-pozorne",
+      "type": "order",
+      "l1": "Nous devons suivre les balisages attentivement.",
+      "l2": "Musíme sledovať značky pozorne.",
+      "tokens_l1": [
+        "Nous",
+        "devons",
+        "suivre",
+        "les",
+        "balisages",
+        "attentivement.",
+        "Nous",
+        "pouvons",
+        "suivre",
+        "le",
+        "vert,",
+        "il",
+        "est",
+        "plus",
+        "facile",
+        "que",
+        "le",
+        "bleu."
+      ],
+      "tokens_l2": [
+        "Musíme",
+        "sledovať",
+        "značky",
+        "pozorne.",
+        "Môžeme",
+        "ísť",
+        "po",
+        "zelenej,",
+        "je",
+        "ľahšia",
+        "ako",
+        "modrá."
+      ]
+    },
+    {
+      "id": "order-chceme-s-po-ervenej-ale-je-pr-li-n-ro-n",
+      "type": "order",
+      "l1": "Nous voulons suivre le rouge, mais c'est trop difficile.",
+      "l2": "Chceme ísť po červenej, ale je príliš náročná.",
+      "tokens_l1": [
+        "Nous",
+        "voulons",
+        "suivre",
+        "le",
+        "rouge,",
+        "mais",
+        "c'est",
+        "trop",
+        "difficile.",
+        "Je",
+        "suis",
+        "le",
+        "balisage",
+        "rouge."
+      ],
+      "tokens_l2": [
+        "Chceme",
+        "ísť",
+        "po",
+        "červenej,",
+        "ale",
+        "je",
+        "príliš",
+        "náročná.",
+        "Idem",
+        "po",
+        "červenej",
+        "značke."
+      ]
+    },
+    {
+      "id": "order-mus-me-ma-mapu-lebo-trasa-je-dlh-a-n-ro-n",
+      "type": "order",
+      "l1": "Nous devons avoir une carte, parce que le parcours est long et difficile.",
+      "l2": "Musíme mať mapu, lebo trasa je dlhá a náročná.",
+      "tokens_l1": [
+        "Nous",
+        "devons",
+        "avoir",
+        "une",
+        "carte,",
+        "parce",
+        "que",
+        "le",
+        "parcours",
+        "est",
+        "long",
+        "et",
+        "difficile.",
+        "La",
+        "vue",
+        "depuis",
+        "le",
+        "sommet",
+        "est",
+        "magnifique."
+      ],
+      "tokens_l2": [
+        "Musíme",
+        "mať",
+        "mapu,",
+        "lebo",
+        "trasa",
+        "je",
+        "dlhá",
+        "a",
+        "náročná.",
+        "Výhľad",
+        "z",
+        "vrcholu",
+        "je",
+        "nádherný."
+      ]
+    },
+    {
+      "id": "order-m-eme-s-po-zelenej-je-ah-ia-ako-modr",
+      "type": "order",
+      "l1": "Nous pouvons suivre le vert, il est plus facile que le bleu.",
+      "l2": "Môžeme ísť po zelenej, je ľahšia ako modrá.",
+      "tokens_l1": [
+        "Nous",
+        "pouvons",
+        "suivre",
+        "le",
+        "vert,",
+        "il",
+        "est",
+        "plus",
+        "facile",
+        "que",
+        "le",
+        "bleu.",
+        "Je",
+        "ne",
+        "vois",
+        "aucun",
+        "balisage",
+        "!"
+      ],
+      "tokens_l2": [
+        "Môžeme",
+        "ísť",
+        "po",
+        "zelenej,",
+        "je",
+        "ľahšia",
+        "ako",
+        "modrá.",
+        "Nevidím",
+        "žiadnu",
+        "značku!"
+      ]
+    },
+    {
+      "id": "order-smerovn-k-ukazuje-dve-trasy",
+      "type": "order",
+      "l1": "Le poteau indicateur montre deux itinéraires.",
+      "l2": "Smerovník ukazuje dve trasy.",
+      "tokens_l1": [
+        "Le",
+        "poteau",
+        "indicateur",
+        "montre",
+        "deux",
+        "itinéraires.",
+        "Je",
+        "ne",
+        "vois",
+        "aucun",
+        "balisage",
+        "!"
+      ],
+      "tokens_l2": [
+        "Smerovník",
+        "ukazuje",
+        "dve",
+        "trasy.",
+        "Nevidím",
+        "žiadnu",
+        "značku!"
+      ]
+    },
+    {
+      "id": "order-v-h-ad-z-vrcholu-je-n-dhern",
+      "type": "order",
+      "l1": "La vue depuis le sommet est magnifique.",
+      "l2": "Výhľad z vrcholu je nádherný.",
+      "tokens_l1": [
+        "La",
+        "vue",
+        "depuis",
+        "le",
+        "sommet",
+        "est",
+        "magnifique.",
+        "Le",
+        "chemin",
+        "est",
+        "raide,",
+        "allez",
+        "prudemment."
+      ],
+      "tokens_l2": [
+        "Výhľad",
+        "z",
+        "vrcholu",
+        "je",
+        "nádherný.",
+        "Cesta",
+        "je",
+        "strmá,",
+        "choďte",
+        "opatrne."
+      ]
+    },
+    {
+      "id": "order-cesta-je-strm-cho-te-opatrne",
+      "type": "order",
+      "l1": "Le chemin est raide, allez prudemment.",
+      "l2": "Cesta je strmá, choďte opatrne.",
+      "tokens_l1": [
+        "Le",
+        "chemin",
+        "est",
+        "raide,",
+        "allez",
+        "prudemment.",
+        "L'itinéraire",
+        "vers",
+        "le",
+        "sommet",
+        "est",
+        "long,",
+        "mais",
+        "la",
+        "vue",
+        "en",
+        "vaut",
+        "la",
+        "peine."
+      ],
+      "tokens_l2": [
+        "Cesta",
+        "je",
+        "strmá,",
+        "choďte",
+        "opatrne.",
+        "Trasa",
+        "na",
+        "vrchol",
+        "je",
+        "dlhá,",
+        "ale",
+        "výhľad",
+        "stojí",
+        "za",
+        "to."
+      ]
+    },
+    {
+      "id": "order-tu-je-z-kaz-vstupu",
+      "type": "order",
+      "l1": "Ici il y a interdiction d'entrer.",
+      "l2": "Tu je zákaz vstupu.",
+      "tokens_l1": [
+        "Ici",
+        "il",
+        "y",
+        "a",
+        "interdiction",
+        "d'entrer.",
+        "Le",
+        "balisage",
+        "vert",
+        "est",
+        "court",
+        "et",
+        "facile."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "je",
+        "zákaz",
+        "vstupu.",
+        "Zelená",
+        "značka",
+        "je",
+        "krátka",
+        "a",
+        "ľahká."
+      ]
+    },
+    {
+      "id": "order-trasa-na-vrchol-je-dlh-ale-v-h-ad-stoj-za-to",
+      "type": "order",
+      "l1": "L'itinéraire vers le sommet est long, mais la vue en vaut la peine.",
+      "l2": "Trasa na vrchol je dlhá, ale výhľad stojí za to.",
+      "tokens_l1": [
+        "L'itinéraire",
+        "vers",
+        "le",
+        "sommet",
+        "est",
+        "long,",
+        "mais",
+        "la",
+        "vue",
+        "en",
+        "vaut",
+        "la",
+        "peine.",
+        "Le",
+        "balisage",
+        "vert",
+        "est",
+        "court",
+        "et",
+        "facile."
+      ],
+      "tokens_l2": [
+        "Trasa",
+        "na",
+        "vrchol",
+        "je",
+        "dlhá,",
+        "ale",
+        "výhľad",
+        "stojí",
+        "za",
+        "to.",
+        "Zelená",
+        "značka",
+        "je",
+        "krátka",
+        "a",
+        "ľahká."
+      ]
+    },
+    {
+      "id": "match-zna-ka-vocab",
+      "type": "match",
+      "l1": [
+        "le balisage, la marque",
+        "rouge (balisage)",
+        "bleu (balisage)",
+        "jaune (balisage)"
+      ],
+      "l2": [
+        "značka",
+        "červená",
+        "modrá",
+        "žltá"
+      ]
+    },
+    {
+      "id": "match-idem-po-ervenej-zna-ke-sentences",
+      "type": "match",
+      "l1": [
+        "Je suis le balisage rouge.",
+        "Ce parcours est difficile.",
+        "Le balisage bleu est plus facile.",
+        "Par où passe le balisage jaune ?"
+      ],
+      "l2": [
+        "Idem po červenej značke.",
+        "Táto trasa je náročná.",
+        "Modrá značka je ľahšia.",
+        "Kade ide žltá značka?"
+      ]
+    }
+  ]
+}

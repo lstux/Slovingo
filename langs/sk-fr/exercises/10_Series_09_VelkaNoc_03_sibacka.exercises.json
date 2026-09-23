@@ -1,0 +1,1390 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-iba",
+      "type": "qcm",
+      "l1": "fouetter (symboliquement, rituellement)",
+      "l2": "šibať",
+      "choices_l1": [
+        "J'ai reçu une récompense.",
+        "Je leur ai donné des œufs.",
+        "Le voisin m'a fouetté (symboliquement)."
+      ],
+      "choices_l2": [
+        "smiech",
+        "chlapec",
+        "dievča"
+      ]
+    },
+    {
+      "id": "qcm-polia",
+      "type": "qcm",
+      "l1": "arroser",
+      "l2": "poliať",
+      "choices_l1": [
+        "le parfum",
+        "rendre visite",
+        "la coutume"
+      ],
+      "choices_l2": [
+        "vtip",
+        "smiech",
+        "odmena"
+      ]
+    },
+    {
+      "id": "qcm-voda",
+      "type": "qcm",
+      "l1": "l'eau",
+      "l2": "voda",
+      "choices_l1": [
+        "la voisine",
+        "la blague",
+        "la coutume"
+      ],
+      "choices_l2": [
+        "vtip",
+        "parfum",
+        "dievča"
+      ]
+    },
+    {
+      "id": "qcm-chlapec",
+      "type": "qcm",
+      "l1": "le garçon",
+      "l2": "chlapec",
+      "choices_l1": [
+        "la blague",
+        "la coutume",
+        "le rire"
+      ],
+      "choices_l2": [
+        "pieseň",
+        "susedka",
+        "odmena"
+      ]
+    },
+    {
+      "id": "qcm-diev-a",
+      "type": "qcm",
+      "l1": "la fille",
+      "l2": "dievča",
+      "choices_l1": [
+        "la blague",
+        "la chanson",
+        "le rire"
+      ],
+      "choices_l2": [
+        "sused",
+        "smiech",
+        "vtip"
+      ]
+    },
+    {
+      "id": "qcm-odmena",
+      "type": "qcm",
+      "l1": "la récompense",
+      "l2": "odmena",
+      "choices_l1": [
+        "la coutume",
+        "le parfum",
+        "la chanson"
+      ],
+      "choices_l2": [
+        "vtip",
+        "smiech",
+        "parfum"
+      ]
+    },
+    {
+      "id": "qcm-nav-t-vi",
+      "type": "qcm",
+      "l1": "rendre visite",
+      "l2": "navštíviť",
+      "choices_l1": [
+        "la récompense",
+        "le rire",
+        "la chanson"
+      ],
+      "choices_l2": [
+        "susedka",
+        "smiech",
+        "dievča"
+      ]
+    },
+    {
+      "id": "qcm-poliali-ma-vodou",
+      "type": "qcm",
+      "l1": "Ils m'ont arrosé d'eau.",
+      "l2": "Poliali ma vodou.",
+      "choices_l1": [
+        "J'ai reçu une récompense.",
+        "J'ai donné des œufs aux garçons.",
+        "Le voisin m'a fouetté (symboliquement)."
+      ],
+      "choices_l2": [
+        "Dostala som odmenu.",
+        "Dal som chlapcom vajíčka.",
+        "Šibal ma sused."
+      ]
+    },
+    {
+      "id": "qcm-ibal-ma-sused",
+      "type": "qcm",
+      "l1": "Le voisin m'a fouetté (symboliquement).",
+      "l2": "Šibal ma sused.",
+      "choices_l1": [
+        "Je leur ai donné des œufs.",
+        "J'ai donné des œufs aux garçons.",
+        "J'ai reçu une récompense."
+      ],
+      "choices_l2": [
+        "Dal som chlapcom vajíčka.",
+        "Dala som im vajíčka.",
+        "Dostala som odmenu."
+      ]
+    },
+    {
+      "id": "qcm-dala-som-im-vaj-ka",
+      "type": "qcm",
+      "l1": "Je leur ai donné des œufs.",
+      "l2": "Dala som im vajíčka.",
+      "choices_l1": [
+        "J'ai reçu une récompense.",
+        "Ils m'ont arrosé d'eau.",
+        "J'ai donné des œufs aux garçons."
+      ],
+      "choices_l2": [
+        "Šibal ma sused.",
+        "Dal som chlapcom vajíčka.",
+        "Poliali ma vodou."
+      ]
+    },
+    {
+      "id": "qcm-dal-som-chlapcom-vaj-ka",
+      "type": "qcm",
+      "l1": "J'ai donné des œufs aux garçons.",
+      "l2": "Dal som chlapcom vajíčka.",
+      "choices_l1": [
+        "J'ai reçu une récompense.",
+        "Le voisin m'a fouetté (symboliquement).",
+        "Je leur ai donné des œufs."
+      ],
+      "choices_l2": [
+        "Dala som im vajíčka.",
+        "Dostala som odmenu.",
+        "Poliali ma vodou."
+      ]
+    },
+    {
+      "id": "qcm-dostala-som-odmenu",
+      "type": "qcm",
+      "l1": "J'ai reçu une récompense.",
+      "l2": "Dostala som odmenu.",
+      "choices_l1": [
+        "Ils m'ont arrosé d'eau.",
+        "Le voisin m'a fouetté (symboliquement).",
+        "J'ai donné des œufs aux garçons."
+      ],
+      "choices_l2": [
+        "Dal som chlapcom vajíčka.",
+        "Poliali ma vodou.",
+        "Dala som im vajíčka."
+      ]
+    },
+    {
+      "id": "qcm-zvyk",
+      "type": "qcm",
+      "l1": "la coutume",
+      "l2": "zvyk",
+      "choices_l1": [
+        "le garçon",
+        "la blague",
+        "le rire"
+      ],
+      "choices_l2": [
+        "smiech",
+        "pieseň",
+        "susedka"
+      ]
+    },
+    {
+      "id": "qcm-parfum",
+      "type": "qcm",
+      "l1": "le parfum",
+      "l2": "parfum",
+      "choices_l1": [
+        "le voisin",
+        "la voisine",
+        "la récompense"
+      ],
+      "choices_l2": [
+        "chlapec",
+        "odmena",
+        "dievča"
+      ]
+    },
+    {
+      "id": "qcm-sused",
+      "type": "qcm",
+      "l1": "le voisin",
+      "l2": "sused",
+      "choices_l1": [
+        "la récompense",
+        "la voisine",
+        "le parfum"
+      ],
+      "choices_l2": [
+        "zvyk",
+        "pieseň",
+        "chlapec"
+      ]
+    },
+    {
+      "id": "qcm-susedka",
+      "type": "qcm",
+      "l1": "la voisine",
+      "l2": "susedka",
+      "choices_l1": [
+        "la récompense",
+        "le garçon",
+        "la coutume"
+      ],
+      "choices_l2": [
+        "vtip",
+        "odmena",
+        "zvyk"
+      ]
+    },
+    {
+      "id": "qcm-smiech",
+      "type": "qcm",
+      "l1": "le rire",
+      "l2": "smiech",
+      "choices_l1": [
+        "le garçon",
+        "la voisine",
+        "la récompense"
+      ],
+      "choices_l2": [
+        "vtip",
+        "odmena",
+        "dievča"
+      ]
+    },
+    {
+      "id": "qcm-vtip",
+      "type": "qcm",
+      "l1": "la blague",
+      "l2": "vtip",
+      "choices_l1": [
+        "la récompense",
+        "le rire",
+        "la coutume"
+      ],
+      "choices_l2": [
+        "pieseň",
+        "parfum",
+        "dievča"
+      ]
+    },
+    {
+      "id": "qcm-piese",
+      "type": "qcm",
+      "l1": "la chanson",
+      "l2": "pieseň",
+      "choices_l1": [
+        "le garçon",
+        "la récompense",
+        "la voisine"
+      ],
+      "choices_l2": [
+        "odmena",
+        "parfum",
+        "vtip"
+      ]
+    },
+    {
+      "id": "blank-na-ve-kono-n-pondelok-chlapci-nav-tevuj-diev-at",
+      "type": "fill-blank",
+      "l1": "Le lundi de Pâques les garçons rendent visite aux filles.",
+      "l2": "Na Veľkonočný pondelok chlapci navštevujú dievčatá.",
+      "missing_l1": "de",
+      "missing_l2": "pondelok",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sans",
+        "sur",
+        "par"
+      ],
+      "choices_l2": [
+        "šibačku",
+        "chlapci",
+        "spievali"
+      ]
+    },
+    {
+      "id": "blank-poliali-ma-vodou",
+      "type": "fill-blank",
+      "l1": "Ils m'ont arrosé d'eau.",
+      "l2": "Poliali ma vodou.",
+      "missing_l1": "d'eau",
+      "missing_l2": "ma",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "donné",
+        "avait",
+        "année"
+      ],
+      "choices_l2": [
+        "ich",
+        "nám",
+        "Dala"
+      ]
+    },
+    {
+      "id": "blank-dala-som-im-vaj-ka-ako-odmenu",
+      "type": "fill-blank",
+      "l1": "Je leur ai donné des œufs comme récompense.",
+      "l2": "Dala som im vajíčka ako odmenu.",
+      "missing_l1": "des",
+      "missing_l2": "som",
+      "blank_index_l1": 4,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "ai",
+        "une",
+        "un"
+      ],
+      "choices_l2": [
+        "bol",
+        "Bude",
+        "je"
+      ]
+    },
+    {
+      "id": "blank-nie-ka-d-ena-m-rada-iba-ku",
+      "type": "fill-blank",
+      "l1": "Toutes les femmes n'aiment pas la šibačka.",
+      "l2": "Nie každá žena má rada šibačku.",
+      "missing_l1": "la",
+      "missing_l2": "má",
+      "blank_index_l1": 5,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "ai",
+        "leur",
+        "aux"
+      ],
+      "choices_l2": [
+        "Máš",
+        "Nemáš",
+        "Máme"
+      ]
+    },
+    {
+      "id": "blank-dnes-je-zvyk-menej-siln-ako-predt-m",
+      "type": "fill-blank",
+      "l1": "Aujourd'hui la coutume est moins forte qu'avant.",
+      "l2": "Dnes je zvyk menej silný ako predtým.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "ai",
+        "le",
+        "aux"
+      ],
+      "choices_l2": [
+        "bol",
+        "sme",
+        "boli"
+      ]
+    },
+    {
+      "id": "blank-chlapci-pri-li-s-korb-om",
+      "type": "fill-blank",
+      "l1": "Les garçons sont venus avec le fouet.",
+      "l2": "Chlapci prišli s korbáčom.",
+      "missing_l1": "le",
+      "missing_l2": "s",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "aux",
+        "ai",
+        "Les"
+      ],
+      "choices_l2": [
+        "medzi",
+        "po",
+        "od"
+      ]
+    },
+    {
+      "id": "blank-rad-ej-som-im-dala-peniaze-ako-vaj-ka",
+      "type": "fill-blank",
+      "l1": "J'ai préféré leur donner de l'argent plutôt que des œufs.",
+      "l2": "Radšej som im dala peniaze ako vajíčka.",
+      "missing_l1": "de",
+      "missing_l2": "som",
+      "blank_index_l1": 4,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "par",
+        "chez",
+        "dans"
+      ],
+      "choices_l2": [
+        "Bude",
+        "si",
+        "boli"
+      ]
+    },
+    {
+      "id": "blank-na-ve-kono-n-pondelok-som-poliala-vodou-cel-rodinu",
+      "type": "fill-blank",
+      "l1": "Le lundi de Pâques j'ai arrosé toute la famille.",
+      "l2": "Na Veľkonočný pondelok som poliala vodou celú rodinu.",
+      "missing_l1": "la",
+      "missing_l2": "som",
+      "blank_index_l1": 7,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "le",
+        "Les",
+        "aux"
+      ],
+      "choices_l2": [
+        "bola",
+        "sú",
+        "si"
+      ]
+    },
+    {
+      "id": "blank-farbili-sme-vaj-ka-na-bielu-sobotu-potom-sme-ich-dali-chlapcom",
+      "type": "fill-blank",
+      "l1": "Nous avons teint les œufs le samedi saint, puis nous les avons donnés aux garçons.",
+      "l2": "Farbili sme vajíčka na Bielu sobotu, potom sme ich dali chlapcom.",
+      "missing_l1": "le",
+      "missing_l2": "na",
+      "blank_index_l1": 5,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "ai",
+        "leur",
+        "aux"
+      ],
+      "choices_l2": [
+        "v",
+        "za",
+        "po"
+      ]
+    },
+    {
+      "id": "blank-susedka-n-m-dala-dom-ce-kol-e",
+      "type": "fill-blank",
+      "l1": "La voisine nous a donné de la pâtisserie maison.",
+      "l2": "Susedka nám dala domáce koláče.",
+      "missing_l1": "la",
+      "missing_l2": "dala",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "leur",
+        "le",
+        "ai"
+      ],
+      "choices_l2": [
+        "im",
+        "žena",
+        "zvyk"
+      ]
+    },
+    {
+      "id": "blank-chlapci-spievali-piese-pred-dverami",
+      "type": "fill-blank",
+      "l1": "Les garçons ont chanté une chanson devant la porte.",
+      "l2": "Chlapci spievali pieseň pred dverami.",
+      "missing_l1": "la",
+      "missing_l2": "pred",
+      "blank_index_l1": 7,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "ai",
+        "aux",
+        "le"
+      ],
+      "choices_l2": [
+        "pri",
+        "zo",
+        "na"
+      ]
+    },
+    {
+      "id": "blank-bolo-ve-a-smiechu-a-vtipov",
+      "type": "fill-blank",
+      "l1": "Il y avait beaucoup de rires et de blagues.",
+      "l2": "Bolo veľa smiechu a vtipov.",
+      "missing_l1": "de",
+      "missing_l2": "a",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "dans",
+        "près",
+        "sans"
+      ],
+      "choices_l2": [
+        "ale",
+        "alebo",
+        "aj"
+      ]
+    },
+    {
+      "id": "blank-rad-ej-pou-vam-parfum-ako-vodu",
+      "type": "fill-blank",
+      "l1": "Je préfère utiliser du parfum plutôt que de l'eau.",
+      "l2": "Radšej používam parfum ako vodu.",
+      "missing_l1": "de",
+      "missing_l2": "ako",
+      "blank_index_l1": 7,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "loin",
+        "pour",
+        "sur"
+      ],
+      "choices_l2": [
+        "asi",
+        "vždy",
+        "len"
+      ]
+    },
+    {
+      "id": "blank-tento-zvyk-sa-men-ka-d-rok",
+      "type": "fill-blank",
+      "l1": "Cette coutume change chaque année.",
+      "l2": "Tento zvyk sa mení každý rok.",
+      "missing_l1": "chaque",
+      "missing_l2": "sa",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "avait",
+        "donné",
+        "chanson"
+      ],
+      "choices_l2": [
+        "tá",
+        "ten",
+        "vy"
+      ]
+    },
+    {
+      "id": "listen-na-ve-kono-n-pondelok-chlapci-nav-tevuj-diev-at",
+      "type": "listen",
+      "l1": "Le lundi de Pâques les garçons rendent visite aux filles.",
+      "l2": "Na Veľkonočný pondelok chlapci navštevujú dievčatá.",
+      "choices_l1": [
+        "Les garçons sont venus avec le fouet.",
+        "Toutes les femmes n'aiment pas la šibačka.",
+        "La voisine nous a donné de la pâtisserie maison."
+      ],
+      "choices_l2": [
+        "Radšej používam parfum ako vodu.",
+        "Susedka nám dala domáce koláče.",
+        "Dala som im vajíčka ako odmenu."
+      ]
+    },
+    {
+      "id": "listen-poliali-ma-vodou",
+      "type": "listen",
+      "l1": "Ils m'ont arrosé d'eau.",
+      "l2": "Poliali ma vodou.",
+      "choices_l1": [
+        "Les garçons sont venus avec le fouet.",
+        "Toutes les femmes n'aiment pas la šibačka.",
+        "Le lundi de Pâques j'ai arrosé toute la famille."
+      ],
+      "choices_l2": [
+        "Nie každá žena má rada šibačku.",
+        "Susedka nám dala domáce koláče.",
+        "Dala som im vajíčka ako odmenu."
+      ]
+    },
+    {
+      "id": "listen-dala-som-im-vaj-ka-ako-odmenu",
+      "type": "listen",
+      "l1": "Je leur ai donné des œufs comme récompense.",
+      "l2": "Dala som im vajíčka ako odmenu.",
+      "choices_l1": [
+        "Nous avons teint les œufs le samedi saint, puis nous les avons donnés aux garçons.",
+        "Les garçons ont chanté une chanson devant la porte.",
+        "J'ai préféré leur donner de l'argent plutôt que des œufs."
+      ],
+      "choices_l2": [
+        "Na Veľkonočný pondelok som poliala vodou celú rodinu.",
+        "Nie každá žena má rada šibačku.",
+        "Radšej som im dala peniaze ako vajíčka."
+      ]
+    },
+    {
+      "id": "listen-nie-ka-d-ena-m-rada-iba-ku",
+      "type": "listen",
+      "l1": "Toutes les femmes n'aiment pas la šibačka.",
+      "l2": "Nie každá žena má rada šibačku.",
+      "choices_l1": [
+        "Je leur ai donné des œufs comme récompense.",
+        "Je préfère utiliser du parfum plutôt que de l'eau.",
+        "Le lundi de Pâques j'ai arrosé toute la famille."
+      ],
+      "choices_l2": [
+        "Farbili sme vajíčka na Bielu sobotu, potom sme ich dali chlapcom.",
+        "Chlapci spievali pieseň pred dverami.",
+        "Chlapci prišli s korbáčom."
+      ]
+    },
+    {
+      "id": "listen-dnes-je-zvyk-menej-siln-ako-predt-m",
+      "type": "listen",
+      "l1": "Aujourd'hui la coutume est moins forte qu'avant.",
+      "l2": "Dnes je zvyk menej silný ako predtým.",
+      "choices_l1": [
+        "Je préfère utiliser du parfum plutôt que de l'eau.",
+        "Toutes les femmes n'aiment pas la šibačka.",
+        "La voisine nous a donné de la pâtisserie maison."
+      ],
+      "choices_l2": [
+        "Chlapci prišli s korbáčom.",
+        "Dala som im vajíčka ako odmenu.",
+        "Nie každá žena má rada šibačku."
+      ]
+    },
+    {
+      "id": "listen-chlapci-pri-li-s-korb-om",
+      "type": "listen",
+      "l1": "Les garçons sont venus avec le fouet.",
+      "l2": "Chlapci prišli s korbáčom.",
+      "choices_l1": [
+        "Le lundi de Pâques les garçons rendent visite aux filles.",
+        "La voisine nous a donné de la pâtisserie maison.",
+        "J'ai préféré leur donner de l'argent plutôt que des œufs."
+      ],
+      "choices_l2": [
+        "Nie každá žena má rada šibačku.",
+        "Dala som im vajíčka ako odmenu.",
+        "Radšej používam parfum ako vodu."
+      ]
+    },
+    {
+      "id": "listen-rad-ej-som-im-dala-peniaze-ako-vaj-ka",
+      "type": "listen",
+      "l1": "J'ai préféré leur donner de l'argent plutôt que des œufs.",
+      "l2": "Radšej som im dala peniaze ako vajíčka.",
+      "choices_l1": [
+        "Aujourd'hui la coutume est moins forte qu'avant.",
+        "Les garçons ont chanté une chanson devant la porte.",
+        "Les garçons sont venus avec le fouet."
+      ],
+      "choices_l2": [
+        "Dnes je zvyk menej silný ako predtým.",
+        "Bolo veľa smiechu a vtipov.",
+        "Chlapci spievali pieseň pred dverami."
+      ]
+    },
+    {
+      "id": "listen-na-ve-kono-n-pondelok-som-poliala-vodou-cel-rodinu",
+      "type": "listen",
+      "l1": "Le lundi de Pâques j'ai arrosé toute la famille.",
+      "l2": "Na Veľkonočný pondelok som poliala vodou celú rodinu.",
+      "choices_l1": [
+        "J'ai préféré leur donner de l'argent plutôt que des œufs.",
+        "Toutes les femmes n'aiment pas la šibačka.",
+        "Il y avait beaucoup de rires et de blagues."
+      ],
+      "choices_l2": [
+        "Farbili sme vajíčka na Bielu sobotu, potom sme ich dali chlapcom.",
+        "Dnes je zvyk menej silný ako predtým.",
+        "Dala som im vajíčka ako odmenu."
+      ]
+    },
+    {
+      "id": "listen-farbili-sme-vaj-ka-na-bielu-sobotu-potom-sme-ich-dali-chlapcom",
+      "type": "listen",
+      "l1": "Nous avons teint les œufs le samedi saint, puis nous les avons donnés aux garçons.",
+      "l2": "Farbili sme vajíčka na Bielu sobotu, potom sme ich dali chlapcom.",
+      "choices_l1": [
+        "Il y avait beaucoup de rires et de blagues.",
+        "Aujourd'hui la coutume est moins forte qu'avant.",
+        "Toutes les femmes n'aiment pas la šibačka."
+      ],
+      "choices_l2": [
+        "Chlapci spievali pieseň pred dverami.",
+        "Radšej som im dala peniaze ako vajíčka.",
+        "Dnes je zvyk menej silný ako predtým."
+      ]
+    },
+    {
+      "id": "listen-susedka-n-m-dala-dom-ce-kol-e",
+      "type": "listen",
+      "l1": "La voisine nous a donné de la pâtisserie maison.",
+      "l2": "Susedka nám dala domáce koláče.",
+      "choices_l1": [
+        "Aujourd'hui la coutume est moins forte qu'avant.",
+        "Ils m'ont arrosé d'eau.",
+        "Le lundi de Pâques j'ai arrosé toute la famille."
+      ],
+      "choices_l2": [
+        "Dala som im vajíčka ako odmenu.",
+        "Dnes je zvyk menej silný ako predtým.",
+        "Radšej používam parfum ako vodu."
+      ]
+    },
+    {
+      "id": "listen-chlapci-spievali-piese-pred-dverami",
+      "type": "listen",
+      "l1": "Les garçons ont chanté une chanson devant la porte.",
+      "l2": "Chlapci spievali pieseň pred dverami.",
+      "choices_l1": [
+        "Le lundi de Pâques j'ai arrosé toute la famille.",
+        "Le lundi de Pâques les garçons rendent visite aux filles.",
+        "J'ai préféré leur donner de l'argent plutôt que des œufs."
+      ],
+      "choices_l2": [
+        "Dala som im vajíčka ako odmenu.",
+        "Chlapci prišli s korbáčom.",
+        "Na Veľkonočný pondelok chlapci navštevujú dievčatá."
+      ]
+    },
+    {
+      "id": "listen-bolo-ve-a-smiechu-a-vtipov",
+      "type": "listen",
+      "l1": "Il y avait beaucoup de rires et de blagues.",
+      "l2": "Bolo veľa smiechu a vtipov.",
+      "choices_l1": [
+        "Le lundi de Pâques j'ai arrosé toute la famille.",
+        "Aujourd'hui la coutume est moins forte qu'avant.",
+        "Les garçons ont chanté une chanson devant la porte."
+      ],
+      "choices_l2": [
+        "Farbili sme vajíčka na Bielu sobotu, potom sme ich dali chlapcom.",
+        "Poliali ma vodou.",
+        "Nie každá žena má rada šibačku."
+      ]
+    },
+    {
+      "id": "listen-rad-ej-pou-vam-parfum-ako-vodu",
+      "type": "listen",
+      "l1": "Je préfère utiliser du parfum plutôt que de l'eau.",
+      "l2": "Radšej používam parfum ako vodu.",
+      "choices_l1": [
+        "La voisine nous a donné de la pâtisserie maison.",
+        "Le lundi de Pâques les garçons rendent visite aux filles.",
+        "Aujourd'hui la coutume est moins forte qu'avant."
+      ],
+      "choices_l2": [
+        "Susedka nám dala domáce koláče.",
+        "Dnes je zvyk menej silný ako predtým.",
+        "Nie každá žena má rada šibačku."
+      ]
+    },
+    {
+      "id": "listen-tento-zvyk-sa-men-ka-d-rok",
+      "type": "listen",
+      "l1": "Cette coutume change chaque année.",
+      "l2": "Tento zvyk sa mení každý rok.",
+      "choices_l1": [
+        "Je leur ai donné des œufs comme récompense.",
+        "Nous avons teint les œufs le samedi saint, puis nous les avons donnés aux garçons.",
+        "Le lundi de Pâques j'ai arrosé toute la famille."
+      ],
+      "choices_l2": [
+        "Dala som im vajíčka ako odmenu.",
+        "Chlapci spievali pieseň pred dverami.",
+        "Farbili sme vajíčka na Bielu sobotu, potom sme ich dali chlapcom."
+      ]
+    },
+    {
+      "id": "order-na-ve-kono-n-pondelok-chlapci-nav-tevuj-diev-at",
+      "type": "order",
+      "l1": "Le lundi de Pâques les garçons rendent visite aux filles.",
+      "l2": "Na Veľkonočný pondelok chlapci navštevujú dievčatá.",
+      "tokens_l1": [
+        "Le",
+        "lundi",
+        "de",
+        "Pâques",
+        "les",
+        "garçons",
+        "rendent",
+        "visite",
+        "aux",
+        "filles.",
+        "Je",
+        "préfère",
+        "utiliser",
+        "du",
+        "parfum",
+        "plutôt",
+        "que",
+        "de",
+        "l'eau."
+      ],
+      "tokens_l2": [
+        "Na",
+        "Veľkonočný",
+        "pondelok",
+        "chlapci",
+        "navštevujú",
+        "dievčatá.",
+        "Radšej",
+        "používam",
+        "parfum",
+        "ako",
+        "vodu."
+      ]
+    },
+    {
+      "id": "order-poliali-ma-vodou",
+      "type": "order",
+      "l1": "Ils m'ont arrosé d'eau.",
+      "l2": "Poliali ma vodou.",
+      "tokens_l1": [
+        "Ils",
+        "m'ont",
+        "arrosé",
+        "d'eau.",
+        "Le",
+        "lundi",
+        "de",
+        "Pâques",
+        "les",
+        "garçons",
+        "rendent",
+        "visite",
+        "aux",
+        "filles."
+      ],
+      "tokens_l2": [
+        "Poliali",
+        "ma",
+        "vodou.",
+        "Na",
+        "Veľkonočný",
+        "pondelok",
+        "chlapci",
+        "navštevujú",
+        "dievčatá."
+      ]
+    },
+    {
+      "id": "order-dala-som-im-vaj-ka-ako-odmenu",
+      "type": "order",
+      "l1": "Je leur ai donné des œufs comme récompense.",
+      "l2": "Dala som im vajíčka ako odmenu.",
+      "tokens_l1": [
+        "Je",
+        "leur",
+        "ai",
+        "donné",
+        "des",
+        "œufs",
+        "comme",
+        "récompense.",
+        "Cette",
+        "coutume",
+        "change",
+        "chaque",
+        "année."
+      ],
+      "tokens_l2": [
+        "Dala",
+        "som",
+        "im",
+        "vajíčka",
+        "ako",
+        "odmenu.",
+        "Tento",
+        "zvyk",
+        "sa",
+        "mení",
+        "každý",
+        "rok."
+      ]
+    },
+    {
+      "id": "order-nie-ka-d-ena-m-rada-iba-ku",
+      "type": "order",
+      "l1": "Toutes les femmes n'aiment pas la šibačka.",
+      "l2": "Nie každá žena má rada šibačku.",
+      "tokens_l1": [
+        "Toutes",
+        "les",
+        "femmes",
+        "n'aiment",
+        "pas",
+        "la",
+        "šibačka.",
+        "Ils",
+        "m'ont",
+        "arrosé",
+        "d'eau."
+      ],
+      "tokens_l2": [
+        "Nie",
+        "každá",
+        "žena",
+        "má",
+        "rada",
+        "šibačku.",
+        "Poliali",
+        "ma",
+        "vodou."
+      ]
+    },
+    {
+      "id": "order-dnes-je-zvyk-menej-siln-ako-predt-m",
+      "type": "order",
+      "l1": "Aujourd'hui la coutume est moins forte qu'avant.",
+      "l2": "Dnes je zvyk menej silný ako predtým.",
+      "tokens_l1": [
+        "Aujourd'hui",
+        "la",
+        "coutume",
+        "est",
+        "moins",
+        "forte",
+        "qu'avant.",
+        "Nous",
+        "avons",
+        "teint",
+        "les",
+        "œufs",
+        "le",
+        "samedi",
+        "saint,",
+        "puis",
+        "nous",
+        "les",
+        "avons",
+        "donnés",
+        "aux",
+        "garçons."
+      ],
+      "tokens_l2": [
+        "Dnes",
+        "je",
+        "zvyk",
+        "menej",
+        "silný",
+        "ako",
+        "predtým.",
+        "Farbili",
+        "sme",
+        "vajíčka",
+        "na",
+        "Bielu",
+        "sobotu,",
+        "potom",
+        "sme",
+        "ich",
+        "dali",
+        "chlapcom."
+      ]
+    },
+    {
+      "id": "order-chlapci-pri-li-s-korb-om",
+      "type": "order",
+      "l1": "Les garçons sont venus avec le fouet.",
+      "l2": "Chlapci prišli s korbáčom.",
+      "tokens_l1": [
+        "Les",
+        "garçons",
+        "sont",
+        "venus",
+        "avec",
+        "le",
+        "fouet.",
+        "Ils",
+        "m'ont",
+        "arrosé",
+        "d'eau."
+      ],
+      "tokens_l2": [
+        "Chlapci",
+        "prišli",
+        "s",
+        "korbáčom.",
+        "Poliali",
+        "ma",
+        "vodou."
+      ]
+    },
+    {
+      "id": "order-rad-ej-som-im-dala-peniaze-ako-vaj-ka",
+      "type": "order",
+      "l1": "J'ai préféré leur donner de l'argent plutôt que des œufs.",
+      "l2": "Radšej som im dala peniaze ako vajíčka.",
+      "tokens_l1": [
+        "J'ai",
+        "préféré",
+        "leur",
+        "donner",
+        "de",
+        "l'argent",
+        "plutôt",
+        "que",
+        "des",
+        "œufs.",
+        "Aujourd'hui",
+        "la",
+        "coutume",
+        "est",
+        "moins",
+        "forte",
+        "qu'avant."
+      ],
+      "tokens_l2": [
+        "Radšej",
+        "som",
+        "im",
+        "dala",
+        "peniaze",
+        "ako",
+        "vajíčka.",
+        "Dnes",
+        "je",
+        "zvyk",
+        "menej",
+        "silný",
+        "ako",
+        "predtým."
+      ]
+    },
+    {
+      "id": "order-na-ve-kono-n-pondelok-som-poliala-vodou-cel-rodinu",
+      "type": "order",
+      "l1": "Le lundi de Pâques j'ai arrosé toute la famille.",
+      "l2": "Na Veľkonočný pondelok som poliala vodou celú rodinu.",
+      "tokens_l1": [
+        "Le",
+        "lundi",
+        "de",
+        "Pâques",
+        "j'ai",
+        "arrosé",
+        "toute",
+        "la",
+        "famille.",
+        "Toutes",
+        "les",
+        "femmes",
+        "n'aiment",
+        "pas",
+        "la",
+        "šibačka."
+      ],
+      "tokens_l2": [
+        "Na",
+        "Veľkonočný",
+        "pondelok",
+        "som",
+        "poliala",
+        "vodou",
+        "celú",
+        "rodinu.",
+        "Nie",
+        "každá",
+        "žena",
+        "má",
+        "rada",
+        "šibačku."
+      ]
+    },
+    {
+      "id": "order-farbili-sme-vaj-ka-na-bielu-sobotu-potom-sme-ich-dali-chlapcom",
+      "type": "order",
+      "l1": "Nous avons teint les œufs le samedi saint, puis nous les avons donnés aux garçons.",
+      "l2": "Farbili sme vajíčka na Bielu sobotu, potom sme ich dali chlapcom.",
+      "tokens_l1": [
+        "Nous",
+        "avons",
+        "teint",
+        "les",
+        "œufs",
+        "le",
+        "samedi",
+        "saint,",
+        "puis",
+        "nous",
+        "les",
+        "avons",
+        "donnés",
+        "aux",
+        "garçons.",
+        "Les",
+        "garçons",
+        "sont",
+        "venus",
+        "avec",
+        "le",
+        "fouet."
+      ],
+      "tokens_l2": [
+        "Farbili",
+        "sme",
+        "vajíčka",
+        "na",
+        "Bielu",
+        "sobotu,",
+        "potom",
+        "sme",
+        "ich",
+        "dali",
+        "chlapcom.",
+        "Chlapci",
+        "prišli",
+        "s",
+        "korbáčom."
+      ]
+    },
+    {
+      "id": "order-susedka-n-m-dala-dom-ce-kol-e",
+      "type": "order",
+      "l1": "La voisine nous a donné de la pâtisserie maison.",
+      "l2": "Susedka nám dala domáce koláče.",
+      "tokens_l1": [
+        "La",
+        "voisine",
+        "nous",
+        "a",
+        "donné",
+        "de",
+        "la",
+        "pâtisserie",
+        "maison.",
+        "Je",
+        "préfère",
+        "utiliser",
+        "du",
+        "parfum",
+        "plutôt",
+        "que",
+        "de",
+        "l'eau."
+      ],
+      "tokens_l2": [
+        "Susedka",
+        "nám",
+        "dala",
+        "domáce",
+        "koláče.",
+        "Radšej",
+        "používam",
+        "parfum",
+        "ako",
+        "vodu."
+      ]
+    },
+    {
+      "id": "order-chlapci-spievali-piese-pred-dverami",
+      "type": "order",
+      "l1": "Les garçons ont chanté une chanson devant la porte.",
+      "l2": "Chlapci spievali pieseň pred dverami.",
+      "tokens_l1": [
+        "Les",
+        "garçons",
+        "ont",
+        "chanté",
+        "une",
+        "chanson",
+        "devant",
+        "la",
+        "porte.",
+        "Je",
+        "leur",
+        "ai",
+        "donné",
+        "des",
+        "œufs",
+        "comme",
+        "récompense."
+      ],
+      "tokens_l2": [
+        "Chlapci",
+        "spievali",
+        "pieseň",
+        "pred",
+        "dverami.",
+        "Dala",
+        "som",
+        "im",
+        "vajíčka",
+        "ako",
+        "odmenu."
+      ]
+    },
+    {
+      "id": "order-bolo-ve-a-smiechu-a-vtipov",
+      "type": "order",
+      "l1": "Il y avait beaucoup de rires et de blagues.",
+      "l2": "Bolo veľa smiechu a vtipov.",
+      "tokens_l1": [
+        "Il",
+        "y",
+        "avait",
+        "beaucoup",
+        "de",
+        "rires",
+        "et",
+        "de",
+        "blagues.",
+        "Nous",
+        "avons",
+        "teint",
+        "les",
+        "œufs",
+        "le",
+        "samedi",
+        "saint,",
+        "puis",
+        "nous",
+        "les",
+        "avons",
+        "donnés",
+        "aux",
+        "garçons."
+      ],
+      "tokens_l2": [
+        "Bolo",
+        "veľa",
+        "smiechu",
+        "a",
+        "vtipov.",
+        "Farbili",
+        "sme",
+        "vajíčka",
+        "na",
+        "Bielu",
+        "sobotu,",
+        "potom",
+        "sme",
+        "ich",
+        "dali",
+        "chlapcom."
+      ]
+    },
+    {
+      "id": "order-rad-ej-pou-vam-parfum-ako-vodu",
+      "type": "order",
+      "l1": "Je préfère utiliser du parfum plutôt que de l'eau.",
+      "l2": "Radšej používam parfum ako vodu.",
+      "tokens_l1": [
+        "Je",
+        "préfère",
+        "utiliser",
+        "du",
+        "parfum",
+        "plutôt",
+        "que",
+        "de",
+        "l'eau.",
+        "J'ai",
+        "préféré",
+        "leur",
+        "donner",
+        "de",
+        "l'argent",
+        "plutôt",
+        "que",
+        "des",
+        "œufs."
+      ],
+      "tokens_l2": [
+        "Radšej",
+        "používam",
+        "parfum",
+        "ako",
+        "vodu.",
+        "Radšej",
+        "som",
+        "im",
+        "dala",
+        "peniaze",
+        "ako",
+        "vajíčka."
+      ]
+    },
+    {
+      "id": "order-tento-zvyk-sa-men-ka-d-rok",
+      "type": "order",
+      "l1": "Cette coutume change chaque année.",
+      "l2": "Tento zvyk sa mení každý rok.",
+      "tokens_l1": [
+        "Cette",
+        "coutume",
+        "change",
+        "chaque",
+        "année.",
+        "Je",
+        "préfère",
+        "utiliser",
+        "du",
+        "parfum",
+        "plutôt",
+        "que",
+        "de",
+        "l'eau."
+      ],
+      "tokens_l2": [
+        "Tento",
+        "zvyk",
+        "sa",
+        "mení",
+        "každý",
+        "rok.",
+        "Radšej",
+        "používam",
+        "parfum",
+        "ako",
+        "vodu."
+      ]
+    },
+    {
+      "id": "match-iba-vocab",
+      "type": "match",
+      "l1": [
+        "fouetter (symboliquement, rituellement)",
+        "arroser",
+        "l'eau",
+        "le garçon"
+      ],
+      "l2": [
+        "šibať",
+        "poliať",
+        "voda",
+        "chlapec"
+      ]
+    },
+    {
+      "id": "match-na-ve-kono-n-pondelok-chlapci-nav-tevuj-diev-at-sentences",
+      "type": "match",
+      "l1": [
+        "Le lundi de Pâques les garçons rendent visite aux filles.",
+        "Ils m'ont arrosé d'eau.",
+        "Je leur ai donné des œufs comme récompense.",
+        "Toutes les femmes n'aiment pas la šibačka."
+      ],
+      "l2": [
+        "Na Veľkonočný pondelok chlapci navštevujú dievčatá.",
+        "Poliali ma vodou.",
+        "Dala som im vajíčka ako odmenu.",
+        "Nie každá žena má rada šibačku."
+      ]
+    }
+  ]
+}

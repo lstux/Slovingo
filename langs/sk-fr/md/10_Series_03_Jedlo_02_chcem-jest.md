@@ -30,6 +30,7 @@ Dire qu'on a faim, qu'on a soif, et surtout demander ce qu'on veut. Le verbe **c
 | ty chceš | tu veux |
 | on / ona chce | il / elle veut |
 | my chceme | nous voulons |
+| vy chcete | vous voulez |
 | oni chcú | ils / elles veulent |
 
 ### Avoir faim, avoir soif

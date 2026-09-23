@@ -12,7 +12,7 @@ Andrea a Karine sa stretávajú s Ericom v Saint-Nazaire na dlho plánovaný vý
 - 🧑 Karine
 - 👦 Eric, ktorý objavuje more
 
-Všetci si tykajú.
+Andrea a Karine si tykajú, rovnako ako Eric a Karine. Eric a Andrea si vykajú.
 
 ---
 

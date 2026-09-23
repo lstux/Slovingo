@@ -1,0 +1,2081 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-n-mestie",
+      "type": "qcm",
+      "l1": "la place",
+      "l2": "námestie",
+      "choices_l1": [
+        "la rue",
+        "la statue",
+        "la bibliothèque"
+      ],
+      "choices_l2": [
+        "kostol",
+        "fontána",
+        "múzeum"
+      ]
+    },
+    {
+      "id": "qcm-ulica",
+      "type": "qcm",
+      "l1": "la rue",
+      "l2": "ulica",
+      "choices_l1": [
+        "la fontaine",
+        "le théâtre",
+        "la place"
+      ],
+      "choices_l2": [
+        "most",
+        "múzeum",
+        "pošta"
+      ]
+    },
+    {
+      "id": "qcm-most",
+      "type": "qcm",
+      "l1": "le pont",
+      "l2": "most",
+      "choices_l1": [
+        "le musée",
+        "la mairie",
+        "la banque"
+      ],
+      "choices_l2": [
+        "radnica",
+        "fontána",
+        "banka"
+      ]
+    },
+    {
+      "id": "qcm-park",
+      "type": "qcm",
+      "l1": "le parc",
+      "l2": "park",
+      "choices_l1": [
+        "la statue",
+        "la poste",
+        "la rue"
+      ],
+      "choices_l2": [
+        "most",
+        "radnica",
+        "múzeum"
+      ]
+    },
+    {
+      "id": "qcm-kostol",
+      "type": "qcm",
+      "l1": "l'église",
+      "l2": "kostol",
+      "choices_l1": [
+        "la mairie",
+        "le parc",
+        "la place"
+      ],
+      "choices_l2": [
+        "ulica",
+        "most",
+        "fontána"
+      ]
+    },
+    {
+      "id": "qcm-divadlo",
+      "type": "qcm",
+      "l1": "le théâtre",
+      "l2": "divadlo",
+      "choices_l1": [
+        "le musée",
+        "la poste",
+        "la place"
+      ],
+      "choices_l2": [
+        "park",
+        "radnica",
+        "pošta"
+      ]
+    },
+    {
+      "id": "qcm-m-zeum",
+      "type": "qcm",
+      "l1": "le musée",
+      "l2": "múzeum",
+      "choices_l1": [
+        "le parc",
+        "la place",
+        "la bibliothèque"
+      ],
+      "choices_l2": [
+        "divadlo",
+        "kostol",
+        "radnica"
+      ]
+    },
+    {
+      "id": "qcm-po-ta",
+      "type": "qcm",
+      "l1": "la poste",
+      "l2": "pošta",
+      "choices_l1": [
+        "la banque",
+        "la fontaine",
+        "la statue"
+      ],
+      "choices_l2": [
+        "park",
+        "námestie",
+        "knižnica"
+      ]
+    },
+    {
+      "id": "qcm-banka",
+      "type": "qcm",
+      "l1": "la banque",
+      "l2": "banka",
+      "choices_l1": [
+        "le théâtre",
+        "la place",
+        "la poste"
+      ],
+      "choices_l2": [
+        "most",
+        "námestie",
+        "knižnica"
+      ]
+    },
+    {
+      "id": "qcm-kni-nica",
+      "type": "qcm",
+      "l1": "la bibliothèque",
+      "l2": "knižnica",
+      "choices_l1": [
+        "la place",
+        "la fontaine",
+        "la banque"
+      ],
+      "choices_l2": [
+        "divadlo",
+        "park",
+        "banka"
+      ]
+    },
+    {
+      "id": "qcm-nemocnica",
+      "type": "qcm",
+      "l1": "l'hôpital",
+      "l2": "nemocnica",
+      "choices_l1": [
+        "le pont",
+        "la poste",
+        "l'église"
+      ],
+      "choices_l2": [
+        "námestie",
+        "radnica",
+        "park"
+      ]
+    },
+    {
+      "id": "qcm-radnica",
+      "type": "qcm",
+      "l1": "la mairie",
+      "l2": "radnica",
+      "choices_l1": [
+        "le théâtre",
+        "la rue",
+        "la place"
+      ],
+      "choices_l2": [
+        "múzeum",
+        "divadlo",
+        "pošta"
+      ]
+    },
+    {
+      "id": "qcm-font-na",
+      "type": "qcm",
+      "l1": "la fontaine",
+      "l2": "fontána",
+      "choices_l1": [
+        "le parc",
+        "la banque",
+        "l'église"
+      ],
+      "choices_l2": [
+        "park",
+        "banka",
+        "socha"
+      ]
+    },
+    {
+      "id": "qcm-socha",
+      "type": "qcm",
+      "l1": "la statue",
+      "l2": "socha",
+      "choices_l1": [
+        "la place",
+        "la fontaine",
+        "la bibliothèque"
+      ],
+      "choices_l2": [
+        "pošta",
+        "fontána",
+        "knižnica"
+      ]
+    },
+    {
+      "id": "qcm-autobus",
+      "type": "qcm",
+      "l1": "le bus",
+      "l2": "autobus",
+      "choices_l1": [
+        "le parc",
+        "le musée",
+        "le théâtre"
+      ],
+      "choices_l2": [
+        "pošta",
+        "most",
+        "fontána"
+      ]
+    },
+    {
+      "id": "qcm-elektri-ka",
+      "type": "qcm",
+      "l1": "le tram",
+      "l2": "električka",
+      "choices_l1": [
+        "le parc",
+        "l'église",
+        "la bibliothèque"
+      ],
+      "choices_l2": [
+        "ulica",
+        "knižnica",
+        "fontána"
+      ]
+    },
+    {
+      "id": "qcm-vlak",
+      "type": "qcm",
+      "l1": "le train",
+      "l2": "vlak",
+      "choices_l1": [
+        "la place",
+        "la rue",
+        "la fontaine"
+      ],
+      "choices_l2": [
+        "fontána",
+        "námestie",
+        "kostol"
+      ]
+    },
+    {
+      "id": "qcm-zast-vka",
+      "type": "qcm",
+      "l1": "l'arrêt",
+      "l2": "zastávka",
+      "choices_l1": [
+        "la bibliothèque",
+        "le parc",
+        "la mairie"
+      ],
+      "choices_l2": [
+        "námestie",
+        "pošta",
+        "most"
+      ]
+    },
+    {
+      "id": "qcm-cestovn-l-stok",
+      "type": "qcm",
+      "l1": "le ticket",
+      "l2": "cestovný lístok",
+      "choices_l1": [
+        "le parc",
+        "la banque",
+        "l'église"
+      ],
+      "choices_l2": [
+        "knižnica",
+        "park",
+        "fontána"
+      ]
+    },
+    {
+      "id": "qcm-chodi",
+      "type": "qcm",
+      "l1": "aller habituellement",
+      "l2": "chodiť",
+      "choices_l1": [
+        "en arrière",
+        "au musée",
+        "à pied"
+      ],
+      "choices_l2": [
+        "rovno",
+        "pešo",
+        "na ulici"
+      ]
+    },
+    {
+      "id": "qcm-mhd",
+      "type": "qcm",
+      "l1": "les transports en commun",
+      "l2": "MHD",
+      "choices_l1": [
+        "Je vais au travail en bus (d'habitude).",
+        "dans le parc",
+        "la gare, la station"
+      ],
+      "choices_l2": [
+        "radnica",
+        "banka",
+        "kostol"
+      ]
+    },
+    {
+      "id": "qcm-pe-o",
+      "type": "qcm",
+      "l1": "à pied",
+      "l2": "pešo",
+      "choices_l1": [
+        "tout droit",
+        "à droite",
+        "dans l'église"
+      ],
+      "choices_l2": [
+        "na pošte",
+        "rovno",
+        "na námestí"
+      ]
+    },
+    {
+      "id": "qcm-bicykel",
+      "type": "qcm",
+      "l1": "le vélo",
+      "l2": "bicykel",
+      "choices_l1": [
+        "la banque",
+        "le parc",
+        "la bibliothèque"
+      ],
+      "choices_l2": [
+        "ulica",
+        "divadlo",
+        "park"
+      ]
+    },
+    {
+      "id": "qcm-auto",
+      "type": "qcm",
+      "l1": "la voiture",
+      "l2": "auto",
+      "choices_l1": [
+        "la place",
+        "la bibliothèque",
+        "le pont"
+      ],
+      "choices_l2": [
+        "fontána",
+        "divadlo",
+        "radnica"
+      ]
+    },
+    {
+      "id": "qcm-tax-k",
+      "type": "qcm",
+      "l1": "le taxi",
+      "l2": "taxík",
+      "choices_l1": [
+        "la bibliothèque",
+        "l'église",
+        "le musée"
+      ],
+      "choices_l2": [
+        "kostol",
+        "ulica",
+        "múzeum"
+      ]
+    },
+    {
+      "id": "qcm-l-stok",
+      "type": "qcm",
+      "l1": "le billet",
+      "l2": "lístok",
+      "choices_l1": [
+        "le pont",
+        "la bibliothèque",
+        "la poste"
+      ],
+      "choices_l2": [
+        "divadlo",
+        "námestie",
+        "ulica"
+      ]
+    },
+    {
+      "id": "qcm-stanica",
+      "type": "qcm",
+      "l1": "la gare, la station",
+      "l2": "stanica",
+      "choices_l1": [
+        "à la poste",
+        "dans le parc",
+        "Tu y vas à pied (en général) ?"
+      ],
+      "choices_l2": [
+        "múzeum",
+        "pošta",
+        "kostol"
+      ]
+    },
+    {
+      "id": "qcm-smer",
+      "type": "qcm",
+      "l1": "la direction",
+      "l2": "smer",
+      "choices_l1": [
+        "la bibliothèque",
+        "la place",
+        "le parc"
+      ],
+      "choices_l2": [
+        "park",
+        "pošta",
+        "banka"
+      ]
+    },
+    {
+      "id": "qcm-cho",
+      "type": "qcm",
+      "l1": "va",
+      "l2": "choď",
+      "choices_l1": [
+        "dans l'église",
+        "à pied",
+        "aller habituellement"
+      ],
+      "choices_l2": [
+        "chodiť",
+        "v múzeu",
+        "v kostole"
+      ]
+    },
+    {
+      "id": "qcm-cho-te",
+      "type": "qcm",
+      "l1": "allez (vouvoiement)",
+      "l2": "choďte",
+      "choices_l1": [
+        "plus loin",
+        "tout droit",
+        "va"
+      ],
+      "choices_l2": [
+        "na námestí",
+        "v kostole",
+        "na moste"
+      ]
+    },
+    {
+      "id": "qcm-rovno",
+      "type": "qcm",
+      "l1": "tout droit",
+      "l2": "rovno",
+      "choices_l1": [
+        "au musée",
+        "dans l'église",
+        "plus loin"
+      ],
+      "choices_l2": [
+        "na námestí",
+        "v divadle",
+        "choď"
+      ]
+    },
+    {
+      "id": "qcm-v-avo",
+      "type": "qcm",
+      "l1": "à gauche",
+      "l2": "vľavo",
+      "choices_l1": [
+        "au théâtre",
+        "à pied",
+        "en arrière"
+      ],
+      "choices_l2": [
+        "pešo",
+        "v kostole",
+        "na moste"
+      ]
+    },
+    {
+      "id": "qcm-vpravo",
+      "type": "qcm",
+      "l1": "à droite",
+      "l2": "vpravo",
+      "choices_l1": [
+        "dans l'église",
+        "au musée",
+        "aller habituellement"
+      ],
+      "choices_l2": [
+        "na pošte",
+        "na námestí",
+        "v parku"
+      ]
+    },
+    {
+      "id": "qcm-za-rohom",
+      "type": "qcm",
+      "l1": "après le coin",
+      "l2": "za rohom",
+      "choices_l1": [
+        "à la poste",
+        "dans la rue",
+        "sur la place"
+      ],
+      "choices_l2": [
+        "chodiť",
+        "v múzeu",
+        "v parku"
+      ]
+    },
+    {
+      "id": "qcm-priamo",
+      "type": "qcm",
+      "l1": "juste, directement",
+      "l2": "priamo",
+      "choices_l1": [
+        "dans l'église",
+        "à droite",
+        "en arrière"
+      ],
+      "choices_l2": [
+        "choďte",
+        "v múzeu",
+        "na moste"
+      ]
+    },
+    {
+      "id": "qcm-roh",
+      "type": "qcm",
+      "l1": "le coin",
+      "l2": "roh",
+      "choices_l1": [
+        "la banque",
+        "le parc",
+        "le pont"
+      ],
+      "choices_l2": [
+        "park",
+        "radnica",
+        "kostol"
+      ]
+    },
+    {
+      "id": "qcm-alej",
+      "type": "qcm",
+      "l1": "plus loin",
+      "l2": "ďalej",
+      "choices_l1": [
+        "juste, directement",
+        "aller habituellement",
+        "à gauche"
+      ],
+      "choices_l2": [
+        "v múzeu",
+        "chodiť",
+        "v kostole"
+      ]
+    },
+    {
+      "id": "qcm-nasp",
+      "type": "qcm",
+      "l1": "en arrière",
+      "l2": "naspäť",
+      "choices_l1": [
+        "allez (vouvoiement)",
+        "juste, directement",
+        "tout droit"
+      ],
+      "choices_l2": [
+        "na pošte",
+        "v divadle",
+        "na ulici"
+      ]
+    },
+    {
+      "id": "qcm-kri-ovatka",
+      "type": "qcm",
+      "l1": "le carrefour",
+      "l2": "križovatka",
+      "choices_l1": [
+        "la bibliothèque",
+        "la rue",
+        "l'église"
+      ],
+      "choices_l2": [
+        "knižnica",
+        "pošta",
+        "park"
+      ]
+    },
+    {
+      "id": "qcm-svetl",
+      "type": "qcm",
+      "l1": "les feux",
+      "l2": "svetlá",
+      "choices_l1": [
+        "l'église",
+        "la mairie",
+        "la bibliothèque"
+      ],
+      "choices_l2": [
+        "knižnica",
+        "radnica",
+        "pošta"
+      ]
+    },
+    {
+      "id": "qcm-chodn-k",
+      "type": "qcm",
+      "l1": "le trottoir",
+      "l2": "chodník",
+      "choices_l1": [
+        "la place",
+        "le théâtre",
+        "le parc"
+      ],
+      "choices_l2": [
+        "radnica",
+        "fontána",
+        "divadlo"
+      ]
+    },
+    {
+      "id": "qcm-vidie",
+      "type": "qcm",
+      "l1": "voir",
+      "l2": "vidieť",
+      "choices_l1": [
+        "rencontrer",
+        "se promener",
+        "je vois"
+      ],
+      "choices_l2": [
+        "prechádzať sa",
+        "my vidíme",
+        "ty chodíš"
+      ]
+    },
+    {
+      "id": "qcm-nav-t-vi",
+      "type": "qcm",
+      "l1": "visiter",
+      "l2": "navštíviť",
+      "choices_l1": [
+        "rencontrer",
+        "voir",
+        "tu vois"
+      ],
+      "choices_l2": [
+        "my vidíme",
+        "ty chodíš",
+        "my chodíme"
+      ]
+    },
+    {
+      "id": "qcm-prech-dza-sa",
+      "type": "qcm",
+      "l1": "se promener",
+      "l2": "prechádzať sa",
+      "choices_l1": [
+        "voir",
+        "visiter",
+        "nous voyons"
+      ],
+      "choices_l2": [
+        "stretnúť",
+        "my chodíme",
+        "vidieť"
+      ]
+    },
+    {
+      "id": "qcm-stretn",
+      "type": "qcm",
+      "l1": "rencontrer",
+      "l2": "stretnúť",
+      "choices_l1": [
+        "je vois",
+        "nous voyons",
+        "se promener"
+      ],
+      "choices_l2": [
+        "vidieť",
+        "navštíviť",
+        "ja vidím"
+      ]
+    },
+    {
+      "id": "qcm-kaviare",
+      "type": "qcm",
+      "l1": "le café",
+      "l2": "kaviareň",
+      "choices_l1": [
+        "la bibliothèque",
+        "le musée",
+        "le théâtre"
+      ],
+      "choices_l2": [
+        "knižnica",
+        "múzeum",
+        "most"
+      ]
+    },
+    {
+      "id": "qcm-re-taur-cia",
+      "type": "qcm",
+      "l1": "le restaurant",
+      "l2": "reštaurácia",
+      "choices_l1": [
+        "la mairie",
+        "la rue",
+        "la place"
+      ],
+      "choices_l2": [
+        "park",
+        "pošta",
+        "ulica"
+      ]
+    },
+    {
+      "id": "qcm-kino",
+      "type": "qcm",
+      "l1": "le cinéma",
+      "l2": "kino",
+      "choices_l1": [
+        "le musée",
+        "le pont",
+        "la fontaine"
+      ],
+      "choices_l2": [
+        "múzeum",
+        "ulica",
+        "kostol"
+      ]
+    },
+    {
+      "id": "qcm-v-stava",
+      "type": "qcm",
+      "l1": "l'exposition",
+      "l2": "výstava",
+      "choices_l1": [
+        "la fontaine",
+        "le musée",
+        "la poste"
+      ],
+      "choices_l2": [
+        "pošta",
+        "radnica",
+        "divadlo"
+      ]
+    },
+    {
+      "id": "qcm-koncert",
+      "type": "qcm",
+      "l1": "le concert",
+      "l2": "koncert",
+      "choices_l1": [
+        "la poste",
+        "le musée",
+        "l'église"
+      ],
+      "choices_l2": [
+        "knižnica",
+        "fontána",
+        "divadlo"
+      ]
+    },
+    {
+      "id": "qcm-festival",
+      "type": "qcm",
+      "l1": "le festival",
+      "l2": "festival",
+      "choices_l1": [
+        "la place",
+        "la bibliothèque",
+        "la mairie"
+      ],
+      "choices_l2": [
+        "kostol",
+        "banka",
+        "divadlo"
+      ]
+    },
+    {
+      "id": "qcm-program",
+      "type": "qcm",
+      "l1": "le programme",
+      "l2": "program",
+      "choices_l1": [
+        "l'église",
+        "la bibliothèque",
+        "la mairie"
+      ],
+      "choices_l2": [
+        "námestie",
+        "knižnica",
+        "pošta"
+      ]
+    },
+    {
+      "id": "qcm-zauj-mav",
+      "type": "qcm",
+      "l1": "intéressant",
+      "l2": "zaujímavý",
+      "choices_l1": [
+        "à droite",
+        "dans l'église",
+        "aller habituellement"
+      ],
+      "choices_l2": [
+        "v kostole",
+        "na pošte",
+        "chodiť"
+      ]
+    },
+    {
+      "id": "qcm-nudn",
+      "type": "qcm",
+      "l1": "ennuyeux",
+      "l2": "nudný",
+      "choices_l1": [
+        "plus loin",
+        "dans l'église",
+        "au théâtre"
+      ],
+      "choices_l2": [
+        "chodiť",
+        "na ulici",
+        "v kostole"
+      ]
+    },
+    {
+      "id": "blank-idem-na-po-tu-potom-do-banky",
+      "type": "fill-blank",
+      "l1": "Je vais à la poste, ensuite à la banque.",
+      "l2": "Idem na poštu, potom do banky.",
+      "missing_l1": "la",
+      "missing_l2": "na",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "face",
+        "Les",
+        "le"
+      ],
+      "choices_l2": [
+        "pri",
+        "po",
+        "za"
+      ]
+    },
+    {
+      "id": "blank-cho-te-rovno-kni-nica-je-ved-a-radnice",
+      "type": "fill-blank",
+      "l1": "Allez tout droit, la bibliothèque est à côté de la mairie.",
+      "l2": "Choďte rovno, knižnica je vedľa radnice.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "face",
+        "le",
+        "Les"
+      ],
+      "choices_l2": [
+        "si",
+        "bol",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-chod-m-do-parku-pe-o-ale-do-divadla-idem-autobusom",
+      "type": "fill-blank",
+      "l1": "Je vais au parc à pied, mais au théâtre j'y vais en bus.",
+      "l2": "Chodím do parku pešo, ale do divadla idem autobusom.",
+      "missing_l1": "à",
+      "missing_l2": "ale",
+      "blank_index_l1": 4,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "loin",
+        "dans",
+        "sans"
+      ],
+      "choices_l2": [
+        "aj",
+        "alebo",
+        "však"
+      ]
+    },
+    {
+      "id": "blank-zast-vka-je-za-rohom-bl-zko-font-ny",
+      "type": "fill-blank",
+      "l1": "L'arrêt est après le coin, près de la fontaine.",
+      "l2": "Zastávka je za rohom, blízko fontány.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 7,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "le",
+        "Les",
+        "face"
+      ],
+      "choices_l2": [
+        "boli",
+        "sú",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-vid-m-sochu-na-n-mest-je-zauj-mav",
+      "type": "fill-blank",
+      "l1": "Je vois la statue sur la place. Elle est intéressante.",
+      "l2": "Vidím sochu na námestí. Je zaujímavá.",
+      "missing_l1": "la",
+      "missing_l2": "Je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "le",
+        "face",
+        "Les"
+      ],
+      "choices_l2": [
+        "ste",
+        "si",
+        "budem"
+      ]
+    },
+    {
+      "id": "blank-chceme-nav-t-vi-m-zeum-a-potom-s-do-kaviarne",
+      "type": "fill-blank",
+      "l1": "Nous voulons visiter le musée et ensuite aller au café.",
+      "l2": "Chceme navštíviť múzeum a potom ísť do kaviarne.",
+      "missing_l1": "le",
+      "missing_l2": "a",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "face",
+        "Les",
+        "la"
+      ],
+      "choices_l2": [
+        "lebo",
+        "aj",
+        "však"
+      ]
+    },
+    {
+      "id": "blank-kino-je-ved-a-mosta-oproti-nemocnici",
+      "type": "fill-blank",
+      "l1": "Le cinéma est à côté du pont, en face de l'hôpital.",
+      "l2": "Kino je vedľa mosta, oproti nemocnici.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "suis",
+        "es",
+        "était"
+      ],
+      "choices_l2": [
+        "bola",
+        "budem",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-cho-v-avo-na-kri-ovatke-potom-rovno",
+      "type": "fill-blank",
+      "l1": "Va à gauche au carrefour, puis tout droit.",
+      "l2": "Choď vľavo na križovatke, potom rovno.",
+      "missing_l1": "à",
+      "missing_l2": "na",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "dans",
+        "pour",
+        "sans"
+      ],
+      "choices_l2": [
+        "so",
+        "za",
+        "pred"
+      ]
+    },
+    {
+      "id": "blank-koncert-bol-nudn-ale-v-stava-bola-zauj-mav",
+      "type": "fill-blank",
+      "l1": "Le concert était ennuyeux, mais l'exposition était intéressante.",
+      "l2": "Koncert bol nudný, ale výstava bola zaujímavá.",
+      "missing_l1": "mais",
+      "missing_l2": "ale",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Donc",
+        "et",
+        "ni"
+      ],
+      "choices_l2": [
+        "aj",
+        "alebo",
+        "však"
+      ]
+    },
+    {
+      "id": "blank-stretneme-sa-pri-font-ne-o-piatej",
+      "type": "fill-blank",
+      "l1": "On se retrouve près de la fontaine à cinq heures.",
+      "l2": "Stretneme sa pri fontáne o piatej.",
+      "missing_l1": "la",
+      "missing_l2": "sa",
+      "blank_index_l1": 5,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "face",
+        "le",
+        "Les"
+      ],
+      "choices_l2": [
+        "Toto",
+        "tá",
+        "My"
+      ]
+    },
+    {
+      "id": "blank-prech-dzam-sa-po-meste-a-fot-m-sochy",
+      "type": "fill-blank",
+      "l1": "Je me promène en ville et je photographie des statues.",
+      "l2": "Prechádzam sa po meste a fotím sochy.",
+      "missing_l1": "je",
+      "missing_l2": "a",
+      "blank_index_l1": 6,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "elles",
+        "On",
+        "Nous"
+      ],
+      "choices_l2": [
+        "však",
+        "alebo",
+        "ale"
+      ]
+    },
+    {
+      "id": "blank-ulica-je-zka-cho-te-pe-o",
+      "type": "fill-blank",
+      "l1": "La rue est étroite, allez à pied.",
+      "l2": "Ulica je úzka, choďte pešo.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "suis",
+        "sommes",
+        "êtes"
+      ],
+      "choices_l2": [
+        "bol",
+        "ste",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-vlak-me-k-tak-idem-tax-kom",
+      "type": "fill-blank",
+      "l1": "Le train est en retard, alors j'y vais en taxi.",
+      "l2": "Vlak mešká, tak idem taxíkom.",
+      "missing_l1": "est",
+      "missing_l2": "idem",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "C'est",
+        "suis",
+        "est-ce"
+      ],
+      "choices_l2": [
+        "ísť",
+        "Chodím",
+        "Chodíš"
+      ]
+    },
+    {
+      "id": "blank-program-festivalu-je-na-stanici-pri-l-stkoch",
+      "type": "fill-blank",
+      "l1": "Le programme du festival est à la gare, près des billets.",
+      "l2": "Program festivalu je na stanici, pri lístkoch.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "le",
+        "Les",
+        "face"
+      ],
+      "choices_l2": [
+        "budeme",
+        "bol",
+        "boli"
+      ]
+    },
+    {
+      "id": "blank-re-taur-cia-je-pred-kostolom-na-rohu-ulice",
+      "type": "fill-blank",
+      "l1": "Le restaurant est devant l'église, au coin de la rue.",
+      "l2": "Reštaurácia je pred kostolom, na rohu ulice.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 8,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "face",
+        "le",
+        "Les"
+      ],
+      "choices_l2": [
+        "sme",
+        "boli",
+        "budú"
+      ]
+    },
+    {
+      "id": "listen-idem-na-po-tu-potom-do-banky",
+      "type": "listen",
+      "l1": "Je vais à la poste, ensuite à la banque.",
+      "l2": "Idem na poštu, potom do banky.",
+      "choices_l1": [
+        "Je vais au parc à pied, mais au théâtre j'y vais en bus.",
+        "Je vois la statue sur la place. Elle est intéressante.",
+        "Va à gauche au carrefour, puis tout droit."
+      ],
+      "choices_l2": [
+        "Choďte rovno, knižnica je vedľa radnice.",
+        "Chceme navštíviť múzeum a potom ísť do kaviarne.",
+        "Zastávka je za rohom, blízko fontány."
+      ]
+    },
+    {
+      "id": "listen-cho-te-rovno-kni-nica-je-ved-a-radnice",
+      "type": "listen",
+      "l1": "Allez tout droit, la bibliothèque est à côté de la mairie.",
+      "l2": "Choďte rovno, knižnica je vedľa radnice.",
+      "choices_l1": [
+        "Va à gauche au carrefour, puis tout droit.",
+        "Je vais au parc à pied, mais au théâtre j'y vais en bus.",
+        "Je vois la statue sur la place. Elle est intéressante."
+      ],
+      "choices_l2": [
+        "Vlak mešká, tak idem taxíkom.",
+        "Choď vľavo na križovatke, potom rovno.",
+        "Chceme navštíviť múzeum a potom ísť do kaviarne."
+      ]
+    },
+    {
+      "id": "listen-chod-m-do-parku-pe-o-ale-do-divadla-idem-autobusom",
+      "type": "listen",
+      "l1": "Je vais au parc à pied, mais au théâtre j'y vais en bus.",
+      "l2": "Chodím do parku pešo, ale do divadla idem autobusom.",
+      "choices_l1": [
+        "Le concert était ennuyeux, mais l'exposition était intéressante.",
+        "L'arrêt est après le coin, près de la fontaine.",
+        "On se retrouve près de la fontaine à cinq heures."
+      ],
+      "choices_l2": [
+        "Stretneme sa pri fontáne o piatej.",
+        "Koncert bol nudný, ale výstava bola zaujímavá.",
+        "Idem na poštu, potom do banky."
+      ]
+    },
+    {
+      "id": "listen-zast-vka-je-za-rohom-bl-zko-font-ny",
+      "type": "listen",
+      "l1": "L'arrêt est après le coin, près de la fontaine.",
+      "l2": "Zastávka je za rohom, blízko fontány.",
+      "choices_l1": [
+        "Je vois la statue sur la place. Elle est intéressante.",
+        "Va à gauche au carrefour, puis tout droit.",
+        "Je vais au parc à pied, mais au théâtre j'y vais en bus."
+      ],
+      "choices_l2": [
+        "Chodím do parku pešo, ale do divadla idem autobusom.",
+        "Ulica je úzka, choďte pešo.",
+        "Vlak mešká, tak idem taxíkom."
+      ]
+    },
+    {
+      "id": "listen-vid-m-sochu-na-n-mest-je-zauj-mav",
+      "type": "listen",
+      "l1": "Je vois la statue sur la place. Elle est intéressante.",
+      "l2": "Vidím sochu na námestí. Je zaujímavá.",
+      "choices_l1": [
+        "La rue est étroite, allez à pied.",
+        "Le train est en retard, alors j'y vais en taxi.",
+        "Nous voulons visiter le musée et ensuite aller au café."
+      ],
+      "choices_l2": [
+        "Zastávka je za rohom, blízko fontány.",
+        "Vlak mešká, tak idem taxíkom.",
+        "Chceme navštíviť múzeum a potom ísť do kaviarne."
+      ]
+    },
+    {
+      "id": "listen-chceme-nav-t-vi-m-zeum-a-potom-s-do-kaviarne",
+      "type": "listen",
+      "l1": "Nous voulons visiter le musée et ensuite aller au café.",
+      "l2": "Chceme navštíviť múzeum a potom ísť do kaviarne.",
+      "choices_l1": [
+        "Le concert était ennuyeux, mais l'exposition était intéressante.",
+        "Je vois la statue sur la place. Elle est intéressante.",
+        "Va à gauche au carrefour, puis tout droit."
+      ],
+      "choices_l2": [
+        "Kino je vedľa mosta, oproti nemocnici.",
+        "Koncert bol nudný, ale výstava bola zaujímavá.",
+        "Choď vľavo na križovatke, potom rovno."
+      ]
+    },
+    {
+      "id": "listen-kino-je-ved-a-mosta-oproti-nemocnici",
+      "type": "listen",
+      "l1": "Le cinéma est à côté du pont, en face de l'hôpital.",
+      "l2": "Kino je vedľa mosta, oproti nemocnici.",
+      "choices_l1": [
+        "Je vais au parc à pied, mais au théâtre j'y vais en bus.",
+        "Je vais à la poste, ensuite à la banque.",
+        "Allez tout droit, la bibliothèque est à côté de la mairie."
+      ],
+      "choices_l2": [
+        "Stretneme sa pri fontáne o piatej.",
+        "Prechádzam sa po meste a fotím sochy.",
+        "Koncert bol nudný, ale výstava bola zaujímavá."
+      ]
+    },
+    {
+      "id": "listen-cho-v-avo-na-kri-ovatke-potom-rovno",
+      "type": "listen",
+      "l1": "Va à gauche au carrefour, puis tout droit.",
+      "l2": "Choď vľavo na križovatke, potom rovno.",
+      "choices_l1": [
+        "Le cinéma est à côté du pont, en face de l'hôpital.",
+        "Je me promène en ville et je photographie des statues.",
+        "La rue est étroite, allez à pied."
+      ],
+      "choices_l2": [
+        "Zastávka je za rohom, blízko fontány.",
+        "Kino je vedľa mosta, oproti nemocnici.",
+        "Stretneme sa pri fontáne o piatej."
+      ]
+    },
+    {
+      "id": "listen-koncert-bol-nudn-ale-v-stava-bola-zauj-mav",
+      "type": "listen",
+      "l1": "Le concert était ennuyeux, mais l'exposition était intéressante.",
+      "l2": "Koncert bol nudný, ale výstava bola zaujímavá.",
+      "choices_l1": [
+        "L'arrêt est après le coin, près de la fontaine.",
+        "Je vais à la poste, ensuite à la banque.",
+        "Allez tout droit, la bibliothèque est à côté de la mairie."
+      ],
+      "choices_l2": [
+        "Chodím do parku pešo, ale do divadla idem autobusom.",
+        "Choďte rovno, knižnica je vedľa radnice.",
+        "Zastávka je za rohom, blízko fontány."
+      ]
+    },
+    {
+      "id": "listen-stretneme-sa-pri-font-ne-o-piatej",
+      "type": "listen",
+      "l1": "On se retrouve près de la fontaine à cinq heures.",
+      "l2": "Stretneme sa pri fontáne o piatej.",
+      "choices_l1": [
+        "Va à gauche au carrefour, puis tout droit.",
+        "Allez tout droit, la bibliothèque est à côté de la mairie.",
+        "L'arrêt est après le coin, près de la fontaine."
+      ],
+      "choices_l2": [
+        "Choď vľavo na križovatke, potom rovno.",
+        "Chodím do parku pešo, ale do divadla idem autobusom.",
+        "Zastávka je za rohom, blízko fontány."
+      ]
+    },
+    {
+      "id": "listen-prech-dzam-sa-po-meste-a-fot-m-sochy",
+      "type": "listen",
+      "l1": "Je me promène en ville et je photographie des statues.",
+      "l2": "Prechádzam sa po meste a fotím sochy.",
+      "choices_l1": [
+        "Allez tout droit, la bibliothèque est à côté de la mairie.",
+        "Le train est en retard, alors j'y vais en taxi.",
+        "Je vais à la poste, ensuite à la banque."
+      ],
+      "choices_l2": [
+        "Stretneme sa pri fontáne o piatej.",
+        "Idem na poštu, potom do banky.",
+        "Chodím do parku pešo, ale do divadla idem autobusom."
+      ]
+    },
+    {
+      "id": "listen-ulica-je-zka-cho-te-pe-o",
+      "type": "listen",
+      "l1": "La rue est étroite, allez à pied.",
+      "l2": "Ulica je úzka, choďte pešo.",
+      "choices_l1": [
+        "Je vais à la poste, ensuite à la banque.",
+        "L'arrêt est après le coin, près de la fontaine.",
+        "Je vais au parc à pied, mais au théâtre j'y vais en bus."
+      ],
+      "choices_l2": [
+        "Koncert bol nudný, ale výstava bola zaujímavá.",
+        "Prechádzam sa po meste a fotím sochy.",
+        "Choď vľavo na križovatke, potom rovno."
+      ]
+    },
+    {
+      "id": "listen-vlak-me-k-tak-idem-tax-kom",
+      "type": "listen",
+      "l1": "Le train est en retard, alors j'y vais en taxi.",
+      "l2": "Vlak mešká, tak idem taxíkom.",
+      "choices_l1": [
+        "Nous voulons visiter le musée et ensuite aller au café.",
+        "Allez tout droit, la bibliothèque est à côté de la mairie.",
+        "L'arrêt est après le coin, près de la fontaine."
+      ],
+      "choices_l2": [
+        "Zastávka je za rohom, blízko fontány.",
+        "Chceme navštíviť múzeum a potom ísť do kaviarne.",
+        "Prechádzam sa po meste a fotím sochy."
+      ]
+    },
+    {
+      "id": "listen-program-festivalu-je-na-stanici-pri-l-stkoch",
+      "type": "listen",
+      "l1": "Le programme du festival est à la gare, près des billets.",
+      "l2": "Program festivalu je na stanici, pri lístkoch.",
+      "choices_l1": [
+        "L'arrêt est après le coin, près de la fontaine.",
+        "Je vais à la poste, ensuite à la banque.",
+        "Va à gauche au carrefour, puis tout droit."
+      ],
+      "choices_l2": [
+        "Kino je vedľa mosta, oproti nemocnici.",
+        "Idem na poštu, potom do banky.",
+        "Choďte rovno, knižnica je vedľa radnice."
+      ]
+    },
+    {
+      "id": "listen-re-taur-cia-je-pred-kostolom-na-rohu-ulice",
+      "type": "listen",
+      "l1": "Le restaurant est devant l'église, au coin de la rue.",
+      "l2": "Reštaurácia je pred kostolom, na rohu ulice.",
+      "choices_l1": [
+        "Va à gauche au carrefour, puis tout droit.",
+        "Je vais à la poste, ensuite à la banque.",
+        "La rue est étroite, allez à pied."
+      ],
+      "choices_l2": [
+        "Prechádzam sa po meste a fotím sochy.",
+        "Idem na poštu, potom do banky.",
+        "Zastávka je za rohom, blízko fontány."
+      ]
+    },
+    {
+      "id": "order-idem-na-po-tu-potom-do-banky",
+      "type": "order",
+      "l1": "Je vais à la poste, ensuite à la banque.",
+      "l2": "Idem na poštu, potom do banky.",
+      "tokens_l1": [
+        "Je",
+        "vais",
+        "à",
+        "la",
+        "poste,",
+        "ensuite",
+        "à",
+        "la",
+        "banque.",
+        "Va",
+        "à",
+        "gauche",
+        "au",
+        "carrefour,",
+        "puis",
+        "tout",
+        "droit."
+      ],
+      "tokens_l2": [
+        "Idem",
+        "na",
+        "poštu,",
+        "potom",
+        "do",
+        "banky.",
+        "Choď",
+        "vľavo",
+        "na",
+        "križovatke,",
+        "potom",
+        "rovno."
+      ]
+    },
+    {
+      "id": "order-cho-te-rovno-kni-nica-je-ved-a-radnice",
+      "type": "order",
+      "l1": "Allez tout droit, la bibliothèque est à côté de la mairie.",
+      "l2": "Choďte rovno, knižnica je vedľa radnice.",
+      "tokens_l1": [
+        "Allez",
+        "tout",
+        "droit,",
+        "la",
+        "bibliothèque",
+        "est",
+        "à",
+        "côté",
+        "de",
+        "la",
+        "mairie.",
+        "L'arrêt",
+        "est",
+        "après",
+        "le",
+        "coin,",
+        "près",
+        "de",
+        "la",
+        "fontaine."
+      ],
+      "tokens_l2": [
+        "Choďte",
+        "rovno,",
+        "knižnica",
+        "je",
+        "vedľa",
+        "radnice.",
+        "Zastávka",
+        "je",
+        "za",
+        "rohom,",
+        "blízko",
+        "fontány."
+      ]
+    },
+    {
+      "id": "order-chod-m-do-parku-pe-o-ale-do-divadla-idem-autobusom",
+      "type": "order",
+      "l1": "Je vais au parc à pied, mais au théâtre j'y vais en bus.",
+      "l2": "Chodím do parku pešo, ale do divadla idem autobusom.",
+      "tokens_l1": [
+        "Je",
+        "vais",
+        "au",
+        "parc",
+        "à",
+        "pied,",
+        "mais",
+        "au",
+        "théâtre",
+        "j'y",
+        "vais",
+        "en",
+        "bus.",
+        "Je",
+        "vais",
+        "à",
+        "la",
+        "poste,",
+        "ensuite",
+        "à",
+        "la",
+        "banque."
+      ],
+      "tokens_l2": [
+        "Chodím",
+        "do",
+        "parku",
+        "pešo,",
+        "ale",
+        "do",
+        "divadla",
+        "idem",
+        "autobusom.",
+        "Idem",
+        "na",
+        "poštu,",
+        "potom",
+        "do",
+        "banky."
+      ]
+    },
+    {
+      "id": "order-zast-vka-je-za-rohom-bl-zko-font-ny",
+      "type": "order",
+      "l1": "L'arrêt est après le coin, près de la fontaine.",
+      "l2": "Zastávka je za rohom, blízko fontány.",
+      "tokens_l1": [
+        "L'arrêt",
+        "est",
+        "après",
+        "le",
+        "coin,",
+        "près",
+        "de",
+        "la",
+        "fontaine.",
+        "Le",
+        "restaurant",
+        "est",
+        "devant",
+        "l'église,",
+        "au",
+        "coin",
+        "de",
+        "la",
+        "rue."
+      ],
+      "tokens_l2": [
+        "Zastávka",
+        "je",
+        "za",
+        "rohom,",
+        "blízko",
+        "fontány.",
+        "Reštaurácia",
+        "je",
+        "pred",
+        "kostolom,",
+        "na",
+        "rohu",
+        "ulice."
+      ]
+    },
+    {
+      "id": "order-vid-m-sochu-na-n-mest-je-zauj-mav",
+      "type": "order",
+      "l1": "Je vois la statue sur la place. Elle est intéressante.",
+      "l2": "Vidím sochu na námestí. Je zaujímavá.",
+      "tokens_l1": [
+        "Je",
+        "vois",
+        "la",
+        "statue",
+        "sur",
+        "la",
+        "place.",
+        "Elle",
+        "est",
+        "intéressante.",
+        "Je",
+        "me",
+        "promène",
+        "en",
+        "ville",
+        "et",
+        "je",
+        "photographie",
+        "des",
+        "statues."
+      ],
+      "tokens_l2": [
+        "Vidím",
+        "sochu",
+        "na",
+        "námestí.",
+        "Je",
+        "zaujímavá.",
+        "Prechádzam",
+        "sa",
+        "po",
+        "meste",
+        "a",
+        "fotím",
+        "sochy."
+      ]
+    },
+    {
+      "id": "order-chceme-nav-t-vi-m-zeum-a-potom-s-do-kaviarne",
+      "type": "order",
+      "l1": "Nous voulons visiter le musée et ensuite aller au café.",
+      "l2": "Chceme navštíviť múzeum a potom ísť do kaviarne.",
+      "tokens_l1": [
+        "Nous",
+        "voulons",
+        "visiter",
+        "le",
+        "musée",
+        "et",
+        "ensuite",
+        "aller",
+        "au",
+        "café.",
+        "Le",
+        "concert",
+        "était",
+        "ennuyeux,",
+        "mais",
+        "l'exposition",
+        "était",
+        "intéressante."
+      ],
+      "tokens_l2": [
+        "Chceme",
+        "navštíviť",
+        "múzeum",
+        "a",
+        "potom",
+        "ísť",
+        "do",
+        "kaviarne.",
+        "Koncert",
+        "bol",
+        "nudný,",
+        "ale",
+        "výstava",
+        "bola",
+        "zaujímavá."
+      ]
+    },
+    {
+      "id": "order-kino-je-ved-a-mosta-oproti-nemocnici",
+      "type": "order",
+      "l1": "Le cinéma est à côté du pont, en face de l'hôpital.",
+      "l2": "Kino je vedľa mosta, oproti nemocnici.",
+      "tokens_l1": [
+        "Le",
+        "cinéma",
+        "est",
+        "à",
+        "côté",
+        "du",
+        "pont,",
+        "en",
+        "face",
+        "de",
+        "l'hôpital.",
+        "Le",
+        "programme",
+        "du",
+        "festival",
+        "est",
+        "à",
+        "la",
+        "gare,",
+        "près",
+        "des",
+        "billets."
+      ],
+      "tokens_l2": [
+        "Kino",
+        "je",
+        "vedľa",
+        "mosta,",
+        "oproti",
+        "nemocnici.",
+        "Program",
+        "festivalu",
+        "je",
+        "na",
+        "stanici,",
+        "pri",
+        "lístkoch."
+      ]
+    },
+    {
+      "id": "order-cho-v-avo-na-kri-ovatke-potom-rovno",
+      "type": "order",
+      "l1": "Va à gauche au carrefour, puis tout droit.",
+      "l2": "Choď vľavo na križovatke, potom rovno.",
+      "tokens_l1": [
+        "Va",
+        "à",
+        "gauche",
+        "au",
+        "carrefour,",
+        "puis",
+        "tout",
+        "droit.",
+        "Nous",
+        "voulons",
+        "visiter",
+        "le",
+        "musée",
+        "et",
+        "ensuite",
+        "aller",
+        "au",
+        "café."
+      ],
+      "tokens_l2": [
+        "Choď",
+        "vľavo",
+        "na",
+        "križovatke,",
+        "potom",
+        "rovno.",
+        "Chceme",
+        "navštíviť",
+        "múzeum",
+        "a",
+        "potom",
+        "ísť",
+        "do",
+        "kaviarne."
+      ]
+    },
+    {
+      "id": "order-koncert-bol-nudn-ale-v-stava-bola-zauj-mav",
+      "type": "order",
+      "l1": "Le concert était ennuyeux, mais l'exposition était intéressante.",
+      "l2": "Koncert bol nudný, ale výstava bola zaujímavá.",
+      "tokens_l1": [
+        "Le",
+        "concert",
+        "était",
+        "ennuyeux,",
+        "mais",
+        "l'exposition",
+        "était",
+        "intéressante.",
+        "L'arrêt",
+        "est",
+        "après",
+        "le",
+        "coin,",
+        "près",
+        "de",
+        "la",
+        "fontaine."
+      ],
+      "tokens_l2": [
+        "Koncert",
+        "bol",
+        "nudný,",
+        "ale",
+        "výstava",
+        "bola",
+        "zaujímavá.",
+        "Zastávka",
+        "je",
+        "za",
+        "rohom,",
+        "blízko",
+        "fontány."
+      ]
+    },
+    {
+      "id": "order-stretneme-sa-pri-font-ne-o-piatej",
+      "type": "order",
+      "l1": "On se retrouve près de la fontaine à cinq heures.",
+      "l2": "Stretneme sa pri fontáne o piatej.",
+      "tokens_l1": [
+        "On",
+        "se",
+        "retrouve",
+        "près",
+        "de",
+        "la",
+        "fontaine",
+        "à",
+        "cinq",
+        "heures.",
+        "Je",
+        "me",
+        "promène",
+        "en",
+        "ville",
+        "et",
+        "je",
+        "photographie",
+        "des",
+        "statues."
+      ],
+      "tokens_l2": [
+        "Stretneme",
+        "sa",
+        "pri",
+        "fontáne",
+        "o",
+        "piatej.",
+        "Prechádzam",
+        "sa",
+        "po",
+        "meste",
+        "a",
+        "fotím",
+        "sochy."
+      ]
+    },
+    {
+      "id": "order-prech-dzam-sa-po-meste-a-fot-m-sochy",
+      "type": "order",
+      "l1": "Je me promène en ville et je photographie des statues.",
+      "l2": "Prechádzam sa po meste a fotím sochy.",
+      "tokens_l1": [
+        "Je",
+        "me",
+        "promène",
+        "en",
+        "ville",
+        "et",
+        "je",
+        "photographie",
+        "des",
+        "statues.",
+        "Le",
+        "concert",
+        "était",
+        "ennuyeux,",
+        "mais",
+        "l'exposition",
+        "était",
+        "intéressante."
+      ],
+      "tokens_l2": [
+        "Prechádzam",
+        "sa",
+        "po",
+        "meste",
+        "a",
+        "fotím",
+        "sochy.",
+        "Koncert",
+        "bol",
+        "nudný,",
+        "ale",
+        "výstava",
+        "bola",
+        "zaujímavá."
+      ]
+    },
+    {
+      "id": "order-ulica-je-zka-cho-te-pe-o",
+      "type": "order",
+      "l1": "La rue est étroite, allez à pied.",
+      "l2": "Ulica je úzka, choďte pešo.",
+      "tokens_l1": [
+        "La",
+        "rue",
+        "est",
+        "étroite,",
+        "allez",
+        "à",
+        "pied.",
+        "Le",
+        "concert",
+        "était",
+        "ennuyeux,",
+        "mais",
+        "l'exposition",
+        "était",
+        "intéressante."
+      ],
+      "tokens_l2": [
+        "Ulica",
+        "je",
+        "úzka,",
+        "choďte",
+        "pešo.",
+        "Koncert",
+        "bol",
+        "nudný,",
+        "ale",
+        "výstava",
+        "bola",
+        "zaujímavá."
+      ]
+    },
+    {
+      "id": "order-vlak-me-k-tak-idem-tax-kom",
+      "type": "order",
+      "l1": "Le train est en retard, alors j'y vais en taxi.",
+      "l2": "Vlak mešká, tak idem taxíkom.",
+      "tokens_l1": [
+        "Le",
+        "train",
+        "est",
+        "en",
+        "retard,",
+        "alors",
+        "j'y",
+        "vais",
+        "en",
+        "taxi.",
+        "Je",
+        "vais",
+        "au",
+        "parc",
+        "à",
+        "pied,",
+        "mais",
+        "au",
+        "théâtre",
+        "j'y",
+        "vais",
+        "en",
+        "bus."
+      ],
+      "tokens_l2": [
+        "Vlak",
+        "mešká,",
+        "tak",
+        "idem",
+        "taxíkom.",
+        "Chodím",
+        "do",
+        "parku",
+        "pešo,",
+        "ale",
+        "do",
+        "divadla",
+        "idem",
+        "autobusom."
+      ]
+    },
+    {
+      "id": "order-program-festivalu-je-na-stanici-pri-l-stkoch",
+      "type": "order",
+      "l1": "Le programme du festival est à la gare, près des billets.",
+      "l2": "Program festivalu je na stanici, pri lístkoch.",
+      "tokens_l1": [
+        "Le",
+        "programme",
+        "du",
+        "festival",
+        "est",
+        "à",
+        "la",
+        "gare,",
+        "près",
+        "des",
+        "billets.",
+        "On",
+        "se",
+        "retrouve",
+        "près",
+        "de",
+        "la",
+        "fontaine",
+        "à",
+        "cinq",
+        "heures."
+      ],
+      "tokens_l2": [
+        "Program",
+        "festivalu",
+        "je",
+        "na",
+        "stanici,",
+        "pri",
+        "lístkoch.",
+        "Stretneme",
+        "sa",
+        "pri",
+        "fontáne",
+        "o",
+        "piatej."
+      ]
+    },
+    {
+      "id": "order-re-taur-cia-je-pred-kostolom-na-rohu-ulice",
+      "type": "order",
+      "l1": "Le restaurant est devant l'église, au coin de la rue.",
+      "l2": "Reštaurácia je pred kostolom, na rohu ulice.",
+      "tokens_l1": [
+        "Le",
+        "restaurant",
+        "est",
+        "devant",
+        "l'église,",
+        "au",
+        "coin",
+        "de",
+        "la",
+        "rue.",
+        "Nous",
+        "voulons",
+        "visiter",
+        "le",
+        "musée",
+        "et",
+        "ensuite",
+        "aller",
+        "au",
+        "café."
+      ],
+      "tokens_l2": [
+        "Reštaurácia",
+        "je",
+        "pred",
+        "kostolom,",
+        "na",
+        "rohu",
+        "ulice.",
+        "Chceme",
+        "navštíviť",
+        "múzeum",
+        "a",
+        "potom",
+        "ísť",
+        "do",
+        "kaviarne."
+      ]
+    },
+    {
+      "id": "match-n-mestie-vocab",
+      "type": "match",
+      "l1": [
+        "la place",
+        "la rue",
+        "le pont",
+        "le parc"
+      ],
+      "l2": [
+        "námestie",
+        "ulica",
+        "most",
+        "park"
+      ]
+    },
+    {
+      "id": "match-idem-na-po-tu-potom-do-banky-sentences",
+      "type": "match",
+      "l1": [
+        "Je vais à la poste, ensuite à la banque.",
+        "Allez tout droit, la bibliothèque est à côté de la mairie.",
+        "Je vais au parc à pied, mais au théâtre j'y vais en bus.",
+        "L'arrêt est après le coin, près de la fontaine."
+      ],
+      "l2": [
+        "Idem na poštu, potom do banky.",
+        "Choďte rovno, knižnica je vedľa radnice.",
+        "Chodím do parku pešo, ale do divadla idem autobusom.",
+        "Zastávka je za rohom, blízko fontány."
+      ]
+    }
+  ]
+}

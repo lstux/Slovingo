@@ -1,0 +1,1255 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-ve-k-noc",
+      "type": "qcm",
+      "l1": "Pâques",
+      "l2": "Veľká noc",
+      "choices_l1": [
+        "le pinceau",
+        "le saule",
+        "décorer"
+      ],
+      "choices_l2": [
+        "farbiť",
+        "pripraviť",
+        "farbili sme"
+      ]
+    },
+    {
+      "id": "qcm-vaj-ko",
+      "type": "qcm",
+      "l1": "l'œuf (petit, diminutif)",
+      "l2": "vajíčko",
+      "choices_l1": [
+        "la teinture, la couleur",
+        "les pelures d'oignon",
+        "le fouet en osier"
+      ],
+      "choices_l2": [
+        "štetec",
+        "vosk",
+        "korbáč"
+      ]
+    },
+    {
+      "id": "qcm-farbi",
+      "type": "qcm",
+      "l1": "teindre, colorer",
+      "l2": "farbiť",
+      "choices_l1": [
+        "préparer",
+        "le pinceau",
+        "Pâques"
+      ],
+      "choices_l2": [
+        "farbila som",
+        "farbil som",
+        "pripraviť"
+      ]
+    },
+    {
+      "id": "qcm-zdobi",
+      "type": "qcm",
+      "l1": "décorer",
+      "l2": "zdobiť",
+      "choices_l1": [
+        "le ruban",
+        "préparer",
+        "Pâques"
+      ],
+      "choices_l2": [
+        "farbil som",
+        "farbiť",
+        "pripraviť"
+      ]
+    },
+    {
+      "id": "qcm-ko-k",
+      "type": "qcm",
+      "l1": "le panier",
+      "l2": "košík",
+      "choices_l1": [
+        "le pinceau",
+        "le ruban",
+        "la cire"
+      ],
+      "choices_l2": [
+        "stužka",
+        "štetec",
+        "vosk"
+      ]
+    },
+    {
+      "id": "qcm-pripravi",
+      "type": "qcm",
+      "l1": "préparer",
+      "l2": "pripraviť",
+      "choices_l1": [
+        "la cire",
+        "teindre, colorer",
+        "Pâques"
+      ],
+      "choices_l2": [
+        "farbil som",
+        "zdobiť",
+        "farbila som"
+      ]
+    },
+    {
+      "id": "qcm-upiec",
+      "type": "qcm",
+      "l1": "faire cuire au four",
+      "l2": "upiecť",
+      "choices_l1": [
+        "nous avons préparé",
+        "j'ai teint (homme)",
+        "ils/elles ont préparé"
+      ],
+      "choices_l2": [
+        "vajíčko",
+        "zdobili ste",
+        "farbila som"
+      ]
+    },
+    {
+      "id": "qcm-farbil-som",
+      "type": "qcm",
+      "l1": "j'ai teint (homme)",
+      "l2": "farbil som",
+      "choices_l1": [
+        "l'œuf (petit, diminutif)",
+        "le fouet en osier",
+        "la teinture, la couleur"
+      ],
+      "choices_l2": [
+        "farbila som",
+        "zdobiť",
+        "pripraviť"
+      ]
+    },
+    {
+      "id": "qcm-farbila-som",
+      "type": "qcm",
+      "l1": "j'ai teint (femme)",
+      "l2": "farbila som",
+      "choices_l1": [
+        "tu as décoré (homme)",
+        "faire cuire au four",
+        "ils/elles ont préparé"
+      ],
+      "choices_l2": [
+        "farbiť",
+        "pripraviť",
+        "farbil som"
+      ]
+    },
+    {
+      "id": "qcm-zdobil-si",
+      "type": "qcm",
+      "l1": "tu as décoré (homme)",
+      "l2": "zdobil si",
+      "choices_l1": [
+        "tu as décoré (femme)",
+        "nous avons préparé",
+        "vous avez décoré"
+      ],
+      "choices_l2": [
+        "zdobila si",
+        "pripravili sme",
+        "farbili sme"
+      ]
+    },
+    {
+      "id": "qcm-zdobila-si",
+      "type": "qcm",
+      "l1": "tu as décoré (femme)",
+      "l2": "zdobila si",
+      "choices_l1": [
+        "tu as décoré (homme)",
+        "ils/elles ont préparé",
+        "nous avons teint"
+      ],
+      "choices_l2": [
+        "farbili sme",
+        "zdobil si",
+        "zdobili ste"
+      ]
+    },
+    {
+      "id": "qcm-pripravili-sme",
+      "type": "qcm",
+      "l1": "nous avons préparé",
+      "l2": "pripravili sme",
+      "choices_l1": [
+        "nous avons teint",
+        "ils/elles ont préparé",
+        "vous avez décoré"
+      ],
+      "choices_l2": [
+        "zdobil si",
+        "farbili sme",
+        "pripravili"
+      ]
+    },
+    {
+      "id": "qcm-farbili-sme",
+      "type": "qcm",
+      "l1": "nous avons teint",
+      "l2": "farbili sme",
+      "choices_l1": [
+        "ils/elles ont préparé",
+        "tu as décoré (homme)",
+        "tu as décoré (femme)"
+      ],
+      "choices_l2": [
+        "zdobil si",
+        "pripravili sme",
+        "pripravili"
+      ]
+    },
+    {
+      "id": "qcm-zdobili-ste",
+      "type": "qcm",
+      "l1": "vous avez décoré",
+      "l2": "zdobili ste",
+      "choices_l1": [
+        "nous avons préparé",
+        "ils/elles ont préparé",
+        "tu as décoré (homme)"
+      ],
+      "choices_l2": [
+        "pripravili",
+        "zdobila si",
+        "farbili sme"
+      ]
+    },
+    {
+      "id": "qcm-pripravili",
+      "type": "qcm",
+      "l1": "ils/elles ont préparé",
+      "l2": "pripravili",
+      "choices_l1": [
+        "vous avez décoré",
+        "nous avons préparé",
+        "tu as décoré (femme)"
+      ],
+      "choices_l2": [
+        "pripravili sme",
+        "zdobila si",
+        "zdobil si"
+      ]
+    },
+    {
+      "id": "qcm-vosk",
+      "type": "qcm",
+      "l1": "la cire",
+      "l2": "vosk",
+      "choices_l1": [
+        "le pinceau",
+        "le ruban",
+        "le saule"
+      ],
+      "choices_l2": [
+        "štetec",
+        "stužka",
+        "vŕba"
+      ]
+    },
+    {
+      "id": "qcm-farba",
+      "type": "qcm",
+      "l1": "la teinture, la couleur",
+      "l2": "farba",
+      "choices_l1": [
+        "l'œuf (petit, diminutif)",
+        "les pelures d'oignon",
+        "le fouet en osier"
+      ],
+      "choices_l2": [
+        "vosk",
+        "štetec",
+        "stužka"
+      ]
+    },
+    {
+      "id": "qcm-tetec",
+      "type": "qcm",
+      "l1": "le pinceau",
+      "l2": "štetec",
+      "choices_l1": [
+        "la cire",
+        "le ruban",
+        "le saule"
+      ],
+      "choices_l2": [
+        "vosk",
+        "cibuľové šupky",
+        "korbáč"
+      ]
+    },
+    {
+      "id": "qcm-cibu-ov-upky",
+      "type": "qcm",
+      "l1": "les pelures d'oignon",
+      "l2": "cibuľové šupky",
+      "choices_l1": [
+        "l'œuf (petit, diminutif)",
+        "la teinture, la couleur",
+        "le fouet en osier"
+      ],
+      "choices_l2": [
+        "stužka",
+        "korbáč",
+        "vŕba"
+      ]
+    },
+    {
+      "id": "qcm-stu-ka",
+      "type": "qcm",
+      "l1": "le ruban",
+      "l2": "stužka",
+      "choices_l1": [
+        "la cire",
+        "le pinceau",
+        "le saule"
+      ],
+      "choices_l2": [
+        "cibuľové šupky",
+        "korbáč",
+        "vŕba"
+      ]
+    },
+    {
+      "id": "qcm-korb",
+      "type": "qcm",
+      "l1": "le fouet en osier",
+      "l2": "korbáč",
+      "choices_l1": [
+        "l'œuf (petit, diminutif)",
+        "la teinture, la couleur",
+        "les pelures d'oignon"
+      ],
+      "choices_l2": [
+        "vosk",
+        "štetec",
+        "cibuľové šupky"
+      ]
+    },
+    {
+      "id": "qcm-v-ba",
+      "type": "qcm",
+      "l1": "le saule",
+      "l2": "vŕba",
+      "choices_l1": [
+        "la cire",
+        "le pinceau",
+        "le ruban"
+      ],
+      "choices_l2": [
+        "vosk",
+        "cibuľové šupky",
+        "štetec"
+      ]
+    },
+    {
+      "id": "blank-farbil-som-vaj-ka",
+      "type": "fill-blank",
+      "l1": "J'ai teint des œufs.",
+      "l2": "Farbil som vajíčka.",
+      "missing_l1": "des",
+      "missing_l2": "som",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "œufs",
+        "un",
+        "une"
+      ],
+      "choices_l2": [
+        "boli",
+        "Bude",
+        "si"
+      ]
+    },
+    {
+      "id": "blank-zdobila-som-ko-k",
+      "type": "fill-blank",
+      "l1": "J'ai décoré le panier.",
+      "l2": "Zdobila som košík.",
+      "missing_l1": "le",
+      "missing_l2": "som",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "ont",
+        "Les",
+        "œufs"
+      ],
+      "choices_l2": [
+        "ste",
+        "budeme",
+        "boli"
+      ]
+    },
+    {
+      "id": "blank-mama-upiekla-kol",
+      "type": "fill-blank",
+      "l1": "Maman a fait cuire un gâteau.",
+      "l2": "Mama upiekla koláč.",
+      "missing_l1": "un",
+      "missing_l2": "koláč",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "cire",
+        "ont",
+        "une"
+      ],
+      "choices_l2": [
+        "červeno",
+        "šupkami",
+        "vajíčka"
+      ]
+    },
+    {
+      "id": "blank-pripravili-sme-v-etko-na-ve-k-noc",
+      "type": "fill-blank",
+      "l1": "Nous avons tout préparé pour Pâques.",
+      "l2": "Pripravili sme všetko na Veľkú noc.",
+      "missing_l1": "pour",
+      "missing_l2": "na",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "par",
+        "à",
+        "chez"
+      ],
+      "choices_l2": [
+        "bez",
+        "pri",
+        "v"
+      ]
+    },
+    {
+      "id": "blank-zdobili-ste-vaj-ka-spolu",
+      "type": "fill-blank",
+      "l1": "Vous avez décoré les œufs ensemble ?",
+      "l2": "Zdobili ste vajíčka spolu?",
+      "missing_l1": "les",
+      "missing_l2": "ste",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "œufs",
+        "le",
+        "ont"
+      ],
+      "choices_l2": [
+        "budeme",
+        "sú",
+        "som"
+      ]
+    },
+    {
+      "id": "blank-deti-farbili-vaj-ka-na-lto-a-na-erveno",
+      "type": "fill-blank",
+      "l1": "Les enfants ont teint des œufs en jaune et en rouge.",
+      "l2": "Deti farbili vajíčka na žlto a na červeno.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 8,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "ou",
+        "Donc",
+        "mais"
+      ],
+      "choices_l2": [
+        "aj",
+        "alebo",
+        "ale"
+      ]
+    },
+    {
+      "id": "blank-ko-k-je-pln-vaj-ok",
+      "type": "fill-blank",
+      "l1": "Le panier est plein d'œufs.",
+      "l2": "Košík je plný vajíčok.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "êtes",
+        "C'est",
+        "sont"
+      ],
+      "choices_l2": [
+        "bol",
+        "budú",
+        "sú"
+      ]
+    },
+    {
+      "id": "blank-pripravil-si-v-etko",
+      "type": "fill-blank",
+      "l1": "Tu as tout préparé ?",
+      "l2": "Pripravil si všetko?",
+      "missing_l1": "tout",
+      "missing_l2": "si",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "surtout",
+        "très",
+        "Maintenant"
+      ],
+      "choices_l2": [
+        "Bude",
+        "je",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-farb-me-vaj-ka-cibu-ov-mi-upkami",
+      "type": "fill-blank",
+      "l1": "Nous teignons les œufs avec des pelures d'oignon.",
+      "l2": "Farbíme vajíčka cibuľovými šupkami.",
+      "missing_l1": "les",
+      "missing_l2": "vajíčka",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "la",
+        "cire",
+        "ont"
+      ],
+      "choices_l2": [
+        "všetko",
+        "Pripravil",
+        "červeno"
+      ]
+    },
+    {
+      "id": "blank-otec-plietol-korb-z-v-by",
+      "type": "fill-blank",
+      "l1": "Papa a tressé un fouet en osier de saule.",
+      "l2": "Otec plietol korbáč z vŕby.",
+      "missing_l1": "de",
+      "missing_l2": "z",
+      "blank_index_l1": 7,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "avec",
+        "dans",
+        "sur"
+      ],
+      "choices_l2": [
+        "bez",
+        "zo",
+        "medzi"
+      ]
+    },
+    {
+      "id": "blank-pou-il-som-vosk-a-tetec",
+      "type": "fill-blank",
+      "l1": "J'ai utilisé de la cire et un pinceau.",
+      "l2": "Použil som vosk a štetec.",
+      "missing_l1": "la",
+      "missing_l2": "a",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "ont",
+        "œufs",
+        "le"
+      ],
+      "choices_l2": [
+        "však",
+        "lebo",
+        "alebo"
+      ]
+    },
+    {
+      "id": "blank-ko-k-m-farebn-stu-ku",
+      "type": "fill-blank",
+      "l1": "Le panier a un ruban coloré.",
+      "l2": "Košík má farebnú stužku.",
+      "missing_l1": "un",
+      "missing_l2": "má",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "une",
+        "des",
+        "œufs"
+      ],
+      "choices_l2": [
+        "Máš",
+        "Mám",
+        "Nemáš"
+      ]
+    },
+    {
+      "id": "blank-farba-je-e-te-mokr",
+      "type": "fill-blank",
+      "l1": "La couleur est encore mouillée.",
+      "l2": "Farba je ešte mokrá.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "es",
+        "était",
+        "suis"
+      ],
+      "choices_l2": [
+        "budem",
+        "sú",
+        "som"
+      ]
+    },
+    {
+      "id": "listen-farbil-som-vaj-ka",
+      "type": "listen",
+      "l1": "J'ai teint des œufs.",
+      "l2": "Farbil som vajíčka.",
+      "choices_l1": [
+        "Nous teignons les œufs avec des pelures d'oignon.",
+        "La couleur est encore mouillée.",
+        "Nous avons tout préparé pour Pâques."
+      ],
+      "choices_l2": [
+        "Farbíme vajíčka cibuľovými šupkami.",
+        "Deti farbili vajíčka na žlto a na červeno.",
+        "Košík je plný vajíčok."
+      ]
+    },
+    {
+      "id": "listen-zdobila-som-ko-k",
+      "type": "listen",
+      "l1": "J'ai décoré le panier.",
+      "l2": "Zdobila som košík.",
+      "choices_l1": [
+        "J'ai teint des œufs.",
+        "La couleur est encore mouillée.",
+        "Tu as tout préparé ?"
+      ],
+      "choices_l2": [
+        "Farba je ešte mokrá.",
+        "Použil som vosk a štetec.",
+        "Deti farbili vajíčka na žlto a na červeno."
+      ]
+    },
+    {
+      "id": "listen-mama-upiekla-kol",
+      "type": "listen",
+      "l1": "Maman a fait cuire un gâteau.",
+      "l2": "Mama upiekla koláč.",
+      "choices_l1": [
+        "Nous avons tout préparé pour Pâques.",
+        "Papa a tressé un fouet en osier de saule.",
+        "Tu as tout préparé ?"
+      ],
+      "choices_l2": [
+        "Pripravili sme všetko na Veľkú noc.",
+        "Otec plietol korbáč z vŕby.",
+        "Zdobila som košík."
+      ]
+    },
+    {
+      "id": "listen-pripravili-sme-v-etko-na-ve-k-noc",
+      "type": "listen",
+      "l1": "Nous avons tout préparé pour Pâques.",
+      "l2": "Pripravili sme všetko na Veľkú noc.",
+      "choices_l1": [
+        "J'ai décoré le panier.",
+        "Vous avez décoré les œufs ensemble ?",
+        "Papa a tressé un fouet en osier de saule."
+      ],
+      "choices_l2": [
+        "Farbíme vajíčka cibuľovými šupkami.",
+        "Zdobila som košík.",
+        "Farbil som vajíčka."
+      ]
+    },
+    {
+      "id": "listen-zdobili-ste-vaj-ka-spolu",
+      "type": "listen",
+      "l1": "Vous avez décoré les œufs ensemble ?",
+      "l2": "Zdobili ste vajíčka spolu?",
+      "choices_l1": [
+        "Les enfants ont teint des œufs en jaune et en rouge.",
+        "La couleur est encore mouillée.",
+        "Maman a fait cuire un gâteau."
+      ],
+      "choices_l2": [
+        "Pripravili sme všetko na Veľkú noc.",
+        "Deti farbili vajíčka na žlto a na červeno.",
+        "Mama upiekla koláč."
+      ]
+    },
+    {
+      "id": "listen-deti-farbili-vaj-ka-na-lto-a-na-erveno",
+      "type": "listen",
+      "l1": "Les enfants ont teint des œufs en jaune et en rouge.",
+      "l2": "Deti farbili vajíčka na žlto a na červeno.",
+      "choices_l1": [
+        "Le panier est plein d'œufs.",
+        "J'ai teint des œufs.",
+        "Vous avez décoré les œufs ensemble ?"
+      ],
+      "choices_l2": [
+        "Pripravil si všetko?",
+        "Zdobila som košík.",
+        "Farba je ešte mokrá."
+      ]
+    },
+    {
+      "id": "listen-ko-k-je-pln-vaj-ok",
+      "type": "listen",
+      "l1": "Le panier est plein d'œufs.",
+      "l2": "Košík je plný vajíčok.",
+      "choices_l1": [
+        "Nous avons tout préparé pour Pâques.",
+        "Le panier a un ruban coloré.",
+        "La couleur est encore mouillée."
+      ],
+      "choices_l2": [
+        "Pripravil si všetko?",
+        "Zdobili ste vajíčka spolu?",
+        "Zdobila som košík."
+      ]
+    },
+    {
+      "id": "listen-pripravil-si-v-etko",
+      "type": "listen",
+      "l1": "Tu as tout préparé ?",
+      "l2": "Pripravil si všetko?",
+      "choices_l1": [
+        "J'ai teint des œufs.",
+        "La couleur est encore mouillée.",
+        "Le panier a un ruban coloré."
+      ],
+      "choices_l2": [
+        "Farbíme vajíčka cibuľovými šupkami.",
+        "Farba je ešte mokrá.",
+        "Použil som vosk a štetec."
+      ]
+    },
+    {
+      "id": "listen-farb-me-vaj-ka-cibu-ov-mi-upkami",
+      "type": "listen",
+      "l1": "Nous teignons les œufs avec des pelures d'oignon.",
+      "l2": "Farbíme vajíčka cibuľovými šupkami.",
+      "choices_l1": [
+        "Nous avons tout préparé pour Pâques.",
+        "Les enfants ont teint des œufs en jaune et en rouge.",
+        "J'ai décoré le panier."
+      ],
+      "choices_l2": [
+        "Zdobila som košík.",
+        "Deti farbili vajíčka na žlto a na červeno.",
+        "Otec plietol korbáč z vŕby."
+      ]
+    },
+    {
+      "id": "listen-otec-plietol-korb-z-v-by",
+      "type": "listen",
+      "l1": "Papa a tressé un fouet en osier de saule.",
+      "l2": "Otec plietol korbáč z vŕby.",
+      "choices_l1": [
+        "Maman a fait cuire un gâteau.",
+        "Les enfants ont teint des œufs en jaune et en rouge.",
+        "Tu as tout préparé ?"
+      ],
+      "choices_l2": [
+        "Košík má farebnú stužku.",
+        "Zdobili ste vajíčka spolu?",
+        "Farbil som vajíčka."
+      ]
+    },
+    {
+      "id": "listen-pou-il-som-vosk-a-tetec",
+      "type": "listen",
+      "l1": "J'ai utilisé de la cire et un pinceau.",
+      "l2": "Použil som vosk a štetec.",
+      "choices_l1": [
+        "J'ai décoré le panier.",
+        "La couleur est encore mouillée.",
+        "Maman a fait cuire un gâteau."
+      ],
+      "choices_l2": [
+        "Košík je plný vajíčok.",
+        "Farbil som vajíčka.",
+        "Farbíme vajíčka cibuľovými šupkami."
+      ]
+    },
+    {
+      "id": "listen-ko-k-m-farebn-stu-ku",
+      "type": "listen",
+      "l1": "Le panier a un ruban coloré.",
+      "l2": "Košík má farebnú stužku.",
+      "choices_l1": [
+        "Les enfants ont teint des œufs en jaune et en rouge.",
+        "La couleur est encore mouillée.",
+        "J'ai décoré le panier."
+      ],
+      "choices_l2": [
+        "Pripravil si všetko?",
+        "Mama upiekla koláč.",
+        "Zdobila som košík."
+      ]
+    },
+    {
+      "id": "listen-farba-je-e-te-mokr",
+      "type": "listen",
+      "l1": "La couleur est encore mouillée.",
+      "l2": "Farba je ešte mokrá.",
+      "choices_l1": [
+        "Le panier est plein d'œufs.",
+        "Tu as tout préparé ?",
+        "Vous avez décoré les œufs ensemble ?"
+      ],
+      "choices_l2": [
+        "Zdobila som košík.",
+        "Pripravil si všetko?",
+        "Farbil som vajíčka."
+      ]
+    },
+    {
+      "id": "order-farbil-som-vaj-ka",
+      "type": "order",
+      "l1": "J'ai teint des œufs.",
+      "l2": "Farbil som vajíčka.",
+      "tokens_l1": [
+        "J'ai",
+        "teint",
+        "des",
+        "œufs.",
+        "La",
+        "couleur",
+        "est",
+        "encore",
+        "mouillée."
+      ],
+      "tokens_l2": [
+        "Farbil",
+        "som",
+        "vajíčka.",
+        "Farba",
+        "je",
+        "ešte",
+        "mokrá."
+      ]
+    },
+    {
+      "id": "order-zdobila-som-ko-k",
+      "type": "order",
+      "l1": "J'ai décoré le panier.",
+      "l2": "Zdobila som košík.",
+      "tokens_l1": [
+        "J'ai",
+        "décoré",
+        "le",
+        "panier.",
+        "Nous",
+        "avons",
+        "tout",
+        "préparé",
+        "pour",
+        "Pâques."
+      ],
+      "tokens_l2": [
+        "Zdobila",
+        "som",
+        "košík.",
+        "Pripravili",
+        "sme",
+        "všetko",
+        "na",
+        "Veľkú",
+        "noc."
+      ]
+    },
+    {
+      "id": "order-mama-upiekla-kol",
+      "type": "order",
+      "l1": "Maman a fait cuire un gâteau.",
+      "l2": "Mama upiekla koláč.",
+      "tokens_l1": [
+        "Maman",
+        "a",
+        "fait",
+        "cuire",
+        "un",
+        "gâteau.",
+        "Le",
+        "panier",
+        "est",
+        "plein",
+        "d'œufs."
+      ],
+      "tokens_l2": [
+        "Mama",
+        "upiekla",
+        "koláč.",
+        "Košík",
+        "je",
+        "plný",
+        "vajíčok."
+      ]
+    },
+    {
+      "id": "order-pripravili-sme-v-etko-na-ve-k-noc",
+      "type": "order",
+      "l1": "Nous avons tout préparé pour Pâques.",
+      "l2": "Pripravili sme všetko na Veľkú noc.",
+      "tokens_l1": [
+        "Nous",
+        "avons",
+        "tout",
+        "préparé",
+        "pour",
+        "Pâques.",
+        "J'ai",
+        "décoré",
+        "le",
+        "panier."
+      ],
+      "tokens_l2": [
+        "Pripravili",
+        "sme",
+        "všetko",
+        "na",
+        "Veľkú",
+        "noc.",
+        "Zdobila",
+        "som",
+        "košík."
+      ]
+    },
+    {
+      "id": "order-zdobili-ste-vaj-ka-spolu",
+      "type": "order",
+      "l1": "Vous avez décoré les œufs ensemble ?",
+      "l2": "Zdobili ste vajíčka spolu?",
+      "tokens_l1": [
+        "Vous",
+        "avez",
+        "décoré",
+        "les",
+        "œufs",
+        "ensemble",
+        "?",
+        "Tu",
+        "as",
+        "tout",
+        "préparé",
+        "?"
+      ],
+      "tokens_l2": [
+        "Zdobili",
+        "ste",
+        "vajíčka",
+        "spolu?",
+        "Pripravil",
+        "si",
+        "všetko?"
+      ]
+    },
+    {
+      "id": "order-deti-farbili-vaj-ka-na-lto-a-na-erveno",
+      "type": "order",
+      "l1": "Les enfants ont teint des œufs en jaune et en rouge.",
+      "l2": "Deti farbili vajíčka na žlto a na červeno.",
+      "tokens_l1": [
+        "Les",
+        "enfants",
+        "ont",
+        "teint",
+        "des",
+        "œufs",
+        "en",
+        "jaune",
+        "et",
+        "en",
+        "rouge.",
+        "Nous",
+        "avons",
+        "tout",
+        "préparé",
+        "pour",
+        "Pâques."
+      ],
+      "tokens_l2": [
+        "Deti",
+        "farbili",
+        "vajíčka",
+        "na",
+        "žlto",
+        "a",
+        "na",
+        "červeno.",
+        "Pripravili",
+        "sme",
+        "všetko",
+        "na",
+        "Veľkú",
+        "noc."
+      ]
+    },
+    {
+      "id": "order-ko-k-je-pln-vaj-ok",
+      "type": "order",
+      "l1": "Le panier est plein d'œufs.",
+      "l2": "Košík je plný vajíčok.",
+      "tokens_l1": [
+        "Le",
+        "panier",
+        "est",
+        "plein",
+        "d'œufs.",
+        "J'ai",
+        "décoré",
+        "le",
+        "panier."
+      ],
+      "tokens_l2": [
+        "Košík",
+        "je",
+        "plný",
+        "vajíčok.",
+        "Zdobila",
+        "som",
+        "košík."
+      ]
+    },
+    {
+      "id": "order-pripravil-si-v-etko",
+      "type": "order",
+      "l1": "Tu as tout préparé ?",
+      "l2": "Pripravil si všetko?",
+      "tokens_l1": [
+        "Tu",
+        "as",
+        "tout",
+        "préparé",
+        "?",
+        "La",
+        "couleur",
+        "est",
+        "encore",
+        "mouillée."
+      ],
+      "tokens_l2": [
+        "Pripravil",
+        "si",
+        "všetko?",
+        "Farba",
+        "je",
+        "ešte",
+        "mokrá."
+      ]
+    },
+    {
+      "id": "order-farb-me-vaj-ka-cibu-ov-mi-upkami",
+      "type": "order",
+      "l1": "Nous teignons les œufs avec des pelures d'oignon.",
+      "l2": "Farbíme vajíčka cibuľovými šupkami.",
+      "tokens_l1": [
+        "Nous",
+        "teignons",
+        "les",
+        "œufs",
+        "avec",
+        "des",
+        "pelures",
+        "d'oignon.",
+        "Le",
+        "panier",
+        "a",
+        "un",
+        "ruban",
+        "coloré."
+      ],
+      "tokens_l2": [
+        "Farbíme",
+        "vajíčka",
+        "cibuľovými",
+        "šupkami.",
+        "Košík",
+        "má",
+        "farebnú",
+        "stužku."
+      ]
+    },
+    {
+      "id": "order-otec-plietol-korb-z-v-by",
+      "type": "order",
+      "l1": "Papa a tressé un fouet en osier de saule.",
+      "l2": "Otec plietol korbáč z vŕby.",
+      "tokens_l1": [
+        "Papa",
+        "a",
+        "tressé",
+        "un",
+        "fouet",
+        "en",
+        "osier",
+        "de",
+        "saule.",
+        "Nous",
+        "teignons",
+        "les",
+        "œufs",
+        "avec",
+        "des",
+        "pelures",
+        "d'oignon."
+      ],
+      "tokens_l2": [
+        "Otec",
+        "plietol",
+        "korbáč",
+        "z",
+        "vŕby.",
+        "Farbíme",
+        "vajíčka",
+        "cibuľovými",
+        "šupkami."
+      ]
+    },
+    {
+      "id": "order-pou-il-som-vosk-a-tetec",
+      "type": "order",
+      "l1": "J'ai utilisé de la cire et un pinceau.",
+      "l2": "Použil som vosk a štetec.",
+      "tokens_l1": [
+        "J'ai",
+        "utilisé",
+        "de",
+        "la",
+        "cire",
+        "et",
+        "un",
+        "pinceau.",
+        "Papa",
+        "a",
+        "tressé",
+        "un",
+        "fouet",
+        "en",
+        "osier",
+        "de",
+        "saule."
+      ],
+      "tokens_l2": [
+        "Použil",
+        "som",
+        "vosk",
+        "a",
+        "štetec.",
+        "Otec",
+        "plietol",
+        "korbáč",
+        "z",
+        "vŕby."
+      ]
+    },
+    {
+      "id": "order-ko-k-m-farebn-stu-ku",
+      "type": "order",
+      "l1": "Le panier a un ruban coloré.",
+      "l2": "Košík má farebnú stužku.",
+      "tokens_l1": [
+        "Le",
+        "panier",
+        "a",
+        "un",
+        "ruban",
+        "coloré.",
+        "J'ai",
+        "utilisé",
+        "de",
+        "la",
+        "cire",
+        "et",
+        "un",
+        "pinceau."
+      ],
+      "tokens_l2": [
+        "Košík",
+        "má",
+        "farebnú",
+        "stužku.",
+        "Použil",
+        "som",
+        "vosk",
+        "a",
+        "štetec."
+      ]
+    },
+    {
+      "id": "order-farba-je-e-te-mokr",
+      "type": "order",
+      "l1": "La couleur est encore mouillée.",
+      "l2": "Farba je ešte mokrá.",
+      "tokens_l1": [
+        "La",
+        "couleur",
+        "est",
+        "encore",
+        "mouillée.",
+        "J'ai",
+        "décoré",
+        "le",
+        "panier."
+      ],
+      "tokens_l2": [
+        "Farba",
+        "je",
+        "ešte",
+        "mokrá.",
+        "Zdobila",
+        "som",
+        "košík."
+      ]
+    },
+    {
+      "id": "match-ve-k-noc-vocab",
+      "type": "match",
+      "l1": [
+        "Pâques",
+        "l'œuf (petit, diminutif)",
+        "teindre, colorer",
+        "décorer"
+      ],
+      "l2": [
+        "Veľká noc",
+        "vajíčko",
+        "farbiť",
+        "zdobiť"
+      ]
+    },
+    {
+      "id": "match-farbil-som-vaj-ka-sentences",
+      "type": "match",
+      "l1": [
+        "J'ai teint des œufs.",
+        "J'ai décoré le panier.",
+        "Maman a fait cuire un gâteau.",
+        "Nous avons tout préparé pour Pâques."
+      ],
+      "l2": [
+        "Farbil som vajíčka.",
+        "Zdobila som košík.",
+        "Mama upiekla koláč.",
+        "Pripravili sme všetko na Veľkú noc."
+      ]
+    }
+  ]
+}

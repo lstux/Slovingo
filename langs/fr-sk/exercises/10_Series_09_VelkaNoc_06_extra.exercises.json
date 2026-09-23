@@ -1,0 +1,2010 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-p-ques",
+      "type": "qcm",
+      "l1": "Veľká noc",
+      "l2": "Pâques",
+      "choices_l1": [
+        "pôst",
+        "čokoládový zvon",
+        "festival"
+      ],
+      "choices_l2": [
+        "la messe",
+        "la tradition",
+        "bénir"
+      ]
+    },
+    {
+      "id": "qcm-l-uf",
+      "type": "qcm",
+      "l1": "vajíčko",
+      "l2": "l'œuf",
+      "choices_l1": [
+        "pot-au-feu",
+        "ješ",
+        "pijeme"
+      ],
+      "choices_l2": [
+        "l'eau",
+        "manger",
+        "goûter"
+      ]
+    },
+    {
+      "id": "qcm-teindre",
+      "type": "qcm",
+      "l1": "farbiť",
+      "l2": "teindre",
+      "choices_l1": [
+        "zostať",
+        "môcť",
+        "meniť"
+      ],
+      "choices_l2": [
+        "veux",
+        "visiter",
+        "décorer"
+      ]
+    },
+    {
+      "id": "qcm-d-corer",
+      "type": "qcm",
+      "l1": "zdobiť",
+      "l2": "décorer",
+      "choices_l1": [
+        "musím",
+        "bude",
+        "budeš"
+      ],
+      "choices_l2": [
+        "rester",
+        "être assis",
+        "essayer"
+      ]
+    },
+    {
+      "id": "qcm-le-panier",
+      "type": "qcm",
+      "l1": "košík",
+      "l2": "le panier",
+      "choices_l1": [
+        "platiť",
+        "obchod",
+        "najlacnejší"
+      ],
+      "choices_l2": [
+        "bon marché",
+        "l'argent",
+        "la réduction"
+      ]
+    },
+    {
+      "id": "qcm-pr-parer",
+      "type": "qcm",
+      "l1": "pripraviť",
+      "l2": "préparer",
+      "choices_l1": [
+        "bude",
+        "Chcem plávať.",
+        "farbiť"
+      ],
+      "choices_l2": [
+        "essayer",
+        "décorer",
+        "écrire"
+      ]
+    },
+    {
+      "id": "qcm-faire-cuire-au-four",
+      "type": "qcm",
+      "l1": "upiecť",
+      "l2": "faire cuire (au four)",
+      "choices_l1": [
+        "vstávať",
+        "máš",
+        "robia"
+      ],
+      "choices_l2": [
+        "arriver / venir",
+        "Tu vas attendre ?",
+        "être en retard"
+      ]
+    },
+    {
+      "id": "qcm-la-cire",
+      "type": "qcm",
+      "l1": "vosk",
+      "l2": "la cire",
+      "choices_l1": [
+        "tradícia",
+        "hľadanie vajíčok",
+        "štetec"
+      ],
+      "choices_l2": [
+        "le ruban",
+        "le carême",
+        "festif"
+      ]
+    },
+    {
+      "id": "qcm-la-peinture",
+      "type": "qcm",
+      "l1": "farba",
+      "l2": "la peinture",
+      "choices_l1": [
+        "sila",
+        "taška",
+        "nôž"
+      ],
+      "choices_l2": [
+        "la couverture",
+        "le toit",
+        "le savon"
+      ]
+    },
+    {
+      "id": "qcm-le-pinceau",
+      "type": "qcm",
+      "l1": "štetec",
+      "l2": "le pinceau",
+      "choices_l1": [
+        "vosk",
+        "zvon",
+        "sviatok"
+      ],
+      "choices_l2": [
+        "le prêtre",
+        "la cire",
+        "la messe"
+      ]
+    },
+    {
+      "id": "qcm-le-ruban",
+      "type": "qcm",
+      "l1": "stužka",
+      "l2": "le ruban",
+      "choices_l1": [
+        "sviatočný",
+        "omša",
+        "sviatok"
+      ],
+      "choices_l2": [
+        "le lapin",
+        "la tradition",
+        "festif"
+      ]
+    },
+    {
+      "id": "qcm-le-chocolat",
+      "type": "qcm",
+      "l1": "čokoláda",
+      "l2": "le chocolat",
+      "choices_l1": [
+        "vajce",
+        "slaný",
+        "ratatouille"
+      ],
+      "choices_l2": [
+        "l'épicerie",
+        "la soupe",
+        "J'ai faim."
+      ]
+    },
+    {
+      "id": "qcm-la-cloche",
+      "type": "qcm",
+      "l1": "zvon",
+      "l2": "la cloche",
+      "choices_l1": [
+        "vosk",
+        "festival",
+        "čokoládový zvon"
+      ],
+      "choices_l2": [
+        "festif",
+        "le lapin",
+        "Pâques"
+      ]
+    },
+    {
+      "id": "qcm-voler",
+      "type": "qcm",
+      "l1": "letieť",
+      "l2": "voler",
+      "choices_l1": [
+        "čítať",
+        "zabočiť",
+        "oddychovať"
+      ],
+      "choices_l2": [
+        "j'essaie",
+        "va",
+        "espérer"
+      ]
+    },
+    {
+      "id": "qcm-le-dimanche-des-rameaux",
+      "type": "qcm",
+      "l1": "Kvetná nedeľa",
+      "l2": "le dimanche des Rameaux",
+      "choices_l1": [
+        "štvrť",
+        "zima",
+        "jar"
+      ],
+      "choices_l2": [
+        "D'habitude, je vais au travail en bus. (zvyk)",
+        "le dimanche de Pâques",
+        "le lundi de Pâques"
+      ]
+    },
+    {
+      "id": "qcm-le-jeudi-saint",
+      "type": "qcm",
+      "l1": "Zelený štvrtok",
+      "l2": "le jeudi saint",
+      "choices_l1": [
+        "zvyčajne",
+        "Biela sobota",
+        "pol šiestej"
+      ],
+      "choices_l2": [
+        "à une heure",
+        "Elle a fait le gigot, et elle est restée dans la cuisine tout l'après-midi.",
+        "Je suis arrivé tôt."
+      ]
+    },
+    {
+      "id": "qcm-le-vendredi-saint",
+      "type": "qcm",
+      "l1": "Veľký piatok",
+      "l2": "le vendredi saint",
+      "choices_l1": [
+        "na jar",
+        "večer",
+        "potom"
+      ],
+      "choices_l2": [
+        "Elle a fait le gigot, et elle est restée dans la cuisine tout l'après-midi.",
+        "à une heure",
+        "Je suis arrivé tôt."
+      ]
+    },
+    {
+      "id": "qcm-le-samedi-saint",
+      "type": "qcm",
+      "l1": "Biela sobota",
+      "l2": "le samedi saint",
+      "choices_l1": [
+        "nedeľu",
+        "o druhej",
+        "v lete"
+      ],
+      "choices_l2": [
+        "le jeudi saint",
+        "le vendredi saint",
+        "le dimanche des Rameaux"
+      ]
+    },
+    {
+      "id": "qcm-le-dimanche-de-p-ques",
+      "type": "qcm",
+      "l1": "Veľkonočná nedeľa",
+      "l2": "le dimanche de Pâques",
+      "choices_l1": [
+        "streda",
+        "štvrť",
+        "vždy"
+      ],
+      "choices_l2": [
+        "le lundi de Pâques",
+        "le vendredi saint",
+        "le jeudi saint"
+      ]
+    },
+    {
+      "id": "qcm-le-lundi-de-p-ques",
+      "type": "qcm",
+      "l1": "Veľkonočný pondelok",
+      "l2": "le lundi de Pâques",
+      "choices_l1": [
+        "stretnutie",
+        "Zelený štvrtok",
+        "nedeľa"
+      ],
+      "choices_l2": [
+        "le vendredi saint",
+        "Le lundi, je travaille. (každý pondelok, zvyčajne)",
+        "à une heure"
+      ]
+    },
+    {
+      "id": "qcm-ranger-nettoyer",
+      "type": "qcm",
+      "l1": "upratovať",
+      "l2": "ranger, nettoyer",
+      "choices_l1": [
+        "Máme",
+        "vidíme",
+        "prechádzaš sa"
+      ],
+      "choices_l2": [
+        "célébrer",
+        "trouver",
+        "aider"
+      ]
+    },
+    {
+      "id": "qcm-le-car-me",
+      "type": "qcm",
+      "l1": "pôst",
+      "l2": "le carême",
+      "choices_l1": [
+        "sviatočný",
+        "vosk",
+        "kňaz"
+      ],
+      "choices_l2": [
+        "la messe",
+        "la cloche",
+        "le prêtre"
+      ]
+    },
+    {
+      "id": "qcm-la-messe",
+      "type": "qcm",
+      "l1": "omša",
+      "l2": "la messe",
+      "choices_l1": [
+        "pôst",
+        "vosk",
+        "tradícia"
+      ],
+      "choices_l2": [
+        "Pâques",
+        "festif",
+        "la cloche"
+      ]
+    },
+    {
+      "id": "qcm-le-pr-tre",
+      "type": "qcm",
+      "l1": "kňaz",
+      "l2": "le prêtre",
+      "choices_l1": [
+        "stužka",
+        "zvon",
+        "požehnať"
+      ],
+      "choices_l2": [
+        "bénir",
+        "la messe",
+        "le ruban"
+      ]
+    },
+    {
+      "id": "qcm-la-tradition",
+      "type": "qcm",
+      "l1": "tradícia",
+      "l2": "la tradition",
+      "choices_l1": [
+        "kňaz",
+        "čokoládový zvon",
+        "sviatočný"
+      ],
+      "choices_l2": [
+        "le ruban",
+        "le lapin",
+        "la cire"
+      ]
+    },
+    {
+      "id": "qcm-c-l-brer",
+      "type": "qcm",
+      "l1": "oslavovať",
+      "l2": "célébrer",
+      "choices_l1": [
+        "nespím",
+        "letieť",
+        "skúšame"
+      ],
+      "choices_l2": [
+        "j'habite",
+        "laver",
+        "ouvrir"
+      ]
+    },
+    {
+      "id": "qcm-festif",
+      "type": "qcm",
+      "l1": "sviatočný",
+      "l2": "festif",
+      "choices_l1": [
+        "omša",
+        "požehnať",
+        "zajac"
+      ],
+      "choices_l2": [
+        "le prêtre",
+        "le carême",
+        "le lapin"
+      ]
+    },
+    {
+      "id": "qcm-la-chasse-aux-ufs",
+      "type": "qcm",
+      "l1": "hľadanie vajíčok",
+      "l2": "la chasse aux œufs",
+      "choices_l1": [
+        "stužka",
+        "požehnať",
+        "pôst"
+      ],
+      "choices_l2": [
+        "il / elle cherche",
+        "J'ai donné des œufs aux enfants. → Je leur ai donné des œufs.",
+        "le dimanche des Rameaux"
+      ]
+    },
+    {
+      "id": "qcm-cacher",
+      "type": "qcm",
+      "l1": "schovať",
+      "l2": "cacher",
+      "choices_l1": [
+        "meškať",
+        "skúšaš",
+        "môže"
+      ],
+      "choices_l2": [
+        "célébrer",
+        "devoir",
+        "espérer"
+      ]
+    },
+    {
+      "id": "qcm-trouver",
+      "type": "qcm",
+      "l1": "nájsť",
+      "l2": "trouver",
+      "choices_l1": [
+        "Musím ísť.",
+        "skúšaš",
+        "odpočívať"
+      ],
+      "choices_l2": [
+        "tourner",
+        "veux",
+        "se baigner"
+      ]
+    },
+    {
+      "id": "qcm-le-jardin",
+      "type": "qcm",
+      "l1": "záhrada",
+      "l2": "le jardin",
+      "choices_l1": [
+        "chata",
+        "kuchyňa",
+        "spálňa"
+      ],
+      "choices_l2": [
+        "la chambre",
+        "le garage",
+        "maison"
+      ]
+    },
+    {
+      "id": "qcm-le-cadeau",
+      "type": "qcm",
+      "l1": "darček",
+      "l2": "le cadeau",
+      "choices_l1": [
+        "kľúč",
+        "plán",
+        "kalendár"
+      ],
+      "choices_l2": [
+        "le toit",
+        "le calendrier",
+        "la surprise"
+      ]
+    },
+    {
+      "id": "qcm-offrir",
+      "type": "qcm",
+      "l1": "darovať",
+      "l2": "offrir",
+      "choices_l1": [
+        "budem",
+        "mám",
+        "umývať"
+      ],
+      "choices_l2": [
+        "pouvoir",
+        "payer",
+        "écrire"
+      ]
+    },
+    {
+      "id": "qcm-l-enfant",
+      "type": "qcm",
+      "l1": "dieťa",
+      "l2": "l'enfant",
+      "choices_l1": [
+        "otec",
+        "syn",
+        "môj otec"
+      ],
+      "choices_l2": [
+        "ma sœur",
+        "la famille",
+        "le frère"
+      ]
+    },
+    {
+      "id": "qcm-la-poule",
+      "type": "qcm",
+      "l1": "sliepka",
+      "l2": "la poule",
+      "choices_l1": [
+        "chutiť",
+        "Mám hlad.",
+        "jesť ovocie"
+      ],
+      "choices_l2": [
+        "le pain",
+        "le beurre",
+        "la viande"
+      ]
+    },
+    {
+      "id": "qcm-le-lapin",
+      "type": "qcm",
+      "l1": "zajac",
+      "l2": "le lapin",
+      "choices_l1": [
+        "festival",
+        "Kvetná nedeľa",
+        "sviatok"
+      ],
+      "choices_l2": [
+        "le ruban",
+        "le prêtre",
+        "la cloche"
+      ]
+    },
+    {
+      "id": "qcm-la-surprise",
+      "type": "qcm",
+      "l1": "prekvapenie",
+      "l2": "la surprise",
+      "choices_l1": [
+        "mapa",
+        "deka",
+        "program"
+      ],
+      "choices_l2": [
+        "le couteau",
+        "le livre",
+        "la peinture"
+      ]
+    },
+    {
+      "id": "qcm-joyeux",
+      "type": "qcm",
+      "l1": "radostný",
+      "l2": "joyeux",
+      "choices_l1": [
+        "tmavý",
+        "celý",
+        "istý"
+      ],
+      "choices_l2": [
+        "pluvieux",
+        "ennuyeux",
+        "assoiffé"
+      ]
+    },
+    {
+      "id": "qcm-amusant",
+      "type": "qcm",
+      "l1": "zábavný",
+      "l2": "amusant",
+      "choices_l1": [
+        "blízko",
+        "malý",
+        "najvyšší"
+      ],
+      "choices_l2": [
+        "fatigué",
+        "jeune",
+        "la fatigue"
+      ]
+    },
+    {
+      "id": "qcm-le-gigot-d-agneau",
+      "type": "qcm",
+      "l1": "jahňacie stehno",
+      "l2": "le gigot d'agneau",
+      "choices_l1": [
+        "vajce",
+        "Nemám hlad.",
+        "pijeme"
+      ],
+      "choices_l2": [
+        "manger de la viande",
+        "Je prends du vin.",
+        "le café au lait"
+      ]
+    },
+    {
+      "id": "qcm-les-haricots-verts",
+      "type": "qcm",
+      "l1": "zelená fazuľka",
+      "l2": "les haricots verts",
+      "choices_l1": [
+        "jedlo",
+        "mlieko",
+        "jahňacie stehno"
+      ],
+      "choices_l2": [
+        "Nous prenons une tarte.",
+        "Je prends une bière.",
+        "Tu prends un café ?"
+      ]
+    },
+    {
+      "id": "qcm-b-nir",
+      "type": "qcm",
+      "l1": "požehnať",
+      "l2": "bénir",
+      "choices_l1": [
+        "vosk",
+        "sviatok",
+        "sviatočný"
+      ],
+      "choices_l2": [
+        "le carême",
+        "le prêtre",
+        "la cloche"
+      ]
+    },
+    {
+      "id": "qcm-la-table",
+      "type": "qcm",
+      "l1": "stôl",
+      "l2": "la table",
+      "choices_l1": [
+        "polica",
+        "sprcha",
+        "lampa"
+      ],
+      "choices_l2": [
+        "le bureau",
+        "l'étagère",
+        "le réveil"
+      ]
+    },
+    {
+      "id": "qcm-l-invit",
+      "type": "qcm",
+      "l1": "hosť",
+      "l2": "l'invité",
+      "choices_l1": [
+        "malá sestra",
+        "deti",
+        "otec"
+      ],
+      "choices_l2": [
+        "la cousine",
+        "le fils",
+        "parents"
+      ]
+    },
+    {
+      "id": "qcm-se-r-unir",
+      "type": "qcm",
+      "l1": "zísť sa",
+      "l2": "se réunir",
+      "choices_l1": [
+        "upiecť",
+        "skúšam",
+        "môžeš"
+      ],
+      "choices_l2": [
+        "se promener",
+        "trouvé",
+        "continuer"
+      ]
+    },
+    {
+      "id": "qcm-le-sucre",
+      "type": "qcm",
+      "l1": "cukor",
+      "l2": "le sucre",
+      "choices_l1": [
+        "hlad",
+        "jesť ovocie",
+        "obed"
+      ],
+      "choices_l2": [
+        "la boucherie",
+        "la bière",
+        "la viande"
+      ]
+    },
+    {
+      "id": "qcm-sal",
+      "type": "qcm",
+      "l1": "slaný",
+      "l2": "salé",
+      "choices_l1": [
+        "istý",
+        "ďaleko",
+        "pekný"
+      ],
+      "choices_l2": [
+        "assoiffé",
+        "libre",
+        "acide"
+      ]
+    },
+    {
+      "id": "qcm-le-fromage",
+      "type": "qcm",
+      "l1": "syr",
+      "l2": "le fromage",
+      "choices_l1": [
+        "zelená fazuľka",
+        "chutný",
+        "kyslý"
+      ],
+      "choices_l2": [
+        "le cidre",
+        "l'eau",
+        "le pain"
+      ]
+    },
+    {
+      "id": "qcm-les-flageolets",
+      "type": "qcm",
+      "l1": "fazuľky flageolet",
+      "l2": "les flageolets",
+      "choices_l1": [
+        "jablčný mušt",
+        "ješ",
+        "potraviny"
+      ],
+      "choices_l2": [
+        "le dessert",
+        "la poule",
+        "le verre"
+      ]
+    },
+    {
+      "id": "qcm-la-cr-me",
+      "type": "qcm",
+      "l1": "smotana",
+      "l2": "la crème",
+      "choices_l1": [
+        "pivo",
+        "pije",
+        "dezert"
+      ],
+      "choices_l2": [
+        "le lait",
+        "la baguette",
+        "sucré"
+      ]
+    },
+    {
+      "id": "qcm-le-dessert",
+      "type": "qcm",
+      "l1": "dezert",
+      "l2": "le dessert",
+      "choices_l1": [
+        "jedlo",
+        "jahňacie stehno",
+        "zelená fazuľka"
+      ],
+      "choices_l2": [
+        "les crêpes",
+        "la soif",
+        "le vin"
+      ]
+    },
+    {
+      "id": "qcm-sucr",
+      "type": "qcm",
+      "l1": "sladký",
+      "l2": "sucré",
+      "choices_l1": [
+        "piješ",
+        "smotana",
+        "bageta"
+      ],
+      "choices_l2": [
+        "l'eau",
+        "le pot-au-feu",
+        "le sel"
+      ]
+    },
+    {
+      "id": "qcm-mais",
+      "type": "qcm",
+      "l1": "ale",
+      "l2": "mais",
+      "choices_l1": [
+        "ona išla",
+        "ďalej",
+        "kedy"
+      ],
+      "choices_l2": [
+        "des",
+        "Quelle",
+        "nous serons"
+      ]
+    },
+    {
+      "id": "blank-le-samedi-saint-nous-avons-d-cor-le-panier-et-pr-par-le-repas",
+      "type": "fill-blank",
+      "l1": "Na Bielu sobotu sme ozdobili košík a pripravili jedlo.",
+      "l2": "Le samedi saint, nous avons décoré le panier et préparé le repas.",
+      "missing_l1": "a",
+      "missing_l2": "le",
+      "blank_index_l1": 6,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "by",
+        "oblečie si",
+        "hľadáme"
+      ],
+      "choices_l2": [
+        "pour",
+        "et",
+        "tu achètes"
+      ]
+    },
+    {
+      "id": "blank-le-lundi-de-p-ques-les-enfants-ont-cherch-les-ufs-dans-le-jardin",
+      "type": "fill-blank",
+      "l1": "Na veľkonočný pondelok deti hľadali vajíčka v záhrade.",
+      "l2": "Le lundi de Pâques, les enfants ont cherché les œufs dans le jardin.",
+      "missing_l1": "v",
+      "missing_l2": "le",
+      "blank_index_l1": 6,
+      "blank_index_l2": 11,
+      "choices_l1": [
+        "naj-",
+        "Je chladno.",
+        "do"
+      ],
+      "choices_l2": [
+        "nous buvons",
+        "de",
+        "Nous"
+      ]
+    },
+    {
+      "id": "blank-nous-sommes-all-s-la-messe-puis-nous-sommes-rentr-s-pour-le-d-jeuner",
+      "type": "fill-blank",
+      "l1": "Išli sme na omšu, potom sme sa vrátili na obed.",
+      "l2": "Nous sommes allés à la messe, puis nous sommes rentrés pour le déjeuner.",
+      "missing_l1": "na",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 11,
+      "choices_l1": [
+        "k",
+        "oblečie si",
+        "on išiel"
+      ],
+      "choices_l2": [
+        "tu vois",
+        "je vais",
+        "à l'intérieur"
+      ]
+    },
+    {
+      "id": "blank-j-ai-donn-le-plus-bel-uf-ma-s-ur-et-les-autres-aux-cousins",
+      "type": "fill-blank",
+      "l1": "Dal/dala som najkrajšie vajíčko sestre, a ostatné bratrancom.",
+      "l2": "J'ai donné le plus bel œuf à ma sœur, et les autres aux cousins.",
+      "missing_l1": "a",
+      "missing_l2": "le",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "hľadáš",
+        "na moste",
+        "Ďakujem"
+      ],
+      "choices_l2": [
+        "sont",
+        "je voudrais",
+        "ma"
+      ]
+    },
+    {
+      "id": "blank-le-pr-tre-a-b-ni-le-panier-puis-nous-sommes-rentr-s-la-maison",
+      "type": "fill-blank",
+      "l1": "Kňaz požehnal košík, potom sme sa vrátili domov.",
+      "l2": "Le prêtre a béni le panier, puis nous sommes rentrés à la maison.",
+      "missing_l1": "sa",
+      "missing_l2": "le",
+      "blank_index_l1": 5,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "nie",
+        "naspäť",
+        "o"
+      ],
+      "choices_l2": [
+        "tu as",
+        "de",
+        "nous serons"
+      ]
+    },
+    {
+      "id": "blank-toute-la-famille-s-est-r-unie-pour-manger-le-gigot-d-agneau",
+      "type": "fill-blank",
+      "l1": "Celá rodina sa zišla, aby jedla jahňacie stehno.",
+      "l2": "Toute la famille s'est réunie pour manger le gigot d'agneau.",
+      "missing_l1": "sa",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "priamo",
+        "Je teplo.",
+        "hľadáš"
+      ],
+      "choices_l2": [
+        "je bois",
+        "pas",
+        "et"
+      ]
+    },
+    {
+      "id": "blank-nous-leur-offrons-du-chocolat-ils-sont-tr-s-contents",
+      "type": "fill-blank",
+      "l1": "Darujeme im čokoládu, sú veľmi spokojní.",
+      "l2": "Nous leur offrons du chocolat, ils sont très contents.",
+      "missing_l1": "sú",
+      "missing_l2": "sont",
+      "blank_index_l1": 3,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "priamo",
+        "do potravín",
+        "a"
+      ],
+      "choices_l2": [
+        "pas",
+        "nous serons",
+        "Combien"
+      ]
+    },
+    {
+      "id": "blank-les-cloches-sont-revenues-de-rome-le-dimanche-de-p-ques",
+      "type": "fill-blank",
+      "l1": "Zvony sa vrátili z Ríma na Veľkonočnú nedeľu.",
+      "l2": "Les cloches sont revenues de Rome le dimanche de Pâques.",
+      "missing_l1": "na",
+      "missing_l2": "le",
+      "blank_index_l1": 5,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "hľadáš",
+        "ty si",
+        "každý"
+      ],
+      "choices_l2": [
+        "est-ce",
+        "un",
+        "une"
+      ]
+    },
+    {
+      "id": "blank-cette-ann-e-nous-avons-cach-plus-d-ufs-que-d-habitude",
+      "type": "fill-blank",
+      "l1": "Tento rok sme schovali viac vajíčok ako zvyčajne.",
+      "l2": "Cette année, nous avons caché plus d'œufs que d'habitude.",
+      "missing_l1": "sme",
+      "missing_l2": "nous",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "vyšší ako",
+        "čo",
+        "ony išli"
+      ],
+      "choices_l2": [
+        "la",
+        "ici",
+        "dans"
+      ]
+    },
+    {
+      "id": "blank-le-g-teau-est-sucr-mais-le-repas-est-surtout-sal",
+      "type": "fill-blank",
+      "l1": "Koláč je sladký, ale jedlo je hlavne slané.",
+      "l2": "Le gâteau est sucré, mais le repas est surtout salé.",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "Je teplo.",
+        "sme",
+        "na námestí"
+      ],
+      "choices_l2": [
+        "est",
+        "je",
+        "tu peux"
+      ]
+    },
+    {
+      "id": "blank-les-invit-s-sont-arriv-s-avec-des-fleurs-et-du-chocolat",
+      "type": "fill-blank",
+      "l1": "Hostia prišli s kvetmi a čokoládou.",
+      "l2": "Les invités sont arrivés avec des fleurs et du chocolat.",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 4,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "Koľko",
+        "vonku",
+        "za rohom"
+      ],
+      "choices_l2": [
+        "pas",
+        "je nagerai",
+        "nous mettons"
+      ]
+    },
+    {
+      "id": "blank-j-ai-trouv-trois-ufs-et-toi-combien-en-as-tu-trouv",
+      "type": "fill-blank",
+      "l1": "Našiel/našla som tri vajíčka, a ty, koľko si ich našiel/našla?",
+      "l2": "J'ai trouvé trois œufs, et toi, combien en as-tu trouvé ?",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 4,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "nie",
+        "na stole",
+        "kedy"
+      ],
+      "choices_l2": [
+        "je cherche",
+        "nous voulons",
+        "ensemble"
+      ]
+    },
+    {
+      "id": "blank-nous-avons-pass-la-journ-e-la-plus-joyeuse-de-l-ann-e",
+      "type": "fill-blank",
+      "l1": "Strávili sme najradostnejší deň v roku.",
+      "l2": "Nous avons passé la journée la plus joyeuse de l'année.",
+      "missing_l1": "v",
+      "missing_l2": "la",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "vyšší ako",
+        "každý",
+        "ty máš"
+      ],
+      "choices_l2": [
+        "je peux",
+        "avec",
+        "où"
+      ]
+    },
+    {
+      "id": "blank-joyeuses-p-ques-toute-la-famille",
+      "type": "fill-blank",
+      "l1": "Veselú Veľkú noc celej rodine!",
+      "l2": "Joyeuses Pâques à toute la famille !",
+      "missing_l1": "noc",
+      "missing_l2": "la",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "Veľký piatok",
+        "týždeň",
+        "Veľkonočná nedeľa"
+      ],
+      "choices_l2": [
+        "ensemble",
+        "J'ai",
+        "dehors"
+      ]
+    },
+    {
+      "id": "listen-le-samedi-saint-nous-avons-d-cor-le-panier-et-pr-par-le-repas",
+      "type": "listen",
+      "l1": "Na Bielu sobotu sme ozdobili košík a pripravili jedlo.",
+      "l2": "Le samedi saint, nous avons décoré le panier et préparé le repas.",
+      "choices_l2": [
+        "Je veux une réduction, parce que c'est trop cher.",
+        "La plage est magnifique, mais l'eau est froide.",
+        "S'il fait chaud, je ne porterai pas de pull."
+      ],
+      "choices_l1": [
+        "Vodu, prosím. Mám smäd.",
+        "Bageta je čerstvá.",
+        "Zdobili ste vajíčka spolu?"
+      ]
+    },
+    {
+      "id": "listen-le-lundi-de-p-ques-les-enfants-ont-cherch-les-ufs-dans-le-jardin",
+      "type": "listen",
+      "l1": "Na veľkonočný pondelok deti hľadali vajíčka v záhrade.",
+      "l2": "Le lundi de Pâques, les enfants ont cherché les œufs dans le jardin.",
+      "choices_l2": [
+        "C'est bon marché.",
+        "Nous planifions une excursion, mais le temps n'est pas sûr.",
+        "Il y a une table et quatre chaises dans la cuisine."
+      ],
+      "choices_l1": [
+        "V pondelky prichádzam neskoro. Dnes prídem načas.",
+        "Na veľkonočný pondelok deti hľadajú vajíčka v záhrade.",
+        "Zajtra má byť daždivo, tak zostaneme doma."
+      ]
+    },
+    {
+      "id": "listen-nous-sommes-all-s-la-messe-puis-nous-sommes-rentr-s-pour-le-d-jeuner",
+      "type": "listen",
+      "l1": "Išli sme na omšu, potom sme sa vrátili na obed.",
+      "l2": "Nous sommes allés à la messe, puis nous sommes rentrés pour le déjeuner.",
+      "choices_l2": [
+        "Combien ça coûte ?",
+        "J'ouvre la fenêtre ? Il fait chaud ici.",
+        "Je prendrai une veste et des gants."
+      ],
+      "choices_l1": [
+        "Croissant a bielu kávu, prosím.",
+        "Obed je o dvanástej.",
+        "Chcem sa kúpať, ale voda je studená."
+      ]
+    },
+    {
+      "id": "listen-j-ai-donn-le-plus-bel-uf-ma-s-ur-et-les-autres-aux-cousins",
+      "type": "listen",
+      "l1": "Dal/dala som najkrajšie vajíčko sestre, a ostatné bratrancom.",
+      "l2": "J'ai donné le plus bel œuf à ma sœur, et les autres aux cousins.",
+      "choices_l2": [
+        "Par où dois-je aller ?",
+        "Ma tante s'appelle Ève.",
+        "Oui ! J'en ai trouvé trois !"
+      ],
+      "choices_l1": [
+        "Môj otec je učiteľ.",
+        "Môj otec je tiež učiteľ!",
+        "Eric, to je moja rodina."
+      ]
+    },
+    {
+      "id": "listen-le-pr-tre-a-b-ni-le-panier-puis-nous-sommes-rentr-s-la-maison",
+      "type": "listen",
+      "l1": "Kňaz požehnal košík, potom sme sa vrátili domov.",
+      "l2": "Le prêtre a béni le panier, puis nous sommes rentrés à la maison.",
+      "choices_l2": [
+        "Mes parents travaillent.",
+        "Demain il fera froid, tu dois porter un manteau.",
+        "Demain nous serons à la plage."
+      ],
+      "choices_l1": [
+        "Aký je dnes dátum?",
+        "Kde sú papuče? Na chodbe?",
+        "Farbil/farbila som vajíčka."
+      ]
+    },
+    {
+      "id": "listen-toute-la-famille-s-est-r-unie-pour-manger-le-gigot-d-agneau",
+      "type": "listen",
+      "l1": "Celá rodina sa zišla, aby jedla jahňacie stehno.",
+      "l2": "Toute la famille s'est réunie pour manger le gigot d'agneau.",
+      "choices_l2": [
+        "Le canapé est dans le salon.",
+        "La quiche me plaît. J'en veux encore.",
+        "Karine a vingt ans. Elle est étudiante."
+      ],
+      "choices_l1": [
+        "Moja teta je učiteľka a pracuje veľa.",
+        "Moja babka nepracuje. Je stará.",
+        "Deti chcú ovocie."
+      ]
+    },
+    {
+      "id": "listen-nous-leur-offrons-du-chocolat-ils-sont-tr-s-contents",
+      "type": "listen",
+      "l1": "Darujeme im čokoládu, sú veľmi spokojní.",
+      "l2": "Nous leur offrons du chocolat, ils sont très contents.",
+      "choices_l2": [
+        "Ne t'inquiète pas, c'est facile !",
+        "Je prends une soupe et ensuite un pot-au-feu.",
+        "Qu'est-ce que tu fais, Andrea ?"
+      ],
+      "choices_l1": [
+        "Quiche je veľmi chutná.",
+        "Sliepka a zajac sú symboly Veľkej noci.",
+        "Palacinky sú dobré, ale jablčný mušt je veľmi silný."
+      ]
+    },
+    {
+      "id": "listen-les-cloches-sont-revenues-de-rome-le-dimanche-de-p-ques",
+      "type": "listen",
+      "l1": "Zvony sa vrátili z Ríma na Veľkonočnú nedeľu.",
+      "l2": "Les cloches sont revenues de Rome le dimanche de Pâques.",
+      "choices_l2": [
+        "J'ai un frère. Il a trois ans.",
+        "C'est la plage la plus belle de la côte.",
+        "Papa mange de la viande."
+      ],
+      "choices_l1": [
+        "Pri mori je vzduch čistý a ticho krásne.",
+        "Uterák je v kúpeľni, na polici.",
+        "Hľadám kľúč, ale nie je na stole."
+      ]
+    },
+    {
+      "id": "listen-cette-ann-e-nous-avons-cach-plus-d-ufs-que-d-habitude",
+      "type": "listen",
+      "l1": "Tento rok sme schovali viac vajíčok ako zvyčajne.",
+      "l2": "Cette année, nous avons caché plus d'œufs que d'habitude.",
+      "choices_l2": [
+        "Ma fille a cinq ans.",
+        "Le parc est plein de monde, la rue est vide.",
+        "Quel âge as-tu ?"
+      ],
+      "choices_l1": [
+        "Moja dcéra má päť rokov.",
+        "Meškám. Prídem o štvrť na deväť.",
+        "Stretneme sa v sobotu o trištvrte na päť."
+      ]
+    },
+    {
+      "id": "listen-le-g-teau-est-sucr-mais-le-repas-est-surtout-sal",
+      "type": "listen",
+      "l1": "Koláč je sladký, ale jedlo je hlavne slané.",
+      "l2": "Le gâteau est sucré, mais le repas est surtout salé.",
+      "choices_l2": [
+        "Nous allons bronzer sur la plage.",
+        "Je bois de l'eau.",
+        "Je vais au parc tous les jours."
+      ],
+      "choices_l1": [
+        "Mám smäd. Chcem mlieko.",
+        "Chcem sa kúpať, ale voda je studená.",
+        "Mám smäd. Dáš si horúcu čokoládu?"
+      ]
+    },
+    {
+      "id": "listen-les-invit-s-sont-arriv-s-avec-des-fleurs-et-du-chocolat",
+      "type": "listen",
+      "l1": "Hostia prišli s kvetmi a čokoládou.",
+      "l2": "Les invités sont arrivés avec des fleurs et du chocolat.",
+      "choices_l2": [
+        "Quand as-tu ton rendez-vous ?",
+        "Maintenant il est cinq heures.",
+        "Qui est-ce ?"
+      ],
+      "choices_l1": [
+        "Spací vak je teplý.",
+        "Použil som farbu a štetec.",
+        "Socha je pri kostole."
+      ]
+    },
+    {
+      "id": "listen-j-ai-trouv-trois-ufs-et-toi-combien-en-as-tu-trouv",
+      "type": "listen",
+      "l1": "Našiel/našla som tri vajíčka, a ty, koľko si ich našiel/našla?",
+      "l2": "J'ai trouvé trois œufs, et toi, combien en as-tu trouvé ?",
+      "choices_l2": [
+        "La poule et le lapin sont des symboles de Pâques.",
+        "Tu veux de l'eau ?",
+        "Nous sommes fatigués, nous voudrions nous reposer à l'hôtel."
+      ],
+      "choices_l1": [
+        "Pätnásť eur. Je to v akcii.",
+        "Moja teta je lekárka. Má štyridsať rokov.",
+        "Je jedna hodina."
+      ]
+    },
+    {
+      "id": "listen-nous-avons-pass-la-journ-e-la-plus-joyeuse-de-l-ann-e",
+      "type": "listen",
+      "l1": "Strávili sme najradostnejší deň v roku.",
+      "l2": "Nous avons passé la journée la plus joyeuse de l'année.",
+      "choices_l2": [
+        "Tu es libre samedi ?",
+        "Oui ! Et j'ai aussi de l'eau et de la nourriture dans le sac.",
+        "Je veux manger."
+      ],
+      "choices_l1": [
+        "Zajtra bude zima, musíš nosiť kabát.",
+        "Deň je dlhý, ale nie je príliš náročný.",
+        "Dúfam, že bude pekne na náš posledný deň pri mori."
+      ]
+    },
+    {
+      "id": "listen-joyeuses-p-ques-toute-la-famille",
+      "type": "listen",
+      "l1": "Veselú Veľkú noc celej rodine!",
+      "l2": "Joyeuses Pâques à toute la famille !",
+      "choices_l2": [
+        "Je voudrais une chambre avec vue sur mer, s'il vous plaît.",
+        "Les chaussettes sont mouillées !",
+        "En hiver la nuit est plus longue que le jour."
+      ],
+      "choices_l1": [
+        "Veľkonočný pondelok je iný ako ostatné dni.",
+        "Deň je dlhý, ale nie je príliš náročný.",
+        "Je zima. Chcem čaj."
+      ]
+    },
+    {
+      "id": "order-le-samedi-saint-nous-avons-d-cor-le-panier-et-pr-par-le-repas",
+      "type": "order",
+      "l1": "Na Bielu sobotu sme ozdobili košík a pripravili jedlo.",
+      "l2": "Le samedi saint, nous avons décoré le panier et préparé le repas.",
+      "tokens_l1": [
+        "Na",
+        "Bielu",
+        "sobotu",
+        "sme",
+        "ozdobili",
+        "košík",
+        "a",
+        "pripravili",
+        "jedlo.",
+        "Strávili",
+        "sme",
+        "najradostnejší",
+        "deň",
+        "v",
+        "roku."
+      ],
+      "tokens_l2": [
+        "Le",
+        "samedi",
+        "saint,",
+        "nous",
+        "avons",
+        "décoré",
+        "le",
+        "panier",
+        "et",
+        "préparé",
+        "le",
+        "repas.",
+        "Nous",
+        "avons",
+        "passé",
+        "la",
+        "journée",
+        "la",
+        "plus",
+        "joyeuse",
+        "de",
+        "l'année."
+      ]
+    },
+    {
+      "id": "order-le-lundi-de-p-ques-les-enfants-ont-cherch-les-ufs-dans-le-jardin",
+      "type": "order",
+      "l1": "Na veľkonočný pondelok deti hľadali vajíčka v záhrade.",
+      "l2": "Le lundi de Pâques, les enfants ont cherché les œufs dans le jardin.",
+      "tokens_l1": [
+        "Na",
+        "veľkonočný",
+        "pondelok",
+        "deti",
+        "hľadali",
+        "vajíčka",
+        "v",
+        "záhrade.",
+        "Kňaz",
+        "požehnal",
+        "košík,",
+        "potom",
+        "sme",
+        "sa",
+        "vrátili",
+        "domov."
+      ],
+      "tokens_l2": [
+        "Le",
+        "lundi",
+        "de",
+        "Pâques,",
+        "les",
+        "enfants",
+        "ont",
+        "cherché",
+        "les",
+        "œufs",
+        "dans",
+        "le",
+        "jardin.",
+        "Le",
+        "prêtre",
+        "a",
+        "béni",
+        "le",
+        "panier,",
+        "puis",
+        "nous",
+        "sommes",
+        "rentrés",
+        "à",
+        "la",
+        "maison."
+      ]
+    },
+    {
+      "id": "order-nous-sommes-all-s-la-messe-puis-nous-sommes-rentr-s-pour-le-d-jeuner",
+      "type": "order",
+      "l1": "Išli sme na omšu, potom sme sa vrátili na obed.",
+      "l2": "Nous sommes allés à la messe, puis nous sommes rentrés pour le déjeuner.",
+      "tokens_l1": [
+        "Išli",
+        "sme",
+        "na",
+        "omšu,",
+        "potom",
+        "sme",
+        "sa",
+        "vrátili",
+        "na",
+        "obed.",
+        "Dal/dala",
+        "som",
+        "najkrajšie",
+        "vajíčko",
+        "sestre,",
+        "a",
+        "ostatné",
+        "bratrancom."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "sommes",
+        "allés",
+        "à",
+        "la",
+        "messe,",
+        "puis",
+        "nous",
+        "sommes",
+        "rentrés",
+        "pour",
+        "le",
+        "déjeuner.",
+        "J'ai",
+        "donné",
+        "le",
+        "plus",
+        "bel",
+        "œuf",
+        "à",
+        "ma",
+        "sœur,",
+        "et",
+        "les",
+        "autres",
+        "aux",
+        "cousins."
+      ]
+    },
+    {
+      "id": "order-j-ai-donn-le-plus-bel-uf-ma-s-ur-et-les-autres-aux-cousins",
+      "type": "order",
+      "l1": "Dal/dala som najkrajšie vajíčko sestre, a ostatné bratrancom.",
+      "l2": "J'ai donné le plus bel œuf à ma sœur, et les autres aux cousins.",
+      "tokens_l1": [
+        "Dal/dala",
+        "som",
+        "najkrajšie",
+        "vajíčko",
+        "sestre,",
+        "a",
+        "ostatné",
+        "bratrancom.",
+        "Kňaz",
+        "požehnal",
+        "košík,",
+        "potom",
+        "sme",
+        "sa",
+        "vrátili",
+        "domov."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "donné",
+        "le",
+        "plus",
+        "bel",
+        "œuf",
+        "à",
+        "ma",
+        "sœur,",
+        "et",
+        "les",
+        "autres",
+        "aux",
+        "cousins.",
+        "Le",
+        "prêtre",
+        "a",
+        "béni",
+        "le",
+        "panier,",
+        "puis",
+        "nous",
+        "sommes",
+        "rentrés",
+        "à",
+        "la",
+        "maison."
+      ]
+    },
+    {
+      "id": "order-le-pr-tre-a-b-ni-le-panier-puis-nous-sommes-rentr-s-la-maison",
+      "type": "order",
+      "l1": "Kňaz požehnal košík, potom sme sa vrátili domov.",
+      "l2": "Le prêtre a béni le panier, puis nous sommes rentrés à la maison.",
+      "tokens_l1": [
+        "Kňaz",
+        "požehnal",
+        "košík,",
+        "potom",
+        "sme",
+        "sa",
+        "vrátili",
+        "domov.",
+        "Išli",
+        "sme",
+        "na",
+        "omšu,",
+        "potom",
+        "sme",
+        "sa",
+        "vrátili",
+        "na",
+        "obed."
+      ],
+      "tokens_l2": [
+        "Le",
+        "prêtre",
+        "a",
+        "béni",
+        "le",
+        "panier,",
+        "puis",
+        "nous",
+        "sommes",
+        "rentrés",
+        "à",
+        "la",
+        "maison.",
+        "Nous",
+        "sommes",
+        "allés",
+        "à",
+        "la",
+        "messe,",
+        "puis",
+        "nous",
+        "sommes",
+        "rentrés",
+        "pour",
+        "le",
+        "déjeuner."
+      ]
+    },
+    {
+      "id": "order-toute-la-famille-s-est-r-unie-pour-manger-le-gigot-d-agneau",
+      "type": "order",
+      "l1": "Celá rodina sa zišla, aby jedla jahňacie stehno.",
+      "l2": "Toute la famille s'est réunie pour manger le gigot d'agneau.",
+      "tokens_l1": [
+        "Celá",
+        "rodina",
+        "sa",
+        "zišla,",
+        "aby",
+        "jedla",
+        "jahňacie",
+        "stehno.",
+        "Veselú",
+        "Veľkú",
+        "noc",
+        "celej",
+        "rodine!"
+      ],
+      "tokens_l2": [
+        "Toute",
+        "la",
+        "famille",
+        "s'est",
+        "réunie",
+        "pour",
+        "manger",
+        "le",
+        "gigot",
+        "d'agneau.",
+        "Joyeuses",
+        "Pâques",
+        "à",
+        "toute",
+        "la",
+        "famille",
+        "!"
+      ]
+    },
+    {
+      "id": "order-nous-leur-offrons-du-chocolat-ils-sont-tr-s-contents",
+      "type": "order",
+      "l1": "Darujeme im čokoládu, sú veľmi spokojní.",
+      "l2": "Nous leur offrons du chocolat, ils sont très contents.",
+      "tokens_l1": [
+        "Darujeme",
+        "im",
+        "čokoládu,",
+        "sú",
+        "veľmi",
+        "spokojní.",
+        "Hostia",
+        "prišli",
+        "s",
+        "kvetmi",
+        "a",
+        "čokoládou."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "leur",
+        "offrons",
+        "du",
+        "chocolat,",
+        "ils",
+        "sont",
+        "très",
+        "contents.",
+        "Les",
+        "invités",
+        "sont",
+        "arrivés",
+        "avec",
+        "des",
+        "fleurs",
+        "et",
+        "du",
+        "chocolat."
+      ]
+    },
+    {
+      "id": "order-les-cloches-sont-revenues-de-rome-le-dimanche-de-p-ques",
+      "type": "order",
+      "l1": "Zvony sa vrátili z Ríma na Veľkonočnú nedeľu.",
+      "l2": "Les cloches sont revenues de Rome le dimanche de Pâques.",
+      "tokens_l1": [
+        "Zvony",
+        "sa",
+        "vrátili",
+        "z",
+        "Ríma",
+        "na",
+        "Veľkonočnú",
+        "nedeľu.",
+        "Koláč",
+        "je",
+        "sladký,",
+        "ale",
+        "jedlo",
+        "je",
+        "hlavne",
+        "slané."
+      ],
+      "tokens_l2": [
+        "Les",
+        "cloches",
+        "sont",
+        "revenues",
+        "de",
+        "Rome",
+        "le",
+        "dimanche",
+        "de",
+        "Pâques.",
+        "Le",
+        "gâteau",
+        "est",
+        "sucré,",
+        "mais",
+        "le",
+        "repas",
+        "est",
+        "surtout",
+        "salé."
+      ]
+    },
+    {
+      "id": "order-cette-ann-e-nous-avons-cach-plus-d-ufs-que-d-habitude",
+      "type": "order",
+      "l1": "Tento rok sme schovali viac vajíčok ako zvyčajne.",
+      "l2": "Cette année, nous avons caché plus d'œufs que d'habitude.",
+      "tokens_l1": [
+        "Tento",
+        "rok",
+        "sme",
+        "schovali",
+        "viac",
+        "vajíčok",
+        "ako",
+        "zvyčajne.",
+        "Strávili",
+        "sme",
+        "najradostnejší",
+        "deň",
+        "v",
+        "roku."
+      ],
+      "tokens_l2": [
+        "Cette",
+        "année,",
+        "nous",
+        "avons",
+        "caché",
+        "plus",
+        "d'œufs",
+        "que",
+        "d'habitude.",
+        "Nous",
+        "avons",
+        "passé",
+        "la",
+        "journée",
+        "la",
+        "plus",
+        "joyeuse",
+        "de",
+        "l'année."
+      ]
+    },
+    {
+      "id": "order-le-g-teau-est-sucr-mais-le-repas-est-surtout-sal",
+      "type": "order",
+      "l1": "Koláč je sladký, ale jedlo je hlavne slané.",
+      "l2": "Le gâteau est sucré, mais le repas est surtout salé.",
+      "tokens_l1": [
+        "Koláč",
+        "je",
+        "sladký,",
+        "ale",
+        "jedlo",
+        "je",
+        "hlavne",
+        "slané.",
+        "Celá",
+        "rodina",
+        "sa",
+        "zišla,",
+        "aby",
+        "jedla",
+        "jahňacie",
+        "stehno."
+      ],
+      "tokens_l2": [
+        "Le",
+        "gâteau",
+        "est",
+        "sucré,",
+        "mais",
+        "le",
+        "repas",
+        "est",
+        "surtout",
+        "salé.",
+        "Toute",
+        "la",
+        "famille",
+        "s'est",
+        "réunie",
+        "pour",
+        "manger",
+        "le",
+        "gigot",
+        "d'agneau."
+      ]
+    },
+    {
+      "id": "order-les-invit-s-sont-arriv-s-avec-des-fleurs-et-du-chocolat",
+      "type": "order",
+      "l1": "Hostia prišli s kvetmi a čokoládou.",
+      "l2": "Les invités sont arrivés avec des fleurs et du chocolat.",
+      "tokens_l1": [
+        "Hostia",
+        "prišli",
+        "s",
+        "kvetmi",
+        "a",
+        "čokoládou.",
+        "Na",
+        "Bielu",
+        "sobotu",
+        "sme",
+        "ozdobili",
+        "košík",
+        "a",
+        "pripravili",
+        "jedlo."
+      ],
+      "tokens_l2": [
+        "Les",
+        "invités",
+        "sont",
+        "arrivés",
+        "avec",
+        "des",
+        "fleurs",
+        "et",
+        "du",
+        "chocolat.",
+        "Le",
+        "samedi",
+        "saint,",
+        "nous",
+        "avons",
+        "décoré",
+        "le",
+        "panier",
+        "et",
+        "préparé",
+        "le",
+        "repas."
+      ]
+    },
+    {
+      "id": "order-j-ai-trouv-trois-ufs-et-toi-combien-en-as-tu-trouv",
+      "type": "order",
+      "l1": "Našiel/našla som tri vajíčka, a ty, koľko si ich našiel/našla?",
+      "l2": "J'ai trouvé trois œufs, et toi, combien en as-tu trouvé ?",
+      "tokens_l1": [
+        "Našiel/našla",
+        "som",
+        "tri",
+        "vajíčka,",
+        "a",
+        "ty,",
+        "koľko",
+        "si",
+        "ich",
+        "našiel/našla?",
+        "Tento",
+        "rok",
+        "sme",
+        "schovali",
+        "viac",
+        "vajíčok",
+        "ako",
+        "zvyčajne."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "trouvé",
+        "trois",
+        "œufs,",
+        "et",
+        "toi,",
+        "combien",
+        "en",
+        "as-tu",
+        "trouvé",
+        "?",
+        "Cette",
+        "année,",
+        "nous",
+        "avons",
+        "caché",
+        "plus",
+        "d'œufs",
+        "que",
+        "d'habitude."
+      ]
+    },
+    {
+      "id": "order-nous-avons-pass-la-journ-e-la-plus-joyeuse-de-l-ann-e",
+      "type": "order",
+      "l1": "Strávili sme najradostnejší deň v roku.",
+      "l2": "Nous avons passé la journée la plus joyeuse de l'année.",
+      "tokens_l1": [
+        "Strávili",
+        "sme",
+        "najradostnejší",
+        "deň",
+        "v",
+        "roku.",
+        "Hostia",
+        "prišli",
+        "s",
+        "kvetmi",
+        "a",
+        "čokoládou."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "avons",
+        "passé",
+        "la",
+        "journée",
+        "la",
+        "plus",
+        "joyeuse",
+        "de",
+        "l'année.",
+        "Les",
+        "invités",
+        "sont",
+        "arrivés",
+        "avec",
+        "des",
+        "fleurs",
+        "et",
+        "du",
+        "chocolat."
+      ]
+    },
+    {
+      "id": "order-joyeuses-p-ques-toute-la-famille",
+      "type": "order",
+      "l1": "Veselú Veľkú noc celej rodine!",
+      "l2": "Joyeuses Pâques à toute la famille !",
+      "tokens_l1": [
+        "Veselú",
+        "Veľkú",
+        "noc",
+        "celej",
+        "rodine!",
+        "Celá",
+        "rodina",
+        "sa",
+        "zišla,",
+        "aby",
+        "jedla",
+        "jahňacie",
+        "stehno."
+      ],
+      "tokens_l2": [
+        "Joyeuses",
+        "Pâques",
+        "à",
+        "toute",
+        "la",
+        "famille",
+        "!",
+        "Toute",
+        "la",
+        "famille",
+        "s'est",
+        "réunie",
+        "pour",
+        "manger",
+        "le",
+        "gigot",
+        "d'agneau."
+      ]
+    }
+  ]
+}

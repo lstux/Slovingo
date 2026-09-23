@@ -1,0 +1,1109 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-p-ques",
+      "type": "qcm",
+      "l1": "Veľká noc",
+      "l2": "Pâques",
+      "choices_l1": [
+        "šiltovka",
+        "minerálka",
+        "horúca čokoláda"
+      ],
+      "choices_l2": [
+        "fatigué",
+        "je serai",
+        "le magasin"
+      ]
+    },
+    {
+      "id": "qcm-l-uf",
+      "type": "qcm",
+      "l1": "vajíčko",
+      "l2": "l'œuf",
+      "choices_l1": [
+        "socha",
+        "električkou",
+        "vstávať"
+      ],
+      "choices_l2": [
+        "l'école",
+        "la gare",
+        "peu"
+      ]
+    },
+    {
+      "id": "qcm-teindre",
+      "type": "qcm",
+      "l1": "farbiť",
+      "l2": "teindre",
+      "choices_l1": [
+        "Bude oblačno.",
+        "vidím",
+        "autobusom"
+      ],
+      "choices_l2": [
+        "tout droit",
+        "j'ai",
+        "acide"
+      ]
+    },
+    {
+      "id": "qcm-d-corer",
+      "type": "qcm",
+      "l1": "zdobiť",
+      "l2": "décorer",
+      "choices_l1": [
+        "zemiaky",
+        "stupeň",
+        "naj-"
+      ],
+      "choices_l2": [
+        "le ciel",
+        "le sable",
+        "le bonnet"
+      ]
+    },
+    {
+      "id": "qcm-le-panier",
+      "type": "qcm",
+      "l1": "košík",
+      "l2": "le panier",
+      "choices_l1": [
+        "program",
+        "dúfať",
+        "recepcia"
+      ],
+      "choices_l2": [
+        "tu fais",
+        "la chemise",
+        "cuisiner"
+      ]
+    },
+    {
+      "id": "qcm-pr-parer",
+      "type": "qcm",
+      "l1": "pripraviť",
+      "l2": "préparer",
+      "choices_l1": [
+        "windsurfing",
+        "kupovať",
+        "musím"
+      ],
+      "choices_l2": [
+        "au musée",
+        "le sable",
+        "espérer"
+      ]
+    },
+    {
+      "id": "qcm-faire-cuire-au-four",
+      "type": "qcm",
+      "l1": "upiecť",
+      "l2": "faire cuire (au four)",
+      "choices_l1": [
+        "teta",
+        "obchod",
+        "môj otec"
+      ],
+      "choices_l2": [
+        "Je prends une bière.",
+        "dans un appartement",
+        "Je cherche les clés. → Je les cherche."
+      ]
+    },
+    {
+      "id": "qcm-j-ai-teint-des-ufs",
+      "type": "qcm",
+      "l1": "Farbil/farbila som vajíčka.",
+      "l2": "J'ai teint des œufs.",
+      "choices_l1": [
+        "je mladý / je mladá",
+        "Stojí to päť eur.",
+        "študent / študentka"
+      ],
+      "choices_l2": [
+        "une chemise bleue",
+        "Ça coûte cinq euros.",
+        "ils / elles vont"
+      ]
+    },
+    {
+      "id": "qcm-tu-as-d-cor-le-panier",
+      "type": "qcm",
+      "l1": "Zdobil/zdobila si košík.",
+      "l2": "Tu as décoré le panier.",
+      "choices_l1": [
+        "Chodím do práce autobusom.",
+        "kamarát / kamarátka",
+        "otváram, otváraš, otvára"
+      ],
+      "choices_l2": [
+        "Pourrions-nous avoir une douche ?",
+        "Je prends une bière.",
+        "Il fera beau."
+      ]
+    },
+    {
+      "id": "qcm-nous-avons-pr-par-le-repas",
+      "type": "qcm",
+      "l1": "Pripravili sme jedlo.",
+      "l2": "Nous avons préparé le repas.",
+      "choices_l1": [
+        "dôchodca / dôchodkyňa",
+        "je mladý / je mladá",
+        "Môžem plávať sám?"
+      ],
+      "choices_l2": [
+        "Il fait très chaud.",
+        "sucré / sucrée",
+        "cinq heures et quart (5:15)"
+      ]
+    },
+    {
+      "id": "qcm-d-cor-d-corer",
+      "type": "qcm",
+      "l1": "zdobil / zdobila",
+      "l2": "décoré (décorer)",
+      "choices_l1": [
+        "mohli by sme",
+        "Je to za rohom.",
+        "To je drahé."
+      ],
+      "choices_l2": [
+        "la viande",
+        "ensemble",
+        "en hiver"
+      ]
+    },
+    {
+      "id": "qcm-pr-par-pr-parer",
+      "type": "qcm",
+      "l1": "pripravil / pripravila",
+      "l2": "préparé (préparer)",
+      "choices_l1": [
+        "Chceli by sme izbu s výhľadom na more.",
+        "To je izba.",
+        "Dám si quiche."
+      ],
+      "choices_l2": [
+        "cher",
+        "la terrasse",
+        "l'épicerie"
+      ]
+    },
+    {
+      "id": "qcm-fait-faire",
+      "type": "qcm",
+      "l1": "urobil / urobila (nepravidelné!)",
+      "l2": "fait (faire)",
+      "choices_l1": [
+        "bude to ľahké",
+        "Stojí to päť eur.",
+        "študent / študentka"
+      ],
+      "choices_l2": [
+        "le sel",
+        "cher",
+        "un moment"
+      ]
+    },
+    {
+      "id": "qcm-la-cire",
+      "type": "qcm",
+      "l1": "vosk",
+      "l2": "la cire",
+      "choices_l1": [
+        "recepcia",
+        "pomáhať",
+        "ochutnať"
+      ],
+      "choices_l2": [
+        "dans l'église",
+        "longtemps",
+        "qui"
+      ]
+    },
+    {
+      "id": "qcm-la-peinture",
+      "type": "qcm",
+      "l1": "farba",
+      "l2": "la peinture",
+      "choices_l1": [
+        "studený",
+        "roh",
+        "izba"
+      ],
+      "choices_l2": [
+        "précisément",
+        "cher",
+        "tu travailles"
+      ]
+    },
+    {
+      "id": "qcm-le-pinceau",
+      "type": "qcm",
+      "l1": "štetec",
+      "l2": "le pinceau",
+      "choices_l1": [
+        "smer",
+        "chvíľa",
+        "bratranec"
+      ],
+      "choices_l2": [
+        "la date",
+        "au musée",
+        "tu vois"
+      ]
+    },
+    {
+      "id": "qcm-le-ruban",
+      "type": "qcm",
+      "l1": "stužka",
+      "l2": "le ruban",
+      "choices_l1": [
+        "pondelok",
+        "ja som",
+        "lacný"
+      ],
+      "choices_l2": [
+        "l'argent",
+        "se lever",
+        "la baguette"
+      ]
+    },
+    {
+      "id": "qcm-le-chocolat",
+      "type": "qcm",
+      "l1": "čokoláda",
+      "l2": "le chocolat",
+      "choices_l1": [
+        "prechádzať sa",
+        "zrkadlo",
+        "drahota"
+      ],
+      "choices_l2": [
+        "la buanderie",
+        "je serai",
+        "ici"
+      ]
+    },
+    {
+      "id": "qcm-la-cloche",
+      "type": "qcm",
+      "l1": "zvon",
+      "l2": "la cloche",
+      "choices_l1": [
+        "zelenina",
+        "neskoro",
+        "izba"
+      ],
+      "choices_l2": [
+        "la pharmacie",
+        "les feuilles",
+        "nous serons"
+      ]
+    },
+    {
+      "id": "qcm-voler",
+      "type": "qcm",
+      "l1": "letieť",
+      "l2": "voler",
+      "choices_l1": [
+        "chutiť",
+        "v múzeu",
+        "choď!"
+      ],
+      "choices_l2": [
+        "regarder",
+        "le billet",
+        "joli"
+      ]
+    },
+    {
+      "id": "blank-j-ai-teint-des-ufs",
+      "type": "fill-blank",
+      "l1": "Farbil/farbila som vajíčka.",
+      "l2": "J'ai teint des œufs.",
+      "missing_l1": "som",
+      "missing_l2": "des",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "deti",
+        "do",
+        "si"
+      ],
+      "choices_l2": [
+        "nous",
+        "n'ai",
+        "c'est"
+      ]
+    },
+    {
+      "id": "blank-tu-as-d-cor-le-panier",
+      "type": "fill-blank",
+      "l1": "Zdobil/zdobila si košík.",
+      "l2": "Tu as décoré le panier.",
+      "missing_l1": "si",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "o",
+        "chcem",
+        "pláž"
+      ],
+      "choices_l2": [
+        "au",
+        "en",
+        "s'il"
+      ]
+    },
+    {
+      "id": "blank-maman-a-fait-cuire-un-g-teau",
+      "type": "fill-blank",
+      "l1": "Mama upiekla koláč.",
+      "l2": "Maman a fait cuire un gâteau.",
+      "missing_l1": "koláč",
+      "missing_l2": "un",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "nie",
+        "by",
+        "ale"
+      ],
+      "choices_l2": [
+        "sur",
+        "vais",
+        "de"
+      ]
+    },
+    {
+      "id": "blank-nous-avons-tout-pr-par-pour-p-ques",
+      "type": "fill-blank",
+      "l1": "Pripravili sme všetko na Veľkú noc.",
+      "l2": "Nous avons tout préparé pour Pâques.",
+      "missing_l1": "na",
+      "missing_l2": "avons",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "deti",
+        "môj",
+        "chcem"
+      ],
+      "choices_l2": [
+        "de",
+        "mais",
+        "tu"
+      ]
+    },
+    {
+      "id": "blank-vous-avez-d-cor-les-ufs-ensemble",
+      "type": "fill-blank",
+      "l1": "Zdobili ste vajíčka spolu?",
+      "l2": "Vous avez décoré les œufs ensemble ?",
+      "missing_l1": "vajíčka",
+      "missing_l2": "les",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "pláž",
+        "mám",
+        "zajtra"
+      ],
+      "choices_l2": [
+        "de",
+        "à",
+        "et"
+      ]
+    },
+    {
+      "id": "blank-les-enfants-ont-teint-des-ufs-en-jaune-et-en-rouge",
+      "type": "fill-blank",
+      "l1": "Deti farbili vajíčka na žlto a na červeno.",
+      "l2": "Les enfants ont teint des œufs en jaune et en rouge.",
+      "missing_l1": "na",
+      "missing_l2": "et",
+      "blank_index_l1": 3,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "mať",
+        "prosím",
+        "ešte"
+      ],
+      "choices_l2": [
+        "y",
+        "heures",
+        "les"
+      ]
+    },
+    {
+      "id": "blank-le-panier-est-plein-d-ufs",
+      "type": "fill-blank",
+      "l1": "Košík je plný vajíčok.",
+      "l2": "Le panier est plein d'œufs.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "siedmej",
+        "do",
+        "prosím"
+      ],
+      "choices_l2": [
+        "tu",
+        "ne",
+        "vous"
+      ]
+    },
+    {
+      "id": "blank-tu-as-tout-pr-par",
+      "type": "fill-blank",
+      "l1": "Pripravil si všetko?",
+      "l2": "Tu as tout préparé ?",
+      "missing_l1": "si",
+      "missing_l2": "tout",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "som",
+        "do",
+        "dnes"
+      ],
+      "choices_l2": [
+        "j'ai",
+        "c'est",
+        "mon"
+      ]
+    },
+    {
+      "id": "blank-j-ai-utilis-de-la-peinture-et-un-pinceau",
+      "type": "fill-blank",
+      "l1": "Použil som farbu a štetec.",
+      "l2": "J'ai utilisé de la peinture et un pinceau.",
+      "missing_l1": "a",
+      "missing_l2": "la",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "chcem",
+        "sa",
+        "veľmi"
+      ],
+      "choices_l2": [
+        "plaît",
+        "est",
+        "dans"
+      ]
+    },
+    {
+      "id": "blank-le-panier-a-un-ruban-color",
+      "type": "fill-blank",
+      "l1": "Košík má farebnú stužku.",
+      "l2": "Le panier a un ruban coloré.",
+      "missing_l1": "má",
+      "missing_l2": "un",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "na",
+        "je",
+        "dnes"
+      ],
+      "choices_l2": [
+        "la",
+        "n'ai",
+        "heures"
+      ]
+    },
+    {
+      "id": "blank-la-peinture-est-encore-mouill-e",
+      "type": "fill-blank",
+      "l1": "Farba je ešte mokrá.",
+      "l2": "La peinture est encore mouillée.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "veľmi",
+        "táto",
+        "sobotu"
+      ],
+      "choices_l2": [
+        "en",
+        "pas",
+        "dans"
+      ]
+    },
+    {
+      "id": "blank-le-chocolat-a-fondu-au-soleil",
+      "type": "fill-blank",
+      "l1": "Čokoláda sa roztopila na slnku.",
+      "l2": "Le chocolat a fondu au soleil.",
+      "missing_l1": "na",
+      "missing_l2": "a",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "je",
+        "by",
+        "zajtra"
+      ],
+      "choices_l2": [
+        "y",
+        "s'il",
+        "suis"
+      ]
+    },
+    {
+      "id": "blank-les-cloches-vont-voler-rome",
+      "type": "fill-blank",
+      "l1": "Zvony poletia do Ríma.",
+      "l2": "Les cloches vont voler à Rome.",
+      "missing_l1": "do",
+      "missing_l2": "à",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "tu",
+        "kde",
+        "deň"
+      ],
+      "choices_l2": [
+        "dans",
+        "il",
+        "ne"
+      ]
+    },
+    {
+      "id": "listen-j-ai-teint-des-ufs",
+      "type": "listen",
+      "l1": "Farbil/farbila som vajíčka.",
+      "l2": "J'ai teint des œufs.",
+      "choices_l2": [
+        "Il y a un beau silence près de la mer.",
+        "Ce serait mieux d'y aller tôt le matin.",
+        "Je veux une réduction, s'il vous plaît."
+      ]
+    },
+    {
+      "id": "listen-tu-as-d-cor-le-panier",
+      "type": "listen",
+      "l1": "Zdobil/zdobila si košík.",
+      "l2": "Tu as décoré le panier.",
+      "choices_l2": [
+        "Tu dois avoir un maillot de bain.",
+        "J'écris et je ne regarde pas la télévision.",
+        "Vous avez un bonnet noir ?"
+      ]
+    },
+    {
+      "id": "listen-maman-a-fait-cuire-un-g-teau",
+      "type": "listen",
+      "l1": "Mama upiekla koláč.",
+      "l2": "Maman a fait cuire un gâteau.",
+      "choices_l2": [
+        "Nage lentement et prudemment. Ce n'est pas une compétition.",
+        "Je porte une casquette en été.",
+        "Maintenant je mange du riz et des légumes."
+      ]
+    },
+    {
+      "id": "listen-nous-avons-tout-pr-par-pour-p-ques",
+      "type": "listen",
+      "l1": "Pripravili sme všetko na Veľkú noc.",
+      "l2": "Nous avons tout préparé pour Pâques.",
+      "choices_l2": [
+        "Je suis sur la place.",
+        "Le pain est frais et bon.",
+        "Le musée est fermé."
+      ]
+    },
+    {
+      "id": "listen-vous-avez-d-cor-les-ufs-ensemble",
+      "type": "listen",
+      "l1": "Zdobili ste vajíčka spolu?",
+      "l2": "Vous avez décoré les œufs ensemble ?",
+      "choices_l2": [
+        "Où sont les chaussons ? Dans le couloir ?",
+        "Non, seulement dix minutes. Ou prends le tram.",
+        "Excusez-moi, où est l'arrêt de bus ?"
+      ]
+    },
+    {
+      "id": "listen-les-enfants-ont-teint-des-ufs-en-jaune-et-en-rouge",
+      "type": "listen",
+      "l1": "Deti farbili vajíčka na žlto a na červeno.",
+      "l2": "Les enfants ont teint des œufs en jaune et en rouge.",
+      "choices_l2": [
+        "Au printemps je dois avoir un parapluie, mais pas de manteau.",
+        "Merci. Qu'est-ce que c'est ?",
+        "Le maître nageur dit que le courant est dangereux aujourd'hui."
+      ]
+    },
+    {
+      "id": "listen-le-panier-est-plein-d-ufs",
+      "type": "listen",
+      "l1": "Košík je plný vajíčok.",
+      "l2": "Le panier est plein d'œufs.",
+      "choices_l2": [
+        "J'ai un frère. Il a trois ans.",
+        "J'ai le livre. Je l'ai ici.",
+        "En automne les prévisions sont souvent pluvieuses."
+      ]
+    },
+    {
+      "id": "listen-tu-as-tout-pr-par",
+      "type": "listen",
+      "l1": "Pripravil si všetko?",
+      "l2": "Tu as tout préparé ?",
+      "choices_l2": [
+        "Cette jupe verte me plaît.",
+        "Moi, c'est Chloé ! J'ai huit ans.",
+        "Va tout droit, puis à droite près de la banque."
+      ]
+    },
+    {
+      "id": "listen-j-ai-utilis-de-la-peinture-et-un-pinceau",
+      "type": "listen",
+      "l1": "Použil som farbu a štetec.",
+      "l2": "J'ai utilisé de la peinture et un pinceau.",
+      "choices_l2": [
+        "Le port est plein de bateaux.",
+        "C'est mon ami.",
+        "Merci pour l'aide !"
+      ]
+    },
+    {
+      "id": "listen-le-panier-a-un-ruban-color",
+      "type": "listen",
+      "l1": "Košík má farebnú stužku.",
+      "l2": "Le panier a un ruban coloré.",
+      "choices_l2": [
+        "La piscine est fermée le lundi.",
+        "J'ai un rendez-vous jeudi après-midi.",
+        "Ma sœur est médecin."
+      ]
+    },
+    {
+      "id": "listen-la-peinture-est-encore-mouill-e",
+      "type": "listen",
+      "l1": "Farba je ešte mokrá.",
+      "l2": "La peinture est encore mouillée.",
+      "choices_l2": [
+        "Je suis fatigué. Nous pouvons nous reposer ?",
+        "Samedi il devrait faire beau !",
+        "Après l'orage, il y a souvent un arc-en-ciel."
+      ]
+    },
+    {
+      "id": "listen-le-chocolat-a-fondu-au-soleil",
+      "type": "listen",
+      "l1": "Čokoláda sa roztopila na slnku.",
+      "l2": "Le chocolat a fondu au soleil.",
+      "choices_l2": [
+        "Je veux encore de l'eau, s'il te plaît.",
+        "Que fais-tu ?",
+        "Nous habitons ensemble."
+      ]
+    },
+    {
+      "id": "listen-les-cloches-vont-voler-rome",
+      "type": "listen",
+      "l1": "Zvony poletia do Ríma.",
+      "l2": "Les cloches vont voler à Rome.",
+      "choices_l2": [
+        "J'ai un fils et une fille.",
+        "Cette jupe verte me plaît.",
+        "Ma grand-mère habite à la campagne."
+      ]
+    },
+    {
+      "id": "order-j-ai-teint-des-ufs",
+      "type": "order",
+      "l1": "Farbil/farbila som vajíčka.",
+      "l2": "J'ai teint des œufs.",
+      "tokens_l1": [
+        "Farbil/farbila",
+        "som",
+        "vajíčka.",
+        "Košík",
+        "má",
+        "farebnú",
+        "stužku."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "teint",
+        "des",
+        "œufs.",
+        "Le",
+        "panier",
+        "a",
+        "un",
+        "ruban",
+        "coloré."
+      ]
+    },
+    {
+      "id": "order-tu-as-d-cor-le-panier",
+      "type": "order",
+      "l1": "Zdobil/zdobila si košík.",
+      "l2": "Tu as décoré le panier.",
+      "tokens_l1": [
+        "Zdobil/zdobila",
+        "si",
+        "košík.",
+        "Farbil/farbila",
+        "som",
+        "vajíčka."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "as",
+        "décoré",
+        "le",
+        "panier.",
+        "J'ai",
+        "teint",
+        "des",
+        "œufs."
+      ]
+    },
+    {
+      "id": "order-maman-a-fait-cuire-un-g-teau",
+      "type": "order",
+      "l1": "Mama upiekla koláč.",
+      "l2": "Maman a fait cuire un gâteau.",
+      "tokens_l1": [
+        "Mama",
+        "upiekla",
+        "koláč.",
+        "Farbil/farbila",
+        "som",
+        "vajíčka."
+      ],
+      "tokens_l2": [
+        "Maman",
+        "a",
+        "fait",
+        "cuire",
+        "un",
+        "gâteau.",
+        "J'ai",
+        "teint",
+        "des",
+        "œufs."
+      ]
+    },
+    {
+      "id": "order-nous-avons-tout-pr-par-pour-p-ques",
+      "type": "order",
+      "l1": "Pripravili sme všetko na Veľkú noc.",
+      "l2": "Nous avons tout préparé pour Pâques.",
+      "tokens_l1": [
+        "Pripravili",
+        "sme",
+        "všetko",
+        "na",
+        "Veľkú",
+        "noc.",
+        "Farba",
+        "je",
+        "ešte",
+        "mokrá."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "avons",
+        "tout",
+        "préparé",
+        "pour",
+        "Pâques.",
+        "La",
+        "peinture",
+        "est",
+        "encore",
+        "mouillée."
+      ]
+    },
+    {
+      "id": "order-vous-avez-d-cor-les-ufs-ensemble",
+      "type": "order",
+      "l1": "Zdobili ste vajíčka spolu?",
+      "l2": "Vous avez décoré les œufs ensemble ?",
+      "tokens_l1": [
+        "Zdobili",
+        "ste",
+        "vajíčka",
+        "spolu?",
+        "Pripravili",
+        "sme",
+        "všetko",
+        "na",
+        "Veľkú",
+        "noc."
+      ],
+      "tokens_l2": [
+        "Vous",
+        "avez",
+        "décoré",
+        "les",
+        "œufs",
+        "ensemble",
+        "?",
+        "Nous",
+        "avons",
+        "tout",
+        "préparé",
+        "pour",
+        "Pâques."
+      ]
+    },
+    {
+      "id": "order-les-enfants-ont-teint-des-ufs-en-jaune-et-en-rouge",
+      "type": "order",
+      "l1": "Deti farbili vajíčka na žlto a na červeno.",
+      "l2": "Les enfants ont teint des œufs en jaune et en rouge.",
+      "tokens_l1": [
+        "Deti",
+        "farbili",
+        "vajíčka",
+        "na",
+        "žlto",
+        "a",
+        "na",
+        "červeno.",
+        "Košík",
+        "je",
+        "plný",
+        "vajíčok."
+      ],
+      "tokens_l2": [
+        "Les",
+        "enfants",
+        "ont",
+        "teint",
+        "des",
+        "œufs",
+        "en",
+        "jaune",
+        "et",
+        "en",
+        "rouge.",
+        "Le",
+        "panier",
+        "est",
+        "plein",
+        "d'œufs."
+      ]
+    },
+    {
+      "id": "order-le-panier-est-plein-d-ufs",
+      "type": "order",
+      "l1": "Košík je plný vajíčok.",
+      "l2": "Le panier est plein d'œufs.",
+      "tokens_l1": [
+        "Košík",
+        "je",
+        "plný",
+        "vajíčok.",
+        "Mama",
+        "upiekla",
+        "koláč."
+      ],
+      "tokens_l2": [
+        "Le",
+        "panier",
+        "est",
+        "plein",
+        "d'œufs.",
+        "Maman",
+        "a",
+        "fait",
+        "cuire",
+        "un",
+        "gâteau."
+      ]
+    },
+    {
+      "id": "order-tu-as-tout-pr-par",
+      "type": "order",
+      "l1": "Pripravil si všetko?",
+      "l2": "Tu as tout préparé ?",
+      "tokens_l1": [
+        "Pripravil",
+        "si",
+        "všetko?",
+        "Zvony",
+        "poletia",
+        "do",
+        "Ríma."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "as",
+        "tout",
+        "préparé",
+        "?",
+        "Les",
+        "cloches",
+        "vont",
+        "voler",
+        "à",
+        "Rome."
+      ]
+    },
+    {
+      "id": "order-j-ai-utilis-de-la-peinture-et-un-pinceau",
+      "type": "order",
+      "l1": "Použil som farbu a štetec.",
+      "l2": "J'ai utilisé de la peinture et un pinceau.",
+      "tokens_l1": [
+        "Použil",
+        "som",
+        "farbu",
+        "a",
+        "štetec.",
+        "Košík",
+        "je",
+        "plný",
+        "vajíčok."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "utilisé",
+        "de",
+        "la",
+        "peinture",
+        "et",
+        "un",
+        "pinceau.",
+        "Le",
+        "panier",
+        "est",
+        "plein",
+        "d'œufs."
+      ]
+    },
+    {
+      "id": "order-le-panier-a-un-ruban-color",
+      "type": "order",
+      "l1": "Košík má farebnú stužku.",
+      "l2": "Le panier a un ruban coloré.",
+      "tokens_l1": [
+        "Košík",
+        "má",
+        "farebnú",
+        "stužku.",
+        "Zvony",
+        "poletia",
+        "do",
+        "Ríma."
+      ],
+      "tokens_l2": [
+        "Le",
+        "panier",
+        "a",
+        "un",
+        "ruban",
+        "coloré.",
+        "Les",
+        "cloches",
+        "vont",
+        "voler",
+        "à",
+        "Rome."
+      ]
+    },
+    {
+      "id": "order-la-peinture-est-encore-mouill-e",
+      "type": "order",
+      "l1": "Farba je ešte mokrá.",
+      "l2": "La peinture est encore mouillée.",
+      "tokens_l1": [
+        "Farba",
+        "je",
+        "ešte",
+        "mokrá.",
+        "Košík",
+        "je",
+        "plný",
+        "vajíčok."
+      ],
+      "tokens_l2": [
+        "La",
+        "peinture",
+        "est",
+        "encore",
+        "mouillée.",
+        "Le",
+        "panier",
+        "est",
+        "plein",
+        "d'œufs."
+      ]
+    },
+    {
+      "id": "order-le-chocolat-a-fondu-au-soleil",
+      "type": "order",
+      "l1": "Čokoláda sa roztopila na slnku.",
+      "l2": "Le chocolat a fondu au soleil.",
+      "tokens_l1": [
+        "Čokoláda",
+        "sa",
+        "roztopila",
+        "na",
+        "slnku.",
+        "Farbil/farbila",
+        "som",
+        "vajíčka."
+      ],
+      "tokens_l2": [
+        "Le",
+        "chocolat",
+        "a",
+        "fondu",
+        "au",
+        "soleil.",
+        "J'ai",
+        "teint",
+        "des",
+        "œufs."
+      ]
+    },
+    {
+      "id": "order-les-cloches-vont-voler-rome",
+      "type": "order",
+      "l1": "Zvony poletia do Ríma.",
+      "l2": "Les cloches vont voler à Rome.",
+      "tokens_l1": [
+        "Zvony",
+        "poletia",
+        "do",
+        "Ríma.",
+        "Zdobil/zdobila",
+        "si",
+        "košík."
+      ],
+      "tokens_l2": [
+        "Les",
+        "cloches",
+        "vont",
+        "voler",
+        "à",
+        "Rome.",
+        "Tu",
+        "as",
+        "décoré",
+        "le",
+        "panier."
+      ]
+    }
+  ]
+}

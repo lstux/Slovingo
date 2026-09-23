@@ -1,0 +1,844 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-odchod",
+      "type": "qcm",
+      "l1": "le départ",
+      "l2": "odchod",
+      "choices_l1": [
+        "le retour",
+        "le destin",
+        "le hasard"
+      ],
+      "choices_l2": [
+        "stesknutie",
+        "cudzina",
+        "náhoda"
+      ]
+    },
+    {
+      "id": "qcm-s-ahovanie",
+      "type": "qcm",
+      "l1": "le déménagement",
+      "l2": "sťahovanie",
+      "choices_l1": [
+        "l'expérience",
+        "le destin",
+        "le départ"
+      ],
+      "choices_l2": [
+        "návrat",
+        "domov",
+        "odvaha"
+      ]
+    },
+    {
+      "id": "qcm-jazykov-bari-ra",
+      "type": "qcm",
+      "l1": "la barrière de la langue",
+      "l2": "jazyková bariéra",
+      "choices_l1": [
+        "le chez-soi, le pays natal",
+        "la sécurité, la certitude",
+        "le mal du pays"
+      ],
+      "choices_l2": [
+        "stesknutie",
+        "skúsenosť",
+        "cudzina"
+      ]
+    },
+    {
+      "id": "qcm-sk-senos",
+      "type": "qcm",
+      "l1": "l'expérience",
+      "l2": "skúsenosť",
+      "choices_l1": [
+        "le hasard",
+        "le destin",
+        "le courage"
+      ],
+      "choices_l2": [
+        "osud",
+        "odvaha",
+        "náhoda"
+      ]
+    },
+    {
+      "id": "qcm-domov",
+      "type": "qcm",
+      "l1": "le chez-soi, le pays natal",
+      "l2": "domov",
+      "choices_l1": [
+        "le mal du pays",
+        "la sécurité, la certitude",
+        "la barrière de la langue"
+      ],
+      "choices_l2": [
+        "odchod",
+        "skúsenosť",
+        "cudzina"
+      ]
+    },
+    {
+      "id": "qcm-cudzina",
+      "type": "qcm",
+      "l1": "l'étranger (le pays étranger)",
+      "l2": "cudzina",
+      "choices_l1": [
+        "le chez-soi, le pays natal",
+        "le mal du pays",
+        "la barrière de la langue"
+      ],
+      "choices_l2": [
+        "odvaha",
+        "návrat",
+        "odchod"
+      ]
+    },
+    {
+      "id": "qcm-n-vrat",
+      "type": "qcm",
+      "l1": "le retour",
+      "l2": "návrat",
+      "choices_l1": [
+        "l'expérience",
+        "le courage",
+        "le déménagement"
+      ],
+      "choices_l2": [
+        "stesknutie",
+        "domov",
+        "odchod"
+      ]
+    },
+    {
+      "id": "qcm-stesknutie",
+      "type": "qcm",
+      "l1": "le mal du pays",
+      "l2": "stesknutie",
+      "choices_l1": [
+        "le chez-soi, le pays natal",
+        "la barrière de la langue",
+        "la sécurité, la certitude"
+      ],
+      "choices_l2": [
+        "náhoda",
+        "návrat",
+        "odvaha"
+      ]
+    },
+    {
+      "id": "qcm-istota",
+      "type": "qcm",
+      "l1": "la sécurité, la certitude",
+      "l2": "istota",
+      "choices_l1": [
+        "l'étranger (le pays étranger)",
+        "le mal du pays",
+        "le chez-soi, le pays natal"
+      ],
+      "choices_l2": [
+        "stesknutie",
+        "náhoda",
+        "odvaha"
+      ]
+    },
+    {
+      "id": "qcm-odvaha",
+      "type": "qcm",
+      "l1": "le courage",
+      "l2": "odvaha",
+      "choices_l1": [
+        "le déménagement",
+        "l'expérience",
+        "le hasard"
+      ],
+      "choices_l2": [
+        "osud",
+        "sťahovanie",
+        "cudzina"
+      ]
+    },
+    {
+      "id": "qcm-n-hoda",
+      "type": "qcm",
+      "l1": "le hasard",
+      "l2": "náhoda",
+      "choices_l1": [
+        "le départ",
+        "le déménagement",
+        "le retour"
+      ],
+      "choices_l2": [
+        "návrat",
+        "odchod",
+        "odvaha"
+      ]
+    },
+    {
+      "id": "qcm-osud",
+      "type": "qcm",
+      "l1": "le destin",
+      "l2": "osud",
+      "choices_l1": [
+        "le hasard",
+        "l'expérience",
+        "le retour"
+      ],
+      "choices_l2": [
+        "náhoda",
+        "návrat",
+        "stesknutie"
+      ]
+    },
+    {
+      "id": "blank-andrea-povedali-ste-e-mi-to-poviete-nabud-ce-tak-som-tu",
+      "type": "fill-blank",
+      "l1": "Andrea, vous avez dit que vous me le diriez la prochaine fois. Alors me voilà.",
+      "l2": "Andrea, povedali ste, že mi to poviete nabudúce. Tak som tu.",
+      "missing_l1": "la",
+      "missing_l2": "to",
+      "blank_index_l1": 9,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "le",
+        "Les",
+        "2005"
+      ],
+      "choices_l2": [
+        "ten",
+        "Ja",
+        "sa"
+      ]
+    },
+    {
+      "id": "blank-no-m-te-pravdu-toto-je-asi-ten-najosobnej-pr-beh-zo-v-etk-ch",
+      "type": "fill-blank",
+      "l1": "Oui, vous avez raison. C'est sans doute l'histoire la plus personnelle de toutes.",
+      "l2": "Áno, máte pravdu. Toto je asi ten najosobnejší príbeh zo všetkých.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 8,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "2005",
+        "Les",
+        "le"
+      ],
+      "choices_l2": [
+        "ste",
+        "bola",
+        "som"
+      ]
+    },
+    {
+      "id": "blank-pre-o-ste-sa-vlastne-rozhodli-od-s-zo-slovenska",
+      "type": "fill-blank",
+      "l1": "Pourquoi avez-vous finalement décidé de quitter la Slovaquie ?",
+      "l2": "Prečo ste sa vlastne rozhodli odísť zo Slovenska?",
+      "missing_l1": "la",
+      "missing_l2": "sa",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "2005",
+        "le",
+        "Les"
+      ],
+      "choices_l2": [
+        "ten",
+        "Toto",
+        "Ja"
+      ]
+    },
+    {
+      "id": "blank-nebol-to-jeden-d-vod-bola-to-kombin-cia-pr-ce-zvedavosti-a-mo-no-aj-trochu-nudy",
+      "type": "fill-blank",
+      "l1": "Ce n'était pas une seule raison. C'était une combinaison de travail, de curiosité et peut-être aussi d'un peu d'ennui.",
+      "l2": "Nebol to jeden dôvod. Bola to kombinácia práce, zvedavosti a možno aj trochu nudy.",
+      "missing_l1": "de",
+      "missing_l2": "a",
+      "blank_index_l1": 9,
+      "blank_index_l2": 9,
+      "choices_l1": [
+        "à",
+        "avec",
+        "par"
+      ],
+      "choices_l2": [
+        "aj",
+        "ale",
+        "lebo"
+      ]
+    },
+    {
+      "id": "blank-odi-la-som-v-roku-dvetis-cp-mala-som-vtedy-tridsa-jeden-rokov",
+      "type": "fill-blank",
+      "l1": "Je suis partie en 2005. J'avais alors trente et un ans.",
+      "l2": "Odišla som v roku dvetisícpäť. Mala som vtedy tridsaťjeden rokov.",
+      "missing_l1": "et",
+      "missing_l2": "v",
+      "blank_index_l1": 8,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ni",
+        "mais",
+        "Donc"
+      ],
+      "choices_l2": [
+        "bez",
+        "o",
+        "Vo"
+      ]
+    },
+    {
+      "id": "blank-to-bol-u-rok-po-vstupe-do-nie",
+      "type": "fill-blank",
+      "l1": "C'était donc déjà un an après l'entrée dans l'union.",
+      "l2": "To bol už rok po vstupe do únie.",
+      "missing_l1": "un",
+      "missing_l2": "do",
+      "blank_index_l1": 3,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "des",
+        "une",
+        "2005"
+      ],
+      "choices_l2": [
+        "pri",
+        "Vo",
+        "s"
+      ]
+    },
+    {
+      "id": "blank-presne-tak-trochu-som-po-kala-k-m-som-sa-naozaj-rozhodla",
+      "type": "fill-blank",
+      "l1": "Exactement. J'ai un peu attendu avant de vraiment me décider.",
+      "l2": "Presne tak. Trochu som počkala, kým som sa naozaj rozhodla.",
+      "missing_l1": "de",
+      "missing_l2": "som",
+      "blank_index_l1": 6,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "par",
+        "sur",
+        "près"
+      ],
+      "choices_l2": [
+        "si",
+        "bol",
+        "budú"
+      ]
+    },
+    {
+      "id": "listen-andrea-povedali-ste-e-mi-to-poviete-nabud-ce-tak-som-tu",
+      "type": "listen",
+      "l1": "Andrea, vous avez dit que vous me le diriez la prochaine fois. Alors me voilà.",
+      "l2": "Andrea, povedali ste, že mi to poviete nabudúce. Tak som tu.",
+      "choices_l1": [
+        "Je suis partie en 2005. J'avais alors trente et un ans.",
+        "C'était donc déjà un an après l'entrée dans l'union.",
+        "Pourquoi avez-vous finalement décidé de quitter la Slovaquie ?"
+      ],
+      "choices_l2": [
+        "Presne tak. Trochu som počkala, kým som sa naozaj rozhodla.",
+        "Áno, máte pravdu. Toto je asi ten najosobnejší príbeh zo všetkých.",
+        "Nebol to jeden dôvod. Bola to kombinácia práce, zvedavosti a možno aj trochu nudy."
+      ]
+    },
+    {
+      "id": "listen-no-m-te-pravdu-toto-je-asi-ten-najosobnej-pr-beh-zo-v-etk-ch",
+      "type": "listen",
+      "l1": "Oui, vous avez raison. C'est sans doute l'histoire la plus personnelle de toutes.",
+      "l2": "Áno, máte pravdu. Toto je asi ten najosobnejší príbeh zo všetkých.",
+      "choices_l1": [
+        "Pourquoi avez-vous finalement décidé de quitter la Slovaquie ?",
+        "Je suis partie en 2005. J'avais alors trente et un ans.",
+        "Ce n'était pas une seule raison. C'était une combinaison de travail, de curiosité et peut-être aussi d'un peu d'ennui."
+      ],
+      "choices_l2": [
+        "Nebol to jeden dôvod. Bola to kombinácia práce, zvedavosti a možno aj trochu nudy.",
+        "To bol už rok po vstupe do únie.",
+        "Presne tak. Trochu som počkala, kým som sa naozaj rozhodla."
+      ]
+    },
+    {
+      "id": "listen-pre-o-ste-sa-vlastne-rozhodli-od-s-zo-slovenska",
+      "type": "listen",
+      "l1": "Pourquoi avez-vous finalement décidé de quitter la Slovaquie ?",
+      "l2": "Prečo ste sa vlastne rozhodli odísť zo Slovenska?",
+      "choices_l1": [
+        "Exactement. J'ai un peu attendu avant de vraiment me décider.",
+        "Ce n'était pas une seule raison. C'était une combinaison de travail, de curiosité et peut-être aussi d'un peu d'ennui.",
+        "C'était donc déjà un an après l'entrée dans l'union."
+      ],
+      "choices_l2": [
+        "Nebol to jeden dôvod. Bola to kombinácia práce, zvedavosti a možno aj trochu nudy.",
+        "Andrea, povedali ste, že mi to poviete nabudúce. Tak som tu.",
+        "Odišla som v roku dvetisícpäť. Mala som vtedy tridsaťjeden rokov."
+      ]
+    },
+    {
+      "id": "listen-nebol-to-jeden-d-vod-bola-to-kombin-cia-pr-ce-zvedavosti-a-mo-no-aj-trochu-nudy",
+      "type": "listen",
+      "l1": "Ce n'était pas une seule raison. C'était une combinaison de travail, de curiosité et peut-être aussi d'un peu d'ennui.",
+      "l2": "Nebol to jeden dôvod. Bola to kombinácia práce, zvedavosti a možno aj trochu nudy.",
+      "choices_l1": [
+        "Oui, vous avez raison. C'est sans doute l'histoire la plus personnelle de toutes.",
+        "Andrea, vous avez dit que vous me le diriez la prochaine fois. Alors me voilà.",
+        "Pourquoi avez-vous finalement décidé de quitter la Slovaquie ?"
+      ],
+      "choices_l2": [
+        "Odišla som v roku dvetisícpäť. Mala som vtedy tridsaťjeden rokov.",
+        "Prečo ste sa vlastne rozhodli odísť zo Slovenska?",
+        "To bol už rok po vstupe do únie."
+      ]
+    },
+    {
+      "id": "listen-odi-la-som-v-roku-dvetis-cp-mala-som-vtedy-tridsa-jeden-rokov",
+      "type": "listen",
+      "l1": "Je suis partie en 2005. J'avais alors trente et un ans.",
+      "l2": "Odišla som v roku dvetisícpäť. Mala som vtedy tridsaťjeden rokov.",
+      "choices_l1": [
+        "Oui, vous avez raison. C'est sans doute l'histoire la plus personnelle de toutes.",
+        "Andrea, vous avez dit que vous me le diriez la prochaine fois. Alors me voilà.",
+        "Ce n'était pas une seule raison. C'était une combinaison de travail, de curiosité et peut-être aussi d'un peu d'ennui."
+      ],
+      "choices_l2": [
+        "Presne tak. Trochu som počkala, kým som sa naozaj rozhodla.",
+        "To bol už rok po vstupe do únie.",
+        "Nebol to jeden dôvod. Bola to kombinácia práce, zvedavosti a možno aj trochu nudy."
+      ]
+    },
+    {
+      "id": "listen-to-bol-u-rok-po-vstupe-do-nie",
+      "type": "listen",
+      "l1": "C'était donc déjà un an après l'entrée dans l'union.",
+      "l2": "To bol už rok po vstupe do únie.",
+      "choices_l1": [
+        "Je suis partie en 2005. J'avais alors trente et un ans.",
+        "Andrea, vous avez dit que vous me le diriez la prochaine fois. Alors me voilà.",
+        "Oui, vous avez raison. C'est sans doute l'histoire la plus personnelle de toutes."
+      ],
+      "choices_l2": [
+        "Odišla som v roku dvetisícpäť. Mala som vtedy tridsaťjeden rokov.",
+        "Presne tak. Trochu som počkala, kým som sa naozaj rozhodla.",
+        "Nebol to jeden dôvod. Bola to kombinácia práce, zvedavosti a možno aj trochu nudy."
+      ]
+    },
+    {
+      "id": "listen-presne-tak-trochu-som-po-kala-k-m-som-sa-naozaj-rozhodla",
+      "type": "listen",
+      "l1": "Exactement. J'ai un peu attendu avant de vraiment me décider.",
+      "l2": "Presne tak. Trochu som počkala, kým som sa naozaj rozhodla.",
+      "choices_l1": [
+        "Andrea, vous avez dit que vous me le diriez la prochaine fois. Alors me voilà.",
+        "Je suis partie en 2005. J'avais alors trente et un ans.",
+        "Pourquoi avez-vous finalement décidé de quitter la Slovaquie ?"
+      ],
+      "choices_l2": [
+        "To bol už rok po vstupe do únie.",
+        "Nebol to jeden dôvod. Bola to kombinácia práce, zvedavosti a možno aj trochu nudy.",
+        "Prečo ste sa vlastne rozhodli odísť zo Slovenska?"
+      ]
+    },
+    {
+      "id": "order-andrea-povedali-ste-e-mi-to-poviete-nabud-ce-tak-som-tu",
+      "type": "order",
+      "l1": "Andrea, vous avez dit que vous me le diriez la prochaine fois. Alors me voilà.",
+      "l2": "Andrea, povedali ste, že mi to poviete nabudúce. Tak som tu.",
+      "tokens_l1": [
+        "Andrea,",
+        "vous",
+        "avez",
+        "dit",
+        "que",
+        "vous",
+        "me",
+        "le",
+        "diriez",
+        "la",
+        "prochaine",
+        "fois.",
+        "Alors",
+        "me",
+        "voilà.",
+        "Je",
+        "suis",
+        "partie",
+        "en",
+        "2005.",
+        "J'avais",
+        "alors",
+        "trente",
+        "et",
+        "un",
+        "ans."
+      ],
+      "tokens_l2": [
+        "Andrea,",
+        "povedali",
+        "ste,",
+        "že",
+        "mi",
+        "to",
+        "poviete",
+        "nabudúce.",
+        "Tak",
+        "som",
+        "tu.",
+        "Odišla",
+        "som",
+        "v",
+        "roku",
+        "dvetisícpäť.",
+        "Mala",
+        "som",
+        "vtedy",
+        "tridsaťjeden",
+        "rokov."
+      ]
+    },
+    {
+      "id": "order-no-m-te-pravdu-toto-je-asi-ten-najosobnej-pr-beh-zo-v-etk-ch",
+      "type": "order",
+      "l1": "Oui, vous avez raison. C'est sans doute l'histoire la plus personnelle de toutes.",
+      "l2": "Áno, máte pravdu. Toto je asi ten najosobnejší príbeh zo všetkých.",
+      "tokens_l1": [
+        "Oui,",
+        "vous",
+        "avez",
+        "raison.",
+        "C'est",
+        "sans",
+        "doute",
+        "l'histoire",
+        "la",
+        "plus",
+        "personnelle",
+        "de",
+        "toutes.",
+        "Je",
+        "suis",
+        "partie",
+        "en",
+        "2005.",
+        "J'avais",
+        "alors",
+        "trente",
+        "et",
+        "un",
+        "ans."
+      ],
+      "tokens_l2": [
+        "Áno,",
+        "máte",
+        "pravdu.",
+        "Toto",
+        "je",
+        "asi",
+        "ten",
+        "najosobnejší",
+        "príbeh",
+        "zo",
+        "všetkých.",
+        "Odišla",
+        "som",
+        "v",
+        "roku",
+        "dvetisícpäť.",
+        "Mala",
+        "som",
+        "vtedy",
+        "tridsaťjeden",
+        "rokov."
+      ]
+    },
+    {
+      "id": "order-pre-o-ste-sa-vlastne-rozhodli-od-s-zo-slovenska",
+      "type": "order",
+      "l1": "Pourquoi avez-vous finalement décidé de quitter la Slovaquie ?",
+      "l2": "Prečo ste sa vlastne rozhodli odísť zo Slovenska?",
+      "tokens_l1": [
+        "Pourquoi",
+        "avez-vous",
+        "finalement",
+        "décidé",
+        "de",
+        "quitter",
+        "la",
+        "Slovaquie",
+        "?",
+        "Andrea,",
+        "vous",
+        "avez",
+        "dit",
+        "que",
+        "vous",
+        "me",
+        "le",
+        "diriez",
+        "la",
+        "prochaine",
+        "fois.",
+        "Alors",
+        "me",
+        "voilà."
+      ],
+      "tokens_l2": [
+        "Prečo",
+        "ste",
+        "sa",
+        "vlastne",
+        "rozhodli",
+        "odísť",
+        "zo",
+        "Slovenska?",
+        "Andrea,",
+        "povedali",
+        "ste,",
+        "že",
+        "mi",
+        "to",
+        "poviete",
+        "nabudúce.",
+        "Tak",
+        "som",
+        "tu."
+      ]
+    },
+    {
+      "id": "order-nebol-to-jeden-d-vod-bola-to-kombin-cia-pr-ce-zvedavosti-a-mo-no-aj-trochu-nudy",
+      "type": "order",
+      "l1": "Ce n'était pas une seule raison. C'était une combinaison de travail, de curiosité et peut-être aussi d'un peu d'ennui.",
+      "l2": "Nebol to jeden dôvod. Bola to kombinácia práce, zvedavosti a možno aj trochu nudy.",
+      "tokens_l1": [
+        "Ce",
+        "n'était",
+        "pas",
+        "une",
+        "seule",
+        "raison.",
+        "C'était",
+        "une",
+        "combinaison",
+        "de",
+        "travail,",
+        "de",
+        "curiosité",
+        "et",
+        "peut-être",
+        "aussi",
+        "d'un",
+        "peu",
+        "d'ennui.",
+        "C'était",
+        "donc",
+        "déjà",
+        "un",
+        "an",
+        "après",
+        "l'entrée",
+        "dans",
+        "l'union."
+      ],
+      "tokens_l2": [
+        "Nebol",
+        "to",
+        "jeden",
+        "dôvod.",
+        "Bola",
+        "to",
+        "kombinácia",
+        "práce,",
+        "zvedavosti",
+        "a",
+        "možno",
+        "aj",
+        "trochu",
+        "nudy.",
+        "To",
+        "bol",
+        "už",
+        "rok",
+        "po",
+        "vstupe",
+        "do",
+        "únie."
+      ]
+    },
+    {
+      "id": "order-odi-la-som-v-roku-dvetis-cp-mala-som-vtedy-tridsa-jeden-rokov",
+      "type": "order",
+      "l1": "Je suis partie en 2005. J'avais alors trente et un ans.",
+      "l2": "Odišla som v roku dvetisícpäť. Mala som vtedy tridsaťjeden rokov.",
+      "tokens_l1": [
+        "Je",
+        "suis",
+        "partie",
+        "en",
+        "2005.",
+        "J'avais",
+        "alors",
+        "trente",
+        "et",
+        "un",
+        "ans.",
+        "Pourquoi",
+        "avez-vous",
+        "finalement",
+        "décidé",
+        "de",
+        "quitter",
+        "la",
+        "Slovaquie",
+        "?"
+      ],
+      "tokens_l2": [
+        "Odišla",
+        "som",
+        "v",
+        "roku",
+        "dvetisícpäť.",
+        "Mala",
+        "som",
+        "vtedy",
+        "tridsaťjeden",
+        "rokov.",
+        "Prečo",
+        "ste",
+        "sa",
+        "vlastne",
+        "rozhodli",
+        "odísť",
+        "zo",
+        "Slovenska?"
+      ]
+    },
+    {
+      "id": "order-to-bol-u-rok-po-vstupe-do-nie",
+      "type": "order",
+      "l1": "C'était donc déjà un an après l'entrée dans l'union.",
+      "l2": "To bol už rok po vstupe do únie.",
+      "tokens_l1": [
+        "C'était",
+        "donc",
+        "déjà",
+        "un",
+        "an",
+        "après",
+        "l'entrée",
+        "dans",
+        "l'union.",
+        "Pourquoi",
+        "avez-vous",
+        "finalement",
+        "décidé",
+        "de",
+        "quitter",
+        "la",
+        "Slovaquie",
+        "?"
+      ],
+      "tokens_l2": [
+        "To",
+        "bol",
+        "už",
+        "rok",
+        "po",
+        "vstupe",
+        "do",
+        "únie.",
+        "Prečo",
+        "ste",
+        "sa",
+        "vlastne",
+        "rozhodli",
+        "odísť",
+        "zo",
+        "Slovenska?"
+      ]
+    },
+    {
+      "id": "order-presne-tak-trochu-som-po-kala-k-m-som-sa-naozaj-rozhodla",
+      "type": "order",
+      "l1": "Exactement. J'ai un peu attendu avant de vraiment me décider.",
+      "l2": "Presne tak. Trochu som počkala, kým som sa naozaj rozhodla.",
+      "tokens_l1": [
+        "Exactement.",
+        "J'ai",
+        "un",
+        "peu",
+        "attendu",
+        "avant",
+        "de",
+        "vraiment",
+        "me",
+        "décider.",
+        "Pourquoi",
+        "avez-vous",
+        "finalement",
+        "décidé",
+        "de",
+        "quitter",
+        "la",
+        "Slovaquie",
+        "?"
+      ],
+      "tokens_l2": [
+        "Presne",
+        "tak.",
+        "Trochu",
+        "som",
+        "počkala,",
+        "kým",
+        "som",
+        "sa",
+        "naozaj",
+        "rozhodla.",
+        "Prečo",
+        "ste",
+        "sa",
+        "vlastne",
+        "rozhodli",
+        "odísť",
+        "zo",
+        "Slovenska?"
+      ]
+    },
+    {
+      "id": "match-odchod-vocab",
+      "type": "match",
+      "l1": [
+        "le départ",
+        "le déménagement",
+        "la barrière de la langue",
+        "l'expérience"
+      ],
+      "l2": [
+        "odchod",
+        "sťahovanie",
+        "jazyková bariéra",
+        "skúsenosť"
+      ]
+    },
+    {
+      "id": "match-andrea-povedali-ste-e-mi-to-poviete-nabud-ce-tak-som-tu-sentences",
+      "type": "match",
+      "l1": [
+        "Andrea, vous avez dit que vous me le diriez la prochaine fois. Alors me voilà.",
+        "Oui, vous avez raison. C'est sans doute l'histoire la plus personnelle de toutes.",
+        "Pourquoi avez-vous finalement décidé de quitter la Slovaquie ?",
+        "Ce n'était pas une seule raison. C'était une combinaison de travail, de curiosité et peut-être aussi d'un peu d'ennui."
+      ],
+      "l2": [
+        "Andrea, povedali ste, že mi to poviete nabudúce. Tak som tu.",
+        "Áno, máte pravdu. Toto je asi ten najosobnejší príbeh zo všetkých.",
+        "Prečo ste sa vlastne rozhodli odísť zo Slovenska?",
+        "Nebol to jeden dôvod. Bola to kombinácia práce, zvedavosti a možno aj trochu nudy."
+      ]
+    }
+  ]
+}

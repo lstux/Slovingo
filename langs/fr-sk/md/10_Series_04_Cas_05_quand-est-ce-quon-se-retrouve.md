@@ -57,7 +57,7 @@ Eric a Andrea si vykajú. Andrea a Marek si tykajú.
 > Vers = asi
 > six heures et demie = pol siedmej
 > du soir = večer
-+ Pozor, „six heures et demie“ = pol siedmej (pasca z fiche 2!).
++ Pozor, „six heures et demie“ = pol siedmej — francúzske číslo je vždy o jedno nižšie, než by napovedala slovenská logika.
 
 ! 👩 D'accord. On se retrouve mercredi à six heures et demie.
 > Dobre. Stretneme sa v stredu o pol siedmej.
@@ -107,7 +107,7 @@ Eric a Andrea si vykajú. Andrea a Marek si tykajú.
 
 **Potvrdiť deň vopred je bežné aj tu.** Stretnutie dohodnuté týždeň vopred sa vo Francúzsku tiež často potvrdzuje krátkou správou deň predtým alebo ráno v daný deň.
 
-**„Six heures et demie“ — pasca funguje v oboch smeroch.** Presne ako sme videli, Francúz povie „six heures et demie“ a myslí šesť tridsať — na rozdiel od inštinktu prevziať slovenskú logiku „pol siedmej“. Overiť si to nahlas, ako to robí Eric, je úplne bežné.
+**„Six heures et demie“ — pasca funguje v oboch smeroch.** Francúz povie „six heures et demie“ a myslí šesť tridsať — na rozdiel od inštinktu prevziať slovenskú logiku „pol siedmej“. Overiť si to nahlas, ako to robí Eric, je úplne bežné.
 
 **Gare de Lyon-Part-Dieu — obľúbený bod stretnutia.** V Lyone slúži hlavná stanica {{Part-Dieu}} ako obľúbené miesto stretnutia, podobne ako bratislavská Hlavná stanica — je odtiaľ ľahké pokračovať autobusom či električkou kamkoľvek v meste.
 

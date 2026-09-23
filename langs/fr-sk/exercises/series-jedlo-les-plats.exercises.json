@@ -1,0 +1,1321 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-la-quiche-lorraine",
+      "type": "qcm",
+      "l1": "quiche lorraine (slaný koláč z Lotrinska)",
+      "l2": "la quiche lorraine",
+      "choices_l1": [
+        "otváram, otváraš, otvára",
+        "Mám knihu. → Mám ju.",
+        "Hľadám kľúče. → Hľadám ich."
+      ],
+      "choices_l2": [
+        "le professeur / la professeure",
+        "salé / salée",
+        "ils / elles travaillent"
+      ]
+    },
+    {
+      "id": "qcm-le-pot-au-feu",
+      "type": "qcm",
+      "l1": "pot-au-feu (varené hovädzie so zeleninou)",
+      "l2": "le pot-au-feu",
+      "choices_l1": [
+        "Je tam stôl.",
+        "obývačka (v slovenčine ženský rod)",
+        "Aké je to?"
+      ],
+      "choices_l2": [
+        "tu fais",
+        "goûter",
+        "le bureau"
+      ]
+    },
+    {
+      "id": "qcm-la-ratatouille",
+      "type": "qcm",
+      "l1": "ratatouille (dusená provensálska zelenina)",
+      "l2": "la ratatouille",
+      "choices_l1": [
+        "To je izba.",
+        "študent / študentka",
+        "Nie je to dobré."
+      ],
+      "choices_l2": [
+        "la cave",
+        "les toilettes",
+        "fermer"
+      ]
+    },
+    {
+      "id": "qcm-la-tarte",
+      "type": "qcm",
+      "l1": "tarta, ovocný koláč",
+      "l2": "la tarte",
+      "choices_l1": [
+        "To je izba.",
+        "je starý / je stará",
+        "upratujem, upratuješ, upratuje"
+      ],
+      "choices_l2": [
+        "je suis",
+        "la cousine",
+        "l'eau"
+      ]
+    },
+    {
+      "id": "qcm-la-baguette",
+      "type": "qcm",
+      "l1": "bageta",
+      "l2": "la baguette",
+      "choices_l1": [
+        "dva roky",
+        "bývame",
+        "trochu"
+      ],
+      "choices_l2": [
+        "je travaille",
+        "la porte",
+        "vouloir"
+      ]
+    },
+    {
+      "id": "qcm-la-bi-re",
+      "type": "qcm",
+      "l1": "pivo",
+      "l2": "la bière",
+      "choices_l1": [
+        "dedina, vidiek",
+        "syr",
+        "je"
+      ],
+      "choices_l2": [
+        "lire",
+        "la viande",
+        "dix ans"
+      ]
+    },
+    {
+      "id": "qcm-le-vin",
+      "type": "qcm",
+      "l1": "víno",
+      "l2": "le vin",
+      "choices_l1": [
+        "robím",
+        "dvere",
+        "ješ"
+      ],
+      "choices_l2": [
+        "le grand-père",
+        "loin",
+        "un peu"
+      ]
+    },
+    {
+      "id": "qcm-je-prends-une-quiche",
+      "type": "qcm",
+      "l1": "Dám si quiche.",
+      "l2": "Je prends une quiche.",
+      "choices_l1": [
+        "učiteľ / učiteľka",
+        "študent / študentka",
+        "Nie je tam posteľ."
+      ],
+      "choices_l2": [
+        "Ce n'est pas bon.",
+        "un petit frère",
+        "petit / petite"
+      ]
+    },
+    {
+      "id": "qcm-je-prends-une-bi-re",
+      "type": "qcm",
+      "l1": "Dám si pivo.",
+      "l2": "Je prends une bière.",
+      "choices_l1": [
+        "Nie je to dobré.",
+        "učiteľ / učiteľka",
+        "upratujem, upratuješ, upratuje"
+      ],
+      "choices_l2": [
+        "Je cherche les clés. → Je les cherche.",
+        "il / elle boit",
+        "Comment c'est ?"
+      ]
+    },
+    {
+      "id": "qcm-tu-prends-un-caf",
+      "type": "qcm",
+      "l1": "Dáš si kávu?",
+      "l2": "Tu prends un café ?",
+      "choices_l1": [
+        "voda je dobrá",
+        "otváram, otváraš, otvára",
+        "Aké je to?"
+      ],
+      "choices_l2": [
+        "grand / grande",
+        "Je cherche la clé. → Je la cherche.",
+        "l'étudiant / l'étudiante"
+      ]
+    },
+    {
+      "id": "qcm-nous-prenons-une-tarte",
+      "type": "qcm",
+      "l1": "Dáme si tartu.",
+      "l2": "Nous prenons une tarte.",
+      "choices_l1": [
+        "upratujem, upratuješ, upratuje",
+        "on / ona má",
+        "To sú izby."
+      ],
+      "choices_l2": [
+        "je dors, tu dors, il dort",
+        "Il y a quatre chaises.",
+        "j'ouvre, tu ouvres, il ouvre"
+      ]
+    },
+    {
+      "id": "qcm-je-prends-du-vin",
+      "type": "qcm",
+      "l1": "Dám si víno.",
+      "l2": "Je prends du vin.",
+      "choices_l1": [
+        "To je izba.",
+        "spím, spíš, spí",
+        "To sú izby."
+      ],
+      "choices_l2": [
+        "Il y a quatre chaises.",
+        "ils / elles travaillent",
+        "manger des fruits"
+      ]
+    },
+    {
+      "id": "qcm-je-ne-prends-pas-de-vin",
+      "type": "qcm",
+      "l1": "Nedám si víno.",
+      "l2": "Je ne prends pas de vin.",
+      "choices_l1": [
+        "spím, spíš, spí",
+        "Nie je tam posteľ.",
+        "Sú tam štyri stoličky."
+      ],
+      "choices_l2": [
+        "dans un appartement",
+        "une petite sœur",
+        "la femme / l'épouse"
+      ]
+    },
+    {
+      "id": "qcm-les-cr-pes",
+      "type": "qcm",
+      "l1": "palacinky",
+      "l2": "les crêpes",
+      "choices_l1": [
+        "mäso",
+        "jesť chlieb",
+        "studený"
+      ],
+      "choices_l2": [
+        "l'entrée",
+        "un an",
+        "lire"
+      ]
+    },
+    {
+      "id": "qcm-le-croissant",
+      "type": "qcm",
+      "l1": "croissant",
+      "l2": "le croissant",
+      "choices_l1": [
+        "terasa",
+        "neupratujem",
+        "pomáhať"
+      ],
+      "choices_l2": [
+        "les fruits",
+        "regarder",
+        "nous voulons"
+      ]
+    },
+    {
+      "id": "qcm-le-caf-au-lait",
+      "type": "qcm",
+      "l1": "biela káva",
+      "l2": "le café au lait",
+      "choices_l1": [
+        "hodiny",
+        "pohár",
+        "ješ"
+      ],
+      "choices_l2": [
+        "dans une maison",
+        "grand / grande",
+        "vieux / vieille"
+      ]
+    },
+    {
+      "id": "qcm-le-chocolat-chaud",
+      "type": "qcm",
+      "l1": "horúca čokoláda",
+      "l2": "le chocolat chaud",
+      "choices_l1": [
+        "okuliare",
+        "môj otec",
+        "hľadáme"
+      ],
+      "choices_l2": [
+        "ils / elles font",
+        "il / elle veut",
+        "le retraité / la retraitée"
+      ]
+    },
+    {
+      "id": "qcm-l-eau-min-rale",
+      "type": "qcm",
+      "l1": "minerálka",
+      "l2": "l'eau minérale",
+      "choices_l1": [
+        "otvárať",
+        "moja sestra",
+        "babka"
+      ],
+      "choices_l2": [
+        "je suis",
+        "le toit",
+        "le frère"
+      ]
+    },
+    {
+      "id": "qcm-le-jus-de-fruits",
+      "type": "qcm",
+      "l1": "ovocný džús",
+      "l2": "le jus de fruits",
+      "choices_l1": [
+        "mydlo",
+        "oddychovať",
+        "ješ"
+      ],
+      "choices_l2": [
+        "Il y a une table.",
+        "Je n'ai pas faim.",
+        "l'ami / l'amie"
+      ]
+    },
+    {
+      "id": "qcm-le-cidre",
+      "type": "qcm",
+      "l1": "jablčný mušt",
+      "l2": "le cidre",
+      "choices_l1": [
+        "okno",
+        "rodina",
+        "hľadáme"
+      ],
+      "choices_l2": [
+        "le verre",
+        "l'anniversaire",
+        "à Lyon"
+      ]
+    },
+    {
+      "id": "blank-je-prends-une-quiche-lorraine",
+      "type": "fill-blank",
+      "l1": "Dám si quiche lorraine.",
+      "l2": "Je prends une quiche lorraine.",
+      "missing_l1": "si",
+      "missing_l2": "une",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "stará",
+        "mama",
+        "moja"
+      ],
+      "choices_l2": [
+        "maman",
+        "les",
+        "cherche"
+      ]
+    },
+    {
+      "id": "blank-la-quiche-est-tr-s-savoureuse",
+      "type": "fill-blank",
+      "l1": "Quiche je veľmi chutná.",
+      "l2": "La quiche est très savoureuse.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "mám",
+        "obývačke",
+        "prosím"
+      ],
+      "choices_l2": [
+        "la",
+        "cuisine",
+        "salon"
+      ]
+    },
+    {
+      "id": "blank-le-pot-au-feu-est-chaud-et-sal",
+      "type": "fill-blank",
+      "l1": "Pot-au-feu je teplý a slaný.",
+      "l2": "Le pot-au-feu est chaud et salé.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "náš",
+        "otec",
+        "sa"
+      ],
+      "choices_l2": [
+        "c'est",
+        "sœur",
+        "habite"
+      ]
+    },
+    {
+      "id": "blank-tu-prends-une-ratatouille",
+      "type": "fill-blank",
+      "l1": "Dáš si ratatouille?",
+      "l2": "Tu prends une ratatouille ?",
+      "missing_l1": "si",
+      "missing_l2": "une",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "prosím",
+        "rodičia",
+        "mám"
+      ],
+      "choices_l2": [
+        "pas",
+        "le",
+        "c'est"
+      ]
+    },
+    {
+      "id": "blank-je-veux-du-vin-s-il-te-pla-t",
+      "type": "fill-blank",
+      "l1": "Chcem víno, prosím.",
+      "l2": "Je veux du vin, s'il te plaît.",
+      "missing_l1": "prosím",
+      "missing_l2": "du",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sestra",
+        "ale",
+        "moja"
+      ],
+      "choices_l2": [
+        "frère",
+        "j'ai",
+        "cuisine"
+      ]
+    },
+    {
+      "id": "blank-je-bois-du-vin-pas-de-bi-re",
+      "type": "fill-blank",
+      "l1": "Pijem víno, nie pivo.",
+      "l2": "Je bois du vin, pas de bière.",
+      "missing_l1": "nie",
+      "missing_l2": "de",
+      "blank_index_l1": 2,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "dedine",
+        "tu",
+        "bývam"
+      ],
+      "choices_l2": [
+        "dans",
+        "sœur",
+        "sur"
+      ]
+    },
+    {
+      "id": "blank-la-tarte-est-sucr-e",
+      "type": "fill-blank",
+      "l1": "Tarta je sladká.",
+      "l2": "La tarte est sucrée.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "nemám",
+        "sestra",
+        "sú"
+      ],
+      "choices_l2": [
+        "elle",
+        "salon",
+        "un"
+      ]
+    },
+    {
+      "id": "blank-la-baguette-est-fra-che",
+      "type": "fill-blank",
+      "l1": "Bageta je čerstvá.",
+      "l2": "La baguette est fraîche.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "hľadám",
+        "sa",
+        "má"
+      ],
+      "choices_l2": [
+        "mes",
+        "elle",
+        "le"
+      ]
+    },
+    {
+      "id": "blank-j-ai-faim-je-prends-du-pot-au-feu-et-du-pain",
+      "type": "fill-blank",
+      "l1": "Mám hlad. Dám si pot-au-feu a chlieb.",
+      "l2": "J'ai faim. Je prends du pot-au-feu et du pain.",
+      "missing_l1": "a",
+      "missing_l2": "Je",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "rodičia",
+        "otec",
+        "som"
+      ],
+      "choices_l2": [
+        "la",
+        "habite",
+        "il"
+      ]
+    },
+    {
+      "id": "blank-le-pot-au-feu-est-br-lant-tu-veux-de-l-eau",
+      "type": "fill-blank",
+      "l1": "Pot-au-feu je horúci. Chceš vodu?",
+      "l2": "Le pot-au-feu est brûlant. Tu veux de l'eau ?",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sú",
+        "bývam",
+        "moji"
+      ],
+      "choices_l2": [
+        "c'est",
+        "travaille",
+        "cherche"
+      ]
+    },
+    {
+      "id": "blank-les-enfants-ne-mangent-pas-de-ratatouille",
+      "type": "fill-blank",
+      "l1": "Deti nejedia ratatouille.",
+      "l2": "Les enfants ne mangent pas de ratatouille.",
+      "missing_l1": "ratatouille",
+      "missing_l2": "de",
+      "blank_index_l1": 2,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "má",
+        "kde",
+        "dedine"
+      ],
+      "choices_l2": [
+        "mon",
+        "est",
+        "j'ai"
+      ]
+    },
+    {
+      "id": "blank-nous-prenons-une-tarte-et-un-caf",
+      "type": "fill-blank",
+      "l1": "Dáme si tartu a kávu.",
+      "l2": "Nous prenons une tarte et un café.",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "veľa",
+        "má",
+        "ale"
+      ],
+      "choices_l2": [
+        "j'ai",
+        "le",
+        "mon"
+      ]
+    },
+    {
+      "id": "blank-je-prends-un-cidre",
+      "type": "fill-blank",
+      "l1": "Dám si jablčný mušt.",
+      "l2": "Je prends un cidre.",
+      "missing_l1": "si",
+      "missing_l2": "un",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "a",
+        "obývačke",
+        "ale"
+      ],
+      "choices_l2": [
+        "pas",
+        "habite",
+        "nous"
+      ]
+    },
+    {
+      "id": "blank-je-bois-du-chocolat-chaud-pas-de-caf",
+      "type": "fill-blank",
+      "l1": "Pijem horúcu čokoládu, nie kávu.",
+      "l2": "Je bois du chocolat chaud, pas de café.",
+      "missing_l1": "nie",
+      "missing_l2": "de",
+      "blank_index_l1": 3,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "sú",
+        "sa",
+        "moja"
+      ],
+      "choices_l2": [
+        "il",
+        "ma",
+        "mon"
+      ]
+    },
+    {
+      "id": "blank-le-croissant-est-chaud-et-savoureux",
+      "type": "fill-blank",
+      "l1": "Croissant je teplý a chutný.",
+      "l2": "Le croissant est chaud et savoureux.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "kde",
+        "sa",
+        "sestra"
+      ],
+      "choices_l2": [
+        "cherche",
+        "où",
+        "a"
+      ]
+    },
+    {
+      "id": "blank-le-jus-de-fruits-est-tr-s-sucr",
+      "type": "fill-blank",
+      "l1": "Ovocný džús je veľmi sladký.",
+      "l2": "Le jus de fruits est très sucré.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "som",
+        "nemám",
+        "tu"
+      ],
+      "choices_l2": [
+        "mais",
+        "cuisine",
+        "frère"
+      ]
+    },
+    {
+      "id": "listen-je-prends-une-quiche-lorraine",
+      "type": "listen",
+      "l1": "Dám si quiche lorraine.",
+      "l2": "Je prends une quiche lorraine.",
+      "choices_l2": [
+        "Quel est ton prénom ?",
+        "Je n'ai pas faim. Je ne veux pas manger.",
+        "Je cherche le téléphone. Il n'est pas dans l'armoire."
+      ]
+    },
+    {
+      "id": "listen-la-quiche-est-tr-s-savoureuse",
+      "type": "listen",
+      "l1": "Quiche je veľmi chutná.",
+      "l2": "La quiche est très savoureuse.",
+      "choices_l2": [
+        "J'ai deux enfants. Nous habitons ensemble.",
+        "Oui. Lavez les verres, s'il vous plaît.",
+        "Le pain est frais et bon."
+      ]
+    },
+    {
+      "id": "listen-le-pot-au-feu-est-chaud-et-sal",
+      "type": "listen",
+      "l1": "Pot-au-feu je teplý a slaný.",
+      "l2": "Le pot-au-feu est chaud et salé.",
+      "choices_l2": [
+        "Mes parents habitent à la campagne. Ils sont vieux.",
+        "Qu'est-ce que tu fais, Andrea ?",
+        "Je n'ai pas faim. Je ne veux pas manger."
+      ]
+    },
+    {
+      "id": "listen-tu-prends-une-ratatouille",
+      "type": "listen",
+      "l1": "Dáš si ratatouille?",
+      "l2": "Tu prends une ratatouille ?",
+      "choices_l2": [
+        "Cette viande est mauvaise.",
+        "J'ai un fils et une fille.",
+        "Et vous, Eric ? Que faites-vous ?"
+      ]
+    },
+    {
+      "id": "listen-je-veux-du-vin-s-il-te-pla-t",
+      "type": "listen",
+      "l1": "Chcem víno, prosím.",
+      "l2": "Je veux du vin, s'il te plaît.",
+      "choices_l2": [
+        "Ma grand-mère est vieille et ma sœur est jeune.",
+        "J'ai un fils et une fille.",
+        "Je mange beaucoup, mais je bois peu."
+      ]
+    },
+    {
+      "id": "listen-je-bois-du-vin-pas-de-bi-re",
+      "type": "listen",
+      "l1": "Pijem víno, nie pivo.",
+      "l2": "Je bois du vin, pas de bière.",
+      "choices_l2": [
+        "Qui est-ce ?",
+        "Je lis un livre dans le salon.",
+        "Ça me plaît."
+      ]
+    },
+    {
+      "id": "listen-la-tarte-est-sucr-e",
+      "type": "listen",
+      "l1": "Tarta je sladká.",
+      "l2": "La tarte est sucrée.",
+      "choices_l2": [
+        "Il y a un miroir au-dessus de l'armoire.",
+        "Mon frère est étudiant. Il ne travaille pas.",
+        "Le café est brûlant."
+      ]
+    },
+    {
+      "id": "listen-la-baguette-est-fra-che",
+      "type": "listen",
+      "l1": "Bageta je čerstvá.",
+      "l2": "La baguette est fraîche.",
+      "choices_l2": [
+        "Les enfants sont dans le jardin.",
+        "Il y a un miroir au-dessus de l'armoire.",
+        "Mon frère est étudiant. Il ne travaille pas."
+      ]
+    },
+    {
+      "id": "listen-j-ai-faim-je-prends-du-pot-au-feu-et-du-pain",
+      "type": "listen",
+      "l1": "Mám hlad. Dám si pot-au-feu a chlieb.",
+      "l2": "J'ai faim. Je prends du pot-au-feu et du pain.",
+      "choices_l2": [
+        "Je ne cuisine pas. Je n'ai pas le temps.",
+        "Je cuisine. Nous déjeunons à midi.",
+        "Ma sœur est médecin."
+      ]
+    },
+    {
+      "id": "listen-le-pot-au-feu-est-br-lant-tu-veux-de-l-eau",
+      "type": "listen",
+      "l1": "Pot-au-feu je horúci. Chceš vodu?",
+      "l2": "Le pot-au-feu est brûlant. Tu veux de l'eau ?",
+      "choices_l2": [
+        "L'œuf est dans l'assiette.",
+        "J'ouvre la fenêtre ? Il fait chaud ici.",
+        "Ma tante est médecin. Elle a quarante ans."
+      ]
+    },
+    {
+      "id": "listen-les-enfants-ne-mangent-pas-de-ratatouille",
+      "type": "listen",
+      "l1": "Deti nejedia ratatouille.",
+      "l2": "Les enfants ne mangent pas de ratatouille.",
+      "choices_l2": [
+        "Les assiettes sont dans l'armoire, dans la cuisine.",
+        "Le toit est grand.",
+        "Les légumes sont frais et les pommes de terre sont chaudes."
+      ]
+    },
+    {
+      "id": "listen-nous-prenons-une-tarte-et-un-caf",
+      "type": "listen",
+      "l1": "Dáme si tartu a kávu.",
+      "l2": "Nous prenons une tarte et un café.",
+      "choices_l2": [
+        "Notre appartement est petit, mais la salle de bain est grande.",
+        "Je mange de la soupe.",
+        "Je cherche le téléphone. Il n'est pas dans l'armoire."
+      ]
+    },
+    {
+      "id": "listen-je-prends-un-cidre",
+      "type": "listen",
+      "l1": "Dám si jablčný mušt.",
+      "l2": "Je prends un cidre.",
+      "choices_l2": [
+        "Le réfrigérateur est dans la cuisine.",
+        "Quel âge as-tu ?",
+        "Nous avons du riz et des pommes de terre."
+      ]
+    },
+    {
+      "id": "listen-je-bois-du-chocolat-chaud-pas-de-caf",
+      "type": "listen",
+      "l1": "Pijem horúcu čokoládu, nie kávu.",
+      "l2": "Je bois du chocolat chaud, pas de café.",
+      "choices_l2": [
+        "Que fais-tu ?",
+        "Je suis professeur. Je travaille dans une école.",
+        "Ma maman est professeure."
+      ]
+    },
+    {
+      "id": "listen-le-croissant-est-chaud-et-savoureux",
+      "type": "listen",
+      "l1": "Croissant je teplý a chutný.",
+      "l2": "Le croissant est chaud et savoureux.",
+      "choices_l2": [
+        "Mon père et ma maman habitent ensemble à la campagne.",
+        "Les enfants sont dans la cour.",
+        "Ma sœur est à la maison."
+      ]
+    },
+    {
+      "id": "listen-vous-voulez-de-l-eau-min-rale",
+      "type": "listen",
+      "l1": "Chcete minerálku?",
+      "l2": "Vous voulez de l'eau minérale ?",
+      "choices_l2": [
+        "Je me repose sur le lit.",
+        "Ma maison de campagne est loin.",
+        "Le lit est dans la chambre."
+      ]
+    },
+    {
+      "id": "listen-le-jus-de-fruits-est-tr-s-sucr",
+      "type": "listen",
+      "l1": "Ovocný džús je veľmi sladký.",
+      "l2": "Le jus de fruits est très sucré.",
+      "choices_l2": [
+        "Mon frère travaille dans un magasin.",
+        "Les enfants veulent des fruits.",
+        "Moi aussi, je suis professeur."
+      ]
+    },
+    {
+      "id": "order-je-prends-une-quiche-lorraine",
+      "type": "order",
+      "l1": "Dám si quiche lorraine.",
+      "l2": "Je prends une quiche lorraine.",
+      "tokens_l1": [
+        "Dám",
+        "si",
+        "quiche",
+        "lorraine.",
+        "Tarta",
+        "je",
+        "sladká."
+      ],
+      "tokens_l2": [
+        "Je",
+        "prends",
+        "une",
+        "quiche",
+        "lorraine.",
+        "La",
+        "tarte",
+        "est",
+        "sucrée."
+      ]
+    },
+    {
+      "id": "order-la-quiche-est-tr-s-savoureuse",
+      "type": "order",
+      "l1": "Quiche je veľmi chutná.",
+      "l2": "La quiche est très savoureuse.",
+      "tokens_l1": [
+        "Quiche",
+        "je",
+        "veľmi",
+        "chutná.",
+        "Tarta",
+        "je",
+        "sladká."
+      ],
+      "tokens_l2": [
+        "La",
+        "quiche",
+        "est",
+        "très",
+        "savoureuse.",
+        "La",
+        "tarte",
+        "est",
+        "sucrée."
+      ]
+    },
+    {
+      "id": "order-le-pot-au-feu-est-chaud-et-sal",
+      "type": "order",
+      "l1": "Pot-au-feu je teplý a slaný.",
+      "l2": "Le pot-au-feu est chaud et salé.",
+      "tokens_l1": [
+        "Pot-au-feu",
+        "je",
+        "teplý",
+        "a",
+        "slaný.",
+        "Quiche",
+        "je",
+        "veľmi",
+        "chutná."
+      ],
+      "tokens_l2": [
+        "Le",
+        "pot-au-feu",
+        "est",
+        "chaud",
+        "et",
+        "salé.",
+        "La",
+        "quiche",
+        "est",
+        "très",
+        "savoureuse."
+      ]
+    },
+    {
+      "id": "order-tu-prends-une-ratatouille",
+      "type": "order",
+      "l1": "Dáš si ratatouille?",
+      "l2": "Tu prends une ratatouille ?",
+      "tokens_l1": [
+        "Dáš",
+        "si",
+        "ratatouille?",
+        "Pot-au-feu",
+        "je",
+        "teplý",
+        "a",
+        "slaný."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "prends",
+        "une",
+        "ratatouille",
+        "?",
+        "Le",
+        "pot-au-feu",
+        "est",
+        "chaud",
+        "et",
+        "salé."
+      ]
+    },
+    {
+      "id": "order-je-veux-du-vin-s-il-te-pla-t",
+      "type": "order",
+      "l1": "Chcem víno, prosím.",
+      "l2": "Je veux du vin, s'il te plaît.",
+      "tokens_l1": [
+        "Chcem",
+        "víno,",
+        "prosím.",
+        "Dám",
+        "si",
+        "jablčný",
+        "mušt."
+      ],
+      "tokens_l2": [
+        "Je",
+        "veux",
+        "du",
+        "vin,",
+        "s'il",
+        "te",
+        "plaît.",
+        "Je",
+        "prends",
+        "un",
+        "cidre."
+      ]
+    },
+    {
+      "id": "order-je-bois-du-vin-pas-de-bi-re",
+      "type": "order",
+      "l1": "Pijem víno, nie pivo.",
+      "l2": "Je bois du vin, pas de bière.",
+      "tokens_l1": [
+        "Pijem",
+        "víno,",
+        "nie",
+        "pivo.",
+        "Croissant",
+        "je",
+        "teplý",
+        "a",
+        "chutný."
+      ],
+      "tokens_l2": [
+        "Je",
+        "bois",
+        "du",
+        "vin,",
+        "pas",
+        "de",
+        "bière.",
+        "Le",
+        "croissant",
+        "est",
+        "chaud",
+        "et",
+        "savoureux."
+      ]
+    },
+    {
+      "id": "order-la-tarte-est-sucr-e",
+      "type": "order",
+      "l1": "Tarta je sladká.",
+      "l2": "La tarte est sucrée.",
+      "tokens_l1": [
+        "Tarta",
+        "je",
+        "sladká.",
+        "Dáme",
+        "si",
+        "tartu",
+        "a",
+        "kávu."
+      ],
+      "tokens_l2": [
+        "La",
+        "tarte",
+        "est",
+        "sucrée.",
+        "Nous",
+        "prenons",
+        "une",
+        "tarte",
+        "et",
+        "un",
+        "café."
+      ]
+    },
+    {
+      "id": "order-la-baguette-est-fra-che",
+      "type": "order",
+      "l1": "Bageta je čerstvá.",
+      "l2": "La baguette est fraîche.",
+      "tokens_l1": [
+        "Bageta",
+        "je",
+        "čerstvá.",
+        "Quiche",
+        "je",
+        "veľmi",
+        "chutná."
+      ],
+      "tokens_l2": [
+        "La",
+        "baguette",
+        "est",
+        "fraîche.",
+        "La",
+        "quiche",
+        "est",
+        "très",
+        "savoureuse."
+      ]
+    },
+    {
+      "id": "order-j-ai-faim-je-prends-du-pot-au-feu-et-du-pain",
+      "type": "order",
+      "l1": "Mám hlad. Dám si pot-au-feu a chlieb.",
+      "l2": "J'ai faim. Je prends du pot-au-feu et du pain.",
+      "tokens_l1": [
+        "Mám",
+        "hlad.",
+        "Dám",
+        "si",
+        "pot-au-feu",
+        "a",
+        "chlieb.",
+        "Pijem",
+        "víno,",
+        "nie",
+        "pivo."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "faim.",
+        "Je",
+        "prends",
+        "du",
+        "pot-au-feu",
+        "et",
+        "du",
+        "pain.",
+        "Je",
+        "bois",
+        "du",
+        "vin,",
+        "pas",
+        "de",
+        "bière."
+      ]
+    },
+    {
+      "id": "order-le-pot-au-feu-est-br-lant-tu-veux-de-l-eau",
+      "type": "order",
+      "l1": "Pot-au-feu je horúci. Chceš vodu?",
+      "l2": "Le pot-au-feu est brûlant. Tu veux de l'eau ?",
+      "tokens_l1": [
+        "Pot-au-feu",
+        "je",
+        "horúci.",
+        "Chceš",
+        "vodu?",
+        "Pijem",
+        "víno,",
+        "nie",
+        "pivo."
+      ],
+      "tokens_l2": [
+        "Le",
+        "pot-au-feu",
+        "est",
+        "brûlant.",
+        "Tu",
+        "veux",
+        "de",
+        "l'eau",
+        "?",
+        "Je",
+        "bois",
+        "du",
+        "vin,",
+        "pas",
+        "de",
+        "bière."
+      ]
+    },
+    {
+      "id": "order-les-enfants-ne-mangent-pas-de-ratatouille",
+      "type": "order",
+      "l1": "Deti nejedia ratatouille.",
+      "l2": "Les enfants ne mangent pas de ratatouille.",
+      "tokens_l1": [
+        "Deti",
+        "nejedia",
+        "ratatouille.",
+        "Pot-au-feu",
+        "je",
+        "horúci.",
+        "Chceš",
+        "vodu?"
+      ],
+      "tokens_l2": [
+        "Les",
+        "enfants",
+        "ne",
+        "mangent",
+        "pas",
+        "de",
+        "ratatouille.",
+        "Le",
+        "pot-au-feu",
+        "est",
+        "brûlant.",
+        "Tu",
+        "veux",
+        "de",
+        "l'eau",
+        "?"
+      ]
+    },
+    {
+      "id": "order-nous-prenons-une-tarte-et-un-caf",
+      "type": "order",
+      "l1": "Dáme si tartu a kávu.",
+      "l2": "Nous prenons une tarte et un café.",
+      "tokens_l1": [
+        "Dáme",
+        "si",
+        "tartu",
+        "a",
+        "kávu.",
+        "Chcem",
+        "víno,",
+        "prosím."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "prenons",
+        "une",
+        "tarte",
+        "et",
+        "un",
+        "café.",
+        "Je",
+        "veux",
+        "du",
+        "vin,",
+        "s'il",
+        "te",
+        "plaît."
+      ]
+    },
+    {
+      "id": "order-je-prends-un-cidre",
+      "type": "order",
+      "l1": "Dám si jablčný mušt.",
+      "l2": "Je prends un cidre.",
+      "tokens_l1": [
+        "Dám",
+        "si",
+        "jablčný",
+        "mušt.",
+        "Dáš",
+        "si",
+        "ratatouille?"
+      ],
+      "tokens_l2": [
+        "Je",
+        "prends",
+        "un",
+        "cidre.",
+        "Tu",
+        "prends",
+        "une",
+        "ratatouille",
+        "?"
+      ]
+    },
+    {
+      "id": "order-je-bois-du-chocolat-chaud-pas-de-caf",
+      "type": "order",
+      "l1": "Pijem horúcu čokoládu, nie kávu.",
+      "l2": "Je bois du chocolat chaud, pas de café.",
+      "tokens_l1": [
+        "Pijem",
+        "horúcu",
+        "čokoládu,",
+        "nie",
+        "kávu.",
+        "Deti",
+        "nejedia",
+        "ratatouille."
+      ],
+      "tokens_l2": [
+        "Je",
+        "bois",
+        "du",
+        "chocolat",
+        "chaud,",
+        "pas",
+        "de",
+        "café.",
+        "Les",
+        "enfants",
+        "ne",
+        "mangent",
+        "pas",
+        "de",
+        "ratatouille."
+      ]
+    },
+    {
+      "id": "order-le-croissant-est-chaud-et-savoureux",
+      "type": "order",
+      "l1": "Croissant je teplý a chutný.",
+      "l2": "Le croissant est chaud et savoureux.",
+      "tokens_l1": [
+        "Croissant",
+        "je",
+        "teplý",
+        "a",
+        "chutný.",
+        "Dáme",
+        "si",
+        "tartu",
+        "a",
+        "kávu."
+      ],
+      "tokens_l2": [
+        "Le",
+        "croissant",
+        "est",
+        "chaud",
+        "et",
+        "savoureux.",
+        "Nous",
+        "prenons",
+        "une",
+        "tarte",
+        "et",
+        "un",
+        "café."
+      ]
+    },
+    {
+      "id": "order-le-jus-de-fruits-est-tr-s-sucr",
+      "type": "order",
+      "l1": "Ovocný džús je veľmi sladký.",
+      "l2": "Le jus de fruits est très sucré.",
+      "tokens_l1": [
+        "Ovocný",
+        "džús",
+        "je",
+        "veľmi",
+        "sladký.",
+        "Dáme",
+        "si",
+        "tartu",
+        "a",
+        "kávu."
+      ],
+      "tokens_l2": [
+        "Le",
+        "jus",
+        "de",
+        "fruits",
+        "est",
+        "très",
+        "sucré.",
+        "Nous",
+        "prenons",
+        "une",
+        "tarte",
+        "et",
+        "un",
+        "café."
+      ]
+    }
+  ]
+}

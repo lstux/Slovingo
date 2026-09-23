@@ -1,0 +1,1173 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-dom",
+      "type": "qcm",
+      "l1": "la maison",
+      "l2": "dom",
+      "choices_l1": [
+        "la cour",
+        "la cave",
+        "le toit"
+      ],
+      "choices_l2": [
+        "obývačka",
+        "spálňa",
+        "chodba"
+      ]
+    },
+    {
+      "id": "qcm-byt",
+      "type": "qcm",
+      "l1": "l'appartement",
+      "l2": "byt",
+      "choices_l1": [
+        "le balcon",
+        "la cave",
+        "le salon"
+      ],
+      "choices_l2": [
+        "balkón",
+        "záchod",
+        "chodba"
+      ]
+    },
+    {
+      "id": "qcm-izba",
+      "type": "qcm",
+      "l1": "la pièce, la chambre",
+      "l2": "izba",
+      "choices_l1": [
+        "féminin : finale en -a ou -ňa",
+        "C'est une pièce.",
+        "masculin : finale en consonne"
+      ],
+      "choices_l2": [
+        "garáž",
+        "chodba",
+        "záchod"
+      ]
+    },
+    {
+      "id": "qcm-kuchy-a",
+      "type": "qcm",
+      "l1": "la cuisine",
+      "l2": "kuchyňa",
+      "choices_l1": [
+        "le balcon",
+        "le toit",
+        "la cour"
+      ],
+      "choices_l2": [
+        "dvor",
+        "spálňa",
+        "garáž"
+      ]
+    },
+    {
+      "id": "qcm-k-pe-a",
+      "type": "qcm",
+      "l1": "la salle de bain",
+      "l2": "kúpeľňa",
+      "choices_l1": [
+        "neutre : finale en -o ou -e",
+        "C'est une pièce.",
+        "masculin : finale en consonne"
+      ],
+      "choices_l2": [
+        "záchod",
+        "garáž",
+        "obývačka"
+      ]
+    },
+    {
+      "id": "qcm-sp-l-a",
+      "type": "qcm",
+      "l1": "la chambre à coucher",
+      "l2": "spálňa",
+      "choices_l1": [
+        "C'est une pièce.",
+        "neutre : finale en -o ou -e",
+        "masculin : finale en consonne"
+      ],
+      "choices_l2": [
+        "pivnica",
+        "kúpeľňa",
+        "strecha"
+      ]
+    },
+    {
+      "id": "qcm-ob-va-ka",
+      "type": "qcm",
+      "l1": "le salon",
+      "l2": "obývačka",
+      "choices_l1": [
+        "le couloir",
+        "le balcon",
+        "les toilettes"
+      ],
+      "choices_l2": [
+        "strecha",
+        "garáž",
+        "pivnica"
+      ]
+    },
+    {
+      "id": "qcm-dom-byt",
+      "type": "qcm",
+      "l1": "masculin : finale en consonne",
+      "l2": "dom, byt",
+      "choices_l1": [
+        "neutre : finale en -o ou -e",
+        "la chambre à coucher",
+        "féminin : finale en -a ou -ňa"
+      ],
+      "choices_l2": [
+        "izba, kuchyňa",
+        "dvor",
+        "obývačka"
+      ]
+    },
+    {
+      "id": "qcm-izba-kuchy-a",
+      "type": "qcm",
+      "l1": "féminin : finale en -a ou -ňa",
+      "l2": "izba, kuchyňa",
+      "choices_l1": [
+        "la chambre à coucher",
+        "neutre : finale en -o ou -e",
+        "masculin : finale en consonne"
+      ],
+      "choices_l2": [
+        "okno, mesto",
+        "balkón",
+        "dvor"
+      ]
+    },
+    {
+      "id": "qcm-okno-mesto",
+      "type": "qcm",
+      "l1": "neutre : finale en -o ou -e",
+      "l2": "okno, mesto",
+      "choices_l1": [
+        "féminin : finale en -a ou -ňa",
+        "Ce sont des pièces.",
+        "la salle de bain"
+      ],
+      "choices_l2": [
+        "pivnica",
+        "izba, kuchyňa",
+        "obývačka"
+      ]
+    },
+    {
+      "id": "qcm-to-je-izba",
+      "type": "qcm",
+      "l1": "C'est une pièce.",
+      "l2": "To je izba.",
+      "choices_l1": [
+        "Ce sont des pièces.",
+        "la chambre à coucher",
+        "neutre : finale en -o ou -e"
+      ],
+      "choices_l2": [
+        "kľúč → Hľadám kľúč.",
+        "taška → Mám tašku.",
+        "kniha → Hľadám knihu."
+      ]
+    },
+    {
+      "id": "qcm-to-s-izby",
+      "type": "qcm",
+      "l1": "Ce sont des pièces.",
+      "l2": "To sú izby.",
+      "choices_l1": [
+        "la chambre à coucher",
+        "masculin : finale en consonne",
+        "C'est une pièce."
+      ],
+      "choices_l2": [
+        "okno → Vidím okno.",
+        "kľúč → Hľadám kľúč.",
+        "taška → Mám tašku."
+      ]
+    },
+    {
+      "id": "qcm-z-chod",
+      "type": "qcm",
+      "l1": "les toilettes",
+      "l2": "záchod",
+      "choices_l1": [
+        "la cour",
+        "le toit",
+        "le couloir"
+      ],
+      "choices_l2": [
+        "chodba",
+        "strecha",
+        "garáž"
+      ]
+    },
+    {
+      "id": "qcm-chodba",
+      "type": "qcm",
+      "l1": "le couloir",
+      "l2": "chodba",
+      "choices_l1": [
+        "le salon",
+        "la cave",
+        "le toit"
+      ],
+      "choices_l2": [
+        "balkón",
+        "strecha",
+        "spálňa"
+      ]
+    },
+    {
+      "id": "qcm-pivnica",
+      "type": "qcm",
+      "l1": "la cave",
+      "l2": "pivnica",
+      "choices_l1": [
+        "le garage",
+        "le couloir",
+        "le salon"
+      ],
+      "choices_l2": [
+        "záchod",
+        "kúpeľňa",
+        "spálňa"
+      ]
+    },
+    {
+      "id": "qcm-balk-n",
+      "type": "qcm",
+      "l1": "le balcon",
+      "l2": "balkón",
+      "choices_l1": [
+        "le toit",
+        "les toilettes",
+        "le couloir"
+      ],
+      "choices_l2": [
+        "kúpeľňa",
+        "garáž",
+        "pivnica"
+      ]
+    },
+    {
+      "id": "qcm-gar",
+      "type": "qcm",
+      "l1": "le garage",
+      "l2": "garáž",
+      "choices_l1": [
+        "le salon",
+        "le balcon",
+        "la cave"
+      ],
+      "choices_l2": [
+        "strecha",
+        "balkón",
+        "obývačka"
+      ]
+    },
+    {
+      "id": "qcm-dvor",
+      "type": "qcm",
+      "l1": "la cour",
+      "l2": "dvor",
+      "choices_l1": [
+        "les toilettes",
+        "le toit",
+        "le balcon"
+      ],
+      "choices_l2": [
+        "strecha",
+        "záchod",
+        "spálňa"
+      ]
+    },
+    {
+      "id": "qcm-strecha",
+      "type": "qcm",
+      "l1": "le toit",
+      "l2": "strecha",
+      "choices_l1": [
+        "le salon",
+        "le couloir",
+        "la cave"
+      ],
+      "choices_l2": [
+        "dvor",
+        "balkón",
+        "garáž"
+      ]
+    },
+    {
+      "id": "blank-to-je-n-dom",
+      "type": "fill-blank",
+      "l1": "C'est notre maison.",
+      "l2": "To je náš dom.",
+      "missing_l1": "maison",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "salle",
+        "là-bas",
+        "couloir"
+      ],
+      "choices_l2": [
+        "Bude",
+        "budú",
+        "sú"
+      ]
+    },
+    {
+      "id": "blank-m-me-tyri-izby",
+      "type": "fill-blank",
+      "l1": "Nous avons quatre pièces.",
+      "l2": "Máme štyri izby.",
+      "missing_l1": "avons",
+      "missing_l2": "štyri",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "avez",
+        "ont",
+        "as"
+      ],
+      "choices_l2": [
+        "pekný",
+        "Kuchyňa",
+        "veľká"
+      ]
+    },
+    {
+      "id": "blank-kuchy-a-je-mal",
+      "type": "fill-blank",
+      "l1": "La cuisine est petite.",
+      "l2": "Kuchyňa je malá.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "est-ce",
+        "sommes",
+        "sont"
+      ],
+      "choices_l2": [
+        "bola",
+        "budem",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-ob-va-ka-je-ve-k",
+      "type": "fill-blank",
+      "l1": "Le salon est grand.",
+      "l2": "Obývačka je veľká.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "suis",
+        "sommes",
+        "C'est"
+      ],
+      "choices_l2": [
+        "ste",
+        "Bude",
+        "bola"
+      ]
+    },
+    {
+      "id": "blank-kde-je-k-pe-a",
+      "type": "fill-blank",
+      "l1": "Où est la salle de bain ?",
+      "l2": "Kde je kúpeľňa?",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "le",
+        "joli",
+        "toit"
+      ],
+      "choices_l2": [
+        "budem",
+        "bola",
+        "boli"
+      ]
+    },
+    {
+      "id": "blank-sp-l-a-je-tam",
+      "type": "fill-blank",
+      "l1": "La chambre est là-bas.",
+      "l2": "Spálňa je tam.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "suis",
+        "est-ce",
+        "c'était"
+      ],
+      "choices_l2": [
+        "bol",
+        "boli",
+        "sú"
+      ]
+    },
+    {
+      "id": "blank-b-vam-v-byte",
+      "type": "fill-blank",
+      "l1": "J'habite dans un appartement.",
+      "l2": "Bývam v byte.",
+      "missing_l1": "un",
+      "missing_l2": "v",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "joli",
+        "des",
+        "cave"
+      ],
+      "choices_l2": [
+        "od",
+        "pri",
+        "na"
+      ]
+    },
+    {
+      "id": "blank-n-byt-je-mal-ale-pekn",
+      "type": "fill-blank",
+      "l1": "Notre appartement est petit, mais joli.",
+      "l2": "Náš byt je malý, ale pekný.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sont",
+        "sommes",
+        "est-ce"
+      ],
+      "choices_l2": [
+        "bola",
+        "sme",
+        "budem"
+      ]
+    },
+    {
+      "id": "blank-z-chod-je-na-chodbe",
+      "type": "fill-blank",
+      "l1": "Les toilettes sont dans le couloir.",
+      "l2": "Záchod je na chodbe.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Les",
+        "toit",
+        "la"
+      ],
+      "choices_l2": [
+        "budem",
+        "si",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-m-me-balk-n-a-gar",
+      "type": "fill-blank",
+      "l1": "Nous avons un balcon et un garage.",
+      "l2": "Máme balkón a garáž.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Donc",
+        "ou",
+        "mais"
+      ],
+      "choices_l2": [
+        "alebo",
+        "lebo",
+        "ale"
+      ]
+    },
+    {
+      "id": "blank-deti-s-na-dvore",
+      "type": "fill-blank",
+      "l1": "Les enfants sont dans la cour.",
+      "l2": "Deti sú na dvore.",
+      "missing_l1": "la",
+      "missing_l2": "na",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "le",
+        "joli",
+        "cour"
+      ],
+      "choices_l2": [
+        "o",
+        "z",
+        "za"
+      ]
+    },
+    {
+      "id": "blank-pivnica-je-mal-a-star",
+      "type": "fill-blank",
+      "l1": "La cave est petite et vieille.",
+      "l2": "Pivnica je malá a stará.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "suis",
+        "c'était",
+        "C'est"
+      ],
+      "choices_l2": [
+        "Bude",
+        "boli",
+        "ste"
+      ]
+    },
+    {
+      "id": "blank-strecha-je-ve-k",
+      "type": "fill-blank",
+      "l1": "Le toit est grand.",
+      "l2": "Strecha je veľká.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "êtes",
+        "c'était",
+        "sont"
+      ],
+      "choices_l2": [
+        "sme",
+        "som",
+        "budú"
+      ]
+    },
+    {
+      "id": "listen-to-je-n-dom",
+      "type": "listen",
+      "l1": "C'est notre maison.",
+      "l2": "To je náš dom.",
+      "choices_l1": [
+        "La cuisine est petite.",
+        "Les toilettes sont dans le couloir.",
+        "Les enfants sont dans la cour."
+      ],
+      "choices_l2": [
+        "Pivnica je malá a stará.",
+        "Máme balkón a garáž.",
+        "Kuchyňa je malá."
+      ]
+    },
+    {
+      "id": "listen-m-me-tyri-izby",
+      "type": "listen",
+      "l1": "Nous avons quatre pièces.",
+      "l2": "Máme štyri izby.",
+      "choices_l1": [
+        "Nous avons un balcon et un garage.",
+        "Le salon est grand.",
+        "Notre appartement est petit, mais joli."
+      ],
+      "choices_l2": [
+        "Náš byt je malý, ale pekný.",
+        "Spálňa je tam.",
+        "Kuchyňa je malá."
+      ]
+    },
+    {
+      "id": "listen-kuchy-a-je-mal",
+      "type": "listen",
+      "l1": "La cuisine est petite.",
+      "l2": "Kuchyňa je malá.",
+      "choices_l1": [
+        "Les toilettes sont dans le couloir.",
+        "Notre appartement est petit, mais joli.",
+        "La chambre est là-bas."
+      ],
+      "choices_l2": [
+        "Pivnica je malá a stará.",
+        "Obývačka je veľká.",
+        "Strecha je veľká."
+      ]
+    },
+    {
+      "id": "listen-ob-va-ka-je-ve-k",
+      "type": "listen",
+      "l1": "Le salon est grand.",
+      "l2": "Obývačka je veľká.",
+      "choices_l1": [
+        "Les toilettes sont dans le couloir.",
+        "Nous avons quatre pièces.",
+        "La cave est petite et vieille."
+      ],
+      "choices_l2": [
+        "Kde je kúpeľňa?",
+        "Strecha je veľká.",
+        "Spálňa je tam."
+      ]
+    },
+    {
+      "id": "listen-kde-je-k-pe-a",
+      "type": "listen",
+      "l1": "Où est la salle de bain ?",
+      "l2": "Kde je kúpeľňa?",
+      "choices_l1": [
+        "La chambre est là-bas.",
+        "Nous avons un balcon et un garage.",
+        "Le toit est grand."
+      ],
+      "choices_l2": [
+        "Kuchyňa je malá.",
+        "Náš byt je malý, ale pekný.",
+        "Spálňa je tam."
+      ]
+    },
+    {
+      "id": "listen-sp-l-a-je-tam",
+      "type": "listen",
+      "l1": "La chambre est là-bas.",
+      "l2": "Spálňa je tam.",
+      "choices_l1": [
+        "Nous avons quatre pièces.",
+        "Notre appartement est petit, mais joli.",
+        "Où est la salle de bain ?"
+      ],
+      "choices_l2": [
+        "Obývačka je veľká.",
+        "Deti sú na dvore.",
+        "To je náš dom."
+      ]
+    },
+    {
+      "id": "listen-b-vam-v-byte",
+      "type": "listen",
+      "l1": "J'habite dans un appartement.",
+      "l2": "Bývam v byte.",
+      "choices_l1": [
+        "Le salon est grand.",
+        "La cuisine est petite.",
+        "Les enfants sont dans la cour."
+      ],
+      "choices_l2": [
+        "Záchod je na chodbe.",
+        "Kuchyňa je malá.",
+        "Náš byt je malý, ale pekný."
+      ]
+    },
+    {
+      "id": "listen-n-byt-je-mal-ale-pekn",
+      "type": "listen",
+      "l1": "Notre appartement est petit, mais joli.",
+      "l2": "Náš byt je malý, ale pekný.",
+      "choices_l1": [
+        "La chambre est là-bas.",
+        "La cave est petite et vieille.",
+        "Le salon est grand."
+      ],
+      "choices_l2": [
+        "To je náš dom.",
+        "Máme balkón a garáž.",
+        "Záchod je na chodbe."
+      ]
+    },
+    {
+      "id": "listen-z-chod-je-na-chodbe",
+      "type": "listen",
+      "l1": "Les toilettes sont dans le couloir.",
+      "l2": "Záchod je na chodbe.",
+      "choices_l1": [
+        "Le salon est grand.",
+        "La cave est petite et vieille.",
+        "Nous avons un balcon et un garage."
+      ],
+      "choices_l2": [
+        "Pivnica je malá a stará.",
+        "Máme balkón a garáž.",
+        "Kde je kúpeľňa?"
+      ]
+    },
+    {
+      "id": "listen-m-me-balk-n-a-gar",
+      "type": "listen",
+      "l1": "Nous avons un balcon et un garage.",
+      "l2": "Máme balkón a garáž.",
+      "choices_l1": [
+        "Nous avons quatre pièces.",
+        "Les toilettes sont dans le couloir.",
+        "Notre appartement est petit, mais joli."
+      ],
+      "choices_l2": [
+        "Strecha je veľká.",
+        "Spálňa je tam.",
+        "Záchod je na chodbe."
+      ]
+    },
+    {
+      "id": "listen-deti-s-na-dvore",
+      "type": "listen",
+      "l1": "Les enfants sont dans la cour.",
+      "l2": "Deti sú na dvore.",
+      "choices_l1": [
+        "Nous avons un balcon et un garage.",
+        "La cuisine est petite.",
+        "La chambre est là-bas."
+      ],
+      "choices_l2": [
+        "Pivnica je malá a stará.",
+        "Záchod je na chodbe.",
+        "Náš byt je malý, ale pekný."
+      ]
+    },
+    {
+      "id": "listen-pivnica-je-mal-a-star",
+      "type": "listen",
+      "l1": "La cave est petite et vieille.",
+      "l2": "Pivnica je malá a stará.",
+      "choices_l1": [
+        "Notre appartement est petit, mais joli.",
+        "La chambre est là-bas.",
+        "Les toilettes sont dans le couloir."
+      ],
+      "choices_l2": [
+        "Spálňa je tam.",
+        "Kuchyňa je malá.",
+        "To je náš dom."
+      ]
+    },
+    {
+      "id": "listen-strecha-je-ve-k",
+      "type": "listen",
+      "l1": "Le toit est grand.",
+      "l2": "Strecha je veľká.",
+      "choices_l1": [
+        "La cave est petite et vieille.",
+        "Nous avons un balcon et un garage.",
+        "Nous avons quatre pièces."
+      ],
+      "choices_l2": [
+        "Máme štyri izby.",
+        "Máme balkón a garáž.",
+        "Náš byt je malý, ale pekný."
+      ]
+    },
+    {
+      "id": "order-to-je-n-dom",
+      "type": "order",
+      "l1": "C'est notre maison.",
+      "l2": "To je náš dom.",
+      "tokens_l1": [
+        "C'est",
+        "notre",
+        "maison.",
+        "Notre",
+        "appartement",
+        "est",
+        "petit,",
+        "mais",
+        "joli."
+      ],
+      "tokens_l2": [
+        "To",
+        "je",
+        "náš",
+        "dom.",
+        "Náš",
+        "byt",
+        "je",
+        "malý,",
+        "ale",
+        "pekný."
+      ]
+    },
+    {
+      "id": "order-m-me-tyri-izby",
+      "type": "order",
+      "l1": "Nous avons quatre pièces.",
+      "l2": "Máme štyri izby.",
+      "tokens_l1": [
+        "Nous",
+        "avons",
+        "quatre",
+        "pièces.",
+        "Notre",
+        "appartement",
+        "est",
+        "petit,",
+        "mais",
+        "joli."
+      ],
+      "tokens_l2": [
+        "Máme",
+        "štyri",
+        "izby.",
+        "Náš",
+        "byt",
+        "je",
+        "malý,",
+        "ale",
+        "pekný."
+      ]
+    },
+    {
+      "id": "order-kuchy-a-je-mal",
+      "type": "order",
+      "l1": "La cuisine est petite.",
+      "l2": "Kuchyňa je malá.",
+      "tokens_l1": [
+        "La",
+        "cuisine",
+        "est",
+        "petite.",
+        "J'habite",
+        "dans",
+        "un",
+        "appartement."
+      ],
+      "tokens_l2": [
+        "Kuchyňa",
+        "je",
+        "malá.",
+        "Bývam",
+        "v",
+        "byte."
+      ]
+    },
+    {
+      "id": "order-ob-va-ka-je-ve-k",
+      "type": "order",
+      "l1": "Le salon est grand.",
+      "l2": "Obývačka je veľká.",
+      "tokens_l1": [
+        "Le",
+        "salon",
+        "est",
+        "grand.",
+        "La",
+        "cave",
+        "est",
+        "petite",
+        "et",
+        "vieille."
+      ],
+      "tokens_l2": [
+        "Obývačka",
+        "je",
+        "veľká.",
+        "Pivnica",
+        "je",
+        "malá",
+        "a",
+        "stará."
+      ]
+    },
+    {
+      "id": "order-kde-je-k-pe-a",
+      "type": "order",
+      "l1": "Où est la salle de bain ?",
+      "l2": "Kde je kúpeľňa?",
+      "tokens_l1": [
+        "Où",
+        "est",
+        "la",
+        "salle",
+        "de",
+        "bain",
+        "?",
+        "Notre",
+        "appartement",
+        "est",
+        "petit,",
+        "mais",
+        "joli."
+      ],
+      "tokens_l2": [
+        "Kde",
+        "je",
+        "kúpeľňa?",
+        "Náš",
+        "byt",
+        "je",
+        "malý,",
+        "ale",
+        "pekný."
+      ]
+    },
+    {
+      "id": "order-sp-l-a-je-tam",
+      "type": "order",
+      "l1": "La chambre est là-bas.",
+      "l2": "Spálňa je tam.",
+      "tokens_l1": [
+        "La",
+        "chambre",
+        "est",
+        "là-bas.",
+        "Où",
+        "est",
+        "la",
+        "salle",
+        "de",
+        "bain",
+        "?"
+      ],
+      "tokens_l2": [
+        "Spálňa",
+        "je",
+        "tam.",
+        "Kde",
+        "je",
+        "kúpeľňa?"
+      ]
+    },
+    {
+      "id": "order-b-vam-v-byte",
+      "type": "order",
+      "l1": "J'habite dans un appartement.",
+      "l2": "Bývam v byte.",
+      "tokens_l1": [
+        "J'habite",
+        "dans",
+        "un",
+        "appartement.",
+        "La",
+        "cuisine",
+        "est",
+        "petite."
+      ],
+      "tokens_l2": [
+        "Bývam",
+        "v",
+        "byte.",
+        "Kuchyňa",
+        "je",
+        "malá."
+      ]
+    },
+    {
+      "id": "order-n-byt-je-mal-ale-pekn",
+      "type": "order",
+      "l1": "Notre appartement est petit, mais joli.",
+      "l2": "Náš byt je malý, ale pekný.",
+      "tokens_l1": [
+        "Notre",
+        "appartement",
+        "est",
+        "petit,",
+        "mais",
+        "joli.",
+        "Les",
+        "toilettes",
+        "sont",
+        "dans",
+        "le",
+        "couloir."
+      ],
+      "tokens_l2": [
+        "Náš",
+        "byt",
+        "je",
+        "malý,",
+        "ale",
+        "pekný.",
+        "Záchod",
+        "je",
+        "na",
+        "chodbe."
+      ]
+    },
+    {
+      "id": "order-z-chod-je-na-chodbe",
+      "type": "order",
+      "l1": "Les toilettes sont dans le couloir.",
+      "l2": "Záchod je na chodbe.",
+      "tokens_l1": [
+        "Les",
+        "toilettes",
+        "sont",
+        "dans",
+        "le",
+        "couloir.",
+        "La",
+        "cuisine",
+        "est",
+        "petite."
+      ],
+      "tokens_l2": [
+        "Záchod",
+        "je",
+        "na",
+        "chodbe.",
+        "Kuchyňa",
+        "je",
+        "malá."
+      ]
+    },
+    {
+      "id": "order-m-me-balk-n-a-gar",
+      "type": "order",
+      "l1": "Nous avons un balcon et un garage.",
+      "l2": "Máme balkón a garáž.",
+      "tokens_l1": [
+        "Nous",
+        "avons",
+        "un",
+        "balcon",
+        "et",
+        "un",
+        "garage.",
+        "Les",
+        "enfants",
+        "sont",
+        "dans",
+        "la",
+        "cour."
+      ],
+      "tokens_l2": [
+        "Máme",
+        "balkón",
+        "a",
+        "garáž.",
+        "Deti",
+        "sú",
+        "na",
+        "dvore."
+      ]
+    },
+    {
+      "id": "order-deti-s-na-dvore",
+      "type": "order",
+      "l1": "Les enfants sont dans la cour.",
+      "l2": "Deti sú na dvore.",
+      "tokens_l1": [
+        "Les",
+        "enfants",
+        "sont",
+        "dans",
+        "la",
+        "cour.",
+        "La",
+        "cuisine",
+        "est",
+        "petite."
+      ],
+      "tokens_l2": [
+        "Deti",
+        "sú",
+        "na",
+        "dvore.",
+        "Kuchyňa",
+        "je",
+        "malá."
+      ]
+    },
+    {
+      "id": "order-pivnica-je-mal-a-star",
+      "type": "order",
+      "l1": "La cave est petite et vieille.",
+      "l2": "Pivnica je malá a stará.",
+      "tokens_l1": [
+        "La",
+        "cave",
+        "est",
+        "petite",
+        "et",
+        "vieille.",
+        "Les",
+        "enfants",
+        "sont",
+        "dans",
+        "la",
+        "cour."
+      ],
+      "tokens_l2": [
+        "Pivnica",
+        "je",
+        "malá",
+        "a",
+        "stará.",
+        "Deti",
+        "sú",
+        "na",
+        "dvore."
+      ]
+    },
+    {
+      "id": "order-strecha-je-ve-k",
+      "type": "order",
+      "l1": "Le toit est grand.",
+      "l2": "Strecha je veľká.",
+      "tokens_l1": [
+        "Le",
+        "toit",
+        "est",
+        "grand.",
+        "J'habite",
+        "dans",
+        "un",
+        "appartement."
+      ],
+      "tokens_l2": [
+        "Strecha",
+        "je",
+        "veľká.",
+        "Bývam",
+        "v",
+        "byte."
+      ]
+    },
+    {
+      "id": "match-dom-vocab",
+      "type": "match",
+      "l1": [
+        "la maison",
+        "l'appartement",
+        "la pièce, la chambre",
+        "la cuisine"
+      ],
+      "l2": [
+        "dom",
+        "byt",
+        "izba",
+        "kuchyňa"
+      ]
+    },
+    {
+      "id": "match-to-je-n-dom-sentences",
+      "type": "match",
+      "l1": [
+        "C'est notre maison.",
+        "Nous avons quatre pièces.",
+        "La cuisine est petite.",
+        "Le salon est grand."
+      ],
+      "l2": [
+        "To je náš dom.",
+        "Máme štyri izby.",
+        "Kuchyňa je malá.",
+        "Obývačka je veľká."
+      ]
+    }
+  ]
+}

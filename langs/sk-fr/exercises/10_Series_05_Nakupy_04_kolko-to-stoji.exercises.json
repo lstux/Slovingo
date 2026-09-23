@@ -1,0 +1,1391 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-st",
+      "type": "qcm",
+      "l1": "coûter",
+      "l2": "stáť",
+      "choices_l1": [
+        "payer",
+        "l'argent liquide",
+        "trois euros"
+      ],
+      "choices_l2": [
+        "štyri eurá",
+        "dve eurá",
+        "tri eurá"
+      ]
+    },
+    {
+      "id": "qcm-cena",
+      "type": "qcm",
+      "l1": "le prix",
+      "l2": "cena",
+      "choices_l1": [
+        "le portefeuille",
+        "l'argent liquide",
+        "le centime"
+      ],
+      "choices_l2": [
+        "euro",
+        "peňaženka",
+        "drahota"
+      ]
+    },
+    {
+      "id": "qcm-euro",
+      "type": "qcm",
+      "l1": "l'euro",
+      "l2": "euro",
+      "choices_l1": [
+        "le portefeuille",
+        "l'argent liquide",
+        "le distributeur"
+      ],
+      "choices_l2": [
+        "jedno euro",
+        "výpredaj",
+        "hotovosť"
+      ]
+    },
+    {
+      "id": "qcm-cent",
+      "type": "qcm",
+      "l1": "le centime",
+      "l2": "cent",
+      "choices_l1": [
+        "la réduction",
+        "un euro",
+        "le prix"
+      ],
+      "choices_l2": [
+        "drahota",
+        "jedno euro",
+        "karta"
+      ]
+    },
+    {
+      "id": "qcm-plati",
+      "type": "qcm",
+      "l1": "payer",
+      "l2": "platiť",
+      "choices_l1": [
+        "cinq euros",
+        "l'argent liquide",
+        "coûter"
+      ],
+      "choices_l2": [
+        "stáť",
+        "desať eur",
+        "tri eurá"
+      ]
+    },
+    {
+      "id": "qcm-hotovos",
+      "type": "qcm",
+      "l1": "l'argent liquide",
+      "l2": "hotovosť",
+      "choices_l1": [
+        "le prix",
+        "le centime",
+        "un euro"
+      ],
+      "choices_l2": [
+        "euro",
+        "účet",
+        "peňaženka"
+      ]
+    },
+    {
+      "id": "qcm-karta",
+      "type": "qcm",
+      "l1": "la carte",
+      "l2": "karta",
+      "choices_l1": [
+        "la promotion",
+        "le prix",
+        "l'euro"
+      ],
+      "choices_l2": [
+        "akcia",
+        "bankomat",
+        "zľava"
+      ]
+    },
+    {
+      "id": "qcm-ko-ko-to-stoj",
+      "type": "qcm",
+      "l1": "Combien ça coûte ?",
+      "l2": "Koľko to stojí?",
+      "choices_l1": [
+        "Ça coûte cinq euros.",
+        "C'est bon marché.",
+        "l'addition, la facture"
+      ],
+      "choices_l2": [
+        "Stojí to päť eur.",
+        "To je drahé.",
+        "To je lacné."
+      ]
+    },
+    {
+      "id": "qcm-stoj-to-p-eur",
+      "type": "qcm",
+      "l1": "Ça coûte cinq euros.",
+      "l2": "Stojí to päť eur.",
+      "choices_l1": [
+        "C'est bon marché.",
+        "Combien ça coûte ?",
+        "l'addition, la facture"
+      ],
+      "choices_l2": [
+        "Koľko to stojí?",
+        "To je drahé.",
+        "To je lacné."
+      ]
+    },
+    {
+      "id": "qcm-to-je-drah",
+      "type": "qcm",
+      "l1": "C'est cher.",
+      "l2": "To je drahé.",
+      "choices_l1": [
+        "le centime",
+        "payer",
+        "cinq euros"
+      ],
+      "choices_l2": [
+        "Koľko to stojí?",
+        "Stojí to päť eur.",
+        "To je lacné."
+      ]
+    },
+    {
+      "id": "qcm-to-je-lacn",
+      "type": "qcm",
+      "l1": "C'est bon marché.",
+      "l2": "To je lacné.",
+      "choices_l1": [
+        "Ça coûte cinq euros.",
+        "Combien ça coûte ?",
+        "la vie chère"
+      ],
+      "choices_l2": [
+        "Koľko to stojí?",
+        "Stojí to päť eur.",
+        "To je drahé."
+      ]
+    },
+    {
+      "id": "qcm-jedno-euro",
+      "type": "qcm",
+      "l1": "un euro",
+      "l2": "jedno euro",
+      "choices_l1": [
+        "le centime",
+        "les soldes",
+        "la réduction"
+      ],
+      "choices_l2": [
+        "hotovosť",
+        "zľava",
+        "účet"
+      ]
+    },
+    {
+      "id": "qcm-dve-eur",
+      "type": "qcm",
+      "l1": "deux euros",
+      "l2": "dve eurá",
+      "choices_l1": [
+        "trois euros",
+        "cinq euros",
+        "dix euros"
+      ],
+      "choices_l2": [
+        "štyri eurá",
+        "desať eur",
+        "tri eurá"
+      ]
+    },
+    {
+      "id": "qcm-tri-eur",
+      "type": "qcm",
+      "l1": "trois euros",
+      "l2": "tri eurá",
+      "choices_l1": [
+        "quatre euros",
+        "cinq euros",
+        "dix euros"
+      ],
+      "choices_l2": [
+        "štyri eurá",
+        "dve eurá",
+        "päť eur"
+      ]
+    },
+    {
+      "id": "qcm-tyri-eur",
+      "type": "qcm",
+      "l1": "quatre euros",
+      "l2": "štyri eurá",
+      "choices_l1": [
+        "cinq euros",
+        "trois euros",
+        "dix euros"
+      ],
+      "choices_l2": [
+        "tri eurá",
+        "päť eur",
+        "dve eurá"
+      ]
+    },
+    {
+      "id": "qcm-p-eur",
+      "type": "qcm",
+      "l1": "cinq euros",
+      "l2": "päť eur",
+      "choices_l1": [
+        "deux euros",
+        "trois euros",
+        "dix euros"
+      ],
+      "choices_l2": [
+        "desať eur",
+        "dve eurá",
+        "tri eurá"
+      ]
+    },
+    {
+      "id": "qcm-desa-eur",
+      "type": "qcm",
+      "l1": "dix euros",
+      "l2": "desať eur",
+      "choices_l1": [
+        "quatre euros",
+        "deux euros",
+        "cinq euros"
+      ],
+      "choices_l2": [
+        "tri eurá",
+        "päť eur",
+        "dve eurá"
+      ]
+    },
+    {
+      "id": "qcm-et",
+      "type": "qcm",
+      "l1": "l'addition, la facture",
+      "l2": "účet",
+      "choices_l1": [
+        "Ça coûte cinq euros.",
+        "Combien ça coûte ?",
+        "la vie chère"
+      ],
+      "choices_l2": [
+        "zľava",
+        "cena",
+        "drahota"
+      ]
+    },
+    {
+      "id": "qcm-z-ava",
+      "type": "qcm",
+      "l1": "la réduction",
+      "l2": "zľava",
+      "choices_l1": [
+        "les soldes",
+        "l'euro",
+        "l'argent liquide"
+      ],
+      "choices_l2": [
+        "hotovosť",
+        "účet",
+        "euro"
+      ]
+    },
+    {
+      "id": "qcm-akcia",
+      "type": "qcm",
+      "l1": "la promotion",
+      "l2": "akcia",
+      "choices_l1": [
+        "un euro",
+        "le prix",
+        "le distributeur"
+      ],
+      "choices_l2": [
+        "výpredaj",
+        "peňaženka",
+        "drahota"
+      ]
+    },
+    {
+      "id": "qcm-drahota",
+      "type": "qcm",
+      "l1": "la vie chère",
+      "l2": "drahota",
+      "choices_l1": [
+        "l'addition, la facture",
+        "Combien ça coûte ?",
+        "C'est bon marché."
+      ],
+      "choices_l2": [
+        "bankomat",
+        "karta",
+        "účet"
+      ]
+    },
+    {
+      "id": "qcm-v-predaj",
+      "type": "qcm",
+      "l1": "les soldes",
+      "l2": "výpredaj",
+      "choices_l1": [
+        "le prix",
+        "le portefeuille",
+        "un euro"
+      ],
+      "choices_l2": [
+        "jedno euro",
+        "drahota",
+        "bankomat"
+      ]
+    },
+    {
+      "id": "qcm-bankomat",
+      "type": "qcm",
+      "l1": "le distributeur",
+      "l2": "bankomat",
+      "choices_l1": [
+        "l'argent liquide",
+        "le prix",
+        "la carte"
+      ],
+      "choices_l2": [
+        "cena",
+        "euro",
+        "akcia"
+      ]
+    },
+    {
+      "id": "qcm-pe-a-enka",
+      "type": "qcm",
+      "l1": "le portefeuille",
+      "l2": "peňaženka",
+      "choices_l1": [
+        "le prix",
+        "le centime",
+        "la promotion"
+      ],
+      "choices_l2": [
+        "akcia",
+        "euro",
+        "cent"
+      ]
+    },
+    {
+      "id": "blank-ko-ko-to-stoj",
+      "type": "fill-blank",
+      "l1": "Combien ça coûte ?",
+      "l2": "Koľko to stojí?",
+      "missing_l1": "ça",
+      "missing_l2": "to",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "prix",
+        "cher",
+        "paie"
+      ],
+      "choices_l2": [
+        "Toto",
+        "tá",
+        "Ja"
+      ]
+    },
+    {
+      "id": "blank-stoj-to-tri-eur",
+      "type": "fill-blank",
+      "l1": "Ça coûte trois euros.",
+      "l2": "Stojí to tri eurá.",
+      "missing_l1": "coûte",
+      "missing_l2": "to",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "élevé",
+        "liquide",
+        "promotion"
+      ],
+      "choices_l2": [
+        "vy",
+        "Toto",
+        "ten"
+      ]
+    },
+    {
+      "id": "blank-to-je-drah",
+      "type": "fill-blank",
+      "l1": "C'est cher !",
+      "l2": "To je drahé!",
+      "missing_l1": "cher",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "prix",
+        "paie",
+        "par"
+      ],
+      "choices_l2": [
+        "budeme",
+        "budú",
+        "si"
+      ]
+    },
+    {
+      "id": "blank-to-je-lacn",
+      "type": "fill-blank",
+      "l1": "C'est bon marché.",
+      "l2": "To je lacné.",
+      "missing_l1": "bon",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "prix",
+        "par",
+        "cher"
+      ],
+      "choices_l2": [
+        "bola",
+        "si",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-plat-te-kartou-alebo-hotovos-ou",
+      "type": "fill-blank",
+      "l1": "Vous payez par carte ou en liquide ?",
+      "l2": "Platíte kartou alebo hotovosťou?",
+      "missing_l1": "en",
+      "missing_l2": "alebo",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "te",
+        "me",
+        "y"
+      ],
+      "choices_l2": [
+        "lebo",
+        "ale",
+        "aj"
+      ]
+    },
+    {
+      "id": "blank-ko-ko-stoja-top-nky",
+      "type": "fill-blank",
+      "l1": "Combien coûtent les chaussures ?",
+      "l2": "Koľko stoja topánky?",
+      "missing_l1": "les",
+      "missing_l2": "topánky",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "le",
+        "prix",
+        "la"
+      ],
+      "choices_l2": [
+        "kartou",
+        "stoja",
+        "bankomat"
+      ]
+    },
+    {
+      "id": "blank-cena-je-vysok",
+      "type": "fill-blank",
+      "l1": "Le prix est élevé.",
+      "l2": "Cena je vysoká.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "c'était",
+        "suis",
+        "sommes"
+      ],
+      "choices_l2": [
+        "sme",
+        "sú",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-chcem-erven-tri-ko-ko-ko-stoj",
+      "type": "fill-blank",
+      "l1": "Je veux ce tee-shirt rouge. Combien coûte-t-il ?",
+      "l2": "Chcem červené tričko. Koľko stojí?",
+      "missing_l1": "veux",
+      "missing_l2": "Koľko",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "voulons",
+        "voulez",
+        "veulent"
+      ],
+      "choices_l2": [
+        "sukňu",
+        "peňaženku",
+        "vysoká"
+      ]
+    },
+    {
+      "id": "blank-sk-sim-modr-suk-u-m-te-ve-kos-m",
+      "type": "fill-blank",
+      "l1": "J'essaie la jupe bleue. Vous avez la taille M ?",
+      "l2": "Skúsim modrú sukňu. Máte veľkosť M?",
+      "missing_l1": "la",
+      "missing_l2": "Máte",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "le",
+        "paie",
+        "Les"
+      ],
+      "choices_l2": [
+        "Nemáš",
+        "Máme",
+        "Nemáme"
+      ]
+    },
+    {
+      "id": "blank-nohavice-stoja-dvadsa-eur-to-je-drah",
+      "type": "fill-blank",
+      "l1": "Le pantalon coûte vingt euros. C'est cher !",
+      "l2": "Nohavice stoja dvadsať eur. To je drahé!",
+      "missing_l1": "C'est",
+      "missing_l2": "je",
+      "blank_index_l1": 5,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "est",
+        "sont",
+        "sommes"
+      ],
+      "choices_l2": [
+        "som",
+        "sme",
+        "si"
+      ]
+    },
+    {
+      "id": "blank-plat-m-hotovos-ou-nie-kartou",
+      "type": "fill-blank",
+      "l1": "Je paie en liquide, pas par carte.",
+      "l2": "Platím hotovosťou, nie kartou.",
+      "missing_l1": "en",
+      "missing_l2": "nie",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "me",
+        "y",
+        "se"
+      ],
+      "choices_l2": [
+        "nikdy",
+        "Účet",
+        "Cena"
+      ]
+    },
+    {
+      "id": "blank-je-to-v-akcii",
+      "type": "fill-blank",
+      "l1": "C'est en promotion.",
+      "l2": "Je to v akcii.",
+      "missing_l1": "en",
+      "missing_l2": "v",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "me",
+        "te",
+        "se"
+      ],
+      "choices_l2": [
+        "Vo",
+        "s",
+        "za"
+      ]
+    },
+    {
+      "id": "blank-chcem-z-avu-pros-m",
+      "type": "fill-blank",
+      "l1": "Je voudrais une réduction, s'il vous plaît.",
+      "l2": "Chcem zľavu, prosím.",
+      "missing_l1": "vous",
+      "missing_l2": "prosím",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Je",
+        "Il",
+        "On"
+      ],
+      "choices_l2": [
+        "akcii",
+        "kartou",
+        "Platím"
+      ]
+    },
+    {
+      "id": "blank-kde-je-bankomat",
+      "type": "fill-blank",
+      "l1": "Où est le distributeur ?",
+      "l2": "Kde je bankomat?",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "paie",
+        "par",
+        "Les"
+      ],
+      "choices_l2": [
+        "si",
+        "sme",
+        "Bude"
+      ]
+    },
+    {
+      "id": "listen-ko-ko-to-stoj",
+      "type": "listen",
+      "l1": "Combien ça coûte ?",
+      "l2": "Koľko to stojí?",
+      "choices_l1": [
+        "C'est en promotion.",
+        "Le pantalon coûte vingt euros. C'est cher !",
+        "Je paie en liquide, pas par carte."
+      ],
+      "choices_l2": [
+        "Stojí to tri eurá.",
+        "Skúsim modrú sukňu. Máte veľkosť M?",
+        "Platím hotovosťou, nie kartou."
+      ]
+    },
+    {
+      "id": "listen-stoj-to-tri-eur",
+      "type": "listen",
+      "l1": "Ça coûte trois euros.",
+      "l2": "Stojí to tri eurá.",
+      "choices_l1": [
+        "Je voudrais une réduction, s'il vous plaît.",
+        "Vous payez par carte ou en liquide ?",
+        "C'est en promotion."
+      ],
+      "choices_l2": [
+        "Je to v akcii.",
+        "Koľko to stojí?",
+        "Platíte kartou alebo hotovosťou?"
+      ]
+    },
+    {
+      "id": "listen-to-je-drah",
+      "type": "listen",
+      "l1": "C'est cher !",
+      "l2": "To je drahé!",
+      "choices_l1": [
+        "Combien ça coûte ?",
+        "Ça coûte trois euros.",
+        "Le pantalon coûte vingt euros. C'est cher !"
+      ],
+      "choices_l2": [
+        "Skúsim modrú sukňu. Máte veľkosť M?",
+        "Chcem zľavu, prosím.",
+        "Stojí to tri eurá."
+      ]
+    },
+    {
+      "id": "listen-to-je-lacn",
+      "type": "listen",
+      "l1": "C'est bon marché.",
+      "l2": "To je lacné.",
+      "choices_l1": [
+        "Je voudrais une réduction, s'il vous plaît.",
+        "J'essaie la jupe bleue. Vous avez la taille M ?",
+        "C'est cher !"
+      ],
+      "choices_l2": [
+        "Platíte kartou alebo hotovosťou?",
+        "Platím hotovosťou, nie kartou.",
+        "Koľko stoja topánky?"
+      ]
+    },
+    {
+      "id": "listen-plat-te-kartou-alebo-hotovos-ou",
+      "type": "listen",
+      "l1": "Vous payez par carte ou en liquide ?",
+      "l2": "Platíte kartou alebo hotovosťou?",
+      "choices_l1": [
+        "C'est cher !",
+        "J'essaie la jupe bleue. Vous avez la taille M ?",
+        "Je paie en liquide, pas par carte."
+      ],
+      "choices_l2": [
+        "Cena je vysoká.",
+        "Nohavice stoja dvadsať eur. To je drahé!",
+        "Stojí to tri eurá."
+      ]
+    },
+    {
+      "id": "listen-plat-m-kartou",
+      "type": "listen",
+      "l1": "Je paie par carte.",
+      "l2": "Platím kartou.",
+      "choices_l1": [
+        "Combien ça coûte ?",
+        "Je paie en liquide, pas par carte.",
+        "C'est cher !"
+      ],
+      "choices_l2": [
+        "Nemám peňaženku!",
+        "Účet, prosím.",
+        "Tam, vľavo."
+      ]
+    },
+    {
+      "id": "listen-ko-ko-stoja-top-nky",
+      "type": "listen",
+      "l1": "Combien coûtent les chaussures ?",
+      "l2": "Koľko stoja topánky?",
+      "choices_l1": [
+        "Le prix est élevé.",
+        "Le pantalon coûte vingt euros. C'est cher !",
+        "Je veux ce tee-shirt rouge. Combien coûte-t-il ?"
+      ],
+      "choices_l2": [
+        "To je drahé!",
+        "Cena je vysoká.",
+        "Koľko to stojí?"
+      ]
+    },
+    {
+      "id": "listen-cena-je-vysok",
+      "type": "listen",
+      "l1": "Le prix est élevé.",
+      "l2": "Cena je vysoká.",
+      "choices_l1": [
+        "Je paie en liquide, pas par carte.",
+        "J'essaie la jupe bleue. Vous avez la taille M ?",
+        "Combien coûtent les chaussures ?"
+      ],
+      "choices_l2": [
+        "Platím hotovosťou, nie kartou.",
+        "Nohavice stoja dvadsať eur. To je drahé!",
+        "Je to v akcii."
+      ]
+    },
+    {
+      "id": "listen-chcem-erven-tri-ko-ko-ko-stoj",
+      "type": "listen",
+      "l1": "Je veux ce tee-shirt rouge. Combien coûte-t-il ?",
+      "l2": "Chcem červené tričko. Koľko stojí?",
+      "choices_l1": [
+        "Je paie en liquide, pas par carte.",
+        "Je voudrais une réduction, s'il vous plaît.",
+        "Le prix est élevé."
+      ],
+      "choices_l2": [
+        "Skúsim modrú sukňu. Máte veľkosť M?",
+        "To je lacné.",
+        "Platíte kartou alebo hotovosťou?"
+      ]
+    },
+    {
+      "id": "listen-sk-sim-modr-suk-u-m-te-ve-kos-m",
+      "type": "listen",
+      "l1": "J'essaie la jupe bleue. Vous avez la taille M ?",
+      "l2": "Skúsim modrú sukňu. Máte veľkosť M?",
+      "choices_l1": [
+        "Je voudrais une réduction, s'il vous plaît.",
+        "C'est bon marché.",
+        "Je paie en liquide, pas par carte."
+      ],
+      "choices_l2": [
+        "Chcem červené tričko. Koľko stojí?",
+        "Je to v akcii.",
+        "Cena je vysoká."
+      ]
+    },
+    {
+      "id": "listen-nohavice-stoja-dvadsa-eur-to-je-drah",
+      "type": "listen",
+      "l1": "Le pantalon coûte vingt euros. C'est cher !",
+      "l2": "Nohavice stoja dvadsať eur. To je drahé!",
+      "choices_l1": [
+        "Combien ça coûte ?",
+        "Je voudrais une réduction, s'il vous plaît.",
+        "Ça coûte trois euros."
+      ],
+      "choices_l2": [
+        "Cena je vysoká.",
+        "Stojí to tri eurá.",
+        "Koľko to stojí?"
+      ]
+    },
+    {
+      "id": "listen-plat-m-hotovos-ou-nie-kartou",
+      "type": "listen",
+      "l1": "Je paie en liquide, pas par carte.",
+      "l2": "Platím hotovosťou, nie kartou.",
+      "choices_l1": [
+        "Le prix est élevé.",
+        "Le pantalon coûte vingt euros. C'est cher !",
+        "Ça coûte trois euros."
+      ],
+      "choices_l2": [
+        "Je to v akcii.",
+        "Koľko to stojí?",
+        "To je drahé!"
+      ]
+    },
+    {
+      "id": "listen-je-to-v-akcii",
+      "type": "listen",
+      "l1": "C'est en promotion.",
+      "l2": "Je to v akcii.",
+      "choices_l1": [
+        "Je paie en liquide, pas par carte.",
+        "C'est cher !",
+        "Combien coûtent les chaussures ?"
+      ],
+      "choices_l2": [
+        "Koľko stoja topánky?",
+        "Chcem červené tričko. Koľko stojí?",
+        "Skúsim modrú sukňu. Máte veľkosť M?"
+      ]
+    },
+    {
+      "id": "listen-chcem-z-avu-pros-m",
+      "type": "listen",
+      "l1": "Je voudrais une réduction, s'il vous plaît.",
+      "l2": "Chcem zľavu, prosím.",
+      "choices_l1": [
+        "Combien coûtent les chaussures ?",
+        "C'est bon marché.",
+        "C'est cher !"
+      ],
+      "choices_l2": [
+        "Platíte kartou alebo hotovosťou?",
+        "Cena je vysoká.",
+        "Chcem červené tričko. Koľko stojí?"
+      ]
+    },
+    {
+      "id": "listen-kde-je-bankomat",
+      "type": "listen",
+      "l1": "Où est le distributeur ?",
+      "l2": "Kde je bankomat?",
+      "choices_l1": [
+        "Je paie en liquide, pas par carte.",
+        "Combien coûtent les chaussures ?",
+        "C'est bon marché."
+      ],
+      "choices_l2": [
+        "To je drahé!",
+        "To je lacné.",
+        "Koľko stoja topánky?"
+      ]
+    },
+    {
+      "id": "listen-et-pros-m",
+      "type": "listen",
+      "l1": "L'addition, s'il vous plaît.",
+      "l2": "Účet, prosím.",
+      "choices_l1": [
+        "Je veux ce tee-shirt rouge. Combien coûte-t-il ?",
+        "Combien ça coûte ?",
+        "Combien coûtent les chaussures ?"
+      ],
+      "choices_l2": [
+        "Nemám peňaženku!",
+        "Čo kupuješ?",
+        "Tam, vľavo."
+      ]
+    },
+    {
+      "id": "listen-nem-m-pe-a-enku",
+      "type": "listen",
+      "l1": "Je n'ai pas mon portefeuille !",
+      "l2": "Nemám peňaženku!",
+      "choices_l1": [
+        "Ça coûte trois euros.",
+        "Combien coûtent les chaussures ?",
+        "C'est cher !"
+      ],
+      "choices_l2": [
+        "Platím kartou.",
+        "Nekupujem veľa.",
+        "Ďakujem. Dovidenia!"
+      ]
+    },
+    {
+      "id": "order-ko-ko-to-stoj",
+      "type": "order",
+      "l1": "Combien ça coûte ?",
+      "l2": "Koľko to stojí?",
+      "tokens_l1": [
+        "Combien",
+        "ça",
+        "coûte",
+        "?",
+        "J'essaie",
+        "la",
+        "jupe",
+        "bleue.",
+        "Vous",
+        "avez",
+        "la",
+        "taille",
+        "M",
+        "?"
+      ],
+      "tokens_l2": [
+        "Koľko",
+        "to",
+        "stojí?",
+        "Skúsim",
+        "modrú",
+        "sukňu.",
+        "Máte",
+        "veľkosť",
+        "M?"
+      ]
+    },
+    {
+      "id": "order-stoj-to-tri-eur",
+      "type": "order",
+      "l1": "Ça coûte trois euros.",
+      "l2": "Stojí to tri eurá.",
+      "tokens_l1": [
+        "Ça",
+        "coûte",
+        "trois",
+        "euros.",
+        "Je",
+        "paie",
+        "en",
+        "liquide,",
+        "pas",
+        "par",
+        "carte."
+      ],
+      "tokens_l2": [
+        "Stojí",
+        "to",
+        "tri",
+        "eurá.",
+        "Platím",
+        "hotovosťou,",
+        "nie",
+        "kartou."
+      ]
+    },
+    {
+      "id": "order-to-je-drah",
+      "type": "order",
+      "l1": "C'est cher !",
+      "l2": "To je drahé!",
+      "tokens_l1": [
+        "C'est",
+        "cher",
+        "!",
+        "Je",
+        "voudrais",
+        "une",
+        "réduction,",
+        "s'il",
+        "vous",
+        "plaît."
+      ],
+      "tokens_l2": [
+        "To",
+        "je",
+        "drahé!",
+        "Chcem",
+        "zľavu,",
+        "prosím."
+      ]
+    },
+    {
+      "id": "order-to-je-lacn",
+      "type": "order",
+      "l1": "C'est bon marché.",
+      "l2": "To je lacné.",
+      "tokens_l1": [
+        "C'est",
+        "bon",
+        "marché.",
+        "Je",
+        "paie",
+        "en",
+        "liquide,",
+        "pas",
+        "par",
+        "carte."
+      ],
+      "tokens_l2": [
+        "To",
+        "je",
+        "lacné.",
+        "Platím",
+        "hotovosťou,",
+        "nie",
+        "kartou."
+      ]
+    },
+    {
+      "id": "order-plat-te-kartou-alebo-hotovos-ou",
+      "type": "order",
+      "l1": "Vous payez par carte ou en liquide ?",
+      "l2": "Platíte kartou alebo hotovosťou?",
+      "tokens_l1": [
+        "Vous",
+        "payez",
+        "par",
+        "carte",
+        "ou",
+        "en",
+        "liquide",
+        "?",
+        "C'est",
+        "cher",
+        "!"
+      ],
+      "tokens_l2": [
+        "Platíte",
+        "kartou",
+        "alebo",
+        "hotovosťou?",
+        "To",
+        "je",
+        "drahé!"
+      ]
+    },
+    {
+      "id": "order-ko-ko-stoja-top-nky",
+      "type": "order",
+      "l1": "Combien coûtent les chaussures ?",
+      "l2": "Koľko stoja topánky?",
+      "tokens_l1": [
+        "Combien",
+        "coûtent",
+        "les",
+        "chaussures",
+        "?",
+        "J'essaie",
+        "la",
+        "jupe",
+        "bleue.",
+        "Vous",
+        "avez",
+        "la",
+        "taille",
+        "M",
+        "?"
+      ],
+      "tokens_l2": [
+        "Koľko",
+        "stoja",
+        "topánky?",
+        "Skúsim",
+        "modrú",
+        "sukňu.",
+        "Máte",
+        "veľkosť",
+        "M?"
+      ]
+    },
+    {
+      "id": "order-cena-je-vysok",
+      "type": "order",
+      "l1": "Le prix est élevé.",
+      "l2": "Cena je vysoká.",
+      "tokens_l1": [
+        "Le",
+        "prix",
+        "est",
+        "élevé.",
+        "Combien",
+        "coûtent",
+        "les",
+        "chaussures",
+        "?"
+      ],
+      "tokens_l2": [
+        "Cena",
+        "je",
+        "vysoká.",
+        "Koľko",
+        "stoja",
+        "topánky?"
+      ]
+    },
+    {
+      "id": "order-chcem-erven-tri-ko-ko-ko-stoj",
+      "type": "order",
+      "l1": "Je veux ce tee-shirt rouge. Combien coûte-t-il ?",
+      "l2": "Chcem červené tričko. Koľko stojí?",
+      "tokens_l1": [
+        "Je",
+        "veux",
+        "ce",
+        "tee-shirt",
+        "rouge.",
+        "Combien",
+        "coûte-t-il",
+        "?",
+        "Le",
+        "prix",
+        "est",
+        "élevé."
+      ],
+      "tokens_l2": [
+        "Chcem",
+        "červené",
+        "tričko.",
+        "Koľko",
+        "stojí?",
+        "Cena",
+        "je",
+        "vysoká."
+      ]
+    },
+    {
+      "id": "order-sk-sim-modr-suk-u-m-te-ve-kos-m",
+      "type": "order",
+      "l1": "J'essaie la jupe bleue. Vous avez la taille M ?",
+      "l2": "Skúsim modrú sukňu. Máte veľkosť M?",
+      "tokens_l1": [
+        "J'essaie",
+        "la",
+        "jupe",
+        "bleue.",
+        "Vous",
+        "avez",
+        "la",
+        "taille",
+        "M",
+        "?",
+        "Ça",
+        "coûte",
+        "trois",
+        "euros."
+      ],
+      "tokens_l2": [
+        "Skúsim",
+        "modrú",
+        "sukňu.",
+        "Máte",
+        "veľkosť",
+        "M?",
+        "Stojí",
+        "to",
+        "tri",
+        "eurá."
+      ]
+    },
+    {
+      "id": "order-nohavice-stoja-dvadsa-eur-to-je-drah",
+      "type": "order",
+      "l1": "Le pantalon coûte vingt euros. C'est cher !",
+      "l2": "Nohavice stoja dvadsať eur. To je drahé!",
+      "tokens_l1": [
+        "Le",
+        "pantalon",
+        "coûte",
+        "vingt",
+        "euros.",
+        "C'est",
+        "cher",
+        "!",
+        "J'essaie",
+        "la",
+        "jupe",
+        "bleue.",
+        "Vous",
+        "avez",
+        "la",
+        "taille",
+        "M",
+        "?"
+      ],
+      "tokens_l2": [
+        "Nohavice",
+        "stoja",
+        "dvadsať",
+        "eur.",
+        "To",
+        "je",
+        "drahé!",
+        "Skúsim",
+        "modrú",
+        "sukňu.",
+        "Máte",
+        "veľkosť",
+        "M?"
+      ]
+    },
+    {
+      "id": "order-plat-m-hotovos-ou-nie-kartou",
+      "type": "order",
+      "l1": "Je paie en liquide, pas par carte.",
+      "l2": "Platím hotovosťou, nie kartou.",
+      "tokens_l1": [
+        "Je",
+        "paie",
+        "en",
+        "liquide,",
+        "pas",
+        "par",
+        "carte.",
+        "Le",
+        "pantalon",
+        "coûte",
+        "vingt",
+        "euros.",
+        "C'est",
+        "cher",
+        "!"
+      ],
+      "tokens_l2": [
+        "Platím",
+        "hotovosťou,",
+        "nie",
+        "kartou.",
+        "Nohavice",
+        "stoja",
+        "dvadsať",
+        "eur.",
+        "To",
+        "je",
+        "drahé!"
+      ]
+    },
+    {
+      "id": "order-je-to-v-akcii",
+      "type": "order",
+      "l1": "C'est en promotion.",
+      "l2": "Je to v akcii.",
+      "tokens_l1": [
+        "C'est",
+        "en",
+        "promotion.",
+        "Le",
+        "prix",
+        "est",
+        "élevé."
+      ],
+      "tokens_l2": [
+        "Je",
+        "to",
+        "v",
+        "akcii.",
+        "Cena",
+        "je",
+        "vysoká."
+      ]
+    },
+    {
+      "id": "order-chcem-z-avu-pros-m",
+      "type": "order",
+      "l1": "Je voudrais une réduction, s'il vous plaît.",
+      "l2": "Chcem zľavu, prosím.",
+      "tokens_l1": [
+        "Je",
+        "voudrais",
+        "une",
+        "réduction,",
+        "s'il",
+        "vous",
+        "plaît.",
+        "Le",
+        "prix",
+        "est",
+        "élevé."
+      ],
+      "tokens_l2": [
+        "Chcem",
+        "zľavu,",
+        "prosím.",
+        "Cena",
+        "je",
+        "vysoká."
+      ]
+    },
+    {
+      "id": "order-kde-je-bankomat",
+      "type": "order",
+      "l1": "Où est le distributeur ?",
+      "l2": "Kde je bankomat?",
+      "tokens_l1": [
+        "Où",
+        "est",
+        "le",
+        "distributeur",
+        "?",
+        "Le",
+        "prix",
+        "est",
+        "élevé."
+      ],
+      "tokens_l2": [
+        "Kde",
+        "je",
+        "bankomat?",
+        "Cena",
+        "je",
+        "vysoká."
+      ]
+    },
+    {
+      "id": "match-st-vocab",
+      "type": "match",
+      "l1": [
+        "coûter",
+        "le prix",
+        "l'euro",
+        "le centime"
+      ],
+      "l2": [
+        "stáť",
+        "cena",
+        "euro",
+        "cent"
+      ]
+    },
+    {
+      "id": "match-ko-ko-to-stoj-sentences",
+      "type": "match",
+      "l1": [
+        "Combien ça coûte ?",
+        "Ça coûte trois euros.",
+        "C'est cher !",
+        "C'est bon marché."
+      ],
+      "l2": [
+        "Koľko to stojí?",
+        "Stojí to tri eurá.",
+        "To je drahé!",
+        "To je lacné."
+      ]
+    }
+  ]
+}

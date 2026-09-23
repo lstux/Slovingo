@@ -1,0 +1,1145 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-l-heure",
+      "type": "qcm",
+      "l1": "hodina",
+      "l2": "l'heure",
+      "choices_l1": [
+        "na jeseň",
+        "v stredu",
+        "utorok"
+      ],
+      "choices_l2": [
+        "la semaine",
+        "depuis",
+        "dimanche"
+      ]
+    },
+    {
+      "id": "qcm-la-minute",
+      "type": "qcm",
+      "l1": "minúta",
+      "l2": "la minute",
+      "choices_l1": [
+        "v pondelok",
+        "nikdy",
+        "v stredu"
+      ],
+      "choices_l2": [
+        "depuis",
+        "au printemps",
+        "ensuite"
+      ]
+    },
+    {
+      "id": "qcm-le-temps",
+      "type": "qcm",
+      "l1": "čas",
+      "l2": "le temps",
+      "choices_l1": [
+        "hviezdy",
+        "lístie",
+        "tráva"
+      ],
+      "choices_l2": [
+        "la canicule",
+        "nuageux",
+        "l'herbe"
+      ]
+    },
+    {
+      "id": "qcm-le-matin",
+      "type": "qcm",
+      "l1": "ráno",
+      "l2": "le matin",
+      "choices_l1": [
+        "v piatok",
+        "teraz",
+        "skoro"
+      ],
+      "choices_l2": [
+        "heures",
+        "lundi",
+        "au printemps"
+      ]
+    },
+    {
+      "id": "qcm-l-apr-s-midi",
+      "type": "qcm",
+      "l1": "poobede",
+      "l2": "l'après-midi",
+      "choices_l1": [
+        "v sobotu",
+        "v noci",
+        "dátum"
+      ],
+      "choices_l2": [
+        "heures",
+        "déjà",
+        "jeudi"
+      ]
+    },
+    {
+      "id": "qcm-le-soir",
+      "type": "qcm",
+      "l1": "večer",
+      "l2": "le soir",
+      "choices_l1": [
+        "vždy",
+        "streda",
+        "v stredu"
+      ],
+      "choices_l2": [
+        "l'après-midi",
+        "le printemps",
+        "jeudi"
+      ]
+    },
+    {
+      "id": "qcm-la-nuit",
+      "type": "qcm",
+      "l1": "noc",
+      "l2": "la nuit",
+      "choices_l1": [
+        "týždeň",
+        "neskoro",
+        "sobotu"
+      ],
+      "choices_l2": [
+        "l'été",
+        "lundi",
+        "depuis"
+      ]
+    },
+    {
+      "id": "qcm-il-est-une-heure",
+      "type": "qcm",
+      "l1": "Je jedna hodina.",
+      "l2": "Il est une heure.",
+      "choices_l1": [
+        "V pondelky (zvyčajne) pracujem.",
+        "V pondelok pracujem.",
+        "Prišiel som skoro."
+      ],
+      "choices_l2": [
+        "à une heure",
+        "Lundi, je travaille. (tento konkrétny pondelok)",
+        "le dimanche des Rameaux"
+      ]
+    },
+    {
+      "id": "qcm-il-est-deux-heures",
+      "type": "qcm",
+      "l1": "Sú dve hodiny.",
+      "l2": "Il est deux heures.",
+      "choices_l1": [
+        "Stojí to päť eur.",
+        "štvrť na šesť",
+        "Sú tam štyri stoličky."
+      ],
+      "choices_l2": [
+        "Il y a quatre chaises.",
+        "cinq heures et demie (5:30)",
+        "Il est cinq heures."
+      ]
+    },
+    {
+      "id": "qcm-il-est-cinq-heures",
+      "type": "qcm",
+      "l1": "Je päť hodín.",
+      "l2": "Il est cinq heures.",
+      "choices_l1": [
+        "Sú dve hodiny.",
+        "trištvrte na šesť",
+        "štvrť na šesť"
+      ],
+      "choices_l2": [
+        "à deux heures",
+        "Ça coûte cinq euros.",
+        "Il est dix heures."
+      ]
+    },
+    {
+      "id": "qcm-il-est-dix-heures",
+      "type": "qcm",
+      "l1": "Je desať hodín.",
+      "l2": "Il est dix heures.",
+      "choices_l1": [
+        "trištvrte na šesť",
+        "štvrť na šesť",
+        "Je päť hodín."
+      ],
+      "choices_l2": [
+        "à sept heures",
+        "à cinq heures",
+        "cinq heures et quart (5:15)"
+      ]
+    },
+    {
+      "id": "qcm-la-nuit",
+      "type": "qcm",
+      "l1": "v noci",
+      "l2": "la nuit",
+      "choices_l1": [
+        "noc",
+        "sobota",
+        "Veľká noc"
+      ],
+      "choices_l2": [
+        "le soir",
+        "samedi",
+        "le week-end"
+      ]
+    },
+    {
+      "id": "qcm-aujourd-hui",
+      "type": "qcm",
+      "l1": "dnes",
+      "l2": "aujourd'hui",
+      "choices_l1": [
+        "neskoro",
+        "načas",
+        "skoro"
+      ],
+      "choices_l2": [
+        "mardi",
+        "d'habitude",
+        "jeudi"
+      ]
+    },
+    {
+      "id": "qcm-demain",
+      "type": "qcm",
+      "l1": "zajtra",
+      "l2": "demain",
+      "choices_l1": [
+        "v utorok",
+        "mesiac",
+        "minúta"
+      ],
+      "choices_l2": [
+        "lundi",
+        "le soir",
+        "maintenant"
+      ]
+    },
+    {
+      "id": "qcm-hier",
+      "type": "qcm",
+      "l1": "včera",
+      "l2": "hier",
+      "choices_l1": [
+        "v stredu",
+        "noc",
+        "o druhej"
+      ],
+      "choices_l2": [
+        "déjà",
+        "l'heure",
+        "l'anniversaire"
+      ]
+    },
+    {
+      "id": "qcm-maintenant",
+      "type": "qcm",
+      "l1": "teraz",
+      "l2": "maintenant",
+      "choices_l1": [
+        "Zelený štvrtok",
+        "hodiny",
+        "nedeľa"
+      ],
+      "choices_l2": [
+        "heure",
+        "l'année",
+        "aujourd'hui"
+      ]
+    },
+    {
+      "id": "qcm-toujours",
+      "type": "qcm",
+      "l1": "vždy",
+      "l2": "toujours",
+      "choices_l1": [
+        "často",
+        "poobede",
+        "noc"
+      ],
+      "choices_l2": [
+        "dimanche",
+        "l'heure",
+        "la minute"
+      ]
+    },
+    {
+      "id": "qcm-jamais",
+      "type": "qcm",
+      "l1": "nikdy",
+      "l2": "jamais",
+      "choices_l1": [
+        "čas",
+        "týždeň",
+        "v lete"
+      ],
+      "choices_l2": [
+        "l'hiver",
+        "encore",
+        "mercredi"
+      ]
+    },
+    {
+      "id": "qcm-souvent",
+      "type": "qcm",
+      "l1": "často",
+      "l2": "souvent",
+      "choices_l1": [
+        "jar",
+        "noc",
+        "Veľký piatok"
+      ],
+      "choices_l2": [
+        "la semaine",
+        "la date",
+        "le matin"
+      ]
+    },
+    {
+      "id": "blank-quelle-heure-est-il",
+      "type": "fill-blank",
+      "l1": "Koľko je hodín?",
+      "l2": "Quelle heure est-il ?",
+      "missing_l1": "je",
+      "missing_l2": "heure",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "kto",
+        "oblečiem si",
+        "vyšší ako"
+      ],
+      "choices_l2": [
+        "l'automne",
+        "mardi",
+        "vendredi"
+      ]
+    },
+    {
+      "id": "blank-il-est-une-heure",
+      "type": "fill-blank",
+      "l1": "Je jedna hodina.",
+      "l2": "Il est une heure.",
+      "missing_l1": "jedna",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "euro",
+        "päť eur",
+        "štyri"
+      ],
+      "choices_l2": [
+        "dehors",
+        "as",
+        "pas"
+      ]
+    },
+    {
+      "id": "blank-il-est-trois-heures",
+      "type": "fill-blank",
+      "l1": "Sú tri hodiny.",
+      "l2": "Il est trois heures.",
+      "missing_l1": "tri",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "päť",
+        "dve eurá",
+        "štyri"
+      ],
+      "choices_l2": [
+        "une",
+        "pas",
+        "dans"
+      ]
+    },
+    {
+      "id": "blank-il-est-sept-heures",
+      "type": "fill-blank",
+      "l1": "Je sedem hodín.",
+      "l2": "Il est sept heures.",
+      "missing_l1": "hodín",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "víkend",
+        "na jar",
+        "nedeľa"
+      ],
+      "choices_l2": [
+        "tu seras",
+        "tu veux",
+        "sont"
+      ]
+    },
+    {
+      "id": "blank-le-matin-j-ai-le-temps",
+      "type": "fill-blank",
+      "l1": "Ráno mám čas.",
+      "l2": "Le matin, j'ai le temps.",
+      "missing_l1": "mám",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Máme",
+        "prechádzať sa",
+        "musíš"
+      ],
+      "choices_l2": [
+        "tu vas",
+        "sont",
+        "pour"
+      ]
+    },
+    {
+      "id": "blank-l-apr-s-midi-je-n-ai-pas-le-temps",
+      "type": "fill-blank",
+      "l1": "Poobede nemám čas.",
+      "l2": "L'après-midi, je n'ai pas le temps.",
+      "missing_l1": "nemám",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "môže",
+        "ideš",
+        "meniť"
+      ],
+      "choices_l2": [
+        "tu fais",
+        "il",
+        "ma"
+      ]
+    },
+    {
+      "id": "blank-le-soir-je-suis-la-maison",
+      "type": "fill-blank",
+      "l1": "Večer som doma.",
+      "l2": "Le soir, je suis à la maison.",
+      "missing_l1": "som",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "sme",
+        "Je chladno.",
+        "tu"
+      ],
+      "choices_l2": [
+        "C'est bon.",
+        "je voudrais",
+        "nous voulons"
+      ]
+    },
+    {
+      "id": "blank-la-nuit-c-est-calme",
+      "type": "fill-blank",
+      "l1": "V noci je ticho.",
+      "l2": "La nuit, c'est calme.",
+      "missing_l1": "je",
+      "missing_l2": "c'est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "hľadám",
+        "k",
+        "tiež"
+      ],
+      "choices_l2": [
+        "nous voulons",
+        "Quelle",
+        "tu essaies"
+      ]
+    },
+    {
+      "id": "blank-aujourd-hui-j-ai-le-temps-demain-non",
+      "type": "fill-blank",
+      "l1": "Dnes mám čas, zajtra nie.",
+      "l2": "Aujourd'hui j'ai le temps, demain non.",
+      "missing_l1": "mám",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "upratovať",
+        "spať",
+        "zostať"
+      ],
+      "choices_l2": [
+        "à l'intérieur",
+        "nous allons",
+        "je cherche"
+      ]
+    },
+    {
+      "id": "blank-maintenant-il-est-cinq-heures",
+      "type": "fill-blank",
+      "l1": "Teraz je päť hodín.",
+      "l2": "Maintenant il est cinq heures.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Je teplo.",
+        "každý",
+        "na námestí"
+      ],
+      "choices_l2": [
+        "quand",
+        "mon",
+        "as-tu"
+      ]
+    },
+    {
+      "id": "blank-le-matin-je-suis-toujours-la-maison",
+      "type": "fill-blank",
+      "l1": "Ráno som vždy doma.",
+      "l2": "Le matin, je suis toujours à la maison.",
+      "missing_l1": "som",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "Ďakujem",
+        "oblečie si",
+        "kupuješ"
+      ],
+      "choices_l2": [
+        "au",
+        "mais",
+        "tu peux"
+      ]
+    },
+    {
+      "id": "blank-le-soir-je-n-ai-jamais-le-temps",
+      "type": "fill-blank",
+      "l1": "Večer nikdy nemám čas.",
+      "l2": "Le soir, je n'ai jamais le temps.",
+      "missing_l1": "nemám",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "ísť",
+        "musí",
+        "stretnúť"
+      ],
+      "choices_l2": [
+        "dans",
+        "nous habitons",
+        "tu es"
+      ]
+    },
+    {
+      "id": "blank-hier-comme-aujourd-hui-je-n-ai-pas-le-temps",
+      "type": "fill-blank",
+      "l1": "Včera, tak ako dnes, nemám čas.",
+      "l2": "Hier, comme aujourd'hui, je n'ai pas le temps.",
+      "missing_l1": "dnes",
+      "missing_l2": "le",
+      "blank_index_l1": 3,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "Biela sobota",
+        "v stredu",
+        "Je zima."
+      ],
+      "choices_l2": [
+        "tu vois",
+        "je serai",
+        "je mange"
+      ]
+    },
+    {
+      "id": "listen-quelle-heure-est-il",
+      "type": "listen",
+      "l1": "Koľko je hodín?",
+      "l2": "Quelle heure est-il ?",
+      "choices_l2": [
+        "Je veux manger.",
+        "Je ferme la porte.",
+        "Il y a une table et quatre chaises dans la cuisine."
+      ],
+      "choices_l1": [
+        "Trh je v sobotu, knižnica je otvorená každý deň.",
+        "Na Zelený štvrtok som upratoval celý dom.",
+        "Je ešte skoro."
+      ]
+    },
+    {
+      "id": "listen-il-est-une-heure",
+      "type": "listen",
+      "l1": "Je jedna hodina.",
+      "l2": "Il est une heure.",
+      "choices_l2": [
+        "Je suis assis sur le canapé et je lis un livre.",
+        "Nous avons quatre pièces.",
+        "Ma sœur travaille à l'hôpital."
+      ],
+      "choices_l1": [
+        "Moja sestra má dva roky.",
+        "Mám dve deti. Sú malé.",
+        "Ahoj Chloé. Koľko rokov má tvoja sestra?"
+      ]
+    },
+    {
+      "id": "listen-il-est-trois-heures",
+      "type": "listen",
+      "l1": "Sú tri hodiny.",
+      "l2": "Il est trois heures.",
+      "choices_l2": [
+        "C'est ma famille.",
+        "La porte est là-bas.",
+        "Et moi, je range le salon !"
+      ],
+      "choices_l1": [
+        "Koľko máš rokov?",
+        "Moja dcéra má päť rokov.",
+        "Mám brata. Má tri roky."
+      ]
+    },
+    {
+      "id": "listen-il-est-sept-heures",
+      "type": "listen",
+      "l1": "Je sedem hodín.",
+      "l2": "Il est sept heures.",
+      "choices_l2": [
+        "J'ouvre la fenêtre.",
+        "Le canapé est dans le salon.",
+        "C'est ma grand-mère. Elle habite ici, à la campagne."
+      ],
+      "choices_l1": [
+        "Máme štyri izby.",
+        "Je štvrť na tri.",
+        "Mám dve deti. Sú malé."
+      ]
+    },
+    {
+      "id": "listen-le-matin-j-ai-le-temps",
+      "type": "listen",
+      "l1": "Ráno mám čas.",
+      "l2": "Le matin, j'ai le temps.",
+      "choices_l2": [
+        "J'ai faim, mais la viande n'est pas bonne.",
+        "Mon frère est étudiant. Il ne travaille pas.",
+        "Le salon est grand."
+      ],
+      "choices_l1": [
+        "Hmla je dnes ráno hustá, nič nevidno.",
+        "Aké je dnes počasie?",
+        "Počasie sa mení každý deň."
+      ]
+    },
+    {
+      "id": "listen-l-apr-s-midi-je-n-ai-pas-le-temps",
+      "type": "listen",
+      "l1": "Poobede nemám čas.",
+      "l2": "L'après-midi, je n'ai pas le temps.",
+      "choices_l2": [
+        "Je range la pièce.",
+        "Je bois du chocolat chaud, pas de café.",
+        "C'est très savoureux."
+      ],
+      "choices_l1": [
+        "Včera, tak ako dnes, nemám čas.",
+        "Toto leto bolo teplejšie ako minulé.",
+        "Dúfam, že bude pekne na náš posledný deň pri mori."
+      ]
+    },
+    {
+      "id": "listen-le-soir-je-suis-la-maison",
+      "type": "listen",
+      "l1": "Večer som doma.",
+      "l2": "Le soir, je suis à la maison.",
+      "choices_l2": [
+        "Nous habitons ensemble.",
+        "Je suis assis sur le canapé et je lis un livre.",
+        "Eric, c'est ma famille."
+      ],
+      "choices_l1": [
+        "Toto ročné obdobie je daždivejšie ako minulé leto.",
+        "Mám rád jeseň, lebo farby sú pekné.",
+        "Poobede nemám čas, ale večer áno."
+      ]
+    },
+    {
+      "id": "listen-la-nuit-c-est-calme",
+      "type": "listen",
+      "l1": "V noci je ticho.",
+      "l2": "La nuit, c'est calme.",
+      "choices_l2": [
+        "Mon frère habite tout près.",
+        "C'est notre maison.",
+        "Maman cuisine et moi je lave les verres."
+      ],
+      "choices_l1": [
+        "Upratujem obývačku a kuchyňu.",
+        "Áno, kde je kabínka?",
+        "Ovocie je sladké."
+      ]
+    },
+    {
+      "id": "listen-aujourd-hui-j-ai-le-temps-demain-non",
+      "type": "listen",
+      "l1": "Dnes mám čas, zajtra nie.",
+      "l2": "Aujourd'hui j'ai le temps, demain non.",
+      "choices_l2": [
+        "La télévision est sur l'étagère.",
+        "Mes parents habitent dans une maison.",
+        "Qui est-ce ?"
+      ],
+      "choices_l1": [
+        "Zajtra bude slnečno.",
+        "Aký je dnes dátum?",
+        "Tak príď skoro!"
+      ]
+    },
+    {
+      "id": "listen-maintenant-il-est-cinq-heures",
+      "type": "listen",
+      "l1": "Teraz je päť hodín.",
+      "l2": "Maintenant il est cinq heures.",
+      "choices_l2": [
+        "Je range la pièce.",
+        "Ma sœur travaille à l'hôpital.",
+        "Que fais-tu ?"
+      ],
+      "choices_l1": [
+        "Máme rezerváciu na dve postele.",
+        "Moja teta je lekárka. Má štyridsať rokov.",
+        "Chcel by som ísť na pláž aj budúci rok."
+      ]
+    },
+    {
+      "id": "listen-le-matin-je-suis-toujours-la-maison",
+      "type": "listen",
+      "l1": "Ráno som vždy doma.",
+      "l2": "Le matin, je suis toujours à la maison.",
+      "choices_l2": [
+        "C'est ma famille.",
+        "Non, merci. Je n'ai plus faim.",
+        "Mamie dit toujours « encore un peu » !"
+      ],
+      "choices_l1": [
+        "Zajtra bude slnečno.",
+        "Bolo by lepšie ísť skoro ráno.",
+        "Ráno mám čas."
+      ]
+    },
+    {
+      "id": "listen-le-soir-je-n-ai-jamais-le-temps",
+      "type": "listen",
+      "l1": "Večer nikdy nemám čas.",
+      "l2": "Le soir, je n'ai jamais le temps.",
+      "choices_l2": [
+        "J'habite à Lyon.",
+        "Ma sœur est médecin et elle habite en ville.",
+        "Vous voulez de l'eau minérale ?"
+      ],
+      "choices_l1": [
+        "Zajtra budeme na pláži, ak bude pekne.",
+        "V pondelok poobede.",
+        "Mohli by sme zostať v hoteli ešte jednu noc?"
+      ]
+    },
+    {
+      "id": "listen-hier-comme-aujourd-hui-je-n-ai-pas-le-temps",
+      "type": "listen",
+      "l1": "Včera, tak ako dnes, nemám čas.",
+      "l2": "Hier, comme aujourd'hui, je n'ai pas le temps.",
+      "choices_l2": [
+        "Ma maman est professeure.",
+        "Le lit est dans la chambre.",
+        "Ma sœur est à la maison."
+      ],
+      "choices_l1": [
+        "Táto vlna je dnes najvyššia!",
+        "Trh je v sobotu, knižnica je otvorená každý deň.",
+        "Na veľkonočný pondelok sme navštívili celú rodinu."
+      ]
+    },
+    {
+      "id": "order-quelle-heure-est-il",
+      "type": "order",
+      "l1": "Koľko je hodín?",
+      "l2": "Quelle heure est-il ?",
+      "tokens_l1": [
+        "Koľko",
+        "je",
+        "hodín?",
+        "Večer",
+        "som",
+        "doma."
+      ],
+      "tokens_l2": [
+        "Quelle",
+        "heure",
+        "est-il",
+        "?",
+        "Le",
+        "soir,",
+        "je",
+        "suis",
+        "à",
+        "la",
+        "maison."
+      ]
+    },
+    {
+      "id": "order-il-est-une-heure",
+      "type": "order",
+      "l1": "Je jedna hodina.",
+      "l2": "Il est une heure.",
+      "tokens_l1": [
+        "Je",
+        "jedna",
+        "hodina.",
+        "Je",
+        "sedem",
+        "hodín."
+      ],
+      "tokens_l2": [
+        "Il",
+        "est",
+        "une",
+        "heure.",
+        "Il",
+        "est",
+        "sept",
+        "heures."
+      ]
+    },
+    {
+      "id": "order-il-est-trois-heures",
+      "type": "order",
+      "l1": "Sú tri hodiny.",
+      "l2": "Il est trois heures.",
+      "tokens_l1": [
+        "Sú",
+        "tri",
+        "hodiny.",
+        "Večer",
+        "som",
+        "doma."
+      ],
+      "tokens_l2": [
+        "Il",
+        "est",
+        "trois",
+        "heures.",
+        "Le",
+        "soir,",
+        "je",
+        "suis",
+        "à",
+        "la",
+        "maison."
+      ]
+    },
+    {
+      "id": "order-il-est-sept-heures",
+      "type": "order",
+      "l1": "Je sedem hodín.",
+      "l2": "Il est sept heures.",
+      "tokens_l1": [
+        "Je",
+        "sedem",
+        "hodín.",
+        "Sú",
+        "tri",
+        "hodiny."
+      ],
+      "tokens_l2": [
+        "Il",
+        "est",
+        "sept",
+        "heures.",
+        "Il",
+        "est",
+        "trois",
+        "heures."
+      ]
+    },
+    {
+      "id": "order-le-matin-j-ai-le-temps",
+      "type": "order",
+      "l1": "Ráno mám čas.",
+      "l2": "Le matin, j'ai le temps.",
+      "tokens_l1": [
+        "Ráno",
+        "mám",
+        "čas.",
+        "Večer",
+        "nikdy",
+        "nemám",
+        "čas."
+      ],
+      "tokens_l2": [
+        "Le",
+        "matin,",
+        "j'ai",
+        "le",
+        "temps.",
+        "Le",
+        "soir,",
+        "je",
+        "n'ai",
+        "jamais",
+        "le",
+        "temps."
+      ]
+    },
+    {
+      "id": "order-l-apr-s-midi-je-n-ai-pas-le-temps",
+      "type": "order",
+      "l1": "Poobede nemám čas.",
+      "l2": "L'après-midi, je n'ai pas le temps.",
+      "tokens_l1": [
+        "Poobede",
+        "nemám",
+        "čas.",
+        "Dnes",
+        "mám",
+        "čas,",
+        "zajtra",
+        "nie."
+      ],
+      "tokens_l2": [
+        "L'après-midi,",
+        "je",
+        "n'ai",
+        "pas",
+        "le",
+        "temps.",
+        "Aujourd'hui",
+        "j'ai",
+        "le",
+        "temps,",
+        "demain",
+        "non."
+      ]
+    },
+    {
+      "id": "order-le-soir-je-suis-la-maison",
+      "type": "order",
+      "l1": "Večer som doma.",
+      "l2": "Le soir, je suis à la maison.",
+      "tokens_l1": [
+        "Večer",
+        "som",
+        "doma.",
+        "V",
+        "noci",
+        "je",
+        "ticho."
+      ],
+      "tokens_l2": [
+        "Le",
+        "soir,",
+        "je",
+        "suis",
+        "à",
+        "la",
+        "maison.",
+        "La",
+        "nuit,",
+        "c'est",
+        "calme."
+      ]
+    },
+    {
+      "id": "order-la-nuit-c-est-calme",
+      "type": "order",
+      "l1": "V noci je ticho.",
+      "l2": "La nuit, c'est calme.",
+      "tokens_l1": [
+        "V",
+        "noci",
+        "je",
+        "ticho.",
+        "Večer",
+        "nikdy",
+        "nemám",
+        "čas."
+      ],
+      "tokens_l2": [
+        "La",
+        "nuit,",
+        "c'est",
+        "calme.",
+        "Le",
+        "soir,",
+        "je",
+        "n'ai",
+        "jamais",
+        "le",
+        "temps."
+      ]
+    },
+    {
+      "id": "order-aujourd-hui-j-ai-le-temps-demain-non",
+      "type": "order",
+      "l1": "Dnes mám čas, zajtra nie.",
+      "l2": "Aujourd'hui j'ai le temps, demain non.",
+      "tokens_l1": [
+        "Dnes",
+        "mám",
+        "čas,",
+        "zajtra",
+        "nie.",
+        "Večer",
+        "nikdy",
+        "nemám",
+        "čas."
+      ],
+      "tokens_l2": [
+        "Aujourd'hui",
+        "j'ai",
+        "le",
+        "temps,",
+        "demain",
+        "non.",
+        "Le",
+        "soir,",
+        "je",
+        "n'ai",
+        "jamais",
+        "le",
+        "temps."
+      ]
+    },
+    {
+      "id": "order-maintenant-il-est-cinq-heures",
+      "type": "order",
+      "l1": "Teraz je päť hodín.",
+      "l2": "Maintenant il est cinq heures.",
+      "tokens_l1": [
+        "Teraz",
+        "je",
+        "päť",
+        "hodín.",
+        "Koľko",
+        "je",
+        "hodín?"
+      ],
+      "tokens_l2": [
+        "Maintenant",
+        "il",
+        "est",
+        "cinq",
+        "heures.",
+        "Quelle",
+        "heure",
+        "est-il",
+        "?"
+      ]
+    },
+    {
+      "id": "order-le-matin-je-suis-toujours-la-maison",
+      "type": "order",
+      "l1": "Ráno som vždy doma.",
+      "l2": "Le matin, je suis toujours à la maison.",
+      "tokens_l1": [
+        "Ráno",
+        "som",
+        "vždy",
+        "doma.",
+        "Večer",
+        "som",
+        "doma."
+      ],
+      "tokens_l2": [
+        "Le",
+        "matin,",
+        "je",
+        "suis",
+        "toujours",
+        "à",
+        "la",
+        "maison.",
+        "Le",
+        "soir,",
+        "je",
+        "suis",
+        "à",
+        "la",
+        "maison."
+      ]
+    },
+    {
+      "id": "order-le-soir-je-n-ai-jamais-le-temps",
+      "type": "order",
+      "l1": "Večer nikdy nemám čas.",
+      "l2": "Le soir, je n'ai jamais le temps.",
+      "tokens_l1": [
+        "Večer",
+        "nikdy",
+        "nemám",
+        "čas.",
+        "Teraz",
+        "je",
+        "päť",
+        "hodín."
+      ],
+      "tokens_l2": [
+        "Le",
+        "soir,",
+        "je",
+        "n'ai",
+        "jamais",
+        "le",
+        "temps.",
+        "Maintenant",
+        "il",
+        "est",
+        "cinq",
+        "heures."
+      ]
+    },
+    {
+      "id": "order-hier-comme-aujourd-hui-je-n-ai-pas-le-temps",
+      "type": "order",
+      "l1": "Včera, tak ako dnes, nemám čas.",
+      "l2": "Hier, comme aujourd'hui, je n'ai pas le temps.",
+      "tokens_l1": [
+        "Včera,",
+        "tak",
+        "ako",
+        "dnes,",
+        "nemám",
+        "čas.",
+        "Je",
+        "jedna",
+        "hodina."
+      ],
+      "tokens_l2": [
+        "Hier,",
+        "comme",
+        "aujourd'hui,",
+        "je",
+        "n'ai",
+        "pas",
+        "le",
+        "temps.",
+        "Il",
+        "est",
+        "une",
+        "heure."
+      ]
+    }
+  ]
+}

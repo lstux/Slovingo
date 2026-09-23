@@ -1,0 +1,1199 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-l-enfant",
+      "type": "qcm",
+      "l1": "dieťa",
+      "l2": "l'enfant",
+      "choices_l1": [
+        "sestra",
+        "manželka",
+        "syn"
+      ],
+      "choices_l2": [
+        "le grand-père",
+        "mon père",
+        "les parents"
+      ]
+    },
+    {
+      "id": "qcm-les-enfants",
+      "type": "qcm",
+      "l1": "deti",
+      "l2": "les enfants",
+      "choices_l1": [
+        "dedko",
+        "ty si",
+        "otec"
+      ],
+      "choices_l2": [
+        "la maman",
+        "la famille",
+        "mon frère"
+      ]
+    },
+    {
+      "id": "qcm-l-an-l-ann-e",
+      "type": "qcm",
+      "l1": "rok",
+      "l2": "l'an / l'année",
+      "choices_l1": [
+        "ty si",
+        "sestra",
+        "brat"
+      ],
+      "choices_l2": [
+        "la femme / l'épouse",
+        "il / elle a",
+        "il / elle est"
+      ]
+    },
+    {
+      "id": "qcm-petit-petite",
+      "type": "qcm",
+      "l1": "malý",
+      "l2": "petit / petite",
+      "choices_l1": [
+        "môj brat",
+        "mama",
+        "babka"
+      ],
+      "choices_l2": [
+        "la femme / l'épouse",
+        "il / elle est",
+        "il / elle a"
+      ]
+    },
+    {
+      "id": "qcm-grand-grande",
+      "type": "qcm",
+      "l1": "veľký",
+      "l2": "grand / grande",
+      "choices_l1": [
+        "môj brat",
+        "ty si",
+        "môj otec"
+      ],
+      "choices_l2": [
+        "la femme / l'épouse",
+        "il / elle a",
+        "il / elle est"
+      ]
+    },
+    {
+      "id": "qcm-vieux-vieille",
+      "type": "qcm",
+      "l1": "starý",
+      "l2": "vieux / vieille",
+      "choices_l1": [
+        "brat",
+        "volať sa",
+        "ty si"
+      ],
+      "choices_l2": [
+        "il / elle est",
+        "la femme / l'épouse",
+        "il / elle a"
+      ]
+    },
+    {
+      "id": "qcm-jeune",
+      "type": "qcm",
+      "l1": "mladý",
+      "l2": "jeune",
+      "choices_l1": [
+        "ty máš",
+        "dedko",
+        "mama"
+      ],
+      "choices_l2": [
+        "les parents",
+        "ma sœur",
+        "le père"
+      ]
+    },
+    {
+      "id": "qcm-un-an",
+      "type": "qcm",
+      "l1": "jeden rok",
+      "l2": "un an",
+      "choices_l1": [
+        "dcéra",
+        "rodičia",
+        "manželka"
+      ],
+      "choices_l2": [
+        "je suis",
+        "le grand-père",
+        "la maman"
+      ]
+    },
+    {
+      "id": "qcm-deux-ans",
+      "type": "qcm",
+      "l1": "dva roky",
+      "l2": "deux ans",
+      "choices_l1": [
+        "volať sa",
+        "dcéra",
+        "rodina"
+      ],
+      "choices_l2": [
+        "les parents",
+        "tu es",
+        "la maman"
+      ]
+    },
+    {
+      "id": "qcm-cinq-ans",
+      "type": "qcm",
+      "l1": "päť rokov",
+      "l2": "cinq ans",
+      "choices_l1": [
+        "rodičia",
+        "moja sestra",
+        "ty si"
+      ],
+      "choices_l2": [
+        "les parents",
+        "le père",
+        "la grand-mère"
+      ]
+    },
+    {
+      "id": "qcm-dix-ans",
+      "type": "qcm",
+      "l1": "desať rokov",
+      "l2": "dix ans",
+      "choices_l1": [
+        "otec",
+        "volať sa",
+        "syn"
+      ],
+      "choices_l2": [
+        "le grand-père",
+        "la grand-mère",
+        "tu es"
+      ]
+    },
+    {
+      "id": "qcm-un-petit-fr-re",
+      "type": "qcm",
+      "l1": "malý brat",
+      "l2": "un petit frère",
+      "choices_l1": [
+        "moja sestra",
+        "ja som",
+        "kto"
+      ],
+      "choices_l2": [
+        "il / elle est",
+        "il / elle a",
+        "la femme / l'épouse"
+      ]
+    },
+    {
+      "id": "qcm-une-petite-s-ur",
+      "type": "qcm",
+      "l1": "malá sestra",
+      "l2": "une petite sœur",
+      "choices_l1": [
+        "moja sestra",
+        "ty máš",
+        "dedko"
+      ],
+      "choices_l2": [
+        "la femme / l'épouse",
+        "il / elle a",
+        "il / elle est"
+      ]
+    },
+    {
+      "id": "qcm-il-est-vieux-elle-est-vieille",
+      "type": "qcm",
+      "l1": "je starý / je stará",
+      "l2": "il est vieux / elle est vieille",
+      "choices_l1": [
+        "dôchodca / dôchodkyňa",
+        "študent / študentka",
+        "Je to vedľa banky."
+      ],
+      "choices_l2": [
+        "il / elle a",
+        "il / elle est",
+        "la femme / l'épouse"
+      ]
+    },
+    {
+      "id": "qcm-il-est-jeune-elle-est-jeune",
+      "type": "qcm",
+      "l1": "je mladý / je mladá",
+      "l2": "il est jeune / elle est jeune",
+      "choices_l1": [
+        "Chceli by sme izbu s výhľadom na more.",
+        "Aké je to?",
+        "bude to ľahké"
+      ],
+      "choices_l2": [
+        "il / elle a",
+        "il / elle est",
+        "la femme / l'épouse"
+      ]
+    },
+    {
+      "id": "qcm-le-pr-nom",
+      "type": "qcm",
+      "l1": "meno",
+      "l2": "le prénom",
+      "choices_l1": [
+        "manžel",
+        "kto",
+        "môj brat"
+      ],
+      "choices_l2": [
+        "le grand-père",
+        "le père",
+        "le frère"
+      ]
+    },
+    {
+      "id": "qcm-la-tante",
+      "type": "qcm",
+      "l1": "teta",
+      "l2": "la tante",
+      "choices_l1": [
+        "ja mám",
+        "môj otec",
+        "kto"
+      ],
+      "choices_l2": [
+        "mon frère",
+        "je suis",
+        "la sœur"
+      ]
+    },
+    {
+      "id": "qcm-l-oncle",
+      "type": "qcm",
+      "l1": "strýko",
+      "l2": "l'oncle",
+      "choices_l1": [
+        "kto",
+        "manžel",
+        "môj brat"
+      ],
+      "choices_l2": [
+        "les parents",
+        "la famille",
+        "la sœur"
+      ]
+    },
+    {
+      "id": "qcm-le-cousin",
+      "type": "qcm",
+      "l1": "bratranec",
+      "l2": "le cousin",
+      "choices_l1": [
+        "sestra",
+        "syn",
+        "ja som"
+      ],
+      "choices_l2": [
+        "qui",
+        "le grand-père",
+        "s'appeler"
+      ]
+    },
+    {
+      "id": "qcm-la-cousine",
+      "type": "qcm",
+      "l1": "sesternica",
+      "l2": "la cousine",
+      "choices_l1": [
+        "rodina",
+        "ja mám",
+        "mama"
+      ],
+      "choices_l2": [
+        "mon frère",
+        "le grand-père",
+        "ma sœur"
+      ]
+    },
+    {
+      "id": "qcm-l-ami-l-amie",
+      "type": "qcm",
+      "l1": "kamarát / kamarátka",
+      "l2": "l'ami / l'amie",
+      "choices_l1": [
+        "Aké je to?",
+        "chlieb je dobrý",
+        "tarta, ovocný koláč"
+      ],
+      "choices_l2": [
+        "il / elle a",
+        "il / elle est",
+        "la femme / l'épouse"
+      ]
+    },
+    {
+      "id": "qcm-l-anniversaire",
+      "type": "qcm",
+      "l1": "narodeniny",
+      "l2": "l'anniversaire",
+      "choices_l1": [
+        "manželka",
+        "rodina",
+        "ja mám"
+      ],
+      "choices_l2": [
+        "le mari",
+        "tu as",
+        "je suis"
+      ]
+    },
+    {
+      "id": "blank-quel-ge-as-tu",
+      "type": "fill-blank",
+      "l1": "Koľko máš rokov?",
+      "l2": "Quel âge as-tu ?",
+      "missing_l1": "rokov",
+      "missing_l2": "as-tu",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "doma",
+        "je",
+        "babka"
+      ],
+      "choices_l2": [
+        "et",
+        "mari",
+        "à"
+      ]
+    },
+    {
+      "id": "blank-j-ai-trente-ans",
+      "type": "fill-blank",
+      "l1": "Mám tridsať rokov.",
+      "l2": "J'ai trente ans.",
+      "missing_l1": "rokov",
+      "missing_l2": "ans",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "manžel",
+        "rodičia",
+        "volá"
+      ],
+      "choices_l2": [
+        "mari",
+        "je",
+        "comment"
+      ]
+    },
+    {
+      "id": "blank-ma-s-ur-a-deux-ans",
+      "type": "fill-blank",
+      "l1": "Moja sestra má dva roky.",
+      "l2": "Ma sœur a deux ans.",
+      "missing_l1": "má",
+      "missing_l2": "a",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sa",
+        "moji",
+        "a"
+      ],
+      "choices_l2": [
+        "frère",
+        "c'est",
+        "sœur"
+      ]
+    },
+    {
+      "id": "blank-mon-fr-re-a-un-an",
+      "type": "fill-blank",
+      "l1": "Môj brat má jeden rok.",
+      "l2": "Mon frère a un an.",
+      "missing_l1": "má",
+      "missing_l2": "un",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "manžel",
+        "ako",
+        "moji"
+      ],
+      "choices_l2": [
+        "sœur",
+        "fils",
+        "comment"
+      ]
+    },
+    {
+      "id": "blank-j-ai-un-petit-enfant",
+      "type": "fill-blank",
+      "l1": "Mám malé dieťa.",
+      "l2": "J'ai un petit enfant.",
+      "missing_l1": "malé",
+      "missing_l2": "un",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "babka",
+        "rodina",
+        "sa"
+      ],
+      "choices_l2": [
+        "maison",
+        "je",
+        "grand-mère"
+      ]
+    },
+    {
+      "id": "blank-mes-enfants-sont-petits",
+      "type": "fill-blank",
+      "l1": "Moje deti sú malé.",
+      "l2": "Mes enfants sont petits.",
+      "missing_l1": "sú",
+      "missing_l2": "sont",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "voláš",
+        "moji",
+        "ako"
+      ],
+      "choices_l2": [
+        "sœur",
+        "est-ce",
+        "comment"
+      ]
+    },
+    {
+      "id": "blank-mon-p-re-est-grand-et-costaud",
+      "type": "fill-blank",
+      "l1": "Môj otec je vysoký a statný.",
+      "l2": "Mon père est grand et costaud.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "otec",
+        "sa",
+        "sú"
+      ],
+      "choices_l2": [
+        "sœur",
+        "et",
+        "grand-père"
+      ]
+    },
+    {
+      "id": "blank-ma-maman-a-cinquante-ans",
+      "type": "fill-blank",
+      "l1": "Moja mama má päťdesiat rokov.",
+      "l2": "Ma maman a cinquante ans.",
+      "missing_l1": "má",
+      "missing_l2": "a",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "kto",
+        "mama",
+        "voláš"
+      ],
+      "choices_l2": [
+        "as-tu",
+        "je",
+        "t'appelles"
+      ]
+    },
+    {
+      "id": "blank-ma-grand-m-re-est-vieille-et-ma-s-ur-est-jeune",
+      "type": "fill-blank",
+      "l1": "Moja babka je stará a moja sestra je mladá.",
+      "l2": "Ma grand-mère est vieille et ma sœur est jeune.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sestra",
+        "manžel",
+        "voláš"
+      ],
+      "choices_l2": [
+        "louise",
+        "à",
+        "et"
+      ]
+    },
+    {
+      "id": "blank-j-ai-un-fr-re-il-a-trois-ans",
+      "type": "fill-blank",
+      "l1": "Mám brata. Má tri roky.",
+      "l2": "J'ai un frère. Il a trois ans.",
+      "missing_l1": "Má",
+      "missing_l2": "Il",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "voláš",
+        "moja",
+        "a"
+      ],
+      "choices_l2": [
+        "sont",
+        "maison",
+        "la"
+      ]
+    },
+    {
+      "id": "blank-ma-tante-s-appelle-ve",
+      "type": "fill-blank",
+      "l1": "Moja teta sa volá Eva.",
+      "l2": "Ma tante s'appelle Ève.",
+      "missing_l1": "sa",
+      "missing_l2": "tante",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "mám",
+        "babka",
+        "manžel"
+      ],
+      "choices_l2": [
+        "grand-père",
+        "est-ce",
+        "louise"
+      ]
+    },
+    {
+      "id": "blank-mon-oncle-a-deux-enfants",
+      "type": "fill-blank",
+      "l1": "Môj strýko má dve deti.",
+      "l2": "Mon oncle a deux enfants.",
+      "missing_l1": "deti",
+      "missing_l2": "a",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ako",
+        "mama",
+        "sú"
+      ],
+      "choices_l2": [
+        "sont",
+        "fille",
+        "qui"
+      ]
+    },
+    {
+      "id": "blank-c-est-mon-ami",
+      "type": "fill-blank",
+      "l1": "To je môj kamarát.",
+      "l2": "C'est mon ami.",
+      "missing_l1": "je",
+      "missing_l2": "mon",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "mama",
+        "dedko",
+        "kto"
+      ],
+      "choices_l2": [
+        "est-ce",
+        "ma",
+        "tu"
+      ]
+    },
+    {
+      "id": "blank-quel-est-ton-pr-nom",
+      "type": "fill-blank",
+      "l1": "Aké je tvoje meno?",
+      "l2": "Quel est ton prénom ?",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "rodina",
+        "to",
+        "moja"
+      ],
+      "choices_l2": [
+        "n'ai",
+        "ma",
+        "mon"
+      ]
+    },
+    {
+      "id": "listen-quel-ge-as-tu",
+      "type": "listen",
+      "l1": "Koľko máš rokov?",
+      "l2": "Quel âge as-tu ?",
+      "choices_l2": [
+        "Voici mon père et voici ma maman.",
+        "Je n'ai pas de frère. J'ai une sœur.",
+        "As-tu un frère ?"
+      ]
+    },
+    {
+      "id": "listen-j-ai-trente-ans",
+      "type": "listen",
+      "l1": "Mám tridsať rokov.",
+      "l2": "J'ai trente ans.",
+      "choices_l2": [
+        "C'est ma famille.",
+        "Qui est-ce ?",
+        "Mon grand-père et ma grand-mère."
+      ]
+    },
+    {
+      "id": "listen-ma-s-ur-a-deux-ans",
+      "type": "listen",
+      "l1": "Moja sestra má dva roky.",
+      "l2": "Ma sœur a deux ans.",
+      "choices_l2": [
+        "Mon grand-père et ma grand-mère.",
+        "Je n'ai pas de frère. J'ai une sœur.",
+        "Qui est-ce ?"
+      ]
+    },
+    {
+      "id": "listen-mon-fr-re-a-un-an",
+      "type": "listen",
+      "l1": "Môj brat má jeden rok.",
+      "l2": "Mon frère a un an.",
+      "choices_l2": [
+        "Ma grand-mère s'appelle Louise.",
+        "C'est ma famille.",
+        "Ce sont mes parents."
+      ]
+    },
+    {
+      "id": "listen-j-ai-un-petit-enfant",
+      "type": "listen",
+      "l1": "Mám malé dieťa.",
+      "l2": "J'ai un petit enfant.",
+      "choices_l2": [
+        "Ma grand-mère s'appelle Louise.",
+        "Mon grand-père et ma grand-mère.",
+        "Ce sont mes parents."
+      ]
+    },
+    {
+      "id": "listen-mes-enfants-sont-petits",
+      "type": "listen",
+      "l1": "Moje deti sú malé.",
+      "l2": "Mes enfants sont petits.",
+      "choices_l2": [
+        "Mon grand-père et ma grand-mère.",
+        "Mon mari s'appelle Marc.",
+        "Je n'ai pas de frère. J'ai une sœur."
+      ]
+    },
+    {
+      "id": "listen-mon-p-re-est-grand-et-costaud",
+      "type": "listen",
+      "l1": "Môj otec je vysoký a statný.",
+      "l2": "Mon père est grand et costaud.",
+      "choices_l2": [
+        "Mon mari s'appelle Marc.",
+        "Ce sont mes parents.",
+        "As-tu un frère ?"
+      ]
+    },
+    {
+      "id": "listen-ma-maman-a-cinquante-ans",
+      "type": "listen",
+      "l1": "Moja mama má päťdesiat rokov.",
+      "l2": "Ma maman a cinquante ans.",
+      "choices_l2": [
+        "Voici mon père et voici ma maman.",
+        "Ma sœur est à la maison.",
+        "As-tu un frère ?"
+      ]
+    },
+    {
+      "id": "listen-ma-grand-m-re-est-vieille-et-ma-s-ur-est-jeune",
+      "type": "listen",
+      "l1": "Moja babka je stará a moja sestra je mladá.",
+      "l2": "Ma grand-mère est vieille et ma sœur est jeune.",
+      "choices_l2": [
+        "Je n'ai pas de frère. J'ai une sœur.",
+        "Mon grand-père et ma grand-mère.",
+        "As-tu un frère ?"
+      ]
+    },
+    {
+      "id": "listen-j-ai-un-fr-re-il-a-trois-ans",
+      "type": "listen",
+      "l1": "Mám brata. Má tri roky.",
+      "l2": "J'ai un frère. Il a trois ans.",
+      "choices_l2": [
+        "Je n'ai pas de frère. J'ai une sœur.",
+        "Voici mon père et voici ma maman.",
+        "Comment tu t'appelles ?"
+      ]
+    },
+    {
+      "id": "listen-ma-tante-s-appelle-ve",
+      "type": "listen",
+      "l1": "Moja teta sa volá Eva.",
+      "l2": "Ma tante s'appelle Ève.",
+      "choices_l2": [
+        "Comment tu t'appelles ?",
+        "Ma sœur est à la maison.",
+        "Mon mari s'appelle Marc."
+      ]
+    },
+    {
+      "id": "listen-mon-oncle-a-deux-enfants",
+      "type": "listen",
+      "l1": "Môj strýko má dve deti.",
+      "l2": "Mon oncle a deux enfants.",
+      "choices_l2": [
+        "Ce sont mes parents.",
+        "Ma grand-mère s'appelle Louise.",
+        "Mon mari s'appelle Marc."
+      ]
+    },
+    {
+      "id": "listen-c-est-mon-ami",
+      "type": "listen",
+      "l1": "To je môj kamarát.",
+      "l2": "C'est mon ami.",
+      "choices_l2": [
+        "J'ai un fils et une fille.",
+        "Ma grand-mère s'appelle Louise.",
+        "Ma sœur est à la maison."
+      ]
+    },
+    {
+      "id": "listen-quel-est-ton-pr-nom",
+      "type": "listen",
+      "l1": "Aké je tvoje meno?",
+      "l2": "Quel est ton prénom ?",
+      "choices_l2": [
+        "Ma sœur est à la maison.",
+        "Je n'ai pas de frère. J'ai une sœur.",
+        "Comment tu t'appelles ?"
+      ]
+    },
+    {
+      "id": "order-quel-ge-as-tu",
+      "type": "order",
+      "l1": "Koľko máš rokov?",
+      "l2": "Quel âge as-tu ?",
+      "tokens_l1": [
+        "Koľko",
+        "máš",
+        "rokov?",
+        "Môj",
+        "otec",
+        "je",
+        "vysoký",
+        "a",
+        "statný."
+      ],
+      "tokens_l2": [
+        "Quel",
+        "âge",
+        "as-tu",
+        "?",
+        "Mon",
+        "père",
+        "est",
+        "grand",
+        "et",
+        "costaud."
+      ]
+    },
+    {
+      "id": "order-j-ai-trente-ans",
+      "type": "order",
+      "l1": "Mám tridsať rokov.",
+      "l2": "J'ai trente ans.",
+      "tokens_l1": [
+        "Mám",
+        "tridsať",
+        "rokov.",
+        "Koľko",
+        "máš",
+        "rokov?"
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "trente",
+        "ans.",
+        "Quel",
+        "âge",
+        "as-tu",
+        "?"
+      ]
+    },
+    {
+      "id": "order-ma-s-ur-a-deux-ans",
+      "type": "order",
+      "l1": "Moja sestra má dva roky.",
+      "l2": "Ma sœur a deux ans.",
+      "tokens_l1": [
+        "Moja",
+        "sestra",
+        "má",
+        "dva",
+        "roky.",
+        "Moja",
+        "babka",
+        "je",
+        "stará",
+        "a",
+        "moja",
+        "sestra",
+        "je",
+        "mladá."
+      ],
+      "tokens_l2": [
+        "Ma",
+        "sœur",
+        "a",
+        "deux",
+        "ans.",
+        "Ma",
+        "grand-mère",
+        "est",
+        "vieille",
+        "et",
+        "ma",
+        "sœur",
+        "est",
+        "jeune."
+      ]
+    },
+    {
+      "id": "order-mon-fr-re-a-un-an",
+      "type": "order",
+      "l1": "Môj brat má jeden rok.",
+      "l2": "Mon frère a un an.",
+      "tokens_l1": [
+        "Môj",
+        "brat",
+        "má",
+        "jeden",
+        "rok.",
+        "Moja",
+        "teta",
+        "sa",
+        "volá",
+        "Eva."
+      ],
+      "tokens_l2": [
+        "Mon",
+        "frère",
+        "a",
+        "un",
+        "an.",
+        "Ma",
+        "tante",
+        "s'appelle",
+        "Ève."
+      ]
+    },
+    {
+      "id": "order-j-ai-un-petit-enfant",
+      "type": "order",
+      "l1": "Mám malé dieťa.",
+      "l2": "J'ai un petit enfant.",
+      "tokens_l1": [
+        "Mám",
+        "malé",
+        "dieťa.",
+        "Moja",
+        "sestra",
+        "má",
+        "dva",
+        "roky."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "un",
+        "petit",
+        "enfant.",
+        "Ma",
+        "sœur",
+        "a",
+        "deux",
+        "ans."
+      ]
+    },
+    {
+      "id": "order-mes-enfants-sont-petits",
+      "type": "order",
+      "l1": "Moje deti sú malé.",
+      "l2": "Mes enfants sont petits.",
+      "tokens_l1": [
+        "Moje",
+        "deti",
+        "sú",
+        "malé.",
+        "Koľko",
+        "máš",
+        "rokov?"
+      ],
+      "tokens_l2": [
+        "Mes",
+        "enfants",
+        "sont",
+        "petits.",
+        "Quel",
+        "âge",
+        "as-tu",
+        "?"
+      ]
+    },
+    {
+      "id": "order-mon-p-re-est-grand-et-costaud",
+      "type": "order",
+      "l1": "Môj otec je vysoký a statný.",
+      "l2": "Mon père est grand et costaud.",
+      "tokens_l1": [
+        "Môj",
+        "otec",
+        "je",
+        "vysoký",
+        "a",
+        "statný.",
+        "Moja",
+        "mama",
+        "má",
+        "päťdesiat",
+        "rokov."
+      ],
+      "tokens_l2": [
+        "Mon",
+        "père",
+        "est",
+        "grand",
+        "et",
+        "costaud.",
+        "Ma",
+        "maman",
+        "a",
+        "cinquante",
+        "ans."
+      ]
+    },
+    {
+      "id": "order-ma-maman-a-cinquante-ans",
+      "type": "order",
+      "l1": "Moja mama má päťdesiat rokov.",
+      "l2": "Ma maman a cinquante ans.",
+      "tokens_l1": [
+        "Moja",
+        "mama",
+        "má",
+        "päťdesiat",
+        "rokov.",
+        "To",
+        "je",
+        "môj",
+        "kamarát."
+      ],
+      "tokens_l2": [
+        "Ma",
+        "maman",
+        "a",
+        "cinquante",
+        "ans.",
+        "C'est",
+        "mon",
+        "ami."
+      ]
+    },
+    {
+      "id": "order-ma-grand-m-re-est-vieille-et-ma-s-ur-est-jeune",
+      "type": "order",
+      "l1": "Moja babka je stará a moja sestra je mladá.",
+      "l2": "Ma grand-mère est vieille et ma sœur est jeune.",
+      "tokens_l1": [
+        "Moja",
+        "babka",
+        "je",
+        "stará",
+        "a",
+        "moja",
+        "sestra",
+        "je",
+        "mladá.",
+        "Môj",
+        "strýko",
+        "má",
+        "dve",
+        "deti."
+      ],
+      "tokens_l2": [
+        "Ma",
+        "grand-mère",
+        "est",
+        "vieille",
+        "et",
+        "ma",
+        "sœur",
+        "est",
+        "jeune.",
+        "Mon",
+        "oncle",
+        "a",
+        "deux",
+        "enfants."
+      ]
+    },
+    {
+      "id": "order-j-ai-un-fr-re-il-a-trois-ans",
+      "type": "order",
+      "l1": "Mám brata. Má tri roky.",
+      "l2": "J'ai un frère. Il a trois ans.",
+      "tokens_l1": [
+        "Mám",
+        "brata.",
+        "Má",
+        "tri",
+        "roky.",
+        "Moja",
+        "sestra",
+        "má",
+        "dva",
+        "roky."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "un",
+        "frère.",
+        "Il",
+        "a",
+        "trois",
+        "ans.",
+        "Ma",
+        "sœur",
+        "a",
+        "deux",
+        "ans."
+      ]
+    },
+    {
+      "id": "order-ma-tante-s-appelle-ve",
+      "type": "order",
+      "l1": "Moja teta sa volá Eva.",
+      "l2": "Ma tante s'appelle Ève.",
+      "tokens_l1": [
+        "Moja",
+        "teta",
+        "sa",
+        "volá",
+        "Eva.",
+        "Moje",
+        "deti",
+        "sú",
+        "malé."
+      ],
+      "tokens_l2": [
+        "Ma",
+        "tante",
+        "s'appelle",
+        "Ève.",
+        "Mes",
+        "enfants",
+        "sont",
+        "petits."
+      ]
+    },
+    {
+      "id": "order-mon-oncle-a-deux-enfants",
+      "type": "order",
+      "l1": "Môj strýko má dve deti.",
+      "l2": "Mon oncle a deux enfants.",
+      "tokens_l1": [
+        "Môj",
+        "strýko",
+        "má",
+        "dve",
+        "deti.",
+        "Mám",
+        "malé",
+        "dieťa."
+      ],
+      "tokens_l2": [
+        "Mon",
+        "oncle",
+        "a",
+        "deux",
+        "enfants.",
+        "J'ai",
+        "un",
+        "petit",
+        "enfant."
+      ]
+    },
+    {
+      "id": "order-c-est-mon-ami",
+      "type": "order",
+      "l1": "To je môj kamarát.",
+      "l2": "C'est mon ami.",
+      "tokens_l1": [
+        "To",
+        "je",
+        "môj",
+        "kamarát.",
+        "Môj",
+        "otec",
+        "je",
+        "vysoký",
+        "a",
+        "statný."
+      ],
+      "tokens_l2": [
+        "C'est",
+        "mon",
+        "ami.",
+        "Mon",
+        "père",
+        "est",
+        "grand",
+        "et",
+        "costaud."
+      ]
+    },
+    {
+      "id": "order-quel-est-ton-pr-nom",
+      "type": "order",
+      "l1": "Aké je tvoje meno?",
+      "l2": "Quel est ton prénom ?",
+      "tokens_l1": [
+        "Aké",
+        "je",
+        "tvoje",
+        "meno?",
+        "To",
+        "je",
+        "môj",
+        "kamarát."
+      ],
+      "tokens_l2": [
+        "Quel",
+        "est",
+        "ton",
+        "prénom",
+        "?",
+        "C'est",
+        "mon",
+        "ami."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1108 @@
+{
+  "exercises": [
+    {
+      "id": "blank-v-t-noc-sme-boli-na-hranici-s-rak-skom-len-tak-zo-zvedavosti",
+      "type": "fill-blank",
+      "l1": "Cette nuit-là on était à la frontière avec l'Autriche, comme ça, par curiosité.",
+      "l2": "V tú noc sme boli na hranici s Rakúskom, len tak, zo zvedavosti.",
+      "missing_l1": "la",
+      "missing_l2": "na",
+      "blank_index_l1": 5,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "d'un",
+        "le",
+        "n'a"
+      ],
+      "choices_l2": [
+        "v",
+        "z",
+        "o"
+      ]
+    },
+    {
+      "id": "blank-a-o-sa-tam-vlastne-stalo-o-polnoci",
+      "type": "fill-blank",
+      "l1": "Et que s'est-il vraiment passé là-bas à minuit ?",
+      "l2": "A čo sa tam vlastne stalo o polnoci?",
+      "missing_l1": "à",
+      "missing_l2": "sa",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "chez",
+        "Sous",
+        "avec"
+      ],
+      "choices_l2": [
+        "ten",
+        "Ja",
+        "My"
+      ]
+    },
+    {
+      "id": "blank-udia-oslavovali-niekto-mal-vlajky-niekto-ampansk-coln-ci-sa-usmievali",
+      "type": "fill-blank",
+      "l1": "Les gens fêtaient ça, certains avaient des drapeaux, d'autres du champagne. Les douaniers souriaient.",
+      "l2": "Ľudia oslavovali, niekto mal vlajky, niekto šampanské. Colníci sa usmievali.",
+      "missing_l1": "Les",
+      "missing_l2": "sa",
+      "blank_index_l1": 11,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "le",
+        "la",
+        "rêve"
+      ],
+      "choices_l2": [
+        "tá",
+        "Toto",
+        "ten"
+      ]
+    },
+    {
+      "id": "blank-ale-hranicu-plne-otvorili-a-o-p-r-rokov-nesk-r-v-t-noc-to-bolo-hlavne-symbolick",
+      "type": "fill-blank",
+      "l1": "Mais la frontière n'a été complètement ouverte que quelques années plus tard. Cette nuit-là c'était surtout symbolique.",
+      "l2": "Ale hranicu úplne otvorili až o pár rokov neskôr. V tú noc to bolo hlavne symbolické.",
+      "missing_l1": "la",
+      "missing_l2": "V",
+      "blank_index_l1": 1,
+      "blank_index_l2": 9,
+      "choices_l1": [
+        "n'a",
+        "d'un",
+        "le"
+      ],
+      "choices_l2": [
+        "bez",
+        "Cez",
+        "Vo"
+      ]
+    },
+    {
+      "id": "blank-a-hovorilo-sa-vtedy-o-odchode-do-zahrani-ia-pracova",
+      "type": "fill-blank",
+      "l1": "Et est-ce qu'on parlait alors de partir travailler à l'étranger ?",
+      "l2": "A hovorilo sa vtedy o odchode do zahraničia pracovať?",
+      "missing_l1": "de",
+      "missing_l2": "sa",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "à",
+        "pour",
+        "chez"
+      ],
+      "choices_l2": [
+        "My",
+        "Toto",
+        "To"
+      ]
+    },
+    {
+      "id": "blank-ve-mi-ve-a-niektor-moji-spolu-iaci-odi-li-hne-do-anglicka-alebo-do-rska",
+      "type": "fill-blank",
+      "l1": "Beaucoup. Certains de mes camarades sont partis tout de suite, en Angleterre ou en Irlande.",
+      "l2": "Veľmi veľa. Niektorí moji spolužiaci odišli hneď, do Anglicka alebo do Írska.",
+      "missing_l1": "de",
+      "missing_l2": "do",
+      "blank_index_l1": 2,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "loin",
+        "à",
+        "Sous"
+      ],
+      "choices_l2": [
+        "Cez",
+        "s",
+        "pri"
+      ]
+    },
+    {
+      "id": "blank-pre-o-pr-ve-tam",
+      "type": "fill-blank",
+      "l1": "Pourquoi justement là-bas ?",
+      "l2": "Prečo práve tam?",
+      "missing_l1": "là-bas",
+      "missing_l2": "tam",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "s'est-il",
+        "attendu",
+        "partie"
+      ],
+      "choices_l2": [
+        "zo",
+        "až",
+        "sen"
+      ]
+    },
+    {
+      "id": "blank-lebo-tieto-krajiny-otvorili-svoj-pracovn-trh-okam-ite-in-krajiny-akali-roky",
+      "type": "fill-blank",
+      "l1": "Parce que ces pays ont ouvert leur marché du travail immédiatement. D'autres pays ont attendu des années.",
+      "l2": "Lebo tieto krajiny otvorili svoj pracovný trh okamžite. Iné krajiny čakali roky.",
+      "missing_l1": "des",
+      "missing_l2": "tieto",
+      "blank_index_l1": 15,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "rêve",
+        "n'a",
+        "une"
+      ],
+      "choices_l2": [
+        "odišli",
+        "odísť",
+        "niekto"
+      ]
+    },
+    {
+      "id": "blank-a-vy-ste-vtedy-neodi-li",
+      "type": "fill-blank",
+      "l1": "Et vous, vous n'êtes pas partie à l'époque ?",
+      "l2": "A vy ste vtedy neodišli?",
+      "missing_l1": "à",
+      "missing_l2": "ste",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "près",
+        "Sous",
+        "par"
+      ],
+      "choices_l2": [
+        "budem",
+        "boli",
+        "som"
+      ]
+    },
+    {
+      "id": "blank-nie-e-te-nie-mala-som-pr-cu-tu-a-nebola-som-e-te-pripraven-od-s-tak-aleko",
+      "type": "fill-blank",
+      "l1": "Non, pas encore. J'avais un travail ici, et je n'étais pas encore prête à partir si loin.",
+      "l2": "Nie, ešte nie. Mala som prácu tu, a nebola som ešte pripravená odísť tak ďaleko.",
+      "missing_l1": "je",
+      "missing_l2": "a",
+      "blank_index_l1": 8,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "Ce",
+        "Nous",
+        "elles"
+      ],
+      "choices_l2": [
+        "však",
+        "aj",
+        "lebo"
+      ]
+    },
+    {
+      "id": "blank-ale-videla-som-ako-sa-men-atmosf-ra-zrazu-bolo-norm-lne-sn-va-o-pr-ci-v-zahrani",
+      "type": "fill-blank",
+      "l1": "Mais j'ai vu comment l'atmosphère changeait. Soudain c'était normal de rêver d'un travail à l'étranger.",
+      "l2": "Ale videla som, ako sa mení atmosféra. Zrazu bolo normálne snívať o práci v zahraničí.",
+      "missing_l1": "de",
+      "missing_l2": "v",
+      "blank_index_l1": 9,
+      "blank_index_l2": 13,
+      "choices_l1": [
+        "loin",
+        "chez",
+        "avec"
+      ],
+      "choices_l2": [
+        "zo",
+        "od",
+        "na"
+      ]
+    },
+    {
+      "id": "blank-predt-m-to-bol-sen-takmer-nedosiahnute-n-teraz-to-bolo-len-ot-zka-rozhodnutia",
+      "type": "fill-blank",
+      "l1": "Avant c'était un rêve presque inaccessible. Maintenant c'était juste une question de décision.",
+      "l2": "Predtým to bol sen takmer nedosiahnuteľný. Teraz to bolo len otázka rozhodnutia.",
+      "missing_l1": "de",
+      "missing_l2": "to",
+      "blank_index_l1": 11,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "dans",
+        "sur",
+        "loin"
+      ],
+      "choices_l2": [
+        "vy",
+        "ten",
+        "Toto"
+      ]
+    },
+    {
+      "id": "listen-v-t-noc-sme-boli-na-hranici-s-rak-skom-len-tak-zo-zvedavosti",
+      "type": "listen",
+      "l1": "Cette nuit-là on était à la frontière avec l'Autriche, comme ça, par curiosité.",
+      "l2": "V tú noc sme boli na hranici s Rakúskom, len tak, zo zvedavosti.",
+      "choices_l1": [
+        "Et vous, vous n'êtes pas partie à l'époque ?",
+        "Non, pas encore. J'avais un travail ici, et je n'étais pas encore prête à partir si loin.",
+        "Pourquoi justement là-bas ?"
+      ],
+      "choices_l2": [
+        "Predtým to bol sen takmer nedosiahnuteľný. Teraz to bolo len otázka rozhodnutia.",
+        "A čo sa tam vlastne stalo o polnoci?",
+        "Lebo tieto krajiny otvorili svoj pracovný trh okamžite. Iné krajiny čakali roky."
+      ]
+    },
+    {
+      "id": "listen-a-o-sa-tam-vlastne-stalo-o-polnoci",
+      "type": "listen",
+      "l1": "Et que s'est-il vraiment passé là-bas à minuit ?",
+      "l2": "A čo sa tam vlastne stalo o polnoci?",
+      "choices_l1": [
+        "Non, pas encore. J'avais un travail ici, et je n'étais pas encore prête à partir si loin.",
+        "Mais la frontière n'a été complètement ouverte que quelques années plus tard. Cette nuit-là c'était surtout symbolique.",
+        "Les gens fêtaient ça, certains avaient des drapeaux, d'autres du champagne. Les douaniers souriaient."
+      ],
+      "choices_l2": [
+        "Nie, ešte nie. Mala som prácu tu, a nebola som ešte pripravená odísť tak ďaleko.",
+        "Ale hranicu úplne otvorili až o pár rokov neskôr. V tú noc to bolo hlavne symbolické.",
+        "Ale videla som, ako sa mení atmosféra. Zrazu bolo normálne snívať o práci v zahraničí."
+      ]
+    },
+    {
+      "id": "listen-udia-oslavovali-niekto-mal-vlajky-niekto-ampansk-coln-ci-sa-usmievali",
+      "type": "listen",
+      "l1": "Les gens fêtaient ça, certains avaient des drapeaux, d'autres du champagne. Les douaniers souriaient.",
+      "l2": "Ľudia oslavovali, niekto mal vlajky, niekto šampanské. Colníci sa usmievali.",
+      "choices_l1": [
+        "Avant c'était un rêve presque inaccessible. Maintenant c'était juste une question de décision.",
+        "Et vous, vous n'êtes pas partie à l'époque ?",
+        "Beaucoup. Certains de mes camarades sont partis tout de suite, en Angleterre ou en Irlande."
+      ],
+      "choices_l2": [
+        "Lebo tieto krajiny otvorili svoj pracovný trh okamžite. Iné krajiny čakali roky.",
+        "A čo sa tam vlastne stalo o polnoci?",
+        "Veľmi veľa. Niektorí moji spolužiaci odišli hneď, do Anglicka alebo do Írska."
+      ]
+    },
+    {
+      "id": "listen-ale-hranicu-plne-otvorili-a-o-p-r-rokov-nesk-r-v-t-noc-to-bolo-hlavne-symbolick",
+      "type": "listen",
+      "l1": "Mais la frontière n'a été complètement ouverte que quelques années plus tard. Cette nuit-là c'était surtout symbolique.",
+      "l2": "Ale hranicu úplne otvorili až o pár rokov neskôr. V tú noc to bolo hlavne symbolické.",
+      "choices_l1": [
+        "Parce que ces pays ont ouvert leur marché du travail immédiatement. D'autres pays ont attendu des années.",
+        "Et vous, vous n'êtes pas partie à l'époque ?",
+        "Pourquoi justement là-bas ?"
+      ],
+      "choices_l2": [
+        "A vy ste vtedy neodišli?",
+        "V tú noc sme boli na hranici s Rakúskom, len tak, zo zvedavosti.",
+        "Ľudia oslavovali, niekto mal vlajky, niekto šampanské. Colníci sa usmievali."
+      ]
+    },
+    {
+      "id": "listen-a-hovorilo-sa-vtedy-o-odchode-do-zahrani-ia-pracova",
+      "type": "listen",
+      "l1": "Et est-ce qu'on parlait alors de partir travailler à l'étranger ?",
+      "l2": "A hovorilo sa vtedy o odchode do zahraničia pracovať?",
+      "choices_l1": [
+        "Pourquoi justement là-bas ?",
+        "Avant c'était un rêve presque inaccessible. Maintenant c'était juste une question de décision.",
+        "Et que s'est-il vraiment passé là-bas à minuit ?"
+      ],
+      "choices_l2": [
+        "A vy ste vtedy neodišli?",
+        "Ale hranicu úplne otvorili až o pár rokov neskôr. V tú noc to bolo hlavne symbolické.",
+        "Lebo tieto krajiny otvorili svoj pracovný trh okamžite. Iné krajiny čakali roky."
+      ]
+    },
+    {
+      "id": "listen-ve-mi-ve-a-niektor-moji-spolu-iaci-odi-li-hne-do-anglicka-alebo-do-rska",
+      "type": "listen",
+      "l1": "Beaucoup. Certains de mes camarades sont partis tout de suite, en Angleterre ou en Irlande.",
+      "l2": "Veľmi veľa. Niektorí moji spolužiaci odišli hneď, do Anglicka alebo do Írska.",
+      "choices_l1": [
+        "Et vous, vous n'êtes pas partie à l'époque ?",
+        "Et est-ce qu'on parlait alors de partir travailler à l'étranger ?",
+        "Pourquoi justement là-bas ?"
+      ],
+      "choices_l2": [
+        "Ľudia oslavovali, niekto mal vlajky, niekto šampanské. Colníci sa usmievali.",
+        "A vy ste vtedy neodišli?",
+        "Prečo práve tam?"
+      ]
+    },
+    {
+      "id": "listen-pre-o-pr-ve-tam",
+      "type": "listen",
+      "l1": "Pourquoi justement là-bas ?",
+      "l2": "Prečo práve tam?",
+      "choices_l1": [
+        "Cette nuit-là on était à la frontière avec l'Autriche, comme ça, par curiosité.",
+        "Non, pas encore. J'avais un travail ici, et je n'étais pas encore prête à partir si loin.",
+        "Mais j'ai vu comment l'atmosphère changeait. Soudain c'était normal de rêver d'un travail à l'étranger."
+      ],
+      "choices_l2": [
+        "Ľudia oslavovali, niekto mal vlajky, niekto šampanské. Colníci sa usmievali.",
+        "A hovorilo sa vtedy o odchode do zahraničia pracovať?",
+        "A vy ste vtedy neodišli?"
+      ]
+    },
+    {
+      "id": "listen-lebo-tieto-krajiny-otvorili-svoj-pracovn-trh-okam-ite-in-krajiny-akali-roky",
+      "type": "listen",
+      "l1": "Parce que ces pays ont ouvert leur marché du travail immédiatement. D'autres pays ont attendu des années.",
+      "l2": "Lebo tieto krajiny otvorili svoj pracovný trh okamžite. Iné krajiny čakali roky.",
+      "choices_l1": [
+        "Et est-ce qu'on parlait alors de partir travailler à l'étranger ?",
+        "Et vous, vous n'êtes pas partie à l'époque ?",
+        "Pourquoi justement là-bas ?"
+      ],
+      "choices_l2": [
+        "V tú noc sme boli na hranici s Rakúskom, len tak, zo zvedavosti.",
+        "Veľmi veľa. Niektorí moji spolužiaci odišli hneď, do Anglicka alebo do Írska.",
+        "Nie, ešte nie. Mala som prácu tu, a nebola som ešte pripravená odísť tak ďaleko."
+      ]
+    },
+    {
+      "id": "listen-a-vy-ste-vtedy-neodi-li",
+      "type": "listen",
+      "l1": "Et vous, vous n'êtes pas partie à l'époque ?",
+      "l2": "A vy ste vtedy neodišli?",
+      "choices_l1": [
+        "Et que s'est-il vraiment passé là-bas à minuit ?",
+        "Mais la frontière n'a été complètement ouverte que quelques années plus tard. Cette nuit-là c'était surtout symbolique.",
+        "Non, pas encore. J'avais un travail ici, et je n'étais pas encore prête à partir si loin."
+      ],
+      "choices_l2": [
+        "Ľudia oslavovali, niekto mal vlajky, niekto šampanské. Colníci sa usmievali.",
+        "Veľmi veľa. Niektorí moji spolužiaci odišli hneď, do Anglicka alebo do Írska.",
+        "V tú noc sme boli na hranici s Rakúskom, len tak, zo zvedavosti."
+      ]
+    },
+    {
+      "id": "listen-nie-e-te-nie-mala-som-pr-cu-tu-a-nebola-som-e-te-pripraven-od-s-tak-aleko",
+      "type": "listen",
+      "l1": "Non, pas encore. J'avais un travail ici, et je n'étais pas encore prête à partir si loin.",
+      "l2": "Nie, ešte nie. Mala som prácu tu, a nebola som ešte pripravená odísť tak ďaleko.",
+      "choices_l1": [
+        "Les gens fêtaient ça, certains avaient des drapeaux, d'autres du champagne. Les douaniers souriaient.",
+        "Cette nuit-là on était à la frontière avec l'Autriche, comme ça, par curiosité.",
+        "Pourquoi justement là-bas ?"
+      ],
+      "choices_l2": [
+        "A čo sa tam vlastne stalo o polnoci?",
+        "Veľmi veľa. Niektorí moji spolužiaci odišli hneď, do Anglicka alebo do Írska.",
+        "A vy ste vtedy neodišli?"
+      ]
+    },
+    {
+      "id": "listen-ale-videla-som-ako-sa-men-atmosf-ra-zrazu-bolo-norm-lne-sn-va-o-pr-ci-v-zahrani",
+      "type": "listen",
+      "l1": "Mais j'ai vu comment l'atmosphère changeait. Soudain c'était normal de rêver d'un travail à l'étranger.",
+      "l2": "Ale videla som, ako sa mení atmosféra. Zrazu bolo normálne snívať o práci v zahraničí.",
+      "choices_l1": [
+        "Et que s'est-il vraiment passé là-bas à minuit ?",
+        "Les gens fêtaient ça, certains avaient des drapeaux, d'autres du champagne. Les douaniers souriaient.",
+        "Et est-ce qu'on parlait alors de partir travailler à l'étranger ?"
+      ],
+      "choices_l2": [
+        "A vy ste vtedy neodišli?",
+        "A čo sa tam vlastne stalo o polnoci?",
+        "Ale hranicu úplne otvorili až o pár rokov neskôr. V tú noc to bolo hlavne symbolické."
+      ]
+    },
+    {
+      "id": "listen-predt-m-to-bol-sen-takmer-nedosiahnute-n-teraz-to-bolo-len-ot-zka-rozhodnutia",
+      "type": "listen",
+      "l1": "Avant c'était un rêve presque inaccessible. Maintenant c'était juste une question de décision.",
+      "l2": "Predtým to bol sen takmer nedosiahnuteľný. Teraz to bolo len otázka rozhodnutia.",
+      "choices_l1": [
+        "Et vous, vous n'êtes pas partie à l'époque ?",
+        "Les gens fêtaient ça, certains avaient des drapeaux, d'autres du champagne. Les douaniers souriaient.",
+        "Mais j'ai vu comment l'atmosphère changeait. Soudain c'était normal de rêver d'un travail à l'étranger."
+      ],
+      "choices_l2": [
+        "Nie, ešte nie. Mala som prácu tu, a nebola som ešte pripravená odísť tak ďaleko.",
+        "A hovorilo sa vtedy o odchode do zahraničia pracovať?",
+        "V tú noc sme boli na hranici s Rakúskom, len tak, zo zvedavosti."
+      ]
+    },
+    {
+      "id": "order-v-t-noc-sme-boli-na-hranici-s-rak-skom-len-tak-zo-zvedavosti",
+      "type": "order",
+      "l1": "Cette nuit-là on était à la frontière avec l'Autriche, comme ça, par curiosité.",
+      "l2": "V tú noc sme boli na hranici s Rakúskom, len tak, zo zvedavosti.",
+      "tokens_l1": [
+        "Cette",
+        "nuit-là",
+        "on",
+        "était",
+        "à",
+        "la",
+        "frontière",
+        "avec",
+        "l'Autriche,",
+        "comme",
+        "ça,",
+        "par",
+        "curiosité.",
+        "Mais",
+        "j'ai",
+        "vu",
+        "comment",
+        "l'atmosphère",
+        "changeait.",
+        "Soudain",
+        "c'était",
+        "normal",
+        "de",
+        "rêver",
+        "d'un",
+        "travail",
+        "à",
+        "l'étranger."
+      ],
+      "tokens_l2": [
+        "V",
+        "tú",
+        "noc",
+        "sme",
+        "boli",
+        "na",
+        "hranici",
+        "s",
+        "Rakúskom,",
+        "len",
+        "tak,",
+        "zo",
+        "zvedavosti.",
+        "Ale",
+        "videla",
+        "som,",
+        "ako",
+        "sa",
+        "mení",
+        "atmosféra.",
+        "Zrazu",
+        "bolo",
+        "normálne",
+        "snívať",
+        "o",
+        "práci",
+        "v",
+        "zahraničí."
+      ]
+    },
+    {
+      "id": "order-a-o-sa-tam-vlastne-stalo-o-polnoci",
+      "type": "order",
+      "l1": "Et que s'est-il vraiment passé là-bas à minuit ?",
+      "l2": "A čo sa tam vlastne stalo o polnoci?",
+      "tokens_l1": [
+        "Et",
+        "que",
+        "s'est-il",
+        "vraiment",
+        "passé",
+        "là-bas",
+        "à",
+        "minuit",
+        "?",
+        "Mais",
+        "la",
+        "frontière",
+        "n'a",
+        "été",
+        "complètement",
+        "ouverte",
+        "que",
+        "quelques",
+        "années",
+        "plus",
+        "tard.",
+        "Cette",
+        "nuit-là",
+        "c'était",
+        "surtout",
+        "symbolique."
+      ],
+      "tokens_l2": [
+        "A",
+        "čo",
+        "sa",
+        "tam",
+        "vlastne",
+        "stalo",
+        "o",
+        "polnoci?",
+        "Ale",
+        "hranicu",
+        "úplne",
+        "otvorili",
+        "až",
+        "o",
+        "pár",
+        "rokov",
+        "neskôr.",
+        "V",
+        "tú",
+        "noc",
+        "to",
+        "bolo",
+        "hlavne",
+        "symbolické."
+      ]
+    },
+    {
+      "id": "order-udia-oslavovali-niekto-mal-vlajky-niekto-ampansk-coln-ci-sa-usmievali",
+      "type": "order",
+      "l1": "Les gens fêtaient ça, certains avaient des drapeaux, d'autres du champagne. Les douaniers souriaient.",
+      "l2": "Ľudia oslavovali, niekto mal vlajky, niekto šampanské. Colníci sa usmievali.",
+      "tokens_l1": [
+        "Les",
+        "gens",
+        "fêtaient",
+        "ça,",
+        "certains",
+        "avaient",
+        "des",
+        "drapeaux,",
+        "d'autres",
+        "du",
+        "champagne.",
+        "Les",
+        "douaniers",
+        "souriaient.",
+        "Mais",
+        "la",
+        "frontière",
+        "n'a",
+        "été",
+        "complètement",
+        "ouverte",
+        "que",
+        "quelques",
+        "années",
+        "plus",
+        "tard.",
+        "Cette",
+        "nuit-là",
+        "c'était",
+        "surtout",
+        "symbolique."
+      ],
+      "tokens_l2": [
+        "Ľudia",
+        "oslavovali,",
+        "niekto",
+        "mal",
+        "vlajky,",
+        "niekto",
+        "šampanské.",
+        "Colníci",
+        "sa",
+        "usmievali.",
+        "Ale",
+        "hranicu",
+        "úplne",
+        "otvorili",
+        "až",
+        "o",
+        "pár",
+        "rokov",
+        "neskôr.",
+        "V",
+        "tú",
+        "noc",
+        "to",
+        "bolo",
+        "hlavne",
+        "symbolické."
+      ]
+    },
+    {
+      "id": "order-ale-hranicu-plne-otvorili-a-o-p-r-rokov-nesk-r-v-t-noc-to-bolo-hlavne-symbolick",
+      "type": "order",
+      "l1": "Mais la frontière n'a été complètement ouverte que quelques années plus tard. Cette nuit-là c'était surtout symbolique.",
+      "l2": "Ale hranicu úplne otvorili až o pár rokov neskôr. V tú noc to bolo hlavne symbolické.",
+      "tokens_l1": [
+        "Mais",
+        "la",
+        "frontière",
+        "n'a",
+        "été",
+        "complètement",
+        "ouverte",
+        "que",
+        "quelques",
+        "années",
+        "plus",
+        "tard.",
+        "Cette",
+        "nuit-là",
+        "c'était",
+        "surtout",
+        "symbolique.",
+        "Pourquoi",
+        "justement",
+        "là-bas",
+        "?"
+      ],
+      "tokens_l2": [
+        "Ale",
+        "hranicu",
+        "úplne",
+        "otvorili",
+        "až",
+        "o",
+        "pár",
+        "rokov",
+        "neskôr.",
+        "V",
+        "tú",
+        "noc",
+        "to",
+        "bolo",
+        "hlavne",
+        "symbolické.",
+        "Prečo",
+        "práve",
+        "tam?"
+      ]
+    },
+    {
+      "id": "order-a-hovorilo-sa-vtedy-o-odchode-do-zahrani-ia-pracova",
+      "type": "order",
+      "l1": "Et est-ce qu'on parlait alors de partir travailler à l'étranger ?",
+      "l2": "A hovorilo sa vtedy o odchode do zahraničia pracovať?",
+      "tokens_l1": [
+        "Et",
+        "est-ce",
+        "qu'on",
+        "parlait",
+        "alors",
+        "de",
+        "partir",
+        "travailler",
+        "à",
+        "l'étranger",
+        "?",
+        "Et",
+        "vous,",
+        "vous",
+        "n'êtes",
+        "pas",
+        "partie",
+        "à",
+        "l'époque",
+        "?"
+      ],
+      "tokens_l2": [
+        "A",
+        "hovorilo",
+        "sa",
+        "vtedy",
+        "o",
+        "odchode",
+        "do",
+        "zahraničia",
+        "pracovať?",
+        "A",
+        "vy",
+        "ste",
+        "vtedy",
+        "neodišli?"
+      ]
+    },
+    {
+      "id": "order-ve-mi-ve-a-niektor-moji-spolu-iaci-odi-li-hne-do-anglicka-alebo-do-rska",
+      "type": "order",
+      "l1": "Beaucoup. Certains de mes camarades sont partis tout de suite, en Angleterre ou en Irlande.",
+      "l2": "Veľmi veľa. Niektorí moji spolužiaci odišli hneď, do Anglicka alebo do Írska.",
+      "tokens_l1": [
+        "Beaucoup.",
+        "Certains",
+        "de",
+        "mes",
+        "camarades",
+        "sont",
+        "partis",
+        "tout",
+        "de",
+        "suite,",
+        "en",
+        "Angleterre",
+        "ou",
+        "en",
+        "Irlande.",
+        "Et",
+        "vous,",
+        "vous",
+        "n'êtes",
+        "pas",
+        "partie",
+        "à",
+        "l'époque",
+        "?"
+      ],
+      "tokens_l2": [
+        "Veľmi",
+        "veľa.",
+        "Niektorí",
+        "moji",
+        "spolužiaci",
+        "odišli",
+        "hneď,",
+        "do",
+        "Anglicka",
+        "alebo",
+        "do",
+        "Írska.",
+        "A",
+        "vy",
+        "ste",
+        "vtedy",
+        "neodišli?"
+      ]
+    },
+    {
+      "id": "order-pre-o-pr-ve-tam",
+      "type": "order",
+      "l1": "Pourquoi justement là-bas ?",
+      "l2": "Prečo práve tam?",
+      "tokens_l1": [
+        "Pourquoi",
+        "justement",
+        "là-bas",
+        "?",
+        "Parce",
+        "que",
+        "ces",
+        "pays",
+        "ont",
+        "ouvert",
+        "leur",
+        "marché",
+        "du",
+        "travail",
+        "immédiatement.",
+        "D'autres",
+        "pays",
+        "ont",
+        "attendu",
+        "des",
+        "années."
+      ],
+      "tokens_l2": [
+        "Prečo",
+        "práve",
+        "tam?",
+        "Lebo",
+        "tieto",
+        "krajiny",
+        "otvorili",
+        "svoj",
+        "pracovný",
+        "trh",
+        "okamžite.",
+        "Iné",
+        "krajiny",
+        "čakali",
+        "roky."
+      ]
+    },
+    {
+      "id": "order-lebo-tieto-krajiny-otvorili-svoj-pracovn-trh-okam-ite-in-krajiny-akali-roky",
+      "type": "order",
+      "l1": "Parce que ces pays ont ouvert leur marché du travail immédiatement. D'autres pays ont attendu des années.",
+      "l2": "Lebo tieto krajiny otvorili svoj pracovný trh okamžite. Iné krajiny čakali roky.",
+      "tokens_l1": [
+        "Parce",
+        "que",
+        "ces",
+        "pays",
+        "ont",
+        "ouvert",
+        "leur",
+        "marché",
+        "du",
+        "travail",
+        "immédiatement.",
+        "D'autres",
+        "pays",
+        "ont",
+        "attendu",
+        "des",
+        "années.",
+        "Beaucoup.",
+        "Certains",
+        "de",
+        "mes",
+        "camarades",
+        "sont",
+        "partis",
+        "tout",
+        "de",
+        "suite,",
+        "en",
+        "Angleterre",
+        "ou",
+        "en",
+        "Irlande."
+      ],
+      "tokens_l2": [
+        "Lebo",
+        "tieto",
+        "krajiny",
+        "otvorili",
+        "svoj",
+        "pracovný",
+        "trh",
+        "okamžite.",
+        "Iné",
+        "krajiny",
+        "čakali",
+        "roky.",
+        "Veľmi",
+        "veľa.",
+        "Niektorí",
+        "moji",
+        "spolužiaci",
+        "odišli",
+        "hneď,",
+        "do",
+        "Anglicka",
+        "alebo",
+        "do",
+        "Írska."
+      ]
+    },
+    {
+      "id": "order-a-vy-ste-vtedy-neodi-li",
+      "type": "order",
+      "l1": "Et vous, vous n'êtes pas partie à l'époque ?",
+      "l2": "A vy ste vtedy neodišli?",
+      "tokens_l1": [
+        "Et",
+        "vous,",
+        "vous",
+        "n'êtes",
+        "pas",
+        "partie",
+        "à",
+        "l'époque",
+        "?",
+        "Pourquoi",
+        "justement",
+        "là-bas",
+        "?"
+      ],
+      "tokens_l2": [
+        "A",
+        "vy",
+        "ste",
+        "vtedy",
+        "neodišli?",
+        "Prečo",
+        "práve",
+        "tam?"
+      ]
+    },
+    {
+      "id": "order-nie-e-te-nie-mala-som-pr-cu-tu-a-nebola-som-e-te-pripraven-od-s-tak-aleko",
+      "type": "order",
+      "l1": "Non, pas encore. J'avais un travail ici, et je n'étais pas encore prête à partir si loin.",
+      "l2": "Nie, ešte nie. Mala som prácu tu, a nebola som ešte pripravená odísť tak ďaleko.",
+      "tokens_l1": [
+        "Non,",
+        "pas",
+        "encore.",
+        "J'avais",
+        "un",
+        "travail",
+        "ici,",
+        "et",
+        "je",
+        "n'étais",
+        "pas",
+        "encore",
+        "prête",
+        "à",
+        "partir",
+        "si",
+        "loin.",
+        "Les",
+        "gens",
+        "fêtaient",
+        "ça,",
+        "certains",
+        "avaient",
+        "des",
+        "drapeaux,",
+        "d'autres",
+        "du",
+        "champagne.",
+        "Les",
+        "douaniers",
+        "souriaient."
+      ],
+      "tokens_l2": [
+        "Nie,",
+        "ešte",
+        "nie.",
+        "Mala",
+        "som",
+        "prácu",
+        "tu,",
+        "a",
+        "nebola",
+        "som",
+        "ešte",
+        "pripravená",
+        "odísť",
+        "tak",
+        "ďaleko.",
+        "Ľudia",
+        "oslavovali,",
+        "niekto",
+        "mal",
+        "vlajky,",
+        "niekto",
+        "šampanské.",
+        "Colníci",
+        "sa",
+        "usmievali."
+      ]
+    },
+    {
+      "id": "order-ale-videla-som-ako-sa-men-atmosf-ra-zrazu-bolo-norm-lne-sn-va-o-pr-ci-v-zahrani",
+      "type": "order",
+      "l1": "Mais j'ai vu comment l'atmosphère changeait. Soudain c'était normal de rêver d'un travail à l'étranger.",
+      "l2": "Ale videla som, ako sa mení atmosféra. Zrazu bolo normálne snívať o práci v zahraničí.",
+      "tokens_l1": [
+        "Mais",
+        "j'ai",
+        "vu",
+        "comment",
+        "l'atmosphère",
+        "changeait.",
+        "Soudain",
+        "c'était",
+        "normal",
+        "de",
+        "rêver",
+        "d'un",
+        "travail",
+        "à",
+        "l'étranger.",
+        "Et",
+        "est-ce",
+        "qu'on",
+        "parlait",
+        "alors",
+        "de",
+        "partir",
+        "travailler",
+        "à",
+        "l'étranger",
+        "?"
+      ],
+      "tokens_l2": [
+        "Ale",
+        "videla",
+        "som,",
+        "ako",
+        "sa",
+        "mení",
+        "atmosféra.",
+        "Zrazu",
+        "bolo",
+        "normálne",
+        "snívať",
+        "o",
+        "práci",
+        "v",
+        "zahraničí.",
+        "A",
+        "hovorilo",
+        "sa",
+        "vtedy",
+        "o",
+        "odchode",
+        "do",
+        "zahraničia",
+        "pracovať?"
+      ]
+    },
+    {
+      "id": "order-predt-m-to-bol-sen-takmer-nedosiahnute-n-teraz-to-bolo-len-ot-zka-rozhodnutia",
+      "type": "order",
+      "l1": "Avant c'était un rêve presque inaccessible. Maintenant c'était juste une question de décision.",
+      "l2": "Predtým to bol sen takmer nedosiahnuteľný. Teraz to bolo len otázka rozhodnutia.",
+      "tokens_l1": [
+        "Avant",
+        "c'était",
+        "un",
+        "rêve",
+        "presque",
+        "inaccessible.",
+        "Maintenant",
+        "c'était",
+        "juste",
+        "une",
+        "question",
+        "de",
+        "décision.",
+        "Et",
+        "vous,",
+        "vous",
+        "n'êtes",
+        "pas",
+        "partie",
+        "à",
+        "l'époque",
+        "?"
+      ],
+      "tokens_l2": [
+        "Predtým",
+        "to",
+        "bol",
+        "sen",
+        "takmer",
+        "nedosiahnuteľný.",
+        "Teraz",
+        "to",
+        "bolo",
+        "len",
+        "otázka",
+        "rozhodnutia.",
+        "A",
+        "vy",
+        "ste",
+        "vtedy",
+        "neodišli?"
+      ]
+    },
+    {
+      "id": "match-v-t-noc-sme-boli-na-hranici-s-rak-skom-len-tak-zo-zvedavosti-sentences",
+      "type": "match",
+      "l1": [
+        "Cette nuit-là on était à la frontière avec l'Autriche, comme ça, par curiosité.",
+        "Et que s'est-il vraiment passé là-bas à minuit ?",
+        "Les gens fêtaient ça, certains avaient des drapeaux, d'autres du champagne. Les douaniers souriaient.",
+        "Mais la frontière n'a été complètement ouverte que quelques années plus tard. Cette nuit-là c'était surtout symbolique."
+      ],
+      "l2": [
+        "V tú noc sme boli na hranici s Rakúskom, len tak, zo zvedavosti.",
+        "A čo sa tam vlastne stalo o polnoci?",
+        "Ľudia oslavovali, niekto mal vlajky, niekto šampanské. Colníci sa usmievali.",
+        "Ale hranicu úplne otvorili až o pár rokov neskôr. V tú noc to bolo hlavne symbolické."
+      ]
+    }
+  ]
+}

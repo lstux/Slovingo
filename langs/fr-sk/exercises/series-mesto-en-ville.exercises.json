@@ -1,0 +1,1192 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-la-place",
+      "type": "qcm",
+      "l1": "námestie",
+      "l2": "la place",
+      "choices_l1": [
+        "sestra",
+        "často",
+        "pracujem"
+      ],
+      "choices_l2": [
+        "le savon",
+        "habiter",
+        "la pharmacie"
+      ]
+    },
+    {
+      "id": "qcm-la-rue",
+      "type": "qcm",
+      "l1": "ulica",
+      "l2": "la rue",
+      "choices_l1": [
+        "trh",
+        "o prvej",
+        "Mám smäd."
+      ],
+      "choices_l2": [
+        "le week-end",
+        "le mari",
+        "le prix"
+      ]
+    },
+    {
+      "id": "qcm-le-pont",
+      "type": "qcm",
+      "l1": "most",
+      "l2": "le pont",
+      "choices_l1": [
+        "oddychovať",
+        "chcieť",
+        "opasok"
+      ],
+      "choices_l2": [
+        "libre",
+        "se lever",
+        "je vais"
+      ]
+    },
+    {
+      "id": "qcm-le-parc",
+      "type": "qcm",
+      "l1": "park",
+      "l2": "le parc",
+      "choices_l1": [
+        "hľadať",
+        "červená bunda",
+        "teta"
+      ],
+      "choices_l2": [
+        "les crêpes",
+        "nous achetons",
+        "la boulangerie"
+      ]
+    },
+    {
+      "id": "qcm-l-glise",
+      "type": "qcm",
+      "l1": "kostol",
+      "l2": "l'église",
+      "choices_l1": [
+        "umývať",
+        "svetlý",
+        "do lekárne"
+      ],
+      "choices_l2": [
+        "le médecin",
+        "la clé",
+        "le salon"
+      ]
+    },
+    {
+      "id": "qcm-le-th-tre",
+      "type": "qcm",
+      "l1": "divadlo",
+      "l2": "le théâtre",
+      "choices_l1": [
+        "piť",
+        "obchod",
+        "telefón"
+      ],
+      "choices_l2": [
+        "fermé",
+        "attendre",
+        "la ratatouille"
+      ]
+    },
+    {
+      "id": "qcm-le-mus-e",
+      "type": "qcm",
+      "l1": "múzeum",
+      "l2": "le musée",
+      "choices_l1": [
+        "prísť",
+        "ide",
+        "uterák"
+      ],
+      "choices_l2": [
+        "le salon",
+        "chercher",
+        "attendre"
+      ]
+    },
+    {
+      "id": "qcm-sur-la-place",
+      "type": "qcm",
+      "l1": "na námestí",
+      "l2": "sur la place",
+      "choices_l1": [
+        "povala",
+        "víkend",
+        "chvíľa"
+      ],
+      "choices_l2": [
+        "Je vais arriver.",
+        "cet imperméable (mužský rod pred samohláskou)",
+        "il / elle travaille"
+      ]
+    },
+    {
+      "id": "qcm-dans-la-rue",
+      "type": "qcm",
+      "l1": "na ulici",
+      "l2": "dans la rue",
+      "choices_l1": [
+        "robia",
+        "modrý",
+        "bývame"
+      ],
+      "choices_l2": [
+        "il / elle veut",
+        "il / elle cherche",
+        "l'addition / la facture"
+      ]
+    },
+    {
+      "id": "qcm-sur-le-pont",
+      "type": "qcm",
+      "l1": "na moste",
+      "l2": "sur le pont",
+      "choices_l1": [
+        "okno",
+        "žltý",
+        "do potravín"
+      ],
+      "choices_l2": [
+        "il est vieux / elle est vieille",
+        "il / elle veut",
+        "six heures moins le quart (5:45)"
+      ]
+    },
+    {
+      "id": "qcm-la-poste",
+      "type": "qcm",
+      "l1": "na pošte",
+      "l2": "à la poste",
+      "choices_l1": [
+        "syr",
+        "červená bunda",
+        "modrá košeľa"
+      ],
+      "choices_l2": [
+        "à sept heures",
+        "il / elle fait",
+        "Je vais arriver."
+      ]
+    },
+    {
+      "id": "qcm-dans-le-parc",
+      "type": "qcm",
+      "l1": "v parku",
+      "l2": "dans le parc",
+      "choices_l1": [
+        "nedeľa",
+        "o druhej",
+        "zľava"
+      ],
+      "choices_l2": [
+        "six heures moins le quart (5:45)",
+        "à la pharmacie (à + la)",
+        "Je prends du vin."
+      ]
+    },
+    {
+      "id": "qcm-dans-l-glise",
+      "type": "qcm",
+      "l1": "v kostole",
+      "l2": "dans l'église",
+      "choices_l1": [
+        "croissant",
+        "rok",
+        "v nedeľu"
+      ],
+      "choices_l2": [
+        "les parents",
+        "le vin",
+        "le tee-shirt"
+      ]
+    },
+    {
+      "id": "qcm-au-th-tre",
+      "type": "qcm",
+      "l1": "v divadle",
+      "l2": "au théâtre",
+      "choices_l1": [
+        "jablko",
+        "chvíľa",
+        "začínať"
+      ],
+      "choices_l2": [
+        "bon marché",
+        "mardi",
+        "nous essayons"
+      ]
+    },
+    {
+      "id": "qcm-au-mus-e",
+      "type": "qcm",
+      "l1": "v múzeu",
+      "l2": "au musée",
+      "choices_l1": [
+        "zľava",
+        "oranžový",
+        "pot-au-feu"
+      ],
+      "choices_l2": [
+        "le médecin",
+        "ici",
+        "je vais"
+      ]
+    },
+    {
+      "id": "qcm-la-poste",
+      "type": "qcm",
+      "l1": "pošta",
+      "l2": "la poste",
+      "choices_l1": [
+        "škola",
+        "pracujú",
+        "teraz"
+      ],
+      "choices_l2": [
+        "j'ai",
+        "la demie",
+        "la viande"
+      ]
+    },
+    {
+      "id": "qcm-la-banque",
+      "type": "qcm",
+      "l1": "banka",
+      "l2": "la banque",
+      "choices_l1": [
+        "obchod",
+        "jesť ovocie",
+        "presne"
+      ],
+      "choices_l2": [
+        "la boucherie",
+        "fermé",
+        "encore"
+      ]
+    },
+    {
+      "id": "qcm-la-biblioth-que",
+      "type": "qcm",
+      "l1": "knižnica",
+      "l2": "la bibliothèque",
+      "choices_l1": [
+        "na stole",
+        "piatok",
+        "nikdy"
+      ],
+      "choices_l2": [
+        "jeudi",
+        "les lunettes",
+        "aider"
+      ]
+    },
+    {
+      "id": "qcm-la-mairie",
+      "type": "qcm",
+      "l1": "radnica",
+      "l2": "la mairie",
+      "choices_l1": [
+        "koberec",
+        "cukor",
+        "uterák"
+      ],
+      "choices_l2": [
+        "se retrouver",
+        "lundi",
+        "dormir"
+      ]
+    },
+    {
+      "id": "qcm-la-fontaine",
+      "type": "qcm",
+      "l1": "fontána",
+      "l2": "la fontaine",
+      "choices_l1": [
+        "farba",
+        "euro",
+        "chutiť"
+      ],
+      "choices_l2": [
+        "hier",
+        "la robe",
+        "tôt"
+      ]
+    },
+    {
+      "id": "qcm-la-statue",
+      "type": "qcm",
+      "l1": "socha",
+      "l2": "la statue",
+      "choices_l1": [
+        "smädný",
+        "minerálka",
+        "kto"
+      ],
+      "choices_l2": [
+        "aujourd'hui",
+        "le fromage",
+        "la maison"
+      ]
+    },
+    {
+      "id": "qcm-la-piscine",
+      "type": "qcm",
+      "l1": "bazén",
+      "l2": "la piscine",
+      "choices_l1": [
+        "bunda",
+        "jeden rok",
+        "načas"
+      ],
+      "choices_l2": [
+        "mon frère",
+        "écrire",
+        "un euro"
+      ]
+    },
+    {
+      "id": "blank-je-suis-sur-la-place",
+      "type": "fill-blank",
+      "l1": "Som na námestí.",
+      "l2": "Je suis sur la place.",
+      "missing_l1": "na",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "v",
+        "kde",
+        "mi"
+      ],
+      "choices_l2": [
+        "nous",
+        "suis",
+        "j'ai"
+      ]
+    },
+    {
+      "id": "blank-la-rue-est-longue",
+      "type": "fill-blank",
+      "l1": "Ulica je dlhá.",
+      "l2": "La rue est longue.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "býva",
+        "siedmej",
+        "máte"
+      ],
+      "choices_l2": [
+        "n'ai",
+        "vous",
+        "une"
+      ]
+    },
+    {
+      "id": "blank-le-pont-est-vieux-et-beau",
+      "type": "fill-blank",
+      "l1": "Most je starý a pekný.",
+      "l2": "Le pont est vieux et beau.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "a",
+        "si",
+        "do"
+      ],
+      "choices_l2": [
+        "et",
+        "de",
+        "les"
+      ]
+    },
+    {
+      "id": "blank-les-enfants-sont-dans-le-parc",
+      "type": "fill-blank",
+      "l1": "Deti sú v parku.",
+      "l2": "Les enfants sont dans le parc.",
+      "missing_l1": "v",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "dnes",
+        "býva",
+        "nemám"
+      ],
+      "choices_l2": [
+        "et",
+        "j'ai",
+        "me"
+      ]
+    },
+    {
+      "id": "blank-l-glise-est-sur-la-place",
+      "type": "fill-blank",
+      "l1": "Kostol je na námestí.",
+      "l2": "L'église est sur la place.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "kuchyni",
+        "to",
+        "má"
+      ],
+      "choices_l2": [
+        "cuisine",
+        "un",
+        "la"
+      ]
+    },
+    {
+      "id": "blank-nous-allons-au-th-tre",
+      "type": "fill-blank",
+      "l1": "Ideme do divadla.",
+      "l2": "Nous allons au théâtre.",
+      "missing_l1": "do",
+      "missing_l2": "au",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "áno",
+        "môj",
+        "babka"
+      ],
+      "choices_l2": [
+        "est",
+        "heures",
+        "ne"
+      ]
+    },
+    {
+      "id": "blank-le-mus-e-est-ferm",
+      "type": "fill-blank",
+      "l1": "Múzeum je zatvorené.",
+      "l2": "Le musée est fermé.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "môj",
+        "ja",
+        "mama"
+      ],
+      "choices_l2": [
+        "vous",
+        "ne",
+        "tu"
+      ]
+    },
+    {
+      "id": "blank-o-est-la-poste",
+      "type": "fill-blank",
+      "l1": "Kde je pošta?",
+      "l2": "Où est la poste ?",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "siedmej",
+        "prosím",
+        "nemám"
+      ],
+      "choices_l2": [
+        "la",
+        "vous",
+        "heures"
+      ]
+    },
+    {
+      "id": "blank-la-banque-est-c-t-de-la-poste",
+      "type": "fill-blank",
+      "l1": "Banka je vedľa pošty.",
+      "l2": "La banque est à côté de la poste.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "na",
+        "kde",
+        "to"
+      ],
+      "choices_l2": [
+        "et",
+        "cuisine",
+        "sur"
+      ]
+    },
+    {
+      "id": "blank-la-biblioth-que-est-dans-le-centre-ville",
+      "type": "fill-blank",
+      "l1": "Knižnica je v centre mesta.",
+      "l2": "La bibliothèque est dans le centre-ville.",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "máte",
+        "kde",
+        "chcem"
+      ],
+      "choices_l2": [
+        "suis",
+        "les",
+        "nous"
+      ]
+    },
+    {
+      "id": "blank-la-mairie-est-ancienne",
+      "type": "fill-blank",
+      "l1": "Radnica je stará.",
+      "l2": "La mairie est ancienne.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "chcem",
+        "do",
+        "hľadám"
+      ],
+      "choices_l2": [
+        "tu",
+        "où",
+        "mon"
+      ]
+    },
+    {
+      "id": "blank-la-fontaine-est-sur-la-place",
+      "type": "fill-blank",
+      "l1": "Fontána je na námestí.",
+      "l2": "La fontaine est sur la place.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "nie",
+        "prídem",
+        "a"
+      ],
+      "choices_l2": [
+        "un",
+        "enfants",
+        "ma"
+      ]
+    },
+    {
+      "id": "blank-la-statue-est-pr-s-de-l-glise",
+      "type": "fill-blank",
+      "l1": "Socha je pri kostole.",
+      "l2": "La statue est près de l'église.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "do",
+        "v",
+        "moja"
+      ],
+      "choices_l2": [
+        "vais",
+        "a",
+        "tu"
+      ]
+    },
+    {
+      "id": "blank-la-piscine-est-ferm-e-le-lundi",
+      "type": "fill-blank",
+      "l1": "Bazén je v pondelok zatvorený.",
+      "l2": "La piscine est fermée le lundi.",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "siedmej",
+        "otec",
+        "ešte"
+      ],
+      "choices_l2": [
+        "plaît",
+        "s'il",
+        "à"
+      ]
+    },
+    {
+      "id": "listen-je-suis-sur-la-place",
+      "type": "listen",
+      "l1": "Som na námestí.",
+      "l2": "Je suis sur la place.",
+      "choices_l2": [
+        "Où travailles-tu ?",
+        "Je cherche la clé, mais elle n'est pas sur la table.",
+        "Il est sept heures."
+      ]
+    },
+    {
+      "id": "listen-la-rue-est-longue",
+      "type": "listen",
+      "l1": "Ulica je dlhá.",
+      "l2": "La rue est longue.",
+      "choices_l2": [
+        "Vous voulez encore de la quiche ?",
+        "Notre balcon est petit, mais la cour est grande.",
+        "Nous avons quatre verres et quatre assiettes."
+      ]
+    },
+    {
+      "id": "listen-le-pont-est-vieux-et-beau",
+      "type": "listen",
+      "l1": "Most je starý a pekný.",
+      "l2": "Le pont est vieux et beau.",
+      "choices_l2": [
+        "Goûte le fromage ! Il est salé.",
+        "Maintenant il est cinq heures.",
+        "Ma sœur a deux ans."
+      ]
+    },
+    {
+      "id": "listen-les-enfants-sont-dans-le-parc",
+      "type": "listen",
+      "l1": "Deti sú v parku.",
+      "l2": "Les enfants sont dans le parc.",
+      "choices_l2": [
+        "Merci. Au revoir !",
+        "Je veux essayer ce tee-shirt.",
+        "Ma maison de campagne est petite, mais belle."
+      ]
+    },
+    {
+      "id": "listen-l-glise-est-sur-la-place",
+      "type": "listen",
+      "l1": "Kostol je na námestí.",
+      "l2": "L'église est sur la place.",
+      "choices_l2": [
+        "J'habite dans un immeuble.",
+        "Vous l'avez en noir ?",
+        "Mon frère habite tout près."
+      ]
+    },
+    {
+      "id": "listen-nous-allons-au-th-tre",
+      "type": "listen",
+      "l1": "Ideme do divadla.",
+      "l2": "Nous allons au théâtre.",
+      "choices_l2": [
+        "C'est cher !",
+        "Ce tee-shirt bleu est joli. Vous voulez essayer ?",
+        "Merci. Vous avez un bel appartement."
+      ]
+    },
+    {
+      "id": "listen-le-mus-e-est-ferm",
+      "type": "listen",
+      "l1": "Múzeum je zatvorené.",
+      "l2": "Le musée est fermé.",
+      "choices_l2": [
+        "Je veux une réduction, s'il vous plaît.",
+        "Le bus part à six heures, le train à sept heures.",
+        "Tu es libre samedi ?"
+      ]
+    },
+    {
+      "id": "listen-o-est-la-poste",
+      "type": "listen",
+      "l1": "Kde je pošta?",
+      "l2": "Où est la poste ?",
+      "choices_l2": [
+        "Je veux un pull bon marché.",
+        "Cette jupe verte me plaît.",
+        "Je lave les verres et les assiettes."
+      ]
+    },
+    {
+      "id": "listen-la-banque-est-c-t-de-la-poste",
+      "type": "listen",
+      "l1": "Banka je vedľa pošty.",
+      "l2": "La banque est à côté de la poste.",
+      "choices_l2": [
+        "J'achète la viande à la boucherie.",
+        "Mon ami est médecin. Il travaille à l'hôpital.",
+        "Et moi, je range le salon !"
+      ]
+    },
+    {
+      "id": "listen-la-biblioth-que-est-dans-le-centre-ville",
+      "type": "listen",
+      "l1": "Knižnica je v centre mesta.",
+      "l2": "La bibliothèque est dans le centre-ville.",
+      "choices_l2": [
+        "Oui, taille XL. Tenez.",
+        "Merci, je n'ai plus faim.",
+        "L'année a douze mois."
+      ]
+    },
+    {
+      "id": "listen-la-mairie-est-ancienne",
+      "type": "listen",
+      "l1": "Radnica je stará.",
+      "l2": "La mairie est ancienne.",
+      "choices_l2": [
+        "Il y a un miroir au-dessus de l'armoire.",
+        "Merci, je n'ai plus faim.",
+        "C'est bon marché ! Achète aussi le vert."
+      ]
+    },
+    {
+      "id": "listen-la-fontaine-est-sur-la-place",
+      "type": "listen",
+      "l1": "Fontána je na námestí.",
+      "l2": "La fontaine est sur la place.",
+      "choices_l2": [
+        "Où est la cabine d'essayage ?",
+        "Je n'achète pas beaucoup.",
+        "Vous voulez de l'eau minérale ?"
+      ]
+    },
+    {
+      "id": "listen-la-statue-est-pr-s-de-l-glise",
+      "type": "listen",
+      "l1": "Socha je pri kostole.",
+      "l2": "La statue est près de l'église.",
+      "choices_l2": [
+        "J'ai la taille M.",
+        "Les enfants sont dans la chambre.",
+        "À quelle heure ?"
+      ]
+    },
+    {
+      "id": "listen-la-piscine-est-ferm-e-le-lundi",
+      "type": "listen",
+      "l1": "Bazén je v pondelok zatvorený.",
+      "l2": "La piscine est fermée le lundi.",
+      "choices_l2": [
+        "Cette jupe verte me plaît.",
+        "Je range la pièce.",
+        "Le prix est élevé."
+      ]
+    },
+    {
+      "id": "order-je-suis-sur-la-place",
+      "type": "order",
+      "l1": "Som na námestí.",
+      "l2": "Je suis sur la place.",
+      "tokens_l1": [
+        "Som",
+        "na",
+        "námestí.",
+        "Kostol",
+        "je",
+        "na",
+        "námestí."
+      ],
+      "tokens_l2": [
+        "Je",
+        "suis",
+        "sur",
+        "la",
+        "place.",
+        "L'église",
+        "est",
+        "sur",
+        "la",
+        "place."
+      ]
+    },
+    {
+      "id": "order-la-rue-est-longue",
+      "type": "order",
+      "l1": "Ulica je dlhá.",
+      "l2": "La rue est longue.",
+      "tokens_l1": [
+        "Ulica",
+        "je",
+        "dlhá.",
+        "Fontána",
+        "je",
+        "na",
+        "námestí."
+      ],
+      "tokens_l2": [
+        "La",
+        "rue",
+        "est",
+        "longue.",
+        "La",
+        "fontaine",
+        "est",
+        "sur",
+        "la",
+        "place."
+      ]
+    },
+    {
+      "id": "order-le-pont-est-vieux-et-beau",
+      "type": "order",
+      "l1": "Most je starý a pekný.",
+      "l2": "Le pont est vieux et beau.",
+      "tokens_l1": [
+        "Most",
+        "je",
+        "starý",
+        "a",
+        "pekný.",
+        "Kde",
+        "je",
+        "pošta?"
+      ],
+      "tokens_l2": [
+        "Le",
+        "pont",
+        "est",
+        "vieux",
+        "et",
+        "beau.",
+        "Où",
+        "est",
+        "la",
+        "poste",
+        "?"
+      ]
+    },
+    {
+      "id": "order-les-enfants-sont-dans-le-parc",
+      "type": "order",
+      "l1": "Deti sú v parku.",
+      "l2": "Les enfants sont dans le parc.",
+      "tokens_l1": [
+        "Deti",
+        "sú",
+        "v",
+        "parku.",
+        "Bazén",
+        "je",
+        "v",
+        "pondelok",
+        "zatvorený."
+      ],
+      "tokens_l2": [
+        "Les",
+        "enfants",
+        "sont",
+        "dans",
+        "le",
+        "parc.",
+        "La",
+        "piscine",
+        "est",
+        "fermée",
+        "le",
+        "lundi."
+      ]
+    },
+    {
+      "id": "order-l-glise-est-sur-la-place",
+      "type": "order",
+      "l1": "Kostol je na námestí.",
+      "l2": "L'église est sur la place.",
+      "tokens_l1": [
+        "Kostol",
+        "je",
+        "na",
+        "námestí.",
+        "Kde",
+        "je",
+        "pošta?"
+      ],
+      "tokens_l2": [
+        "L'église",
+        "est",
+        "sur",
+        "la",
+        "place.",
+        "Où",
+        "est",
+        "la",
+        "poste",
+        "?"
+      ]
+    },
+    {
+      "id": "order-nous-allons-au-th-tre",
+      "type": "order",
+      "l1": "Ideme do divadla.",
+      "l2": "Nous allons au théâtre.",
+      "tokens_l1": [
+        "Ideme",
+        "do",
+        "divadla.",
+        "Radnica",
+        "je",
+        "stará."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "allons",
+        "au",
+        "théâtre.",
+        "La",
+        "mairie",
+        "est",
+        "ancienne."
+      ]
+    },
+    {
+      "id": "order-le-mus-e-est-ferm",
+      "type": "order",
+      "l1": "Múzeum je zatvorené.",
+      "l2": "Le musée est fermé.",
+      "tokens_l1": [
+        "Múzeum",
+        "je",
+        "zatvorené.",
+        "Socha",
+        "je",
+        "pri",
+        "kostole."
+      ],
+      "tokens_l2": [
+        "Le",
+        "musée",
+        "est",
+        "fermé.",
+        "La",
+        "statue",
+        "est",
+        "près",
+        "de",
+        "l'église."
+      ]
+    },
+    {
+      "id": "order-o-est-la-poste",
+      "type": "order",
+      "l1": "Kde je pošta?",
+      "l2": "Où est la poste ?",
+      "tokens_l1": [
+        "Kde",
+        "je",
+        "pošta?",
+        "Bazén",
+        "je",
+        "v",
+        "pondelok",
+        "zatvorený."
+      ],
+      "tokens_l2": [
+        "Où",
+        "est",
+        "la",
+        "poste",
+        "?",
+        "La",
+        "piscine",
+        "est",
+        "fermée",
+        "le",
+        "lundi."
+      ]
+    },
+    {
+      "id": "order-la-banque-est-c-t-de-la-poste",
+      "type": "order",
+      "l1": "Banka je vedľa pošty.",
+      "l2": "La banque est à côté de la poste.",
+      "tokens_l1": [
+        "Banka",
+        "je",
+        "vedľa",
+        "pošty.",
+        "Múzeum",
+        "je",
+        "zatvorené."
+      ],
+      "tokens_l2": [
+        "La",
+        "banque",
+        "est",
+        "à",
+        "côté",
+        "de",
+        "la",
+        "poste.",
+        "Le",
+        "musée",
+        "est",
+        "fermé."
+      ]
+    },
+    {
+      "id": "order-la-biblioth-que-est-dans-le-centre-ville",
+      "type": "order",
+      "l1": "Knižnica je v centre mesta.",
+      "l2": "La bibliothèque est dans le centre-ville.",
+      "tokens_l1": [
+        "Knižnica",
+        "je",
+        "v",
+        "centre",
+        "mesta.",
+        "Bazén",
+        "je",
+        "v",
+        "pondelok",
+        "zatvorený."
+      ],
+      "tokens_l2": [
+        "La",
+        "bibliothèque",
+        "est",
+        "dans",
+        "le",
+        "centre-ville.",
+        "La",
+        "piscine",
+        "est",
+        "fermée",
+        "le",
+        "lundi."
+      ]
+    },
+    {
+      "id": "order-la-mairie-est-ancienne",
+      "type": "order",
+      "l1": "Radnica je stará.",
+      "l2": "La mairie est ancienne.",
+      "tokens_l1": [
+        "Radnica",
+        "je",
+        "stará.",
+        "Fontána",
+        "je",
+        "na",
+        "námestí."
+      ],
+      "tokens_l2": [
+        "La",
+        "mairie",
+        "est",
+        "ancienne.",
+        "La",
+        "fontaine",
+        "est",
+        "sur",
+        "la",
+        "place."
+      ]
+    },
+    {
+      "id": "order-la-fontaine-est-sur-la-place",
+      "type": "order",
+      "l1": "Fontána je na námestí.",
+      "l2": "La fontaine est sur la place.",
+      "tokens_l1": [
+        "Fontána",
+        "je",
+        "na",
+        "námestí.",
+        "Socha",
+        "je",
+        "pri",
+        "kostole."
+      ],
+      "tokens_l2": [
+        "La",
+        "fontaine",
+        "est",
+        "sur",
+        "la",
+        "place.",
+        "La",
+        "statue",
+        "est",
+        "près",
+        "de",
+        "l'église."
+      ]
+    },
+    {
+      "id": "order-la-statue-est-pr-s-de-l-glise",
+      "type": "order",
+      "l1": "Socha je pri kostole.",
+      "l2": "La statue est près de l'église.",
+      "tokens_l1": [
+        "Socha",
+        "je",
+        "pri",
+        "kostole.",
+        "Most",
+        "je",
+        "starý",
+        "a",
+        "pekný."
+      ],
+      "tokens_l2": [
+        "La",
+        "statue",
+        "est",
+        "près",
+        "de",
+        "l'église.",
+        "Le",
+        "pont",
+        "est",
+        "vieux",
+        "et",
+        "beau."
+      ]
+    },
+    {
+      "id": "order-la-piscine-est-ferm-e-le-lundi",
+      "type": "order",
+      "l1": "Bazén je v pondelok zatvorený.",
+      "l2": "La piscine est fermée le lundi.",
+      "tokens_l1": [
+        "Bazén",
+        "je",
+        "v",
+        "pondelok",
+        "zatvorený.",
+        "Knižnica",
+        "je",
+        "v",
+        "centre",
+        "mesta."
+      ],
+      "tokens_l2": [
+        "La",
+        "piscine",
+        "est",
+        "fermée",
+        "le",
+        "lundi.",
+        "La",
+        "bibliothèque",
+        "est",
+        "dans",
+        "le",
+        "centre-ville."
+      ]
+    }
+  ]
+}

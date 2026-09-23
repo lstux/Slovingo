@@ -1,0 +1,1370 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-s",
+      "type": "qcm",
+      "l1": "aller",
+      "l2": "ísť",
+      "choices_l1": [
+        "se retrouver",
+        "nous arrivons",
+        "arriver, venir"
+      ],
+      "choices_l2": [
+        "ja prídem",
+        "ty ideš",
+        "čakať"
+      ]
+    },
+    {
+      "id": "qcm-pr-s",
+      "type": "qcm",
+      "l1": "arriver, venir",
+      "l2": "prísť",
+      "choices_l1": [
+        "tu arrives",
+        "aller",
+        "libre"
+      ],
+      "choices_l2": [
+        "my prídeme",
+        "čakať",
+        "ty prídeš"
+      ]
+    },
+    {
+      "id": "qcm-aka",
+      "type": "qcm",
+      "l1": "attendre",
+      "l2": "čakať",
+      "choices_l1": [
+        "aller",
+        "tu arrives",
+        "nous arrivons"
+      ],
+      "choices_l2": [
+        "ja idem",
+        "prísť",
+        "ísť"
+      ]
+    },
+    {
+      "id": "qcm-stretn-sa",
+      "type": "qcm",
+      "l1": "se retrouver",
+      "l2": "stretnúť sa",
+      "choices_l1": [
+        "je vais",
+        "nous allons",
+        "j'arrive"
+      ],
+      "choices_l2": [
+        "ja prídem",
+        "ísť",
+        "čakať"
+      ]
+    },
+    {
+      "id": "qcm-kedy",
+      "type": "qcm",
+      "l1": "quand",
+      "l2": "kedy",
+      "choices_l1": [
+        "tôt",
+        "se retrouver",
+        "nous arrivons"
+      ],
+      "choices_l2": [
+        "ja idem",
+        "ty ideš",
+        "načas"
+      ]
+    },
+    {
+      "id": "qcm-skoro",
+      "type": "qcm",
+      "l1": "tôt",
+      "l2": "skoro",
+      "choices_l1": [
+        "arriver, venir",
+        "tu vas",
+        "attendre"
+      ],
+      "choices_l2": [
+        "načas",
+        "prísť",
+        "ja prídem"
+      ]
+    },
+    {
+      "id": "qcm-neskoro",
+      "type": "qcm",
+      "l1": "tard",
+      "l2": "neskoro",
+      "choices_l1": [
+        "quand",
+        "tôt",
+        "à l'heure"
+      ],
+      "choices_l2": [
+        "ísť",
+        "ja idem",
+        "stretnúť sa"
+      ]
+    },
+    {
+      "id": "qcm-ja-idem",
+      "type": "qcm",
+      "l1": "je vais",
+      "l2": "ja idem",
+      "choices_l1": [
+        "tu arrives",
+        "se retrouver",
+        "nous allons"
+      ],
+      "choices_l2": [
+        "prísť",
+        "čakať",
+        "voľný"
+      ]
+    },
+    {
+      "id": "qcm-ty-ide",
+      "type": "qcm",
+      "l1": "tu vas",
+      "l2": "ty ideš",
+      "choices_l1": [
+        "aller",
+        "tu arrives",
+        "se retrouver"
+      ],
+      "choices_l2": [
+        "my ideme",
+        "prísť",
+        "ísť"
+      ]
+    },
+    {
+      "id": "qcm-on-ona-ide",
+      "type": "qcm",
+      "l1": "il / elle va",
+      "l2": "on / ona ide",
+      "choices_l1": [
+        "Il est deux heures.",
+        "il / elle arrive",
+        "ils / elles vont"
+      ],
+      "choices_l2": [
+        "Sú dve hodiny.",
+        "Je jedna hodina.",
+        "Je desať hodín."
+      ]
+    },
+    {
+      "id": "qcm-my-ideme",
+      "type": "qcm",
+      "l1": "nous allons",
+      "l2": "my ideme",
+      "choices_l1": [
+        "arriver, venir",
+        "aller",
+        "je vais"
+      ],
+      "choices_l2": [
+        "stretnúť sa",
+        "voľný",
+        "ty ideš"
+      ]
+    },
+    {
+      "id": "qcm-oni-id",
+      "type": "qcm",
+      "l1": "ils / elles vont",
+      "l2": "oni idú",
+      "choices_l1": [
+        "il / elle va",
+        "il / elle arrive",
+        "Il est une heure."
+      ],
+      "choices_l2": [
+        "ty ideš",
+        "stretnutie",
+        "stretnúť sa"
+      ]
+    },
+    {
+      "id": "qcm-ja-pr-dem",
+      "type": "qcm",
+      "l1": "j'arrive",
+      "l2": "ja prídem",
+      "choices_l1": [
+        "tu arrives",
+        "arriver, venir",
+        "se retrouver"
+      ],
+      "choices_l2": [
+        "ísť",
+        "čakať",
+        "my prídeme"
+      ]
+    },
+    {
+      "id": "qcm-ty-pr-de",
+      "type": "qcm",
+      "l1": "tu arrives",
+      "l2": "ty prídeš",
+      "choices_l1": [
+        "libre",
+        "attendre",
+        "j'arrive"
+      ],
+      "choices_l2": [
+        "ísť",
+        "my ideme",
+        "ty ideš"
+      ]
+    },
+    {
+      "id": "qcm-on-ona-pr-de",
+      "type": "qcm",
+      "l1": "il / elle arrive",
+      "l2": "on / ona príde",
+      "choices_l1": [
+        "Il est cinq heures.",
+        "il / elle va",
+        "être en retard"
+      ],
+      "choices_l2": [
+        "Je päť hodín.",
+        "trištvrte na šesť",
+        "Je jedna hodina."
+      ]
+    },
+    {
+      "id": "qcm-my-pr-deme",
+      "type": "qcm",
+      "l1": "nous arrivons",
+      "l2": "my prídeme",
+      "choices_l1": [
+        "aller",
+        "nous allons",
+        "libre"
+      ],
+      "choices_l2": [
+        "stretnúť sa",
+        "ísť",
+        "voľný"
+      ]
+    },
+    {
+      "id": "qcm-stretnutie",
+      "type": "qcm",
+      "l1": "le rendez-vous",
+      "l2": "stretnutie",
+      "choices_l1": [
+        "le réveil",
+        "la montre",
+        "le bus"
+      ],
+      "choices_l2": [
+        "hodinky",
+        "vlak",
+        "budík"
+      ]
+    },
+    {
+      "id": "qcm-hodinky",
+      "type": "qcm",
+      "l1": "la montre",
+      "l2": "hodinky",
+      "choices_l1": [
+        "le rendez-vous",
+        "le train",
+        "le réveil"
+      ],
+      "choices_l2": [
+        "vlak",
+        "budík",
+        "autobus"
+      ]
+    },
+    {
+      "id": "qcm-bud-k",
+      "type": "qcm",
+      "l1": "le réveil",
+      "l2": "budík",
+      "choices_l1": [
+        "le bus",
+        "la montre",
+        "le train"
+      ],
+      "choices_l2": [
+        "hodinky",
+        "vlak",
+        "stretnutie"
+      ]
+    },
+    {
+      "id": "qcm-autobus",
+      "type": "qcm",
+      "l1": "le bus",
+      "l2": "autobus",
+      "choices_l1": [
+        "la montre",
+        "le rendez-vous",
+        "le réveil"
+      ],
+      "choices_l2": [
+        "vlak",
+        "stretnutie",
+        "hodinky"
+      ]
+    },
+    {
+      "id": "qcm-vlak",
+      "type": "qcm",
+      "l1": "le train",
+      "l2": "vlak",
+      "choices_l1": [
+        "la montre",
+        "le réveil",
+        "le rendez-vous"
+      ],
+      "choices_l2": [
+        "hodinky",
+        "autobus",
+        "stretnutie"
+      ]
+    },
+    {
+      "id": "qcm-na-as",
+      "type": "qcm",
+      "l1": "à l'heure",
+      "l2": "načas",
+      "choices_l1": [
+        "tu vas",
+        "tu arrives",
+        "arriver, venir"
+      ],
+      "choices_l2": [
+        "ty prídeš",
+        "ja idem",
+        "ísť"
+      ]
+    },
+    {
+      "id": "qcm-vo-n",
+      "type": "qcm",
+      "l1": "libre",
+      "l2": "voľný",
+      "choices_l1": [
+        "nous allons",
+        "j'arrive",
+        "je vais"
+      ],
+      "choices_l2": [
+        "my ideme",
+        "čakať",
+        "ísť"
+      ]
+    },
+    {
+      "id": "blank-pr-dem-o-piatej",
+      "type": "fill-blank",
+      "l1": "J'arrive à cinq heures.",
+      "l2": "Prídem o piatej.",
+      "missing_l1": "à",
+      "missing_l2": "o",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "loin",
+        "sur",
+        "Sous"
+      ],
+      "choices_l2": [
+        "zo",
+        "za",
+        "medzi"
+      ]
+    },
+    {
+      "id": "blank-ak-m-o-siedmej",
+      "type": "fill-blank",
+      "l1": "J'attends à sept heures.",
+      "l2": "Čakám o siedmej.",
+      "missing_l1": "à",
+      "missing_l2": "o",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "chez",
+        "pour",
+        "par"
+      ],
+      "choices_l2": [
+        "Vo",
+        "s",
+        "pred"
+      ]
+    },
+    {
+      "id": "blank-stretneme-sa-v-stredu",
+      "type": "fill-blank",
+      "l1": "On se retrouve mercredi ?",
+      "l2": "Stretneme sa v stredu?",
+      "missing_l1": "se",
+      "missing_l2": "v",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "te",
+        "me",
+        "y"
+      ],
+      "choices_l2": [
+        "po",
+        "bez",
+        "medzi"
+      ]
+    },
+    {
+      "id": "blank-pr-dem-skoro-nie-neskoro",
+      "type": "fill-blank",
+      "l1": "J'arrive tôt, pas tard.",
+      "l2": "Prídem skoro, nie neskoro.",
+      "missing_l1": "pas",
+      "missing_l2": "nie",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ne",
+        "On",
+        "vers"
+      ],
+      "choices_l2": [
+        "idem",
+        "ideš",
+        "nikdy"
+      ]
+    },
+    {
+      "id": "blank-kedy-ide-domov",
+      "type": "fill-blank",
+      "l1": "Quand rentres-tu ?",
+      "l2": "Kedy ideš domov?",
+      "missing_l1": "rentres-tu",
+      "missing_l2": "domov",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "t'appelles-tu",
+        "as-tu",
+        "Où"
+      ],
+      "choices_l2": [
+        "Nečakaj",
+        "zvoní",
+        "Autobus"
+      ]
+    },
+    {
+      "id": "blank-stretneme-sa-v-piatok-o-pol-siedmej",
+      "type": "fill-blank",
+      "l1": "On se retrouve vendredi à six heures et demie.",
+      "l2": "Stretneme sa v piatok o pol siedmej.",
+      "missing_l1": "et",
+      "missing_l2": "v",
+      "blank_index_l1": 7,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ni",
+        "Donc",
+        "mais"
+      ],
+      "choices_l2": [
+        "pri",
+        "za",
+        "zo"
+      ]
+    },
+    {
+      "id": "blank-pr-dem-asi-o-druhej-akaj-pros-m",
+      "type": "fill-blank",
+      "l1": "J'arrive vers deux heures. Attends, s'il te plaît.",
+      "l2": "Prídem asi o druhej. Čakaj, prosím.",
+      "missing_l1": "heures",
+      "missing_l2": "o",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "arrives-tu",
+        "Attends",
+        "rentres-tu"
+      ],
+      "choices_l2": [
+        "Vo",
+        "za",
+        "na"
+      ]
+    },
+    {
+      "id": "blank-v-sobotu-r-no-idem-skoro",
+      "type": "fill-blank",
+      "l1": "Samedi matin j'y vais tôt.",
+      "l2": "V sobotu ráno idem skoro.",
+      "missing_l1": "vais",
+      "missing_l2": "idem",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "allons",
+        "Va",
+        "Allez"
+      ],
+      "choices_l2": [
+        "ide",
+        "ideš",
+        "Prídem"
+      ]
+    },
+    {
+      "id": "blank-me-k-m-pr-dem-o-tvr-na-dev",
+      "type": "fill-blank",
+      "l1": "Je suis en retard. J'arrive à huit heures et quart.",
+      "l2": "Meškám. Prídem o štvrť na deväť.",
+      "missing_l1": "et",
+      "missing_l2": "na",
+      "blank_index_l1": 8,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "Donc",
+        "ou",
+        "mais"
+      ],
+      "choices_l2": [
+        "zo",
+        "z",
+        "bez"
+      ]
+    },
+    {
+      "id": "blank-m-m-stretnutie-o-desiatej",
+      "type": "fill-blank",
+      "l1": "J'ai un rendez-vous à dix heures.",
+      "l2": "Mám stretnutie o desiatej.",
+      "missing_l1": "à",
+      "missing_l2": "o",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "avec",
+        "sans",
+        "dans"
+      ],
+      "choices_l2": [
+        "od",
+        "po",
+        "zo"
+      ]
+    },
+    {
+      "id": "blank-vlak-prich-dza-na-as",
+      "type": "fill-blank",
+      "l1": "Le train arrive à l'heure.",
+      "l2": "Vlak prichádza načas.",
+      "missing_l1": "à",
+      "missing_l2": "načas",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sur",
+        "pour",
+        "près"
+      ],
+      "choices_l2": [
+        "zvoní",
+        "Stretneme",
+        "Autobus"
+      ]
+    },
+    {
+      "id": "blank-autobus-me-k-desa-min-t",
+      "type": "fill-blank",
+      "l1": "Le bus a dix minutes de retard.",
+      "l2": "Autobus mešká desať minút.",
+      "missing_l1": "de",
+      "missing_l2": "desať",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "dans",
+        "pour",
+        "chez"
+      ],
+      "choices_l2": [
+        "prichádza",
+        "Autobus",
+        "stretnutie"
+      ]
+    },
+    {
+      "id": "blank-si-vo-n-v-sobotu",
+      "type": "fill-blank",
+      "l1": "Tu es libre samedi ?",
+      "l2": "Si voľný v sobotu?",
+      "missing_l1": "samedi",
+      "missing_l2": "v",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "réveil",
+        "J'attends",
+        "arrive"
+      ],
+      "choices_l2": [
+        "na",
+        "pri",
+        "medzi"
+      ]
+    },
+    {
+      "id": "blank-bud-k-zvon-o-iestej",
+      "type": "fill-blank",
+      "l1": "Le réveil sonne à six heures.",
+      "l2": "Budík zvoní o šiestej.",
+      "missing_l1": "à",
+      "missing_l2": "o",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sans",
+        "de",
+        "près"
+      ],
+      "choices_l2": [
+        "pri",
+        "od",
+        "do"
+      ]
+    },
+    {
+      "id": "listen-kedy-pr-de",
+      "type": "listen",
+      "l1": "Quand arrives-tu ?",
+      "l2": "Kedy prídeš?",
+      "choices_l1": [
+        "Samedi matin j'y vais tôt.",
+        "J'attends à sept heures.",
+        "J'arrive vers deux heures. Attends, s'il te plaît."
+      ],
+      "choices_l2": [
+        "Nečakaj, meškám.",
+        "O koľkej?",
+        "Idem teraz."
+      ]
+    },
+    {
+      "id": "listen-pr-dem-o-piatej",
+      "type": "listen",
+      "l1": "J'arrive à cinq heures.",
+      "l2": "Prídem o piatej.",
+      "choices_l1": [
+        "J'attends à sept heures.",
+        "J'arrive tôt, pas tard.",
+        "J'ai un rendez-vous à dix heures."
+      ],
+      "choices_l2": [
+        "Stretneme sa v piatok o pol siedmej.",
+        "Stretneme sa v stredu?",
+        "Prídem asi o druhej. Čakaj, prosím."
+      ]
+    },
+    {
+      "id": "listen-idem-teraz",
+      "type": "listen",
+      "l1": "J'y vais maintenant.",
+      "l2": "Idem teraz.",
+      "choices_l1": [
+        "Le bus a dix minutes de retard.",
+        "J'arrive à cinq heures.",
+        "Le train arrive à l'heure."
+      ],
+      "choices_l2": [
+        "Nečakaj, meškám.",
+        "O koľkej?",
+        "O piatej."
+      ]
+    },
+    {
+      "id": "listen-ak-m-o-siedmej",
+      "type": "listen",
+      "l1": "J'attends à sept heures.",
+      "l2": "Čakám o siedmej.",
+      "choices_l1": [
+        "J'arrive à cinq heures.",
+        "J'ai un rendez-vous à dix heures.",
+        "On se retrouve mercredi ?"
+      ],
+      "choices_l2": [
+        "Prídem asi o druhej. Čakaj, prosím.",
+        "Prídem o piatej.",
+        "Stretneme sa v piatok o pol siedmej."
+      ]
+    },
+    {
+      "id": "listen-stretneme-sa-v-stredu",
+      "type": "listen",
+      "l1": "On se retrouve mercredi ?",
+      "l2": "Stretneme sa v stredu?",
+      "choices_l1": [
+        "Le train arrive à l'heure.",
+        "Le bus a dix minutes de retard.",
+        "Tu es libre samedi ?"
+      ],
+      "choices_l2": [
+        "Mám stretnutie o desiatej.",
+        "Si voľný v sobotu?",
+        "Autobus mešká desať minút."
+      ]
+    },
+    {
+      "id": "listen-pr-dem-skoro-nie-neskoro",
+      "type": "listen",
+      "l1": "J'arrive tôt, pas tard.",
+      "l2": "Prídem skoro, nie neskoro.",
+      "choices_l1": [
+        "J'arrive vers deux heures. Attends, s'il te plaît.",
+        "J'arrive à cinq heures.",
+        "Le train arrive à l'heure."
+      ],
+      "choices_l2": [
+        "Prídem asi o druhej. Čakaj, prosím.",
+        "Autobus mešká desať minút.",
+        "Stretneme sa v stredu?"
+      ]
+    },
+    {
+      "id": "listen-ne-akaj-me-k-m",
+      "type": "listen",
+      "l1": "N'attends pas, je suis en retard.",
+      "l2": "Nečakaj, meškám.",
+      "choices_l1": [
+        "J'arrive à cinq heures.",
+        "J'attends à sept heures.",
+        "J'ai un rendez-vous à dix heures."
+      ],
+      "choices_l2": [
+        "Nečakám dlho.",
+        "O koľkej?",
+        "Prídem hneď."
+      ]
+    },
+    {
+      "id": "listen-kedy-ide-domov",
+      "type": "listen",
+      "l1": "Quand rentres-tu ?",
+      "l2": "Kedy ideš domov?",
+      "choices_l1": [
+        "J'ai un rendez-vous à dix heures.",
+        "Tu es libre samedi ?",
+        "J'arrive vers deux heures. Attends, s'il te plaît."
+      ],
+      "choices_l2": [
+        "Meškám. Prídem o štvrť na deväť.",
+        "Autobus mešká desať minút.",
+        "Stretneme sa v piatok o pol siedmej."
+      ]
+    },
+    {
+      "id": "listen-stretneme-sa-v-piatok-o-pol-siedmej",
+      "type": "listen",
+      "l1": "On se retrouve vendredi à six heures et demie.",
+      "l2": "Stretneme sa v piatok o pol siedmej.",
+      "choices_l1": [
+        "Samedi matin j'y vais tôt.",
+        "Le bus a dix minutes de retard.",
+        "Le train arrive à l'heure."
+      ],
+      "choices_l2": [
+        "Prídem skoro, nie neskoro.",
+        "V sobotu ráno idem skoro.",
+        "Stretneme sa v stredu?"
+      ]
+    },
+    {
+      "id": "listen-pr-dem-asi-o-druhej-akaj-pros-m",
+      "type": "listen",
+      "l1": "J'arrive vers deux heures. Attends, s'il te plaît.",
+      "l2": "Prídem asi o druhej. Čakaj, prosím.",
+      "choices_l1": [
+        "Le bus a dix minutes de retard.",
+        "Samedi matin j'y vais tôt.",
+        "J'arrive à cinq heures."
+      ],
+      "choices_l2": [
+        "Stretneme sa v piatok o pol siedmej.",
+        "Prídem skoro, nie neskoro.",
+        "Si voľný v sobotu?"
+      ]
+    },
+    {
+      "id": "listen-v-sobotu-r-no-idem-skoro",
+      "type": "listen",
+      "l1": "Samedi matin j'y vais tôt.",
+      "l2": "V sobotu ráno idem skoro.",
+      "choices_l1": [
+        "Le bus a dix minutes de retard.",
+        "J'arrive vers deux heures. Attends, s'il te plaît.",
+        "J'ai un rendez-vous à dix heures."
+      ],
+      "choices_l2": [
+        "Mám stretnutie o desiatej.",
+        "Čakám o siedmej.",
+        "Kedy ideš domov?"
+      ]
+    },
+    {
+      "id": "listen-me-k-m-pr-dem-o-tvr-na-dev",
+      "type": "listen",
+      "l1": "Je suis en retard. J'arrive à huit heures et quart.",
+      "l2": "Meškám. Prídem o štvrť na deväť.",
+      "choices_l1": [
+        "Samedi matin j'y vais tôt.",
+        "J'arrive à cinq heures.",
+        "J'ai un rendez-vous à dix heures."
+      ],
+      "choices_l2": [
+        "Čakám o siedmej.",
+        "Prídem o piatej.",
+        "Stretneme sa v piatok o pol siedmej."
+      ]
+    },
+    {
+      "id": "listen-m-m-stretnutie-o-desiatej",
+      "type": "listen",
+      "l1": "J'ai un rendez-vous à dix heures.",
+      "l2": "Mám stretnutie o desiatej.",
+      "choices_l1": [
+        "Tu es libre samedi ?",
+        "J'arrive à cinq heures.",
+        "J'attends à sept heures."
+      ],
+      "choices_l2": [
+        "Autobus mešká desať minút.",
+        "Prídem skoro, nie neskoro.",
+        "Meškám. Prídem o štvrť na deväť."
+      ]
+    },
+    {
+      "id": "listen-vlak-prich-dza-na-as",
+      "type": "listen",
+      "l1": "Le train arrive à l'heure.",
+      "l2": "Vlak prichádza načas.",
+      "choices_l1": [
+        "J'arrive vers deux heures. Attends, s'il te plaît.",
+        "Le bus a dix minutes de retard.",
+        "On se retrouve vendredi à six heures et demie."
+      ],
+      "choices_l2": [
+        "Prídem o piatej.",
+        "Mám stretnutie o desiatej.",
+        "Stretneme sa v piatok o pol siedmej."
+      ]
+    },
+    {
+      "id": "listen-autobus-me-k-desa-min-t",
+      "type": "listen",
+      "l1": "Le bus a dix minutes de retard.",
+      "l2": "Autobus mešká desať minút.",
+      "choices_l1": [
+        "J'arrive à cinq heures.",
+        "On se retrouve vendredi à six heures et demie.",
+        "Tu es libre samedi ?"
+      ],
+      "choices_l2": [
+        "Čakám o siedmej.",
+        "Stretneme sa v stredu?",
+        "Si voľný v sobotu?"
+      ]
+    },
+    {
+      "id": "listen-si-vo-n-v-sobotu",
+      "type": "listen",
+      "l1": "Tu es libre samedi ?",
+      "l2": "Si voľný v sobotu?",
+      "choices_l1": [
+        "Samedi matin j'y vais tôt.",
+        "Je suis en retard. J'arrive à huit heures et quart.",
+        "J'arrive à cinq heures."
+      ],
+      "choices_l2": [
+        "Prídem asi o druhej. Čakaj, prosím.",
+        "Autobus mešká desať minút.",
+        "V sobotu ráno idem skoro."
+      ]
+    },
+    {
+      "id": "listen-bud-k-zvon-o-iestej",
+      "type": "listen",
+      "l1": "Le réveil sonne à six heures.",
+      "l2": "Budík zvoní o šiestej.",
+      "choices_l1": [
+        "On se retrouve vendredi à six heures et demie.",
+        "J'ai un rendez-vous à dix heures.",
+        "J'arrive à cinq heures."
+      ],
+      "choices_l2": [
+        "Kedy ideš domov?",
+        "Vlak prichádza načas.",
+        "Stretneme sa v piatok o pol siedmej."
+      ]
+    },
+    {
+      "id": "order-pr-dem-o-piatej",
+      "type": "order",
+      "l1": "J'arrive à cinq heures.",
+      "l2": "Prídem o piatej.",
+      "tokens_l1": [
+        "J'arrive",
+        "à",
+        "cinq",
+        "heures.",
+        "J'arrive",
+        "tôt,",
+        "pas",
+        "tard."
+      ],
+      "tokens_l2": [
+        "Prídem",
+        "o",
+        "piatej.",
+        "Prídem",
+        "skoro,",
+        "nie",
+        "neskoro."
+      ]
+    },
+    {
+      "id": "order-ak-m-o-siedmej",
+      "type": "order",
+      "l1": "J'attends à sept heures.",
+      "l2": "Čakám o siedmej.",
+      "tokens_l1": [
+        "J'attends",
+        "à",
+        "sept",
+        "heures.",
+        "J'ai",
+        "un",
+        "rendez-vous",
+        "à",
+        "dix",
+        "heures."
+      ],
+      "tokens_l2": [
+        "Čakám",
+        "o",
+        "siedmej.",
+        "Mám",
+        "stretnutie",
+        "o",
+        "desiatej."
+      ]
+    },
+    {
+      "id": "order-stretneme-sa-v-stredu",
+      "type": "order",
+      "l1": "On se retrouve mercredi ?",
+      "l2": "Stretneme sa v stredu?",
+      "tokens_l1": [
+        "On",
+        "se",
+        "retrouve",
+        "mercredi",
+        "?",
+        "Quand",
+        "rentres-tu",
+        "?"
+      ],
+      "tokens_l2": [
+        "Stretneme",
+        "sa",
+        "v",
+        "stredu?",
+        "Kedy",
+        "ideš",
+        "domov?"
+      ]
+    },
+    {
+      "id": "order-pr-dem-skoro-nie-neskoro",
+      "type": "order",
+      "l1": "J'arrive tôt, pas tard.",
+      "l2": "Prídem skoro, nie neskoro.",
+      "tokens_l1": [
+        "J'arrive",
+        "tôt,",
+        "pas",
+        "tard.",
+        "J'arrive",
+        "à",
+        "cinq",
+        "heures."
+      ],
+      "tokens_l2": [
+        "Prídem",
+        "skoro,",
+        "nie",
+        "neskoro.",
+        "Prídem",
+        "o",
+        "piatej."
+      ]
+    },
+    {
+      "id": "order-kedy-ide-domov",
+      "type": "order",
+      "l1": "Quand rentres-tu ?",
+      "l2": "Kedy ideš domov?",
+      "tokens_l1": [
+        "Quand",
+        "rentres-tu",
+        "?",
+        "Le",
+        "bus",
+        "a",
+        "dix",
+        "minutes",
+        "de",
+        "retard."
+      ],
+      "tokens_l2": [
+        "Kedy",
+        "ideš",
+        "domov?",
+        "Autobus",
+        "mešká",
+        "desať",
+        "minút."
+      ]
+    },
+    {
+      "id": "order-stretneme-sa-v-piatok-o-pol-siedmej",
+      "type": "order",
+      "l1": "On se retrouve vendredi à six heures et demie.",
+      "l2": "Stretneme sa v piatok o pol siedmej.",
+      "tokens_l1": [
+        "On",
+        "se",
+        "retrouve",
+        "vendredi",
+        "à",
+        "six",
+        "heures",
+        "et",
+        "demie.",
+        "Le",
+        "réveil",
+        "sonne",
+        "à",
+        "six",
+        "heures."
+      ],
+      "tokens_l2": [
+        "Stretneme",
+        "sa",
+        "v",
+        "piatok",
+        "o",
+        "pol",
+        "siedmej.",
+        "Budík",
+        "zvoní",
+        "o",
+        "šiestej."
+      ]
+    },
+    {
+      "id": "order-pr-dem-asi-o-druhej-akaj-pros-m",
+      "type": "order",
+      "l1": "J'arrive vers deux heures. Attends, s'il te plaît.",
+      "l2": "Prídem asi o druhej. Čakaj, prosím.",
+      "tokens_l1": [
+        "J'arrive",
+        "vers",
+        "deux",
+        "heures.",
+        "Attends,",
+        "s'il",
+        "te",
+        "plaît.",
+        "Le",
+        "train",
+        "arrive",
+        "à",
+        "l'heure."
+      ],
+      "tokens_l2": [
+        "Prídem",
+        "asi",
+        "o",
+        "druhej.",
+        "Čakaj,",
+        "prosím.",
+        "Vlak",
+        "prichádza",
+        "načas."
+      ]
+    },
+    {
+      "id": "order-v-sobotu-r-no-idem-skoro",
+      "type": "order",
+      "l1": "Samedi matin j'y vais tôt.",
+      "l2": "V sobotu ráno idem skoro.",
+      "tokens_l1": [
+        "Samedi",
+        "matin",
+        "j'y",
+        "vais",
+        "tôt.",
+        "On",
+        "se",
+        "retrouve",
+        "vendredi",
+        "à",
+        "six",
+        "heures",
+        "et",
+        "demie."
+      ],
+      "tokens_l2": [
+        "V",
+        "sobotu",
+        "ráno",
+        "idem",
+        "skoro.",
+        "Stretneme",
+        "sa",
+        "v",
+        "piatok",
+        "o",
+        "pol",
+        "siedmej."
+      ]
+    },
+    {
+      "id": "order-me-k-m-pr-dem-o-tvr-na-dev",
+      "type": "order",
+      "l1": "Je suis en retard. J'arrive à huit heures et quart.",
+      "l2": "Meškám. Prídem o štvrť na deväť.",
+      "tokens_l1": [
+        "Je",
+        "suis",
+        "en",
+        "retard.",
+        "J'arrive",
+        "à",
+        "huit",
+        "heures",
+        "et",
+        "quart.",
+        "Quand",
+        "rentres-tu",
+        "?"
+      ],
+      "tokens_l2": [
+        "Meškám.",
+        "Prídem",
+        "o",
+        "štvrť",
+        "na",
+        "deväť.",
+        "Kedy",
+        "ideš",
+        "domov?"
+      ]
+    },
+    {
+      "id": "order-m-m-stretnutie-o-desiatej",
+      "type": "order",
+      "l1": "J'ai un rendez-vous à dix heures.",
+      "l2": "Mám stretnutie o desiatej.",
+      "tokens_l1": [
+        "J'ai",
+        "un",
+        "rendez-vous",
+        "à",
+        "dix",
+        "heures.",
+        "Le",
+        "train",
+        "arrive",
+        "à",
+        "l'heure."
+      ],
+      "tokens_l2": [
+        "Mám",
+        "stretnutie",
+        "o",
+        "desiatej.",
+        "Vlak",
+        "prichádza",
+        "načas."
+      ]
+    },
+    {
+      "id": "order-vlak-prich-dza-na-as",
+      "type": "order",
+      "l1": "Le train arrive à l'heure.",
+      "l2": "Vlak prichádza načas.",
+      "tokens_l1": [
+        "Le",
+        "train",
+        "arrive",
+        "à",
+        "l'heure.",
+        "J'ai",
+        "un",
+        "rendez-vous",
+        "à",
+        "dix",
+        "heures."
+      ],
+      "tokens_l2": [
+        "Vlak",
+        "prichádza",
+        "načas.",
+        "Mám",
+        "stretnutie",
+        "o",
+        "desiatej."
+      ]
+    },
+    {
+      "id": "order-autobus-me-k-desa-min-t",
+      "type": "order",
+      "l1": "Le bus a dix minutes de retard.",
+      "l2": "Autobus mešká desať minút.",
+      "tokens_l1": [
+        "Le",
+        "bus",
+        "a",
+        "dix",
+        "minutes",
+        "de",
+        "retard.",
+        "J'ai",
+        "un",
+        "rendez-vous",
+        "à",
+        "dix",
+        "heures."
+      ],
+      "tokens_l2": [
+        "Autobus",
+        "mešká",
+        "desať",
+        "minút.",
+        "Mám",
+        "stretnutie",
+        "o",
+        "desiatej."
+      ]
+    },
+    {
+      "id": "order-si-vo-n-v-sobotu",
+      "type": "order",
+      "l1": "Tu es libre samedi ?",
+      "l2": "Si voľný v sobotu?",
+      "tokens_l1": [
+        "Tu",
+        "es",
+        "libre",
+        "samedi",
+        "?",
+        "On",
+        "se",
+        "retrouve",
+        "vendredi",
+        "à",
+        "six",
+        "heures",
+        "et",
+        "demie."
+      ],
+      "tokens_l2": [
+        "Si",
+        "voľný",
+        "v",
+        "sobotu?",
+        "Stretneme",
+        "sa",
+        "v",
+        "piatok",
+        "o",
+        "pol",
+        "siedmej."
+      ]
+    },
+    {
+      "id": "order-bud-k-zvon-o-iestej",
+      "type": "order",
+      "l1": "Le réveil sonne à six heures.",
+      "l2": "Budík zvoní o šiestej.",
+      "tokens_l1": [
+        "Le",
+        "réveil",
+        "sonne",
+        "à",
+        "six",
+        "heures.",
+        "J'attends",
+        "à",
+        "sept",
+        "heures."
+      ],
+      "tokens_l2": [
+        "Budík",
+        "zvoní",
+        "o",
+        "šiestej.",
+        "Čakám",
+        "o",
+        "siedmej."
+      ]
+    },
+    {
+      "id": "match-s-vocab",
+      "type": "match",
+      "l1": [
+        "aller",
+        "arriver, venir",
+        "attendre",
+        "se retrouver"
+      ],
+      "l2": [
+        "ísť",
+        "prísť",
+        "čakať",
+        "stretnúť sa"
+      ]
+    },
+    {
+      "id": "match-kedy-pr-de-sentences",
+      "type": "match",
+      "l1": [
+        "Quand arrives-tu ?",
+        "J'arrive à cinq heures.",
+        "J'y vais maintenant.",
+        "J'attends à sept heures."
+      ],
+      "l2": [
+        "Kedy prídeš?",
+        "Prídem o piatej.",
+        "Idem teraz.",
+        "Čakám o siedmej."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1424 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-l-h-tel",
+      "type": "qcm",
+      "l1": "hotel",
+      "l2": "l'hôtel",
+      "choices_l1": [
+        "pobrežie",
+        "skala",
+        "loď"
+      ],
+      "choices_l2": [
+        "l'excursion",
+        "l'île",
+        "la mer"
+      ]
+    },
+    {
+      "id": "qcm-la-r-servation",
+      "type": "qcm",
+      "l1": "rezervácia",
+      "l2": "la réservation",
+      "choices_l1": [
+        "skala",
+        "pobrežie",
+        "loď"
+      ],
+      "choices_l2": [
+        "le seau",
+        "le parasol",
+        "la marée"
+      ]
+    },
+    {
+      "id": "qcm-la-chambre",
+      "type": "qcm",
+      "l1": "izba",
+      "l2": "la chambre",
+      "choices_l1": [
+        "strecha",
+        "záchod",
+        "dvere"
+      ],
+      "choices_l2": [
+        "le balcon",
+        "la buanderie",
+        "l'immeuble"
+      ]
+    },
+    {
+      "id": "qcm-la-vue-sur-mer",
+      "type": "qcm",
+      "l1": "výhľad na more",
+      "l2": "la vue sur mer",
+      "choices_l1": [
+        "stavať hrad z piesku",
+        "Môžem plávať sám?",
+        "Musím mať plavky."
+      ],
+      "choices_l2": [
+        "Je veux nager.",
+        "la serviette de plage",
+        "construire un château de sable"
+      ]
+    },
+    {
+      "id": "qcm-la-douche",
+      "type": "qcm",
+      "l1": "sprcha",
+      "l2": "la douche",
+      "choices_l1": [
+        "chladnička",
+        "televízor",
+        "budík"
+      ],
+      "choices_l2": [
+        "le miroir",
+        "l'horloge",
+        "le téléphone"
+      ]
+    },
+    {
+      "id": "qcm-fatigu",
+      "type": "qcm",
+      "l1": "unavený",
+      "l2": "fatigué",
+      "choices_l1": [
+        "najvyšší",
+        "mladý",
+        "starý"
+      ],
+      "choices_l2": [
+        "le silence",
+        "intéressant",
+        "jeune"
+      ]
+    },
+    {
+      "id": "qcm-se-reposer",
+      "type": "qcm",
+      "l1": "odpočívať",
+      "l2": "se reposer",
+      "choices_l1": [
+        "budeš",
+        "chcieť",
+        "otvárať"
+      ],
+      "choices_l2": [
+        "dormir",
+        "essayer",
+        "se lever"
+      ]
+    },
+    {
+      "id": "qcm-je-voudrais",
+      "type": "qcm",
+      "l1": "chcel by som / chcela by som",
+      "l2": "je voudrais",
+      "choices_l1": [
+        "bude to ľahké",
+        "Je to za rohom.",
+        "Chodím do práce autobusom."
+      ],
+      "choices_l2": [
+        "à",
+        "un peu",
+        "Quelle"
+      ]
+    },
+    {
+      "id": "qcm-nous-pourrions",
+      "type": "qcm",
+      "l1": "mohli by sme",
+      "l2": "nous pourrions",
+      "choices_l1": [
+        "Urobila jahňacie stehno, a zostala v kuchyni celé poobedie.",
+        "Je to vedľa banky.",
+        "Aké je to?"
+      ],
+      "choices_l2": [
+        "je mange",
+        "est-ce",
+        "C'est bon."
+      ]
+    },
+    {
+      "id": "qcm-ce-serait",
+      "type": "qcm",
+      "l1": "bolo by to",
+      "l2": "ce serait",
+      "choices_l1": [
+        "menej teplý ako",
+        "chcel by som / chcela by som",
+        "plaviť sa na lodi"
+      ],
+      "choices_l2": [
+        "quand",
+        "tu habites",
+        "J'ai"
+      ]
+    },
+    {
+      "id": "qcm-je-voudrais-une-chambre",
+      "type": "qcm",
+      "l1": "Chcel by som izbu.",
+      "l2": "Je voudrais une chambre.",
+      "choices_l1": [
+        "obývačka (v slovenčine ženský rod)",
+        "To je izba.",
+        "To sú izby."
+      ],
+      "choices_l2": [
+        "C'est une pièce.",
+        "Nous voudrions une chambre avec vue sur mer.",
+        "dans la chambre"
+      ]
+    },
+    {
+      "id": "qcm-nous-voudrions-une-chambre-avec-vue-sur-mer",
+      "type": "qcm",
+      "l1": "Chceli by sme izbu s výhľadom na more.",
+      "l2": "Nous voudrions une chambre avec vue sur mer.",
+      "choices_l1": [
+        "To sú izby.",
+        "To je izba.",
+        "obývačka (v slovenčine ženský rod)"
+      ],
+      "choices_l2": [
+        "Je voudrais une chambre.",
+        "une chambre (ženský rod)",
+        "la chambre (à coucher)"
+      ]
+    },
+    {
+      "id": "qcm-pourrions-nous-avoir-une-douche",
+      "type": "qcm",
+      "l1": "Mohli by sme mať sprchu?",
+      "l2": "Pourrions-nous avoir une douche ?",
+      "choices_l1": [
+        "dôchodca / dôchodkyňa",
+        "menej teplý ako",
+        "Dám si quiche."
+      ],
+      "choices_l2": [
+        "sur la table",
+        "Il n'y a pas de lit.",
+        "Il y a une table."
+      ]
+    },
+    {
+      "id": "qcm-le-lit",
+      "type": "qcm",
+      "l1": "posteľ",
+      "l2": "le lit",
+      "choices_l1": [
+        "budík",
+        "sprcha",
+        "stôl"
+      ],
+      "choices_l2": [
+        "le tableau",
+        "le miroir",
+        "le réveil"
+      ]
+    },
+    {
+      "id": "qcm-la-couverture",
+      "type": "qcm",
+      "l1": "deka",
+      "l2": "la couverture",
+      "choices_l1": [
+        "nôž",
+        "kľúč",
+        "sila"
+      ],
+      "choices_l2": [
+        "la clé",
+        "la force",
+        "le livre"
+      ]
+    },
+    {
+      "id": "qcm-la-r-ception",
+      "type": "qcm",
+      "l1": "recepcia",
+      "l2": "la réception",
+      "choices_l1": [
+        "potápať sa",
+        "pobrežie",
+        "bazén"
+      ],
+      "choices_l2": [
+        "le coquillage",
+        "l'excursion",
+        "la crique"
+      ]
+    },
+    {
+      "id": "qcm-les-toiles",
+      "type": "qcm",
+      "l1": "hviezdy",
+      "l2": "les étoiles",
+      "choices_l1": [
+        "upozornenie",
+        "stupeň",
+        "búrka"
+      ],
+      "choices_l2": [
+        "la fleur",
+        "le brouillard",
+        "le vent"
+      ]
+    },
+    {
+      "id": "qcm-le-silence",
+      "type": "qcm",
+      "l1": "ticho",
+      "l2": "le silence",
+      "choices_l1": [
+        "hladný",
+        "radostný",
+        "unavený"
+      ],
+      "choices_l2": [
+        "salé",
+        "beau",
+        "fatigué"
+      ]
+    },
+    {
+      "id": "qcm-la-tranquillit",
+      "type": "qcm",
+      "l1": "pohoda",
+      "l2": "la tranquillité",
+      "choices_l1": [
+        "malé",
+        "otvorené",
+        "daždivo"
+      ],
+      "choices_l2": [
+        "ennuyeux",
+        "préféré",
+        "près"
+      ]
+    },
+    {
+      "id": "qcm-le-balcon",
+      "type": "qcm",
+      "l1": "balkón",
+      "l2": "le balcon",
+      "choices_l1": [
+        "byt",
+        "záchod",
+        "kúpeľňa"
+      ],
+      "choices_l2": [
+        "les toilettes",
+        "la maison",
+        "la cour"
+      ]
+    },
+    {
+      "id": "blank-je-voudrais-une-chambre-l-h-tel",
+      "type": "fill-blank",
+      "l1": "Chcel by som izbu v hoteli.",
+      "l2": "Je voudrais une chambre à l'hôtel.",
+      "missing_l1": "v",
+      "missing_l2": "à",
+      "blank_index_l1": 4,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "sú",
+        "Ďakujem",
+        "spolu"
+      ],
+      "choices_l2": [
+        "mais",
+        "nous marcherons",
+        "une"
+      ]
+    },
+    {
+      "id": "blank-je-suis-fatigu-je-veux-me-reposer",
+      "type": "fill-blank",
+      "l1": "Som unavený. Chcem odpočívať.",
+      "l2": "Je suis fatigué. Je veux me reposer.",
+      "missing_l1": "Chcem",
+      "missing_l2": "Je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "sedieť",
+        "mať",
+        "Stretneme sa."
+      ],
+      "choices_l2": [
+        "je cherche",
+        "un peu",
+        "nous allons"
+      ]
+    },
+    {
+      "id": "blank-nous-voudrions-une-chambre-avec-vue-sur-mer",
+      "type": "fill-blank",
+      "l1": "Chceli by sme izbu s výhľadom na more.",
+      "l2": "Nous voudrions une chambre avec vue sur mer.",
+      "missing_l1": "na",
+      "missing_l2": "une",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ako",
+        "oblečieme si",
+        "ja mám"
+      ],
+      "choices_l2": [
+        "tu vois",
+        "je cherche",
+        "avec"
+      ]
+    },
+    {
+      "id": "blank-pourrions-nous-dormir-ici",
+      "type": "fill-blank",
+      "l1": "Mohli by sme tu prespať?",
+      "l2": "Pourrions-nous dormir ici ?",
+      "missing_l1": "sme",
+      "missing_l2": "ici",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Kde",
+        "má",
+        "po"
+      ],
+      "choices_l2": [
+        "le plus...",
+        "on",
+        "dehors"
+      ]
+    },
+    {
+      "id": "blank-ce-serait-mieux-d-y-aller-t-t-le-matin",
+      "type": "fill-blank",
+      "l1": "Bolo by lepšie ísť skoro ráno.",
+      "l2": "Ce serait mieux d'y aller tôt le matin.",
+      "missing_l1": "by",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "tiež",
+        "Je horúco.",
+        "nie"
+      ],
+      "choices_l2": [
+        "se",
+        "tu es",
+        "des"
+      ]
+    },
+    {
+      "id": "blank-dans-l-h-tel-il-fait-chaud-et-c-est-confortable",
+      "type": "fill-blank",
+      "l1": "V hoteli je teplo a útulno.",
+      "l2": "Dans l'hôtel il fait chaud et c'est confortable.",
+      "missing_l1": "je",
+      "missing_l2": "et",
+      "blank_index_l1": 2,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "do potravín",
+        "Ďakujem",
+        "na stoličke"
+      ],
+      "choices_l2": [
+        "s'appelle",
+        "je serai",
+        "beaucoup"
+      ]
+    },
+    {
+      "id": "blank-je-voudrais-voir-les-toiles-depuis-la-plage",
+      "type": "fill-blank",
+      "l1": "Chcel by som vidieť hviezdy z pláže.",
+      "l2": "Je voudrais voir les étoiles depuis la plage.",
+      "missing_l1": "som",
+      "missing_l2": "la",
+      "blank_index_l1": 2,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "do",
+        "Je horúco.",
+        "hľadám"
+      ],
+      "choices_l2": [
+        "avec",
+        "as",
+        "mon"
+      ]
+    },
+    {
+      "id": "blank-nous-sommes-fatigu-s-nous-voudrions-nous-reposer-l-h-tel",
+      "type": "fill-blank",
+      "l1": "Sme unavení, chceli by sme odpočívať v hoteli.",
+      "l2": "Nous sommes fatigués, nous voudrions nous reposer à l'hôtel.",
+      "missing_l1": "v",
+      "missing_l2": "à",
+      "blank_index_l1": 6,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "ale",
+        "prosím",
+        "oblečieme si"
+      ],
+      "choices_l2": [
+        "le",
+        "cette",
+        "ma"
+      ]
+    },
+    {
+      "id": "blank-pourrions-nous-avoir-une-soupe-chaude-s-il-vous-pla-t",
+      "type": "fill-blank",
+      "l1": "Mohli by sme mať teplú polievku, prosím?",
+      "l2": "Pourrions-nous avoir une soupe chaude, s'il vous plaît ?",
+      "missing_l1": "sme",
+      "missing_l2": "une",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "na stole",
+        "Zostala doma.",
+        "za"
+      ],
+      "choices_l2": [
+        "c'est",
+        "tu",
+        "le plus..."
+      ]
+    },
+    {
+      "id": "blank-la-plage-est-magnifique-mais-l-eau-est-froide",
+      "type": "fill-blank",
+      "l1": "Pláž je krásna, ale voda je studená.",
+      "l2": "La plage est magnifique, mais l'eau est froide.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "každý",
+        "veľa",
+        "na stole"
+      ],
+      "choices_l2": [
+        "nous habitons",
+        "nous marcherons",
+        "je mets"
+      ]
+    },
+    {
+      "id": "blank-nous-avons-une-r-servation-pour-deux-lits",
+      "type": "fill-blank",
+      "l1": "Máme rezerváciu na dve postele.",
+      "l2": "Nous avons une réservation pour deux lits.",
+      "missing_l1": "na",
+      "missing_l2": "une",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ďalej",
+        "ty si",
+        "táto bunda"
+      ],
+      "choices_l2": [
+        "ensemble",
+        "aussi",
+        "dehors"
+      ]
+    },
+    {
+      "id": "blank-je-voudrais-une-couverture-chaude",
+      "type": "fill-blank",
+      "l1": "Chcel by som teplú deku.",
+      "l2": "Je voudrais une couverture chaude.",
+      "missing_l1": "som",
+      "missing_l2": "une",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "do",
+        "dlhší ako",
+        "tieto topánky"
+      ],
+      "choices_l2": [
+        "plaît",
+        "je bois",
+        "je voudrais"
+      ]
+    },
+    {
+      "id": "blank-la-r-ception-est-ouverte-jusqu-minuit",
+      "type": "fill-blank",
+      "l1": "Recepcia je otvorená do polnoci.",
+      "l2": "La réception est ouverte jusqu'à minuit.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "vnútri",
+        "ja som",
+        "sme"
+      ],
+      "choices_l2": [
+        "peu",
+        "une",
+        "au"
+      ]
+    },
+    {
+      "id": "blank-il-y-a-un-beau-silence-pr-s-de-la-mer",
+      "type": "fill-blank",
+      "l1": "Pri mori je krásne ticho.",
+      "l2": "Il y a un beau silence près de la mer.",
+      "missing_l1": "je",
+      "missing_l2": "la",
+      "blank_index_l1": 2,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "oblečie si",
+        "na stole",
+        "ty si"
+      ],
+      "choices_l2": [
+        "nous marcherons",
+        "je serai",
+        "nous voulons"
+      ]
+    },
+    {
+      "id": "blank-je-ressens-la-tranquillit-sur-le-balcon",
+      "type": "fill-blank",
+      "l1": "Cítim pohodu na balkóne.",
+      "l2": "Je ressens la tranquillité sur le balcon.",
+      "missing_l1": "na",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "vonku",
+        "oblečieme si",
+        "Koľko"
+      ],
+      "choices_l2": [
+        "pas",
+        "nous allons",
+        "je bois"
+      ]
+    },
+    {
+      "id": "listen-je-voudrais-une-chambre-l-h-tel",
+      "type": "listen",
+      "l1": "Chcel by som izbu v hoteli.",
+      "l2": "Je voudrais une chambre à l'hôtel.",
+      "choices_l2": [
+        "Cette saison est plus pluvieuse que l'été dernier.",
+        "S'il fait beau, nous irons au parc.",
+        "J'arrive tout de suite."
+      ],
+      "choices_l1": [
+        "Ďakujem. Máte pekný byt.",
+        "Náš dom je veľký, ale izby sú malé.",
+        "Náš balkón je malý, ale dvor je veľký."
+      ]
+    },
+    {
+      "id": "listen-vous-avez-une-r-servation",
+      "type": "listen",
+      "l1": "Máte rezerváciu?",
+      "l2": "Vous avez une réservation ?",
+      "choices_l2": [
+        "Moi aussi, je suis professeur.",
+        "Le rocher est dangereux.",
+        "Le pot-au-feu est chaud et salé."
+      ],
+      "choices_l1": [
+        "Umývam tanier.",
+        "Nemám cukor.",
+        "Jem chlieb."
+      ]
+    },
+    {
+      "id": "listen-je-suis-fatigu-je-veux-me-reposer",
+      "type": "listen",
+      "l1": "Som unavený. Chcem odpočívať.",
+      "l2": "Je suis fatigué. Je veux me reposer.",
+      "choices_l2": [
+        "Ma sœur travaille à l'hôpital.",
+        "S'il fait beau demain, nous irons nous promener dans le parc.",
+        "Aujourd'hui, j'y vais à pied."
+      ],
+      "choices_l1": [
+        "Kade mám ísť?",
+        "Môžem ísť s tebou?",
+        "Musíme mať chladiaci box."
+      ]
+    },
+    {
+      "id": "listen-nous-voudrions-une-chambre-avec-vue-sur-mer",
+      "type": "listen",
+      "l1": "Chceli by sme izbu s výhľadom na more.",
+      "l2": "Nous voudrions une chambre avec vue sur mer.",
+      "choices_l2": [
+        "Le couteau est dans la cuisine.",
+        "Je cherche mes lunettes.",
+        "Je dois mettre mes bottes, il y a de la neige."
+      ],
+      "choices_l1": [
+        "Táto zátoka je pokojnejšia ako hlavná pláž.",
+        "Na pláž do La Baule. Je to ďalej, ale pláž je krajšia.",
+        "Pláž je krásna."
+      ]
+    },
+    {
+      "id": "listen-pourrions-nous-dormir-ici",
+      "type": "listen",
+      "l1": "Mohli by sme tu prespať?",
+      "l2": "Pourrions-nous dormir ici ?",
+      "choices_l2": [
+        "Et moi, je range le salon !",
+        "La température est de dix degrés.",
+        "Je veux ce tee-shirt rouge. Combien coûte-t-il ?"
+      ],
+      "choices_l1": [
+        "Ďakujem za pomoc!",
+        "Kuchyňa je malá.",
+        "V noci je ticho."
+      ]
+    },
+    {
+      "id": "listen-ce-serait-mieux-d-y-aller-t-t-le-matin",
+      "type": "listen",
+      "l1": "Bolo by lepšie ísť skoro ráno.",
+      "l2": "Ce serait mieux d'y aller tôt le matin.",
+      "choices_l2": [
+        "Je suis en retard. Je vais arriver à huit heures et quart.",
+        "La bibliothèque est dans le centre-ville.",
+        "Tu veux encore de la soupe ?"
+      ],
+      "choices_l1": [
+        "V zime je noc dlhšia ako deň.",
+        "Vstávam a zatváram okno. Je zima.",
+        "Zajtra bude slnečno."
+      ]
+    },
+    {
+      "id": "listen-dans-l-h-tel-il-fait-chaud-et-c-est-confortable",
+      "type": "listen",
+      "l1": "V hoteli je teplo a útulno.",
+      "l2": "Dans l'hôtel il fait chaud et c'est confortable.",
+      "choices_l2": [
+        "Le train arrive à l'heure.",
+        "Je sens la fatigue, j'ai besoin de repos.",
+        "Il y a un vent fort."
+      ],
+      "choices_l1": [
+        "Chcem ešte kávu. Je studená.",
+        "Chodím do práce autobusom.",
+        "Zdobili sme košík a pripravili sme koláče."
+      ]
+    },
+    {
+      "id": "listen-je-voudrais-voir-les-toiles-depuis-la-plage",
+      "type": "listen",
+      "l1": "Chcel by som vidieť hviezdy z pláže.",
+      "l2": "Je voudrais voir les étoiles depuis la plage.",
+      "choices_l2": [
+        "Ce sac rose me plaît.",
+        "Allez tout droit, puis à gauche.",
+        "Le prix est élevé."
+      ],
+      "choices_l1": [
+        "Toto leto je teplejšie, nemusím nosiť sveter.",
+        "Ráno mám čas.",
+        "Aký je dnes deň?"
+      ]
+    },
+    {
+      "id": "listen-nous-sommes-fatigu-s-nous-voudrions-nous-reposer-l-h-tel",
+      "type": "listen",
+      "l1": "Sme unavení, chceli by sme odpočívať v hoteli.",
+      "l2": "Nous sommes fatigués, nous voudrions nous reposer à l'hôtel.",
+      "choices_l2": [
+        "Retournez en arrière.",
+        "Je suis en retard d'environ dix minutes.",
+        "Je ferme la porte."
+      ],
+      "choices_l1": [
+        "Kade mám ísť?",
+        "Môžem ísť s tebou?",
+        "Musíme mať chladiaci box."
+      ]
+    },
+    {
+      "id": "listen-pourrions-nous-avoir-une-soupe-chaude-s-il-vous-pla-t",
+      "type": "listen",
+      "l1": "Mohli by sme mať teplú polievku, prosím?",
+      "l2": "Pourrions-nous avoir une soupe chaude, s'il vous plaît ?",
+      "choices_l2": [
+        "Je veux manger.",
+        "Tu connais la marée ?",
+        "Il est encore tôt."
+      ],
+      "choices_l1": [
+        "Chceš ísť do kina?",
+        "Môžem ísť s tebou?",
+        "Ale mali sme ísť na turistiku!"
+      ]
+    },
+    {
+      "id": "listen-la-plage-est-magnifique-mais-l-eau-est-froide",
+      "type": "listen",
+      "l1": "Pláž je krásna, ale voda je studená.",
+      "l2": "La plage est magnifique, mais l'eau est froide.",
+      "choices_l2": [
+        "Demain, c'est vendredi. Je suis libre.",
+        "Cette jupe verte me plaît.",
+        "Ma femme travaille dans un bureau."
+      ],
+      "choices_l1": [
+        "Konečne! Už som schovala vajíčka v záhrade.",
+        "Zdobili ste vajíčka spolu?",
+        "Croissant a bielu kávu, prosím."
+      ]
+    },
+    {
+      "id": "listen-nous-avons-une-r-servation-pour-deux-lits",
+      "type": "listen",
+      "l1": "Máme rezerváciu na dve postele.",
+      "l2": "Nous avons une réservation pour deux lits.",
+      "choices_l2": [
+        "Mes parents sont retraités. Ils habitent tout près.",
+        "J'habite dans un appartement.",
+        "C'est bon marché."
+      ],
+      "choices_l1": [
+        "Môj bratranec je mladý. Má osemnásť rokov.",
+        "Nemám brata, ale mám dve sestry.",
+        "Mám tridsať rokov."
+      ]
+    },
+    {
+      "id": "listen-je-voudrais-une-couverture-chaude",
+      "type": "listen",
+      "l1": "Chcel by som teplú deku.",
+      "l2": "Je voudrais une couverture chaude.",
+      "choices_l2": [
+        "Je cherche le téléphone. Il n'est pas dans l'armoire.",
+        "Le soir, je n'ai jamais le temps.",
+        "Un peu de sel, s'il te plaît."
+      ],
+      "choices_l1": [
+        "Nemám istotu, ale asi bude pekne.",
+        "Aké je tvoje obľúbené ročné obdobie?",
+        "Poznáš príliv a odliv?"
+      ]
+    },
+    {
+      "id": "listen-la-r-ception-est-ouverte-jusqu-minuit",
+      "type": "listen",
+      "l1": "Recepcia je otvorená do polnoci.",
+      "l2": "La réception est ouverte jusqu'à minuit.",
+      "choices_l2": [
+        "Cette plage est plus belle, mais celle-là est moins chère.",
+        "Le train arrive à l'heure.",
+        "Le salon est grand."
+      ],
+      "choices_l1": [
+        "Chcem vidieť maják, ale musím mať dobré topánky.",
+        "Musíme mať vodu a krém na opaľovanie, lebo pláž je ďaleko.",
+        "Dúfam, že bude pekne na náš výlet."
+      ]
+    },
+    {
+      "id": "listen-il-y-a-un-beau-silence-pr-s-de-la-mer",
+      "type": "listen",
+      "l1": "Pri mori je krásne ticho.",
+      "l2": "Il y a un beau silence près de la mer.",
+      "choices_l2": [
+        "La température est de moins cinq degrés. Il gèle.",
+        "Je cherche la clé, mais elle n'est pas sur la table.",
+        "Mamie est vieille, mais elle travaille beaucoup !"
+      ],
+      "choices_l1": [
+        "Sedím na stoličke.",
+        "Ovocie je sladké.",
+        "Poznáš príliv a odliv?"
+      ]
+    },
+    {
+      "id": "listen-je-ressens-la-tranquillit-sur-le-balcon",
+      "type": "listen",
+      "l1": "Cítim pohodu na balkóne.",
+      "l2": "Je ressens la tranquillité sur le balcon.",
+      "choices_l2": [
+        "Je nage dans la mer.",
+        "Le fromage est acide.",
+        "La serviette est dans la salle de bain, sur l'étagère."
+      ],
+      "choices_l1": [
+        "Ja nechcem pot-au-feu. Chcem tartu!",
+        "Tráva je zelená a mokrá.",
+        "Zvony poletia do Ríma."
+      ]
+    },
+    {
+      "id": "order-je-voudrais-une-chambre-l-h-tel",
+      "type": "order",
+      "l1": "Chcel by som izbu v hoteli.",
+      "l2": "Je voudrais une chambre à l'hôtel.",
+      "tokens_l1": [
+        "Chcel",
+        "by",
+        "som",
+        "izbu",
+        "v",
+        "hoteli.",
+        "Sme",
+        "unavení,",
+        "chceli",
+        "by",
+        "sme",
+        "odpočívať",
+        "v",
+        "hoteli."
+      ],
+      "tokens_l2": [
+        "Je",
+        "voudrais",
+        "une",
+        "chambre",
+        "à",
+        "l'hôtel.",
+        "Nous",
+        "sommes",
+        "fatigués,",
+        "nous",
+        "voudrions",
+        "nous",
+        "reposer",
+        "à",
+        "l'hôtel."
+      ]
+    },
+    {
+      "id": "order-je-suis-fatigu-je-veux-me-reposer",
+      "type": "order",
+      "l1": "Som unavený. Chcem odpočívať.",
+      "l2": "Je suis fatigué. Je veux me reposer.",
+      "tokens_l1": [
+        "Som",
+        "unavený.",
+        "Chcem",
+        "odpočívať.",
+        "V",
+        "hoteli",
+        "je",
+        "teplo",
+        "a",
+        "útulno."
+      ],
+      "tokens_l2": [
+        "Je",
+        "suis",
+        "fatigué.",
+        "Je",
+        "veux",
+        "me",
+        "reposer.",
+        "Dans",
+        "l'hôtel",
+        "il",
+        "fait",
+        "chaud",
+        "et",
+        "c'est",
+        "confortable."
+      ]
+    },
+    {
+      "id": "order-nous-voudrions-une-chambre-avec-vue-sur-mer",
+      "type": "order",
+      "l1": "Chceli by sme izbu s výhľadom na more.",
+      "l2": "Nous voudrions une chambre avec vue sur mer.",
+      "tokens_l1": [
+        "Chceli",
+        "by",
+        "sme",
+        "izbu",
+        "s",
+        "výhľadom",
+        "na",
+        "more.",
+        "Máme",
+        "rezerváciu",
+        "na",
+        "dve",
+        "postele."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "voudrions",
+        "une",
+        "chambre",
+        "avec",
+        "vue",
+        "sur",
+        "mer.",
+        "Nous",
+        "avons",
+        "une",
+        "réservation",
+        "pour",
+        "deux",
+        "lits."
+      ]
+    },
+    {
+      "id": "order-pourrions-nous-dormir-ici",
+      "type": "order",
+      "l1": "Mohli by sme tu prespať?",
+      "l2": "Pourrions-nous dormir ici ?",
+      "tokens_l1": [
+        "Mohli",
+        "by",
+        "sme",
+        "tu",
+        "prespať?",
+        "Sme",
+        "unavení,",
+        "chceli",
+        "by",
+        "sme",
+        "odpočívať",
+        "v",
+        "hoteli."
+      ],
+      "tokens_l2": [
+        "Pourrions-nous",
+        "dormir",
+        "ici",
+        "?",
+        "Nous",
+        "sommes",
+        "fatigués,",
+        "nous",
+        "voudrions",
+        "nous",
+        "reposer",
+        "à",
+        "l'hôtel."
+      ]
+    },
+    {
+      "id": "order-ce-serait-mieux-d-y-aller-t-t-le-matin",
+      "type": "order",
+      "l1": "Bolo by lepšie ísť skoro ráno.",
+      "l2": "Ce serait mieux d'y aller tôt le matin.",
+      "tokens_l1": [
+        "Bolo",
+        "by",
+        "lepšie",
+        "ísť",
+        "skoro",
+        "ráno.",
+        "Mohli",
+        "by",
+        "sme",
+        "tu",
+        "prespať?"
+      ],
+      "tokens_l2": [
+        "Ce",
+        "serait",
+        "mieux",
+        "d'y",
+        "aller",
+        "tôt",
+        "le",
+        "matin.",
+        "Pourrions-nous",
+        "dormir",
+        "ici",
+        "?"
+      ]
+    },
+    {
+      "id": "order-dans-l-h-tel-il-fait-chaud-et-c-est-confortable",
+      "type": "order",
+      "l1": "V hoteli je teplo a útulno.",
+      "l2": "Dans l'hôtel il fait chaud et c'est confortable.",
+      "tokens_l1": [
+        "V",
+        "hoteli",
+        "je",
+        "teplo",
+        "a",
+        "útulno.",
+        "Recepcia",
+        "je",
+        "otvorená",
+        "do",
+        "polnoci."
+      ],
+      "tokens_l2": [
+        "Dans",
+        "l'hôtel",
+        "il",
+        "fait",
+        "chaud",
+        "et",
+        "c'est",
+        "confortable.",
+        "La",
+        "réception",
+        "est",
+        "ouverte",
+        "jusqu'à",
+        "minuit."
+      ]
+    },
+    {
+      "id": "order-je-voudrais-voir-les-toiles-depuis-la-plage",
+      "type": "order",
+      "l1": "Chcel by som vidieť hviezdy z pláže.",
+      "l2": "Je voudrais voir les étoiles depuis la plage.",
+      "tokens_l1": [
+        "Chcel",
+        "by",
+        "som",
+        "vidieť",
+        "hviezdy",
+        "z",
+        "pláže.",
+        "Chcel",
+        "by",
+        "som",
+        "teplú",
+        "deku."
+      ],
+      "tokens_l2": [
+        "Je",
+        "voudrais",
+        "voir",
+        "les",
+        "étoiles",
+        "depuis",
+        "la",
+        "plage.",
+        "Je",
+        "voudrais",
+        "une",
+        "couverture",
+        "chaude."
+      ]
+    },
+    {
+      "id": "order-nous-sommes-fatigu-s-nous-voudrions-nous-reposer-l-h-tel",
+      "type": "order",
+      "l1": "Sme unavení, chceli by sme odpočívať v hoteli.",
+      "l2": "Nous sommes fatigués, nous voudrions nous reposer à l'hôtel.",
+      "tokens_l1": [
+        "Sme",
+        "unavení,",
+        "chceli",
+        "by",
+        "sme",
+        "odpočívať",
+        "v",
+        "hoteli.",
+        "V",
+        "hoteli",
+        "je",
+        "teplo",
+        "a",
+        "útulno."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "sommes",
+        "fatigués,",
+        "nous",
+        "voudrions",
+        "nous",
+        "reposer",
+        "à",
+        "l'hôtel.",
+        "Dans",
+        "l'hôtel",
+        "il",
+        "fait",
+        "chaud",
+        "et",
+        "c'est",
+        "confortable."
+      ]
+    },
+    {
+      "id": "order-pourrions-nous-avoir-une-soupe-chaude-s-il-vous-pla-t",
+      "type": "order",
+      "l1": "Mohli by sme mať teplú polievku, prosím?",
+      "l2": "Pourrions-nous avoir une soupe chaude, s'il vous plaît ?",
+      "tokens_l1": [
+        "Mohli",
+        "by",
+        "sme",
+        "mať",
+        "teplú",
+        "polievku,",
+        "prosím?",
+        "Sme",
+        "unavení,",
+        "chceli",
+        "by",
+        "sme",
+        "odpočívať",
+        "v",
+        "hoteli."
+      ],
+      "tokens_l2": [
+        "Pourrions-nous",
+        "avoir",
+        "une",
+        "soupe",
+        "chaude,",
+        "s'il",
+        "vous",
+        "plaît",
+        "?",
+        "Nous",
+        "sommes",
+        "fatigués,",
+        "nous",
+        "voudrions",
+        "nous",
+        "reposer",
+        "à",
+        "l'hôtel."
+      ]
+    },
+    {
+      "id": "order-la-plage-est-magnifique-mais-l-eau-est-froide",
+      "type": "order",
+      "l1": "Pláž je krásna, ale voda je studená.",
+      "l2": "La plage est magnifique, mais l'eau est froide.",
+      "tokens_l1": [
+        "Pláž",
+        "je",
+        "krásna,",
+        "ale",
+        "voda",
+        "je",
+        "studená.",
+        "Máme",
+        "rezerváciu",
+        "na",
+        "dve",
+        "postele."
+      ],
+      "tokens_l2": [
+        "La",
+        "plage",
+        "est",
+        "magnifique,",
+        "mais",
+        "l'eau",
+        "est",
+        "froide.",
+        "Nous",
+        "avons",
+        "une",
+        "réservation",
+        "pour",
+        "deux",
+        "lits."
+      ]
+    },
+    {
+      "id": "order-nous-avons-une-r-servation-pour-deux-lits",
+      "type": "order",
+      "l1": "Máme rezerváciu na dve postele.",
+      "l2": "Nous avons une réservation pour deux lits.",
+      "tokens_l1": [
+        "Máme",
+        "rezerváciu",
+        "na",
+        "dve",
+        "postele.",
+        "Som",
+        "unavený.",
+        "Chcem",
+        "odpočívať."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "avons",
+        "une",
+        "réservation",
+        "pour",
+        "deux",
+        "lits.",
+        "Je",
+        "suis",
+        "fatigué.",
+        "Je",
+        "veux",
+        "me",
+        "reposer."
+      ]
+    },
+    {
+      "id": "order-je-voudrais-une-couverture-chaude",
+      "type": "order",
+      "l1": "Chcel by som teplú deku.",
+      "l2": "Je voudrais une couverture chaude.",
+      "tokens_l1": [
+        "Chcel",
+        "by",
+        "som",
+        "teplú",
+        "deku.",
+        "Pri",
+        "mori",
+        "je",
+        "krásne",
+        "ticho."
+      ],
+      "tokens_l2": [
+        "Je",
+        "voudrais",
+        "une",
+        "couverture",
+        "chaude.",
+        "Il",
+        "y",
+        "a",
+        "un",
+        "beau",
+        "silence",
+        "près",
+        "de",
+        "la",
+        "mer."
+      ]
+    },
+    {
+      "id": "order-la-r-ception-est-ouverte-jusqu-minuit",
+      "type": "order",
+      "l1": "Recepcia je otvorená do polnoci.",
+      "l2": "La réception est ouverte jusqu'à minuit.",
+      "tokens_l1": [
+        "Recepcia",
+        "je",
+        "otvorená",
+        "do",
+        "polnoci.",
+        "Som",
+        "unavený.",
+        "Chcem",
+        "odpočívať."
+      ],
+      "tokens_l2": [
+        "La",
+        "réception",
+        "est",
+        "ouverte",
+        "jusqu'à",
+        "minuit.",
+        "Je",
+        "suis",
+        "fatigué.",
+        "Je",
+        "veux",
+        "me",
+        "reposer."
+      ]
+    },
+    {
+      "id": "order-il-y-a-un-beau-silence-pr-s-de-la-mer",
+      "type": "order",
+      "l1": "Pri mori je krásne ticho.",
+      "l2": "Il y a un beau silence près de la mer.",
+      "tokens_l1": [
+        "Pri",
+        "mori",
+        "je",
+        "krásne",
+        "ticho.",
+        "V",
+        "hoteli",
+        "je",
+        "teplo",
+        "a",
+        "útulno."
+      ],
+      "tokens_l2": [
+        "Il",
+        "y",
+        "a",
+        "un",
+        "beau",
+        "silence",
+        "près",
+        "de",
+        "la",
+        "mer.",
+        "Dans",
+        "l'hôtel",
+        "il",
+        "fait",
+        "chaud",
+        "et",
+        "c'est",
+        "confortable."
+      ]
+    },
+    {
+      "id": "order-je-ressens-la-tranquillit-sur-le-balcon",
+      "type": "order",
+      "l1": "Cítim pohodu na balkóne.",
+      "l2": "Je ressens la tranquillité sur le balcon.",
+      "tokens_l1": [
+        "Cítim",
+        "pohodu",
+        "na",
+        "balkóne.",
+        "Máme",
+        "rezerváciu",
+        "na",
+        "dve",
+        "postele."
+      ],
+      "tokens_l2": [
+        "Je",
+        "ressens",
+        "la",
+        "tranquillité",
+        "sur",
+        "le",
+        "balcon.",
+        "Nous",
+        "avons",
+        "une",
+        "réservation",
+        "pour",
+        "deux",
+        "lits."
+      ]
+    }
+  ]
+}

@@ -30,6 +30,7 @@ Ce qu'on met dans le sac. Le verbe **môcť**, pouvoir, complète la série des 
 | ty môžeš | tu peux |
 | on / ona môže | il / elle peut |
 | my môžeme | nous pouvons |
+| vy môžete | vous pouvez |
 | oni môžu | ils / elles peuvent |
 
 ### Les trois modaux ensemble

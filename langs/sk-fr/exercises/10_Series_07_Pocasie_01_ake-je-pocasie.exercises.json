@@ -1,0 +1,1271 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-po-asie",
+      "type": "qcm",
+      "l1": "le temps (météo)",
+      "l2": "počasie",
+      "choices_l1": [
+        "Il fait frais.",
+        "Il fait froid.",
+        "Il fait chaud."
+      ],
+      "choices_l2": [
+        "slnko",
+        "obloha",
+        "búrka"
+      ]
+    },
+    {
+      "id": "qcm-slnko",
+      "type": "qcm",
+      "l1": "le soleil",
+      "l2": "slnko",
+      "choices_l1": [
+        "l'arc-en-ciel",
+        "l'orage",
+        "le parapluie"
+      ],
+      "choices_l2": [
+        "teplota",
+        "vietor",
+        "oblak"
+      ]
+    },
+    {
+      "id": "qcm-d",
+      "type": "qcm",
+      "l1": "la pluie",
+      "l2": "dážď",
+      "choices_l1": [
+        "le nuage",
+        "le vent",
+        "le soleil"
+      ],
+      "choices_l2": [
+        "počasie",
+        "dáždnik",
+        "búrka"
+      ]
+    },
+    {
+      "id": "qcm-sneh",
+      "type": "qcm",
+      "l1": "la neige",
+      "l2": "sneh",
+      "choices_l1": [
+        "la pluie",
+        "le ciel",
+        "le parapluie"
+      ],
+      "choices_l2": [
+        "stupeň",
+        "slnko",
+        "teplota"
+      ]
+    },
+    {
+      "id": "qcm-vietor",
+      "type": "qcm",
+      "l1": "le vent",
+      "l2": "vietor",
+      "choices_l1": [
+        "le soleil",
+        "le degré",
+        "le parapluie"
+      ],
+      "choices_l2": [
+        "obloha",
+        "dáždnik",
+        "oblak"
+      ]
+    },
+    {
+      "id": "qcm-oblak",
+      "type": "qcm",
+      "l1": "le nuage",
+      "l2": "oblak",
+      "choices_l1": [
+        "l'orage",
+        "le vent",
+        "la température"
+      ],
+      "choices_l2": [
+        "búrka",
+        "obloha",
+        "sneh"
+      ]
+    },
+    {
+      "id": "qcm-b-rka",
+      "type": "qcm",
+      "l1": "l'orage",
+      "l2": "búrka",
+      "choices_l1": [
+        "la neige",
+        "le vent",
+        "le soleil"
+      ],
+      "choices_l2": [
+        "hmla",
+        "dáždnik",
+        "sneh"
+      ]
+    },
+    {
+      "id": "qcm-je-teplo",
+      "type": "qcm",
+      "l1": "Il fait chaud.",
+      "l2": "Je teplo.",
+      "choices_l1": [
+        "Il fait froid.",
+        "Il fait frais.",
+        "Le soleil brille."
+      ],
+      "choices_l2": [
+        "Sneží.",
+        "Svieti slnko.",
+        "Prší."
+      ]
+    },
+    {
+      "id": "qcm-je-zima",
+      "type": "qcm",
+      "l1": "Il fait froid.",
+      "l2": "Je zima.",
+      "choices_l1": [
+        "Il fait très chaud.",
+        "Il fait chaud.",
+        "Le soleil brille."
+      ],
+      "choices_l2": [
+        "Fúka vietor.",
+        "Sneží.",
+        "Prší."
+      ]
+    },
+    {
+      "id": "qcm-je-hor-co",
+      "type": "qcm",
+      "l1": "Il fait très chaud.",
+      "l2": "Je horúco.",
+      "choices_l1": [
+        "Le soleil brille.",
+        "Il fait froid.",
+        "Il fait frais."
+      ],
+      "choices_l2": [
+        "Je chladno.",
+        "Prší.",
+        "Je teplo."
+      ]
+    },
+    {
+      "id": "qcm-je-chladno",
+      "type": "qcm",
+      "l1": "Il fait frais.",
+      "l2": "Je chladno.",
+      "choices_l1": [
+        "Il fait froid.",
+        "Le soleil brille.",
+        "Il fait chaud."
+      ],
+      "choices_l2": [
+        "Sneží.",
+        "Je horúco.",
+        "Je teplo."
+      ]
+    },
+    {
+      "id": "qcm-pr",
+      "type": "qcm",
+      "l1": "Il pleut.",
+      "l2": "Prší.",
+      "choices_l1": [
+        "geler",
+        "le soleil",
+        "Il neige."
+      ],
+      "choices_l2": [
+        "Fúka vietor.",
+        "Svieti slnko.",
+        "Je chladno."
+      ]
+    },
+    {
+      "id": "qcm-sne",
+      "type": "qcm",
+      "l1": "Il neige.",
+      "l2": "Sneží.",
+      "choices_l1": [
+        "la neige",
+        "la pluie",
+        "geler"
+      ],
+      "choices_l2": [
+        "Svieti slnko.",
+        "Je zima.",
+        "Prší."
+      ]
+    },
+    {
+      "id": "qcm-f-ka-vietor",
+      "type": "qcm",
+      "l1": "Il y a du vent.",
+      "l2": "Fúka vietor.",
+      "choices_l1": [
+        "Le soleil brille.",
+        "Il fait très chaud.",
+        "Il fait chaud."
+      ],
+      "choices_l2": [
+        "Svieti slnko.",
+        "Je teplo.",
+        "Sneží."
+      ]
+    },
+    {
+      "id": "qcm-svieti-slnko",
+      "type": "qcm",
+      "l1": "Le soleil brille.",
+      "l2": "Svieti slnko.",
+      "choices_l1": [
+        "Il y a du vent.",
+        "Il fait chaud.",
+        "Il fait très chaud."
+      ],
+      "choices_l2": [
+        "Je chladno.",
+        "Je zima.",
+        "Sneží."
+      ]
+    },
+    {
+      "id": "qcm-d-dnik",
+      "type": "qcm",
+      "l1": "le parapluie",
+      "l2": "dáždnik",
+      "choices_l1": [
+        "la neige",
+        "la pluie",
+        "le nuage"
+      ],
+      "choices_l2": [
+        "počasie",
+        "stupeň",
+        "slnko"
+      ]
+    },
+    {
+      "id": "qcm-mrzn",
+      "type": "qcm",
+      "l1": "geler",
+      "l2": "mrznúť",
+      "choices_l1": [
+        "le soleil",
+        "la neige",
+        "Il neige."
+      ],
+      "choices_l2": [
+        "Je horúco.",
+        "sneh",
+        "Je chladno."
+      ]
+    },
+    {
+      "id": "qcm-teplota",
+      "type": "qcm",
+      "l1": "la température",
+      "l2": "teplota",
+      "choices_l1": [
+        "l'arc-en-ciel",
+        "le brouillard",
+        "le degré"
+      ],
+      "choices_l2": [
+        "dáždnik",
+        "dúha",
+        "vietor"
+      ]
+    },
+    {
+      "id": "qcm-stupe",
+      "type": "qcm",
+      "l1": "le degré",
+      "l2": "stupeň",
+      "choices_l1": [
+        "le vent",
+        "le nuage",
+        "le parapluie"
+      ],
+      "choices_l2": [
+        "dúha",
+        "dáždnik",
+        "dážď"
+      ]
+    },
+    {
+      "id": "qcm-hmla",
+      "type": "qcm",
+      "l1": "le brouillard",
+      "l2": "hmla",
+      "choices_l1": [
+        "la neige",
+        "la pluie",
+        "le vent"
+      ],
+      "choices_l2": [
+        "sneh",
+        "obloha",
+        "vietor"
+      ]
+    },
+    {
+      "id": "qcm-d-ha",
+      "type": "qcm",
+      "l1": "l'arc-en-ciel",
+      "l2": "dúha",
+      "choices_l1": [
+        "le parapluie",
+        "le nuage",
+        "la température"
+      ],
+      "choices_l2": [
+        "teplota",
+        "obloha",
+        "dáždnik"
+      ]
+    },
+    {
+      "id": "qcm-obloha",
+      "type": "qcm",
+      "l1": "le ciel",
+      "l2": "obloha",
+      "choices_l1": [
+        "le degré",
+        "la neige",
+        "le parapluie"
+      ],
+      "choices_l2": [
+        "dážď",
+        "teplota",
+        "slnko"
+      ]
+    },
+    {
+      "id": "blank-ak-je-dnes-po-asie",
+      "type": "fill-blank",
+      "l1": "Quel temps fait-il aujourd'hui ?",
+      "l2": "Aké je dnes počasie?",
+      "missing_l1": "aujourd'hui",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "avoir",
+        "hiver",
+        "neige"
+      ],
+      "choices_l2": [
+        "budú",
+        "Bude",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-je-teplo-a-svieti-slnko",
+      "type": "fill-blank",
+      "l1": "Il fait chaud et le soleil brille.",
+      "l2": "Je teplo a svieti slnko.",
+      "missing_l1": "le",
+      "missing_l2": "a",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "la",
+        "gèle",
+        "Les"
+      ],
+      "choices_l2": [
+        "aj",
+        "lebo",
+        "však"
+      ]
+    },
+    {
+      "id": "blank-pr-nem-m-d-dnik",
+      "type": "fill-blank",
+      "l1": "Il pleut. Je n'ai pas de parapluie.",
+      "l2": "Prší. Nemám dáždnik.",
+      "missing_l1": "Je",
+      "missing_l2": "Nemám",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Il",
+        "elles",
+        "Ce"
+      ],
+      "choices_l2": [
+        "Máš",
+        "Mám",
+        "Máte"
+      ]
+    },
+    {
+      "id": "blank-v-zime-sne",
+      "type": "fill-blank",
+      "l1": "En hiver il neige.",
+      "l2": "V zime sneží.",
+      "missing_l1": "il",
+      "missing_l2": "zime",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Elle",
+        "Nous",
+        "Tu"
+      ],
+      "choices_l2": [
+        "Bude",
+        "Fúka",
+        "Prší"
+      ]
+    },
+    {
+      "id": "blank-f-ka-siln-vietor",
+      "type": "fill-blank",
+      "l1": "Il y a un vent fort.",
+      "l2": "Fúka silný vietor.",
+      "missing_l1": "un",
+      "missing_l2": "silný",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "fera",
+        "gèle",
+        "vent"
+      ],
+      "choices_l2": [
+        "dáždnik",
+        "počasie",
+        "modrá"
+      ]
+    },
+    {
+      "id": "blank-je-zima-chcem-aj",
+      "type": "fill-blank",
+      "l1": "Il fait froid. Je veux du thé.",
+      "l2": "Je zima. Chcem čaj.",
+      "missing_l1": "Je",
+      "missing_l2": "Chcem",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Nous",
+        "Elle",
+        "vous"
+      ],
+      "choices_l2": [
+        "Musíš",
+        "Môžem",
+        "Musím"
+      ]
+    },
+    {
+      "id": "blank-oblaky-s-tmav-bude-b-rka",
+      "type": "fill-blank",
+      "l1": "Les nuages sont sombres. Il va y avoir un orage.",
+      "l2": "Oblaky sú tmavé. Bude búrka.",
+      "missing_l1": "un",
+      "missing_l2": "sú",
+      "blank_index_l1": 8,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "une",
+        "gèle",
+        "des"
+      ],
+      "choices_l2": [
+        "Bude",
+        "budú",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-dnes-je-chladno-zajtra-bude-teplo",
+      "type": "fill-blank",
+      "l1": "Aujourd'hui il fait frais, demain il fera chaud.",
+      "l2": "Dnes je chladno, zajtra bude teplo.",
+      "missing_l1": "il",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "On",
+        "Elle",
+        "Tu"
+      ],
+      "choices_l2": [
+        "budú",
+        "sme",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-mrzne-cesta-je-klzk",
+      "type": "fill-blank",
+      "l1": "Il gèle. La route est glissante.",
+      "l2": "Mrzne. Cesta je klzká.",
+      "missing_l1": "La",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "vent",
+        "Les",
+        "ciel"
+      ],
+      "choices_l2": [
+        "Bude",
+        "budú",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-teplota-je-desa-stup-ov",
+      "type": "fill-blank",
+      "l1": "La température est de dix degrés.",
+      "l2": "Teplota je desať stupňov.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "était",
+        "sont",
+        "sommes"
+      ],
+      "choices_l2": [
+        "budú",
+        "Bude",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-je-hmla-nevid-m-ni",
+      "type": "fill-blank",
+      "l1": "Il y a du brouillard, je ne vois rien.",
+      "l2": "Je hmla, nevidím nič.",
+      "missing_l1": "je",
+      "missing_l2": "nič",
+      "blank_index_l1": 5,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "On",
+        "Elle",
+        "Il"
+      ],
+      "choices_l2": [
+        "hmla",
+        "dúha",
+        "Prší"
+      ]
+    },
+    {
+      "id": "blank-obloha-je-modr-a-ist",
+      "type": "fill-blank",
+      "l1": "Le ciel est bleu et clair.",
+      "l2": "Obloha je modrá a čistá.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "est-ce",
+        "c'était",
+        "C'est"
+      ],
+      "choices_l2": [
+        "budú",
+        "sme",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-po-da-di-je-d-ha",
+      "type": "fill-blank",
+      "l1": "Après la pluie il y a un arc-en-ciel.",
+      "l2": "Po daždi je dúha.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "vent",
+        "le",
+        "gèle"
+      ],
+      "choices_l2": [
+        "sme",
+        "budú",
+        "Bude"
+      ]
+    },
+    {
+      "id": "listen-ak-je-dnes-po-asie",
+      "type": "listen",
+      "l1": "Quel temps fait-il aujourd'hui ?",
+      "l2": "Aké je dnes počasie?",
+      "choices_l1": [
+        "Il y a un vent fort.",
+        "Le ciel est bleu et clair.",
+        "La température est de dix degrés."
+      ],
+      "choices_l2": [
+        "Obloha je modrá a čistá.",
+        "Fúka silný vietor.",
+        "Je hmla, nevidím nič."
+      ]
+    },
+    {
+      "id": "listen-je-teplo-a-svieti-slnko",
+      "type": "listen",
+      "l1": "Il fait chaud et le soleil brille.",
+      "l2": "Je teplo a svieti slnko.",
+      "choices_l1": [
+        "Après la pluie il y a un arc-en-ciel.",
+        "Quel temps fait-il aujourd'hui ?",
+        "Aujourd'hui il fait frais, demain il fera chaud."
+      ],
+      "choices_l2": [
+        "Po daždi je dúha.",
+        "Je zima. Chcem čaj.",
+        "Prší. Nemám dáždnik."
+      ]
+    },
+    {
+      "id": "listen-pr-nem-m-d-dnik",
+      "type": "listen",
+      "l1": "Il pleut. Je n'ai pas de parapluie.",
+      "l2": "Prší. Nemám dáždnik.",
+      "choices_l1": [
+        "Il y a du brouillard, je ne vois rien.",
+        "Le ciel est bleu et clair.",
+        "Après la pluie il y a un arc-en-ciel."
+      ],
+      "choices_l2": [
+        "Po daždi je dúha.",
+        "Je teplo a svieti slnko.",
+        "Teplota je desať stupňov."
+      ]
+    },
+    {
+      "id": "listen-v-zime-sne",
+      "type": "listen",
+      "l1": "En hiver il neige.",
+      "l2": "V zime sneží.",
+      "choices_l1": [
+        "Il pleut. Je n'ai pas de parapluie.",
+        "Le ciel est bleu et clair.",
+        "Il y a du brouillard, je ne vois rien."
+      ],
+      "choices_l2": [
+        "Je teplo a svieti slnko.",
+        "Po daždi je dúha.",
+        "Fúka silný vietor."
+      ]
+    },
+    {
+      "id": "listen-f-ka-siln-vietor",
+      "type": "listen",
+      "l1": "Il y a un vent fort.",
+      "l2": "Fúka silný vietor.",
+      "choices_l1": [
+        "Aujourd'hui il fait frais, demain il fera chaud.",
+        "Il y a du brouillard, je ne vois rien.",
+        "Il gèle. La route est glissante."
+      ],
+      "choices_l2": [
+        "Je teplo a svieti slnko.",
+        "Je hmla, nevidím nič.",
+        "Po daždi je dúha."
+      ]
+    },
+    {
+      "id": "listen-je-zima-chcem-aj",
+      "type": "listen",
+      "l1": "Il fait froid. Je veux du thé.",
+      "l2": "Je zima. Chcem čaj.",
+      "choices_l1": [
+        "Il y a du brouillard, je ne vois rien.",
+        "Les nuages sont sombres. Il va y avoir un orage.",
+        "Il fait chaud et le soleil brille."
+      ],
+      "choices_l2": [
+        "Aké je dnes počasie?",
+        "V zime sneží.",
+        "Dnes je chladno, zajtra bude teplo."
+      ]
+    },
+    {
+      "id": "listen-oblaky-s-tmav-bude-b-rka",
+      "type": "listen",
+      "l1": "Les nuages sont sombres. Il va y avoir un orage.",
+      "l2": "Oblaky sú tmavé. Bude búrka.",
+      "choices_l1": [
+        "Il y a un vent fort.",
+        "Il pleut. Je n'ai pas de parapluie.",
+        "Il fait chaud et le soleil brille."
+      ],
+      "choices_l2": [
+        "Teplota je desať stupňov.",
+        "Aké je dnes počasie?",
+        "Je hmla, nevidím nič."
+      ]
+    },
+    {
+      "id": "listen-dnes-je-chladno-zajtra-bude-teplo",
+      "type": "listen",
+      "l1": "Aujourd'hui il fait frais, demain il fera chaud.",
+      "l2": "Dnes je chladno, zajtra bude teplo.",
+      "choices_l1": [
+        "Quel temps fait-il aujourd'hui ?",
+        "Il fait froid. Je veux du thé.",
+        "Après la pluie il y a un arc-en-ciel."
+      ],
+      "choices_l2": [
+        "Obloha je modrá a čistá.",
+        "Teplota je desať stupňov.",
+        "Mrzne. Cesta je klzká."
+      ]
+    },
+    {
+      "id": "listen-mrzne-cesta-je-klzk",
+      "type": "listen",
+      "l1": "Il gèle. La route est glissante.",
+      "l2": "Mrzne. Cesta je klzká.",
+      "choices_l1": [
+        "La température est de dix degrés.",
+        "Il y a du brouillard, je ne vois rien.",
+        "Aujourd'hui il fait frais, demain il fera chaud."
+      ],
+      "choices_l2": [
+        "Dnes je chladno, zajtra bude teplo.",
+        "Prší. Nemám dáždnik.",
+        "Obloha je modrá a čistá."
+      ]
+    },
+    {
+      "id": "listen-teplota-je-desa-stup-ov",
+      "type": "listen",
+      "l1": "La température est de dix degrés.",
+      "l2": "Teplota je desať stupňov.",
+      "choices_l1": [
+        "Aujourd'hui il fait frais, demain il fera chaud.",
+        "En hiver il neige.",
+        "Quel temps fait-il aujourd'hui ?"
+      ],
+      "choices_l2": [
+        "Po daždi je dúha.",
+        "Je teplo a svieti slnko.",
+        "Aké je dnes počasie?"
+      ]
+    },
+    {
+      "id": "listen-je-hmla-nevid-m-ni",
+      "type": "listen",
+      "l1": "Il y a du brouillard, je ne vois rien.",
+      "l2": "Je hmla, nevidím nič.",
+      "choices_l1": [
+        "Quel temps fait-il aujourd'hui ?",
+        "Il gèle. La route est glissante.",
+        "Le ciel est bleu et clair."
+      ],
+      "choices_l2": [
+        "Fúka silný vietor.",
+        "Oblaky sú tmavé. Bude búrka.",
+        "Je zima. Chcem čaj."
+      ]
+    },
+    {
+      "id": "listen-obloha-je-modr-a-ist",
+      "type": "listen",
+      "l1": "Le ciel est bleu et clair.",
+      "l2": "Obloha je modrá a čistá.",
+      "choices_l1": [
+        "Il pleut. Je n'ai pas de parapluie.",
+        "Aujourd'hui il fait frais, demain il fera chaud.",
+        "Quel temps fait-il aujourd'hui ?"
+      ],
+      "choices_l2": [
+        "Dnes je chladno, zajtra bude teplo.",
+        "Oblaky sú tmavé. Bude búrka.",
+        "Prší. Nemám dáždnik."
+      ]
+    },
+    {
+      "id": "listen-po-da-di-je-d-ha",
+      "type": "listen",
+      "l1": "Après la pluie il y a un arc-en-ciel.",
+      "l2": "Po daždi je dúha.",
+      "choices_l1": [
+        "Il gèle. La route est glissante.",
+        "Quel temps fait-il aujourd'hui ?",
+        "Il y a un vent fort."
+      ],
+      "choices_l2": [
+        "V zime sneží.",
+        "Oblaky sú tmavé. Bude búrka.",
+        "Obloha je modrá a čistá."
+      ]
+    },
+    {
+      "id": "order-ak-je-dnes-po-asie",
+      "type": "order",
+      "l1": "Quel temps fait-il aujourd'hui ?",
+      "l2": "Aké je dnes počasie?",
+      "tokens_l1": [
+        "Quel",
+        "temps",
+        "fait-il",
+        "aujourd'hui",
+        "?",
+        "Il",
+        "fait",
+        "chaud",
+        "et",
+        "le",
+        "soleil",
+        "brille."
+      ],
+      "tokens_l2": [
+        "Aké",
+        "je",
+        "dnes",
+        "počasie?",
+        "Je",
+        "teplo",
+        "a",
+        "svieti",
+        "slnko."
+      ]
+    },
+    {
+      "id": "order-je-teplo-a-svieti-slnko",
+      "type": "order",
+      "l1": "Il fait chaud et le soleil brille.",
+      "l2": "Je teplo a svieti slnko.",
+      "tokens_l1": [
+        "Il",
+        "fait",
+        "chaud",
+        "et",
+        "le",
+        "soleil",
+        "brille.",
+        "Après",
+        "la",
+        "pluie",
+        "il",
+        "y",
+        "a",
+        "un",
+        "arc-en-ciel."
+      ],
+      "tokens_l2": [
+        "Je",
+        "teplo",
+        "a",
+        "svieti",
+        "slnko.",
+        "Po",
+        "daždi",
+        "je",
+        "dúha."
+      ]
+    },
+    {
+      "id": "order-pr-nem-m-d-dnik",
+      "type": "order",
+      "l1": "Il pleut. Je n'ai pas de parapluie.",
+      "l2": "Prší. Nemám dáždnik.",
+      "tokens_l1": [
+        "Il",
+        "pleut.",
+        "Je",
+        "n'ai",
+        "pas",
+        "de",
+        "parapluie.",
+        "Il",
+        "fait",
+        "froid.",
+        "Je",
+        "veux",
+        "du",
+        "thé."
+      ],
+      "tokens_l2": [
+        "Prší.",
+        "Nemám",
+        "dáždnik.",
+        "Je",
+        "zima.",
+        "Chcem",
+        "čaj."
+      ]
+    },
+    {
+      "id": "order-v-zime-sne",
+      "type": "order",
+      "l1": "En hiver il neige.",
+      "l2": "V zime sneží.",
+      "tokens_l1": [
+        "En",
+        "hiver",
+        "il",
+        "neige.",
+        "Il",
+        "fait",
+        "froid.",
+        "Je",
+        "veux",
+        "du",
+        "thé."
+      ],
+      "tokens_l2": [
+        "V",
+        "zime",
+        "sneží.",
+        "Je",
+        "zima.",
+        "Chcem",
+        "čaj."
+      ]
+    },
+    {
+      "id": "order-f-ka-siln-vietor",
+      "type": "order",
+      "l1": "Il y a un vent fort.",
+      "l2": "Fúka silný vietor.",
+      "tokens_l1": [
+        "Il",
+        "y",
+        "a",
+        "un",
+        "vent",
+        "fort.",
+        "Quel",
+        "temps",
+        "fait-il",
+        "aujourd'hui",
+        "?"
+      ],
+      "tokens_l2": [
+        "Fúka",
+        "silný",
+        "vietor.",
+        "Aké",
+        "je",
+        "dnes",
+        "počasie?"
+      ]
+    },
+    {
+      "id": "order-je-zima-chcem-aj",
+      "type": "order",
+      "l1": "Il fait froid. Je veux du thé.",
+      "l2": "Je zima. Chcem čaj.",
+      "tokens_l1": [
+        "Il",
+        "fait",
+        "froid.",
+        "Je",
+        "veux",
+        "du",
+        "thé.",
+        "Les",
+        "nuages",
+        "sont",
+        "sombres.",
+        "Il",
+        "va",
+        "y",
+        "avoir",
+        "un",
+        "orage."
+      ],
+      "tokens_l2": [
+        "Je",
+        "zima.",
+        "Chcem",
+        "čaj.",
+        "Oblaky",
+        "sú",
+        "tmavé.",
+        "Bude",
+        "búrka."
+      ]
+    },
+    {
+      "id": "order-oblaky-s-tmav-bude-b-rka",
+      "type": "order",
+      "l1": "Les nuages sont sombres. Il va y avoir un orage.",
+      "l2": "Oblaky sú tmavé. Bude búrka.",
+      "tokens_l1": [
+        "Les",
+        "nuages",
+        "sont",
+        "sombres.",
+        "Il",
+        "va",
+        "y",
+        "avoir",
+        "un",
+        "orage.",
+        "La",
+        "température",
+        "est",
+        "de",
+        "dix",
+        "degrés."
+      ],
+      "tokens_l2": [
+        "Oblaky",
+        "sú",
+        "tmavé.",
+        "Bude",
+        "búrka.",
+        "Teplota",
+        "je",
+        "desať",
+        "stupňov."
+      ]
+    },
+    {
+      "id": "order-dnes-je-chladno-zajtra-bude-teplo",
+      "type": "order",
+      "l1": "Aujourd'hui il fait frais, demain il fera chaud.",
+      "l2": "Dnes je chladno, zajtra bude teplo.",
+      "tokens_l1": [
+        "Aujourd'hui",
+        "il",
+        "fait",
+        "frais,",
+        "demain",
+        "il",
+        "fera",
+        "chaud.",
+        "Après",
+        "la",
+        "pluie",
+        "il",
+        "y",
+        "a",
+        "un",
+        "arc-en-ciel."
+      ],
+      "tokens_l2": [
+        "Dnes",
+        "je",
+        "chladno,",
+        "zajtra",
+        "bude",
+        "teplo.",
+        "Po",
+        "daždi",
+        "je",
+        "dúha."
+      ]
+    },
+    {
+      "id": "order-mrzne-cesta-je-klzk",
+      "type": "order",
+      "l1": "Il gèle. La route est glissante.",
+      "l2": "Mrzne. Cesta je klzká.",
+      "tokens_l1": [
+        "Il",
+        "gèle.",
+        "La",
+        "route",
+        "est",
+        "glissante.",
+        "Il",
+        "y",
+        "a",
+        "un",
+        "vent",
+        "fort."
+      ],
+      "tokens_l2": [
+        "Mrzne.",
+        "Cesta",
+        "je",
+        "klzká.",
+        "Fúka",
+        "silný",
+        "vietor."
+      ]
+    },
+    {
+      "id": "order-teplota-je-desa-stup-ov",
+      "type": "order",
+      "l1": "La température est de dix degrés.",
+      "l2": "Teplota je desať stupňov.",
+      "tokens_l1": [
+        "La",
+        "température",
+        "est",
+        "de",
+        "dix",
+        "degrés.",
+        "En",
+        "hiver",
+        "il",
+        "neige."
+      ],
+      "tokens_l2": [
+        "Teplota",
+        "je",
+        "desať",
+        "stupňov.",
+        "V",
+        "zime",
+        "sneží."
+      ]
+    },
+    {
+      "id": "order-je-hmla-nevid-m-ni",
+      "type": "order",
+      "l1": "Il y a du brouillard, je ne vois rien.",
+      "l2": "Je hmla, nevidím nič.",
+      "tokens_l1": [
+        "Il",
+        "y",
+        "a",
+        "du",
+        "brouillard,",
+        "je",
+        "ne",
+        "vois",
+        "rien.",
+        "Après",
+        "la",
+        "pluie",
+        "il",
+        "y",
+        "a",
+        "un",
+        "arc-en-ciel."
+      ],
+      "tokens_l2": [
+        "Je",
+        "hmla,",
+        "nevidím",
+        "nič.",
+        "Po",
+        "daždi",
+        "je",
+        "dúha."
+      ]
+    },
+    {
+      "id": "order-obloha-je-modr-a-ist",
+      "type": "order",
+      "l1": "Le ciel est bleu et clair.",
+      "l2": "Obloha je modrá a čistá.",
+      "tokens_l1": [
+        "Le",
+        "ciel",
+        "est",
+        "bleu",
+        "et",
+        "clair.",
+        "Il",
+        "y",
+        "a",
+        "un",
+        "vent",
+        "fort."
+      ],
+      "tokens_l2": [
+        "Obloha",
+        "je",
+        "modrá",
+        "a",
+        "čistá.",
+        "Fúka",
+        "silný",
+        "vietor."
+      ]
+    },
+    {
+      "id": "order-po-da-di-je-d-ha",
+      "type": "order",
+      "l1": "Après la pluie il y a un arc-en-ciel.",
+      "l2": "Po daždi je dúha.",
+      "tokens_l1": [
+        "Après",
+        "la",
+        "pluie",
+        "il",
+        "y",
+        "a",
+        "un",
+        "arc-en-ciel.",
+        "Il",
+        "y",
+        "a",
+        "du",
+        "brouillard,",
+        "je",
+        "ne",
+        "vois",
+        "rien."
+      ],
+      "tokens_l2": [
+        "Po",
+        "daždi",
+        "je",
+        "dúha.",
+        "Je",
+        "hmla,",
+        "nevidím",
+        "nič."
+      ]
+    },
+    {
+      "id": "match-po-asie-vocab",
+      "type": "match",
+      "l1": [
+        "le temps (météo)",
+        "le soleil",
+        "la pluie",
+        "la neige"
+      ],
+      "l2": [
+        "počasie",
+        "slnko",
+        "dážď",
+        "sneh"
+      ]
+    },
+    {
+      "id": "match-ak-je-dnes-po-asie-sentences",
+      "type": "match",
+      "l1": [
+        "Quel temps fait-il aujourd'hui ?",
+        "Il fait chaud et le soleil brille.",
+        "Il pleut. Je n'ai pas de parapluie.",
+        "En hiver il neige."
+      ],
+      "l2": [
+        "Aké je dnes počasie?",
+        "Je teplo a svieti slnko.",
+        "Prší. Nemám dáždnik.",
+        "V zime sneží."
+      ]
+    }
+  ]
+}

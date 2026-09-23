@@ -1,0 +1,1146 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-travailler",
+      "type": "qcm",
+      "l1": "pracovať",
+      "l2": "travailler",
+      "choices_l1": [
+        "strýko",
+        "desať rokov",
+        "sestra"
+      ],
+      "choices_l2": [
+        "la fille",
+        "l'anniversaire",
+        "j'ai"
+      ]
+    },
+    {
+      "id": "qcm-faire",
+      "type": "qcm",
+      "l1": "robiť",
+      "l2": "faire",
+      "choices_l1": [
+        "veľký",
+        "kto",
+        "sestra"
+      ],
+      "choices_l2": [
+        "la grand-mère",
+        "tu es",
+        "la tante"
+      ]
+    },
+    {
+      "id": "qcm-le-professeur-la-professeure",
+      "type": "qcm",
+      "l1": "učiteľ / učiteľka",
+      "l2": "le professeur / la professeure",
+      "choices_l1": [
+        "je mladý / je mladá",
+        "on / ona je",
+        "je starý / je stará"
+      ],
+      "choices_l2": [
+        "il / elle a",
+        "l'an / l'année",
+        "la femme / l'épouse"
+      ]
+    },
+    {
+      "id": "qcm-le-m-decin",
+      "type": "qcm",
+      "l1": "lekár",
+      "l2": "le médecin",
+      "choices_l1": [
+        "jeden rok",
+        "ty si",
+        "manželka"
+      ],
+      "choices_l2": [
+        "la grand-mère",
+        "l'oncle",
+        "le prénom"
+      ]
+    },
+    {
+      "id": "qcm-l-tudiant-l-tudiante",
+      "type": "qcm",
+      "l1": "študent / študentka",
+      "l2": "l'étudiant / l'étudiante",
+      "choices_l1": [
+        "je mladý / je mladá",
+        "kamarát / kamarátka",
+        "je starý / je stará"
+      ],
+      "choices_l2": [
+        "vieux / vieille",
+        "grand / grande",
+        "il / elle est"
+      ]
+    },
+    {
+      "id": "qcm-le-retrait-la-retrait-e",
+      "type": "qcm",
+      "l1": "dôchodca / dôchodkyňa",
+      "l2": "le retraité / la retraitée",
+      "choices_l1": [
+        "on / ona má",
+        "kamarát / kamarátka",
+        "on / ona je"
+      ],
+      "choices_l2": [
+        "l'an / l'année",
+        "un petit frère",
+        "il / elle est"
+      ]
+    },
+    {
+      "id": "qcm-je-travaille",
+      "type": "qcm",
+      "l1": "pracujem",
+      "l2": "je travaille",
+      "choices_l1": [
+        "dva roky",
+        "malá sestra",
+        "rodičia"
+      ],
+      "choices_l2": [
+        "s'appeler",
+        "l'enfant",
+        "le père"
+      ]
+    },
+    {
+      "id": "qcm-tu-travailles",
+      "type": "qcm",
+      "l1": "pracuješ",
+      "l2": "tu travailles",
+      "choices_l1": [
+        "malá sestra",
+        "dcéra",
+        "meno"
+      ],
+      "choices_l2": [
+        "jeune",
+        "le frère",
+        "la grand-mère"
+      ]
+    },
+    {
+      "id": "qcm-il-elle-travaille",
+      "type": "qcm",
+      "l1": "pracuje",
+      "l2": "il / elle travaille",
+      "choices_l1": [
+        "jeden rok",
+        "mladý",
+        "päť rokov"
+      ],
+      "choices_l2": [
+        "il est jeune / elle est jeune",
+        "il est vieux / elle est vieille",
+        "l'an / l'année"
+      ]
+    },
+    {
+      "id": "qcm-ils-elles-travaillent",
+      "type": "qcm",
+      "l1": "pracujú",
+      "l2": "ils / elles travaillent",
+      "choices_l1": [
+        "jeden rok",
+        "malá sestra",
+        "sestra"
+      ],
+      "choices_l2": [
+        "vieux / vieille",
+        "il / elle a",
+        "l'an / l'année"
+      ]
+    },
+    {
+      "id": "qcm-je-fais",
+      "type": "qcm",
+      "l1": "robím",
+      "l2": "je fais",
+      "choices_l1": [
+        "moja sestra",
+        "veľký",
+        "bratranec"
+      ],
+      "choices_l2": [
+        "deux ans",
+        "j'ai",
+        "jeune"
+      ]
+    },
+    {
+      "id": "qcm-tu-fais",
+      "type": "qcm",
+      "l1": "robíš",
+      "l2": "tu fais",
+      "choices_l1": [
+        "dva roky",
+        "ja som",
+        "kto"
+      ],
+      "choices_l2": [
+        "l'anniversaire",
+        "un an",
+        "cinq ans"
+      ]
+    },
+    {
+      "id": "qcm-il-elle-fait",
+      "type": "qcm",
+      "l1": "robí",
+      "l2": "il / elle fait",
+      "choices_l1": [
+        "môj otec",
+        "rodina",
+        "kto"
+      ],
+      "choices_l2": [
+        "il est vieux / elle est vieille",
+        "l'an / l'année",
+        "petit / petite"
+      ]
+    },
+    {
+      "id": "qcm-ils-elles-font",
+      "type": "qcm",
+      "l1": "robia",
+      "l2": "ils / elles font",
+      "choices_l1": [
+        "ja mám",
+        "sesternica",
+        "dcéra"
+      ],
+      "choices_l2": [
+        "l'ami / l'amie",
+        "grand / grande",
+        "il / elle est"
+      ]
+    },
+    {
+      "id": "qcm-le-travail",
+      "type": "qcm",
+      "l1": "práca",
+      "l2": "le travail",
+      "choices_l1": [
+        "volať sa",
+        "rodina",
+        "bratranec"
+      ],
+      "choices_l2": [
+        "la fille",
+        "la famille",
+        "la cousine"
+      ]
+    },
+    {
+      "id": "qcm-l-cole",
+      "type": "qcm",
+      "l1": "škola",
+      "l2": "l'école",
+      "choices_l1": [
+        "môj otec",
+        "jeden rok",
+        "ja mám"
+      ],
+      "choices_l2": [
+        "mon frère",
+        "la fille",
+        "le mari"
+      ]
+    },
+    {
+      "id": "qcm-l-h-pital",
+      "type": "qcm",
+      "l1": "nemocnica",
+      "l2": "l'hôpital",
+      "choices_l1": [
+        "strýko",
+        "meno",
+        "moja sestra"
+      ],
+      "choices_l2": [
+        "dix ans",
+        "le prénom",
+        "un an"
+      ]
+    },
+    {
+      "id": "qcm-le-bureau",
+      "type": "qcm",
+      "l1": "kancelária",
+      "l2": "le bureau",
+      "choices_l1": [
+        "bratranec",
+        "starý",
+        "kto"
+      ],
+      "choices_l2": [
+        "cinq ans",
+        "le mari",
+        "la cousine"
+      ]
+    },
+    {
+      "id": "qcm-le-magasin",
+      "type": "qcm",
+      "l1": "obchod",
+      "l2": "le magasin",
+      "choices_l1": [
+        "brat",
+        "mama",
+        "dedko"
+      ],
+      "choices_l2": [
+        "la sœur",
+        "cinq ans",
+        "s'appeler"
+      ]
+    },
+    {
+      "id": "qcm-aussi",
+      "type": "qcm",
+      "l1": "tiež",
+      "l2": "aussi",
+      "choices_l1": [
+        "meno",
+        "otec",
+        "teta"
+      ],
+      "choices_l2": [
+        "le grand-père",
+        "mon frère",
+        "l'oncle"
+      ]
+    },
+    {
+      "id": "qcm-beaucoup",
+      "type": "qcm",
+      "l1": "veľa",
+      "l2": "beaucoup",
+      "choices_l1": [
+        "deti",
+        "narodeniny",
+        "starý"
+      ],
+      "choices_l2": [
+        "dix ans",
+        "la famille",
+        "qui"
+      ]
+    },
+    {
+      "id": "blank-mon-p-re-est-professeur",
+      "type": "fill-blank",
+      "l1": "Môj otec je učiteľ.",
+      "l2": "Mon père est professeur.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "tridsať",
+        "rodina",
+        "mama"
+      ],
+      "choices_l2": [
+        "une",
+        "ans",
+        "à"
+      ]
+    },
+    {
+      "id": "blank-ma-maman-est-professeure",
+      "type": "fill-blank",
+      "l1": "Moja mama je učiteľka.",
+      "l2": "Ma maman est professeure.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "dedko",
+        "doma",
+        "rokov"
+      ],
+      "choices_l2": [
+        "frère",
+        "maison",
+        "enfants"
+      ]
+    },
+    {
+      "id": "blank-ma-s-ur-est-m-decin",
+      "type": "fill-blank",
+      "l1": "Moja sestra je lekárka.",
+      "l2": "Ma sœur est médecin.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "roky",
+        "voláš",
+        "to"
+      ],
+      "choices_l2": [
+        "la",
+        "maison",
+        "est-ce"
+      ]
+    },
+    {
+      "id": "blank-mon-fr-re-est-tudiant-il-ne-travaille-pas",
+      "type": "fill-blank",
+      "l1": "Môj brat je študent. Nepracuje.",
+      "l2": "Mon frère est étudiant. Il ne travaille pas.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "marc",
+        "môj",
+        "mama"
+      ],
+      "choices_l2": [
+        "as-tu",
+        "sœur",
+        "de"
+      ]
+    },
+    {
+      "id": "blank-mon-grand-p-re-est-retrait",
+      "type": "fill-blank",
+      "l1": "Môj dedko je dôchodca.",
+      "l2": "Mon grand-père est retraité.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "louise",
+        "dva",
+        "doma"
+      ],
+      "choices_l2": [
+        "as-tu",
+        "j'ai",
+        "mon"
+      ]
+    },
+    {
+      "id": "blank-ma-tante-est-m-decin-elle-a-quarante-ans",
+      "type": "fill-blank",
+      "l1": "Moja teta je lekárka. Má štyridsať rokov.",
+      "l2": "Ma tante est médecin. Elle a quarante ans.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "brat",
+        "tridsať",
+        "mám"
+      ],
+      "choices_l2": [
+        "comment",
+        "fille",
+        "deux"
+      ]
+    },
+    {
+      "id": "blank-mes-parents-travaillent",
+      "type": "fill-blank",
+      "l1": "Moji rodičia pracujú.",
+      "l2": "Mes parents travaillent.",
+      "missing_l1": "rodičia",
+      "missing_l2": "parents",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "brat",
+        "mama",
+        "marc"
+      ],
+      "choices_l2": [
+        "pas",
+        "quel",
+        "est-ce"
+      ]
+    },
+    {
+      "id": "blank-ma-grand-m-re-ne-travaille-pas-elle-est-vieille",
+      "type": "fill-blank",
+      "l1": "Moja babka nepracuje. Je stará.",
+      "l2": "Ma grand-mère ne travaille pas. Elle est vieille.",
+      "missing_l1": "Je",
+      "missing_l2": "est",
+      "blank_index_l1": 3,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "babka",
+        "rokov",
+        "volá"
+      ],
+      "choices_l2": [
+        "maman",
+        "grand-père",
+        "et"
+      ]
+    },
+    {
+      "id": "blank-je-travaille-l-cole",
+      "type": "fill-blank",
+      "l1": "Pracujem v škole.",
+      "l2": "Je travaille à l'école.",
+      "missing_l1": "v",
+      "missing_l2": "à",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "dva",
+        "jeden",
+        "roky"
+      ],
+      "choices_l2": [
+        "pas",
+        "parents",
+        "est-ce"
+      ]
+    },
+    {
+      "id": "blank-ma-s-ur-travaille-l-h-pital",
+      "type": "fill-blank",
+      "l1": "Moja sestra pracuje v nemocnici.",
+      "l2": "Ma sœur travaille à l'hôpital.",
+      "missing_l1": "v",
+      "missing_l2": "à",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "mama",
+        "moja",
+        "a"
+      ],
+      "choices_l2": [
+        "famille",
+        "grand-père",
+        "la"
+      ]
+    },
+    {
+      "id": "blank-mon-fr-re-travaille-dans-un-magasin",
+      "type": "fill-blank",
+      "l1": "Môj brat pracuje v obchode.",
+      "l2": "Mon frère travaille dans un magasin.",
+      "missing_l1": "v",
+      "missing_l2": "un",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "roky",
+        "rokov",
+        "máš"
+      ],
+      "choices_l2": [
+        "s'appelle",
+        "a",
+        "sœur"
+      ]
+    },
+    {
+      "id": "blank-moi-aussi-je-suis-professeur",
+      "type": "fill-blank",
+      "l1": "Ja som tiež učiteľ.",
+      "l2": "Moi aussi, je suis professeur.",
+      "missing_l1": "som",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "rodičia",
+        "brat",
+        "moji"
+      ],
+      "choices_l2": [
+        "grand-père",
+        "comment",
+        "ma"
+      ]
+    },
+    {
+      "id": "blank-j-ai-beaucoup-de-travail",
+      "type": "fill-blank",
+      "l1": "Mám veľa práce.",
+      "l2": "J'ai beaucoup de travail.",
+      "missing_l1": "veľa",
+      "missing_l2": "de",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "moja",
+        "sestra",
+        "moji"
+      ],
+      "choices_l2": [
+        "sœur",
+        "j'ai",
+        "louise"
+      ]
+    },
+    {
+      "id": "listen-que-fais-tu",
+      "type": "listen",
+      "l1": "Čo robíš?",
+      "l2": "Que fais-tu ?",
+      "choices_l2": [
+        "Ma grand-mère s'appelle Louise.",
+        "As-tu un frère ?",
+        "J'ai un frère. Il a trois ans."
+      ]
+    },
+    {
+      "id": "listen-mon-p-re-est-professeur",
+      "type": "listen",
+      "l1": "Môj otec je učiteľ.",
+      "l2": "Mon père est professeur.",
+      "choices_l2": [
+        "Mon frère a un an.",
+        "Je n'ai pas de frère. J'ai une sœur.",
+        "Voici mon père et voici ma maman."
+      ]
+    },
+    {
+      "id": "listen-ma-maman-est-professeure",
+      "type": "listen",
+      "l1": "Moja mama je učiteľka.",
+      "l2": "Ma maman est professeure.",
+      "choices_l2": [
+        "Ma sœur a deux ans.",
+        "Qui est-ce ?",
+        "Je n'ai pas de frère. J'ai une sœur."
+      ]
+    },
+    {
+      "id": "listen-ma-s-ur-est-m-decin",
+      "type": "listen",
+      "l1": "Moja sestra je lekárka.",
+      "l2": "Ma sœur est médecin.",
+      "choices_l2": [
+        "Qui est-ce ?",
+        "Mon grand-père et ma grand-mère.",
+        "Ma maman a cinquante ans."
+      ]
+    },
+    {
+      "id": "listen-mon-fr-re-est-tudiant-il-ne-travaille-pas",
+      "type": "listen",
+      "l1": "Môj brat je študent. Nepracuje.",
+      "l2": "Mon frère est étudiant. Il ne travaille pas.",
+      "choices_l2": [
+        "Ma grand-mère est vieille et ma sœur est jeune.",
+        "Quel est ton prénom ?",
+        "Mon frère a un an."
+      ]
+    },
+    {
+      "id": "listen-mon-grand-p-re-est-retrait",
+      "type": "listen",
+      "l1": "Môj dedko je dôchodca.",
+      "l2": "Mon grand-père est retraité.",
+      "choices_l2": [
+        "C'est mon ami.",
+        "Ma tante s'appelle Ève.",
+        "Quel est ton prénom ?"
+      ]
+    },
+    {
+      "id": "listen-o-travailles-tu",
+      "type": "listen",
+      "l1": "Kde pracuješ?",
+      "l2": "Où travailles-tu ?",
+      "choices_l2": [
+        "Mon oncle a deux enfants.",
+        "Ma tante s'appelle Ève.",
+        "J'ai un fils et une fille."
+      ]
+    },
+    {
+      "id": "listen-ma-tante-est-m-decin-elle-a-quarante-ans",
+      "type": "listen",
+      "l1": "Moja teta je lekárka. Má štyridsať rokov.",
+      "l2": "Ma tante est médecin. Elle a quarante ans.",
+      "choices_l2": [
+        "Ma sœur est à la maison.",
+        "Mon grand-père et ma grand-mère.",
+        "Mon frère a un an."
+      ]
+    },
+    {
+      "id": "listen-mes-parents-travaillent",
+      "type": "listen",
+      "l1": "Moji rodičia pracujú.",
+      "l2": "Mes parents travaillent.",
+      "choices_l2": [
+        "Quel âge as-tu ?",
+        "As-tu un frère ?",
+        "Mon père est grand et costaud."
+      ]
+    },
+    {
+      "id": "listen-ma-grand-m-re-ne-travaille-pas-elle-est-vieille",
+      "type": "listen",
+      "l1": "Moja babka nepracuje. Je stará.",
+      "l2": "Ma grand-mère ne travaille pas. Elle est vieille.",
+      "choices_l2": [
+        "J'ai un petit enfant.",
+        "Ma sœur est à la maison.",
+        "Voici mon père et voici ma maman."
+      ]
+    },
+    {
+      "id": "listen-je-travaille-l-cole",
+      "type": "listen",
+      "l1": "Pracujem v škole.",
+      "l2": "Je travaille à l'école.",
+      "choices_l2": [
+        "Mon mari s'appelle Marc.",
+        "Comment tu t'appelles ?",
+        "Mes enfants sont petits."
+      ]
+    },
+    {
+      "id": "listen-ma-s-ur-travaille-l-h-pital",
+      "type": "listen",
+      "l1": "Moja sestra pracuje v nemocnici.",
+      "l2": "Ma sœur travaille à l'hôpital.",
+      "choices_l2": [
+        "Ce sont mes parents.",
+        "Comment tu t'appelles ?",
+        "Ma tante s'appelle Ève."
+      ]
+    },
+    {
+      "id": "listen-mon-fr-re-travaille-dans-un-magasin",
+      "type": "listen",
+      "l1": "Môj brat pracuje v obchode.",
+      "l2": "Mon frère travaille dans un magasin.",
+      "choices_l2": [
+        "Mes enfants sont petits.",
+        "J'ai un petit enfant.",
+        "Ma sœur a deux ans."
+      ]
+    },
+    {
+      "id": "listen-moi-aussi-je-suis-professeur",
+      "type": "listen",
+      "l1": "Ja som tiež učiteľ.",
+      "l2": "Moi aussi, je suis professeur.",
+      "choices_l2": [
+        "Qui est-ce ?",
+        "Comment tu t'appelles ?",
+        "C'est ma famille."
+      ]
+    },
+    {
+      "id": "listen-j-ai-beaucoup-de-travail",
+      "type": "listen",
+      "l1": "Mám veľa práce.",
+      "l2": "J'ai beaucoup de travail.",
+      "choices_l2": [
+        "J'ai un fils et une fille.",
+        "Quel âge as-tu ?",
+        "Ma sœur est à la maison."
+      ]
+    },
+    {
+      "id": "order-mon-p-re-est-professeur",
+      "type": "order",
+      "l1": "Môj otec je učiteľ.",
+      "l2": "Mon père est professeur.",
+      "tokens_l1": [
+        "Môj",
+        "otec",
+        "je",
+        "učiteľ.",
+        "Môj",
+        "dedko",
+        "je",
+        "dôchodca."
+      ],
+      "tokens_l2": [
+        "Mon",
+        "père",
+        "est",
+        "professeur.",
+        "Mon",
+        "grand-père",
+        "est",
+        "retraité."
+      ]
+    },
+    {
+      "id": "order-ma-maman-est-professeure",
+      "type": "order",
+      "l1": "Moja mama je učiteľka.",
+      "l2": "Ma maman est professeure.",
+      "tokens_l1": [
+        "Moja",
+        "mama",
+        "je",
+        "učiteľka.",
+        "Ja",
+        "som",
+        "tiež",
+        "učiteľ."
+      ],
+      "tokens_l2": [
+        "Ma",
+        "maman",
+        "est",
+        "professeure.",
+        "Moi",
+        "aussi,",
+        "je",
+        "suis",
+        "professeur."
+      ]
+    },
+    {
+      "id": "order-ma-s-ur-est-m-decin",
+      "type": "order",
+      "l1": "Moja sestra je lekárka.",
+      "l2": "Ma sœur est médecin.",
+      "tokens_l1": [
+        "Moja",
+        "sestra",
+        "je",
+        "lekárka.",
+        "Moja",
+        "sestra",
+        "pracuje",
+        "v",
+        "nemocnici."
+      ],
+      "tokens_l2": [
+        "Ma",
+        "sœur",
+        "est",
+        "médecin.",
+        "Ma",
+        "sœur",
+        "travaille",
+        "à",
+        "l'hôpital."
+      ]
+    },
+    {
+      "id": "order-mon-fr-re-est-tudiant-il-ne-travaille-pas",
+      "type": "order",
+      "l1": "Môj brat je študent. Nepracuje.",
+      "l2": "Mon frère est étudiant. Il ne travaille pas.",
+      "tokens_l1": [
+        "Môj",
+        "brat",
+        "je",
+        "študent.",
+        "Nepracuje.",
+        "Moja",
+        "teta",
+        "je",
+        "lekárka.",
+        "Má",
+        "štyridsať",
+        "rokov."
+      ],
+      "tokens_l2": [
+        "Mon",
+        "frère",
+        "est",
+        "étudiant.",
+        "Il",
+        "ne",
+        "travaille",
+        "pas.",
+        "Ma",
+        "tante",
+        "est",
+        "médecin.",
+        "Elle",
+        "a",
+        "quarante",
+        "ans."
+      ]
+    },
+    {
+      "id": "order-mon-grand-p-re-est-retrait",
+      "type": "order",
+      "l1": "Môj dedko je dôchodca.",
+      "l2": "Mon grand-père est retraité.",
+      "tokens_l1": [
+        "Môj",
+        "dedko",
+        "je",
+        "dôchodca.",
+        "Moji",
+        "rodičia",
+        "pracujú."
+      ],
+      "tokens_l2": [
+        "Mon",
+        "grand-père",
+        "est",
+        "retraité.",
+        "Mes",
+        "parents",
+        "travaillent."
+      ]
+    },
+    {
+      "id": "order-ma-tante-est-m-decin-elle-a-quarante-ans",
+      "type": "order",
+      "l1": "Moja teta je lekárka. Má štyridsať rokov.",
+      "l2": "Ma tante est médecin. Elle a quarante ans.",
+      "tokens_l1": [
+        "Moja",
+        "teta",
+        "je",
+        "lekárka.",
+        "Má",
+        "štyridsať",
+        "rokov.",
+        "Môj",
+        "brat",
+        "je",
+        "študent.",
+        "Nepracuje."
+      ],
+      "tokens_l2": [
+        "Ma",
+        "tante",
+        "est",
+        "médecin.",
+        "Elle",
+        "a",
+        "quarante",
+        "ans.",
+        "Mon",
+        "frère",
+        "est",
+        "étudiant.",
+        "Il",
+        "ne",
+        "travaille",
+        "pas."
+      ]
+    },
+    {
+      "id": "order-mes-parents-travaillent",
+      "type": "order",
+      "l1": "Moji rodičia pracujú.",
+      "l2": "Mes parents travaillent.",
+      "tokens_l1": [
+        "Moji",
+        "rodičia",
+        "pracujú.",
+        "Moja",
+        "sestra",
+        "je",
+        "lekárka."
+      ],
+      "tokens_l2": [
+        "Mes",
+        "parents",
+        "travaillent.",
+        "Ma",
+        "sœur",
+        "est",
+        "médecin."
+      ]
+    },
+    {
+      "id": "order-ma-grand-m-re-ne-travaille-pas-elle-est-vieille",
+      "type": "order",
+      "l1": "Moja babka nepracuje. Je stará.",
+      "l2": "Ma grand-mère ne travaille pas. Elle est vieille.",
+      "tokens_l1": [
+        "Moja",
+        "babka",
+        "nepracuje.",
+        "Je",
+        "stará.",
+        "Moja",
+        "sestra",
+        "je",
+        "lekárka."
+      ],
+      "tokens_l2": [
+        "Ma",
+        "grand-mère",
+        "ne",
+        "travaille",
+        "pas.",
+        "Elle",
+        "est",
+        "vieille.",
+        "Ma",
+        "sœur",
+        "est",
+        "médecin."
+      ]
+    },
+    {
+      "id": "order-je-travaille-l-cole",
+      "type": "order",
+      "l1": "Pracujem v škole.",
+      "l2": "Je travaille à l'école.",
+      "tokens_l1": [
+        "Pracujem",
+        "v",
+        "škole.",
+        "Môj",
+        "brat",
+        "je",
+        "študent.",
+        "Nepracuje."
+      ],
+      "tokens_l2": [
+        "Je",
+        "travaille",
+        "à",
+        "l'école.",
+        "Mon",
+        "frère",
+        "est",
+        "étudiant.",
+        "Il",
+        "ne",
+        "travaille",
+        "pas."
+      ]
+    },
+    {
+      "id": "order-ma-s-ur-travaille-l-h-pital",
+      "type": "order",
+      "l1": "Moja sestra pracuje v nemocnici.",
+      "l2": "Ma sœur travaille à l'hôpital.",
+      "tokens_l1": [
+        "Moja",
+        "sestra",
+        "pracuje",
+        "v",
+        "nemocnici.",
+        "Môj",
+        "brat",
+        "pracuje",
+        "v",
+        "obchode."
+      ],
+      "tokens_l2": [
+        "Ma",
+        "sœur",
+        "travaille",
+        "à",
+        "l'hôpital.",
+        "Mon",
+        "frère",
+        "travaille",
+        "dans",
+        "un",
+        "magasin."
+      ]
+    },
+    {
+      "id": "order-mon-fr-re-travaille-dans-un-magasin",
+      "type": "order",
+      "l1": "Môj brat pracuje v obchode.",
+      "l2": "Mon frère travaille dans un magasin.",
+      "tokens_l1": [
+        "Môj",
+        "brat",
+        "pracuje",
+        "v",
+        "obchode.",
+        "Moji",
+        "rodičia",
+        "pracujú."
+      ],
+      "tokens_l2": [
+        "Mon",
+        "frère",
+        "travaille",
+        "dans",
+        "un",
+        "magasin.",
+        "Mes",
+        "parents",
+        "travaillent."
+      ]
+    },
+    {
+      "id": "order-moi-aussi-je-suis-professeur",
+      "type": "order",
+      "l1": "Ja som tiež učiteľ.",
+      "l2": "Moi aussi, je suis professeur.",
+      "tokens_l1": [
+        "Ja",
+        "som",
+        "tiež",
+        "učiteľ.",
+        "Moja",
+        "sestra",
+        "je",
+        "lekárka."
+      ],
+      "tokens_l2": [
+        "Moi",
+        "aussi,",
+        "je",
+        "suis",
+        "professeur.",
+        "Ma",
+        "sœur",
+        "est",
+        "médecin."
+      ]
+    },
+    {
+      "id": "order-j-ai-beaucoup-de-travail",
+      "type": "order",
+      "l1": "Mám veľa práce.",
+      "l2": "J'ai beaucoup de travail.",
+      "tokens_l1": [
+        "Mám",
+        "veľa",
+        "práce.",
+        "Môj",
+        "brat",
+        "je",
+        "študent.",
+        "Nepracuje."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "beaucoup",
+        "de",
+        "travail.",
+        "Mon",
+        "frère",
+        "est",
+        "étudiant.",
+        "Il",
+        "ne",
+        "travaille",
+        "pas."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,898 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-le-pain",
+      "type": "qcm",
+      "l1": "chlieb",
+      "l2": "le pain",
+      "choices_l1": [
+        "posteľ",
+        "ale",
+        "otec"
+      ],
+      "choices_l2": [
+        "je suis",
+        "la buanderie",
+        "le prénom"
+      ]
+    },
+    {
+      "id": "qcm-le-lait",
+      "type": "qcm",
+      "l1": "mlieko",
+      "l2": "le lait",
+      "choices_l1": [
+        "pohár",
+        "môj brat",
+        "terasa"
+      ],
+      "choices_l2": [
+        "le tapis",
+        "mon frère",
+        "l'horloge"
+      ]
+    },
+    {
+      "id": "qcm-l-eau",
+      "type": "qcm",
+      "l1": "voda",
+      "l2": "l'eau",
+      "choices_l1": [
+        "kancelária",
+        "veľa",
+        "peniaze"
+      ],
+      "choices_l2": [
+        "en ville",
+        "faire",
+        "je cherche"
+      ]
+    },
+    {
+      "id": "qcm-le-fromage",
+      "type": "qcm",
+      "l1": "syr",
+      "l2": "le fromage",
+      "choices_l1": [
+        "deti",
+        "strecha",
+        "okuliare"
+      ],
+      "choices_l2": [
+        "le lit",
+        "ma sœur",
+        "le magasin"
+      ]
+    },
+    {
+      "id": "qcm-la-viande",
+      "type": "qcm",
+      "l1": "mäso",
+      "l2": "la viande",
+      "choices_l1": [
+        "práca",
+        "posteľ",
+        "povala"
+      ],
+      "choices_l2": [
+        "faire",
+        "le verre",
+        "l'immeuble"
+      ]
+    },
+    {
+      "id": "qcm-les-fruits",
+      "type": "qcm",
+      "l1": "ovocie",
+      "l2": "les fruits",
+      "choices_l1": [
+        "spálňa",
+        "zrkadlo",
+        "jeden rok"
+      ],
+      "choices_l2": [
+        "dans l'armoire",
+        "le livre",
+        "la cour"
+      ]
+    },
+    {
+      "id": "qcm-les-l-gumes",
+      "type": "qcm",
+      "l1": "zelenina",
+      "l2": "les légumes",
+      "choices_l1": [
+        "moja sestra",
+        "pracuje",
+        "variť"
+      ],
+      "choices_l2": [
+        "écouter",
+        "joli",
+        "un an"
+      ]
+    },
+    {
+      "id": "qcm-je-mange",
+      "type": "qcm",
+      "l1": "jem",
+      "l2": "je mange",
+      "choices_l1": [
+        "starý",
+        "balkón",
+        "papuče"
+      ],
+      "choices_l2": [
+        "près",
+        "l'argent",
+        "deux ans"
+      ]
+    },
+    {
+      "id": "qcm-tu-manges",
+      "type": "qcm",
+      "l1": "ješ",
+      "l2": "tu manges",
+      "choices_l1": [
+        "robiť",
+        "robím",
+        "nemocnica"
+      ],
+      "choices_l2": [
+        "la chaise",
+        "dix ans",
+        "la cave"
+      ]
+    },
+    {
+      "id": "qcm-il-elle-mange",
+      "type": "qcm",
+      "l1": "je",
+      "l2": "il / elle mange",
+      "choices_l1": [
+        "povala",
+        "môj otec",
+        "chata"
+      ],
+      "choices_l2": [
+        "je ne range pas",
+        "ils / elles travaillent",
+        "grand / grande"
+      ]
+    },
+    {
+      "id": "qcm-nous-mangeons",
+      "type": "qcm",
+      "l1": "jeme",
+      "l2": "nous mangeons",
+      "choices_l1": [
+        "robí",
+        "mydlo",
+        "pivnica"
+      ],
+      "choices_l2": [
+        "la maison",
+        "la famille",
+        "deux ans"
+      ]
+    },
+    {
+      "id": "qcm-ils-elles-mangent",
+      "type": "qcm",
+      "l1": "jedia",
+      "l2": "ils / elles mangent",
+      "choices_l1": [
+        "veľa",
+        "veľký",
+        "panelák"
+      ],
+      "choices_l2": [
+        "une salle de bain (ženský rod)",
+        "grand / grande",
+        "l'ami / l'amie"
+      ]
+    },
+    {
+      "id": "qcm-je-bois",
+      "type": "qcm",
+      "l1": "pijem",
+      "l2": "je bois",
+      "choices_l1": [
+        "dva roky",
+        "bývam",
+        "tiež"
+      ],
+      "choices_l2": [
+        "l'horloge",
+        "deux ans",
+        "le garage"
+      ]
+    },
+    {
+      "id": "qcm-tu-bois",
+      "type": "qcm",
+      "l1": "piješ",
+      "l2": "tu bois",
+      "choices_l1": [
+        "ja som",
+        "brat",
+        "ale"
+      ],
+      "choices_l2": [
+        "le balcon",
+        "la table",
+        "le canapé"
+      ]
+    },
+    {
+      "id": "qcm-il-elle-boit",
+      "type": "qcm",
+      "l1": "pije",
+      "l2": "il / elle boit",
+      "choices_l1": [
+        "nemocnica",
+        "pomáhať",
+        "sesternica"
+      ],
+      "choices_l2": [
+        "sur la chaise",
+        "sur la table",
+        "Je cherche la clé. → Je la cherche."
+      ]
+    },
+    {
+      "id": "qcm-nous-buvons",
+      "type": "qcm",
+      "l1": "pijeme",
+      "l2": "nous buvons",
+      "choices_l1": [
+        "malý brat",
+        "chladnička",
+        "kúpeľňa"
+      ],
+      "choices_l2": [
+        "le frère",
+        "être assis",
+        "tu cherches"
+      ]
+    },
+    {
+      "id": "qcm-ils-elles-boivent",
+      "type": "qcm",
+      "l1": "pijú",
+      "l2": "ils / elles boivent",
+      "choices_l1": [
+        "dcéra",
+        "izba",
+        "v Lyone"
+      ],
+      "choices_l2": [
+        "la femme / l'épouse",
+        "dans un appartement",
+        "Il y a quatre chaises."
+      ]
+    },
+    {
+      "id": "qcm-manger-du-pain",
+      "type": "qcm",
+      "l1": "jesť chlieb",
+      "l2": "manger du pain",
+      "choices_l1": [
+        "terasa",
+        "obývačka",
+        "gauč"
+      ],
+      "choices_l2": [
+        "la maison de campagne",
+        "l'an / l'année",
+        "une salle de bain (ženský rod)"
+      ]
+    },
+    {
+      "id": "qcm-boire-de-l-eau",
+      "type": "qcm",
+      "l1": "piť vodu",
+      "l2": "boire de l'eau",
+      "choices_l1": [
+        "balkón",
+        "robíš",
+        "bývaš"
+      ],
+      "choices_l2": [
+        "petit / petite",
+        "un petit frère",
+        "Il n'y a pas de lit."
+      ]
+    },
+    {
+      "id": "qcm-manger-de-la-viande",
+      "type": "qcm",
+      "l1": "jesť mäso",
+      "l2": "manger de la viande",
+      "choices_l1": [
+        "robia",
+        "otec",
+        "lekár"
+      ],
+      "choices_l2": [
+        "le professeur / la professeure",
+        "une salle de bain (ženský rod)",
+        "sur la table"
+      ]
+    },
+    {
+      "id": "qcm-manger-des-fruits",
+      "type": "qcm",
+      "l1": "jesť ovocie",
+      "l2": "manger des fruits",
+      "choices_l1": [
+        "oddychovať",
+        "televízor",
+        "dom"
+      ],
+      "choices_l2": [
+        "sur la chaise",
+        "une chambre (ženský rod)",
+        "dans la chambre"
+      ]
+    },
+    {
+      "id": "qcm-le-beurre",
+      "type": "qcm",
+      "l1": "maslo",
+      "l2": "le beurre",
+      "choices_l1": [
+        "volať sa",
+        "pozerať",
+        "nespím"
+      ],
+      "choices_l2": [
+        "l'assiette",
+        "le couteau",
+        "les chaussons"
+      ]
+    },
+    {
+      "id": "qcm-l-uf",
+      "type": "qcm",
+      "l1": "vajce",
+      "l2": "l'œuf",
+      "choices_l1": [
+        "nespím",
+        "hľadáš",
+        "bývam"
+      ],
+      "choices_l2": [
+        "je fais",
+        "le couteau",
+        "deux ans"
+      ]
+    },
+    {
+      "id": "qcm-le-sucre",
+      "type": "qcm",
+      "l1": "cukor",
+      "l2": "le sucre",
+      "choices_l1": [
+        "balkón",
+        "starý",
+        "papuče"
+      ],
+      "choices_l2": [
+        "s'appeler",
+        "le tapis",
+        "le prénom"
+      ]
+    },
+    {
+      "id": "qcm-le-sel",
+      "type": "qcm",
+      "l1": "soľ",
+      "l2": "le sel",
+      "choices_l1": [
+        "hľadáme",
+        "babka",
+        "práca"
+      ],
+      "choices_l2": [
+        "la cousine",
+        "regarder",
+        "aider"
+      ]
+    },
+    {
+      "id": "qcm-le-riz",
+      "type": "qcm",
+      "l1": "ryža",
+      "l2": "le riz",
+      "choices_l1": [
+        "na stole",
+        "narodeniny",
+        "taška"
+      ],
+      "choices_l2": [
+        "le bureau",
+        "dans l'armoire",
+        "l'oncle"
+      ]
+    },
+    {
+      "id": "qcm-les-pommes-de-terre",
+      "type": "qcm",
+      "l1": "zemiaky",
+      "l2": "les pommes de terre",
+      "choices_l1": [
+        "tiež",
+        "meno",
+        "malý"
+      ],
+      "choices_l2": [
+        "il est jeune / elle est jeune",
+        "je ne range pas",
+        "la femme / l'épouse"
+      ]
+    },
+    {
+      "id": "qcm-la-soupe",
+      "type": "qcm",
+      "l1": "polievka",
+      "l2": "la soupe",
+      "choices_l1": [
+        "bývaš",
+        "hľadať",
+        "býva"
+      ],
+      "choices_l2": [
+        "l'anniversaire",
+        "l'argent",
+        "la tante"
+      ]
+    },
+    {
+      "id": "blank-les-enfants-boivent-du-lait",
+      "type": "fill-blank",
+      "l1": "Deti pijú mlieko.",
+      "l2": "Les enfants boivent du lait.",
+      "missing_l1": "mlieko",
+      "missing_l2": "du",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "má",
+        "máme",
+        "je"
+      ],
+      "choices_l2": [
+        "grand-mère",
+        "où",
+        "nous"
+      ]
+    },
+    {
+      "id": "blank-papa-mange-de-la-viande",
+      "type": "fill-blank",
+      "l1": "Otec je mäso.",
+      "l2": "Papa mange de la viande.",
+      "missing_l1": "je",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "obývačke",
+        "volá",
+        "pracuje"
+      ],
+      "choices_l2": [
+        "frère",
+        "ici",
+        "et"
+      ]
+    },
+    {
+      "id": "blank-nous-mangeons-des-fruits-et-des-l-gumes",
+      "type": "fill-blank",
+      "l1": "Jeme ovocie a zeleninu.",
+      "l2": "Nous mangeons des fruits et des légumes.",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "okno",
+        "volá",
+        "kde"
+      ],
+      "choices_l2": [
+        "pas",
+        "campagne",
+        "est"
+      ]
+    },
+    {
+      "id": "blank-du-pain-et-du-beurre-s-il-te-pla-t",
+      "type": "fill-blank",
+      "l1": "Chlieb a maslo, prosím.",
+      "l2": "Du pain et du beurre, s'il te plaît.",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "otec",
+        "ale",
+        "okno"
+      ],
+      "choices_l2": [
+        "sœur",
+        "a",
+        "mes"
+      ]
+    },
+    {
+      "id": "blank-nous-avons-du-riz-et-des-pommes-de-terre",
+      "type": "fill-blank",
+      "l1": "Máme ryžu a zemiaky.",
+      "l2": "Nous avons du riz et des pommes de terre.",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "babka",
+        "býva",
+        "náš"
+      ],
+      "choices_l2": [
+        "mais",
+        "je",
+        "le"
+      ]
+    },
+    {
+      "id": "blank-l-uf-est-dans-l-assiette",
+      "type": "fill-blank",
+      "l1": "Vajce je na tanieri.",
+      "l2": "L'œuf est dans l'assiette.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "rodičia",
+        "máme",
+        "sestra"
+      ],
+      "choices_l2": [
+        "ici",
+        "il",
+        "enfants"
+      ]
+    },
+    {
+      "id": "listen-je-mange-du-pain",
+      "type": "listen",
+      "l1": "Jem chlieb.",
+      "l2": "Je mange du pain.",
+      "choices_l2": [
+        "Que fais-tu ?",
+        "Ma grand-mère habite à la campagne.",
+        "Ce sont mes parents."
+      ]
+    },
+    {
+      "id": "listen-je-bois-de-l-eau",
+      "type": "listen",
+      "l1": "Pijem vodu.",
+      "l2": "Je bois de l'eau.",
+      "choices_l2": [
+        "Ma tante est médecin. Elle a quarante ans.",
+        "Le canapé est dans le salon.",
+        "Je ne cuisine pas. Je n'ai pas le temps."
+      ]
+    },
+    {
+      "id": "listen-les-enfants-boivent-du-lait",
+      "type": "listen",
+      "l1": "Deti pijú mlieko.",
+      "l2": "Les enfants boivent du lait.",
+      "choices_l2": [
+        "Je cherche la clé. Elle n'est pas dans le sac.",
+        "Maman cuisine dans la cuisine.",
+        "Ma cousine s'appelle Marie."
+      ]
+    },
+    {
+      "id": "listen-papa-mange-de-la-viande",
+      "type": "listen",
+      "l1": "Otec je mäso.",
+      "l2": "Papa mange de la viande.",
+      "choices_l2": [
+        "Je travaille à l'école.",
+        "Mes parents habitent dans une maison.",
+        "Je range la pièce."
+      ]
+    },
+    {
+      "id": "listen-tu-manges-du-fromage",
+      "type": "listen",
+      "l1": "Ješ syr?",
+      "l2": "Tu manges du fromage ?",
+      "choices_l2": [
+        "Maman cuisine dans la cuisine.",
+        "Je travaille à l'école.",
+        "J'écoute et je n'écris pas."
+      ]
+    },
+    {
+      "id": "listen-je-ne-mange-pas-de-viande",
+      "type": "listen",
+      "l1": "Nejem mäso.",
+      "l2": "Je ne mange pas de viande.",
+      "choices_l2": [
+        "Notre appartement est petit, mais la salle de bain est grande.",
+        "Mon père est grand et costaud.",
+        "Karine a vingt ans. Elle est étudiante."
+      ]
+    },
+    {
+      "id": "listen-nous-mangeons-des-fruits-et-des-l-gumes",
+      "type": "listen",
+      "l1": "Jeme ovocie a zeleninu.",
+      "l2": "Nous mangeons des fruits et des légumes.",
+      "choices_l2": [
+        "J'habite à Lyon, dans un appartement. Et vous ?",
+        "Il y a une table et quatre chaises dans la cuisine.",
+        "Je cherche le sac. Je le cherche partout."
+      ]
+    },
+    {
+      "id": "listen-nous-buvons-de-l-eau",
+      "type": "listen",
+      "l1": "Pijeme vodu.",
+      "l2": "Nous buvons de l'eau.",
+      "choices_l2": [
+        "Où est mon téléphone ?",
+        "J'ai deux enfants. Nous habitons ensemble.",
+        "Le toit est grand."
+      ]
+    },
+    {
+      "id": "listen-du-pain-et-du-beurre-s-il-te-pla-t",
+      "type": "listen",
+      "l1": "Chlieb a maslo, prosím.",
+      "l2": "Du pain et du beurre, s'il te plaît.",
+      "choices_l2": [
+        "Ma maman est professeure.",
+        "Nous cherchons les clés. Nous les cherchons depuis une heure !",
+        "Ma maison de campagne est loin."
+      ]
+    },
+    {
+      "id": "listen-je-mange-de-la-soupe",
+      "type": "listen",
+      "l1": "Jem polievku.",
+      "l2": "Je mange de la soupe.",
+      "choices_l2": [
+        "Oui, je vous en prie. Asseyez-vous sur le canapé.",
+        "Le lit est dans la chambre.",
+        "Mon frère a un an."
+      ]
+    },
+    {
+      "id": "listen-nous-avons-du-riz-et-des-pommes-de-terre",
+      "type": "listen",
+      "l1": "Máme ryžu a zemiaky.",
+      "l2": "Nous avons du riz et des pommes de terre.",
+      "choices_l2": [
+        "C'est ma grand-mère. Elle habite ici, à la campagne.",
+        "Ma grand-mère habite à la campagne et ma tante habite en ville.",
+        "J'ai deux enfants. Nous habitons ensemble."
+      ]
+    },
+    {
+      "id": "listen-je-n-ai-pas-de-sucre",
+      "type": "listen",
+      "l1": "Nemám cukor.",
+      "l2": "Je n'ai pas de sucre.",
+      "choices_l2": [
+        "Ma maman est professeure.",
+        "Ma grand-mère habite à la campagne.",
+        "J'ai beaucoup de travail."
+      ]
+    },
+    {
+      "id": "listen-l-uf-est-dans-l-assiette",
+      "type": "listen",
+      "l1": "Vajce je na tanieri.",
+      "l2": "L'œuf est dans l'assiette.",
+      "choices_l2": [
+        "Les assiettes sont dans l'armoire, dans la cuisine.",
+        "Je lis un livre dans le salon.",
+        "Qui est-ce ?"
+      ]
+    },
+    {
+      "id": "order-les-enfants-boivent-du-lait",
+      "type": "order",
+      "l1": "Deti pijú mlieko.",
+      "l2": "Les enfants boivent du lait.",
+      "tokens_l1": [
+        "Deti",
+        "pijú",
+        "mlieko.",
+        "Otec",
+        "je",
+        "mäso."
+      ],
+      "tokens_l2": [
+        "Les",
+        "enfants",
+        "boivent",
+        "du",
+        "lait.",
+        "Papa",
+        "mange",
+        "de",
+        "la",
+        "viande."
+      ]
+    },
+    {
+      "id": "order-papa-mange-de-la-viande",
+      "type": "order",
+      "l1": "Otec je mäso.",
+      "l2": "Papa mange de la viande.",
+      "tokens_l1": [
+        "Otec",
+        "je",
+        "mäso.",
+        "Vajce",
+        "je",
+        "na",
+        "tanieri."
+      ],
+      "tokens_l2": [
+        "Papa",
+        "mange",
+        "de",
+        "la",
+        "viande.",
+        "L'œuf",
+        "est",
+        "dans",
+        "l'assiette."
+      ]
+    },
+    {
+      "id": "order-nous-mangeons-des-fruits-et-des-l-gumes",
+      "type": "order",
+      "l1": "Jeme ovocie a zeleninu.",
+      "l2": "Nous mangeons des fruits et des légumes.",
+      "tokens_l1": [
+        "Jeme",
+        "ovocie",
+        "a",
+        "zeleninu.",
+        "Máme",
+        "ryžu",
+        "a",
+        "zemiaky."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "mangeons",
+        "des",
+        "fruits",
+        "et",
+        "des",
+        "légumes.",
+        "Nous",
+        "avons",
+        "du",
+        "riz",
+        "et",
+        "des",
+        "pommes",
+        "de",
+        "terre."
+      ]
+    },
+    {
+      "id": "order-du-pain-et-du-beurre-s-il-te-pla-t",
+      "type": "order",
+      "l1": "Chlieb a maslo, prosím.",
+      "l2": "Du pain et du beurre, s'il te plaît.",
+      "tokens_l1": [
+        "Chlieb",
+        "a",
+        "maslo,",
+        "prosím.",
+        "Jeme",
+        "ovocie",
+        "a",
+        "zeleninu."
+      ],
+      "tokens_l2": [
+        "Du",
+        "pain",
+        "et",
+        "du",
+        "beurre,",
+        "s'il",
+        "te",
+        "plaît.",
+        "Nous",
+        "mangeons",
+        "des",
+        "fruits",
+        "et",
+        "des",
+        "légumes."
+      ]
+    },
+    {
+      "id": "order-nous-avons-du-riz-et-des-pommes-de-terre",
+      "type": "order",
+      "l1": "Máme ryžu a zemiaky.",
+      "l2": "Nous avons du riz et des pommes de terre.",
+      "tokens_l1": [
+        "Máme",
+        "ryžu",
+        "a",
+        "zemiaky.",
+        "Chlieb",
+        "a",
+        "maslo,",
+        "prosím."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "avons",
+        "du",
+        "riz",
+        "et",
+        "des",
+        "pommes",
+        "de",
+        "terre.",
+        "Du",
+        "pain",
+        "et",
+        "du",
+        "beurre,",
+        "s'il",
+        "te",
+        "plaît."
+      ]
+    },
+    {
+      "id": "order-l-uf-est-dans-l-assiette",
+      "type": "order",
+      "l1": "Vajce je na tanieri.",
+      "l2": "L'œuf est dans l'assiette.",
+      "tokens_l1": [
+        "Vajce",
+        "je",
+        "na",
+        "tanieri.",
+        "Jeme",
+        "ovocie",
+        "a",
+        "zeleninu."
+      ],
+      "tokens_l2": [
+        "L'œuf",
+        "est",
+        "dans",
+        "l'assiette.",
+        "Nous",
+        "mangeons",
+        "des",
+        "fruits",
+        "et",
+        "des",
+        "légumes."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1025 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-la-famille",
+      "type": "qcm",
+      "l1": "rodina",
+      "l2": "la famille",
+      "choices_l1": [
+        "šiltovka",
+        "mydlo",
+        "v noci"
+      ],
+      "choices_l2": [
+        "les soldes",
+        "dans l'armoire",
+        "trente"
+      ]
+    },
+    {
+      "id": "qcm-la-maman",
+      "type": "qcm",
+      "l1": "mama",
+      "l2": "la maman",
+      "choices_l1": [
+        "deka",
+        "bankomat",
+        "Veľkonočná nedeľa"
+      ],
+      "choices_l2": [
+        "le prêtre",
+        "le bateau",
+        "la viande"
+      ]
+    },
+    {
+      "id": "qcm-le-p-re",
+      "type": "qcm",
+      "l1": "otec",
+      "l2": "le père",
+      "choices_l1": [
+        "jedia",
+        "zdobiť",
+        "chce"
+      ],
+      "choices_l2": [
+        "décembre",
+        "l'île",
+        "dans l'armoire"
+      ]
+    },
+    {
+      "id": "qcm-le-fr-re",
+      "type": "qcm",
+      "l1": "brat",
+      "l2": "le frère",
+      "choices_l1": [
+        "pol hodiny",
+        "rovno",
+        "okuliare"
+      ],
+      "choices_l2": [
+        "le mari",
+        "l'horloge",
+        "plonger"
+      ]
+    },
+    {
+      "id": "qcm-la-s-ur",
+      "type": "qcm",
+      "l1": "sestra",
+      "l2": "la sœur",
+      "choices_l1": [
+        "začínať",
+        "koncert",
+        "pol hodiny"
+      ],
+      "choices_l2": [
+        "qui",
+        "cacher",
+        "tard"
+      ]
+    },
+    {
+      "id": "qcm-la-grand-m-re",
+      "type": "qcm",
+      "l1": "babka",
+      "l2": "la grand-mère",
+      "choices_l1": [
+        "minulý rok",
+        "dobrý",
+        "musím"
+      ],
+      "choices_l2": [
+        "cette année",
+        "la pomme",
+        "la boulangerie"
+      ]
+    },
+    {
+      "id": "qcm-le-grand-p-re",
+      "type": "qcm",
+      "l1": "dedko",
+      "l2": "le grand-père",
+      "choices_l1": [
+        "tiež",
+        "pol šiestej",
+        "umývať"
+      ],
+      "choices_l2": [
+        "la tradition",
+        "à gauche",
+        "le billet"
+      ]
+    },
+    {
+      "id": "qcm-mon-fr-re",
+      "type": "qcm",
+      "l1": "môj brat",
+      "l2": "mon frère",
+      "choices_l1": [
+        "kúpeľňa",
+        "10",
+        "obloha"
+      ],
+      "choices_l2": [
+        "les feux",
+        "bon marché",
+        "joyeux"
+      ]
+    },
+    {
+      "id": "qcm-ma-s-ur",
+      "type": "qcm",
+      "l1": "moja sestra",
+      "l2": "ma sœur",
+      "choices_l1": [
+        "schovať",
+        "hosť",
+        "štrnásty"
+      ],
+      "choices_l2": [
+        "l'orage",
+        "le pinceau",
+        "le plan"
+      ]
+    },
+    {
+      "id": "qcm-mon-p-re",
+      "type": "qcm",
+      "l1": "môj otec",
+      "l2": "mon père",
+      "choices_l1": [
+        "pracuje",
+        "presne",
+        "100"
+      ],
+      "choices_l2": [
+        "l'épicerie",
+        "l'euro",
+        "les légumes"
+      ]
+    },
+    {
+      "id": "qcm-je-suis",
+      "type": "qcm",
+      "l1": "ja som",
+      "l2": "je suis",
+      "choices_l1": [
+        "december",
+        "robiť",
+        "kľúč"
+      ],
+      "choices_l2": [
+        "la crique",
+        "soixante-dix",
+        "le lapin"
+      ]
+    },
+    {
+      "id": "qcm-tu-es",
+      "type": "qcm",
+      "l1": "ty si",
+      "l2": "tu es",
+      "choices_l1": [
+        "omša",
+        "maják",
+        "ty máš"
+      ],
+      "choices_l2": [
+        "blanc",
+        "J'ai soif.",
+        "le parapluie"
+      ]
+    },
+    {
+      "id": "qcm-il-elle-est",
+      "type": "qcm",
+      "l1": "on / ona je",
+      "l2": "il / elle est",
+      "choices_l1": [
+        "V pondelky (zvyčajne) pracujem.",
+        "Je to pred kostolom.",
+        "Prídem. (doslova: „idem prísť“)"
+      ],
+      "choices_l2": [
+        "Tu as décoré le panier.",
+        "le retraité / la retraitée",
+        "S'il pleut, nous resterons à la maison."
+      ]
+    },
+    {
+      "id": "qcm-j-ai",
+      "type": "qcm",
+      "l1": "ja mám",
+      "l2": "j'ai",
+      "choices_l1": [
+        "15",
+        "6",
+        "na ulici"
+      ],
+      "choices_l2": [
+        "rouge",
+        "l'excursion",
+        "libre"
+      ]
+    },
+    {
+      "id": "qcm-tu-as",
+      "type": "qcm",
+      "l1": "ty máš",
+      "l2": "tu as",
+      "choices_l1": [
+        "poludnie",
+        "kyslý",
+        "zastávka"
+      ],
+      "choices_l2": [
+        "cuisiner",
+        "le mari",
+        "cent"
+      ]
+    },
+    {
+      "id": "qcm-il-elle-a",
+      "type": "qcm",
+      "l1": "on / ona má",
+      "l2": "il / elle a",
+      "choices_l1": [
+        "Chceli by sme izbu s výhľadom na more.",
+        "pot-au-feu (varené hovädzie so zeleninou)",
+        "Sú dve hodiny."
+      ],
+      "choices_l2": [
+        "Je voudrais une chambre.",
+        "le pain est bon (mužský)",
+        "les pommes de terre"
+      ]
+    },
+    {
+      "id": "qcm-qui",
+      "type": "qcm",
+      "l1": "kto",
+      "l2": "qui",
+      "choices_l1": [
+        "oslavovať",
+        "hosť",
+        "babka"
+      ],
+      "choices_l2": [
+        "ouvert",
+        "le week-end",
+        "zéro"
+      ]
+    },
+    {
+      "id": "qcm-s-appeler",
+      "type": "qcm",
+      "l1": "volať sa",
+      "l2": "s'appeler",
+      "choices_l1": [
+        "polievka",
+        "spací vak",
+        "hnedý"
+      ],
+      "choices_l2": [
+        "loin",
+        "offrir",
+        "nous devons"
+      ]
+    },
+    {
+      "id": "qcm-les-parents",
+      "type": "qcm",
+      "l1": "rodičia",
+      "l2": "les parents",
+      "choices_l1": [
+        "mušľa",
+        "horúca čokoláda",
+        "sobota"
+      ],
+      "choices_l2": [
+        "décorer",
+        "l'étagère",
+        "cinquième"
+      ]
+    },
+    {
+      "id": "qcm-le-fils",
+      "type": "qcm",
+      "l1": "syn",
+      "l2": "le fils",
+      "choices_l1": [
+        "15",
+        "brat",
+        "ovocný džús"
+      ],
+      "choices_l2": [
+        "le week-end",
+        "cinq cents",
+        "préparer"
+      ]
+    },
+    {
+      "id": "qcm-la-fille",
+      "type": "qcm",
+      "l1": "dcéra",
+      "l2": "la fille",
+      "choices_l1": [
+        "musím",
+        "malá sestra",
+        "Je horúco."
+      ],
+      "choices_l2": [
+        "le jardin",
+        "ennuyeux",
+        "je serai"
+      ]
+    },
+    {
+      "id": "qcm-le-mari",
+      "type": "qcm",
+      "l1": "manžel",
+      "l2": "le mari",
+      "choices_l1": [
+        "vozík",
+        "zvyčajne",
+        "bývam"
+      ],
+      "choices_l2": [
+        "le miroir",
+        "je mets",
+        "onzième"
+      ]
+    },
+    {
+      "id": "qcm-la-femme-l-pouse",
+      "type": "qcm",
+      "l1": "manželka",
+      "l2": "la femme / l'épouse",
+      "choices_l1": [
+        "voľný",
+        "modrý",
+        "sprcha"
+      ],
+      "choices_l2": [
+        "à la poste",
+        "six heures moins le quart (5:45)",
+        "C'est bon marché."
+      ]
+    },
+    {
+      "id": "blank-c-est-ma-famille",
+      "type": "fill-blank",
+      "l1": "To je moja rodina.",
+      "l2": "C'est ma famille.",
+      "missing_l1": "je",
+      "missing_l2": "ma",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "zajtra",
+        "ako",
+        "má"
+      ],
+      "choices_l2": [
+        "vous",
+        "la",
+        "j'ai"
+      ]
+    },
+    {
+      "id": "blank-voici-mon-p-re-et-voici-ma-maman",
+      "type": "fill-blank",
+      "l1": "To je môj otec a to je moja mama.",
+      "l2": "Voici mon père et voici ma maman.",
+      "missing_l1": "je",
+      "missing_l2": "et",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "si",
+        "o",
+        "nie"
+      ],
+      "choices_l2": [
+        "veux",
+        "mais",
+        "des"
+      ]
+    },
+    {
+      "id": "blank-je-n-ai-pas-de-fr-re-j-ai-une-s-ur",
+      "type": "fill-blank",
+      "l1": "Nemám brata. Mám sestru.",
+      "l2": "Je n'ai pas de frère. J'ai une sœur.",
+      "missing_l1": "Mám",
+      "missing_l2": "de",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "koľko",
+        "bude",
+        "táto"
+      ],
+      "choices_l2": [
+        "ma",
+        "mais",
+        "dans"
+      ]
+    },
+    {
+      "id": "blank-ma-s-ur-est-la-maison",
+      "type": "fill-blank",
+      "l1": "Moja sestra je doma.",
+      "l2": "Ma sœur est à la maison.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "nemám",
+        "potom",
+        "siedmej"
+      ],
+      "choices_l2": [
+        "vais",
+        "les",
+        "un"
+      ]
+    },
+    {
+      "id": "blank-ma-grand-m-re-s-appelle-louise",
+      "type": "fill-blank",
+      "l1": "Moja babka sa volá Louise.",
+      "l2": "Ma grand-mère s'appelle Louise.",
+      "missing_l1": "sa",
+      "missing_l2": "grand-mère",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "do",
+        "mám",
+        "má"
+      ],
+      "choices_l2": [
+        "c'est",
+        "plus",
+        "sont"
+      ]
+    },
+    {
+      "id": "blank-mon-grand-p-re-et-ma-grand-m-re",
+      "type": "fill-blank",
+      "l1": "Môj dedko a moja babka.",
+      "l2": "Mon grand-père et ma grand-mère.",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "áno",
+        "si",
+        "ale"
+      ],
+      "choices_l2": [
+        "le",
+        "cette",
+        "a"
+      ]
+    },
+    {
+      "id": "blank-qui-est-ce",
+      "type": "fill-blank",
+      "l1": "Kto je to?",
+      "l2": "Qui est-ce ?",
+      "missing_l1": "je",
+      "missing_l2": "est-ce",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "vajíčka",
+        "môj",
+        "nemám"
+      ],
+      "choices_l2": [
+        "a",
+        "j'ai",
+        "sont"
+      ]
+    },
+    {
+      "id": "blank-ce-sont-mes-parents",
+      "type": "fill-blank",
+      "l1": "To sú moji rodičia.",
+      "l2": "Ce sont mes parents.",
+      "missing_l1": "sú",
+      "missing_l2": "sont",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "táto",
+        "máte",
+        "na"
+      ],
+      "choices_l2": [
+        "du",
+        "des",
+        "à"
+      ]
+    },
+    {
+      "id": "blank-j-ai-un-fils-et-une-fille",
+      "type": "fill-blank",
+      "l1": "Mám syna a dcéru.",
+      "l2": "J'ai un fils et une fille.",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "siedmej",
+        "nie",
+        "vajíčka"
+      ],
+      "choices_l2": [
+        "sont",
+        "s'il",
+        "plaît"
+      ]
+    },
+    {
+      "id": "blank-comment-tu-t-appelles",
+      "type": "fill-blank",
+      "l1": "Ako sa voláš?",
+      "l2": "Comment tu t'appelles ?",
+      "missing_l1": "sa",
+      "missing_l2": "tu",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "to",
+        "na",
+        "chcem"
+      ],
+      "choices_l2": [
+        "la",
+        "plus",
+        "dans"
+      ]
+    },
+    {
+      "id": "blank-mon-mari-s-appelle-marc",
+      "type": "fill-blank",
+      "l1": "Môj manžel sa volá Marc.",
+      "l2": "Mon mari s'appelle Marc.",
+      "missing_l1": "sa",
+      "missing_l2": "s'appelle",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sú",
+        "vajíčka",
+        "do"
+      ],
+      "choices_l2": [
+        "et",
+        "ne",
+        "s'il"
+      ]
+    },
+    {
+      "id": "listen-c-est-ma-famille",
+      "type": "listen",
+      "l1": "To je moja rodina.",
+      "l2": "C'est ma famille.",
+      "choices_l2": [
+        "Au printemps il fait plus chaud qu'en hiver.",
+        "J'ai la taille M.",
+        "Eric, quand avez-vous le temps ?"
+      ]
+    },
+    {
+      "id": "listen-voici-mon-p-re-et-voici-ma-maman",
+      "type": "listen",
+      "l1": "To je môj otec a to je moja mama.",
+      "l2": "Voici mon père et voici ma maman.",
+      "choices_l2": [
+        "S'il fait nuageux, il ne fera pas trop chaud.",
+        "Moi, c'est Chloé ! J'ai huit ans.",
+        "Aujourd'hui, j'y vais à pied."
+      ]
+    },
+    {
+      "id": "listen-as-tu-un-fr-re",
+      "type": "listen",
+      "l1": "Máš brata?",
+      "l2": "As-tu un frère ?",
+      "choices_l2": [
+        "Les enfants sont dans la chambre.",
+        "Cette zone est sécurisée.",
+        "Le soir il va pleuvoir."
+      ]
+    },
+    {
+      "id": "listen-je-n-ai-pas-de-fr-re-j-ai-une-s-ur",
+      "type": "listen",
+      "l1": "Nemám brata. Mám sestru.",
+      "l2": "Je n'ai pas de frère. J'ai une sœur.",
+      "choices_l2": [
+        "Le pont est vieux et beau.",
+        "Cette viande est mauvaise.",
+        "Le pot-au-feu est brûlant. Tu veux de l'eau ?"
+      ]
+    },
+    {
+      "id": "listen-ma-s-ur-est-la-maison",
+      "type": "listen",
+      "l1": "Moja sestra je doma.",
+      "l2": "Ma sœur est à la maison.",
+      "choices_l2": [
+        "Maman cuisine dans la cuisine.",
+        "Le jeudi saint j'ai rangé toute la maison.",
+        "Lundi, je commence à sept heures du matin."
+      ]
+    },
+    {
+      "id": "listen-ma-grand-m-re-s-appelle-louise",
+      "type": "listen",
+      "l1": "Moja babka sa volá Louise.",
+      "l2": "Ma grand-mère s'appelle Louise.",
+      "choices_l2": [
+        "Ma tante est professeure et elle travaille beaucoup.",
+        "Le lit est dans la chambre.",
+        "Hier, comme aujourd'hui, je n'ai pas le temps."
+      ]
+    },
+    {
+      "id": "listen-mon-grand-p-re-et-ma-grand-m-re",
+      "type": "listen",
+      "l1": "Môj dedko a moja babka.",
+      "l2": "Mon grand-père et ma grand-mère.",
+      "choices_l2": [
+        "Nous avons quatre pièces.",
+        "Je me repose sur le lit et j'écoute.",
+        "Nous n'avons pas de tente, nous dormirons à l'hôtel."
+      ]
+    },
+    {
+      "id": "listen-qui-est-ce",
+      "type": "listen",
+      "l1": "Kto je to?",
+      "l2": "Qui est-ce ?",
+      "choices_l2": [
+        "Nous voulons visiter le théâtre.",
+        "Mon oncle a une grande maison et un jardin.",
+        "Joyeuses Pâques, tout le monde !"
+      ]
+    },
+    {
+      "id": "listen-ce-sont-mes-parents",
+      "type": "listen",
+      "l1": "To sú moji rodičia.",
+      "l2": "Ce sont mes parents.",
+      "choices_l2": [
+        "La lampe est sur la table, mais le livre est sur l'étagère.",
+        "Moi, je n'ai rien trouvé !",
+        "Je suis professeur. Je travaille dans une école."
+      ]
+    },
+    {
+      "id": "listen-j-ai-un-fils-et-une-fille",
+      "type": "listen",
+      "l1": "Mám syna a dcéru.",
+      "l2": "J'ai un fils et une fille.",
+      "choices_l2": [
+        "Les enfants nagent et construisent un château de sable.",
+        "Qu'est-ce que tu cherches ?",
+        "Je ne mange pas de viande."
+      ]
+    },
+    {
+      "id": "listen-comment-tu-t-appelles",
+      "type": "listen",
+      "l1": "Ako sa voláš?",
+      "l2": "Comment tu t'appelles ?",
+      "choices_l2": [
+        "Tu connais la marée ?",
+        "Je me lève et j'ouvre la fenêtre.",
+        "Il est neuf heures moins le quart."
+      ]
+    },
+    {
+      "id": "listen-mon-mari-s-appelle-marc",
+      "type": "listen",
+      "l1": "Môj manžel sa volá Marc.",
+      "l2": "Mon mari s'appelle Marc.",
+      "choices_l2": [
+        "Va à droite, pas à gauche !",
+        "À la gare. Je vais arriver à l'heure.",
+        "Allez tout droit, puis à gauche."
+      ]
+    },
+    {
+      "id": "order-c-est-ma-famille",
+      "type": "order",
+      "l1": "To je moja rodina.",
+      "l2": "C'est ma famille.",
+      "tokens_l1": [
+        "To",
+        "je",
+        "moja",
+        "rodina.",
+        "Môj",
+        "manžel",
+        "sa",
+        "volá",
+        "Marc."
+      ],
+      "tokens_l2": [
+        "C'est",
+        "ma",
+        "famille.",
+        "Mon",
+        "mari",
+        "s'appelle",
+        "Marc."
+      ]
+    },
+    {
+      "id": "order-voici-mon-p-re-et-voici-ma-maman",
+      "type": "order",
+      "l1": "To je môj otec a to je moja mama.",
+      "l2": "Voici mon père et voici ma maman.",
+      "tokens_l1": [
+        "To",
+        "je",
+        "môj",
+        "otec",
+        "a",
+        "to",
+        "je",
+        "moja",
+        "mama.",
+        "Kto",
+        "je",
+        "to?"
+      ],
+      "tokens_l2": [
+        "Voici",
+        "mon",
+        "père",
+        "et",
+        "voici",
+        "ma",
+        "maman.",
+        "Qui",
+        "est-ce",
+        "?"
+      ]
+    },
+    {
+      "id": "order-je-n-ai-pas-de-fr-re-j-ai-une-s-ur",
+      "type": "order",
+      "l1": "Nemám brata. Mám sestru.",
+      "l2": "Je n'ai pas de frère. J'ai une sœur.",
+      "tokens_l1": [
+        "Nemám",
+        "brata.",
+        "Mám",
+        "sestru.",
+        "Mám",
+        "syna",
+        "a",
+        "dcéru."
+      ],
+      "tokens_l2": [
+        "Je",
+        "n'ai",
+        "pas",
+        "de",
+        "frère.",
+        "J'ai",
+        "une",
+        "sœur.",
+        "J'ai",
+        "un",
+        "fils",
+        "et",
+        "une",
+        "fille."
+      ]
+    },
+    {
+      "id": "order-ma-s-ur-est-la-maison",
+      "type": "order",
+      "l1": "Moja sestra je doma.",
+      "l2": "Ma sœur est à la maison.",
+      "tokens_l1": [
+        "Moja",
+        "sestra",
+        "je",
+        "doma.",
+        "Môj",
+        "manžel",
+        "sa",
+        "volá",
+        "Marc."
+      ],
+      "tokens_l2": [
+        "Ma",
+        "sœur",
+        "est",
+        "à",
+        "la",
+        "maison.",
+        "Mon",
+        "mari",
+        "s'appelle",
+        "Marc."
+      ]
+    },
+    {
+      "id": "order-ma-grand-m-re-s-appelle-louise",
+      "type": "order",
+      "l1": "Moja babka sa volá Louise.",
+      "l2": "Ma grand-mère s'appelle Louise.",
+      "tokens_l1": [
+        "Moja",
+        "babka",
+        "sa",
+        "volá",
+        "Louise.",
+        "Ako",
+        "sa",
+        "voláš?"
+      ],
+      "tokens_l2": [
+        "Ma",
+        "grand-mère",
+        "s'appelle",
+        "Louise.",
+        "Comment",
+        "tu",
+        "t'appelles",
+        "?"
+      ]
+    },
+    {
+      "id": "order-mon-grand-p-re-et-ma-grand-m-re",
+      "type": "order",
+      "l1": "Môj dedko a moja babka.",
+      "l2": "Mon grand-père et ma grand-mère.",
+      "tokens_l1": [
+        "Môj",
+        "dedko",
+        "a",
+        "moja",
+        "babka.",
+        "Kto",
+        "je",
+        "to?"
+      ],
+      "tokens_l2": [
+        "Mon",
+        "grand-père",
+        "et",
+        "ma",
+        "grand-mère.",
+        "Qui",
+        "est-ce",
+        "?"
+      ]
+    },
+    {
+      "id": "order-qui-est-ce",
+      "type": "order",
+      "l1": "Kto je to?",
+      "l2": "Qui est-ce ?",
+      "tokens_l1": [
+        "Kto",
+        "je",
+        "to?",
+        "To",
+        "je",
+        "moja",
+        "rodina."
+      ],
+      "tokens_l2": [
+        "Qui",
+        "est-ce",
+        "?",
+        "C'est",
+        "ma",
+        "famille."
+      ]
+    },
+    {
+      "id": "order-ce-sont-mes-parents",
+      "type": "order",
+      "l1": "To sú moji rodičia.",
+      "l2": "Ce sont mes parents.",
+      "tokens_l1": [
+        "To",
+        "sú",
+        "moji",
+        "rodičia.",
+        "To",
+        "je",
+        "moja",
+        "rodina."
+      ],
+      "tokens_l2": [
+        "Ce",
+        "sont",
+        "mes",
+        "parents.",
+        "C'est",
+        "ma",
+        "famille."
+      ]
+    },
+    {
+      "id": "order-j-ai-un-fils-et-une-fille",
+      "type": "order",
+      "l1": "Mám syna a dcéru.",
+      "l2": "J'ai un fils et une fille.",
+      "tokens_l1": [
+        "Mám",
+        "syna",
+        "a",
+        "dcéru.",
+        "Moja",
+        "sestra",
+        "je",
+        "doma."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "un",
+        "fils",
+        "et",
+        "une",
+        "fille.",
+        "Ma",
+        "sœur",
+        "est",
+        "à",
+        "la",
+        "maison."
+      ]
+    },
+    {
+      "id": "order-comment-tu-t-appelles",
+      "type": "order",
+      "l1": "Ako sa voláš?",
+      "l2": "Comment tu t'appelles ?",
+      "tokens_l1": [
+        "Ako",
+        "sa",
+        "voláš?",
+        "Kto",
+        "je",
+        "to?"
+      ],
+      "tokens_l2": [
+        "Comment",
+        "tu",
+        "t'appelles",
+        "?",
+        "Qui",
+        "est-ce",
+        "?"
+      ]
+    },
+    {
+      "id": "order-mon-mari-s-appelle-marc",
+      "type": "order",
+      "l1": "Môj manžel sa volá Marc.",
+      "l2": "Mon mari s'appelle Marc.",
+      "tokens_l1": [
+        "Môj",
+        "manžel",
+        "sa",
+        "volá",
+        "Marc.",
+        "Moja",
+        "sestra",
+        "je",
+        "doma."
+      ],
+      "tokens_l2": [
+        "Mon",
+        "mari",
+        "s'appelle",
+        "Marc.",
+        "Ma",
+        "sœur",
+        "est",
+        "à",
+        "la",
+        "maison."
+      ]
+    }
+  ]
+}

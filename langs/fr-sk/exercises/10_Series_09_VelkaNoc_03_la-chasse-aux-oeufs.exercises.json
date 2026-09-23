@@ -1,0 +1,1413 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-la-chasse-aux-ufs",
+      "type": "qcm",
+      "l1": "hľadanie vajíčok",
+      "l2": "la chasse aux œufs",
+      "choices_l1": [
+        "zvon",
+        "čokoládový zvon",
+        "zajac"
+      ],
+      "choices_l2": [
+        "il est jeune / elle est jeune",
+        "Nous voudrions une chambre avec vue sur mer.",
+        "sur le pont"
+      ]
+    },
+    {
+      "id": "qcm-cacher",
+      "type": "qcm",
+      "l1": "schovať",
+      "l2": "cacher",
+      "choices_l1": [
+        "chcieť",
+        "upiecť",
+        "kúpať sa"
+      ],
+      "choices_l2": [
+        "s'appeler",
+        "veux",
+        "écouter"
+      ]
+    },
+    {
+      "id": "qcm-trouver",
+      "type": "qcm",
+      "l1": "nájsť",
+      "l2": "trouver",
+      "choices_l1": [
+        "stretnúť sa",
+        "môcť",
+        "zaboč!"
+      ],
+      "choices_l2": [
+        "être assis",
+        "voir",
+        "décorer"
+      ]
+    },
+    {
+      "id": "qcm-le-jardin",
+      "type": "qcm",
+      "l1": "záhrada",
+      "l2": "le jardin",
+      "choices_l1": [
+        "dom",
+        "panelák",
+        "kuchyňa"
+      ],
+      "choices_l2": [
+        "le balcon",
+        "le grenier",
+        "la porte"
+      ]
+    },
+    {
+      "id": "qcm-le-cadeau",
+      "type": "qcm",
+      "l1": "darček",
+      "l2": "le cadeau",
+      "choices_l1": [
+        "program",
+        "plán",
+        "mydlo"
+      ],
+      "choices_l2": [
+        "la force",
+        "le repos",
+        "le programme"
+      ]
+    },
+    {
+      "id": "qcm-offrir",
+      "type": "qcm",
+      "l1": "darovať",
+      "l2": "offrir",
+      "choices_l1": [
+        "máš",
+        "skúsiť",
+        "volať sa"
+      ],
+      "choices_l2": [
+        "attendre",
+        "visiter",
+        "préparé (préparer)"
+      ]
+    },
+    {
+      "id": "qcm-l-enfant",
+      "type": "qcm",
+      "l1": "dieťa",
+      "l2": "l'enfant",
+      "choices_l1": [
+        "môj otec",
+        "manželka",
+        "otec"
+      ],
+      "choices_l2": [
+        "la sœur",
+        "le mari",
+        "la cousine"
+      ]
+    },
+    {
+      "id": "qcm-j-ai-donn-un-uf-chlo-je-lui-ai-donn-un-uf",
+      "type": "qcm",
+      "l1": "Dal/dala som Chloé vajíčko. → Dal/dala som jej vajíčko.",
+      "l2": "J'ai donné un œuf à Chloé. → Je lui ai donné un œuf.",
+      "choices_l1": [
+        "quiche lorraine (slaný koláč z Lotrinska)",
+        "Dám si pivo.",
+        "voda je dobrá"
+      ],
+      "choices_l2": [
+        "Je prends une quiche.",
+        "manger du pain",
+        "Tu prends un café ?"
+      ]
+    },
+    {
+      "id": "qcm-j-ai-donn-des-ufs-aux-enfants-je-leur-ai-donn-des-ufs",
+      "type": "qcm",
+      "l1": "Dal/dala som deťom vajíčka. → Dal/dala som im vajíčka.",
+      "l2": "J'ai donné des œufs aux enfants. → Je leur ai donné des œufs.",
+      "choices_l1": [
+        "učiteľ / učiteľka",
+        "kamarát / kamarátka",
+        "študent / študentka"
+      ],
+      "choices_l2": [
+        "la femme / l'épouse",
+        "une petite sœur",
+        "un petit frère"
+      ]
+    },
+    {
+      "id": "qcm-la-poule",
+      "type": "qcm",
+      "l1": "sliepka",
+      "l2": "la poule",
+      "choices_l1": [
+        "Nemám hlad.",
+        "pijú",
+        "jedia"
+      ],
+      "choices_l2": [
+        "le vin",
+        "la soupe",
+        "le cidre"
+      ]
+    },
+    {
+      "id": "qcm-le-lapin",
+      "type": "qcm",
+      "l1": "zajac",
+      "l2": "le lapin",
+      "choices_l1": [
+        "festival",
+        "vosk",
+        "sviatok"
+      ],
+      "choices_l2": [
+        "le carême",
+        "la cloche",
+        "le pinceau"
+      ]
+    },
+    {
+      "id": "qcm-la-cloche-en-chocolat",
+      "type": "qcm",
+      "l1": "čokoládový zvon",
+      "l2": "la cloche en chocolat",
+      "choices_l1": [
+        "jesť mäso",
+        "zelenina",
+        "pivo"
+      ],
+      "choices_l2": [
+        "Je prends une quiche.",
+        "boire de l'eau",
+        "manger des fruits"
+      ]
+    },
+    {
+      "id": "qcm-chercher",
+      "type": "qcm",
+      "l1": "hľadať",
+      "l2": "chercher",
+      "choices_l1": [
+        "skúsiť",
+        "mať",
+        "bývaš"
+      ],
+      "choices_l2": [
+        "cacher",
+        "commencer",
+        "j'essaie"
+      ]
+    },
+    {
+      "id": "qcm-la-surprise",
+      "type": "qcm",
+      "l1": "prekvapenie",
+      "l2": "la surprise",
+      "choices_l1": [
+        "kľúč",
+        "sila",
+        "program"
+      ],
+      "choices_l2": [
+        "la fontaine",
+        "le sac",
+        "le plan"
+      ]
+    },
+    {
+      "id": "qcm-joyeux",
+      "type": "qcm",
+      "l1": "radostný",
+      "l2": "joyeux",
+      "choices_l1": [
+        "obľúbený",
+        "čerstvý",
+        "svetlý"
+      ],
+      "choices_l2": [
+        "assoiffé",
+        "plus loin",
+        "dangereux"
+      ]
+    },
+    {
+      "id": "qcm-amusant",
+      "type": "qcm",
+      "l1": "zábavný",
+      "l2": "amusant",
+      "choices_l1": [
+        "zaujímavý",
+        "pokojný",
+        "voľný"
+      ],
+      "choices_l2": [
+        "ennuyeux",
+        "beau",
+        "la fatigue"
+      ]
+    },
+    {
+      "id": "blank-le-lundi-de-p-ques-les-enfants-cherchent-les-ufs-dans-le-jardin",
+      "type": "fill-blank",
+      "l1": "Na veľkonočný pondelok deti hľadajú vajíčka v záhrade.",
+      "l2": "Le lundi de Pâques, les enfants cherchent les œufs dans le jardin.",
+      "missing_l1": "v",
+      "missing_l2": "le",
+      "blank_index_l1": 6,
+      "blank_index_l2": 10,
+      "choices_l1": [
+        "ja som",
+        "ja",
+        "on išiel"
+      ],
+      "choices_l2": [
+        "s'appelle",
+        "Nous",
+        "tu travailles"
+      ]
+    },
+    {
+      "id": "blank-j-ai-cach-des-ufs-en-chocolat",
+      "type": "fill-blank",
+      "l1": "Schoval/schovala som čokoládové vajíčka.",
+      "l2": "J'ai caché des œufs en chocolat.",
+      "missing_l1": "som",
+      "missing_l2": "en",
+      "blank_index_l1": 1,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "oblečieš si",
+        "v dome",
+        "naspäť"
+      ],
+      "choices_l2": [
+        "tu cherches",
+        "mais",
+        "Quelle"
+      ]
+    },
+    {
+      "id": "blank-chlo-a-trouv-le-plus-gros-uf",
+      "type": "fill-blank",
+      "l1": "Chloé našla najväčšie vajíčko!",
+      "l2": "Chloé a trouvé le plus gros œuf !",
+      "missing_l1": "vajíčko",
+      "missing_l2": "le",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "croissant",
+        "mlieko",
+        "kyslý"
+      ],
+      "choices_l2": [
+        "est-ce",
+        "pour",
+        "nous essayons"
+      ]
+    },
+    {
+      "id": "blank-j-ai-donn-un-cadeau-chlo-je-lui-ai-donn-un-cadeau",
+      "type": "fill-blank",
+      "l1": "Dal/dala som Chloé darček. Dal/dala som jej darček.",
+      "l2": "J'ai donné un cadeau à Chloé. Je lui ai donné un cadeau.",
+      "missing_l1": "som",
+      "missing_l2": "Je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "málo",
+        "veľmi",
+        "ja mám"
+      ],
+      "choices_l2": [
+        "le plus...",
+        "tout",
+        "Combien"
+      ]
+    },
+    {
+      "id": "blank-nous-avons-offert-des-ufs-aux-enfants-nous-leur-avons-offert-des-ufs",
+      "type": "fill-blank",
+      "l1": "Darovali sme deťom vajíčka. Darovali sme im vajíčka.",
+      "l2": "Nous avons offert des œufs aux enfants. Nous leur avons offert des œufs.",
+      "missing_l1": "sme",
+      "missing_l2": "Nous",
+      "blank_index_l1": 1,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "som",
+        "do lekárne",
+        "kedy"
+      ],
+      "choices_l2": [
+        "sont",
+        "tu manges",
+        "de"
+      ]
+    },
+    {
+      "id": "blank-tu-lui-as-donn-combien-d-ufs",
+      "type": "fill-blank",
+      "l1": "Koľko vajíčok si jej dal/dala?",
+      "l2": "Tu lui as donné combien d'œufs ?",
+      "missing_l1": "si",
+      "missing_l2": "as",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "hľadá",
+        "by",
+        "ona išla"
+      ],
+      "choices_l2": [
+        "cette",
+        "un",
+        "nous pourrions"
+      ]
+    },
+    {
+      "id": "blank-je-leur-ai-dit-o-chercher",
+      "type": "fill-blank",
+      "l1": "Povedal/povedala som im, kde hľadať.",
+      "l2": "Je leur ai dit où chercher.",
+      "missing_l1": "som",
+      "missing_l2": "où",
+      "blank_index_l1": 1,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "s",
+        "k",
+        "tieto topánky"
+      ],
+      "choices_l2": [
+        "tout",
+        "et",
+        "tu dois"
+      ]
+    },
+    {
+      "id": "blank-les-enfants-sont-contents-ils-ont-trouv-tous-les-ufs",
+      "type": "fill-blank",
+      "l1": "Deti sú spokojné, našli všetky vajíčka.",
+      "l2": "Les enfants sont contents, ils ont trouvé tous les œufs.",
+      "missing_l1": "sú",
+      "missing_l2": "les",
+      "blank_index_l1": 1,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "ty máš",
+        "ty si",
+        "k"
+      ],
+      "choices_l2": [
+        "tu veux",
+        "le plus...",
+        "tu es"
+      ]
+    },
+    {
+      "id": "blank-nous-sommes-all-s-au-jardin-et-nous-avons-cherch-les-ufs",
+      "type": "fill-blank",
+      "l1": "Išli sme do záhrady a hľadali sme vajíčka.",
+      "l2": "Nous sommes allés au jardin et nous avons cherché les œufs.",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 4,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "vnútri",
+        "ja",
+        "k"
+      ],
+      "choices_l2": [
+        "nous allons",
+        "Quelle",
+        "tu seras"
+      ]
+    },
+    {
+      "id": "blank-j-ai-donn-les-plus-beaux-ufs-ma-s-ur",
+      "type": "fill-blank",
+      "l1": "Dal/dala som najkrajšie vajíčka svojej sestre.",
+      "l2": "J'ai donné les plus beaux œufs à ma sœur.",
+      "missing_l1": "som",
+      "missing_l2": "à",
+      "blank_index_l1": 1,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "oblečieme si",
+        "ďalej",
+        "Kde"
+      ],
+      "choices_l2": [
+        "tu travailles",
+        "je vois",
+        "tu as"
+      ]
+    },
+    {
+      "id": "blank-ils-leur-ont-offert-du-chocolat-pour-p-ques",
+      "type": "fill-blank",
+      "l1": "Darovali im čokoládu na Veľkú noc.",
+      "l2": "Ils leur ont offert du chocolat pour Pâques.",
+      "missing_l1": "na",
+      "missing_l2": "du",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "hľadáš",
+        "teplejší ako",
+        "málo"
+      ],
+      "choices_l2": [
+        "C'est bon.",
+        "ma",
+        "au"
+      ]
+    },
+    {
+      "id": "blank-la-poule-et-le-lapin-sont-des-symboles-de-p-ques",
+      "type": "fill-blank",
+      "l1": "Sliepka a zajac sú symboly Veľkej noci.",
+      "l2": "La poule et le lapin sont des symboles de Pâques.",
+      "missing_l1": "a",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "tieto topánky",
+        "ako",
+        "Koľko"
+      ],
+      "choices_l2": [
+        "Combien",
+        "du",
+        "tu vas"
+      ]
+    },
+    {
+      "id": "blank-cette-cloche-en-chocolat-est-immense",
+      "type": "fill-blank",
+      "l1": "Tento čokoládový zvon je obrovský!",
+      "l2": "Cette cloche en chocolat est immense !",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "ty máš",
+        "každý",
+        "asi"
+      ],
+      "choices_l2": [
+        "tu veux",
+        "où",
+        "je mets"
+      ]
+    },
+    {
+      "id": "blank-c-tait-tr-s-amusant",
+      "type": "fill-blank",
+      "l1": "Bolo to veľmi zábavné.",
+      "l2": "C'était très amusant.",
+      "missing_l1": "to",
+      "missing_l2": "très",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "kto",
+        "za rohom",
+        "ale"
+      ],
+      "choices_l2": [
+        "je travaille",
+        "ensemble",
+        "aussi"
+      ]
+    },
+    {
+      "id": "blank-nous-avons-pass-un-jour-joyeux",
+      "type": "fill-blank",
+      "l1": "Strávili sme radostný deň.",
+      "l2": "Nous avons passé un jour joyeux.",
+      "missing_l1": "sme",
+      "missing_l2": "un",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "v byte",
+        "o",
+        "do"
+      ],
+      "choices_l2": [
+        "s'appelle",
+        "cette",
+        "nous buvons"
+      ]
+    },
+    {
+      "id": "listen-le-lundi-de-p-ques-les-enfants-cherchent-les-ufs-dans-le-jardin",
+      "type": "listen",
+      "l1": "Na veľkonočný pondelok deti hľadajú vajíčka v záhrade.",
+      "l2": "Le lundi de Pâques, les enfants cherchent les œufs dans le jardin.",
+      "choices_l2": [
+        "La gare est loin, prends le tram.",
+        "Le pot-au-feu est brûlant. Tu veux de l'eau ?",
+        "Le train arrive à midi et quart."
+      ],
+      "choices_l1": [
+        "Vo štvrtok začínam o ôsmej.",
+        "Poobede nemám čas, ale večer áno.",
+        "Zajtra bude zima, musíš nosiť kabát."
+      ]
+    },
+    {
+      "id": "listen-j-ai-cach-des-ufs-en-chocolat",
+      "type": "listen",
+      "l1": "Schoval/schovala som čokoládové vajíčka.",
+      "l2": "J'ai caché des œufs en chocolat.",
+      "choices_l2": [
+        "Aujourd'hui il fait plus frais qu'hier.",
+        "J'aime la couleur verte, mais pas la jaune.",
+        "J'ai utilisé de la peinture et un pinceau."
+      ],
+      "choices_l1": [
+        "Na Bielu sobotu sme ozdobili košík a pripravili jedlo.",
+        "Quiche lorraine. Je teplá, pozor.",
+        "Na Bielu sobotu sme pripravili jahňacie stehno a vajíčka."
+      ]
+    },
+    {
+      "id": "listen-chlo-a-trouv-le-plus-gros-uf",
+      "type": "listen",
+      "l1": "Chloé našla najväčšie vajíčko!",
+      "l2": "Chloé a trouvé le plus gros œuf !",
+      "choices_l2": [
+        "C'est très savoureux.",
+        "Qu'as-tu fait le jeudi saint ?",
+        "J'achète la viande à la boucherie et le fromage à l'épicerie."
+      ],
+      "choices_l1": [
+        "Mám smäd. Dáš si horúcu čokoládu?",
+        "Mám hlad. Dám si pot-au-feu a chlieb.",
+        "Zemiaky sú teplé, ale mäso je studené."
+      ]
+    },
+    {
+      "id": "listen-j-ai-donn-un-cadeau-chlo-je-lui-ai-donn-un-cadeau",
+      "type": "listen",
+      "l1": "Dal/dala som Chloé darček. Dal/dala som jej darček.",
+      "l2": "J'ai donné un cadeau à Chloé. Je lui ai donné un cadeau.",
+      "choices_l2": [
+        "Nous allons bronzer sur la plage.",
+        "Nous cherchons les clés. Nous les cherchons depuis une heure !",
+        "J'arrive tout de suite."
+      ],
+      "choices_l1": [
+        "Tráva je zelená a mokrá.",
+        "Mrzne. Cesta je klzká.",
+        "To je drahé!"
+      ]
+    },
+    {
+      "id": "listen-nous-avons-offert-des-ufs-aux-enfants-nous-leur-avons-offert-des-ufs",
+      "type": "listen",
+      "l1": "Darovali sme deťom vajíčka. Darovali sme im vajíčka.",
+      "l2": "Nous avons offert des œufs aux enfants. Nous leur avons offert des œufs.",
+      "choices_l2": [
+        "Cette chemise est verte.",
+        "Ma tante est médecin. Elle a quarante ans.",
+        "Mon père est professeur."
+      ],
+      "choices_l1": [
+        "Tarta je chutná, ale je toho veľa.",
+        "Čokoláda sa roztopila na slnku.",
+        "Fazuľky flageolet sú jemné a hodia sa k jahňaciemu."
+      ]
+    },
+    {
+      "id": "listen-tu-lui-as-donn-combien-d-ufs",
+      "type": "listen",
+      "l1": "Koľko vajíčok si jej dal/dala?",
+      "l2": "Tu lui as donné combien d'œufs ?",
+      "choices_l2": [
+        "Le musée est juste devant vous.",
+        "Je voudrais voir les étoiles depuis la plage.",
+        "Mercredi oui. Mais pas tôt."
+      ],
+      "choices_l1": [
+        "Áno! O piatej, pred kostolom.",
+        "Bravo, Eric! Schovala som ti práve toto.",
+        "Dám si polievku a potom pot-au-feu."
+      ]
+    },
+    {
+      "id": "listen-je-leur-ai-dit-o-chercher",
+      "type": "listen",
+      "l1": "Povedal/povedala som im, kde hľadať.",
+      "l2": "Je leur ai dit où chercher.",
+      "choices_l2": [
+        "Demain, c'est vendredi. Je suis libre.",
+        "Je cherche la clé, mais elle n'est pas sur la table.",
+        "Ma grand-mère habite à la campagne et ma tante habite en ville."
+      ],
+      "choices_l1": [
+        "Kade mám ísť?",
+        "Som unavený. Chcem odpočívať.",
+        "Sme unavení, chceli by sme odpočívať v hoteli."
+      ]
+    },
+    {
+      "id": "listen-les-enfants-sont-contents-ils-ont-trouv-tous-les-ufs",
+      "type": "listen",
+      "l1": "Deti sú spokojné, našli všetky vajíčka.",
+      "l2": "Les enfants sont contents, ils ont trouvé tous les œufs.",
+      "choices_l2": [
+        "J'ai la taille M.",
+        "Merci, je n'ai plus faim.",
+        "J'habite à Lyon."
+      ],
+      "choices_l1": [
+        "Deti sú v záhrade.",
+        "Môj otec je učiteľ.",
+        "Môj otec je vysoký a statný."
+      ]
+    },
+    {
+      "id": "listen-nous-sommes-all-s-au-jardin-et-nous-avons-cherch-les-ufs",
+      "type": "listen",
+      "l1": "Išli sme do záhrady a hľadali sme vajíčka.",
+      "l2": "Nous sommes allés au jardin et nous avons cherché les œufs.",
+      "choices_l2": [
+        "Mes parents sont retraités. Ils habitent tout près.",
+        "Je ressens la tranquillité sur le balcon.",
+        "Le dimanche de Pâques nous sommes allés à l'église."
+      ],
+      "choices_l1": [
+        "Dám si pot-au-feu a pivo.",
+        "Mám hlad. Dám si pot-au-feu a chlieb.",
+        "Ja si dám víno. Na zdravie!"
+      ]
+    },
+    {
+      "id": "listen-j-ai-donn-les-plus-beaux-ufs-ma-s-ur",
+      "type": "listen",
+      "l1": "Dal/dala som najkrajšie vajíčka svojej sestre.",
+      "l2": "J'ai donné les plus beaux œufs à ma sœur.",
+      "choices_l2": [
+        "Le train arrive à midi et quart.",
+        "Le magasin est ouvert jusqu'à sept heures.",
+        "La télévision est sur l'étagère."
+      ],
+      "choices_l1": [
+        "Mama varí v kuchyni.",
+        "Moje deti sú malé.",
+        "Moja sesternica sa volá Mária."
+      ]
+    },
+    {
+      "id": "listen-ils-leur-ont-offert-du-chocolat-pour-p-ques",
+      "type": "listen",
+      "l1": "Darovali im čokoládu na Veľkú noc.",
+      "l2": "Ils leur ont offert du chocolat pour Pâques.",
+      "choices_l2": [
+        "Oui, s'il vous plaît. Et fermez la porte.",
+        "Les enfants boivent du lait au dîner.",
+        "Tu dois avoir de la crème solaire, le soleil est fort."
+      ],
+      "choices_l1": [
+        "Mám rád leto.",
+        "Super. Musíme mať dobré oblečenie, na kopcoch je vždy chladnejšie.",
+        "Chodíš vždy vlakom?"
+      ]
+    },
+    {
+      "id": "listen-la-poule-et-le-lapin-sont-des-symboles-de-p-ques",
+      "type": "listen",
+      "l1": "Sliepka a zajac sú symboly Veľkej noci.",
+      "l2": "La poule et le lapin sont des symboles de Pâques.",
+      "choices_l2": [
+        "Pourrions-nous rester une nuit de plus à l'hôtel ?",
+        "Cette zone est sécurisée.",
+        "Il y a un miroir au-dessus de l'armoire."
+      ],
+      "choices_l1": [
+        "Čokoláda sa roztopila na slnku.",
+        "Konečne! Už som schovala vajíčka v záhrade.",
+        "Áno! A mám aj vodu a jedlo v taške."
+      ]
+    },
+    {
+      "id": "listen-cette-cloche-en-chocolat-est-immense",
+      "type": "listen",
+      "l1": "Tento čokoládový zvon je obrovský!",
+      "l2": "Cette cloche en chocolat est immense !",
+      "choices_l2": [
+        "La falaise est haute et dangereuse.",
+        "Je cherche mes lunettes.",
+        "Notre appartement est petit, mais la salle de bain est grande."
+      ],
+      "choices_l1": [
+        "Áno, je to naša tradícia. Poďte, hľadajte dobre!",
+        "Ako sa voláš?",
+        "Použil som farbu a štetec."
+      ]
+    },
+    {
+      "id": "listen-quelle-surprise",
+      "type": "listen",
+      "l1": "Aké prekvapenie!",
+      "l2": "Quelle surprise !",
+      "choices_l2": [
+        "Je veux manger.",
+        "C'est un peu salé.",
+        "Je ressens la tranquillité sur le balcon."
+      ],
+      "choices_l1": [
+        "Ďakujem. Dovidenia!",
+        "Ochutnaj!",
+        "Nespím. Počúvam."
+      ]
+    },
+    {
+      "id": "listen-c-tait-tr-s-amusant",
+      "type": "listen",
+      "l1": "Bolo to veľmi zábavné.",
+      "l2": "C'était très amusant.",
+      "choices_l2": [
+        "Je veux un plan, parce que je suis vraiment perdu.",
+        "Le jus de fruits est très sucré.",
+        "Tu n'as pas besoin de porter un manteau, il fait chaud."
+      ],
+      "choices_l1": [
+        "Ideme sa plaviť na lodi.",
+        "MHD je v Lyone dobrá.",
+        "To je lacné! Kúp si aj to zelené."
+      ]
+    },
+    {
+      "id": "listen-nous-avons-pass-un-jour-joyeux",
+      "type": "listen",
+      "l1": "Strávili sme radostný deň.",
+      "l2": "Nous avons passé un jour joyeux.",
+      "choices_l2": [
+        "Quelles sont les prévisions pour demain ?",
+        "La télévision est sur l'étagère.",
+        "Bonne idée ! Sur la place il y a un joli café."
+      ],
+      "choices_l1": [
+        "Na jar je tráva zelená a kvitnú kvety.",
+        "Na jar musím mať dáždnik, ale nie kabát.",
+        "Čo si mám dnes obliecť?"
+      ]
+    },
+    {
+      "id": "order-le-lundi-de-p-ques-les-enfants-cherchent-les-ufs-dans-le-jardin",
+      "type": "order",
+      "l1": "Na veľkonočný pondelok deti hľadajú vajíčka v záhrade.",
+      "l2": "Le lundi de Pâques, les enfants cherchent les œufs dans le jardin.",
+      "tokens_l1": [
+        "Na",
+        "veľkonočný",
+        "pondelok",
+        "deti",
+        "hľadajú",
+        "vajíčka",
+        "v",
+        "záhrade.",
+        "Dal/dala",
+        "som",
+        "najkrajšie",
+        "vajíčka",
+        "svojej",
+        "sestre."
+      ],
+      "tokens_l2": [
+        "Le",
+        "lundi",
+        "de",
+        "Pâques,",
+        "les",
+        "enfants",
+        "cherchent",
+        "les",
+        "œufs",
+        "dans",
+        "le",
+        "jardin.",
+        "J'ai",
+        "donné",
+        "les",
+        "plus",
+        "beaux",
+        "œufs",
+        "à",
+        "ma",
+        "sœur."
+      ]
+    },
+    {
+      "id": "order-j-ai-cach-des-ufs-en-chocolat",
+      "type": "order",
+      "l1": "Schoval/schovala som čokoládové vajíčka.",
+      "l2": "J'ai caché des œufs en chocolat.",
+      "tokens_l1": [
+        "Schoval/schovala",
+        "som",
+        "čokoládové",
+        "vajíčka.",
+        "Sliepka",
+        "a",
+        "zajac",
+        "sú",
+        "symboly",
+        "Veľkej",
+        "noci."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "caché",
+        "des",
+        "œufs",
+        "en",
+        "chocolat.",
+        "La",
+        "poule",
+        "et",
+        "le",
+        "lapin",
+        "sont",
+        "des",
+        "symboles",
+        "de",
+        "Pâques."
+      ]
+    },
+    {
+      "id": "order-chlo-a-trouv-le-plus-gros-uf",
+      "type": "order",
+      "l1": "Chloé našla najväčšie vajíčko!",
+      "l2": "Chloé a trouvé le plus gros œuf !",
+      "tokens_l1": [
+        "Chloé",
+        "našla",
+        "najväčšie",
+        "vajíčko!",
+        "Sliepka",
+        "a",
+        "zajac",
+        "sú",
+        "symboly",
+        "Veľkej",
+        "noci."
+      ],
+      "tokens_l2": [
+        "Chloé",
+        "a",
+        "trouvé",
+        "le",
+        "plus",
+        "gros",
+        "œuf",
+        "!",
+        "La",
+        "poule",
+        "et",
+        "le",
+        "lapin",
+        "sont",
+        "des",
+        "symboles",
+        "de",
+        "Pâques."
+      ]
+    },
+    {
+      "id": "order-j-ai-donn-un-cadeau-chlo-je-lui-ai-donn-un-cadeau",
+      "type": "order",
+      "l1": "Dal/dala som Chloé darček. Dal/dala som jej darček.",
+      "l2": "J'ai donné un cadeau à Chloé. Je lui ai donné un cadeau.",
+      "tokens_l1": [
+        "Dal/dala",
+        "som",
+        "Chloé",
+        "darček.",
+        "Dal/dala",
+        "som",
+        "jej",
+        "darček.",
+        "Tento",
+        "čokoládový",
+        "zvon",
+        "je",
+        "obrovský!"
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "donné",
+        "un",
+        "cadeau",
+        "à",
+        "Chloé.",
+        "Je",
+        "lui",
+        "ai",
+        "donné",
+        "un",
+        "cadeau.",
+        "Cette",
+        "cloche",
+        "en",
+        "chocolat",
+        "est",
+        "immense",
+        "!"
+      ]
+    },
+    {
+      "id": "order-nous-avons-offert-des-ufs-aux-enfants-nous-leur-avons-offert-des-ufs",
+      "type": "order",
+      "l1": "Darovali sme deťom vajíčka. Darovali sme im vajíčka.",
+      "l2": "Nous avons offert des œufs aux enfants. Nous leur avons offert des œufs.",
+      "tokens_l1": [
+        "Darovali",
+        "sme",
+        "deťom",
+        "vajíčka.",
+        "Darovali",
+        "sme",
+        "im",
+        "vajíčka.",
+        "Dal/dala",
+        "som",
+        "najkrajšie",
+        "vajíčka",
+        "svojej",
+        "sestre."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "avons",
+        "offert",
+        "des",
+        "œufs",
+        "aux",
+        "enfants.",
+        "Nous",
+        "leur",
+        "avons",
+        "offert",
+        "des",
+        "œufs.",
+        "J'ai",
+        "donné",
+        "les",
+        "plus",
+        "beaux",
+        "œufs",
+        "à",
+        "ma",
+        "sœur."
+      ]
+    },
+    {
+      "id": "order-tu-lui-as-donn-combien-d-ufs",
+      "type": "order",
+      "l1": "Koľko vajíčok si jej dal/dala?",
+      "l2": "Tu lui as donné combien d'œufs ?",
+      "tokens_l1": [
+        "Koľko",
+        "vajíčok",
+        "si",
+        "jej",
+        "dal/dala?",
+        "Chloé",
+        "našla",
+        "najväčšie",
+        "vajíčko!"
+      ],
+      "tokens_l2": [
+        "Tu",
+        "lui",
+        "as",
+        "donné",
+        "combien",
+        "d'œufs",
+        "?",
+        "Chloé",
+        "a",
+        "trouvé",
+        "le",
+        "plus",
+        "gros",
+        "œuf",
+        "!"
+      ]
+    },
+    {
+      "id": "order-je-leur-ai-dit-o-chercher",
+      "type": "order",
+      "l1": "Povedal/povedala som im, kde hľadať.",
+      "l2": "Je leur ai dit où chercher.",
+      "tokens_l1": [
+        "Povedal/povedala",
+        "som",
+        "im,",
+        "kde",
+        "hľadať.",
+        "Dal/dala",
+        "som",
+        "Chloé",
+        "darček.",
+        "Dal/dala",
+        "som",
+        "jej",
+        "darček."
+      ],
+      "tokens_l2": [
+        "Je",
+        "leur",
+        "ai",
+        "dit",
+        "où",
+        "chercher.",
+        "J'ai",
+        "donné",
+        "un",
+        "cadeau",
+        "à",
+        "Chloé.",
+        "Je",
+        "lui",
+        "ai",
+        "donné",
+        "un",
+        "cadeau."
+      ]
+    },
+    {
+      "id": "order-les-enfants-sont-contents-ils-ont-trouv-tous-les-ufs",
+      "type": "order",
+      "l1": "Deti sú spokojné, našli všetky vajíčka.",
+      "l2": "Les enfants sont contents, ils ont trouvé tous les œufs.",
+      "tokens_l1": [
+        "Deti",
+        "sú",
+        "spokojné,",
+        "našli",
+        "všetky",
+        "vajíčka.",
+        "Išli",
+        "sme",
+        "do",
+        "záhrady",
+        "a",
+        "hľadali",
+        "sme",
+        "vajíčka."
+      ],
+      "tokens_l2": [
+        "Les",
+        "enfants",
+        "sont",
+        "contents,",
+        "ils",
+        "ont",
+        "trouvé",
+        "tous",
+        "les",
+        "œufs.",
+        "Nous",
+        "sommes",
+        "allés",
+        "au",
+        "jardin",
+        "et",
+        "nous",
+        "avons",
+        "cherché",
+        "les",
+        "œufs."
+      ]
+    },
+    {
+      "id": "order-nous-sommes-all-s-au-jardin-et-nous-avons-cherch-les-ufs",
+      "type": "order",
+      "l1": "Išli sme do záhrady a hľadali sme vajíčka.",
+      "l2": "Nous sommes allés au jardin et nous avons cherché les œufs.",
+      "tokens_l1": [
+        "Išli",
+        "sme",
+        "do",
+        "záhrady",
+        "a",
+        "hľadali",
+        "sme",
+        "vajíčka.",
+        "Povedal/povedala",
+        "som",
+        "im,",
+        "kde",
+        "hľadať."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "sommes",
+        "allés",
+        "au",
+        "jardin",
+        "et",
+        "nous",
+        "avons",
+        "cherché",
+        "les",
+        "œufs.",
+        "Je",
+        "leur",
+        "ai",
+        "dit",
+        "où",
+        "chercher."
+      ]
+    },
+    {
+      "id": "order-j-ai-donn-les-plus-beaux-ufs-ma-s-ur",
+      "type": "order",
+      "l1": "Dal/dala som najkrajšie vajíčka svojej sestre.",
+      "l2": "J'ai donné les plus beaux œufs à ma sœur.",
+      "tokens_l1": [
+        "Dal/dala",
+        "som",
+        "najkrajšie",
+        "vajíčka",
+        "svojej",
+        "sestre.",
+        "Išli",
+        "sme",
+        "do",
+        "záhrady",
+        "a",
+        "hľadali",
+        "sme",
+        "vajíčka."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "donné",
+        "les",
+        "plus",
+        "beaux",
+        "œufs",
+        "à",
+        "ma",
+        "sœur.",
+        "Nous",
+        "sommes",
+        "allés",
+        "au",
+        "jardin",
+        "et",
+        "nous",
+        "avons",
+        "cherché",
+        "les",
+        "œufs."
+      ]
+    },
+    {
+      "id": "order-ils-leur-ont-offert-du-chocolat-pour-p-ques",
+      "type": "order",
+      "l1": "Darovali im čokoládu na Veľkú noc.",
+      "l2": "Ils leur ont offert du chocolat pour Pâques.",
+      "tokens_l1": [
+        "Darovali",
+        "im",
+        "čokoládu",
+        "na",
+        "Veľkú",
+        "noc.",
+        "Chloé",
+        "našla",
+        "najväčšie",
+        "vajíčko!"
+      ],
+      "tokens_l2": [
+        "Ils",
+        "leur",
+        "ont",
+        "offert",
+        "du",
+        "chocolat",
+        "pour",
+        "Pâques.",
+        "Chloé",
+        "a",
+        "trouvé",
+        "le",
+        "plus",
+        "gros",
+        "œuf",
+        "!"
+      ]
+    },
+    {
+      "id": "order-la-poule-et-le-lapin-sont-des-symboles-de-p-ques",
+      "type": "order",
+      "l1": "Sliepka a zajac sú symboly Veľkej noci.",
+      "l2": "La poule et le lapin sont des symboles de Pâques.",
+      "tokens_l1": [
+        "Sliepka",
+        "a",
+        "zajac",
+        "sú",
+        "symboly",
+        "Veľkej",
+        "noci.",
+        "Koľko",
+        "vajíčok",
+        "si",
+        "jej",
+        "dal/dala?"
+      ],
+      "tokens_l2": [
+        "La",
+        "poule",
+        "et",
+        "le",
+        "lapin",
+        "sont",
+        "des",
+        "symboles",
+        "de",
+        "Pâques.",
+        "Tu",
+        "lui",
+        "as",
+        "donné",
+        "combien",
+        "d'œufs",
+        "?"
+      ]
+    },
+    {
+      "id": "order-cette-cloche-en-chocolat-est-immense",
+      "type": "order",
+      "l1": "Tento čokoládový zvon je obrovský!",
+      "l2": "Cette cloche en chocolat est immense !",
+      "tokens_l1": [
+        "Tento",
+        "čokoládový",
+        "zvon",
+        "je",
+        "obrovský!",
+        "Sliepka",
+        "a",
+        "zajac",
+        "sú",
+        "symboly",
+        "Veľkej",
+        "noci."
+      ],
+      "tokens_l2": [
+        "Cette",
+        "cloche",
+        "en",
+        "chocolat",
+        "est",
+        "immense",
+        "!",
+        "La",
+        "poule",
+        "et",
+        "le",
+        "lapin",
+        "sont",
+        "des",
+        "symboles",
+        "de",
+        "Pâques."
+      ]
+    },
+    {
+      "id": "order-c-tait-tr-s-amusant",
+      "type": "order",
+      "l1": "Bolo to veľmi zábavné.",
+      "l2": "C'était très amusant.",
+      "tokens_l1": [
+        "Bolo",
+        "to",
+        "veľmi",
+        "zábavné.",
+        "Darovali",
+        "sme",
+        "deťom",
+        "vajíčka.",
+        "Darovali",
+        "sme",
+        "im",
+        "vajíčka."
+      ],
+      "tokens_l2": [
+        "C'était",
+        "très",
+        "amusant.",
+        "Nous",
+        "avons",
+        "offert",
+        "des",
+        "œufs",
+        "aux",
+        "enfants.",
+        "Nous",
+        "leur",
+        "avons",
+        "offert",
+        "des",
+        "œufs."
+      ]
+    },
+    {
+      "id": "order-nous-avons-pass-un-jour-joyeux",
+      "type": "order",
+      "l1": "Strávili sme radostný deň.",
+      "l2": "Nous avons passé un jour joyeux.",
+      "tokens_l1": [
+        "Strávili",
+        "sme",
+        "radostný",
+        "deň.",
+        "Tento",
+        "čokoládový",
+        "zvon",
+        "je",
+        "obrovský!"
+      ],
+      "tokens_l2": [
+        "Nous",
+        "avons",
+        "passé",
+        "un",
+        "jour",
+        "joyeux.",
+        "Cette",
+        "cloche",
+        "en",
+        "chocolat",
+        "est",
+        "immense",
+        "!"
+      ]
+    }
+  ]
+}

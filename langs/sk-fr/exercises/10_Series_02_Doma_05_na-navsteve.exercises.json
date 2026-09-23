@@ -1,0 +1,1273 @@
+{
+  "exercises": [
+    {
+      "id": "blank-dobr-de-eric-nech-sa-p-i",
+      "type": "fill-blank",
+      "l1": "Bonjour, Eric. Entrez, je vous en prie.",
+      "l2": "Dobrý deň, Eric. Nech sa páči.",
+      "missing_l1": "je",
+      "missing_l2": "sa",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "On",
+        "Ils",
+        "Nous"
+      ],
+      "choices_l2": [
+        "Toto",
+        "tá",
+        "vy"
+      ]
+    },
+    {
+      "id": "blank-akujem-m-te-pekn-byt",
+      "type": "fill-blank",
+      "l1": "Merci. Vous avez un bel appartement.",
+      "l2": "Ďakujem. Máte pekný byt.",
+      "missing_l1": "un",
+      "missing_l2": "Máte",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "des",
+        "prie",
+        "une"
+      ],
+      "choices_l2": [
+        "Mám",
+        "Máš",
+        "Máme"
+      ]
+    },
+    {
+      "id": "blank-je-mal-m-me-tri-izby",
+      "type": "fill-blank",
+      "l1": "Il est petit. Nous avons trois pièces.",
+      "l2": "Je malý. Máme tri izby.",
+      "missing_l1": "est",
+      "missing_l2": "Máme",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sont",
+        "êtes",
+        "était"
+      ],
+      "choices_l2": [
+        "Nemáme",
+        "Mám",
+        "Nemáš"
+      ]
+    },
+    {
+      "id": "blank-kde-je-k-pe-a",
+      "type": "fill-blank",
+      "l1": "Où est la salle de bain ?",
+      "l2": "Kde je kúpeľňa?",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "le",
+        "midi",
+        "s'il"
+      ],
+      "choices_l2": [
+        "si",
+        "budem",
+        "ste"
+      ]
+    },
+    {
+      "id": "blank-na-chodbe-z-chod-je-tam-tie",
+      "type": "fill-blank",
+      "l1": "Dans le couloir. Les toilettes sont là aussi.",
+      "l2": "Na chodbe. Záchod je tam tiež.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "midi",
+        "Les",
+        "s'il"
+      ],
+      "choices_l2": [
+        "bola",
+        "si",
+        "som"
+      ]
+    },
+    {
+      "id": "blank-papu-e-s-tu",
+      "type": "fill-blank",
+      "l1": "Les chaussons sont ici ?",
+      "l2": "Papuče sú tu?",
+      "missing_l1": "sont",
+      "missing_l2": "sú",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "êtes",
+        "sommes",
+        "C'est"
+      ],
+      "choices_l2": [
+        "je",
+        "ste",
+        "si"
+      ]
+    },
+    {
+      "id": "blank-no-nech-sa-p-i-sadnite-si-na-gau",
+      "type": "fill-blank",
+      "l1": "Oui, je vous en prie. Asseyez-vous sur le canapé.",
+      "l2": "Áno, nech sa páči. Sadnite si na gauč.",
+      "missing_l1": "le",
+      "missing_l2": "na",
+      "blank_index_l1": 7,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "prie",
+        "Les",
+        "bel"
+      ],
+      "choices_l2": [
+        "medzi",
+        "zo",
+        "za"
+      ]
+    },
+    {
+      "id": "blank-o-rob-andrea",
+      "type": "fill-blank",
+      "l1": "Que fais-tu, Andrea ?",
+      "l2": "Čo robíš, Andrea?",
+      "missing_l1": "Andrea",
+      "missing_l2": "robíš",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "aider",
+        "Entrez",
+        "Asseyez-vous"
+      ],
+      "choices_l2": [
+        "zatvárajte",
+        "Môžem",
+        "Varím"
+      ]
+    },
+    {
+      "id": "blank-var-m-m-me-obed-o-dvan-stej",
+      "type": "fill-blank",
+      "l1": "Je cuisine. Nous déjeunons à midi.",
+      "l2": "Varím. Máme obed o dvanástej.",
+      "missing_l1": "à",
+      "missing_l2": "o",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "pour",
+        "dans",
+        "avec"
+      ],
+      "choices_l2": [
+        "Vo",
+        "od",
+        "medzi"
+      ]
+    },
+    {
+      "id": "blank-no-um-vajte-poh-re-pros-m",
+      "type": "fill-blank",
+      "l1": "Oui. Lavez les verres, s'il vous plaît.",
+      "l2": "Áno. Umývajte poháre, prosím.",
+      "missing_l1": "les",
+      "missing_l2": "prosím",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "s'il",
+        "midi",
+        "Oui"
+      ],
+      "choices_l2": [
+        "pomáhať",
+        "Varím",
+        "výborné"
+      ]
+    },
+    {
+      "id": "blank-a-ja-upratujem-ob-va-ku",
+      "type": "fill-blank",
+      "l1": "Et moi je range le salon !",
+      "l2": "A ja upratujem obývačku!",
+      "missing_l1": "le",
+      "missing_l2": "ja",
+      "blank_index_l1": 4,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Les",
+        "prie",
+        "s'il"
+      ],
+      "choices_l2": [
+        "ten",
+        "Toto",
+        "My"
+      ]
+    },
+    {
+      "id": "blank-taniere-s-v-skrini-v-kuchyni",
+      "type": "fill-blank",
+      "l1": "Les assiettes sont dans l'armoire, dans la cuisine.",
+      "l2": "Taniere sú v skrini, v kuchyni.",
+      "missing_l1": "la",
+      "missing_l2": "v",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "prie",
+        "Les",
+        "s'il"
+      ],
+      "choices_l2": [
+        "z",
+        "zo",
+        "pred"
+      ]
+    },
+    {
+      "id": "blank-otv-ram-okno-je-tu-teplo",
+      "type": "fill-blank",
+      "l1": "J'ouvre la fenêtre ? Il fait chaud ici.",
+      "l2": "Otváram okno? Je tu teplo.",
+      "missing_l1": "la",
+      "missing_l2": "Je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "midi",
+        "le",
+        "Oui"
+      ],
+      "choices_l2": [
+        "ste",
+        "bol",
+        "si"
+      ]
+    },
+    {
+      "id": "blank-no-pros-m-a-zatv-rajte-dvere",
+      "type": "fill-blank",
+      "l1": "Oui, s'il vous plaît. Et fermez la porte.",
+      "l2": "Áno, prosím. A zatvárajte dvere.",
+      "missing_l1": "la",
+      "missing_l2": "A",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "prie",
+        "le",
+        "s'il"
+      ],
+      "choices_l2": [
+        "ale",
+        "lebo",
+        "alebo"
+      ]
+    },
+    {
+      "id": "blank-akujem-bolo-to-v-born",
+      "type": "fill-blank",
+      "l1": "Merci, c'était excellent.",
+      "l2": "Ďakujem, bolo to výborné.",
+      "missing_l1": "c'était",
+      "missing_l2": "to",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "était",
+        "est",
+        "sont"
+      ],
+      "choices_l2": [
+        "sa",
+        "Toto",
+        "vy"
+      ]
+    },
+    {
+      "id": "blank-kde-s-moje-okuliare",
+      "type": "fill-blank",
+      "l1": "Où sont mes lunettes ?",
+      "l2": "Kde sú moje okuliare?",
+      "missing_l1": "sont",
+      "missing_l2": "sú",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "est-ce",
+        "est",
+        "C'est"
+      ],
+      "choices_l2": [
+        "budem",
+        "bol",
+        "ste"
+      ]
+    },
+    {
+      "id": "blank-n-dom-je-ve-k-ale-izby-s-mal",
+      "type": "fill-blank",
+      "l1": "Notre maison est grande, mais les pièces sont petites.",
+      "l2": "Náš dom je veľký, ale izby sú malé.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "était",
+        "suis",
+        "sont"
+      ],
+      "choices_l2": [
+        "Bude",
+        "sme",
+        "bola"
+      ]
+    },
+    {
+      "id": "blank-h-ad-m-k-nie-je-v-ta-ke",
+      "type": "fill-blank",
+      "l1": "Je cherche la clé. Elle n'est pas dans le sac.",
+      "l2": "Hľadám kľúč. Nie je v taške.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Oui",
+        "Les",
+        "bel"
+      ],
+      "choices_l2": [
+        "bola",
+        "sú",
+        "sme"
+      ]
+    },
+    {
+      "id": "listen-dobr-de-eric-nech-sa-p-i",
+      "type": "listen",
+      "l1": "Bonjour, Eric. Entrez, je vous en prie.",
+      "l2": "Dobrý deň, Eric. Nech sa páči.",
+      "choices_l1": [
+        "Oui, je vous en prie. Asseyez-vous sur le canapé.",
+        "Que fais-tu, Andrea ?",
+        "Il est petit. Nous avons trois pièces."
+      ],
+      "choices_l2": [
+        "Na chodbe. Záchod je tam tiež.",
+        "Taniere sú v skrini, v kuchyni.",
+        "Papuče sú tu?"
+      ]
+    },
+    {
+      "id": "listen-akujem-m-te-pekn-byt",
+      "type": "listen",
+      "l1": "Merci. Vous avez un bel appartement.",
+      "l2": "Ďakujem. Máte pekný byt.",
+      "choices_l1": [
+        "Et moi je range le salon !",
+        "Les chaussons sont ici ?",
+        "Bonjour, Eric. Entrez, je vous en prie."
+      ],
+      "choices_l2": [
+        "Taniere sú v skrini, v kuchyni.",
+        "Čo robíš, Andrea?",
+        "A ja upratujem obývačku!"
+      ]
+    },
+    {
+      "id": "listen-je-mal-m-me-tri-izby",
+      "type": "listen",
+      "l1": "Il est petit. Nous avons trois pièces.",
+      "l2": "Je malý. Máme tri izby.",
+      "choices_l1": [
+        "Merci. Vous avez un bel appartement.",
+        "Les assiettes sont dans l'armoire, dans la cuisine.",
+        "Oui, s'il vous plaît. Et fermez la porte."
+      ],
+      "choices_l2": [
+        "Varím. Máme obed o dvanástej.",
+        "Áno, nech sa páči. Sadnite si na gauč.",
+        "Čo robíš, Andrea?"
+      ]
+    },
+    {
+      "id": "listen-kde-je-k-pe-a",
+      "type": "listen",
+      "l1": "Où est la salle de bain ?",
+      "l2": "Kde je kúpeľňa?",
+      "choices_l1": [
+        "Bonjour, Eric. Entrez, je vous en prie.",
+        "Les assiettes sont dans l'armoire, dans la cuisine.",
+        "Que fais-tu, Andrea ?"
+      ],
+      "choices_l2": [
+        "Dobrý deň, Eric. Nech sa páči.",
+        "Papuče sú tu?",
+        "Áno, nech sa páči. Sadnite si na gauč."
+      ]
+    },
+    {
+      "id": "listen-na-chodbe-z-chod-je-tam-tie",
+      "type": "listen",
+      "l1": "Dans le couloir. Les toilettes sont là aussi.",
+      "l2": "Na chodbe. Záchod je tam tiež.",
+      "choices_l1": [
+        "Il est petit. Nous avons trois pièces.",
+        "Bonjour, Eric. Entrez, je vous en prie.",
+        "Oui, je vous en prie. Asseyez-vous sur le canapé."
+      ],
+      "choices_l2": [
+        "Dobrý deň, Eric. Nech sa páči.",
+        "Varím. Máme obed o dvanástej.",
+        "Áno, nech sa páči. Sadnite si na gauč."
+      ]
+    },
+    {
+      "id": "listen-papu-e-s-tu",
+      "type": "listen",
+      "l1": "Les chaussons sont ici ?",
+      "l2": "Papuče sú tu?",
+      "choices_l1": [
+        "Que fais-tu, Andrea ?",
+        "Oui, je vous en prie. Asseyez-vous sur le canapé.",
+        "Oui, s'il vous plaît. Et fermez la porte."
+      ],
+      "choices_l2": [
+        "Dobrý deň, Eric. Nech sa páči.",
+        "Varím. Máme obed o dvanástej.",
+        "Na chodbe. Záchod je tam tiež."
+      ]
+    },
+    {
+      "id": "listen-no-nech-sa-p-i-sadnite-si-na-gau",
+      "type": "listen",
+      "l1": "Oui, je vous en prie. Asseyez-vous sur le canapé.",
+      "l2": "Áno, nech sa páči. Sadnite si na gauč.",
+      "choices_l1": [
+        "Que fais-tu, Andrea ?",
+        "Et moi je range le salon !",
+        "Oui, s'il vous plaît. Et fermez la porte."
+      ],
+      "choices_l2": [
+        "Otváram okno? Je tu teplo.",
+        "Ďakujem. Máte pekný byt.",
+        "Áno. Umývajte poháre, prosím."
+      ]
+    },
+    {
+      "id": "listen-o-rob-andrea",
+      "type": "listen",
+      "l1": "Que fais-tu, Andrea ?",
+      "l2": "Čo robíš, Andrea?",
+      "choices_l1": [
+        "Oui, s'il vous plaît. Et fermez la porte.",
+        "Les chaussons sont ici ?",
+        "Et moi je range le salon !"
+      ],
+      "choices_l2": [
+        "Ďakujem. Máte pekný byt.",
+        "Áno, prosím. A zatvárajte dvere.",
+        "Áno. Umývajte poháre, prosím."
+      ]
+    },
+    {
+      "id": "listen-var-m-m-me-obed-o-dvan-stej",
+      "type": "listen",
+      "l1": "Je cuisine. Nous déjeunons à midi.",
+      "l2": "Varím. Máme obed o dvanástej.",
+      "choices_l1": [
+        "J'ouvre la fenêtre ? Il fait chaud ici.",
+        "Les chaussons sont ici ?",
+        "Bonjour, Eric. Entrez, je vous en prie."
+      ],
+      "choices_l2": [
+        "Áno, nech sa páči. Sadnite si na gauč.",
+        "Áno. Umývajte poháre, prosím.",
+        "Dobrý deň, Eric. Nech sa páči."
+      ]
+    },
+    {
+      "id": "listen-m-em-pom-ha",
+      "type": "listen",
+      "l1": "Puis-je aider ?",
+      "l2": "Môžem pomáhať?",
+      "choices_l1": [
+        "Les assiettes sont dans l'armoire, dans la cuisine.",
+        "Oui. Lavez les verres, s'il vous plaît.",
+        "J'ouvre la fenêtre ? Il fait chaud ici."
+      ],
+      "choices_l2": [
+        "Hľadám okuliare.",
+        "Nespím. Počúvam.",
+        "Otváram okno."
+      ]
+    },
+    {
+      "id": "listen-no-um-vajte-poh-re-pros-m",
+      "type": "listen",
+      "l1": "Oui. Lavez les verres, s'il vous plaît.",
+      "l2": "Áno. Umývajte poháre, prosím.",
+      "choices_l1": [
+        "Oui, s'il vous plaît. Et fermez la porte.",
+        "Bonjour, Eric. Entrez, je vous en prie.",
+        "Je cuisine. Nous déjeunons à midi."
+      ],
+      "choices_l2": [
+        "Papuče sú tu?",
+        "Taniere sú v skrini, v kuchyni.",
+        "Na chodbe. Záchod je tam tiež."
+      ]
+    },
+    {
+      "id": "listen-a-ja-upratujem-ob-va-ku",
+      "type": "listen",
+      "l1": "Et moi je range le salon !",
+      "l2": "A ja upratujem obývačku!",
+      "choices_l1": [
+        "Dans le couloir. Les toilettes sont là aussi.",
+        "Bonjour, Eric. Entrez, je vous en prie.",
+        "Il est petit. Nous avons trois pièces."
+      ],
+      "choices_l2": [
+        "Varím. Máme obed o dvanástej.",
+        "Čo robíš, Andrea?",
+        "Ďakujem. Máte pekný byt."
+      ]
+    },
+    {
+      "id": "listen-taniere-s-v-skrini-v-kuchyni",
+      "type": "listen",
+      "l1": "Les assiettes sont dans l'armoire, dans la cuisine.",
+      "l2": "Taniere sú v skrini, v kuchyni.",
+      "choices_l1": [
+        "Dans le couloir. Les toilettes sont là aussi.",
+        "Oui. Lavez les verres, s'il vous plaît.",
+        "Il est petit. Nous avons trois pièces."
+      ],
+      "choices_l2": [
+        "Čo robíš, Andrea?",
+        "Na chodbe. Záchod je tam tiež.",
+        "Varím. Máme obed o dvanástej."
+      ]
+    },
+    {
+      "id": "listen-otv-ram-okno-je-tu-teplo",
+      "type": "listen",
+      "l1": "J'ouvre la fenêtre ? Il fait chaud ici.",
+      "l2": "Otváram okno? Je tu teplo.",
+      "choices_l1": [
+        "Il est petit. Nous avons trois pièces.",
+        "Oui, s'il vous plaît. Et fermez la porte.",
+        "Dans le couloir. Les toilettes sont là aussi."
+      ],
+      "choices_l2": [
+        "Čo robíš, Andrea?",
+        "Áno. Umývajte poháre, prosím.",
+        "Áno, prosím. A zatvárajte dvere."
+      ]
+    },
+    {
+      "id": "listen-no-pros-m-a-zatv-rajte-dvere",
+      "type": "listen",
+      "l1": "Oui, s'il vous plaît. Et fermez la porte.",
+      "l2": "Áno, prosím. A zatvárajte dvere.",
+      "choices_l1": [
+        "Les assiettes sont dans l'armoire, dans la cuisine.",
+        "Merci. Vous avez un bel appartement.",
+        "Je cuisine. Nous déjeunons à midi."
+      ],
+      "choices_l2": [
+        "Čo robíš, Andrea?",
+        "Áno, nech sa páči. Sadnite si na gauč.",
+        "Otváram okno? Je tu teplo."
+      ]
+    },
+    {
+      "id": "listen-akujem-bolo-to-v-born",
+      "type": "listen",
+      "l1": "Merci, c'était excellent.",
+      "l2": "Ďakujem, bolo to výborné.",
+      "choices_l1": [
+        "Que fais-tu, Andrea ?",
+        "Et moi je range le salon !",
+        "Il est petit. Nous avons trois pièces."
+      ],
+      "choices_l2": [
+        "Ďakujem. Máte pekný byt.",
+        "Čo robíš, Andrea?",
+        "Áno. Umývajte poháre, prosím."
+      ]
+    },
+    {
+      "id": "listen-kde-s-moje-okuliare",
+      "type": "listen",
+      "l1": "Où sont mes lunettes ?",
+      "l2": "Kde sú moje okuliare?",
+      "choices_l1": [
+        "Et moi je range le salon !",
+        "Je cuisine. Nous déjeunons à midi.",
+        "Bonjour, Eric. Entrez, je vous en prie."
+      ],
+      "choices_l2": [
+        "Dobrý deň, Eric. Nech sa páči.",
+        "Ďakujem. Máte pekný byt.",
+        "Taniere sú v skrini, v kuchyni."
+      ]
+    },
+    {
+      "id": "listen-n-dom-je-ve-k-ale-izby-s-mal",
+      "type": "listen",
+      "l1": "Notre maison est grande, mais les pièces sont petites.",
+      "l2": "Náš dom je veľký, ale izby sú malé.",
+      "choices_l1": [
+        "Il est petit. Nous avons trois pièces.",
+        "Et moi je range le salon !",
+        "Oui, je vous en prie. Asseyez-vous sur le canapé."
+      ],
+      "choices_l2": [
+        "Áno, nech sa páči. Sadnite si na gauč.",
+        "Varím. Máme obed o dvanástej.",
+        "Taniere sú v skrini, v kuchyni."
+      ]
+    },
+    {
+      "id": "listen-h-ad-m-k-nie-je-v-ta-ke",
+      "type": "listen",
+      "l1": "Je cherche la clé. Elle n'est pas dans le sac.",
+      "l2": "Hľadám kľúč. Nie je v taške.",
+      "choices_l1": [
+        "J'ouvre la fenêtre ? Il fait chaud ici.",
+        "Oui, je vous en prie. Asseyez-vous sur le canapé.",
+        "Il est petit. Nous avons trois pièces."
+      ],
+      "choices_l2": [
+        "Áno. Umývajte poháre, prosím.",
+        "Papuče sú tu?",
+        "A ja upratujem obývačku!"
+      ]
+    },
+    {
+      "id": "order-dobr-de-eric-nech-sa-p-i",
+      "type": "order",
+      "l1": "Bonjour, Eric. Entrez, je vous en prie.",
+      "l2": "Dobrý deň, Eric. Nech sa páči.",
+      "tokens_l1": [
+        "Bonjour,",
+        "Eric.",
+        "Entrez,",
+        "je",
+        "vous",
+        "en",
+        "prie.",
+        "Je",
+        "cuisine.",
+        "Nous",
+        "déjeunons",
+        "à",
+        "midi."
+      ],
+      "tokens_l2": [
+        "Dobrý",
+        "deň,",
+        "Eric.",
+        "Nech",
+        "sa",
+        "páči.",
+        "Varím.",
+        "Máme",
+        "obed",
+        "o",
+        "dvanástej."
+      ]
+    },
+    {
+      "id": "order-akujem-m-te-pekn-byt",
+      "type": "order",
+      "l1": "Merci. Vous avez un bel appartement.",
+      "l2": "Ďakujem. Máte pekný byt.",
+      "tokens_l1": [
+        "Merci.",
+        "Vous",
+        "avez",
+        "un",
+        "bel",
+        "appartement.",
+        "Bonjour,",
+        "Eric.",
+        "Entrez,",
+        "je",
+        "vous",
+        "en",
+        "prie."
+      ],
+      "tokens_l2": [
+        "Ďakujem.",
+        "Máte",
+        "pekný",
+        "byt.",
+        "Dobrý",
+        "deň,",
+        "Eric.",
+        "Nech",
+        "sa",
+        "páči."
+      ]
+    },
+    {
+      "id": "order-je-mal-m-me-tri-izby",
+      "type": "order",
+      "l1": "Il est petit. Nous avons trois pièces.",
+      "l2": "Je malý. Máme tri izby.",
+      "tokens_l1": [
+        "Il",
+        "est",
+        "petit.",
+        "Nous",
+        "avons",
+        "trois",
+        "pièces.",
+        "Je",
+        "cuisine.",
+        "Nous",
+        "déjeunons",
+        "à",
+        "midi."
+      ],
+      "tokens_l2": [
+        "Je",
+        "malý.",
+        "Máme",
+        "tri",
+        "izby.",
+        "Varím.",
+        "Máme",
+        "obed",
+        "o",
+        "dvanástej."
+      ]
+    },
+    {
+      "id": "order-kde-je-k-pe-a",
+      "type": "order",
+      "l1": "Où est la salle de bain ?",
+      "l2": "Kde je kúpeľňa?",
+      "tokens_l1": [
+        "Où",
+        "est",
+        "la",
+        "salle",
+        "de",
+        "bain",
+        "?",
+        "Et",
+        "moi",
+        "je",
+        "range",
+        "le",
+        "salon",
+        "!"
+      ],
+      "tokens_l2": [
+        "Kde",
+        "je",
+        "kúpeľňa?",
+        "A",
+        "ja",
+        "upratujem",
+        "obývačku!"
+      ]
+    },
+    {
+      "id": "order-na-chodbe-z-chod-je-tam-tie",
+      "type": "order",
+      "l1": "Dans le couloir. Les toilettes sont là aussi.",
+      "l2": "Na chodbe. Záchod je tam tiež.",
+      "tokens_l1": [
+        "Dans",
+        "le",
+        "couloir.",
+        "Les",
+        "toilettes",
+        "sont",
+        "là",
+        "aussi.",
+        "Où",
+        "sont",
+        "mes",
+        "lunettes",
+        "?"
+      ],
+      "tokens_l2": [
+        "Na",
+        "chodbe.",
+        "Záchod",
+        "je",
+        "tam",
+        "tiež.",
+        "Kde",
+        "sú",
+        "moje",
+        "okuliare?"
+      ]
+    },
+    {
+      "id": "order-papu-e-s-tu",
+      "type": "order",
+      "l1": "Les chaussons sont ici ?",
+      "l2": "Papuče sú tu?",
+      "tokens_l1": [
+        "Les",
+        "chaussons",
+        "sont",
+        "ici",
+        "?",
+        "Et",
+        "moi",
+        "je",
+        "range",
+        "le",
+        "salon",
+        "!"
+      ],
+      "tokens_l2": [
+        "Papuče",
+        "sú",
+        "tu?",
+        "A",
+        "ja",
+        "upratujem",
+        "obývačku!"
+      ]
+    },
+    {
+      "id": "order-no-nech-sa-p-i-sadnite-si-na-gau",
+      "type": "order",
+      "l1": "Oui, je vous en prie. Asseyez-vous sur le canapé.",
+      "l2": "Áno, nech sa páči. Sadnite si na gauč.",
+      "tokens_l1": [
+        "Oui,",
+        "je",
+        "vous",
+        "en",
+        "prie.",
+        "Asseyez-vous",
+        "sur",
+        "le",
+        "canapé.",
+        "Oui.",
+        "Lavez",
+        "les",
+        "verres,",
+        "s'il",
+        "vous",
+        "plaît."
+      ],
+      "tokens_l2": [
+        "Áno,",
+        "nech",
+        "sa",
+        "páči.",
+        "Sadnite",
+        "si",
+        "na",
+        "gauč.",
+        "Áno.",
+        "Umývajte",
+        "poháre,",
+        "prosím."
+      ]
+    },
+    {
+      "id": "order-o-rob-andrea",
+      "type": "order",
+      "l1": "Que fais-tu, Andrea ?",
+      "l2": "Čo robíš, Andrea?",
+      "tokens_l1": [
+        "Que",
+        "fais-tu,",
+        "Andrea",
+        "?",
+        "Dans",
+        "le",
+        "couloir.",
+        "Les",
+        "toilettes",
+        "sont",
+        "là",
+        "aussi."
+      ],
+      "tokens_l2": [
+        "Čo",
+        "robíš,",
+        "Andrea?",
+        "Na",
+        "chodbe.",
+        "Záchod",
+        "je",
+        "tam",
+        "tiež."
+      ]
+    },
+    {
+      "id": "order-var-m-m-me-obed-o-dvan-stej",
+      "type": "order",
+      "l1": "Je cuisine. Nous déjeunons à midi.",
+      "l2": "Varím. Máme obed o dvanástej.",
+      "tokens_l1": [
+        "Je",
+        "cuisine.",
+        "Nous",
+        "déjeunons",
+        "à",
+        "midi.",
+        "Où",
+        "sont",
+        "mes",
+        "lunettes",
+        "?"
+      ],
+      "tokens_l2": [
+        "Varím.",
+        "Máme",
+        "obed",
+        "o",
+        "dvanástej.",
+        "Kde",
+        "sú",
+        "moje",
+        "okuliare?"
+      ]
+    },
+    {
+      "id": "order-no-um-vajte-poh-re-pros-m",
+      "type": "order",
+      "l1": "Oui. Lavez les verres, s'il vous plaît.",
+      "l2": "Áno. Umývajte poháre, prosím.",
+      "tokens_l1": [
+        "Oui.",
+        "Lavez",
+        "les",
+        "verres,",
+        "s'il",
+        "vous",
+        "plaît.",
+        "Les",
+        "chaussons",
+        "sont",
+        "ici",
+        "?"
+      ],
+      "tokens_l2": [
+        "Áno.",
+        "Umývajte",
+        "poháre,",
+        "prosím.",
+        "Papuče",
+        "sú",
+        "tu?"
+      ]
+    },
+    {
+      "id": "order-a-ja-upratujem-ob-va-ku",
+      "type": "order",
+      "l1": "Et moi je range le salon !",
+      "l2": "A ja upratujem obývačku!",
+      "tokens_l1": [
+        "Et",
+        "moi",
+        "je",
+        "range",
+        "le",
+        "salon",
+        "!",
+        "Les",
+        "chaussons",
+        "sont",
+        "ici",
+        "?"
+      ],
+      "tokens_l2": [
+        "A",
+        "ja",
+        "upratujem",
+        "obývačku!",
+        "Papuče",
+        "sú",
+        "tu?"
+      ]
+    },
+    {
+      "id": "order-taniere-s-v-skrini-v-kuchyni",
+      "type": "order",
+      "l1": "Les assiettes sont dans l'armoire, dans la cuisine.",
+      "l2": "Taniere sú v skrini, v kuchyni.",
+      "tokens_l1": [
+        "Les",
+        "assiettes",
+        "sont",
+        "dans",
+        "l'armoire,",
+        "dans",
+        "la",
+        "cuisine.",
+        "Oui,",
+        "je",
+        "vous",
+        "en",
+        "prie.",
+        "Asseyez-vous",
+        "sur",
+        "le",
+        "canapé."
+      ],
+      "tokens_l2": [
+        "Taniere",
+        "sú",
+        "v",
+        "skrini,",
+        "v",
+        "kuchyni.",
+        "Áno,",
+        "nech",
+        "sa",
+        "páči.",
+        "Sadnite",
+        "si",
+        "na",
+        "gauč."
+      ]
+    },
+    {
+      "id": "order-otv-ram-okno-je-tu-teplo",
+      "type": "order",
+      "l1": "J'ouvre la fenêtre ? Il fait chaud ici.",
+      "l2": "Otváram okno? Je tu teplo.",
+      "tokens_l1": [
+        "J'ouvre",
+        "la",
+        "fenêtre",
+        "?",
+        "Il",
+        "fait",
+        "chaud",
+        "ici.",
+        "Où",
+        "sont",
+        "mes",
+        "lunettes",
+        "?"
+      ],
+      "tokens_l2": [
+        "Otváram",
+        "okno?",
+        "Je",
+        "tu",
+        "teplo.",
+        "Kde",
+        "sú",
+        "moje",
+        "okuliare?"
+      ]
+    },
+    {
+      "id": "order-no-pros-m-a-zatv-rajte-dvere",
+      "type": "order",
+      "l1": "Oui, s'il vous plaît. Et fermez la porte.",
+      "l2": "Áno, prosím. A zatvárajte dvere.",
+      "tokens_l1": [
+        "Oui,",
+        "s'il",
+        "vous",
+        "plaît.",
+        "Et",
+        "fermez",
+        "la",
+        "porte.",
+        "Merci.",
+        "Vous",
+        "avez",
+        "un",
+        "bel",
+        "appartement."
+      ],
+      "tokens_l2": [
+        "Áno,",
+        "prosím.",
+        "A",
+        "zatvárajte",
+        "dvere.",
+        "Ďakujem.",
+        "Máte",
+        "pekný",
+        "byt."
+      ]
+    },
+    {
+      "id": "order-akujem-bolo-to-v-born",
+      "type": "order",
+      "l1": "Merci, c'était excellent.",
+      "l2": "Ďakujem, bolo to výborné.",
+      "tokens_l1": [
+        "Merci,",
+        "c'était",
+        "excellent.",
+        "Les",
+        "chaussons",
+        "sont",
+        "ici",
+        "?"
+      ],
+      "tokens_l2": [
+        "Ďakujem,",
+        "bolo",
+        "to",
+        "výborné.",
+        "Papuče",
+        "sú",
+        "tu?"
+      ]
+    },
+    {
+      "id": "order-kde-s-moje-okuliare",
+      "type": "order",
+      "l1": "Où sont mes lunettes ?",
+      "l2": "Kde sú moje okuliare?",
+      "tokens_l1": [
+        "Où",
+        "sont",
+        "mes",
+        "lunettes",
+        "?",
+        "Oui,",
+        "s'il",
+        "vous",
+        "plaît.",
+        "Et",
+        "fermez",
+        "la",
+        "porte."
+      ],
+      "tokens_l2": [
+        "Kde",
+        "sú",
+        "moje",
+        "okuliare?",
+        "Áno,",
+        "prosím.",
+        "A",
+        "zatvárajte",
+        "dvere."
+      ]
+    },
+    {
+      "id": "order-n-dom-je-ve-k-ale-izby-s-mal",
+      "type": "order",
+      "l1": "Notre maison est grande, mais les pièces sont petites.",
+      "l2": "Náš dom je veľký, ale izby sú malé.",
+      "tokens_l1": [
+        "Notre",
+        "maison",
+        "est",
+        "grande,",
+        "mais",
+        "les",
+        "pièces",
+        "sont",
+        "petites.",
+        "Où",
+        "est",
+        "la",
+        "salle",
+        "de",
+        "bain",
+        "?"
+      ],
+      "tokens_l2": [
+        "Náš",
+        "dom",
+        "je",
+        "veľký,",
+        "ale",
+        "izby",
+        "sú",
+        "malé.",
+        "Kde",
+        "je",
+        "kúpeľňa?"
+      ]
+    },
+    {
+      "id": "order-h-ad-m-k-nie-je-v-ta-ke",
+      "type": "order",
+      "l1": "Je cherche la clé. Elle n'est pas dans le sac.",
+      "l2": "Hľadám kľúč. Nie je v taške.",
+      "tokens_l1": [
+        "Je",
+        "cherche",
+        "la",
+        "clé.",
+        "Elle",
+        "n'est",
+        "pas",
+        "dans",
+        "le",
+        "sac.",
+        "Bonjour,",
+        "Eric.",
+        "Entrez,",
+        "je",
+        "vous",
+        "en",
+        "prie."
+      ],
+      "tokens_l2": [
+        "Hľadám",
+        "kľúč.",
+        "Nie",
+        "je",
+        "v",
+        "taške.",
+        "Dobrý",
+        "deň,",
+        "Eric.",
+        "Nech",
+        "sa",
+        "páči."
+      ]
+    },
+    {
+      "id": "match-dobr-de-eric-nech-sa-p-i-sentences",
+      "type": "match",
+      "l1": [
+        "Bonjour, Eric. Entrez, je vous en prie.",
+        "Merci. Vous avez un bel appartement.",
+        "Il est petit. Nous avons trois pièces.",
+        "Où est la salle de bain ?"
+      ],
+      "l2": [
+        "Dobrý deň, Eric. Nech sa páči.",
+        "Ďakujem. Máte pekný byt.",
+        "Je malý. Máme tri izby.",
+        "Kde je kúpeľňa?"
+      ]
+    }
+  ]
+}

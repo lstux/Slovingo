@@ -1,0 +1,1295 @@
+{
+  "exercises": [
+    {
+      "id": "blank-marek-som-straten",
+      "type": "fill-blank",
+      "l1": "Marek ! Je suis perdu.",
+      "l2": "Marek! Som stratený.",
+      "missing_l1": "Je",
+      "missing_l2": "Som",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Ils",
+        "Tu",
+        "Nous"
+      ],
+      "choices_l2": [
+        "sú",
+        "ste",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-h-ad-m-m-zeum-vyst-pil-som-na-zlej-zast-vke",
+      "type": "fill-blank",
+      "l1": "Je cherche le musée. Je suis descendu au mauvais arrêt.",
+      "l2": "Hľadám múzeum. Vystúpil som na zlej zastávke.",
+      "missing_l1": "le",
+      "missing_l2": "na",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "Les",
+        "rien",
+        "voir"
+      ],
+      "choices_l2": [
+        "po",
+        "so",
+        "za"
+      ]
+    },
+    {
+      "id": "blank-aha-cho-rovno-a-potom-v-avo",
+      "type": "fill-blank",
+      "l1": "Ah. Va tout droit puis à gauche.",
+      "l2": "Aha. Choď rovno a potom vľavo.",
+      "missing_l1": "à",
+      "missing_l2": "a",
+      "blank_index_l1": 5,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "par",
+        "chez",
+        "Sous"
+      ],
+      "choices_l2": [
+        "aj",
+        "alebo",
+        "však"
+      ]
+    },
+    {
+      "id": "blank-rovno-a-v-avo-a-potom",
+      "type": "fill-blank",
+      "l1": "Tout droit et à gauche. Et ensuite ?",
+      "l2": "Rovno a vľavo. A potom?",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "ou",
+        "ni",
+        "mais"
+      ],
+      "choices_l2": [
+        "ale",
+        "lebo",
+        "alebo"
+      ]
+    },
+    {
+      "id": "blank-uvid-kostol-m-zeum-je-za-rohom-ved-a-kostola",
+      "type": "fill-blank",
+      "l1": "Tu verras une église. Le musée est après le coin, à côté de l'église.",
+      "l2": "Uvidíš kostol. Múzeum je za rohom, vedľa kostola.",
+      "missing_l1": "Le",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "idée",
+        "Les",
+        "la"
+      ],
+      "choices_l2": [
+        "budú",
+        "budem",
+        "som"
+      ]
+    },
+    {
+      "id": "blank-je-to-aleko-pe-o",
+      "type": "fill-blank",
+      "l1": "C'est loin à pied ?",
+      "l2": "Je to ďaleko pešo?",
+      "missing_l1": "à",
+      "missing_l2": "to",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "de",
+        "dans",
+        "chez"
+      ],
+      "choices_l2": [
+        "vy",
+        "ten",
+        "tá"
+      ]
+    },
+    {
+      "id": "blank-nie-len-desa-min-t-alebo-cho-elektri-kou",
+      "type": "fill-blank",
+      "l1": "Non, seulement dix minutes. Ou prends le tram.",
+      "l2": "Nie, len desať minút. Alebo choď električkou.",
+      "missing_l1": "le",
+      "missing_l2": "len",
+      "blank_index_l1": 6,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "Les",
+        "rien",
+        "la"
+      ],
+      "choices_l2": [
+        "Dnes",
+        "veľa",
+        "vždy"
+      ]
+    },
+    {
+      "id": "blank-p-jdem-pe-o-chcem-vidie-mesto",
+      "type": "fill-blank",
+      "l1": "J'irai à pied. Je veux voir la ville.",
+      "l2": "Pôjdem pešo. Chcem vidieť mesto.",
+      "missing_l1": "la",
+      "missing_l2": "Chcem",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Ah",
+        "rien",
+        "le"
+      ],
+      "choices_l2": [
+        "Musíš",
+        "Môžem",
+        "Chceš"
+      ]
+    },
+    {
+      "id": "blank-dobr-n-pad-na-n-mest-je-pekn-kaviare",
+      "type": "fill-blank",
+      "l1": "Bonne idée ! Sur la place il y a un joli café.",
+      "l2": "Dobrý nápad! Na námestí je pekná kaviareň.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "Ah",
+        "Les",
+        "voir"
+      ],
+      "choices_l2": [
+        "ste",
+        "bol",
+        "som"
+      ]
+    },
+    {
+      "id": "blank-stretneme-sa-tam-nesk-r",
+      "type": "fill-blank",
+      "l1": "On se retrouve là-bas plus tard ?",
+      "l2": "Stretneme sa tam neskôr?",
+      "missing_l1": "plus",
+      "missing_l2": "sa",
+      "blank_index_l1": 4,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "voir",
+        "rien",
+        "Ah"
+      ],
+      "choices_l2": [
+        "Ja",
+        "tá",
+        "My"
+      ]
+    },
+    {
+      "id": "blank-no-o-piatej-pred-kostolom",
+      "type": "fill-blank",
+      "l1": "Oui ! À cinq heures, devant l'église.",
+      "l2": "Áno! O piatej, pred kostolom.",
+      "missing_l1": "À",
+      "missing_l2": "O",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "par",
+        "loin",
+        "sans"
+      ],
+      "choices_l2": [
+        "pri",
+        "so",
+        "po"
+      ]
+    },
+    {
+      "id": "blank-dobre-akujem-za-pomoc",
+      "type": "fill-blank",
+      "l1": "D'accord. Merci pour l'aide !",
+      "l2": "Dobre. Ďakujem za pomoc!",
+      "missing_l1": "pour",
+      "missing_l2": "za",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "loin",
+        "sur",
+        "près"
+      ],
+      "choices_l2": [
+        "pri",
+        "pred",
+        "po"
+      ]
+    },
+    {
+      "id": "blank-nem-za-o-dovidenia",
+      "type": "fill-blank",
+      "l1": "De rien. À bientôt !",
+      "l2": "Nemáš za čo. Dovidenia!",
+      "missing_l1": "À",
+      "missing_l2": "čo",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "loin",
+        "sur",
+        "avec"
+      ],
+      "choices_l2": [
+        "zlej",
+        "Aha",
+        "len"
+      ]
+    },
+    {
+      "id": "blank-cho-rovno-potom-vpravo-pri-banke",
+      "type": "fill-blank",
+      "l1": "Va tout droit, puis à droite près de la banque.",
+      "l2": "Choď rovno, potom vpravo pri banke.",
+      "missing_l1": "la",
+      "missing_l2": "potom",
+      "blank_index_l1": 8,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Les",
+        "voir",
+        "rien"
+      ],
+      "choices_l2": [
+        "skoro",
+        "hneď",
+        "ešte"
+      ]
+    },
+    {
+      "id": "blank-chod-m-do-pr-ce-pe-o-ale-dnes-idem-autobusom",
+      "type": "fill-blank",
+      "l1": "Je vais au travail à pied, mais aujourd'hui j'y vais en bus.",
+      "l2": "Chodím do práce pešo, ale dnes idem autobusom.",
+      "missing_l1": "à",
+      "missing_l2": "ale",
+      "blank_index_l1": 4,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "sur",
+        "sans",
+        "Sous"
+      ],
+      "choices_l2": [
+        "aj",
+        "a",
+        "však"
+      ]
+    },
+    {
+      "id": "blank-vid-t-font-nu-na-n-mest",
+      "type": "fill-blank",
+      "l1": "Tu vois cette fontaine sur la place ?",
+      "l2": "Vidíš tú fontánu na námestí?",
+      "missing_l1": "la",
+      "missing_l2": "na",
+      "blank_index_l1": 5,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "le",
+        "idée",
+        "Ah"
+      ],
+      "choices_l2": [
+        "pri",
+        "za",
+        "po"
+      ]
+    },
+    {
+      "id": "blank-kaviare-je-zauj-mav-a-bl-zko-zast-vky",
+      "type": "fill-blank",
+      "l1": "Le café est intéressant et proche de l'arrêt.",
+      "l2": "Kaviareň je zaujímavá a blízko zastávky.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "C'est",
+        "suis",
+        "était"
+      ],
+      "choices_l2": [
+        "bola",
+        "budeme",
+        "budú"
+      ]
+    },
+    {
+      "id": "listen-marek-som-straten",
+      "type": "listen",
+      "l1": "Marek ! Je suis perdu.",
+      "l2": "Marek! Som stratený.",
+      "choices_l1": [
+        "On se retrouve là-bas plus tard ?",
+        "J'irai à pied. Je veux voir la ville.",
+        "De rien. À bientôt !"
+      ],
+      "choices_l2": [
+        "Áno! O piatej, pred kostolom.",
+        "Stretneme sa tam neskôr?",
+        "Pôjdem pešo. Chcem vidieť mesto."
+      ]
+    },
+    {
+      "id": "listen-o-h-ad",
+      "type": "listen",
+      "l1": "Que cherches-tu ?",
+      "l2": "Čo hľadáš?",
+      "choices_l1": [
+        "Tout droit et à gauche. Et ensuite ?",
+        "Je cherche le musée. Je suis descendu au mauvais arrêt.",
+        "Bonne idée ! Sur la place il y a un joli café."
+      ],
+      "choices_l2": [
+        "Bývame spolu.",
+        "Zavolám taxík.",
+        "Čo robíš?"
+      ]
+    },
+    {
+      "id": "listen-h-ad-m-m-zeum-vyst-pil-som-na-zlej-zast-vke",
+      "type": "listen",
+      "l1": "Je cherche le musée. Je suis descendu au mauvais arrêt.",
+      "l2": "Hľadám múzeum. Vystúpil som na zlej zastávke.",
+      "choices_l1": [
+        "Non, seulement dix minutes. Ou prends le tram.",
+        "Tu verras une église. Le musée est après le coin, à côté de l'église.",
+        "On se retrouve là-bas plus tard ?"
+      ],
+      "choices_l2": [
+        "Nemáš za čo. Dovidenia!",
+        "Je to ďaleko pešo?",
+        "Nie, len desať minút. Alebo choď električkou."
+      ]
+    },
+    {
+      "id": "listen-aha-cho-rovno-a-potom-v-avo",
+      "type": "listen",
+      "l1": "Ah. Va tout droit puis à gauche.",
+      "l2": "Aha. Choď rovno a potom vľavo.",
+      "choices_l1": [
+        "Non, seulement dix minutes. Ou prends le tram.",
+        "C'est loin à pied ?",
+        "Oui ! À cinq heures, devant l'église."
+      ],
+      "choices_l2": [
+        "Dobrý nápad! Na námestí je pekná kaviareň.",
+        "Marek! Som stratený.",
+        "Hľadám múzeum. Vystúpil som na zlej zastávke."
+      ]
+    },
+    {
+      "id": "listen-rovno-a-v-avo-a-potom",
+      "type": "listen",
+      "l1": "Tout droit et à gauche. Et ensuite ?",
+      "l2": "Rovno a vľavo. A potom?",
+      "choices_l1": [
+        "De rien. À bientôt !",
+        "Oui ! À cinq heures, devant l'église.",
+        "Je cherche le musée. Je suis descendu au mauvais arrêt."
+      ],
+      "choices_l2": [
+        "Nemáš za čo. Dovidenia!",
+        "Dobrý nápad! Na námestí je pekná kaviareň.",
+        "Aha. Choď rovno a potom vľavo."
+      ]
+    },
+    {
+      "id": "listen-uvid-kostol-m-zeum-je-za-rohom-ved-a-kostola",
+      "type": "listen",
+      "l1": "Tu verras une église. Le musée est après le coin, à côté de l'église.",
+      "l2": "Uvidíš kostol. Múzeum je za rohom, vedľa kostola.",
+      "choices_l1": [
+        "Non, seulement dix minutes. Ou prends le tram.",
+        "J'irai à pied. Je veux voir la ville.",
+        "Oui ! À cinq heures, devant l'église."
+      ],
+      "choices_l2": [
+        "Stretneme sa tam neskôr?",
+        "Nemáš za čo. Dovidenia!",
+        "Nie, len desať minút. Alebo choď električkou."
+      ]
+    },
+    {
+      "id": "listen-je-to-aleko-pe-o",
+      "type": "listen",
+      "l1": "C'est loin à pied ?",
+      "l2": "Je to ďaleko pešo?",
+      "choices_l1": [
+        "D'accord. Merci pour l'aide !",
+        "Je cherche le musée. Je suis descendu au mauvais arrêt.",
+        "Tu verras une église. Le musée est après le coin, à côté de l'église."
+      ],
+      "choices_l2": [
+        "Áno! O piatej, pred kostolom.",
+        "Rovno a vľavo. A potom?",
+        "Nemáš za čo. Dovidenia!"
+      ]
+    },
+    {
+      "id": "listen-nie-len-desa-min-t-alebo-cho-elektri-kou",
+      "type": "listen",
+      "l1": "Non, seulement dix minutes. Ou prends le tram.",
+      "l2": "Nie, len desať minút. Alebo choď električkou.",
+      "choices_l1": [
+        "D'accord. Merci pour l'aide !",
+        "On se retrouve là-bas plus tard ?",
+        "Marek ! Je suis perdu."
+      ],
+      "choices_l2": [
+        "Rovno a vľavo. A potom?",
+        "Pôjdem pešo. Chcem vidieť mesto.",
+        "Aha. Choď rovno a potom vľavo."
+      ]
+    },
+    {
+      "id": "listen-p-jdem-pe-o-chcem-vidie-mesto",
+      "type": "listen",
+      "l1": "J'irai à pied. Je veux voir la ville.",
+      "l2": "Pôjdem pešo. Chcem vidieť mesto.",
+      "choices_l1": [
+        "Je cherche le musée. Je suis descendu au mauvais arrêt.",
+        "Oui ! À cinq heures, devant l'église.",
+        "On se retrouve là-bas plus tard ?"
+      ],
+      "choices_l2": [
+        "Dobre. Ďakujem za pomoc!",
+        "Áno! O piatej, pred kostolom.",
+        "Hľadám múzeum. Vystúpil som na zlej zastávke."
+      ]
+    },
+    {
+      "id": "listen-dobr-n-pad-na-n-mest-je-pekn-kaviare",
+      "type": "listen",
+      "l1": "Bonne idée ! Sur la place il y a un joli café.",
+      "l2": "Dobrý nápad! Na námestí je pekná kaviareň.",
+      "choices_l1": [
+        "Tout droit et à gauche. Et ensuite ?",
+        "Je cherche le musée. Je suis descendu au mauvais arrêt.",
+        "D'accord. Merci pour l'aide !"
+      ],
+      "choices_l2": [
+        "Aha. Choď rovno a potom vľavo.",
+        "Uvidíš kostol. Múzeum je za rohom, vedľa kostola.",
+        "Nemáš za čo. Dovidenia!"
+      ]
+    },
+    {
+      "id": "listen-stretneme-sa-tam-nesk-r",
+      "type": "listen",
+      "l1": "On se retrouve là-bas plus tard ?",
+      "l2": "Stretneme sa tam neskôr?",
+      "choices_l1": [
+        "Tout droit et à gauche. Et ensuite ?",
+        "Oui ! À cinq heures, devant l'église.",
+        "Je cherche le musée. Je suis descendu au mauvais arrêt."
+      ],
+      "choices_l2": [
+        "Marek! Som stratený.",
+        "Hľadám múzeum. Vystúpil som na zlej zastávke.",
+        "Dobrý nápad! Na námestí je pekná kaviareň."
+      ]
+    },
+    {
+      "id": "listen-no-o-piatej-pred-kostolom",
+      "type": "listen",
+      "l1": "Oui ! À cinq heures, devant l'église.",
+      "l2": "Áno! O piatej, pred kostolom.",
+      "choices_l1": [
+        "Marek ! Je suis perdu.",
+        "Ah. Va tout droit puis à gauche.",
+        "Tout droit et à gauche. Et ensuite ?"
+      ],
+      "choices_l2": [
+        "Dobrý nápad! Na námestí je pekná kaviareň.",
+        "Marek! Som stratený.",
+        "Rovno a vľavo. A potom?"
+      ]
+    },
+    {
+      "id": "listen-dobre-akujem-za-pomoc",
+      "type": "listen",
+      "l1": "D'accord. Merci pour l'aide !",
+      "l2": "Dobre. Ďakujem za pomoc!",
+      "choices_l1": [
+        "Bonne idée ! Sur la place il y a un joli café.",
+        "On se retrouve là-bas plus tard ?",
+        "Ah. Va tout droit puis à gauche."
+      ],
+      "choices_l2": [
+        "Áno! O piatej, pred kostolom.",
+        "Aha. Choď rovno a potom vľavo.",
+        "Hľadám múzeum. Vystúpil som na zlej zastávke."
+      ]
+    },
+    {
+      "id": "listen-nem-za-o-dovidenia",
+      "type": "listen",
+      "l1": "De rien. À bientôt !",
+      "l2": "Nemáš za čo. Dovidenia!",
+      "choices_l1": [
+        "C'est loin à pied ?",
+        "D'accord. Merci pour l'aide !",
+        "Marek ! Je suis perdu."
+      ],
+      "choices_l2": [
+        "Pôjdem pešo. Chcem vidieť mesto.",
+        "Uvidíš kostol. Múzeum je za rohom, vedľa kostola.",
+        "Je to ďaleko pešo?"
+      ]
+    },
+    {
+      "id": "listen-cho-rovno-potom-vpravo-pri-banke",
+      "type": "listen",
+      "l1": "Va tout droit, puis à droite près de la banque.",
+      "l2": "Choď rovno, potom vpravo pri banke.",
+      "choices_l1": [
+        "Tout droit et à gauche. Et ensuite ?",
+        "On se retrouve là-bas plus tard ?",
+        "Oui ! À cinq heures, devant l'église."
+      ],
+      "choices_l2": [
+        "Hľadám múzeum. Vystúpil som na zlej zastávke.",
+        "Uvidíš kostol. Múzeum je za rohom, vedľa kostola.",
+        "Je to ďaleko pešo?"
+      ]
+    },
+    {
+      "id": "listen-chod-m-do-pr-ce-pe-o-ale-dnes-idem-autobusom",
+      "type": "listen",
+      "l1": "Je vais au travail à pied, mais aujourd'hui j'y vais en bus.",
+      "l2": "Chodím do práce pešo, ale dnes idem autobusom.",
+      "choices_l1": [
+        "J'irai à pied. Je veux voir la ville.",
+        "On se retrouve là-bas plus tard ?",
+        "D'accord. Merci pour l'aide !"
+      ],
+      "choices_l2": [
+        "Rovno a vľavo. A potom?",
+        "Nie, len desať minút. Alebo choď električkou.",
+        "Je to ďaleko pešo?"
+      ]
+    },
+    {
+      "id": "listen-vid-t-font-nu-na-n-mest",
+      "type": "listen",
+      "l1": "Tu vois cette fontaine sur la place ?",
+      "l2": "Vidíš tú fontánu na námestí?",
+      "choices_l1": [
+        "Je cherche le musée. Je suis descendu au mauvais arrêt.",
+        "Marek ! Je suis perdu.",
+        "D'accord. Merci pour l'aide !"
+      ],
+      "choices_l2": [
+        "Stretneme sa tam neskôr?",
+        "Je to ďaleko pešo?",
+        "Dobre. Ďakujem za pomoc!"
+      ]
+    },
+    {
+      "id": "listen-kaviare-je-zauj-mav-a-bl-zko-zast-vky",
+      "type": "listen",
+      "l1": "Le café est intéressant et proche de l'arrêt.",
+      "l2": "Kaviareň je zaujímavá a blízko zastávky.",
+      "choices_l1": [
+        "Bonne idée ! Sur la place il y a un joli café.",
+        "D'accord. Merci pour l'aide !",
+        "Je cherche le musée. Je suis descendu au mauvais arrêt."
+      ],
+      "choices_l2": [
+        "Marek! Som stratený.",
+        "Uvidíš kostol. Múzeum je za rohom, vedľa kostola.",
+        "Áno! O piatej, pred kostolom."
+      ]
+    },
+    {
+      "id": "order-marek-som-straten",
+      "type": "order",
+      "l1": "Marek ! Je suis perdu.",
+      "l2": "Marek! Som stratený.",
+      "tokens_l1": [
+        "Marek",
+        "!",
+        "Je",
+        "suis",
+        "perdu.",
+        "On",
+        "se",
+        "retrouve",
+        "là-bas",
+        "plus",
+        "tard",
+        "?"
+      ],
+      "tokens_l2": [
+        "Marek!",
+        "Som",
+        "stratený.",
+        "Stretneme",
+        "sa",
+        "tam",
+        "neskôr?"
+      ]
+    },
+    {
+      "id": "order-h-ad-m-m-zeum-vyst-pil-som-na-zlej-zast-vke",
+      "type": "order",
+      "l1": "Je cherche le musée. Je suis descendu au mauvais arrêt.",
+      "l2": "Hľadám múzeum. Vystúpil som na zlej zastávke.",
+      "tokens_l1": [
+        "Je",
+        "cherche",
+        "le",
+        "musée.",
+        "Je",
+        "suis",
+        "descendu",
+        "au",
+        "mauvais",
+        "arrêt.",
+        "Marek",
+        "!",
+        "Je",
+        "suis",
+        "perdu."
+      ],
+      "tokens_l2": [
+        "Hľadám",
+        "múzeum.",
+        "Vystúpil",
+        "som",
+        "na",
+        "zlej",
+        "zastávke.",
+        "Marek!",
+        "Som",
+        "stratený."
+      ]
+    },
+    {
+      "id": "order-aha-cho-rovno-a-potom-v-avo",
+      "type": "order",
+      "l1": "Ah. Va tout droit puis à gauche.",
+      "l2": "Aha. Choď rovno a potom vľavo.",
+      "tokens_l1": [
+        "Ah.",
+        "Va",
+        "tout",
+        "droit",
+        "puis",
+        "à",
+        "gauche.",
+        "Tu",
+        "verras",
+        "une",
+        "église.",
+        "Le",
+        "musée",
+        "est",
+        "après",
+        "le",
+        "coin,",
+        "à",
+        "côté",
+        "de",
+        "l'église."
+      ],
+      "tokens_l2": [
+        "Aha.",
+        "Choď",
+        "rovno",
+        "a",
+        "potom",
+        "vľavo.",
+        "Uvidíš",
+        "kostol.",
+        "Múzeum",
+        "je",
+        "za",
+        "rohom,",
+        "vedľa",
+        "kostola."
+      ]
+    },
+    {
+      "id": "order-rovno-a-v-avo-a-potom",
+      "type": "order",
+      "l1": "Tout droit et à gauche. Et ensuite ?",
+      "l2": "Rovno a vľavo. A potom?",
+      "tokens_l1": [
+        "Tout",
+        "droit",
+        "et",
+        "à",
+        "gauche.",
+        "Et",
+        "ensuite",
+        "?",
+        "Tu",
+        "vois",
+        "cette",
+        "fontaine",
+        "sur",
+        "la",
+        "place",
+        "?"
+      ],
+      "tokens_l2": [
+        "Rovno",
+        "a",
+        "vľavo.",
+        "A",
+        "potom?",
+        "Vidíš",
+        "tú",
+        "fontánu",
+        "na",
+        "námestí?"
+      ]
+    },
+    {
+      "id": "order-uvid-kostol-m-zeum-je-za-rohom-ved-a-kostola",
+      "type": "order",
+      "l1": "Tu verras une église. Le musée est après le coin, à côté de l'église.",
+      "l2": "Uvidíš kostol. Múzeum je za rohom, vedľa kostola.",
+      "tokens_l1": [
+        "Tu",
+        "verras",
+        "une",
+        "église.",
+        "Le",
+        "musée",
+        "est",
+        "après",
+        "le",
+        "coin,",
+        "à",
+        "côté",
+        "de",
+        "l'église.",
+        "J'irai",
+        "à",
+        "pied.",
+        "Je",
+        "veux",
+        "voir",
+        "la",
+        "ville."
+      ],
+      "tokens_l2": [
+        "Uvidíš",
+        "kostol.",
+        "Múzeum",
+        "je",
+        "za",
+        "rohom,",
+        "vedľa",
+        "kostola.",
+        "Pôjdem",
+        "pešo.",
+        "Chcem",
+        "vidieť",
+        "mesto."
+      ]
+    },
+    {
+      "id": "order-je-to-aleko-pe-o",
+      "type": "order",
+      "l1": "C'est loin à pied ?",
+      "l2": "Je to ďaleko pešo?",
+      "tokens_l1": [
+        "C'est",
+        "loin",
+        "à",
+        "pied",
+        "?",
+        "Non,",
+        "seulement",
+        "dix",
+        "minutes.",
+        "Ou",
+        "prends",
+        "le",
+        "tram."
+      ],
+      "tokens_l2": [
+        "Je",
+        "to",
+        "ďaleko",
+        "pešo?",
+        "Nie,",
+        "len",
+        "desať",
+        "minút.",
+        "Alebo",
+        "choď",
+        "električkou."
+      ]
+    },
+    {
+      "id": "order-nie-len-desa-min-t-alebo-cho-elektri-kou",
+      "type": "order",
+      "l1": "Non, seulement dix minutes. Ou prends le tram.",
+      "l2": "Nie, len desať minút. Alebo choď električkou.",
+      "tokens_l1": [
+        "Non,",
+        "seulement",
+        "dix",
+        "minutes.",
+        "Ou",
+        "prends",
+        "le",
+        "tram.",
+        "Je",
+        "vais",
+        "au",
+        "travail",
+        "à",
+        "pied,",
+        "mais",
+        "aujourd'hui",
+        "j'y",
+        "vais",
+        "en",
+        "bus."
+      ],
+      "tokens_l2": [
+        "Nie,",
+        "len",
+        "desať",
+        "minút.",
+        "Alebo",
+        "choď",
+        "električkou.",
+        "Chodím",
+        "do",
+        "práce",
+        "pešo,",
+        "ale",
+        "dnes",
+        "idem",
+        "autobusom."
+      ]
+    },
+    {
+      "id": "order-p-jdem-pe-o-chcem-vidie-mesto",
+      "type": "order",
+      "l1": "J'irai à pied. Je veux voir la ville.",
+      "l2": "Pôjdem pešo. Chcem vidieť mesto.",
+      "tokens_l1": [
+        "J'irai",
+        "à",
+        "pied.",
+        "Je",
+        "veux",
+        "voir",
+        "la",
+        "ville.",
+        "Tu",
+        "vois",
+        "cette",
+        "fontaine",
+        "sur",
+        "la",
+        "place",
+        "?"
+      ],
+      "tokens_l2": [
+        "Pôjdem",
+        "pešo.",
+        "Chcem",
+        "vidieť",
+        "mesto.",
+        "Vidíš",
+        "tú",
+        "fontánu",
+        "na",
+        "námestí?"
+      ]
+    },
+    {
+      "id": "order-dobr-n-pad-na-n-mest-je-pekn-kaviare",
+      "type": "order",
+      "l1": "Bonne idée ! Sur la place il y a un joli café.",
+      "l2": "Dobrý nápad! Na námestí je pekná kaviareň.",
+      "tokens_l1": [
+        "Bonne",
+        "idée",
+        "!",
+        "Sur",
+        "la",
+        "place",
+        "il",
+        "y",
+        "a",
+        "un",
+        "joli",
+        "café.",
+        "Je",
+        "cherche",
+        "le",
+        "musée.",
+        "Je",
+        "suis",
+        "descendu",
+        "au",
+        "mauvais",
+        "arrêt."
+      ],
+      "tokens_l2": [
+        "Dobrý",
+        "nápad!",
+        "Na",
+        "námestí",
+        "je",
+        "pekná",
+        "kaviareň.",
+        "Hľadám",
+        "múzeum.",
+        "Vystúpil",
+        "som",
+        "na",
+        "zlej",
+        "zastávke."
+      ]
+    },
+    {
+      "id": "order-stretneme-sa-tam-nesk-r",
+      "type": "order",
+      "l1": "On se retrouve là-bas plus tard ?",
+      "l2": "Stretneme sa tam neskôr?",
+      "tokens_l1": [
+        "On",
+        "se",
+        "retrouve",
+        "là-bas",
+        "plus",
+        "tard",
+        "?",
+        "C'est",
+        "loin",
+        "à",
+        "pied",
+        "?"
+      ],
+      "tokens_l2": [
+        "Stretneme",
+        "sa",
+        "tam",
+        "neskôr?",
+        "Je",
+        "to",
+        "ďaleko",
+        "pešo?"
+      ]
+    },
+    {
+      "id": "order-no-o-piatej-pred-kostolom",
+      "type": "order",
+      "l1": "Oui ! À cinq heures, devant l'église.",
+      "l2": "Áno! O piatej, pred kostolom.",
+      "tokens_l1": [
+        "Oui",
+        "!",
+        "À",
+        "cinq",
+        "heures,",
+        "devant",
+        "l'église.",
+        "Je",
+        "vais",
+        "au",
+        "travail",
+        "à",
+        "pied,",
+        "mais",
+        "aujourd'hui",
+        "j'y",
+        "vais",
+        "en",
+        "bus."
+      ],
+      "tokens_l2": [
+        "Áno!",
+        "O",
+        "piatej,",
+        "pred",
+        "kostolom.",
+        "Chodím",
+        "do",
+        "práce",
+        "pešo,",
+        "ale",
+        "dnes",
+        "idem",
+        "autobusom."
+      ]
+    },
+    {
+      "id": "order-dobre-akujem-za-pomoc",
+      "type": "order",
+      "l1": "D'accord. Merci pour l'aide !",
+      "l2": "Dobre. Ďakujem za pomoc!",
+      "tokens_l1": [
+        "D'accord.",
+        "Merci",
+        "pour",
+        "l'aide",
+        "!",
+        "De",
+        "rien.",
+        "À",
+        "bientôt",
+        "!"
+      ],
+      "tokens_l2": [
+        "Dobre.",
+        "Ďakujem",
+        "za",
+        "pomoc!",
+        "Nemáš",
+        "za",
+        "čo.",
+        "Dovidenia!"
+      ]
+    },
+    {
+      "id": "order-nem-za-o-dovidenia",
+      "type": "order",
+      "l1": "De rien. À bientôt !",
+      "l2": "Nemáš za čo. Dovidenia!",
+      "tokens_l1": [
+        "De",
+        "rien.",
+        "À",
+        "bientôt",
+        "!",
+        "D'accord.",
+        "Merci",
+        "pour",
+        "l'aide",
+        "!"
+      ],
+      "tokens_l2": [
+        "Nemáš",
+        "za",
+        "čo.",
+        "Dovidenia!",
+        "Dobre.",
+        "Ďakujem",
+        "za",
+        "pomoc!"
+      ]
+    },
+    {
+      "id": "order-cho-rovno-potom-vpravo-pri-banke",
+      "type": "order",
+      "l1": "Va tout droit, puis à droite près de la banque.",
+      "l2": "Choď rovno, potom vpravo pri banke.",
+      "tokens_l1": [
+        "Va",
+        "tout",
+        "droit,",
+        "puis",
+        "à",
+        "droite",
+        "près",
+        "de",
+        "la",
+        "banque.",
+        "Je",
+        "vais",
+        "au",
+        "travail",
+        "à",
+        "pied,",
+        "mais",
+        "aujourd'hui",
+        "j'y",
+        "vais",
+        "en",
+        "bus."
+      ],
+      "tokens_l2": [
+        "Choď",
+        "rovno,",
+        "potom",
+        "vpravo",
+        "pri",
+        "banke.",
+        "Chodím",
+        "do",
+        "práce",
+        "pešo,",
+        "ale",
+        "dnes",
+        "idem",
+        "autobusom."
+      ]
+    },
+    {
+      "id": "order-chod-m-do-pr-ce-pe-o-ale-dnes-idem-autobusom",
+      "type": "order",
+      "l1": "Je vais au travail à pied, mais aujourd'hui j'y vais en bus.",
+      "l2": "Chodím do práce pešo, ale dnes idem autobusom.",
+      "tokens_l1": [
+        "Je",
+        "vais",
+        "au",
+        "travail",
+        "à",
+        "pied,",
+        "mais",
+        "aujourd'hui",
+        "j'y",
+        "vais",
+        "en",
+        "bus.",
+        "C'est",
+        "loin",
+        "à",
+        "pied",
+        "?"
+      ],
+      "tokens_l2": [
+        "Chodím",
+        "do",
+        "práce",
+        "pešo,",
+        "ale",
+        "dnes",
+        "idem",
+        "autobusom.",
+        "Je",
+        "to",
+        "ďaleko",
+        "pešo?"
+      ]
+    },
+    {
+      "id": "order-vid-t-font-nu-na-n-mest",
+      "type": "order",
+      "l1": "Tu vois cette fontaine sur la place ?",
+      "l2": "Vidíš tú fontánu na námestí?",
+      "tokens_l1": [
+        "Tu",
+        "vois",
+        "cette",
+        "fontaine",
+        "sur",
+        "la",
+        "place",
+        "?",
+        "Va",
+        "tout",
+        "droit,",
+        "puis",
+        "à",
+        "droite",
+        "près",
+        "de",
+        "la",
+        "banque."
+      ],
+      "tokens_l2": [
+        "Vidíš",
+        "tú",
+        "fontánu",
+        "na",
+        "námestí?",
+        "Choď",
+        "rovno,",
+        "potom",
+        "vpravo",
+        "pri",
+        "banke."
+      ]
+    },
+    {
+      "id": "order-kaviare-je-zauj-mav-a-bl-zko-zast-vky",
+      "type": "order",
+      "l1": "Le café est intéressant et proche de l'arrêt.",
+      "l2": "Kaviareň je zaujímavá a blízko zastávky.",
+      "tokens_l1": [
+        "Le",
+        "café",
+        "est",
+        "intéressant",
+        "et",
+        "proche",
+        "de",
+        "l'arrêt.",
+        "Je",
+        "vais",
+        "au",
+        "travail",
+        "à",
+        "pied,",
+        "mais",
+        "aujourd'hui",
+        "j'y",
+        "vais",
+        "en",
+        "bus."
+      ],
+      "tokens_l2": [
+        "Kaviareň",
+        "je",
+        "zaujímavá",
+        "a",
+        "blízko",
+        "zastávky.",
+        "Chodím",
+        "do",
+        "práce",
+        "pešo,",
+        "ale",
+        "dnes",
+        "idem",
+        "autobusom."
+      ]
+    },
+    {
+      "id": "match-marek-som-straten-sentences",
+      "type": "match",
+      "l1": [
+        "Marek ! Je suis perdu.",
+        "Que cherches-tu ?",
+        "Je cherche le musée. Je suis descendu au mauvais arrêt.",
+        "Ah. Va tout droit puis à gauche."
+      ],
+      "l2": [
+        "Marek! Som stratený.",
+        "Čo hľadáš?",
+        "Hľadám múzeum. Vystúpil som na zlej zastávke.",
+        "Aha. Choď rovno a potom vľavo."
+      ]
+    }
+  ]
+}

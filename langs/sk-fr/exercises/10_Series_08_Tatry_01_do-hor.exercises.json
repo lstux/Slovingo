@@ -1,0 +1,1154 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-hora",
+      "type": "qcm",
+      "l1": "la montagne",
+      "l2": "hora",
+      "choices_l1": [
+        "l'ours",
+        "la vallée",
+        "la boussole"
+      ],
+      "choices_l2": [
+        "medveď",
+        "skala",
+        "kompas"
+      ]
+    },
+    {
+      "id": "qcm-vrch",
+      "type": "qcm",
+      "l1": "le sommet",
+      "l2": "vrch",
+      "choices_l1": [
+        "l'ours",
+        "le ruisseau",
+        "le chamois"
+      ],
+      "choices_l2": [
+        "kompas",
+        "potok",
+        "skala"
+      ]
+    },
+    {
+      "id": "qcm-dolina",
+      "type": "qcm",
+      "l1": "la vallée",
+      "l2": "dolina",
+      "choices_l1": [
+        "la montagne",
+        "le pic",
+        "le ruisseau"
+      ],
+      "choices_l2": [
+        "potok",
+        "vrch",
+        "kamzík"
+      ]
+    },
+    {
+      "id": "qcm-les",
+      "type": "qcm",
+      "l1": "la forêt",
+      "l2": "les",
+      "choices_l1": [
+        "la boussole",
+        "le sommet",
+        "la vallée"
+      ],
+      "choices_l2": [
+        "batoh",
+        "vrch",
+        "medveď"
+      ]
+    },
+    {
+      "id": "qcm-jazero",
+      "type": "qcm",
+      "l1": "le lac",
+      "l2": "jazero",
+      "choices_l1": [
+        "le rocher",
+        "le chamois",
+        "le ruisseau"
+      ],
+      "choices_l2": [
+        "dolina",
+        "vrch",
+        "skala"
+      ]
+    },
+    {
+      "id": "qcm-chodn-k",
+      "type": "qcm",
+      "l1": "le sentier",
+      "l2": "chodník",
+      "choices_l1": [
+        "le pic",
+        "la montagne",
+        "le sommet"
+      ],
+      "choices_l2": [
+        "batoh",
+        "jazero",
+        "vrch"
+      ]
+    },
+    {
+      "id": "qcm-batoh",
+      "type": "qcm",
+      "l1": "le sac à dos",
+      "l2": "batoh",
+      "choices_l1": [
+        "ils / elles seront",
+        "il / elle sera",
+        "je marcherai (d'habitude)"
+      ],
+      "choices_l2": [
+        "medveď",
+        "kompas",
+        "skala"
+      ]
+    },
+    {
+      "id": "qcm-ja-budem",
+      "type": "qcm",
+      "l1": "je serai",
+      "l2": "ja budem",
+      "choices_l1": [
+        "tu seras",
+        "nous serons",
+        "nous monterons"
+      ],
+      "choices_l2": [
+        "budeme stúpať",
+        "ty budeš",
+        "my budeme"
+      ]
+    },
+    {
+      "id": "qcm-ty-bude",
+      "type": "qcm",
+      "l1": "tu seras",
+      "l2": "ty budeš",
+      "choices_l1": [
+        "je serai",
+        "nous serons",
+        "nous monterons"
+      ],
+      "choices_l2": [
+        "budem chodiť",
+        "oni budú",
+        "budeme stúpať"
+      ]
+    },
+    {
+      "id": "qcm-on-ona-bude",
+      "type": "qcm",
+      "l1": "il / elle sera",
+      "l2": "on / ona bude",
+      "choices_l1": [
+        "ce sera difficile",
+        "ils / elles seront",
+        "je marcherai (d'habitude)"
+      ],
+      "choices_l2": [
+        "Chcela by som čaj.",
+        "bude to ťažké",
+        "on / ona môže"
+      ]
+    },
+    {
+      "id": "qcm-my-budeme",
+      "type": "qcm",
+      "l1": "nous serons",
+      "l2": "my budeme",
+      "choices_l1": [
+        "je serai",
+        "tu seras",
+        "nous monterons"
+      ],
+      "choices_l2": [
+        "ty budeš",
+        "oni budú",
+        "ja budem"
+      ]
+    },
+    {
+      "id": "qcm-oni-bud",
+      "type": "qcm",
+      "l1": "ils / elles seront",
+      "l2": "oni budú",
+      "choices_l1": [
+        "je marcherai (d'habitude)",
+        "ce sera difficile",
+        "il / elle sera"
+      ],
+      "choices_l2": [
+        "budeme stúpať",
+        "budem chodiť",
+        "ja budem"
+      ]
+    },
+    {
+      "id": "qcm-budem-chodi",
+      "type": "qcm",
+      "l1": "je marcherai (d'habitude)",
+      "l2": "budem chodiť",
+      "choices_l1": [
+        "ce sera difficile",
+        "ils / elles seront",
+        "il / elle sera"
+      ],
+      "choices_l2": [
+        "oni budú",
+        "my budeme",
+        "ty budeš"
+      ]
+    },
+    {
+      "id": "qcm-budeme-st-pa",
+      "type": "qcm",
+      "l1": "nous monterons",
+      "l2": "budeme stúpať",
+      "choices_l1": [
+        "je serai",
+        "tu seras",
+        "nous serons"
+      ],
+      "choices_l2": [
+        "budem chodiť",
+        "ty budeš",
+        "my budeme"
+      ]
+    },
+    {
+      "id": "qcm-bude-to-a-k",
+      "type": "qcm",
+      "l1": "ce sera difficile",
+      "l2": "bude to ťažké",
+      "choices_l1": [
+        "il / elle sera",
+        "le sac à dos",
+        "je marcherai (d'habitude)"
+      ],
+      "choices_l2": [
+        "Musím mať vodu.",
+        "Táto trasa je žltá.",
+        "Chcem ísť na vrch."
+      ]
+    },
+    {
+      "id": "qcm-t-t",
+      "type": "qcm",
+      "l1": "le pic",
+      "l2": "štít",
+      "choices_l1": [
+        "le sentier",
+        "la montagne",
+        "la forêt"
+      ],
+      "choices_l2": [
+        "les",
+        "vrch",
+        "kompas"
+      ]
+    },
+    {
+      "id": "qcm-skala",
+      "type": "qcm",
+      "l1": "le rocher",
+      "l2": "skala",
+      "choices_l1": [
+        "le ruisseau",
+        "la forêt",
+        "la vallée"
+      ],
+      "choices_l2": [
+        "potok",
+        "batoh",
+        "mapa"
+      ]
+    },
+    {
+      "id": "qcm-potok",
+      "type": "qcm",
+      "l1": "le ruisseau",
+      "l2": "potok",
+      "choices_l1": [
+        "la forêt",
+        "le sommet",
+        "la vallée"
+      ],
+      "choices_l2": [
+        "medveď",
+        "batoh",
+        "kamzík"
+      ]
+    },
+    {
+      "id": "qcm-medve",
+      "type": "qcm",
+      "l1": "l'ours",
+      "l2": "medveď",
+      "choices_l1": [
+        "le rocher",
+        "la forêt",
+        "la boussole"
+      ],
+      "choices_l2": [
+        "jazero",
+        "skala",
+        "hora"
+      ]
+    },
+    {
+      "id": "qcm-kamz-k",
+      "type": "qcm",
+      "l1": "le chamois",
+      "l2": "kamzík",
+      "choices_l1": [
+        "la montagne",
+        "le pic",
+        "le rocher"
+      ],
+      "choices_l2": [
+        "štít",
+        "batoh",
+        "jazero"
+      ]
+    },
+    {
+      "id": "qcm-mapa",
+      "type": "qcm",
+      "l1": "la carte",
+      "l2": "mapa",
+      "choices_l1": [
+        "l'ours",
+        "le rocher",
+        "le sentier"
+      ],
+      "choices_l2": [
+        "batoh",
+        "kompas",
+        "medveď"
+      ]
+    },
+    {
+      "id": "qcm-kompas",
+      "type": "qcm",
+      "l1": "la boussole",
+      "l2": "kompas",
+      "choices_l1": [
+        "la montagne",
+        "le rocher",
+        "le pic"
+      ],
+      "choices_l2": [
+        "medveď",
+        "dolina",
+        "štít"
+      ]
+    },
+    {
+      "id": "blank-ideme-do-h-r",
+      "type": "fill-blank",
+      "l1": "Nous allons en montagne.",
+      "l2": "Ideme do hôr.",
+      "missing_l1": "en",
+      "missing_l2": "do",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "se",
+        "te",
+        "me"
+      ],
+      "choices_l2": [
+        "z",
+        "k",
+        "bez"
+      ]
+    },
+    {
+      "id": "blank-vrch-je-vysok",
+      "type": "fill-blank",
+      "l1": "Le sommet est haut.",
+      "l2": "Vrch je vysoký.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "est-ce",
+        "sont",
+        "sommes"
+      ],
+      "choices_l2": [
+        "bol",
+        "bola",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-dolina-je-kr-sna",
+      "type": "fill-blank",
+      "l1": "La vallée est magnifique.",
+      "l2": "Dolina je krásna.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "êtes",
+        "C'est",
+        "sont"
+      ],
+      "choices_l2": [
+        "ste",
+        "som",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-jazero-je-studen",
+      "type": "fill-blank",
+      "l1": "Le lac est froid.",
+      "l2": "Jazero je studené.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "es",
+        "sont",
+        "sommes"
+      ],
+      "choices_l2": [
+        "ste",
+        "sme",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-chodn-k-je-dlh",
+      "type": "fill-blank",
+      "l1": "Le sentier est long.",
+      "l2": "Chodník je dlhý.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "es",
+        "était",
+        "c'était"
+      ],
+      "choices_l2": [
+        "si",
+        "boli",
+        "ste"
+      ]
+    },
+    {
+      "id": "blank-budem-chodi-r-chlo",
+      "type": "fill-blank",
+      "l1": "Je marcherai vite.",
+      "l2": "Budem chodiť rýchlo.",
+      "missing_l1": "vite",
+      "missing_l2": "rýchlo",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "lac",
+        "ours",
+        "dos"
+      ],
+      "choices_l2": [
+        "batoh",
+        "budeme",
+        "čistý"
+      ]
+    },
+    {
+      "id": "blank-zajtra-budeme-v-hor-ch",
+      "type": "fill-blank",
+      "l1": "Demain nous serons en montagne.",
+      "l2": "Zajtra budeme v horách.",
+      "missing_l1": "nous",
+      "missing_l2": "v",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Tu",
+        "Elle",
+        "Il"
+      ],
+      "choices_l2": [
+        "bez",
+        "k",
+        "z"
+      ]
+    },
+    {
+      "id": "blank-t-t-je-vysoko",
+      "type": "fill-blank",
+      "l1": "Le pic est haut.",
+      "l2": "Štít je vysoko.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "c'était",
+        "est-ce",
+        "es"
+      ],
+      "choices_l2": [
+        "ste",
+        "boli",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-skala-je-tvrd",
+      "type": "fill-blank",
+      "l1": "Le rocher est dur.",
+      "l2": "Skala je tvrdá.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "est-ce",
+        "sommes",
+        "était"
+      ],
+      "choices_l2": [
+        "sú",
+        "sme",
+        "budem"
+      ]
+    },
+    {
+      "id": "blank-potok-je-ist",
+      "type": "fill-blank",
+      "l1": "Le ruisseau est propre.",
+      "l2": "Potok je čistý.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "était",
+        "sommes",
+        "êtes"
+      ],
+      "choices_l2": [
+        "sú",
+        "budem",
+        "som"
+      ]
+    },
+    {
+      "id": "blank-v-lese-s-medvede",
+      "type": "fill-blank",
+      "l1": "Il y a des ours dans la forêt.",
+      "l2": "V lese sú medvede.",
+      "missing_l1": "la",
+      "missing_l2": "sú",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Les",
+        "pic",
+        "ours"
+      ],
+      "choices_l2": [
+        "bola",
+        "budem",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-m-m-mapu-ale-nem-m-kompas",
+      "type": "fill-blank",
+      "l1": "J'ai une carte, mais je n'ai pas de boussole.",
+      "l2": "Mám mapu, ale nemám kompas.",
+      "missing_l1": "je",
+      "missing_l2": "ale",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Nous",
+        "Tu",
+        "Ils"
+      ],
+      "choices_l2": [
+        "aj",
+        "lebo",
+        "a"
+      ]
+    },
+    {
+      "id": "listen-ideme-do-h-r",
+      "type": "listen",
+      "l1": "Nous allons en montagne.",
+      "l2": "Ideme do hôr.",
+      "choices_l1": [
+        "Le sentier est long.",
+        "La vallée est magnifique.",
+        "Le rocher est dur."
+      ],
+      "choices_l2": [
+        "Skala je tvrdá.",
+        "V lese sú medvede.",
+        "Štít je vysoko."
+      ]
+    },
+    {
+      "id": "listen-vrch-je-vysok",
+      "type": "listen",
+      "l1": "Le sommet est haut.",
+      "l2": "Vrch je vysoký.",
+      "choices_l1": [
+        "Le lac est froid.",
+        "Le ruisseau est propre.",
+        "Le pic est haut."
+      ],
+      "choices_l2": [
+        "Štít je vysoko.",
+        "Potok je čistý.",
+        "Dolina je krásna."
+      ]
+    },
+    {
+      "id": "listen-dolina-je-kr-sna",
+      "type": "listen",
+      "l1": "La vallée est magnifique.",
+      "l2": "Dolina je krásna.",
+      "choices_l1": [
+        "Il y a des ours dans la forêt.",
+        "Le rocher est dur.",
+        "Le lac est froid."
+      ],
+      "choices_l2": [
+        "Budem chodiť rýchlo.",
+        "Jazero je studené.",
+        "Chodník je dlhý."
+      ]
+    },
+    {
+      "id": "listen-jazero-je-studen",
+      "type": "listen",
+      "l1": "Le lac est froid.",
+      "l2": "Jazero je studené.",
+      "choices_l1": [
+        "J'ai une carte, mais je n'ai pas de boussole.",
+        "Le ruisseau est propre.",
+        "Le pic est haut."
+      ],
+      "choices_l2": [
+        "V lese sú medvede.",
+        "Potok je čistý.",
+        "Ideme do hôr."
+      ]
+    },
+    {
+      "id": "listen-chodn-k-je-dlh",
+      "type": "listen",
+      "l1": "Le sentier est long.",
+      "l2": "Chodník je dlhý.",
+      "choices_l1": [
+        "Le rocher est dur.",
+        "Le pic est haut.",
+        "Demain nous serons en montagne."
+      ],
+      "choices_l2": [
+        "Jazero je studené.",
+        "Štít je vysoko.",
+        "Zajtra budeme v horách."
+      ]
+    },
+    {
+      "id": "listen-m-batoh",
+      "type": "listen",
+      "l1": "Tu as un sac à dos ?",
+      "l2": "Máš batoh?",
+      "choices_l1": [
+        "Le ruisseau est propre.",
+        "Le pic est haut.",
+        "Le rocher est dur."
+      ],
+      "choices_l2": [
+        "Kde pracuješ?",
+        "Bývam tu.",
+        "Máš brata?"
+      ]
+    },
+    {
+      "id": "listen-budem-chodi-r-chlo",
+      "type": "listen",
+      "l1": "Je marcherai vite.",
+      "l2": "Budem chodiť rýchlo.",
+      "choices_l1": [
+        "Le ruisseau est propre.",
+        "Le lac est froid.",
+        "Le rocher est dur."
+      ],
+      "choices_l2": [
+        "Jazero je studené.",
+        "Potok je čistý.",
+        "Chodník je dlhý."
+      ]
+    },
+    {
+      "id": "listen-zajtra-budeme-v-hor-ch",
+      "type": "listen",
+      "l1": "Demain nous serons en montagne.",
+      "l2": "Zajtra budeme v horách.",
+      "choices_l1": [
+        "La vallée est magnifique.",
+        "Le rocher est dur.",
+        "Nous allons en montagne."
+      ],
+      "choices_l2": [
+        "Mám mapu, ale nemám kompas.",
+        "Chodník je dlhý.",
+        "V lese sú medvede."
+      ]
+    },
+    {
+      "id": "listen-t-t-je-vysoko",
+      "type": "listen",
+      "l1": "Le pic est haut.",
+      "l2": "Štít je vysoko.",
+      "choices_l1": [
+        "Le ruisseau est propre.",
+        "Il y a des ours dans la forêt.",
+        "Le sentier est long."
+      ],
+      "choices_l2": [
+        "Dolina je krásna.",
+        "Vrch je vysoký.",
+        "Budem chodiť rýchlo."
+      ]
+    },
+    {
+      "id": "listen-skala-je-tvrd",
+      "type": "listen",
+      "l1": "Le rocher est dur.",
+      "l2": "Skala je tvrdá.",
+      "choices_l1": [
+        "Tu as un sac à dos ?",
+        "Le pic est haut.",
+        "Le sommet est haut."
+      ],
+      "choices_l2": [
+        "Budem chodiť rýchlo.",
+        "Štít je vysoko.",
+        "Jazero je studené."
+      ]
+    },
+    {
+      "id": "listen-potok-je-ist",
+      "type": "listen",
+      "l1": "Le ruisseau est propre.",
+      "l2": "Potok je čistý.",
+      "choices_l1": [
+        "Il y a des ours dans la forêt.",
+        "La vallée est magnifique.",
+        "Le lac est froid."
+      ],
+      "choices_l2": [
+        "Jazero je studené.",
+        "Mám mapu, ale nemám kompas.",
+        "Dolina je krásna."
+      ]
+    },
+    {
+      "id": "listen-v-lese-s-medvede",
+      "type": "listen",
+      "l1": "Il y a des ours dans la forêt.",
+      "l2": "V lese sú medvede.",
+      "choices_l1": [
+        "Demain nous serons en montagne.",
+        "La vallée est magnifique.",
+        "Le lac est froid."
+      ],
+      "choices_l2": [
+        "Dolina je krásna.",
+        "Ideme do hôr.",
+        "Štít je vysoko."
+      ]
+    },
+    {
+      "id": "listen-m-m-mapu-ale-nem-m-kompas",
+      "type": "listen",
+      "l1": "J'ai une carte, mais je n'ai pas de boussole.",
+      "l2": "Mám mapu, ale nemám kompas.",
+      "choices_l1": [
+        "Demain nous serons en montagne.",
+        "Tu as un sac à dos ?",
+        "Il y a des ours dans la forêt."
+      ],
+      "choices_l2": [
+        "Ideme do hôr.",
+        "Skala je tvrdá.",
+        "Zajtra budeme v horách."
+      ]
+    },
+    {
+      "id": "order-ideme-do-h-r",
+      "type": "order",
+      "l1": "Nous allons en montagne.",
+      "l2": "Ideme do hôr.",
+      "tokens_l1": [
+        "Nous",
+        "allons",
+        "en",
+        "montagne.",
+        "Le",
+        "pic",
+        "est",
+        "haut."
+      ],
+      "tokens_l2": [
+        "Ideme",
+        "do",
+        "hôr.",
+        "Štít",
+        "je",
+        "vysoko."
+      ]
+    },
+    {
+      "id": "order-vrch-je-vysok",
+      "type": "order",
+      "l1": "Le sommet est haut.",
+      "l2": "Vrch je vysoký.",
+      "tokens_l1": [
+        "Le",
+        "sommet",
+        "est",
+        "haut.",
+        "Je",
+        "marcherai",
+        "vite."
+      ],
+      "tokens_l2": [
+        "Vrch",
+        "je",
+        "vysoký.",
+        "Budem",
+        "chodiť",
+        "rýchlo."
+      ]
+    },
+    {
+      "id": "order-dolina-je-kr-sna",
+      "type": "order",
+      "l1": "La vallée est magnifique.",
+      "l2": "Dolina je krásna.",
+      "tokens_l1": [
+        "La",
+        "vallée",
+        "est",
+        "magnifique.",
+        "Demain",
+        "nous",
+        "serons",
+        "en",
+        "montagne."
+      ],
+      "tokens_l2": [
+        "Dolina",
+        "je",
+        "krásna.",
+        "Zajtra",
+        "budeme",
+        "v",
+        "horách."
+      ]
+    },
+    {
+      "id": "order-jazero-je-studen",
+      "type": "order",
+      "l1": "Le lac est froid.",
+      "l2": "Jazero je studené.",
+      "tokens_l1": [
+        "Le",
+        "lac",
+        "est",
+        "froid.",
+        "Le",
+        "rocher",
+        "est",
+        "dur."
+      ],
+      "tokens_l2": [
+        "Jazero",
+        "je",
+        "studené.",
+        "Skala",
+        "je",
+        "tvrdá."
+      ]
+    },
+    {
+      "id": "order-chodn-k-je-dlh",
+      "type": "order",
+      "l1": "Le sentier est long.",
+      "l2": "Chodník je dlhý.",
+      "tokens_l1": [
+        "Le",
+        "sentier",
+        "est",
+        "long.",
+        "J'ai",
+        "une",
+        "carte,",
+        "mais",
+        "je",
+        "n'ai",
+        "pas",
+        "de",
+        "boussole."
+      ],
+      "tokens_l2": [
+        "Chodník",
+        "je",
+        "dlhý.",
+        "Mám",
+        "mapu,",
+        "ale",
+        "nemám",
+        "kompas."
+      ]
+    },
+    {
+      "id": "order-budem-chodi-r-chlo",
+      "type": "order",
+      "l1": "Je marcherai vite.",
+      "l2": "Budem chodiť rýchlo.",
+      "tokens_l1": [
+        "Je",
+        "marcherai",
+        "vite.",
+        "Le",
+        "sentier",
+        "est",
+        "long."
+      ],
+      "tokens_l2": [
+        "Budem",
+        "chodiť",
+        "rýchlo.",
+        "Chodník",
+        "je",
+        "dlhý."
+      ]
+    },
+    {
+      "id": "order-zajtra-budeme-v-hor-ch",
+      "type": "order",
+      "l1": "Demain nous serons en montagne.",
+      "l2": "Zajtra budeme v horách.",
+      "tokens_l1": [
+        "Demain",
+        "nous",
+        "serons",
+        "en",
+        "montagne.",
+        "Le",
+        "pic",
+        "est",
+        "haut."
+      ],
+      "tokens_l2": [
+        "Zajtra",
+        "budeme",
+        "v",
+        "horách.",
+        "Štít",
+        "je",
+        "vysoko."
+      ]
+    },
+    {
+      "id": "order-t-t-je-vysoko",
+      "type": "order",
+      "l1": "Le pic est haut.",
+      "l2": "Štít je vysoko.",
+      "tokens_l1": [
+        "Le",
+        "pic",
+        "est",
+        "haut.",
+        "Le",
+        "lac",
+        "est",
+        "froid."
+      ],
+      "tokens_l2": [
+        "Štít",
+        "je",
+        "vysoko.",
+        "Jazero",
+        "je",
+        "studené."
+      ]
+    },
+    {
+      "id": "order-skala-je-tvrd",
+      "type": "order",
+      "l1": "Le rocher est dur.",
+      "l2": "Skala je tvrdá.",
+      "tokens_l1": [
+        "Le",
+        "rocher",
+        "est",
+        "dur.",
+        "Demain",
+        "nous",
+        "serons",
+        "en",
+        "montagne."
+      ],
+      "tokens_l2": [
+        "Skala",
+        "je",
+        "tvrdá.",
+        "Zajtra",
+        "budeme",
+        "v",
+        "horách."
+      ]
+    },
+    {
+      "id": "order-potok-je-ist",
+      "type": "order",
+      "l1": "Le ruisseau est propre.",
+      "l2": "Potok je čistý.",
+      "tokens_l1": [
+        "Le",
+        "ruisseau",
+        "est",
+        "propre.",
+        "Nous",
+        "allons",
+        "en",
+        "montagne."
+      ],
+      "tokens_l2": [
+        "Potok",
+        "je",
+        "čistý.",
+        "Ideme",
+        "do",
+        "hôr."
+      ]
+    },
+    {
+      "id": "order-v-lese-s-medvede",
+      "type": "order",
+      "l1": "Il y a des ours dans la forêt.",
+      "l2": "V lese sú medvede.",
+      "tokens_l1": [
+        "Il",
+        "y",
+        "a",
+        "des",
+        "ours",
+        "dans",
+        "la",
+        "forêt.",
+        "J'ai",
+        "une",
+        "carte,",
+        "mais",
+        "je",
+        "n'ai",
+        "pas",
+        "de",
+        "boussole."
+      ],
+      "tokens_l2": [
+        "V",
+        "lese",
+        "sú",
+        "medvede.",
+        "Mám",
+        "mapu,",
+        "ale",
+        "nemám",
+        "kompas."
+      ]
+    },
+    {
+      "id": "order-m-m-mapu-ale-nem-m-kompas",
+      "type": "order",
+      "l1": "J'ai une carte, mais je n'ai pas de boussole.",
+      "l2": "Mám mapu, ale nemám kompas.",
+      "tokens_l1": [
+        "J'ai",
+        "une",
+        "carte,",
+        "mais",
+        "je",
+        "n'ai",
+        "pas",
+        "de",
+        "boussole.",
+        "Le",
+        "rocher",
+        "est",
+        "dur."
+      ],
+      "tokens_l2": [
+        "Mám",
+        "mapu,",
+        "ale",
+        "nemám",
+        "kompas.",
+        "Skala",
+        "je",
+        "tvrdá."
+      ]
+    },
+    {
+      "id": "match-hora-vocab",
+      "type": "match",
+      "l1": [
+        "la montagne",
+        "le sommet",
+        "la vallée",
+        "la forêt"
+      ],
+      "l2": [
+        "hora",
+        "vrch",
+        "dolina",
+        "les"
+      ]
+    },
+    {
+      "id": "match-ideme-do-h-r-sentences",
+      "type": "match",
+      "l1": [
+        "Nous allons en montagne.",
+        "Le sommet est haut.",
+        "La vallée est magnifique.",
+        "Le lac est froid."
+      ],
+      "l2": [
+        "Ideme do hôr.",
+        "Vrch je vysoký.",
+        "Dolina je krásna.",
+        "Jazero je studené."
+      ]
+    }
+  ]
+}

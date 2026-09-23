@@ -1,0 +1,2044 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-le-salon",
+      "type": "qcm",
+      "l1": "obývačka",
+      "l2": "le salon",
+      "choices_l1": [
+        "pohár",
+        "robia",
+        "malý"
+      ],
+      "choices_l2": [
+        "l'oncle",
+        "je suis",
+        "l'entrée"
+      ]
+    },
+    {
+      "id": "qcm-la-chambre-coucher",
+      "type": "qcm",
+      "l1": "spálňa",
+      "l2": "la chambre (à coucher)",
+      "choices_l1": [
+        "sesternica",
+        "stôl",
+        "veľa"
+      ],
+      "choices_l2": [
+        "Il y a une table.",
+        "petit / petite",
+        "je range, tu ranges, il range"
+      ]
+    },
+    {
+      "id": "qcm-la-salle-de-bain",
+      "type": "qcm",
+      "l1": "kúpeľňa",
+      "l2": "la salle de bain",
+      "choices_l1": [
+        "mama",
+        "spať",
+        "bývame"
+      ],
+      "choices_l2": [
+        "je ne range pas",
+        "un salon (mužský rod)",
+        "une petite sœur"
+      ]
+    },
+    {
+      "id": "qcm-les-toilettes",
+      "type": "qcm",
+      "l1": "záchod",
+      "l2": "les toilettes",
+      "choices_l1": [
+        "nemocnica",
+        "malý",
+        "malá sestra"
+      ],
+      "choices_l2": [
+        "ensemble",
+        "la fille",
+        "j'habite"
+      ]
+    },
+    {
+      "id": "qcm-le-couloir",
+      "type": "qcm",
+      "l1": "chodba",
+      "l2": "le couloir",
+      "choices_l1": [
+        "bývať",
+        "ja mám",
+        "otec"
+      ],
+      "choices_l2": [
+        "l'horloge",
+        "l'assiette",
+        "chercher"
+      ]
+    },
+    {
+      "id": "qcm-la-cave",
+      "type": "qcm",
+      "l1": "pivnica",
+      "l2": "la cave",
+      "choices_l1": [
+        "hľadáme",
+        "dieťa",
+        "hľadať"
+      ],
+      "choices_l2": [
+        "aider",
+        "se reposer",
+        "le bureau"
+      ]
+    },
+    {
+      "id": "qcm-le-balcon",
+      "type": "qcm",
+      "l1": "balkón",
+      "l2": "le balcon",
+      "choices_l1": [
+        "päť rokov",
+        "v byte",
+        "telefón"
+      ],
+      "choices_l2": [
+        "les parents",
+        "cuisiner",
+        "travailler"
+      ]
+    },
+    {
+      "id": "qcm-le-garage",
+      "type": "qcm",
+      "l1": "garáž",
+      "l2": "le garage",
+      "choices_l1": [
+        "tu",
+        "rok",
+        "pracuješ"
+      ],
+      "choices_l2": [
+        "je cherche",
+        "dans l'armoire",
+        "le livre"
+      ]
+    },
+    {
+      "id": "qcm-la-cour",
+      "type": "qcm",
+      "l1": "dvor",
+      "l2": "la cour",
+      "choices_l1": [
+        "ty máš",
+        "hľadať",
+        "bratranec"
+      ],
+      "choices_l2": [
+        "les parents",
+        "je fais",
+        "la cuisine"
+      ]
+    },
+    {
+      "id": "qcm-le-toit",
+      "type": "qcm",
+      "l1": "strecha",
+      "l2": "le toit",
+      "choices_l1": [
+        "môj otec",
+        "strýko",
+        "tanier"
+      ],
+      "choices_l2": [
+        "la cousine",
+        "le jardin",
+        "dix ans"
+      ]
+    },
+    {
+      "id": "qcm-le-grenier",
+      "type": "qcm",
+      "l1": "povala",
+      "l2": "le grenier",
+      "choices_l1": [
+        "ty máš",
+        "hľadáš",
+        "variť"
+      ],
+      "choices_l2": [
+        "se lever",
+        "le frère",
+        "mon père"
+      ]
+    },
+    {
+      "id": "qcm-la-terrasse",
+      "type": "qcm",
+      "l1": "terasa",
+      "l2": "la terrasse",
+      "choices_l1": [
+        "na stole",
+        "bývame",
+        "telefón"
+      ],
+      "choices_l2": [
+        "qui",
+        "en ville",
+        "le frère"
+      ]
+    },
+    {
+      "id": "qcm-l-entr-e",
+      "type": "qcm",
+      "l1": "predsieň",
+      "l2": "l'entrée",
+      "choices_l1": [
+        "okuliare",
+        "dedina, vidiek",
+        "obchod"
+      ],
+      "choices_l2": [
+        "se lever",
+        "faire",
+        "écrire"
+      ]
+    },
+    {
+      "id": "qcm-la-buanderie",
+      "type": "qcm",
+      "l1": "práčovňa",
+      "l2": "la buanderie",
+      "choices_l1": [
+        "oddychovať",
+        "terasa",
+        "starý"
+      ],
+      "choices_l2": [
+        "être assis",
+        "nous habitons",
+        "faire"
+      ]
+    },
+    {
+      "id": "qcm-la-table",
+      "type": "qcm",
+      "l1": "stôl",
+      "l2": "la table",
+      "choices_l1": [
+        "pozerať",
+        "zrkadlo",
+        "pivnica"
+      ],
+      "choices_l2": [
+        "cuisiner",
+        "tu travailles",
+        "être assis"
+      ]
+    },
+    {
+      "id": "qcm-la-chaise",
+      "type": "qcm",
+      "l1": "stolička",
+      "l2": "la chaise",
+      "choices_l1": [
+        "moja sestra",
+        "mladý",
+        "dedko"
+      ],
+      "choices_l2": [
+        "les toilettes",
+        "nous cherchons",
+        "regarder"
+      ]
+    },
+    {
+      "id": "qcm-le-lit",
+      "type": "qcm",
+      "l1": "posteľ",
+      "l2": "le lit",
+      "choices_l1": [
+        "veľký",
+        "veľa",
+        "hľadáš"
+      ],
+      "choices_l2": [
+        "aussi",
+        "travailler",
+        "les enfants"
+      ]
+    },
+    {
+      "id": "qcm-l-armoire",
+      "type": "qcm",
+      "l1": "skriňa",
+      "l2": "l'armoire",
+      "choices_l1": [
+        "dieťa",
+        "povala",
+        "zatvárať"
+      ],
+      "choices_l2": [
+        "l'appartement",
+        "tu cherches",
+        "le couteau"
+      ]
+    },
+    {
+      "id": "qcm-la-fen-tre",
+      "type": "qcm",
+      "l1": "okno",
+      "l2": "la fenêtre",
+      "choices_l1": [
+        "nemocnica",
+        "škola",
+        "mama"
+      ],
+      "choices_l2": [
+        "cuisiner",
+        "écouter",
+        "tu fais"
+      ]
+    },
+    {
+      "id": "qcm-la-porte",
+      "type": "qcm",
+      "l1": "dvere",
+      "l2": "la porte",
+      "choices_l1": [
+        "uterák",
+        "záchod",
+        "tiež"
+      ],
+      "choices_l2": [
+        "la clé",
+        "travailler",
+        "faire"
+      ]
+    },
+    {
+      "id": "qcm-la-lampe",
+      "type": "qcm",
+      "l1": "lampa",
+      "l2": "la lampe",
+      "choices_l1": [
+        "kúpeľňa",
+        "bývaš",
+        "pracuješ"
+      ],
+      "choices_l2": [
+        "je fais",
+        "l'appartement",
+        "dormir"
+      ]
+    },
+    {
+      "id": "qcm-le-canap",
+      "type": "qcm",
+      "l1": "gauč",
+      "l2": "le canapé",
+      "choices_l1": [
+        "vstávať",
+        "bývať",
+        "chata"
+      ],
+      "choices_l2": [
+        "se reposer",
+        "tu as",
+        "la lampe"
+      ]
+    },
+    {
+      "id": "qcm-le-tapis",
+      "type": "qcm",
+      "l1": "koberec",
+      "l2": "le tapis",
+      "choices_l1": [
+        "zrkadlo",
+        "spať",
+        "skriňa"
+      ],
+      "choices_l2": [
+        "se lever",
+        "le cousin",
+        "l'argent"
+      ]
+    },
+    {
+      "id": "qcm-le-miroir",
+      "type": "qcm",
+      "l1": "zrkadlo",
+      "l2": "le miroir",
+      "choices_l1": [
+        "hľadáš",
+        "bratranec",
+        "narodeniny"
+      ],
+      "choices_l2": [
+        "cinq ans",
+        "le savon",
+        "la maison"
+      ]
+    },
+    {
+      "id": "qcm-le-r-frig-rateur",
+      "type": "qcm",
+      "l1": "chladnička",
+      "l2": "le réfrigérateur",
+      "choices_l1": [
+        "pomáhať",
+        "päť rokov",
+        "bývam"
+      ],
+      "choices_l2": [
+        "les chaussons",
+        "le mari",
+        "je travaille"
+      ]
+    },
+    {
+      "id": "qcm-l-tag-re",
+      "type": "qcm",
+      "l1": "polica",
+      "l2": "l'étagère",
+      "choices_l1": [
+        "manžel",
+        "rodina",
+        "robia"
+      ],
+      "choices_l2": [
+        "le livre",
+        "le jardin",
+        "ici"
+      ]
+    },
+    {
+      "id": "qcm-le-tableau",
+      "type": "qcm",
+      "l1": "obraz",
+      "l2": "le tableau",
+      "choices_l1": [
+        "vstávať",
+        "taška",
+        "chata"
+      ],
+      "choices_l2": [
+        "habiter",
+        "être assis",
+        "le tapis"
+      ]
+    },
+    {
+      "id": "qcm-la-t-l-vision",
+      "type": "qcm",
+      "l1": "televízor",
+      "l2": "la télévision",
+      "choices_l1": [
+        "počúvať",
+        "malá sestra",
+        "terasa"
+      ],
+      "choices_l2": [
+        "habiter",
+        "la fille",
+        "le frère"
+      ]
+    },
+    {
+      "id": "qcm-chercher",
+      "type": "qcm",
+      "l1": "hľadať",
+      "l2": "chercher",
+      "choices_l1": [
+        "na stole",
+        "dieťa",
+        "blízko"
+      ],
+      "choices_l2": [
+        "le mari",
+        "la ville",
+        "l'assiette"
+      ]
+    },
+    {
+      "id": "qcm-la-cl",
+      "type": "qcm",
+      "l1": "kľúč",
+      "l2": "la clé",
+      "choices_l1": [
+        "peniaze",
+        "kniha",
+        "babka"
+      ],
+      "choices_l2": [
+        "le grenier",
+        "cinq ans",
+        "le livre"
+      ]
+    },
+    {
+      "id": "qcm-le-t-l-phone",
+      "type": "qcm",
+      "l1": "telefón",
+      "l2": "le téléphone",
+      "choices_l1": [
+        "v meste",
+        "babka",
+        "kancelária"
+      ],
+      "choices_l2": [
+        "qui",
+        "faire",
+        "la cave"
+      ]
+    },
+    {
+      "id": "qcm-le-livre",
+      "type": "qcm",
+      "l1": "kniha",
+      "l2": "le livre",
+      "choices_l1": [
+        "byt",
+        "vstávať",
+        "v byte"
+      ],
+      "choices_l2": [
+        "l'école",
+        "être assis",
+        "la cave"
+      ]
+    },
+    {
+      "id": "qcm-le-sac",
+      "type": "qcm",
+      "l1": "taška",
+      "l2": "le sac",
+      "choices_l1": [
+        "sestra",
+        "počúvať",
+        "spať"
+      ],
+      "choices_l2": [
+        "la clé",
+        "tu habites",
+        "le grenier"
+      ]
+    },
+    {
+      "id": "qcm-le-verre",
+      "type": "qcm",
+      "l1": "pohár",
+      "l2": "le verre",
+      "choices_l1": [
+        "hľadá",
+        "ďaleko",
+        "ja mám"
+      ],
+      "choices_l2": [
+        "tu fais",
+        "tu cherches",
+        "le prénom"
+      ]
+    },
+    {
+      "id": "qcm-l-assiette",
+      "type": "qcm",
+      "l1": "tanier",
+      "l2": "l'assiette",
+      "choices_l1": [
+        "kancelária",
+        "v spálni",
+        "pohár"
+      ],
+      "choices_l2": [
+        "ouvrir",
+        "dans l'armoire",
+        "la clé"
+      ]
+    },
+    {
+      "id": "qcm-l-horloge",
+      "type": "qcm",
+      "l1": "hodiny",
+      "l2": "l'horloge",
+      "choices_l1": [
+        "v spálni",
+        "deti",
+        "veľký"
+      ],
+      "choices_l2": [
+        "le frère",
+        "le tableau",
+        "la cour"
+      ]
+    },
+    {
+      "id": "qcm-l-argent",
+      "type": "qcm",
+      "l1": "peniaze",
+      "l2": "l'argent",
+      "choices_l1": [
+        "strýko",
+        "robiť",
+        "dvor"
+      ],
+      "choices_l2": [
+        "la tante",
+        "mon frère",
+        "tu es"
+      ]
+    },
+    {
+      "id": "qcm-les-lunettes",
+      "type": "qcm",
+      "l1": "okuliare",
+      "l2": "les lunettes",
+      "choices_l1": [
+        "peniaze",
+        "malý brat",
+        "garáž"
+      ],
+      "choices_l2": [
+        "l'entrée",
+        "la maman",
+        "les parents"
+      ]
+    },
+    {
+      "id": "qcm-les-chaussons",
+      "type": "qcm",
+      "l1": "papuče",
+      "l2": "les chaussons",
+      "choices_l1": [
+        "bratranec",
+        "práčovňa",
+        "hľadá"
+      ],
+      "choices_l2": [
+        "la maison",
+        "le couteau",
+        "beaucoup"
+      ]
+    },
+    {
+      "id": "qcm-la-serviette",
+      "type": "qcm",
+      "l1": "uterák",
+      "l2": "la serviette",
+      "choices_l1": [
+        "mesto",
+        "päť rokov",
+        "peniaze"
+      ],
+      "choices_l2": [
+        "dix ans",
+        "le livre",
+        "j'habite"
+      ]
+    },
+    {
+      "id": "qcm-le-savon",
+      "type": "qcm",
+      "l1": "mydlo",
+      "l2": "le savon",
+      "choices_l1": [
+        "robím",
+        "babka",
+        "meno"
+      ],
+      "choices_l2": [
+        "un an",
+        "fermer",
+        "la maman"
+      ]
+    },
+    {
+      "id": "qcm-le-couteau",
+      "type": "qcm",
+      "l1": "nôž",
+      "l2": "le couteau",
+      "choices_l1": [
+        "upratovať",
+        "v Lyone",
+        "robí"
+      ],
+      "choices_l2": [
+        "l'horloge",
+        "l'hôpital",
+        "qui"
+      ]
+    },
+    {
+      "id": "qcm-cuisiner",
+      "type": "qcm",
+      "l1": "variť",
+      "l2": "cuisiner",
+      "choices_l1": [
+        "v skrini",
+        "pracovať",
+        "blízko"
+      ],
+      "choices_l2": [
+        "la clé",
+        "l'anniversaire",
+        "le garage"
+      ]
+    },
+    {
+      "id": "qcm-ranger",
+      "type": "qcm",
+      "l1": "upratovať",
+      "l2": "ranger",
+      "choices_l1": [
+        "pracujú",
+        "písať",
+        "veľký"
+      ],
+      "choices_l2": [
+        "cinq ans",
+        "le frère",
+        "le grenier"
+      ]
+    },
+    {
+      "id": "qcm-dormir",
+      "type": "qcm",
+      "l1": "spať",
+      "l2": "dormir",
+      "choices_l1": [
+        "dieťa",
+        "rodina",
+        "bývajú"
+      ],
+      "choices_l2": [
+        "l'immeuble",
+        "la serviette",
+        "la maison"
+      ]
+    },
+    {
+      "id": "qcm-tre-assis",
+      "type": "qcm",
+      "l1": "sedieť",
+      "l2": "être assis",
+      "choices_l1": [
+        "teta",
+        "taška",
+        "dedko"
+      ],
+      "choices_l2": [
+        "aussi",
+        "écrire",
+        "nous habitons"
+      ]
+    },
+    {
+      "id": "qcm-laver",
+      "type": "qcm",
+      "l1": "umývať",
+      "l2": "laver",
+      "choices_l1": [
+        "dva roky",
+        "mama",
+        "záhrada"
+      ],
+      "choices_l2": [
+        "le canapé",
+        "l'immeuble",
+        "le téléphone"
+      ]
+    },
+    {
+      "id": "qcm-ouvrir",
+      "type": "qcm",
+      "l1": "otvárať",
+      "l2": "ouvrir",
+      "choices_l1": [
+        "ale",
+        "pohár",
+        "písať"
+      ],
+      "choices_l2": [
+        "tu travailles",
+        "deux ans",
+        "la table"
+      ]
+    },
+    {
+      "id": "qcm-fermer",
+      "type": "qcm",
+      "l1": "zatvárať",
+      "l2": "fermer",
+      "choices_l1": [
+        "počúvať",
+        "kľúč",
+        "spálňa"
+      ],
+      "choices_l2": [
+        "ma sœur",
+        "la cousine",
+        "écrire"
+      ]
+    },
+    {
+      "id": "qcm-aider",
+      "type": "qcm",
+      "l1": "pomáhať",
+      "l2": "aider",
+      "choices_l1": [
+        "predsieň",
+        "rodina",
+        "v byte"
+      ],
+      "choices_l2": [
+        "habiter",
+        "j'habite",
+        "les lunettes"
+      ]
+    },
+    {
+      "id": "qcm-se-reposer",
+      "type": "qcm",
+      "l1": "oddychovať",
+      "l2": "se reposer",
+      "choices_l1": [
+        "uterák",
+        "robíš",
+        "taška"
+      ],
+      "choices_l2": [
+        "près",
+        "les toilettes",
+        "tu cherches"
+      ]
+    },
+    {
+      "id": "qcm-regarder",
+      "type": "qcm",
+      "l1": "pozerať",
+      "l2": "regarder",
+      "choices_l1": [
+        "uterák",
+        "strýko",
+        "manželka"
+      ],
+      "choices_l2": [
+        "le livre",
+        "la maman",
+        "écrire"
+      ]
+    },
+    {
+      "id": "qcm-couter",
+      "type": "qcm",
+      "l1": "počúvať",
+      "l2": "écouter",
+      "choices_l1": [
+        "sedieť",
+        "mladý",
+        "terasa"
+      ],
+      "choices_l2": [
+        "le toit",
+        "se reposer",
+        "l'assiette"
+      ]
+    },
+    {
+      "id": "qcm-lire",
+      "type": "qcm",
+      "l1": "čítať",
+      "l2": "lire",
+      "choices_l1": [
+        "sestra",
+        "ty máš",
+        "papuče"
+      ],
+      "choices_l2": [
+        "les lunettes",
+        "tu cherches",
+        "qui"
+      ]
+    },
+    {
+      "id": "qcm-crire",
+      "type": "qcm",
+      "l1": "písať",
+      "l2": "écrire",
+      "choices_l1": [
+        "desať rokov",
+        "sedieť",
+        "povala"
+      ],
+      "choices_l2": [
+        "ma sœur",
+        "deux ans",
+        "s'appeler"
+      ]
+    },
+    {
+      "id": "qcm-se-lever",
+      "type": "qcm",
+      "l1": "vstávať",
+      "l2": "se lever",
+      "choices_l1": [
+        "dieťa",
+        "taška",
+        "posteľ"
+      ],
+      "choices_l2": [
+        "qui",
+        "ensemble",
+        "l'horloge"
+      ]
+    },
+    {
+      "id": "qcm-mais",
+      "type": "qcm",
+      "l1": "ale",
+      "l2": "mais",
+      "choices_l1": [
+        "peniaze",
+        "spálňa",
+        "veľa"
+      ],
+      "choices_l2": [
+        "la grand-mère",
+        "la sœur",
+        "dormir"
+      ]
+    },
+    {
+      "id": "qcm-joli",
+      "type": "qcm",
+      "l1": "pekný",
+      "l2": "joli",
+      "choices_l1": [
+        "býva",
+        "práčovňa",
+        "sestra"
+      ],
+      "choices_l2": [
+        "s'appeler",
+        "nous habitons",
+        "cuisiner"
+      ]
+    },
+    {
+      "id": "blank-l-argent-est-dans-le-sac",
+      "type": "fill-blank",
+      "l1": "Peniaze sú v taške.",
+      "l2": "L'argent est dans le sac.",
+      "missing_l1": "v",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "kuchyni",
+        "brata",
+        "dve"
+      ],
+      "choices_l2": [
+        "de",
+        "c'est",
+        "campagne"
+      ]
+    },
+    {
+      "id": "blank-je-suis-assis-sur-le-canap-et-je-lis-un-livre",
+      "type": "fill-blank",
+      "l1": "Sedím na gauči a čítam knihu.",
+      "l2": "Je suis assis sur le canapé et je lis un livre.",
+      "missing_l1": "na",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "babka",
+        "má",
+        "malé"
+      ],
+      "choices_l2": [
+        "mes",
+        "c'est",
+        "j'ai"
+      ]
+    },
+    {
+      "id": "blank-il-y-a-un-miroir-au-dessus-de-l-armoire",
+      "type": "fill-blank",
+      "l1": "Nad skriňou je zrkadlo.",
+      "l2": "Il y a un miroir au-dessus de l'armoire.",
+      "missing_l1": "je",
+      "missing_l2": "de",
+      "blank_index_l1": 2,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "tu",
+        "ale",
+        "hľadám"
+      ],
+      "choices_l2": [
+        "nous",
+        "frère",
+        "campagne"
+      ]
+    },
+    {
+      "id": "blank-o-sont-les-chaussons-dans-le-couloir",
+      "type": "fill-blank",
+      "l1": "Kde sú papuče? Na chodbe?",
+      "l2": "Où sont les chaussons ? Dans le couloir ?",
+      "missing_l1": "Na",
+      "missing_l2": "le",
+      "blank_index_l1": 3,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "a",
+        "otec",
+        "máme"
+      ],
+      "choices_l2": [
+        "cherche",
+        "est",
+        "enfants"
+      ]
+    },
+    {
+      "id": "blank-papa-range-la-cave-et-le-garage",
+      "type": "fill-blank",
+      "l1": "Otec upratuje pivnicu a garáž.",
+      "l2": "Papa range la cave et le garage.",
+      "missing_l1": "a",
+      "missing_l2": "le",
+      "blank_index_l1": 3,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "máme",
+        "je",
+        "deti"
+      ],
+      "choices_l2": [
+        "enfants",
+        "sœur",
+        "un"
+      ]
+    },
+    {
+      "id": "blank-le-couteau-et-l-assiette-sont-sur-la-table",
+      "type": "fill-blank",
+      "l1": "Nôž a tanier sú na stole.",
+      "l2": "Le couteau et l'assiette sont sur la table.",
+      "missing_l1": "na",
+      "missing_l2": "la",
+      "blank_index_l1": 4,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "tu",
+        "býva",
+        "pracuje"
+      ],
+      "choices_l2": [
+        "elle",
+        "les",
+        "de"
+      ]
+    },
+    {
+      "id": "blank-les-enfants-regardent-la-t-l-vision-dans-le-salon",
+      "type": "fill-blank",
+      "l1": "Deti pozerajú televízor v obývačke.",
+      "l2": "Les enfants regardent la télévision dans le salon.",
+      "missing_l1": "v",
+      "missing_l2": "le",
+      "blank_index_l1": 3,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "dve",
+        "volá",
+        "sa"
+      ],
+      "choices_l2": [
+        "j'ai",
+        "de",
+        "une"
+      ]
+    },
+    {
+      "id": "blank-la-serviette-est-dans-la-salle-de-bain-sur-l-tag-re",
+      "type": "fill-blank",
+      "l1": "Uterák je v kúpeľni, na polici.",
+      "l2": "La serviette est dans la salle de bain, sur l'étagère.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "rodičia",
+        "malé",
+        "mama"
+      ],
+      "choices_l2": [
+        "salon",
+        "ma",
+        "j'ai"
+      ]
+    },
+    {
+      "id": "blank-je-cherche-le-t-l-phone-il-n-est-pas-dans-l-armoire",
+      "type": "fill-blank",
+      "l1": "Hľadám telefón. Nie je v skrini.",
+      "l2": "Je cherche le téléphone. Il n'est pas dans l'armoire.",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "som",
+        "ale",
+        "otec"
+      ],
+      "choices_l2": [
+        "enfants",
+        "maison",
+        "a"
+      ]
+    },
+    {
+      "id": "blank-je-me-l-ve-et-je-ferme-la-fen-tre-il-fait-froid",
+      "type": "fill-blank",
+      "l1": "Vstávam a zatváram okno. Je zima.",
+      "l2": "Je me lève et je ferme la fenêtre. Il fait froid.",
+      "missing_l1": "Je",
+      "missing_l2": "la",
+      "blank_index_l1": 4,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "babka",
+        "stará",
+        "sa"
+      ],
+      "choices_l2": [
+        "sœur",
+        "a",
+        "ans"
+      ]
+    },
+    {
+      "id": "blank-maman-cuisine-et-moi-je-lave-les-verres",
+      "type": "fill-blank",
+      "l1": "Mama varí a ja umývam poháre.",
+      "l2": "Maman cuisine et moi je lave les verres.",
+      "missing_l1": "a",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "otec",
+        "sa",
+        "má"
+      ],
+      "choices_l2": [
+        "un",
+        "de",
+        "nous"
+      ]
+    },
+    {
+      "id": "blank-notre-balcon-est-petit-mais-la-cour-est-grande",
+      "type": "fill-blank",
+      "l1": "Náš balkón je malý, ale dvor je veľký.",
+      "l2": "Notre balcon est petit, mais la cour est grande.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "volá",
+        "brata",
+        "býva"
+      ],
+      "choices_l2": [
+        "il",
+        "j'ai",
+        "une"
+      ]
+    },
+    {
+      "id": "blank-il-y-a-une-horloge-au-dessus-de-la-porte",
+      "type": "fill-blank",
+      "l1": "Nad dverami sú hodiny.",
+      "l2": "Il y a une horloge au-dessus de la porte.",
+      "missing_l1": "sú",
+      "missing_l2": "la",
+      "blank_index_l1": 2,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "dve",
+        "dedine",
+        "a"
+      ],
+      "choices_l2": [
+        "maman",
+        "mes",
+        "dans"
+      ]
+    },
+    {
+      "id": "blank-je-me-repose-sur-le-lit-et-j-coute",
+      "type": "fill-blank",
+      "l1": "Oddychujem na posteli a počúvam.",
+      "l2": "Je me repose sur le lit et j'écoute.",
+      "missing_l1": "na",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "moji",
+        "sú",
+        "mama"
+      ],
+      "choices_l2": [
+        "où",
+        "la",
+        "un"
+      ]
+    },
+    {
+      "id": "blank-j-cris-et-je-ne-regarde-pas-la-t-l-vision",
+      "type": "fill-blank",
+      "l1": "Píšem a nepozerám televízor.",
+      "l2": "J'écris et je ne regarde pas la télévision.",
+      "missing_l1": "a",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "pracuje",
+        "teta",
+        "bývam"
+      ],
+      "choices_l2": [
+        "à",
+        "salon",
+        "mes"
+      ]
+    },
+    {
+      "id": "blank-le-r-frig-rateur-est-dans-la-cuisine-pr-s-de-la-fen-tre",
+      "type": "fill-blank",
+      "l1": "Chladnička je v kuchyni, blízko okna.",
+      "l2": "Le réfrigérateur est dans la cuisine, près de la fenêtre.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "mám",
+        "mama",
+        "brata"
+      ],
+      "choices_l2": [
+        "habite",
+        "dans",
+        "cherche"
+      ]
+    },
+    {
+      "id": "listen-l-argent-est-dans-le-sac",
+      "type": "listen",
+      "l1": "Peniaze sú v taške.",
+      "l2": "L'argent est dans le sac.",
+      "choices_l2": [
+        "Le couteau est dans la cuisine.",
+        "Mon cousin est jeune. Il a dix-huit ans.",
+        "Les chaussons sont dans le couloir."
+      ]
+    },
+    {
+      "id": "listen-je-suis-assis-sur-le-canap-et-je-lis-un-livre",
+      "type": "listen",
+      "l1": "Sedím na gauči a čítam knihu.",
+      "l2": "Je suis assis sur le canapé et je lis un livre.",
+      "choices_l2": [
+        "Qui habite dans la maison ?",
+        "Je lave l'assiette.",
+        "C'est ma grand-mère. Elle habite ici, à la campagne."
+      ]
+    },
+    {
+      "id": "listen-il-y-a-un-miroir-au-dessus-de-l-armoire",
+      "type": "listen",
+      "l1": "Nad skriňou je zrkadlo.",
+      "l2": "Il y a un miroir au-dessus de l'armoire.",
+      "choices_l2": [
+        "Oui. Lavez les verres, s'il vous plaît.",
+        "Mon père est professeur.",
+        "Notre maison est grande, mais les pièces sont petites."
+      ]
+    },
+    {
+      "id": "listen-o-sont-les-chaussons-dans-le-couloir",
+      "type": "listen",
+      "l1": "Kde sú papuče? Na chodbe?",
+      "l2": "Où sont les chaussons ? Dans le couloir ?",
+      "choices_l2": [
+        "J'ai un petit enfant.",
+        "Que fais-tu ?",
+        "Mon grand-père et ma grand-mère."
+      ]
+    },
+    {
+      "id": "listen-papa-range-la-cave-et-le-garage",
+      "type": "listen",
+      "l1": "Otec upratuje pivnicu a garáž.",
+      "l2": "Papa range la cave et le garage.",
+      "choices_l2": [
+        "Papa est assis sur le canapé et regarde la télévision.",
+        "Ma maison de campagne est petite, mais belle.",
+        "Je n'ai pas de frère, mais j'ai deux sœurs."
+      ]
+    },
+    {
+      "id": "listen-le-couteau-et-l-assiette-sont-sur-la-table",
+      "type": "listen",
+      "l1": "Nôž a tanier sú na stole.",
+      "l2": "Le couteau et l'assiette sont sur la table.",
+      "choices_l2": [
+        "Ma grand-mère habite à la campagne et ma tante habite en ville.",
+        "Je lave les verres et les assiettes.",
+        "Je cherche mes lunettes."
+      ]
+    },
+    {
+      "id": "listen-je-ne-dors-pas-j-coute",
+      "type": "listen",
+      "l1": "Nespím. Počúvam.",
+      "l2": "Je ne dors pas. J'écoute.",
+      "choices_l2": [
+        "C'est mon ami.",
+        "Moi aussi, je suis professeur.",
+        "Il est petit. Nous avons trois pièces."
+      ]
+    },
+    {
+      "id": "listen-les-enfants-regardent-la-t-l-vision-dans-le-salon",
+      "type": "listen",
+      "l1": "Deti pozerajú televízor v obývačke.",
+      "l2": "Les enfants regardent la télévision dans le salon.",
+      "choices_l2": [
+        "Ma grand-mère habite à la campagne et ma tante habite en ville.",
+        "Mon père est professeur aussi !",
+        "Ma grand-mère habite à la campagne."
+      ]
+    },
+    {
+      "id": "listen-la-serviette-est-dans-la-salle-de-bain-sur-l-tag-re",
+      "type": "listen",
+      "l1": "Uterák je v kúpeľni, na polici.",
+      "l2": "La serviette est dans la salle de bain, sur l'étagère.",
+      "choices_l2": [
+        "Mon oncle a une grande maison et un jardin.",
+        "Ce sont mes parents.",
+        "Bonjour, Eric. Entrez, je vous en prie."
+      ]
+    },
+    {
+      "id": "listen-je-cherche-le-t-l-phone-il-n-est-pas-dans-l-armoire",
+      "type": "listen",
+      "l1": "Hľadám telefón. Nie je v skrini.",
+      "l2": "Je cherche le téléphone. Il n'est pas dans l'armoire.",
+      "choices_l2": [
+        "Papa est assis sur le canapé et regarde la télévision.",
+        "Mon grand-père est retraité et il est ici.",
+        "Je lave l'assiette."
+      ]
+    },
+    {
+      "id": "listen-je-me-l-ve-et-je-ferme-la-fen-tre-il-fait-froid",
+      "type": "listen",
+      "l1": "Vstávam a zatváram okno. Je zima.",
+      "l2": "Je me lève et je ferme la fenêtre. Il fait froid.",
+      "choices_l2": [
+        "Je cuisine. Nous déjeunons à midi.",
+        "Oui, s'il vous plaît. Et fermez la porte.",
+        "Mon frère habite tout près."
+      ]
+    },
+    {
+      "id": "listen-maman-cuisine-et-moi-je-lave-les-verres",
+      "type": "listen",
+      "l1": "Mama varí a ja umývam poháre.",
+      "l2": "Maman cuisine et moi je lave les verres.",
+      "choices_l2": [
+        "Mon ami est médecin. Il travaille à l'hôpital.",
+        "Ma tante s'appelle Ève.",
+        "Où est la lampe ?"
+      ]
+    },
+    {
+      "id": "listen-notre-balcon-est-petit-mais-la-cour-est-grande",
+      "type": "listen",
+      "l1": "Náš balkón je malý, ale dvor je veľký.",
+      "l2": "Notre balcon est petit, mais la cour est grande.",
+      "choices_l2": [
+        "Salut Chloé. Quel âge a ta sœur ?",
+        "Je suis assis sur la chaise.",
+        "Mon ami est médecin. Il travaille à l'hôpital."
+      ]
+    },
+    {
+      "id": "listen-il-y-a-une-horloge-au-dessus-de-la-porte",
+      "type": "listen",
+      "l1": "Nad dverami sú hodiny.",
+      "l2": "Il y a une horloge au-dessus de la porte.",
+      "choices_l2": [
+        "Je travaille à l'école.",
+        "La serviette et le savon sont dans la salle de bain.",
+        "Je cherche la clé. Elle n'est pas dans le sac."
+      ]
+    },
+    {
+      "id": "listen-je-me-repose-sur-le-lit-et-j-coute",
+      "type": "listen",
+      "l1": "Oddychujem na posteli a počúvam.",
+      "l2": "Je me repose sur le lit et j'écoute.",
+      "choices_l2": [
+        "Je ne cuisine pas. Je n'ai pas le temps.",
+        "Mon ami est médecin. Il travaille à l'hôpital.",
+        "Mon père et ma maman habitent ensemble à la campagne."
+      ]
+    },
+    {
+      "id": "listen-j-cris-et-je-ne-regarde-pas-la-t-l-vision",
+      "type": "listen",
+      "l1": "Píšem a nepozerám televízor.",
+      "l2": "J'écris et je ne regarde pas la télévision.",
+      "choices_l2": [
+        "L'horloge est au mur.",
+        "J'ai deux enfants. Ils sont petits.",
+        "Je suis professeur. Je travaille dans une école."
+      ]
+    },
+    {
+      "id": "listen-le-r-frig-rateur-est-dans-la-cuisine-pr-s-de-la-fen-tre",
+      "type": "listen",
+      "l1": "Chladnička je v kuchyni, blízko okna.",
+      "l2": "Le réfrigérateur est dans la cuisine, près de la fenêtre.",
+      "choices_l2": [
+        "Ma grand-mère habite à la campagne et ma tante habite en ville.",
+        "C'est mon ami.",
+        "Je me lève et j'ouvre la fenêtre."
+      ]
+    },
+    {
+      "id": "order-l-argent-est-dans-le-sac",
+      "type": "order",
+      "l1": "Peniaze sú v taške.",
+      "l2": "L'argent est dans le sac.",
+      "tokens_l1": [
+        "Peniaze",
+        "sú",
+        "v",
+        "taške.",
+        "Kde",
+        "sú",
+        "papuče?",
+        "Na",
+        "chodbe?"
+      ],
+      "tokens_l2": [
+        "L'argent",
+        "est",
+        "dans",
+        "le",
+        "sac.",
+        "Où",
+        "sont",
+        "les",
+        "chaussons",
+        "?",
+        "Dans",
+        "le",
+        "couloir",
+        "?"
+      ]
+    },
+    {
+      "id": "order-je-suis-assis-sur-le-canap-et-je-lis-un-livre",
+      "type": "order",
+      "l1": "Sedím na gauči a čítam knihu.",
+      "l2": "Je suis assis sur le canapé et je lis un livre.",
+      "tokens_l1": [
+        "Sedím",
+        "na",
+        "gauči",
+        "a",
+        "čítam",
+        "knihu.",
+        "Otec",
+        "upratuje",
+        "pivnicu",
+        "a",
+        "garáž."
+      ],
+      "tokens_l2": [
+        "Je",
+        "suis",
+        "assis",
+        "sur",
+        "le",
+        "canapé",
+        "et",
+        "je",
+        "lis",
+        "un",
+        "livre.",
+        "Papa",
+        "range",
+        "la",
+        "cave",
+        "et",
+        "le",
+        "garage."
+      ]
+    },
+    {
+      "id": "order-il-y-a-un-miroir-au-dessus-de-l-armoire",
+      "type": "order",
+      "l1": "Nad skriňou je zrkadlo.",
+      "l2": "Il y a un miroir au-dessus de l'armoire.",
+      "tokens_l1": [
+        "Nad",
+        "skriňou",
+        "je",
+        "zrkadlo.",
+        "Oddychujem",
+        "na",
+        "posteli",
+        "a",
+        "počúvam."
+      ],
+      "tokens_l2": [
+        "Il",
+        "y",
+        "a",
+        "un",
+        "miroir",
+        "au-dessus",
+        "de",
+        "l'armoire.",
+        "Je",
+        "me",
+        "repose",
+        "sur",
+        "le",
+        "lit",
+        "et",
+        "j'écoute."
+      ]
+    },
+    {
+      "id": "order-o-sont-les-chaussons-dans-le-couloir",
+      "type": "order",
+      "l1": "Kde sú papuče? Na chodbe?",
+      "l2": "Où sont les chaussons ? Dans le couloir ?",
+      "tokens_l1": [
+        "Kde",
+        "sú",
+        "papuče?",
+        "Na",
+        "chodbe?",
+        "Mama",
+        "varí",
+        "a",
+        "ja",
+        "umývam",
+        "poháre."
+      ],
+      "tokens_l2": [
+        "Où",
+        "sont",
+        "les",
+        "chaussons",
+        "?",
+        "Dans",
+        "le",
+        "couloir",
+        "?",
+        "Maman",
+        "cuisine",
+        "et",
+        "moi",
+        "je",
+        "lave",
+        "les",
+        "verres."
+      ]
+    },
+    {
+      "id": "order-papa-range-la-cave-et-le-garage",
+      "type": "order",
+      "l1": "Otec upratuje pivnicu a garáž.",
+      "l2": "Papa range la cave et le garage.",
+      "tokens_l1": [
+        "Otec",
+        "upratuje",
+        "pivnicu",
+        "a",
+        "garáž.",
+        "Oddychujem",
+        "na",
+        "posteli",
+        "a",
+        "počúvam."
+      ],
+      "tokens_l2": [
+        "Papa",
+        "range",
+        "la",
+        "cave",
+        "et",
+        "le",
+        "garage.",
+        "Je",
+        "me",
+        "repose",
+        "sur",
+        "le",
+        "lit",
+        "et",
+        "j'écoute."
+      ]
+    },
+    {
+      "id": "order-le-couteau-et-l-assiette-sont-sur-la-table",
+      "type": "order",
+      "l1": "Nôž a tanier sú na stole.",
+      "l2": "Le couteau et l'assiette sont sur la table.",
+      "tokens_l1": [
+        "Nôž",
+        "a",
+        "tanier",
+        "sú",
+        "na",
+        "stole.",
+        "Píšem",
+        "a",
+        "nepozerám",
+        "televízor."
+      ],
+      "tokens_l2": [
+        "Le",
+        "couteau",
+        "et",
+        "l'assiette",
+        "sont",
+        "sur",
+        "la",
+        "table.",
+        "J'écris",
+        "et",
+        "je",
+        "ne",
+        "regarde",
+        "pas",
+        "la",
+        "télévision."
+      ]
+    },
+    {
+      "id": "order-les-enfants-regardent-la-t-l-vision-dans-le-salon",
+      "type": "order",
+      "l1": "Deti pozerajú televízor v obývačke.",
+      "l2": "Les enfants regardent la télévision dans le salon.",
+      "tokens_l1": [
+        "Deti",
+        "pozerajú",
+        "televízor",
+        "v",
+        "obývačke.",
+        "Chladnička",
+        "je",
+        "v",
+        "kuchyni,",
+        "blízko",
+        "okna."
+      ],
+      "tokens_l2": [
+        "Les",
+        "enfants",
+        "regardent",
+        "la",
+        "télévision",
+        "dans",
+        "le",
+        "salon.",
+        "Le",
+        "réfrigérateur",
+        "est",
+        "dans",
+        "la",
+        "cuisine,",
+        "près",
+        "de",
+        "la",
+        "fenêtre."
+      ]
+    },
+    {
+      "id": "order-la-serviette-est-dans-la-salle-de-bain-sur-l-tag-re",
+      "type": "order",
+      "l1": "Uterák je v kúpeľni, na polici.",
+      "l2": "La serviette est dans la salle de bain, sur l'étagère.",
+      "tokens_l1": [
+        "Uterák",
+        "je",
+        "v",
+        "kúpeľni,",
+        "na",
+        "polici.",
+        "Píšem",
+        "a",
+        "nepozerám",
+        "televízor."
+      ],
+      "tokens_l2": [
+        "La",
+        "serviette",
+        "est",
+        "dans",
+        "la",
+        "salle",
+        "de",
+        "bain,",
+        "sur",
+        "l'étagère.",
+        "J'écris",
+        "et",
+        "je",
+        "ne",
+        "regarde",
+        "pas",
+        "la",
+        "télévision."
+      ]
+    },
+    {
+      "id": "order-je-cherche-le-t-l-phone-il-n-est-pas-dans-l-armoire",
+      "type": "order",
+      "l1": "Hľadám telefón. Nie je v skrini.",
+      "l2": "Je cherche le téléphone. Il n'est pas dans l'armoire.",
+      "tokens_l1": [
+        "Hľadám",
+        "telefón.",
+        "Nie",
+        "je",
+        "v",
+        "skrini.",
+        "Vstávam",
+        "a",
+        "zatváram",
+        "okno.",
+        "Je",
+        "zima."
+      ],
+      "tokens_l2": [
+        "Je",
+        "cherche",
+        "le",
+        "téléphone.",
+        "Il",
+        "n'est",
+        "pas",
+        "dans",
+        "l'armoire.",
+        "Je",
+        "me",
+        "lève",
+        "et",
+        "je",
+        "ferme",
+        "la",
+        "fenêtre.",
+        "Il",
+        "fait",
+        "froid."
+      ]
+    },
+    {
+      "id": "order-je-me-l-ve-et-je-ferme-la-fen-tre-il-fait-froid",
+      "type": "order",
+      "l1": "Vstávam a zatváram okno. Je zima.",
+      "l2": "Je me lève et je ferme la fenêtre. Il fait froid.",
+      "tokens_l1": [
+        "Vstávam",
+        "a",
+        "zatváram",
+        "okno.",
+        "Je",
+        "zima.",
+        "Uterák",
+        "je",
+        "v",
+        "kúpeľni,",
+        "na",
+        "polici."
+      ],
+      "tokens_l2": [
+        "Je",
+        "me",
+        "lève",
+        "et",
+        "je",
+        "ferme",
+        "la",
+        "fenêtre.",
+        "Il",
+        "fait",
+        "froid.",
+        "La",
+        "serviette",
+        "est",
+        "dans",
+        "la",
+        "salle",
+        "de",
+        "bain,",
+        "sur",
+        "l'étagère."
+      ]
+    },
+    {
+      "id": "order-maman-cuisine-et-moi-je-lave-les-verres",
+      "type": "order",
+      "l1": "Mama varí a ja umývam poháre.",
+      "l2": "Maman cuisine et moi je lave les verres.",
+      "tokens_l1": [
+        "Mama",
+        "varí",
+        "a",
+        "ja",
+        "umývam",
+        "poháre.",
+        "Oddychujem",
+        "na",
+        "posteli",
+        "a",
+        "počúvam."
+      ],
+      "tokens_l2": [
+        "Maman",
+        "cuisine",
+        "et",
+        "moi",
+        "je",
+        "lave",
+        "les",
+        "verres.",
+        "Je",
+        "me",
+        "repose",
+        "sur",
+        "le",
+        "lit",
+        "et",
+        "j'écoute."
+      ]
+    },
+    {
+      "id": "order-notre-balcon-est-petit-mais-la-cour-est-grande",
+      "type": "order",
+      "l1": "Náš balkón je malý, ale dvor je veľký.",
+      "l2": "Notre balcon est petit, mais la cour est grande.",
+      "tokens_l1": [
+        "Náš",
+        "balkón",
+        "je",
+        "malý,",
+        "ale",
+        "dvor",
+        "je",
+        "veľký.",
+        "Peniaze",
+        "sú",
+        "v",
+        "taške."
+      ],
+      "tokens_l2": [
+        "Notre",
+        "balcon",
+        "est",
+        "petit,",
+        "mais",
+        "la",
+        "cour",
+        "est",
+        "grande.",
+        "L'argent",
+        "est",
+        "dans",
+        "le",
+        "sac."
+      ]
+    },
+    {
+      "id": "order-il-y-a-une-horloge-au-dessus-de-la-porte",
+      "type": "order",
+      "l1": "Nad dverami sú hodiny.",
+      "l2": "Il y a une horloge au-dessus de la porte.",
+      "tokens_l1": [
+        "Nad",
+        "dverami",
+        "sú",
+        "hodiny.",
+        "Mama",
+        "varí",
+        "a",
+        "ja",
+        "umývam",
+        "poháre."
+      ],
+      "tokens_l2": [
+        "Il",
+        "y",
+        "a",
+        "une",
+        "horloge",
+        "au-dessus",
+        "de",
+        "la",
+        "porte.",
+        "Maman",
+        "cuisine",
+        "et",
+        "moi",
+        "je",
+        "lave",
+        "les",
+        "verres."
+      ]
+    },
+    {
+      "id": "order-je-me-repose-sur-le-lit-et-j-coute",
+      "type": "order",
+      "l1": "Oddychujem na posteli a počúvam.",
+      "l2": "Je me repose sur le lit et j'écoute.",
+      "tokens_l1": [
+        "Oddychujem",
+        "na",
+        "posteli",
+        "a",
+        "počúvam.",
+        "Vstávam",
+        "a",
+        "zatváram",
+        "okno.",
+        "Je",
+        "zima."
+      ],
+      "tokens_l2": [
+        "Je",
+        "me",
+        "repose",
+        "sur",
+        "le",
+        "lit",
+        "et",
+        "j'écoute.",
+        "Je",
+        "me",
+        "lève",
+        "et",
+        "je",
+        "ferme",
+        "la",
+        "fenêtre.",
+        "Il",
+        "fait",
+        "froid."
+      ]
+    },
+    {
+      "id": "order-j-cris-et-je-ne-regarde-pas-la-t-l-vision",
+      "type": "order",
+      "l1": "Píšem a nepozerám televízor.",
+      "l2": "J'écris et je ne regarde pas la télévision.",
+      "tokens_l1": [
+        "Píšem",
+        "a",
+        "nepozerám",
+        "televízor.",
+        "Uterák",
+        "je",
+        "v",
+        "kúpeľni,",
+        "na",
+        "polici."
+      ],
+      "tokens_l2": [
+        "J'écris",
+        "et",
+        "je",
+        "ne",
+        "regarde",
+        "pas",
+        "la",
+        "télévision.",
+        "La",
+        "serviette",
+        "est",
+        "dans",
+        "la",
+        "salle",
+        "de",
+        "bain,",
+        "sur",
+        "l'étagère."
+      ]
+    },
+    {
+      "id": "order-le-r-frig-rateur-est-dans-la-cuisine-pr-s-de-la-fen-tre",
+      "type": "order",
+      "l1": "Chladnička je v kuchyni, blízko okna.",
+      "l2": "Le réfrigérateur est dans la cuisine, près de la fenêtre.",
+      "tokens_l1": [
+        "Chladnička",
+        "je",
+        "v",
+        "kuchyni,",
+        "blízko",
+        "okna.",
+        "Oddychujem",
+        "na",
+        "posteli",
+        "a",
+        "počúvam."
+      ],
+      "tokens_l2": [
+        "Le",
+        "réfrigérateur",
+        "est",
+        "dans",
+        "la",
+        "cuisine,",
+        "près",
+        "de",
+        "la",
+        "fenêtre.",
+        "Je",
+        "me",
+        "repose",
+        "sur",
+        "le",
+        "lit",
+        "et",
+        "j'écoute."
+      ]
+    }
+  ]
+}

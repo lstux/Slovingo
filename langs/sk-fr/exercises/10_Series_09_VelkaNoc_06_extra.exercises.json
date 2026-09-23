@@ -1,0 +1,2149 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-ve-k-noc",
+      "type": "qcm",
+      "l1": "Pâques",
+      "l2": "Veľká noc",
+      "choices_l1": [
+        "l'agneau (pascal)",
+        "teindre",
+        "fouetter (symboliquement)"
+      ],
+      "choices_l2": [
+        "upiecť",
+        "sviatočný",
+        "štipľavý"
+      ]
+    },
+    {
+      "id": "qcm-vaj-ko",
+      "type": "qcm",
+      "l1": "l'œuf",
+      "l2": "vajíčko",
+      "choices_l1": [
+        "teindre",
+        "l'agneau (pascal)",
+        "fouetter (symboliquement)"
+      ],
+      "choices_l2": [
+        "Veľkonočná nedeľa",
+        "Zelený štvrtok",
+        "korbáč"
+      ]
+    },
+    {
+      "id": "qcm-farbi",
+      "type": "qcm",
+      "l1": "teindre",
+      "l2": "farbiť",
+      "choices_l1": [
+        "fouetter (symboliquement)",
+        "le jeûne",
+        "l'agneau (pascal)"
+      ],
+      "choices_l2": [
+        "pripraviť",
+        "farbila som",
+        "zdobiť"
+      ]
+    },
+    {
+      "id": "qcm-zdobi",
+      "type": "qcm",
+      "l1": "décorer",
+      "l2": "zdobiť",
+      "choices_l1": [
+        "teindre",
+        "le jeûne",
+        "fouetter (symboliquement)"
+      ],
+      "choices_l2": [
+        "poliať",
+        "požehnať",
+        "farbiť"
+      ]
+    },
+    {
+      "id": "qcm-ko-k",
+      "type": "qcm",
+      "l1": "le panier",
+      "l2": "košík",
+      "choices_l1": [
+        "l'agneau (pascal)",
+        "fouetter (symboliquement)",
+        "teindre"
+      ],
+      "choices_l2": [
+        "Zelený štvrtok",
+        "vosk",
+        "Kvetná nedeľa"
+      ]
+    },
+    {
+      "id": "qcm-pripravi",
+      "type": "qcm",
+      "l1": "préparer",
+      "l2": "pripraviť",
+      "choices_l1": [
+        "l'agneau (pascal)",
+        "teindre",
+        "le jeûne"
+      ],
+      "choices_l2": [
+        "farbila som",
+        "farbil som",
+        "zdobiť"
+      ]
+    },
+    {
+      "id": "qcm-upiec",
+      "type": "qcm",
+      "l1": "faire cuire au four",
+      "l2": "upiecť",
+      "choices_l1": [
+        "les pelures d'oignon",
+        "nous avons préparé",
+        "j'ai teint (femme)"
+      ],
+      "choices_l2": [
+        "Veľká noc",
+        "sviatočný",
+        "štipľavý"
+      ]
+    },
+    {
+      "id": "qcm-vosk",
+      "type": "qcm",
+      "l1": "la cire",
+      "l2": "vosk",
+      "choices_l1": [
+        "le jeûne",
+        "fouetter (symboliquement)",
+        "teindre"
+      ],
+      "choices_l2": [
+        "stužka",
+        "vajíčko",
+        "Veľkonočná nedeľa"
+      ]
+    },
+    {
+      "id": "qcm-farba",
+      "type": "qcm",
+      "l1": "la teinture, la couleur",
+      "l2": "farba",
+      "choices_l1": [
+        "l'agneau (petit, pascal)",
+        "le jeûne, le carême",
+        "les pelures d'oignon"
+      ],
+      "choices_l2": [
+        "stužka",
+        "vosk",
+        "Kvetná nedeľa"
+      ]
+    },
+    {
+      "id": "qcm-tetec",
+      "type": "qcm",
+      "l1": "le pinceau",
+      "l2": "štetec",
+      "choices_l1": [
+        "fouetter (symboliquement)",
+        "l'agneau (pascal)",
+        "teindre"
+      ],
+      "choices_l2": [
+        "Zelený štvrtok",
+        "vajíčko",
+        "stužka"
+      ]
+    },
+    {
+      "id": "qcm-cibu-ov-upky",
+      "type": "qcm",
+      "l1": "les pelures d'oignon",
+      "l2": "cibuľové šupky",
+      "choices_l1": [
+        "la teinture, la couleur",
+        "le jeudi saint",
+        "le jeûne, le carême"
+      ],
+      "choices_l2": [
+        "Veľkonočný pondelok",
+        "Zelený štvrtok",
+        "štetec"
+      ]
+    },
+    {
+      "id": "qcm-stu-ka",
+      "type": "qcm",
+      "l1": "le ruban",
+      "l2": "stužka",
+      "choices_l1": [
+        "teindre",
+        "le jeûne",
+        "l'agneau (pascal)"
+      ],
+      "choices_l2": [
+        "Kvetná nedeľa",
+        "Veľkonočný pondelok",
+        "Zelený štvrtok"
+      ]
+    },
+    {
+      "id": "qcm-korb",
+      "type": "qcm",
+      "l1": "le fouet en osier",
+      "l2": "korbáč",
+      "choices_l1": [
+        "le dimanche de Pâques",
+        "les pelures d'oignon",
+        "l'agneau (petit, pascal)"
+      ],
+      "choices_l2": [
+        "vosk",
+        "Zelený štvrtok",
+        "Veľkonočný pondelok"
+      ]
+    },
+    {
+      "id": "qcm-v-ba",
+      "type": "qcm",
+      "l1": "le saule",
+      "l2": "vŕba",
+      "choices_l1": [
+        "teindre",
+        "fouetter (symboliquement)",
+        "l'agneau (pascal)"
+      ],
+      "choices_l2": [
+        "korbáč",
+        "Biela sobota",
+        "stužka"
+      ]
+    },
+    {
+      "id": "qcm-kvetn-nede-a",
+      "type": "qcm",
+      "l1": "le dimanche des Rameaux",
+      "l2": "Kvetná nedeľa",
+      "choices_l1": [
+        "l'œuf (petit, diminutif)",
+        "le samedi saint",
+        "la tartinade au fromage"
+      ],
+      "choices_l2": [
+        "cibuľové šupky",
+        "štetec",
+        "korbáč"
+      ]
+    },
+    {
+      "id": "qcm-zelen-tvrtok",
+      "type": "qcm",
+      "l1": "le jeudi saint",
+      "l2": "Zelený štvrtok",
+      "choices_l1": [
+        "le jeûne, le carême",
+        "la tartinade au fromage",
+        "la teinture, la couleur"
+      ],
+      "choices_l2": [
+        "Biela sobota",
+        "vŕba",
+        "Kvetná nedeľa"
+      ]
+    },
+    {
+      "id": "qcm-ve-k-piatok",
+      "type": "qcm",
+      "l1": "le vendredi saint",
+      "l2": "Veľký piatok",
+      "choices_l1": [
+        "le jeudi saint",
+        "les pelures d'oignon",
+        "le dimanche des Rameaux"
+      ],
+      "choices_l2": [
+        "korbáč",
+        "vosk",
+        "cibuľové šupky"
+      ]
+    },
+    {
+      "id": "qcm-biela-sobota",
+      "type": "qcm",
+      "l1": "le samedi saint",
+      "l2": "Biela sobota",
+      "choices_l1": [
+        "le fouet en osier",
+        "l'agneau (petit, pascal)",
+        "le vendredi saint"
+      ],
+      "choices_l2": [
+        "Kvetná nedeľa",
+        "korbáč",
+        "štetec"
+      ]
+    },
+    {
+      "id": "qcm-ve-kono-n-nede-a",
+      "type": "qcm",
+      "l1": "le dimanche de Pâques",
+      "l2": "Veľkonočná nedeľa",
+      "choices_l1": [
+        "l'agneau (petit, pascal)",
+        "le jeudi saint",
+        "le vendredi saint"
+      ],
+      "choices_l2": [
+        "vajíčko",
+        "vŕba",
+        "Veľký piatok"
+      ]
+    },
+    {
+      "id": "qcm-ve-kono-n-pondelok",
+      "type": "qcm",
+      "l1": "le lundi de Pâques",
+      "l2": "Veľkonočný pondelok",
+      "choices_l1": [
+        "la teinture, la couleur",
+        "le jeudi saint",
+        "le jeûne, le carême"
+      ],
+      "choices_l2": [
+        "vosk",
+        "Veľký piatok",
+        "stužka"
+      ]
+    },
+    {
+      "id": "qcm-upratova",
+      "type": "qcm",
+      "l1": "ranger, nettoyer",
+      "l2": "upratovať",
+      "choices_l1": [
+        "le jeûne",
+        "l'agneau (pascal)",
+        "teindre"
+      ],
+      "choices_l2": [
+        "farbila som",
+        "oslavovať",
+        "požehnať"
+      ]
+    },
+    {
+      "id": "qcm-p-st",
+      "type": "qcm",
+      "l1": "le jeûne",
+      "l2": "pôst",
+      "choices_l1": [
+        "l'agneau (pascal)",
+        "teindre",
+        "fouetter (symboliquement)"
+      ],
+      "choices_l2": [
+        "Kvetná nedeľa",
+        "Veľký piatok",
+        "vosk"
+      ]
+    },
+    {
+      "id": "qcm-zvon",
+      "type": "qcm",
+      "l1": "la cloche",
+      "l2": "zvon",
+      "choices_l1": [
+        "le jeûne",
+        "l'agneau (pascal)",
+        "fouetter (symboliquement)"
+      ],
+      "choices_l2": [
+        "vosk",
+        "vajíčko",
+        "Veľkonočná nedeľa"
+      ]
+    },
+    {
+      "id": "qcm-om-a",
+      "type": "qcm",
+      "l1": "la messe",
+      "l2": "omša",
+      "choices_l1": [
+        "le jeûne",
+        "teindre",
+        "fouetter (symboliquement)"
+      ],
+      "choices_l2": [
+        "korbáč",
+        "Kvetná nedeľa",
+        "Zelený štvrtok"
+      ]
+    },
+    {
+      "id": "qcm-k-az",
+      "type": "qcm",
+      "l1": "le prêtre",
+      "l2": "kňaz",
+      "choices_l1": [
+        "le jeûne",
+        "fouetter (symboliquement)",
+        "l'agneau (pascal)"
+      ],
+      "choices_l2": [
+        "cibuľové šupky",
+        "stužka",
+        "vosk"
+      ]
+    },
+    {
+      "id": "qcm-trad-cia",
+      "type": "qcm",
+      "l1": "la tradition",
+      "l2": "tradícia",
+      "choices_l1": [
+        "teindre",
+        "le jeûne",
+        "l'agneau (pascal)"
+      ],
+      "choices_l2": [
+        "Veľký piatok",
+        "Biela sobota",
+        "vŕba"
+      ]
+    },
+    {
+      "id": "qcm-oslavova",
+      "type": "qcm",
+      "l1": "célébrer",
+      "l2": "oslavovať",
+      "choices_l1": [
+        "fouetter (symboliquement)",
+        "le jeûne",
+        "teindre"
+      ],
+      "choices_l2": [
+        "farbil som",
+        "šibať",
+        "pripraviť"
+      ]
+    },
+    {
+      "id": "qcm-sviato-n",
+      "type": "qcm",
+      "l1": "festif",
+      "l2": "sviatočný",
+      "choices_l1": [
+        "teindre",
+        "l'agneau (pascal)",
+        "fouetter (symboliquement)"
+      ],
+      "choices_l2": [
+        "Veľká noc",
+        "upiecť",
+        "štipľavý"
+      ]
+    },
+    {
+      "id": "qcm-iba",
+      "type": "qcm",
+      "l1": "fouetter (symboliquement)",
+      "l2": "šibať",
+      "choices_l1": [
+        "teindre",
+        "le jeûne",
+        "l'agneau (pascal)"
+      ],
+      "choices_l2": [
+        "poliať",
+        "oslavovať",
+        "farbila som"
+      ]
+    },
+    {
+      "id": "qcm-polia",
+      "type": "qcm",
+      "l1": "arroser",
+      "l2": "poliať",
+      "choices_l1": [
+        "fouetter (symboliquement)",
+        "teindre",
+        "l'agneau (pascal)"
+      ],
+      "choices_l2": [
+        "šibať",
+        "pripraviť",
+        "farbiť"
+      ]
+    },
+    {
+      "id": "qcm-voda",
+      "type": "qcm",
+      "l1": "l'eau",
+      "l2": "voda",
+      "choices_l1": [
+        "fouetter (symboliquement)",
+        "l'agneau (pascal)",
+        "le jeûne"
+      ],
+      "choices_l2": [
+        "Veľkonočná nedeľa",
+        "cibuľové šupky",
+        "štetec"
+      ]
+    },
+    {
+      "id": "qcm-chlapec",
+      "type": "qcm",
+      "l1": "le garçon",
+      "l2": "chlapec",
+      "choices_l1": [
+        "l'agneau (pascal)",
+        "fouetter (symboliquement)",
+        "le jeûne"
+      ],
+      "choices_l2": [
+        "Biela sobota",
+        "stužka",
+        "vosk"
+      ]
+    },
+    {
+      "id": "qcm-diev-a",
+      "type": "qcm",
+      "l1": "la fille",
+      "l2": "dievča",
+      "choices_l1": [
+        "le jeûne",
+        "l'agneau (pascal)",
+        "teindre"
+      ],
+      "choices_l2": [
+        "vajíčko",
+        "stužka",
+        "štetec"
+      ]
+    },
+    {
+      "id": "qcm-odmena",
+      "type": "qcm",
+      "l1": "la récompense",
+      "l2": "odmena",
+      "choices_l1": [
+        "fouetter (symboliquement)",
+        "le jeûne",
+        "l'agneau (pascal)"
+      ],
+      "choices_l2": [
+        "Biela sobota",
+        "stužka",
+        "Veľký piatok"
+      ]
+    },
+    {
+      "id": "qcm-nav-t-vi",
+      "type": "qcm",
+      "l1": "rendre visite",
+      "l2": "navštíviť",
+      "choices_l1": [
+        "fouetter (symboliquement)",
+        "l'agneau (pascal)",
+        "le jeûne"
+      ],
+      "choices_l2": [
+        "štipľavý",
+        "upiecť",
+        "sviatočný"
+      ]
+    },
+    {
+      "id": "qcm-zvyk",
+      "type": "qcm",
+      "l1": "la coutume",
+      "l2": "zvyk",
+      "choices_l1": [
+        "teindre",
+        "le jeûne",
+        "fouetter (symboliquement)"
+      ],
+      "choices_l2": [
+        "korbáč",
+        "stužka",
+        "vŕba"
+      ]
+    },
+    {
+      "id": "qcm-parfum",
+      "type": "qcm",
+      "l1": "le parfum",
+      "l2": "parfum",
+      "choices_l1": [
+        "le jeûne",
+        "fouetter (symboliquement)",
+        "teindre"
+      ],
+      "choices_l2": [
+        "korbáč",
+        "Zelený štvrtok",
+        "Veľký piatok"
+      ]
+    },
+    {
+      "id": "qcm-sused",
+      "type": "qcm",
+      "l1": "le voisin",
+      "l2": "sused",
+      "choices_l1": [
+        "fouetter (symboliquement)",
+        "teindre",
+        "le jeûne"
+      ],
+      "choices_l2": [
+        "štetec",
+        "Biela sobota",
+        "korbáč"
+      ]
+    },
+    {
+      "id": "qcm-susedka",
+      "type": "qcm",
+      "l1": "la voisine",
+      "l2": "susedka",
+      "choices_l1": [
+        "l'agneau (pascal)",
+        "fouetter (symboliquement)",
+        "teindre"
+      ],
+      "choices_l2": [
+        "štetec",
+        "Kvetná nedeľa",
+        "vosk"
+      ]
+    },
+    {
+      "id": "qcm-smiech",
+      "type": "qcm",
+      "l1": "le rire",
+      "l2": "smiech",
+      "choices_l1": [
+        "le jeûne",
+        "fouetter (symboliquement)",
+        "l'agneau (pascal)"
+      ],
+      "choices_l2": [
+        "Kvetná nedeľa",
+        "korbáč",
+        "Biela sobota"
+      ]
+    },
+    {
+      "id": "qcm-vtip",
+      "type": "qcm",
+      "l1": "la blague",
+      "l2": "vtip",
+      "choices_l1": [
+        "le jeûne",
+        "fouetter (symboliquement)",
+        "teindre"
+      ],
+      "choices_l2": [
+        "Veľký piatok",
+        "vosk",
+        "cibuľové šupky"
+      ]
+    },
+    {
+      "id": "qcm-piese",
+      "type": "qcm",
+      "l1": "la chanson",
+      "l2": "pieseň",
+      "choices_l1": [
+        "l'agneau (pascal)",
+        "le jeûne",
+        "fouetter (symboliquement)"
+      ],
+      "choices_l2": [
+        "korbáč",
+        "Veľký piatok",
+        "cibuľové šupky"
+      ]
+    },
+    {
+      "id": "qcm-bar-nok",
+      "type": "qcm",
+      "l1": "l'agneau (pascal)",
+      "l2": "baránok",
+      "choices_l1": [
+        "le jeûne",
+        "teindre",
+        "fouetter (symboliquement)"
+      ],
+      "choices_l2": [
+        "korbáč",
+        "vajíčko",
+        "vŕba"
+      ]
+    },
+    {
+      "id": "qcm-unka",
+      "type": "qcm",
+      "l1": "le jambon",
+      "l2": "šunka",
+      "choices_l1": [
+        "le jeûne",
+        "fouetter (symboliquement)",
+        "l'agneau (pascal)"
+      ],
+      "choices_l2": [
+        "stužka",
+        "vajíčko",
+        "Veľký piatok"
+      ]
+    },
+    {
+      "id": "qcm-chren",
+      "type": "qcm",
+      "l1": "le raifort",
+      "l2": "chren",
+      "choices_l1": [
+        "l'agneau (pascal)",
+        "teindre",
+        "le jeûne"
+      ],
+      "choices_l2": [
+        "Biela sobota",
+        "vosk",
+        "Kvetná nedeľa"
+      ]
+    },
+    {
+      "id": "qcm-syrov-n-tierka",
+      "type": "qcm",
+      "l1": "la tartinade au fromage",
+      "l2": "syrová nátierka",
+      "choices_l1": [
+        "l'agneau (petit, pascal)",
+        "le vendredi saint",
+        "le dimanche de Pâques"
+      ],
+      "choices_l2": [
+        "vosk",
+        "Veľkonočná nedeľa",
+        "stužka"
+      ]
+    },
+    {
+      "id": "qcm-po-ehna",
+      "type": "qcm",
+      "l1": "bénir",
+      "l2": "požehnať",
+      "choices_l1": [
+        "fouetter (symboliquement)",
+        "le jeûne",
+        "teindre"
+      ],
+      "choices_l2": [
+        "farbil som",
+        "zdobiť",
+        "šibať"
+      ]
+    },
+    {
+      "id": "qcm-jes",
+      "type": "qcm",
+      "l1": "manger",
+      "l2": "jesť",
+      "choices_l1": [
+        "fouetter (symboliquement)",
+        "teindre",
+        "le jeûne"
+      ],
+      "choices_l2": [
+        "poliať",
+        "farbiť",
+        "zdobiť"
+      ]
+    },
+    {
+      "id": "qcm-st-l",
+      "type": "qcm",
+      "l1": "la table",
+      "l2": "stôl",
+      "choices_l1": [
+        "le jeûne",
+        "teindre",
+        "l'agneau (pascal)"
+      ],
+      "choices_l2": [
+        "štetec",
+        "cibuľové šupky",
+        "Zelený štvrtok"
+      ]
+    },
+    {
+      "id": "qcm-syr",
+      "type": "qcm",
+      "l1": "le fromage",
+      "l2": "syr",
+      "choices_l1": [
+        "le jeûne",
+        "l'agneau (pascal)",
+        "fouetter (symboliquement)"
+      ],
+      "choices_l2": [
+        "Kvetná nedeľa",
+        "vosk",
+        "Veľkonočná nedeľa"
+      ]
+    },
+    {
+      "id": "qcm-chlieb",
+      "type": "qcm",
+      "l1": "le pain",
+      "l2": "chlieb",
+      "choices_l1": [
+        "le jeûne",
+        "teindre",
+        "l'agneau (pascal)"
+      ],
+      "choices_l2": [
+        "Veľkonočná nedeľa",
+        "vosk",
+        "Zelený štvrtok"
+      ]
+    },
+    {
+      "id": "qcm-v-no",
+      "type": "qcm",
+      "l1": "le vin",
+      "l2": "víno",
+      "choices_l1": [
+        "l'agneau (pascal)",
+        "le jeûne",
+        "fouetter (symboliquement)"
+      ],
+      "choices_l2": [
+        "korbáč",
+        "Zelený štvrtok",
+        "vosk"
+      ]
+    },
+    {
+      "id": "qcm-paska",
+      "type": "qcm",
+      "l1": "la brioche pascale",
+      "l2": "paska",
+      "choices_l1": [
+        "le samedi saint",
+        "le vendredi saint",
+        "le jeûne, le carême"
+      ],
+      "choices_l2": [
+        "Veľký piatok",
+        "Kvetná nedeľa",
+        "Veľkonočná nedeľa"
+      ]
+    },
+    {
+      "id": "qcm-cukor",
+      "type": "qcm",
+      "l1": "le sucre",
+      "l2": "cukor",
+      "choices_l1": [
+        "le jeûne",
+        "fouetter (symboliquement)",
+        "teindre"
+      ],
+      "choices_l2": [
+        "vajíčko",
+        "vosk",
+        "štetec"
+      ]
+    },
+    {
+      "id": "qcm-slan",
+      "type": "qcm",
+      "l1": "salé",
+      "l2": "slaný",
+      "choices_l1": [
+        "fouetter (symboliquement)",
+        "le jeûne",
+        "teindre"
+      ],
+      "choices_l2": [
+        "sviatočný",
+        "Veľká noc",
+        "upiecť"
+      ]
+    },
+    {
+      "id": "qcm-tip-av",
+      "type": "qcm",
+      "l1": "piquant",
+      "l2": "štipľavý",
+      "choices_l1": [
+        "teindre",
+        "fouetter (symboliquement)",
+        "le jeûne"
+      ],
+      "choices_l2": [
+        "Veľká noc",
+        "upiecť",
+        "sviatočný"
+      ]
+    },
+    {
+      "id": "blank-farbili-sme-vaj-ka-cibu-ov-mi-upkami-a-zdobili-sme-ich-voskom",
+      "type": "fill-blank",
+      "l1": "Nous avons teint les œufs avec des pelures d'oignon et les avons décorés à la cire.",
+      "l2": "Farbili sme vajíčka cibuľovými šupkami a zdobili sme ich voskom.",
+      "missing_l1": "la",
+      "missing_l2": "a",
+      "blank_index_l1": 14,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "peur",
+        "pâte",
+        "fois"
+      ],
+      "choices_l2": [
+        "lebo",
+        "aj",
+        "však"
+      ]
+    },
+    {
+      "id": "blank-na-zelen-tvrtok-sme-upratovali-cel-dom",
+      "type": "fill-blank",
+      "l1": "Le jeudi saint nous avons rangé toute la maison.",
+      "l2": "Na Zelený štvrtok sme upratovali celý dom.",
+      "missing_l1": "la",
+      "missing_l2": "sme",
+      "blank_index_l1": 7,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "tues",
+        "fois",
+        "peur"
+      ],
+      "choices_l2": [
+        "sú",
+        "Bude",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-k-az-po-ehnal-ko-k-so-unkou-chlebom-a-vaj-kami",
+      "type": "fill-blank",
+      "l1": "Le prêtre a béni le panier avec le jambon, le pain et les œufs.",
+      "l2": "Kňaz požehnal košík so šunkou, chlebom a vajíčkami.",
+      "missing_l1": "le",
+      "missing_l2": "a",
+      "blank_index_l1": 4,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "béni",
+        "aux",
+        "la"
+      ],
+      "choices_l2": [
+        "alebo",
+        "aj",
+        "ale"
+      ]
+    },
+    {
+      "id": "blank-na-ve-k-piatok-sme-sa-postili-a-nejedli-sme-m-so",
+      "type": "fill-blank",
+      "l1": "Le vendredi saint nous avons jeûné et n'avons pas mangé de viande.",
+      "l2": "Na Veľký piatok sme sa postili a nejedli sme mäso.",
+      "missing_l1": "de",
+      "missing_l2": "a",
+      "blank_index_l1": 10,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "loin",
+        "sur",
+        "avec"
+      ],
+      "choices_l2": [
+        "lebo",
+        "ale",
+        "alebo"
+      ]
+    },
+    {
+      "id": "blank-chlapci-pri-li-s-korb-om-a-parfumom-nie-s-vodou",
+      "type": "fill-blank",
+      "l1": "Les garçons sont venus avec le fouet et du parfum, pas avec de l'eau.",
+      "l2": "Chlapci prišli s korbáčom a parfumom, nie s vodou.",
+      "missing_l1": "le",
+      "missing_l2": "a",
+      "blank_index_l1": 5,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "cire",
+        "fête",
+        "la"
+      ],
+      "choices_l2": [
+        "lebo",
+        "alebo",
+        "aj"
+      ]
+    },
+    {
+      "id": "blank-dala-som-im-vaj-ka-a-kol-ako-odmenu-za-piese",
+      "type": "fill-blank",
+      "l1": "Je leur ai donné des œufs et du gâteau comme récompense pour la chanson.",
+      "l2": "Dala som im vajíčka a koláč ako odmenu za pieseň.",
+      "missing_l1": "la",
+      "missing_l2": "a",
+      "blank_index_l1": 12,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "leur",
+        "vrai",
+        "béni"
+      ],
+      "choices_l2": [
+        "alebo",
+        "lebo",
+        "ale"
+      ]
+    },
+    {
+      "id": "blank-tento-zvyk-sa-men-ale-trad-cia-zost-va-v-rodine",
+      "type": "fill-blank",
+      "l1": "Cette coutume change, mais la tradition reste dans la famille.",
+      "l2": "Tento zvyk sa mení, ale tradícia zostáva v rodine.",
+      "missing_l1": "la",
+      "missing_l2": "v",
+      "blank_index_l1": 4,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "ai",
+        "fois",
+        "béni"
+      ],
+      "choices_l2": [
+        "po",
+        "Vo",
+        "bez"
+      ]
+    },
+    {
+      "id": "blank-na-stole-boli-bar-nok-unka-chren-a-syrov-n-tierka",
+      "type": "fill-blank",
+      "l1": "Sur la table il y avait de l'agneau, du jambon, du raifort et de la tartinade au fromage.",
+      "l2": "Na stole boli baránok, šunka, chren a syrová nátierka.",
+      "missing_l1": "la",
+      "missing_l2": "a",
+      "blank_index_l1": 1,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "aux",
+        "œufs",
+        "fête"
+      ],
+      "choices_l2": [
+        "alebo",
+        "aj",
+        "lebo"
+      ]
+    },
+    {
+      "id": "blank-susedka-n-m-dala-parfum-namiesto-vody",
+      "type": "fill-blank",
+      "l1": "La voisine nous a donné du parfum au lieu de l'eau.",
+      "l2": "Susedka nám dala parfum namiesto vody.",
+      "missing_l1": "de",
+      "missing_l2": "dala",
+      "blank_index_l1": 9,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Sous",
+        "à",
+        "pour"
+      ],
+      "choices_l2": [
+        "ju",
+        "od",
+        "ho"
+      ]
+    },
+    {
+      "id": "blank-zvony-ml-ali-od-zelen-ho-tvrtka-do-bielej-soboty",
+      "type": "fill-blank",
+      "l1": "Les cloches se sont tues du jeudi saint au samedi saint.",
+      "l2": "Zvony mlčali od Zeleného štvrtka do Bielej soboty.",
+      "missing_l1": "du",
+      "missing_l2": "do",
+      "blank_index_l1": 5,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "ai",
+        "aux",
+        "tues"
+      ],
+      "choices_l2": [
+        "pri",
+        "v",
+        "bez"
+      ]
+    },
+    {
+      "id": "blank-bolo-ve-a-smiechu-vtipov-a-piesn-pred-domom",
+      "type": "fill-blank",
+      "l1": "Il y avait beaucoup de rires, de blagues et de chansons devant la maison.",
+      "l2": "Bolo veľa smiechu, vtipov a piesní pred domom.",
+      "missing_l1": "la",
+      "missing_l2": "a",
+      "blank_index_l1": 12,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "ai",
+        "peur",
+        "le"
+      ],
+      "choices_l2": [
+        "aj",
+        "alebo",
+        "lebo"
+      ]
+    },
+    {
+      "id": "blank-chren-bol-tip-av-ale-paska-bola-sladk",
+      "type": "fill-blank",
+      "l1": "Le raifort était piquant, mais la paska était sucrée.",
+      "l2": "Chren bol štipľavý, ale paska bola sladká.",
+      "missing_l1": "la",
+      "missing_l2": "ale",
+      "blank_index_l1": 5,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "œufs",
+        "fois",
+        "peur"
+      ],
+      "choices_l2": [
+        "a",
+        "alebo",
+        "lebo"
+      ]
+    },
+    {
+      "id": "blank-zdobili-sme-ko-k-stu-kami-a-niesli-sme-ho-do-kostola",
+      "type": "fill-blank",
+      "l1": "Nous avons décoré le panier avec des rubans et l'avons apporté à l'église.",
+      "l2": "Zdobili sme košík stužkami a niesli sme ho do kostola.",
+      "missing_l1": "le",
+      "missing_l2": "a",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "tues",
+        "ont",
+        "béni"
+      ],
+      "choices_l2": [
+        "lebo",
+        "alebo",
+        "však"
+      ]
+    },
+    {
+      "id": "blank-t-to-trad-cia-je-star-ale-mlad-udia-ju-menia",
+      "type": "fill-blank",
+      "l1": "Cette tradition est ancienne, mais les jeunes la changent.",
+      "l2": "Táto tradícia je stará, ale mladí ľudia ju menia.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 7,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ont",
+        "pâte",
+        "leur"
+      ],
+      "choices_l2": [
+        "sme",
+        "budeme",
+        "budú"
+      ]
+    },
+    {
+      "id": "listen-farbili-sme-vaj-ka-cibu-ov-mi-upkami-a-zdobili-sme-ich-voskom",
+      "type": "listen",
+      "l1": "Nous avons teint les œufs avec des pelures d'oignon et les avons décorés à la cire.",
+      "l2": "Farbili sme vajíčka cibuľovými šupkami a zdobili sme ich voskom.",
+      "choices_l1": [
+        "Le vendredi saint nous avons jeûné et n'avons pas mangé de viande.",
+        "Nous avons décoré le panier avec des rubans et l'avons apporté à l'église.",
+        "La voisine nous a donné du parfum au lieu de l'eau."
+      ],
+      "choices_l2": [
+        "Na Veľký piatok sme sa postili a nejedli sme mäso.",
+        "Zvony mlčali od Zeleného štvrtka do Bielej soboty.",
+        "Na stole boli baránok, šunka, chren a syrová nátierka."
+      ]
+    },
+    {
+      "id": "listen-na-zelen-tvrtok-sme-upratovali-cel-dom",
+      "type": "listen",
+      "l1": "Le jeudi saint nous avons rangé toute la maison.",
+      "l2": "Na Zelený štvrtok sme upratovali celý dom.",
+      "choices_l1": [
+        "Je leur ai donné des œufs et du gâteau comme récompense pour la chanson.",
+        "La voisine nous a donné du parfum au lieu de l'eau.",
+        "Nous avons décoré le panier avec des rubans et l'avons apporté à l'église."
+      ],
+      "choices_l2": [
+        "Zvony mlčali od Zeleného štvrtka do Bielej soboty.",
+        "Farbili sme vajíčka cibuľovými šupkami a zdobili sme ich voskom.",
+        "Zdobili sme košík stužkami a niesli sme ho do kostola."
+      ]
+    },
+    {
+      "id": "listen-k-az-po-ehnal-ko-k-so-unkou-chlebom-a-vaj-kami",
+      "type": "listen",
+      "l1": "Le prêtre a béni le panier avec le jambon, le pain et les œufs.",
+      "l2": "Kňaz požehnal košík so šunkou, chlebom a vajíčkami.",
+      "choices_l1": [
+        "Nous avons décoré le panier avec des rubans et l'avons apporté à l'église.",
+        "Il y avait beaucoup de rires, de blagues et de chansons devant la maison.",
+        "La voisine nous a donné du parfum au lieu de l'eau."
+      ],
+      "choices_l2": [
+        "Zdobili sme košík stužkami a niesli sme ho do kostola.",
+        "Zvony mlčali od Zeleného štvrtka do Bielej soboty.",
+        "Na Zelený štvrtok sme upratovali celý dom."
+      ]
+    },
+    {
+      "id": "listen-na-ve-k-piatok-sme-sa-postili-a-nejedli-sme-m-so",
+      "type": "listen",
+      "l1": "Le vendredi saint nous avons jeûné et n'avons pas mangé de viande.",
+      "l2": "Na Veľký piatok sme sa postili a nejedli sme mäso.",
+      "choices_l1": [
+        "Les garçons sont venus avec le fouet et du parfum, pas avec de l'eau.",
+        "Le prêtre a béni le panier avec le jambon, le pain et les œufs.",
+        "Sur la table il y avait de l'agneau, du jambon, du raifort et de la tartinade au fromage."
+      ],
+      "choices_l2": [
+        "Farbili sme vajíčka cibuľovými šupkami a zdobili sme ich voskom.",
+        "Tento zvyk sa mení, ale tradícia zostáva v rodine.",
+        "Dala som im vajíčka a koláč ako odmenu za pieseň."
+      ]
+    },
+    {
+      "id": "listen-chlapci-pri-li-s-korb-om-a-parfumom-nie-s-vodou",
+      "type": "listen",
+      "l1": "Les garçons sont venus avec le fouet et du parfum, pas avec de l'eau.",
+      "l2": "Chlapci prišli s korbáčom a parfumom, nie s vodou.",
+      "choices_l1": [
+        "Le raifort était piquant, mais la paska était sucrée.",
+        "Il y avait beaucoup de rires, de blagues et de chansons devant la maison.",
+        "Cette coutume change, mais la tradition reste dans la famille."
+      ],
+      "choices_l2": [
+        "Zdobili sme košík stužkami a niesli sme ho do kostola.",
+        "Dala som im vajíčka a koláč ako odmenu za pieseň.",
+        "Na stole boli baránok, šunka, chren a syrová nátierka."
+      ]
+    },
+    {
+      "id": "listen-dala-som-im-vaj-ka-a-kol-ako-odmenu-za-piese",
+      "type": "listen",
+      "l1": "Je leur ai donné des œufs et du gâteau comme récompense pour la chanson.",
+      "l2": "Dala som im vajíčka a koláč ako odmenu za pieseň.",
+      "choices_l1": [
+        "Les cloches se sont tues du jeudi saint au samedi saint.",
+        "Le raifort était piquant, mais la paska était sucrée.",
+        "Cette coutume change, mais la tradition reste dans la famille."
+      ],
+      "choices_l2": [
+        "Farbili sme vajíčka cibuľovými šupkami a zdobili sme ich voskom.",
+        "Chren bol štipľavý, ale paska bola sladká.",
+        "Na Zelený štvrtok sme upratovali celý dom."
+      ]
+    },
+    {
+      "id": "listen-tento-zvyk-sa-men-ale-trad-cia-zost-va-v-rodine",
+      "type": "listen",
+      "l1": "Cette coutume change, mais la tradition reste dans la famille.",
+      "l2": "Tento zvyk sa mení, ale tradícia zostáva v rodine.",
+      "choices_l1": [
+        "Le jeudi saint nous avons rangé toute la maison.",
+        "Nous avons décoré le panier avec des rubans et l'avons apporté à l'église.",
+        "Le raifort était piquant, mais la paska était sucrée."
+      ],
+      "choices_l2": [
+        "Na Zelený štvrtok sme upratovali celý dom.",
+        "Chlapci prišli s korbáčom a parfumom, nie s vodou.",
+        "Bolo veľa smiechu, vtipov a piesní pred domom."
+      ]
+    },
+    {
+      "id": "listen-na-stole-boli-bar-nok-unka-chren-a-syrov-n-tierka",
+      "type": "listen",
+      "l1": "Sur la table il y avait de l'agneau, du jambon, du raifort et de la tartinade au fromage.",
+      "l2": "Na stole boli baránok, šunka, chren a syrová nátierka.",
+      "choices_l1": [
+        "Cette coutume change, mais la tradition reste dans la famille.",
+        "Les garçons sont venus avec le fouet et du parfum, pas avec de l'eau.",
+        "Le prêtre a béni le panier avec le jambon, le pain et les œufs."
+      ],
+      "choices_l2": [
+        "Kňaz požehnal košík so šunkou, chlebom a vajíčkami.",
+        "Bolo veľa smiechu, vtipov a piesní pred domom.",
+        "Na Veľký piatok sme sa postili a nejedli sme mäso."
+      ]
+    },
+    {
+      "id": "listen-susedka-n-m-dala-parfum-namiesto-vody",
+      "type": "listen",
+      "l1": "La voisine nous a donné du parfum au lieu de l'eau.",
+      "l2": "Susedka nám dala parfum namiesto vody.",
+      "choices_l1": [
+        "Le jeudi saint nous avons rangé toute la maison.",
+        "Le raifort était piquant, mais la paska était sucrée.",
+        "Je leur ai donné des œufs et du gâteau comme récompense pour la chanson."
+      ],
+      "choices_l2": [
+        "Farbili sme vajíčka cibuľovými šupkami a zdobili sme ich voskom.",
+        "Zvony mlčali od Zeleného štvrtka do Bielej soboty.",
+        "Dala som im vajíčka a koláč ako odmenu za pieseň."
+      ]
+    },
+    {
+      "id": "listen-zvony-ml-ali-od-zelen-ho-tvrtka-do-bielej-soboty",
+      "type": "listen",
+      "l1": "Les cloches se sont tues du jeudi saint au samedi saint.",
+      "l2": "Zvony mlčali od Zeleného štvrtka do Bielej soboty.",
+      "choices_l1": [
+        "Nous avons décoré le panier avec des rubans et l'avons apporté à l'église.",
+        "Le prêtre a béni le panier avec le jambon, le pain et les œufs.",
+        "Je leur ai donné des œufs et du gâteau comme récompense pour la chanson."
+      ],
+      "choices_l2": [
+        "Zdobili sme košík stužkami a niesli sme ho do kostola.",
+        "Susedka nám dala parfum namiesto vody.",
+        "Bolo veľa smiechu, vtipov a piesní pred domom."
+      ]
+    },
+    {
+      "id": "listen-bolo-ve-a-smiechu-vtipov-a-piesn-pred-domom",
+      "type": "listen",
+      "l1": "Il y avait beaucoup de rires, de blagues et de chansons devant la maison.",
+      "l2": "Bolo veľa smiechu, vtipov a piesní pred domom.",
+      "choices_l1": [
+        "Sur la table il y avait de l'agneau, du jambon, du raifort et de la tartinade au fromage.",
+        "Le raifort était piquant, mais la paska était sucrée.",
+        "Nous avons décoré le panier avec des rubans et l'avons apporté à l'église."
+      ],
+      "choices_l2": [
+        "Susedka nám dala parfum namiesto vody.",
+        "Na Zelený štvrtok sme upratovali celý dom.",
+        "Kňaz požehnal košík so šunkou, chlebom a vajíčkami."
+      ]
+    },
+    {
+      "id": "listen-chren-bol-tip-av-ale-paska-bola-sladk",
+      "type": "listen",
+      "l1": "Le raifort était piquant, mais la paska était sucrée.",
+      "l2": "Chren bol štipľavý, ale paska bola sladká.",
+      "choices_l1": [
+        "Le vendredi saint nous avons jeûné et n'avons pas mangé de viande.",
+        "Je leur ai donné des œufs et du gâteau comme récompense pour la chanson.",
+        "Il y avait beaucoup de rires, de blagues et de chansons devant la maison."
+      ],
+      "choices_l2": [
+        "Na Zelený štvrtok sme upratovali celý dom.",
+        "Dala som im vajíčka a koláč ako odmenu za pieseň.",
+        "Na Veľký piatok sme sa postili a nejedli sme mäso."
+      ]
+    },
+    {
+      "id": "listen-zdobili-sme-ko-k-stu-kami-a-niesli-sme-ho-do-kostola",
+      "type": "listen",
+      "l1": "Nous avons décoré le panier avec des rubans et l'avons apporté à l'église.",
+      "l2": "Zdobili sme košík stužkami a niesli sme ho do kostola.",
+      "choices_l1": [
+        "Sur la table il y avait de l'agneau, du jambon, du raifort et de la tartinade au fromage.",
+        "Les garçons sont venus avec le fouet et du parfum, pas avec de l'eau.",
+        "Nous avons teint les œufs avec des pelures d'oignon et les avons décorés à la cire."
+      ],
+      "choices_l2": [
+        "Zvony mlčali od Zeleného štvrtka do Bielej soboty.",
+        "Chren bol štipľavý, ale paska bola sladká.",
+        "Susedka nám dala parfum namiesto vody."
+      ]
+    },
+    {
+      "id": "listen-t-to-trad-cia-je-star-ale-mlad-udia-ju-menia",
+      "type": "listen",
+      "l1": "Cette tradition est ancienne, mais les jeunes la changent.",
+      "l2": "Táto tradícia je stará, ale mladí ľudia ju menia.",
+      "choices_l1": [
+        "Le jeudi saint nous avons rangé toute la maison.",
+        "Le raifort était piquant, mais la paska était sucrée.",
+        "La voisine nous a donné du parfum au lieu de l'eau."
+      ],
+      "choices_l2": [
+        "Chlapci prišli s korbáčom a parfumom, nie s vodou.",
+        "Dala som im vajíčka a koláč ako odmenu za pieseň.",
+        "Kňaz požehnal košík so šunkou, chlebom a vajíčkami."
+      ]
+    },
+    {
+      "id": "order-farbili-sme-vaj-ka-cibu-ov-mi-upkami-a-zdobili-sme-ich-voskom",
+      "type": "order",
+      "l1": "Nous avons teint les œufs avec des pelures d'oignon et les avons décorés à la cire.",
+      "l2": "Farbili sme vajíčka cibuľovými šupkami a zdobili sme ich voskom.",
+      "tokens_l1": [
+        "Nous",
+        "avons",
+        "teint",
+        "les",
+        "œufs",
+        "avec",
+        "des",
+        "pelures",
+        "d'oignon",
+        "et",
+        "les",
+        "avons",
+        "décorés",
+        "à",
+        "la",
+        "cire.",
+        "Je",
+        "leur",
+        "ai",
+        "donné",
+        "des",
+        "œufs",
+        "et",
+        "du",
+        "gâteau",
+        "comme",
+        "récompense",
+        "pour",
+        "la",
+        "chanson."
+      ],
+      "tokens_l2": [
+        "Farbili",
+        "sme",
+        "vajíčka",
+        "cibuľovými",
+        "šupkami",
+        "a",
+        "zdobili",
+        "sme",
+        "ich",
+        "voskom.",
+        "Dala",
+        "som",
+        "im",
+        "vajíčka",
+        "a",
+        "koláč",
+        "ako",
+        "odmenu",
+        "za",
+        "pieseň."
+      ]
+    },
+    {
+      "id": "order-na-zelen-tvrtok-sme-upratovali-cel-dom",
+      "type": "order",
+      "l1": "Le jeudi saint nous avons rangé toute la maison.",
+      "l2": "Na Zelený štvrtok sme upratovali celý dom.",
+      "tokens_l1": [
+        "Le",
+        "jeudi",
+        "saint",
+        "nous",
+        "avons",
+        "rangé",
+        "toute",
+        "la",
+        "maison.",
+        "Les",
+        "cloches",
+        "se",
+        "sont",
+        "tues",
+        "du",
+        "jeudi",
+        "saint",
+        "au",
+        "samedi",
+        "saint."
+      ],
+      "tokens_l2": [
+        "Na",
+        "Zelený",
+        "štvrtok",
+        "sme",
+        "upratovali",
+        "celý",
+        "dom.",
+        "Zvony",
+        "mlčali",
+        "od",
+        "Zeleného",
+        "štvrtka",
+        "do",
+        "Bielej",
+        "soboty."
+      ]
+    },
+    {
+      "id": "order-k-az-po-ehnal-ko-k-so-unkou-chlebom-a-vaj-kami",
+      "type": "order",
+      "l1": "Le prêtre a béni le panier avec le jambon, le pain et les œufs.",
+      "l2": "Kňaz požehnal košík so šunkou, chlebom a vajíčkami.",
+      "tokens_l1": [
+        "Le",
+        "prêtre",
+        "a",
+        "béni",
+        "le",
+        "panier",
+        "avec",
+        "le",
+        "jambon,",
+        "le",
+        "pain",
+        "et",
+        "les",
+        "œufs.",
+        "Nous",
+        "avons",
+        "décoré",
+        "le",
+        "panier",
+        "avec",
+        "des",
+        "rubans",
+        "et",
+        "l'avons",
+        "apporté",
+        "à",
+        "l'église."
+      ],
+      "tokens_l2": [
+        "Kňaz",
+        "požehnal",
+        "košík",
+        "so",
+        "šunkou,",
+        "chlebom",
+        "a",
+        "vajíčkami.",
+        "Zdobili",
+        "sme",
+        "košík",
+        "stužkami",
+        "a",
+        "niesli",
+        "sme",
+        "ho",
+        "do",
+        "kostola."
+      ]
+    },
+    {
+      "id": "order-na-ve-k-piatok-sme-sa-postili-a-nejedli-sme-m-so",
+      "type": "order",
+      "l1": "Le vendredi saint nous avons jeûné et n'avons pas mangé de viande.",
+      "l2": "Na Veľký piatok sme sa postili a nejedli sme mäso.",
+      "tokens_l1": [
+        "Le",
+        "vendredi",
+        "saint",
+        "nous",
+        "avons",
+        "jeûné",
+        "et",
+        "n'avons",
+        "pas",
+        "mangé",
+        "de",
+        "viande.",
+        "Les",
+        "garçons",
+        "sont",
+        "venus",
+        "avec",
+        "le",
+        "fouet",
+        "et",
+        "du",
+        "parfum,",
+        "pas",
+        "avec",
+        "de",
+        "l'eau."
+      ],
+      "tokens_l2": [
+        "Na",
+        "Veľký",
+        "piatok",
+        "sme",
+        "sa",
+        "postili",
+        "a",
+        "nejedli",
+        "sme",
+        "mäso.",
+        "Chlapci",
+        "prišli",
+        "s",
+        "korbáčom",
+        "a",
+        "parfumom,",
+        "nie",
+        "s",
+        "vodou."
+      ]
+    },
+    {
+      "id": "order-chlapci-pri-li-s-korb-om-a-parfumom-nie-s-vodou",
+      "type": "order",
+      "l1": "Les garçons sont venus avec le fouet et du parfum, pas avec de l'eau.",
+      "l2": "Chlapci prišli s korbáčom a parfumom, nie s vodou.",
+      "tokens_l1": [
+        "Les",
+        "garçons",
+        "sont",
+        "venus",
+        "avec",
+        "le",
+        "fouet",
+        "et",
+        "du",
+        "parfum,",
+        "pas",
+        "avec",
+        "de",
+        "l'eau.",
+        "Cette",
+        "coutume",
+        "change,",
+        "mais",
+        "la",
+        "tradition",
+        "reste",
+        "dans",
+        "la",
+        "famille."
+      ],
+      "tokens_l2": [
+        "Chlapci",
+        "prišli",
+        "s",
+        "korbáčom",
+        "a",
+        "parfumom,",
+        "nie",
+        "s",
+        "vodou.",
+        "Tento",
+        "zvyk",
+        "sa",
+        "mení,",
+        "ale",
+        "tradícia",
+        "zostáva",
+        "v",
+        "rodine."
+      ]
+    },
+    {
+      "id": "order-dala-som-im-vaj-ka-a-kol-ako-odmenu-za-piese",
+      "type": "order",
+      "l1": "Je leur ai donné des œufs et du gâteau comme récompense pour la chanson.",
+      "l2": "Dala som im vajíčka a koláč ako odmenu za pieseň.",
+      "tokens_l1": [
+        "Je",
+        "leur",
+        "ai",
+        "donné",
+        "des",
+        "œufs",
+        "et",
+        "du",
+        "gâteau",
+        "comme",
+        "récompense",
+        "pour",
+        "la",
+        "chanson.",
+        "Il",
+        "y",
+        "avait",
+        "beaucoup",
+        "de",
+        "rires,",
+        "de",
+        "blagues",
+        "et",
+        "de",
+        "chansons",
+        "devant",
+        "la",
+        "maison."
+      ],
+      "tokens_l2": [
+        "Dala",
+        "som",
+        "im",
+        "vajíčka",
+        "a",
+        "koláč",
+        "ako",
+        "odmenu",
+        "za",
+        "pieseň.",
+        "Bolo",
+        "veľa",
+        "smiechu,",
+        "vtipov",
+        "a",
+        "piesní",
+        "pred",
+        "domom."
+      ]
+    },
+    {
+      "id": "order-tento-zvyk-sa-men-ale-trad-cia-zost-va-v-rodine",
+      "type": "order",
+      "l1": "Cette coutume change, mais la tradition reste dans la famille.",
+      "l2": "Tento zvyk sa mení, ale tradícia zostáva v rodine.",
+      "tokens_l1": [
+        "Cette",
+        "coutume",
+        "change,",
+        "mais",
+        "la",
+        "tradition",
+        "reste",
+        "dans",
+        "la",
+        "famille.",
+        "Le",
+        "jeudi",
+        "saint",
+        "nous",
+        "avons",
+        "rangé",
+        "toute",
+        "la",
+        "maison."
+      ],
+      "tokens_l2": [
+        "Tento",
+        "zvyk",
+        "sa",
+        "mení,",
+        "ale",
+        "tradícia",
+        "zostáva",
+        "v",
+        "rodine.",
+        "Na",
+        "Zelený",
+        "štvrtok",
+        "sme",
+        "upratovali",
+        "celý",
+        "dom."
+      ]
+    },
+    {
+      "id": "order-na-stole-boli-bar-nok-unka-chren-a-syrov-n-tierka",
+      "type": "order",
+      "l1": "Sur la table il y avait de l'agneau, du jambon, du raifort et de la tartinade au fromage.",
+      "l2": "Na stole boli baránok, šunka, chren a syrová nátierka.",
+      "tokens_l1": [
+        "Sur",
+        "la",
+        "table",
+        "il",
+        "y",
+        "avait",
+        "de",
+        "l'agneau,",
+        "du",
+        "jambon,",
+        "du",
+        "raifort",
+        "et",
+        "de",
+        "la",
+        "tartinade",
+        "au",
+        "fromage.",
+        "Cette",
+        "tradition",
+        "est",
+        "ancienne,",
+        "mais",
+        "les",
+        "jeunes",
+        "la",
+        "changent."
+      ],
+      "tokens_l2": [
+        "Na",
+        "stole",
+        "boli",
+        "baránok,",
+        "šunka,",
+        "chren",
+        "a",
+        "syrová",
+        "nátierka.",
+        "Táto",
+        "tradícia",
+        "je",
+        "stará,",
+        "ale",
+        "mladí",
+        "ľudia",
+        "ju",
+        "menia."
+      ]
+    },
+    {
+      "id": "order-susedka-n-m-dala-parfum-namiesto-vody",
+      "type": "order",
+      "l1": "La voisine nous a donné du parfum au lieu de l'eau.",
+      "l2": "Susedka nám dala parfum namiesto vody.",
+      "tokens_l1": [
+        "La",
+        "voisine",
+        "nous",
+        "a",
+        "donné",
+        "du",
+        "parfum",
+        "au",
+        "lieu",
+        "de",
+        "l'eau.",
+        "Les",
+        "cloches",
+        "se",
+        "sont",
+        "tues",
+        "du",
+        "jeudi",
+        "saint",
+        "au",
+        "samedi",
+        "saint."
+      ],
+      "tokens_l2": [
+        "Susedka",
+        "nám",
+        "dala",
+        "parfum",
+        "namiesto",
+        "vody.",
+        "Zvony",
+        "mlčali",
+        "od",
+        "Zeleného",
+        "štvrtka",
+        "do",
+        "Bielej",
+        "soboty."
+      ]
+    },
+    {
+      "id": "order-zvony-ml-ali-od-zelen-ho-tvrtka-do-bielej-soboty",
+      "type": "order",
+      "l1": "Les cloches se sont tues du jeudi saint au samedi saint.",
+      "l2": "Zvony mlčali od Zeleného štvrtka do Bielej soboty.",
+      "tokens_l1": [
+        "Les",
+        "cloches",
+        "se",
+        "sont",
+        "tues",
+        "du",
+        "jeudi",
+        "saint",
+        "au",
+        "samedi",
+        "saint.",
+        "Le",
+        "prêtre",
+        "a",
+        "béni",
+        "le",
+        "panier",
+        "avec",
+        "le",
+        "jambon,",
+        "le",
+        "pain",
+        "et",
+        "les",
+        "œufs."
+      ],
+      "tokens_l2": [
+        "Zvony",
+        "mlčali",
+        "od",
+        "Zeleného",
+        "štvrtka",
+        "do",
+        "Bielej",
+        "soboty.",
+        "Kňaz",
+        "požehnal",
+        "košík",
+        "so",
+        "šunkou,",
+        "chlebom",
+        "a",
+        "vajíčkami."
+      ]
+    },
+    {
+      "id": "order-bolo-ve-a-smiechu-vtipov-a-piesn-pred-domom",
+      "type": "order",
+      "l1": "Il y avait beaucoup de rires, de blagues et de chansons devant la maison.",
+      "l2": "Bolo veľa smiechu, vtipov a piesní pred domom.",
+      "tokens_l1": [
+        "Il",
+        "y",
+        "avait",
+        "beaucoup",
+        "de",
+        "rires,",
+        "de",
+        "blagues",
+        "et",
+        "de",
+        "chansons",
+        "devant",
+        "la",
+        "maison.",
+        "Les",
+        "garçons",
+        "sont",
+        "venus",
+        "avec",
+        "le",
+        "fouet",
+        "et",
+        "du",
+        "parfum,",
+        "pas",
+        "avec",
+        "de",
+        "l'eau."
+      ],
+      "tokens_l2": [
+        "Bolo",
+        "veľa",
+        "smiechu,",
+        "vtipov",
+        "a",
+        "piesní",
+        "pred",
+        "domom.",
+        "Chlapci",
+        "prišli",
+        "s",
+        "korbáčom",
+        "a",
+        "parfumom,",
+        "nie",
+        "s",
+        "vodou."
+      ]
+    },
+    {
+      "id": "order-chren-bol-tip-av-ale-paska-bola-sladk",
+      "type": "order",
+      "l1": "Le raifort était piquant, mais la paska était sucrée.",
+      "l2": "Chren bol štipľavý, ale paska bola sladká.",
+      "tokens_l1": [
+        "Le",
+        "raifort",
+        "était",
+        "piquant,",
+        "mais",
+        "la",
+        "paska",
+        "était",
+        "sucrée.",
+        "Les",
+        "cloches",
+        "se",
+        "sont",
+        "tues",
+        "du",
+        "jeudi",
+        "saint",
+        "au",
+        "samedi",
+        "saint."
+      ],
+      "tokens_l2": [
+        "Chren",
+        "bol",
+        "štipľavý,",
+        "ale",
+        "paska",
+        "bola",
+        "sladká.",
+        "Zvony",
+        "mlčali",
+        "od",
+        "Zeleného",
+        "štvrtka",
+        "do",
+        "Bielej",
+        "soboty."
+      ]
+    },
+    {
+      "id": "order-zdobili-sme-ko-k-stu-kami-a-niesli-sme-ho-do-kostola",
+      "type": "order",
+      "l1": "Nous avons décoré le panier avec des rubans et l'avons apporté à l'église.",
+      "l2": "Zdobili sme košík stužkami a niesli sme ho do kostola.",
+      "tokens_l1": [
+        "Nous",
+        "avons",
+        "décoré",
+        "le",
+        "panier",
+        "avec",
+        "des",
+        "rubans",
+        "et",
+        "l'avons",
+        "apporté",
+        "à",
+        "l'église.",
+        "Le",
+        "jeudi",
+        "saint",
+        "nous",
+        "avons",
+        "rangé",
+        "toute",
+        "la",
+        "maison."
+      ],
+      "tokens_l2": [
+        "Zdobili",
+        "sme",
+        "košík",
+        "stužkami",
+        "a",
+        "niesli",
+        "sme",
+        "ho",
+        "do",
+        "kostola.",
+        "Na",
+        "Zelený",
+        "štvrtok",
+        "sme",
+        "upratovali",
+        "celý",
+        "dom."
+      ]
+    },
+    {
+      "id": "order-t-to-trad-cia-je-star-ale-mlad-udia-ju-menia",
+      "type": "order",
+      "l1": "Cette tradition est ancienne, mais les jeunes la changent.",
+      "l2": "Táto tradícia je stará, ale mladí ľudia ju menia.",
+      "tokens_l1": [
+        "Cette",
+        "tradition",
+        "est",
+        "ancienne,",
+        "mais",
+        "les",
+        "jeunes",
+        "la",
+        "changent.",
+        "Le",
+        "jeudi",
+        "saint",
+        "nous",
+        "avons",
+        "rangé",
+        "toute",
+        "la",
+        "maison."
+      ],
+      "tokens_l2": [
+        "Táto",
+        "tradícia",
+        "je",
+        "stará,",
+        "ale",
+        "mladí",
+        "ľudia",
+        "ju",
+        "menia.",
+        "Na",
+        "Zelený",
+        "štvrtok",
+        "sme",
+        "upratovali",
+        "celý",
+        "dom."
+      ]
+    },
+    {
+      "id": "match-ve-k-noc-vocab",
+      "type": "match",
+      "l1": [
+        "Pâques",
+        "l'œuf",
+        "teindre",
+        "décorer"
+      ],
+      "l2": [
+        "Veľká noc",
+        "vajíčko",
+        "farbiť",
+        "zdobiť"
+      ]
+    },
+    {
+      "id": "match-farbili-sme-vaj-ka-cibu-ov-mi-upkami-a-zdobili-sme-ich-voskom-sentences",
+      "type": "match",
+      "l1": [
+        "Nous avons teint les œufs avec des pelures d'oignon et les avons décorés à la cire.",
+        "Le jeudi saint nous avons rangé toute la maison.",
+        "Le prêtre a béni le panier avec le jambon, le pain et les œufs.",
+        "Le vendredi saint nous avons jeûné et n'avons pas mangé de viande."
+      ],
+      "l2": [
+        "Farbili sme vajíčka cibuľovými šupkami a zdobili sme ich voskom.",
+        "Na Zelený štvrtok sme upratovali celý dom.",
+        "Kňaz požehnal košík so šunkou, chlebom a vajíčkami.",
+        "Na Veľký piatok sme sa postili a nejedli sme mäso."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1257 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-aller",
+      "type": "qcm",
+      "l1": "ísť",
+      "l2": "aller",
+      "choices_l1": [
+        "dobrý",
+        "jeme",
+        "mydlo"
+      ],
+      "choices_l2": [
+        "J'ai soif.",
+        "la soif",
+        "le salon"
+      ]
+    },
+    {
+      "id": "qcm-arriver-venir",
+      "type": "qcm",
+      "l1": "prísť",
+      "l2": "arriver / venir",
+      "choices_l1": [
+        "utorok",
+        "minerálka",
+        "strýko"
+      ],
+      "choices_l2": [
+        "J'ai le livre. → Je l'ai.",
+        "l'eau est bonne (ženský)",
+        "il / elle boit"
+      ]
+    },
+    {
+      "id": "qcm-attendre",
+      "type": "qcm",
+      "l1": "čakať",
+      "l2": "attendre",
+      "choices_l1": [
+        "malá sestra",
+        "mesiac",
+        "rok"
+      ],
+      "choices_l2": [
+        "je cherche",
+        "l'entrée",
+        "rassasié"
+      ]
+    },
+    {
+      "id": "qcm-se-retrouver",
+      "type": "qcm",
+      "l1": "stretnúť sa",
+      "l2": "se retrouver",
+      "choices_l1": [
+        "pol šiestej",
+        "starý",
+        "malý brat"
+      ],
+      "choices_l2": [
+        "le travail",
+        "déjà",
+        "le fromage"
+      ]
+    },
+    {
+      "id": "qcm-quand",
+      "type": "qcm",
+      "l1": "kedy",
+      "l2": "quand",
+      "choices_l1": [
+        "jedia",
+        "chutný",
+        "málo"
+      ],
+      "choices_l2": [
+        "tu as",
+        "faire",
+        "le mois"
+      ]
+    },
+    {
+      "id": "qcm-t-t",
+      "type": "qcm",
+      "l1": "skoro",
+      "l2": "tôt",
+      "choices_l1": [
+        "umývať",
+        "ja mám",
+        "ty si"
+      ],
+      "choices_l2": [
+        "les fruits",
+        "la ratatouille",
+        "j'ai"
+      ]
+    },
+    {
+      "id": "qcm-tard",
+      "type": "qcm",
+      "l1": "neskoro",
+      "l2": "tard",
+      "choices_l1": [
+        "víno",
+        "presne",
+        "narodeniny"
+      ],
+      "choices_l2": [
+        "J'ai faim.",
+        "deux ans",
+        "mon père"
+      ]
+    },
+    {
+      "id": "qcm-je-vais",
+      "type": "qcm",
+      "l1": "idem",
+      "l2": "je vais",
+      "choices_l1": [
+        "chce",
+        "robíš",
+        "garáž"
+      ],
+      "choices_l2": [
+        "le riz",
+        "le réfrigérateur",
+        "les légumes"
+      ]
+    },
+    {
+      "id": "qcm-tu-vas",
+      "type": "qcm",
+      "l1": "ideš",
+      "l2": "tu vas",
+      "choices_l1": [
+        "streda",
+        "bývať",
+        "dvor"
+      ],
+      "choices_l2": [
+        "le frère",
+        "la tante",
+        "dix ans"
+      ]
+    },
+    {
+      "id": "qcm-il-elle-va",
+      "type": "qcm",
+      "l1": "ide",
+      "l2": "il / elle va",
+      "choices_l1": [
+        "v nedeľu",
+        "oddychovať",
+        "ješ"
+      ],
+      "choices_l2": [
+        "Il y a une table.",
+        "Je prends une bière.",
+        "il / elle est"
+      ]
+    },
+    {
+      "id": "qcm-nous-allons",
+      "type": "qcm",
+      "l1": "ideme",
+      "l2": "nous allons",
+      "choices_l1": [
+        "teraz",
+        "čerstvý",
+        "Mám hlad."
+      ],
+      "choices_l2": [
+        "fermer",
+        "je cherche",
+        "le fils"
+      ]
+    },
+    {
+      "id": "qcm-ils-elles-vont",
+      "type": "qcm",
+      "l1": "idú",
+      "l2": "ils / elles vont",
+      "choices_l1": [
+        "skoro",
+        "ešte",
+        "hľadať"
+      ],
+      "choices_l2": [
+        "il / elle travaille",
+        "vieux / vieille",
+        "Je prends du vin."
+      ]
+    },
+    {
+      "id": "qcm-je-vais-arriver",
+      "type": "qcm",
+      "l1": "Prídem. (doslova: „idem prísť“)",
+      "l2": "Je vais arriver.",
+      "choices_l1": [
+        "To sú izby.",
+        "Dáš si kávu?",
+        "V pondelok pracujem."
+      ],
+      "choices_l2": [
+        "ils / elles font",
+        "Le lundi, je travaille. (každý pondelok, zvyčajne)",
+        "il est vieux / elle est vieille"
+      ]
+    },
+    {
+      "id": "qcm-tu-vas-attendre",
+      "type": "qcm",
+      "l1": "Budeš čakať?",
+      "l2": "Tu vas attendre ?",
+      "choices_l1": [
+        "bývame",
+        "v stredu",
+        "malá sestra"
+      ],
+      "choices_l2": [
+        "ils / elles font",
+        "il / elle mange",
+        "à sept heures"
+      ]
+    },
+    {
+      "id": "qcm-nous-allons-nous-retrouver",
+      "type": "qcm",
+      "l1": "Stretneme sa.",
+      "l2": "Nous allons nous retrouver.",
+      "choices_l1": [
+        "mydlo",
+        "čítať",
+        "strecha"
+      ],
+      "choices_l2": [
+        "la chambre (à coucher)",
+        "boire de l'eau",
+        "je ne dors pas"
+      ]
+    },
+    {
+      "id": "qcm-le-rendez-vous",
+      "type": "qcm",
+      "l1": "stretnutie",
+      "l2": "le rendez-vous",
+      "choices_l1": [
+        "soľ",
+        "zlý",
+        "päť rokov"
+      ],
+      "choices_l2": [
+        "le pain",
+        "l'eau minérale",
+        "aussi"
+      ]
+    },
+    {
+      "id": "qcm-la-montre",
+      "type": "qcm",
+      "l1": "hodinky",
+      "l2": "la montre",
+      "choices_l1": [
+        "hľadáš",
+        "maslo",
+        "dedina, vidiek"
+      ],
+      "choices_l2": [
+        "j'ai",
+        "le soir",
+        "la campagne"
+      ]
+    },
+    {
+      "id": "qcm-le-r-veil",
+      "type": "qcm",
+      "l1": "budík",
+      "l2": "le réveil",
+      "choices_l1": [
+        "v byte",
+        "trochu",
+        "pozerať"
+      ],
+      "choices_l2": [
+        "tu cherches",
+        "tu as",
+        "dans l'armoire"
+      ]
+    },
+    {
+      "id": "qcm-le-bus",
+      "type": "qcm",
+      "l1": "autobus",
+      "l2": "le bus",
+      "choices_l1": [
+        "chcem",
+        "jeden rok",
+        "už"
+      ],
+      "choices_l2": [
+        "joli",
+        "les crêpes",
+        "qui"
+      ]
+    },
+    {
+      "id": "qcm-le-train",
+      "type": "qcm",
+      "l1": "vlak",
+      "l2": "le train",
+      "choices_l1": [
+        "obraz",
+        "zajtra",
+        "ráno"
+      ],
+      "choices_l2": [
+        "mardi",
+        "ma sœur",
+        "le garage"
+      ]
+    },
+    {
+      "id": "qcm-l-heure",
+      "type": "qcm",
+      "l1": "načas",
+      "l2": "à l'heure",
+      "choices_l1": [
+        "kancelária",
+        "pol šiestej",
+        "chvíľa"
+      ],
+      "choices_l2": [
+        "assoiffé",
+        "le déjeuner",
+        "un an"
+      ]
+    },
+    {
+      "id": "qcm-libre",
+      "type": "qcm",
+      "l1": "voľný",
+      "l2": "libre",
+      "choices_l1": [
+        "studený",
+        "hľadá",
+        "dom"
+      ],
+      "choices_l2": [
+        "je cherche",
+        "souvent",
+        "écouter"
+      ]
+    },
+    {
+      "id": "blank-j-arrive-cinq-heures",
+      "type": "fill-blank",
+      "l1": "Prídem o piatej.",
+      "l2": "J'arrive à cinq heures.",
+      "missing_l1": "o",
+      "missing_l2": "à",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "čas",
+        "stole",
+        "pracuje"
+      ],
+      "choices_l2": [
+        "le",
+        "nous",
+        "cuisine"
+      ]
+    },
+    {
+      "id": "blank-j-attends-sept-heures",
+      "type": "fill-blank",
+      "l1": "Čakám o siedmej.",
+      "l2": "J'attends à sept heures.",
+      "missing_l1": "o",
+      "missing_l2": "à",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "v",
+        "som",
+        "si"
+      ],
+      "choices_l2": [
+        "elle",
+        "mes",
+        "cuisine"
+      ]
+    },
+    {
+      "id": "blank-on-se-retrouve-mercredi",
+      "type": "fill-blank",
+      "l1": "Stretneme sa v stredu?",
+      "l2": "On se retrouve mercredi ?",
+      "missing_l1": "v",
+      "missing_l2": "se",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "sú",
+        "čas",
+        "mama"
+      ],
+      "choices_l2": [
+        "tu",
+        "mes",
+        "sont"
+      ]
+    },
+    {
+      "id": "blank-je-vais-arriver-t-t-pas-tard",
+      "type": "fill-blank",
+      "l1": "Prídem skoro, nie neskoro.",
+      "l2": "Je vais arriver tôt, pas tard.",
+      "missing_l1": "nie",
+      "missing_l2": "pas",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "kde",
+        "si",
+        "sestra"
+      ],
+      "choices_l2": [
+        "j'ai",
+        "veux",
+        "il"
+      ]
+    },
+    {
+      "id": "blank-quand-rentres-tu",
+      "type": "fill-blank",
+      "l1": "Kedy ideš domov?",
+      "l2": "Quand rentres-tu ?",
+      "missing_l1": "ideš",
+      "missing_l2": "rentres-tu",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "má",
+        "veľa",
+        "čas"
+      ],
+      "choices_l2": [
+        "nous",
+        "mais",
+        "sur"
+      ]
+    },
+    {
+      "id": "blank-on-se-retrouve-vendredi-six-heures-et-demie",
+      "type": "fill-blank",
+      "l1": "Stretneme sa v piatok o pol siedmej.",
+      "l2": "On se retrouve vendredi à six heures et demie.",
+      "missing_l1": "v",
+      "missing_l2": "et",
+      "blank_index_l1": 2,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "pracuje",
+        "býva",
+        "sestra"
+      ],
+      "choices_l2": [
+        "les",
+        "ma",
+        "où"
+      ]
+    },
+    {
+      "id": "blank-je-vais-arriver-vers-deux-heures-attends-s-il-te-pla-t",
+      "type": "fill-blank",
+      "l1": "Prídem asi o druhej. Čakaj, prosím.",
+      "l2": "Je vais arriver vers deux heures. Attends, s'il te plaît.",
+      "missing_l1": "o",
+      "missing_l2": "heures",
+      "blank_index_l1": 2,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "moja",
+        "hľadám",
+        "ešte"
+      ],
+      "choices_l2": [
+        "du",
+        "une",
+        "cuisine"
+      ]
+    },
+    {
+      "id": "blank-samedi-matin-j-y-vais-t-t",
+      "type": "fill-blank",
+      "l1": "V sobotu ráno idem skoro.",
+      "l2": "Samedi matin, j'y vais tôt.",
+      "missing_l1": "sobotu",
+      "missing_l2": "vais",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "pot-au-feu",
+        "stole",
+        "to"
+      ],
+      "choices_l2": [
+        "tu",
+        "un",
+        "sur"
+      ]
+    },
+    {
+      "id": "blank-je-suis-en-retard-je-vais-arriver-huit-heures-et-quart",
+      "type": "fill-blank",
+      "l1": "Meškám. Prídem o štvrť na deväť.",
+      "l2": "Je suis en retard. Je vais arriver à huit heures et quart.",
+      "missing_l1": "na",
+      "missing_l2": "Je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "tu",
+        "deti",
+        "môj"
+      ],
+      "choices_l2": [
+        "sont",
+        "le",
+        "temps"
+      ]
+    },
+    {
+      "id": "blank-j-ai-un-rendez-vous-dix-heures",
+      "type": "fill-blank",
+      "l1": "Mám stretnutie o desiatej.",
+      "l2": "J'ai un rendez-vous à dix heures.",
+      "missing_l1": "o",
+      "missing_l2": "à",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "ja",
+        "sestra",
+        "pot-au-feu"
+      ],
+      "choices_l2": [
+        "maison",
+        "nous",
+        "dans"
+      ]
+    },
+    {
+      "id": "blank-le-train-arrive-l-heure",
+      "type": "fill-blank",
+      "l1": "Vlak prichádza načas.",
+      "l2": "Le train arrive à l'heure.",
+      "missing_l1": "načas",
+      "missing_l2": "à",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "stole",
+        "a",
+        "na"
+      ],
+      "choices_l2": [
+        "cuisine",
+        "c'est",
+        "enfants"
+      ]
+    },
+    {
+      "id": "blank-le-bus-a-dix-minutes-de-retard",
+      "type": "fill-blank",
+      "l1": "Autobus mešká desať minút.",
+      "l2": "Le bus a dix minutes de retard.",
+      "missing_l1": "desať",
+      "missing_l2": "de",
+      "blank_index_l1": 2,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "sestra",
+        "môj",
+        "o"
+      ],
+      "choices_l2": [
+        "du",
+        "un",
+        "mais"
+      ]
+    },
+    {
+      "id": "blank-tu-es-libre-samedi",
+      "type": "fill-blank",
+      "l1": "Si voľný v sobotu?",
+      "l2": "Tu es libre samedi ?",
+      "missing_l1": "v",
+      "missing_l2": "samedi",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "deti",
+        "kde",
+        "si"
+      ],
+      "choices_l2": [
+        "et",
+        "la",
+        "l'eau"
+      ]
+    },
+    {
+      "id": "blank-le-r-veil-sonne-six-heures",
+      "type": "fill-blank",
+      "l1": "Budík zvoní o šiestej.",
+      "l2": "Le réveil sonne à six heures.",
+      "missing_l1": "o",
+      "missing_l2": "à",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "chcem",
+        "pot-au-feu",
+        "tu"
+      ],
+      "choices_l2": [
+        "il",
+        "c'est",
+        "n'ai"
+      ]
+    },
+    {
+      "id": "listen-quand-arrives-tu",
+      "type": "listen",
+      "l1": "Kedy prídeš?",
+      "l2": "Quand arrives-tu ?",
+      "choices_l2": [
+        "Ma grand-mère est vieille, mais elle fait beaucoup dans le jardin.",
+        "Les chaussons sont dans le couloir.",
+        "Papa mange de la viande."
+      ]
+    },
+    {
+      "id": "listen-j-arrive-cinq-heures",
+      "type": "listen",
+      "l1": "Prídem o piatej.",
+      "l2": "J'arrive à cinq heures.",
+      "choices_l2": [
+        "Le matin, je commence à huit heures.",
+        "Le petit-déjeuner est à sept heures.",
+        "Les enfants aident à la maison."
+      ]
+    },
+    {
+      "id": "listen-j-y-vais-maintenant",
+      "type": "listen",
+      "l1": "Idem teraz.",
+      "l2": "J'y vais maintenant.",
+      "choices_l2": [
+        "Je n'attends pas longtemps.",
+        "Il est trois heures.",
+        "Je peux aider ?"
+      ]
+    },
+    {
+      "id": "listen-j-attends-sept-heures",
+      "type": "listen",
+      "l1": "Čakám o siedmej.",
+      "l2": "J'attends à sept heures.",
+      "choices_l2": [
+        "Le samedi, je ne me lève jamais tôt.",
+        "Mercredi, je n'ai pas le temps.",
+        "Je cherche la clé, mais elle n'est pas sur la table."
+      ]
+    },
+    {
+      "id": "listen-on-se-retrouve-mercredi",
+      "type": "listen",
+      "l1": "Stretneme sa v stredu?",
+      "l2": "On se retrouve mercredi ?",
+      "choices_l2": [
+        "Maintenant je mange, ensuite je bois un café.",
+        "Ma maman est dans la cuisine.",
+        "Où habites-tu ?"
+      ]
+    },
+    {
+      "id": "listen-je-vais-arriver-t-t-pas-tard",
+      "type": "listen",
+      "l1": "Prídem skoro, nie neskoro.",
+      "l2": "Je vais arriver tôt, pas tard.",
+      "choices_l2": [
+        "Ma maman a cinquante ans.",
+        "Non, merci. Je n'ai plus faim.",
+        "Mon oncle a une grande maison et un jardin."
+      ]
+    },
+    {
+      "id": "listen-n-attends-pas-je-suis-en-retard",
+      "type": "listen",
+      "l1": "Nečakaj, meškám.",
+      "l2": "N'attends pas, je suis en retard.",
+      "choices_l2": [
+        "Où habites-tu ?",
+        "L'année a douze mois.",
+        "Le couteau et l'assiette sont sur la table."
+      ]
+    },
+    {
+      "id": "listen-quand-rentres-tu",
+      "type": "listen",
+      "l1": "Kedy ideš domov?",
+      "l2": "Quand rentres-tu ?",
+      "choices_l2": [
+        "Je bois du chocolat chaud, pas de café.",
+        "Il est deux heures et quart.",
+        "Merci. Qu'est-ce que c'est ?"
+      ]
+    },
+    {
+      "id": "listen-on-se-retrouve-vendredi-six-heures-et-demie",
+      "type": "listen",
+      "l1": "Stretneme sa v piatok o pol siedmej.",
+      "l2": "On se retrouve vendredi à six heures et demie.",
+      "choices_l2": [
+        "Nous buvons de l'eau.",
+        "Mon oncle a une grande maison et un jardin.",
+        "Je mange beaucoup, mais je bois peu."
+      ]
+    },
+    {
+      "id": "listen-je-vais-arriver-vers-deux-heures-attends-s-il-te-pla-t",
+      "type": "listen",
+      "l1": "Prídem asi o druhej. Čakaj, prosím.",
+      "l2": "Je vais arriver vers deux heures. Attends, s'il te plaît.",
+      "choices_l2": [
+        "La porte est là-bas.",
+        "Notre maison est grande, mais les pièces sont petites.",
+        "Je lave l'assiette."
+      ]
+    },
+    {
+      "id": "listen-samedi-matin-j-y-vais-t-t",
+      "type": "listen",
+      "l1": "V sobotu ráno idem skoro.",
+      "l2": "Samedi matin, j'y vais tôt.",
+      "choices_l2": [
+        "C'est un peu salé.",
+        "Je n'attends pas longtemps.",
+        "Je cherche la clé, mais elle n'est pas sur la table."
+      ]
+    },
+    {
+      "id": "listen-je-suis-en-retard-je-vais-arriver-huit-heures-et-quart",
+      "type": "listen",
+      "l1": "Meškám. Prídem o štvrť na deväť.",
+      "l2": "Je suis en retard. Je vais arriver à huit heures et quart.",
+      "choices_l2": [
+        "Je mange du pain.",
+        "Mes parents habitent dans une maison.",
+        "J'habite dans un appartement."
+      ]
+    },
+    {
+      "id": "listen-j-ai-un-rendez-vous-dix-heures",
+      "type": "listen",
+      "l1": "Mám stretnutie o desiatej.",
+      "l2": "J'ai un rendez-vous à dix heures.",
+      "choices_l2": [
+        "Le cidre est sucré et froid.",
+        "Mes parents sont retraités. Ils habitent tout près.",
+        "Je mange beaucoup, mais je bois peu."
+      ]
+    },
+    {
+      "id": "listen-le-train-arrive-l-heure",
+      "type": "listen",
+      "l1": "Vlak prichádza načas.",
+      "l2": "Le train arrive à l'heure.",
+      "choices_l2": [
+        "Qui est-ce ?",
+        "Maintenant je mange, ensuite je bois un café.",
+        "Lundi, je commence à sept heures du matin."
+      ]
+    },
+    {
+      "id": "listen-le-bus-a-dix-minutes-de-retard",
+      "type": "listen",
+      "l1": "Autobus mešká desať minút.",
+      "l2": "Le bus a dix minutes de retard.",
+      "choices_l2": [
+        "Ma cousine s'appelle Marie.",
+        "La serviette est dans la salle de bain, sur l'étagère.",
+        "Cette viande est mauvaise."
+      ]
+    },
+    {
+      "id": "listen-tu-es-libre-samedi",
+      "type": "listen",
+      "l1": "Si voľný v sobotu?",
+      "l2": "Tu es libre samedi ?",
+      "choices_l2": [
+        "Ma grand-mère s'appelle Louise.",
+        "J'ai faim. Je prends du pot-au-feu et du pain.",
+        "Quel est ton prénom ?"
+      ]
+    },
+    {
+      "id": "listen-le-r-veil-sonne-six-heures",
+      "type": "listen",
+      "l1": "Budík zvoní o šiestej.",
+      "l2": "Le réveil sonne à six heures.",
+      "choices_l2": [
+        "Nous avons du riz et des pommes de terre.",
+        "Que fais-tu ?",
+        "Quel jour sommes-nous aujourd'hui ?"
+      ]
+    },
+    {
+      "id": "order-j-arrive-cinq-heures",
+      "type": "order",
+      "l1": "Prídem o piatej.",
+      "l2": "J'arrive à cinq heures.",
+      "tokens_l1": [
+        "Prídem",
+        "o",
+        "piatej.",
+        "Vlak",
+        "prichádza",
+        "načas."
+      ],
+      "tokens_l2": [
+        "J'arrive",
+        "à",
+        "cinq",
+        "heures.",
+        "Le",
+        "train",
+        "arrive",
+        "à",
+        "l'heure."
+      ]
+    },
+    {
+      "id": "order-j-attends-sept-heures",
+      "type": "order",
+      "l1": "Čakám o siedmej.",
+      "l2": "J'attends à sept heures.",
+      "tokens_l1": [
+        "Čakám",
+        "o",
+        "siedmej.",
+        "Prídem",
+        "o",
+        "piatej."
+      ],
+      "tokens_l2": [
+        "J'attends",
+        "à",
+        "sept",
+        "heures.",
+        "J'arrive",
+        "à",
+        "cinq",
+        "heures."
+      ]
+    },
+    {
+      "id": "order-on-se-retrouve-mercredi",
+      "type": "order",
+      "l1": "Stretneme sa v stredu?",
+      "l2": "On se retrouve mercredi ?",
+      "tokens_l1": [
+        "Stretneme",
+        "sa",
+        "v",
+        "stredu?",
+        "Si",
+        "voľný",
+        "v",
+        "sobotu?"
+      ],
+      "tokens_l2": [
+        "On",
+        "se",
+        "retrouve",
+        "mercredi",
+        "?",
+        "Tu",
+        "es",
+        "libre",
+        "samedi",
+        "?"
+      ]
+    },
+    {
+      "id": "order-je-vais-arriver-t-t-pas-tard",
+      "type": "order",
+      "l1": "Prídem skoro, nie neskoro.",
+      "l2": "Je vais arriver tôt, pas tard.",
+      "tokens_l1": [
+        "Prídem",
+        "skoro,",
+        "nie",
+        "neskoro.",
+        "Budík",
+        "zvoní",
+        "o",
+        "šiestej."
+      ],
+      "tokens_l2": [
+        "Je",
+        "vais",
+        "arriver",
+        "tôt,",
+        "pas",
+        "tard.",
+        "Le",
+        "réveil",
+        "sonne",
+        "à",
+        "six",
+        "heures."
+      ]
+    },
+    {
+      "id": "order-quand-rentres-tu",
+      "type": "order",
+      "l1": "Kedy ideš domov?",
+      "l2": "Quand rentres-tu ?",
+      "tokens_l1": [
+        "Kedy",
+        "ideš",
+        "domov?",
+        "Meškám.",
+        "Prídem",
+        "o",
+        "štvrť",
+        "na",
+        "deväť."
+      ],
+      "tokens_l2": [
+        "Quand",
+        "rentres-tu",
+        "?",
+        "Je",
+        "suis",
+        "en",
+        "retard.",
+        "Je",
+        "vais",
+        "arriver",
+        "à",
+        "huit",
+        "heures",
+        "et",
+        "quart."
+      ]
+    },
+    {
+      "id": "order-on-se-retrouve-vendredi-six-heures-et-demie",
+      "type": "order",
+      "l1": "Stretneme sa v piatok o pol siedmej.",
+      "l2": "On se retrouve vendredi à six heures et demie.",
+      "tokens_l1": [
+        "Stretneme",
+        "sa",
+        "v",
+        "piatok",
+        "o",
+        "pol",
+        "siedmej.",
+        "Si",
+        "voľný",
+        "v",
+        "sobotu?"
+      ],
+      "tokens_l2": [
+        "On",
+        "se",
+        "retrouve",
+        "vendredi",
+        "à",
+        "six",
+        "heures",
+        "et",
+        "demie.",
+        "Tu",
+        "es",
+        "libre",
+        "samedi",
+        "?"
+      ]
+    },
+    {
+      "id": "order-je-vais-arriver-vers-deux-heures-attends-s-il-te-pla-t",
+      "type": "order",
+      "l1": "Prídem asi o druhej. Čakaj, prosím.",
+      "l2": "Je vais arriver vers deux heures. Attends, s'il te plaît.",
+      "tokens_l1": [
+        "Prídem",
+        "asi",
+        "o",
+        "druhej.",
+        "Čakaj,",
+        "prosím.",
+        "V",
+        "sobotu",
+        "ráno",
+        "idem",
+        "skoro."
+      ],
+      "tokens_l2": [
+        "Je",
+        "vais",
+        "arriver",
+        "vers",
+        "deux",
+        "heures.",
+        "Attends,",
+        "s'il",
+        "te",
+        "plaît.",
+        "Samedi",
+        "matin,",
+        "j'y",
+        "vais",
+        "tôt."
+      ]
+    },
+    {
+      "id": "order-samedi-matin-j-y-vais-t-t",
+      "type": "order",
+      "l1": "V sobotu ráno idem skoro.",
+      "l2": "Samedi matin, j'y vais tôt.",
+      "tokens_l1": [
+        "V",
+        "sobotu",
+        "ráno",
+        "idem",
+        "skoro.",
+        "Stretneme",
+        "sa",
+        "v",
+        "piatok",
+        "o",
+        "pol",
+        "siedmej."
+      ],
+      "tokens_l2": [
+        "Samedi",
+        "matin,",
+        "j'y",
+        "vais",
+        "tôt.",
+        "On",
+        "se",
+        "retrouve",
+        "vendredi",
+        "à",
+        "six",
+        "heures",
+        "et",
+        "demie."
+      ]
+    },
+    {
+      "id": "order-je-suis-en-retard-je-vais-arriver-huit-heures-et-quart",
+      "type": "order",
+      "l1": "Meškám. Prídem o štvrť na deväť.",
+      "l2": "Je suis en retard. Je vais arriver à huit heures et quart.",
+      "tokens_l1": [
+        "Meškám.",
+        "Prídem",
+        "o",
+        "štvrť",
+        "na",
+        "deväť.",
+        "Mám",
+        "stretnutie",
+        "o",
+        "desiatej."
+      ],
+      "tokens_l2": [
+        "Je",
+        "suis",
+        "en",
+        "retard.",
+        "Je",
+        "vais",
+        "arriver",
+        "à",
+        "huit",
+        "heures",
+        "et",
+        "quart.",
+        "J'ai",
+        "un",
+        "rendez-vous",
+        "à",
+        "dix",
+        "heures."
+      ]
+    },
+    {
+      "id": "order-j-ai-un-rendez-vous-dix-heures",
+      "type": "order",
+      "l1": "Mám stretnutie o desiatej.",
+      "l2": "J'ai un rendez-vous à dix heures.",
+      "tokens_l1": [
+        "Mám",
+        "stretnutie",
+        "o",
+        "desiatej.",
+        "Stretneme",
+        "sa",
+        "v",
+        "stredu?"
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "un",
+        "rendez-vous",
+        "à",
+        "dix",
+        "heures.",
+        "On",
+        "se",
+        "retrouve",
+        "mercredi",
+        "?"
+      ]
+    },
+    {
+      "id": "order-le-train-arrive-l-heure",
+      "type": "order",
+      "l1": "Vlak prichádza načas.",
+      "l2": "Le train arrive à l'heure.",
+      "tokens_l1": [
+        "Vlak",
+        "prichádza",
+        "načas.",
+        "Čakám",
+        "o",
+        "siedmej."
+      ],
+      "tokens_l2": [
+        "Le",
+        "train",
+        "arrive",
+        "à",
+        "l'heure.",
+        "J'attends",
+        "à",
+        "sept",
+        "heures."
+      ]
+    },
+    {
+      "id": "order-le-bus-a-dix-minutes-de-retard",
+      "type": "order",
+      "l1": "Autobus mešká desať minút.",
+      "l2": "Le bus a dix minutes de retard.",
+      "tokens_l1": [
+        "Autobus",
+        "mešká",
+        "desať",
+        "minút.",
+        "Meškám.",
+        "Prídem",
+        "o",
+        "štvrť",
+        "na",
+        "deväť."
+      ],
+      "tokens_l2": [
+        "Le",
+        "bus",
+        "a",
+        "dix",
+        "minutes",
+        "de",
+        "retard.",
+        "Je",
+        "suis",
+        "en",
+        "retard.",
+        "Je",
+        "vais",
+        "arriver",
+        "à",
+        "huit",
+        "heures",
+        "et",
+        "quart."
+      ]
+    },
+    {
+      "id": "order-tu-es-libre-samedi",
+      "type": "order",
+      "l1": "Si voľný v sobotu?",
+      "l2": "Tu es libre samedi ?",
+      "tokens_l1": [
+        "Si",
+        "voľný",
+        "v",
+        "sobotu?",
+        "Prídem",
+        "o",
+        "piatej."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "es",
+        "libre",
+        "samedi",
+        "?",
+        "J'arrive",
+        "à",
+        "cinq",
+        "heures."
+      ]
+    },
+    {
+      "id": "order-le-r-veil-sonne-six-heures",
+      "type": "order",
+      "l1": "Budík zvoní o šiestej.",
+      "l2": "Le réveil sonne à six heures.",
+      "tokens_l1": [
+        "Budík",
+        "zvoní",
+        "o",
+        "šiestej.",
+        "Stretneme",
+        "sa",
+        "v",
+        "stredu?"
+      ],
+      "tokens_l2": [
+        "Le",
+        "réveil",
+        "sonne",
+        "à",
+        "six",
+        "heures.",
+        "On",
+        "se",
+        "retrouve",
+        "mercredi",
+        "?"
+      ]
+    }
+  ]
+}

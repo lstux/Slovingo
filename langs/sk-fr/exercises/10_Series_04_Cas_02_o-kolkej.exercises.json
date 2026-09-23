@@ -1,0 +1,1300 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-pol",
+      "type": "qcm",
+      "l1": "la demie",
+      "l2": "pol",
+      "choices_l1": [
+        "le quart",
+        "tard",
+        "tôt, bientôt"
+      ],
+      "choices_l2": [
+        "štvrť",
+        "trištvrte",
+        "chvíľa"
+      ]
+    },
+    {
+      "id": "qcm-tvr",
+      "type": "qcm",
+      "l1": "le quart",
+      "l2": "štvrť",
+      "choices_l1": [
+        "tard",
+        "environ",
+        "un moment"
+      ],
+      "choices_l2": [
+        "pol",
+        "trištvrte",
+        "chvíľa"
+      ]
+    },
+    {
+      "id": "qcm-tri-tvrte",
+      "type": "qcm",
+      "l1": "les trois quarts",
+      "l2": "trištvrte",
+      "choices_l1": [
+        "cinq heures et quart",
+        "à trois heures",
+        "six heures moins le quart"
+      ],
+      "choices_l2": [
+        "pol",
+        "štvrť",
+        "chvíľa"
+      ]
+    },
+    {
+      "id": "qcm-presne",
+      "type": "qcm",
+      "l1": "précisément",
+      "l2": "presne",
+      "choices_l1": [
+        "déjà",
+        "environ",
+        "tôt, bientôt"
+      ],
+      "choices_l2": [
+        "už",
+        "neskoro",
+        "o piatej"
+      ]
+    },
+    {
+      "id": "qcm-asi",
+      "type": "qcm",
+      "l1": "environ",
+      "l2": "asi",
+      "choices_l1": [
+        "déjà",
+        "tard",
+        "longtemps"
+      ],
+      "choices_l2": [
+        "skoro",
+        "presne",
+        "o piatej"
+      ]
+    },
+    {
+      "id": "qcm-me-ka",
+      "type": "qcm",
+      "l1": "être en retard",
+      "l2": "meškať",
+      "choices_l1": [
+        "à douze heures",
+        "tout de suite",
+        "cinq heures et quart"
+      ],
+      "choices_l2": [
+        "o druhej",
+        "pol šiestej",
+        "o dvanástej"
+      ]
+    },
+    {
+      "id": "qcm-za-na",
+      "type": "qcm",
+      "l1": "commencer",
+      "l2": "začínať",
+      "choices_l1": [
+        "tôt, bientôt",
+        "précisément",
+        "longtemps"
+      ],
+      "choices_l2": [
+        "pol",
+        "meškať",
+        "o tretej"
+      ]
+    },
+    {
+      "id": "qcm-o-prvej",
+      "type": "qcm",
+      "l1": "à une heure",
+      "l2": "o prvej",
+      "choices_l1": [
+        "à cinq heures",
+        "à trois heures",
+        "à sept heures"
+      ],
+      "choices_l2": [
+        "o siedmej",
+        "už",
+        "meškať"
+      ]
+    },
+    {
+      "id": "qcm-o-druhej",
+      "type": "qcm",
+      "l1": "à deux heures",
+      "l2": "o druhej",
+      "choices_l1": [
+        "à trois heures",
+        "à une heure",
+        "tout de suite"
+      ],
+      "choices_l2": [
+        "neskoro",
+        "asi",
+        "meškať"
+      ]
+    },
+    {
+      "id": "qcm-o-tretej",
+      "type": "qcm",
+      "l1": "à trois heures",
+      "l2": "o tretej",
+      "choices_l1": [
+        "à cinq heures",
+        "à douze heures",
+        "six heures moins le quart"
+      ],
+      "choices_l2": [
+        "o dvanástej",
+        "už",
+        "skoro"
+      ]
+    },
+    {
+      "id": "qcm-o-piatej",
+      "type": "qcm",
+      "l1": "à cinq heures",
+      "l2": "o piatej",
+      "choices_l1": [
+        "à sept heures",
+        "à trois heures",
+        "six heures moins le quart"
+      ],
+      "choices_l2": [
+        "presne",
+        "neskoro",
+        "už"
+      ]
+    },
+    {
+      "id": "qcm-o-siedmej",
+      "type": "qcm",
+      "l1": "à sept heures",
+      "l2": "o siedmej",
+      "choices_l1": [
+        "à une heure",
+        "à douze heures",
+        "tout de suite"
+      ],
+      "choices_l2": [
+        "už",
+        "o druhej",
+        "o prvej"
+      ]
+    },
+    {
+      "id": "qcm-o-dvan-stej",
+      "type": "qcm",
+      "l1": "à douze heures",
+      "l2": "o dvanástej",
+      "choices_l1": [
+        "six heures moins le quart",
+        "à une heure",
+        "cinq heures et quart"
+      ],
+      "choices_l2": [
+        "o tretej",
+        "o prvej",
+        "o druhej"
+      ]
+    },
+    {
+      "id": "qcm-tvr-na-es",
+      "type": "qcm",
+      "l1": "cinq heures et quart",
+      "l2": "štvrť na šesť",
+      "choices_l1": [
+        "cinq heures et demie",
+        "six heures moins le quart",
+        "à sept heures"
+      ],
+      "choices_l2": [
+        "on / ona ide",
+        "on / ona príde",
+        "trištvrte na šesť"
+      ]
+    },
+    {
+      "id": "qcm-pol-iestej",
+      "type": "qcm",
+      "l1": "cinq heures et demie",
+      "l2": "pol šiestej",
+      "choices_l1": [
+        "être en retard",
+        "à trois heures",
+        "à sept heures"
+      ],
+      "choices_l2": [
+        "meškať",
+        "o siedmej",
+        "o dvanástej"
+      ]
+    },
+    {
+      "id": "qcm-tri-tvrte-na-es",
+      "type": "qcm",
+      "l1": "six heures moins le quart",
+      "l2": "trištvrte na šesť",
+      "choices_l1": [
+        "à douze heures",
+        "à sept heures",
+        "à cinq heures"
+      ],
+      "choices_l2": [
+        "Je päť hodín.",
+        "Je jedna hodina.",
+        "on / ona ide"
+      ]
+    },
+    {
+      "id": "qcm-u",
+      "type": "qcm",
+      "l1": "déjà",
+      "l2": "už",
+      "choices_l1": [
+        "environ",
+        "tôt, bientôt",
+        "précisément"
+      ],
+      "choices_l2": [
+        "o piatej",
+        "neskoro",
+        "asi"
+      ]
+    },
+    {
+      "id": "qcm-e-te",
+      "type": "qcm",
+      "l1": "encore",
+      "l2": "ešte",
+      "choices_l1": [
+        "la demie",
+        "commencer",
+        "environ"
+      ],
+      "choices_l2": [
+        "presne",
+        "o tretej",
+        "o druhej"
+      ]
+    },
+    {
+      "id": "qcm-skoro",
+      "type": "qcm",
+      "l1": "tôt, bientôt",
+      "l2": "skoro",
+      "choices_l1": [
+        "tard",
+        "environ",
+        "déjà"
+      ],
+      "choices_l2": [
+        "o dvanástej",
+        "pol šiestej",
+        "už"
+      ]
+    },
+    {
+      "id": "qcm-neskoro",
+      "type": "qcm",
+      "l1": "tard",
+      "l2": "neskoro",
+      "choices_l1": [
+        "déjà",
+        "tôt, bientôt",
+        "longtemps"
+      ],
+      "choices_l2": [
+        "pol šiestej",
+        "asi",
+        "o piatej"
+      ]
+    },
+    {
+      "id": "qcm-dlho",
+      "type": "qcm",
+      "l1": "longtemps",
+      "l2": "dlho",
+      "choices_l1": [
+        "environ",
+        "déjà",
+        "précisément"
+      ],
+      "choices_l2": [
+        "o prvej",
+        "skoro",
+        "presne"
+      ]
+    },
+    {
+      "id": "qcm-chv-a",
+      "type": "qcm",
+      "l1": "un moment",
+      "l2": "chvíľa",
+      "choices_l1": [
+        "le quart",
+        "environ",
+        "précisément"
+      ],
+      "choices_l2": [
+        "pol",
+        "štvrť",
+        "trištvrte"
+      ]
+    },
+    {
+      "id": "qcm-hne",
+      "type": "qcm",
+      "l1": "tout de suite",
+      "l2": "hneď",
+      "choices_l1": [
+        "à une heure",
+        "à cinq heures",
+        "six heures moins le quart"
+      ],
+      "choices_l2": [
+        "o siedmej",
+        "o piatej",
+        "o dvanástej"
+      ]
+    },
+    {
+      "id": "blank-za-nam-o-siedmej",
+      "type": "fill-blank",
+      "l1": "Je commence à sept heures.",
+      "l2": "Začínam o siedmej.",
+      "missing_l1": "à",
+      "missing_l2": "o",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "près",
+        "Sous",
+        "loin"
+      ],
+      "choices_l2": [
+        "medzi",
+        "pred",
+        "zo"
+      ]
+    },
+    {
+      "id": "blank-je-pol-iestej",
+      "type": "fill-blank",
+      "l1": "Il est cinq heures et demie.",
+      "l2": "Je pol šiestej.",
+      "missing_l1": "est",
+      "missing_l2": "pol",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "suis",
+        "sommes",
+        "C'est"
+      ],
+      "choices_l2": [
+        "už",
+        "asi",
+        "dlho"
+      ]
+    },
+    {
+      "id": "blank-je-tvr-na-tri",
+      "type": "fill-blank",
+      "l1": "Il est deux heures et quart.",
+      "l2": "Je štvrť na tri.",
+      "missing_l1": "est",
+      "missing_l2": "na",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sont",
+        "est-ce",
+        "es"
+      ],
+      "choices_l2": [
+        "za",
+        "pri",
+        "do"
+      ]
+    },
+    {
+      "id": "blank-je-tri-tvrte-na-dev",
+      "type": "fill-blank",
+      "l1": "Il est neuf heures moins le quart.",
+      "l2": "Je trištvrte na deväť.",
+      "missing_l1": "le",
+      "missing_l2": "na",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "es",
+        "six",
+        "la"
+      ],
+      "choices_l2": [
+        "medzi",
+        "z",
+        "bez"
+      ]
+    },
+    {
+      "id": "blank-me-k-m-asi-desa-min-t",
+      "type": "fill-blank",
+      "l1": "Je suis en retard d'environ dix minutes.",
+      "l2": "Meškám asi desať minút.",
+      "missing_l1": "en",
+      "missing_l2": "asi",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "y",
+        "te",
+        "se"
+      ],
+      "choices_l2": [
+        "už",
+        "skoro",
+        "hneď"
+      ]
+    },
+    {
+      "id": "blank-pr-dem-presne-o-druhej",
+      "type": "fill-blank",
+      "l1": "J'arrive précisément à deux heures.",
+      "l2": "Prídem presne o druhej.",
+      "missing_l1": "à",
+      "missing_l2": "o",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "près",
+        "pour",
+        "loin"
+      ],
+      "choices_l2": [
+        "Cez",
+        "Vo",
+        "po"
+      ]
+    },
+    {
+      "id": "blank-ko-ko-je-hod-n-je-pol-siedmej",
+      "type": "fill-blank",
+      "l1": "Quelle heure est-il ? Il est six heures et demie.",
+      "l2": "Koľko je hodín? Je pol siedmej.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 5,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "était",
+        "sommes",
+        "sont"
+      ],
+      "choices_l2": [
+        "Bude",
+        "bol",
+        "budem"
+      ]
+    },
+    {
+      "id": "blank-r-no-za-nam-o-smej",
+      "type": "fill-blank",
+      "l1": "Le matin je commence à huit heures.",
+      "l2": "Ráno začínam o ôsmej.",
+      "missing_l1": "je",
+      "missing_l2": "o",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "elles",
+        "Il",
+        "Elle"
+      ],
+      "choices_l2": [
+        "Vo",
+        "Cez",
+        "medzi"
+      ]
+    },
+    {
+      "id": "blank-poobede-nem-m-as-ale-ve-er-no",
+      "type": "fill-blank",
+      "l1": "L'après-midi je n'ai pas le temps, mais le soir oui.",
+      "l2": "Poobede nemám čas, ale večer áno.",
+      "missing_l1": "le",
+      "missing_l2": "ale",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "six",
+        "tôt",
+        "la"
+      ],
+      "choices_l2": [
+        "a",
+        "však",
+        "aj"
+      ]
+    },
+    {
+      "id": "blank-me-k-je-u-dev-hod-n",
+      "type": "fill-blank",
+      "l1": "Tu es en retard ! Il est déjà neuf heures.",
+      "l2": "Meškáš! Je už deväť hodín.",
+      "missing_l1": "est",
+      "missing_l2": "Je",
+      "blank_index_l1": 6,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "est-ce",
+        "suis",
+        "sont"
+      ],
+      "choices_l2": [
+        "boli",
+        "si",
+        "ste"
+      ]
+    },
+    {
+      "id": "blank-je-e-te-skoro",
+      "type": "fill-blank",
+      "l1": "Il est encore tôt.",
+      "l2": "Je ešte skoro.",
+      "missing_l1": "est",
+      "missing_l2": "ešte",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "suis",
+        "êtes",
+        "était"
+      ],
+      "choices_l2": [
+        "už",
+        "skoro",
+        "asi"
+      ]
+    },
+    {
+      "id": "blank-je-u-neskoro",
+      "type": "fill-blank",
+      "l1": "Il est déjà tard.",
+      "l2": "Je už neskoro.",
+      "missing_l1": "est",
+      "missing_l2": "už",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "c'était",
+        "sont",
+        "êtes"
+      ],
+      "choices_l2": [
+        "skoro",
+        "asi",
+        "presne"
+      ]
+    },
+    {
+      "id": "listen-o-ko-kej",
+      "type": "listen",
+      "l1": "À quelle heure ?",
+      "l2": "O koľkej?",
+      "choices_l1": [
+        "L'après-midi je n'ai pas le temps, mais le soir oui.",
+        "Il est cinq heures et demie.",
+        "Je commence à sept heures."
+      ],
+      "choices_l2": [
+        "Prídem hneď.",
+        "Chvíľu, prosím.",
+        "Nečakám dlho."
+      ]
+    },
+    {
+      "id": "listen-o-piatej",
+      "type": "listen",
+      "l1": "À cinq heures.",
+      "l2": "O piatej.",
+      "choices_l1": [
+        "Je suis en retard d'environ dix minutes.",
+        "Tu es en retard ! Il est déjà neuf heures.",
+        "Il est cinq heures et demie."
+      ],
+      "choices_l2": [
+        "Prídem hneď.",
+        "Nečakám dlho.",
+        "O koľkej?"
+      ]
+    },
+    {
+      "id": "listen-za-nam-o-siedmej",
+      "type": "listen",
+      "l1": "Je commence à sept heures.",
+      "l2": "Začínam o siedmej.",
+      "choices_l1": [
+        "L'après-midi je n'ai pas le temps, mais le soir oui.",
+        "Je suis en retard d'environ dix minutes.",
+        "Il est cinq heures et demie."
+      ],
+      "choices_l2": [
+        "Ráno začínam o ôsmej.",
+        "Prídem presne o druhej.",
+        "Poobede nemám čas, ale večer áno."
+      ]
+    },
+    {
+      "id": "listen-je-pol-iestej",
+      "type": "listen",
+      "l1": "Il est cinq heures et demie.",
+      "l2": "Je pol šiestej.",
+      "choices_l1": [
+        "J'arrive précisément à deux heures.",
+        "Tu es en retard ! Il est déjà neuf heures.",
+        "Il est encore tôt."
+      ],
+      "choices_l2": [
+        "Poobede nemám čas, ale večer áno.",
+        "Koľko je hodín? Je pol siedmej.",
+        "Ráno začínam o ôsmej."
+      ]
+    },
+    {
+      "id": "listen-je-tvr-na-tri",
+      "type": "listen",
+      "l1": "Il est deux heures et quart.",
+      "l2": "Je štvrť na tri.",
+      "choices_l1": [
+        "Je commence à sept heures.",
+        "Tu es en retard ! Il est déjà neuf heures.",
+        "Il est encore tôt."
+      ],
+      "choices_l2": [
+        "Je už neskoro.",
+        "Ráno začínam o ôsmej.",
+        "Je ešte skoro."
+      ]
+    },
+    {
+      "id": "listen-je-tri-tvrte-na-dev",
+      "type": "listen",
+      "l1": "Il est neuf heures moins le quart.",
+      "l2": "Je trištvrte na deväť.",
+      "choices_l1": [
+        "Il est deux heures et quart.",
+        "À quelle heure ?",
+        "Je suis en retard d'environ dix minutes."
+      ],
+      "choices_l2": [
+        "Je už neskoro.",
+        "Koľko je hodín? Je pol siedmej.",
+        "Je štvrť na tri."
+      ]
+    },
+    {
+      "id": "listen-me-k-m-asi-desa-min-t",
+      "type": "listen",
+      "l1": "Je suis en retard d'environ dix minutes.",
+      "l2": "Meškám asi desať minút.",
+      "choices_l1": [
+        "Il est neuf heures moins le quart.",
+        "Il est encore tôt.",
+        "Le matin je commence à huit heures."
+      ],
+      "choices_l2": [
+        "Je trištvrte na deväť.",
+        "Je ešte skoro.",
+        "Začínam o siedmej."
+      ]
+    },
+    {
+      "id": "listen-pr-dem-presne-o-druhej",
+      "type": "listen",
+      "l1": "J'arrive précisément à deux heures.",
+      "l2": "Prídem presne o druhej.",
+      "choices_l1": [
+        "Je commence à sept heures.",
+        "Il est neuf heures moins le quart.",
+        "Je suis en retard d'environ dix minutes."
+      ],
+      "choices_l2": [
+        "Je pol šiestej.",
+        "Začínam o siedmej.",
+        "Meškám asi desať minút."
+      ]
+    },
+    {
+      "id": "listen-ko-ko-je-hod-n-je-pol-siedmej",
+      "type": "listen",
+      "l1": "Quelle heure est-il ? Il est six heures et demie.",
+      "l2": "Koľko je hodín? Je pol siedmej.",
+      "choices_l1": [
+        "Il est encore tôt.",
+        "À quelle heure ?",
+        "Tu es en retard ! Il est déjà neuf heures."
+      ],
+      "choices_l2": [
+        "Je trištvrte na deväť.",
+        "Je pol šiestej.",
+        "Je štvrť na tri."
+      ]
+    },
+    {
+      "id": "listen-r-no-za-nam-o-smej",
+      "type": "listen",
+      "l1": "Le matin je commence à huit heures.",
+      "l2": "Ráno začínam o ôsmej.",
+      "choices_l1": [
+        "Il est deux heures et quart.",
+        "Tu es en retard ! Il est déjà neuf heures.",
+        "Il est cinq heures et demie."
+      ],
+      "choices_l2": [
+        "Je pol šiestej.",
+        "Koľko je hodín? Je pol siedmej.",
+        "Je trištvrte na deväť."
+      ]
+    },
+    {
+      "id": "listen-poobede-nem-m-as-ale-ve-er-no",
+      "type": "listen",
+      "l1": "L'après-midi je n'ai pas le temps, mais le soir oui.",
+      "l2": "Poobede nemám čas, ale večer áno.",
+      "choices_l1": [
+        "Le matin je commence à huit heures.",
+        "Je commence à sept heures.",
+        "J'arrive précisément à deux heures."
+      ],
+      "choices_l2": [
+        "Je pol šiestej.",
+        "Je už neskoro.",
+        "Je štvrť na tri."
+      ]
+    },
+    {
+      "id": "listen-me-k-je-u-dev-hod-n",
+      "type": "listen",
+      "l1": "Tu es en retard ! Il est déjà neuf heures.",
+      "l2": "Meškáš! Je už deväť hodín.",
+      "choices_l1": [
+        "Il est déjà tard.",
+        "Il est neuf heures moins le quart.",
+        "L'après-midi je n'ai pas le temps, mais le soir oui."
+      ],
+      "choices_l2": [
+        "Je ešte skoro.",
+        "Koľko je hodín? Je pol siedmej.",
+        "Je už neskoro."
+      ]
+    },
+    {
+      "id": "listen-je-e-te-skoro",
+      "type": "listen",
+      "l1": "Il est encore tôt.",
+      "l2": "Je ešte skoro.",
+      "choices_l1": [
+        "Tu es en retard ! Il est déjà neuf heures.",
+        "Quelle heure est-il ? Il est six heures et demie.",
+        "Le matin je commence à huit heures."
+      ],
+      "choices_l2": [
+        "Začínam o siedmej.",
+        "Je pol šiestej.",
+        "Poobede nemám čas, ale večer áno."
+      ]
+    },
+    {
+      "id": "listen-je-u-neskoro",
+      "type": "listen",
+      "l1": "Il est déjà tard.",
+      "l2": "Je už neskoro.",
+      "choices_l1": [
+        "Il est encore tôt.",
+        "J'arrive précisément à deux heures.",
+        "Je commence à sept heures."
+      ],
+      "choices_l2": [
+        "Je pol šiestej.",
+        "Je trištvrte na deväť.",
+        "Poobede nemám čas, ale večer áno."
+      ]
+    },
+    {
+      "id": "listen-pr-dem-hne",
+      "type": "listen",
+      "l1": "J'arrive tout de suite.",
+      "l2": "Prídem hneď.",
+      "choices_l1": [
+        "Il est déjà tard.",
+        "Il est cinq heures et demie.",
+        "Je commence à sept heures."
+      ],
+      "choices_l2": [
+        "O koľkej?",
+        "O piatej.",
+        "Chvíľu, prosím."
+      ]
+    },
+    {
+      "id": "listen-chv-u-pros-m",
+      "type": "listen",
+      "l1": "Un moment, s'il te plaît.",
+      "l2": "Chvíľu, prosím.",
+      "choices_l1": [
+        "Quelle heure est-il ? Il est six heures et demie.",
+        "Il est cinq heures et demie.",
+        "Je commence à sept heures."
+      ],
+      "choices_l2": [
+        "O koľkej?",
+        "Nečakám dlho.",
+        "Prídem hneď."
+      ]
+    },
+    {
+      "id": "listen-ne-ak-m-dlho",
+      "type": "listen",
+      "l1": "Je n'attends pas longtemps.",
+      "l2": "Nečakám dlho.",
+      "choices_l1": [
+        "Je commence à sept heures.",
+        "Il est encore tôt.",
+        "Tu es en retard ! Il est déjà neuf heures."
+      ],
+      "choices_l2": [
+        "Prídem hneď.",
+        "O koľkej?",
+        "Chvíľu, prosím."
+      ]
+    },
+    {
+      "id": "order-za-nam-o-siedmej",
+      "type": "order",
+      "l1": "Je commence à sept heures.",
+      "l2": "Začínam o siedmej.",
+      "tokens_l1": [
+        "Je",
+        "commence",
+        "à",
+        "sept",
+        "heures.",
+        "Il",
+        "est",
+        "neuf",
+        "heures",
+        "moins",
+        "le",
+        "quart."
+      ],
+      "tokens_l2": [
+        "Začínam",
+        "o",
+        "siedmej.",
+        "Je",
+        "trištvrte",
+        "na",
+        "deväť."
+      ]
+    },
+    {
+      "id": "order-je-pol-iestej",
+      "type": "order",
+      "l1": "Il est cinq heures et demie.",
+      "l2": "Je pol šiestej.",
+      "tokens_l1": [
+        "Il",
+        "est",
+        "cinq",
+        "heures",
+        "et",
+        "demie.",
+        "Quelle",
+        "heure",
+        "est-il",
+        "?",
+        "Il",
+        "est",
+        "six",
+        "heures",
+        "et",
+        "demie."
+      ],
+      "tokens_l2": [
+        "Je",
+        "pol",
+        "šiestej.",
+        "Koľko",
+        "je",
+        "hodín?",
+        "Je",
+        "pol",
+        "siedmej."
+      ]
+    },
+    {
+      "id": "order-je-tvr-na-tri",
+      "type": "order",
+      "l1": "Il est deux heures et quart.",
+      "l2": "Je štvrť na tri.",
+      "tokens_l1": [
+        "Il",
+        "est",
+        "deux",
+        "heures",
+        "et",
+        "quart.",
+        "J'arrive",
+        "précisément",
+        "à",
+        "deux",
+        "heures."
+      ],
+      "tokens_l2": [
+        "Je",
+        "štvrť",
+        "na",
+        "tri.",
+        "Prídem",
+        "presne",
+        "o",
+        "druhej."
+      ]
+    },
+    {
+      "id": "order-je-tri-tvrte-na-dev",
+      "type": "order",
+      "l1": "Il est neuf heures moins le quart.",
+      "l2": "Je trištvrte na deväť.",
+      "tokens_l1": [
+        "Il",
+        "est",
+        "neuf",
+        "heures",
+        "moins",
+        "le",
+        "quart.",
+        "Quelle",
+        "heure",
+        "est-il",
+        "?",
+        "Il",
+        "est",
+        "six",
+        "heures",
+        "et",
+        "demie."
+      ],
+      "tokens_l2": [
+        "Je",
+        "trištvrte",
+        "na",
+        "deväť.",
+        "Koľko",
+        "je",
+        "hodín?",
+        "Je",
+        "pol",
+        "siedmej."
+      ]
+    },
+    {
+      "id": "order-me-k-m-asi-desa-min-t",
+      "type": "order",
+      "l1": "Je suis en retard d'environ dix minutes.",
+      "l2": "Meškám asi desať minút.",
+      "tokens_l1": [
+        "Je",
+        "suis",
+        "en",
+        "retard",
+        "d'environ",
+        "dix",
+        "minutes.",
+        "J'arrive",
+        "précisément",
+        "à",
+        "deux",
+        "heures."
+      ],
+      "tokens_l2": [
+        "Meškám",
+        "asi",
+        "desať",
+        "minút.",
+        "Prídem",
+        "presne",
+        "o",
+        "druhej."
+      ]
+    },
+    {
+      "id": "order-pr-dem-presne-o-druhej",
+      "type": "order",
+      "l1": "J'arrive précisément à deux heures.",
+      "l2": "Prídem presne o druhej.",
+      "tokens_l1": [
+        "J'arrive",
+        "précisément",
+        "à",
+        "deux",
+        "heures.",
+        "Je",
+        "commence",
+        "à",
+        "sept",
+        "heures."
+      ],
+      "tokens_l2": [
+        "Prídem",
+        "presne",
+        "o",
+        "druhej.",
+        "Začínam",
+        "o",
+        "siedmej."
+      ]
+    },
+    {
+      "id": "order-ko-ko-je-hod-n-je-pol-siedmej",
+      "type": "order",
+      "l1": "Quelle heure est-il ? Il est six heures et demie.",
+      "l2": "Koľko je hodín? Je pol siedmej.",
+      "tokens_l1": [
+        "Quelle",
+        "heure",
+        "est-il",
+        "?",
+        "Il",
+        "est",
+        "six",
+        "heures",
+        "et",
+        "demie.",
+        "Le",
+        "matin",
+        "je",
+        "commence",
+        "à",
+        "huit",
+        "heures."
+      ],
+      "tokens_l2": [
+        "Koľko",
+        "je",
+        "hodín?",
+        "Je",
+        "pol",
+        "siedmej.",
+        "Ráno",
+        "začínam",
+        "o",
+        "ôsmej."
+      ]
+    },
+    {
+      "id": "order-r-no-za-nam-o-smej",
+      "type": "order",
+      "l1": "Le matin je commence à huit heures.",
+      "l2": "Ráno začínam o ôsmej.",
+      "tokens_l1": [
+        "Le",
+        "matin",
+        "je",
+        "commence",
+        "à",
+        "huit",
+        "heures.",
+        "Il",
+        "est",
+        "neuf",
+        "heures",
+        "moins",
+        "le",
+        "quart."
+      ],
+      "tokens_l2": [
+        "Ráno",
+        "začínam",
+        "o",
+        "ôsmej.",
+        "Je",
+        "trištvrte",
+        "na",
+        "deväť."
+      ]
+    },
+    {
+      "id": "order-poobede-nem-m-as-ale-ve-er-no",
+      "type": "order",
+      "l1": "L'après-midi je n'ai pas le temps, mais le soir oui.",
+      "l2": "Poobede nemám čas, ale večer áno.",
+      "tokens_l1": [
+        "L'après-midi",
+        "je",
+        "n'ai",
+        "pas",
+        "le",
+        "temps,",
+        "mais",
+        "le",
+        "soir",
+        "oui.",
+        "Il",
+        "est",
+        "deux",
+        "heures",
+        "et",
+        "quart."
+      ],
+      "tokens_l2": [
+        "Poobede",
+        "nemám",
+        "čas,",
+        "ale",
+        "večer",
+        "áno.",
+        "Je",
+        "štvrť",
+        "na",
+        "tri."
+      ]
+    },
+    {
+      "id": "order-me-k-je-u-dev-hod-n",
+      "type": "order",
+      "l1": "Tu es en retard ! Il est déjà neuf heures.",
+      "l2": "Meškáš! Je už deväť hodín.",
+      "tokens_l1": [
+        "Tu",
+        "es",
+        "en",
+        "retard",
+        "!",
+        "Il",
+        "est",
+        "déjà",
+        "neuf",
+        "heures.",
+        "Je",
+        "commence",
+        "à",
+        "sept",
+        "heures."
+      ],
+      "tokens_l2": [
+        "Meškáš!",
+        "Je",
+        "už",
+        "deväť",
+        "hodín.",
+        "Začínam",
+        "o",
+        "siedmej."
+      ]
+    },
+    {
+      "id": "order-je-e-te-skoro",
+      "type": "order",
+      "l1": "Il est encore tôt.",
+      "l2": "Je ešte skoro.",
+      "tokens_l1": [
+        "Il",
+        "est",
+        "encore",
+        "tôt.",
+        "Tu",
+        "es",
+        "en",
+        "retard",
+        "!",
+        "Il",
+        "est",
+        "déjà",
+        "neuf",
+        "heures."
+      ],
+      "tokens_l2": [
+        "Je",
+        "ešte",
+        "skoro.",
+        "Meškáš!",
+        "Je",
+        "už",
+        "deväť",
+        "hodín."
+      ]
+    },
+    {
+      "id": "order-je-u-neskoro",
+      "type": "order",
+      "l1": "Il est déjà tard.",
+      "l2": "Je už neskoro.",
+      "tokens_l1": [
+        "Il",
+        "est",
+        "déjà",
+        "tard.",
+        "Il",
+        "est",
+        "deux",
+        "heures",
+        "et",
+        "quart."
+      ],
+      "tokens_l2": [
+        "Je",
+        "už",
+        "neskoro.",
+        "Je",
+        "štvrť",
+        "na",
+        "tri."
+      ]
+    },
+    {
+      "id": "match-pol-vocab",
+      "type": "match",
+      "l1": [
+        "la demie",
+        "le quart",
+        "les trois quarts",
+        "précisément"
+      ],
+      "l2": [
+        "pol",
+        "štvrť",
+        "trištvrte",
+        "presne"
+      ]
+    },
+    {
+      "id": "match-o-ko-kej-sentences",
+      "type": "match",
+      "l1": [
+        "À quelle heure ?",
+        "À cinq heures.",
+        "Je commence à sept heures.",
+        "Il est cinq heures et demie."
+      ],
+      "l2": [
+        "O koľkej?",
+        "O piatej.",
+        "Začínam o siedmej.",
+        "Je pol šiestej."
+      ]
+    }
+  ]
+}

@@ -12,7 +12,7 @@ Andrea pomáha Ericovi vybrať oblečenie, s pomocou predavačky. Prejde sa tu c
 - 👩 Andrea, jeho kamarátka
 - 🙋‍♀️ Predavačka
 
-Eric a Andrea si tykajú. Obaja vykajú predavačke.
+Eric a Andrea si vykajú. Obaja vykajú predavačke.
 
 ---
 
@@ -23,10 +23,10 @@ Eric a Andrea si tykajú. Obaja vykajú predavačke.
 > Je veux acheter = chcem kúpiť
 > un tee-shirt = tričko
 
-! 👩 Quelle couleur veux-tu ?
-> Akú farbu chceš?
+! 👩 Quelle couleur voulez-vous ?
+> Akú farbu chcete?
 > Quelle couleur = akú farbu
-> veux-tu = chceš
+> voulez-vous = chcete
 
 ! 👦 Bleu ou vert. Pas noir.
 > Modré alebo zelené. Nie čierne.
@@ -80,10 +80,10 @@ Eric a Andrea si tykajú. Obaja vykajú predavačke.
 > Quinze euros = pätnásť eur
 > c'est en promotion = je to v akcii
 
-! 👩 C'est bon marché ! Achète aussi le vert.
-> To je lacné! Kúp si aj to zelené.
+! 👩 C'est bon marché ! Achetez aussi le vert.
+> To je lacné! Kúpte si aj to zelené.
 > C'est bon marché = to je lacné
-> achète aussi le vert = kúp si aj to zelené
+> achetez aussi le vert = kúpte si aj to zelené
 
 ! 👦 D'accord. Je paie par carte.
 > Dobre. Platím kartou.

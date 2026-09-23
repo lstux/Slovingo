@@ -1,0 +1,1360 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-nager",
+      "type": "qcm",
+      "l1": "plávať",
+      "l2": "nager",
+      "choices_l1": [
+        "ešte",
+        "otvárať",
+        "okno"
+      ],
+      "choices_l2": [
+        "le portefeuille",
+        "les enfants",
+        "la vendeuse"
+      ]
+    },
+    {
+      "id": "qcm-faire-du-bateau",
+      "type": "qcm",
+      "l1": "plaviť sa na lodi",
+      "l2": "faire du bateau",
+      "choices_l1": [
+        "Dám si quiche.",
+        "je starý / je stará",
+        "Idem do práce."
+      ],
+      "choices_l2": [
+        "une chemise bleue",
+        "froid / froide",
+        "l'étudiant / l'étudiante"
+      ]
+    },
+    {
+      "id": "qcm-la-planche-voile",
+      "type": "qcm",
+      "l1": "windsurfing",
+      "l2": "la planche à voile",
+      "choices_l1": [
+        "bageta",
+        "tieto topánky",
+        "banka"
+      ],
+      "choices_l2": [
+        "Il y a quatre chaises.",
+        "je ne dors pas",
+        "ils / elles veulent"
+      ]
+    },
+    {
+      "id": "qcm-construire-un-ch-teau-de-sable",
+      "type": "qcm",
+      "l1": "stavať hrad z piesku",
+      "l2": "construire un château de sable",
+      "choices_l1": [
+        "menej teplý ako",
+        "Musíme mať dáždnik.",
+        "Sú tam štyri stoličky."
+      ],
+      "choices_l2": [
+        "cinq heures et demie (5:30)",
+        "ils / elles font",
+        "vieux / vieille"
+      ]
+    },
+    {
+      "id": "qcm-plonger",
+      "type": "qcm",
+      "l1": "potápať sa",
+      "l2": "plonger",
+      "choices_l1": [
+        "piesok",
+        "ďalej",
+        "dom"
+      ],
+      "choices_l2": [
+        "la plage",
+        "nuageux",
+        "l'automne"
+      ]
+    },
+    {
+      "id": "qcm-s-amuser",
+      "type": "qcm",
+      "l1": "zabávať sa",
+      "l2": "s'amuser",
+      "choices_l1": [
+        "hotovosť",
+        "priamo",
+        "budeš"
+      ],
+      "choices_l2": [
+        "l'orage",
+        "très",
+        "dans l'armoire"
+      ]
+    },
+    {
+      "id": "qcm-le-plus",
+      "type": "qcm",
+      "l1": "naj-",
+      "l2": "le plus...",
+      "choices_l1": [
+        "jeseň",
+        "radnica",
+        "na stole"
+      ],
+      "choices_l2": [
+        "la poste",
+        "ensoleillé",
+        "nuageux"
+      ]
+    },
+    {
+      "id": "qcm-la-plage-la-plus-belle",
+      "type": "qcm",
+      "l1": "najkrajšia pláž",
+      "l2": "la plage la plus belle",
+      "choices_l1": [
+        "skúšame",
+        "električka",
+        "piješ"
+      ],
+      "choices_l2": [
+        "un petit frère",
+        "frais / fraîche",
+        "l'ami / l'amie"
+      ]
+    },
+    {
+      "id": "qcm-la-vague-la-plus-haute",
+      "type": "qcm",
+      "l1": "najvyššia vlna",
+      "l2": "la vague la plus haute",
+      "choices_l1": [
+        "jablčný mušt",
+        "kupujeme",
+        "kostol"
+      ],
+      "choices_l2": [
+        "Il fait très chaud.",
+        "tu tournes → Tourne !",
+        "C'est à côté de la banque."
+      ]
+    },
+    {
+      "id": "qcm-le-moins-cher",
+      "type": "qcm",
+      "l1": "najlacnejší",
+      "l2": "le moins cher",
+      "choices_l1": [
+        "lacný",
+        "do potravín",
+        "robí"
+      ],
+      "choices_l2": [
+        "cinq heures et demie (5:30)",
+        "Lundi, je travaille. (tento konkrétny pondelok)",
+        "petit / petite"
+      ]
+    },
+    {
+      "id": "qcm-plus-haut-que",
+      "type": "qcm",
+      "l1": "vyšší ako",
+      "l2": "plus haut que",
+      "choices_l1": [
+        "robíš",
+        "spací vak",
+        "často"
+      ],
+      "choices_l2": [
+        "chaud / chaude",
+        "à la pharmacie (à + la)",
+        "C'est bon marché."
+      ]
+    },
+    {
+      "id": "qcm-le-plus-haut",
+      "type": "qcm",
+      "l1": "najvyšší",
+      "l2": "le plus haut",
+      "choices_l1": [
+        "je",
+        "Fúka vietor.",
+        "zatvárať"
+      ],
+      "choices_l2": [
+        "Je prends du vin.",
+        "le professeur / la professeure",
+        "boire de l'eau"
+      ]
+    },
+    {
+      "id": "qcm-la-crique",
+      "type": "qcm",
+      "l1": "zátoka",
+      "l2": "la crique",
+      "choices_l1": [
+        "televízor",
+        "pekáreň",
+        "môj brat"
+      ],
+      "choices_l2": [
+        "le frère",
+        "tu essaies",
+        "le garage"
+      ]
+    },
+    {
+      "id": "qcm-la-falaise",
+      "type": "qcm",
+      "l1": "útes",
+      "l2": "la falaise",
+      "choices_l1": [
+        "piatok",
+        "čiapka",
+        "bývam"
+      ],
+      "choices_l2": [
+        "les bottes",
+        "les vêtements",
+        "tu mets"
+      ]
+    },
+    {
+      "id": "qcm-le-courant",
+      "type": "qcm",
+      "l1": "prúd",
+      "l2": "le courant",
+      "choices_l1": [
+        "roh",
+        "polica",
+        "o druhej"
+      ],
+      "choices_l2": [
+        "nous marcherons",
+        "J'ai soif.",
+        "vendredi"
+      ]
+    },
+    {
+      "id": "qcm-dangereux",
+      "type": "qcm",
+      "l1": "nebezpečný",
+      "l2": "dangereux",
+      "choices_l1": [
+        "chladiaci box",
+        "pekáreň",
+        "hodiny"
+      ],
+      "choices_l2": [
+        "tu vois",
+        "le bonnet",
+        "le dîner"
+      ]
+    },
+    {
+      "id": "qcm-s-curis",
+      "type": "qcm",
+      "l1": "bezpečný",
+      "l2": "sécurisé",
+      "choices_l1": [
+        "zima",
+        "hlad",
+        "oblečieme si"
+      ],
+      "choices_l2": [
+        "se lever",
+        "le travail",
+        "un euro"
+      ]
+    },
+    {
+      "id": "qcm-le-ma-tre-nageur",
+      "type": "qcm",
+      "l1": "plavčík",
+      "l2": "le maître nageur",
+      "choices_l1": [
+        "pošta",
+        "nemocnica",
+        "v utorok"
+      ],
+      "choices_l2": [
+        "Ça coûte combien ?",
+        "il / elle boit",
+        "manger de la viande"
+      ]
+    },
+    {
+      "id": "qcm-calme",
+      "type": "qcm",
+      "l1": "pokojný",
+      "l2": "calme",
+      "choices_l1": [
+        "kúpeľňa",
+        "bývať",
+        "skúšame"
+      ],
+      "choices_l2": [
+        "se lever",
+        "J'ai soif.",
+        "l'immeuble"
+      ]
+    },
+    {
+      "id": "blank-je-nage-dans-la-mer",
+      "type": "fill-blank",
+      "l1": "Plávam v mori.",
+      "l2": "Je nage dans la mer.",
+      "missing_l1": "v",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "dnes",
+        "ja",
+        "prosím"
+      ],
+      "choices_l2": [
+        "au",
+        "c'est",
+        "s'il"
+      ]
+    },
+    {
+      "id": "blank-nous-allons-faire-du-bateau",
+      "type": "fill-blank",
+      "l1": "Ideme sa plaviť na lodi.",
+      "l2": "Nous allons faire du bateau.",
+      "missing_l1": "na",
+      "missing_l2": "du",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "moja",
+        "potom",
+        "deň"
+      ],
+      "choices_l2": [
+        "au",
+        "est",
+        "un"
+      ]
+    },
+    {
+      "id": "blank-tu-veux-essayer-la-planche-voile",
+      "type": "fill-blank",
+      "l1": "Chceš skúsiť windsurfing?",
+      "l2": "Tu veux essayer la planche à voile ?",
+      "missing_l1": "skúsiť",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "čas",
+        "veľmi",
+        "moja"
+      ],
+      "choices_l2": [
+        "à",
+        "sur",
+        "dans"
+      ]
+    },
+    {
+      "id": "blank-les-enfants-construisent-un-ch-teau-de-sable",
+      "type": "fill-blank",
+      "l1": "Deti stavajú hrad z piesku.",
+      "l2": "Les enfants construisent un château de sable.",
+      "missing_l1": "z",
+      "missing_l2": "de",
+      "blank_index_l1": 3,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "zajtra",
+        "bude",
+        "ešte"
+      ],
+      "choices_l2": [
+        "veux",
+        "j'ai",
+        "chaud"
+      ]
+    },
+    {
+      "id": "blank-je-vais-plonger-l-eau-est-claire-ici",
+      "type": "fill-blank",
+      "l1": "Idem sa potopiť. Voda je tu čistá.",
+      "l2": "Je vais plonger. L'eau est claire ici.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 4,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "zajtra",
+        "idem",
+        "deti"
+      ],
+      "choices_l2": [
+        "ne",
+        "où",
+        "tu"
+      ]
+    },
+    {
+      "id": "blank-nous-nous-amusons-beaucoup",
+      "type": "fill-blank",
+      "l1": "Veľmi sa zabávame.",
+      "l2": "Nous nous amusons beaucoup.",
+      "missing_l1": "sa",
+      "missing_l2": "nous",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "veľmi",
+        "na",
+        "bude"
+      ],
+      "choices_l2": [
+        "fait",
+        "veux",
+        "chaud"
+      ]
+    },
+    {
+      "id": "blank-c-est-la-plage-la-plus-belle-de-la-c-te",
+      "type": "fill-blank",
+      "l1": "To je najkrajšia pláž na pobreží.",
+      "l2": "C'est la plage la plus belle de la côte.",
+      "missing_l1": "je",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "potom",
+        "môj",
+        "to"
+      ],
+      "choices_l2": [
+        "nous",
+        "un",
+        "du"
+      ]
+    },
+    {
+      "id": "blank-cette-vague-est-la-plus-haute-de-la-journ-e",
+      "type": "fill-blank",
+      "l1": "Táto vlna je dnes najvyššia!",
+      "l2": "Cette vague est la plus haute de la journée !",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ale",
+        "máte",
+        "mám"
+      ],
+      "choices_l2": [
+        "un",
+        "ma",
+        "je"
+      ]
+    },
+    {
+      "id": "blank-cette-plage-est-plus-belle-mais-celle-l-est-moins-ch-re",
+      "type": "fill-blank",
+      "l1": "Táto pláž je krajšia, ale tamtá je lacnejšia.",
+      "l2": "Cette plage est plus belle, mais celle-là est moins chère.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "kde",
+        "som",
+        "sobotu"
+      ],
+      "choices_l2": [
+        "les",
+        "il",
+        "un"
+      ]
+    },
+    {
+      "id": "blank-nous-devons-mettre-de-la-cr-me-solaire-le-soleil-est-le-plus-fort-midi",
+      "type": "fill-blank",
+      "l1": "Musíme si dať krém na opaľovanie, slnko je najsilnejšie na obed.",
+      "l2": "Nous devons mettre de la crème solaire, le soleil est le plus fort à midi.",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 7,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "môj",
+        "chcem",
+        "do"
+      ],
+      "choices_l2": [
+        "y",
+        "je",
+        "au"
+      ]
+    },
+    {
+      "id": "blank-je-peux-nager-mais-je-ne-peux-pas-plonger",
+      "type": "fill-blank",
+      "l1": "Viem plávať, ale neviem sa potápať.",
+      "l2": "Je peux nager, mais je ne peux pas plonger.",
+      "missing_l1": "sa",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "veľmi",
+        "deti",
+        "ešte"
+      ],
+      "choices_l2": [
+        "une",
+        "sur",
+        "il"
+      ]
+    },
+    {
+      "id": "blank-cette-crique-est-plus-calme-que-la-plage-principale",
+      "type": "fill-blank",
+      "l1": "Táto zátoka je pokojnejšia ako hlavná pláž.",
+      "l2": "Cette crique est plus calme que la plage principale.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "moja",
+        "na",
+        "sobotu"
+      ],
+      "choices_l2": [
+        "j'ai",
+        "s'il",
+        "où"
+      ]
+    },
+    {
+      "id": "blank-la-falaise-est-haute-et-dangereuse",
+      "type": "fill-blank",
+      "l1": "Útes je vysoký a nebezpečný.",
+      "l2": "La falaise est haute et dangereuse.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sa",
+        "toto",
+        "máte"
+      ],
+      "choices_l2": [
+        "j'ai",
+        "vais",
+        "je"
+      ]
+    },
+    {
+      "id": "blank-le-courant-est-fort-aujourd-hui",
+      "type": "fill-blank",
+      "l1": "Prúd je dnes silný.",
+      "l2": "Le courant est fort aujourd'hui.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "nie",
+        "sobotu",
+        "mať"
+      ],
+      "choices_l2": [
+        "sur",
+        "veux",
+        "la"
+      ]
+    },
+    {
+      "id": "blank-cette-zone-est-s-curis-e",
+      "type": "fill-blank",
+      "l1": "Táto zóna je bezpečná.",
+      "l2": "Cette zone est sécurisée.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "doma",
+        "deň",
+        "moja"
+      ],
+      "choices_l2": [
+        "à",
+        "ma",
+        "y"
+      ]
+    },
+    {
+      "id": "blank-le-ma-tre-nageur-surveille-la-plage",
+      "type": "fill-blank",
+      "l1": "Plavčík dozerá na pláž.",
+      "l2": "Le maître nageur surveille la plage.",
+      "missing_l1": "na",
+      "missing_l2": "la",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "v",
+        "sa",
+        "siedmej"
+      ],
+      "choices_l2": [
+        "à",
+        "j'ai",
+        "cette"
+      ]
+    },
+    {
+      "id": "listen-je-nage-dans-la-mer",
+      "type": "listen",
+      "l1": "Plávam v mori.",
+      "l2": "Je nage dans la mer.",
+      "choices_l2": [
+        "Ma grand-mère habite à la campagne et ma tante habite en ville.",
+        "La pharmacie est fermée aujourd'hui.",
+        "C'est très savoureux."
+      ]
+    },
+    {
+      "id": "listen-nous-allons-faire-du-bateau",
+      "type": "listen",
+      "l1": "Ideme sa plaviť na lodi.",
+      "l2": "Nous allons faire du bateau.",
+      "choices_l2": [
+        "Cet été est plus chaud, je n'ai pas besoin de porter un pull.",
+        "Quelle couleur veux-tu ?",
+        "J'attends ici depuis longtemps."
+      ]
+    },
+    {
+      "id": "listen-tu-veux-essayer-la-planche-voile",
+      "type": "listen",
+      "l1": "Chceš skúsiť windsurfing?",
+      "l2": "Tu veux essayer la planche à voile ?",
+      "choices_l2": [
+        "Allez tout droit, puis à gauche.",
+        "Encore un peu. Vous n'avez pas faim ?",
+        "Quand commences-tu ? À huit heures ?"
+      ]
+    },
+    {
+      "id": "listen-les-enfants-construisent-un-ch-teau-de-sable",
+      "type": "listen",
+      "l1": "Deti stavajú hrad z piesku.",
+      "l2": "Les enfants construisent un château de sable.",
+      "choices_l2": [
+        "Alors viens tôt !",
+        "Papa est assis sur le canapé et regarde la télévision.",
+        "Quelle couleur veux-tu ?"
+      ]
+    },
+    {
+      "id": "listen-je-vais-plonger-l-eau-est-claire-ici",
+      "type": "listen",
+      "l1": "Idem sa potopiť. Voda je tu čistá.",
+      "l2": "Je vais plonger. L'eau est claire ici.",
+      "choices_l2": [
+        "Vous l'avez dans une autre couleur ?",
+        "Les nuages sont sombres. Il va y avoir un orage.",
+        "Moi, je prends du vin. Santé !"
+      ]
+    },
+    {
+      "id": "listen-nous-nous-amusons-beaucoup",
+      "type": "listen",
+      "l1": "Veľmi sa zabávame.",
+      "l2": "Nous nous amusons beaucoup.",
+      "choices_l2": [
+        "Je veux essayer ce tee-shirt.",
+        "Je suis sur la place.",
+        "Quel est le programme ce soir ?"
+      ]
+    },
+    {
+      "id": "listen-c-est-la-plage-la-plus-belle-de-la-c-te",
+      "type": "listen",
+      "l1": "To je najkrajšia pláž na pobreží.",
+      "l2": "C'est la plage la plus belle de la côte.",
+      "choices_l2": [
+        "J'aime la couleur verte, mais pas la jaune.",
+        "Ma maison de campagne est petite, mais belle.",
+        "Je n'ai pas faim, mais j'ai soif."
+      ]
+    },
+    {
+      "id": "listen-cette-vague-est-la-plus-haute-de-la-journ-e",
+      "type": "listen",
+      "l1": "Táto vlna je dnes najvyššia!",
+      "l2": "Cette vague est la plus haute de la journée !",
+      "choices_l2": [
+        "Il fait chaud et ensoleillé, mais il y aura des nuages ce soir.",
+        "Je vais m'acheter un nouveau vélo et je vais vendre mon vieux vélo.",
+        "Cette viande est mauvaise."
+      ]
+    },
+    {
+      "id": "listen-cette-plage-est-plus-belle-mais-celle-l-est-moins-ch-re",
+      "type": "listen",
+      "l1": "Táto pláž je krajšia, ale tamtá je lacnejšia.",
+      "l2": "Cette plage est plus belle, mais celle-là est moins chère.",
+      "choices_l2": [
+        "Je prends une quiche lorraine.",
+        "Je cherche la clé. Elle n'est pas dans le sac.",
+        "Cet été est plus chaud que le précédent."
+      ]
+    },
+    {
+      "id": "listen-nous-devons-mettre-de-la-cr-me-solaire-le-soleil-est-le-plus-fort-midi",
+      "type": "listen",
+      "l1": "Musíme si dať krém na opaľovanie, slnko je najsilnejšie na obed.",
+      "l2": "Nous devons mettre de la crème solaire, le soleil est le plus fort à midi.",
+      "choices_l2": [
+        "Ensuite il y a du pot-au-feu. Tu aimes la viande ?",
+        "Je sens la fatigue, j'ai besoin de repos.",
+        "Ma sœur a deux ans."
+      ]
+    },
+    {
+      "id": "listen-je-peux-nager-mais-je-ne-peux-pas-plonger",
+      "type": "listen",
+      "l1": "Viem plávať, ale neviem sa potápať.",
+      "l2": "Je peux nager, mais je ne peux pas plonger.",
+      "choices_l2": [
+        "J'habite à Lyon, dans un appartement. Et vous ?",
+        "Mon père est grand et costaud.",
+        "Je veux manger."
+      ]
+    },
+    {
+      "id": "listen-cette-crique-est-plus-calme-que-la-plage-principale",
+      "type": "listen",
+      "l1": "Táto zátoka je pokojnejšia ako hlavná pláž.",
+      "l2": "Cette crique est plus calme que la plage principale.",
+      "choices_l2": [
+        "L'église est sur la place.",
+        "Bonjour, Eric. Entrez, je vous en prie.",
+        "Aujourd'hui, j'y vais à pied."
+      ]
+    },
+    {
+      "id": "listen-la-falaise-est-haute-et-dangereuse",
+      "type": "listen",
+      "l1": "Útes je vysoký a nebezpečný.",
+      "l2": "La falaise est haute et dangereuse.",
+      "choices_l2": [
+        "Je paie en liquide, pas par carte.",
+        "On se retrouve mercredi ?",
+        "Le jus de fruits est très sucré."
+      ]
+    },
+    {
+      "id": "listen-le-courant-est-fort-aujourd-hui",
+      "type": "listen",
+      "l1": "Prúd je dnes silný.",
+      "l2": "Le courant est fort aujourd'hui.",
+      "choices_l2": [
+        "Il pleut. Je n'ai pas de parapluie.",
+        "Eric, quand avez-vous le temps ?",
+        "En hiver il neige, mais au printemps le soleil brille."
+      ]
+    },
+    {
+      "id": "listen-cette-zone-est-s-curis-e",
+      "type": "listen",
+      "l1": "Táto zóna je bezpečná.",
+      "l2": "Cette zone est sécurisée.",
+      "choices_l2": [
+        "Quel jour sommes-nous aujourd'hui ?",
+        "Je rencontre un ami au café et ensuite on va au cinéma.",
+        "À quelle heure ?"
+      ]
+    },
+    {
+      "id": "listen-le-ma-tre-nageur-surveille-la-plage",
+      "type": "listen",
+      "l1": "Plavčík dozerá na pláž.",
+      "l2": "Le maître nageur surveille la plage.",
+      "choices_l2": [
+        "Salut Chloé. Quel âge a ta sœur ?",
+        "Retournez en arrière.",
+        "En colline, tu dois avoir des vêtements chauds et un parapluie."
+      ]
+    },
+    {
+      "id": "order-je-nage-dans-la-mer",
+      "type": "order",
+      "l1": "Plávam v mori.",
+      "l2": "Je nage dans la mer.",
+      "tokens_l1": [
+        "Plávam",
+        "v",
+        "mori.",
+        "Táto",
+        "zátoka",
+        "je",
+        "pokojnejšia",
+        "ako",
+        "hlavná",
+        "pláž."
+      ],
+      "tokens_l2": [
+        "Je",
+        "nage",
+        "dans",
+        "la",
+        "mer.",
+        "Cette",
+        "crique",
+        "est",
+        "plus",
+        "calme",
+        "que",
+        "la",
+        "plage",
+        "principale."
+      ]
+    },
+    {
+      "id": "order-nous-allons-faire-du-bateau",
+      "type": "order",
+      "l1": "Ideme sa plaviť na lodi.",
+      "l2": "Nous allons faire du bateau.",
+      "tokens_l1": [
+        "Ideme",
+        "sa",
+        "plaviť",
+        "na",
+        "lodi.",
+        "Plávam",
+        "v",
+        "mori."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "allons",
+        "faire",
+        "du",
+        "bateau.",
+        "Je",
+        "nage",
+        "dans",
+        "la",
+        "mer."
+      ]
+    },
+    {
+      "id": "order-tu-veux-essayer-la-planche-voile",
+      "type": "order",
+      "l1": "Chceš skúsiť windsurfing?",
+      "l2": "Tu veux essayer la planche à voile ?",
+      "tokens_l1": [
+        "Chceš",
+        "skúsiť",
+        "windsurfing?",
+        "Plavčík",
+        "dozerá",
+        "na",
+        "pláž."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "veux",
+        "essayer",
+        "la",
+        "planche",
+        "à",
+        "voile",
+        "?",
+        "Le",
+        "maître",
+        "nageur",
+        "surveille",
+        "la",
+        "plage."
+      ]
+    },
+    {
+      "id": "order-les-enfants-construisent-un-ch-teau-de-sable",
+      "type": "order",
+      "l1": "Deti stavajú hrad z piesku.",
+      "l2": "Les enfants construisent un château de sable.",
+      "tokens_l1": [
+        "Deti",
+        "stavajú",
+        "hrad",
+        "z",
+        "piesku.",
+        "Táto",
+        "zátoka",
+        "je",
+        "pokojnejšia",
+        "ako",
+        "hlavná",
+        "pláž."
+      ],
+      "tokens_l2": [
+        "Les",
+        "enfants",
+        "construisent",
+        "un",
+        "château",
+        "de",
+        "sable.",
+        "Cette",
+        "crique",
+        "est",
+        "plus",
+        "calme",
+        "que",
+        "la",
+        "plage",
+        "principale."
+      ]
+    },
+    {
+      "id": "order-je-vais-plonger-l-eau-est-claire-ici",
+      "type": "order",
+      "l1": "Idem sa potopiť. Voda je tu čistá.",
+      "l2": "Je vais plonger. L'eau est claire ici.",
+      "tokens_l1": [
+        "Idem",
+        "sa",
+        "potopiť.",
+        "Voda",
+        "je",
+        "tu",
+        "čistá.",
+        "Prúd",
+        "je",
+        "dnes",
+        "silný."
+      ],
+      "tokens_l2": [
+        "Je",
+        "vais",
+        "plonger.",
+        "L'eau",
+        "est",
+        "claire",
+        "ici.",
+        "Le",
+        "courant",
+        "est",
+        "fort",
+        "aujourd'hui."
+      ]
+    },
+    {
+      "id": "order-nous-nous-amusons-beaucoup",
+      "type": "order",
+      "l1": "Veľmi sa zabávame.",
+      "l2": "Nous nous amusons beaucoup.",
+      "tokens_l1": [
+        "Veľmi",
+        "sa",
+        "zabávame.",
+        "Ideme",
+        "sa",
+        "plaviť",
+        "na",
+        "lodi."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "nous",
+        "amusons",
+        "beaucoup.",
+        "Nous",
+        "allons",
+        "faire",
+        "du",
+        "bateau."
+      ]
+    },
+    {
+      "id": "order-c-est-la-plage-la-plus-belle-de-la-c-te",
+      "type": "order",
+      "l1": "To je najkrajšia pláž na pobreží.",
+      "l2": "C'est la plage la plus belle de la côte.",
+      "tokens_l1": [
+        "To",
+        "je",
+        "najkrajšia",
+        "pláž",
+        "na",
+        "pobreží.",
+        "Plavčík",
+        "dozerá",
+        "na",
+        "pláž."
+      ],
+      "tokens_l2": [
+        "C'est",
+        "la",
+        "plage",
+        "la",
+        "plus",
+        "belle",
+        "de",
+        "la",
+        "côte.",
+        "Le",
+        "maître",
+        "nageur",
+        "surveille",
+        "la",
+        "plage."
+      ]
+    },
+    {
+      "id": "order-cette-vague-est-la-plus-haute-de-la-journ-e",
+      "type": "order",
+      "l1": "Táto vlna je dnes najvyššia!",
+      "l2": "Cette vague est la plus haute de la journée !",
+      "tokens_l1": [
+        "Táto",
+        "vlna",
+        "je",
+        "dnes",
+        "najvyššia!",
+        "Veľmi",
+        "sa",
+        "zabávame."
+      ],
+      "tokens_l2": [
+        "Cette",
+        "vague",
+        "est",
+        "la",
+        "plus",
+        "haute",
+        "de",
+        "la",
+        "journée",
+        "!",
+        "Nous",
+        "nous",
+        "amusons",
+        "beaucoup."
+      ]
+    },
+    {
+      "id": "order-cette-plage-est-plus-belle-mais-celle-l-est-moins-ch-re",
+      "type": "order",
+      "l1": "Táto pláž je krajšia, ale tamtá je lacnejšia.",
+      "l2": "Cette plage est plus belle, mais celle-là est moins chère.",
+      "tokens_l1": [
+        "Táto",
+        "pláž",
+        "je",
+        "krajšia,",
+        "ale",
+        "tamtá",
+        "je",
+        "lacnejšia.",
+        "Ideme",
+        "sa",
+        "plaviť",
+        "na",
+        "lodi."
+      ],
+      "tokens_l2": [
+        "Cette",
+        "plage",
+        "est",
+        "plus",
+        "belle,",
+        "mais",
+        "celle-là",
+        "est",
+        "moins",
+        "chère.",
+        "Nous",
+        "allons",
+        "faire",
+        "du",
+        "bateau."
+      ]
+    },
+    {
+      "id": "order-nous-devons-mettre-de-la-cr-me-solaire-le-soleil-est-le-plus-fort-midi",
+      "type": "order",
+      "l1": "Musíme si dať krém na opaľovanie, slnko je najsilnejšie na obed.",
+      "l2": "Nous devons mettre de la crème solaire, le soleil est le plus fort à midi.",
+      "tokens_l1": [
+        "Musíme",
+        "si",
+        "dať",
+        "krém",
+        "na",
+        "opaľovanie,",
+        "slnko",
+        "je",
+        "najsilnejšie",
+        "na",
+        "obed.",
+        "Prúd",
+        "je",
+        "dnes",
+        "silný."
+      ],
+      "tokens_l2": [
+        "Nous",
+        "devons",
+        "mettre",
+        "de",
+        "la",
+        "crème",
+        "solaire,",
+        "le",
+        "soleil",
+        "est",
+        "le",
+        "plus",
+        "fort",
+        "à",
+        "midi.",
+        "Le",
+        "courant",
+        "est",
+        "fort",
+        "aujourd'hui."
+      ]
+    },
+    {
+      "id": "order-je-peux-nager-mais-je-ne-peux-pas-plonger",
+      "type": "order",
+      "l1": "Viem plávať, ale neviem sa potápať.",
+      "l2": "Je peux nager, mais je ne peux pas plonger.",
+      "tokens_l1": [
+        "Viem",
+        "plávať,",
+        "ale",
+        "neviem",
+        "sa",
+        "potápať.",
+        "Prúd",
+        "je",
+        "dnes",
+        "silný."
+      ],
+      "tokens_l2": [
+        "Je",
+        "peux",
+        "nager,",
+        "mais",
+        "je",
+        "ne",
+        "peux",
+        "pas",
+        "plonger.",
+        "Le",
+        "courant",
+        "est",
+        "fort",
+        "aujourd'hui."
+      ]
+    },
+    {
+      "id": "order-cette-crique-est-plus-calme-que-la-plage-principale",
+      "type": "order",
+      "l1": "Táto zátoka je pokojnejšia ako hlavná pláž.",
+      "l2": "Cette crique est plus calme que la plage principale.",
+      "tokens_l1": [
+        "Táto",
+        "zátoka",
+        "je",
+        "pokojnejšia",
+        "ako",
+        "hlavná",
+        "pláž.",
+        "Musíme",
+        "si",
+        "dať",
+        "krém",
+        "na",
+        "opaľovanie,",
+        "slnko",
+        "je",
+        "najsilnejšie",
+        "na",
+        "obed."
+      ],
+      "tokens_l2": [
+        "Cette",
+        "crique",
+        "est",
+        "plus",
+        "calme",
+        "que",
+        "la",
+        "plage",
+        "principale.",
+        "Nous",
+        "devons",
+        "mettre",
+        "de",
+        "la",
+        "crème",
+        "solaire,",
+        "le",
+        "soleil",
+        "est",
+        "le",
+        "plus",
+        "fort",
+        "à",
+        "midi."
+      ]
+    },
+    {
+      "id": "order-la-falaise-est-haute-et-dangereuse",
+      "type": "order",
+      "l1": "Útes je vysoký a nebezpečný.",
+      "l2": "La falaise est haute et dangereuse.",
+      "tokens_l1": [
+        "Útes",
+        "je",
+        "vysoký",
+        "a",
+        "nebezpečný.",
+        "Táto",
+        "vlna",
+        "je",
+        "dnes",
+        "najvyššia!"
+      ],
+      "tokens_l2": [
+        "La",
+        "falaise",
+        "est",
+        "haute",
+        "et",
+        "dangereuse.",
+        "Cette",
+        "vague",
+        "est",
+        "la",
+        "plus",
+        "haute",
+        "de",
+        "la",
+        "journée",
+        "!"
+      ]
+    },
+    {
+      "id": "order-le-courant-est-fort-aujourd-hui",
+      "type": "order",
+      "l1": "Prúd je dnes silný.",
+      "l2": "Le courant est fort aujourd'hui.",
+      "tokens_l1": [
+        "Prúd",
+        "je",
+        "dnes",
+        "silný.",
+        "Plavčík",
+        "dozerá",
+        "na",
+        "pláž."
+      ],
+      "tokens_l2": [
+        "Le",
+        "courant",
+        "est",
+        "fort",
+        "aujourd'hui.",
+        "Le",
+        "maître",
+        "nageur",
+        "surveille",
+        "la",
+        "plage."
+      ]
+    },
+    {
+      "id": "order-cette-zone-est-s-curis-e",
+      "type": "order",
+      "l1": "Táto zóna je bezpečná.",
+      "l2": "Cette zone est sécurisée.",
+      "tokens_l1": [
+        "Táto",
+        "zóna",
+        "je",
+        "bezpečná.",
+        "Chceš",
+        "skúsiť",
+        "windsurfing?"
+      ],
+      "tokens_l2": [
+        "Cette",
+        "zone",
+        "est",
+        "sécurisée.",
+        "Tu",
+        "veux",
+        "essayer",
+        "la",
+        "planche",
+        "à",
+        "voile",
+        "?"
+      ]
+    },
+    {
+      "id": "order-le-ma-tre-nageur-surveille-la-plage",
+      "type": "order",
+      "l1": "Plavčík dozerá na pláž.",
+      "l2": "Le maître nageur surveille la plage.",
+      "tokens_l1": [
+        "Plavčík",
+        "dozerá",
+        "na",
+        "pláž.",
+        "To",
+        "je",
+        "najkrajšia",
+        "pláž",
+        "na",
+        "pobreží."
+      ],
+      "tokens_l2": [
+        "Le",
+        "maître",
+        "nageur",
+        "surveille",
+        "la",
+        "plage.",
+        "C'est",
+        "la",
+        "plage",
+        "la",
+        "plus",
+        "belle",
+        "de",
+        "la",
+        "côte."
+      ]
+    }
+  ]
+}

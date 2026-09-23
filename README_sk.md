@@ -2,186 +2,91 @@
 
 # Slovingo
 
-Uč sa jazyk bez aplikácie, bez účtu, bez servera. Len textové kartičky, skript v Python a webová stránka.
+Uč sa jazyk bez aplikácie, bez účtu, bez servera. Len textové kartičky a Python skript, ktorý vygeneruje mini-web v HTML.
 
-Navrhnuté tak, aby si sa vedel plynule dorozumieť (A2) bez toho, aby si sa stratil v skloňovaní — a ultra jednoduché na prispôsobenie tvojmu vlastnému jazyku.
+Priamo dostupné na **[www.lslinux.org/slovingo](https://www.lslinux.org/slovingo)**.
 
 ## 🎯 Prečo Slovingo
 
-Najznámejšie aplikácie nemajú kurz slovenčiny. Skúšal som Ling, ktorý ju podporuje, ale ani ten ma úplne nenadchol. Chcel som si slová a vety počas čítania aj počúvať a vytvárať si vlastné kartičky so slovnou zásobou či dialógmi...
+Najznámejšie aplikácie nemajú kurz slovenčiny. Ling bol vyskúšaný, ale nenadchol (a po prvom kurze je platený). Preto vznikol tento projekt: chcel som si slová počas čítania aj vypočuť a vytvárať si vlastné kartičky.
 
-Tu nie si na nikom závislý. Žiadny účet, žiadne predplatné, žiadny aplikačný server, ktorý môže zajtra zmiznúť. Len textové súbory v Markdowne, malý skript v Python, ktorý z nich vyrobí mini-web použiteľný offline, a máš svoj kurz.
+Žiadny účet, žiadne predplatné, žiadny server, ktorý môže zajtra zmiznúť. Len textové súbory v Markdowne + malý Python skript, ktorý z nich spraví mini-web na offline prezeranie.
 
-Niekoľko snímok obrazovky v mobilnej verzii :
+![Some screenshots](img/screenshots.png)
 
-![Some screenshots](img/screenshots.png)  
+- Tvoj pokrok sa ukladá lokálne (nič sa nikam neposiela)
+- Kartička zobrazuje slovnú zásobu, gramatiku, zvuk — všetko klikateľné a vysloviteľné
+- Klik na vetu → preklad + rozklad slovo po slove + prehratie zvuku
+- Testy, vety s medzerami, počúvanie — generované automaticky z kartičiek
+- Po nainštalovaní ako PWA funguje aj naďalej offline, aj keby lslinux.org jedného dňa zanikol
 
-- *Tvoj pokrok sa ukladá lokálne (localStorage), všetko funguje bez internetu po prvej návšteve.*  
-- *Kartička zobrazuje slovnú zásobu, gramatiku, audio-karty — všetko sa dá kliknúť a vysloviť.*  
-- *Klik na slovenskú vetu → preklad + rozklad slovo po slove + prehratie zvuku.*  
-- *Testy s výberom odpovede, vety s medzerami, porozumenie sluchom — generované automaticky z kartičiek.*  
+## ⚠️ Obsah generovaný AI
 
----
+Kartičky boli napísané s pomocou AI.
 
-## 🚀 Pre študentov
+- **Slovenčina pre frankofónov**: priebežne kontrolovaná a opravovaná, keďže kurz sám absolvujem.
+- **Francúzština pre Slovákov**: pre mňa oveľa ťažšie poriadne skontrolovať (nie je k dispozícii rodený Slovák na kontrolu). Ak nájdeš chybu, PR alebo issue sú vítané 🙏
 
-### Dostupné kurzy
+## 🚀 Ako sa učiť
 
 - **[Slovenčina pre frankofónov](https://www.lslinux.org/slovingo/sk-fr/)** — *Ahoj Slovenčina!*
 - **[Francúzština pre Slovákov](https://www.lslinux.org/slovingo/fr-sk/)** — *Dis bonjour!*
+- **Bretónčina pre frankofónov** — začiatočný kurz, zatiaľ bez syntézy reči
 
-Každý kurz obsahuje:
+Klikni a ide sa. Žiadna registrácia.
 
-✅ **Kartičky so slovnou zásobou a gramatikou** — audio-karty s prekladom a rozkladom  
-✅ **Mini-dialógy** — opakujúce sa postavy, reálne situácie  
-✅ **Neobmedzené cvičenia** — automaticky generované z korpusu  
-✅ **Sledovanie pokroku** — lokálne (nič sa nikam neodosiela)  
-✅ **Offline** — po načítaní zostane kartička dostupná aj bez siete  
+## 📚 Ako vytvoriť kurz v inom jazyku
 
-### Začni za 30 sekúnd
+Slovingo je generický engine: jeden jazyk = jeden súbor `lang.json` + kartičky v Markdowne.
 
-Klikni na kurz vyššie a ide sa. Žiadna registrácia, žiadne zakladanie účtu.
-
----
-
-## 📚 Pre tvorcov kurzov
-
-Chceš vytvoriť kurz pre **svoj vlastný jazyk**? Slovingo je generický engine — jeden jazyk = jeden konfiguračný súbor JSON + kartičky v Markdowne.
-
-### Čo je to kartička?
-
-Je to **klasický Markdown** + 3 malé syntaktické vychytávky:
+Kartička je bežný Markdown plus pár syntaktických trikov (formát **SMD**):
 
 ```markdown
 # Základná slovná zásoba
 
 | Môj jazyk | Slovenčina |
-|--------------|-----------|
+|-----------|-----------|
 | …         | Dobrý deň |
-| …         | Ďakujem |
-
-## Gramatika
+| …         | Ďakujem   |
 
 ! Ukážková veta
 > Prirodzený preklad.
 > Slovo1 = preklad slova 1
-> Slovo2 = preklad slova 2
-+ Gramatická poznámka, ak je potrebná.
-
-Slovo {{špeciálne}} sa dá vysloviť aj uprostred textu.
++ Gramatická poznámka, ak treba.
 ```
 
-**To je všetko.** Súbor zostáva čitateľný ako čistý text. Žiadne formátovanie, žiadny HTML. Engine vygeneruje HTML, CSS sa postará o vzhľad, JS pridá interaktivitu (zvuk, tlačidlá, vyhľadávanie).
-
-### Pridanie jazyka
-
-```bash
-# 1. Naklonuj repozitár
-git clone https://github.com/...
-cd slovingo
-
-# 2. Vytvor priečinok pre svoj jazyk
-cp -r langs/sk langs/môj-jazyk
-cd langs/môj-jazyk
-
-# 3. Uprav lang.json podľa svojich metadát
-# 4. Napíš svoje kartičky v Markdowne + SMD
-# 5. Publikuj (pozri INSTALL.md)
-```
-
-Ani jeden riadok Python netreba meniť. Všetko, čo závisí od jazyka (syntéza reči, farby, názov), žije v `lang.json`.
-
-## ⚙️ Technické špecifikácie
-
-| Aspekt | Detail |
-|--------|--------|
-| **Jazyk** | Python 3.8+ (smd2html.py) + vanilla JS |
-| **Závislosti** | Žiadne — iba štandardná knižnica Python |
-| **Nasadenie** | Statický hosting (GitHub Pages, Netlify, tvoj server…) |
-| **Veľkosť** | ~500 KB komprimované na kurz |
-| **Úložisko** | localStorage v prehliadači (pokrok + preferencie) |
-| **Offline** | Service worker + PWA — funguje bez siete po prvej návšteve |
-| **Prehliadače** | Chrome, Firefox, Safari, Edge (moderné verzie) |
-| **Syntéza reči** | Web Speech API prehliadača (žiadne volanie externého API) |
-| **OS** | Linux, macOS, Windows — skript funguje všade |
-
-### Architektúra
-
-```
-slovingo/
-├── src/              # Generický engine (nikdy sa nekopíruje)
-│   ├── smd2html.py   # Konvertor SMD → HTML
-│   ├── exercises.py  # Generátor testov a cvičení
-│   └── …
-├── langs/
-│   ├── sk/           # Slovenský kurz
-│   │   ├── lang.json # Konfigurácia: názov, farby, syntéza reči…
-│   │   └── fiches/   # Súbory .md
-│   └── bzh/          # Bretónsky kurz (rovnaká štruktúra)
-└── publish.sh        # Skript na generovanie a nasadenie
-```
-
-Pridať jazyk = skopírovať `langs/sk/`, premenovať, upraviť `lang.json`, napísať kartičky. To je všetko.
-
----
-
-## 📖 Dokumentácia
-
-- **[INSTALL.md](INSTALL.md)** — Lokálna inštalácia, spustenie dev servera, generovanie stránok
-- **[Format-SMD.txt](docs/Format-SMD.txt)** — Úplná syntax formátu SMD (audio-karty, tabuľky, vysloviteľné prvky)
-- **[Fiches-Serie.txt](docs/Fiches-Serie.txt)** — Ako štruktúrovať postupný kurz
-
----
-
-## 🛠️ Inštalácia a lokálny vývoj
-
-### Požiadavky
-- Python 3.8+
-- Moderný prehliadač
-
-### Nastavenie za 2 minúty
+Žiadny Python netreba meniť: všetko, čo závisí od jazyka (hlas, farby, názov), je v `lang.json`. Celý formát je v [Format-SMD.txt](docs/Format-SMD.txt).
 
 ```bash
 git clone https://github.com/…/slovingo.git
 cd slovingo
-python3 src/smd2html.py langs/sk/
-# Otvor langs/sk/index.html vo svojom prehliadači
+cp -r langs/sk-fr langs/môj-jazyk
+python3 src/publish.py --lang-dir langs/môj-jazyk
 ```
 
-Zakaždým, keď upravíš kartičku, spusti skript znova → vygeneruje HTML nanovo.
+## 🛠️ Lokálna inštalácia
 
-Pre vývoj s automatickým znovunačítaním pozri [INSTALL.md](INSTALL.md).
+```bash
+git clone https://github.com/…/slovingo.git
+cd slovingo
+python3 src/publish.py --lang-dir langs/sk-fr
+# Otvor langs/sk-fr/dist/index.html v prehliadači
+```
 
----
+Python 3.8+, žiadne externé závislosti, funguje všade (Linux/macOS/Windows). Detaily v [INSTALL.md](INSTALL.md).
 
 ## 🤝 Prispievanie
 
-### Pridanie kartičiek do existujúceho kurzu
+Príspevky sú vítané, hlavne kontrola a opravy francúzskeho kurzu!
 
-1. Sforkuj repozitár
-2. Vytvor kartičku v `langs/<kód>/fiches/` (ako vzor použi existujúce súbory)
-3. Otestuj lokálne: `python3 src/smd2html.py langs/<kód>/`
-4. Otvor PR
-
-### Nahlásenie chyby
-
-Issues → sekcia *Issues* v repozitári. Opíš, čo nefunguje, + prehliadač/OS.
-
-### Návrh nového jazyka
-
-Otvor issue s týmito údajmi:
-- Jazyk + ISO kód
-- Prečo inde neexistuje (ako v prípade slovenčiny/bretónčiny)
-- Koľko kartičiek plánuješ
-
----
+- **Oprava/pridanie kartičky**: fork → uprav v `langs/<kód>/fiches/` → otestuj cez `python3 src/publish.py --lang-dir langs/<kód>` → PR
+- **Nahlásenie chyby**: otvor issue (čo nefunguje + prehliadač/OS)
+- **Návrh jazyka**: otvor issue (jazyk, ISO kód, prečo inde chýba)
 
 ## 📝 Licencia
 
-GPL v3 — pozri [LICENSE](LICENSE).
-
-Tvoje kartičky, tvoje cvičenia, všetko, čo vytvoríš: je na tebe, akú licenciu zvolíš (CC-BY, GPL, verejná doména…). Samotné Slovingo je pod GPL v3.
+GitHub repozitár — engine, kartičky aj cvičenia — je pod GPL v3, pozri [LICENSE](LICENSE). Mimo repozitára si každý môže zvoliť pre svoje vlastné kartičky ľubovoľnú licenciu (CC-BY, verejná doména…).
 
 ---
 
-**Otázky?** Otvor issue, alebo to jednoducho naklonuj a vyskúšaj. Najlepší README je ten, ktorý žiješ. 🚀
+**Otázky?** Otvor issue, alebo to jednoducho naklonuj a vyskúšaj. 🚀

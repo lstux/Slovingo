@@ -1,0 +1,486 @@
+{
+  "exercises": [
+    {
+      "id": "blank-dnes-je-sedemn-sty-november-sk-r-symbolick-de-hlavne-pre-mlad-ch-ud",
+      "type": "fill-blank",
+      "l1": "Aujourd'hui le 17 novembre est plutôt un jour symbolique, surtout pour les jeunes.",
+      "l2": "Dnes je sedemnásty november skôr symbolický deň, hlavne pre mladých ľudí.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "gens",
+        "voix",
+        "chez"
+      ],
+      "choices_l2": [
+        "boli",
+        "sme",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-a-vy-si-ten-de-e-te-pripom-nate-osobne",
+      "type": "fill-blank",
+      "l1": "Et vous, vous vous rappelez encore ce jour personnellement ?",
+      "l2": "A vy si ten deň ešte pripomínate osobne?",
+      "missing_l1": "vous",
+      "missing_l2": "si",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Ils",
+        "Elle",
+        "Je"
+      ],
+      "choices_l2": [
+        "bola",
+        "budem",
+        "boli"
+      ]
+    },
+    {
+      "id": "blank-no-ka-d-rok-si-spomeniem-na-to-n-mestie-a-na-tie-k-e",
+      "type": "fill-blank",
+      "l1": "Oui, chaque année je me souviens de cette place et de ces clés.",
+      "l2": "Áno, každý rok si spomeniem na to námestie a na tie kľúče.",
+      "missing_l1": "je",
+      "missing_l2": "a",
+      "blank_index_l1": 3,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "Nous",
+        "elles",
+        "Elle"
+      ],
+      "choices_l2": [
+        "aj",
+        "lebo",
+        "však"
+      ]
+    },
+    {
+      "id": "blank-je-to-zvl-tny-pocit-po-va-v-s-pre-m-a-je-to-len-d-tum-v-hist-rii",
+      "type": "fill-blank",
+      "l1": "C'est un sentiment étrange de vous écouter. Pour moi c'est juste une date dans l'histoire.",
+      "l2": "Je to zvláštny pocit, počúvať vás. Pre mňa je to len dátum v histórii.",
+      "missing_l1": "de",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "près",
+        "à",
+        "sans"
+      ],
+      "choices_l2": [
+        "som",
+        "budeme",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-a-pre-m-a-je-to-spomienka-ktor-som-naozaj-pre-ila-to-je-ten-rozdiel-medzi-nami",
+      "type": "fill-blank",
+      "l1": "Et pour moi c'est un souvenir que j'ai vraiment vécu. C'est ça la différence entre nous.",
+      "l2": "A pre mňa je to spomienka, ktorú som naozaj prežila. To je ten rozdiel medzi nami.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 12,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "dont",
+        "êtes",
+        "vécu"
+      ],
+      "choices_l2": [
+        "bol",
+        "Bude",
+        "boli"
+      ]
+    },
+    {
+      "id": "listen-dnes-je-sedemn-sty-november-sk-r-symbolick-de-hlavne-pre-mlad-ch-ud",
+      "type": "listen",
+      "l1": "Aujourd'hui le 17 novembre est plutôt un jour symbolique, surtout pour les jeunes.",
+      "l2": "Dnes je sedemnásty november skôr symbolický deň, hlavne pre mladých ľudí.",
+      "choices_l1": [
+        "C'est un sentiment étrange de vous écouter. Pour moi c'est juste une date dans l'histoire.",
+        "Et pour moi c'est un souvenir que j'ai vraiment vécu. C'est ça la différence entre nous.",
+        "Et vous, vous vous rappelez encore ce jour personnellement ?"
+      ],
+      "choices_l2": [
+        "Áno, každý rok si spomeniem na to námestie a na tie kľúče.",
+        "A pre mňa je to spomienka, ktorú som naozaj prežila. To je ten rozdiel medzi nami.",
+        "Je to zvláštny pocit, počúvať vás. Pre mňa je to len dátum v histórii."
+      ]
+    },
+    {
+      "id": "listen-a-vy-si-ten-de-e-te-pripom-nate-osobne",
+      "type": "listen",
+      "l1": "Et vous, vous vous rappelez encore ce jour personnellement ?",
+      "l2": "A vy si ten deň ešte pripomínate osobne?",
+      "choices_l1": [
+        "Aujourd'hui le 17 novembre est plutôt un jour symbolique, surtout pour les jeunes.",
+        "Oui, chaque année je me souviens de cette place et de ces clés.",
+        "C'est un sentiment étrange de vous écouter. Pour moi c'est juste une date dans l'histoire."
+      ],
+      "choices_l2": [
+        "Áno, každý rok si spomeniem na to námestie a na tie kľúče.",
+        "Je to zvláštny pocit, počúvať vás. Pre mňa je to len dátum v histórii.",
+        "Dnes je sedemnásty november skôr symbolický deň, hlavne pre mladých ľudí."
+      ]
+    },
+    {
+      "id": "listen-no-ka-d-rok-si-spomeniem-na-to-n-mestie-a-na-tie-k-e",
+      "type": "listen",
+      "l1": "Oui, chaque année je me souviens de cette place et de ces clés.",
+      "l2": "Áno, každý rok si spomeniem na to námestie a na tie kľúče.",
+      "choices_l1": [
+        "Et vous, vous vous rappelez encore ce jour personnellement ?",
+        "Aujourd'hui le 17 novembre est plutôt un jour symbolique, surtout pour les jeunes.",
+        "C'est un sentiment étrange de vous écouter. Pour moi c'est juste une date dans l'histoire."
+      ],
+      "choices_l2": [
+        "A vy si ten deň ešte pripomínate osobne?",
+        "Je to zvláštny pocit, počúvať vás. Pre mňa je to len dátum v histórii.",
+        "Dnes je sedemnásty november skôr symbolický deň, hlavne pre mladých ľudí."
+      ]
+    },
+    {
+      "id": "listen-je-to-zvl-tny-pocit-po-va-v-s-pre-m-a-je-to-len-d-tum-v-hist-rii",
+      "type": "listen",
+      "l1": "C'est un sentiment étrange de vous écouter. Pour moi c'est juste une date dans l'histoire.",
+      "l2": "Je to zvláštny pocit, počúvať vás. Pre mňa je to len dátum v histórii.",
+      "choices_l1": [
+        "Aujourd'hui le 17 novembre est plutôt un jour symbolique, surtout pour les jeunes.",
+        "Et vous, vous vous rappelez encore ce jour personnellement ?",
+        "Oui, chaque année je me souviens de cette place et de ces clés."
+      ],
+      "choices_l2": [
+        "A pre mňa je to spomienka, ktorú som naozaj prežila. To je ten rozdiel medzi nami.",
+        "A vy si ten deň ešte pripomínate osobne?",
+        "Áno, každý rok si spomeniem na to námestie a na tie kľúče."
+      ]
+    },
+    {
+      "id": "listen-a-pre-m-a-je-to-spomienka-ktor-som-naozaj-pre-ila-to-je-ten-rozdiel-medzi-nami",
+      "type": "listen",
+      "l1": "Et pour moi c'est un souvenir que j'ai vraiment vécu. C'est ça la différence entre nous.",
+      "l2": "A pre mňa je to spomienka, ktorú som naozaj prežila. To je ten rozdiel medzi nami.",
+      "choices_l1": [
+        "Et vous, vous vous rappelez encore ce jour personnellement ?",
+        "Oui, chaque année je me souviens de cette place et de ces clés.",
+        "Aujourd'hui le 17 novembre est plutôt un jour symbolique, surtout pour les jeunes."
+      ],
+      "choices_l2": [
+        "Je to zvláštny pocit, počúvať vás. Pre mňa je to len dátum v histórii.",
+        "Dnes je sedemnásty november skôr symbolický deň, hlavne pre mladých ľudí.",
+        "A vy si ten deň ešte pripomínate osobne?"
+      ]
+    },
+    {
+      "id": "order-dnes-je-sedemn-sty-november-sk-r-symbolick-de-hlavne-pre-mlad-ch-ud",
+      "type": "order",
+      "l1": "Aujourd'hui le 17 novembre est plutôt un jour symbolique, surtout pour les jeunes.",
+      "l2": "Dnes je sedemnásty november skôr symbolický deň, hlavne pre mladých ľudí.",
+      "tokens_l1": [
+        "Aujourd'hui",
+        "le",
+        "17",
+        "novembre",
+        "est",
+        "plutôt",
+        "un",
+        "jour",
+        "symbolique,",
+        "surtout",
+        "pour",
+        "les",
+        "jeunes.",
+        "Et",
+        "vous,",
+        "vous",
+        "vous",
+        "rappelez",
+        "encore",
+        "ce",
+        "jour",
+        "personnellement",
+        "?"
+      ],
+      "tokens_l2": [
+        "Dnes",
+        "je",
+        "sedemnásty",
+        "november",
+        "skôr",
+        "symbolický",
+        "deň,",
+        "hlavne",
+        "pre",
+        "mladých",
+        "ľudí.",
+        "A",
+        "vy",
+        "si",
+        "ten",
+        "deň",
+        "ešte",
+        "pripomínate",
+        "osobne?"
+      ]
+    },
+    {
+      "id": "order-a-vy-si-ten-de-e-te-pripom-nate-osobne",
+      "type": "order",
+      "l1": "Et vous, vous vous rappelez encore ce jour personnellement ?",
+      "l2": "A vy si ten deň ešte pripomínate osobne?",
+      "tokens_l1": [
+        "Et",
+        "vous,",
+        "vous",
+        "vous",
+        "rappelez",
+        "encore",
+        "ce",
+        "jour",
+        "personnellement",
+        "?",
+        "Aujourd'hui",
+        "le",
+        "17",
+        "novembre",
+        "est",
+        "plutôt",
+        "un",
+        "jour",
+        "symbolique,",
+        "surtout",
+        "pour",
+        "les",
+        "jeunes."
+      ],
+      "tokens_l2": [
+        "A",
+        "vy",
+        "si",
+        "ten",
+        "deň",
+        "ešte",
+        "pripomínate",
+        "osobne?",
+        "Dnes",
+        "je",
+        "sedemnásty",
+        "november",
+        "skôr",
+        "symbolický",
+        "deň,",
+        "hlavne",
+        "pre",
+        "mladých",
+        "ľudí."
+      ]
+    },
+    {
+      "id": "order-no-ka-d-rok-si-spomeniem-na-to-n-mestie-a-na-tie-k-e",
+      "type": "order",
+      "l1": "Oui, chaque année je me souviens de cette place et de ces clés.",
+      "l2": "Áno, každý rok si spomeniem na to námestie a na tie kľúče.",
+      "tokens_l1": [
+        "Oui,",
+        "chaque",
+        "année",
+        "je",
+        "me",
+        "souviens",
+        "de",
+        "cette",
+        "place",
+        "et",
+        "de",
+        "ces",
+        "clés.",
+        "Aujourd'hui",
+        "le",
+        "17",
+        "novembre",
+        "est",
+        "plutôt",
+        "un",
+        "jour",
+        "symbolique,",
+        "surtout",
+        "pour",
+        "les",
+        "jeunes."
+      ],
+      "tokens_l2": [
+        "Áno,",
+        "každý",
+        "rok",
+        "si",
+        "spomeniem",
+        "na",
+        "to",
+        "námestie",
+        "a",
+        "na",
+        "tie",
+        "kľúče.",
+        "Dnes",
+        "je",
+        "sedemnásty",
+        "november",
+        "skôr",
+        "symbolický",
+        "deň,",
+        "hlavne",
+        "pre",
+        "mladých",
+        "ľudí."
+      ]
+    },
+    {
+      "id": "order-je-to-zvl-tny-pocit-po-va-v-s-pre-m-a-je-to-len-d-tum-v-hist-rii",
+      "type": "order",
+      "l1": "C'est un sentiment étrange de vous écouter. Pour moi c'est juste une date dans l'histoire.",
+      "l2": "Je to zvláštny pocit, počúvať vás. Pre mňa je to len dátum v histórii.",
+      "tokens_l1": [
+        "C'est",
+        "un",
+        "sentiment",
+        "étrange",
+        "de",
+        "vous",
+        "écouter.",
+        "Pour",
+        "moi",
+        "c'est",
+        "juste",
+        "une",
+        "date",
+        "dans",
+        "l'histoire.",
+        "Aujourd'hui",
+        "le",
+        "17",
+        "novembre",
+        "est",
+        "plutôt",
+        "un",
+        "jour",
+        "symbolique,",
+        "surtout",
+        "pour",
+        "les",
+        "jeunes."
+      ],
+      "tokens_l2": [
+        "Je",
+        "to",
+        "zvláštny",
+        "pocit,",
+        "počúvať",
+        "vás.",
+        "Pre",
+        "mňa",
+        "je",
+        "to",
+        "len",
+        "dátum",
+        "v",
+        "histórii.",
+        "Dnes",
+        "je",
+        "sedemnásty",
+        "november",
+        "skôr",
+        "symbolický",
+        "deň,",
+        "hlavne",
+        "pre",
+        "mladých",
+        "ľudí."
+      ]
+    },
+    {
+      "id": "order-a-pre-m-a-je-to-spomienka-ktor-som-naozaj-pre-ila-to-je-ten-rozdiel-medzi-nami",
+      "type": "order",
+      "l1": "Et pour moi c'est un souvenir que j'ai vraiment vécu. C'est ça la différence entre nous.",
+      "l2": "A pre mňa je to spomienka, ktorú som naozaj prežila. To je ten rozdiel medzi nami.",
+      "tokens_l1": [
+        "Et",
+        "pour",
+        "moi",
+        "c'est",
+        "un",
+        "souvenir",
+        "que",
+        "j'ai",
+        "vraiment",
+        "vécu.",
+        "C'est",
+        "ça",
+        "la",
+        "différence",
+        "entre",
+        "nous.",
+        "Et",
+        "vous,",
+        "vous",
+        "vous",
+        "rappelez",
+        "encore",
+        "ce",
+        "jour",
+        "personnellement",
+        "?"
+      ],
+      "tokens_l2": [
+        "A",
+        "pre",
+        "mňa",
+        "je",
+        "to",
+        "spomienka,",
+        "ktorú",
+        "som",
+        "naozaj",
+        "prežila.",
+        "To",
+        "je",
+        "ten",
+        "rozdiel",
+        "medzi",
+        "nami.",
+        "A",
+        "vy",
+        "si",
+        "ten",
+        "deň",
+        "ešte",
+        "pripomínate",
+        "osobne?"
+      ]
+    },
+    {
+      "id": "match-dnes-je-sedemn-sty-november-sk-r-symbolick-de-hlavne-pre-mlad-ch-ud-sentences",
+      "type": "match",
+      "l1": [
+        "Aujourd'hui le 17 novembre est plutôt un jour symbolique, surtout pour les jeunes.",
+        "Et vous, vous vous rappelez encore ce jour personnellement ?",
+        "Oui, chaque année je me souviens de cette place et de ces clés.",
+        "C'est un sentiment étrange de vous écouter. Pour moi c'est juste une date dans l'histoire."
+      ],
+      "l2": [
+        "Dnes je sedemnásty november skôr symbolický deň, hlavne pre mladých ľudí.",
+        "A vy si ten deň ešte pripomínate osobne?",
+        "Áno, každý rok si spomeniem na to námestie a na tie kľúče.",
+        "Je to zvláštny pocit, počúvať vás. Pre mňa je to len dátum v histórii."
+      ]
+    }
+  ]
+}

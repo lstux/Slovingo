@@ -1,0 +1,501 @@
+{
+  "exercises": [
+    {
+      "id": "blank-dnes-je-hranica-medzi-nami-len-formalita-ani-si-ju-nev-imnete-ke-tam-idete-autom",
+      "type": "fill-blank",
+      "l1": "Aujourd'hui la frontière entre nous n'est qu'une formalité. Vous ne la remarquez même pas en y allant en voiture.",
+      "l2": "Dnes je hranica medzi nami len formalita. Ani si ju nevšimnete, keď tam idete autom.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "ni",
+        "dire",
+        "le"
+      ],
+      "choices_l2": [
+        "som",
+        "si",
+        "sú"
+      ]
+    },
+    {
+      "id": "blank-utujete-niekedy-e-sa-eskoslovensko-rozdelilo",
+      "type": "fill-blank",
+      "l1": "Regrettez-vous parfois que la Tchécoslovaquie se soit séparée ?",
+      "l2": "Ľutujete niekedy, že sa Československo rozdelilo?",
+      "missing_l1": "la",
+      "missing_l2": "sa",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "le",
+        "Les",
+        "dire"
+      ],
+      "choices_l2": [
+        "vy",
+        "To",
+        "Toto"
+      ]
+    },
+    {
+      "id": "blank-primne-neviem-mo-no-to-bolo-lep-ie-takto-mo-no-nie-a-ko-poveda",
+      "type": "fill-blank",
+      "l1": "Honnêtement, je ne sais pas. Peut-être que c'était mieux ainsi, peut-être pas. Difficile à dire.",
+      "l2": "Úprimne, neviem. Možno to bolo lepšie takto, možno nie. Ťažko povedať.",
+      "missing_l1": "je",
+      "missing_l2": "to",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "On",
+        "Ce",
+        "Il"
+      ],
+      "choices_l2": [
+        "Toto",
+        "Ja",
+        "vy"
+      ]
+    },
+    {
+      "id": "blank-to-znie-ako-ve-mi-vyv-en-poh-ad",
+      "type": "fill-blank",
+      "l1": "Ça sonne comme un regard très équilibré.",
+      "l2": "To znie ako veľmi vyvážený pohľad.",
+      "missing_l1": "un",
+      "missing_l2": "ako",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "dire",
+        "ni",
+        "des"
+      ],
+      "choices_l2": [
+        "presne",
+        "zajtra",
+        "veľa"
+      ]
+    },
+    {
+      "id": "blank-v-ina-ud-u-n-s-to-tak-vid-nie-je-to-hrdos-ani-tos-je-to-len-na-a-hist-ria",
+      "type": "fill-blank",
+      "l1": "La plupart des gens chez nous voient ça comme ça. Ce n'est ni de la fierté ni du regret. C'est juste notre histoire.",
+      "l2": "Väčšina ľudí u nás to tak vidí. Nie je to hrdosť ani ľútosť. Je to len naša história.",
+      "missing_l1": "la",
+      "missing_l2": "je",
+      "blank_index_l1": 14,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "le",
+        "soit",
+        "dire"
+      ],
+      "choices_l2": [
+        "bol",
+        "boli",
+        "budem"
+      ]
+    },
+    {
+      "id": "listen-dnes-je-hranica-medzi-nami-len-formalita-ani-si-ju-nev-imnete-ke-tam-idete-autom",
+      "type": "listen",
+      "l1": "Aujourd'hui la frontière entre nous n'est qu'une formalité. Vous ne la remarquez même pas en y allant en voiture.",
+      "l2": "Dnes je hranica medzi nami len formalita. Ani si ju nevšimnete, keď tam idete autom.",
+      "choices_l1": [
+        "Ça sonne comme un regard très équilibré.",
+        "Regrettez-vous parfois que la Tchécoslovaquie se soit séparée ?",
+        "Honnêtement, je ne sais pas. Peut-être que c'était mieux ainsi, peut-être pas. Difficile à dire."
+      ],
+      "choices_l2": [
+        "Väčšina ľudí u nás to tak vidí. Nie je to hrdosť ani ľútosť. Je to len naša história.",
+        "Ľutujete niekedy, že sa Československo rozdelilo?",
+        "To znie ako veľmi vyvážený pohľad."
+      ]
+    },
+    {
+      "id": "listen-utujete-niekedy-e-sa-eskoslovensko-rozdelilo",
+      "type": "listen",
+      "l1": "Regrettez-vous parfois que la Tchécoslovaquie se soit séparée ?",
+      "l2": "Ľutujete niekedy, že sa Československo rozdelilo?",
+      "choices_l1": [
+        "Aujourd'hui la frontière entre nous n'est qu'une formalité. Vous ne la remarquez même pas en y allant en voiture.",
+        "Honnêtement, je ne sais pas. Peut-être que c'était mieux ainsi, peut-être pas. Difficile à dire.",
+        "La plupart des gens chez nous voient ça comme ça. Ce n'est ni de la fierté ni du regret. C'est juste notre histoire."
+      ],
+      "choices_l2": [
+        "Väčšina ľudí u nás to tak vidí. Nie je to hrdosť ani ľútosť. Je to len naša história.",
+        "Úprimne, neviem. Možno to bolo lepšie takto, možno nie. Ťažko povedať.",
+        "To znie ako veľmi vyvážený pohľad."
+      ]
+    },
+    {
+      "id": "listen-primne-neviem-mo-no-to-bolo-lep-ie-takto-mo-no-nie-a-ko-poveda",
+      "type": "listen",
+      "l1": "Honnêtement, je ne sais pas. Peut-être que c'était mieux ainsi, peut-être pas. Difficile à dire.",
+      "l2": "Úprimne, neviem. Možno to bolo lepšie takto, možno nie. Ťažko povedať.",
+      "choices_l1": [
+        "Ça sonne comme un regard très équilibré.",
+        "Regrettez-vous parfois que la Tchécoslovaquie se soit séparée ?",
+        "La plupart des gens chez nous voient ça comme ça. Ce n'est ni de la fierté ni du regret. C'est juste notre histoire."
+      ],
+      "choices_l2": [
+        "Väčšina ľudí u nás to tak vidí. Nie je to hrdosť ani ľútosť. Je to len naša história.",
+        "Dnes je hranica medzi nami len formalita. Ani si ju nevšimnete, keď tam idete autom.",
+        "Ľutujete niekedy, že sa Československo rozdelilo?"
+      ]
+    },
+    {
+      "id": "listen-to-znie-ako-ve-mi-vyv-en-poh-ad",
+      "type": "listen",
+      "l1": "Ça sonne comme un regard très équilibré.",
+      "l2": "To znie ako veľmi vyvážený pohľad.",
+      "choices_l1": [
+        "Aujourd'hui la frontière entre nous n'est qu'une formalité. Vous ne la remarquez même pas en y allant en voiture.",
+        "Honnêtement, je ne sais pas. Peut-être que c'était mieux ainsi, peut-être pas. Difficile à dire.",
+        "La plupart des gens chez nous voient ça comme ça. Ce n'est ni de la fierté ni du regret. C'est juste notre histoire."
+      ],
+      "choices_l2": [
+        "Väčšina ľudí u nás to tak vidí. Nie je to hrdosť ani ľútosť. Je to len naša história.",
+        "Ľutujete niekedy, že sa Československo rozdelilo?",
+        "Úprimne, neviem. Možno to bolo lepšie takto, možno nie. Ťažko povedať."
+      ]
+    },
+    {
+      "id": "listen-v-ina-ud-u-n-s-to-tak-vid-nie-je-to-hrdos-ani-tos-je-to-len-na-a-hist-ria",
+      "type": "listen",
+      "l1": "La plupart des gens chez nous voient ça comme ça. Ce n'est ni de la fierté ni du regret. C'est juste notre histoire.",
+      "l2": "Väčšina ľudí u nás to tak vidí. Nie je to hrdosť ani ľútosť. Je to len naša história.",
+      "choices_l1": [
+        "Aujourd'hui la frontière entre nous n'est qu'une formalité. Vous ne la remarquez même pas en y allant en voiture.",
+        "Ça sonne comme un regard très équilibré.",
+        "Honnêtement, je ne sais pas. Peut-être que c'était mieux ainsi, peut-être pas. Difficile à dire."
+      ],
+      "choices_l2": [
+        "Dnes je hranica medzi nami len formalita. Ani si ju nevšimnete, keď tam idete autom.",
+        "To znie ako veľmi vyvážený pohľad.",
+        "Úprimne, neviem. Možno to bolo lepšie takto, možno nie. Ťažko povedať."
+      ]
+    },
+    {
+      "id": "order-dnes-je-hranica-medzi-nami-len-formalita-ani-si-ju-nev-imnete-ke-tam-idete-autom",
+      "type": "order",
+      "l1": "Aujourd'hui la frontière entre nous n'est qu'une formalité. Vous ne la remarquez même pas en y allant en voiture.",
+      "l2": "Dnes je hranica medzi nami len formalita. Ani si ju nevšimnete, keď tam idete autom.",
+      "tokens_l1": [
+        "Aujourd'hui",
+        "la",
+        "frontière",
+        "entre",
+        "nous",
+        "n'est",
+        "qu'une",
+        "formalité.",
+        "Vous",
+        "ne",
+        "la",
+        "remarquez",
+        "même",
+        "pas",
+        "en",
+        "y",
+        "allant",
+        "en",
+        "voiture.",
+        "Ça",
+        "sonne",
+        "comme",
+        "un",
+        "regard",
+        "très",
+        "équilibré."
+      ],
+      "tokens_l2": [
+        "Dnes",
+        "je",
+        "hranica",
+        "medzi",
+        "nami",
+        "len",
+        "formalita.",
+        "Ani",
+        "si",
+        "ju",
+        "nevšimnete,",
+        "keď",
+        "tam",
+        "idete",
+        "autom.",
+        "To",
+        "znie",
+        "ako",
+        "veľmi",
+        "vyvážený",
+        "pohľad."
+      ]
+    },
+    {
+      "id": "order-utujete-niekedy-e-sa-eskoslovensko-rozdelilo",
+      "type": "order",
+      "l1": "Regrettez-vous parfois que la Tchécoslovaquie se soit séparée ?",
+      "l2": "Ľutujete niekedy, že sa Československo rozdelilo?",
+      "tokens_l1": [
+        "Regrettez-vous",
+        "parfois",
+        "que",
+        "la",
+        "Tchécoslovaquie",
+        "se",
+        "soit",
+        "séparée",
+        "?",
+        "Aujourd'hui",
+        "la",
+        "frontière",
+        "entre",
+        "nous",
+        "n'est",
+        "qu'une",
+        "formalité.",
+        "Vous",
+        "ne",
+        "la",
+        "remarquez",
+        "même",
+        "pas",
+        "en",
+        "y",
+        "allant",
+        "en",
+        "voiture."
+      ],
+      "tokens_l2": [
+        "Ľutujete",
+        "niekedy,",
+        "že",
+        "sa",
+        "Československo",
+        "rozdelilo?",
+        "Dnes",
+        "je",
+        "hranica",
+        "medzi",
+        "nami",
+        "len",
+        "formalita.",
+        "Ani",
+        "si",
+        "ju",
+        "nevšimnete,",
+        "keď",
+        "tam",
+        "idete",
+        "autom."
+      ]
+    },
+    {
+      "id": "order-primne-neviem-mo-no-to-bolo-lep-ie-takto-mo-no-nie-a-ko-poveda",
+      "type": "order",
+      "l1": "Honnêtement, je ne sais pas. Peut-être que c'était mieux ainsi, peut-être pas. Difficile à dire.",
+      "l2": "Úprimne, neviem. Možno to bolo lepšie takto, možno nie. Ťažko povedať.",
+      "tokens_l1": [
+        "Honnêtement,",
+        "je",
+        "ne",
+        "sais",
+        "pas.",
+        "Peut-être",
+        "que",
+        "c'était",
+        "mieux",
+        "ainsi,",
+        "peut-être",
+        "pas.",
+        "Difficile",
+        "à",
+        "dire.",
+        "Regrettez-vous",
+        "parfois",
+        "que",
+        "la",
+        "Tchécoslovaquie",
+        "se",
+        "soit",
+        "séparée",
+        "?"
+      ],
+      "tokens_l2": [
+        "Úprimne,",
+        "neviem.",
+        "Možno",
+        "to",
+        "bolo",
+        "lepšie",
+        "takto,",
+        "možno",
+        "nie.",
+        "Ťažko",
+        "povedať.",
+        "Ľutujete",
+        "niekedy,",
+        "že",
+        "sa",
+        "Československo",
+        "rozdelilo?"
+      ]
+    },
+    {
+      "id": "order-to-znie-ako-ve-mi-vyv-en-poh-ad",
+      "type": "order",
+      "l1": "Ça sonne comme un regard très équilibré.",
+      "l2": "To znie ako veľmi vyvážený pohľad.",
+      "tokens_l1": [
+        "Ça",
+        "sonne",
+        "comme",
+        "un",
+        "regard",
+        "très",
+        "équilibré.",
+        "Honnêtement,",
+        "je",
+        "ne",
+        "sais",
+        "pas.",
+        "Peut-être",
+        "que",
+        "c'était",
+        "mieux",
+        "ainsi,",
+        "peut-être",
+        "pas.",
+        "Difficile",
+        "à",
+        "dire."
+      ],
+      "tokens_l2": [
+        "To",
+        "znie",
+        "ako",
+        "veľmi",
+        "vyvážený",
+        "pohľad.",
+        "Úprimne,",
+        "neviem.",
+        "Možno",
+        "to",
+        "bolo",
+        "lepšie",
+        "takto,",
+        "možno",
+        "nie.",
+        "Ťažko",
+        "povedať."
+      ]
+    },
+    {
+      "id": "order-v-ina-ud-u-n-s-to-tak-vid-nie-je-to-hrdos-ani-tos-je-to-len-na-a-hist-ria",
+      "type": "order",
+      "l1": "La plupart des gens chez nous voient ça comme ça. Ce n'est ni de la fierté ni du regret. C'est juste notre histoire.",
+      "l2": "Väčšina ľudí u nás to tak vidí. Nie je to hrdosť ani ľútosť. Je to len naša história.",
+      "tokens_l1": [
+        "La",
+        "plupart",
+        "des",
+        "gens",
+        "chez",
+        "nous",
+        "voient",
+        "ça",
+        "comme",
+        "ça.",
+        "Ce",
+        "n'est",
+        "ni",
+        "de",
+        "la",
+        "fierté",
+        "ni",
+        "du",
+        "regret.",
+        "C'est",
+        "juste",
+        "notre",
+        "histoire.",
+        "Aujourd'hui",
+        "la",
+        "frontière",
+        "entre",
+        "nous",
+        "n'est",
+        "qu'une",
+        "formalité.",
+        "Vous",
+        "ne",
+        "la",
+        "remarquez",
+        "même",
+        "pas",
+        "en",
+        "y",
+        "allant",
+        "en",
+        "voiture."
+      ],
+      "tokens_l2": [
+        "Väčšina",
+        "ľudí",
+        "u",
+        "nás",
+        "to",
+        "tak",
+        "vidí.",
+        "Nie",
+        "je",
+        "to",
+        "hrdosť",
+        "ani",
+        "ľútosť.",
+        "Je",
+        "to",
+        "len",
+        "naša",
+        "história.",
+        "Dnes",
+        "je",
+        "hranica",
+        "medzi",
+        "nami",
+        "len",
+        "formalita.",
+        "Ani",
+        "si",
+        "ju",
+        "nevšimnete,",
+        "keď",
+        "tam",
+        "idete",
+        "autom."
+      ]
+    },
+    {
+      "id": "match-dnes-je-hranica-medzi-nami-len-formalita-ani-si-ju-nev-imnete-ke-tam-idete-autom-sentences",
+      "type": "match",
+      "l1": [
+        "Aujourd'hui la frontière entre nous n'est qu'une formalité. Vous ne la remarquez même pas en y allant en voiture.",
+        "Regrettez-vous parfois que la Tchécoslovaquie se soit séparée ?",
+        "Honnêtement, je ne sais pas. Peut-être que c'était mieux ainsi, peut-être pas. Difficile à dire.",
+        "Ça sonne comme un regard très équilibré."
+      ],
+      "l2": [
+        "Dnes je hranica medzi nami len formalita. Ani si ju nevšimnete, keď tam idete autom.",
+        "Ľutujete niekedy, že sa Československo rozdelilo?",
+        "Úprimne, neviem. Možno to bolo lepšie takto, možno nie. Ťažko povedať.",
+        "To znie ako veľmi vyvážený pohľad."
+      ]
+    }
+  ]
+}

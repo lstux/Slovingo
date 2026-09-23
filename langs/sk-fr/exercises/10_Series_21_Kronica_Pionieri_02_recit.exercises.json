@@ -1,0 +1,1456 @@
+{
+  "exercises": [
+    {
+      "id": "blank-vst-vali-sme-na-bugel-o-siedmej-r-no-nikto-neme-kal-to-sa-nedalo",
+      "type": "fill-blank",
+      "l1": "On se levait au clairon, à sept heures du matin. Personne n'était en retard, ce n'était pas possible.",
+      "l2": "Vstávali sme na bugel, o siedmej ráno. Nikto nemeškal, to sa nedalo.",
+      "missing_l1": "à",
+      "missing_l2": "na",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "de",
+        "loin",
+        "avec"
+      ],
+      "choices_l2": [
+        "po",
+        "v",
+        "od"
+      ]
+    },
+    {
+      "id": "blank-o-siedmej-to-je-dos-skoro-na-pr-zdniny",
+      "type": "fill-blank",
+      "l1": "À sept heures ? C'est assez tôt pour des vacances !",
+      "l2": "O siedmej? To je dosť skoro na prázdniny!",
+      "missing_l1": "C'est",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "sommes",
+        "es",
+        "suis"
+      ],
+      "choices_l2": [
+        "si",
+        "bol",
+        "bola"
+      ]
+    },
+    {
+      "id": "blank-presne-ale-potom-sme-mali-rozcvi-ku-vonku-aj-ke-pr-alo",
+      "type": "fill-blank",
+      "l1": "Exactement ! Mais ensuite nous avions de la gym en extérieur, même s'il pleuvait.",
+      "l2": "Presne! Ale potom sme mali rozcvičku vonku, aj keď pršalo.",
+      "missing_l1": "la",
+      "missing_l2": "Ale",
+      "blank_index_l1": 7,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "même",
+        "jeux",
+        "gym"
+      ],
+      "choices_l2": [
+        "však",
+        "lebo",
+        "a"
+      ]
+    },
+    {
+      "id": "blank-potom-bol-n-stup-museli-sme-st-rovno-v-rade-pod-a-oddielov",
+      "type": "fill-blank",
+      "l1": "Ensuite il y avait le rassemblement. Nous devions nous tenir droit, en rang, par groupes.",
+      "l2": "Potom bol nástup. Museli sme stáť rovno, v rade, podľa oddielov.",
+      "missing_l1": "le",
+      "missing_l2": "v",
+      "blank_index_l1": 4,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "rang",
+        "quoi",
+        "Les"
+      ],
+      "choices_l2": [
+        "do",
+        "po",
+        "bez"
+      ]
+    },
+    {
+      "id": "blank-a-spievali-ste-tam",
+      "type": "fill-blank",
+      "l1": "Et vous chantiez là-bas ?",
+      "l2": "A spievali ste tam?",
+      "missing_l1": "vous",
+      "missing_l2": "ste",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Ce",
+        "Ils",
+        "Nous"
+      ],
+      "choices_l2": [
+        "Bude",
+        "boli",
+        "sú"
+      ]
+    },
+    {
+      "id": "blank-no-ka-d-r-no-rovnak-piese-e-te-si-pam-t-m-niektor-slov",
+      "type": "fill-blank",
+      "l1": "Oui, chaque matin la même chanson. Je me souviens encore de certains mots.",
+      "l2": "Áno, každé ráno rovnakú pieseň. Ešte si pamätám niektoré slová.",
+      "missing_l1": "la",
+      "missing_l2": "si",
+      "blank_index_l1": 3,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "jeux",
+        "le",
+        "Les"
+      ],
+      "choices_l2": [
+        "som",
+        "sme",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-dopoludnia-sme-mali-hry-s-a-e-medzi-dru-inami-alebo-sme-chodili-do-lesa",
+      "type": "fill-blank",
+      "l1": "Le matin nous avions des jeux, des compétitions entre petites équipes, ou nous allions dans la forêt.",
+      "l2": "Dopoludnia sme mali hry, súťaže medzi družinami, alebo sme chodili do lesa.",
+      "missing_l1": "la",
+      "missing_l2": "sme",
+      "blank_index_l1": 15,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "gym",
+        "tir",
+        "quoi"
+      ],
+      "choices_l2": [
+        "budem",
+        "sú",
+        "budeme"
+      ]
+    },
+    {
+      "id": "blank-to-znie-ako-skautsk-t-bor",
+      "type": "fill-blank",
+      "l1": "Ça ressemble à un camp scout.",
+      "l2": "To znie ako skautský tábor.",
+      "missing_l1": "à",
+      "missing_l2": "ako",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "pour",
+        "Sous",
+        "par"
+      ],
+      "choices_l2": [
+        "potom",
+        "zajtra",
+        "asi"
+      ]
+    },
+    {
+      "id": "blank-vlastne-no-ve-mi-podobn-len-s-in-mi-symbolmi",
+      "type": "fill-blank",
+      "l1": "En fait oui, très semblable. Juste avec des symboles différents.",
+      "l2": "Vlastne áno, veľmi podobné. Len s inými symbolmi.",
+      "missing_l1": "des",
+      "missing_l2": "veľmi",
+      "blank_index_l1": 7,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "un",
+        "mots",
+        "feu"
+      ],
+      "choices_l2": [
+        "medzi",
+        "rovnaký",
+        "rôzne"
+      ]
+    },
+    {
+      "id": "blank-obed-bol-v-jed-lni-v-dy-rovnak-as-v-dy-rovnak-st-l",
+      "type": "fill-blank",
+      "l1": "Le déjeuner était à la cantine, toujours la même heure, toujours la même table.",
+      "l2": "Obed bol v jedálni, vždy rovnaký čas, vždy rovnaký stôl.",
+      "missing_l1": "la",
+      "missing_l2": "v",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Les",
+        "gym",
+        "feu"
+      ],
+      "choices_l2": [
+        "bez",
+        "o",
+        "od"
+      ]
+    },
+    {
+      "id": "blank-poobede-sme-sa-k-pali-v-jazere-ak-bolo-teplo-to-bola-najlep-ia-as-d-a",
+      "type": "fill-blank",
+      "l1": "L'après-midi on se baignait dans le lac, s'il faisait chaud. C'était le meilleur moment de la journée.",
+      "l2": "Poobede sme sa kúpali v jazere, ak bolo teplo. To bola najlepšia časť dňa.",
+      "missing_l1": "la",
+      "missing_l2": "v",
+      "blank_index_l1": 15,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "quoi",
+        "mots",
+        "rang"
+      ],
+      "choices_l2": [
+        "z",
+        "od",
+        "po"
+      ]
+    },
+    {
+      "id": "blank-a-tie-odznaky-o-ste-mali-na-atke-za-o-boli",
+      "type": "fill-blank",
+      "l1": "Et ces badges que vous aviez sur le foulard ? C'était pour quoi ?",
+      "l2": "A tie odznaky, čo ste mali na šatke? Za čo boli?",
+      "missing_l1": "le",
+      "missing_l2": "na",
+      "blank_index_l1": 7,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "même",
+        "Les",
+        "jeux"
+      ],
+      "choices_l2": [
+        "o",
+        "za",
+        "po"
+      ]
+    },
+    {
+      "id": "blank-za-r-zne-veci-pl-vanie-stre-bu-prv-pomoc-dokonca-aj-varenie",
+      "type": "fill-blank",
+      "l1": "Pour différentes choses. La natation, le tir, les premiers secours, même la cuisine.",
+      "l2": "Za rôzne veci. Plávanie, streľbu, prvú pomoc, dokonca aj varenie.",
+      "missing_l1": "La",
+      "missing_l2": "aj",
+      "blank_index_l1": 3,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "feu",
+        "même",
+        "rang"
+      ],
+      "choices_l2": [
+        "a",
+        "však",
+        "alebo"
+      ]
+    },
+    {
+      "id": "blank-ve-er-bol-t-bor-k-spievali-sme-rozpr-vali-sme-si-pr-behy",
+      "type": "fill-blank",
+      "l1": "Le soir il y avait le feu de camp. On chantait, on se racontait des histoires.",
+      "l2": "Večer bol táborák. Spievali sme, rozprávali sme si príbehy.",
+      "missing_l1": "le",
+      "missing_l2": "si",
+      "blank_index_l1": 5,
+      "blank_index_l2": 7,
+      "choices_l1": [
+        "jeux",
+        "quoi",
+        "mots"
+      ],
+      "choices_l2": [
+        "budú",
+        "budem",
+        "bol"
+      ]
+    },
+    {
+      "id": "blank-to-znie-naozaj-pekne-ch-balo-v-m-nie-o",
+      "type": "fill-blank",
+      "l1": "Ça a l'air vraiment sympa. Il vous manquait quelque chose ?",
+      "l2": "To znie naozaj pekne. Chýbalo vám niečo?",
+      "missing_l1": "Il",
+      "missing_l2": "naozaj",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "Tu",
+        "vous",
+        "Elle"
+      ],
+      "choices_l2": [
+        "pamätám",
+        "Vstávali",
+        "medzi"
+      ]
+    },
+    {
+      "id": "blank-rodi-ia-samozrejme-ale-kamar-tky-t-bor-to-mi-ch-ba-dodnes",
+      "type": "fill-blank",
+      "l1": "Mes parents, bien sûr. Mais les copines, le camp, ça me manque encore aujourd'hui.",
+      "l2": "Rodičia, samozrejme. Ale kamarátky, tábor, to mi chýba dodnes.",
+      "missing_l1": "le",
+      "missing_l2": "to",
+      "blank_index_l1": 7,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "rang",
+        "mots",
+        "quoi"
+      ],
+      "choices_l2": [
+        "Ja",
+        "My",
+        "tá"
+      ]
+    },
+    {
+      "id": "listen-vst-vali-sme-na-bugel-o-siedmej-r-no-nikto-neme-kal-to-sa-nedalo",
+      "type": "listen",
+      "l1": "On se levait au clairon, à sept heures du matin. Personne n'était en retard, ce n'était pas possible.",
+      "l2": "Vstávali sme na bugel, o siedmej ráno. Nikto nemeškal, to sa nedalo.",
+      "choices_l1": [
+        "Le déjeuner était à la cantine, toujours la même heure, toujours la même table.",
+        "Pour différentes choses. La natation, le tir, les premiers secours, même la cuisine.",
+        "Ça ressemble à un camp scout."
+      ],
+      "choices_l2": [
+        "O siedmej? To je dosť skoro na prázdniny!",
+        "Vlastne áno, veľmi podobné. Len s inými symbolmi.",
+        "Za rôzne veci. Plávanie, streľbu, prvú pomoc, dokonca aj varenie."
+      ]
+    },
+    {
+      "id": "listen-o-siedmej-to-je-dos-skoro-na-pr-zdniny",
+      "type": "listen",
+      "l1": "À sept heures ? C'est assez tôt pour des vacances !",
+      "l2": "O siedmej? To je dosť skoro na prázdniny!",
+      "choices_l1": [
+        "Le déjeuner était à la cantine, toujours la même heure, toujours la même table.",
+        "Ensuite il y avait le rassemblement. Nous devions nous tenir droit, en rang, par groupes.",
+        "Et ces badges que vous aviez sur le foulard ? C'était pour quoi ?"
+      ],
+      "choices_l2": [
+        "To znie ako skautský tábor.",
+        "Dopoludnia sme mali hry, súťaže medzi družinami, alebo sme chodili do lesa.",
+        "Áno, každé ráno rovnakú pieseň. Ešte si pamätám niektoré slová."
+      ]
+    },
+    {
+      "id": "listen-presne-ale-potom-sme-mali-rozcvi-ku-vonku-aj-ke-pr-alo",
+      "type": "listen",
+      "l1": "Exactement ! Mais ensuite nous avions de la gym en extérieur, même s'il pleuvait.",
+      "l2": "Presne! Ale potom sme mali rozcvičku vonku, aj keď pršalo.",
+      "choices_l1": [
+        "Le déjeuner était à la cantine, toujours la même heure, toujours la même table.",
+        "Et vous chantiez là-bas ?",
+        "Ça ressemble à un camp scout."
+      ],
+      "choices_l2": [
+        "O siedmej? To je dosť skoro na prázdniny!",
+        "A tie odznaky, čo ste mali na šatke? Za čo boli?",
+        "Áno, každé ráno rovnakú pieseň. Ešte si pamätám niektoré slová."
+      ]
+    },
+    {
+      "id": "listen-potom-bol-n-stup-museli-sme-st-rovno-v-rade-pod-a-oddielov",
+      "type": "listen",
+      "l1": "Ensuite il y avait le rassemblement. Nous devions nous tenir droit, en rang, par groupes.",
+      "l2": "Potom bol nástup. Museli sme stáť rovno, v rade, podľa oddielov.",
+      "choices_l1": [
+        "Le déjeuner était à la cantine, toujours la même heure, toujours la même table.",
+        "En fait oui, très semblable. Juste avec des symboles différents.",
+        "Exactement ! Mais ensuite nous avions de la gym en extérieur, même s'il pleuvait."
+      ],
+      "choices_l2": [
+        "Vstávali sme na bugel, o siedmej ráno. Nikto nemeškal, to sa nedalo.",
+        "A tie odznaky, čo ste mali na šatke? Za čo boli?",
+        "Vlastne áno, veľmi podobné. Len s inými symbolmi."
+      ]
+    },
+    {
+      "id": "listen-a-spievali-ste-tam",
+      "type": "listen",
+      "l1": "Et vous chantiez là-bas ?",
+      "l2": "A spievali ste tam?",
+      "choices_l1": [
+        "On se levait au clairon, à sept heures du matin. Personne n'était en retard, ce n'était pas possible.",
+        "Ça ressemble à un camp scout.",
+        "Ensuite il y avait le rassemblement. Nous devions nous tenir droit, en rang, par groupes."
+      ],
+      "choices_l2": [
+        "A tie odznaky, čo ste mali na šatke? Za čo boli?",
+        "Potom bol nástup. Museli sme stáť rovno, v rade, podľa oddielov.",
+        "Vlastne áno, veľmi podobné. Len s inými symbolmi."
+      ]
+    },
+    {
+      "id": "listen-no-ka-d-r-no-rovnak-piese-e-te-si-pam-t-m-niektor-slov",
+      "type": "listen",
+      "l1": "Oui, chaque matin la même chanson. Je me souviens encore de certains mots.",
+      "l2": "Áno, každé ráno rovnakú pieseň. Ešte si pamätám niektoré slová.",
+      "choices_l1": [
+        "À sept heures ? C'est assez tôt pour des vacances !",
+        "Pour différentes choses. La natation, le tir, les premiers secours, même la cuisine.",
+        "Le matin nous avions des jeux, des compétitions entre petites équipes, ou nous allions dans la forêt."
+      ],
+      "choices_l2": [
+        "O siedmej? To je dosť skoro na prázdniny!",
+        "Vlastne áno, veľmi podobné. Len s inými symbolmi.",
+        "Obed bol v jedálni, vždy rovnaký čas, vždy rovnaký stôl."
+      ]
+    },
+    {
+      "id": "listen-dopoludnia-sme-mali-hry-s-a-e-medzi-dru-inami-alebo-sme-chodili-do-lesa",
+      "type": "listen",
+      "l1": "Le matin nous avions des jeux, des compétitions entre petites équipes, ou nous allions dans la forêt.",
+      "l2": "Dopoludnia sme mali hry, súťaže medzi družinami, alebo sme chodili do lesa.",
+      "choices_l1": [
+        "Exactement ! Mais ensuite nous avions de la gym en extérieur, même s'il pleuvait.",
+        "À sept heures ? C'est assez tôt pour des vacances !",
+        "Et ces badges que vous aviez sur le foulard ? C'était pour quoi ?"
+      ],
+      "choices_l2": [
+        "To znie ako skautský tábor.",
+        "Áno, každé ráno rovnakú pieseň. Ešte si pamätám niektoré slová.",
+        "Poobede sme sa kúpali v jazere, ak bolo teplo. To bola najlepšia časť dňa."
+      ]
+    },
+    {
+      "id": "listen-to-znie-ako-skautsk-t-bor",
+      "type": "listen",
+      "l1": "Ça ressemble à un camp scout.",
+      "l2": "To znie ako skautský tábor.",
+      "choices_l1": [
+        "Pour différentes choses. La natation, le tir, les premiers secours, même la cuisine.",
+        "En fait oui, très semblable. Juste avec des symboles différents.",
+        "Et vous chantiez là-bas ?"
+      ],
+      "choices_l2": [
+        "Vstávali sme na bugel, o siedmej ráno. Nikto nemeškal, to sa nedalo.",
+        "Obed bol v jedálni, vždy rovnaký čas, vždy rovnaký stôl.",
+        "Vlastne áno, veľmi podobné. Len s inými symbolmi."
+      ]
+    },
+    {
+      "id": "listen-vlastne-no-ve-mi-podobn-len-s-in-mi-symbolmi",
+      "type": "listen",
+      "l1": "En fait oui, très semblable. Juste avec des symboles différents.",
+      "l2": "Vlastne áno, veľmi podobné. Len s inými symbolmi.",
+      "choices_l1": [
+        "Et vous chantiez là-bas ?",
+        "Le matin nous avions des jeux, des compétitions entre petites équipes, ou nous allions dans la forêt.",
+        "Ensuite il y avait le rassemblement. Nous devions nous tenir droit, en rang, par groupes."
+      ],
+      "choices_l2": [
+        "Vstávali sme na bugel, o siedmej ráno. Nikto nemeškal, to sa nedalo.",
+        "Presne! Ale potom sme mali rozcvičku vonku, aj keď pršalo.",
+        "Za rôzne veci. Plávanie, streľbu, prvú pomoc, dokonca aj varenie."
+      ]
+    },
+    {
+      "id": "listen-obed-bol-v-jed-lni-v-dy-rovnak-as-v-dy-rovnak-st-l",
+      "type": "listen",
+      "l1": "Le déjeuner était à la cantine, toujours la même heure, toujours la même table.",
+      "l2": "Obed bol v jedálni, vždy rovnaký čas, vždy rovnaký stôl.",
+      "choices_l1": [
+        "Pour différentes choses. La natation, le tir, les premiers secours, même la cuisine.",
+        "Ça ressemble à un camp scout.",
+        "Le matin nous avions des jeux, des compétitions entre petites équipes, ou nous allions dans la forêt."
+      ],
+      "choices_l2": [
+        "To znie ako skautský tábor.",
+        "Dopoludnia sme mali hry, súťaže medzi družinami, alebo sme chodili do lesa.",
+        "A spievali ste tam?"
+      ]
+    },
+    {
+      "id": "listen-poobede-sme-sa-k-pali-v-jazere-ak-bolo-teplo-to-bola-najlep-ia-as-d-a",
+      "type": "listen",
+      "l1": "L'après-midi on se baignait dans le lac, s'il faisait chaud. C'était le meilleur moment de la journée.",
+      "l2": "Poobede sme sa kúpali v jazere, ak bolo teplo. To bola najlepšia časť dňa.",
+      "choices_l1": [
+        "En fait oui, très semblable. Juste avec des symboles différents.",
+        "Ça ressemble à un camp scout.",
+        "Le matin nous avions des jeux, des compétitions entre petites équipes, ou nous allions dans la forêt."
+      ],
+      "choices_l2": [
+        "Za rôzne veci. Plávanie, streľbu, prvú pomoc, dokonca aj varenie.",
+        "Presne! Ale potom sme mali rozcvičku vonku, aj keď pršalo.",
+        "Áno, každé ráno rovnakú pieseň. Ešte si pamätám niektoré slová."
+      ]
+    },
+    {
+      "id": "listen-a-tie-odznaky-o-ste-mali-na-atke-za-o-boli",
+      "type": "listen",
+      "l1": "Et ces badges que vous aviez sur le foulard ? C'était pour quoi ?",
+      "l2": "A tie odznaky, čo ste mali na šatke? Za čo boli?",
+      "choices_l1": [
+        "En fait oui, très semblable. Juste avec des symboles différents.",
+        "Le déjeuner était à la cantine, toujours la même heure, toujours la même table.",
+        "Le matin nous avions des jeux, des compétitions entre petites équipes, ou nous allions dans la forêt."
+      ],
+      "choices_l2": [
+        "Za rôzne veci. Plávanie, streľbu, prvú pomoc, dokonca aj varenie.",
+        "Poobede sme sa kúpali v jazere, ak bolo teplo. To bola najlepšia časť dňa.",
+        "Presne! Ale potom sme mali rozcvičku vonku, aj keď pršalo."
+      ]
+    },
+    {
+      "id": "listen-za-r-zne-veci-pl-vanie-stre-bu-prv-pomoc-dokonca-aj-varenie",
+      "type": "listen",
+      "l1": "Pour différentes choses. La natation, le tir, les premiers secours, même la cuisine.",
+      "l2": "Za rôzne veci. Plávanie, streľbu, prvú pomoc, dokonca aj varenie.",
+      "choices_l1": [
+        "Le matin nous avions des jeux, des compétitions entre petites équipes, ou nous allions dans la forêt.",
+        "Oui, chaque matin la même chanson. Je me souviens encore de certains mots.",
+        "Et ces badges que vous aviez sur le foulard ? C'était pour quoi ?"
+      ],
+      "choices_l2": [
+        "Áno, každé ráno rovnakú pieseň. Ešte si pamätám niektoré slová.",
+        "To znie ako skautský tábor.",
+        "A tie odznaky, čo ste mali na šatke? Za čo boli?"
+      ]
+    },
+    {
+      "id": "listen-ve-er-bol-t-bor-k-spievali-sme-rozpr-vali-sme-si-pr-behy",
+      "type": "listen",
+      "l1": "Le soir il y avait le feu de camp. On chantait, on se racontait des histoires.",
+      "l2": "Večer bol táborák. Spievali sme, rozprávali sme si príbehy.",
+      "choices_l1": [
+        "À sept heures ? C'est assez tôt pour des vacances !",
+        "Oui, chaque matin la même chanson. Je me souviens encore de certains mots.",
+        "Ensuite il y avait le rassemblement. Nous devions nous tenir droit, en rang, par groupes."
+      ],
+      "choices_l2": [
+        "Obed bol v jedálni, vždy rovnaký čas, vždy rovnaký stôl.",
+        "Vlastne áno, veľmi podobné. Len s inými symbolmi.",
+        "Dopoludnia sme mali hry, súťaže medzi družinami, alebo sme chodili do lesa."
+      ]
+    },
+    {
+      "id": "listen-to-znie-naozaj-pekne-ch-balo-v-m-nie-o",
+      "type": "listen",
+      "l1": "Ça a l'air vraiment sympa. Il vous manquait quelque chose ?",
+      "l2": "To znie naozaj pekne. Chýbalo vám niečo?",
+      "choices_l1": [
+        "Ensuite il y avait le rassemblement. Nous devions nous tenir droit, en rang, par groupes.",
+        "Ça ressemble à un camp scout.",
+        "Le matin nous avions des jeux, des compétitions entre petites équipes, ou nous allions dans la forêt."
+      ],
+      "choices_l2": [
+        "Poobede sme sa kúpali v jazere, ak bolo teplo. To bola najlepšia časť dňa.",
+        "Potom bol nástup. Museli sme stáť rovno, v rade, podľa oddielov.",
+        "Áno, každé ráno rovnakú pieseň. Ešte si pamätám niektoré slová."
+      ]
+    },
+    {
+      "id": "listen-rodi-ia-samozrejme-ale-kamar-tky-t-bor-to-mi-ch-ba-dodnes",
+      "type": "listen",
+      "l1": "Mes parents, bien sûr. Mais les copines, le camp, ça me manque encore aujourd'hui.",
+      "l2": "Rodičia, samozrejme. Ale kamarátky, tábor, to mi chýba dodnes.",
+      "choices_l1": [
+        "Ça ressemble à un camp scout.",
+        "Exactement ! Mais ensuite nous avions de la gym en extérieur, même s'il pleuvait.",
+        "Le matin nous avions des jeux, des compétitions entre petites équipes, ou nous allions dans la forêt."
+      ],
+      "choices_l2": [
+        "Presne! Ale potom sme mali rozcvičku vonku, aj keď pršalo.",
+        "A tie odznaky, čo ste mali na šatke? Za čo boli?",
+        "Áno, každé ráno rovnakú pieseň. Ešte si pamätám niektoré slová."
+      ]
+    },
+    {
+      "id": "order-vst-vali-sme-na-bugel-o-siedmej-r-no-nikto-neme-kal-to-sa-nedalo",
+      "type": "order",
+      "l1": "On se levait au clairon, à sept heures du matin. Personne n'était en retard, ce n'était pas possible.",
+      "l2": "Vstávali sme na bugel, o siedmej ráno. Nikto nemeškal, to sa nedalo.",
+      "tokens_l1": [
+        "On",
+        "se",
+        "levait",
+        "au",
+        "clairon,",
+        "à",
+        "sept",
+        "heures",
+        "du",
+        "matin.",
+        "Personne",
+        "n'était",
+        "en",
+        "retard,",
+        "ce",
+        "n'était",
+        "pas",
+        "possible.",
+        "Le",
+        "déjeuner",
+        "était",
+        "à",
+        "la",
+        "cantine,",
+        "toujours",
+        "la",
+        "même",
+        "heure,",
+        "toujours",
+        "la",
+        "même",
+        "table."
+      ],
+      "tokens_l2": [
+        "Vstávali",
+        "sme",
+        "na",
+        "bugel,",
+        "o",
+        "siedmej",
+        "ráno.",
+        "Nikto",
+        "nemeškal,",
+        "to",
+        "sa",
+        "nedalo.",
+        "Obed",
+        "bol",
+        "v",
+        "jedálni,",
+        "vždy",
+        "rovnaký",
+        "čas,",
+        "vždy",
+        "rovnaký",
+        "stôl."
+      ]
+    },
+    {
+      "id": "order-o-siedmej-to-je-dos-skoro-na-pr-zdniny",
+      "type": "order",
+      "l1": "À sept heures ? C'est assez tôt pour des vacances !",
+      "l2": "O siedmej? To je dosť skoro na prázdniny!",
+      "tokens_l1": [
+        "À",
+        "sept",
+        "heures",
+        "?",
+        "C'est",
+        "assez",
+        "tôt",
+        "pour",
+        "des",
+        "vacances",
+        "!",
+        "Ça",
+        "ressemble",
+        "à",
+        "un",
+        "camp",
+        "scout."
+      ],
+      "tokens_l2": [
+        "O",
+        "siedmej?",
+        "To",
+        "je",
+        "dosť",
+        "skoro",
+        "na",
+        "prázdniny!",
+        "To",
+        "znie",
+        "ako",
+        "skautský",
+        "tábor."
+      ]
+    },
+    {
+      "id": "order-presne-ale-potom-sme-mali-rozcvi-ku-vonku-aj-ke-pr-alo",
+      "type": "order",
+      "l1": "Exactement ! Mais ensuite nous avions de la gym en extérieur, même s'il pleuvait.",
+      "l2": "Presne! Ale potom sme mali rozcvičku vonku, aj keď pršalo.",
+      "tokens_l1": [
+        "Exactement",
+        "!",
+        "Mais",
+        "ensuite",
+        "nous",
+        "avions",
+        "de",
+        "la",
+        "gym",
+        "en",
+        "extérieur,",
+        "même",
+        "s'il",
+        "pleuvait.",
+        "À",
+        "sept",
+        "heures",
+        "?",
+        "C'est",
+        "assez",
+        "tôt",
+        "pour",
+        "des",
+        "vacances",
+        "!"
+      ],
+      "tokens_l2": [
+        "Presne!",
+        "Ale",
+        "potom",
+        "sme",
+        "mali",
+        "rozcvičku",
+        "vonku,",
+        "aj",
+        "keď",
+        "pršalo.",
+        "O",
+        "siedmej?",
+        "To",
+        "je",
+        "dosť",
+        "skoro",
+        "na",
+        "prázdniny!"
+      ]
+    },
+    {
+      "id": "order-potom-bol-n-stup-museli-sme-st-rovno-v-rade-pod-a-oddielov",
+      "type": "order",
+      "l1": "Ensuite il y avait le rassemblement. Nous devions nous tenir droit, en rang, par groupes.",
+      "l2": "Potom bol nástup. Museli sme stáť rovno, v rade, podľa oddielov.",
+      "tokens_l1": [
+        "Ensuite",
+        "il",
+        "y",
+        "avait",
+        "le",
+        "rassemblement.",
+        "Nous",
+        "devions",
+        "nous",
+        "tenir",
+        "droit,",
+        "en",
+        "rang,",
+        "par",
+        "groupes.",
+        "Mes",
+        "parents,",
+        "bien",
+        "sûr.",
+        "Mais",
+        "les",
+        "copines,",
+        "le",
+        "camp,",
+        "ça",
+        "me",
+        "manque",
+        "encore",
+        "aujourd'hui."
+      ],
+      "tokens_l2": [
+        "Potom",
+        "bol",
+        "nástup.",
+        "Museli",
+        "sme",
+        "stáť",
+        "rovno,",
+        "v",
+        "rade,",
+        "podľa",
+        "oddielov.",
+        "Rodičia,",
+        "samozrejme.",
+        "Ale",
+        "kamarátky,",
+        "tábor,",
+        "to",
+        "mi",
+        "chýba",
+        "dodnes."
+      ]
+    },
+    {
+      "id": "order-a-spievali-ste-tam",
+      "type": "order",
+      "l1": "Et vous chantiez là-bas ?",
+      "l2": "A spievali ste tam?",
+      "tokens_l1": [
+        "Et",
+        "vous",
+        "chantiez",
+        "là-bas",
+        "?",
+        "L'après-midi",
+        "on",
+        "se",
+        "baignait",
+        "dans",
+        "le",
+        "lac,",
+        "s'il",
+        "faisait",
+        "chaud.",
+        "C'était",
+        "le",
+        "meilleur",
+        "moment",
+        "de",
+        "la",
+        "journée."
+      ],
+      "tokens_l2": [
+        "A",
+        "spievali",
+        "ste",
+        "tam?",
+        "Poobede",
+        "sme",
+        "sa",
+        "kúpali",
+        "v",
+        "jazere,",
+        "ak",
+        "bolo",
+        "teplo.",
+        "To",
+        "bola",
+        "najlepšia",
+        "časť",
+        "dňa."
+      ]
+    },
+    {
+      "id": "order-no-ka-d-r-no-rovnak-piese-e-te-si-pam-t-m-niektor-slov",
+      "type": "order",
+      "l1": "Oui, chaque matin la même chanson. Je me souviens encore de certains mots.",
+      "l2": "Áno, každé ráno rovnakú pieseň. Ešte si pamätám niektoré slová.",
+      "tokens_l1": [
+        "Oui,",
+        "chaque",
+        "matin",
+        "la",
+        "même",
+        "chanson.",
+        "Je",
+        "me",
+        "souviens",
+        "encore",
+        "de",
+        "certains",
+        "mots.",
+        "Ça",
+        "a",
+        "l'air",
+        "vraiment",
+        "sympa.",
+        "Il",
+        "vous",
+        "manquait",
+        "quelque",
+        "chose",
+        "?"
+      ],
+      "tokens_l2": [
+        "Áno,",
+        "každé",
+        "ráno",
+        "rovnakú",
+        "pieseň.",
+        "Ešte",
+        "si",
+        "pamätám",
+        "niektoré",
+        "slová.",
+        "To",
+        "znie",
+        "naozaj",
+        "pekne.",
+        "Chýbalo",
+        "vám",
+        "niečo?"
+      ]
+    },
+    {
+      "id": "order-dopoludnia-sme-mali-hry-s-a-e-medzi-dru-inami-alebo-sme-chodili-do-lesa",
+      "type": "order",
+      "l1": "Le matin nous avions des jeux, des compétitions entre petites équipes, ou nous allions dans la forêt.",
+      "l2": "Dopoludnia sme mali hry, súťaže medzi družinami, alebo sme chodili do lesa.",
+      "tokens_l1": [
+        "Le",
+        "matin",
+        "nous",
+        "avions",
+        "des",
+        "jeux,",
+        "des",
+        "compétitions",
+        "entre",
+        "petites",
+        "équipes,",
+        "ou",
+        "nous",
+        "allions",
+        "dans",
+        "la",
+        "forêt.",
+        "À",
+        "sept",
+        "heures",
+        "?",
+        "C'est",
+        "assez",
+        "tôt",
+        "pour",
+        "des",
+        "vacances",
+        "!"
+      ],
+      "tokens_l2": [
+        "Dopoludnia",
+        "sme",
+        "mali",
+        "hry,",
+        "súťaže",
+        "medzi",
+        "družinami,",
+        "alebo",
+        "sme",
+        "chodili",
+        "do",
+        "lesa.",
+        "O",
+        "siedmej?",
+        "To",
+        "je",
+        "dosť",
+        "skoro",
+        "na",
+        "prázdniny!"
+      ]
+    },
+    {
+      "id": "order-to-znie-ako-skautsk-t-bor",
+      "type": "order",
+      "l1": "Ça ressemble à un camp scout.",
+      "l2": "To znie ako skautský tábor.",
+      "tokens_l1": [
+        "Ça",
+        "ressemble",
+        "à",
+        "un",
+        "camp",
+        "scout.",
+        "Exactement",
+        "!",
+        "Mais",
+        "ensuite",
+        "nous",
+        "avions",
+        "de",
+        "la",
+        "gym",
+        "en",
+        "extérieur,",
+        "même",
+        "s'il",
+        "pleuvait."
+      ],
+      "tokens_l2": [
+        "To",
+        "znie",
+        "ako",
+        "skautský",
+        "tábor.",
+        "Presne!",
+        "Ale",
+        "potom",
+        "sme",
+        "mali",
+        "rozcvičku",
+        "vonku,",
+        "aj",
+        "keď",
+        "pršalo."
+      ]
+    },
+    {
+      "id": "order-vlastne-no-ve-mi-podobn-len-s-in-mi-symbolmi",
+      "type": "order",
+      "l1": "En fait oui, très semblable. Juste avec des symboles différents.",
+      "l2": "Vlastne áno, veľmi podobné. Len s inými symbolmi.",
+      "tokens_l1": [
+        "En",
+        "fait",
+        "oui,",
+        "très",
+        "semblable.",
+        "Juste",
+        "avec",
+        "des",
+        "symboles",
+        "différents.",
+        "On",
+        "se",
+        "levait",
+        "au",
+        "clairon,",
+        "à",
+        "sept",
+        "heures",
+        "du",
+        "matin.",
+        "Personne",
+        "n'était",
+        "en",
+        "retard,",
+        "ce",
+        "n'était",
+        "pas",
+        "possible."
+      ],
+      "tokens_l2": [
+        "Vlastne",
+        "áno,",
+        "veľmi",
+        "podobné.",
+        "Len",
+        "s",
+        "inými",
+        "symbolmi.",
+        "Vstávali",
+        "sme",
+        "na",
+        "bugel,",
+        "o",
+        "siedmej",
+        "ráno.",
+        "Nikto",
+        "nemeškal,",
+        "to",
+        "sa",
+        "nedalo."
+      ]
+    },
+    {
+      "id": "order-obed-bol-v-jed-lni-v-dy-rovnak-as-v-dy-rovnak-st-l",
+      "type": "order",
+      "l1": "Le déjeuner était à la cantine, toujours la même heure, toujours la même table.",
+      "l2": "Obed bol v jedálni, vždy rovnaký čas, vždy rovnaký stôl.",
+      "tokens_l1": [
+        "Le",
+        "déjeuner",
+        "était",
+        "à",
+        "la",
+        "cantine,",
+        "toujours",
+        "la",
+        "même",
+        "heure,",
+        "toujours",
+        "la",
+        "même",
+        "table.",
+        "Exactement",
+        "!",
+        "Mais",
+        "ensuite",
+        "nous",
+        "avions",
+        "de",
+        "la",
+        "gym",
+        "en",
+        "extérieur,",
+        "même",
+        "s'il",
+        "pleuvait."
+      ],
+      "tokens_l2": [
+        "Obed",
+        "bol",
+        "v",
+        "jedálni,",
+        "vždy",
+        "rovnaký",
+        "čas,",
+        "vždy",
+        "rovnaký",
+        "stôl.",
+        "Presne!",
+        "Ale",
+        "potom",
+        "sme",
+        "mali",
+        "rozcvičku",
+        "vonku,",
+        "aj",
+        "keď",
+        "pršalo."
+      ]
+    },
+    {
+      "id": "order-poobede-sme-sa-k-pali-v-jazere-ak-bolo-teplo-to-bola-najlep-ia-as-d-a",
+      "type": "order",
+      "l1": "L'après-midi on se baignait dans le lac, s'il faisait chaud. C'était le meilleur moment de la journée.",
+      "l2": "Poobede sme sa kúpali v jazere, ak bolo teplo. To bola najlepšia časť dňa.",
+      "tokens_l1": [
+        "L'après-midi",
+        "on",
+        "se",
+        "baignait",
+        "dans",
+        "le",
+        "lac,",
+        "s'il",
+        "faisait",
+        "chaud.",
+        "C'était",
+        "le",
+        "meilleur",
+        "moment",
+        "de",
+        "la",
+        "journée.",
+        "Ensuite",
+        "il",
+        "y",
+        "avait",
+        "le",
+        "rassemblement.",
+        "Nous",
+        "devions",
+        "nous",
+        "tenir",
+        "droit,",
+        "en",
+        "rang,",
+        "par",
+        "groupes."
+      ],
+      "tokens_l2": [
+        "Poobede",
+        "sme",
+        "sa",
+        "kúpali",
+        "v",
+        "jazere,",
+        "ak",
+        "bolo",
+        "teplo.",
+        "To",
+        "bola",
+        "najlepšia",
+        "časť",
+        "dňa.",
+        "Potom",
+        "bol",
+        "nástup.",
+        "Museli",
+        "sme",
+        "stáť",
+        "rovno,",
+        "v",
+        "rade,",
+        "podľa",
+        "oddielov."
+      ]
+    },
+    {
+      "id": "order-a-tie-odznaky-o-ste-mali-na-atke-za-o-boli",
+      "type": "order",
+      "l1": "Et ces badges que vous aviez sur le foulard ? C'était pour quoi ?",
+      "l2": "A tie odznaky, čo ste mali na šatke? Za čo boli?",
+      "tokens_l1": [
+        "Et",
+        "ces",
+        "badges",
+        "que",
+        "vous",
+        "aviez",
+        "sur",
+        "le",
+        "foulard",
+        "?",
+        "C'était",
+        "pour",
+        "quoi",
+        "?",
+        "Ça",
+        "a",
+        "l'air",
+        "vraiment",
+        "sympa.",
+        "Il",
+        "vous",
+        "manquait",
+        "quelque",
+        "chose",
+        "?"
+      ],
+      "tokens_l2": [
+        "A",
+        "tie",
+        "odznaky,",
+        "čo",
+        "ste",
+        "mali",
+        "na",
+        "šatke?",
+        "Za",
+        "čo",
+        "boli?",
+        "To",
+        "znie",
+        "naozaj",
+        "pekne.",
+        "Chýbalo",
+        "vám",
+        "niečo?"
+      ]
+    },
+    {
+      "id": "order-za-r-zne-veci-pl-vanie-stre-bu-prv-pomoc-dokonca-aj-varenie",
+      "type": "order",
+      "l1": "Pour différentes choses. La natation, le tir, les premiers secours, même la cuisine.",
+      "l2": "Za rôzne veci. Plávanie, streľbu, prvú pomoc, dokonca aj varenie.",
+      "tokens_l1": [
+        "Pour",
+        "différentes",
+        "choses.",
+        "La",
+        "natation,",
+        "le",
+        "tir,",
+        "les",
+        "premiers",
+        "secours,",
+        "même",
+        "la",
+        "cuisine.",
+        "Exactement",
+        "!",
+        "Mais",
+        "ensuite",
+        "nous",
+        "avions",
+        "de",
+        "la",
+        "gym",
+        "en",
+        "extérieur,",
+        "même",
+        "s'il",
+        "pleuvait."
+      ],
+      "tokens_l2": [
+        "Za",
+        "rôzne",
+        "veci.",
+        "Plávanie,",
+        "streľbu,",
+        "prvú",
+        "pomoc,",
+        "dokonca",
+        "aj",
+        "varenie.",
+        "Presne!",
+        "Ale",
+        "potom",
+        "sme",
+        "mali",
+        "rozcvičku",
+        "vonku,",
+        "aj",
+        "keď",
+        "pršalo."
+      ]
+    },
+    {
+      "id": "order-ve-er-bol-t-bor-k-spievali-sme-rozpr-vali-sme-si-pr-behy",
+      "type": "order",
+      "l1": "Le soir il y avait le feu de camp. On chantait, on se racontait des histoires.",
+      "l2": "Večer bol táborák. Spievali sme, rozprávali sme si príbehy.",
+      "tokens_l1": [
+        "Le",
+        "soir",
+        "il",
+        "y",
+        "avait",
+        "le",
+        "feu",
+        "de",
+        "camp.",
+        "On",
+        "chantait,",
+        "on",
+        "se",
+        "racontait",
+        "des",
+        "histoires.",
+        "Et",
+        "vous",
+        "chantiez",
+        "là-bas",
+        "?"
+      ],
+      "tokens_l2": [
+        "Večer",
+        "bol",
+        "táborák.",
+        "Spievali",
+        "sme,",
+        "rozprávali",
+        "sme",
+        "si",
+        "príbehy.",
+        "A",
+        "spievali",
+        "ste",
+        "tam?"
+      ]
+    },
+    {
+      "id": "order-to-znie-naozaj-pekne-ch-balo-v-m-nie-o",
+      "type": "order",
+      "l1": "Ça a l'air vraiment sympa. Il vous manquait quelque chose ?",
+      "l2": "To znie naozaj pekne. Chýbalo vám niečo?",
+      "tokens_l1": [
+        "Ça",
+        "a",
+        "l'air",
+        "vraiment",
+        "sympa.",
+        "Il",
+        "vous",
+        "manquait",
+        "quelque",
+        "chose",
+        "?",
+        "Le",
+        "déjeuner",
+        "était",
+        "à",
+        "la",
+        "cantine,",
+        "toujours",
+        "la",
+        "même",
+        "heure,",
+        "toujours",
+        "la",
+        "même",
+        "table."
+      ],
+      "tokens_l2": [
+        "To",
+        "znie",
+        "naozaj",
+        "pekne.",
+        "Chýbalo",
+        "vám",
+        "niečo?",
+        "Obed",
+        "bol",
+        "v",
+        "jedálni,",
+        "vždy",
+        "rovnaký",
+        "čas,",
+        "vždy",
+        "rovnaký",
+        "stôl."
+      ]
+    },
+    {
+      "id": "order-rodi-ia-samozrejme-ale-kamar-tky-t-bor-to-mi-ch-ba-dodnes",
+      "type": "order",
+      "l1": "Mes parents, bien sûr. Mais les copines, le camp, ça me manque encore aujourd'hui.",
+      "l2": "Rodičia, samozrejme. Ale kamarátky, tábor, to mi chýba dodnes.",
+      "tokens_l1": [
+        "Mes",
+        "parents,",
+        "bien",
+        "sûr.",
+        "Mais",
+        "les",
+        "copines,",
+        "le",
+        "camp,",
+        "ça",
+        "me",
+        "manque",
+        "encore",
+        "aujourd'hui.",
+        "Ça",
+        "a",
+        "l'air",
+        "vraiment",
+        "sympa.",
+        "Il",
+        "vous",
+        "manquait",
+        "quelque",
+        "chose",
+        "?"
+      ],
+      "tokens_l2": [
+        "Rodičia,",
+        "samozrejme.",
+        "Ale",
+        "kamarátky,",
+        "tábor,",
+        "to",
+        "mi",
+        "chýba",
+        "dodnes.",
+        "To",
+        "znie",
+        "naozaj",
+        "pekne.",
+        "Chýbalo",
+        "vám",
+        "niečo?"
+      ]
+    },
+    {
+      "id": "match-vst-vali-sme-na-bugel-o-siedmej-r-no-nikto-neme-kal-to-sa-nedalo-sentences",
+      "type": "match",
+      "l1": [
+        "On se levait au clairon, à sept heures du matin. Personne n'était en retard, ce n'était pas possible.",
+        "À sept heures ? C'est assez tôt pour des vacances !",
+        "Exactement ! Mais ensuite nous avions de la gym en extérieur, même s'il pleuvait.",
+        "Ensuite il y avait le rassemblement. Nous devions nous tenir droit, en rang, par groupes."
+      ],
+      "l2": [
+        "Vstávali sme na bugel, o siedmej ráno. Nikto nemeškal, to sa nedalo.",
+        "O siedmej? To je dosť skoro na prázdniny!",
+        "Presne! Ale potom sme mali rozcvičku vonku, aj keď pršalo.",
+        "Potom bol nástup. Museli sme stáť rovno, v rade, podľa oddielov."
+      ]
+    }
+  ]
+}

@@ -55,7 +55,7 @@ Eric a Andrea si vykajú. Eric a Karine si tykajú.
 > Il y a = sú
 > des chaussons = papuče
 > ici = tu
-+ Vo Francúzsku to nie je samozrejmosť (spomenuté vo fiche 3) — Eric sa preto radšej pýta.
++ Vo Francúzsku to nie je samozrejmosť — Eric sa preto radšej pýta.
 
 ! 👩 Oui, je vous en prie. Asseyez-vous sur le canapé.
 > Áno, prosím. Sadnite si na gauč.

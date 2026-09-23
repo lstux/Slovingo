@@ -1,0 +1,1458 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-halu-ky",
+      "type": "qcm",
+      "l1": "les halušky, petites quenelles de pomme de terre",
+      "l2": "halušky",
+      "choices_l1": [
+        "les langoše, beignets frits",
+        "la soupe de choucroute",
+        "le fromage de brebis"
+      ],
+      "choices_l2": [
+        "bryndza",
+        "čaj",
+        "kofola"
+      ]
+    },
+    {
+      "id": "qcm-bryndza",
+      "type": "qcm",
+      "l1": "le fromage de brebis",
+      "l2": "bryndza",
+      "choices_l1": [
+        "les langoše, beignets frits",
+        "la soupe de choucroute",
+        "le trdelník, pâtisserie roulée"
+      ],
+      "choices_l2": [
+        "víno",
+        "kofola",
+        "koláč"
+      ]
+    },
+    {
+      "id": "qcm-kapustnica",
+      "type": "qcm",
+      "l1": "la soupe de choucroute",
+      "l2": "kapustnica",
+      "choices_l1": [
+        "les langoše, beignets frits",
+        "les halušky, petites quenelles de pomme de terre",
+        "l'eau-de-vie de prune"
+      ],
+      "choices_l2": [
+        "víno",
+        "káva",
+        "halušky"
+      ]
+    },
+    {
+      "id": "qcm-gul",
+      "type": "qcm",
+      "l1": "le goulash",
+      "l2": "guláš",
+      "choices_l1": [
+        "le gâteau",
+        "le café",
+        "l'eau minérale"
+      ],
+      "choices_l2": [
+        "čaj",
+        "trdelník",
+        "koláč"
+      ]
+    },
+    {
+      "id": "qcm-kol",
+      "type": "qcm",
+      "l1": "le gâteau",
+      "l2": "koláč",
+      "choices_l1": [
+        "la bière",
+        "le thé",
+        "le vin"
+      ],
+      "choices_l2": [
+        "kapustnica",
+        "kofola",
+        "guláš"
+      ]
+    },
+    {
+      "id": "qcm-pivo",
+      "type": "qcm",
+      "l1": "la bière",
+      "l2": "pivo",
+      "choices_l1": [
+        "le vin",
+        "le thé",
+        "la kofola"
+      ],
+      "choices_l2": [
+        "trdelník",
+        "guláš",
+        "koláč"
+      ]
+    },
+    {
+      "id": "qcm-v-no",
+      "type": "qcm",
+      "l1": "le vin",
+      "l2": "víno",
+      "choices_l1": [
+        "le gâteau",
+        "l'eau minérale",
+        "le goulash"
+      ],
+      "choices_l2": [
+        "pivo",
+        "trdelník",
+        "bryndza"
+      ]
+    },
+    {
+      "id": "qcm-d-m-si-gul",
+      "type": "qcm",
+      "l1": "Je prends un goulash.",
+      "l2": "Dám si guláš.",
+      "choices_l1": [
+        "Tu prends un café ?",
+        "les halušky sont bonnes",
+        "Nous prenons un gâteau."
+      ],
+      "choices_l2": [
+        "raňajky sú o siedmej",
+        "Dám si pivo.",
+        "halušky sú dobré"
+      ]
+    },
+    {
+      "id": "qcm-d-m-si-pivo",
+      "type": "qcm",
+      "l1": "Je prends une bière.",
+      "l2": "Dám si pivo.",
+      "choices_l1": [
+        "les halušky sont bonnes",
+        "Tu prends un café ?",
+        "le petit-déjeuner est à sept heures"
+      ],
+      "choices_l2": [
+        "Dám si guláš.",
+        "halušky sú dobré",
+        "Dáme si koláč."
+      ]
+    },
+    {
+      "id": "qcm-d-si-k-vu",
+      "type": "qcm",
+      "l1": "Tu prends un café ?",
+      "l2": "Dáš si kávu?",
+      "choices_l1": [
+        "Je prends un goulash.",
+        "le petit-déjeuner est à sept heures",
+        "les pommes de terre sont chaudes"
+      ],
+      "choices_l2": [
+        "Dáme si koláč.",
+        "raňajky sú o siedmej",
+        "Dám si guláš."
+      ]
+    },
+    {
+      "id": "qcm-d-me-si-kol",
+      "type": "qcm",
+      "l1": "Nous prenons un gâteau.",
+      "l2": "Dáme si koláč.",
+      "choices_l1": [
+        "Je prends une bière.",
+        "Tu prends un café ?",
+        "les halušky sont bonnes"
+      ],
+      "choices_l2": [
+        "raňajky sú o siedmej",
+        "Dám si pivo.",
+        "zemiaky sú teplé"
+      ]
+    },
+    {
+      "id": "qcm-halu-ky-s-dobr",
+      "type": "qcm",
+      "l1": "les halušky sont bonnes",
+      "l2": "halušky sú dobré",
+      "choices_l1": [
+        "les pommes de terre sont chaudes",
+        "Je prends une bière.",
+        "le petit-déjeuner est à sept heures"
+      ],
+      "choices_l2": [
+        "zemiaky sú teplé",
+        "Dám si guláš.",
+        "Dáme si koláč."
+      ]
+    },
+    {
+      "id": "qcm-zemiaky-s-tepl",
+      "type": "qcm",
+      "l1": "les pommes de terre sont chaudes",
+      "l2": "zemiaky sú teplé",
+      "choices_l1": [
+        "le petit-déjeuner est à sept heures",
+        "Nous prenons un gâteau.",
+        "Je prends une bière."
+      ],
+      "choices_l2": [
+        "Dáš si kávu?",
+        "halušky sú dobré",
+        "Dám si pivo."
+      ]
+    },
+    {
+      "id": "qcm-ra-ajky-s-o-siedmej",
+      "type": "qcm",
+      "l1": "le petit-déjeuner est à sept heures",
+      "l2": "raňajky sú o siedmej",
+      "choices_l1": [
+        "les pommes de terre sont chaudes",
+        "les halušky sont bonnes",
+        "Je prends une bière."
+      ],
+      "choices_l2": [
+        "halušky sú dobré",
+        "Dám si pivo.",
+        "zemiaky sú teplé"
+      ]
+    },
+    {
+      "id": "qcm-lango-e",
+      "type": "qcm",
+      "l1": "les langoše, beignets frits",
+      "l2": "langoše",
+      "choices_l1": [
+        "le trdelník, pâtisserie roulée",
+        "les halušky, petites quenelles de pomme de terre",
+        "la soupe de choucroute"
+      ],
+      "choices_l2": [
+        "čaj",
+        "víno",
+        "slivovica"
+      ]
+    },
+    {
+      "id": "qcm-trdeln-k",
+      "type": "qcm",
+      "l1": "le trdelník, pâtisserie roulée",
+      "l2": "trdelník",
+      "choices_l1": [
+        "les langoše, beignets frits",
+        "les halušky, petites quenelles de pomme de terre",
+        "l'eau-de-vie de prune"
+      ],
+      "choices_l2": [
+        "koláč",
+        "bryndza",
+        "guláš"
+      ]
+    },
+    {
+      "id": "qcm-slivovica",
+      "type": "qcm",
+      "l1": "l'eau-de-vie de prune",
+      "l2": "slivovica",
+      "choices_l1": [
+        "les halušky, petites quenelles de pomme de terre",
+        "les langoše, beignets frits",
+        "le trdelník, pâtisserie roulée"
+      ],
+      "choices_l2": [
+        "halušky",
+        "langoše",
+        "bryndza"
+      ]
+    },
+    {
+      "id": "qcm-kofola",
+      "type": "qcm",
+      "l1": "la kofola",
+      "l2": "kofola",
+      "choices_l1": [
+        "la bière",
+        "le gâteau",
+        "le vin"
+      ],
+      "choices_l2": [
+        "guláš",
+        "halušky",
+        "langoše"
+      ]
+    },
+    {
+      "id": "qcm-aj",
+      "type": "qcm",
+      "l1": "le thé",
+      "l2": "čaj",
+      "choices_l1": [
+        "le café",
+        "le gâteau",
+        "l'eau minérale"
+      ],
+      "choices_l2": [
+        "víno",
+        "kofola",
+        "pivo"
+      ]
+    },
+    {
+      "id": "qcm-k-va",
+      "type": "qcm",
+      "l1": "le café",
+      "l2": "káva",
+      "choices_l1": [
+        "le thé",
+        "le gâteau",
+        "le goulash"
+      ],
+      "choices_l2": [
+        "kapustnica",
+        "pivo",
+        "langoše"
+      ]
+    },
+    {
+      "id": "qcm-miner-lka",
+      "type": "qcm",
+      "l1": "l'eau minérale",
+      "l2": "minerálka",
+      "choices_l1": [
+        "le goulash",
+        "le gâteau",
+        "la bière"
+      ],
+      "choices_l2": [
+        "bryndza",
+        "koláč",
+        "čaj"
+      ]
+    },
+    {
+      "id": "blank-d-m-si-bryndzov-halu-ky",
+      "type": "fill-blank",
+      "l1": "Je prends des halušky à la bryndza.",
+      "l2": "Dám si bryndzové halušky.",
+      "missing_l1": "la",
+      "missing_l2": "si",
+      "blank_index_l1": 5,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "thé",
+        "le",
+        "vin"
+      ],
+      "choices_l2": [
+        "budem",
+        "sú",
+        "ste"
+      ]
+    },
+    {
+      "id": "blank-halu-ky-s-ve-mi-chutn",
+      "type": "fill-blank",
+      "l1": "Les halušky sont très savoureuses.",
+      "l2": "Halušky sú veľmi chutné.",
+      "missing_l1": "sont",
+      "missing_l2": "sú",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "suis",
+        "est-ce",
+        "c'était"
+      ],
+      "choices_l2": [
+        "boli",
+        "som",
+        "budem"
+      ]
+    },
+    {
+      "id": "blank-kapustnica-je-tepl-a-kysl",
+      "type": "fill-blank",
+      "l1": "La soupe de choucroute est chaude et acide.",
+      "l2": "Kapustnica je teplá a kyslá.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 4,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "C'est",
+        "sont",
+        "est-ce"
+      ],
+      "choices_l2": [
+        "som",
+        "Bude",
+        "boli"
+      ]
+    },
+    {
+      "id": "blank-d-si-gul",
+      "type": "fill-blank",
+      "l1": "Tu prends un goulash ?",
+      "l2": "Dáš si guláš?",
+      "missing_l1": "un",
+      "missing_l2": "si",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "une",
+        "thé",
+        "des"
+      ],
+      "choices_l2": [
+        "budú",
+        "som",
+        "budem"
+      ]
+    },
+    {
+      "id": "blank-chcem-pivo-pros-m",
+      "type": "fill-blank",
+      "l1": "Je veux une bière, s'il te plaît.",
+      "l2": "Chcem pivo, prosím.",
+      "missing_l1": "une",
+      "missing_l2": "prosím",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "thé",
+        "des",
+        "un"
+      ],
+      "choices_l2": [
+        "Bryndza",
+        "Kapustnica",
+        "Koláč"
+      ]
+    },
+    {
+      "id": "blank-pijem-v-no-nie-pivo",
+      "type": "fill-blank",
+      "l1": "Je bois du vin, pas de la bière.",
+      "l2": "Pijem víno, nie pivo.",
+      "missing_l1": "la",
+      "missing_l2": "nie",
+      "blank_index_l1": 6,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "vin",
+        "le",
+        "thé"
+      ],
+      "choices_l2": [
+        "nikdy",
+        "čaj",
+        "Dáme"
+      ]
+    },
+    {
+      "id": "blank-kol-je-sladk",
+      "type": "fill-blank",
+      "l1": "Le gâteau est sucré.",
+      "l2": "Koláč je sladký.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "suis",
+        "es",
+        "sont"
+      ],
+      "choices_l2": [
+        "Bude",
+        "bol",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-bryndza-je-slan",
+      "type": "fill-blank",
+      "l1": "La bryndza est salée.",
+      "l2": "Bryndza je slaná.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "était",
+        "sont",
+        "c'était"
+      ],
+      "choices_l2": [
+        "budem",
+        "som",
+        "boli"
+      ]
+    },
+    {
+      "id": "blank-m-m-hlad-d-m-si-kapustnicu-a-chlieb",
+      "type": "fill-blank",
+      "l1": "J'ai faim. Je prends une soupe de choucroute et du pain.",
+      "l2": "Mám hlad. Dám si kapustnicu a chlieb.",
+      "missing_l1": "Je",
+      "missing_l2": "a",
+      "blank_index_l1": 2,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "On",
+        "vous",
+        "Nous"
+      ],
+      "choices_l2": [
+        "však",
+        "alebo",
+        "lebo"
+      ]
+    },
+    {
+      "id": "blank-gul-je-hor-ci-chce-vodu",
+      "type": "fill-blank",
+      "l1": "Le goulash est brûlant. Tu veux de l'eau ?",
+      "l2": "Guláš je horúci. Chceš vodu?",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "sommes",
+        "sont",
+        "est-ce"
+      ],
+      "choices_l2": [
+        "sú",
+        "bol",
+        "budú"
+      ]
+    },
+    {
+      "id": "blank-deti-nejedia-bryndzu",
+      "type": "fill-blank",
+      "l1": "Les enfants ne mangent pas de bryndza.",
+      "l2": "Deti nejedia bryndzu.",
+      "missing_l1": "de",
+      "missing_l2": "bryndzu",
+      "blank_index_l1": 5,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "dans",
+        "près",
+        "loin"
+      ],
+      "choices_l2": [
+        "Koláč",
+        "silná",
+        "Trdelník"
+      ]
+    },
+    {
+      "id": "blank-d-me-si-kol-a-k-vu",
+      "type": "fill-blank",
+      "l1": "Nous prenons un gâteau et un café.",
+      "l2": "Dáme si koláč a kávu.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Donc",
+        "ou",
+        "ni"
+      ],
+      "choices_l2": [
+        "aj",
+        "ale",
+        "alebo"
+      ]
+    },
+    {
+      "id": "blank-d-m-si-kofolu",
+      "type": "fill-blank",
+      "l1": "Je prends une kofola.",
+      "l2": "Dám si kofolu.",
+      "missing_l1": "une",
+      "missing_l2": "si",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "vin",
+        "thé",
+        "un"
+      ],
+      "choices_l2": [
+        "je",
+        "Bude",
+        "sme"
+      ]
+    },
+    {
+      "id": "blank-pijem-aj-nie-k-vu",
+      "type": "fill-blank",
+      "l1": "Je bois du thé, pas du café.",
+      "l2": "Pijem čaj, nie kávu.",
+      "missing_l1": "pas",
+      "missing_l2": "nie",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ne",
+        "vin",
+        "thé"
+      ],
+      "choices_l2": [
+        "Dám",
+        "pivo",
+        "Dáš"
+      ]
+    },
+    {
+      "id": "blank-trdeln-k-je-sladk-a-tepl",
+      "type": "fill-blank",
+      "l1": "Le trdelník est sucré et chaud.",
+      "l2": "Trdelník je sladký a teplý.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "êtes",
+        "sont",
+        "sommes"
+      ],
+      "choices_l2": [
+        "bol",
+        "sú",
+        "si"
+      ]
+    },
+    {
+      "id": "blank-slivovica-je-ve-mi-siln",
+      "type": "fill-blank",
+      "l1": "L'eau-de-vie de prune est très forte.",
+      "l2": "Slivovica je veľmi silná.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "est-ce",
+        "suis",
+        "était"
+      ],
+      "choices_l2": [
+        "budú",
+        "som",
+        "bola"
+      ]
+    },
+    {
+      "id": "listen-d-m-si-bryndzov-halu-ky",
+      "type": "listen",
+      "l1": "Je prends des halušky à la bryndza.",
+      "l2": "Dám si bryndzové halušky.",
+      "choices_l1": [
+        "Nous prenons un gâteau et un café.",
+        "Les halušky sont très savoureuses.",
+        "Je prends une kofola."
+      ],
+      "choices_l2": [
+        "Halušky sú veľmi chutné.",
+        "Kapustnica je teplá a kyslá.",
+        "Mám hlad. Dám si kapustnicu a chlieb."
+      ]
+    },
+    {
+      "id": "listen-halu-ky-s-ve-mi-chutn",
+      "type": "listen",
+      "l1": "Les halušky sont très savoureuses.",
+      "l2": "Halušky sú veľmi chutné.",
+      "choices_l1": [
+        "La bryndza est salée.",
+        "Le gâteau est sucré.",
+        "Je veux une bière, s'il te plaît."
+      ],
+      "choices_l2": [
+        "Guláš je horúci. Chceš vodu?",
+        "Deti nejedia bryndzu.",
+        "Koláč je sladký."
+      ]
+    },
+    {
+      "id": "listen-kapustnica-je-tepl-a-kysl",
+      "type": "listen",
+      "l1": "La soupe de choucroute est chaude et acide.",
+      "l2": "Kapustnica je teplá a kyslá.",
+      "choices_l1": [
+        "Je bois du vin, pas de la bière.",
+        "Nous prenons un gâteau et un café.",
+        "Je veux une bière, s'il te plaît."
+      ],
+      "choices_l2": [
+        "Guláš je horúci. Chceš vodu?",
+        "Mám hlad. Dám si kapustnicu a chlieb.",
+        "Koláč je sladký."
+      ]
+    },
+    {
+      "id": "listen-d-si-gul",
+      "type": "listen",
+      "l1": "Tu prends un goulash ?",
+      "l2": "Dáš si guláš?",
+      "choices_l1": [
+        "Le goulash est brûlant. Tu veux de l'eau ?",
+        "J'ai faim. Je prends une soupe de choucroute et du pain.",
+        "Les halušky sont très savoureuses."
+      ],
+      "choices_l2": [
+        "Dám si kofolu.",
+        "Kapustnica je teplá a kyslá.",
+        "Pijem víno, nie pivo."
+      ]
+    },
+    {
+      "id": "listen-chcem-pivo-pros-m",
+      "type": "listen",
+      "l1": "Je veux une bière, s'il te plaît.",
+      "l2": "Chcem pivo, prosím.",
+      "choices_l1": [
+        "La bryndza est salée.",
+        "La soupe de choucroute est chaude et acide.",
+        "Tu prends un goulash ?"
+      ],
+      "choices_l2": [
+        "Dáš si guláš?",
+        "Bryndza je slaná.",
+        "Deti nejedia bryndzu."
+      ]
+    },
+    {
+      "id": "listen-pijem-v-no-nie-pivo",
+      "type": "listen",
+      "l1": "Je bois du vin, pas de la bière.",
+      "l2": "Pijem víno, nie pivo.",
+      "choices_l1": [
+        "Je prends des halušky à la bryndza.",
+        "Je veux une bière, s'il te plaît.",
+        "J'ai faim. Je prends une soupe de choucroute et du pain."
+      ],
+      "choices_l2": [
+        "Dáš si guláš?",
+        "Guláš je horúci. Chceš vodu?",
+        "Halušky sú veľmi chutné."
+      ]
+    },
+    {
+      "id": "listen-kol-je-sladk",
+      "type": "listen",
+      "l1": "Le gâteau est sucré.",
+      "l2": "Koláč je sladký.",
+      "choices_l1": [
+        "Les halušky sont très savoureuses.",
+        "Je prends une kofola.",
+        "J'ai faim. Je prends une soupe de choucroute et du pain."
+      ],
+      "choices_l2": [
+        "Dáme si koláč a kávu.",
+        "Mám hlad. Dám si kapustnicu a chlieb.",
+        "Dám si bryndzové halušky."
+      ]
+    },
+    {
+      "id": "listen-bryndza-je-slan",
+      "type": "listen",
+      "l1": "La bryndza est salée.",
+      "l2": "Bryndza je slaná.",
+      "choices_l1": [
+        "Je prends une kofola.",
+        "Nous prenons un gâteau et un café.",
+        "Les enfants ne mangent pas de bryndza."
+      ],
+      "choices_l2": [
+        "Guláš je horúci. Chceš vodu?",
+        "Mám hlad. Dám si kapustnicu a chlieb.",
+        "Dám si bryndzové halušky."
+      ]
+    },
+    {
+      "id": "listen-m-m-hlad-d-m-si-kapustnicu-a-chlieb",
+      "type": "listen",
+      "l1": "J'ai faim. Je prends une soupe de choucroute et du pain.",
+      "l2": "Mám hlad. Dám si kapustnicu a chlieb.",
+      "choices_l1": [
+        "Nous prenons un gâteau et un café.",
+        "Le goulash est brûlant. Tu veux de l'eau ?",
+        "Les enfants ne mangent pas de bryndza."
+      ],
+      "choices_l2": [
+        "Dám si kofolu.",
+        "Dáme si koláč a kávu.",
+        "Chcem pivo, prosím."
+      ]
+    },
+    {
+      "id": "listen-gul-je-hor-ci-chce-vodu",
+      "type": "listen",
+      "l1": "Le goulash est brûlant. Tu veux de l'eau ?",
+      "l2": "Guláš je horúci. Chceš vodu?",
+      "choices_l1": [
+        "Je veux une bière, s'il te plaît.",
+        "La bryndza est salée.",
+        "Tu prends un goulash ?"
+      ],
+      "choices_l2": [
+        "Kapustnica je teplá a kyslá.",
+        "Pijem víno, nie pivo.",
+        "Chcem pivo, prosím."
+      ]
+    },
+    {
+      "id": "listen-deti-nejedia-bryndzu",
+      "type": "listen",
+      "l1": "Les enfants ne mangent pas de bryndza.",
+      "l2": "Deti nejedia bryndzu.",
+      "choices_l1": [
+        "Je bois du vin, pas de la bière.",
+        "J'ai faim. Je prends une soupe de choucroute et du pain.",
+        "Tu prends un goulash ?"
+      ],
+      "choices_l2": [
+        "Chcem pivo, prosím.",
+        "Halušky sú veľmi chutné.",
+        "Dáme si koláč a kávu."
+      ]
+    },
+    {
+      "id": "listen-d-me-si-kol-a-k-vu",
+      "type": "listen",
+      "l1": "Nous prenons un gâteau et un café.",
+      "l2": "Dáme si koláč a kávu.",
+      "choices_l1": [
+        "Le goulash est brûlant. Tu veux de l'eau ?",
+        "Les halušky sont très savoureuses.",
+        "La soupe de choucroute est chaude et acide."
+      ],
+      "choices_l2": [
+        "Halušky sú veľmi chutné.",
+        "Dám si bryndzové halušky.",
+        "Deti nejedia bryndzu."
+      ]
+    },
+    {
+      "id": "listen-d-m-si-kofolu",
+      "type": "listen",
+      "l1": "Je prends une kofola.",
+      "l2": "Dám si kofolu.",
+      "choices_l1": [
+        "La soupe de choucroute est chaude et acide.",
+        "Je veux une bière, s'il te plaît.",
+        "Je prends des halušky à la bryndza."
+      ],
+      "choices_l2": [
+        "Chcem pivo, prosím.",
+        "Mám hlad. Dám si kapustnicu a chlieb.",
+        "Deti nejedia bryndzu."
+      ]
+    },
+    {
+      "id": "listen-pijem-aj-nie-k-vu",
+      "type": "listen",
+      "l1": "Je bois du thé, pas du café.",
+      "l2": "Pijem čaj, nie kávu.",
+      "choices_l1": [
+        "J'ai faim. Je prends une soupe de choucroute et du pain.",
+        "Le gâteau est sucré.",
+        "Le goulash est brûlant. Tu veux de l'eau ?"
+      ],
+      "choices_l2": [
+        "Dám si bryndzové halušky.",
+        "Dáme si koláč a kávu.",
+        "Chcem pivo, prosím."
+      ]
+    },
+    {
+      "id": "listen-trdeln-k-je-sladk-a-tepl",
+      "type": "listen",
+      "l1": "Le trdelník est sucré et chaud.",
+      "l2": "Trdelník je sladký a teplý.",
+      "choices_l1": [
+        "Les enfants ne mangent pas de bryndza.",
+        "Tu prends un goulash ?",
+        "Nous prenons un gâteau et un café."
+      ],
+      "choices_l2": [
+        "Kapustnica je teplá a kyslá.",
+        "Dáme si koláč a kávu.",
+        "Koláč je sladký."
+      ]
+    },
+    {
+      "id": "listen-chcete-miner-lku",
+      "type": "listen",
+      "l1": "Vous voulez de l'eau minérale ?",
+      "l2": "Chcete minerálku?",
+      "choices_l1": [
+        "Je veux une bière, s'il te plaît.",
+        "La bryndza est salée.",
+        "Le gâteau est sucré."
+      ],
+      "choices_l2": [
+        "Chceš vodu?",
+        "Si smädný?",
+        "Ješ syr?"
+      ]
+    },
+    {
+      "id": "listen-slivovica-je-ve-mi-siln",
+      "type": "listen",
+      "l1": "L'eau-de-vie de prune est très forte.",
+      "l2": "Slivovica je veľmi silná.",
+      "choices_l1": [
+        "La soupe de choucroute est chaude et acide.",
+        "Je bois du vin, pas de la bière.",
+        "Je prends des halušky à la bryndza."
+      ],
+      "choices_l2": [
+        "Kapustnica je teplá a kyslá.",
+        "Koláč je sladký.",
+        "Dáš si guláš?"
+      ]
+    },
+    {
+      "id": "order-d-m-si-bryndzov-halu-ky",
+      "type": "order",
+      "l1": "Je prends des halušky à la bryndza.",
+      "l2": "Dám si bryndzové halušky.",
+      "tokens_l1": [
+        "Je",
+        "prends",
+        "des",
+        "halušky",
+        "à",
+        "la",
+        "bryndza.",
+        "Tu",
+        "prends",
+        "un",
+        "goulash",
+        "?"
+      ],
+      "tokens_l2": [
+        "Dám",
+        "si",
+        "bryndzové",
+        "halušky.",
+        "Dáš",
+        "si",
+        "guláš?"
+      ]
+    },
+    {
+      "id": "order-halu-ky-s-ve-mi-chutn",
+      "type": "order",
+      "l1": "Les halušky sont très savoureuses.",
+      "l2": "Halušky sú veľmi chutné.",
+      "tokens_l1": [
+        "Les",
+        "halušky",
+        "sont",
+        "très",
+        "savoureuses.",
+        "La",
+        "soupe",
+        "de",
+        "choucroute",
+        "est",
+        "chaude",
+        "et",
+        "acide."
+      ],
+      "tokens_l2": [
+        "Halušky",
+        "sú",
+        "veľmi",
+        "chutné.",
+        "Kapustnica",
+        "je",
+        "teplá",
+        "a",
+        "kyslá."
+      ]
+    },
+    {
+      "id": "order-kapustnica-je-tepl-a-kysl",
+      "type": "order",
+      "l1": "La soupe de choucroute est chaude et acide.",
+      "l2": "Kapustnica je teplá a kyslá.",
+      "tokens_l1": [
+        "La",
+        "soupe",
+        "de",
+        "choucroute",
+        "est",
+        "chaude",
+        "et",
+        "acide.",
+        "Je",
+        "prends",
+        "une",
+        "kofola."
+      ],
+      "tokens_l2": [
+        "Kapustnica",
+        "je",
+        "teplá",
+        "a",
+        "kyslá.",
+        "Dám",
+        "si",
+        "kofolu."
+      ]
+    },
+    {
+      "id": "order-d-si-gul",
+      "type": "order",
+      "l1": "Tu prends un goulash ?",
+      "l2": "Dáš si guláš?",
+      "tokens_l1": [
+        "Tu",
+        "prends",
+        "un",
+        "goulash",
+        "?",
+        "Les",
+        "halušky",
+        "sont",
+        "très",
+        "savoureuses."
+      ],
+      "tokens_l2": [
+        "Dáš",
+        "si",
+        "guláš?",
+        "Halušky",
+        "sú",
+        "veľmi",
+        "chutné."
+      ]
+    },
+    {
+      "id": "order-chcem-pivo-pros-m",
+      "type": "order",
+      "l1": "Je veux une bière, s'il te plaît.",
+      "l2": "Chcem pivo, prosím.",
+      "tokens_l1": [
+        "Je",
+        "veux",
+        "une",
+        "bière,",
+        "s'il",
+        "te",
+        "plaît.",
+        "Les",
+        "enfants",
+        "ne",
+        "mangent",
+        "pas",
+        "de",
+        "bryndza."
+      ],
+      "tokens_l2": [
+        "Chcem",
+        "pivo,",
+        "prosím.",
+        "Deti",
+        "nejedia",
+        "bryndzu."
+      ]
+    },
+    {
+      "id": "order-pijem-v-no-nie-pivo",
+      "type": "order",
+      "l1": "Je bois du vin, pas de la bière.",
+      "l2": "Pijem víno, nie pivo.",
+      "tokens_l1": [
+        "Je",
+        "bois",
+        "du",
+        "vin,",
+        "pas",
+        "de",
+        "la",
+        "bière.",
+        "Les",
+        "halušky",
+        "sont",
+        "très",
+        "savoureuses."
+      ],
+      "tokens_l2": [
+        "Pijem",
+        "víno,",
+        "nie",
+        "pivo.",
+        "Halušky",
+        "sú",
+        "veľmi",
+        "chutné."
+      ]
+    },
+    {
+      "id": "order-kol-je-sladk",
+      "type": "order",
+      "l1": "Le gâteau est sucré.",
+      "l2": "Koláč je sladký.",
+      "tokens_l1": [
+        "Le",
+        "gâteau",
+        "est",
+        "sucré.",
+        "La",
+        "bryndza",
+        "est",
+        "salée."
+      ],
+      "tokens_l2": [
+        "Koláč",
+        "je",
+        "sladký.",
+        "Bryndza",
+        "je",
+        "slaná."
+      ]
+    },
+    {
+      "id": "order-bryndza-je-slan",
+      "type": "order",
+      "l1": "La bryndza est salée.",
+      "l2": "Bryndza je slaná.",
+      "tokens_l1": [
+        "La",
+        "bryndza",
+        "est",
+        "salée.",
+        "L'eau-de-vie",
+        "de",
+        "prune",
+        "est",
+        "très",
+        "forte."
+      ],
+      "tokens_l2": [
+        "Bryndza",
+        "je",
+        "slaná.",
+        "Slivovica",
+        "je",
+        "veľmi",
+        "silná."
+      ]
+    },
+    {
+      "id": "order-m-m-hlad-d-m-si-kapustnicu-a-chlieb",
+      "type": "order",
+      "l1": "J'ai faim. Je prends une soupe de choucroute et du pain.",
+      "l2": "Mám hlad. Dám si kapustnicu a chlieb.",
+      "tokens_l1": [
+        "J'ai",
+        "faim.",
+        "Je",
+        "prends",
+        "une",
+        "soupe",
+        "de",
+        "choucroute",
+        "et",
+        "du",
+        "pain.",
+        "L'eau-de-vie",
+        "de",
+        "prune",
+        "est",
+        "très",
+        "forte."
+      ],
+      "tokens_l2": [
+        "Mám",
+        "hlad.",
+        "Dám",
+        "si",
+        "kapustnicu",
+        "a",
+        "chlieb.",
+        "Slivovica",
+        "je",
+        "veľmi",
+        "silná."
+      ]
+    },
+    {
+      "id": "order-gul-je-hor-ci-chce-vodu",
+      "type": "order",
+      "l1": "Le goulash est brûlant. Tu veux de l'eau ?",
+      "l2": "Guláš je horúci. Chceš vodu?",
+      "tokens_l1": [
+        "Le",
+        "goulash",
+        "est",
+        "brûlant.",
+        "Tu",
+        "veux",
+        "de",
+        "l'eau",
+        "?",
+        "Nous",
+        "prenons",
+        "un",
+        "gâteau",
+        "et",
+        "un",
+        "café."
+      ],
+      "tokens_l2": [
+        "Guláš",
+        "je",
+        "horúci.",
+        "Chceš",
+        "vodu?",
+        "Dáme",
+        "si",
+        "koláč",
+        "a",
+        "kávu."
+      ]
+    },
+    {
+      "id": "order-deti-nejedia-bryndzu",
+      "type": "order",
+      "l1": "Les enfants ne mangent pas de bryndza.",
+      "l2": "Deti nejedia bryndzu.",
+      "tokens_l1": [
+        "Les",
+        "enfants",
+        "ne",
+        "mangent",
+        "pas",
+        "de",
+        "bryndza.",
+        "Le",
+        "goulash",
+        "est",
+        "brûlant.",
+        "Tu",
+        "veux",
+        "de",
+        "l'eau",
+        "?"
+      ],
+      "tokens_l2": [
+        "Deti",
+        "nejedia",
+        "bryndzu.",
+        "Guláš",
+        "je",
+        "horúci.",
+        "Chceš",
+        "vodu?"
+      ]
+    },
+    {
+      "id": "order-d-me-si-kol-a-k-vu",
+      "type": "order",
+      "l1": "Nous prenons un gâteau et un café.",
+      "l2": "Dáme si koláč a kávu.",
+      "tokens_l1": [
+        "Nous",
+        "prenons",
+        "un",
+        "gâteau",
+        "et",
+        "un",
+        "café.",
+        "Je",
+        "prends",
+        "des",
+        "halušky",
+        "à",
+        "la",
+        "bryndza."
+      ],
+      "tokens_l2": [
+        "Dáme",
+        "si",
+        "koláč",
+        "a",
+        "kávu.",
+        "Dám",
+        "si",
+        "bryndzové",
+        "halušky."
+      ]
+    },
+    {
+      "id": "order-d-m-si-kofolu",
+      "type": "order",
+      "l1": "Je prends une kofola.",
+      "l2": "Dám si kofolu.",
+      "tokens_l1": [
+        "Je",
+        "prends",
+        "une",
+        "kofola.",
+        "Les",
+        "enfants",
+        "ne",
+        "mangent",
+        "pas",
+        "de",
+        "bryndza."
+      ],
+      "tokens_l2": [
+        "Dám",
+        "si",
+        "kofolu.",
+        "Deti",
+        "nejedia",
+        "bryndzu."
+      ]
+    },
+    {
+      "id": "order-pijem-aj-nie-k-vu",
+      "type": "order",
+      "l1": "Je bois du thé, pas du café.",
+      "l2": "Pijem čaj, nie kávu.",
+      "tokens_l1": [
+        "Je",
+        "bois",
+        "du",
+        "thé,",
+        "pas",
+        "du",
+        "café.",
+        "J'ai",
+        "faim.",
+        "Je",
+        "prends",
+        "une",
+        "soupe",
+        "de",
+        "choucroute",
+        "et",
+        "du",
+        "pain."
+      ],
+      "tokens_l2": [
+        "Pijem",
+        "čaj,",
+        "nie",
+        "kávu.",
+        "Mám",
+        "hlad.",
+        "Dám",
+        "si",
+        "kapustnicu",
+        "a",
+        "chlieb."
+      ]
+    },
+    {
+      "id": "order-trdeln-k-je-sladk-a-tepl",
+      "type": "order",
+      "l1": "Le trdelník est sucré et chaud.",
+      "l2": "Trdelník je sladký a teplý.",
+      "tokens_l1": [
+        "Le",
+        "trdelník",
+        "est",
+        "sucré",
+        "et",
+        "chaud.",
+        "Les",
+        "halušky",
+        "sont",
+        "très",
+        "savoureuses."
+      ],
+      "tokens_l2": [
+        "Trdelník",
+        "je",
+        "sladký",
+        "a",
+        "teplý.",
+        "Halušky",
+        "sú",
+        "veľmi",
+        "chutné."
+      ]
+    },
+    {
+      "id": "order-slivovica-je-ve-mi-siln",
+      "type": "order",
+      "l1": "L'eau-de-vie de prune est très forte.",
+      "l2": "Slivovica je veľmi silná.",
+      "tokens_l1": [
+        "L'eau-de-vie",
+        "de",
+        "prune",
+        "est",
+        "très",
+        "forte.",
+        "Je",
+        "prends",
+        "une",
+        "kofola."
+      ],
+      "tokens_l2": [
+        "Slivovica",
+        "je",
+        "veľmi",
+        "silná.",
+        "Dám",
+        "si",
+        "kofolu."
+      ]
+    },
+    {
+      "id": "match-halu-ky-vocab",
+      "type": "match",
+      "l1": [
+        "les halušky, petites quenelles de pomme de terre",
+        "le fromage de brebis",
+        "la soupe de choucroute",
+        "le goulash"
+      ],
+      "l2": [
+        "halušky",
+        "bryndza",
+        "kapustnica",
+        "guláš"
+      ]
+    },
+    {
+      "id": "match-d-m-si-bryndzov-halu-ky-sentences",
+      "type": "match",
+      "l1": [
+        "Je prends des halušky à la bryndza.",
+        "Les halušky sont très savoureuses.",
+        "La soupe de choucroute est chaude et acide.",
+        "Tu prends un goulash ?"
+      ],
+      "l2": [
+        "Dám si bryndzové halušky.",
+        "Halušky sú veľmi chutné.",
+        "Kapustnica je teplá a kyslá.",
+        "Dáš si guláš?"
+      ]
+    }
+  ]
+}

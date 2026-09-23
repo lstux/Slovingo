@@ -1,0 +1,2139 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-rodina",
+      "type": "qcm",
+      "l1": "la famille",
+      "l2": "rodina",
+      "choices_l1": [
+        "le père",
+        "l'épouse",
+        "la maman"
+      ],
+      "choices_l2": [
+        "dedko",
+        "sestra",
+        "otec"
+      ]
+    },
+    {
+      "id": "qcm-mama",
+      "type": "qcm",
+      "l1": "la maman",
+      "l2": "mama",
+      "choices_l1": [
+        "la sœur",
+        "la fille",
+        "la grand-mère"
+      ],
+      "choices_l2": [
+        "rodičia",
+        "dcéra",
+        "manžel"
+      ]
+    },
+    {
+      "id": "qcm-otec",
+      "type": "qcm",
+      "l1": "le père",
+      "l2": "otec",
+      "choices_l1": [
+        "le frère",
+        "les parents",
+        "la famille"
+      ],
+      "choices_l2": [
+        "manžel",
+        "dieťa",
+        "rodičia"
+      ]
+    },
+    {
+      "id": "qcm-brat",
+      "type": "qcm",
+      "l1": "le frère",
+      "l2": "brat",
+      "choices_l1": [
+        "la sœur",
+        "le mari",
+        "la fille"
+      ],
+      "choices_l2": [
+        "syn",
+        "mama",
+        "dcéra"
+      ]
+    },
+    {
+      "id": "qcm-sestra",
+      "type": "qcm",
+      "l1": "la sœur",
+      "l2": "sestra",
+      "choices_l1": [
+        "le fils",
+        "la fille",
+        "l'enfant"
+      ],
+      "choices_l2": [
+        "rodičia",
+        "brat",
+        "syn"
+      ]
+    },
+    {
+      "id": "qcm-babka",
+      "type": "qcm",
+      "l1": "la grand-mère",
+      "l2": "babka",
+      "choices_l1": [
+        "la fille",
+        "le grand-père",
+        "les parents"
+      ],
+      "choices_l2": [
+        "manžel",
+        "dedko",
+        "otec"
+      ]
+    },
+    {
+      "id": "qcm-dedko",
+      "type": "qcm",
+      "l1": "le grand-père",
+      "l2": "dedko",
+      "choices_l1": [
+        "le frère",
+        "le fils",
+        "l'enfant"
+      ],
+      "choices_l2": [
+        "manželka",
+        "babka",
+        "sestra"
+      ]
+    },
+    {
+      "id": "qcm-rodi-ia",
+      "type": "qcm",
+      "l1": "les parents",
+      "l2": "rodičia",
+      "choices_l1": [
+        "la sœur",
+        "l'enfant",
+        "le fils"
+      ],
+      "choices_l2": [
+        "manželka",
+        "dcéra",
+        "rodina"
+      ]
+    },
+    {
+      "id": "qcm-syn",
+      "type": "qcm",
+      "l1": "le fils",
+      "l2": "syn",
+      "choices_l1": [
+        "l'enfant",
+        "le frère",
+        "la sœur"
+      ],
+      "choices_l2": [
+        "dcéra",
+        "manželka",
+        "dieťa"
+      ]
+    },
+    {
+      "id": "qcm-dc-ra",
+      "type": "qcm",
+      "l1": "la fille",
+      "l2": "dcéra",
+      "choices_l1": [
+        "la grand-mère",
+        "la sœur",
+        "la maman"
+      ],
+      "choices_l2": [
+        "syn",
+        "otec",
+        "babka"
+      ]
+    },
+    {
+      "id": "qcm-man-el",
+      "type": "qcm",
+      "l1": "le mari",
+      "l2": "manžel",
+      "choices_l1": [
+        "la grand-mère",
+        "le père",
+        "les parents"
+      ],
+      "choices_l2": [
+        "rodina",
+        "brat",
+        "sestra"
+      ]
+    },
+    {
+      "id": "qcm-man-elka",
+      "type": "qcm",
+      "l1": "l'épouse",
+      "l2": "manželka",
+      "choices_l1": [
+        "la maman",
+        "la sœur",
+        "l'enfant"
+      ],
+      "choices_l2": [
+        "dcéra",
+        "brat",
+        "dieťa"
+      ]
+    },
+    {
+      "id": "qcm-teta",
+      "type": "qcm",
+      "l1": "la tante",
+      "l2": "teta",
+      "choices_l1": [
+        "le père",
+        "la famille",
+        "la grand-mère"
+      ],
+      "choices_l2": [
+        "dcéra",
+        "otec",
+        "syn"
+      ]
+    },
+    {
+      "id": "qcm-str-ko",
+      "type": "qcm",
+      "l1": "l'oncle",
+      "l2": "strýko",
+      "choices_l1": [
+        "la grand-mère",
+        "le mari",
+        "les parents"
+      ],
+      "choices_l2": [
+        "rodina",
+        "dcéra",
+        "brat"
+      ]
+    },
+    {
+      "id": "qcm-bratranec",
+      "type": "qcm",
+      "l1": "le cousin",
+      "l2": "bratranec",
+      "choices_l1": [
+        "la fille",
+        "la maman",
+        "la grand-mère"
+      ],
+      "choices_l2": [
+        "mama",
+        "manželka",
+        "syn"
+      ]
+    },
+    {
+      "id": "qcm-sesternica",
+      "type": "qcm",
+      "l1": "la cousine",
+      "l2": "sesternica",
+      "choices_l1": [
+        "le frère",
+        "la grand-mère",
+        "le grand-père"
+      ],
+      "choices_l2": [
+        "brat",
+        "rodina",
+        "manžel"
+      ]
+    },
+    {
+      "id": "qcm-kamar-t",
+      "type": "qcm",
+      "l1": "l'ami",
+      "l2": "kamarát",
+      "choices_l1": [
+        "le fils",
+        "le grand-père",
+        "le père"
+      ],
+      "choices_l2": [
+        "mama",
+        "syn",
+        "otec"
+      ]
+    },
+    {
+      "id": "qcm-die-a",
+      "type": "qcm",
+      "l1": "l'enfant",
+      "l2": "dieťa",
+      "choices_l1": [
+        "la famille",
+        "le père",
+        "la maman"
+      ],
+      "choices_l2": [
+        "manželka",
+        "brat",
+        "syn"
+      ]
+    },
+    {
+      "id": "qcm-deti",
+      "type": "qcm",
+      "l1": "les enfants",
+      "l2": "deti",
+      "choices_l1": [
+        "la maman",
+        "le frère",
+        "le mari"
+      ],
+      "choices_l2": [
+        "manželka",
+        "mama",
+        "sestra"
+      ]
+    },
+    {
+      "id": "qcm-meno",
+      "type": "qcm",
+      "l1": "le prénom",
+      "l2": "meno",
+      "choices_l1": [
+        "l'épouse",
+        "la famille",
+        "le père"
+      ],
+      "choices_l2": [
+        "dcéra",
+        "brat",
+        "babka"
+      ]
+    },
+    {
+      "id": "qcm-narodeniny",
+      "type": "qcm",
+      "l1": "l'anniversaire",
+      "l2": "narodeniny",
+      "choices_l1": [
+        "la sœur",
+        "le père",
+        "la famille"
+      ],
+      "choices_l2": [
+        "brat",
+        "otec",
+        "dedko"
+      ]
+    },
+    {
+      "id": "qcm-rok",
+      "type": "qcm",
+      "l1": "l'an, l'année",
+      "l2": "rok",
+      "choices_l1": [
+        "la sœur",
+        "la maman",
+        "le mari"
+      ],
+      "choices_l2": [
+        "rodina",
+        "manželka",
+        "mama"
+      ]
+    },
+    {
+      "id": "qcm-kto",
+      "type": "qcm",
+      "l1": "qui",
+      "l2": "kto",
+      "choices_l1": [
+        "beaucoup",
+        "cinq ans",
+        "trois ans"
+      ],
+      "choices_l2": [
+        "päť rokov",
+        "malý",
+        "tri roky"
+      ]
+    },
+    {
+      "id": "qcm-vola-sa",
+      "type": "qcm",
+      "l1": "s'appeler",
+      "l2": "volať sa",
+      "choices_l1": [
+        "travailler",
+        "faire",
+        "tu as"
+      ],
+      "choices_l2": [
+        "ty robíš",
+        "ja mám",
+        "oni robia"
+      ]
+    },
+    {
+      "id": "qcm-mal",
+      "type": "qcm",
+      "l1": "petit",
+      "l2": "malý",
+      "choices_l1": [
+        "jeune",
+        "qui",
+        "aussi"
+      ],
+      "choices_l2": [
+        "moja sestra",
+        "kto",
+        "dva roky"
+      ]
+    },
+    {
+      "id": "qcm-ve-k",
+      "type": "qcm",
+      "l1": "grand",
+      "l2": "veľký",
+      "choices_l1": [
+        "aussi",
+        "la fille",
+        "vieux"
+      ],
+      "choices_l2": [
+        "mladý",
+        "moje meno",
+        "tri roky"
+      ]
+    },
+    {
+      "id": "qcm-star",
+      "type": "qcm",
+      "l1": "vieux",
+      "l2": "starý",
+      "choices_l1": [
+        "jeune",
+        "deux ans",
+        "petit"
+      ],
+      "choices_l2": [
+        "štyri roky",
+        "dva roky",
+        "veľký"
+      ]
+    },
+    {
+      "id": "qcm-mlad",
+      "type": "qcm",
+      "l1": "jeune",
+      "l2": "mladý",
+      "choices_l1": [
+        "dix ans",
+        "grand",
+        "vieux"
+      ],
+      "choices_l2": [
+        "moje meno",
+        "štyri roky",
+        "malý"
+      ]
+    },
+    {
+      "id": "qcm-pracova",
+      "type": "qcm",
+      "l1": "travailler",
+      "l2": "pracovať",
+      "choices_l1": [
+        "je fais",
+        "tu es",
+        "je suis"
+      ],
+      "choices_l2": [
+        "oni pracujú",
+        "volať sa",
+        "robiť"
+      ]
+    },
+    {
+      "id": "qcm-robi",
+      "type": "qcm",
+      "l1": "faire",
+      "l2": "robiť",
+      "choices_l1": [
+        "tu es",
+        "je fais",
+        "j'ai"
+      ],
+      "choices_l2": [
+        "ty pracuješ",
+        "ja robím",
+        "ty robíš"
+      ]
+    },
+    {
+      "id": "qcm-b-va",
+      "type": "qcm",
+      "l1": "habiter",
+      "l2": "bývať",
+      "choices_l1": [
+        "je travaille",
+        "j'ai",
+        "tu fais"
+      ],
+      "choices_l2": [
+        "volať sa",
+        "ja mám",
+        "ty robíš"
+      ]
+    },
+    {
+      "id": "qcm-u-ite",
+      "type": "qcm",
+      "l1": "le professeur",
+      "l2": "učiteľ",
+      "choices_l1": [
+        "la sœur",
+        "la famille",
+        "la maman"
+      ],
+      "choices_l2": [
+        "dedko",
+        "syn",
+        "mama"
+      ]
+    },
+    {
+      "id": "qcm-u-ite-ka",
+      "type": "qcm",
+      "l1": "la professeure",
+      "l2": "učiteľka",
+      "choices_l1": [
+        "le mari",
+        "le grand-père",
+        "la sœur"
+      ],
+      "choices_l2": [
+        "syn",
+        "rodina",
+        "brat"
+      ]
+    },
+    {
+      "id": "qcm-lek-r",
+      "type": "qcm",
+      "l1": "le médecin",
+      "l2": "lekár",
+      "choices_l1": [
+        "le grand-père",
+        "le frère",
+        "la maman"
+      ],
+      "choices_l2": [
+        "babka",
+        "otec",
+        "dcéra"
+      ]
+    },
+    {
+      "id": "qcm-tudent",
+      "type": "qcm",
+      "l1": "l'étudiant",
+      "l2": "študent",
+      "choices_l1": [
+        "le frère",
+        "les parents",
+        "le fils"
+      ],
+      "choices_l2": [
+        "otec",
+        "manželka",
+        "manžel"
+      ]
+    },
+    {
+      "id": "qcm-d-chodca",
+      "type": "qcm",
+      "l1": "le retraité",
+      "l2": "dôchodca",
+      "choices_l1": [
+        "le père",
+        "les parents",
+        "le grand-père"
+      ],
+      "choices_l2": [
+        "brat",
+        "rodina",
+        "otec"
+      ]
+    },
+    {
+      "id": "qcm-pr-ca",
+      "type": "qcm",
+      "l1": "le travail",
+      "l2": "práca",
+      "choices_l1": [
+        "le frère",
+        "les parents",
+        "la grand-mère"
+      ],
+      "choices_l2": [
+        "babka",
+        "rodina",
+        "rodičia"
+      ]
+    },
+    {
+      "id": "qcm-kola",
+      "type": "qcm",
+      "l1": "l'école",
+      "l2": "škola",
+      "choices_l1": [
+        "la fille",
+        "la grand-mère",
+        "le fils"
+      ],
+      "choices_l2": [
+        "syn",
+        "manžel",
+        "babka"
+      ]
+    },
+    {
+      "id": "qcm-nemocnica",
+      "type": "qcm",
+      "l1": "l'hôpital",
+      "l2": "nemocnica",
+      "choices_l1": [
+        "le grand-père",
+        "la grand-mère",
+        "les parents"
+      ],
+      "choices_l2": [
+        "babka",
+        "brat",
+        "rodičia"
+      ]
+    },
+    {
+      "id": "qcm-kancel-ria",
+      "type": "qcm",
+      "l1": "le bureau",
+      "l2": "kancelária",
+      "choices_l1": [
+        "la fille",
+        "le mari",
+        "les parents"
+      ],
+      "choices_l2": [
+        "syn",
+        "manžel",
+        "dcéra"
+      ]
+    },
+    {
+      "id": "qcm-obchod",
+      "type": "qcm",
+      "l1": "le magasin",
+      "l2": "obchod",
+      "choices_l1": [
+        "l'épouse",
+        "la sœur",
+        "la fille"
+      ],
+      "choices_l2": [
+        "syn",
+        "dcéra",
+        "babka"
+      ]
+    },
+    {
+      "id": "qcm-mesto",
+      "type": "qcm",
+      "l1": "la ville",
+      "l2": "mesto",
+      "choices_l1": [
+        "le fils",
+        "la grand-mère",
+        "la sœur"
+      ],
+      "choices_l2": [
+        "otec",
+        "sestra",
+        "manžel"
+      ]
+    },
+    {
+      "id": "qcm-dedina",
+      "type": "qcm",
+      "l1": "le village",
+      "l2": "dedina",
+      "choices_l1": [
+        "la sœur",
+        "la grand-mère",
+        "la fille"
+      ],
+      "choices_l2": [
+        "rodina",
+        "babka",
+        "otec"
+      ]
+    },
+    {
+      "id": "qcm-dom",
+      "type": "qcm",
+      "l1": "la maison",
+      "l2": "dom",
+      "choices_l1": [
+        "la sœur",
+        "la famille",
+        "la maman"
+      ],
+      "choices_l2": [
+        "dedko",
+        "dcéra",
+        "manželka"
+      ]
+    },
+    {
+      "id": "qcm-byt",
+      "type": "qcm",
+      "l1": "l'appartement",
+      "l2": "byt",
+      "choices_l1": [
+        "la sœur",
+        "le père",
+        "la maman"
+      ],
+      "choices_l2": [
+        "brat",
+        "otec",
+        "dcéra"
+      ]
+    },
+    {
+      "id": "qcm-izba",
+      "type": "qcm",
+      "l1": "la pièce, la chambre",
+      "l2": "izba",
+      "choices_l1": [
+        "un petit frère (masculin)",
+        "une petite sœur (féminin)",
+        "un petit enfant (neutre)"
+      ],
+      "choices_l2": [
+        "brat",
+        "syn",
+        "mama"
+      ]
+    },
+    {
+      "id": "qcm-kuchy-a",
+      "type": "qcm",
+      "l1": "la cuisine",
+      "l2": "kuchyňa",
+      "choices_l1": [
+        "la famille",
+        "le frère",
+        "la fille"
+      ],
+      "choices_l2": [
+        "dedko",
+        "syn",
+        "otec"
+      ]
+    },
+    {
+      "id": "qcm-z-hrada",
+      "type": "qcm",
+      "l1": "le jardin",
+      "l2": "záhrada",
+      "choices_l1": [
+        "les parents",
+        "la famille",
+        "le père"
+      ],
+      "choices_l2": [
+        "brat",
+        "manžel",
+        "sestra"
+      ]
+    },
+    {
+      "id": "qcm-panel-k",
+      "type": "qcm",
+      "l1": "l'immeuble préfabriqué",
+      "l2": "panelák",
+      "choices_l1": [
+        "la fille",
+        "le fils",
+        "le père"
+      ],
+      "choices_l2": [
+        "babka",
+        "sestra",
+        "mama"
+      ]
+    },
+    {
+      "id": "qcm-chata",
+      "type": "qcm",
+      "l1": "le chalet",
+      "l2": "chata",
+      "choices_l1": [
+        "la famille",
+        "la sœur",
+        "la maman"
+      ],
+      "choices_l2": [
+        "syn",
+        "manželka",
+        "brat"
+      ]
+    },
+    {
+      "id": "qcm-spolu",
+      "type": "qcm",
+      "l1": "ensemble",
+      "l2": "spolu",
+      "choices_l1": [
+        "quatre ans",
+        "vieux",
+        "qui"
+      ],
+      "choices_l2": [
+        "tri roky",
+        "malý",
+        "veľký"
+      ]
+    },
+    {
+      "id": "qcm-bl-zko",
+      "type": "qcm",
+      "l1": "près",
+      "l2": "blízko",
+      "choices_l1": [
+        "aussi",
+        "dix ans",
+        "qui"
+      ],
+      "choices_l2": [
+        "malý",
+        "päť rokov",
+        "dva roky"
+      ]
+    },
+    {
+      "id": "qcm-aleko",
+      "type": "qcm",
+      "l1": "loin",
+      "l2": "ďaleko",
+      "choices_l1": [
+        "cinq ans",
+        "deux ans",
+        "aussi"
+      ],
+      "choices_l2": [
+        "starý",
+        "tri roky",
+        "päť rokov"
+      ]
+    },
+    {
+      "id": "qcm-tu",
+      "type": "qcm",
+      "l1": "ici",
+      "l2": "tu",
+      "choices_l1": [
+        "la fille",
+        "jeune",
+        "trois ans"
+      ],
+      "choices_l2": [
+        "tri roky",
+        "štyri roky",
+        "dva roky"
+      ]
+    },
+    {
+      "id": "qcm-tie",
+      "type": "qcm",
+      "l1": "aussi",
+      "l2": "tiež",
+      "choices_l1": [
+        "cinq ans",
+        "quatre ans",
+        "deux ans"
+      ],
+      "choices_l2": [
+        "dva roky",
+        "kto",
+        "malý"
+      ]
+    },
+    {
+      "id": "qcm-ve-a",
+      "type": "qcm",
+      "l1": "beaucoup",
+      "l2": "veľa",
+      "choices_l1": [
+        "qui",
+        "trois ans",
+        "grand"
+      ],
+      "choices_l2": [
+        "tri roky",
+        "malý",
+        "starý"
+      ]
+    },
+    {
+      "id": "blank-moja-dc-ra-m-p-rokov",
+      "type": "fill-blank",
+      "l1": "Ma fille a cinq ans.",
+      "l2": "Moja dcéra má päť rokov.",
+      "missing_l1": "a",
+      "missing_l2": "má",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "avons",
+        "avez",
+        "as"
+      ],
+      "choices_l2": [
+        "Mám",
+        "Nemám",
+        "Máš"
+      ]
+    },
+    {
+      "id": "blank-m-j-syn-je-tudent-b-va-v-meste",
+      "type": "fill-blank",
+      "l1": "Mon fils est étudiant. Il habite en ville.",
+      "l2": "Môj syn je študent. Býva v meste.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "C'est",
+        "sont",
+        "suis"
+      ],
+      "choices_l2": [
+        "som",
+        "bola",
+        "Bude"
+      ]
+    },
+    {
+      "id": "blank-kto-b-va-v-tom-dome",
+      "type": "fill-blank",
+      "l1": "Qui habite dans cette maison ?",
+      "l2": "Kto býva v tom dome?",
+      "missing_l1": "dans",
+      "missing_l2": "v",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "à",
+        "près",
+        "loin"
+      ],
+      "choices_l2": [
+        "od",
+        "za",
+        "z"
+      ]
+    },
+    {
+      "id": "blank-moja-man-elka-pracuje-v-kancel-rii",
+      "type": "fill-blank",
+      "l1": "Mon épouse travaille dans un bureau.",
+      "l2": "Moja manželka pracuje v kancelárii.",
+      "missing_l1": "un",
+      "missing_l2": "v",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "des",
+        "cinq",
+        "fait"
+      ],
+      "choices_l2": [
+        "na",
+        "pri",
+        "Cez"
+      ]
+    },
+    {
+      "id": "blank-m-j-bratranec-je-mlad-m-osemn-s-rokov",
+      "type": "fill-blank",
+      "l1": "Mon cousin est jeune. Il a dix-huit ans.",
+      "l2": "Môj bratranec je mladý. Má osemnásť rokov.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "est-ce",
+        "suis",
+        "sont"
+      ],
+      "choices_l2": [
+        "bola",
+        "sme",
+        "si"
+      ]
+    },
+    {
+      "id": "blank-moja-sesternica-sa-vol-m-ria",
+      "type": "fill-blank",
+      "l1": "Ma cousine s'appelle Mária.",
+      "l2": "Moja sesternica sa volá Mária.",
+      "missing_l1": "s'appelle",
+      "missing_l2": "sa",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "cousin",
+        "grande",
+        "anniversaire"
+      ],
+      "choices_l2": [
+        "Ja",
+        "To",
+        "vy"
+      ]
+    },
+    {
+      "id": "blank-m-j-str-ko-m-ve-k-dom-a-z-hradu",
+      "type": "fill-blank",
+      "l1": "Mon oncle a une grande maison et un jardin.",
+      "l2": "Môj strýko má veľký dom a záhradu.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 6,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "ni",
+        "mais",
+        "ou"
+      ],
+      "choices_l2": [
+        "lebo",
+        "však",
+        "aj"
+      ]
+    },
+    {
+      "id": "blank-nem-m-brata-ale-m-m-dve-sestry",
+      "type": "fill-blank",
+      "l1": "Je n'ai pas de frère, mais j'ai deux sœurs.",
+      "l2": "Nemám brata, ale mám dve sestry.",
+      "missing_l1": "de",
+      "missing_l2": "ale",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "loin",
+        "dans",
+        "à"
+      ],
+      "choices_l2": [
+        "alebo",
+        "lebo",
+        "aj"
+      ]
+    },
+    {
+      "id": "blank-moje-deti-s-v-izbe",
+      "type": "fill-blank",
+      "l1": "Mes enfants sont dans la chambre.",
+      "l2": "Moje deti sú v izbe.",
+      "missing_l1": "la",
+      "missing_l2": "v",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "Les",
+        "cinq",
+        "fait"
+      ],
+      "choices_l2": [
+        "bez",
+        "z",
+        "za"
+      ]
+    },
+    {
+      "id": "blank-moja-teta-je-u-ite-ka-a-pracuje-ve-a",
+      "type": "fill-blank",
+      "l1": "Ma tante est professeure et elle travaille beaucoup.",
+      "l2": "Moja teta je učiteľka a pracuje veľa.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "sont",
+        "est-ce",
+        "C'est"
+      ],
+      "choices_l2": [
+        "budem",
+        "si",
+        "som"
+      ]
+    },
+    {
+      "id": "blank-na-a-chata-je-aleko",
+      "type": "fill-blank",
+      "l1": "Notre chalet est loin.",
+      "l2": "Naša chata je ďaleko.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "suis",
+        "sont",
+        "C'est"
+      ],
+      "choices_l2": [
+        "budeme",
+        "budem",
+        "som"
+      ]
+    },
+    {
+      "id": "blank-m-j-kamar-t-b-va-v-panel-ku-bl-zko",
+      "type": "fill-blank",
+      "l1": "Mon ami habite dans un immeuble, tout près.",
+      "l2": "Môj kamarát býva v paneláku, blízko.",
+      "missing_l1": "un",
+      "missing_l2": "v",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "fait",
+        "des",
+        "cinq"
+      ],
+      "choices_l2": [
+        "Vo",
+        "s",
+        "po"
+      ]
+    },
+    {
+      "id": "blank-kedy-m-narodeniny",
+      "type": "fill-blank",
+      "l1": "Quand as-tu ton anniversaire ?",
+      "l2": "Kedy máš narodeniny?",
+      "missing_l1": "ton",
+      "missing_l2": "máš",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "mon",
+        "Notre",
+        "ma"
+      ],
+      "choices_l2": [
+        "Máte",
+        "Nemám",
+        "má"
+      ]
+    },
+    {
+      "id": "blank-m-j-otec-a-moja-mama-b-vaj-spolu-na-dedine",
+      "type": "fill-blank",
+      "l1": "Mon père et ma maman habitent ensemble au village.",
+      "l2": "Môj otec a moja mama bývajú spolu na dedine.",
+      "missing_l1": "et",
+      "missing_l2": "a",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "mais",
+        "ou",
+        "Donc"
+      ],
+      "choices_l2": [
+        "lebo",
+        "však",
+        "alebo"
+      ]
+    },
+    {
+      "id": "blank-ak-je-tvoje-meno",
+      "type": "fill-blank",
+      "l1": "Quel est ton prénom ?",
+      "l2": "Aké je tvoje meno?",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "suis",
+        "C'est",
+        "sont"
+      ],
+      "choices_l2": [
+        "budem",
+        "bola",
+        "som"
+      ]
+    },
+    {
+      "id": "blank-moja-babka-je-star-ale-rob-ve-a-v-z-hrade",
+      "type": "fill-blank",
+      "l1": "Ma grand-mère est vieille, mais elle fait beaucoup dans le jardin.",
+      "l2": "Moja babka je stará, ale robí veľa v záhrade.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 9,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "la",
+        "cinq",
+        "Les"
+      ],
+      "choices_l2": [
+        "bola",
+        "sme",
+        "ste"
+      ]
+    },
+    {
+      "id": "blank-m-j-dedko-je-d-chodca-a-je-tu",
+      "type": "fill-blank",
+      "l1": "Mon grand-père est retraité et il est ici.",
+      "l2": "Môj dedko je dôchodca a je tu.",
+      "missing_l1": "est",
+      "missing_l2": "je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "suis",
+        "est-ce",
+        "C'est"
+      ],
+      "choices_l2": [
+        "som",
+        "boli",
+        "sme"
+      ]
+    },
+    {
+      "id": "listen-moja-dc-ra-m-p-rokov",
+      "type": "listen",
+      "l1": "Ma fille a cinq ans.",
+      "l2": "Moja dcéra má päť rokov.",
+      "choices_l1": [
+        "Ma cousine s'appelle Mária.",
+        "Quand as-tu ton anniversaire ?",
+        "Mon fils est étudiant. Il habite en ville."
+      ],
+      "choices_l2": [
+        "Moja sesternica sa volá Mária.",
+        "Naša chata je ďaleko.",
+        "Môj syn je študent. Býva v meste."
+      ]
+    },
+    {
+      "id": "listen-m-j-syn-je-tudent-b-va-v-meste",
+      "type": "listen",
+      "l1": "Mon fils est étudiant. Il habite en ville.",
+      "l2": "Môj syn je študent. Býva v meste.",
+      "choices_l1": [
+        "Ma tante est professeure et elle travaille beaucoup.",
+        "Mes enfants sont dans la chambre.",
+        "Je n'ai pas de frère, mais j'ai deux sœurs."
+      ],
+      "choices_l2": [
+        "Moja teta je učiteľka a pracuje veľa.",
+        "Naša chata je ďaleko.",
+        "Nemám brata, ale mám dve sestry."
+      ]
+    },
+    {
+      "id": "listen-kto-b-va-v-tom-dome",
+      "type": "listen",
+      "l1": "Qui habite dans cette maison ?",
+      "l2": "Kto býva v tom dome?",
+      "choices_l1": [
+        "Notre chalet est loin.",
+        "Mon oncle a une grande maison et un jardin.",
+        "Mon ami habite dans un immeuble, tout près."
+      ],
+      "choices_l2": [
+        "Moja dcéra má päť rokov.",
+        "Moje deti sú v izbe.",
+        "Naša chata je ďaleko."
+      ]
+    },
+    {
+      "id": "listen-moja-man-elka-pracuje-v-kancel-rii",
+      "type": "listen",
+      "l1": "Mon épouse travaille dans un bureau.",
+      "l2": "Moja manželka pracuje v kancelárii.",
+      "choices_l1": [
+        "Mon ami habite dans un immeuble, tout près.",
+        "Mes enfants sont dans la chambre.",
+        "Mon fils est étudiant. Il habite en ville."
+      ],
+      "choices_l2": [
+        "Môj kamarát býva v paneláku, blízko.",
+        "Moja teta je učiteľka a pracuje veľa.",
+        "Naša chata je ďaleko."
+      ]
+    },
+    {
+      "id": "listen-m-j-bratranec-je-mlad-m-osemn-s-rokov",
+      "type": "listen",
+      "l1": "Mon cousin est jeune. Il a dix-huit ans.",
+      "l2": "Môj bratranec je mladý. Má osemnásť rokov.",
+      "choices_l1": [
+        "Je n'ai pas de frère, mais j'ai deux sœurs.",
+        "Mon oncle a une grande maison et un jardin.",
+        "Ma tante est professeure et elle travaille beaucoup."
+      ],
+      "choices_l2": [
+        "Moje deti sú v izbe.",
+        "Naša chata je ďaleko.",
+        "Nemám brata, ale mám dve sestry."
+      ]
+    },
+    {
+      "id": "listen-moja-sesternica-sa-vol-m-ria",
+      "type": "listen",
+      "l1": "Ma cousine s'appelle Mária.",
+      "l2": "Moja sesternica sa volá Mária.",
+      "choices_l1": [
+        "Mon épouse travaille dans un bureau.",
+        "Je n'ai pas de frère, mais j'ai deux sœurs.",
+        "Mon ami habite dans un immeuble, tout près."
+      ],
+      "choices_l2": [
+        "Moja manželka pracuje v kancelárii.",
+        "Kto býva v tom dome?",
+        "Nemám brata, ale mám dve sestry."
+      ]
+    },
+    {
+      "id": "listen-m-j-str-ko-m-ve-k-dom-a-z-hradu",
+      "type": "listen",
+      "l1": "Mon oncle a une grande maison et un jardin.",
+      "l2": "Môj strýko má veľký dom a záhradu.",
+      "choices_l1": [
+        "Je n'ai pas de frère, mais j'ai deux sœurs.",
+        "Mon fils est étudiant. Il habite en ville.",
+        "Qui habite dans cette maison ?"
+      ],
+      "choices_l2": [
+        "Môj bratranec je mladý. Má osemnásť rokov.",
+        "Moja manželka pracuje v kancelárii.",
+        "Kedy máš narodeniny?"
+      ]
+    },
+    {
+      "id": "listen-nem-m-brata-ale-m-m-dve-sestry",
+      "type": "listen",
+      "l1": "Je n'ai pas de frère, mais j'ai deux sœurs.",
+      "l2": "Nemám brata, ale mám dve sestry.",
+      "choices_l1": [
+        "Ma fille a cinq ans.",
+        "Mon cousin est jeune. Il a dix-huit ans.",
+        "Notre chalet est loin."
+      ],
+      "choices_l2": [
+        "Môj strýko má veľký dom a záhradu.",
+        "Moje deti sú v izbe.",
+        "Kedy máš narodeniny?"
+      ]
+    },
+    {
+      "id": "listen-moje-deti-s-v-izbe",
+      "type": "listen",
+      "l1": "Mes enfants sont dans la chambre.",
+      "l2": "Moje deti sú v izbe.",
+      "choices_l1": [
+        "Ma cousine s'appelle Mária.",
+        "Qui habite dans cette maison ?",
+        "Je n'ai pas de frère, mais j'ai deux sœurs."
+      ],
+      "choices_l2": [
+        "Môj kamarát býva v paneláku, blízko.",
+        "Moja sesternica sa volá Mária.",
+        "Kto býva v tom dome?"
+      ]
+    },
+    {
+      "id": "listen-moja-teta-je-u-ite-ka-a-pracuje-ve-a",
+      "type": "listen",
+      "l1": "Ma tante est professeure et elle travaille beaucoup.",
+      "l2": "Moja teta je učiteľka a pracuje veľa.",
+      "choices_l1": [
+        "Ma cousine s'appelle Mária.",
+        "Ma fille a cinq ans.",
+        "Qui habite dans cette maison ?"
+      ],
+      "choices_l2": [
+        "Kedy máš narodeniny?",
+        "Môj strýko má veľký dom a záhradu.",
+        "Kto býva v tom dome?"
+      ]
+    },
+    {
+      "id": "listen-na-a-chata-je-aleko",
+      "type": "listen",
+      "l1": "Notre chalet est loin.",
+      "l2": "Naša chata je ďaleko.",
+      "choices_l1": [
+        "Mon cousin est jeune. Il a dix-huit ans.",
+        "Qui habite dans cette maison ?",
+        "Mon épouse travaille dans un bureau."
+      ],
+      "choices_l2": [
+        "Môj bratranec je mladý. Má osemnásť rokov.",
+        "Moja teta je učiteľka a pracuje veľa.",
+        "Moja dcéra má päť rokov."
+      ]
+    },
+    {
+      "id": "listen-m-j-kamar-t-b-va-v-panel-ku-bl-zko",
+      "type": "listen",
+      "l1": "Mon ami habite dans un immeuble, tout près.",
+      "l2": "Môj kamarát býva v paneláku, blízko.",
+      "choices_l1": [
+        "Je n'ai pas de frère, mais j'ai deux sœurs.",
+        "Mon épouse travaille dans un bureau.",
+        "Mon cousin est jeune. Il a dix-huit ans."
+      ],
+      "choices_l2": [
+        "Kedy máš narodeniny?",
+        "Naša chata je ďaleko.",
+        "Moja dcéra má päť rokov."
+      ]
+    },
+    {
+      "id": "listen-kedy-m-narodeniny",
+      "type": "listen",
+      "l1": "Quand as-tu ton anniversaire ?",
+      "l2": "Kedy máš narodeniny?",
+      "choices_l1": [
+        "Ma cousine s'appelle Mária.",
+        "Je n'ai pas de frère, mais j'ai deux sœurs.",
+        "Mon oncle a une grande maison et un jardin."
+      ],
+      "choices_l2": [
+        "Nemám brata, ale mám dve sestry.",
+        "Môj bratranec je mladý. Má osemnásť rokov.",
+        "Môj strýko má veľký dom a záhradu."
+      ]
+    },
+    {
+      "id": "listen-m-j-otec-a-moja-mama-b-vaj-spolu-na-dedine",
+      "type": "listen",
+      "l1": "Mon père et ma maman habitent ensemble au village.",
+      "l2": "Môj otec a moja mama bývajú spolu na dedine.",
+      "choices_l1": [
+        "Mon cousin est jeune. Il a dix-huit ans.",
+        "Ma cousine s'appelle Mária.",
+        "Mon fils est étudiant. Il habite en ville."
+      ],
+      "choices_l2": [
+        "Nemám brata, ale mám dve sestry.",
+        "Môj syn je študent. Býva v meste.",
+        "Môj kamarát býva v paneláku, blízko."
+      ]
+    },
+    {
+      "id": "listen-ak-je-tvoje-meno",
+      "type": "listen",
+      "l1": "Quel est ton prénom ?",
+      "l2": "Aké je tvoje meno?",
+      "choices_l1": [
+        "Ma cousine s'appelle Mária.",
+        "Ma tante est professeure et elle travaille beaucoup.",
+        "Ma fille a cinq ans."
+      ],
+      "choices_l2": [
+        "Naša chata je ďaleko.",
+        "Nemám brata, ale mám dve sestry.",
+        "Môj syn je študent. Býva v meste."
+      ]
+    },
+    {
+      "id": "listen-moja-babka-je-star-ale-rob-ve-a-v-z-hrade",
+      "type": "listen",
+      "l1": "Ma grand-mère est vieille, mais elle fait beaucoup dans le jardin.",
+      "l2": "Moja babka je stará, ale robí veľa v záhrade.",
+      "choices_l1": [
+        "Ma cousine s'appelle Mária.",
+        "Mon oncle a une grande maison et un jardin.",
+        "Mon fils est étudiant. Il habite en ville."
+      ],
+      "choices_l2": [
+        "Môj strýko má veľký dom a záhradu.",
+        "Môj bratranec je mladý. Má osemnásť rokov.",
+        "Môj kamarát býva v paneláku, blízko."
+      ]
+    },
+    {
+      "id": "listen-m-j-dedko-je-d-chodca-a-je-tu",
+      "type": "listen",
+      "l1": "Mon grand-père est retraité et il est ici.",
+      "l2": "Môj dedko je dôchodca a je tu.",
+      "choices_l1": [
+        "Mon oncle a une grande maison et un jardin.",
+        "Qui habite dans cette maison ?",
+        "Je n'ai pas de frère, mais j'ai deux sœurs."
+      ],
+      "choices_l2": [
+        "Môj strýko má veľký dom a záhradu.",
+        "Môj bratranec je mladý. Má osemnásť rokov.",
+        "Moja teta je učiteľka a pracuje veľa."
+      ]
+    },
+    {
+      "id": "order-moja-dc-ra-m-p-rokov",
+      "type": "order",
+      "l1": "Ma fille a cinq ans.",
+      "l2": "Moja dcéra má päť rokov.",
+      "tokens_l1": [
+        "Ma",
+        "fille",
+        "a",
+        "cinq",
+        "ans.",
+        "Mon",
+        "cousin",
+        "est",
+        "jeune.",
+        "Il",
+        "a",
+        "dix-huit",
+        "ans."
+      ],
+      "tokens_l2": [
+        "Moja",
+        "dcéra",
+        "má",
+        "päť",
+        "rokov.",
+        "Môj",
+        "bratranec",
+        "je",
+        "mladý.",
+        "Má",
+        "osemnásť",
+        "rokov."
+      ]
+    },
+    {
+      "id": "order-m-j-syn-je-tudent-b-va-v-meste",
+      "type": "order",
+      "l1": "Mon fils est étudiant. Il habite en ville.",
+      "l2": "Môj syn je študent. Býva v meste.",
+      "tokens_l1": [
+        "Mon",
+        "fils",
+        "est",
+        "étudiant.",
+        "Il",
+        "habite",
+        "en",
+        "ville.",
+        "Je",
+        "n'ai",
+        "pas",
+        "de",
+        "frère,",
+        "mais",
+        "j'ai",
+        "deux",
+        "sœurs."
+      ],
+      "tokens_l2": [
+        "Môj",
+        "syn",
+        "je",
+        "študent.",
+        "Býva",
+        "v",
+        "meste.",
+        "Nemám",
+        "brata,",
+        "ale",
+        "mám",
+        "dve",
+        "sestry."
+      ]
+    },
+    {
+      "id": "order-kto-b-va-v-tom-dome",
+      "type": "order",
+      "l1": "Qui habite dans cette maison ?",
+      "l2": "Kto býva v tom dome?",
+      "tokens_l1": [
+        "Qui",
+        "habite",
+        "dans",
+        "cette",
+        "maison",
+        "?",
+        "Je",
+        "n'ai",
+        "pas",
+        "de",
+        "frère,",
+        "mais",
+        "j'ai",
+        "deux",
+        "sœurs."
+      ],
+      "tokens_l2": [
+        "Kto",
+        "býva",
+        "v",
+        "tom",
+        "dome?",
+        "Nemám",
+        "brata,",
+        "ale",
+        "mám",
+        "dve",
+        "sestry."
+      ]
+    },
+    {
+      "id": "order-moja-man-elka-pracuje-v-kancel-rii",
+      "type": "order",
+      "l1": "Mon épouse travaille dans un bureau.",
+      "l2": "Moja manželka pracuje v kancelárii.",
+      "tokens_l1": [
+        "Mon",
+        "épouse",
+        "travaille",
+        "dans",
+        "un",
+        "bureau.",
+        "Qui",
+        "habite",
+        "dans",
+        "cette",
+        "maison",
+        "?"
+      ],
+      "tokens_l2": [
+        "Moja",
+        "manželka",
+        "pracuje",
+        "v",
+        "kancelárii.",
+        "Kto",
+        "býva",
+        "v",
+        "tom",
+        "dome?"
+      ]
+    },
+    {
+      "id": "order-m-j-bratranec-je-mlad-m-osemn-s-rokov",
+      "type": "order",
+      "l1": "Mon cousin est jeune. Il a dix-huit ans.",
+      "l2": "Môj bratranec je mladý. Má osemnásť rokov.",
+      "tokens_l1": [
+        "Mon",
+        "cousin",
+        "est",
+        "jeune.",
+        "Il",
+        "a",
+        "dix-huit",
+        "ans.",
+        "Ma",
+        "fille",
+        "a",
+        "cinq",
+        "ans."
+      ],
+      "tokens_l2": [
+        "Môj",
+        "bratranec",
+        "je",
+        "mladý.",
+        "Má",
+        "osemnásť",
+        "rokov.",
+        "Moja",
+        "dcéra",
+        "má",
+        "päť",
+        "rokov."
+      ]
+    },
+    {
+      "id": "order-moja-sesternica-sa-vol-m-ria",
+      "type": "order",
+      "l1": "Ma cousine s'appelle Mária.",
+      "l2": "Moja sesternica sa volá Mária.",
+      "tokens_l1": [
+        "Ma",
+        "cousine",
+        "s'appelle",
+        "Mária.",
+        "Mon",
+        "épouse",
+        "travaille",
+        "dans",
+        "un",
+        "bureau."
+      ],
+      "tokens_l2": [
+        "Moja",
+        "sesternica",
+        "sa",
+        "volá",
+        "Mária.",
+        "Moja",
+        "manželka",
+        "pracuje",
+        "v",
+        "kancelárii."
+      ]
+    },
+    {
+      "id": "order-m-j-str-ko-m-ve-k-dom-a-z-hradu",
+      "type": "order",
+      "l1": "Mon oncle a une grande maison et un jardin.",
+      "l2": "Môj strýko má veľký dom a záhradu.",
+      "tokens_l1": [
+        "Mon",
+        "oncle",
+        "a",
+        "une",
+        "grande",
+        "maison",
+        "et",
+        "un",
+        "jardin.",
+        "Ma",
+        "tante",
+        "est",
+        "professeure",
+        "et",
+        "elle",
+        "travaille",
+        "beaucoup."
+      ],
+      "tokens_l2": [
+        "Môj",
+        "strýko",
+        "má",
+        "veľký",
+        "dom",
+        "a",
+        "záhradu.",
+        "Moja",
+        "teta",
+        "je",
+        "učiteľka",
+        "a",
+        "pracuje",
+        "veľa."
+      ]
+    },
+    {
+      "id": "order-nem-m-brata-ale-m-m-dve-sestry",
+      "type": "order",
+      "l1": "Je n'ai pas de frère, mais j'ai deux sœurs.",
+      "l2": "Nemám brata, ale mám dve sestry.",
+      "tokens_l1": [
+        "Je",
+        "n'ai",
+        "pas",
+        "de",
+        "frère,",
+        "mais",
+        "j'ai",
+        "deux",
+        "sœurs.",
+        "Notre",
+        "chalet",
+        "est",
+        "loin."
+      ],
+      "tokens_l2": [
+        "Nemám",
+        "brata,",
+        "ale",
+        "mám",
+        "dve",
+        "sestry.",
+        "Naša",
+        "chata",
+        "je",
+        "ďaleko."
+      ]
+    },
+    {
+      "id": "order-moje-deti-s-v-izbe",
+      "type": "order",
+      "l1": "Mes enfants sont dans la chambre.",
+      "l2": "Moje deti sú v izbe.",
+      "tokens_l1": [
+        "Mes",
+        "enfants",
+        "sont",
+        "dans",
+        "la",
+        "chambre.",
+        "Notre",
+        "chalet",
+        "est",
+        "loin."
+      ],
+      "tokens_l2": [
+        "Moje",
+        "deti",
+        "sú",
+        "v",
+        "izbe.",
+        "Naša",
+        "chata",
+        "je",
+        "ďaleko."
+      ]
+    },
+    {
+      "id": "order-moja-teta-je-u-ite-ka-a-pracuje-ve-a",
+      "type": "order",
+      "l1": "Ma tante est professeure et elle travaille beaucoup.",
+      "l2": "Moja teta je učiteľka a pracuje veľa.",
+      "tokens_l1": [
+        "Ma",
+        "tante",
+        "est",
+        "professeure",
+        "et",
+        "elle",
+        "travaille",
+        "beaucoup.",
+        "Mes",
+        "enfants",
+        "sont",
+        "dans",
+        "la",
+        "chambre."
+      ],
+      "tokens_l2": [
+        "Moja",
+        "teta",
+        "je",
+        "učiteľka",
+        "a",
+        "pracuje",
+        "veľa.",
+        "Moje",
+        "deti",
+        "sú",
+        "v",
+        "izbe."
+      ]
+    },
+    {
+      "id": "order-na-a-chata-je-aleko",
+      "type": "order",
+      "l1": "Notre chalet est loin.",
+      "l2": "Naša chata je ďaleko.",
+      "tokens_l1": [
+        "Notre",
+        "chalet",
+        "est",
+        "loin.",
+        "Mes",
+        "enfants",
+        "sont",
+        "dans",
+        "la",
+        "chambre."
+      ],
+      "tokens_l2": [
+        "Naša",
+        "chata",
+        "je",
+        "ďaleko.",
+        "Moje",
+        "deti",
+        "sú",
+        "v",
+        "izbe."
+      ]
+    },
+    {
+      "id": "order-m-j-kamar-t-b-va-v-panel-ku-bl-zko",
+      "type": "order",
+      "l1": "Mon ami habite dans un immeuble, tout près.",
+      "l2": "Môj kamarát býva v paneláku, blízko.",
+      "tokens_l1": [
+        "Mon",
+        "ami",
+        "habite",
+        "dans",
+        "un",
+        "immeuble,",
+        "tout",
+        "près.",
+        "Mon",
+        "cousin",
+        "est",
+        "jeune.",
+        "Il",
+        "a",
+        "dix-huit",
+        "ans."
+      ],
+      "tokens_l2": [
+        "Môj",
+        "kamarát",
+        "býva",
+        "v",
+        "paneláku,",
+        "blízko.",
+        "Môj",
+        "bratranec",
+        "je",
+        "mladý.",
+        "Má",
+        "osemnásť",
+        "rokov."
+      ]
+    },
+    {
+      "id": "order-kedy-m-narodeniny",
+      "type": "order",
+      "l1": "Quand as-tu ton anniversaire ?",
+      "l2": "Kedy máš narodeniny?",
+      "tokens_l1": [
+        "Quand",
+        "as-tu",
+        "ton",
+        "anniversaire",
+        "?",
+        "Mon",
+        "oncle",
+        "a",
+        "une",
+        "grande",
+        "maison",
+        "et",
+        "un",
+        "jardin."
+      ],
+      "tokens_l2": [
+        "Kedy",
+        "máš",
+        "narodeniny?",
+        "Môj",
+        "strýko",
+        "má",
+        "veľký",
+        "dom",
+        "a",
+        "záhradu."
+      ]
+    },
+    {
+      "id": "order-m-j-otec-a-moja-mama-b-vaj-spolu-na-dedine",
+      "type": "order",
+      "l1": "Mon père et ma maman habitent ensemble au village.",
+      "l2": "Môj otec a moja mama bývajú spolu na dedine.",
+      "tokens_l1": [
+        "Mon",
+        "père",
+        "et",
+        "ma",
+        "maman",
+        "habitent",
+        "ensemble",
+        "au",
+        "village.",
+        "Notre",
+        "chalet",
+        "est",
+        "loin."
+      ],
+      "tokens_l2": [
+        "Môj",
+        "otec",
+        "a",
+        "moja",
+        "mama",
+        "bývajú",
+        "spolu",
+        "na",
+        "dedine.",
+        "Naša",
+        "chata",
+        "je",
+        "ďaleko."
+      ]
+    },
+    {
+      "id": "order-ak-je-tvoje-meno",
+      "type": "order",
+      "l1": "Quel est ton prénom ?",
+      "l2": "Aké je tvoje meno?",
+      "tokens_l1": [
+        "Quel",
+        "est",
+        "ton",
+        "prénom",
+        "?",
+        "Mes",
+        "enfants",
+        "sont",
+        "dans",
+        "la",
+        "chambre."
+      ],
+      "tokens_l2": [
+        "Aké",
+        "je",
+        "tvoje",
+        "meno?",
+        "Moje",
+        "deti",
+        "sú",
+        "v",
+        "izbe."
+      ]
+    },
+    {
+      "id": "order-moja-babka-je-star-ale-rob-ve-a-v-z-hrade",
+      "type": "order",
+      "l1": "Ma grand-mère est vieille, mais elle fait beaucoup dans le jardin.",
+      "l2": "Moja babka je stará, ale robí veľa v záhrade.",
+      "tokens_l1": [
+        "Ma",
+        "grand-mère",
+        "est",
+        "vieille,",
+        "mais",
+        "elle",
+        "fait",
+        "beaucoup",
+        "dans",
+        "le",
+        "jardin.",
+        "Mon",
+        "oncle",
+        "a",
+        "une",
+        "grande",
+        "maison",
+        "et",
+        "un",
+        "jardin."
+      ],
+      "tokens_l2": [
+        "Moja",
+        "babka",
+        "je",
+        "stará,",
+        "ale",
+        "robí",
+        "veľa",
+        "v",
+        "záhrade.",
+        "Môj",
+        "strýko",
+        "má",
+        "veľký",
+        "dom",
+        "a",
+        "záhradu."
+      ]
+    },
+    {
+      "id": "order-m-j-dedko-je-d-chodca-a-je-tu",
+      "type": "order",
+      "l1": "Mon grand-père est retraité et il est ici.",
+      "l2": "Môj dedko je dôchodca a je tu.",
+      "tokens_l1": [
+        "Mon",
+        "grand-père",
+        "est",
+        "retraité",
+        "et",
+        "il",
+        "est",
+        "ici.",
+        "Quel",
+        "est",
+        "ton",
+        "prénom",
+        "?"
+      ],
+      "tokens_l2": [
+        "Môj",
+        "dedko",
+        "je",
+        "dôchodca",
+        "a",
+        "je",
+        "tu.",
+        "Aké",
+        "je",
+        "tvoje",
+        "meno?"
+      ]
+    },
+    {
+      "id": "match-rodina-vocab",
+      "type": "match",
+      "l1": [
+        "la famille",
+        "la maman",
+        "le père",
+        "le frère"
+      ],
+      "l2": [
+        "rodina",
+        "mama",
+        "otec",
+        "brat"
+      ]
+    },
+    {
+      "id": "match-moja-dc-ra-m-p-rokov-sentences",
+      "type": "match",
+      "l1": [
+        "Ma fille a cinq ans.",
+        "Mon fils est étudiant. Il habite en ville.",
+        "Qui habite dans cette maison ?",
+        "Mon épouse travaille dans un bureau."
+      ],
+      "l2": [
+        "Moja dcéra má päť rokov.",
+        "Môj syn je študent. Býva v meste.",
+        "Kto býva v tom dome?",
+        "Moja manželka pracuje v kancelárii."
+      ]
+    }
+  ]
+}
