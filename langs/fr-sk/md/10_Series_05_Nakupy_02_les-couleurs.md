@@ -1,6 +1,6 @@
 # Séria Nákupy (2/5) — Les couleurs
 
-@ img/TODO_nakupy_02.jpg | (doplniť: farebné oblečenie vo výklade — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Vintage_clothes_shop_with_a_vintage_shop_front_(8032311036).jpg | Farebné oblečenie vo výklade — Wikimedia Commons
 
 Farby, ktoré sa zhodujú ako každé iné prídavné meno. A nové slovká **ce / cette / ces**, ukazovacie zámená, ktoré sa tiež musia zhodovať.
 

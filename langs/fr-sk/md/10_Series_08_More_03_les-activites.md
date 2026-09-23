@@ -1,6 +1,6 @@
 # Séria More (3/5) — Les activités
 
-@ img/TODO_more_03.jpg | (doplniť: windsurfing, Atlantické pobrežie — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Windsurf.JPG | Windsurfing na Atlantickom pobreží — Wikimedia Commons
 
 Čo všetko sa dá pri mori robiť. A superlatív — konečne rovnako jednoduchý ako komparatív.
 

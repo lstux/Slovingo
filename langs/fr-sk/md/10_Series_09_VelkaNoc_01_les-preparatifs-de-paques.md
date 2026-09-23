@@ -1,6 +1,6 @@
 # Séria Veľká noc (1/5) — Les préparatifs de Pâques
 
-@ img/TODO_velkanoc_01.jpg | (doplniť: veľkonočná výzdoba, Francúzsko — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Easter_eggs_-_straw_decoration.jpg | Veľkonočná výzdoba — Wikimedia Commons
 
 Posledná séria cesty: Veľká noc. Začíname prípravami, a **passé composé**, časom, ktorý si letmo stretol už predtým (il est allé) a teraz ho konečne postavíme poriadne.
 

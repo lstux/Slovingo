@@ -1,6 +1,6 @@
 # Séria Čas (2/5) — À quelle heure ?
 
-@ img/TODO_cas_02.jpg | (doplniť: tabuľa odchodov, francúzska stanica — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Panneau_SNCF_-_Lyon_-_20100403.jpg | Tabuľa odchodov, stanica v Lyone — Wikimedia Commons
 
 Povedať, o koľkej sa niečo deje. A bod, ktorý mýli každého Slováka: francúzština počíta OD hodiny, ktorá už prešla — presne opačne než slovenčina.
 

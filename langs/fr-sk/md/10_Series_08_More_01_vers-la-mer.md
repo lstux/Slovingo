@@ -1,6 +1,6 @@
 # Séria More (1/5) — Vers la mer
 
-@ img/TODO_more_01.jpg | (doplniť: Atlantické pobrežie, La Baule — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Plage_de_La_Baule-Escoublac_01.JPG | Atlantické pobrežie, pláž La Baule — Wikimedia Commons
 
 Prvá fiche najočakávanejšej série: more. Základná slovná zásoba, a skutočný budúci čas (futur simple), ktorý ti poslúži v celej sérii.
 

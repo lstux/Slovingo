@@ -1,6 +1,6 @@
 # Séria Doma (2/5) — Les meubles
 
-@ img/TODO_doma_02.jpg | (doplniť: francúzsky nábytok, obývačka — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Couch-furniture-living-room-sofa_(24300293356).jpg | Nábytok v obývačke — Wikimedia Commons
 
 Nábytok, a jedna veľmi užitočná väzba, ktorú slovenčina nemá: **il y a**, „je tam / sú tam“.
 

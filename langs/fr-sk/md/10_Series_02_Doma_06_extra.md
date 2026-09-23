@@ -1,6 +1,6 @@
 # Séria Doma (extra) — Všetko dokopy
 
-@ img/TODO_doma_06.jpg | (doplniť: francúzsky interiér — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Neat_Living_Room.jpg | Francúzsky interiér — Wikimedia Commons
 
 Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet.
 

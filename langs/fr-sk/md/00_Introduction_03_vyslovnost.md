@@ -1,5 +1,7 @@
 # 🇫🇷 Memo — Výslovnosť francúzštiny
 
+@ https://commons.wikimedia.org/wiki/Special:FilePath/French_accents.svg | Francúzske diakritické znamienka (accents) — Wikimedia Commons
+
 > Francúzsky pravopis je oveľa menej pravidelný než slovenský — veľa písmen sa vôbec nevyslovuje.
 > Dobrá správa: keď raz pochopíš základné pravidlá, čítanie sa stane celkom predvídateľné.
 
@@ -115,14 +117,3 @@ Väčšina francúzskych spoluhlások na konci slova sa nevyslovuje. Malá pomô
 | koncové spoluhlásky | vždy vyslovené | väčšinou nemé (okrem CaReFuL) |
 | nosovky (an, on, in) | čítané ako a-n, o-n, i-n oddelene | jedna nosová hláska |
 | j | j ako v slovenskom „jama“ | ž ako v slovenskom „žena“ |
-
----
-
-# Zapamätaj si
-
-✅ Veľa koncových písmen sa nevyslovuje — okrem C, R, F, L (mnemotechnika CaReFuL)  
-✅ Prízvuk padá na poslednú slabiku, presný opak slovenčiny  
-✅ Francúzština má 4 nosové samohlásky, ktoré slovenčina nepozná  
-✅ h sa nikdy nevyslovuje  
-✅ Francúzske r je hrdelné, nie rolované  
-✅ Liaison spája slová cez inak nemú spoluhlásku

@@ -1,6 +1,6 @@
 # Séria Mesto (5/5) — Perdu en ville
 
-@ img/TODO_mesto_05.jpg | (doplniť: ulica vo Vieux Lyon — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Une_fa%C3%A7ade_Vieux-Lyon.JPG | Ulica vo Vieux Lyon — Wikimedia Commons
 
 Eric zmeškal svoju zastávku a hľadá cestu. Náhodou stretne Mareka. Prejde sa tu celá slovná zásoba série. Žiadne nové slovo, okrem tých označených v poznámkach.
 

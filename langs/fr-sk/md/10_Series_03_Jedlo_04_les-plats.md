@@ -1,6 +1,6 @@
 # Séria Jedlo (4/5) — Les plats
 
-@ img/TODO_jedlo_04.jpg | (doplniť: francúzske jedlá, quiche lorraine — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Quiche_Lorraine.jpg | Quiche lorraine — Wikimedia Commons
 
 Jedlá a nápoje, ktoré ti naozaj naservírujú. A magická formulka na objednávanie: **je prends**.
 

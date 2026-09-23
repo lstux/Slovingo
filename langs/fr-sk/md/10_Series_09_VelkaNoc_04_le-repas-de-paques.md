@@ -1,6 +1,6 @@
 # Séria Veľká noc (4/5) — Le repas de Pâques
 
-@ img/TODO_velkanoc_04.jpg | (doplniť: francúzsky veľkonočný stôl s jahňacím — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Easter_lamb_03346.JPG | Veľkonočný stôl s jahňacím — Wikimedia Commons
 
 Veľkonočný obed, s jedlami, aké sa jedia iba pri tejto príležitosti. Zhŕňame tu celý passé composé — avoir aj être — dokopy.
 

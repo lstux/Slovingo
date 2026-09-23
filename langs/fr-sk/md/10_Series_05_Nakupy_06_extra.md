@@ -1,6 +1,6 @@
 # Séria Nákupy (extra) — Všetko dokopy
 
-@ img/TODO_nakupy_06.jpg | (doplniť: francúzsky obchodný dom — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Coupole_des_galeries_Lafayette,_Paris,_juin_2014.jpg | Galeries Lafayette, francúzsky obchodný dom — Wikimedia Commons
 
 Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet.
 

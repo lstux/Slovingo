@@ -1,6 +1,6 @@
 # Séria More (4/5) — À l'hôtel
 
-@ img/TODO_more_04.jpg | (doplniť: hotel s výhľadom na more, La Baule — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/H%C3%B4tel_Royal_La_Baule.jpg | Hotel s výhľadom na more, La Baule — Wikimedia Commons
 
 Zastávka v hoteli pri mori. Prvé stretnutie s **kondicionálom**, na vyjadrenie zdvorilejšieho želania alebo možnosti.
 

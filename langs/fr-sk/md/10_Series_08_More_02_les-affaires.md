@@ -1,6 +1,6 @@
 # Séria More (2/5) — Les affaires
 
-@ img/TODO_more_02.jpg | (doplniť: taška s vecami na pláž — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/WLE_and_Wikipedia_20_eco_bags_on_the_beach_1.jpg | Taška s vecami na pláž — Wikimedia Commons
 
 Čo si zbaliť do tašky. Sloveso **pouvoir**, môcť, dopĺňa sériu modálnych slovies začatú s „vouloir“ a „devoir“.
 

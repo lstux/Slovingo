@@ -1,6 +1,6 @@
 # Séria Mesto (3/5) — Quel chemin dois-je prendre ?
 
-@ img/TODO_mesto_03.jpg | (doplniť: francúzska ulica, smerovky — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/France_road_sign_C117-b21c1.svg | Francúzske smerové značky — Wikimedia Commons
 
 Pýtať sa a nasledovať cestu. Tu sa objavuje **rozkazovací spôsob** (impératif), tvar, ktorý sa používa na dávanie inštrukcií.
 

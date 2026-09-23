@@ -1,6 +1,6 @@
 # Séria Počasie (4/5) — Les prévisions
 
-@ img/TODO_pocasie_04.jpg | (doplniť: predpoveď počasia na obrazovke — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Weather_Forecast.jpg | Predpoveď počasia — Wikimedia Commons
 
 Hovoriť o počasí, ktoré príde, a prispôsobiť plány. Kombinujeme budúci čas s „bude“ a podmienky, ktoré menia plány — plus jedna dôležitá pasca.
 

@@ -1,6 +1,6 @@
 # Séria Jedlo (5/5) — Déjeuner chez mamie Louise
 
-@ img/TODO_jedlo_05.jpg | (doplniť: nedeľný obed, francúzsky stôl — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Set_dinner_table.jpg | Nedeľný obed, prestretý stôl — Wikimedia Commons
 
 Nedeľa napoludnie, obed u Mamie Louise. Prejde sa tu celá slovná zásoba série. Žiadne nové slovo, okrem tých označených v poznámkach.
 

@@ -1,6 +1,6 @@
 # Séria Jedlo (1/5) — Les aliments de base
 
-@ img/TODO_jedlo_01.jpg | (doplniť: francúzske potraviny, trh — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Morning_baguettes.jpg | Francúzske potraviny — Wikimedia Commons
 
 Základné potraviny, a dva slovesá, ktoré k nim patria: **manger** (jesť) a **boire** (piť). A hlavne: prvé stretnutie s partitívnym členom, jednou z čisto francúzskych vecí, ktoré slovenčina vôbec nepozná.
 

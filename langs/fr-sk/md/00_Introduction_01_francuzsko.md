@@ -1,5 +1,7 @@
 # 🇫🇷 Memo — Francúzsko v skratke
 
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel_Tower_from_the_Tour_Montparnasse_3,_Paris_May_2014.jpg | Eiffelova veža, symbol Paríža a Francúzska — Wikimedia Commons, CC BY-SA
+
 Predtým, než sa pustíme do samotného jazyka, trochu kontextu o krajine samotnej: kde leží, odkiaľ pochádza, a čo tvorí jej kultúru. Fiche na pokojné prelistovanie, s odkazmi na doplnkové čítanie, ak by ťa to zaujalo.
 
 ---
@@ -76,13 +78,3 @@ Niekoľko stránok na prehĺbenie (over si odkazy, mohli sa zmeniť):
 - [Marseille](https://sk.wikipedia.org/wiki/Marseille)
 - [Lyon](https://sk.wikipedia.org/wiki/Lyon)
 - [Mont Blanc](https://sk.wikipedia.org/wiki/Mont_Blanc)
-
----
-
-# Zapamätaj si
-
-✅ Francúzsko leží v západnej Európe, hraničí s ôsmimi krajinami  
-✅ Hlavné mesto: Paríž — ďalšie veľké mestá sú Marseille a Lyon  
-✅ Piata republika od roku 1958  
-✅ Zakladajúci člen Európskej únie, euro od roku 2002  
-✅ Gastronomické stolovanie zapísané na zozname UNESCO

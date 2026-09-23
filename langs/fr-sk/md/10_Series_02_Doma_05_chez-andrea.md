@@ -1,6 +1,6 @@
 # Séria Doma (5/5) — Chez Andrea
 
-@ img/TODO_doma_05.jpg | (doplniť: byt, Lyon, Francúzsko — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Cpe_front_building.JPG | Budova v Lyone — Wikimedia Commons
 
 Andrea prijíma Erica a Karine vo svojom byte v Lyone. Prejde sa tu celá slovná zásoba série, v jednom súvislom rozhovore. Žiadne nové slovo, okrem tých označených v poznámkach.
 

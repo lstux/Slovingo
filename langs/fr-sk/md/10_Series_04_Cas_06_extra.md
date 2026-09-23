@@ -1,6 +1,6 @@
 # Séria Čas (extra) — Všetko dokopy
 
-@ img/TODO_cas_06.jpg | (doplniť: francúzska stanica v noci — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Gare_de_Lille-Flandres_by_night_IMG_1407_(15621951726).jpg | Francúzska stanica v noci, Lille-Flandres — Wikimedia Commons
 
 Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet.
 

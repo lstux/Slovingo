@@ -1,6 +1,6 @@
 # Séria Rodina (2/5) — Quel âge as-tu ?
 
-@ img/TODO_rodina_02.jpg | (doplniť: rodina s deťmi, Francúzsko — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Family_Portrait_A12444.jpg | Rodina s deťmi — Wikimedia Commons
 
 Rozširujeme rodinu o deti a učíme sa povedať vek. Dobrá správa: francúzske slovo pre „rok" sa nemení podľa počtu tak komplikovane ako v slovenčine.
 
@@ -97,9 +97,9 @@ Dobrá správa: francúzske « an » sa nedelí na tri tvary ako slovenské rok/
 
 ## Opakujeme
 
-! Ma maman a cinquante ans.
+! Ma mère a cinquante ans.
 > Moja mama má päťdesiat rokov.
-> Ma maman = moja mama
+> Ma mère = moja mama
 > a = má
 > cinquante ans = päťdesiat rokov
 

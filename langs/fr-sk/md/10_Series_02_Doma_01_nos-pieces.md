@@ -1,6 +1,6 @@
 # Séria Doma (1/5) — Nos pièces
 
-@ img/TODO_doma_01.jpg | (doplniť: interiér francúzskeho bytu — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/The_Paris_Apartment_style_interior.jpg | Interiér francúzskeho bytu — Wikimedia Commons
 
 Miestnosti bytu, a jedna z prvých vecí, ktoré prekvapia Slováka na francúzštine: rod podstatného mena sa (na rozdiel od slovenčiny) väčšinou nedá uhádnuť z koncovky — treba sa ho naučiť spolu so slovom.
 

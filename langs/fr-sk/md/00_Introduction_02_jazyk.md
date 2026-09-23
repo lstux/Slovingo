@@ -1,5 +1,7 @@
 # 🇫🇷 Memo — Francúzština, románsky jazyk
 
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Map-Francophonie_organisation_fr.svg | Mapa krajín Frankofónie (La Francophonie) vo svete — Wikimedia Commons
+
 Predtým, než sa ponoríme do slovnej zásoby a gramatiky: kto hovorí po francúzsky, odkiaľ tento jazyk pochádza, a do akej rodiny patrí?
 
 ---
@@ -90,13 +92,3 @@ Súčasná spisovná francúzština sa ustálila oveľa skôr než slovenčina: 
 > Učím sa francúzsky.
 > J'apprends = učím sa
 > le français = francúzštinu
-
----
-
-# Zapamätaj si
-
-✅ Okolo 230 – 300 miliónov hovoriacich na celom svete (rodení aj druhý jazyk)  
-✅ Románsky jazyk, blízky taliančine a španielčine  
-✅ Úradný jazyk vo Francúzsku a takmer tridsiatich ďalších krajinách (La Francophonie)  
-✅ Latinská abeceda s diakritikou, ale menej písmen než slovenčina  
-✅ Ustálená už od 17. storočia (Académie française, 1635)

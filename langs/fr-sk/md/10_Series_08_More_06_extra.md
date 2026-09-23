@@ -1,6 +1,6 @@
 # Séria More (extra) — Všetko dokopy
 
-@ img/TODO_more_06.jpg | (doplniť: západ slnka nad Atlantikom — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Oceansunset.JPG | Západ slnka nad Atlantikom — Wikimedia Commons
 
 Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet.
 

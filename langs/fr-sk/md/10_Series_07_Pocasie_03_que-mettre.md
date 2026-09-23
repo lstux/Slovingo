@@ -1,6 +1,6 @@
 # Séria Počasie (3/5) — Que mettre ?
 
-@ img/TODO_pocasie_03.jpg | (doplniť: oblečenie na chladné počasie — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Focale_scarf.jpg | Oblečenie na chladné počasie — Wikimedia Commons
 
 Obliecť sa podľa počasia. Oblečenie, sloveso **mettre**, a nový odtieň: nutnosť.
 

@@ -1,6 +1,6 @@
 # Séria Nákupy (3/5) — Les vêtements
 
-@ img/TODO_nakupy_03.jpg | (doplniť: francúzsky obchod s oblečením — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Clothing_store_interior_LCCN2016824584.jpg | Obchod s oblečením — Wikimedia Commons
 
 Oblečenie, veľkosti, a sloveso **essayer** (skúsiť). Tu si všimneš niečo dôležité: farba stojí za slovom, nie pred ním.
 

@@ -1,6 +1,6 @@
 # Séria Veľká noc (3/5) — La chasse aux œufs
 
-@ img/TODO_velkanoc_03.jpg | (doplniť: deti hľadajú čokoládové vajíčka v záhrade — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Easter_egg_hunt.JPG | Deti hľadajú čokoládové vajíčka v záhrade — Wikimedia Commons
 
 Ústredná francúzska tradícia Veľkej noci: hľadanie čokoládových vajíčok schovaných v záhrade. Úplne iný zvyk než slovenská šibačka — a príležitosť naučiť sa francúzsky datív.
 

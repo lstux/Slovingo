@@ -1,6 +1,6 @@
 # Séria Mesto (1/5) — En ville
 
-@ img/TODO_mesto_01.jpg | (doplniť: francúzske námestie s fontánou — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Fontaine_Bartholdi_Place_des_Terreaux_Lyon.jpg | Fontaine Bartholdi, námestie s fontánou v Lyone — Wikimedia Commons
 
 Miesta, na ktoré natrafíš v meste. Predložky „sur“ a „dans“ tu robia trochu podobnú prácu ako slovenské na/v — nie vždy, ale často.
 

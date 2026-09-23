@@ -1,6 +1,6 @@
 # Séria Doma (4/5) — Ce qu'on fait à la maison
 
-@ img/TODO_doma_04.jpg | (doplniť: rodina doma, domáce činnosti — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Household_Chores_by_Harry_Brooker.jpg | Domáce činnosti — Wikimedia Commons
 
 Čo robíme v každej miestnosti. Sedem bežných slovies, a tri skupiny slovies v prítomnom čase.
 

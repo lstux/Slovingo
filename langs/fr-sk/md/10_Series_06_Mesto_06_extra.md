@@ -1,6 +1,6 @@
 # Séria Mesto (extra) — Všetko dokopy
 
-@ img/TODO_mesto_06.jpg | (doplniť: francúzske mesto v noci — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Paris_at_night.jpg | Francúzske mesto v noci — Wikimedia Commons
 
 Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet.
 

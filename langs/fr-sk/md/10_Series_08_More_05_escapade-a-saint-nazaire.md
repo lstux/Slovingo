@@ -1,6 +1,6 @@
 # Séria More (5/5) — Escapade à Saint-Nazaire
 
-@ img/TODO_more_05.jpg | (doplniť: panoráma La Baule, Atlantik — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Pronichet_plage_vue_La_Baule.jpg | Panoráma La Baule, Atlantik — Wikimedia Commons
 
 Andrea a Karine sa stretávajú s Ericom v Saint-Nazaire na dlho plánovaný výlet. Prejde sa tu celá slovná zásoba série. Žiadne nové slovo, okrem tých označených v poznámkach.
 

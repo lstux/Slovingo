@@ -1,6 +1,6 @@
 # Séria Jedlo (2/5) — J'ai faim, je veux
 
-@ img/TODO_jedlo_02.jpg | (doplniť: francúzsky stôl prestretý na raňajky — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Morning-breakfast-croissant_(24244330501).jpg | Francúzske raňajky — Wikimedia Commons
 
 Povedať, že máme hlad, že máme smäd, a hlavne povedať, čo chceme. Sloveso **vouloir** je nepravidelné, ale nevyhnutné.
 

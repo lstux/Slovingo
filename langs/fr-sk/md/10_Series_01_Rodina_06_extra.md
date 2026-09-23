@@ -1,6 +1,6 @@
 # Séria Rodina (extra) — Všetko dokopy
 
-@ img/TODO_rodina_06.jpg | (doplniť: francúzska rodina, viac generácií — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Baby_Mother_Grandmother_and_Great_Grandmother.jpg | Rodina, viac generácií — Wikimedia Commons
 
 Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet.
 
@@ -11,7 +11,7 @@
 | Francúzština | Slovenčina |
 |----------|----------|
 | la famille | rodina |
-| la maman | mama |
+| la mère | mama |
 | le père | otec |
 | le frère | brat |
 | la sœur | sestra |
@@ -160,11 +160,11 @@
 > Quand est = kedy je
 > ton anniversaire = tvoje narodeniny
 
-! Mon père et ma maman habitent ensemble à la campagne.
+! Mon père et ma mère habitent ensemble à la campagne.
 > Môj otec a moja mama bývajú spolu na dedine.
 > Mon père = môj otec
 > et = a
-> ma maman = moja mama
+> ma mère = moja mama
 > habitent = bývajú
 > ensemble = spolu
 > à la campagne = na dedine

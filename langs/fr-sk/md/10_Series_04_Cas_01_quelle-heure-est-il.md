@@ -1,6 +1,6 @@
 # Séria Čas (1/5) — Quelle heure est-il ?
 
-@ img/TODO_cas_01.jpg | (doplniť: hodinová veža, francúzske mesto — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Le_Gros_Horloge,_Rouen,_Normandy.jpg | Gros Horloge, hodinová veža v Rouene — Wikimedia Commons
 
 Pýtať sa a povedať, koľko je hodín. Dobrá správa hneď na úvod: francúzština je tu jednoduchšia než slovenčina.
 

@@ -1,6 +1,6 @@
 # Séria Rodina (3/5) — Le travail
 
-@ img/TODO_rodina_03.jpg | (doplniť: pracovné prostredie, Francúzsko — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Working_at_office_(Unsplash).jpg | Pracovné prostredie — Wikimedia Commons
 
 Hovoríme o tom, čo robia členovia rodiny. Dve nové slovesá, **travailler** a **faire**, a jedna dobrá správa: po « être » sa pri povolaní vo francúzštine — tak ako v slovenčine — nepoužíva žiadny člen.
 
@@ -57,9 +57,9 @@ Hovoríme o tom, čo robia členovia rodiny. Dve nové slovesá, **travailler** 
 > professeur = učiteľ
 + Po « être » sa s povolaním nepoužíva člen: « il est professeur », nie « il est un professeur ». Presne ako v slovenčine!
 
-! Ma maman est professeure.
+! Ma mère est professeure.
 > Moja mama je učiteľka.
-> Ma maman = moja mama
+> Ma mère = moja mama
 > est = je
 > professeure = učiteľka
 + Ženský tvar mnohých povolaní sa tvorí pridaním « -e »: professeur → professeure. Podobná logika ako slovenská prípona -ka.

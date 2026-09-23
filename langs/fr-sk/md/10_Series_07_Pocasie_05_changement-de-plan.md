@@ -1,6 +1,6 @@
 # Séria Počasie (5/5) — Changement de plan
 
-@ img/TODO_pocasie_05.jpg | (doplniť: kopce v okolí Lyonu — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/A_wide-open_natural_landscape_under_a_cloudy_sky.jpg | Kopce a vidiek — Wikimedia Commons
 
 Andrea a Karine si pripravovali turistiku, ale počasie rozhodne inak. Prejde sa tu celá slovná zásoba série. Žiadne nové slovo, okrem tých označených v poznámkach.
 

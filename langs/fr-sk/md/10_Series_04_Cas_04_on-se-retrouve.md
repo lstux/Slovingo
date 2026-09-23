@@ -1,6 +1,6 @@
 # Séria Čas (4/5) — On se retrouve
 
-@ img/TODO_cas_04.jpg | (doplniť: francúzska stanica, hlavná hala — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Hall_de_la_gare_de_Lyon_%C3%A0_Paris_(ao%C3%BBt_2019).JPG | Hlavná hala, Gare de Lyon, Paríž — Wikimedia Commons
 
 Dohodnúť stretnutie: ísť, prísť, čakať, stretnúť sa. Sloveso **aller** je nepravidelné a jedno z najužitočnejších vo francúzštine — otvára dvere aj k blízkej budúcnosti.
 

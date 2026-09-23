@@ -1,6 +1,6 @@
 # Séria Rodina (1/5) — Ma famille
 
-@ img/TODO_rodina_01.jpg | (doplniť: francúzska rodina — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Family_Portrait.jpg | Rodina — Wikimedia Commons
 
 Prvá fiche série: členovia rodiny, privlastňovacie zámená **mon** / **ma**, a dve slovesá, ktoré budeš potrebovať všade — **être** (byť) a **avoir** (mať).
 
@@ -11,7 +11,7 @@ Prvá fiche série: členovia rodiny, privlastňovacie zámená **mon** / **ma**
 | Francúzština | Slovenčina |
 |----------|----------|
 | la famille | rodina |
-| la maman | mama |
+| la mère | mama |
 | le père | otec |
 | le frère | brat |
 | la sœur | sestra |
@@ -58,7 +58,7 @@ Privlastňovacie zámeno sa zhoduje s rodom podstatného mena, ktoré nasleduje 
 > ma = moja
 > famille = rodina
 
-! Voici mon père et voici ma maman.
+! Voici mon père et voici ma mère.
 > To je môj otec a to je moja mama.
 > Voici = to je
 > mon = môj
@@ -66,7 +66,7 @@ Privlastňovacie zámeno sa zhoduje s rodom podstatného mena, ktoré nasleduje 
 > et = a
 > voici = to je
 > ma = moja
-> maman = mama
+> mère = mama
 + « mon » pred mužským slovom, « ma » pred ženským — presne ako pri člene « le / la ».
 
 ! As-tu un frère ?
@@ -105,6 +105,8 @@ Privlastňovacie zámeno sa zhoduje s rodom podstatného mena, ktoré nasleduje 
 ## 🇫🇷 Francúzsky kútik
 
 **Nie « grand-mère », ale « Mamie ».** V bežnej reči takmer nikto neosloví svoju babku formálnym slovom {{grand-mère}}. Oveľa častejšie počuješ {{Mamie}} a {{Papi}} — familiárne, vrelé oslovenia, ktoré používajú aj dospelí.
+
+**Aj « mère » a « père » majú svoje familiárne verzie.** Presne ako pri babke a dedkovi vyššie — v bežnej reči Francúzi takmer vždy povedia {{maman}} a {{papa}}, nie formálne {{mère}} a {{père}}.
 
 **Nedeľný obed vo veľkom štýle.** Francúzska rodina sa rada stretáva na dlhom nedeľnom obede, niekedy aj na tri hodiny pri stole. Odmietnuť druhú porciu sa nepatrí — presne ako u slovenskej babky.
 

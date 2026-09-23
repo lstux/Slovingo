@@ -1,6 +1,6 @@
 # Séria Počasie (extra) — Všetko dokopy
 
-@ img/TODO_pocasie_06.jpg | (doplniť: búrkové mraky nad francúzskou krajinou — Wikimedia Commons, CC BY-SA)
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Storm_clouds_gathering.jpg | Búrkové mraky nad krajinou — Wikimedia Commons
 
 Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet.
 
