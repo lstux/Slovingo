@@ -8,7 +8,7 @@ Designed to speak fluently (A2) without getting lost in declensions — and ultr
 
 ## 🎯 Why Slovingo
 
-The most well-known apps don't have Slovak courses available. I tried Ling which supports it, but I wasn't quite satisfied either. I wanted to be able to listen to words and sentences while reading them, create my own vocabulary or dialogue cards...
+The most well-known apps don't have Slovak courses available, at least in French. I tried Ling which supports it, but I wasn't quite satisfied either. I wanted to be able to listen to words and sentences while reading them, create my own vocabulary or dialogue cards...
 
 Here you don't depend on anyone. No account to create, no subscription, no application server that could disappear tomorrow. Just text files in Markdown, a little Python script to transform it all into a mini-site you can consult offline, and you've got your course.
 
