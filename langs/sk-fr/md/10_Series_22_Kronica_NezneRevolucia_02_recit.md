@@ -1,6 +1,6 @@
 # Nežná revolúcia (2/3) — Na námestí
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/N%C3%A1mestie_SNP_Bratislava.jpg?width=800 | Námestie SNP, place emblématique des manifestations de 1989, Bratislava — Wikimedia Commons
+@ img/Námestie_SNP_Bratislava.jpg | Námestie SNP, place emblématique des manifestations de 1989, Bratislava — Wikimedia Commons
 
 Andrea continue son récit : les rumeurs à l'école, la première fois sur la place, et ce bruit de clés qu'elle n'a jamais oublié.
 

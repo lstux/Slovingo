@@ -1,6 +1,6 @@
 # Emigrácia (3/3) — Domov je tam, kde...
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Map_of_the_Slovak_Diaspora_in_the_World.svg?width=800 | Carte de la diaspora slovaque dans le monde — Wikimedia Commons
+@ img/Map_of_the_Slovak_Diaspora_in_the_World.svg | Carte de la diaspora slovaque dans le monde — Wikimedia Commons
 
 Après le récit, Andrea et Eric referment ensemble ce cycle d'histoires — celui qui a commencé avec un camp de pionniers dans les années 80, et se termine ici, sur cette question du chez-soi.
 

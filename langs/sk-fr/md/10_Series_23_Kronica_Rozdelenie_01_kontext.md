@@ -1,6 +1,6 @@
 # Rozdelenie (1/3) — Prvý január deväťdesiattri
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/National_Council_of_the_Slovak_Republic,_Bratislava,_Slovakia.jpg?width=800 | Le Conseil national de la République slovaque, Bratislava — Wikimedia Commons
+@ img/National_Council_of_the_Slovak_Republic,_Bratislava,_Slovakia.jpg | Le Conseil national de la République slovaque, Bratislava — Wikimedia Commons
 
 Un jour où Eric feuillette une carte ancienne de l'Europe, il remarque que la Tchécoslovaquie a disparu. Andrea, dix-neuf ans à l'époque, lui raconte ce qu'elle en a vécu.
 

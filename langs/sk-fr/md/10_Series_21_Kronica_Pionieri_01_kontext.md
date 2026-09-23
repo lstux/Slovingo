@@ -1,6 +1,6 @@
 # Pionieri (1/3) — Prázdniny v osemdesiatych rokoch
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/'Young_pioneers'_of_Czechoslovakia.jpg?width=800 | Jeunes pionnières de Tchécoslovaquie — Wikimedia Commons, OGL v1.0
+@ img/'Young_pioneers'_of_Czechoslovakia.jpg | Jeunes pionnières de Tchécoslovaquie — Wikimedia Commons, OGL v1.0
 
 Un après-midi, Eric tombe sur une photo dans un vieil album chez Andrea. Une question en entraîne une autre, et Andrea se retrouve à raconter ses étés d'enfant dans les années 80.
 

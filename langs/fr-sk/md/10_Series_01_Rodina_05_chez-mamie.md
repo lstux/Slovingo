@@ -1,6 +1,6 @@
 # Séria Rodina (5/5) — Chez mamie Louise
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Col_de_la_Sib%C3%A9rie_-_Haut_Beaujolais.jpg | Vidiecka krajina, Beaujolais — Wikimedia Commons
+@ img/Col_de_la_Sibérie_-_Haut_Beaujolais.jpg | Vidiecka krajina, Beaujolais — Wikimedia Commons
 
 Karine berie Erica na obed k svojej babke, na vidiek neďaleko Lyonu. Stretávame sa tu s celou slovnou zásobou série, v jednom súvislom rozhovore. Žiadne nové slovo, okrem tých označených v poznámkach.
 

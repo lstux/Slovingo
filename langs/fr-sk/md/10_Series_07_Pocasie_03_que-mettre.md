@@ -1,6 +1,6 @@
 # Séria Počasie (3/5) — Que mettre ?
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Focale_scarf.jpg | Oblečenie na chladné počasie — Wikimedia Commons
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Bonnet_bleu_en_laine.jpg | Oblečenie na chladné počasie — Wikimedia Commons
 
 Obliecť sa podľa počasia. Oblečenie, sloveso **mettre**, a nový odtieň: nutnosť.
 

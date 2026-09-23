@@ -1,6 +1,6 @@
 # Séria Rodina (2/5) — Quel âge as-tu ?
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Family_Portrait_A12444.jpg | Rodina s deťmi — Wikimedia Commons
+@ img/Family_Portrait_A12444.jpg | Rodina s deťmi — Wikimedia Commons
 
 Rozširujeme rodinu o deti a učíme sa povedať vek. Dobrá správa: francúzske slovo pre „rok" sa nemení podľa počtu tak komplikovane ako v slovenčine.
 

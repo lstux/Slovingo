@@ -1,6 +1,6 @@
 # Emigrácia (1/3) — Rozhodnutie
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava_Airport_passport_control_stamp.jpg?width=800 | Tampon de contrôle des passeports, aéroport de Bratislava — Wikimedia Commons
+@ img/Bratislava_Airport_passport_control_stamp.jpg | Tampon de contrôle des passeports, aéroport de Bratislava — Wikimedia Commons
 
 Après quatre récits sur l'histoire de son pays, Andrea en raconte un dernier — le sien. Celui qui explique ce qu'elle a vécu à l'étranger, et pourquoi elle a fini par revenir vivre à Bratislava.
 

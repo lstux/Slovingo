@@ -1,0 +1,57 @@
+{
+  "mode": "replace",
+  "exercises": [
+    {
+      "id": "qcm-kolko-jazykov",
+      "type": "qcm",
+      "l1": "Autant de langues tu parles, autant de fois tu es un homme.",
+      "l2": "Koľko jazykov vieš, toľkokrát si človekom.",
+      "choices_l1": [
+        "Autant de fromages tu manges, autant de fois tu es français.",
+        "Autant de cafés tu bois, autant de fois tu es réveillé.",
+        "Autant de langues tu apprends, autant de fois tu es fatigué."
+      ],
+      "choices_l2": [
+        "Koľko syrov zješ, toľkokrát si Francúz.",
+        "Koľko káv vypiješ, toľkokrát si hore.",
+        "Koľko jazykov sa učíš, toľkokrát si unavený."
+      ]
+    },
+    {
+      "id": "order-kolko-jazykov",
+      "type": "order",
+      "l1": "Autant de langues tu parles, autant de fois tu es un homme.",
+      "l2": "Koľko jazykov vieš, toľkokrát si človekom.",
+      "tokens_l1": ["Autant", "de", "langues", "tu", "parles,", "autant", "de", "fois", "tu", "es", "un", "homme."],
+      "tokens_l2": ["Koľko", "jazykov", "vieš,", "toľkokrát", "si", "človekom."]
+    },
+    {
+      "id": "blank-dakujem-pekne",
+      "type": "fill-blank",
+      "l1": "Merci beaucoup.",
+      "l2": "Ďakujem veľmi pekne.",
+      "missing_l1": "beaucoup.",
+      "missing_l2": "pekne.",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": ["beaucoup.", "bien.", "énormément."],
+      "choices_l2": ["pekne.", "krásne.", "úprimne."]
+    },
+    {
+      "id": "qcm-mot-partout",
+      "type": "qcm",
+      "l1": "On a compté : ce mot revient un paquet de fois sur cette page.",
+      "l2": "Spočítali sme to: toto slovo sa na tejto stránke opakuje veľakrát.",
+      "choices_l1": [
+        "On a compté : ce mot n'apparaît jamais sur cette page.",
+        "On a compté : ce mot apparaît exactement une fois, pas plus.",
+        "On a compté : ce mot a été banni de cette page."
+      ],
+      "choices_l2": [
+        "Spočítali sme to: toto slovo sa na tejto stránke nevyskytuje vôbec.",
+        "Spočítali sme to: toto slovo sa objavuje presne raz.",
+        "Spočítali sme to: toto slovo bolo z tejto stránky vyhodené."
+      ]
+    }
+  ]
+}

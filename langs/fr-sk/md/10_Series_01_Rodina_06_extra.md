@@ -1,6 +1,6 @@
 # Séria Rodina (extra) — Všetko dokopy
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Baby_Mother_Grandmother_and_Great_Grandmother.jpg | Rodina, viac generácií — Wikimedia Commons
+@ img/Family_silhouette.png | Rodina, viac generácií — Wikimedia Commons
 
 Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet.
 

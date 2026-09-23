@@ -1,6 +1,6 @@
 # Séria Jedlo (3/5) — Comment c'est ?
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/French_bread_(5821638701).jpg | Francúzske jedlo — Wikimedia Commons
+@ img/Different_kind_of_bread_in_a_basket.jpg | Francúzske jedlo — Wikimedia Commons
 
 Opísať, čo máme na tanieri. Sedem prídavných mien, a dobrá správa: francúzska zhoda je jednoduchšia než slovenská.
 

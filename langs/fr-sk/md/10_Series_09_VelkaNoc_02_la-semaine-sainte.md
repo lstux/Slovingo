@@ -1,6 +1,6 @@
 # Séria Veľká noc (2/5) — La semaine sainte
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Holy_Week.jpg | Svätý týždeň pred Veľkou nocou — Wikimedia Commons
+@ img/Holy_Week.jpg | Svätý týždeň pred Veľkou nocou — Wikimedia Commons
 
 Každý deň veľkonočného týždňa má svoje meno a svoj zvyk. Kombinujeme dni týždňa s pravou stranou passé composé — pomocným slovesom **être**.
 

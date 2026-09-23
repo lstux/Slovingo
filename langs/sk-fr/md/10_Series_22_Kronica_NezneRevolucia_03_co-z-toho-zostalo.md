@@ -1,6 +1,6 @@
 # Nežná revolúcia (3/3) — Čo z toho zostalo
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/SNP_Square,_Bratislava.jpg?width=800 | Námestie SNP aujourd'hui, Bratislava — Wikimedia Commons, CC BY-SA
+@ img/SNP_Square,_Bratislava.jpg | Námestie SNP aujourd'hui, Bratislava — Wikimedia Commons, CC BY-SA
 
 Le récit terminé, Andrea et Eric discutent de ce que cette journée représente aujourd'hui — et du fait que tout le monde en Slovaquie n'a pas le même rapport à cette date.
 

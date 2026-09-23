@@ -1,6 +1,6 @@
 # 🇫🇷 Memo — Výslovnosť francúzštiny
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/French_accents.svg | Francúzske diakritické znamienka (accents) — Wikimedia Commons
+@ img/French_accents.svg | Francúzske diakritické znamienka (accents) — Wikimedia Commons
 
 > Francúzsky pravopis je oveľa menej pravidelný než slovenský — veľa písmen sa vôbec nevyslovuje.
 > Dobrá správa: keď raz pochopíš základné pravidlá, čítanie sa stane celkom predvídateľné.

@@ -1,6 +1,6 @@
 # Série Rodina (2/5) — Koľko máš rokov?
 
-@ img/rodina_02_park_mothers.jpg | Park matiek, le parc des mères à Prešov — Wikimedia Commons, CC BY-SA
+@ img/Children_Playing_in_Playground.jpg | Des enfants dans une cour d'école — Wikimedia Commons
 
 On enrichit la famille avec les enfants, et on apprend à donner un âge. Attention : le mot « an » change de forme selon le nombre, c'est le petit piège du jour.
 

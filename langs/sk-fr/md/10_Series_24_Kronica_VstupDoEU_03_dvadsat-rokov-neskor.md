@@ -1,6 +1,6 @@
 # Vstup do EÚ (3/3) — Dvadsať rokov neskôr
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/European,_Slovakian_en_Bratislava_flag.jpg?width=800 | Drapeaux européen et slovaque flottant ensemble à Bratislava — Wikimedia Commons
+@ img/European,_Slovakian_en_Bratislava_flag.jpg | Drapeaux européen et slovaque flottant ensemble à Bratislava — Wikimedia Commons
 
 Après le récit, Andrea et Eric prennent du recul sur ce que l'entrée dans l'Union européenne a vraiment changé, et sur ce qui a suivi pour toute une génération.
 

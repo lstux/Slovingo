@@ -1,6 +1,6 @@
 # Séria Nákupy (4/5) — Combien ça coûte ?
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Electronic_Price_Tags_(1192182535).jpg | Cenovky v obchode — Wikimedia Commons
+@ img/Price_Tag.png | Cenovky v obchode — Wikimedia Commons
 
 Pýtať sa a povedať cenu. A konečne dobrá správa: francúzske „euros“ je oveľa jednoduchšie než slovenské euro/eurá/eur.
 

@@ -1,6 +1,6 @@
 # Vstup do EÚ (1/3) — Prvý máj dvetisícštyri
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/EU_and_Slovakia_flags.jpg?width=800 | Drapeaux de l'Union européenne et de la Slovaquie — Wikimedia Commons
+@ img/EU_and_Slovakia_flags.jpg | Drapeaux de l'Union européenne et de la Slovaquie — Wikimedia Commons
 
 Eric retrouve un vieux passeport slovaque dans un tiroir chez Andrea, différent de celui qu'elle utilise aujourd'hui. Nouvelle occasion de remonter le temps, cette fois jusqu'en 2004.
 

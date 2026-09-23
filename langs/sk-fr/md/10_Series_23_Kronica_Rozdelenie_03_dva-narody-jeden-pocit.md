@@ -1,6 +1,6 @@
 # Rozdelenie (3/3) — Dva národy, jeden pocit
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava,_Hrad,_Slovensko.jpg?width=800 | Le château de Bratislava, siège du Conseil national slovaque — Wikimedia Commons, CC BY-SA
+@ img/Bratislava,_Hrad,_Slovensko.jpg | Le château de Bratislava, siège du Conseil national slovaque — Wikimedia Commons, CC BY-SA
 
 Après le récit, Andrea et Eric reviennent sur ce que cette séparation représente aujourd'hui, plus de trente ans après.
 

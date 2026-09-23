@@ -32,6 +32,11 @@ from typing import Any
 
 
 CATEGORIES = ["introduction", "series", "dialog", "vocabulary", "annex"]
+"""The categories with dedicated behaviour elsewhere in the pipeline
+(e.g. "introduction" is skipped for exercise generation, "series" gets
+numbered kickers in the front-end). Any other category segment is
+still accepted by parse_sheet_filename() -- see the note there -- this
+list is not an exhaustive whitelist."""
 
 SPEAKABLE_RE = re.compile(r"\{\{(.+?)\}\}")
 IMAGE_RE = re.compile(r"^@\s+(\S+)\s*\|\s*(.+)$")
@@ -112,11 +117,17 @@ def parse_sheet_filename(path: Path) -> dict[str, str | None]:
         subgroup_label (a default display label, "" if no subgroup --
         see humanize_subgroup()), title_slug.
 
+    The category segment is not restricted to CATEGORIES: any lowercase
+    slug is accepted, so a one-off category (e.g. a closing "thank you"
+    page) works without touching this list. CATEGORIES only tracks
+    which categories get special-cased behaviour elsewhere (see its
+    docstring) -- an unlisted category just gets the generic/default
+    treatment everywhere that switches on it.
+
     Raises:
         SheetNameError: If the filename does not have 4 or 6+
-            underscore-separated parts, an order segment is not
-            numeric, or the category segment is not one of
-            CATEGORIES.
+            underscore-separated parts, or an order segment is not
+            numeric.
     """
     stem = path.stem
     parts = stem.split("_")
@@ -142,11 +153,6 @@ def parse_sheet_filename(path: Path) -> dict[str, str | None]:
             )
 
     category = category_raw.lower()
-    if category not in CATEGORIES:
-        raise SheetNameError(
-            f"{path.name}: unknown category '{category_raw}', "
-            f"expected one of {CATEGORIES}"
-        )
 
     subgroup_slug = "_".join(middle).lower() if middle else None
     title_slug = title_raw.lower()

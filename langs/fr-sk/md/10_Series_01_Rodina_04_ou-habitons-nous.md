@@ -1,6 +1,6 @@
 # Séria Rodina (4/5) — Où habitons-nous ?
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/French_Countryside_(215837655).jpeg | Francúzsky vidiek — Wikimedia Commons
+@ img/French_Countryside_(215837655).jpeg | Francúzsky vidiek — Wikimedia Commons
 
 Posledná učebná fiche pred dialógom. Situujeme rodinu: sloveso **habiter**, a predložky miesta, ktoré na rozdiel od slovenčiny nemenia tvar slova, ktoré nasleduje.
 

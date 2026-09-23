@@ -1,6 +1,6 @@
 # Série Rodina (5/5) — U babky
 
-@ img/rodina_05_village_house.jpg | Une maison de village en Slovaquie — Wikimedia Commons, CC BY-SA
+@ img/Čičmany_(Csicsmány,_Zimmermannshau)_-_old_house.JPG | Une maison traditionnelle du village de Čičmany, Slovaquie — Wikimedia Commons
 
 Ján emmène Eric déjeuner chez sa grand-mère, au village. Tout le vocabulaire de la série se retrouve ici, dans un échange suivi. Aucun mot nouveau, sauf ceux signalés dans les remarques.
 

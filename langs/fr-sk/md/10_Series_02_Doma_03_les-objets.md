@@ -1,6 +1,6 @@
 # Séria Doma (3/5) — Les objets
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Kitchen_utensils-01.jpg | Predmety v byte — Wikimedia Commons
+@ img/Kitchen_utensils-01.jpg | Predmety v byte — Wikimedia Commons
 
 Predmety, ktoré v byte hľadáme neustále. A spôsob, ako ich nahradiť krátkym slovkom namiesto ich opakovania — francúzske **le / la / les**.
 

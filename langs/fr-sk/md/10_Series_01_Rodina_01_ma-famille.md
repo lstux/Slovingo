@@ -1,6 +1,6 @@
 # Séria Rodina (1/5) — Ma famille
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Family_Portrait.jpg | Rodina — Wikimedia Commons
+@ img/Family_Portrait.jpg | Rodina — Wikimedia Commons
 
 Prvá fiche série: členovia rodiny, privlastňovacie zámená **mon** / **ma**, a dve slovesá, ktoré budeš potrebovať všade — **être** (byť) a **avoir** (mať).
 

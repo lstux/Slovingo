@@ -1,6 +1,6 @@
 # 🇫🇷 Memo — Počítanie po francúzsky
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Euro_coins_and_banknotes.jpg | Euro mince a bankovky, na počítanie cien — Wikimedia Commons
+@ img/Boulier1.JPG | Boulier, pomôcka na počítanie — Wikimedia Commons
 
 Čísla sa hodia všade: vek, čas, ceny, množstvá. Tu je základ na rozbeh — kompletná tabuľka (až do milióna!) zostáva v knižnici, ak chceš vidieť všetko naraz. A áno, francúzske čísla majú od 70 vyššie svoje slávne zvláštnosti — priprav sa.
 

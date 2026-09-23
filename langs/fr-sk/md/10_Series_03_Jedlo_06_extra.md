@@ -1,6 +1,6 @@
 # Séria Jedlo (extra) — Všetko dokopy
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/12_Course_Table_Setting.jpg | Stôl plný jedla — Wikimedia Commons
+@ img/12_Course_Table_Setting.jpg | Stôl plný jedla — Wikimedia Commons
 
 Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet.
 

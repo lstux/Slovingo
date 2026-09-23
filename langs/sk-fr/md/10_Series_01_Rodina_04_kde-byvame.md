@@ -1,6 +1,6 @@
 # Série Rodina (4/5) — Kde bývame
 
-@ img/rodina_04_village.jpg | Un village slovaque — Wikimedia Commons, CC BY-SA
+@ img/Zdiar_2_Tatry.jpg | Le village de Ždiar, avec les Tatras en arrière-plan — Wikimedia Commons
 
 Dernière fiche d'apprentissage avant le dialogue. On situe la famille : le verbe **bývať**, et la préposition **v** qui modifie la fin du mot qui la suit.
 

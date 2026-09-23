@@ -1,6 +1,6 @@
 # Pionieri (3/3) — Medzi nostalgiou a kritikou
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Stu%C5%BEica_primeval_forest,_Slovakia.jpg?width=800 | Forêt primaire de Stužica, Slovaquie — Wikimedia Commons, CC BY-SA
+@ img/Stužica_primeval_forest,_Slovakia.jpg | Forêt primaire de Stužica, Slovaquie — Wikimedia Commons, CC BY-SA
 
 Le récit terminé, Andrea et Eric prennent du recul. Ce que cette histoire veut dire aujourd'hui dépend beaucoup de qui la raconte.
 

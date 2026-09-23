@@ -1,0 +1,57 @@
+{
+  "mode": "replace",
+  "exercises": [
+    {
+      "id": "qcm-kolko-jazykov",
+      "type": "qcm",
+      "l1": "Koľko jazykov vieš, toľkokrát si človekom.",
+      "l2": "Autant de langues tu parles, autant de fois tu es un homme.",
+      "choices_l1": [
+        "Koľko syrov zješ, toľkokrát si Francúz.",
+        "Koľko káv vypiješ, toľkokrát si hore.",
+        "Koľko jazykov sa učíš, toľkokrát si unavený."
+      ],
+      "choices_l2": [
+        "Autant de fromages tu manges, autant de fois tu es français.",
+        "Autant de cafés tu bois, autant de fois tu es réveillé.",
+        "Autant de langues tu apprends, autant de fois tu es fatigué."
+      ]
+    },
+    {
+      "id": "order-autant-de-langues",
+      "type": "order",
+      "l1": "Koľko jazykov vieš, toľkokrát si človekom.",
+      "l2": "Autant de langues tu parles, autant de fois tu es un homme.",
+      "tokens_l1": ["Koľko", "jazykov", "vieš,", "toľkokrát", "si", "človekom."],
+      "tokens_l2": ["Autant", "de", "langues", "tu", "parles,", "autant", "de", "fois", "tu", "es", "un", "homme."]
+    },
+    {
+      "id": "blank-merci-beaucoup",
+      "type": "fill-blank",
+      "l1": "Ďakujem veľmi pekne.",
+      "l2": "Merci beaucoup.",
+      "missing_l1": "pekne.",
+      "missing_l2": "beaucoup.",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": ["pekne.", "krásne.", "úprimne."],
+      "choices_l2": ["beaucoup.", "bien.", "énormément."]
+    },
+    {
+      "id": "qcm-mot-partout",
+      "type": "qcm",
+      "l1": "Spočítali sme to: toto slovo sa na tejto stránke opakuje veľakrát.",
+      "l2": "On a compté : ce mot revient un paquet de fois sur cette page.",
+      "choices_l1": [
+        "Spočítali sme to: toto slovo sa na tejto stránke nevyskytuje vôbec.",
+        "Spočítali sme to: toto slovo sa objavuje presne raz.",
+        "Spočítali sme to: toto slovo bolo z tejto stránky vyhodené."
+      ],
+      "choices_l2": [
+        "On a compté : ce mot n'apparaît jamais sur cette page.",
+        "On a compté : ce mot apparaît exactement une fois, pas plus.",
+        "On a compté : ce mot a été banni de cette page."
+      ]
+    }
+  ]
+}

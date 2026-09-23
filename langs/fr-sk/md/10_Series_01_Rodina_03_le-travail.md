@@ -1,6 +1,6 @@
 # Séria Rodina (3/5) — Le travail
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Working_at_office_(Unsplash).jpg | Pracovné prostredie — Wikimedia Commons
+@ img/Working_at_office_(Unsplash).jpg | Pracovné prostredie — Wikimedia Commons
 
 Hovoríme o tom, čo robia členovia rodiny. Dve nové slovesá, **travailler** a **faire**, a jedna dobrá správa: po « être » sa pri povolaní vo francúzštine — tak ako v slovenčine — nepoužíva žiadny člen.
 

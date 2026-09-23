@@ -1,6 +1,6 @@
 # Vstup do EÚ (2/3) — Nová hranica, nové cesty
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Danube_Bridge_border_crossing.JPG?width=800 | Poste-frontière sur le Danube, ouvert dans le cadre de l'espace européen — Wikimedia Commons
+@ img/Danube_Bridge_border_crossing.JPG | Poste-frontière sur le Danube, ouvert dans le cadre de l'espace européen — Wikimedia Commons
 
 Andrea continue : ce qui a réellement changé dans son quotidien à ce moment-là, et pourquoi elle n'est pas partie tout de suite.
 

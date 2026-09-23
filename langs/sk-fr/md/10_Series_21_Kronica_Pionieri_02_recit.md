@@ -1,6 +1,6 @@
 # Pionieri (2/3) — Deň v tábore
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/P%C5%99ij%C3%ADm%C3%A1n%C3%AD_do_Pion%C3%BDra,_1979.jpg?width=800 | Cérémonie d'admission chez les pionniers, 1979 — Wikimedia Commons
+@ img/Přijímání_do_Pionýra,_1979.jpg | Cérémonie d'admission chez les pionniers, 1979 — Wikimedia Commons
 
 On reprend là où on s'était arrêtés : Andrea raconte, jour après jour, ce à quoi ressemblait vraiment une journée de camp.
 

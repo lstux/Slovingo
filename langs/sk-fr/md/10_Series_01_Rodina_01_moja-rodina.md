@@ -1,6 +1,6 @@
 # Série Rodina (1/5) — Moja rodina
 
-@ img/rodina_01_slovak_family.png | Une famille slovaque — Wikimedia Commons, CC BY-SA
+@ img/Family_Portrait.jpg | Portrait de famille — Wikimedia Commons
 
 Première fiche de la série : les membres de la famille, les possessifs **môj** / **moja**, et les deux verbes que tu utiliseras partout, **byť** (être) et **mať** (avoir).
 

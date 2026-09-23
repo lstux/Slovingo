@@ -36,13 +36,19 @@ from __future__ import annotations
 import argparse
 import re
 import shutil
+import subprocess
 import sys
 from pathlib import Path
-from urllib.parse import urlparse
-from urllib.request import urlopen
+from urllib.parse import unquote, urlparse
+from urllib.request import Request, urlopen
 
 # Regex for @ img_line | caption
 IMAGE_RE = re.compile(r"^@\s+(\S+)\s*\|\s*(.+)$")
+
+# Wikimedia (and several other hosts) reject the default urllib/requests
+# User-Agent with a 403. Their policy asks for an identifying UA:
+# https://meta.wikimedia.org/wiki/User-Agent_policy
+USER_AGENT = "Slovingo-fetch-images/1.0 (https://lslinux.org; contact: ericlecat83@gmail.com)"
 
 
 def discover_lang_dirs(langs_root: Path) -> list[Path]:
@@ -55,9 +61,14 @@ def discover_lang_dirs(langs_root: Path) -> list[Path]:
 
 
 def extract_filename_from_url(url: str) -> str:
-    """Extract filename from URL, cleaning query params."""
+    """Extract filename from URL, cleaning query params.
+
+    Percent-decoded so e.g. "H%C3%B4tel" becomes "Hôtel" on disk instead
+    of the raw URL-encoded form (common with Wikimedia Special:FilePath
+    links, which carry accented/punctuated filenames).
+    """
     parsed = urlparse(url)
-    filename = Path(parsed.path).name
+    filename = unquote(Path(parsed.path).name)
     if not filename:
         filename = "image.jpg"
     return filename
@@ -89,7 +100,7 @@ def resize_image(input_path: Path, output_path: Path, max_width: int) -> bool:
     ]
 
     try:
-        result = shutil.run(cmd, capture_output=True, timeout=30)
+        result = subprocess.run(cmd, capture_output=True, timeout=30)
         return result.returncode == 0
     except Exception as e:
         print(f"  ⚠️  Resize failed: {e}", file=sys.stderr)
@@ -101,7 +112,8 @@ def download_image(url: str, output_path: Path, resize_width: int | None = None)
     try:
         print(f"  ↓ {url} → {output_path.name}", end=" ")
 
-        with urlopen(url, timeout=10) as response:
+        req = Request(url, headers={"User-Agent": USER_AGENT})
+        with urlopen(req, timeout=10) as response:
             data = response.read()
 
         output_path.write_bytes(data)

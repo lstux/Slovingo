@@ -1,6 +1,6 @@
 # Nežná revolúcia (1/3) — Sedemnásty november
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Bratislava_Slovakia_213.JPG?width=800 | Plaque commémorative de la Révolution de velours, Bratislava — Wikimedia Commons, CC BY 3.0
+@ img/Bratislava_Slovakia_213.JPG | Plaque commémorative de la Révolution de velours, Bratislava — Wikimedia Commons, CC BY 3.0
 
 Le 17 novembre est un jour férié en Slovaquie. Eric, qui ne comprend pas bien pourquoi, pose la question à Andrea — et découvre qu'elle avait quinze ans quand tout s'est passé.
 
