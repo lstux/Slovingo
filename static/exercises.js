@@ -173,6 +173,15 @@ function typePlayable(type) {
     return !(entry && entry.needsVoice && !ttsAvailable());
 }
 
+/**
+ * Pending auto-advance timer, set by markAnswer() after a correct
+ * answer (see AUTO_ADVANCE_DELAY_MS below). Tracked at module scope
+ * so any navigation away from the current question -- clicking
+ * "Next" manually, or going back/home -- can cancel it and avoid a
+ * stray goToExercise() firing on a question the person already left.
+ */
+let autoAdvanceTimer = null;
+
 /** Session state, rebuilt each time a session starts. */
 const state = {
     answerMode: "choice",       // "choice" or "type"
@@ -1388,7 +1397,22 @@ function resolveView(ex, direction) {
  * This ensures random values are generated once per display, and rerolled
  * if the user navigates back to this exercise.
  */
+/**
+ * Cancel a pending auto-advance timer, if any. Called by goToExercise()
+ * itself, and by app.js's route() whenever the person navigates away
+ * from the exercises screen entirely (Home, a sheet, Settings...) so a
+ * timer from a question they've since left can't fire into content
+ * route() has already replaced.
+ */
+function cancelExerciseAutoAdvance() {
+    if (autoAdvanceTimer) {
+        clearTimeout(autoAdvanceTimer);
+        autoAdvanceTimer = null;
+    }
+}
+
 function goToExercise(index) {
+    cancelExerciseAutoAdvance();
     state.current = index;
     if (index >= state.exercises.length) {
         renderSummary();
@@ -1477,6 +1501,18 @@ function markAnswer(container, isCorrect, view, userAnswer) {
 
     if (canReplay) {
         speakSafe(view.audio);
+    }
+
+    // Correct answer: move on by itself after a short delay (both
+    // on/off and the delay itself are Settings > Exercises), unless
+    // the person clicks "Next" (or navigates away) first -- see
+    // goToExercise(), which cancels this timer as soon as it runs.
+    // A wrong answer always waits for an explicit click, so the
+    // person can read the correction at their own pace.
+    const autoAdvanceEnabled = !SETTINGS || SETTINGS.autoAdvanceEnabled !== false;
+    if (isCorrect && autoAdvanceEnabled) {
+        const delaySeconds = (SETTINGS && SETTINGS.autoAdvanceDelay) || 2;
+        autoAdvanceTimer = setTimeout(() => goToExercise(state.current + 1), delaySeconds * 1000);
     }
 }
 

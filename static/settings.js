@@ -36,6 +36,8 @@ const DEFAULT_SETTINGS = {
     dialoguePlaybackMode: "auto",  // "auto" = auto-play in sequence, "manual" = wait for click
     dialoguePauseDuration: 2,      // pause duration between dialogue lines (seconds)
     displayFont: "grotesk",        // "serif", "mono", or "grotesk" for h2/h3 on index
+    autoAdvanceEnabled: true,       // move to the next exercise by itself on a correct answer
+    autoAdvanceDelay: 2,            // delay before doing so (seconds)
 };
 
 /**
@@ -693,6 +695,39 @@ function renderExerciseSettingsSection() {
     modeSelect.addEventListener("change", () => saveSettings({ defaultAnswerMode: modeSelect.value }));
     modeRow.appendChild(modeSelect);
     rows.push(modeRow);
+
+    // Auto-advance on a correct answer: on/off toggle, plus a delay
+    // slider only shown (well, only enabled) while it's on.
+    const autoAdvanceRow = el("div", { className: "settings-row" });
+    autoAdvanceRow.appendChild(el("label", {
+        text: (LANG.ui && LANG.ui.auto_advance) || "Auto-advance on correct answer",
+        attrs: { for: "settings-auto-advance" },
+    }));
+    const autoAdvanceCheckbox = el("input", {
+        attrs: { type: "checkbox", id: "settings-auto-advance" },
+    });
+    autoAdvanceCheckbox.checked = SETTINGS.autoAdvanceEnabled !== false;
+    autoAdvanceRow.appendChild(autoAdvanceCheckbox);
+    rows.push(autoAdvanceRow);
+
+    const autoAdvanceDelaySlider = renderSlider({
+        id: "settings-auto-advance-delay",
+        labelText: (LANG.ui && LANG.ui.auto_advance_delay) || "Auto-advance delay",
+        min: 0.5, max: 5, step: 0.25,
+        value: SETTINGS.autoAdvanceDelay || 2,
+        formatValue: (v) => `${v.toFixed(2)}s`,
+        onChange: (v) => saveSettings({ autoAdvanceDelay: v }),
+    });
+    autoAdvanceDelaySlider.classList.toggle("settings-row-disabled", !autoAdvanceCheckbox.checked);
+    const autoAdvanceDelayInput = autoAdvanceDelaySlider.querySelector("input[type=range]");
+    if (autoAdvanceDelayInput) autoAdvanceDelayInput.disabled = !autoAdvanceCheckbox.checked;
+
+    autoAdvanceCheckbox.addEventListener("change", () => {
+        saveSettings({ autoAdvanceEnabled: autoAdvanceCheckbox.checked });
+        autoAdvanceDelaySlider.classList.toggle("settings-row-disabled", !autoAdvanceCheckbox.checked);
+        if (autoAdvanceDelayInput) autoAdvanceDelayInput.disabled = !autoAdvanceCheckbox.checked;
+    });
+    rows.push(autoAdvanceDelaySlider);
 
     return settingsSection((LANG.ui && LANG.ui.settings_exercises) || "Exercises", rows);
 }

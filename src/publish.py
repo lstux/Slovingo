@@ -19,6 +19,29 @@ exception to the "pure Python, cross-platform" rule that governs the
 rest of the toolchain -- deployment is a one-off, personal step run
 from Eric's own machine, not something contributors need portable.
 
+Special case -- deploy.json's "host" set to "localhost" or "lan":
+instead of rsync-ing anywhere, serve the built dist/ straight from
+disk with a plain Python HTTP server (default port 8000, override
+with an optional "port" key in deploy.json). Meant for people who
+want their own fiches on their own phone without a real server and
+without sending anything over the internet. No --execute needed here
+(nothing is sent anywhere), rsync doesn't need to be installed, and
+--langs-root isn't allowed (one language, one local server, at a
+time) -- use --lang-dir. Ctrl+C stops the server.
+
+  - "localhost": binds 127.0.0.1 only, reachable from this machine
+    alone (same use as before -- eyeballing a build in a browser).
+  - "lan": binds 0.0.0.0, reachable from any device on the same
+    Wi-Fi/LAN (a phone, say) at this machine's local IP -- printed
+    when the server starts. IMPORTANT: service workers (needed for
+    the PWA's offline caching) only register on a secure origin, and
+    browsers only special-case "localhost" as secure -- a plain
+    http://192.168.x.x:port is not. Practically: "Add to Home Screen"
+    still works, but without offline support, unless the phone is
+    told to trust this origin -- on Android/Chrome via
+    chrome://flags/#unsafely-treat-insecure-origin-as-secure (add
+    the printed URL to the list); iOS/Safari has no such override.
+
 Usage (run from the repo root -- --static-dir and --deploy-config
 default to ./static and ./deploy.json):
     # One language:
@@ -29,13 +52,20 @@ default to ./static and ./deploy.json):
 
     # For real (default is a dry run):
     python3 src/publish.py ... --execute
+
+    # Serve langs/sk-fr/dist locally instead of deploying (requires
+    # "host": "localhost" in deploy.json):
+    python3 src/publish.py --lang-dir langs/sk-fr
 """
 
 from __future__ import annotations
 
 import argparse
+import functools
+import http.server
 import json
 import shutil
+import socket
 import subprocess
 import sys
 from pathlib import Path
@@ -94,6 +124,58 @@ def publish_one(lang_dir: Path, deploy_cfg: dict, execute: bool, delete: bool) -
     return result.returncode
 
 
+def local_ip() -> str | None:
+    """Best-effort guess at this machine's LAN IP (the one a phone on
+    the same Wi-Fi would use to reach it). Doesn't actually send
+    anything -- UDP "connect" just asks the OS which local address it
+    would route through. Falls back to None if that fails (no
+    network, unusual setup...), and the caller prints a hint instead.
+    """
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+            s.connect(("8.8.8.8", 80))
+            return s.getsockname()[0]
+    except OSError:
+        return None
+
+
+def serve_locally(dist_dir: Path, port: int, expose_lan: bool) -> None:
+    """Serve an already-built dist/ over plain HTTP, in place of rsync.
+
+    expose_lan=False ("host": "localhost"): binds 127.0.0.1 only,
+    reachable from this machine alone.
+
+    expose_lan=True ("host": "lan"): binds 0.0.0.0, reachable from any
+    device on the same network (e.g. a phone) at this machine's local
+    IP -- see the module docstring for the important caveat about PWA
+    offline support needing a secure origin, which a plain LAN http://
+    URL isn't.
+
+    Either way, blocks until interrupted (Ctrl+C).
+    """
+    if not dist_dir.is_dir():
+        print(f"Error: {dist_dir} does not exist -- build it first (drop --skip-build).", file=sys.stderr)
+        sys.exit(1)
+
+    bind_addr = "0.0.0.0" if expose_lan else "127.0.0.1"
+    handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(dist_dir))
+    with http.server.ThreadingHTTPServer((bind_addr, port), handler) as httpd:
+        if expose_lan:
+            ip = local_ip()
+            if ip:
+                print(f"Serving {dist_dir} at http://{ip}:{port}/ -- reachable from any device on this Wi-Fi/LAN.")
+            else:
+                print(f"Serving {dist_dir} on port {port} -- couldn't detect this machine's LAN IP, check it yourself (e.g. `ip addr` / `ifconfig`).")
+            print("PWA offline caching needs a secure origin, which this plain http:// LAN address isn't -- see publish.py's module docstring.")
+        else:
+            print(f"Serving {dist_dir} at http://localhost:{port}/")
+        print("Ctrl+C to stop.")
+        try:
+            httpd.serve_forever()
+        except KeyboardInterrupt:
+            print("\nStopped.")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build and deploy one or more languages with rsync.")
     target = parser.add_mutually_exclusive_group(required=True)
@@ -123,14 +205,6 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    if shutil.which("rsync") is None:
-        print(
-            "Error: rsync not found on this machine. On Windows, run this "
-            "from WSL -- see publish.py's module docstring.",
-            file=sys.stderr,
-        )
-        sys.exit(1)
-
     lang_dirs = discover_lang_dirs(args.langs_root) if args.langs_root else [args.lang_dir]
     if not lang_dirs:
         print(f"Error: no language directory (with a lang.json) found under {args.langs_root}", file=sys.stderr)
@@ -138,6 +212,25 @@ def main() -> None:
 
     with args.deploy_config.open(encoding="utf-8") as f:
         deploy_cfg = json.load(f)
+
+    host = deploy_cfg.get("host")
+    serve_local = host in ("localhost", "lan")
+
+    if serve_local:
+        if len(lang_dirs) != 1:
+            print(
+                f"Error: deploy.json's host is \"{host}\" -- that serves one "
+                "language at a time, so use --lang-dir instead of --langs-root.",
+                file=sys.stderr,
+            )
+            sys.exit(1)
+    elif shutil.which("rsync") is None:
+        print(
+            "Error: rsync not found on this machine. On Windows, run this "
+            "from WSL -- see publish.py's module docstring.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
 
     if not args.skip_build:
         try:
@@ -150,6 +243,10 @@ def main() -> None:
         except (SheetNameError, ValueError) as exc:
             print(f"Error: {exc}", file=sys.stderr)
             sys.exit(1)
+
+    if serve_local:
+        serve_locally(lang_dirs[0] / "dist", deploy_cfg.get("port", 8000), expose_lan=(host == "lan"))
+        return
 
     if not args.execute:
         print("Dry run -- nothing will be sent. Re-run with --execute to actually deploy.")

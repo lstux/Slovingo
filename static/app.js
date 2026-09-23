@@ -231,6 +231,14 @@ document.addEventListener("DOMContentLoaded", boot);
  *   #/exercises          -- exercises (placeholder for now)
  */
 function route() {
+    // Leaving the exercises screen (Home, a sheet, Settings, or even
+    // another exercises route) must not let a pending auto-advance
+    // timer from exercises.js fire later into content route() has
+    // since replaced.
+    if (typeof cancelExerciseAutoAdvance === "function") {
+        cancelExerciseAutoAdvance();
+    }
+
     const hash = window.location.hash || "#/";
     const sheetMatch = hash.match(/^#\/sheet\/(.+)$/);
 

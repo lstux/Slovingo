@@ -1134,11 +1134,13 @@ button.index-card {
     align-items: center;
     justify-content: center;
     gap: 16px;
-    margin: 32px 0 8px;
+    margin: 32px auto 8px;
     opacity: 1;
 }
 
 #pager-bottom span { opacity: 0.55; }
+#pager-bottom span a { color: inherit; text-decoration: none; }
+#pager-bottom span a:hover { text-decoration: underline; }
 
 
 /* ==========================================================================
@@ -1168,6 +1170,8 @@ button.index-card {
 }
 
 .settings-row:first-of-type { border-top: none; padding-top: 0; }
+
+.settings-row-disabled { opacity: 0.45; }
 
 .settings-row > label {
     font-weight: 600;
