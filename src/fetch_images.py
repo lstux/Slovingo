@@ -39,7 +39,7 @@ import shutil
 import subprocess
 import sys
 from pathlib import Path
-from urllib.parse import unquote, urlparse
+from urllib.parse import quote, unquote, urlparse, urlunparse
 from urllib.request import Request, urlopen
 
 # Regex for @ img_line | caption
@@ -72,6 +72,27 @@ def extract_filename_from_url(url: str) -> str:
     if not filename:
         filename = "image.jpg"
     return filename
+
+
+def encode_url_for_request(url: str) -> str:
+    """Percent-encode any raw non-ASCII characters in the URL's path/query
+    before it's sent over HTTP.
+
+    Some sources (Wikimedia Special:FilePath links in particular) end up
+    stored in the .md with literal accented/unicode characters instead of
+    %-encoded ones (e.g. ".../Holíč_in_Slovakia...jpg" rather than
+    ".../Hol%C3%ADč_in_Slovakia...jpg"). http.client encodes the request
+    line as ASCII before writing it to the socket, so an un-encoded
+    non-ASCII URL raises UnicodeEncodeError deep inside urlopen() rather
+    than a clean HTTP error. Re-quoting here (idempotent on URLs that are
+    already properly encoded) fixes that without touching the filename we
+    derive separately for local storage.
+    """
+    parsed = urlparse(url)
+    safe = "/:@!$&'()*+,;=%"  # keep existing % escapes and URL delimiters intact
+    path = quote(parsed.path, safe=safe)
+    query = quote(parsed.query, safe=safe + "?")
+    return urlunparse(parsed._replace(path=path, query=query))
 
 
 def has_imagemagick() -> bool:
@@ -112,7 +133,7 @@ def download_image(url: str, output_path: Path, resize_width: int | None = None)
     try:
         print(f"  ↓ {url} → {output_path.name}", end=" ")
 
-        req = Request(url, headers={"User-Agent": USER_AGENT})
+        req = Request(encode_url_for_request(url), headers={"User-Agent": USER_AGENT})
         with urlopen(req, timeout=10) as response:
             data = response.read()
 
