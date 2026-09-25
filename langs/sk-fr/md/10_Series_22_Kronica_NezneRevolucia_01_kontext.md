@@ -1,6 +1,6 @@
 # Nežná revolúcia (1/3) — Sedemnásty november
 
-@ img/Bratislava_Slovakia_213.JPG | Plaque commémorative de la Révolution de velours, Bratislava — Wikimedia Commons, CC BY 3.0
+@ img/kronika_revolucia_01_kosice_hlavna.jpg | Hlavná ulica à Košice, où des dizaines de milliers de personnes ont manifesté en novembre 1989 — Wikimedia Commons, CC BY-SA
 
 Le 17 novembre est un jour férié en Slovaquie. Eric, qui ne comprend pas bien pourquoi, pose la question à Andrea — et découvre qu'elle avait quinze ans quand tout s'est passé.
 

@@ -1,6 +1,6 @@
 # Série Čas (1/5) — Koľko je hodín?
 
-@ img/cas_01_bratislava_clock_tower.jpg | La tour de l'horloge de Bratislava — Wikimedia Commons, CC BY-SA
+@ img/cas_01_kosice_urban_tower.jpg | La tour Urbanova veža, Košice — Wikimedia Commons, CC BY-SA
 
 Demander et donner l'heure. Le piège du jour : le mot « heure » change de forme selon le chiffre, et le verbe suit.
 
@@ -106,7 +106,7 @@ Ils s'emploient tels quels, sans préposition, sauf *v noci*.
 
 **Vingt-quatre heures partout.** Horaires de train, programmes télé, rendez-vous : tout s'affiche de zéro à vingt-trois. À l'oral en revanche, on utilise volontiers les chiffres de un à douze avec *ráno* ou *večer* pour lever l'ambiguïté.
 
-**La tour de l'horloge de Bratislava.** L'ancienne tour de l'hôtel de ville domine la place principale depuis le XIVᵉ siècle. On y voit encore un boulet de canon fiché dans le mur, souvenir du siège napoléonien de 1809.
+**La tour Urbanova veža de Košice.** Ce clocher indépendant du XVIᵉ siècle domine toujours Hlavná ulica. Sa grosse cloche, fondue en 1557, a été détruite dans un incendie en 1966 — la cloche actuelle est une réplique coulée trente ans plus tard par des ouvriers des aciéries de Košice.
 
 ---
 

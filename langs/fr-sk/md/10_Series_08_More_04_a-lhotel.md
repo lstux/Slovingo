@@ -1,6 +1,6 @@
 # Séria More (4/5) — À l'hôtel
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Saint-Marc_H%C3%B4tel_de_la_Plage.JPG | Hôtel de la Plage, Saint-Marc-sur-Mer — Wikimedia Commons
+@ img/Saint-Marc_Hôtel_de_la_Plage.JPG | Hôtel de la Plage, Saint-Marc-sur-Mer — Wikimedia Commons
 
 Zastávka v hoteli pri mori. Prvé stretnutie s **kondicionálom**, na vyjadrenie zdvorilejšieho želania alebo možnosti.
 

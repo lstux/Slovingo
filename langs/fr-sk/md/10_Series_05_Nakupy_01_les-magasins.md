@@ -1,6 +1,6 @@
 # Séria Nákupy (1/5) — Les magasins
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/A_Paris_Street_Scene.jpg | Obchodná ulica, francúzske mesto — Wikimedia Commons
+@ img/A_Paris_Street_Scene.jpg | Obchodná ulica, francúzske mesto — Wikimedia Commons
 
 Bežné obchody. Sloveso **acheter** (kupovať), a malé slovko „au“, ktoré v sebe skrýva celú predložku aj člen naraz.
 

@@ -1,6 +1,6 @@
 # Séria Počasie (2/5) — Les saisons
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Vigne_Champagne-002.jpg | Francúzska vinica na jeseň, Champagne — Wikimedia Commons
+@ img/Vigne_Champagne-002.jpg | Francúzska vinica na jeseň, Champagne — Wikimedia Commons
 
 Štyri ročné obdobia, a porovnávanie: teplejšie, chladnejšie. Nová konštrukcia na zapamätanie, ale oveľa jednoduchšia než slovenská.
 

@@ -1,6 +1,6 @@
 # Série Mesto (5/5) — Stratený v meste
 
-@ img/mesto_05_mudronova_street.jpg | Une rue de Bratislava vue depuis le château — Wikimedia Commons, CC BY-SA
+@ img/mesto_05_hlavna_street.jpg | La rue Hlavná à Košice, près du théâtre — Wikimedia Commons, CC BY-SA
 
 Eric a raté son arrêt et cherche son chemin. Il croise Marek par hasard. Tout le vocabulaire de la série y passe. Aucun mot nouveau, sauf ceux signalés dans les remarques.
 
@@ -115,7 +115,7 @@ Eric et Marek se tutoient déjà, comme dans la série Čas.
 
 ## 🇸🇰 Coin slovaque
 
-**Se perdre à Bratislava est presque un plaisir.** Le centre historique est petit, entouré de collines et du Danube, et on retrouve son chemin très vite en marchant droit vers un point haut, comme le château.
+**Se perdre à Košice est presque difficile.** Le centre historique tient presque tout entier sur une seule et même rue, {{Hlavná}}, longue d'environ un kilomètre avec la cathédrale en son centre : il suffit de la suivre dans un sens ou dans l'autre pour retrouver son chemin.
 
 **Vystúpiť et nastúpiť, les verbes du bus.** {{Nastúpiť}} veut dire monter, {{vystúpiť}} descendre. Les annonces sonores dans les transports utilisent ces deux verbes en boucle, une bonne façon de les mémoriser sans effort.
 

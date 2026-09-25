@@ -1,6 +1,6 @@
 # Rozdelenie (2/3) — Jedna krajina, zrazu dve
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/009_Skalica_and_Holíč_in_Slovakia,_Hodonín_in_Czech_Republic_-_aerial_view_of_Czech-Slovakian_border.jpg?width=800 | Vue aérienne de la frontière tchéco-slovaque — Wikimedia Commons, CC BY-SA
+@ img/009_Skalica_and_Holíč_in_Slovakia,_Hodonín_in_Czech_Republic_-_aerial_view_of_Czech-Slovakian_border.jpg | Vue aérienne de la frontière tchéco-slovaque — Wikimedia Commons, CC BY-SA
 
 Andrea continue : ce qui a changé concrètement, et surtout ce qui n'a presque pas changé, malgré la naissance de deux pays.
 

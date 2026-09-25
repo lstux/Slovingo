@@ -41,8 +41,11 @@ Dernière fiche d'apprentissage avant le dialogue. On situe la famille : le verb
 | dom → v dome | dans la maison |
 | byt → v byte | dans l'appartement |
 | Bratislava → v Bratislave | à Bratislava |
+| Košice → v Košiciach | à Košice |
 
 C'est le locatif : il répond à la question « où ? » et ne s'utilise jamais sans préposition.
+
++ Attention à Košice : contrairement à Bratislava, c'est un nom toujours pluriel en slovaque (comme Piešťany), et il se décline donc comme un pluriel — « v Košiciach », jamais « v Košice ». Bonne nouvelle pour la logique du tableau ci-dessus, mauvaise nouvelle pour la mémoire.
 
 ---
 
@@ -53,11 +56,12 @@ C'est le locatif : il répond à la question « où ? » et ne s'utilise jamais 
 > Kde = où
 > bývaš = habites-tu
 
-! Bývam v Bratislave.
-> J'habite à Bratislava.
+! Bývam v Košiciach.
+> J'habite à Košice.
 > Bývam = j'habite
 > v = à
-> Bratislave = Bratislava
+> Košiciach = Košice (locatif, toujours au pluriel)
++ Comme le fait remarquer Andrea : « ça aurait été tellement plus simple si j'habitais Bratislava… »
 
 ! Bývam v byte.
 > J'habite dans un appartement.

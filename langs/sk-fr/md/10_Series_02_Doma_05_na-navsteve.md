@@ -1,6 +1,6 @@
 # Série Doma (5/5) — Na návšteve
 
-@ img/doma_05_bratislava.jpg | Bratislava — Wikimedia Commons, CC BY-SA
+@ img/doma_05_kosice.jpg | Košice — Wikimedia Commons, CC BY-SA
 
 Andrea reçoit Eric et Ján dans son appartement. Tout le vocabulaire de la série y passe, dans un échange suivi. Aucun mot nouveau, sauf ceux signalés dans les remarques.
 

@@ -1,6 +1,6 @@
 # Nežná revolúcia (2/3) — Na námestí
 
-@ img/Námestie_SNP_Bratislava.jpg | Námestie SNP, place emblématique des manifestations de 1989, Bratislava — Wikimedia Commons
+@ img/kronika_revolucia_02_kosice_hlavna.jpg | Hlavná ulica, artère où les Košičania se sont rassemblés par dizaines de milliers en novembre 1989 — Wikimedia Commons, CC BY-SA
 
 Andrea continue son récit : les rumeurs à l'école, la première fois sur la place, et ce bruit de clés qu'elle n'a jamais oublié.
 
@@ -27,12 +27,12 @@ Andrea continue son récit : les rumeurs à l'école, la première fois sur la p
 > nikto poriadne nerozumel = personne ne comprenait vraiment
 > čo sa presne deje = ce qui se passe exactement
 
-! 👩 Potom jedného dňa staršia sestra mojej kamarátky povedala, že v Bratislave bude demonštrácia.
-> Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation à Bratislava.
+! 👩 Potom jedného dňa staršia sestra mojej kamarátky povedala, že bude demonštrácia na Hlavnej.
+> Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation sur Hlavná.
 > jedného dňa = un jour
 > staršia sestra mojej kamarátky = la grande sœur de mon amie
 > povedala, že = a dit que
-> bude demonštrácia = il y aurait une manifestation
+> bude demonštrácia na Hlavnej = il y aurait une manifestation sur Hlavná (la grande rue de Košice)
 
 ! 👦 A šli ste tam?
 > Et vous y êtes allée ?
@@ -51,6 +51,7 @@ Andrea continue son récit : les rumeurs à l'école, la première fois sur la p
 > obrovské množstvo ľudí = une foule énorme
 > Nikdy predtým = jamais avant
 > nič také = rien de tel
++ « Námestie » ici, c'est Hlavná ulica : à Košice, cette rue piétonne est si large et si longue qu'elle fait aussi office de place publique.
 
 ! 👦 Čo ste cítili?
 > Qu'avez-vous ressenti ?

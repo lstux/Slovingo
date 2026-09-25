@@ -1,6 +1,6 @@
 # Séria Nákupy (5/5) — Au magasin
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Rue_Victor-Hugo_(Lyon,_2025).jpg | Obchodná ulica v Lyone, rue Victor-Hugo — Wikimedia Commons
+@ img/Rue_Victor-Hugo_(Lyon,_2025).jpg | Obchodná ulica v Lyone, rue Victor-Hugo — Wikimedia Commons
 
 Andrea pomáha Ericovi vybrať oblečenie, s pomocou predavačky. Prejde sa tu celá slovná zásoba série. Žiadne nové slovo, okrem tých označených v poznámkach.
 

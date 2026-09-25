@@ -10,6 +10,8 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 
 | Slovaque | Français |
 |----------|----------|
+| nákupy | les courses |
+| nakupovanie | faire les courses |
 | obchod | le magasin |
 | potraviny | l'épicerie |
 | pekáreň | la boulangerie |

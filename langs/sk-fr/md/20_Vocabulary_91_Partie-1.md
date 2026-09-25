@@ -73,8 +73,8 @@
 ! Mám dobrého priateľa.
 > J'ai un bon ami.
 
-! Moja sestra býva v Bratislave.
-> Ma sœur habite à Bratislava.
+! Moja sestra býva v Košiciach.
+> Ma sœur habite à Košice.
 
 ! Radi pomáhame priateľom.
 > Nous aidons volontiers nos amis.

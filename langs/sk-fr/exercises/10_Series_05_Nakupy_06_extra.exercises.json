@@ -1,6 +1,38 @@
 {
   "exercises": [
     {
+      "id": "qcm-n-kupy",
+      "type": "qcm",
+      "l1": "les courses",
+      "l2": "nákupy",
+      "choices_l1": [
+        "le magasin",
+        "l'épicerie",
+        "la boulangerie"
+      ],
+      "choices_l2": [
+        "obchod",
+        "potraviny",
+        "pekáreň"
+      ]
+    },
+    {
+      "id": "qcm-nakupovanie",
+      "type": "qcm",
+      "l1": "faire les courses",
+      "l2": "nakupovanie",
+      "choices_l1": [
+        "la boucherie",
+        "la pharmacie",
+        "le marché"
+      ],
+      "choices_l2": [
+        "mäsiarstvo",
+        "lekáreň",
+        "trh"
+      ]
+    },
+    {
       "id": "qcm-obchod",
       "type": "qcm",
       "l1": "le magasin",

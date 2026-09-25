@@ -11,7 +11,7 @@ Première fiche de la série : les membres de la famille, les possessifs **môj*
 | Slovaque | Français |
 |----------|----------|
 | rodina | la famille |
-| mama | la maman |
+| matka | la mère |
 | otec | le père |
 | brat | le frère |
 | sestra | la sœur |
@@ -59,14 +59,14 @@ Le possessif s'accorde avec le genre du nom qui suit, pas avec la personne qui p
 > moja = ma
 > rodina = famille
 
-! To je môj otec a to je moja mama.
-> Voici mon père et voici ma maman.
+! To je môj otec a to je moja matka.
+> Voici mon père et voici ma mère.
 > To je = c'est, voici
 > môj = mon
 > otec = père
 > a = et
 > moja = ma
-> mama = maman
+> matka = mère
 + « môj » devant un nom masculin, « moja » devant un féminin.
 
 ! Máš brata?
@@ -111,7 +111,7 @@ Le possessif s'accorde avec le genre du nom qui suit, pas avec la personne qui p
 
 **Babka et dedko, pas « stará mama ».** Les formes officielles existent (*stará mama*, *starý otec*), mais dans la vraie vie tout le monde dit {{babka}} et {{dedko}}. C'est chaleureux et parfaitement standard.
 
-**Le pays des diminutifs.** Le slovaque en raffole : *mama* devient {{mamička}}, *otec* devient {{ocko}}, Katarína devient {{Katka}}, Ján devient {{Janko}}. Ce n'est pas réservé aux enfants — un adulte appellera sa mère *mamička* sans que personne ne sourcille.
+**Matka n'est pas le mot du quotidien.** C'est la forme neutre, celle des documents ou du dictionnaire, symétrique de {{otec}}. Dans la vraie vie, presque tout le monde dit plutôt {{mama}} — déjà familier, un cran en dessous de *matka*, comme « maman » face à « mère ». Et le slovaque adore encore diminutiver : *mama* devient {{mamička}}, *otec* devient {{ocko}}. Ce n'est pas réservé aux enfants — un adulte appellera sa mère *mamička* sans que personne ne sourcille.
 
 **Le déjeuner du dimanche.** Beaucoup de familles se retrouvent le dimanche midi chez la babka. C'est une institution, et refuser une deuxième assiette est considéré comme une insulte modérée. Tu es prévenu.
 

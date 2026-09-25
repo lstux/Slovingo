@@ -1,6 +1,6 @@
 # Série Čas (5/5) — Kedy sa stretneme?
 
-@ img/cas_05_station_interior.jpg | Intérieur de la gare principale de Bratislava — Wikimedia Commons, CC BY-SA
+@ img/cas_05_station_interior.jpg | Intérieur de la gare principale de Košice — Wikimedia Commons, CC BY-SA
 
 Andrea, Eric et Marek essaient de trouver un créneau commun. Tout le vocabulaire de la série y passe. Aucun mot nouveau, sauf ceux signalés dans les remarques.
 
@@ -125,7 +125,7 @@ Eric et Andrea se vouvoient. Andrea et Marek se tutoient.
 
 **Pol siedmej reste le piège numéro un.** Six heures trente, pas sept heures trente. Dans le doute, demander {{To je šesť tridsať?}} n'a rien d'embarrassant : beaucoup d'étrangers posent la question, et personne ne s'en formalise.
 
-**La gare comme point de repère.** {{Hlavná stanica}}, la gare principale de Bratislava, sert de point de ralliement autant que de gare. C'est aussi le nœud d'où partent les bus et les tramways vers le reste de la ville.
+**La gare comme point de repère.** {{Hlavná stanica}}, la gare principale de Košice, sert de point de ralliement autant que de gare. C'est aussi le nœud d'où partent les bus et les tramways vers le reste de la ville.
 
 ---
 

@@ -1,6 +1,22 @@
 {
   "exercises": [
     {
+      "id": "qcm-jedlo",
+      "type": "qcm",
+      "l1": "la nourriture",
+      "l2": "jedlo",
+      "choices_l1": [
+        "le pain",
+        "le lait",
+        "l'eau"
+      ],
+      "choices_l2": [
+        "chlieb",
+        "mlieko",
+        "voda"
+      ]
+    },
+    {
       "id": "qcm-chlieb",
       "type": "qcm",
       "l1": "le pain",

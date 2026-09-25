@@ -61,14 +61,14 @@
       ]
     },
     {
-      "id": "blank-potom-jedn-ho-d-a-star-ia-sestra-mojej-kamar-tky-povedala-e-v-bratislave-bude-demon-tr-cia",
+      "id": "blank-potom-jedn-ho-d-a-star-ia-sestra-mojej-kamar-tky-povedala-e-bude-demon-tr-cia-na-hlavnej",
       "type": "fill-blank",
-      "l1": "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation à Bratislava.",
-      "l2": "Potom jedného dňa staršia sestra mojej kamarátky povedala, že v Bratislave bude demonštrácia.",
+      "l1": "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation sur Hlavná.",
+      "l2": "Potom jedného dňa staršia sestra mojej kamarátky povedala, že bude demonštrácia na Hlavnej.",
       "missing_l1": "la",
-      "missing_l2": "v",
+      "missing_l2": "na",
       "blank_index_l1": 3,
-      "blank_index_l2": 9,
+      "blank_index_l2": 11,
       "choices_l1": [
         "nos",
         "le",
@@ -326,7 +326,7 @@
       "l1": "À l'école on ne faisait d'abord que chuchoter. Les professeurs étaient nerveux, mais n'expliquaient rien.",
       "l2": "V škole sa najprv len šuškalo. Učitelia boli nervózni, ale nič nevysvetľovali.",
       "choices_l1": [
-        "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation à Bratislava.",
+        "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation sur Hlavná.",
         "Oui, mais personne ne comprenait vraiment ce qui se passait exactement à Prague.",
         "Et vous y êtes allée ?"
       ],
@@ -344,7 +344,7 @@
       "choices_l1": [
         "De la peur et de l'enthousiasme à la fois. C'était étrange, ces deux sentiments ensemble.",
         "Et pourquoi justement des clés ?",
-        "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation à Bratislava."
+        "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation sur Hlavná."
       ],
       "choices_l2": [
         "Vraj to znamenalo, že komunistickej strane zvoní umieračik. Presne neviem, kto to vymyslel.",
@@ -369,10 +369,10 @@
       ]
     },
     {
-      "id": "listen-potom-jedn-ho-d-a-star-ia-sestra-mojej-kamar-tky-povedala-e-v-bratislave-bude-demon-tr-cia",
+      "id": "listen-potom-jedn-ho-d-a-star-ia-sestra-mojej-kamar-tky-povedala-e-bude-demon-tr-cia-na-hlavnej",
       "type": "listen",
-      "l1": "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation à Bratislava.",
-      "l2": "Potom jedného dňa staršia sestra mojej kamarátky povedala, že v Bratislave bude demonštrácia.",
+      "l1": "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation sur Hlavná.",
+      "l2": "Potom jedného dňa staršia sestra mojej kamarátky povedala, že bude demonštrácia na Hlavnej.",
       "choices_l1": [
         "Qu'avez-vous ressenti ?",
         "J'y suis allée avec elle, en secret, sans que mes parents le sachent.",
@@ -411,7 +411,7 @@
         "Et vous y êtes allée ?"
       ],
       "choices_l2": [
-        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že v Bratislave bude demonštrácia.",
+        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že bude demonštrácia na Hlavnej.",
         "Strach aj nadšenie naraz. Bolo to zvláštne, tie dva pocity spolu.",
         "A šli ste tam?"
       ]
@@ -444,7 +444,7 @@
       ],
       "choices_l2": [
         "V škole sa najprv len šuškalo. Učitelia boli nervózni, ale nič nevysvetľovali.",
-        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že v Bratislave bude demonštrácia.",
+        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že bude demonštrácia na Hlavnej.",
         "Na námestí bolo obrovské množstvo ľudí. Nikdy predtým som nič také nevidela."
       ]
     },
@@ -472,11 +472,11 @@
       "choices_l1": [
         "Oui, mais personne ne comprenait vraiment ce qui se passait exactement à Prague.",
         "J'y suis allée avec elle, en secret, sans que mes parents le sachent.",
-        "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation à Bratislava."
+        "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation sur Hlavná."
       ],
       "choices_l2": [
         "Na námestí bolo obrovské množstvo ľudí. Nikdy predtým som nič také nevidela.",
-        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že v Bratislave bude demonštrácia.",
+        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že bude demonštrácia na Hlavnej.",
         "Deti si to medzi sebou hovorili?"
       ]
     },
@@ -487,12 +487,12 @@
       "l2": "A prečo práve kľúče?",
       "choices_l1": [
         "Sur la place il y avait une foule énorme. Je n'avais jamais rien vu de tel avant.",
-        "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation à Bratislava.",
+        "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation sur Hlavná.",
         "De la peur et de l'enthousiasme à la fois. C'était étrange, ces deux sentiments ensemble."
       ],
       "choices_l2": [
         "Išla som s ňou, tajne, bez toho, aby to vedeli moji rodičia.",
-        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že v Bratislave bude demonštrácia.",
+        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že bude demonštrácia na Hlavnej.",
         "Čo ste cítili?"
       ]
     },
@@ -503,7 +503,7 @@
       "l2": "Vraj to znamenalo, že komunistickej strane zvoní umieračik. Presne neviem, kto to vymyslel.",
       "choices_l1": [
         "Et vous y êtes allée ?",
-        "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation à Bratislava.",
+        "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation sur Hlavná.",
         "Les gens avaient des banderoles, criaient des slogans sur la liberté. C'était bruyant, mais personne n'était violent."
       ],
       "choices_l2": [
@@ -525,7 +525,7 @@
       "choices_l2": [
         "A šli ste tam?",
         "Ľudia zvonili kľúčmi. Celé námestie znelo ako obrovský zvon.",
-        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že v Bratislave bude demonštrácia."
+        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že bude demonštrácia na Hlavnej."
       ]
     },
     {
@@ -539,7 +539,7 @@
         "Et pourquoi justement des clés ?"
       ],
       "choices_l2": [
-        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že v Bratislave bude demonštrácia.",
+        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že bude demonštrácia na Hlavnej.",
         "Ľudia zvonili kľúčmi. Celé námestie znelo ako obrovský zvon.",
         "A šli ste tam?"
       ]
@@ -551,13 +551,13 @@
       "l2": "Áno, ale srdce mi bilo veľmi rýchlo. Bála som sa, že ma rodičia uvidia v správach.",
       "choices_l1": [
         "Et vous y êtes allée ?",
-        "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation à Bratislava.",
+        "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation sur Hlavná.",
         "Les enfants se le disaient entre eux ?"
       ],
       "choices_l2": [
         "Áno, ale nikto poriadne nerozumel, čo sa presne deje v Prahe.",
         "Na námestí bolo obrovské množstvo ľudí. Nikdy predtým som nič také nevidela.",
-        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že v Bratislave bude demonštrácia."
+        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že bude demonštrácia na Hlavnej."
       ]
     },
     {
@@ -736,10 +736,10 @@
       ]
     },
     {
-      "id": "order-potom-jedn-ho-d-a-star-ia-sestra-mojej-kamar-tky-povedala-e-v-bratislave-bude-demon-tr-cia",
+      "id": "order-potom-jedn-ho-d-a-star-ia-sestra-mojej-kamar-tky-povedala-e-bude-demon-tr-cia-na-hlavnej",
       "type": "order",
-      "l1": "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation à Bratislava.",
-      "l2": "Potom jedného dňa staršia sestra mojej kamarátky povedala, že v Bratislave bude demonštrácia.",
+      "l1": "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation sur Hlavná.",
+      "l2": "Potom jedného dňa staršia sestra mojej kamarátky povedala, že bude demonštrácia na Hlavnej.",
       "tokens_l1": [
         "Puis",
         "un",
@@ -757,8 +757,8 @@
         "aurait",
         "une",
         "manifestation",
-        "à",
-        "Bratislava.",
+        "sur",
+        "Hlavná.",
         "Oui,",
         "mais",
         "mon",
@@ -786,10 +786,10 @@
         "kamarátky",
         "povedala,",
         "že",
-        "v",
-        "Bratislave",
         "bude",
-        "demonštrácia.",
+        "demonštrácia",
+        "na",
+        "Hlavnej.",
         "Áno,",
         "ale",
         "srdce",
@@ -1163,8 +1163,8 @@
         "aurait",
         "une",
         "manifestation",
-        "à",
-        "Bratislava."
+        "sur",
+        "Hlavná."
       ],
       "tokens_l2": [
         "A",
@@ -1180,10 +1180,10 @@
         "kamarátky",
         "povedala,",
         "že",
-        "v",
-        "Bratislave",
         "bude",
-        "demonštrácia."
+        "demonštrácia",
+        "na",
+        "Hlavnej."
       ]
     },
     {
@@ -1228,8 +1228,8 @@
         "aurait",
         "une",
         "manifestation",
-        "à",
-        "Bratislava."
+        "sur",
+        "Hlavná."
       ],
       "tokens_l2": [
         "Vraj",
@@ -1254,10 +1254,10 @@
         "kamarátky",
         "povedala,",
         "že",
-        "v",
-        "Bratislave",
         "bude",
-        "demonštrácia."
+        "demonštrácia",
+        "na",
+        "Hlavnej."
       ]
     },
     {
@@ -1515,13 +1515,13 @@
         "À l'école on ne faisait d'abord que chuchoter. Les professeurs étaient nerveux, mais n'expliquaient rien.",
         "Les enfants se le disaient entre eux ?",
         "Oui, mais personne ne comprenait vraiment ce qui se passait exactement à Prague.",
-        "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation à Bratislava."
+        "Puis un jour la grande sœur de mon amie a dit qu'il y aurait une manifestation sur Hlavná."
       ],
       "l2": [
         "V škole sa najprv len šuškalo. Učitelia boli nervózni, ale nič nevysvetľovali.",
         "Deti si to medzi sebou hovorili?",
         "Áno, ale nikto poriadne nerozumel, čo sa presne deje v Prahe.",
-        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že v Bratislave bude demonštrácia."
+        "Potom jedného dňa staršia sestra mojej kamarátky povedala, že bude demonštrácia na Hlavnej."
       ]
     }
   ]

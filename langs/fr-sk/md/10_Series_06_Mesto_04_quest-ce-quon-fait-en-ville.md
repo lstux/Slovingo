@@ -1,6 +1,6 @@
 # Séria Mesto (4/5) — Qu'est-ce qu'on fait en ville
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Vincent_van_Gogh_-_Cafe_Terrace_at_Night_(1888).jpg | Francúzska kaviareň s terasou (Van Gogh) — Wikimedia Commons
+@ img/Vincent_van_Gogh_-_Cafe_Terrace_at_Night_(1888).jpg | Francúzska kaviareň s terasou (Van Gogh) — Wikimedia Commons
 
 Čo robíme v meste: pozeráme, navštevujeme, prechádzame sa. A jedno malé slovko, ktoré ti vôbec nie je cudzie.
 

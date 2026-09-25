@@ -17,10 +17,10 @@
       ]
     },
     {
-      "id": "qcm-mama",
+      "id": "qcm-matka",
       "type": "qcm",
-      "l1": "la maman",
-      "l2": "mama",
+      "l1": "la mère",
+      "l2": "matka",
       "choices_l1": [
         "le fils",
         "la sœur",
@@ -44,7 +44,7 @@
       ],
       "choices_l2": [
         "syn",
-        "mama",
+        "matka",
         "rodina"
       ]
     },
@@ -91,7 +91,7 @@
         "la sœur"
       ],
       "choices_l2": [
-        "mama",
+        "matka",
         "sestra",
         "dcéra"
       ]
@@ -312,10 +312,10 @@
       "choices_l1": [
         "la famille",
         "la grand-mère",
-        "la maman"
+        "la mère"
       ],
       "choices_l2": [
-        "mama",
+        "matka",
         "dedko",
         "babka"
       ]
@@ -358,7 +358,7 @@
       "l1": "l'épouse",
       "l2": "manželka",
       "choices_l1": [
-        "la maman",
+        "la mère",
         "le grand-père",
         "le mari"
       ],
@@ -389,10 +389,10 @@
       ]
     },
     {
-      "id": "blank-to-je-m-j-otec-a-to-je-moja-mama",
+      "id": "blank-to-je-m-j-otec-a-to-je-moja-matka",
       "type": "fill-blank",
-      "l1": "Voici mon père et voici ma maman.",
-      "l2": "To je môj otec a to je moja mama.",
+      "l1": "Voici mon père et voici ma mère.",
+      "l2": "To je môj otec a to je moja matka.",
       "missing_l1": "et",
       "missing_l2": "je",
       "blank_index_l1": 3,
@@ -459,7 +459,7 @@
       "blank_index_l2": 2,
       "choices_l1": [
         "frère",
-        "maman",
+        "mère",
         "Voici"
       ],
       "choices_l2": [
@@ -605,10 +605,10 @@
       ]
     },
     {
-      "id": "listen-to-je-m-j-otec-a-to-je-moja-mama",
+      "id": "listen-to-je-m-j-otec-a-to-je-moja-matka",
       "type": "listen",
-      "l1": "Voici mon père et voici ma maman.",
-      "l2": "To je môj otec a to je moja mama.",
+      "l1": "Voici mon père et voici ma mère.",
+      "l2": "To je môj otec a to je moja matka.",
       "choices_l1": [
         "Ce sont mes parents.",
         "Ma sœur est à la maison.",
@@ -695,7 +695,7 @@
         "Ce sont mes parents."
       ],
       "choices_l2": [
-        "To je môj otec a to je moja mama.",
+        "To je môj otec a to je moja matka.",
         "To sú moji rodičia.",
         "Nemám brata. Mám sestru."
       ]
@@ -727,7 +727,7 @@
         "C'est ma famille."
       ],
       "choices_l2": [
-        "To je môj otec a to je moja mama.",
+        "To je môj otec a to je moja matka.",
         "Mám syna a dcéru.",
         "To je moja rodina."
       ]
@@ -761,7 +761,7 @@
       "choices_l2": [
         "Moja sestra je doma.",
         "Môj dedko a moja babka.",
-        "To je môj otec a to je moja mama."
+        "To je môj otec a to je moja matka."
       ]
     },
     {
@@ -777,7 +777,7 @@
       "choices_l2": [
         "Moja babka sa volá Zuzana.",
         "Ako sa voláš?",
-        "To je môj otec a to je moja mama."
+        "To je môj otec a to je moja matka."
       ]
     },
     {
@@ -808,10 +808,10 @@
       ]
     },
     {
-      "id": "order-to-je-m-j-otec-a-to-je-moja-mama",
+      "id": "order-to-je-m-j-otec-a-to-je-moja-matka",
       "type": "order",
-      "l1": "Voici mon père et voici ma maman.",
-      "l2": "To je môj otec a to je moja mama.",
+      "l1": "Voici mon père et voici ma mère.",
+      "l2": "To je môj otec a to je moja matka.",
       "tokens_l1": [
         "Voici",
         "mon",
@@ -819,7 +819,7 @@
         "et",
         "voici",
         "ma",
-        "maman.",
+        "mère.",
         "Mon",
         "grand-père",
         "et",
@@ -835,7 +835,7 @@
         "to",
         "je",
         "moja",
-        "mama.",
+        "matka.",
         "Môj",
         "dedko",
         "a",
@@ -1059,7 +1059,7 @@
         "et",
         "voici",
         "ma",
-        "maman."
+        "mère."
       ],
       "tokens_l2": [
         "Ako",
@@ -1073,7 +1073,7 @@
         "to",
         "je",
         "moja",
-        "mama."
+        "matka."
       ]
     },
     {
@@ -1108,13 +1108,13 @@
       "type": "match",
       "l1": [
         "la famille",
-        "la maman",
+        "la mère",
         "le père",
         "le frère"
       ],
       "l2": [
         "rodina",
-        "mama",
+        "matka",
         "otec",
         "brat"
       ]
@@ -1124,13 +1124,13 @@
       "type": "match",
       "l1": [
         "C'est ma famille.",
-        "Voici mon père et voici ma maman.",
+        "Voici mon père et voici ma mère.",
         "Tu as un frère ?",
         "Je n'ai pas de frère. J'ai une sœur."
       ],
       "l2": [
         "To je moja rodina.",
-        "To je môj otec a to je moja mama.",
+        "To je môj otec a to je moja matka.",
         "Máš brata?",
         "Nemám brata. Mám sestru."
       ]

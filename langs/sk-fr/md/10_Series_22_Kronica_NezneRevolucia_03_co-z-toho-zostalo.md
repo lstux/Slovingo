@@ -1,6 +1,6 @@
 # Nežná revolúcia (3/3) — Čo z toho zostalo
 
-@ img/SNP_Square,_Bratislava.jpg | Námestie SNP aujourd'hui, Bratislava — Wikimedia Commons, CC BY-SA
+@ img/kronika_revolucia_03_kosice_hlavna_today.jpg | Hlavná ulica aujourd'hui, Košice — Wikimedia Commons, CC BY-SA
 
 Le récit terminé, Andrea et Eric discutent de ce que cette journée représente aujourd'hui — et du fait que tout le monde en Slovaquie n'a pas le même rapport à cette date.
 
@@ -8,7 +8,7 @@ Le récit terminé, Andrea et Eric discutent de ce que cette journée représent
 
 ## Coin slovaque
 
-**La Révolution de velours n'a pas commencé le 17 novembre par hasard.** Des mouvements de contestation existaient déjà avant cette date, comme la manifestation aux bougies de 1988 à Bratislava, réprimée par la police. Le 17 novembre a servi de déclencheur, mais le mécontentement couvait depuis plus longtemps, en Slovaquie comme dans le reste du bloc de l'Est.
+**La Révolution de velours n'a pas commencé le 17 novembre par hasard.** Des mouvements de contestation existaient déjà avant cette date, comme la manifestation aux bougies de mars 1988 à Bratislava, réprimée par la police. À Košice aussi, ça ne s'est pas arrêté au 17 : dans les jours suivants, des dizaines de milliers de personnes ont manifesté sur Hlavná ulica, pendant que les étudiants de l'université technique faisaient grève. Le 17 novembre a servi de déclencheur, mais le mécontentement couvait depuis plus longtemps, en Slovaquie comme dans le reste du bloc de l'Est.
 
 **Le tintement des clés reste le symbole le plus universellement reconnu de cette période.** Ce geste simple, pacifique et sans besoin de slogan compliqué, explique en partie pourquoi la transition a été qualifiée de « douce » ({{nežná}}) plutôt que violente, contrairement à d'autres révolutions de la même année dans la région.
 

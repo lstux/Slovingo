@@ -1,6 +1,6 @@
 # Série Mesto (1/5) — V meste
 
-@ img/mesto_01_maximilian_fountain.jpg | La fontaine Maximilien, place principale de Bratislava — Wikimedia Commons, CC BY-SA
+@ img/mesto_01_st_elisabeth_cathedral.jpg | La cathédrale Sainte-Élisabeth, au centre de la rue Hlavná à Košice — Wikimedia Commons, CC BY-SA
 
 Les lieux qu'on croise en ville. La préposition **na** revient beaucoup ici, pour les endroits ouverts et les institutions.
 
@@ -10,6 +10,7 @@ Les lieux qu'on croise en ville. La préposition **na** revient beaucoup ici, po
 
 | Slovaque | Français |
 |----------|----------|
+| mesto | la ville |
 | námestie | la place |
 | ulica | la rue |
 | most | le pont |
@@ -98,9 +99,9 @@ La distinction n'est pas parfaitement logique — *park* prend *v* bien qu'il so
 
 ## 🇸🇰 Coin slovaque
 
-**Le vieux pont porte le nom d'un slogan.** {{Nový most}}, littéralement « le pont neuf », traverse le Danube avec son restaurant en forme de soucoupe volante perché au sommet d'un pylône. Malgré son nom, il date des années 1970.
+**La fontaine chante, littéralement.** Sur la rue Hlavná, la {{Spievajúca fontána}} (fontaine chantante) diffuse de la musique et s'illumine le soir : un rendez-vous classique en sortant du théâtre ou d'un café voisin.
 
-**La place principale change de nom l'hiver.** {{Hlavné námestie}} accueille les marchés de Noël dès fin novembre, et devient le cœur battant de la ville jusqu'au 6 janvier, avec vin chaud et échoppes en bois.
+**La place principale change de nom l'hiver.** {{Hlavná ulica}} accueille les marchés de Noël dès fin novembre, et devient le cœur battant de la ville jusqu'au 6 janvier, avec vin chaud et échoppes en bois.
 
 **Múzeum et divadlo se déclinent au pluriel de spécialité.** Une même ville compte souvent plusieurs musées et théâtres thématiques : un {{múzeum}} d'histoire, un autre de design, un théâtre national et un théâtre de marionnettes, très prisé des familles.
 

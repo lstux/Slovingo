@@ -1,6 +1,6 @@
 # Série Mesto (4/5) — Čo robíme v meste
 
-@ img/mesto_04_national_theatre.jpg | L'ancien théâtre national slovaque, Bratislava — Wikimedia Commons, CC BY-SA
+@ img/mesto_04_national_theatre.jpg | Le Théâtre d'État, bâtiment historique de 1899, Košice — Wikimedia Commons, CC BY-SA
 
 Ce qu'on fait en ville : voir, visiter, se promener. Un peu de vocabulaire des loisirs urbains, et un retour sur des verbes déjà croisés.
 
@@ -122,7 +122,7 @@ Le petit mot **sa** est indispensable : sans lui, *prechádzať* voudrait dire t
 
 **Le café slovaque est un rituel lent.** S'asseoir en terrasse pour un long café n'a rien de pressé : on y lit, on y discute, personne ne vous fait sentir qu'il faut libérer la table. C'est un bon endroit pour observer la vie locale sans se presser.
 
-**Le théâtre national trône sur son propre bâtiment historique.** L'ancien bâtiment néo-Renaissance du {{Slovenské národné divadlo}} domine toujours le centre, même si les grandes productions se jouent aujourd'hui dans un bâtiment plus récent.
+**Le théâtre trône toujours dans son bâtiment historique.** Le {{Štátne divadlo}} (Théâtre d'État) occupe depuis 1899 un bâtiment néo-Renaissance en plein centre de Hlavná ulica, et continue d'y jouer aujourd'hui.
 
 **Se promener se dit avec « sa ».** Beaucoup de verbes d'activité personnelle prennent ce petit mot réfléchi : {{prechádzať sa}}, se promener, mais aussi *hrať sa*, jouer, ou *učiť sa*, apprendre. Le repérer facilite beaucoup la lecture.
 

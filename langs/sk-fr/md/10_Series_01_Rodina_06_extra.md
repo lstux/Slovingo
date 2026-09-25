@@ -11,7 +11,7 @@ Aucun mot nouveau ici. Tout le vocabulaire de la série est rassemblé, puis rec
 | Slovaque | Français |
 |----------|----------|
 | rodina | la famille |
-| mama | la maman |
+| matka | la mère |
 | otec | le père |
 | brat | le frère |
 | sestra | la sœur |
@@ -172,11 +172,11 @@ Aucun mot nouveau ici. Tout le vocabulaire de la série est rassemblé, puis rec
 > máš = as-tu
 > narodeniny = anniversaire
 
-! Môj otec a moja mama bývajú spolu na dedine.
-> Mon père et ma maman habitent ensemble au village.
+! Môj otec a moja matka bývajú spolu na dedine.
+> Mon père et ma mère habitent ensemble au village.
 > Môj otec = mon père
 > a = et
-> moja mama = ma maman
+> moja matka = ma mère
 > bývajú = habitent
 > spolu = ensemble
 > na dedine = au village

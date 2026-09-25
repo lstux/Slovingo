@@ -1,6 +1,6 @@
 # Séria Počasie (1/5) — Quel temps fait-il ?
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Cloudy_sky_(26171935906).jpg | Krajina, oblačná obloha — Wikimedia Commons
+@ img/Cloudy_sky_(26171935906).jpg | Krajina, oblačná obloha — Wikimedia Commons
 
 Počasie, s neosobnými väzbami: **il fait chaud**, **il fait froid**. Malá záhada na úvod: francúzština potrebuje podmet „il“, aj keď v skutočnosti nič neoznačuje.
 

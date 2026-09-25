@@ -2,6 +2,8 @@
 
 Merci si vous êtes arrivé jusqu'ici…
 
+Avec un peu de chance, vous savez maintenant commander des halušky et une bière au restaurant !
+
 Et merci aussi si vous êtes directement allé sur cette page sans suivre tout le cours ! 🤣
 
 Plus sérieusement, cette petite application est née d'une envie assez simple : apprendre le slovaque, découvrir un peu mieux une langue et une culture que je connaissais très peu, et me lancer un petit défi personnel.

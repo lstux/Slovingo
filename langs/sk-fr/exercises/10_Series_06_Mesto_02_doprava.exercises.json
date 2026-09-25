@@ -493,10 +493,10 @@
       ]
     },
     {
-      "id": "blank-mhd-je-v-bratislave-dobr",
+      "id": "blank-mhd-je-v-ko-iciach-dobr",
       "type": "fill-blank",
-      "l1": "Les transports en commun sont bons à Bratislava.",
-      "l2": "MHD je v Bratislave dobrá.",
+      "l1": "Les transports en commun sont bons à Košice.",
+      "l2": "MHD je v Košiciach dobrá.",
       "missing_l1": "à",
       "missing_l2": "je",
       "blank_index_l1": 6,
@@ -659,7 +659,7 @@
       "l2": "Chodím do práce autobusom.",
       "choices_l1": [
         "Je vais sur la place. Tu viens avec moi ?",
-        "Les transports en commun sont bons à Bratislava.",
+        "Les transports en commun sont bons à Košice.",
         "Le tram part à cinq heures."
       ],
       "choices_l2": [
@@ -680,7 +680,7 @@
       ],
       "choices_l2": [
         "Chodíš vždy vlakom?",
-        "MHD je v Bratislave dobrá.",
+        "MHD je v Košiciach dobrá.",
         "Chodím do školy pešo."
       ]
     },
@@ -722,12 +722,12 @@
       "l1": "Le tram part à cinq heures.",
       "l2": "Električka ide o piatej.",
       "choices_l1": [
-        "Les transports en commun sont bons à Bratislava.",
+        "Les transports en commun sont bons à Košice.",
         "Je vais sur la place. Tu viens avec moi ?",
         "Je vais au parc tous les jours."
       ],
       "choices_l2": [
-        "MHD je v Bratislave dobrá.",
+        "MHD je v Košiciach dobrá.",
         "Kde je zastávka?",
         "Múzeum je zatvorené. Chodíme tam v sobotu."
       ]
@@ -738,7 +738,7 @@
       "l1": "Tu prends toujours le train ?",
       "l2": "Chodíš vždy vlakom?",
       "choices_l1": [
-        "Les transports en commun sont bons à Bratislava.",
+        "Les transports en commun sont bons à Košice.",
         "Le tram part à cinq heures.",
         "Quelle est la direction ?"
       ],
@@ -765,10 +765,10 @@
       ]
     },
     {
-      "id": "listen-mhd-je-v-bratislave-dobr",
+      "id": "listen-mhd-je-v-ko-iciach-dobr",
       "type": "listen",
-      "l1": "Les transports en commun sont bons à Bratislava.",
-      "l2": "MHD je v Bratislave dobrá.",
+      "l1": "Les transports en commun sont bons à Košice.",
+      "l2": "MHD je v Košiciach dobrá.",
       "choices_l1": [
         "J'ai un vélo, mais aujourd'hui j'y vais en voiture.",
         "Le tram part à cinq heures.",
@@ -809,7 +809,7 @@
       "choices_l2": [
         "Mám bicykel, ale dnes idem autom.",
         "Chodím do práce autobusom.",
-        "MHD je v Bratislave dobrá."
+        "MHD je v Košiciach dobrá."
       ]
     },
     {
@@ -820,7 +820,7 @@
       "choices_l1": [
         "Je vais au travail en bus.",
         "Je vais à l'école à pied.",
-        "Les transports en commun sont bons à Bratislava."
+        "Les transports en commun sont bons à Košice."
       ],
       "choices_l2": [
         "Chodíš vždy vlakom?",
@@ -835,11 +835,11 @@
       "l2": "Chodím do školy pešo.",
       "choices_l1": [
         "Où est l'arrêt ?",
-        "Les transports en commun sont bons à Bratislava.",
+        "Les transports en commun sont bons à Košice.",
         "Aujourd'hui j'y vais à pied."
       ],
       "choices_l2": [
-        "MHD je v Bratislave dobrá.",
+        "MHD je v Košiciach dobrá.",
         "Električka ide o piatej.",
         "Aký je smer?"
       ]
@@ -882,7 +882,7 @@
       "l1": "Quelle est la direction ?",
       "l2": "Aký je smer?",
       "choices_l1": [
-        "Les transports en commun sont bons à Bratislava.",
+        "Les transports en commun sont bons à Košice.",
         "Je vais au travail en bus.",
         "Où est l'arrêt ?"
       ],
@@ -1142,10 +1142,10 @@
       ]
     },
     {
-      "id": "order-mhd-je-v-bratislave-dobr",
+      "id": "order-mhd-je-v-ko-iciach-dobr",
       "type": "order",
-      "l1": "Les transports en commun sont bons à Bratislava.",
-      "l2": "MHD je v Bratislave dobrá.",
+      "l1": "Les transports en commun sont bons à Košice.",
+      "l2": "MHD je v Košiciach dobrá.",
       "tokens_l1": [
         "Les",
         "transports",
@@ -1154,7 +1154,7 @@
         "sont",
         "bons",
         "à",
-        "Bratislava.",
+        "Košice.",
         "Tu",
         "prends",
         "toujours",
@@ -1166,7 +1166,7 @@
         "MHD",
         "je",
         "v",
-        "Bratislave",
+        "Košiciach",
         "dobrá.",
         "Chodíš",
         "vždy",

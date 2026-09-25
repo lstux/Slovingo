@@ -1,6 +1,6 @@
 # Série Mesto (3/5) — Kade mám ísť?
 
-@ img/mesto_03_square.jpg | Une place de Bratislava — Wikimedia Commons, CC BY-SA
+@ img/mesto_03_square.jpg | La rue Hlavná à Košice — Wikimedia Commons, CC BY-SA
 
 Demander son chemin et le suivre. C'est ici qu'apparaît l'**impératif**, la forme qu'on utilise pour donner une instruction.
 
@@ -130,7 +130,7 @@ L'impératif se retient d'abord tel quel, sans en construire la règle : ce sont
 
 **Les Slovaques indiquent volontiers le chemin à pied.** Demander sa route dans la rue reste courant et bien accueilli, contrairement à d'autres capitales où l'on préfère sortir son téléphone. Une explication orale accompagnée d'un geste du bras est fréquente.
 
-**Le vieux centre se visite surtout à pied.** Les rues pavées de la vieille ville de Bratislava sont largement piétonnes, et beaucoup de sites historiques se trouvent à quelques minutes les uns des autres — largement de quoi pratiquer *rovno*, *vľavo* et *vpravo* en vrai.
+**Le vieux centre se visite surtout à pied.** {{Hlavná ulica}}, piétonne depuis 1986, forme le plus grand centre historique protégé de Slovaquie, et la plupart des sites se trouvent à quelques minutes les uns des autres — largement de quoi pratiquer *rovno*, *vľavo* et *vpravo* en vrai.
 
 ---
 

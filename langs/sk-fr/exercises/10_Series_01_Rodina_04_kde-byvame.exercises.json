@@ -257,6 +257,22 @@
       ]
     },
     {
+      "id": "qcm-ko-ice-v-ko-iciach",
+      "type": "qcm",
+      "l1": "à Košice",
+      "l2": "Košice → v Košiciach",
+      "choices_l1": [
+        "loin",
+        "en ville",
+        "dans l'appartement"
+      ],
+      "choices_l2": [
+        "mesto → v meste",
+        "dom → v dome",
+        "byt → v byte"
+      ]
+    },
+    {
       "id": "qcm-izba",
       "type": "qcm",
       "l1": "la pièce, la chambre",
@@ -369,10 +385,10 @@
       ]
     },
     {
-      "id": "blank-b-vam-v-bratislave",
+      "id": "blank-b-vam-v-ko-iciach",
       "type": "fill-blank",
-      "l1": "J'habite à Bratislava.",
-      "l2": "Bývam v Bratislave.",
+      "l1": "J'habite à Košice.",
+      "l2": "Bývam v Košiciach.",
       "missing_l1": "à",
       "missing_l2": "v",
       "blank_index_l1": 1,
@@ -645,10 +661,10 @@
       ]
     },
     {
-      "id": "listen-b-vam-v-bratislave",
+      "id": "listen-b-vam-v-ko-iciach",
       "type": "listen",
-      "l1": "J'habite à Bratislava.",
-      "l2": "Bývam v Bratislave.",
+      "l1": "J'habite à Košice.",
+      "l2": "Bývam v Košiciach.",
       "choices_l1": [
         "J'habite dans un appartement.",
         "Ma maman est dans la cuisine.",
@@ -705,7 +721,7 @@
       "choices_l2": [
         "Moja chata je ďaleko.",
         "Mám dve deti. Bývame spolu.",
-        "Bývam v Bratislave."
+        "Bývam v Košiciach."
       ]
     },
     {
@@ -736,7 +752,7 @@
       ],
       "choices_l2": [
         "Bývam v byte.",
-        "Bývam v Bratislave.",
+        "Bývam v Košiciach.",
         "Moji rodičia bývajú na dedine. Sú starí."
       ]
     },
@@ -767,7 +783,7 @@
         "Ma grand-mère habite au village."
       ],
       "choices_l2": [
-        "Bývam v Bratislave.",
+        "Bývam v Košiciach.",
         "Moja sestra je lekárka a býva v meste.",
         "Moja chata je ďaleko."
       ]
@@ -801,7 +817,7 @@
       "choices_l2": [
         "Deti sú v záhrade.",
         "Moja chata je ďaleko.",
-        "Bývam v Bratislave."
+        "Bývam v Košiciach."
       ]
     },
     {
@@ -849,7 +865,7 @@
       "choices_l2": [
         "Môj dedko je dôchodca a býva blízko.",
         "Deti sú v záhrade.",
-        "Bývam v Bratislave."
+        "Bývam v Košiciach."
       ]
     },
     {
@@ -885,14 +901,14 @@
       ]
     },
     {
-      "id": "order-b-vam-v-bratislave",
+      "id": "order-b-vam-v-ko-iciach",
       "type": "order",
-      "l1": "J'habite à Bratislava.",
-      "l2": "Bývam v Bratislave.",
+      "l1": "J'habite à Košice.",
+      "l2": "Bývam v Košiciach.",
       "tokens_l1": [
         "J'habite",
         "à",
-        "Bratislava.",
+        "Košice.",
         "Mon",
         "frère",
         "habite",
@@ -902,7 +918,7 @@
       "tokens_l2": [
         "Bývam",
         "v",
-        "Bratislave.",
+        "Košiciach.",
         "Môj",
         "brat",
         "býva",
@@ -951,7 +967,7 @@
         "maison.",
         "J'habite",
         "à",
-        "Bratislava."
+        "Košice."
       ],
       "tokens_l2": [
         "Moji",
@@ -961,7 +977,7 @@
         "dome.",
         "Bývam",
         "v",
-        "Bratislave."
+        "Košiciach."
       ]
     },
     {
@@ -1119,7 +1135,7 @@
         "ensemble.",
         "J'habite",
         "à",
-        "Bratislava."
+        "Košice."
       ],
       "tokens_l2": [
         "Mám",
@@ -1129,7 +1145,7 @@
         "spolu.",
         "Bývam",
         "v",
-        "Bratislave."
+        "Košiciach."
       ]
     },
     {
@@ -1213,7 +1229,7 @@
         "loin.",
         "J'habite",
         "à",
-        "Bratislava."
+        "Košice."
       ],
       "tokens_l2": [
         "Moja",
@@ -1222,7 +1238,7 @@
         "ďaleko.",
         "Bývam",
         "v",
-        "Bratislave."
+        "Košiciach."
       ]
     },
     {
@@ -1309,13 +1325,13 @@
       "type": "match",
       "l1": [
         "Où habites-tu ?",
-        "J'habite à Bratislava.",
+        "J'habite à Košice.",
         "J'habite dans un appartement.",
         "Mes parents habitent dans une maison."
       ],
       "l2": [
         "Kde bývaš?",
-        "Bývam v Bratislave.",
+        "Bývam v Košiciach.",
         "Bývam v byte.",
         "Moji rodičia bývajú v dome."
       ]

@@ -10,6 +10,7 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 
 | Slovaque | Français |
 |----------|----------|
+| jedlo | la nourriture |
 | chlieb | le pain |
 | mlieko | le lait |
 | voda | l'eau |

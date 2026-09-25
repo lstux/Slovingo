@@ -1,6 +1,6 @@
 # Série Mesto (extra) — Všetko dokopy
 
-@ img/mesto_06_tram_terminus.jpg | Terminus du tram, gare principale de Bratislava — Wikimedia Commons, CC BY-SA
+@ img/mesto_06_tram_terminus.jpg | Terminus du tram, gare principale de Košice — Wikimedia Commons, CC BY-SA
 
 Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombiné dans des phrases inédites.
 
@@ -10,6 +10,7 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 
 | Slovaque | Français |
 |----------|----------|
+| mesto | la ville |
 | námestie | la place |
 | ulica | la rue |
 | most | le pont |

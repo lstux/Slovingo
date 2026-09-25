@@ -1,6 +1,6 @@
 # Séria Veľká noc (5/5) — Lundi de Pâques chez mamie Louise
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Luxembourg_Chocolate_Easter_Eggs.JPG | Čokoládové vajíčka na hľadanie v záhrade — Wikimedia Commons
+@ img/Luxembourg_Chocolate_Easter_Eggs.JPG | Čokoládové vajíčka na hľadanie v záhrade — Wikimedia Commons
 
 Veľkonočný pondelok u Mamie Louise: Karine a Eric prídu na hľadanie vajíčok, s malou Chloé. Prejde sa tu celá slovná zásoba série. Žiadne nové slovo, okrem tých označených v poznámkach.
 

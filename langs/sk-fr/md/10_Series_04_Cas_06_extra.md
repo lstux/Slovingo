@@ -1,6 +1,6 @@
 # Série Čas (extra) — Všetko dokopy
 
-@ img/cas_06_station_night.jpg | La gare de Bratislava la nuit — Wikimedia Commons, CC BY-SA
+@ img/cas_06_station_night.jpg | La gare de Košice le soir — Wikimedia Commons, CC BY-SA
 
 Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombiné dans des phrases inédites.
 

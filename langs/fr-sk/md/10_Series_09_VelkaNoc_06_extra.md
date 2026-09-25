@@ -1,6 +1,6 @@
 # Séria Veľká noc (extra) — Všetko dokopy
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Easter-Eggs.jpg | Veľkonočný stôl — Wikimedia Commons
+@ img/Easter-Eggs.jpg | Veľkonočný stôl — Wikimedia Commons
 
 Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet. Posledná fiche celej cesty!
 

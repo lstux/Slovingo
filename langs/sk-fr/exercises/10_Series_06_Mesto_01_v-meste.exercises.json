@@ -1,6 +1,22 @@
 {
   "exercises": [
     {
+      "id": "qcm-mesto",
+      "type": "qcm",
+      "l1": "la ville",
+      "l2": "mesto",
+      "choices_l1": [
+        "la place",
+        "la rue",
+        "le pont"
+      ],
+      "choices_l2": [
+        "námestie",
+        "ulica",
+        "most"
+      ]
+    },
+    {
       "id": "qcm-n-mestie",
       "type": "qcm",
       "l1": "la place",

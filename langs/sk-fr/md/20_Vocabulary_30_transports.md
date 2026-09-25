@@ -51,9 +51,9 @@
 | príchod | arrivée |
 | spiatočný lístok | billet aller-retour |
 
-! Chcem lístok do Bratislavy.
-> Je voudrais un billet pour Bratislava.
-> chcem = je veux · lístok = billet · do Bratislavy = pour Bratislava
+! Chcem lístok do Košíc.
+> Je voudrais un billet pour Košice.
+> chcem = je veux · lístok = billet · do Košíc = pour Košice (génitif pluriel)
 
 ! Z ktorého nástupišťa odchádza vlak?
 > De quel quai part le train ?

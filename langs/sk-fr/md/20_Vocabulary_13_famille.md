@@ -63,8 +63,8 @@
 > J'ai une sœur et un frère.
 > mám = j'ai · jednu sestru = une sœur · jedného brata = un frère
 
-! Moji rodičia bývajú v Bratislave.
-> Mes parents habitent à Bratislava.
+! Moji rodičia bývajú v Košiciach.
+> Mes parents habitent à Košice.
 > moji = mes · rodičia = parents · bývajú = habitent
 
 ! Som ženatý. / Som vydatá.

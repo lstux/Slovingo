@@ -1,6 +1,6 @@
 # Séria Počasie (5/5) — Changement de plan
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/A_scenic_view_of_the_green_hills.jpg | Kopce a vidiek — Wikimedia Commons
+@ img/A_scenic_view_of_the_green_hills.jpg | Kopce a vidiek — Wikimedia Commons
 
 Andrea a Karine si pripravovali turistiku, ale počasie rozhodne inak. Prejde sa tu celá slovná zásoba série. Žiadne nové slovo, okrem tých označených v poznámkach.
 

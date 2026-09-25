@@ -10,6 +10,7 @@ Les aliments de base, et les deux verbes qui vont avec : **jesť** (manger) et *
 
 | Slovaque | Français |
 |----------|----------|
+| jedlo | la nourriture |
 | chlieb | le pain |
 | mlieko | le lait |
 | voda | l'eau |

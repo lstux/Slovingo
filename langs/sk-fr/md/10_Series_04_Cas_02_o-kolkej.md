@@ -1,6 +1,6 @@
 # Série Čas (2/5) — O koľkej?
 
-@ img/cas_02_station_board.jpg | Tableau d'affichage, gare de Bratislava — Wikimedia Commons, CC BY-SA
+@ img/cas_02_station_board.jpg | Tableau d'affichage, gare de Košice — Wikimedia Commons, CC BY-SA
 
 Dire à quelle heure quelque chose se passe. Et le point qui déroute tous les débutants : le slovaque compte vers l'heure suivante, pas depuis l'heure passée.
 

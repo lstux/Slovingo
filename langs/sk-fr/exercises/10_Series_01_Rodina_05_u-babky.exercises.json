@@ -181,10 +181,10 @@
       ]
     },
     {
-      "id": "blank-b-vam-v-bratislave-v-byte-a-vy",
+      "id": "blank-b-vam-v-ko-iciach-v-byte-a-vy",
       "type": "fill-blank",
-      "l1": "J'habite à Bratislava, dans un appartement. Et vous ?",
-      "l2": "Bývam v Bratislave, v byte. A vy?",
+      "l1": "J'habite à Košice, dans un appartement. Et vous ?",
+      "l2": "Bývam v Košiciach, v byte. A vy?",
       "missing_l1": "Et",
       "missing_l2": "v",
       "blank_index_l1": 6,
@@ -400,7 +400,7 @@
       "choices_l1": [
         "Mon père est professeur aussi !",
         "C'est ma grand-mère. Elle habite ici, au village.",
-        "J'habite à Bratislava, dans un appartement. Et vous ?"
+        "J'habite à Košice, dans un appartement. Et vous ?"
       ],
       "choices_l2": [
         "Som učiteľ. Pracujem v škole.",
@@ -416,7 +416,7 @@
       "choices_l1": [
         "Mon père est professeur aussi !",
         "Salut Katka. Quel âge a ton frère ?",
-        "J'habite à Bratislava, dans un appartement. Et vous ?"
+        "J'habite à Košice, dans un appartement. Et vous ?"
       ],
       "choices_l2": [
         "Ján má dvadsať rokov. Je študent.",
@@ -469,7 +469,7 @@
       "choices_l2": [
         "Môj otec je tiež učiteľ!",
         "Bývam tu, v dome. Mám záhradu.",
-        "Bývam v Bratislave, v byte. A vy?"
+        "Bývam v Košiciach, v byte. A vy?"
       ]
     },
     {
@@ -478,14 +478,14 @@
       "l1": "Et vous, Eric ? Que faites-vous ?",
       "l2": "A vy, Eric? Čo robíte?",
       "choices_l1": [
-        "J'habite à Bratislava, dans un appartement. Et vous ?",
+        "J'habite à Košice, dans un appartement. Et vous ?",
         "Moi, je suis Katka ! J'ai huit ans.",
         "Grand-mère est vieille, mais elle travaille beaucoup !"
       ],
       "choices_l2": [
         "Ján má dvadsať rokov. Je študent.",
         "To je moja babka. Býva tu, na dedine.",
-        "Bývam v Bratislave, v byte. A vy?"
+        "Bývam v Košiciach, v byte. A vy?"
       ]
     },
     {
@@ -500,7 +500,7 @@
       ],
       "choices_l2": [
         "Babka je stará, ale pracuje veľa!",
-        "Bývam v Bratislave, v byte. A vy?",
+        "Bývam v Košiciach, v byte. A vy?",
         "Ahoj Katka. Koľko rokov má tvoj brat?"
       ]
     },
@@ -517,7 +517,7 @@
       "choices_l2": [
         "Ja som Katka! Mám osem rokov.",
         "To je moja babka. Býva tu, na dedine.",
-        "Bývam v Bratislave, v byte. A vy?"
+        "Bývam v Košiciach, v byte. A vy?"
       ]
     },
     {
@@ -527,7 +527,7 @@
       "l2": "Kde bývate?",
       "choices_l1": [
         "Grand-mère est vieille, mais elle travaille beaucoup !",
-        "J'habite à Bratislava, dans un appartement. Et vous ?",
+        "J'habite à Košice, dans un appartement. Et vous ?",
         "C'est ma grand-mère. Elle habite ici, au village."
       ],
       "choices_l2": [
@@ -537,10 +537,10 @@
       ]
     },
     {
-      "id": "listen-b-vam-v-bratislave-v-byte-a-vy",
+      "id": "listen-b-vam-v-ko-iciach-v-byte-a-vy",
       "type": "listen",
-      "l1": "J'habite à Bratislava, dans un appartement. Et vous ?",
-      "l2": "Bývam v Bratislave, v byte. A vy?",
+      "l1": "J'habite à Košice, dans un appartement. Et vous ?",
+      "l2": "Bývam v Košiciach, v byte. A vy?",
       "choices_l1": [
         "C'est ma grand-mère. Elle habite ici, au village.",
         "Katka ! Va dans le jardin.",
@@ -607,7 +607,7 @@
       "l2": "Máte peknú rodinu.",
       "choices_l1": [
         "Salut Katka. Quel âge a ton frère ?",
-        "J'habite à Bratislava, dans un appartement. Et vous ?",
+        "J'habite à Košice, dans un appartement. Et vous ?",
         "Mon père est professeur aussi !"
       ],
       "choices_l2": [
@@ -640,7 +640,7 @@
       "choices_l1": [
         "Et vous, Eric ? Que faites-vous ?",
         "Eric, voici ma famille.",
-        "J'habite à Bratislava, dans un appartement. Et vous ?"
+        "J'habite à Košice, dans un appartement. Et vous ?"
       ],
       "choices_l2": [
         "Môj otec je tiež učiteľ!",
@@ -1001,14 +1001,14 @@
       ]
     },
     {
-      "id": "order-b-vam-v-bratislave-v-byte-a-vy",
+      "id": "order-b-vam-v-ko-iciach-v-byte-a-vy",
       "type": "order",
-      "l1": "J'habite à Bratislava, dans un appartement. Et vous ?",
-      "l2": "Bývam v Bratislave, v byte. A vy?",
+      "l1": "J'habite à Košice, dans un appartement. Et vous ?",
+      "l2": "Bývam v Košiciach, v byte. A vy?",
       "tokens_l1": [
         "J'habite",
         "à",
-        "Bratislava,",
+        "Košice,",
         "dans",
         "un",
         "appartement.",
@@ -1027,7 +1027,7 @@
       "tokens_l2": [
         "Bývam",
         "v",
-        "Bratislave,",
+        "Košiciach,",
         "v",
         "byte.",
         "A",

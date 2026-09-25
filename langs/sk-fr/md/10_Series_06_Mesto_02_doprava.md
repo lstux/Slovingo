@@ -1,6 +1,6 @@
 # Série Mesto (2/5) — Doprava
 
-@ img/mesto_02_tram_stop.jpg | Arrêt de tram devant la gare de Bratislava — Wikimedia Commons, CC BY-SA
+@ img/mesto_02_tram_stop.jpg | Tram devant la gare de Košice — Wikimedia Commons, CC BY-SA
 
 Les transports en commun. Et la distinction entre **ísť** (un trajet précis) et **chodiť** (une habitude), déjà annoncée dans la série Čas.
 
@@ -87,11 +87,11 @@ Les transports en commun. Et la distinction entre **ísť** (un trajet précis) 
 > mešká = est en retard
 > desať minút = dix minutes
 
-! MHD je v Bratislave dobrá.
-> Les transports en commun sont bons à Bratislava.
+! MHD je v Košiciach dobrá.
+> Les transports en commun sont bons à Košice.
 > MHD = les transports en commun
 > je = est
-> v Bratislave = à Bratislava
+> v Košiciach = à Košice
 > dobrá = bonne
 
 ---
@@ -126,7 +126,7 @@ Les transports en commun. Et la distinction entre **ísť** (un trajet précis) 
 
 **MHD, l'abréviation que tout le monde utilise.** Pour *mestská hromadná doprava*, transport urbain collectif, ce sigle apparaît sur les applications, les tickets et les panneaux. Personne ne prononce la version longue au quotidien.
 
-**Le tram de Bratislava roule depuis 1895.** Le réseau reste un des piliers de la mobilité en ville, avec des rames modernes à côté de vieux modèles encore en service sur certaines lignes. Les tickets s'achètent en borne ou par application.
+**Le tram de Košice roule depuis 1891, à l'origine tiré par des chevaux.** Il a été électrifié en 1913, et reste depuis un pilier de la mobilité en ville, avec des rames modernes à côté de vieux modèles encore en service sur certaines lignes. Les tickets s'achètent en borne ou par application.
 
 **La gratuité pour les jeunes et les seniors.** Depuis quelques années, les moins de 26 ans et les plus de 62 ans voyagent gratuitement sur les trains nationaux. Une bonne nouvelle à connaître si tu voyages avec de la famille slovaque.
 

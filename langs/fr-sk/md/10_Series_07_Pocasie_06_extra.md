@@ -1,6 +1,6 @@
 # Séria Počasie (extra) — Všetko dokopy
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Storm_clouds_gathering.jpg | Búrkové mraky nad krajinou — Wikimedia Commons
+@ img/Storm_clouds_gathering.jpg | Búrkové mraky nad krajinou — Wikimedia Commons
 
 Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet.
 

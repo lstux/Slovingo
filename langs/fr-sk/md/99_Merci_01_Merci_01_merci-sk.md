@@ -2,6 +2,8 @@
 
 Ďakujem, ak ste sa dostali až sem…
 
+S trochou šťastia si už viete vo francúzskej pekárni objednať kávu a croissant!
+
 A ďakujem aj vtedy, ak ste sa na túto stránku dostali rovno, bez toho, aby ste absolvovali celý kurz! 🤣
 
 Vážnejšie povedané: táto malá aplikácia vznikla z pomerne jednoduchej túžby — naučiť sa po slovensky, trochu lepšie spoznať jazyk a kultúru, ktoré som predtým takmer nepoznal, a dať si osobnú výzvu.

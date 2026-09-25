@@ -1,6 +1,6 @@
 # Séria Mesto (2/5) — Les transports
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Tramways_Strasbourg_16.JPG | Električka v Strasbourgu — Wikimedia Commons
+@ img/Tramways_Strasbourg_16.JPG | Električka v Strasbourgu — Wikimedia Commons
 
 Mestská doprava. A dobrá správa: francúzština na rozdiel od slovenčiny nepotrebuje dve rôzne slovesá pre jednorazovú cestu a zvyk.
 

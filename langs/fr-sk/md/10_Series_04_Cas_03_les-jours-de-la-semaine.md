@@ -1,6 +1,6 @@
 # Séria Čas (3/5) — Les jours de la semaine
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Gare_du_Nord_Fallblattanzeiger_Departure-board.JPG | Tabuľa odchodov, Gare du Nord — Wikimedia Commons
+@ img/Gare_du_Nord_Fallblattanzeiger_Departure-board.JPG | Tabuľa odchodov, Gare du Nord — Wikimedia Commons
 
 Sedem dní týždňa. Dobrá správa: francúzština na to nepotrebuje žiadnu predložku. Zlá správa: malý člen „le“ vie zmeniť význam celej vety.
 
