@@ -2,8 +2,6 @@
 
 @ img/Stužica_primeval_forest,_Slovakia.jpg | Forêt primaire de Stužica, Slovaquie — Wikimedia Commons, CC BY-SA
 
-Le récit terminé, Andrea et Eric prennent du recul. Ce que cette histoire veut dire aujourd'hui dépend beaucoup de qui la raconte.
-
 ---
 
 ## Coin slovaque
