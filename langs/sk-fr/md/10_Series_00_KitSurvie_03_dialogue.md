@@ -19,6 +19,8 @@ Eric croise Andrea pour la première fois. Rien que des salutations et de la pol
 | nerozumiem | je ne comprends pas |
 | čo to znamená | qu'est-ce que ça veut dire |
 | tiež | aussi |
+| hovoríte | vous parlez |
+| po francúzsky | français |
 
 ---
 
@@ -50,6 +52,17 @@ Eric et Andrea se vouvoient : c'est leur première rencontre.
 > Tiež = aussi
 > v poriadku = bien
 > ďakujem = merci
+
+! 👦 Hovoríte po francúzsky?
+> Parlez-vous français ?
+> Hovoríte = vous parlez
+> po francúzsky = français
+
+! 👩 Áno, hovorím po francúzsky.
+> Oui, je parle français.
+> Áno = oui
+> hovorím = je parle
+> po francúzsky = français
 
 ! 👦 Prepáčte, nerozumiem. Čo to znamená "dovidenia"?
 > Pardon, je ne comprends pas. Qu'est-ce que ça veut dire « dovidenia » ?

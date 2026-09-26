@@ -22,6 +22,8 @@ Les trois mots magiques qui t'ouvrent les portes : merci, s'il te plaît, et par
 | pomôž | aide |
 | pomoc | l'aide |
 | nič | rien |
+| hovoríte | vous parlez |
+| po francúzsky | français (une langue) |
 
 ---
 
@@ -42,6 +44,10 @@ C'est comment on refuse poliment quelque chose. « Non, merci ». C'est un bloc 
 ### Prepáčte
 
 Ça peut vouloir dire « pardon », « excusez-moi », ou « s'il vous plaît » (dans un sens formel, comme pour déranger quelqu'un). C'est l'arme secrète pour demander poliment dans un café ou une boutique.
+
+### Hovoríte po francúzsky?
+
+Littéralement « vous parlez en-français ? » **Po** + une langue à la forme en « -y » (francúzsky, anglicky, slovensky...) veut dire « en telle langue ». C'est probablement la question la plus utile de tout ce kit : si la réponse est oui, la moitié de tes problèmes de communication disparaissent d'un coup.
 
 ---
 
@@ -109,6 +115,19 @@ C'est comment on refuse poliment quelque chose. « Non, merci ». C'est un bloc 
 > Rien.
 > Nič = rien
 + Réponse à « Čo sa stalo? » (Qu'est-ce qui s'est passé ?) ou simplement : « T'as trouvé quoi? Nič » (Rien).
+
+! Hovoríte po francúzsky?
+> Parlez-vous français ?
+> Hovoríte = vous parlez
+> po francúzsky = français
++ La question à garder sous le coude en toute circonstance.
+
+! Áno, hovorím po francúzsky.
+> Oui, je parle français.
+> Áno = oui
+> Hovorím = je parle
+> po francúzsky = français
++ « Hovorím » est la forme « je » du même verbe que « hovoríte » (vous parlez).
 
 ---
 

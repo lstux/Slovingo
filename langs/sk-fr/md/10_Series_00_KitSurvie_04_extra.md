@@ -37,6 +37,9 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 | pomôž | aide |
 | pomoc | l'aide |
 | nič | rien, de rien |
+| hovoríte | vous parlez |
+| hovorím | je parle |
+| po francúzsky | français |
 | nie | non |
 | áno | oui |
 | veľa | beaucoup |
@@ -105,6 +108,11 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 > Prosím = s'il te plaît
 > rozumieš = tu comprends
 
+! Prepáčte, hovoríte po francúzsky?
+> Pardon, parlez-vous français ?
+> Prepáčte = pardon
+> Hovoríte po francúzsky = vous parlez français
+
 ! Rozumiem, ale to bol omyl.
 > Je comprends, mais c'était une erreur.
 > Rozumiem = je comprends
@@ -160,6 +168,6 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 
 **Tu as le minimum vital.** Avec ces quelques phrases — saluer, remercier, s'excuser, dire qu'on ne comprend pas — tu peux déjà survivre à peu près n'importe quelle interaction basique en Slovaquie. Le reste, c'est du vocabulaire : les séries vont te le donner, thème par thème.
 
-**Le vouvoiement reviendra souvent.** Tu l'as croisé dans le dialogue avec Andrea et dans plusieurs phrases ici (ako sa máte, vaše, voláte). Ne le stresse pas trop pour l'instant : les séries reprendront le sujet en détail. Pour commencer, retiens juste qu'il existe et qu'il change la forme du verbe et des possessifs.
+**Le vouvoiement reviendra souvent.** Tu l'as croisé dans le dialogue avec Andrea et dans plusieurs phrases ici (ako sa máte, vaše, voláte, hovoríte). Ne le stresse pas trop pour l'instant : les séries reprendront le sujet en détail. Pour commencer, retiens juste qu'il existe et qu'il change la forme du verbe et des possessifs.
 
 **Prêt pour la série Rodina.** La suite logique du Kit de Survie, c'est la première vraie série : la famille, les possessifs môj/moja, et les verbes byť et mať. Tu as maintenant de quoi dire bonjour, merci et pardon pendant que tu apprends tout ça.
