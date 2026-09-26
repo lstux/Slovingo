@@ -941,14 +941,20 @@ function showTtsWarning() {
  * @param {number} [pitch] Voice pitch (default from SETTINGS)
  * @param {string} [voiceURI] Voice URI (default automatic)
  * @param {HTMLElement} [highlightElement] Element to add .speaking class during playback
+ * @param {Function} [onEnd] Called once the utterance stops (finished,
+ *     cancelled, or errored) -- lets callers (e.g. exercises.js's
+ *     auto-advance) know when the audio is actually done playing,
+ *     independently of any highlightElement.
  */
-function speak(text, rate, pitch, voiceURI, highlightElement) {
+function speak(text, rate, pitch, voiceURI, highlightElement, onEnd) {
     if (!("speechSynthesis" in window)) {
         alert("Speech synthesis is not available on this device.");
+        if (onEnd) onEnd();
         return;
     }
     if (!targetVoiceAvailable) {
         showTtsWarning();
+        if (onEnd) onEnd();
         return;
     }
 
@@ -964,17 +970,26 @@ function speak(text, rate, pitch, voiceURI, highlightElement) {
     if (voice) {
         currentUtterance.voice = voice;
     }
-    
+
     // Handle visual feedback: add .speaking class to the text element during playback
     if (highlightElement) {
         currentUtterance.onstart = () => {
             highlightElement.classList.add("speaking");
         };
-        currentUtterance.onend = () => {
-            highlightElement.classList.remove("speaking");
-        };
     }
-    
+
+    // Fire onEnd exactly once, whether playback finishes normally,
+    // gets cancelled (stopSpeaking()/a new speak() call), or errors.
+    let onEndFired = false;
+    const fireOnEnd = () => {
+        if (onEndFired) return;
+        onEndFired = true;
+        if (highlightElement) highlightElement.classList.remove("speaking");
+        if (onEnd) onEnd();
+    };
+    currentUtterance.onend = fireOnEnd;
+    currentUtterance.onerror = fireOnEnd;
+
     window.speechSynthesis.speak(currentUtterance);
 }
 

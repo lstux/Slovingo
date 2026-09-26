@@ -1,6 +1,6 @@
 # Série Čas (1/5) — Koľko je hodín?
 
-@ img/cas_01_kosice_urban_tower.jpg | La tour Urbanova veža, Košice — Wikimedia Commons, CC BY-SA
+@ img/500px-ChurchMyslava15Slovakia20.JPG | Eglise de Myslava, Košice — Wikimedia Commons, CC BY-SA
 
 Demander et donner l'heure. Le piège du jour : le mot « heure » change de forme selon le chiffre, et le verbe suit.
 

@@ -182,6 +182,15 @@ function typePlayable(type) {
  */
 let autoAdvanceTimer = null;
 
+/**
+ * Bumped every time an auto-advance wait is (re)started or cancelled.
+ * markAnswer() captures the value at the start of its wait; a stray
+ * TTS "end" callback that fires after the person has already moved on
+ * (manual "Next", back/home navigation, or the next question's own
+ * wait) checks it and becomes a no-op instead of advancing twice.
+ */
+let autoAdvanceToken = 0;
+
 /** Session state, rebuilt each time a session starts. */
 const state = {
     answerMode: "choice",       // "choice" or "type"
@@ -251,9 +260,13 @@ function el(tag, options = {}, children = []) {
     return node;
 }
 
-function speakSafe(text, rate, pitch, voiceURI) {
+function speakSafe(text, rate, pitch, voiceURI, highlightElement, onEnd) {
     if (typeof speak === "function") {
-        speak(text, rate, pitch, voiceURI);
+        speak(text, rate, pitch, voiceURI, highlightElement, onEnd);
+    } else if (onEnd) {
+        // No speech synthesis wired up at all (e.g. app.js not loaded):
+        // don't leave a caller waiting on a callback that'll never fire.
+        onEnd();
     }
 }
 
@@ -1409,6 +1422,9 @@ function cancelExerciseAutoAdvance() {
         clearTimeout(autoAdvanceTimer);
         autoAdvanceTimer = null;
     }
+    // Invalidate any pending "waiting for TTS to finish" advance too,
+    // so its onEnd callback becomes a no-op if it fires later.
+    autoAdvanceToken++;
 }
 
 function goToExercise(index) {
@@ -1499,20 +1515,46 @@ function markAnswer(container, isCorrect, view, userAnswer) {
         onclick: () => goToExercise(state.current + 1),
     }));
 
-    if (canReplay) {
-        speakSafe(view.audio);
-    }
-
     // Correct answer: move on by itself after a short delay (both
     // on/off and the delay itself are Settings > Exercises), unless
     // the person clicks "Next" (or navigates away) first -- see
     // goToExercise(), which cancels this timer as soon as it runs.
     // A wrong answer always waits for an explicit click, so the
     // person can read the correction at their own pace.
+    //
+    // When the correct answer also triggers the TTS playback below,
+    // and that playback runs longer than the configured delay, we
+    // wait for it to finish before advancing -- otherwise the next
+    // question would cut the audio off mid-sentence. If the TTS
+    // finishes before the delay, the delay still applies as before.
     const autoAdvanceEnabled = !SETTINGS || SETTINGS.autoAdvanceEnabled !== false;
-    if (isCorrect && autoAdvanceEnabled) {
+    const willAutoAdvance = isCorrect && autoAdvanceEnabled;
+    // Invalidate any wait from a previous question so a late TTS
+    // "end" callback can't advance past where the person already is.
+    const advanceToken = ++autoAdvanceToken;
+    let delayElapsed = !willAutoAdvance;
+    let ttsFinished = !(willAutoAdvance && canReplay);
+
+    const maybeAdvance = () => {
+        if (advanceToken !== autoAdvanceToken) return;
+        if (delayElapsed && ttsFinished) {
+            goToExercise(state.current + 1);
+        }
+    };
+
+    if (canReplay) {
+        speakSafe(view.audio, undefined, undefined, undefined, undefined, () => {
+            ttsFinished = true;
+            maybeAdvance();
+        });
+    }
+
+    if (willAutoAdvance) {
         const delaySeconds = (SETTINGS && SETTINGS.autoAdvanceDelay) || 2;
-        autoAdvanceTimer = setTimeout(() => goToExercise(state.current + 1), delaySeconds * 1000);
+        autoAdvanceTimer = setTimeout(() => {
+            delayElapsed = true;
+            maybeAdvance();
+        }, delaySeconds * 1000);
     }
 }
 
@@ -1725,6 +1767,7 @@ function renderMatch(view) {
     const matchGrid = el("div", { className: "exo-match-grid" });
     const leftColumn = el("div", { className: "exo-match-column exo-match-left" });
     const rightBank = el("div", { className: "exo-match-bank" });
+    const dropZones = new Map();  // leftIdx -> drop zone DOM element
 
     const submit = el("button", { className: "exo-submit", text: "Check", attrs: { disabled: "disabled" } });
 
@@ -1738,108 +1781,14 @@ function renderMatch(view) {
         targetItemsToIndex.set(pair.target, idx);
     });
 
-    // Left column: source items with drop zones
-    view.sourceItems.forEach((sourceItem, leftIdx) => {
-        const pair = el("div", { className: "exo-match-pair" });
-
-        const source = el("div", {
-            className: "exo-match-item exo-match-item-left",
-            text: sourceItem,
-        });
-        pair.appendChild(source);
-
-        // Drop zone (initially empty, receives dragged items)
-        const dropZone = el("div", { className: "exo-match-drop-zone" });
-        dropZone.dataset.leftIdx = leftIdx;
-
-        dropZone.ondragover = (e) => {
-            e.preventDefault();
-            dropZone.classList.add("exo-match-drop-active");
-        };
-        dropZone.ondragleave = () => {
-            dropZone.classList.remove("exo-match-drop-active");
-        };
-        dropZone.ondrop = (e) => {
-            e.preventDefault();
-            dropZone.classList.remove("exo-match-drop-active");
-
-            if (!draggingItem.element) return;
-            const targetItem = draggingItem.element.textContent;
-            const correctIdx = targetItemsToIndex.get(targetItem);
-
-            // If there's an existing match in this slot, return it to the bank
-            if (matches.has(leftIdx)) {
-                const prevMatch = matches.get(leftIdx);
-                const prevItem = prevMatch.item;
-
-                // Create new bank item for the displaced item
-                const restoredBankItem = el("div", {
-                    className: "exo-match-item exo-match-item-right",
-                    text: prevItem,
-                });
-                restoredBankItem.draggable = true;
-                restoredBankItem.ondragstart = (e) => {
-                    draggingItem.element = restoredBankItem;
-                    draggingItem.source = "bank";
-                    restoredBankItem.classList.add("exo-match-dragging");
-                    e.dataTransfer.effectAllowed = "move";
-                };
-                restoredBankItem.ondragend = () => {
-                    restoredBankItem.classList.remove("exo-match-dragging");
-                };
-
-                rightBank.appendChild(restoredBankItem);
-                bankItems.set(prevItem, restoredBankItem);
-
-                // Remove the old matched element
-                prevMatch.element.remove();
-            }
-
-            // Remove the item from the bank if it's there
-            if (draggingItem.source === "bank" && bankItems.has(targetItem)) {
-                const bankItem = bankItems.get(targetItem);
-                bankItem.remove();
-                bankItems.delete(targetItem);
-            }
-
-            // Create matched item in drop zone
-            const matched = el("div", {
-                className: "exo-match-item exo-match-item-matched",
-                text: targetItem,
-            });
-            matched.draggable = true;
-            matched.ondragstart = (e) => {
-                draggingItem.element = matched;
-                draggingItem.source = leftIdx;  // remember this came from a drop zone
-                matched.classList.add("exo-match-dragging");
-                e.dataTransfer.effectAllowed = "move";
-            };
-            matched.ondragend = () => {
-                matched.classList.remove("exo-match-dragging");
-            };
-
-            dropZone.appendChild(matched);
-            matches.set(leftIdx, { item: targetItem, correctIdx, element: matched });
-            draggingItem.element = null;
-            draggingItem.source = null;
-
-            // Enable submit if all matched
-            if (matches.size === view.sourceItems.length) {
-                submit.disabled = false;
-            }
-        };
-        pair.appendChild(dropZone);
-        leftColumn.appendChild(pair);
-    });
-
-    // Right bank: draggable target items
-    const HOLD_DELAY = 500; // ms before drag starts on mobile
-    view.targetItems.forEach((targetItem) => {
+    /** Build a draggable item sitting in the bank (not yet matched). */
+    function createBankItem(targetItem) {
         const item = el("div", {
             className: "exo-match-item exo-match-item-right",
             text: targetItem,
         });
         item.draggable = true;
+        const HOLD_DELAY = 500; // ms before drag starts on mobile
         let holdTimeout = null;
 
         item.ondragstart = (e) => {
@@ -1854,7 +1803,7 @@ function renderMatch(view) {
         };
 
         // Mobile support: add hold-to-drag delay
-        item.ontouchstart = (e) => {
+        item.ontouchstart = () => {
             holdTimeout = setTimeout(() => {
                 // Simulate drag start after delay
                 item.classList.add("exo-match-dragging");
@@ -1865,9 +1814,115 @@ function renderMatch(view) {
             item.classList.remove("exo-match-dragging");
         };
 
-        rightBank.appendChild(item);
-        bankItems.set(targetItem, item);
+        return item;
+    }
+
+    /** Build a draggable item sitting in a drop zone (already matched to leftIdx). */
+    function createMatchedItem(targetItem, leftIdx) {
+        const matched = el("div", {
+            className: "exo-match-item exo-match-item-matched",
+            text: targetItem,
+        });
+        matched.draggable = true;
+        matched.ondragstart = (e) => {
+            draggingItem.element = matched;
+            draggingItem.source = leftIdx;  // remember this came from a drop zone
+            matched.classList.add("exo-match-dragging");
+            e.dataTransfer.effectAllowed = "move";
+        };
+        matched.ondragend = () => {
+            matched.classList.remove("exo-match-dragging");
+        };
+        return matched;
+    }
+
+    function placeInBank(targetItem) {
+        const bankItem = createBankItem(targetItem);
+        rightBank.appendChild(bankItem);
+        bankItems.set(targetItem, bankItem);
+    }
+
+    function placeInSlot(targetItem, leftIdx) {
+        const matched = createMatchedItem(targetItem, leftIdx);
+        dropZones.get(leftIdx).appendChild(matched);
+        matches.set(leftIdx, { item: targetItem, correctIdx: targetItemsToIndex.get(targetItem), element: matched });
+    }
+
+    // Left column: source items with drop zones
+    view.sourceItems.forEach((sourceItem, leftIdx) => {
+        const pair = el("div", { className: "exo-match-pair" });
+
+        const source = el("div", {
+            className: "exo-match-item exo-match-item-left",
+            text: sourceItem,
+        });
+        pair.appendChild(source);
+
+        // Drop zone (initially empty, receives dragged items)
+        const dropZone = el("div", { className: "exo-match-drop-zone" });
+        dropZone.dataset.leftIdx = leftIdx;
+        dropZones.set(leftIdx, dropZone);
+
+        dropZone.ondragover = (e) => {
+            e.preventDefault();
+            dropZone.classList.add("exo-match-drop-active");
+        };
+        dropZone.ondragleave = () => {
+            dropZone.classList.remove("exo-match-drop-active");
+        };
+        dropZone.ondrop = (e) => {
+            e.preventDefault();
+            dropZone.classList.remove("exo-match-drop-active");
+
+            if (!draggingItem.element) return;
+            const targetItem = draggingItem.element.textContent;
+            const fromSource = draggingItem.source;  // "bank" or the leftIdx it was matched to
+            draggingItem.element = null;
+            draggingItem.source = null;
+
+            // Dropped back onto the slot it already occupied: nothing to do.
+            if (fromSource === leftIdx) return;
+
+            // Whatever already sits in the target slot gets displaced.
+            const displaced = matches.has(leftIdx) ? matches.get(leftIdx).item : null;
+            if (displaced !== null) {
+                matches.get(leftIdx).element.remove();
+                matches.delete(leftIdx);
+            }
+
+            // Clear the dragged item out of wherever it came from.
+            if (fromSource === "bank") {
+                const bankItem = bankItems.get(targetItem);
+                if (bankItem) bankItem.remove();
+                bankItems.delete(targetItem);
+            } else {
+                dropZones.get(fromSource).innerHTML = "";
+                matches.delete(fromSource);
+            }
+
+            // The displaced item (if any) takes over the spot the dragged
+            // item just vacated -- back to the bank if it came from there,
+            // or into its old slot if it came from another one, so two
+            // slotted items swap places instead of one getting duplicated.
+            if (displaced !== null) {
+                if (fromSource === "bank") {
+                    placeInBank(displaced);
+                } else {
+                    placeInSlot(displaced, fromSource);
+                }
+            }
+
+            placeInSlot(targetItem, leftIdx);
+
+            // Enable submit only once every slot is filled.
+            submit.disabled = matches.size !== view.sourceItems.length;
+        };
+        pair.appendChild(dropZone);
+        leftColumn.appendChild(pair);
     });
+
+    // Right bank: draggable target items
+    view.targetItems.forEach((targetItem) => placeInBank(targetItem));
 
     submit.onclick = () => {
         // Check all matches

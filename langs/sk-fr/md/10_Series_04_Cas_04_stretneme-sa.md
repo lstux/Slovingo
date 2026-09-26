@@ -1,6 +1,6 @@
 # Série Čas (4/5) — Stretneme sa
 
-@ img/cas_04_kosice_main_station.jpg | Gare principale de Košice — Wikimedia Commons, CC BY-SA
+@ img/960px-Stanicne_namestie_Kosice_Slowakei.JPG | Gare de Košice — Wikimedia Commons, CC BY-SA
 
 Fixer un rendez-vous : y aller, arriver, attendre, se retrouver. Le verbe **ísť** est irrégulier et vaut la peine d'être appris tel quel.
 
