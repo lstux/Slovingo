@@ -1,6 +1,6 @@
 # Série Doma (5/5) — Na návšteve
 
-@ img/doma_05_kosice.jpg | Košice — Wikimedia Commons, CC BY-SA
+@ https://commons.wikimedia.org/wiki/Special:FilePath/BALTICK%C3%81_ULICA,_S%C3%8DDLISKO_NAD_JAZEROM,_KO%C5%A0ICE,_SLOVENSKO_-_01.jpg | Un quartier résidentiel à Košice — Wikimedia Commons, CC BY-SA
 
 Andrea reçoit Eric et Ján dans son appartement. Tout le vocabulaire de la série y passe, dans un échange suivi. Aucun mot nouveau, sauf ceux signalés dans les remarques.
 
