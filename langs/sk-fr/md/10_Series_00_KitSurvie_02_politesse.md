@@ -12,6 +12,7 @@ La fiche précédente t'a laissé en plan avec une question sans réponse. La vo
 |----------|----------|
 | som | je suis |
 | v poriadku | en ordre, bien, ça va |
+| dobre | bien |
 | ďakujem | merci |
 | prosím | s'il te plaît |
 | prepáčte | pardon, excusez-moi |
@@ -23,7 +24,9 @@ La fiche précédente t'a laissé en plan avec une question sans réponse. La vo
 
 ### Répondre à « Ako sa máš? »
 
-**{{Som}}** = je suis. **{{V poriadku}}** = en ordre, bien. Ensemble : **{{Som v poriadku}}** (je vais bien), littéralement « je suis en ordre ». C'est la réponse standard à {{Ako sa máš?}}. On peut aussi la raccourcir en juste **{{V poriadku}}**, moins formel.
+**{{Som}}** = je suis. **{{V poriadku}}** = en ordre, bien. Ensemble : **{{Som v poriadku}}** (je vais bien), littéralement « je suis en ordre ». C'est une réponse standard à {{Ako sa máš?}}. On peut aussi la raccourcir en juste **{{V poriadku}}**, moins formel.
+
+Il existe une autre réponse, tout aussi courante, voire plus naturelle à l'oral : **{{Dobre}}** (bien), l'adverbe de {{dobrý}} déjà croisé dans {{dobrý deň}}. **{{Som v poriadku}}** sonne un peu plus « rien à signaler, tout est correct », alors que **{{Dobre}}** est plus chaleureux, l'équivalent de notre « bien, merci ». Les deux sont interchangeables la plupart du temps.
 
 ### Prosím et ďakujem
 
@@ -53,6 +56,14 @@ Deux mots indispensables. **{{Prosím}}** = s'il te plaît / s'il vous plaît (l
 > Tiež = aussi
 > v poriadku = bien
 > ďakujem = merci
+
+! Ako sa máš? Dobre, ďakujem, a ty?
+> Comment ça va ? Bien, merci, et toi ?
+> Ako sa máš = comment ça va
+> Dobre = bien
+> ďakujem = merci
+> a ty = et toi
++ Aussi naturel que {{Som v poriadku}}, en plus court.
 
 ! Prosím.
 > S'il te plaît.
