@@ -69,7 +69,7 @@ Eric et Andrea se vouvoient : c'est leur première rencontre.
 > Prepáčte = pardon
 > nerozumiem = je ne comprends pas
 > Čo to znamená = qu'est-ce que ça veut dire
-+ « dovidenia » est un mot tout neuf : Andrea va te l'expliquer directement.
++ {{dovidenia}} est un mot tout neuf : Andrea va te l'expliquer directement.
 
 ! 👩 Dovidenia znamená "au revoir".
 > « Dovidenia » veut dire « au revoir ».
@@ -97,7 +97,7 @@ Eric et Andrea se vouvoient : c'est leur première rencontre.
 
 **Dovidenia, le au revoir formel.** Contrairement à {{Ahoj}} ou {{Čau}}, qui sont informels, {{Dovidenia}} c'est le au revoir « propre », qu'on utilise avec quelqu'un qu'on vouvoie ou qu'on rencontre pour la première fois. Retiens les deux : le formel et l'informel n'ont pas le même mot en slovaque, alors qu'en français on dit « au revoir » dans les deux cas.
 
-**« Nič » pour dire « de rien ».** Tu l'as vu dans la fiche précédente comme « rien » tout court. En réponse à un « ďakujem », ça devient l'équivalent de notre « de rien » ou « pas de quoi ».
+**« Nič » pour dire « de rien ».** Tu l'as vu dans la fiche précédente comme « rien » tout court. En réponse à un {{ďakujem}}, ça devient l'équivalent de notre « de rien » ou « pas de quoi ».
 
 ---
 
@@ -137,9 +137,9 @@ Eric et Andrea se vouvoient : c'est leur première rencontre.
 > je = est
 > vaše = votre
 > meno = prénom
-+ Vouvoiement : « vaše » (votre) au lieu de « tvoje » (ton/ta).
++ Vouvoiement : {{vaše}} (votre) au lieu de {{tvoje}} (ton/ta).
 
 ! Ako sa voláte?
 > Comment vous appelez-vous ?
 > Ako sa voláte = comment vous appelez-vous
-+ Vouvoiement de « Ako sa voláš? », vu dans la fiche précédente.
++ Vouvoiement de {{Ako sa voláš?}}, vu dans la fiche précédente.

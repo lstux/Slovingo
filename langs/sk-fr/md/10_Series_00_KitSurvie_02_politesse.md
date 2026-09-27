@@ -31,7 +31,7 @@ Les trois mots magiques qui t'ouvrent les portes : merci, s'il te plaît, et par
 
 ### Prosím et ďakujem
 
-Deux mots indispensables. **Prosím** = s'il te plaît / s'il vous plaît (le contexte décide). **Ďakujem** = merci. On peut les utiliser seuls ou les combiner avec d'autres mots.
+Deux mots indispensables. **{{Prosím}}** = s'il te plaît / s'il vous plaît (le contexte décide). **{{Ďakujem}}** = merci. On peut les utiliser seuls ou les combiner avec d'autres mots.
 
 ### Nie, ďakujem
 
@@ -39,7 +39,7 @@ C'est comment on refuse poliment quelque chose. « Non, merci ». C'est un bloc 
 
 ### Rozumieš? / Rozumiem / Nerozumiem
 
-**Rozumieš** = tu comprends ? C'est la forme interrogative. **Rozumiem** = je comprends. **Nerozumiem** = je ne comprends pas : la négation « ne- » se colle directement au verbe, un seul mot, sans équivalent du « ne... pas » français. Tu retrouveras ce mécanisme partout dans les séries.
+**{{Rozumieš}}** = tu comprends ? C'est la forme interrogative. **{{Rozumiem}}** = je comprends. **{{Nerozumiem}}** = je ne comprends pas : la négation « ne- » se colle directement au verbe, un seul mot, sans équivalent du « ne... pas » français. Tu retrouveras ce mécanisme partout dans les séries.
 
 ### Prepáčte
 
@@ -47,7 +47,7 @@ C'est comment on refuse poliment quelque chose. « Non, merci ». C'est un bloc 
 
 ### Hovoríte po francúzsky?
 
-Littéralement « vous parlez en-français ? » **Po** + une langue à la forme en « -y » (francúzsky, anglicky, slovensky...) veut dire « en telle langue ». C'est probablement la question la plus utile de tout ce kit : si la réponse est oui, la moitié de tes problèmes de communication disparaissent d'un coup.
+Littéralement « vous parlez en-français ? » **{{Po}}** + une langue à la forme en « -y » ({{francúzsky}}, {{anglicky}}, {{slovensky}}...) veut dire « en telle langue ». C'est probablement la question la plus utile de tout ce kit : si la réponse est oui, la moitié de tes problèmes de communication disparaissent d'un coup.
 
 ---
 
@@ -83,7 +83,7 @@ Littéralement « vous parlez en-français ? » **Po** + une langue à la forme 
 ! Rozumiem.
 > Je comprends.
 > Rozumiem = je comprends
-+ Le contraire de « nerozumiem », sans la négation « ne- ».
++ Le contraire de {{nerozumiem}}, sans la négation « ne- ».
 
 ! Nerozumiem.
 > Je ne comprends pas.
@@ -109,12 +109,12 @@ Littéralement « vous parlez en-français ? » **Po** + une langue à la forme 
 > À l'aide, s'il te plaît !
 > Pomoc = l'aide
 > prosím = s'il te plaît
-+ Version courte avec le nom « pomoc » au lieu du verbe « pomôž ».
++ Version courte avec le nom {{pomoc}} au lieu du verbe {{pomôž}}.
 
 ! Nič.
 > Rien.
 > Nič = rien
-+ Réponse à « Čo sa stalo? » (Qu'est-ce qui s'est passé ?) ou simplement : « T'as trouvé quoi? Nič » (Rien).
++ Réponse à {{Čo sa stalo?}} (Qu'est-ce qui s'est passé ?) ou simplement : « T'as trouvé quoi? {{Nič}} » (Rien).
 
 ! Hovoríte po francúzsky?
 > Parlez-vous français ?
@@ -127,17 +127,17 @@ Littéralement « vous parlez en-français ? » **Po** + une langue à la forme 
 > Áno = oui
 > Hovorím = je parle
 > po francúzsky = français
-+ « Hovorím » est la forme « je » du même verbe que « hovoríte » (vous parlez).
++ {{Hovorím}} est la forme « je » du même verbe que {{hovoríte}} (vous parlez).
 
 ---
 
 ## 🇸🇰 Coin slovaque
 
-**« Ďakujem » sans s'en lasser.** Les Slovaques sont polis. Tu vas entendre « ďakujem » *tout le temps* dans les interactions du quotidien. Le boulanger te donne ton pain : « ďakujem ». Tu paies : « ďakujem ». C'est rien qu'une courtoisie hyper standard — ne sois pas surpris, c'est juste comment ça marche.
+**« Ďakujem » sans s'en lasser.** Les Slovaques sont polis. Tu vas entendre {{ďakujem}} *tout le temps* dans les interactions du quotidien. Le boulanger te donne ton pain : {{ďakujem}}. Tu paies : {{ďakujem}}. C'est rien qu'une courtoisie hyper standard — ne sois pas surpris, c'est juste comment ça marche.
 
 **« Prepáčte » est multifonction.** Ça peut vouloir dire « pardon je suis maladroit », « pardon de vous déranger » (formel), ou carrément « s'il vous plaît » (quand on adresse un vrai). Le contexte décide.
 
-**« Rozumieš » en conversation.** Quand tu poses la question « Rozumieš? » à quelqu'un, c'est quasiment systématiquement suivi d'un hochement de tête. On peut aussi répondre « Rozumiem » d'un mot, sans rien ajouter.
+**« Rozumieš » en conversation.** Quand tu poses la question {{Rozumieš?}} à quelqu'un, c'est quasiment systématiquement suivi d'un hochement de tête. On peut aussi répondre {{Rozumiem}} d'un mot, sans rien ajouter.
 
 ---
 
@@ -169,14 +169,14 @@ Littéralement « vous parlez en-français ? » **Po** + une langue à la forme 
 > Ďakujem = merci
 > ale = mais
 > nie = non
-+ Plus développé que « Nie, ďakujem » mais pareil l'idée.
++ Plus développé que {{Nie, ďakujem}} mais pareil l'idée.
 
 ! To bol omyl, prepáčte.
 > C'était une erreur, pardon.
 > To bol = c'était
 > omyl = une erreur
 > prepáčte = pardon
-+ « to bol » (c'était) est une forme figée à retenir telle quelle pour l'instant.
++ {{to bol}} (c'était) est une forme figée à retenir telle quelle pour l'instant.
 
 ! To nie je chyba, to je v poriadku.
 > Ce n'est pas une faute, c'est bon.
@@ -188,4 +188,4 @@ Littéralement « vous parlez en-français ? » **Po** + une langue à la forme 
 > Je suis content que tu comprennes.
 > Som rád = je suis content
 > že rozumieš = que tu comprends
-+ « rád » au masculin ; une femme dirait « rada ».
++ {{rád}} au masculin ; une femme dirait {{rada}}.
