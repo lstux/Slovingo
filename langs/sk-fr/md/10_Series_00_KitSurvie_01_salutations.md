@@ -2,7 +2,7 @@
 
 @ TODO_img/choisir-image.jpg | TODO : choisir une image (salutations, poignée de main...) sur Wikimedia Commons
 
-Avant de lancer les séries, les trois phrases que tu vas utiliser 100 fois : dire bonjour, demander comment ça va, et dire au revoir. Rien de compliqué, juste ce qu'il faut pour ne pas paniquer à la première interaction.
+Pour commencer, seulement quatre mots : de quoi dire bonjour, demander comment ça va, et dire au revoir. La réponse à « comment ça va » arrive dans la fiche suivante — patience.
 
 ---
 
@@ -10,28 +10,22 @@ Avant de lancer les séries, les trois phrases que tu vas utiliser 100 fois : di
 
 | Slovaque | Français |
 |----------|----------|
-| dobrý | bon |
-| deň | jour |
-| večer | soir |
-| noc | nuit |
+| dobrý deň | bonjour |
+| ako sa máš | comment ça va |
 | ahoj | salut |
 | čau | ciao, au revoir |
-| ako | comment |
-| máš | tu as, tu vas |
-| som | je suis |
-| v poriadku | en ordre, bien, ok |
 
 ---
 
 ## La grammaire du jour
 
-### Dobrý deň, dobrý večer, dobrú noc
+### Dobrý deň
 
-Les salutations formelles changent selon l'heure. Simple : **{{Dobrý deň}}** le jour, **{{Dobrý večer}}** le soir (après 17-18h), **{{Dobrú noc}}** avant de dormir.
+La salutation formelle, valable toute la journée. Littéralement « bon jour ». Tu peux la sortir dans n'importe quelle situation où tu ne connais pas la personne.
 
 ### Ako sa máš?
 
-Littéralement « comment toi tu vas ? » C'est la façon la plus courante de demander comment ça va. **{{Máš}}** est la forme « tu » du verbe **{{mať}}** (avoir) : tu la retrouveras conjuguée en détail dans les séries. La réponse simple : **{{Som v poriadku}}** (je vais bien) ou juste **{{V poriadku}}** (ça va).
+Littéralement « comment toi tu vas ? ». C'est la façon la plus courante de demander comment ça va, à quelqu'un qu'on tutoie. On la garde en bloc pour l'instant — tu apprendras à y répondre dans la fiche suivante.
 
 ### Ahoj et čau
 
@@ -42,22 +36,9 @@ Les deux sont informels et signifient à peu près la même chose. **{{Ahoj}}** 
 ## Des phrases
 
 ! Dobrý deň.
-> Bonjour / Bon jour.
-> Dobrý = bon
-> deň = jour
-+ C'est la salutation formelle de la journée. Tu la dis jusqu'à vers 17-18h.
-
-! Dobrý večer.
-> Bonsoir.
-> Dobrý = bon
-> večer = soir
-+ À partir de l'heure de l'apéritif, on bascule à {{dobrý večer}}.
-
-! Dobrú noc.
-> Bonne nuit.
-> Dobrú = bonne (féminin)
-> noc = nuit
-+ On dit ça avant d'aller se coucher ou si on se dit au revoir très tard. Remarque : c'est {{dobrú}} (féminin) parce que {{noc}} est féminin.
+> Bonjour.
+> Dobrý deň = bonjour
++ La salutation formelle. Tu la dis à n'importe quelle heure de la journée.
 
 ! Ahoj!
 > Salut !
@@ -71,34 +52,27 @@ Les deux sont informels et signifient à peu près la même chose. **{{Ahoj}}** 
 
 ! Ako sa máš?
 > Comment ça va ?
-> Ako = comment
-> sa = te, se (réfléchi)
-> máš = tu vas, tu as
-+ C'est *la* phrase pour demander comment quelqu'un va. Très courante.
+> Ako sa máš = comment ça va
++ *La* phrase pour demander comment quelqu'un va. Très courante. La réponse : fiche suivante !
 
-! Som v poriadku.
-> Je vais bien.
-> Som = je suis
-> v = en, dans
-> poriadku = ordre, bien
-+ Littéralement « je suis en ordre ». C'est la réponse standard.
+! Dobrý deň! Ako sa máš?
+> Bonjour ! Comment ça va ?
+> Dobrý deň = bonjour
+> Ako sa máš = comment ça va
 
-! V poriadku. A ty?
-> Ça va. Et toi ?
-> V poriadku = ça va
-> A = et
-> ty = tu
-+ Raccourcir {{Som v poriadku}} en {{V poriadku}} c'est tout à fait normal et moins formel.
+! Ahoj! Čau!
+> Salut ! Au revoir !
+> Ahoj = salut
+> Čau = au revoir
++ Une conversation entière peut tenir en deux mots.
 
 ---
 
 ## 🇸🇰 Coin slovaque
 
-**Entre le formel et l'informel.** En slovaque, la ligne entre « vous » formel ({{vy}}) et « tu » informel ({{ty}}) existe mais elle est plus floue qu'en français. Les salutations s'adaptent : **{{Ako sa máte?}}** (formel) vs **{{Ako sa máš?}}** (informel). Pour commencer, reste à l'informel — c'est plus sympathique.
+**Entre le formel et l'informel.** En slovaque, la ligne entre « vous » formel ({{vy}}) et « tu » informel ({{ty}}) existe, comme en français. **{{Ako sa máš}}** est informel ; la version formelle existe aussi, tu la croiseras dans la fiche 3. Pour commencer, reste à l'informel — c'est plus sympathique.
 
-**Pourquoi « dobrú » et pas « dobrý »?** Parce que {{noc}} est féminin. L'adjectif {{dobrý}} s'accorde avec le genre du nom, exactement comme en français. On dit « bon jour » (masculin) mais « bonne nuit » (féminin).
-
-**« V poriadku » c'est universel.** Au-delà de « ça va », tu l'utiliseras pour dire « pas de souci », « d'accord », « c'est bon ». C'est un peu le couteau suisse du slovaque.
+**Ahoj, le couteau suisse.** C'est un des mots slovaques les plus utilisés au quotidien, parce qu'il marche dans les deux sens : arrivée et départ, un peu comme « salut » en français.
 
 ---
 
@@ -106,36 +80,21 @@ Les deux sont informels et signifient à peu près la même chose. **{{Ahoj}}** 
 
 | Slovaque | Français |
 |----------|----------|
-| voláš | tu t'appelles |
-| tu | ici |
 | priateľ | l'ami |
-| priateľka | l'amie |
 | dnes | aujourd'hui |
 
 ---
 
 ## Encore quelques phrases
 
-! Ako sa voláš?
-> Comment t'appelles-tu ?
-> Ako = comment
-> sa voláš = tu t'appelles
-+ Même mécanisme que {{Ako sa máš?}} : le petit mot {{sa}} colle au verbe.
-
-! Som tu, priateľ! Dobrý deň!
-> Je suis là, l'ami ! Bonjour !
-> Som = je suis
-> tu = ici
-> priateľ = ami
-> Dobrý deň = bonjour
-
-! Dnes som v poriadku.
-> Aujourd'hui je vais bien.
-> Dnes = aujourd'hui
-> som v poriadku = je vais bien
-
-! Ahoj priateľka!
-> Salut mon amie !
+! Ahoj priateľ!
+> Salut l'ami !
 > Ahoj = salut
-> priateľka = amie
-+ {{priateľka}} est le féminin de {{priateľ}}, comme {{dobrú}} est le féminin de {{dobrý}}.
+> priateľ = ami
+
+! Dnes je dobrý deň.
+> Aujourd'hui c'est un bon jour.
+> Dnes = aujourd'hui
+> je = est
+> dobrý deň = un bon jour
++ {{Dobrý deň}} veut dire aussi bien « bonjour » que, littéralement, « bon jour ». Ici, pas de salutation, juste une description.

@@ -2,7 +2,7 @@
 
 @ TODO_img/choisir-image.jpg | TODO : choisir une image (rencontre, deux personnes qui se saluent...) sur Wikimedia Commons
 
-Eric croise Andrea pour la première fois. Rien que des salutations et de la politesse — tout le vocabulaire des deux premières fiches, remis en situation.
+Eric croise Andrea pour la première fois. On boucle le kit avec de quoi dire qu'on ne comprend pas, demander si elle parle français — et un dernier mot tout neuf, caché dans le dialogue.
 
 ---
 
@@ -10,17 +10,13 @@ Eric croise Andrea pour la première fois. Rien que des salutations et de la pol
 
 | Slovaque | Français |
 |----------|----------|
-| dobrý deň | bonjour |
-| ako sa máte | comment allez-vous |
-| v poriadku | bien, ça va |
-| ďakujem | merci |
-| a vy | et vous |
-| prepáčte | pardon, excusez-moi |
+| rozumieš | tu comprends |
+| rozumiem | je comprends |
 | nerozumiem | je ne comprends pas |
-| čo to znamená | qu'est-ce que ça veut dire |
-| tiež | aussi |
+| čo | quoi |
+| znamená | ça veut dire |
 | hovoríte | vous parlez |
-| po francúzsky | français |
+| po francúzsky | français (une langue) |
 
 ---
 
@@ -39,6 +35,7 @@ Eric et Andrea se vouvoient : c'est leur première rencontre.
 > Bonjour ! Comment allez-vous ?
 > Dobrý deň = bonjour
 > Ako sa máte = comment allez-vous
++ {{Ako sa máte}} est la forme vouvoiement de {{Ako sa máš}}, vu en fiche 1.
 
 ! 👦 Dobrý deň. Som v poriadku, ďakujem. A vy?
 > Bonjour. Je vais bien, merci. Et vous ?
@@ -57,30 +54,31 @@ Eric et Andrea se vouvoient : c'est leur première rencontre.
 > Parlez-vous français ?
 > Hovoríte = vous parlez
 > po francúzsky = français
++ Probablement la question la plus utile de tout ce kit : si la réponse est oui, la moitié de tes problèmes de communication disparaissent d'un coup.
 
 ! 👩 Áno, hovorím po francúzsky.
 > Oui, je parle français.
 > Áno = oui
 > hovorím = je parle
 > po francúzsky = français
++ {{Hovorím}} est la forme « je » du même verbe que {{hovoríte}} (vous parlez).
 
 ! 👦 Prepáčte, nerozumiem. Čo to znamená "dovidenia"?
 > Pardon, je ne comprends pas. Qu'est-ce que ça veut dire « dovidenia » ?
 > Prepáčte = pardon
 > nerozumiem = je ne comprends pas
-> Čo to znamená = qu'est-ce que ça veut dire
+> čo... znamená = qu'est-ce que... ça veut dire
+> to = ça
 + {{dovidenia}} est un mot tout neuf : Andrea va te l'expliquer directement.
 
 ! 👩 Dovidenia znamená "au revoir".
 > « Dovidenia » veut dire « au revoir ».
 > znamená = ça veut dire
-> au revoir = au revoir
 + Andrea répond directement en donnant la traduction française — pratique quand quelqu'un ne comprend pas un mot.
 
-! 👦 Ďakujem veľa!
-> Merci beaucoup !
+! 👦 Ďakujem!
+> Merci !
 > Ďakujem = merci
-> veľa = beaucoup
 
 ! 👩 Nič! Dovidenia!
 > De rien ! Au revoir !
@@ -105,31 +103,18 @@ Eric et Andrea se vouvoient : c'est leur première rencontre.
 
 | Slovaque | Français |
 |----------|----------|
-| dovidenia | au revoir (formel) |
-| stretnutie | la rencontre |
-| po prvýkrát | pour la première fois |
-| milé | agréable, sympa |
-| poznať | connaître |
+| veľa | beaucoup |
 | meno | le prénom |
-| voláte | vous vous appelez |
+| poznať | connaître |
 
 ---
 
 ## Quelques phrases avec ce vocabulaire
 
-! To je naše prvé stretnutie.
-> C'est notre première rencontre.
-> To je = c'est
-> naše = notre
-> prvé = première
-> stretnutie = rencontre
-
-! Je milé vás poznať.
-> C'est agréable de vous connaître.
-> Je milé = c'est agréable
-> vás = vous
-> poznať = connaître
-+ Formule polie qu'on utilise à la fin d'une première rencontre, un peu comme « ravi de vous avoir rencontré » en français.
+! Ďakujem veľa!
+> Merci beaucoup !
+> Ďakujem = merci
+> veľa = beaucoup
 
 ! Aké je vaše meno?
 > Quel est votre prénom ?
@@ -139,7 +124,9 @@ Eric et Andrea se vouvoient : c'est leur première rencontre.
 > meno = prénom
 + Vouvoiement : {{vaše}} (votre) au lieu de {{tvoje}} (ton/ta).
 
-! Ako sa voláte?
-> Comment vous appelez-vous ?
-> Ako sa voláte = comment vous appelez-vous
-+ Vouvoiement de {{Ako sa voláš?}}, vu dans la fiche précédente.
+! Je milé vás poznať.
+> C'est agréable de vous connaître.
+> Je milé = c'est agréable
+> vás = vous
+> poznať = connaître
++ Formule polie qu'on utilise à la fin d'une première rencontre, un peu comme « ravi de vous avoir rencontré » en français.
