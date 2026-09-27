@@ -95,7 +95,7 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 > Merci beaucoup ! Je suis content.
 > Ďakujem veľa = merci beaucoup
 > Som rád = je suis content
-+ Une femme dirait « som rada ».
++ Une femme dirait {{som rada}}.
 
 ! Nie, ďakujem, to je v poriadku.
 > Non merci, ça va comme ça.
@@ -168,6 +168,6 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 
 **Tu as le minimum vital.** Avec ces quelques phrases — saluer, remercier, s'excuser, dire qu'on ne comprend pas — tu peux déjà survivre à peu près n'importe quelle interaction basique en Slovaquie. Le reste, c'est du vocabulaire : les séries vont te le donner, thème par thème.
 
-**Le vouvoiement reviendra souvent.** Tu l'as croisé dans le dialogue avec Andrea et dans plusieurs phrases ici (ako sa máte, vaše, voláte, hovoríte). Ne le stresse pas trop pour l'instant : les séries reprendront le sujet en détail. Pour commencer, retiens juste qu'il existe et qu'il change la forme du verbe et des possessifs.
+**Le vouvoiement reviendra souvent.** Tu l'as croisé dans le dialogue avec Andrea et dans plusieurs phrases ici ({{ako sa máte}}, {{vaše}}, {{voláte}}, {{hovoríte}}). Ne le stresse pas trop pour l'instant : les séries reprendront le sujet en détail. Pour commencer, retiens juste qu'il existe et qu'il change la forme du verbe et des possessifs.
 
-**Prêt pour la série Rodina.** La suite logique du Kit de Survie, c'est la première vraie série : la famille, les possessifs môj/moja, et les verbes byť et mať. Tu as maintenant de quoi dire bonjour, merci et pardon pendant que tu apprends tout ça.
+**Prêt pour la série Rodina.** La suite logique du Kit de Survie, c'est la première vraie série : la famille, les possessifs {{môj}}/{{moja}}, et les verbes {{byť}} et {{mať}}. Tu as maintenant de quoi dire bonjour, merci et pardon pendant que tu apprends tout ça.

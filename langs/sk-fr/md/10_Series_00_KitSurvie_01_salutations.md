@@ -27,15 +27,15 @@ Avant de lancer les séries, les trois phrases que tu vas utiliser 100 fois : di
 
 ### Dobrý deň, dobrý večer, dobrú noc
 
-Les salutations formelles changent selon l'heure. Simple : **Dobrý deň** le jour, **Dobrý večer** le soir (après 17-18h), **Dobrú noc** avant de dormir.
+Les salutations formelles changent selon l'heure. Simple : **{{Dobrý deň}}** le jour, **{{Dobrý večer}}** le soir (après 17-18h), **{{Dobrú noc}}** avant de dormir.
 
 ### Ako sa máš?
 
-Littéralement « comment toi tu vas ? » C'est la façon la plus courante de demander comment ça va. **Máš** est la forme « tu » du verbe **mať** (avoir) : tu la retrouveras conjuguée en détail dans les séries. La réponse simple : **Som v poriadku** (je vais bien) ou juste **V poriadku** (ça va).
+Littéralement « comment toi tu vas ? » C'est la façon la plus courante de demander comment ça va. **{{Máš}}** est la forme « tu » du verbe **{{mať}}** (avoir) : tu la retrouveras conjuguée en détail dans les séries. La réponse simple : **{{Som v poriadku}}** (je vais bien) ou juste **{{V poriadku}}** (ça va).
 
 ### Ahoj et čau
 
-Les deux sont informels et signifient à peu près la même chose. **Ahoj** peut être bonjour *ou* au revoir selon le contexte. **Čau** c'est surtout au revoir, plus désinvolte.
+Les deux sont informels et signifient à peu près la même chose. **{{Ahoj}}** peut être bonjour *ou* au revoir selon le contexte. **{{Čau}}** c'est surtout au revoir, plus désinvolte.
 
 ---
 
@@ -51,13 +51,13 @@ Les deux sont informels et signifient à peu près la même chose. **Ahoj** peut
 > Bonsoir.
 > Dobrý = bon
 > večer = soir
-+ À partir de l'heure de l'apéritif, on bascule à « dobrý večer ».
++ À partir de l'heure de l'apéritif, on bascule à {{dobrý večer}}.
 
 ! Dobrú noc.
 > Bonne nuit.
 > Dobrú = bonne (féminin)
 > noc = nuit
-+ On dit ça avant d'aller se coucher ou si on se dit au revoir très tard. Remarque : c'est « dobrú » (féminin) parce que « noc » est féminin.
++ On dit ça avant d'aller se coucher ou si on se dit au revoir très tard. Remarque : c'est {{dobrú}} (féminin) parce que {{noc}} est féminin.
 
 ! Ahoj!
 > Salut !
@@ -88,15 +88,15 @@ Les deux sont informels et signifient à peu près la même chose. **Ahoj** peut
 > V poriadku = ça va
 > A = et
 > ty = tu
-+ Raccourcir « Som v poriadku » en « V poriadku » c'est tout à fait normal et moins formel.
++ Raccourcir {{Som v poriadku}} en {{V poriadku}} c'est tout à fait normal et moins formel.
 
 ---
 
 ## 🇸🇰 Coin slovaque
 
-**Entre le formel et l'informel.** En slovaque, la ligne entre « vous » formel (vy) et « tu » informel (ty) existe mais elle est plus floue qu'en français. Les salutations s'adaptent : **Ako sa máte?** (formel) vs **Ako sa máš?** (informel). Pour commencer, reste à l'informel — c'est plus sympathique.
+**Entre le formel et l'informel.** En slovaque, la ligne entre « vous » formel ({{vy}}) et « tu » informel ({{ty}}) existe mais elle est plus floue qu'en français. Les salutations s'adaptent : **{{Ako sa máte?}}** (formel) vs **{{Ako sa máš?}}** (informel). Pour commencer, reste à l'informel — c'est plus sympathique.
 
-**Pourquoi « dobrú » et pas « dobrý »?** Parce que « noc » est féminin. L'adjectif « dobrý » s'accorde avec le genre du nom, exactement comme en français. On dit « bon jour » (masculin) mais « bonne nuit » (féminin).
+**Pourquoi « dobrú » et pas « dobrý »?** Parce que {{noc}} est féminin. L'adjectif {{dobrý}} s'accorde avec le genre du nom, exactement comme en français. On dit « bon jour » (masculin) mais « bonne nuit » (féminin).
 
 **« V poriadku » c'est universel.** Au-delà de « ça va », tu l'utiliseras pour dire « pas de souci », « d'accord », « c'est bon ». C'est un peu le couteau suisse du slovaque.
 
@@ -120,7 +120,7 @@ Les deux sont informels et signifient à peu près la même chose. **Ahoj** peut
 > Comment t'appelles-tu ?
 > Ako = comment
 > sa voláš = tu t'appelles
-+ Même mécanisme que « Ako sa máš? » : le petit mot « sa » colle au verbe.
++ Même mécanisme que {{Ako sa máš?}} : le petit mot {{sa}} colle au verbe.
 
 ! Som tu, priateľ! Dobrý deň!
 > Je suis là, l'ami ! Bonjour !
@@ -138,4 +138,4 @@ Les deux sont informels et signifient à peu près la même chose. **Ahoj** peut
 > Salut mon amie !
 > Ahoj = salut
 > priateľka = amie
-+ « priateľka » est le féminin de « priateľ », comme « dobrú » est le féminin de « dobrý ».
++ {{priateľka}} est le féminin de {{priateľ}}, comme {{dobrú}} est le féminin de {{dobrý}}.
