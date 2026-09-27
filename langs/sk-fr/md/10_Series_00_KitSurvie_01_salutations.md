@@ -2,7 +2,7 @@
 
 @ TODO_img/choisir-image.jpg | TODO : choisir une image (salutations, poignée de main...) sur Wikimedia Commons
 
-Pour commencer, seulement quatre mots : de quoi dire bonjour, demander comment ça va, et dire au revoir. La réponse à « comment ça va » arrive dans la fiche suivante — patience.
+Pour commencer, seulement quatre mots : {{dobrý deň}} (bonjour), {{ako sa máš}} (comment ça va), {{ahoj}} et {{čau}} (au revoir). La réponse à {{ako sa máš}} arrive dans la fiche suivante — patience.
 
 ---
 

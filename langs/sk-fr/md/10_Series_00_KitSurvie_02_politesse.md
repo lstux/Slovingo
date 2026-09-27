@@ -2,7 +2,7 @@
 
 @ TODO_img/choisir-image.jpg | TODO : choisir une image (politesse, savoir-vivre...) sur Wikimedia Commons
 
-La fiche précédente t'a laissé en plan avec une question sans réponse. La voici, plus les mots magiques qui t'ouvrent les portes : merci, s'il te plaît, pardon.
+La fiche précédente t'a laissé en plan avec {{ako sa máš}} sans réponse. La voici, plus les mots magiques qui t'ouvrent les portes : {{ďakujem}} (merci), {{prosím}} (s'il te plaît), {{prepáčte}} (pardon).
 
 ---
 
