@@ -1,8 +1,22 @@
 Les fiches série utilisent le format SMD. Elles sont regroupées en séries thématiques de 5 fiches progressives, complétées par une 6e fiche "extra" servant de base d'exercices.
 
-Les noms de fichier sont de la forme NN_Serie_XX_NomSerie_YY_titre.md, où XX est le numéro d'ordre de la série dans la progression générale, NomSerie son nom court, et YY le numéro de la fiche au sein de la série (le tout sur 2 chiffres).
+Les noms de fichier suivent le schéma générique de la plateforme :
+XX_Category_XX_[Sous-groupe_]XX_Titre.md (voir parse_sheet_filename() dans
+src/smd2data.py). Pour une fiche série, Category vaut Series (au pluriel),
+et le sous-groupe est le nom court de la série :
 
-Exemple : 10_Serie_01_Rodina_03_praca.md
+10_Series_XX_NomSerie_YY_titre.md
+
+où XX est le numéro d'ordre de la série dans la progression générale, et YY
+le numéro de la fiche au sein de la série (le tout sur 2 chiffres).
+
+Exemple : 10_Series_01_Rodina_03_praca.md
+
+Ce même schéma de nommage sert aussi à d'autres catégories que ce document
+ne couvre pas (Introduction, Vocabulary, Annex...), ainsi qu'à des
+catégories propres à une instance de langue donnée (par ex. Kronica ou
+Merci dans le cours sk-fr), qui suivent leur propre format éditorial et
+sortent du cadre de ce document.
 
 # Objectif
 
@@ -40,8 +54,8 @@ Six à huit audio-cards utilisant le vocabulaire et la grammaire du jour. Pas d'
 ## On révise
 (à partir de la fiche 02) Deux à quatre audio-cards utilisant EXCLUSIVEMENT le vocabulaire des fiches précédentes de la série, éventuellement combiné à la grammaire du jour.
 
-## Coin culture
-Deux ou trois paragraphes courts sur un aspect culturel lié au thème, avec un titre en gras. Les mots en langue apprise y sont marqués {{...}} pour être prononçables.
+## 🇽🇽 Coin <langue>
+(ex. "🇸🇰 Coin slovaque" pour le cours sk-fr) Deux ou trois paragraphes courts sur un aspect culturel lié au thème, avec un titre en gras. Les mots en langue apprise y sont marqués {{...}} pour être prononçables.
 
 ## Vocabulaire complémentaire
 Une translate-table d'environ 7 mots non utilisés plus haut.
@@ -57,9 +71,9 @@ Titre, illustration, courte introduction au contexte.
 Liste émoticône + nom, comme les fiches dialogue.
 
 ## Le dialogue
-Une suite d'audio-cards formant un échange suivi. L'émoticône du locuteur est placée DANS la audio-card, avant le texte slovaque.
+Une suite d'audio-cards formant un échange suivi. L'émoticône du locuteur est placée DANS la audio-card, avant le texte en langue apprise (voir "Marqueur de locuteur" dans Format-SMD.txt).
 
-## Coin culture
+## 🇽🇽 Coin <langue>
 
 ## Encore quelques phrases
 Quelques cartes de réemploi hors dialogue.

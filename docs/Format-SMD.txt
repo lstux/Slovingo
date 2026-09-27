@@ -52,6 +52,20 @@ Règles :
 - les lignes commençant par "+" sont des remarques, explications ou notes grammaticales ;
 - plusieurs lignes ">" et "+" sont autorisées.
  
+Marqueur de locuteur (dialogues) :
+
+Dans une fiche dialogue, une audio-card peut être préfixée par un émoji
+désignant le locuteur :
+
+! 💬 Vstávali sme na bugel, o siedmej ráno.
+> On se levait au clairon, à sept heures du matin.
+
+Règle de détection (voir split_speaker() dans src/smd2data.py) : sur la
+ligne "!", le premier "mot" (séparé par un espace) est traité comme
+émoji-locuteur s'il ne contient aucun caractère alphabétique. Une section
+(H2/H3) entièrement composée d'audio-cards ayant chacune un émoji-locuteur
+est automatiquement marquée comme section de dialogue par le convertisseur.
+
 Le convertisseur génère une structure HTML du type :
  
 <div class="audio-card">
@@ -105,7 +119,34 @@ Le Javascript ajoute automatiquement le comportement de lecture.
 Cette syntaxe peut être utilisée partout (paragraphes, listes, tableaux, cartes audio...).
  
 ---
- 
+
+4. Illustration
+
+Permet d'ajouter une image en tête de fiche (ou, plus rarement, au milieu du contenu). Deux syntaxes équivalentes sont acceptées :
+
+Syntaxe SMD :
+
+@ img/fichier.jpg | Légende
+
+Syntaxe Markdown classique (également supportée) :
+
+![Légende](img/fichier.jpg)
+
+ou, avec un titre distinct de l'alt-text (le titre est alors utilisé comme légende) :
+
+![alt](img/fichier.jpg "Légende")
+
+Les deux formes produisent :
+
+<figure class="fiche-illustration">
+    <img src="img/fichier.jpg" alt="Légende">
+    <figcaption>Légende</figcaption>
+</figure>
+
+Le caractère @ est choisi pour ne pas entrer en collision avec "!" (audio-card), ">" (traduction), "+" (remarque). Voir Fiches-Serie.txt pour le détail du workflow éditorial (sourcing Wikimedia Commons, rapatriement local des images).
+
+---
+
 Résumé de la syntaxe
  
 Syntaxe| Signification
@@ -115,6 +156,8 @@ premier ">"| Traduction naturelle
 autres ">"| Traduction littérale / décomposition
 "+"| Remarques, notes, explications
 "{{...}}"| Élément prononçable (speakable)
+émoji en tête de "!"| Marqueur de locuteur (dialogues)
+"@ url \| légende" ou "![alt](url)"| Illustration
  
 ---
  
