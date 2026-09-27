@@ -1,0 +1,164 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-som",
+      "type": "qcm",
+      "l1": "som",
+      "l2": "je suis",
+      "choices_l1": [
+        "v poriadku",
+        "ďakujem",
+        "prosím"
+      ],
+      "choices_l2": [
+        "c'est bien",
+        "merci",
+        "s'il te plaît"
+      ]
+    },
+    {
+      "id": "qcm-vporiadku",
+      "type": "qcm",
+      "l1": "v poriadku",
+      "l2": "en ordre, bien, ça va",
+      "choices_l1": [
+        "som",
+        "ďakujem",
+        "prosím"
+      ],
+      "choices_l2": [
+        "je suis",
+        "merci",
+        "s'il te plaît"
+      ]
+    },
+    {
+      "id": "qcm-dakujem",
+      "type": "qcm",
+      "l1": "ďakujem",
+      "l2": "merci",
+      "choices_l1": [
+        "som",
+        "v poriadku",
+        "prosím"
+      ],
+      "choices_l2": [
+        "je suis",
+        "bien",
+        "s'il te plaît"
+      ]
+    },
+    {
+      "id": "qcm-prosim",
+      "type": "qcm",
+      "l1": "prosím",
+      "l2": "s'il te plaît",
+      "choices_l1": [
+        "som",
+        "ďakujem",
+        "v poriadku"
+      ],
+      "choices_l2": [
+        "je suis",
+        "merci",
+        "bien"
+      ]
+    },
+    {
+      "id": "qcm-prepacte",
+      "type": "qcm",
+      "l1": "prepáčte",
+      "l2": "pardon, excusez-moi",
+      "choices_l1": [
+        "ďakujem",
+        "prosím",
+        "tiež"
+      ],
+      "choices_l2": [
+        "merci",
+        "s'il te plaît",
+        "aussi"
+      ]
+    },
+    {
+      "id": "qcm-tiez",
+      "type": "qcm",
+      "l1": "tiež",
+      "l2": "aussi",
+      "choices_l1": [
+        "nie",
+        "áno",
+        "pomoc"
+      ],
+      "choices_l2": [
+        "non",
+        "oui",
+        "aide"
+      ]
+    },
+    {
+      "id": "qcm-nie",
+      "type": "qcm",
+      "l1": "nie",
+      "l2": "non",
+      "choices_l1": [
+        "tiež",
+        "áno",
+        "pomoc"
+      ],
+      "choices_l2": [
+        "aussi",
+        "oui",
+        "aide"
+      ]
+    },
+    {
+      "id": "qcm-ano",
+      "type": "qcm",
+      "l1": "áno",
+      "l2": "oui",
+      "choices_l1": [
+        "nie",
+        "tiež",
+        "pomoc"
+      ],
+      "choices_l2": [
+        "non",
+        "aussi",
+        "aide"
+      ]
+    },
+    {
+      "id": "match-politesse",
+      "type": "match",
+      "l1": [
+        "Ako sa máš? Som v poriadku, ďakujem.",
+        "Tiež v poriadku, ďakujem.",
+        "Prosím.",
+        "Ďakujem."
+      ],
+      "l2": [
+        "Comment ça va ? Je vais bien, merci.",
+        "Bien aussi, merci.",
+        "S'il te plaît.",
+        "Merci."
+      ]
+    },
+    {
+      "id": "match-politesse-extended",
+      "type": "match",
+      "l1": [
+        "Prepáčte!",
+        "Nie, ďakujem.",
+        "Áno, prosím.",
+        "Pomôž mi, prosím."
+      ],
+      "l2": [
+        "Pardon ! Excusez-moi !",
+        "Non, merci.",
+        "Oui, s'il te plaît.",
+        "Aide-moi, s'il te plaît."
+      ]
+    }
+  ]
+}
