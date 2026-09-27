@@ -4,8 +4,9 @@ Ce document couvre deux systèmes de substitution qui n'ont rien à voir avec
 le format SMD proprement dit (voir Format-SMD.txt) : au lieu d'être résolus
 au build par smd2data.py, ils sont écrits tels quels dans le texte, restent
 tels quels dans data.json / exercises.json, et ne sont résolus qu'au moment
-de l'affichage, côté navigateur (app.js pour USER_NAME/ASK_USER_NAME,
-exercises.js pour RANDOM/SHUFFLE). Ils peuvent apparaître partout où du
+de l'affichage, côté navigateur (app.js pour USER_NAME/ASK_USER_NAME dans
+les fiches, exercises.js pour RANDOM/SHUFFLE et USER_NAME/ASK_USER_NAME
+dans les exercices). Ils peuvent apparaître partout où du
 texte libre est autorisé : paragraphes, audio-cards (texte, traduction,
 remarque), coin culture, etc.
 
@@ -48,15 +49,15 @@ Stockage : localStorage, clé `${storage_prefix || "slovingo"}-user-name`
 chaque instance de langue déployée sur un même domaine/navigateur, pas
 partagé entre plusieurs cours si storage_prefix diffère.
 
-ATTENTION — portée limitée à l'affichage d'une fiche : la résolution de
-[USER_NAME] / [ASK_USER_NAME] est faite par renderText() dans app.js,
-uniquement quand une fiche est affichée normalement. Le moteur d'exercices
-(exercises.js) ne les résout PAS : si une audio-card contenant l'un de ces
-marqueurs est reprise telle quelle par smd2exercises.py dans un exercice,
-le marqueur apparaîtra littéralement ("[USER_NAME]") dans l'exercice au
-lieu d'être résolu. À éviter, donc, dans du texte susceptible de devenir
-matière à exercice (voir Fiches-revisions / la logique de smd2exercises.py
-côté corpus) sans vérification a posteriori du rendu en mode exercice.
+Dans les exercices : exercises.js résout aussi ces deux marqueurs, au
+moment d'afficher chaque question (substituteUserName(), appliqué aux
+mêmes champs que RANDOM/SHUFFLE : l1, l2, missing_*, choices_*, tokens_*).
+Comme il n'y a rien à saisir dans un exercice, [USER_NAME] et
+[ASK_USER_NAME] y deviennent tous les deux le nom mémorisé (ou
+site.user_name_default si aucun nom n'a été saisi). Une audio-card
+personnalisée reprise par smd2exercises.py s'affiche donc correctement,
+et un changement de nom dans les Paramètres s'applique dès la question
+suivante, sans régénérer exercises.json.
 
 ---
 

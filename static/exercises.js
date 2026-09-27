@@ -492,6 +492,30 @@ function substituteRandomVariables(text, context) {
 }
 
 /**
+ * Resolve [USER_NAME] / [ASK_USER_NAME] in exercise text.
+ *
+ * In a sheet, app.js's renderText() turns these into a live span / an
+ * input field. In an exercise there is nothing to type into, so both
+ * simply become the learner's stored name (or lang.json ->
+ * site.user_name_default when none was entered yet). Resolved at display
+ * time, like RANDOM/SHUFFLE, so a name changed in Settings applies to
+ * the next question without regenerating exercises.json.
+ */
+const USER_NAME_PLACEHOLDER_REGEX = /\[(?:ASK_)?USER_NAME\]/g;
+
+function currentUserNameForExercises() {
+    const stored = (typeof window !== "undefined" && window.USER_NAME) || "";
+    if (stored) return stored;
+    return (typeof LANG !== "undefined" && LANG && LANG.site && LANG.site.user_name_default) || "";
+}
+
+function substituteUserName(text) {
+    if (typeof text !== "string" || text.indexOf("USER_NAME]") === -1) return text;
+    const name = currentUserNameForExercises();
+    return text.replace(USER_NAME_PLACEHOLDER_REGEX, () => name);
+}
+
+/**
  * Main entry point: process all RANDOM/SHUFFLE in an exercise.
  * Scans all text/list fields, generates values once, substitutes everywhere.
  */
@@ -516,16 +540,18 @@ function processRandomVariablesInExercise(exercise) {
         // Generate all values once
         const filledContext = generateRandomValues(declarations);
 
-        // Substitute in each field
+        // Substitute in each field (RANDOM/SHUFFLE, then [USER_NAME])
         const processed = { ...exercise };
         for (const field of textFields) {
             if (field in processed) {
                 const value = processed[field];
                 if (typeof value === 'string') {
-                    processed[field] = substituteRandomVariables(value, filledContext);
+                    processed[field] = substituteUserName(substituteRandomVariables(value, filledContext));
                 } else if (Array.isArray(value)) {
                     processed[field] = value.map(item =>
-                        typeof item === 'string' ? substituteRandomVariables(item, filledContext) : item
+                        typeof item === 'string'
+                            ? substituteUserName(substituteRandomVariables(item, filledContext))
+                            : item
                     );
                 }
             }
