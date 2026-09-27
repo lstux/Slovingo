@@ -174,4 +174,12 @@ Le CSS gère la présentation.
 Le Javascript ajoute le comportement interactif (lecture audio, boutons, affichage des traductions, recherche, etc.).
  
 Cette séparation permet de faire évoluer librement le rendu HTML, le CSS ou le Javascript sans modifier les fichiers SMD.
+
+---
+
+Voir aussi
+
+Deux systèmes de substitution supplémentaires existent, résolus côté
+navigateur au moment de l'affichage plutôt qu'au build ([USER_NAME] /
+[ASK_USER_NAME], RANDOM(...) / SHUFFLE_id) : voir Placeholders-Dynamiques.txt.
  

@@ -1,0 +1,121 @@
+Placeholders dynamiques (USER_NAME, RANDOM, SHUFFLE)
+
+Ce document couvre deux systèmes de substitution qui n'ont rien à voir avec
+le format SMD proprement dit (voir Format-SMD.txt) : au lieu d'être résolus
+au build par smd2data.py, ils sont écrits tels quels dans le texte, restent
+tels quels dans data.json / exercises.json, et ne sont résolus qu'au moment
+de l'affichage, côté navigateur (app.js pour USER_NAME/ASK_USER_NAME,
+exercises.js pour RANDOM/SHUFFLE). Ils peuvent apparaître partout où du
+texte libre est autorisé : paragraphes, audio-cards (texte, traduction,
+remarque), coin culture, etc.
+
+---
+
+1. Personnalisation par le nom de l'apprenant
+
+[USER_NAME]
+
+Affiche le nom que l'apprenant a renseigné (mémorisé dans son navigateur,
+en localStorage). Tant qu'aucun nom n'a été saisi, retombe sur
+lang.json → site.user_name_default.
+
+[ASK_USER_NAME]
+
+Affiche un champ de saisie en ligne (input texte), pré-rempli avec le nom
+déjà mémorisé le cas échéant, avec pour placeholder
+lang.json → site.user_name_placeholder. Ce que l'apprenant tape est
+sauvegardé en live (à chaque frappe, et sur Entrée) et met immédiatement à
+jour tous les [USER_NAME] déjà affichés sur la page, sans rechargement.
+
+Exemple (00_Introduction_04_qui-es-tu.md) :
+
+! 👤 Volám sa [ASK_USER_NAME].
+> Je m'appelle [ASK_USER_NAME].
+
+! 👩 Teší ma, [USER_NAME]! Som rada.
+> Enchantée, [USER_NAME] ! Je suis heureuse !
+
+Configuration (lang.json → site) :
+
+| Clé                    | Rôle                                                  |
+|------------------------|--------------------------------------------------------|
+| user_name_default      | Valeur affichée par [USER_NAME] avant toute saisie     |
+| user_name_placeholder  | Placeholder du champ [ASK_USER_NAME]                   |
+| storage_prefix         | Préfixe de la clé localStorage (namespacing par cours) |
+
+Stockage : localStorage, clé `${storage_prefix || "slovingo"}-user-name`
+(voir userNameKey() dans static/settings.js) — le nom est donc propre à
+chaque instance de langue déployée sur un même domaine/navigateur, pas
+partagé entre plusieurs cours si storage_prefix diffère.
+
+ATTENTION — portée limitée à l'affichage d'une fiche : la résolution de
+[USER_NAME] / [ASK_USER_NAME] est faite par renderText() dans app.js,
+uniquement quand une fiche est affichée normalement. Le moteur d'exercices
+(exercises.js) ne les résout PAS : si une audio-card contenant l'un de ces
+marqueurs est reprise telle quelle par smd2exercises.py dans un exercice,
+le marqueur apparaîtra littéralement ("[USER_NAME]") dans l'exercice au
+lieu d'être résolu. À éviter, donc, dans du texte susceptible de devenir
+matière à exercice (voir Fiches-revisions / la logique de smd2exercises.py
+côté corpus) sans vérification a posteriori du rendu en mode exercice.
+
+---
+
+2. Variables aléatoires (RANDOM, SHUFFLE)
+
+Système indépendant du précédent, entièrement gèré par exercises.js (voir
+processRandomVariablesInExercise()) : il n'a de sens QUE dans un exercice,
+jamais dans l'affichage normal d'une fiche (app.js ne le résout pas).
+Comme il opère sur le texte déjà présent dans exercises.json, il peut être
+écrit soit directement dans une audio-card d'un .md dont le texte finit
+dans un exercice généré, soit directement dans une exception d'exercice à
+la main (json/*.exercises.json / exercises/).
+
+Déclaration :
+
+RANDOM(id, max)
+RANDOM(id, min, max)
+RANDOM(id, min, max, step)
+
+- id : identifiant arbitraire (lettres/chiffres/underscore), à déclarer une
+  seule fois par exercice (duplicate = erreur).
+- Une seule valeur de max donnée → min vaut 0 implicitement.
+- step (défaut 1) : pas de la valeur ; step non entier (ex. 0.25) → valeur
+  finale flottante (arrondie à 2 décimales par SHUFFLE, voir plus bas).
+- min > max est toléré : les deux bornes sont échangées silencieusement.
+
+Réutilisation :
+
+RANDOM_id     -- réutilise la valeur déjà tirée pour id (même exercice)
+SHUFFLE_id    -- génère un distracteur plausible autour de la valeur de id
+                 (±1, ±step, ±2×step, et ±0.5×step si step est flottant),
+                 jamais deux fois la même valeur pour un même id
+
+Toute référence à un id non déclaré par un RANDOM(...) dans le même
+exercice est une erreur (l'exercice n'est pas affiché, erreur en console).
+
+Exemple :
+
+Question : Quel est RANDOM(x, 0, 100, 10) + 5 ?
+Réponse : RANDOM_x + 5
+Distracteurs : SHUFFLE_x, SHUFFLE_x, SHUFFLE_x
+
+→ à l'affichage (x tiré à 30 par exemple) :
+
+Question : Quel est 30 + 5 ?
+Réponse : 35
+Distracteurs : 29, 40, 20   (exemple ; valeurs différentes à chaque tirage)
+
+Cycle de vie : le tirage se fait une fois par affichage de l'exercice — si
+l'apprenant revient sur le même exercice plus tard, les valeurs sont
+retirées (reroll). Tous les champs de l'exercice (l1, l2, choices_l1/l2,
+tokens_l1/l2, missing_l1/l2...) partagent le même contexte de tirage : un
+RANDOM(x, ...) déclaré dans l'énoncé (l1) est utilisable via RANDOM_x /
+SHUFFLE_x dans les choix ou la réponse, quel que soit le champ.
+
+Zéro configuration nécessaire côté lang.json : ce système ne dépend
+d'aucune clé de config, contrairement à USER_NAME/ASK_USER_NAME.
+
+À ce jour (2026-09-27), ce système n'est pas encore utilisé dans le
+contenu sk-fr existant (aucune occurrence de RANDOM(/SHUFFLE_ dans
+langs/sk-fr/md ou langs/sk-fr/exercises) — il est disponible mais pas
+encore éprouvé sur du contenu réel.
