@@ -44,7 +44,7 @@ Fixer un rendez-vous : y aller, arriver, attendre, se retrouver. Le verbe **ís�
 | vy prídete | vous arrivez |
 | oni prídu | ils / elles arrivent |
 
-*Prísť* est *ísť* avec le préfixe **prí-**, et la conjugaison suit le même moule.
+*Prísť* est *ísť* avec le préfixe **prí-**, et la conjugaison suit le même moule. Attention : ce présent a en fait un sens de futur proche — {{prídem}}, c'est « j'arrive (tout à l'heure) », jamais « je suis en train d'arriver ».
 
 ---
 
@@ -130,7 +130,7 @@ Fixer un rendez-vous : y aller, arriver, attendre, se retrouver. Le verbe **ís�
 
 ## 🇸🇰 Coin slovaque
 
-**Le train plutôt que la voiture.** Le réseau ferroviaire est dense et bon marché, et les jeunes ainsi que les retraités voyagent gratuitement sur les trains nationaux depuis plusieurs années. Les gares sont donc de vrais lieux de rendez-vous.
+**Le train plutôt que la voiture.** Le réseau ferroviaire est dense et bon marché, et les étudiants comme les seniors peuvent, sous conditions, voyager gratuitement sur les trains nationaux. Les gares sont donc de vrais lieux de rendez-vous.
 
 **Ísť et chodiť ne sont pas interchangeables.** {{Ísť}} décrit un trajet précis en cours ou prévu, {{chodiť}} une habitude. « J'y vais maintenant » et « j'y vais tous les mardis » n'utilisent pas le même verbe. Pour l'instant, *ísť* suffira.
 

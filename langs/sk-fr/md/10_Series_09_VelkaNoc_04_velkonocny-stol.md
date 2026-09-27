@@ -2,7 +2,7 @@
 
 @ img/velkanoc_04_village_museum.jpg | Musée du village liptovien — Wikimedia Commons, CC BY-SA
 
-Le repas de Pâques, avec ses plats bien précis qu'on ne mange qu'à cette occasion. On révise ici l'accusatif de la série Jedlo, et on ajoute le passé négatif complet.
+Le repas de Pâques, avec ses plats bien précis qu'on ne mange qu'à cette occasion. On révise ici l'accusatif, et le passé au négatif.
 
 ---
 
@@ -13,7 +13,7 @@ Le repas de Pâques, avec ses plats bien précis qu'on ne mange qu'à cette occa
 | baránok | l'agneau (petit, pascal) |
 | šunka | le jambon |
 | chren | le raifort |
-| syrová nátierka | la tartinade au fromage |
+| hrudka | le « fromage » pascal aux œufs |
 | požehnať | bénir |
 | jesť | manger |
 | stôl | la table |
@@ -36,9 +36,9 @@ Le repas de Pâques, avec ses plats bien précis qu'on ne mange qu'à cette occa
 | Jem šunku. | Je mange du jambon. |
 | Jem baránka. | Je mange de l'agneau. |
 | Mám chren. | J'ai du raifort. |
-| Chcem syrovú nátierku. | Je veux de la tartinade au fromage. |
+| Chcem hrudku. | Je veux de la hrudka. |
 
-Ce sont exactement les mêmes mécanismes que dans la série Jedlo : les féminins en -a passent à -u, les adjectifs s'accordent.
+Les féminins en -a passent à -u, les adjectifs s'accordent. Nouveauté : les masculins **animés** (personnes, animaux) prennent -a — {{baránok}} devient {{baránka}}, comme {{brat}} devient {{brata}}.
 
 ---
 
@@ -59,11 +59,12 @@ Ce sont exactement les mêmes mécanismes que dans la série Jedlo : les fémini
 > jedlo = la nourriture
 > pred obedom = avant le déjeuner
 
-! Jedli sme baránka a syrovú nátierku.
+! Jedli sme baránka a hrudku.
 > Nous avons mangé de l'agneau et de la tartinade au fromage.
 > Jedli sme = nous avons mangé
 > baránka = de l'agneau
-> a syrovú nátierku = et de la tartinade au fromage
+> a hrudku = et de la hrudka
++ La {{hrudka}} (ou {{syrek}}) est une boule d'œufs et de lait cuits ensemble, légèrement sucrée, typique de l'Est du pays.
 
 ! Chren je veľmi štipľavý!
 > Le raifort est très piquant !
@@ -119,7 +120,7 @@ Ce sont exactement les mêmes mécanismes que dans la série Jedlo : les fémini
 
 ## 🇸🇰 Coin slovaque
 
-**Le panier béni contient toujours les mêmes éléments.** Œufs, jambon, pain, sel et parfois un peu de raifort sont apportés à l'église le samedi saint pour être bénis, dans un panier souvent brodé ou décoré pour l'occasion.
+**Le panier béni, une tradition surtout de l'Est.** Dans de nombreuses familles, notamment gréco-catholiques, on apporte à l'église œufs, jambon, pain, sel, hrudka et parfois un peu de raifort pour les faire bénir, dans un panier souvent brodé ou décoré pour l'occasion.
 
 **Le baránok occupe une place centrale sur la table.** Ce gâteau en forme d'agneau, souvent moulé et saupoudré de sucre glace, symbolise le Christ ressuscité et trône fièrement au centre du repas, à côté du vrai plat de viande.
 

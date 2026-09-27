@@ -101,9 +101,9 @@ La distinction n'est pas parfaitement logique — *park* prend *v* bien qu'il so
 
 **La fontaine chante, littéralement.** Sur la rue Hlavná, la {{Spievajúca fontána}} (fontaine chantante) diffuse de la musique et s'illumine le soir : un rendez-vous classique en sortant du théâtre ou d'un café voisin.
 
-**La place principale change de nom l'hiver.** {{Hlavná ulica}} accueille les marchés de Noël dès fin novembre, et devient le cœur battant de la ville jusqu'au 6 janvier, avec vin chaud et échoppes en bois.
+**Hlavná ulica s'habille pour l'hiver.** La rue principale accueille les marchés de Noël dès fin novembre, et devient le cœur battant de la ville jusqu'au 6 janvier, avec vin chaud et échoppes en bois.
 
-**Múzeum et divadlo se déclinent au pluriel de spécialité.** Une même ville compte souvent plusieurs musées et théâtres thématiques : un {{múzeum}} d'histoire, un autre de design, un théâtre national et un théâtre de marionnettes, très prisé des familles.
+**Un múzeum, des musées.** Une même ville compte souvent plusieurs musées et théâtres thématiques : un {{múzeum}} d'histoire, un autre de design, un théâtre national et un théâtre de marionnettes, très prisé des familles.
 
 ---
 

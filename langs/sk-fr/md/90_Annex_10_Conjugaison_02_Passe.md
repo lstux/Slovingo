@@ -128,4 +128,31 @@ On ajoute simplement {{ne-}} devant le verbe.
 | Affirmatif | Négatif |
 |------------|----------|
 | {{robil som}} | {{nerobil som}} |
-|
+| {{išla som}} | {{nešla som}} |
+| {{mali sme}} | {{nemali sme}} |
+
+Exception avec {{byť}} : au passé, la négation se colle aussi au participe — {{nebol som}}, {{nebola si}} (et non « nie bol »).
+
+---
+
+## 💬 Exemples
+
+| Français | Slovaque |
+|----------|-----------|
+| Hier, j'ai travaillé. | Včera som pracoval. |
+| Elle a parlé slovaque. | Hovorila po slovensky. |
+| Nous sommes allés en ville. | Išli sme do mesta. |
+| Je n'ai pas eu le temps. | Nemal som čas. |
+| Tu étais à la maison ? | Bol si doma? |
+
+---
+
+## ⚠️ Pièges du français
+
+### Pas d'auxiliaire à la 3e personne
+
+{{Robil som}} (j'ai fait), mais simplement {{on robil}} (il a fait) : à la 3e personne, le verbe {{byť}} disparaît.
+
+### Le choix du verbe compte plus que le temps
+
+Le passé slovaque est simple à former, mais il faut choisir entre un verbe imperfectif ({{čítal som}}, j'ai lu / je lisais) et un verbe perfectif ({{prečítal som}}, j'ai lu en entier).

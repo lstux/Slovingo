@@ -23,10 +23,10 @@ Eric et Andrea se vouvoient. Tous deux vouvoient la vendeuse.
 > Chcem kúpiť = je veux acheter
 > tričko = un tee-shirt
 
-! 👩 Akú farbu chceš?
-> Quelle couleur veux-tu ?
+! 👩 Akú farbu chcete?
+> Quelle couleur voulez-vous ?
 > Akú farbu = quelle couleur
-> chceš = veux-tu
+> chcete = voulez-vous
 
 ! 👦 Modré alebo zelené. Nie čierne.
 > Bleu ou vert. Pas noir.
@@ -47,14 +47,14 @@ Eric et Andrea se vouvoient. Tous deux vouvoient la vendeuse.
 > Veľkosť L = la taille L
 > prosím = s'il vous plaît
 
-! 🙋‍♀️ Toto modré tričko je pekné. Chcete skúsiť?
-> Ce tee-shirt bleu est joli. Vous voulez essayer ?
+! 🙋‍♀️ Toto modré tričko je pekné. Chcete si ho skúsiť?
+> Ce tee-shirt bleu est joli. Vous voulez l'essayer ?
 > Toto = ce
 > modré tričko = tee-shirt bleu
 > je = est
 > pekné = joli
 > Chcete = voulez-vous
-> skúsiť = essayer
+> si ho skúsiť = l'essayer
 
 ! 👦 Áno, kde je kabínka?
 > Oui, où est la cabine ?
@@ -95,14 +95,14 @@ Eric et Andrea se vouvoient. Tous deux vouvoient la vendeuse.
 > Je to = c'est
 > v akcii = en promotion
 
-! 👩 To je lacné! Kúp si aj to zelené.
-> C'est bon marché ! Achète aussi le vert.
+! 👩 To je lacné! Kúpte si aj to zelené.
+> C'est bon marché ! Achetez aussi le vert.
 > To je = c'est
 > lacné = bon marché
-> Kúp si = achète
+> Kúpte si = achetez
 > aj = aussi
 > to zelené = le vert
-+ « kúp si » est l'impératif de kúpiť si, s'acheter.
++ « kúpte si » est l'impératif de politesse de kúpiť si, s'acheter (au tutoiement : kúp si).
 
 ! 👦 Dobre. Platím kartou.
 > D'accord. Je paie par carte.

@@ -17,7 +17,7 @@ Le bilan économique de ces vingt années reste débattu, mais globalement jugé
 
 ! 💬 Pre krajinu to bolo určite dobré rozhodnutie. Pre niektoré rodiny, ktoré stratili svoje deti do zahraničia, je to zložitejšie.
 > Pour le pays c'était certainement une bonne décision. Pour certaines familles qui ont perdu leurs enfants au profit de l'étranger, c'est plus compliqué.
-> Pre krajinu určite áno = pour le pays certainement oui
+> Pre krajinu to bolo určite dobré rozhodnutie = pour le pays, c'était certainement une bonne décision
 > stratili svoje deti do zahraničia = ont perdu leurs enfants au profit de l'étranger
 
 ! 💬 Ja osobne si myslím, že sme sa priveľmi vyprázdnili. Mladí odišli a už sa nevrátili.

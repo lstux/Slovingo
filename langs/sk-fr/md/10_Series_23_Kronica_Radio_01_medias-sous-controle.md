@@ -1,8 +1,8 @@
 # Rádio (1/2) — Les médias sous contrôle
 
-@ https://commons.wikimedia.org/wiki/Special:FilePath/Pravda_(Slovakia)_logo.svg | Logo du quotidien Pravda, fondé en 1920, organe du Parti communiste tchécoslovaque de 1948 à 1989 — Wikimedia Commons
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Pravda_(Slovakia)_logo.svg | Logo du quotidien Pravda, fondé en 1920, organe du Parti communiste de Slovaquie de 1948 à 1989 — Wikimedia Commons
 
-La presse, la radio et la télévision appartenaient toutes à l'État, ou plus précisément au parti. Posséder une simple machine à polycopier était illégal ; reproduire plus de onze exemplaires d'un texte imprimé aussi. Chaque publication passait par un bureau officiel de contrôle avant parution.
+La presse, la radio et la télévision appartenaient toutes à l'État, ou plus précisément au parti. Posséder une machine à polycopier sans autorisation était illégal, et toute reproduction de textes était surveillée. Chaque publication passait par un bureau officiel de contrôle avant parution.
 
 Le quotidien du parti communiste slovaque, publié à Bratislava, s'appelait {{Pravda}} — littéralement « la {{pravda}} », la vérité. La loi sur la presse de 1966 exigeait, sans ironie apparente, que la presse tchécoslovaque « fournisse une information complète » — tout en faisant avancer les intérêts du parti. Les deux exigences n'étaient pas vraiment compatibles, mais personne ne le disait à voix haute.
 

@@ -1,6 +1,6 @@
 # Rozdelenie (2/2) — Dva národy, jeden pocit
 
-@ img/Bratislava,_Hrad,_Slovensko.jpg | Le château de Bratislava, siège du Conseil national slovaque — Wikimedia Commons
+@ img/Bratislava,_Hrad,_Slovensko.jpg | Le château de Bratislava, à côté duquel siège le Conseil national slovaque — Wikimedia Commons
 
 L'appellation « divorce de velours » vient du contraste avec d'autres séparations de la même époque. Contrairement à l'éclatement violent de la Yougoslavie qui se déroulait au même moment, la {{rozdelenie}} tchéco-slovaque s'est faite sans aucun conflit armé, par accord entre dirigeants politiques — un terme, popularisé à l'international, qui souligne ce caractère pacifique et négocié.
 

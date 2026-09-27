@@ -32,7 +32,7 @@ Point important pour un francophone : le slovaque utilise la double négation. Q
 > Je n'ai rien.
 > Nemám = je n'ai pas
 > nič = rien
-+ Double négation : le verbe est négé ("nemám") ET "nič" (rien) est aussi présent — en français on ne dirait jamais "je n'ai pas rien" pour dire "je n'ai rien".
++ Double négation : le verbe est à la forme négative ("nemám") ET "nič" (rien) est aussi présent — en français on ne dirait jamais "je n'ai pas rien" pour dire "je n'ai rien".
 
 ! Nikto tam nebol.
 > Personne n'était là.

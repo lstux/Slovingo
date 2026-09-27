@@ -131,9 +131,9 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 > otvorený = ouvert
 > do ôsmej = jusqu'à huit heures
 
-! Skúsim topánky vo veľkosti štyridsať.
-> J'essaie les chaussures en taille quarante.
-> Skúsim = j'essaie
+! Skúsim si topánky vo veľkosti štyridsať.
+> Je vais essayer les chaussures en taille quarante.
+> Skúsim si = je vais essayer
 > topánky = les chaussures
 > vo veľkosti = en taille
 > štyridsať = quarante

@@ -26,7 +26,7 @@
 | posteľ | lit |
 | skriňa | armoire |
 | pohovka | canapé |
-| police | étagère |
+| polica | étagère |
 | zrkadlo | miroir |
 | lampa | lampe |
 
@@ -46,7 +46,7 @@
 > Notre maison a trois pièces et une cuisine.
 > náš dom = notre maison · má = a · tri izby = trois pièces · kuchyňu = cuisine
 
-+ "izba" désigne une pièce en général (souvent une chambre), tandis que "miestnosť" est un terme plus neutre pour "pièce" au sens large.
+> 💡 "izba" désigne une pièce en général (souvent une chambre), tandis que "miestnosť" est un terme plus neutre pour "pièce" au sens large.
 
 ! Moja spálňa je malá, ale svetlá.
 > Ma chambre est petite mais lumineuse.
@@ -66,7 +66,7 @@
 | balkón | balcon |
 | schody | escaliers |
 
-+ "dvere" (porte) et "schody" (escaliers) sont toujours au pluriel en slovaque, même pour une seule porte ou un seul escalier.
+> 💡 "dvere" (porte) et "schody" (escaliers) sont toujours au pluriel en slovaque, même pour une seule porte ou un seul escalier.
 
 ! Zavri prosím dvere, je zima.
 > Ferme la porte s'il te plaît, il fait froid.

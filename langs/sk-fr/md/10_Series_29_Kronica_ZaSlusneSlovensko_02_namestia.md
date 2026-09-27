@@ -23,9 +23,9 @@ Quelques jours après l'annonce des meurtres, des rassemblements spontanés se f
 
 La pression de la rue produit des effets rapides et concrets, du moins en apparence : le ministre de l'Intérieur démissionne le 12 mars, suivi trois jours plus tard par le Premier ministre et l'ensemble de son gouvernement, puis par le chef de la police d'ici la fin du mois de mai. Une chute en cascade rare pour l'Europe centrale de cette période.
 
-! 💬 Vláda padla za pár týždňov. To sme si nikdy nemysleli, že je vôbec možné.
+! 💬 Vláda padla za pár týždňov. Nikdy by sme si neboli mysleli, že je to vôbec možné.
 > Le gouvernement est tombé en quelques semaines. On n'aurait jamais cru ça possible.
-> nikdy nemysleli, že je možné = jamais cru que c'était possible
+> nikdy by sme si neboli mysleli = on n'aurait jamais cru
 
 L'enquête judiciaire, elle, prend beaucoup plus de temps. Les exécutants directs du meurtre sont condamnés à de lourdes peines de prison, mais l'homme d'affaires soupçonné d'en avoir commandité l'assassinat est d'abord acquitté en 2020 — un jugement qui choque une partie de l'opinion — avant que la procédure ne reparte en appel dans les années suivantes.
 

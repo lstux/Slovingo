@@ -55,7 +55,7 @@ Les chiffres de base à apprendre d'abord. C'est la fondation — tous les autre
 - 15 = {{päť}} + -násť = {{pätnásť}}
 - 19 = {{deväť}} + -násť = {{devätnásť}}
 
-**20** est l'exception : {{dvadsať}} (et non *desat'*).
+**20** change de logique : {{dvadsať}}, c'est « deux dizaines » ({{dva}} + -dsať).
 
 ---
 

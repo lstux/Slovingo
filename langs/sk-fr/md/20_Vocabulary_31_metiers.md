@@ -15,7 +15,7 @@
 | vodič | conducteur |
 | účtovník / účtovníčka | comptable |
 
-+ Beaucoup de métiers ont une forme masculine et une forme féminine bien distinctes, avec un suffixe comme "-ka" pour le féminin : učiteľ → učiteľka.
+> 💡 Beaucoup de métiers ont une forme masculine et une forme féminine bien distinctes, avec un suffixe comme "-ka" pour le féminin : učiteľ → učiteľka.
 
 ---
 
@@ -35,15 +35,15 @@
 
 ## 3. Parler de son travail
 
-! Čím pracuješ? / Aké je tvoje povolanie?
+! Čo robíš? / Aké je tvoje povolanie?
 > Qu'est-ce que tu fais dans la vie ? / Quel est ton métier ?
-> čím pracuješ = par quoi tu travailles (littéralement) · aké je tvoje povolanie = quel est ton métier
+> čo robíš = qu'est-ce que tu fais · aké je tvoje povolanie = quel est ton métier
 
 ! Som učiteľka na základnej škole.
 > Je suis enseignante à l'école primaire.
 > som = je suis · učiteľka = enseignante · na základnej škole = à l'école primaire
 
-+ La question "Čím pracuješ?" utilise littéralement "par quoi", une construction différente du français "que fais-tu".
+> 💡 "Čo robíš?" (qu'est-ce que tu fais ?) sert aussi à demander le métier, selon le contexte. On entend également "Čím si?" (tu es quoi, comme métier ?), où {{čím}} veut dire « en tant que quoi ».
 
 ! Pracujem ako programátor.
 > Je travaille comme informaticien.
@@ -92,5 +92,5 @@
 ## ⚠️ Pièges pour les francophones
 
 - Les métiers ont souvent deux formes distinctes (masculin/féminin), pas juste un "-e" final comme en français : {{učiteľ}} vs {{učiteľka}}.
-- "Čím pracuješ?" est la façon idiomatique de demander le métier de quelqu'un, littéralement "par quoi travailles-tu", à ne pas traduire mot à mot.
+- "Čo robíš?" peut vouloir dire "qu'est-ce que tu fais (là) ?" ou "qu'est-ce que tu fais dans la vie ?" : c'est le contexte qui tranche.
 - "škola" (école) et "nemocnica" (hôpital) désignent aussi bien le lieu que l'idée de "être scolarisé/hospitalisé" dans certaines expressions.

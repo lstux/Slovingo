@@ -16,7 +16,7 @@
 | sestra | sœur |
 | deti | enfants |
 
-+ "rodičia" (parents) et "deti" (enfants) sont des pluriels irréguliers, à mémoriser tels quels.
+> 💡 "rodičia" (parents) et "deti" (enfants) sont des pluriels irréguliers, à mémoriser tels quels.
 
 ---
 
@@ -34,7 +34,7 @@
 | bratranec | cousin |
 | sesternica | cousine |
 
-+ "dedko" et "babka" sont les formes affectueuses les plus utilisées à l'oral, plus fréquentes que "starý otec / stará mama" dans une conversation courante.
+> 💡 "dedko" et "babka" sont les formes affectueuses les plus utilisées à l'oral, plus fréquentes que "starý otec / stará mama" dans une conversation courante.
 
 ---
 
@@ -49,7 +49,7 @@
 | svokor | beau-père |
 | svokra | belle-mère |
 
-+ "priateľ / priateľka" veut aussi dire simplement "ami / amie" selon le contexte : c'est le sens (romantique ou non) qui distingue les deux usages.
+> 💡 "priateľ / priateľka" veut aussi dire simplement "ami / amie" selon le contexte : c'est le sens (romantique ou non) qui distingue les deux usages.
 
 ---
 

@@ -19,7 +19,7 @@ Entre 1939 et 1945, la Slovaquie existe comme État indépendant — mais un Ét
 
 Depuis 1943, après le désastre allemand de Stalingrad, une partie de l'armée slovaque — de tradition plutôt démocratique et occidentale — se rapproche en secret d'un Conseil national slovaque clandestin, où communistes et démocrates civils préparent ensemble un retournement. Le déclencheur arrive le 27 août 1944 : des {{partizáni}} pro-soviétiques et des soldats slovaques mutinés tuent 22 officiers allemands. En réaction, Berlin exige l'entrée de la Wehrmacht en Slovaquie — ce qui précipite exactement ce que les conjurés redoutaient et attendaient à la fois.
 
-! 💬 Nemohli sme len sledovať, ako nás Nemci obsadzujú, aj keď sme oficiálne ich spojenci.
+! 💬 Nemohli sme len sledovať, ako nás Nemci obsadzujú, aj keď sme boli oficiálne ich spojenci.
 > Nous ne pouvions pas nous contenter de regarder les Allemands nous occuper, même si nous étions officiellement leurs alliés.
 > aj keď sme boli = même si nous étions
 

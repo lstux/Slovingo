@@ -13,21 +13,21 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 | dobrý deň | bonjour |
 | ako sa máš | comment ça va |
 | ahoj | salut |
-| čau | ciao, au revoir |
-| priateľ | l'ami |
+| čau | ciao, salut, au revoir |
+| kamarát | le copain, l'ami |
 | dnes | aujourd'hui |
-| som | je suis |
-| v poriadku | en ordre, bien, ça va |
 | dobre | bien |
+| mám sa | je vais (réponse à « ako sa máš ») |
+| v poriadku | en ordre, OK, ça va |
 | ďakujem | merci |
 | prosím | s'il te plaît |
 | prepáčte | pardon, excusez-moi |
 | tiež | aussi |
 | nie | non |
 | áno | oui |
-| pomôž | aide |
+| pomôž | aide ! (impératif) |
 | pomoc | l'aide |
-| nič | rien, de rien |
+| nič | rien |
 | rozumieš | tu comprends |
 | rozumiem | je comprends |
 | nerozumiem | je ne comprends pas |
@@ -35,10 +35,11 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 | znamená | ça veut dire |
 | hovoríte | vous parlez |
 | po francúzsky | français |
+| nemáte za čo | de rien (vouvoiement) |
 | dovidenia | au revoir (formel) |
-| veľa | beaucoup |
-| meno | le prénom |
-| poznať | connaître |
+| pekne | joliment, bien |
+| volať sa | s'appeler |
+| teší ma | enchanté(e) |
 | po anglicky | anglais |
 
 ---
@@ -50,9 +51,9 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 > Dobrý deň = bonjour
 > Ako sa máš = comment ça va
 
-! Som v poriadku, ďakujem. A ty?
+! Mám sa dobre, ďakujem. A ty?
 > Je vais bien, merci. Et toi ?
-> Som v poriadku = je vais bien
+> Mám sa dobre = je vais bien
 > ďakujem = merci
 > A ty = et toi
 
@@ -62,10 +63,10 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 > Dobre = bien
 > ďakujem = merci
 
-! Ahoj priateľ! Čau!
-> Salut l'ami ! Au revoir !
+! Ahoj, kamarát! Čau!
+> Salut, mon pote ! Au revoir !
 > Ahoj = salut
-> priateľ = ami
+> kamarát = copain
 > Čau = au revoir
 
 ! Dnes je dobrý deň.
@@ -97,10 +98,10 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 > Áno = oui
 > prosím = s'il te plaît
 
-! Hovoríte po francúzsky? Rozumieš?
-> Vous parlez français ? Tu comprends ?
+! Hovoríte po francúzsky? Nerozumiem.
+> Vous parlez français ? Je ne comprends pas.
 > Hovoríte po francúzsky = vous parlez français
-> Rozumieš = tu comprends
+> Nerozumiem = je ne comprends pas
 
 ! Prepáčte, hovoríte po anglicky?
 > Pardon, vous parlez anglais ?
@@ -113,30 +114,31 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 > to = ça
 > znamená = ça veut dire
 
-! Ďakujem veľa, priateľ!
-> Merci beaucoup, l'ami !
-> Ďakujem veľa = merci beaucoup
-> priateľ = ami
+! Ďakujem pekne, kamarát!
+> Merci beaucoup, mon pote !
+> Ďakujem pekne = merci beaucoup
+> kamarát = copain
 
-! Aké je vaše meno?
-> Quel est votre prénom ?
-> Aké je vaše meno = quel est votre prénom
+! Dobrý deň! Ako sa voláte?
+> Bonjour ! Comment vous appelez-vous ?
+> Dobrý deň = bonjour
+> Ako sa voláte = comment vous appelez-vous
 
-! Je milé vás poznať.
-> C'est agréable de vous connaître.
-> Je milé = c'est agréable
-> vás poznať = vous connaître
+! Teší ma. Ďakujem.
+> Enchanté(e). Merci.
+> Teší ma = enchanté(e)
+> Ďakujem = merci
 
-! Nič, dovidenia!
+! Nemáte za čo, dovidenia!
 > De rien, au revoir !
-> Nič = rien, de rien
+> Nemáte za čo = de rien
 > dovidenia = au revoir
 
-! Tiež dovidenia, priateľ!
-> Au revoir aussi, l'ami !
-> Tiež = aussi
-> dovidenia = au revoir
-> priateľ = ami
+! Rozumieš? Áno, rozumiem.
+> Tu comprends ? Oui, je comprends.
+> Rozumieš = tu comprends
+> Áno = oui
+> rozumiem = je comprends
 
 ---
 
@@ -144,6 +146,6 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 
 **Tu as le minimum vital.** Avec ces quelques phrases — saluer, remercier, s'excuser, dire qu'on ne comprend pas — tu peux déjà survivre à peu près n'importe quelle interaction basique en Slovaquie. Le reste, c'est du vocabulaire : les séries vont te le donner, thème par thème.
 
-**Le vouvoiement reviendra souvent.** Tu l'as croisé dans le dialogue avec Andrea et dans plusieurs phrases ici ({{ako sa máte}}, {{vaše}}, {{hovoríte}}). Ne le stresse pas trop pour l'instant : les séries reprendront le sujet en détail. Pour commencer, retiens juste qu'il existe et qu'il change la forme du verbe et des possessifs.
+**Le vouvoiement reviendra souvent.** Tu l'as croisé dans le dialogue avec Andrea et dans plusieurs phrases ici ({{hovoríte}}, {{ako sa voláte}}, {{nemáte za čo}}). Ne le stresse pas trop pour l'instant : les séries reprendront le sujet en détail. Pour commencer, retiens juste qu'il existe et qu'il change la forme du verbe et des possessifs.
 
-**Prêt pour la série Rodina.** La suite logique du Kit de Survie, c'est la première vraie série : la famille, les possessifs {{môj}}/{{moja}}, et les verbes {{byť}} et {{mať}}. Tu as maintenant de quoi dire bonjour, merci et pardon pendant que tu apprends tout ça.
+**Prêt pour la suite.** Tu as maintenant de quoi dire bonjour, merci et pardon pendant que tu apprends le reste, thème par thème.

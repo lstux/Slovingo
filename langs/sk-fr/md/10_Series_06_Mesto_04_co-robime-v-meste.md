@@ -1,6 +1,6 @@
 # Série Mesto (4/5) — Čo robíme v meste
 
-@ img/mesto_04_national_theatre.jpg | Le Théâtre d'État, bâtiment historique de 1899, Košice — Wikimedia Commons, CC BY-SA
+@ img/mesto_04_national_theatre.jpg | Le Théâtre national de Košice, bâtiment historique de 1899 — Wikimedia Commons, CC BY-SA
 
 Ce qu'on fait en ville : voir, visiter, se promener. Un peu de vocabulaire des loisirs urbains, et un retour sur des verbes déjà croisés.
 
@@ -63,10 +63,10 @@ Le petit mot **sa** est indispensable : sans lui, *prechádzať* voudrait dire t
 > Prechádzam sa = je me promène
 > v parku = dans le parc
 
-! Stretávam kamaráta v kaviarni.
-> Je rencontre un ami au café.
-> Stretávam = je rencontre
-> kamaráta = un ami
+! Stretávam sa s kamarátom v kaviarni.
+> Je retrouve un ami au café.
+> Stretávam sa = je retrouve (d'habitude)
+> s kamarátom = avec un ami
 > v kaviarni = au café
 + « stretávať » est la forme d'habitude ; « stretnúť » est plus ponctuel. Les deux se rencontrent en pratique.
 
@@ -109,10 +109,9 @@ Le petit mot **sa** est indispensable : sans lui, *prechádzať* voudrait dire t
 > je = est
 > vedľa divadla = à côté du théâtre
 
-! Stretnem ťa na námestí o piatej.
-> Je te retrouve sur la place à cinq heures.
-> Stretnem = je retrouverai
-> ťa = te
+! Stretneme sa na námestí o piatej.
+> On se retrouve sur la place à cinq heures.
+> Stretneme sa = on se retrouve
 > na námestí = sur la place
 > o piatej = à cinq heures
 
@@ -122,7 +121,7 @@ Le petit mot **sa** est indispensable : sans lui, *prechádzať* voudrait dire t
 
 **Le café slovaque est un rituel lent.** S'asseoir en terrasse pour un long café n'a rien de pressé : on y lit, on y discute, personne ne vous fait sentir qu'il faut libérer la table. C'est un bon endroit pour observer la vie locale sans se presser.
 
-**Le théâtre trône toujours dans son bâtiment historique.** Le {{Štátne divadlo}} (Théâtre d'État) occupe depuis 1899 un bâtiment néo-Renaissance en plein centre de Hlavná ulica, et continue d'y jouer aujourd'hui.
+**Le théâtre trône toujours dans son bâtiment historique.** Le {{Národné divadlo Košice}} (Théâtre national, appelé Théâtre d'État jusqu'en 2023) occupe depuis 1899 un bâtiment historique en plein centre de Hlavná ulica, et continue d'y jouer aujourd'hui.
 
 **Se promener se dit avec « sa ».** Beaucoup de verbes d'activité personnelle prennent ce petit mot réfléchi : {{prechádzať sa}}, se promener, mais aussi *hrať sa*, jouer, ou *učiť sa*, apprendre. Le repérer facilite beaucoup la lecture.
 

@@ -2,7 +2,7 @@
 
 @ https://commons.wikimedia.org/wiki/Special:FilePath/Radio%2C_Model_308U%2C_Talisman%2C_Tesla%2C_Czechoslovakia%2C_c._1953%2C_Bakelite_case_-_Museum_f%C3%BCr_Angewandte_Kunst_K%C3%B6ln_-_Cologne%2C_Germany_-_DSC09685.jpg?width=800 | Poste radio Tesla Talisman, Tchécoslovaquie, années 1950 — Wikimedia Commons, CC BY-SA
 
-À côté des {{noviny}} et de la {{televízia}} officielles, une autre {{pravda}} circulait — cherchée, elle, du bout des doigts sur le cadran d'un poste de radio. {{Slobodná Európa}} (Radio Free Europe) et {{Hlas Ameriky}} (Voice of America) émettaient depuis l'étranger, en tchèque et en slovaque, financées par les États-Unis. Les écouter n'était {{zakázané}} de manière systématique, mais c'était mal vu, risqué socialement, et parfois surveillé.
+À côté des {{noviny}} et de la {{televízia}} officielles, une autre {{pravda}} circulait — cherchée, elle, du bout des doigts sur le cadran d'un poste de radio. {{Slobodná Európa}} (Radio Free Europe) et {{Hlas Ameriky}} (Voice of America) émettaient depuis l'étranger, en tchèque et en slovaque, financées par les États-Unis. Les écouter n'était pas {{zakázané}} de manière systématique, mais c'était mal vu, risqué socialement, et parfois surveillé.
 
 ---
 
@@ -24,11 +24,11 @@
 
 Le rituel se répétait chaque fois, presque immuable.
 
-! 💬 Zavreli dvere do obývačky a stiahli hlasitosť na minimum. Museli sa hrať s anténou, aby našli lepší signál.
-> On fermait la porte du salon et on baissait le volume au minimum. On devait jouer avec l'antenne pour trouver un meilleur signal.
-> Zavreli dvere = ils fermaient la porte
-> stiahli hlasitosť na minimum = baissaient le volume au minimum
-> Museli sa hrať s anténou = ils devaient jouer avec l'antenne
+! 💬 Zatvárali sme dvere do obývačky a rádio sme mali úplne potichu. Museli sme sa hrať s anténou, aby sme chytili lepší signál.
+> On fermait la porte du salon et on mettait la radio tout bas. On devait jouer avec l'antenne pour attraper un meilleur signal.
+> Zatvárali sme dvere = on fermait la porte
+> rádio sme mali úplne potichu = on avait la radio tout bas
+> Museli sme sa hrať s anténou = on devait jouer avec l'antenne
 
 Le {{rušenie}}, le brouillage, représentait un effort technique et financier considérable pour le régime : des émetteurs dédiés, disséminés sur le territoire, produisaient volontairement ce {{šum}} caractéristique qui rendait l'écoute difficile — surtout pour Radio Free Europe, la cible prioritaire, bien plus brouillée que Voice of America ou la BBC.
 
@@ -40,7 +40,7 @@ Le {{rušenie}}, le brouillage, représentait un effort technique et financier c
 Cette pratique s'inscrivait dans un climat plus large de méfiance quotidienne : on ne savait jamais avec certitude qui, parmi ses {{susedia}} ou ses collègues, pouvait rapporter ce genre de détail aux autorités. Cette incertitude permanente — plus que la peur d'une sanction précise — façonnait la prudence de nombreuses familles.
 
 ! 💬 Nikdy sme si neboli úplne istí, komu môžeme dôverovať. Rodičia si o tom šepkali medzi sebou, nie pred nami deťmi, spočiatku.
-> On n'était jamais totalement sûrs de qui on pouvait faire confiance. Mes parents en chuchotaient entre eux, pas devant nous les enfants, au début.
+> On n'était jamais totalement sûrs de savoir à qui on pouvait faire confiance. Mes parents en chuchotaient entre eux, pas devant nous les enfants, au début.
 > komu môžeme dôverovať = à qui on pouvait faire confiance
 > spočiatku = au début
 

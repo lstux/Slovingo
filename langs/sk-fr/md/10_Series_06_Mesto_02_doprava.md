@@ -2,7 +2,7 @@
 
 @ img/mesto_02_tram_stop.jpg | Tram devant la gare de Košice — Wikimedia Commons, CC BY-SA
 
-Les transports en commun. Et la distinction entre **ísť** (un trajet précis) et **chodiť** (une habitude), déjà annoncée dans la série Čas.
+Les transports en commun. Et la distinction entre **ísť** (un trajet précis) et **chodiť** (une habitude).
 
 ---
 
@@ -128,7 +128,7 @@ Les transports en commun. Et la distinction entre **ísť** (un trajet précis) 
 
 **Le tram de Košice roule depuis 1891, à l'origine tiré par des chevaux.** Il a été électrifié en 1913, et reste depuis un pilier de la mobilité en ville, avec des rames modernes à côté de vieux modèles encore en service sur certaines lignes. Les tickets s'achètent en borne ou par application.
 
-**La gratuité pour les jeunes et les seniors.** Depuis quelques années, les moins de 26 ans et les plus de 62 ans voyagent gratuitement sur les trains nationaux. Une bonne nouvelle à connaître si tu voyages avec de la famille slovaque.
+**La gratuité pour les jeunes et les seniors.** Depuis 2014, étudiants et seniors peuvent, sous conditions (d'âge et d'inscription, qui ont évolué au fil des réformes), voyager gratuitement sur les trains nationaux. Une bonne nouvelle à connaître si tu voyages avec de la famille slovaque.
 
 ---
 

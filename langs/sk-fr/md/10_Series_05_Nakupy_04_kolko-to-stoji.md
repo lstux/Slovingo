@@ -106,9 +106,9 @@ Exactement la même règle que pour *rok* : **un** → *euro*, **de deux à quat
 > Koľko = combien
 > stojí = coûte
 
-! Skúsim modrú sukňu. Máte veľkosť M?
-> J'essaie la jupe bleue. Vous avez la taille M ?
-> Skúsim = j'essaie
+! Skúsim si modrú sukňu. Máte veľkosť M?
+> Je vais essayer la jupe bleue. Vous avez la taille M ?
+> Skúsim si = je vais essayer
 > modrú sukňu = la jupe bleue
 > Máte = vous avez
 > veľkosť M = la taille M

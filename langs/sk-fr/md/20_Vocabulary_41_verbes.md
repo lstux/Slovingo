@@ -13,7 +13,7 @@
 | odísť | partir |
 | vrátiť sa | revenir |
 
-+ "ísť" et "chodiť" sont deux verbes pour "aller" : "ísť" pour un déplacement ponctuel et précis, "chodiť" pour une habitude répétée.
+> 💡 "ísť" et "chodiť" sont deux verbes pour "aller" : "ísť" pour un déplacement ponctuel et précis, "chodiť" pour une habitude répétée.
 
 ---
 
@@ -57,7 +57,7 @@
 > Je ne comprends pas, tu peux répéter ?
 > nerozumiem = je ne comprends pas · môžeš to zopakovať = tu peux répéter ça
 
-+ "po slovensky" (littéralement "à la slovaque") est la structure pour dire "en slovaque" avec les verbes de langue, comme "hovoriť po slovensky" = parler slovaque.
+> 💡 "po slovensky" (littéralement "à la slovaque") est la structure pour dire "en slovaque" avec les verbes de langue, comme "hovoriť po slovensky" = parler slovaque.
 
 ! Čo si o tom myslíš?
 > Qu'est-ce que tu en penses ?

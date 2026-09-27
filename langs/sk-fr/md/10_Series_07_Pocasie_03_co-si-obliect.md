@@ -2,7 +2,7 @@
 
 @ img/pocasie_03_tatras_landscape.jpg | Paysage d'été dans les Tatras
 
-S'habiller selon la météo. On retrouve les vêtements de la série Nákupy, avec le verbe **obliecť si** et une nuance de nécessité.
+S'habiller selon la météo. Quelques vêtements de saison, avec le verbe **obliecť si** et une nuance de nécessité.
 
 ---
 
@@ -90,9 +90,9 @@ Comme *chcieť*, *musieť* est toujours suivi d'un infinitif : aucun mot de liai
 > kabát = un manteau
 > je teplo = il fait chaud
 
-! Obliecť si niečo teplé!
+! Obleč si niečo teplé!
 > Mets quelque chose de chaud !
-> Obliecť si = mets
+> Obleč si = mets
 > niečo teplé = quelque chose de chaud
 + Impératif. Retiens la forme telle quelle.
 
@@ -128,11 +128,11 @@ Comme *chcieť*, *musieť* est toujours suivi d'un infinitif : aucun mot de liai
 
 ## 🇸🇰 Coin slovaque
 
-**Les couches sont une religion locale.** Face à un climat continental aux écarts marqués, s'habiller « à la cebuľa », en couches comme un oignon, est le conseil qu'on donne à tout étranger avant l'hiver.
+**Les couches sont une religion locale.** Face à un climat continental aux écarts marqués, s'habiller « na cibuľku », en couches comme un oignon ({{cibuľa}}), est le conseil qu'on donne à tout étranger avant l'hiver.
 
 **Le passage de la saison de ski dicte le calendrier scolaire.** Une semaine de vacances, la {{jarné prázdniny}}, tombe en plein hiver et sert traditionnellement à partir aux sports d'hiver dans les Tatras.
 
-**Musieť n'a pas d'équivalent poli distinct.** Contrairement au français qui nuance entre « devoir » et « il faudrait », {{musieť}} sert dans presque tous les contextes de nécessité, du plus urgent au plus anodin.
+**Musieť, c'est une vraie obligation.** Pour un conseil plus doux, le slovaque passe par {{mal by som}} (« je devrais », conditionnel de {{mať}}) ou par {{treba}} (« il faut »). {{Musíš si obliecť kabát}} est un ordre ; {{Mal by si si obliecť kabát}}, un conseil.
 
 ---
 
@@ -142,7 +142,7 @@ Comme *chcieť*, *musieť* est toujours suivi d'un infinitif : aucun mot de liai
 |----------|----------|
 | čižmy | les bottes |
 | plášť do dažďa | l'imperméable |
-| krémy na opaľovanie | la crème solaire |
+| krém na opaľovanie | la crème solaire |
 | šiltovka | la casquette |
 | ponožky | les chaussettes |
 | teplota vzduchu | la température de l'air |

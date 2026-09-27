@@ -15,7 +15,7 @@ Pour Štúr et son cercle, fixer une {{spisovná slovenčina}} n'était jamais q
 | dobrovoľník | le volontaire |
 | úradný jazyk | la langue officielle |
 | roľník | le paysan |
-| pamiatka | le souvenir, le monument |
+| pamätník | le monument |
 
 L'occasion se présente en 1848. Une trentaine d'activistes se réunissent à Liptovský Mikuláš et proclament, le 11 mai, quatorze {{požiadavky}} : la reconnaissance du slovaque comme {{úradný jazyk}} dans l'administration et l'école, un parlement propre, le droit de vote universel, la restitution des terres confisquées aux {{roľníci}}. Le gouvernement hongrois rejette le texte en bloc, le déclare illégal et « pan-slave », lance des mandats d'arrêt contre Štúr et ses proches.
 
@@ -47,6 +47,6 @@ Aujourd'hui, Štúr est une figure quasi incontournable de l'identité slovaque 
 > Un seul homme peut changer la langue de toute une nation.
 > celého národa = de toute la nation
 
-! Táto {{pamiatka}} mu pripomína dodnes.
-> Ce monument lui rend hommage encore aujourd'hui.
-> mu pripomína = lui rend hommage, lui rappelle
+! Tento {{pamätník}} ho pripomína dodnes.
+> Ce monument rappelle son souvenir encore aujourd'hui.
+> ho pripomína = rappelle son souvenir

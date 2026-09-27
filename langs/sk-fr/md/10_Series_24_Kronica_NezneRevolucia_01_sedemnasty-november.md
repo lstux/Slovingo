@@ -2,7 +2,7 @@
 
 @ https://commons.wikimedia.org/wiki/Special:FilePath/Kosice_(Slovakia)_-_Main_Street_3.jpg | Hlavná ulica à Košice, où des dizaines de milliers de personnes ont manifesté en novembre 1989 — Wikimedia Commons, CC BY-SA
 
-Le 17 novembre est un jour férié en Slovaquie, jour de la {{Nežná revolúcia}}, la Révolution de velours. Tout a commencé à Prague ce jour-là, mais s'est vite répandu à travers tout le pays — y compris à Košice, où des dizaines de milliers de personnes ont fini par manifester sur {{Hlavná ulica}}, l'artère centrale de la ville.
+Le 17 novembre est une fête nationale en Slovaquie (même s'il n'est plus chômé depuis 2025), jour de la {{Nežná revolúcia}}, la Révolution de velours. Tout a commencé à Prague ce jour-là, mais s'est vite répandu à travers tout le pays — y compris à Košice, où des dizaines de milliers de personnes ont fini par manifester sur {{Hlavná ulica}}, l'artère centrale de la ville.
 
 ---
 
@@ -37,7 +37,7 @@ Dans les écoles, on ne faisait d'abord que chuchoter : les enseignants, nerveux
 > Išla som tam tajne = j'y suis allée en secret
 > bez toho, aby to vedeli = sans qu'ils le sachent
 
-Sur la {{námestie}}, la foule était immense — un {{transparent}} par-ci, des slogans sur la {{sloboda}} par-là, mais rien de violent.
+Sur la place, le {{námestie}}, la foule était immense — un {{transparent}} par-ci, des slogans sur la {{sloboda}} par-là, mais rien de violent.
 
 ! 💬 Strach aj nadšenie naraz. Bolo to zvláštne, tie dva pocity spolu.
 > De la peur et de l'enthousiasme à la fois. C'était étrange, ces deux sentiments ensemble.

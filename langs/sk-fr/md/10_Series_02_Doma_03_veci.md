@@ -135,7 +135,7 @@ La règle utile : **les féminins en -a passent à -u**. Les masculins d'objets 
 
 **Le pohárik de bienvenue.** Le diminutif de *pohár* désigne le petit verre d'alcool qu'on propose à l'arrivée, souvent de la {{slivovica}}, eau-de-vie de prune parfois distillée à la maison. Elle est nettement plus forte qu'elle n'en a l'air.
 
-**Un objet, dix diminutifs.** Le slovaque décline presque tout : *pohár* donne {{pohárik}}, *kniha* donne {{knižka}}, *stôl* donne {{stolík}}. Ce n'est pas seulement une question de taille, c'est aussi une façon d'être affectueux avec les choses.
+**Un objet, dix diminutifs.** Le slovaque fabrique des diminutifs à partir de presque tout : *pohár* donne {{pohárik}}, *kniha* donne {{knižka}}, *stôl* donne {{stolík}}. Ce n'est pas seulement une question de taille, c'est aussi une façon d'être affectueux avec les choses.
 
 ---
 

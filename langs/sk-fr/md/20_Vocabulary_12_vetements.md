@@ -13,7 +13,7 @@
 | kabát | manteau |
 | šaty | robe |
 
-+ "šaty" est toujours au pluriel en slovaque, même pour parler d'une seule robe.
+> 💡 "šaty" est toujours au pluriel en slovaque, même pour parler d'une seule robe.
 
 ---
 
@@ -29,7 +29,7 @@
 | topánky | chaussures |
 | tenisky | baskets |
 
-+ "nohavice" et "ponožky" sont toujours au pluriel en slovaque, comme "des lunettes" en français.
+> 💡 "nohavice" et "ponožky" sont toujours au pluriel en slovaque, comme "des lunettes" en français.
 
 ---
 

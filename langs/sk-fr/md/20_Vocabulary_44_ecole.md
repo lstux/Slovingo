@@ -14,7 +14,7 @@
 | univerzita | université |
 | skúška | examen |
 
-+ "žiak/žiačka" désigne un élève (école primaire/secondaire), tandis que "študent/študentka" est réservé aux étudiants de l'enseignement supérieur.
+> 💡 "žiak/žiačka" désigne un élève (école primaire/secondaire), tandis que "študent/študentka" est réservé aux étudiants de l'enseignement supérieur.
 
 ---
 
@@ -39,14 +39,14 @@
 > do ktorej triedy = dans quelle classe · chodíš = tu vas
 
 ! Chodím do piatej triedy.
-> Je suis en cinquième (littéralement : cinquième classe).
+> Je suis en « cinquième classe » (5e année d'école, vers 10-11 ans).
 > chodím do = je vais à · piatej triedy = cinquième classe
 
 ! Máme dnes skúšku z matematiky.
 > Nous avons un examen de mathématiques aujourd'hui.
 > máme = nous avons · dnes = aujourd'hui · skúšku z matematiky = examen de mathématiques
 
-+ La numérotation des classes en Slovaquie ne correspond pas exactement au système français : mieux vaut donner l'âge ou le niveau si besoin de précision.
+> 💡 La numérotation des classes en Slovaquie ne correspond pas exactement au système français : mieux vaut donner l'âge ou le niveau si besoin de précision.
 
 ! Musím sa učiť na skúšku.
 > Je dois étudier pour l'examen.

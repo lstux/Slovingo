@@ -18,7 +18,7 @@ La Slovaquie est un pays d'Europe centrale, sans accès à la mer, niché entre 
 | Monnaie | Euro |
 | Relief | Très montagneux, dominé par les Carpates |
 
-Le pays est occupé aux quatre cinquièmes par des massifs montagneux, dont les {{Vysoké Tatry}} (Hautes Tatras), le point culminant du pays et le plus haut sommet des Carpates. Le Danube, deuxième fleuve d'Europe, traverse le sud-ouest du pays et longe Bratislava.
+Le pays est en grande partie montagneux ; les {{Vysoké Tatry}} (Hautes Tatras) y abritent le point culminant du pays, le {{Gerlachovský štít}} (2 655 m), qui est aussi le plus haut sommet des Carpates. Le Danube, deuxième fleuve d'Europe, traverse le sud-ouest du pays et longe Bratislava.
 
 Deuxième ville du pays, {{Košice}} se situe à l'est, à l'opposé géographique de la capitale.
 
@@ -44,7 +44,7 @@ Rien d'exhaustif ici, juste de quoi comprendre le fil :
 
 Quelques repères culturels pour se faire une idée du pays :
 
-- **Religion** : majoritairement catholique, avec une minorité protestante (luthérienne) non négligeable.
+- **Religion** : majoritairement catholique (avec une communauté gréco-catholique à l'est), une minorité protestante (luthérienne) non négligeable, et environ un quart de la population sans religion.
 - **Gastronomie** : le plat national est les {{bryndzové halušky}}, des petites quenelles de pomme de terre accompagnées d'un fromage de brebis typique (bryndza) et de lardons. Autre spécialité : la {{slivovica}}, une eau-de-vie de prune assez forte, souvent servie en apéritif ou en toast.
 - **Musique et traditions** : un folklore vivace, avec costumes traditionnels colorés, danses régionales et un attachement fort à la vie de village dans certaines zones rurales.
 - **Nature** : un pays très tourné vers la randonnée et les sports de montagne, avec plusieurs parcs nationaux emblématiques (Tatras, Slovenský raj).

@@ -1,4 +1,4 @@
-# 🇸🇰 Introduction — Qui es-tu?
+# 🇸🇰 Introduction — Qui es-tu ?
 
 En slovaque, comme en français, il y a un **tu** (tutoiement) et un **vous** (vouvoiement). C'est important de savoir les distinguer dès le départ, surtout pour bien saluer les gens ! 😊
 
@@ -61,7 +61,7 @@ Deux salutations essentielles en slovaque :
 
 ! Dovidenia!
 > Au revoir !
-> Dovidenia = jusqu'à ce qu'on se revoie (forme neutre, courante)
+> Dovidenia = jusqu'à ce qu'on se revoie (forme standard, courante)
 
 ! Ahoj!
 > Salut ! (aussi utilisé pour dire au revoir entre proches)

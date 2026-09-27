@@ -17,6 +17,7 @@ Eric croise Andrea pour la première fois. On boucle le kit avec de quoi dire qu
 | znamená | ça veut dire |
 | hovoríte | vous parlez |
 | po francúzsky | français (une langue) |
+| nemáte za čo | de rien (vouvoiement) |
 
 ---
 
@@ -37,17 +38,17 @@ Eric et Andrea se vouvoient : c'est leur première rencontre.
 > Ako sa máte = comment allez-vous
 + {{Ako sa máte}} est la forme vouvoiement de {{Ako sa máš}}, vu en fiche 1.
 
-! 👦 Dobrý deň. Som v poriadku, ďakujem. A vy?
-> Bonjour. Je vais bien, merci. Et vous ?
+! 👦 Dobrý deň. Dobre, ďakujem. A vy?
+> Bonjour. Bien, merci. Et vous ?
 > Dobrý deň = bonjour
-> Som v poriadku = je vais bien
+> Dobre = bien
 > ďakujem = merci
 > A vy = et vous
 
-! 👩 Tiež v poriadku, ďakujem.
+! 👩 Tiež dobre, ďakujem.
 > Bien aussi, merci.
 > Tiež = aussi
-> v poriadku = bien
+> dobre = bien
 > ďakujem = merci
 
 ! 👦 Hovoríte po francúzsky?
@@ -80,10 +81,11 @@ Eric et Andrea se vouvoient : c'est leur première rencontre.
 > Merci !
 > Ďakujem = merci
 
-! 👩 Nič! Dovidenia!
+! 👩 Nemáte za čo! Dovidenia!
 > De rien ! Au revoir !
-> Nič = rien, de rien
+> Nemáte za čo = de rien (littéralement « vous n'avez pas de quoi »)
 > Dovidenia = au revoir
++ Entre amis, ce sera {{Nemáš za čo}}. Un simple {{Prosím}} marche aussi dans les deux cas.
 
 ! 👦 Dovidenia!
 > Au revoir !
@@ -95,7 +97,7 @@ Eric et Andrea se vouvoient : c'est leur première rencontre.
 
 **Dovidenia, le au revoir formel.** Contrairement à {{Ahoj}} ou {{Čau}}, qui sont informels, {{Dovidenia}} c'est le au revoir « propre », qu'on utilise avec quelqu'un qu'on vouvoie ou qu'on rencontre pour la première fois. Retiens les deux : le formel et l'informel n'ont pas le même mot en slovaque, alors qu'en français on dit « au revoir » dans les deux cas.
 
-**« Nič » pour dire « de rien ».** Tu l'as vu dans la fiche précédente comme « rien » tout court. En réponse à un {{ďakujem}}, ça devient l'équivalent de notre « de rien » ou « pas de quoi ».
+**Trois façons de dire « de rien ».** {{Prosím}} (le plus courant), {{Nemáte za čo}} avec quelqu'un qu'on vouvoie, {{Nemáš za čo}} avec quelqu'un qu'on tutoie — littéralement « il n'y a pas de quoi ». Surtout pas {{nič}}, qui veut juste dire « rien ».
 
 ---
 
@@ -103,34 +105,31 @@ Eric et Andrea se vouvoient : c'est leur première rencontre.
 
 | Slovaque | Français |
 |----------|----------|
-| veľa | beaucoup |
-| meno | le prénom |
-| poznať | connaître |
+| pekne | joliment, bien |
+| volať sa | s'appeler |
+| teší ma | enchanté(e) |
 | po anglicky | anglais (une langue) |
 
 ---
 
-## Quelques phrases avec ce vocabulaire
+## Encore quelques phrases
 
-! Ďakujem veľa!
+! Ďakujem pekne!
 > Merci beaucoup !
 > Ďakujem = merci
-> veľa = beaucoup
+> pekne = joliment
++ Littéralement « je remercie joliment ». On peut renforcer : {{Ďakujem veľmi pekne}}.
 
-! Aké je vaše meno?
-> Quel est votre prénom ?
-> Aké = quel
-> je = est
-> vaše = votre
-> meno = prénom
-+ Vouvoiement : {{vaše}} (votre) au lieu de {{tvoje}} (ton/ta).
+! Ako sa voláte?
+> Comment vous appelez-vous ?
+> Ako = comment
+> sa voláte = vous vous appelez
++ Vouvoiement. Au tutoiement : {{Ako sa voláš?}}
 
-! Je milé vás poznať.
-> C'est agréable de vous connaître.
-> Je milé = c'est agréable
-> vás = vous
-> poznať = connaître
-+ Formule polie qu'on utilise à la fin d'une première rencontre, un peu comme « ravi de vous avoir rencontré » en français.
+! Teší ma.
+> Enchanté(e).
+> Teší ma = ça me réjouit
++ La formule de toute première rencontre, valable au tutoiement comme au vouvoiement.
 
 ! Prepáčte, hovoríte po anglicky?
 > Pardon, vous parlez anglais ?

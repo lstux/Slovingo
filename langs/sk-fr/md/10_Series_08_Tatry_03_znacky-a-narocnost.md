@@ -28,7 +28,7 @@ Comprendre le balisage des sentiers, et parler de la difficulté du parcours. Vo
 |----------|----------|
 | Idem po červenej značke. | Je suis le balisage rouge. |
 | Choď po modrej. | Suis le bleu. |
-| Táto trasa je žltá. | Ce parcours est jaune. |
+| Na tejto trase je žltá značka. | Ce parcours est balisé en jaune. |
 
 Après « po », le nom passe au locatif : c'est exactement le même mécanisme que « v » et « na » déjà vus. La couleur devient un adjectif féminin, car « značka » est féminin.
 
@@ -57,11 +57,12 @@ Le préfixe **naj-** devant un comparatif donne le superlatif : le plus, la plus
 > je = est
 > náročná = difficile
 
-! Modrá značka je ľahšia.
-> Le balisage bleu est plus facile.
-> Modrá značka = le balisage bleu
+! Trasa po modrej je ľahšia.
+> Le parcours par le bleu est plus facile.
+> Trasa po modrej = le parcours par le (balisage) bleu
 > je = est
 > ľahšia = plus facile
++ C'est ce parcours-là qui est plus facile : la couleur du balisage, elle, ne dit rien de la difficulté.
 
 ! Kade ide žltá značka?
 > Par où passe le balisage jaune ?
@@ -75,9 +76,9 @@ Le préfixe **naj-** devant un comparatif donne le superlatif : le plus, la plus
 > najnáročnejšia trasa = le parcours le plus difficile
 > v horách = de la montagne
 
-! Zelená značka je krátka a ľahká.
-> Le balisage vert est court et facile.
-> Zelená značka = le balisage vert
+! Trasa po zelenej je krátka a ľahká.
+> Le parcours par le vert est court et facile.
+> Trasa po zelenej = le parcours par le vert
 > je = est
 > krátka = courte
 > a = et
@@ -114,20 +115,20 @@ Le préfixe **naj-** devant un comparatif donne le superlatif : le plus, la plus
 > je = est
 > dlhá a náročná = long et difficile
 
-! Môžeme ísť po zelenej, je ľahšia ako modrá.
-> Nous pouvons suivre le vert, il est plus facile que le bleu.
+! Môžeme ísť po zelenej, tá trasa je ľahšia.
+> Nous pouvons suivre le vert, ce parcours-là est plus facile.
 > Môžeme ísť = nous pouvons suivre
 > po zelenej = le vert
+> tá trasa = ce parcours-là
 > je ľahšia = est plus facile
-> ako modrá = que le bleu
 
 ---
 
 ## 🇸🇰 Coin slovaque
 
-**Le système de couleurs est unifié dans tout le pays.** Rouge, bleu, vert et jaune signalent des niveaux de parcours cohérents sur l'ensemble du réseau slovaque de sentiers, entretenu depuis plus d'un siècle par le Klub slovenských turistov.
+**Les couleurs ne disent rien de la difficulté.** Contrairement aux pistes de ski, rouge, bleu, vert et jaune indiquent le type d'itinéraire : le **rouge** marque les grands itinéraires principaux (souvent de crête), le **bleu** et le **vert** les liaisons, le **jaune** les itinéraires courts et locaux. Un sentier jaune peut donc être très raide ! Le réseau est entretenu depuis plus d'un siècle par le Klub slovenských turistov.
 
-**Le rouge indique souvent les grandes crêtes.** Les itinéraires de crête les plus emblématiques, comme certaines sections vers Rysy, portent un balisage rouge et exigent une bonne condition physique et de l'expérience.
+**La difficulté se lit ailleurs.** Pour savoir si un parcours est {{náročný}}, on regarde la carte, le dénivelé et les temps de marche indiqués sur les poteaux ({{smerovník}}) — pas la couleur.
 
 **Les sentiers se ferment parfois officiellement.** Pour protéger la faune ou éviter les avalanches, certains tronçons sont interdits une partie de l'année. Un panneau {{zákaz vstupu}}, interdiction d'entrer, doit toujours être respecté, même si le sentier semble praticable.
 

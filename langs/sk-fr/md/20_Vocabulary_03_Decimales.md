@@ -22,23 +22,25 @@ Savoir dire les prix, les tailles, les pourcentages — tout ce qui a une virgul
 
 On peut soit :
 
-### 1️⃣ Dire chaque chiffre après la virgule
+### 1️⃣ La lecture « officielle » : entiers + fraction
 
 Pour **3,14** :
-- {{tri celých pätnásť stotín}}
-- Littéralement : « trois entiers quinze centièmes »
+- {{tri celé štrnásť stotín}}
+- Littéralement : « trois entiers quatorze centièmes »
 
 Pour **27,5** :
 - {{dvadsaťsedem celých päť desatín}}
 - Littéralement : « vingt-sept entiers cinq dixièmes »
 
-### 2️⃣ Simplement énumérer les chiffres (plus courant à l'oral)
+> 💡 « Entier » s'accorde comme un nom compté : {{jedna celá}} (1), {{dve / tri / štyri celé}} (2 à 4), {{päť celých}} (5 et plus, et aussi 0 : {{nula celá}}).
 
-**3,14** → {{tri–čiarka–jedna–štyri}} (ou {{tri–bod–jedna–štyri}})
+### 2️⃣ Avec le mot « virgule » (plus courant à l'oral)
 
-**27,5** → {{dvadsaťsedem–čiarka–päť}}
+**3,14** → {{tri čiarka štrnásť}}
 
-*({{čiarka}} = virgule, {{bod}} = point — mais {{čiarka}} est le standard slovaque)*
+**27,5** → {{dvadsaťsedem čiarka päť}}
+
+*({{čiarka}} = virgule)*
 
 ---
 
@@ -64,15 +66,21 @@ Pour **27,5** :
 | hauteur | {{výška}} | Moja výška je {{172,5 cm}} |
 | poids | {{váha}} | Moja váha je {{68,5 kg}} |
 | température | {{teplota}} | Dnes je {{22,3 °C}} |
-| distance | {{vzdialenosť}} | Vzdalenosť je {{5,5 km}} |
+| distance | {{vzdialenosť}} | Vzdialenosť je {{5,5 km}} |
 
 ### Exemples complets
 
-! Aká je tvoja výška?
-> Quelle est ta taille ?
+! Koľko meriaš?
+> Combien mesures-tu ?
+> Koľko = combien
+> meriaš = tu mesures
 
-? Moja výška je {{172 celých päť desatín}} centimetrov.
-> Ma taille est 172,5 centimètres.
+! Meriam stosedemdesiatdva celých päť desatín centimetra.
+> Je mesure 172,5 centimètres.
+> Meriam = je mesure
+> stosedemdesiatdva celých päť desatín = 172,5
+> centimetra = centimètres
++ Avec un nombre décimal, l'unité se met au génitif singulier : {{centimetra}}, {{kilogramu}}, {{percenta}}.
 
 ---
 
@@ -81,15 +89,20 @@ Pour **27,5** :
 | Pourcentage | Slovaque |
 |---|---|
 | 50% | {{päťdesiat percent}} |
-| 75% | {{sedemdesiat päť percent}} |
+| 75% | {{sedemdesiatpäť percent}} |
 | 100% | {{sto percent}} |
 | 0,5% | {{nula celých päť desatín percenta}} |
 
-! Koľko je {{25 percent}} z {{100}}?
-> Combien font 25% de 100 ?
+! Koľko je dvadsaťpäť percent zo sto?
+> Combien font 25 % de 100 ?
+> Koľko je = combien font
+> dvadsaťpäť percent = 25 %
+> zo sto = de 100
 
-? Je to {{dvadsaťpäť}}.
+! Je to dvadsaťpäť.
 > C'est 25.
+> Je to = c'est
+> dvadsaťpäť = vingt-cinq
 
 ---
 
@@ -102,7 +115,6 @@ Pour **27,5** :
 | {{stotín}} | centièmes |
 | {{tisícin}} | millièmes |
 | {{čiarka}} | virgule |
-| {{bod}} | point (moins courant) |
 | {{percent}} | pourcentage |
 
 ---
@@ -118,7 +130,7 @@ Pour **27,5** :
 - 100,5 = ?
 
 *(Réponses :*
-*- 3,7 = {{tri celých sedem desatín}}*
+*- 3,7 = {{tri celé sedem desatín}}*
 *- 19,25 = {{devätnásť celých dvadsaťpäť stotín}}*
 *- 54,99 = {{päťdesiatštyri celých deväťdesiatdeväť stotín}}*
 *- 100,5 = {{sto celých päť desatín}})*

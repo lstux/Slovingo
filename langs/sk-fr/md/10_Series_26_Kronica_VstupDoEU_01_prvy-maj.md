@@ -52,7 +52,7 @@ Certains sont partis presque aussitôt, vers les rares pays ayant ouvert leur ma
 > spolužiaci odišli hneď = camarades sont partis tout de suite
 > otvorili okamžite = ont ouvert immédiatement
 
-! 💬 Ja som ešte neodišla. Mala som prácu tu, a nebola som ešte pripravená odísť tak ďaleko.
+! 💬 Ja som ešte neodišla. Mala som prácu tu a nebola som ešte pripravená odísť tak ďaleko.
 > Moi je ne suis pas encore partie. J'avais un travail ici, et je n'étais pas encore prête à partir si loin.
 > nebola som ešte pripravená = je n'étais pas encore prête
 

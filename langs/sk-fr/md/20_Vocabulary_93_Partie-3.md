@@ -143,7 +143,7 @@
 | plávanie | natation |
 | beh | course |
 | kreslenie | dessin |
-| záhrada | jardinage |
+| záhradkárčenie | jardinage |
 | koncert | concert |
 | televízia | télévision |
 

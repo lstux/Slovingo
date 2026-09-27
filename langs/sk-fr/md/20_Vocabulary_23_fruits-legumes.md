@@ -15,7 +15,7 @@
 | hrozno | raisin |
 | broskyňa | pêche |
 
-+ "hrozno" (raisin) est un mot singulier en slovaque, comme "le raisin" en français : on ne dit pas "des raisins" un par un de la même façon.
+> 💡 "hrozno" (raisin) est un mot singulier en slovaque, comme "le raisin" en français : on ne dit pas "des raisins" un par un de la même façon.
 
 ---
 
@@ -44,7 +44,7 @@
 > J'aime les carottes.
 > mám rada = j'aime (dit par une femme) · mrkvu = carotte
 
-+ "mám rád" pour un homme, "mám rada" pour une femme : le verbe "avoir" reste le même, mais l'adjectif "rád/rada" s'accorde avec la personne qui parle.
+> 💡 "mám rád" pour un homme, "mám rada" pour une femme : le verbe "avoir" reste le même, mais l'adjectif "rád/rada" s'accorde avec la personne qui parle.
 
 ! Nemám rád cibuľu.
 > Je n'aime pas l'oignon.
@@ -87,7 +87,7 @@
 > Ce fruit n'est pas encore mûr.
 > toto ovocie = ce fruit · ešte nie je = n'est pas encore · zrelé = mûr
 
-+ "ovocie" (fruits) et "zelenina" (légumes) sont des noms collectifs singuliers en slovaque : on ne les met pas au pluriel comme en français.
+> 💡 "ovocie" (fruits) et "zelenina" (légumes) sont des noms collectifs singuliers en slovaque : on ne les met pas au pluriel comme en français.
 
 ---
 

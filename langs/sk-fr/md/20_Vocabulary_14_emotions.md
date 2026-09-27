@@ -13,7 +13,7 @@
 | prekvapený / prekvapená | surpris(e) |
 | hrdý / hrdá | fier / fière |
 
-+ Comme les couleurs, les adjectifs d'émotion s'accordent en genre : -ý au masculin, -á au féminin.
+> 💡 Comme les couleurs, les adjectifs d'émotion s'accordent en genre : -ý au masculin, -á au féminin.
 
 ---
 
@@ -44,11 +44,11 @@
 > Je suis un peu fatigué.
 > som = je suis · trochu = un peu · unavený = fatigué
 
-! Prečo si taký smutná?
+! Prečo si taká smutná?
 > Pourquoi es-tu si triste ?
-> prečo = pourquoi · si = es (tu) · taký = si, tellement · smutná = triste (féminin)
+> prečo = pourquoi · si = es (tu) · taká = si, tellement (féminin) · smutná = triste (féminin)
 
-+ "taký" s'accorde aussi en genre : taký pour le masculin, taká pour le féminin, devant l'adjectif.
+> 💡 "taký" s'accorde aussi en genre : taký pour le masculin, taká pour le féminin, devant l'adjectif.
 
 ! Som z toho veľmi šťastný!
 > Je suis très heureux de ça !

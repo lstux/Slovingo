@@ -30,7 +30,7 @@
 | ježko | hérisson |
 | srnka | chevreuil |
 
-+ Le medveď (ours) et le vlk (loup) sont deux animaux emblématiques des forêts slovaques, notamment dans les Tatras.
+> 💡 Le medveď (ours) et le vlk (loup) sont deux animaux emblématiques des forêts slovaques, notamment dans les Tatras.
 
 ---
 
@@ -59,7 +59,7 @@
 > J'ai un chien et deux chats.
 > mám = j'ai · psa = chien (accusatif) · dve mačky = deux chats
 
-+ "pes" devient "psa" à l'accusatif : c'est une déclinaison irrégulière fréquente, à mémoriser.
+> 💡 "pes" devient "psa" à l'accusatif : c'est une déclinaison irrégulière fréquente, à mémoriser.
 
 ! Môj pes sa volá Rex.
 > Mon chien s'appelle Rex.

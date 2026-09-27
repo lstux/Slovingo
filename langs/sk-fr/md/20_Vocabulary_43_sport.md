@@ -14,7 +14,7 @@
 | cyklistika | cyclisme |
 | hokej | hockey |
 
-+ Le hokej (hockey sur glace) est extrêmement populaire en Slovaquie, presque au même niveau que le football dans d'autres pays.
+> 💡 Le hokej (hockey sur glace) est extrêmement populaire en Slovaquie, presque au même niveau que le football dans d'autres pays.
 
 ---
 
@@ -32,7 +32,7 @@
 > J'aime courir dans le parc.
 > rád behám = j'aime courir · v parku = dans le parc
 
-+ Pour les sports d'équipe ou avec un ballon on utilise "hrať" (jouer à), tandis que pour la natation, la course ou le ski on utilise directement le verbe correspondant : plávať, behať, lyžovať sa.
+> 💡 Pour les sports d'équipe ou avec un ballon on utilise "hrať" (jouer à), tandis que pour la natation, la course ou le ski on utilise directement le verbe correspondant : plávať, behať, lyžovať sa.
 
 ! V zime chodíme lyžovať do Tatier.
 > En hiver nous allons skier dans les Tatras.

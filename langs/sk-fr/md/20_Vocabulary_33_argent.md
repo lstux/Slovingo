@@ -14,7 +14,7 @@
 | pokladňa | caisse |
 | platba | paiement |
 
-+ "peniaze" (argent) est toujours au pluriel en slovaque, même pour une petite somme.
+> 💡 "peniaze" (argent) est toujours au pluriel en slovaque, même pour une petite somme.
 
 ---
 
@@ -28,7 +28,7 @@
 > Ça coûte dix euros.
 > to stojí = ça coûte · desať eur = dix euros
 
-+ Après les nombres à partir de 5, "euro" prend la forme "eur" (génitif pluriel) : {{päť eur}}, {{desať eur}}.
+> 💡 Après les nombres à partir de 5, "euro" prend la forme "eur" (génitif pluriel) : {{päť eur}}, {{desať eur}}.
 
 ! Môžem platiť kartou?
 > Je peux payer par carte ?
@@ -88,9 +88,9 @@
 | šetriť | économiser |
 | míňať | dépenser |
 
-! Nemám drobné, môžete mi vrátiť?
-> Je n'ai pas de monnaie, pouvez-vous me rendre la monnaie ?
-> nemám drobné = je n'ai pas de monnaie · môžete mi vrátiť = pouvez-vous me rendre
+! Nemám drobné, môžete mi vydať z dvadsiatich eur?
+> Je n'ai pas de monnaie, vous pouvez me rendre la monnaie sur vingt euros ?
+> nemám drobné = je n'ai pas de monnaie · môžete mi vydať = pouvez-vous me rendre la monnaie · z dvadsiatich eur = sur vingt euros
 
 ---
 

@@ -45,7 +45,7 @@ Dernière fiche d'apprentissage avant le dialogue. On situe la famille : le verb
 
 C'est le locatif : il répond à la question « où ? » et ne s'utilise jamais sans préposition.
 
-+ Attention à Košice : contrairement à Bratislava, c'est un nom toujours pluriel en slovaque (comme Piešťany), et il se décline donc comme un pluriel — « v Košiciach », jamais « v Košice ». Bonne nouvelle pour la logique du tableau ci-dessus, mauvaise nouvelle pour la mémoire.
+> 💡 Attention à Košice : contrairement à Bratislava, c'est un nom toujours pluriel en slovaque (comme Piešťany), et il se décline donc comme un pluriel — « v Košiciach », jamais « v Košice ». Bonne nouvelle pour la logique du tableau ci-dessus, mauvaise nouvelle pour la mémoire.
 
 ---
 
@@ -61,7 +61,7 @@ C'est le locatif : il répond à la question « où ? » et ne s'utilise jamais 
 > Bývam = j'habite
 > v = à
 > Košiciach = Košice (locatif, toujours au pluriel)
-+ Comme le fait remarquer Andrea : « ça aurait été tellement plus simple si j'habitais Bratislava… »
++ Nom toujours pluriel, d'où la terminaison -iach. Avec Bratislava, ç'aurait été tellement plus simple…
 
 ! Bývam v byte.
 > J'habite dans un appartement.

@@ -15,7 +15,7 @@ Demander son chemin et le suivre. C'est ici qu'apparaît l'**impératif**, la fo
 | rovno | tout droit |
 | vľavo | à gauche |
 | vpravo | à droite |
-| za rohom | après le coin |
+| za rohom | au coin |
 | priamo | juste, directement |
 
 ---
@@ -37,7 +37,7 @@ L'impératif se retient d'abord tel quel, sans en construire la règle : ce sont
 
 | Slovaque | Français |
 |----------|----------|
-| Je to za rohom. | C'est après le coin. |
+| Je to za rohom. | C'est au coin. |
 | Je to vedľa banky. | C'est à côté de la banque. |
 | Je to pred kostolom. | C'est devant l'église. |
 | Je to blízko. | C'est près d'ici. |
@@ -62,9 +62,9 @@ L'impératif se retient d'abord tel quel, sans en construire la règle : ce sont
 > vľavo = à gauche
 
 ! Je to za rohom.
-> C'est après le coin.
+> C'est au coin.
 > Je to = c'est
-> za rohom = après le coin
+> za rohom = au coin
 
 ! Choď vpravo, nie vľavo!
 > Va à droite, pas à gauche !
@@ -116,11 +116,11 @@ L'impératif se retient d'abord tel quel, sans en construire la règle : ce sont
 > na námestí = sur la place
 
 ! Banka je vedľa múzea, za rohom.
-> La banque est à côté du musée, après le coin.
+> La banque est à côté du musée, au coin.
 > Banka = la banque
 > je = est
 > vedľa múzea = à côté du musée
-> za rohom = après le coin
+> za rohom = au coin
 
 ---
 
@@ -128,9 +128,9 @@ L'impératif se retient d'abord tel quel, sans en construire la règle : ce sont
 
 **Prepáčte ouvre toutes les portes.** Ce mot d'excuse poli sert à interpeller un inconnu, à se faufiler dans une foule ou à s'excuser d'un vrai impair. C'est probablement l'un des mots les plus utiles du répertoire touristique.
 
-**Les Slovaques indiquent volontiers le chemin à pied.** Demander sa route dans la rue reste courant et bien accueilli, contrairement à d'autres capitales où l'on préfère sortir son téléphone. Une explication orale accompagnée d'un geste du bras est fréquente.
+**Les Slovaques indiquent volontiers le chemin à pied.** Demander sa route dans la rue reste courant et bien accueilli, contrairement à d'autres grandes villes où l'on préfère sortir son téléphone. Une explication orale accompagnée d'un geste du bras est fréquente.
 
-**Le vieux centre se visite surtout à pied.** {{Hlavná ulica}}, piétonne depuis 1986, forme le plus grand centre historique protégé de Slovaquie, et la plupart des sites se trouvent à quelques minutes les uns des autres — largement de quoi pratiquer *rovno*, *vľavo* et *vpravo* en vrai.
+**Le vieux centre se visite surtout à pied.** {{Hlavná ulica}}, largement piétonne, forme le plus grand centre historique protégé de Slovaquie, et la plupart des sites se trouvent à quelques minutes les uns des autres — largement de quoi pratiquer *rovno*, *vľavo* et *vpravo* en vrai.
 
 ---
 

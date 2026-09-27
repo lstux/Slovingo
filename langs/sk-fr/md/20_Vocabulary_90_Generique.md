@@ -49,7 +49,7 @@
 ! Veľmi dobre.
 > Très bien.
 
-! Ako sa voláte ?
+! Ako sa voláte?
 > Comment vous appelez-vous ?
 
 ! Volám sa…

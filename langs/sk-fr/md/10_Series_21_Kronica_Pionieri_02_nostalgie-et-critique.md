@@ -19,8 +19,8 @@ Des camps existent toujours aujourd'hui, mais sans l'idéologie ni le {{sľub}} 
 
 ! 💬 So svojou mamou o tom hovorím inak ako s kamarátkami z tábora.
 > J'en parle différemment avec ma mère qu'avec mes copines de camp.
-> S mojou mamou = avec ma mère
-> o tom hovoríme inak = j'en parle différemment
+> So svojou mamou = avec ma mère
+> o tom hovorím inak = j'en parle différemment
 
 ! 💬 Ja osobne by som tam svoje dieťa neposlala. Aj bez ideológie mi to príde príliš vojenské.
 > Personnellement je n'y enverrais pas mon enfant. Même sans idéologie, je trouve ça trop militaire.

@@ -26,7 +26,7 @@ Les couleurs, qui s'accordent comme n'importe quel adjectif. Et le verbe **páč
 
 | Slovaque | Français |
 |----------|----------|
-| červený svetr | un pull rouge (masculin) |
+| červený sveter | un pull rouge (masculin) |
 | červená taška | un sac rouge (féminin) |
 | červené auto | une voiture rouge (neutre) |
 
@@ -126,7 +126,7 @@ Comme *chutiť*, la construction est renversée : c'est l'objet qui « plaît à
 
 ## 🇸🇰 Coin slovaque
 
-**Modrý a le sens du bleu-vert.** Selon la région et le locuteur, {{modrý}} peut légèrement déborder vers ce qu'un francophone appellerait turquoise. Rien de systématique, mais ça explique certains désaccords amusants sur la couleur exacte d'un objet.
+**Farba, c'est aussi la peinture.** Le même mot {{farba}} désigne la couleur, la peinture qu'on met sur un mur et la teinture des œufs de Pâques. Le contexte fait le tri.
 
 **Le rouge et le blanc du drapeau.** Ces deux couleurs, associées au bleu, dominent le drapeau national et reviennent dans énormément de symboles traditionnels : costumes, décorations de Pâques, motifs brodés.
 

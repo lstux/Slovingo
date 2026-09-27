@@ -2,7 +2,7 @@
 
 @ TODO_img/choisir-image.jpg | TODO : choisir une image (salutations, poignée de main...) sur Wikimedia Commons
 
-Pour commencer, seulement quatre mots : {{dobrý deň}} (bonjour), {{ako sa máš}} (comment ça va), {{ahoj}} et {{čau}} (au revoir). La réponse à {{ako sa máš}} arrive dans la fiche suivante — patience.
+Pour commencer, seulement quatre mots : {{dobrý deň}} (bonjour), {{ako sa máš}} (comment ça va), {{ahoj}} et {{čau}} (salut, au revoir). La réponse à {{ako sa máš}} arrive dans la fiche suivante — patience.
 
 ---
 
@@ -13,7 +13,7 @@ Pour commencer, seulement quatre mots : {{dobrý deň}} (bonjour), {{ako sa má�
 | dobrý deň | bonjour |
 | ako sa máš | comment ça va |
 | ahoj | salut |
-| čau | ciao, au revoir |
+| čau | ciao, salut, au revoir |
 
 ---
 
@@ -21,15 +21,15 @@ Pour commencer, seulement quatre mots : {{dobrý deň}} (bonjour), {{ako sa má�
 
 ### {{Dobrý deň}}
 
-La salutation formelle, valable toute la journée. Littéralement « bon jour ». Tu peux la sortir dans n'importe quelle situation où tu ne connais pas la personne.
+La salutation formelle, valable toute la journée (le soir, on passe plutôt à {{dobrý večer}}). Littéralement « bon jour ». Tu peux la sortir dans n'importe quelle situation où tu ne connais pas la personne.
 
 ### {{Ako sa máš?}}
 
-Littéralement « comment toi tu vas ? ». C'est la façon la plus courante de demander comment ça va, à quelqu'un qu'on tutoie. On la garde en bloc pour l'instant — tu apprendras à y répondre dans la fiche suivante.
+Littéralement « comment te portes-tu ? ». C'est la façon la plus courante de demander comment ça va, à quelqu'un qu'on tutoie. On la garde en bloc pour l'instant — tu apprendras à y répondre dans la fiche suivante.
 
 ### {{Ahoj}} et {{čau}}
 
-Les deux sont informels et signifient à peu près la même chose. **{{Ahoj}}** peut être bonjour *ou* au revoir selon le contexte. **{{Čau}}** c'est surtout au revoir, plus désinvolte.
+Les deux sont informels et signifient à peu près la même chose. **{{Ahoj}}** peut être bonjour *ou* au revoir selon le contexte. **{{Čau}}** aussi, en encore plus désinvolte — c'est le « ciao » italien, dans les deux sens.
 
 ---
 
@@ -38,7 +38,7 @@ Les deux sont informels et signifient à peu près la même chose. **{{Ahoj}}** 
 ! Dobrý deň.
 > Bonjour.
 > Dobrý deň = bonjour
-+ La salutation formelle. Tu la dis à n'importe quelle heure de la journée.
++ La salutation formelle. Tu la dis à n'importe quelle heure de la journée, jusqu'au soir.
 
 ! Ahoj!
 > Salut !
@@ -46,9 +46,9 @@ Les deux sont informels et signifient à peu près la même chose. **{{Ahoj}}** 
 + Désinvolte, ami avec ami. Peut vouloir dire bonjour ou au revoir selon le contexte.
 
 ! Čau!
-> Ciao ! Au revoir !
+> Ciao ! Salut !
 > Čau = ciao
-+ C'est surtout un au revoir, plus casual.
++ Comme ahoj, il sert à l'arrivée comme au départ, entre amis.
 
 ! Ako sa máš?
 > Comment ça va ?
@@ -80,17 +80,18 @@ Les deux sont informels et signifient à peu près la même chose. **{{Ahoj}}** 
 
 | Slovaque | Français |
 |----------|----------|
-| priateľ | l'ami |
+| kamarát | le copain, l'ami |
 | dnes | aujourd'hui |
 
 ---
 
 ## Encore quelques phrases
 
-! Ahoj priateľ!
-> Salut l'ami !
+! Ahoj, kamarát!
+> Salut, mon pote !
 > Ahoj = salut
-> priateľ = ami
+> kamarát = copain, ami
++ On croisera aussi {{priateľ}} : il veut dire « ami », mais très souvent « petit ami ». Pour un copain, {{kamarát}} est plus sûr.
 
 ! Dnes je dobrý deň.
 > Aujourd'hui c'est un bon jour.

@@ -45,7 +45,7 @@
 > C'est loin d'ici ?
 > je to ďaleko = c'est loin · odtiaľto = d'ici
 
-+ "doprava" (à droite) et "doľava" (à gauche) sont des adverbes de direction, différents de "pravá/ľavá strana" qui décrivent un côté ou un objet.
+> 💡 "doprava" (à droite) et "doľava" (à gauche) sont des adverbes de direction, différents de "pravá/ľavá strana" qui décrivent un côté ou un objet.
 
 ! Je to hneď za rohom.
 > C'est juste au coin de la rue.

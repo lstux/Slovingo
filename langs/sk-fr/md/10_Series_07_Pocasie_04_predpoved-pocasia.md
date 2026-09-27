@@ -87,9 +87,9 @@ Parler de la météo à venir, et adapter ses projets. On combine ici le futur s
 > sa mení = change
 > každý deň = chaque jour
 
-! Musíme meniť plán, bude búrka.
+! Musíme zmeniť plán, bude búrka.
 > Nous devons changer de plan, il va y avoir un orage.
-> Musíme meniť = nous devons changer
+> Musíme zmeniť = nous devons changer
 > plán = de plan
 > bude búrka = il va y avoir un orage
 

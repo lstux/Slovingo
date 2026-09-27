@@ -2,7 +2,7 @@
 
 @ img/Map_of_the_Slovak_Diaspora_in_the_World.svg | Carte de la diaspora slovaque dans le monde — Wikimedia Commons
 
-Depuis l'adhésion à l'Union européenne, plusieurs centaines de milliers de Slovaques ont vécu ou travaillé à l'étranger à un moment de leur vie, dans des proportions particulièrement élevées pour un pays de cette taille. La diaspora slovaque contemporaine s'est concentrée sur quelques destinations phares : le Royaume-Uni, l'Autriche, l'Allemagne — et, pour certains secteurs comme l'hôtellerie ou les services à la personne, des pays comme l'Espagne.
+Depuis l'adhésion à l'Union européenne, plusieurs centaines de milliers de Slovaques ont vécu ou travaillé à l'étranger à un moment de leur vie, dans des proportions particulièrement élevées pour un pays de cette taille. La diaspora slovaque contemporaine s'est concentrée sur quelques destinations phares : la République tchèque d'abord, langue oblige, puis le Royaume-Uni, l'Autriche et l'Allemagne — ces deux derniers notamment pour les soins aux personnes âgées et l'hôtellerie.
 
 ---
 
@@ -17,7 +17,7 @@ Depuis l'adhésion à l'Union européenne, plusieurs centaines de milliers de Sl
 | domov | le chez-soi, le pays natal |
 | cudzina | l'étranger (le pays étranger) |
 | návrat | le retour |
-| stesknutie | le mal du pays |
+| clivota | le mal du pays, la nostalgie |
 | istota | la sécurité, la certitude |
 | odvaha | le courage |
 | náhoda | le hasard |
@@ -36,13 +36,13 @@ Les raisons de partir ne se ressemblent jamais tout à fait — un mélange de t
 > som takmer nerozumela ničomu = je ne comprenais presque rien
 > jazykovej bariére = la barrière de la langue
 
-! 💬 Postupne som si zvykla, a začala som mať naozaj rada ten spôsob života.
+! 💬 Postupne som si zvykla a začala som mať naozaj rada ten spôsob života.
 > Petit à petit je m'y suis habituée, et j'ai commencé à vraiment aimer ce mode de vie.
 > Postupne som si zvykla = petit à petit je m'y suis habituée
 
-Le mot {{stesknutie}}, le mal du pays, revient souvent dans les récits de cette génération — un rapport ambivalent au pays d'origine : la nostalgie de la famille et de la langue maternelle, combinée à une vraie appréciation des opportunités trouvées ailleurs, sans nécessairement vouloir rentrer de façon définitive.
+Le mot {{clivota}}, le mal du pays, revient souvent dans les récits de cette génération — un rapport ambivalent au pays d'origine : la nostalgie de la famille et de la langue maternelle, combinée à une vraie appréciation des opportunités trouvées ailleurs, sans nécessairement vouloir rentrer de façon définitive.
 
-! 💬 Chýbala mi rodina, a chýbalo mi bývať naozaj doma, nie len na návšteve.
+! 💬 Chýbala mi rodina a chýbalo mi bývať naozaj doma, nie len na návšteve.
 > Ma famille me manquait, et il me manquait d'habiter vraiment chez moi, pas juste en visite.
 > chýbalo mi bývať naozaj doma = il me manquait d'habiter vraiment chez moi
 

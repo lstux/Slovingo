@@ -1,6 +1,6 @@
 # Grammaire - Les verbes modaux
 
-Ces verbes sont presque toujours suivis d'un infinitif, comme en français ("je peux partir", "je dois manger"). Attention : le slovaque distingue deux formes de "pouvoir" bien différentes.
+Ces verbes sont presque toujours suivis d'un infinitif, comme en français ("je peux partir", "je dois manger"). Attention : le slovaque distingue plusieurs façons de dire "pouvoir" : la possibilité (môcť), la permission (smieť) et la capacité (vedieť).
 
 ## Vocabulaire essentiel
 

@@ -46,7 +46,7 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 | musieť | devoir |
 | čižmy | les bottes |
 | plášť do dažďa | l'imperméable |
-| krémy na opaľovanie | la crème solaire |
+| krém na opaľovanie | la crème solaire |
 | šiltovka | la casquette |
 | ponožky | les chaussettes |
 | teplota vzduchu | la température de l'air |
@@ -138,11 +138,11 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 > kvitnú = fleurissent
 > kvety = les fleurs
 
-! Je hmla, tak musíme meniť plán výletu.
+! Je hmla, tak musíme zmeniť plán výletu.
 > Il y a du brouillard, alors nous devons changer le plan de l'excursion.
 > Je hmla = il y a du brouillard
 > tak = alors
-> musíme meniť = nous devons changer
+> musíme zmeniť = nous devons changer
 > plán výletu = le plan de l'excursion
 
 ! V horách je vždy chladnejšie, tak beriem šiltovku a bundu.
@@ -177,11 +177,11 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 > dnes = aujourd'hui
 > je slnečno = il fait beau
 
-! Krémy na opaľovanie sú dôležité v lete, slnko je silné.
+! Krém na opaľovanie je v lete dôležitý, slnko je silné.
 > La crème solaire est importante en été, le soleil est fort.
-> Krémy na opaľovanie = la crème solaire
-> sú = sont
-> dôležité = importante
+> Krém na opaľovanie = la crème solaire
+> je = est
+> dôležitý = importante
 > v lete = en été
 > slnko = le soleil
 > je = est

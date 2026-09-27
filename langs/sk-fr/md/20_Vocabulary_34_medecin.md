@@ -14,7 +14,7 @@
 | recept | ordonnance |
 | choroba | maladie |
 
-+ "lieky" (médicaments) est toujours au pluriel en slovaque, même pour un seul médicament.
+> 💡 "lieky" (médicaments) est toujours au pluriel en slovaque, même pour un seul médicament.
 
 ---
 
@@ -36,7 +36,7 @@
 > Je tousse depuis trois jours.
 > kašlem = je tousse · už tri dni = déjà depuis trois jours
 
-+ "už" (déjà) accompagné d'une durée exprime une action qui continue depuis un moment, comme "depuis" en français.
+> 💡 "už" (déjà) accompagné d'une durée exprime une action qui continue depuis un moment, comme "depuis" en français.
 
 ---
 
