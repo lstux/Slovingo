@@ -1,0 +1,132 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-bonjour",
+      "type": "qcm",
+      "l1": "bonjour",
+      "l2": "dobrý deň",
+      "choices_l1": [
+        "salut",
+        "au revoir",
+        "comment ça va"
+      ],
+      "choices_l2": [
+        "ahoj",
+        "čau",
+        "ako sa máš"
+      ]
+    },
+    {
+      "id": "qcm-salut",
+      "type": "qcm",
+      "l1": "salut",
+      "l2": "ahoj",
+      "choices_l1": [
+        "bonjour",
+        "au revoir",
+        "comment ça va"
+      ],
+      "choices_l2": [
+        "dobrý deň",
+        "čau",
+        "ako sa máš"
+      ]
+    },
+    {
+      "id": "qcm-ciao",
+      "type": "qcm",
+      "l1": "ciao, au revoir",
+      "l2": "čau",
+      "choices_l1": [
+        "bonjour",
+        "salut",
+        "comment ça va"
+      ],
+      "choices_l2": [
+        "dobrý deň",
+        "ahoj",
+        "ako sa máš"
+      ]
+    },
+    {
+      "id": "qcm-commentcava",
+      "type": "qcm",
+      "l1": "comment ça va",
+      "l2": "ako sa máš",
+      "choices_l1": [
+        "bonjour",
+        "salut",
+        "au revoir"
+      ],
+      "choices_l2": [
+        "dobrý deň",
+        "ahoj",
+        "čau"
+      ]
+    },
+    {
+      "id": "qcm-lami",
+      "type": "qcm",
+      "l1": "l'ami",
+      "l2": "priateľ",
+      "choices_l1": [
+        "bonjour",
+        "aujourd'hui",
+        "salut"
+      ],
+      "choices_l2": [
+        "dobrý deň",
+        "dnes",
+        "ahoj"
+      ]
+    },
+    {
+      "id": "qcm-aujourd",
+      "type": "qcm",
+      "l1": "aujourd'hui",
+      "l2": "dnes",
+      "choices_l1": [
+        "l'ami",
+        "salut",
+        "bonjour"
+      ],
+      "choices_l2": [
+        "priateľ",
+        "ahoj",
+        "dobrý deň"
+      ]
+    },
+    {
+      "id": "match-salutations",
+      "type": "match",
+      "l1": [
+        "Bonjour.",
+        "Salut !",
+        "Au revoir !",
+        "Comment ça va ?"
+      ],
+      "l2": [
+        "Dobrý deň.",
+        "Ahoj!",
+        "Čau!",
+        "Ako sa máš?"
+      ]
+    },
+    {
+      "id": "match-salutations-extended",
+      "type": "match",
+      "l1": [
+        "Bonjour ! Comment ça va ?",
+        "Salut l'ami !",
+        "Salut ! Au revoir !",
+        "Aujourd'hui c'est un bon jour."
+      ],
+      "l2": [
+        "Dobrý deň! Ako sa máš?",
+        "Ahoj priateľ!",
+        "Ahoj! Čau!",
+        "Dnes je dobrý deň."
+      ]
+    }
+  ]
+}

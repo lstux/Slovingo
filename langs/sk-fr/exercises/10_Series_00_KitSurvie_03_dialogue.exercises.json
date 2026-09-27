@@ -1,0 +1,164 @@
+{
+  "exercises": [
+    {
+      "id": "qcm-rozumies",
+      "type": "qcm",
+      "l1": "rozumieš",
+      "l2": "tu comprends",
+      "choices_l1": [
+        "rozumiem",
+        "nerozumiem",
+        "znamená"
+      ],
+      "choices_l2": [
+        "je comprends",
+        "je ne comprends pas",
+        "ça veut dire"
+      ]
+    },
+    {
+      "id": "qcm-rozumiem",
+      "type": "qcm",
+      "l1": "rozumiem",
+      "l2": "je comprends",
+      "choices_l1": [
+        "rozumieš",
+        "nerozumiem",
+        "znamená"
+      ],
+      "choices_l2": [
+        "tu comprends",
+        "je ne comprends pas",
+        "ça veut dire"
+      ]
+    },
+    {
+      "id": "qcm-nerozumiem",
+      "type": "qcm",
+      "l1": "nerozumiem",
+      "l2": "je ne comprends pas",
+      "choices_l1": [
+        "rozumiem",
+        "rozumieš",
+        "znamená"
+      ],
+      "choices_l2": [
+        "je comprends",
+        "tu comprends",
+        "ça veut dire"
+      ]
+    },
+    {
+      "id": "qcm-co",
+      "type": "qcm",
+      "l1": "čo",
+      "l2": "quoi",
+      "choices_l1": [
+        "znamená",
+        "hovoríte",
+        "rozumiem"
+      ],
+      "choices_l2": [
+        "ça veut dire",
+        "vous parlez",
+        "je comprends"
+      ]
+    },
+    {
+      "id": "qcm-znamena",
+      "type": "qcm",
+      "l1": "znamená",
+      "l2": "ça veut dire",
+      "choices_l1": [
+        "čo",
+        "hovoríte",
+        "rozumiem"
+      ],
+      "choices_l2": [
+        "quoi",
+        "vous parlez",
+        "je comprends"
+      ]
+    },
+    {
+      "id": "qcm-hovorite",
+      "type": "qcm",
+      "l1": "hovoríte",
+      "l2": "vous parlez",
+      "choices_l1": [
+        "čo",
+        "znamená",
+        "hovorím"
+      ],
+      "choices_l2": [
+        "quoi",
+        "ça veut dire",
+        "je parle"
+      ]
+    },
+    {
+      "id": "qcm-pofrancuzsky",
+      "type": "qcm",
+      "l1": "po francúzsky",
+      "l2": "français",
+      "choices_l1": [
+        "po anglicky",
+        "hovoríte",
+        "dovidenia"
+      ],
+      "choices_l2": [
+        "anglais",
+        "vous parlez",
+        "au revoir"
+      ]
+    },
+    {
+      "id": "qcm-dovidenia",
+      "type": "qcm",
+      "l1": "dovidenia",
+      "l2": "au revoir",
+      "choices_l1": [
+        "po anglicky",
+        "po francúzsky",
+        "hovoríte"
+      ],
+      "choices_l2": [
+        "anglais",
+        "français",
+        "vous parlez"
+      ]
+    },
+    {
+      "id": "match-dialogue",
+      "type": "match",
+      "l1": [
+        "Dobrý deň! Ako sa máte?",
+        "Dobrý deň. Som v poriadku, ďakujem. A vy?",
+        "Hovoríte po francúzsky?",
+        "Áno, hovorím po francúzsky."
+      ],
+      "l2": [
+        "Bonjour ! Comment allez-vous ?",
+        "Bonjour. Je vais bien, merci. Et vous ?",
+        "Parlez-vous français ?",
+        "Oui, je parle français."
+      ]
+    },
+    {
+      "id": "match-dialogue-extended",
+      "type": "match",
+      "l1": [
+        "Prepáčte, nerozumiem. Čo to znamená \"dovidenia\"?",
+        "Dovidenia znamená \"au revoir\".",
+        "Ďakujem!",
+        "Nič! Dovidenia!"
+      ],
+      "l2": [
+        "Pardon, je ne comprends pas. Qu'est-ce que ça veut dire \"dovidenia\" ?",
+        "\"Dovidenia\" veut dire \"au revoir\".",
+        "Merci !",
+        "De rien ! Au revoir !"
+      ]
+    }
+  ]
+}
