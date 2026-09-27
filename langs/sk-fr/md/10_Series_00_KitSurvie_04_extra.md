@@ -38,6 +38,7 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 | veľa | beaucoup |
 | meno | le prénom |
 | poznať | connaître |
+| po anglicky | anglais |
 
 ---
 
@@ -93,6 +94,11 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 > Vous parlez français ? Tu comprends ?
 > Hovoríte po francúzsky = vous parlez français
 > Rozumieš = tu comprends
+
+! Prepáčte, hovoríte po anglicky?
+> Pardon, vous parlez anglais ?
+> Prepáčte = pardon
+> Hovoríte po anglicky = vous parlez anglais
 
 ! Čo to znamená?
 > Qu'est-ce que ça veut dire ?

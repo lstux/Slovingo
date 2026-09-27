@@ -54,7 +54,7 @@ Eric et Andrea se vouvoient : c'est leur première rencontre.
 > Parlez-vous français ?
 > Hovoríte = vous parlez
 > po francúzsky = français
-+ Probablement la question la plus utile de tout ce kit : si la réponse est oui, la moitié de tes problèmes de communication disparaissent d'un coup.
++ Probablement la question la plus utile de tout ce kit : si la réponse est oui, la moitié de tes problèmes de communication disparaissent d'un coup. Le patron **{{po}}** + une langue à la forme en « -y » marche pour n'importe quelle langue : {{po francúzsky}} (en français), {{po anglicky}} (en anglais). En pratique, tu croiseras sans doute plus d'anglophones que de francophones en Slovaquie — {{Hovoríte po anglicky?}} te servira encore plus souvent.
 
 ! 👩 Áno, hovorím po francúzsky.
 > Oui, je parle français.
@@ -106,6 +106,7 @@ Eric et Andrea se vouvoient : c'est leur première rencontre.
 | veľa | beaucoup |
 | meno | le prénom |
 | poznať | connaître |
+| po anglicky | anglais (une langue) |
 
 ---
 
@@ -130,3 +131,9 @@ Eric et Andrea se vouvoient : c'est leur première rencontre.
 > vás = vous
 > poznať = connaître
 + Formule polie qu'on utilise à la fin d'une première rencontre, un peu comme « ravi de vous avoir rencontré » en français.
+
+! Prepáčte, hovoríte po anglicky?
+> Pardon, vous parlez anglais ?
+> Prepáčte = pardon
+> Hovoríte po anglicky = vous parlez anglais
++ La version qui te servira le plus souvent, statistiquement.
