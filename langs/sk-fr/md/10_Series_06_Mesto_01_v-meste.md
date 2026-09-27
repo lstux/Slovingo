@@ -1,6 +1,6 @@
 # Série Mesto (1/5) — V meste
 
-@ img/mesto_01_st_elisabeth_cathedral.jpg | La cathédrale Sainte-Élisabeth, au centre de la rue Hlavná à Košice — Wikimedia Commons, CC BY-SA
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Kosice_(Slovakia)_-_St._Elizabeth%27s_Catedral_2.jpg | La cathédrale Sainte-Élisabeth, au centre de la rue Hlavná à Košice — Wikimedia Commons, CC BY-SA
 
 Les lieux qu'on croise en ville. La préposition **na** revient beaucoup ici, pour les endroits ouverts et les institutions.
 

@@ -1,6 +1,6 @@
 # Nežná revolúcia (2/2) — Čo z toho zostalo
 
-@ img/kronika_revolucia_03_kosice_hlavna_today.jpg | Hlavná ulica aujourd'hui, Košice — Wikimedia Commons, CC BY-SA
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Ko%C5%A1ice_-_pam._budova_-_Hlavn%C3%A1_ul._69.jpg | Hlavná ulica aujourd'hui, Košice — Wikimedia Commons, CC BY-SA
 
 Le 17 novembre n'est pas arrivé par hasard. Des mouvements de contestation existaient déjà avant cette date, comme la {{sviečka}}, la manifestation aux bougies de mars 1988 à Bratislava, réprimée par la police. À Košice non plus, ça ne s'est pas arrêté au 17 : dans les jours suivants, pendant que des dizaines de milliers de personnes manifestaient sur {{Hlavná ulica}}, les étudiants de l'université technique faisaient {{štrajk}}, la grève. Le mécontentement couvait depuis plus longtemps, en Slovaquie comme dans le reste du bloc de l'Est.
 

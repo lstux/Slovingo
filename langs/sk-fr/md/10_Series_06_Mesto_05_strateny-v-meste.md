@@ -1,6 +1,6 @@
 # Série Mesto (5/5) — Stratený v meste
 
-@ img/mesto_05_hlavna_street.jpg | La rue Hlavná à Košice, près du théâtre — Wikimedia Commons, CC BY-SA
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Kosice_(Slovakia)_-_Main_Street_4.jpg | La rue Hlavná à Košice — Wikimedia Commons, CC BY-SA
 
 Eric a raté son arrêt et cherche son chemin. Il croise Marek par hasard. Tout le vocabulaire de la série y passe. Aucun mot nouveau, sauf ceux signalés dans les remarques.
 
