@@ -19,15 +19,15 @@ Pour commencer, seulement quatre mots : {{dobrý deň}} (bonjour), {{ako sa má�
 
 ## La grammaire du jour
 
-### Dobrý deň
+### {{Dobrý deň}}
 
 La salutation formelle, valable toute la journée. Littéralement « bon jour ». Tu peux la sortir dans n'importe quelle situation où tu ne connais pas la personne.
 
-### Ako sa máš?
+### {{Ako sa máš?}}
 
 Littéralement « comment toi tu vas ? ». C'est la façon la plus courante de demander comment ça va, à quelqu'un qu'on tutoie. On la garde en bloc pour l'instant — tu apprendras à y répondre dans la fiche suivante.
 
-### Ahoj et čau
+### {{Ahoj}} et {{čau}}
 
 Les deux sont informels et signifient à peu près la même chose. **{{Ahoj}}** peut être bonjour *ou* au revoir selon le contexte. **{{Čau}}** c'est surtout au revoir, plus désinvolte.
 

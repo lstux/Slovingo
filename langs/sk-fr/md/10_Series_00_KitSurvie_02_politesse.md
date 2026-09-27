@@ -22,21 +22,21 @@ La fiche précédente t'a laissé en plan avec {{ako sa máš}} sans réponse. L
 
 ## La grammaire du jour
 
-### Répondre à « Ako sa máš? »
+### Répondre à « {{Ako sa máš?}} »
 
 **{{Som}}** = je suis. **{{V poriadku}}** = en ordre, bien. Ensemble : **{{Som v poriadku}}** (je vais bien), littéralement « je suis en ordre ». C'est une réponse standard à {{Ako sa máš?}}. On peut aussi la raccourcir en juste **{{V poriadku}}**, moins formel.
 
 Il existe une autre réponse, tout aussi courante, voire plus naturelle à l'oral : **{{Dobre}}** (bien), l'adverbe de {{dobrý}} déjà croisé dans {{dobrý deň}}. **{{Som v poriadku}}** sonne un peu plus « rien à signaler, tout est correct », alors que **{{Dobre}}** est plus chaleureux, l'équivalent de notre « bien, merci ». Les deux sont interchangeables la plupart du temps.
 
-### Prosím et ďakujem
+### {{Prosím}} et {{ďakujem}}
 
 Deux mots indispensables. **{{Prosím}}** = s'il te plaît / s'il vous plaît (le contexte décide). **{{Ďakujem}}** = merci. On peut les utiliser seuls ou les combiner avec d'autres mots.
 
-### Prepáčte
+### {{Prepáčte}}
 
 Ça peut vouloir dire « pardon », « excusez-moi », ou « s'il vous plaît » (dans un sens formel, comme pour déranger quelqu'un). C'est l'arme secrète pour demander poliment dans un café ou une boutique.
 
-### Tiež
+### {{Tiež}}
 
 « Aussi ». Pratique pour renvoyer la politesse sans tout répéter : au lieu de reformuler toute la phrase, un simple {{Tiež}} suffit.
 
