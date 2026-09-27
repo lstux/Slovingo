@@ -1,0 +1,87 @@
+name: Build & Release (reusable)
+
+# Reusable workflow: builds one language's content with this repo's
+# src/build.py and publishes the result as a GitHub Release on the
+# CALLING repo (the content repo, e.g. lstux/Slovingo-sk-fr).
+#
+# Called from each content repo's own .github/workflows/build-release.yml
+# via `uses: lstux/Slovingo/.github/workflows/build-release.yml@main`.
+#
+# Assumes the calling repo IS the "lang dir" as expected by build.py:
+# it contains, at its root, md/, img/, exercises/ and lang.json
+# (json/ and dist/ are generated, never committed there).
+
+on:
+  workflow_call:
+    inputs:
+      lang_code:
+        description: "Language dir name to build under (e.g. sk-fr, fr-sk, bzh-fr)"
+        required: true
+        type: string
+      slovingo_ref:
+        description: "Branch/tag/commit of lstux/Slovingo to build with"
+        required: false
+        type: string
+        default: "main"
+      release_tag:
+        description: "Tag for the created release (empty = auto date)"
+        required: false
+        type: string
+        default: ""
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout content (calling repo)
+        uses: actions/checkout@v4
+        with:
+          path: content
+
+      - name: Checkout code (Slovingo)
+        uses: actions/checkout@v4
+        with:
+          repository: lstux/Slovingo
+          ref: ${{ inputs.slovingo_ref }}
+          path: engine
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+          # No requirements.txt: Slovingo has zero external dependencies.
+
+      - name: Place content into build.py's expected layout
+        run: |
+          mkdir -p "engine/langs/${{ inputs.lang_code }}"
+          rsync -a --exclude='.git' --exclude='.github' --exclude='LICENSE' --exclude='README*' \
+            content/ "engine/langs/${{ inputs.lang_code }}/"
+
+      - name: Build
+        run: |
+          cd engine
+          python3 src/build.py --lang-dir "langs/${{ inputs.lang_code }}" --static-dir static
+
+      - name: Determine release tag
+        id: tag
+        run: |
+          if [ -n "${{ inputs.release_tag }}" ]; then
+            echo "tag=${{ inputs.release_tag }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "tag=$(date +%Y.%m.%d)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Package build
+        run: |
+          cd "engine/langs/${{ inputs.lang_code }}"
+          tar czf "../../../slovingo-${{ inputs.lang_code }}.tar.gz" dist/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          name: "Slovingo ${{ inputs.lang_code }} — ${{ steps.tag.outputs.tag }}"
+          body: |
+            Build généré via workflow_dispatch.
+            Code Slovingo utilisé : `${{ inputs.slovingo_ref }}`
+          files: slovingo-${{ inputs.lang_code }}.tar.gz
