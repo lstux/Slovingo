@@ -55,7 +55,7 @@ Kartička je bežný Markdown plus pár syntaktických trikov (formát **SMD**):
 + Gramatická poznámka, ak treba.
 ```
 
-Žiadny Python netreba meniť: všetko, čo závisí od jazyka (hlas, farby, názov), je v `lang.json`. Celý formát je v [Format-SMD.txt](docs/Format-SMD.txt).
+Žiadny Python netreba meniť: všetko, čo závisí od jazyka (hlas, farby, názov), je v `lang.json`. Celý formát je v [Lang-json.md](docs/Lang-json.md) (samotné kartičky používajú formát **SMD**, popísaný v [Format-SMD.txt](docs/Format-SMD.txt)).
 
 ```bash
 git clone https://github.com/…/slovingo.git

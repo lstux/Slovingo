@@ -55,7 +55,7 @@ Une fiche, c'est du Markdown classique + quelques trucs de syntaxe (le format **
 + Note grammaticale si besoin.
 ```
 
-Rien à toucher côté Python : tout ce qui dépend de la langue (voix, couleurs, titre) vit dans `lang.json`. Détail complet du format dans [Format-SMD.txt](docs/Format-SMD.txt).
+Rien à toucher côté Python : tout ce qui dépend de la langue (voix, couleurs, titre) vit dans `lang.json`. Détail complet du format dans [Lang-json.md](docs/Lang-json.md) (les fiches elles-mêmes utilisent le format **SMD**, documenté dans [Format-SMD.txt](docs/Format-SMD.txt)).
 
 ```bash
 git clone https://github.com/…/slovingo.git
