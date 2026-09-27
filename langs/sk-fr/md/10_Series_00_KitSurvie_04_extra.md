@@ -18,6 +18,7 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 | dnes | aujourd'hui |
 | som | je suis |
 | v poriadku | en ordre, bien, ça va |
+| dobre | bien |
 | ďakujem | merci |
 | prosím | s'il te plaît |
 | prepáčte | pardon, excusez-moi |
@@ -54,6 +55,12 @@ Aucun mot nouveau ici. Tout le vocabulaire du Kit de Survie est rassemblé, puis
 > Som v poriadku = je vais bien
 > ďakujem = merci
 > A ty = et toi
+
+! Ako sa máš? Dobre, ďakujem.
+> Comment ça va ? Bien, merci.
+> Ako sa máš = comment ça va
+> Dobre = bien
+> ďakujem = merci
 
 ! Ahoj priateľ! Čau!
 > Salut l'ami ! Au revoir !
