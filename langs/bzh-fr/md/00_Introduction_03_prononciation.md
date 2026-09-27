@@ -1,6 +1,8 @@
 # 🏰 Mémo 2 — Prononciation bretonne
 
-> Le breton s'écrit avec l'alphabet latin, sans accent diacritique comme en slovaque ou en tchèque.
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Fabrication%20de%20la%20bouillie%20d%27avoine%20%28yod%20kerc%27h%29%20-%20%C3%A9tape%204.jpg | Préparation du yod kerc'h (bouillie d'avoine), un mot qui contient le fameux « c'h » — Wikimedia Commons
+
+> Le breton s'écrit avec l'alphabet latin, sans accents diacritiques compliqués.
 > En revanche, il joue beaucoup sur l'accent tonique et sur quelques digrammes de consonnes — une fois ces réflexes pris, la lecture devient assez logique.
 
 ---
@@ -33,7 +35,7 @@ Les voyelles bretonnes sont globalement proches du français, avec un piège not
 | ae | kae | diphtongue "a-é" enchaînée |
 | añ / eñ / iñ / oñ / uñ | Breizh, ken, ki, mont, gunel | voyelle nasalisée, comme "an", "in", "on" en français |
 
-Contrairement au slovaque, qui n'a pas de voyelles nasales, le breton en a — et elles ressemblent à celles du français. Un vrai coup de pouce pour un francophone !
+Bonne nouvelle pour un francophone : ces voyelles nasales bretonnes ressemblent beaucoup à celles du français, un vrai coup de pouce pour la prononciation.
 
 ---
 

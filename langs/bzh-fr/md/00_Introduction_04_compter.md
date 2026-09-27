@@ -1,5 +1,7 @@
 # 🏰 Mémo 4 — Compter en breton
 
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Menhirs%20carnac.jpg | Les alignements de menhirs de Carnac — de quoi s'entraîner à compter ! — Wikimedia Commons
+
 Les nombres reviennent partout : l'âge, l'heure, les prix, les quantités. Tu les croiseras dans presque chaque série. Voici de quoi s'en sortir dès le départ — la liste complète (jusqu'au millier) reste dans la bibliothèque si tu veux tout voir d'un coup.
 
 *Petit avertissement amical : à partir de 40, le breton ne compte plus par dizaines, mais par vingtaines. On t'explique tout, tranquillement.*

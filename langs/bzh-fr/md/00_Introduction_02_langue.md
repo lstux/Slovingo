@@ -1,5 +1,7 @@
 # 🏰 Mémo — Le breton, une langue celtique
 
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Road%20signs%20bilingual%20Breton%20in%20Quimper.jpg | Panneau bilingue français-breton à Quimper — Wikimedia Commons
+
 Avant de plonger dans le vocabulaire et la grammaire, qui parle breton, d'où vient cette langue, et à quelle famille elle appartient ?
 
 ---
@@ -38,7 +40,7 @@ Le breton n'est pas né en Bretagne : il y a été apporté aux 5e-7e siècles p
 
 Résultat : le breton reste historiquement très proche du cornique, la langue de Cornouailles britannique — les deux se sont longtemps compris à distance, avant que les siècles ne les éloignent. Le gallois, plus éloigné géographiquement à l'origine, partage tout de même avec le breton un hymne national dont la mélodie est identique dans les deux pays.
 
-Contrairement au slovaque et au tchèque, cependant, breton et gallois ne se comprennent plus spontanément aujourd'hui : la parenté est réelle, mais l'intercompréhension, elle, a disparu avec le temps.
+Aujourd'hui, cependant, breton et gallois ne se comprennent plus spontanément : la parenté est réelle, mais l'intercompréhension, elle, a disparu avec le temps.
 
 ---
 

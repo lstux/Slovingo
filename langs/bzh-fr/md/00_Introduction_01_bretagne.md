@@ -1,5 +1,7 @@
 # 🏰 Mémo — La Bretagne en un coup d'œil
 
+@ https://commons.wikimedia.org/wiki/Special:FilePath/Brittany%20Coast.JPG | La côte bretonne, symbole des cinq départements de la Bretagne historique — Wikimedia Commons
+
 Avant d'apprendre la langue, un peu de contexte sur le pays lui-même : où il se situe, d'où il vient, et ce qui fait sa culture. Une fiche à parcourir tranquillement, avec des liens pour creuser si l'envie te prend.
 
 *Petite précision avant de commencer : on parle ici de la Bretagne historique, celle des cinq départements et du vieux duché — pas seulement de la région administrative actuelle, qui n'en garde que quatre.*
