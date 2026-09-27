@@ -55,7 +55,7 @@ A card is regular Markdown plus a few syntax tricks (the **SMD** format):
 + Grammar note if needed.
 ```
 
-Nothing to touch in Python: everything language-dependent (voice, colors, title) lives in `lang.json`. Full format details in [Format-SMD.txt](docs/Format-SMD.txt).
+Nothing to touch in Python: everything language-dependent (voice, colors, title) lives in `lang.json`. Full format details in [Lang-json.md](docs/Lang-json.md) (cards themselves use the **SMD** format, documented in [Format-SMD.txt](docs/Format-SMD.txt)).
 
 ```bash
 git clone https://github.com/…/slovingo.git
