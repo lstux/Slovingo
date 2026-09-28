@@ -513,22 +513,6 @@
       ]
     },
     {
-      "id": "qcm-apr-s-le-coin",
-      "type": "qcm",
-      "l1": "za rohom",
-      "l2": "après le coin",
-      "choices_l1": [
-        "kino",
-        "električkou",
-        "nemocnica"
-      ],
-      "choices_l2": [
-        "à la pharmacie (à + la)",
-        "C'est à côté de la banque.",
-        "C'est après le coin."
-      ]
-    },
-    {
       "id": "qcm-continuer",
       "type": "qcm",
       "l1": "pokračovať",
@@ -865,22 +849,6 @@
       ]
     },
     {
-      "id": "qcm-le-plan",
-      "type": "qcm",
-      "l1": "mapa",
-      "l2": "le plan",
-      "choices_l1": [
-        "sila",
-        "tanier",
-        "plán"
-      ],
-      "choices_l2": [
-        "le cadeau",
-        "le repos",
-        "le programme"
-      ]
-    },
-    {
       "id": "qcm-mais",
       "type": "qcm",
       "l1": "ale",
@@ -1077,26 +1045,6 @@
       ]
     },
     {
-      "id": "blank-cette-direction-ne-me-pla-t-pas-vous-avez-un-plan",
-      "type": "fill-blank",
-      "l1": "Tento smer sa mi nepáči. Máte mapu?",
-      "l2": "Cette direction ne me plaît pas. Vous avez un plan ?",
-      "missing_l1": "sa",
-      "missing_l2": "un",
-      "blank_index_l1": 2,
-      "blank_index_l2": 8,
-      "choices_l1": [
-        "na pošte",
-        "tieto topánky",
-        "ja som"
-      ],
-      "choices_l2": [
-        "peu",
-        "tu as",
-        "sont"
-      ]
-    },
-    {
       "id": "blank-la-mairie-est-ferm-e-ce-n-est-pas-possible",
       "type": "fill-blank",
       "l1": "Radnica je zatvorená? To nie je možné!",
@@ -1114,46 +1062,6 @@
         "nous essayons",
         "je fais",
         "je travaille"
-      ]
-    },
-    {
-      "id": "blank-je-n-ai-pas-de-plan-il-est-la-maison",
-      "type": "fill-blank",
-      "l1": "Nemám mapu. Je doma.",
-      "l2": "Je n'ai pas de plan. Il est à la maison.",
-      "missing_l1": "Je",
-      "missing_l2": "est",
-      "blank_index_l1": 2,
-      "blank_index_l2": 6,
-      "choices_l1": [
-        "sme",
-        "studenejší ako",
-        "kedy"
-      ],
-      "choices_l2": [
-        "je mets",
-        "tu fais",
-        "pour"
-      ]
-    },
-    {
-      "id": "blank-je-veux-un-plan-parce-que-je-suis-vraiment-perdu",
-      "type": "fill-blank",
-      "l1": "Chcem mapu, lebo som naozaj stratený.",
-      "l2": "Je veux un plan, parce que je suis vraiment perdu.",
-      "missing_l1": "som",
-      "missing_l2": "je",
-      "blank_index_l1": 3,
-      "blank_index_l2": 6,
-      "choices_l1": [
-        "oblečieme si",
-        "by",
-        "vonku"
-      ],
-      "choices_l2": [
-        "environ",
-        "tu",
-        "mais"
       ]
     },
     {
@@ -1341,22 +1249,6 @@
       ]
     },
     {
-      "id": "listen-cette-direction-ne-me-pla-t-pas-vous-avez-un-plan",
-      "type": "listen",
-      "l1": "Tento smer sa mi nepáči. Máte mapu?",
-      "l2": "Cette direction ne me plaît pas. Vous avez un plan ?",
-      "choices_l2": [
-        "Les légumes sont frais et les pommes de terre sont chaudes.",
-        "Ma grand-mère habite à la campagne.",
-        "J'irai à pied. Je veux voir la ville."
-      ],
-      "choices_l1": [
-        "Vlak prichádza načas.",
-        "Uvidíš kostol. Múzeum je za rohom, vedľa kostola.",
-        "Choďte rovno a potom vľavo."
-      ]
-    },
-    {
       "id": "listen-la-mairie-est-ferm-e-ce-n-est-pas-possible",
       "type": "listen",
       "l1": "Radnica je zatvorená? To nie je možné!",
@@ -1370,38 +1262,6 @@
         "Vlak prichádza načas.",
         "Tento smer sa mi nepáči. Máte mapu?",
         "Rovno a vľavo. A potom?"
-      ]
-    },
-    {
-      "id": "listen-je-n-ai-pas-de-plan-il-est-la-maison",
-      "type": "listen",
-      "l1": "Nemám mapu. Je doma.",
-      "l2": "Je n'ai pas de plan. Il est à la maison.",
-      "choices_l2": [
-        "Mon mari s'appelle Marc.",
-        "Au petit-déjeuner, je mange un œuf et du pain avec du beurre.",
-        "Vous l'avez dans une autre couleur ?"
-      ],
-      "choices_l1": [
-        "Je upozornenie na búrku.",
-        "Aké je tvoje obľúbené ročné obdobie?",
-        "Vidíš tú sochu?"
-      ]
-    },
-    {
-      "id": "listen-je-veux-un-plan-parce-que-je-suis-vraiment-perdu",
-      "type": "listen",
-      "l1": "Chcem mapu, lebo som naozaj stratený.",
-      "l2": "Je veux un plan, parce que je suis vraiment perdu.",
-      "choices_l2": [
-        "Cette chemise est petite. Vous en avez une plus grande ?",
-        "Nous cherchons les clés. Nous les cherchons depuis une heure !",
-        "J'ai le livre. Je l'ai ici."
-      ],
-      "choices_l1": [
-        "Chutí mi to.",
-        "Je to veľmi chutné!",
-        "Pripravil si všetko?"
       ]
     },
     {
@@ -1826,48 +1686,6 @@
       ]
     },
     {
-      "id": "order-cette-direction-ne-me-pla-t-pas-vous-avez-un-plan",
-      "type": "order",
-      "l1": "Tento smer sa mi nepáči. Máte mapu?",
-      "l2": "Cette direction ne me plaît pas. Vous avez un plan ?",
-      "tokens_l1": [
-        "Tento",
-        "smer",
-        "sa",
-        "mi",
-        "nepáči.",
-        "Máte",
-        "mapu?",
-        "Beriem",
-        "električku",
-        "na",
-        "zastávke",
-        "číslo",
-        "štyridsať."
-      ],
-      "tokens_l2": [
-        "Cette",
-        "direction",
-        "ne",
-        "me",
-        "plaît",
-        "pas.",
-        "Vous",
-        "avez",
-        "un",
-        "plan",
-        "?",
-        "Je",
-        "prends",
-        "le",
-        "tram",
-        "à",
-        "l'arrêt",
-        "numéro",
-        "quarante."
-      ]
-    },
-    {
       "id": "order-la-mairie-est-ferm-e-ce-n-est-pas-possible",
       "type": "order",
       "l1": "Radnica je zatvorená? To nie je možné!",
@@ -1906,94 +1724,6 @@
         "l'arrêt",
         "numéro",
         "quarante."
-      ]
-    },
-    {
-      "id": "order-je-n-ai-pas-de-plan-il-est-la-maison",
-      "type": "order",
-      "l1": "Nemám mapu. Je doma.",
-      "l2": "Je n'ai pas de plan. Il est à la maison.",
-      "tokens_l1": [
-        "Nemám",
-        "mapu.",
-        "Je",
-        "doma.",
-        "Radnica",
-        "je",
-        "zatvorená?",
-        "To",
-        "nie",
-        "je",
-        "možné!"
-      ],
-      "tokens_l2": [
-        "Je",
-        "n'ai",
-        "pas",
-        "de",
-        "plan.",
-        "Il",
-        "est",
-        "à",
-        "la",
-        "maison.",
-        "La",
-        "mairie",
-        "est",
-        "fermée",
-        "?",
-        "Ce",
-        "n'est",
-        "pas",
-        "possible",
-        "!"
-      ]
-    },
-    {
-      "id": "order-je-veux-un-plan-parce-que-je-suis-vraiment-perdu",
-      "type": "order",
-      "l1": "Chcem mapu, lebo som naozaj stratený.",
-      "l2": "Je veux un plan, parce que je suis vraiment perdu.",
-      "tokens_l1": [
-        "Chcem",
-        "mapu,",
-        "lebo",
-        "som",
-        "naozaj",
-        "stratený.",
-        "Stretávam",
-        "kamaráta",
-        "v",
-        "kaviarni",
-        "a",
-        "potom",
-        "ideme",
-        "do",
-        "kina."
-      ],
-      "tokens_l2": [
-        "Je",
-        "veux",
-        "un",
-        "plan,",
-        "parce",
-        "que",
-        "je",
-        "suis",
-        "vraiment",
-        "perdu.",
-        "Je",
-        "rencontre",
-        "un",
-        "ami",
-        "au",
-        "café",
-        "et",
-        "ensuite",
-        "on",
-        "va",
-        "au",
-        "cinéma."
       ]
     },
     {
@@ -2088,6 +1818,250 @@
         "suis",
         "vraiment",
         "perdu."
+      ]
+    },
+    {
+      "id": "qcm-au-coin-de-la-rue",
+      "type": "qcm",
+      "l1": "za rohom, na rohu ulice",
+      "l2": "au coin de la rue",
+      "choices_l1": [
+        "V pondelok pracujem.",
+        "štvrť na šesť",
+        "Dáš si kávu?"
+      ],
+      "choices_l2": [
+        "vous tournez → Tournez !",
+        "Comment c'est ?",
+        "Il est deux heures."
+      ]
+    },
+    {
+      "id": "blank-cette-direction-ne-me-pla-t-pas-je-suis-perdu",
+      "type": "fill-blank",
+      "l1": "Tento smer sa mi nepáči. Som stratený.",
+      "l2": "Cette direction ne me plaît pas. Je suis perdu.",
+      "missing_l1": "sa",
+      "missing_l2": "Je",
+      "blank_index_l1": 2,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "ale",
+        "chcem",
+        "idem"
+      ],
+      "choices_l2": [
+        "à",
+        "les",
+        "n'ai"
+      ]
+    },
+    {
+      "id": "blank-je-n-ai-pas-mon-v-lo-il-est-la-maison",
+      "type": "fill-blank",
+      "l1": "Nemám so sebou bicykel. Je doma.",
+      "l2": "Je n'ai pas mon vélo. Il est à la maison.",
+      "missing_l1": "Je",
+      "missing_l2": "est",
+      "blank_index_l1": 4,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "o",
+        "rokov",
+        "deti"
+      ],
+      "choices_l2": [
+        "veux",
+        "sur",
+        "vous"
+      ]
+    },
+    {
+      "id": "blank-j-ai-besoin-d-aide-parce-que-je-suis-vraiment-perdu",
+      "type": "fill-blank",
+      "l1": "Potrebujem pomoc, lebo som naozaj stratený.",
+      "l2": "J'ai besoin d'aide, parce que je suis vraiment perdu.",
+      "missing_l1": "som",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "deň",
+        "mi",
+        "dnes"
+      ],
+      "choices_l2": [
+        "vous",
+        "sont",
+        "j'ai"
+      ]
+    },
+    {
+      "id": "listen-cette-direction-ne-me-pla-t-pas-je-suis-perdu",
+      "type": "listen",
+      "l1": "Tento smer sa mi nepáči. Som stratený.",
+      "l2": "Cette direction ne me plaît pas. Je suis perdu.",
+      "choices_l1": [
+        "Meškám. Prídem o štvrť na deväť.",
+        "Dnes mám čas, zajtra nie.",
+        "Platíte kartou alebo hotovosťou?"
+      ]
+    },
+    {
+      "id": "listen-je-n-ai-pas-mon-v-lo-il-est-la-maison",
+      "type": "listen",
+      "l1": "Nemám so sebou bicykel. Je doma.",
+      "l2": "Je n'ai pas mon vélo. Il est à la maison.",
+      "choices_l1": [
+        "Hľadám telefón. Je v obývačke?",
+        "Varím. Obedujeme o dvanástej.",
+        "Káva je horúca."
+      ]
+    },
+    {
+      "id": "listen-j-ai-besoin-d-aide-parce-que-je-suis-vraiment-perdu",
+      "type": "listen",
+      "l1": "Potrebujem pomoc, lebo som naozaj stratený.",
+      "l2": "J'ai besoin d'aide, parce que je suis vraiment perdu.",
+      "choices_l1": [
+        "Dovidenia znamená \"au revoir\".",
+        "Dnes idem pešo.",
+        "Polievka je teplá a chutná. Chcem ešte."
+      ]
+    },
+    {
+      "id": "order-cette-direction-ne-me-pla-t-pas-je-suis-perdu",
+      "type": "order",
+      "l1": "Tento smer sa mi nepáči. Som stratený.",
+      "l2": "Cette direction ne me plaît pas. Je suis perdu.",
+      "tokens_l1": [
+        "Tento",
+        "smer",
+        "sa",
+        "mi",
+        "nepáči.",
+        "Som",
+        "stratený.",
+        "Nemám",
+        "so",
+        "sebou",
+        "bicykel.",
+        "Je",
+        "doma."
+      ],
+      "tokens_l2": [
+        "Cette",
+        "direction",
+        "ne",
+        "me",
+        "plaît",
+        "pas.",
+        "Je",
+        "suis",
+        "perdu.",
+        "Je",
+        "n'ai",
+        "pas",
+        "mon",
+        "vélo.",
+        "Il",
+        "est",
+        "à",
+        "la",
+        "maison."
+      ]
+    },
+    {
+      "id": "order-je-n-ai-pas-mon-v-lo-il-est-la-maison",
+      "type": "order",
+      "l1": "Nemám so sebou bicykel. Je doma.",
+      "l2": "Je n'ai pas mon vélo. Il est à la maison.",
+      "tokens_l1": [
+        "Nemám",
+        "so",
+        "sebou",
+        "bicykel.",
+        "Je",
+        "doma.",
+        "Trh",
+        "je",
+        "v",
+        "sobotu,",
+        "knižnica",
+        "je",
+        "otvorená",
+        "každý",
+        "deň."
+      ],
+      "tokens_l2": [
+        "Je",
+        "n'ai",
+        "pas",
+        "mon",
+        "vélo.",
+        "Il",
+        "est",
+        "à",
+        "la",
+        "maison.",
+        "Le",
+        "marché",
+        "a",
+        "lieu",
+        "le",
+        "samedi,",
+        "la",
+        "bibliothèque",
+        "est",
+        "ouverte",
+        "tous",
+        "les",
+        "jours."
+      ]
+    },
+    {
+      "id": "order-j-ai-besoin-d-aide-parce-que-je-suis-vraiment-perdu",
+      "type": "order",
+      "l1": "Potrebujem pomoc, lebo som naozaj stratený.",
+      "l2": "J'ai besoin d'aide, parce que je suis vraiment perdu.",
+      "tokens_l1": [
+        "Potrebujem",
+        "pomoc,",
+        "lebo",
+        "som",
+        "naozaj",
+        "stratený.",
+        "Kúpim",
+        "si",
+        "nový",
+        "bicykel",
+        "a",
+        "starý",
+        "predám."
+      ],
+      "tokens_l2": [
+        "J'ai",
+        "besoin",
+        "d'aide,",
+        "parce",
+        "que",
+        "je",
+        "suis",
+        "vraiment",
+        "perdu.",
+        "Je",
+        "vais",
+        "m'acheter",
+        "un",
+        "nouveau",
+        "vélo",
+        "et",
+        "je",
+        "vais",
+        "vendre",
+        "mon",
+        "vieux",
+        "vélo."
       ]
     }
   ]

@@ -2,7 +2,7 @@
 
 @ img/Easter_eggs_-_straw_decoration.jpg | Veľkonočná výzdoba — Wikimedia Commons
 
-Posledná séria cesty: Veľká noc. Začíname prípravami, a **passé composé**, časom, ktorý si letmo stretol už predtým (il est allé) a teraz ho konečne postavíme poriadne.
+Posledná séria cesty: Veľká noc. Začíname prípravami, a **passé composé**, časom, ktorý si letmo stretol/a už predtým (je suis descendu, il a été) a teraz ho konečne postavíme poriadne.
 
 ---
 
@@ -91,7 +91,7 @@ Passé composé sa tvorí z pomocného slovesa „avoir“ (v prítomnom čase) 
 
 **Vajíčko, láskavé slovo — francúzština má tiež svoje.** Podobne ako slovenský zdrobnený tvar {{vajíčko}}, aj francúzština v tomto kontexte skôr povie {{les œufs de Pâques}} než holé „les œufs“ — kontext ich už sám osebe robí láskavými.
 
-**Čokoládové vajíčka, nie maľované.** Na rozdiel od slovenskej tradície maľovaných vajíčok ({{kraslice}}), vo Francúzsku sú veľkonočné vajíčka takmer vždy čokoládové — skutočné vajíčko sa na Veľkú noc takmer nemaľuje.
+**Hlavne čokoládové vajíčka.** Vo Francúzsku sú veľkonočné vajíčka predovšetkým čokoládové. Farbenie skutočných vajíčok existuje, najmä ako zábava pre deti, ale nie je to taká silná tradícia ako slovenské kraslice.
 
 **Príprava trvá celý týždeň, aj tu.** Podobne ako na Slovensku, aj vo Francúzsku sa príprava na Veľkú noc rozkladá na niekoľko dní — nákup čokolády, príprava obeda, niekedy aj upratovanie domu pred rodinnou návštevou.
 

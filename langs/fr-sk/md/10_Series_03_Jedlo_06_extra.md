@@ -30,8 +30,8 @@
 | le dîner | večera |
 | la faim | hlad |
 | la soif | smäd |
-| affamé | hladný |
-| assoiffé | smädný |
+| affamé | vyhladovaný (silný výraz) |
+| assoiffé | vysmädnutý (silný výraz) |
 | rassasié | plný |
 | peu | málo |
 | beaucoup | veľa |
@@ -50,7 +50,7 @@
 | mauvais / mauvaise | zlý |
 | très | veľmi |
 | un peu | trochu |
-| plaire au goût | chutiť |
+| délicieux / délicieuse | výborný, lahodný |
 | goûter | ochutnať |
 | manger | jesť |
 | boire | piť |
@@ -68,7 +68,7 @@
 | le chocolat chaud | horúca čokoláda |
 | l'eau minérale | minerálka |
 | le jus de fruits | ovocný džús |
-| le cidre | jablčný mušt |
+| le cidre | cider (jablkové víno) |
 
 ---
 
@@ -84,8 +84,8 @@
 > avec du beurre = s maslom
 
 ! Le cidre est sucré et froid.
-> Jablčný mušt je sladký a studený.
-> Le cidre est = jablčný mušt je
+> Cider je sladký a studený.
+> Le cidre est = cider je
 > sucré = sladký
 > et = a
 > froid = studený
@@ -172,14 +172,14 @@
 > s'il te plaît = prosím
 
 ! Les crêpes sont bonnes, mais le cidre est très fort.
-> Palacinky sú dobré, ale jablčný mušt je veľmi silný.
+> Palacinky sú dobré, ale cider je veľmi silný.
 > Les crêpes sont = palacinky sú
 > bonnes = dobré
 > mais = ale
-> le cidre est = jablčný mušt je
+> le cidre est = cider je
 > très fort = veľmi silný
 
-! La quiche me plaît. J'en veux encore.
-> Quiche mi chutí. Chcem ešte.
-> La quiche me plaît = quiche mi chutí
+! La quiche est délicieuse. J'en veux encore.
+> Quiche je výborná. Chcem ešte.
+> La quiche est délicieuse = quiche je výborná
 > j'en veux encore = chcem ešte

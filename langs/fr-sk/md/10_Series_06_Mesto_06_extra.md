@@ -42,7 +42,7 @@
 | tout droit | rovno |
 | à gauche | vľavo |
 | à droite | vpravo |
-| après le coin | za rohom |
+| au coin de la rue | za rohom, na rohu ulice |
 | continuer | pokračovať |
 | juste | priamo |
 | le coin | roh |
@@ -127,14 +127,14 @@
 > La mairie est fermée = radnica je zatvorená
 > ce n'est pas possible = to nie je možné
 
-! Je n'ai pas de vélo. Il est à la maison.
-> Nemám bicykel. Je doma.
-> Je n'ai pas de vélo = nemám bicykel
+! Je n'ai pas mon vélo. Il est à la maison.
+> Nemám so sebou bicykel. Je doma.
+> Je n'ai pas mon vélo = nemám so sebou bicykel
 > il est à la maison = je doma
 
-! Je veux de l'aide, parce que je suis vraiment perdu.
-> Chcem pomoc, lebo som naozaj stratený.
-> Je veux de l'aide = chcem pomoc
+! J'ai besoin d'aide, parce que je suis vraiment perdu.
+> Potrebujem pomoc, lebo som naozaj stratený.
+> J'ai besoin d'aide = potrebujem pomoc
 > parce que je suis vraiment perdu = lebo som naozaj stratený
 
 ! Le parc est plein de monde, la rue est vide.

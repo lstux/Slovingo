@@ -2,7 +2,7 @@
 
 @ img/Eiffel_Tower_from_the_Tour_Montparnasse_3,_Paris_May_2014.jpg | Eiffelova veža, symbol Paríža a Francúzska — Wikimedia Commons, CC BY-SA
 
-Predtým, než sa pustíme do samotného jazyka, trochu kontextu o krajine samotnej: kde leží, odkiaľ pochádza, a čo tvorí jej kultúru. Fiche na pokojné prelistovanie, s odkazmi na doplnkové čítanie, ak by ťa to zaujalo.
+Predtým, než sa pustíme do samotného jazyka, trochu kontextu o krajine samotnej: kde leží, odkiaľ pochádza, a čo tvorí jej kultúru. Kartička na pokojné prelistovanie, s odkazmi na doplnkové čítanie, ak by ťa to zaujalo.
 
 ---
 

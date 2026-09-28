@@ -397,26 +397,6 @@
       ]
     },
     {
-      "id": "blank-tu-as-une-serviette-de-plage-elle-aide-contre-le-sable",
-      "type": "fill-blank",
-      "l1": "Máš osušku? Pomáha proti piesku.",
-      "l2": "Tu as une serviette de plage ? Elle aide contre le sable.",
-      "missing_l1": "piesku",
-      "missing_l2": "le",
-      "blank_index_l1": 4,
-      "blank_index_l2": 10,
-      "choices_l1": [
-        "maják",
-        "loď",
-        "bazén"
-      ],
-      "choices_l2": [
-        "beaucoup",
-        "Combien",
-        "tu fais"
-      ]
-    },
-    {
       "id": "blank-j-ai-le-seau-et-le-parasol-dans-le-sac",
       "type": "fill-blank",
       "l1": "Mám vedierko a slnečník v taške.",
@@ -577,26 +557,6 @@
       ]
     },
     {
-      "id": "blank-je-sens-la-fatigue-j-ai-besoin-de-repos",
-      "type": "fill-blank",
-      "l1": "Cítim únavu, potrebujem odpočinok.",
-      "l2": "Je sens la fatigue, j'ai besoin de repos.",
-      "missing_l1": "odpočinok",
-      "missing_l2": "la",
-      "blank_index_l1": 3,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "tanier",
-        "kniha",
-        "mapa"
-      ],
-      "choices_l2": [
-        "plaît",
-        "le prénom",
-        "pour"
-      ]
-    },
-    {
       "id": "blank-je-veux-me-baigner-mais-l-eau-est-froide",
       "type": "fill-blank",
       "l1": "Chcem sa kúpať, ale voda je studená.",
@@ -682,22 +642,6 @@
         "Táto zátoka je pokojnejšia ako hlavná pláž.",
         "To je najkrajšia pláž na pobreží.",
         "Musíme mať vodu a krém na opaľovanie, lebo pláž je ďaleko."
-      ]
-    },
-    {
-      "id": "listen-tu-as-une-serviette-de-plage-elle-aide-contre-le-sable",
-      "type": "listen",
-      "l1": "Máš osušku? Pomáha proti piesku.",
-      "l2": "Tu as une serviette de plage ? Elle aide contre le sable.",
-      "choices_l2": [
-        "J'attends ici depuis longtemps.",
-        "Je veux ce pull rouge.",
-        "Hier, comme aujourd'hui, je n'ai pas le temps."
-      ],
-      "choices_l1": [
-        "Ideme sa opaľovať na pláži.",
-        "Pozri! Vidno maják a celý záliv!",
-        "Táto pláž je menej známa, ale je nádherná."
       ]
     },
     {
@@ -826,22 +770,6 @@
         "Idem do lekárne.",
         "Skúsim to v obchode v sobotu.",
         "Ideme do divadla."
-      ]
-    },
-    {
-      "id": "listen-je-sens-la-fatigue-j-ai-besoin-de-repos",
-      "type": "listen",
-      "l1": "Cítim únavu, potrebujem odpočinok.",
-      "l2": "Je sens la fatigue, j'ai besoin de repos.",
-      "choices_l2": [
-        "Où est la cabine d'essayage ?",
-        "Le lait est froid.",
-        "Je veux une réduction, parce que c'est trop cher."
-      ],
-      "choices_l1": [
-        "Moja chata je ďaleko.",
-        "Koncert je zaujímavý.",
-        "Film je nudný."
       ]
     },
     {
@@ -982,48 +910,6 @@
         "couchage",
         "est",
         "chaud."
-      ]
-    },
-    {
-      "id": "order-tu-as-une-serviette-de-plage-elle-aide-contre-le-sable",
-      "type": "order",
-      "l1": "Máš osušku? Pomáha proti piesku.",
-      "l2": "Tu as une serviette de plage ? Elle aide contre le sable.",
-      "tokens_l1": [
-        "Máš",
-        "osušku?",
-        "Pomáha",
-        "proti",
-        "piesku.",
-        "Nemáme",
-        "stan,",
-        "budeme",
-        "spať",
-        "v",
-        "hoteli."
-      ],
-      "tokens_l2": [
-        "Tu",
-        "as",
-        "une",
-        "serviette",
-        "de",
-        "plage",
-        "?",
-        "Elle",
-        "aide",
-        "contre",
-        "le",
-        "sable.",
-        "Nous",
-        "n'avons",
-        "pas",
-        "de",
-        "tente,",
-        "nous",
-        "dormirons",
-        "à",
-        "l'hôtel."
       ]
     },
     {
@@ -1346,39 +1232,6 @@
       ]
     },
     {
-      "id": "order-je-sens-la-fatigue-j-ai-besoin-de-repos",
-      "type": "order",
-      "l1": "Cítim únavu, potrebujem odpočinok.",
-      "l2": "Je sens la fatigue, j'ai besoin de repos.",
-      "tokens_l1": [
-        "Cítim",
-        "únavu,",
-        "potrebujem",
-        "odpočinok.",
-        "Nemôžem",
-        "plávať",
-        "bez",
-        "plutiev."
-      ],
-      "tokens_l2": [
-        "Je",
-        "sens",
-        "la",
-        "fatigue,",
-        "j'ai",
-        "besoin",
-        "de",
-        "repos.",
-        "Je",
-        "ne",
-        "peux",
-        "pas",
-        "nager",
-        "sans",
-        "palmes."
-      ]
-    },
-    {
       "id": "order-je-veux-me-baigner-mais-l-eau-est-froide",
       "type": "order",
       "l1": "Chcem sa kúpať, ale voda je studená.",
@@ -1441,6 +1294,142 @@
         "avoir",
         "une",
         "glacière."
+      ]
+    },
+    {
+      "id": "blank-tu-as-une-serviette-de-plage-c-est-pratique-contre-le-sable",
+      "type": "fill-blank",
+      "l1": "Máš osušku? Na piesok sa hodí.",
+      "l2": "Tu as une serviette de plage ? C'est pratique contre le sable.",
+      "missing_l1": "Na",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 10,
+      "choices_l1": [
+        "má",
+        "mám",
+        "ja"
+      ],
+      "choices_l2": [
+        "en",
+        "n'ai",
+        "du"
+      ]
+    },
+    {
+      "id": "blank-je-suis-fatigu-j-ai-besoin-de-repos",
+      "type": "fill-blank",
+      "l1": "Som unavený, potrebujem odpočinok.",
+      "l2": "Je suis fatigué, j'ai besoin de repos.",
+      "missing_l1": "unavený",
+      "missing_l2": "de",
+      "blank_index_l1": 1,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "áno",
+        "to",
+        "deti"
+      ],
+      "choices_l2": [
+        "sont",
+        "le",
+        "tu"
+      ]
+    },
+    {
+      "id": "listen-tu-as-une-serviette-de-plage-c-est-pratique-contre-le-sable",
+      "type": "listen",
+      "l1": "Máš osušku? Na piesok sa hodí.",
+      "l2": "Tu as une serviette de plage ? C'est pratique contre le sable.",
+      "choices_l1": [
+        "Na raňajky jem chlieb a syr.",
+        "Aké je tvoje meno?",
+        "Čakám tu už dlho."
+      ]
+    },
+    {
+      "id": "listen-je-suis-fatigu-j-ai-besoin-de-repos",
+      "type": "listen",
+      "l1": "Som unavený, potrebujem odpočinok.",
+      "l2": "Je suis fatigué, j'ai besoin de repos.",
+      "choices_l1": [
+        "Ďakujem. Máte pekný byt.",
+        "Kde je môj telefón?",
+        "Chcem skúsiť toto tričko."
+      ]
+    },
+    {
+      "id": "order-tu-as-une-serviette-de-plage-c-est-pratique-contre-le-sable",
+      "type": "order",
+      "l1": "Máš osušku? Na piesok sa hodí.",
+      "l2": "Tu as une serviette de plage ? C'est pratique contre le sable.",
+      "tokens_l1": [
+        "Máš",
+        "osušku?",
+        "Na",
+        "piesok",
+        "sa",
+        "hodí.",
+        "Mám",
+        "vedierko",
+        "a",
+        "slnečník",
+        "v",
+        "taške."
+      ],
+      "tokens_l2": [
+        "Tu",
+        "as",
+        "une",
+        "serviette",
+        "de",
+        "plage",
+        "?",
+        "C'est",
+        "pratique",
+        "contre",
+        "le",
+        "sable.",
+        "J'ai",
+        "le",
+        "seau",
+        "et",
+        "le",
+        "parasol",
+        "dans",
+        "le",
+        "sac."
+      ]
+    },
+    {
+      "id": "order-je-suis-fatigu-j-ai-besoin-de-repos",
+      "type": "order",
+      "l1": "Som unavený, potrebujem odpočinok.",
+      "l2": "Je suis fatigué, j'ai besoin de repos.",
+      "tokens_l1": [
+        "Som",
+        "unavený,",
+        "potrebujem",
+        "odpočinok.",
+        "Musíš",
+        "mať",
+        "plavky."
+      ],
+      "tokens_l2": [
+        "Je",
+        "suis",
+        "fatigué,",
+        "j'ai",
+        "besoin",
+        "de",
+        "repos.",
+        "Tu",
+        "dois",
+        "avoir",
+        "un",
+        "maillot",
+        "de",
+        "bain."
       ]
     }
   ]

@@ -37,12 +37,12 @@ Eric a Karine si tykajú. Eric vyká Mamie Louise.
 + « Moi, c'est... » je bežný neformálny spôsob predstavenia sa, popri « je suis... ».
 
 ! 🧑 C'est ma grand-mère. Elle habite ici, à la campagne.
-> To je moja babka. Býva tu, na dedine.
+> To je moja babka. Býva tu, na vidieku.
 > C'est = to je
 > ma grand-mère = moja babka
 > elle habite = býva
 > ici = tu
-> à la campagne = na dedine
+> à la campagne = na vidieku
 
 ! 👧 Moi, c'est Chloé ! J'ai huit ans.
 > Ja som Chloé! Mám osem rokov.
@@ -139,10 +139,10 @@ Eric a Karine si tykajú. Eric vyká Mamie Louise.
 ## Ešte pár viet
 
 ! Ma grand-mère habite à la campagne et ma tante habite en ville.
-> Moja babka býva na dedine a moja teta býva v meste.
+> Moja babka býva na vidieku a moja teta býva v meste.
 > Ma grand-mère = moja babka
 > habite = býva
-> à la campagne = na dedine
+> à la campagne = na vidieku
 > et = a
 > ma tante = moja teta
 > habite = býva

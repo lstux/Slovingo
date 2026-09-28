@@ -35,7 +35,7 @@
     {
       "id": "qcm-la-campagne",
       "type": "qcm",
-      "l1": "dedina, vidiek",
+      "l1": "vidiek",
       "l2": "la campagne",
       "choices_l1": [
         "ulica",
@@ -257,22 +257,6 @@
       ]
     },
     {
-      "id": "qcm-la-pi-ce-la-chambre",
-      "type": "qcm",
-      "l1": "izba",
-      "l2": "la pièce / la chambre",
-      "choices_l1": [
-        "doma",
-        "okno",
-        "byt"
-      ],
-      "choices_l2": [
-        "une salle de bain (ženský rod)",
-        "Je voudrais une chambre.",
-        "la chambre (à coucher)"
-      ]
-    },
-    {
       "id": "qcm-la-cuisine",
       "type": "qcm",
       "l1": "kuchyňa",
@@ -431,7 +415,7 @@
     {
       "id": "blank-ma-grand-m-re-habite-la-campagne",
       "type": "fill-blank",
-      "l1": "Moja babka býva na dedine.",
+      "l1": "Moja babka býva na vidieku.",
       "l2": "Ma grand-mère habite à la campagne.",
       "missing_l1": "na",
       "missing_l2": "la",
@@ -491,7 +475,7 @@
     {
       "id": "blank-mes-parents-habitent-la-campagne-ils-sont-vieux",
       "type": "fill-blank",
-      "l1": "Moji rodičia bývajú na dedine. Sú starí.",
+      "l1": "Moji rodičia bývajú na vidieku. Sú starí.",
       "l2": "Mes parents habitent à la campagne. Ils sont vieux.",
       "missing_l1": "na",
       "missing_l2": "la",
@@ -572,7 +556,7 @@
       "id": "blank-ma-maman-est-dans-la-cuisine",
       "type": "fill-blank",
       "l1": "Moja mama je v kuchyni.",
-      "l2": "Ma maman est dans la cuisine.",
+      "l2": "Ma mère est dans la cuisine.",
       "missing_l1": "je",
       "missing_l2": "est",
       "blank_index_l1": 2,
@@ -675,7 +659,7 @@
     {
       "id": "listen-ma-grand-m-re-habite-la-campagne",
       "type": "listen",
-      "l1": "Moja babka býva na dedine.",
+      "l1": "Moja babka býva na vidieku.",
       "l2": "Ma grand-mère habite à la campagne.",
       "choices_l2": [
         "Mon père est grand et costaud.",
@@ -739,7 +723,7 @@
     {
       "id": "listen-mes-parents-habitent-la-campagne-ils-sont-vieux",
       "type": "listen",
-      "l1": "Moji rodičia bývajú na dedine. Sú starí.",
+      "l1": "Moji rodičia bývajú na vidieku. Sú starí.",
       "l2": "Mes parents habitent à la campagne. Ils sont vieux.",
       "choices_l2": [
         "Moi aussi, je suis professeur.",
@@ -804,7 +788,7 @@
       "id": "listen-ma-maman-est-dans-la-cuisine",
       "type": "listen",
       "l1": "Moja mama je v kuchyni.",
-      "l2": "Ma maman est dans la cuisine.",
+      "l2": "Ma mère est dans la cuisine.",
       "choices_l2": [
         "Comment tu t'appelles ?",
         "Mon père est grand et costaud.",
@@ -938,14 +922,14 @@
     {
       "id": "order-ma-grand-m-re-habite-la-campagne",
       "type": "order",
-      "l1": "Moja babka býva na dedine.",
+      "l1": "Moja babka býva na vidieku.",
       "l2": "Ma grand-mère habite à la campagne.",
       "tokens_l1": [
         "Moja",
         "babka",
         "býva",
         "na",
-        "dedine.",
+        "vidieku.",
         "Moja",
         "chata",
         "je",
@@ -1034,14 +1018,14 @@
     {
       "id": "order-mes-parents-habitent-la-campagne-ils-sont-vieux",
       "type": "order",
-      "l1": "Moji rodičia bývajú na dedine. Sú starí.",
+      "l1": "Moji rodičia bývajú na vidieku. Sú starí.",
       "l2": "Mes parents habitent à la campagne. Ils sont vieux.",
       "tokens_l1": [
         "Moji",
         "rodičia",
         "bývajú",
         "na",
-        "dedine.",
+        "vidieku.",
         "Sú",
         "starí.",
         "Deti",
@@ -1162,7 +1146,7 @@
       "id": "order-ma-maman-est-dans-la-cuisine",
       "type": "order",
       "l1": "Moja mama je v kuchyni.",
-      "l2": "Ma maman est dans la cuisine.",
+      "l2": "Ma mère est dans la cuisine.",
       "tokens_l1": [
         "Moja",
         "mama",
@@ -1180,7 +1164,7 @@
       ],
       "tokens_l2": [
         "Ma",
-        "maman",
+        "mère",
         "est",
         "dans",
         "la",
@@ -1225,6 +1209,38 @@
         "Nous",
         "habitons",
         "ensemble."
+      ]
+    },
+    {
+      "id": "qcm-la-pi-ce",
+      "type": "qcm",
+      "l1": "izba, miestnosť",
+      "l2": "la pièce",
+      "choices_l1": [
+        "práca",
+        "čau",
+        "brat"
+      ],
+      "choices_l2": [
+        "aujourd'hui",
+        "ma sœur",
+        "je fais"
+      ]
+    },
+    {
+      "id": "qcm-la-chambre",
+      "type": "qcm",
+      "l1": "spálňa, izba na spanie",
+      "l2": "la chambre",
+      "choices_l1": [
+        "študent / študentka",
+        "on / ona má",
+        "dôchodca / dôchodkyňa"
+      ],
+      "choices_l2": [
+        "les parents",
+        "le prénom",
+        "je comprends"
       ]
     }
   ]

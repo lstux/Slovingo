@@ -27,7 +27,7 @@ Hovoriť o počasí, ktoré príde, a prispôsobiť plány. Kombinujeme budúci 
 | Francúzština | Slovenčina |
 |----------|----------|
 | Il fera beau. | Bude slnečno. |
-| Il fera nuageux. | Bude oblačno. |
+| Il y aura des nuages. | Bude oblačno. |
 | Il pleuvra. | Bude pršať. |
 | Il y aura un orage. | Bude búrka. |
 
@@ -55,9 +55,11 @@ Dôležitá pasca: po „si“ (ak) francúzština NIKDY nepoužije budúci čas
 > Zajtra bude slnečno.
 > Demain il fera beau = zajtra bude slnečno
 
-! L'après-midi il fera nuageux.
+! L'après-midi, le temps sera nuageux.
 > Poobede bude oblačno.
-> L'après-midi il fera nuageux = poobede bude oblačno
+> L'après-midi = poobede
+> le temps sera nuageux = bude oblačno
++ Pozor: „il fait nuageux“ ani „il fera nuageux“ sa nehovorí. „Nuageux“ sa spája s počasím alebo oblohou: „le temps est nuageux“, „le ciel est nuageux“ — alebo jednoducho „il y a des nuages“.
 
 ! Le soir il va pleuvoir.
 > Večer bude pršať.

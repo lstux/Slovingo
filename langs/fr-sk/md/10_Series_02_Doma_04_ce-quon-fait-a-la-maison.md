@@ -30,7 +30,7 @@
 | je dors, tu dors, il dort | spím, spíš, spí |
 | j'ouvre, tu ouvres, il ouvre | otváram, otváraš, otvára |
 
-Väčšina slovies na **-er** (ako « ranger ») sa časuje veľmi pravidelne — to je najväčšia a najjednoduchšia skupina. Slovesá ako « dormir » patria do nepravidelnejšej skupiny. A pozor na prekvapenie: « ouvrir » sa napriek koncovke -ir časuje ako sloveso na -er (j'ouvre, nie „j'ouvris“). Nepravidelnosti majú svoju logiku, len inú, než by si čakal.
+Väčšina slovies na **-er** (ako « ranger ») sa časuje veľmi pravidelne — to je najväčšia a najjednoduchšia skupina. Slovesá ako « dormir » patria do nepravidelnejšej skupiny. A pozor na prekvapenie: « ouvrir » sa napriek koncovke -ir časuje ako sloveso na -er (j'ouvre, nie „j'ouvris“). Nepravidelnosti majú svoju logiku, len inú, než by si čakal/a.
 
 ### Zápor ne...pas
 

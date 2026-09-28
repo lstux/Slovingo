@@ -97,7 +97,7 @@ Dobrá správa: francúzske „il est“ sa vôbec nemení, či je hodina jedna 
 
 **24-hodinový formát, ale menej striktne v reči.** Podobne ako na Slovensku, aj francúzske vlakové a televízne časy sa zapisujú od 0 do 23. V bežnej reči však Francúzi častejšie hovoria čísla od jednej do dvanástej, s doplnením {{du matin}} (ráno) alebo {{du soir}} (večer).
 
-**Hodinová veža — klasika aj tu.** Takmer každé francúzske mesto má svoju historickú vežu s hodinami na námestí, podobne ako bratislavská Stará radnica. V Lyone je to napríklad veža na kopci {{Fourvière}}.
+**Hodinová veža — klasika aj tu.** Takmer každé francúzske mesto má svoju historickú vežu s hodinami na námestí, podobne ako bratislavská Stará radnica. Jedny z najslávnejších sú renesančné hodiny {{le Gros-Horloge}} nad ulicou v Rouene — tie na obrázku tejto kartičky.
 
 ---
 
@@ -141,8 +141,8 @@ Dobrá správa: francúzske „il est“ sa vôbec nemení, či je hodina jedna 
 > je n'ai jamais le temps = nikdy nemám čas
 + Francúzske „ne...jamais“ funguje podobne ako slovenská dvojitá zápora „nikdy ne-“ — tu si oba jazyky navzájom rozumejú.
 
-! Hier, comme aujourd'hui, je n'ai pas le temps.
-> Včera, tak ako dnes, nemám čas.
-> Hier = včera
-> comme aujourd'hui = tak ako dnes
+! Aujourd'hui, je n'ai pas le temps. Demain non plus.
+> Dnes nemám čas. Zajtra tiež nie.
+> Aujourd'hui = dnes
 > je n'ai pas le temps = nemám čas
+> Demain non plus = zajtra tiež nie

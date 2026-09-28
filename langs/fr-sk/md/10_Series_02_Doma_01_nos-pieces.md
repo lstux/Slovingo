@@ -96,7 +96,7 @@ Zlá správa hneď na úvod: francúzsky rod sa musí naučiť naspamäť spolu 
 
 **Salon — „miestnosť, kde prijímame“.** Francúzske slovo {{salon}} pôvodne označovalo miestnosť na prijímanie hostí v zámkoch. Dnes je to jednoducho obývačka, ale slovo si podržalo nádych trochu formálnosti.
 
-**WC a kúpeľňa spolu, nie oddelene.** Na rozdiel od slovenského zvyku oddeľovať {{les toilettes}} od {{la salle de bain}}, vo francúzskych bytoch sú tieto dve miestnosti veľmi často spojené do jednej. Spýtať sa „kde sú toalety“ v byte teda často znamená tie isté dvere ako kúpeľňa.
+**WC zvlášť, kúpeľňa zvlášť.** Vo francúzskych bytoch je záchod ({{les toilettes}}) veľmi často samostatná miestnosť, oddelená od kúpeľne ({{la salle de bain}}). Francúzi to považujú za samozrejmosť a v inzerátoch sa „WC séparés“ uvádza ako výhoda. Keď sa teda opýtaš na {{la salle de bain}}, záchod tam nutne nenájdeš.
 
 **Domy s drevenou kostrou.** V Alsasku a Normandii nájdeš celé staré mestá postavené z domov s viditeľnou drevenou konštrukciou a farebnými fasádami, {{maisons à colombages}} — francúzsky ekvivalent slovenských maľovaných Čičmian, len v inom štýle.
 

@@ -36,7 +36,7 @@
 | 18 | dix-huit |
 | 19 | dix-neuf |
 
-> Všimni si: 11 až 16 sú samostatné, nepriehľadné slová (podobne ako slovenské jedenásť–šestnásť), ale 17, 18, 19 sú už zložené — „dix-sept“ doslova „desať-sedem“.
+> Všimni si: 11 až 16 sú samostatné slová, ktoré si treba zapamätať (na rozdiel od slovenských jeden-násť, dva-násť…), ale 17, 18, 19 sú už zložené — „dix-sept“ doslova „desať-sedem“.
 
 ---
 
@@ -73,7 +73,7 @@ Pri číslach končiacich na 1 (okrem 81 a 91) sa medzi desiatku a jednotku vkla
 
 ### 🧩 Čísla od 70 do 99 — dvadsiatkový systém
 
-Toto je najznámejšia zvláštnosť francúzskych čísel. Namiesto pravidelných „septante, huitante, nonante“ (ktoré sa mimochodom skutočne používajú v Belgicku a vo Švajčiarsku!) používa štandardná francúzština počítanie po dvadsiatkach:
+Toto je najznámejšia zvláštnosť francúzskych čísel. Namiesto pravidelných „septante, huitante, nonante“ (v Belgicku a vo Švajčiarsku sa naozaj hovorí „septante“ a „nonante“; „huitante“ počuť len v niektorých švajčiarskych kantónoch) používa štandardná francúzština počítanie po dvadsiatkach:
 
 - **70** = {{soixante-dix}} (doslova „šesťdesiat-desať“)
 - **71** = {{soixante et onze}} (šesťdesiat a jedenásť — „et“ platí aj tu!)

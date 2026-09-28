@@ -20,7 +20,7 @@
       "id": "qcm-la-maman",
       "type": "qcm",
       "l1": "mama",
-      "l2": "la maman",
+      "l2": "la mère",
       "choices_l1": [
         "manžel",
         "sesternica",
@@ -392,7 +392,7 @@
       "id": "blank-voici-mon-p-re-et-voici-ma-maman",
       "type": "fill-blank",
       "l1": "To je môj otec a to je moja mama.",
-      "l2": "Voici mon père et voici ma maman.",
+      "l2": "Voici mon père et voici ma mère.",
       "missing_l1": "je",
       "missing_l2": "et",
       "blank_index_l1": 1,
@@ -608,7 +608,7 @@
       "id": "listen-voici-mon-p-re-et-voici-ma-maman",
       "type": "listen",
       "l1": "To je môj otec a to je moja mama.",
-      "l2": "Voici mon père et voici ma maman.",
+      "l2": "Voici mon père et voici ma mère.",
       "choices_l2": [
         "S'il fait nuageux, il ne fera pas trop chaud.",
         "Moi, c'est Chloé ! J'ai huit ans.",
@@ -810,7 +810,7 @@
       "id": "order-voici-mon-p-re-et-voici-ma-maman",
       "type": "order",
       "l1": "To je môj otec a to je moja mama.",
-      "l2": "Voici mon père et voici ma maman.",
+      "l2": "Voici mon père et voici ma mère.",
       "tokens_l1": [
         "To",
         "je",
@@ -832,7 +832,7 @@
         "et",
         "voici",
         "ma",
-        "maman.",
+        "mère.",
         "Qui",
         "est-ce",
         "?"

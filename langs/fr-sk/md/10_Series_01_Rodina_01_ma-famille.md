@@ -2,7 +2,7 @@
 
 @ img/Family_Portrait.jpg | Rodina — Wikimedia Commons
 
-Prvá fiche série: členovia rodiny, privlastňovacie zámená **mon** / **ma**, a dve slovesá, ktoré budeš potrebovať všade — **être** (byť) a **avoir** (mať).
+Prvá kartička série: členovia rodiny, privlastňovacie zámená **mon** / **ma**, a dve slovesá, ktoré budeš potrebovať všade — **être** (byť) a **avoir** (mať).
 
 ---
 
@@ -108,7 +108,7 @@ Privlastňovacie zámeno sa zhoduje s rodom podstatného mena, ktoré nasleduje 
 
 **Aj « mère » a « père » majú svoje familiárne verzie.** Presne ako pri babke a dedkovi vyššie — v bežnej reči Francúzi takmer vždy povedia {{maman}} a {{papa}}, nie formálne {{mère}} a {{père}}.
 
-**Nedeľný obed vo veľkom štýle.** Francúzska rodina sa rada stretáva na dlhom nedeľnom obede, niekedy aj na tri hodiny pri stole. Odmietnuť druhú porciu sa nepatrí — presne ako u slovenskej babky.
+**Nedeľný obed vo veľkom štýle.** Francúzska rodina sa rada stretáva na dlhom nedeľnom obede, niekedy aj na tri hodiny pri stole. A babka bude ponúkať druhú porciu — presne ako tá slovenská.
 
 **Priezviská sa nemenia podľa rodu.** Na rozdiel od slovenčiny (napr. Nováková), francúzske priezviská majú rovnaký tvar pre mužov aj ženy: {{Madame Dupont}} aj {{Monsieur Dupont}}.
 

@@ -114,9 +114,9 @@ Toto je najbližšia vec, akú francúzština má k slovenskému farbil/farbila 
 
 ## 🇫🇷 Francúzsky kútik
 
-**Zvony letia do Ríma, nemlčia.** Na rozdiel od slovenskej tradície umlčaných zvonov nahradených rapkáčmi, francúzska tradícia hovorí, že zvony {{s'envolent à Rome}} (odletia do Ríma) od Zeleného štvrtka a vrátia sa na Veľkonočnú nedeľu — deťom sa hovorí, že práve zvony pri návrate rozhadzujú čokoládové vajíčka po záhrade.
+**Zvony mlčia, lebo odleteli do Ríma.** Od Zeleného štvrtka do Veľkonočnej nedele zvony v kostoloch mlčia. Francúzske deti sa dozvedia prečo: zvony {{s'envolent à Rome}} (odleteli do Ríma) a na Veľkonočnú nedeľu sa vracajú — a cestou rozhadzujú po záhradách čokoládové vajíčka.
 
-**Veľký piatok nie je vo väčšine Francúzska štátny sviatok.** Na rozdiel od Slovenska, kde je Veľký piatok od nedávna voľný deň, vo väčšine Francúzska (okrem Alsaska a Lotrinska, kde platí špeciálny štatút) sa v piatok bežne pracuje — voľno je iba veľkonočný pondelok.
+**Veľký piatok nie je vo väčšine Francúzska štátny sviatok.** Na rozdiel od Slovenska, kde je Veľký piatok dňom pracovného pokoja, vo väčšine Francúzska (okrem Alsaska a Lotrinska, kde platí špeciálny štatút) sa v piatok bežne pracuje — voľno je iba veľkonočný pondelok.
 
 **Veľkonočný pondelok je voľný deň, spoločné pre oba jazyky.** Podobne ako na Slovensku, aj vo Francúzsku je veľkonočný pondelok štátnym sviatkom — v oboch krajinách je to deň na rodinné návštevy.
 
@@ -138,10 +138,10 @@ Toto je najbližšia vec, akú francúzština má k slovenskému farbil/farbila 
 
 ## Ešte pár viet
 
-! Les cloches se sont tues toute la semaine.
-> Zvony mlčali celý týždeň.
+! Les cloches se sont tues du jeudi au dimanche.
+> Zvony mlčali od štvrtka do nedele.
 > Les cloches se sont tues = zvony mlčali
-> toute la semaine = celý týždeň
+> du jeudi au dimanche = od štvrtka do nedele
 
 ! Le prêtre a célébré la messe le dimanche de Pâques.
 > Kňaz slúžil omšu na Veľkonočnú nedeľu.

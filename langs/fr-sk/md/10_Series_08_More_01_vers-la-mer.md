@@ -2,7 +2,7 @@
 
 @ img/Plage_de_La_Baule-Escoublac_01.JPG | Atlantické pobrežie, pláž La Baule — Wikimedia Commons
 
-Prvá fiche najočakávanejšej série: more. Základná slovná zásoba, a skutočný budúci čas (futur simple), ktorý ti poslúži v celej sérii.
+Prvá kartička najočakávanejšej série: more. Základná slovná zásoba, a skutočný budúci čas (futur simple), ktorý ti poslúži v celej sérii.
 
 ---
 
@@ -22,7 +22,7 @@ Prvá fiche najočakávanejšej série: more. Základná slovná zásoba, a skut
 
 ## Dnešná gramatika
 
-### Futur simple de être
+### Futur simple d'être
 
 | Francúzština | Slovenčina |
 |----------|----------|

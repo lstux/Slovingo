@@ -579,7 +579,7 @@
     {
       "id": "qcm-la-cr-me-solaire",
       "type": "qcm",
-      "l1": "krémy na opaľovanie",
+      "l1": "krém na opaľovanie",
       "l2": "la crème solaire",
       "choices_l1": [
         "Dal/dala som Chloé vajíčko. → Dal/dala som jej vajíčko.",
@@ -881,26 +881,6 @@
       ]
     },
     {
-      "id": "blank-il-fait-chaud-et-ensoleill-mais-il-y-aura-des-nuages-ce-soir",
-      "type": "fill-blank",
-      "l1": "Je teplo a slnečno, ale večer budú oblaky.",
-      "l2": "Il fait chaud et ensoleillé, mais il y aura des nuages ce soir.",
-      "missing_l1": "a",
-      "missing_l2": "et",
-      "blank_index_l1": 2,
-      "blank_index_l2": 3,
-      "choices_l1": [
-        "tiež",
-        "studenejší ako",
-        "oblečie si"
-      ],
-      "choices_l2": [
-        "ma",
-        "un",
-        "des"
-      ]
-    },
-    {
       "id": "blank-en-automne-il-pleut-souvent-et-les-feuilles-tombent",
       "type": "fill-blank",
       "l1": "Na jeseň často prší a padá lístie.",
@@ -1181,22 +1161,6 @@
       ]
     },
     {
-      "id": "listen-il-fait-chaud-et-ensoleill-mais-il-y-aura-des-nuages-ce-soir",
-      "type": "listen",
-      "l1": "Je teplo a slnečno, ale večer budú oblaky.",
-      "l2": "Il fait chaud et ensoleillé, mais il y aura des nuages ce soir.",
-      "choices_l2": [
-        "Je paie par carte.",
-        "Il est cinq heures et demie.",
-        "En été les jours sont plus longs."
-      ],
-      "choices_l1": [
-        "Chodím do práce pešo, ale dnes idem autobusom.",
-        "Prišla skoro a pomohla pripraviť stôl.",
-        "Na veľkonočný pondelok deti hľadajú vajíčka v záhrade."
-      ]
-    },
-    {
       "id": "listen-en-automne-il-pleut-souvent-et-les-feuilles-tombent",
       "type": "listen",
       "l1": "Na jeseň často prší a padá lístie.",
@@ -1418,57 +1382,6 @@
         "Tieto topánky sú pohodlné.",
         "Je to trochu malé. Máte väčšie?",
         "Dáme si tartu a kávu."
-      ]
-    },
-    {
-      "id": "order-il-fait-chaud-et-ensoleill-mais-il-y-aura-des-nuages-ce-soir",
-      "type": "order",
-      "l1": "Je teplo a slnečno, ale večer budú oblaky.",
-      "l2": "Il fait chaud et ensoleillé, mais il y aura des nuages ce soir.",
-      "tokens_l1": [
-        "Je",
-        "teplo",
-        "a",
-        "slnečno,",
-        "ale",
-        "večer",
-        "budú",
-        "oblaky.",
-        "Ak",
-        "bude",
-        "zajtra",
-        "pekne,",
-        "pôjdeme",
-        "sa",
-        "prechádzať",
-        "do",
-        "parku."
-      ],
-      "tokens_l2": [
-        "Il",
-        "fait",
-        "chaud",
-        "et",
-        "ensoleillé,",
-        "mais",
-        "il",
-        "y",
-        "aura",
-        "des",
-        "nuages",
-        "ce",
-        "soir.",
-        "S'il",
-        "fait",
-        "beau",
-        "demain,",
-        "nous",
-        "irons",
-        "nous",
-        "promener",
-        "dans",
-        "le",
-        "parc."
       ]
     },
     {
@@ -2050,6 +1963,80 @@
         "presque",
         "la",
         "canicule."
+      ]
+    },
+    {
+      "id": "blank-il-fait-beau-et-chaud-mais-il-y-aura-des-nuages-ce-soir",
+      "type": "fill-blank",
+      "l1": "Je pekne a teplo, ale večer budú oblaky.",
+      "l2": "Il fait beau et chaud, mais il y aura des nuages ce soir.",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "ešte",
+        "o",
+        "kde"
+      ],
+      "choices_l2": [
+        "a",
+        "ma",
+        "en"
+      ]
+    },
+    {
+      "id": "listen-il-fait-beau-et-chaud-mais-il-y-aura-des-nuages-ce-soir",
+      "type": "listen",
+      "l1": "Je pekne a teplo, ale večer budú oblaky.",
+      "l2": "Il fait beau et chaud, mais il y aura des nuages ce soir.",
+      "choices_l1": [
+        "Knižnica je v centre mesta.",
+        "Máme balkón a garáž.",
+        "Stretávam kamaráta v kaviarni a potom ideme do kina."
+      ]
+    },
+    {
+      "id": "order-il-fait-beau-et-chaud-mais-il-y-aura-des-nuages-ce-soir",
+      "type": "order",
+      "l1": "Je pekne a teplo, ale večer budú oblaky.",
+      "l2": "Il fait beau et chaud, mais il y aura des nuages ce soir.",
+      "tokens_l1": [
+        "Je",
+        "pekne",
+        "a",
+        "teplo,",
+        "ale",
+        "večer",
+        "budú",
+        "oblaky.",
+        "Turistika",
+        "je",
+        "krásna,",
+        "napriek",
+        "zime."
+      ],
+      "tokens_l2": [
+        "Il",
+        "fait",
+        "beau",
+        "et",
+        "chaud,",
+        "mais",
+        "il",
+        "y",
+        "aura",
+        "des",
+        "nuages",
+        "ce",
+        "soir.",
+        "La",
+        "randonnée",
+        "est",
+        "magnifique,",
+        "malgré",
+        "le",
+        "froid."
       ]
     }
   ]

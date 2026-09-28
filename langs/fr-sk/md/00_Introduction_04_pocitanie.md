@@ -50,7 +50,7 @@ Desiatky od 20 do 60 fungujú pravidelne:
 | 50 | cinquante |
 | 60 | soixante |
 
-Potom prichádza prekvapenie. Namiesto pravidelných „septante“, „huitante“, „nonante“ (ktoré sa mimochodom naozaj používajú v Belgicku a vo Švajčiarsku!) používa štandardná francúzština vo Francúzsku zvyškový systém počítania po dvadsiatkach, dedičstvo starogalského vplyvu:
+Potom prichádza prekvapenie. Namiesto pravidelných „septante“, „huitante“, „nonante“ (v Belgicku a vo Švajčiarsku sa naozaj hovorí „septante“ a „nonante“; „huitante“ počuť len v niektorých švajčiarskych kantónoch, inak sa aj tam povie „quatre-vingts“) používa štandardná francúzština vo Francúzsku počítanie po dvadsiatkach, ktorého pôvod sa dodnes presne nevie:
 
 | Číslo | Francúzština | Doslovný rozklad |
 |---:|---|---|

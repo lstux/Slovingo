@@ -545,26 +545,6 @@
       ]
     },
     {
-      "id": "blank-hier-comme-aujourd-hui-je-n-ai-pas-le-temps",
-      "type": "fill-blank",
-      "l1": "Včera, tak ako dnes, nemám čas.",
-      "l2": "Hier, comme aujourd'hui, je n'ai pas le temps.",
-      "missing_l1": "dnes",
-      "missing_l2": "le",
-      "blank_index_l1": 3,
-      "blank_index_l2": 6,
-      "choices_l1": [
-        "Biela sobota",
-        "v stredu",
-        "Je zima."
-      ],
-      "choices_l2": [
-        "tu vois",
-        "je serai",
-        "je mange"
-      ]
-    },
-    {
       "id": "listen-quelle-heure-est-il",
       "type": "listen",
       "l1": "Koľko je hodín?",
@@ -754,22 +734,6 @@
         "Zajtra budeme na pláži, ak bude pekne.",
         "V pondelok poobede.",
         "Mohli by sme zostať v hoteli ešte jednu noc?"
-      ]
-    },
-    {
-      "id": "listen-hier-comme-aujourd-hui-je-n-ai-pas-le-temps",
-      "type": "listen",
-      "l1": "Včera, tak ako dnes, nemám čas.",
-      "l2": "Hier, comme aujourd'hui, je n'ai pas le temps.",
-      "choices_l2": [
-        "Ma maman est professeure.",
-        "Le lit est dans la chambre.",
-        "Ma sœur est à la maison."
-      ],
-      "choices_l1": [
-        "Táto vlna je dnes najvyššia!",
-        "Trh je v sobotu, knižnica je otvorená každý deň.",
-        "Na veľkonočný pondelok sme navštívili celú rodinu."
       ]
     },
     {
@@ -1111,34 +1075,71 @@
       ]
     },
     {
-      "id": "order-hier-comme-aujourd-hui-je-n-ai-pas-le-temps",
+      "id": "blank-aujourd-hui-je-n-ai-pas-le-temps-demain-non-plus",
+      "type": "fill-blank",
+      "l1": "Dnes nemám čas. Zajtra tiež nie.",
+      "l2": "Aujourd'hui, je n'ai pas le temps. Demain non plus.",
+      "missing_l1": "nie",
+      "missing_l2": "le",
+      "blank_index_l1": 5,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "rokov",
+        "veľa",
+        "si"
+      ],
+      "choices_l2": [
+        "maison",
+        "a",
+        "au"
+      ]
+    },
+    {
+      "id": "listen-aujourd-hui-je-n-ai-pas-le-temps-demain-non-plus",
+      "type": "listen",
+      "l1": "Dnes nemám čas. Zajtra tiež nie.",
+      "l2": "Aujourd'hui, je n'ai pas le temps. Demain non plus.",
+      "choices_l1": [
+        "Karine má dvadsať rokov. Je študentka.",
+        "Moji rodičia sú dôchodcovia. Bývajú blízko.",
+        "Kde sú papuče? Na chodbe?"
+      ]
+    },
+    {
+      "id": "order-aujourd-hui-je-n-ai-pas-le-temps-demain-non-plus",
       "type": "order",
-      "l1": "Včera, tak ako dnes, nemám čas.",
-      "l2": "Hier, comme aujourd'hui, je n'ai pas le temps.",
+      "l1": "Dnes nemám čas. Zajtra tiež nie.",
+      "l2": "Aujourd'hui, je n'ai pas le temps. Demain non plus.",
       "tokens_l1": [
-        "Včera,",
-        "tak",
-        "ako",
-        "dnes,",
+        "Dnes",
         "nemám",
         "čas.",
-        "Je",
-        "jedna",
-        "hodina."
+        "Zajtra",
+        "tiež",
+        "nie.",
+        "Ráno",
+        "som",
+        "vždy",
+        "doma."
       ],
       "tokens_l2": [
-        "Hier,",
-        "comme",
-        "aujourd'hui,",
+        "Aujourd'hui,",
         "je",
         "n'ai",
         "pas",
         "le",
         "temps.",
-        "Il",
-        "est",
-        "une",
-        "heure."
+        "Demain",
+        "non",
+        "plus.",
+        "Le",
+        "matin,",
+        "je",
+        "suis",
+        "toujours",
+        "à",
+        "la",
+        "maison."
       ]
     }
   ]

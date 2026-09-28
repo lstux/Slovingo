@@ -557,26 +557,6 @@
       ]
     },
     {
-      "id": "blank-les-cloches-se-sont-tues-toute-la-semaine",
-      "type": "fill-blank",
-      "l1": "Zvony mlčali celý týždeň.",
-      "l2": "Les cloches se sont tues toute la semaine.",
-      "missing_l1": "celý",
-      "missing_l2": "la",
-      "blank_index_l1": 2,
-      "blank_index_l2": 6,
-      "choices_l1": [
-        "svetlý",
-        "otvorené",
-        "blízko"
-      ],
-      "choices_l2": [
-        "tu bois",
-        "mon",
-        "une"
-      ]
-    },
-    {
       "id": "blank-le-pr-tre-a-c-l-br-la-messe-le-dimanche-de-p-ques",
       "type": "fill-blank",
       "l1": "Kňaz slúžil omšu na Veľkonočnú nedeľu.",
@@ -830,22 +810,6 @@
         "Choď rovno, potom vpravo pri banke.",
         "Pôjdem pešo. Chcem vidieť mesto.",
         "Električka ide o piatej."
-      ]
-    },
-    {
-      "id": "listen-les-cloches-se-sont-tues-toute-la-semaine",
-      "type": "listen",
-      "l1": "Zvony mlčali celý týždeň.",
-      "l2": "Les cloches se sont tues toute la semaine.",
-      "choices_l2": [
-        "La tarte est savoureuse, mais il y en a beaucoup.",
-        "Le samedi, je ne me lève jamais tôt.",
-        "Mon père et ma maman habitent ensemble à la campagne."
-      ],
-      "choices_l1": [
-        "Zajtra má byť daždivo, tak zostaneme doma.",
-        "Neupratovali sme včera, upratujeme dnes.",
-        "Na jeseň je predpoveď často daždivá."
       ]
     },
     {
@@ -1346,40 +1310,6 @@
       ]
     },
     {
-      "id": "order-les-cloches-se-sont-tues-toute-la-semaine",
-      "type": "order",
-      "l1": "Zvony mlčali celý týždeň.",
-      "l2": "Les cloches se sont tues toute la semaine.",
-      "tokens_l1": [
-        "Zvony",
-        "mlčali",
-        "celý",
-        "týždeň.",
-        "Oslavovali",
-        "sme",
-        "s",
-        "celou",
-        "rodinou."
-      ],
-      "tokens_l2": [
-        "Les",
-        "cloches",
-        "se",
-        "sont",
-        "tues",
-        "toute",
-        "la",
-        "semaine.",
-        "Nous",
-        "avons",
-        "célébré",
-        "avec",
-        "toute",
-        "la",
-        "famille."
-      ]
-    },
-    {
       "id": "order-le-pr-tre-a-c-l-br-la-messe-le-dimanche-de-p-ques",
       "type": "order",
       "l1": "Kňaz slúžil omšu na Veľkonočnú nedeľu.",
@@ -1530,6 +1460,78 @@
         "toute",
         "la",
         "maison."
+      ]
+    },
+    {
+      "id": "blank-les-cloches-se-sont-tues-du-jeudi-au-dimanche",
+      "type": "fill-blank",
+      "l1": "Zvony mlčali od štvrtka do nedele.",
+      "l2": "Les cloches se sont tues du jeudi au dimanche.",
+      "missing_l1": "do",
+      "missing_l2": "sont",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "dnes",
+        "mi",
+        "môj"
+      ],
+      "choices_l2": [
+        "heures",
+        "j'ai",
+        "en"
+      ]
+    },
+    {
+      "id": "listen-les-cloches-se-sont-tues-du-jeudi-au-dimanche",
+      "type": "listen",
+      "l1": "Zvony mlčali od štvrtka do nedele.",
+      "l2": "Les cloches se sont tues du jeudi au dimanche.",
+      "choices_l1": [
+        "Zastávka je blízko, choďte rovno.",
+        "Moja mama má päťdesiat rokov.",
+        "Mám vedierko a slnečník v taške."
+      ]
+    },
+    {
+      "id": "order-les-cloches-se-sont-tues-du-jeudi-au-dimanche",
+      "type": "order",
+      "l1": "Zvony mlčali od štvrtka do nedele.",
+      "l2": "Les cloches se sont tues du jeudi au dimanche.",
+      "tokens_l1": [
+        "Zvony",
+        "mlčali",
+        "od",
+        "štvrtka",
+        "do",
+        "nedele.",
+        "Na",
+        "Kvetnú",
+        "nedeľu",
+        "sme",
+        "išli",
+        "do",
+        "kostola."
+      ],
+      "tokens_l2": [
+        "Les",
+        "cloches",
+        "se",
+        "sont",
+        "tues",
+        "du",
+        "jeudi",
+        "au",
+        "dimanche.",
+        "Le",
+        "dimanche",
+        "des",
+        "Rameaux",
+        "nous",
+        "sommes",
+        "allés",
+        "à",
+        "l'église."
       ]
     }
   ]

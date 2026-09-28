@@ -111,11 +111,12 @@
 > et le magasin est ouvert = a obchod je otvorený
 > jusqu'à huit heures = do ôsmej
 
-! J'essaie ces chaussures en taille quarante.
-> Skúsim topánky vo veľkosti štyridsať.
+! J'essaie ces chaussures en quarante.
+> Skúsim tieto topánky v štyridsiatke.
 > J'essaie = skúsim
-> ces chaussures = topánky
-> en taille quarante = vo veľkosti štyridsať
+> ces chaussures = tieto topánky
+> en quarante = vo veľkosti štyridsať
++ Pri topánkach sa nehovorí „taille“, ale „pointure“ — alebo jednoducho „en quarante“.
 
 ! Le marché a lieu chaque samedi, le magasin est ouvert tous les jours.
 > Trh je každú sobotu, obchod je otvorený každý deň.

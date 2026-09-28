@@ -144,16 +144,16 @@ Rovnaké pravidlo ako pri partitívnom člene: po zápore sa „du / de la / des
 | le chocolat chaud | horúca čokoláda |
 | l'eau minérale | minerálka |
 | le jus de fruits | ovocný džús |
-| le cidre | jablčný mušt |
+| le cidre | cider (jablkové víno) |
 
 ---
 
 ## Ešte pár viet
 
 ! Je prends un cidre.
-> Dám si jablčný mušt.
+> Dám si cider.
 > Je prends = dám si
-> un cidre = jablčný mušt
+> un cidre = cider
 
 ! Je bois du chocolat chaud, pas de café.
 > Pijem horúcu čokoládu, nie kávu.

@@ -2,7 +2,7 @@
 
 @ img/French_Countryside_(215837655).jpeg | Francúzsky vidiek — Wikimedia Commons
 
-Posledná učebná fiche pred dialógom. Situujeme rodinu: sloveso **habiter**, a predložky miesta, ktoré na rozdiel od slovenčiny nemenia tvar slova, ktoré nasleduje.
+Posledná učebná kartička pred dialógom. Situujeme rodinu: sloveso **habiter**, a predložky miesta, ktoré na rozdiel od slovenčiny nemenia tvar slova, ktoré nasleduje.
 
 ---
 
@@ -12,7 +12,7 @@ Posledná učebná fiche pred dialógom. Situujeme rodinu: sloveso **habiter**, 
 |----------|----------|
 | habiter | bývať |
 | la ville | mesto |
-| la campagne | dedina, vidiek |
+| la campagne | vidiek |
 | la maison | dom |
 | l'appartement | byt |
 | ensemble | spolu |
@@ -69,10 +69,10 @@ Vo francúzštine sa slovo za predložkou vôbec nemení — na rozdiel od slove
 > dans une maison = v dome
 
 ! Ma grand-mère habite à la campagne.
-> Moja babka býva na dedine.
+> Moja babka býva na vidieku.
 > Ma grand-mère = moja babka
 > habite = býva
-> à la campagne = na dedine
+> à la campagne = na vidieku
 
 ! Nous habitons ensemble.
 > Bývame spolu.
@@ -100,10 +100,10 @@ Vo francúzštine sa slovo za predložkou vôbec nemení — na rozdiel od slove
 + « en ville » pre mesto všeobecne, « à + mesto » pre konkrétne mesto (à Lyon).
 
 ! Mes parents habitent à la campagne. Ils sont vieux.
-> Moji rodičia bývajú na dedine. Sú starí.
+> Moji rodičia bývajú na vidieku. Sú starí.
 > Mes parents = moji rodičia
 > habitent = bývajú
-> à la campagne = na dedine
+> à la campagne = na vidieku
 > ils sont = sú
 > vieux = starí
 
@@ -130,7 +130,8 @@ Vo francúzštine sa slovo za predložkou vôbec nemení — na rozdiel od slove
 
 | Francúzština | Slovenčina |
 |----------|----------|
-| la pièce / la chambre | izba |
+| la pièce | izba, miestnosť |
+| la chambre | spálňa, izba na spanie |
 | la cuisine | kuchyňa |
 | le jardin | záhrada |
 | l'immeuble | panelák |

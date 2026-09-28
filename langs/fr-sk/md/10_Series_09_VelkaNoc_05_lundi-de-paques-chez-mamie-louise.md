@@ -13,7 +13,7 @@ Veľkonočný pondelok u Mamie Louise: Karine a Eric prídu na hľadanie vajíč
 - 👧 Chloé, malá sestra Karine
 - 👦 Eric
 
-Všetci si tykajú okrem vzťahu Eric–Mamie Louise, kde Eric vyká.
+Všetci si tykajú, okrem Erica, ktorý Mamie Louise z úcty stále vyká. Mamie Louise už Ericovi tyká — pozná ho z predchádzajúcich návštev.
 
 ---
 
@@ -76,9 +76,10 @@ Všetci si tykajú okrem vzťahu Eric–Mamie Louise, kde Eric vyká.
 > je te l'ai caché, celui-là = schovala som ti práve toto
 + „je te l'ai caché“ spája dve zámená — „te“ (tebe) a „l'“ (to) — trochu pokročilé, zatiaľ si len všimni, že sú dve.
 
-! 🧑 On lui a donné le plus bel œuf, elle l'a bien mérité.
-> Dali sme jej najkrajšie vajíčko, dobre si ho zaslúžila.
-> On lui a donné le plus bel œuf = dali sme jej najkrajšie vajíčko
+! 🧑 Et Chloé en a trouvé trois ! On lui donne le plus bel œuf, elle l'a bien mérité.
+> A Chloé našla tri! Dáme jej najkrajšie vajíčko, dobre si ho zaslúžila.
+> Et Chloé en a trouvé trois = a Chloé našla tri
+> On lui donne le plus bel œuf = dáme jej najkrajšie vajíčko
 > elle l'a bien mérité = dobre si ho zaslúžila
 
 ! 👵 Venez, j'ai préparé le gigot. On se réunit à table !
@@ -100,7 +101,7 @@ Všetci si tykajú okrem vzťahu Eric–Mamie Louise, kde Eric vyká.
 
 ## 🇫🇷 Francúzsky kútik
 
-**Hľadanie vajíčok namiesto pomlázky.** Zatiaľ čo slovenská Veľká noc má šibačku, francúzska tradícia je úplne iná — a nekladie žiadny dôraz na fyzický kontakt medzi mužmi a ženami. Hľadanie vajíčok je rodinná, detská zábava, bez rodového rozmeru.
+**Hľadanie vajíčok namiesto šibačky.** Zatiaľ čo slovenská Veľká noc má šibačku, francúzska tradícia je úplne iná — a nekladie žiadny dôraz na fyzický kontakt medzi mužmi a ženami. Hľadanie vajíčok je rodinná, detská zábava, bez rodového rozmeru.
 
 **„Joyeuses Pâques“, nie jedna formulka na všetko.** Podobne ako „Bonjour“/„Au revoir“, aj francúzske veľkonočné pozdravy sú presné: {{Joyeuses Pâques}} sa hovorí len počas veľkonočného víkendu, nie inokedy.
 

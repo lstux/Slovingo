@@ -537,26 +537,6 @@
       ]
     },
     {
-      "id": "blank-nous-avons-pass-un-jour-joyeux",
-      "type": "fill-blank",
-      "l1": "Strávili sme radostný deň.",
-      "l2": "Nous avons passé un jour joyeux.",
-      "missing_l1": "sme",
-      "missing_l2": "un",
-      "blank_index_l1": 1,
-      "blank_index_l2": 3,
-      "choices_l1": [
-        "v byte",
-        "o",
-        "do"
-      ],
-      "choices_l2": [
-        "s'appelle",
-        "cette",
-        "nous buvons"
-      ]
-    },
-    {
       "id": "listen-le-lundi-de-p-ques-les-enfants-cherchent-les-ufs-dans-le-jardin",
       "type": "listen",
       "l1": "Na veľkonočný pondelok deti hľadajú vajíčka v záhrade.",
@@ -800,7 +780,7 @@
       "id": "listen-nous-avons-pass-un-jour-joyeux",
       "type": "listen",
       "l1": "Strávili sme radostný deň.",
-      "l2": "Nous avons passé un jour joyeux.",
+      "l2": "Nous avons passé une journée joyeuse.",
       "choices_l2": [
         "Quelles sont les prévisions pour demain ?",
         "La télévision est sur l'étagère.",
@@ -1381,7 +1361,7 @@
       "id": "order-nous-avons-pass-un-jour-joyeux",
       "type": "order",
       "l1": "Strávili sme radostný deň.",
-      "l2": "Nous avons passé un jour joyeux.",
+      "l2": "Nous avons passé une journée joyeuse.",
       "tokens_l1": [
         "Strávili",
         "sme",
@@ -1397,9 +1377,9 @@
         "Nous",
         "avons",
         "passé",
-        "un",
-        "jour",
-        "joyeux.",
+        "une",
+        "journée",
+        "joyeuse.",
         "Cette",
         "cloche",
         "en",

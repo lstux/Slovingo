@@ -601,26 +601,6 @@
       ]
     },
     {
-      "id": "blank-je-ressens-la-tranquillit-sur-le-balcon",
-      "type": "fill-blank",
-      "l1": "Cítim pohodu na balkóne.",
-      "l2": "Je ressens la tranquillité sur le balcon.",
-      "missing_l1": "na",
-      "missing_l2": "le",
-      "blank_index_l1": 2,
-      "blank_index_l2": 5,
-      "choices_l1": [
-        "vonku",
-        "oblečieme si",
-        "Koľko"
-      ],
-      "choices_l2": [
-        "pas",
-        "nous allons",
-        "je bois"
-      ]
-    },
-    {
       "id": "listen-je-voudrais-une-chambre-l-h-tel",
       "type": "listen",
       "l1": "Chcel by som izbu v hoteli.",
@@ -858,22 +838,6 @@
         "Sedím na stoličke.",
         "Ovocie je sladké.",
         "Poznáš príliv a odliv?"
-      ]
-    },
-    {
-      "id": "listen-je-ressens-la-tranquillit-sur-le-balcon",
-      "type": "listen",
-      "l1": "Cítim pohodu na balkóne.",
-      "l2": "Je ressens la tranquillité sur le balcon.",
-      "choices_l2": [
-        "Je nage dans la mer.",
-        "Le fromage est acide.",
-        "La serviette est dans la salle de bain, sur l'étagère."
-      ],
-      "choices_l1": [
-        "Ja nechcem pot-au-feu. Chcem tartu!",
-        "Tráva je zelená a mokrá.",
-        "Zvony poletia do Ríma."
       ]
     },
     {
@@ -1388,36 +1352,66 @@
       ]
     },
     {
-      "id": "order-je-ressens-la-tranquillit-sur-le-balcon",
+      "id": "blank-sur-le-balcon-quelle-tranquillit",
+      "type": "fill-blank",
+      "l1": "Na balkóne je taký pokoj!",
+      "l2": "Sur le balcon, quelle tranquillité !",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "dobrý",
+        "kde",
+        "v"
+      ],
+      "choices_l2": [
+        "s'il",
+        "plaît",
+        "veux"
+      ]
+    },
+    {
+      "id": "listen-sur-le-balcon-quelle-tranquillit",
+      "type": "listen",
+      "l1": "Na balkóne je taký pokoj!",
+      "l2": "Sur le balcon, quelle tranquillité !",
+      "choices_l1": [
+        "Skúsim tieto topánky v štyridsiatke.",
+        "Musíš mať dáždnik, prší.",
+        "V lete nosím slnečné okuliare."
+      ]
+    },
+    {
+      "id": "order-sur-le-balcon-quelle-tranquillit",
       "type": "order",
-      "l1": "Cítim pohodu na balkóne.",
-      "l2": "Je ressens la tranquillité sur le balcon.",
+      "l1": "Na balkóne je taký pokoj!",
+      "l2": "Sur le balcon, quelle tranquillité !",
       "tokens_l1": [
-        "Cítim",
-        "pohodu",
-        "na",
-        "balkóne.",
-        "Máme",
-        "rezerváciu",
-        "na",
-        "dve",
-        "postele."
+        "Na",
+        "balkóne",
+        "je",
+        "taký",
+        "pokoj!",
+        "Som",
+        "unavený.",
+        "Chcem",
+        "odpočívať."
       ],
       "tokens_l2": [
-        "Je",
-        "ressens",
-        "la",
-        "tranquillité",
-        "sur",
+        "Sur",
         "le",
-        "balcon.",
-        "Nous",
-        "avons",
-        "une",
-        "réservation",
-        "pour",
-        "deux",
-        "lits."
+        "balcon,",
+        "quelle",
+        "tranquillité",
+        "!",
+        "Je",
+        "suis",
+        "fatigué.",
+        "Je",
+        "veux",
+        "me",
+        "reposer."
       ]
     }
   ]

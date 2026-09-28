@@ -30,7 +30,7 @@ Hovoríme o tom, čo robia členovia rodiny. Dve nové slovesá, **travailler** 
 | il / elle travaille | pracuje |
 | ils / elles travaillent | pracujú |
 
-« travailler » patrí do najväčšej skupiny francúzskych slovies, tých na -er — takmer všetky sa skloňujú rovnako.
+« travailler » patrí do najväčšej skupiny francúzskych slovies, tých na -er — takmer všetky sa časujú rovnako.
 
 ### Faire (nepravidelné)
 

@@ -436,7 +436,7 @@
       "id": "blank-j-ai-un-petit-enfant",
       "type": "fill-blank",
       "l1": "Mám malé dieťa.",
-      "l2": "J'ai un petit enfant.",
+      "l2": "J'ai un jeune enfant.",
       "missing_l1": "malé",
       "missing_l2": "un",
       "blank_index_l1": 1,
@@ -496,7 +496,7 @@
       "id": "blank-ma-maman-a-cinquante-ans",
       "type": "fill-blank",
       "l1": "Moja mama má päťdesiat rokov.",
-      "l2": "Ma maman a cinquante ans.",
+      "l2": "Ma mère a cinquante ans.",
       "missing_l1": "má",
       "missing_l2": "a",
       "blank_index_l1": 2,
@@ -700,7 +700,7 @@
       "id": "listen-j-ai-un-petit-enfant",
       "type": "listen",
       "l1": "Mám malé dieťa.",
-      "l2": "J'ai un petit enfant.",
+      "l2": "J'ai un jeune enfant.",
       "choices_l2": [
         "Ma grand-mère s'appelle Louise.",
         "Mon grand-père et ma grand-mère.",
@@ -748,7 +748,7 @@
       "id": "listen-ma-maman-a-cinquante-ans",
       "type": "listen",
       "l1": "Moja mama má päťdesiat rokov.",
-      "l2": "Ma maman a cinquante ans.",
+      "l2": "Ma mère a cinquante ans.",
       "choices_l2": [
         "Voici mon père et voici ma maman.",
         "Ma sœur est à la maison.",
@@ -979,7 +979,7 @@
       "id": "order-j-ai-un-petit-enfant",
       "type": "order",
       "l1": "Mám malé dieťa.",
-      "l2": "J'ai un petit enfant.",
+      "l2": "J'ai un jeune enfant.",
       "tokens_l1": [
         "Mám",
         "malé",
@@ -993,7 +993,7 @@
       "tokens_l2": [
         "J'ai",
         "un",
-        "petit",
+        "jeune",
         "enfant.",
         "Ma",
         "sœur",
@@ -1063,7 +1063,7 @@
       "id": "order-ma-maman-a-cinquante-ans",
       "type": "order",
       "l1": "Moja mama má päťdesiat rokov.",
-      "l2": "Ma maman a cinquante ans.",
+      "l2": "Ma mère a cinquante ans.",
       "tokens_l1": [
         "Moja",
         "mama",
@@ -1077,7 +1077,7 @@
       ],
       "tokens_l2": [
         "Ma",
-        "maman",
+        "mère",
         "a",
         "cinquante",
         "ans.",

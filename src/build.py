@@ -112,6 +112,15 @@ def run_build(
     # 2. Exercises: persistent -- only sheets without an existing
     #    .exercises.json are generated, unless force_exercises.
     records = smd2exercises.load_corpus(md_dir, lang_cfg)
+    stale = {r["manual_path"]: len(smd2exercises.find_stale_manual_exercises(r)) for r in records}
+    stale = {path: n for path, n in stale.items() if n}
+    if stale:
+        print(
+            f"Warning: {sum(stale.values())} manual exercise(s) in {len(stale)} file(s) no longer "
+            f"match their sheet's text (sheet edited after the exercises were written); "
+            f"run: python3 src/sync_exercises.py --lang-dir {lang_dir}",
+            file=sys.stderr,
+        )
     all_exercises = smd2exercises.build_exercises_for_corpus(records)
     written, skipped = 0, 0
     for sheet_id, payload in all_exercises.items():

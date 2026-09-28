@@ -143,7 +143,7 @@ Zhrnutie: väčšina slovies ide s „avoir“ (bez zhody príčastia), malá sk
 > J'aime la crème = mám rád smotanu
 > avec le chocolat = s čokoládou
 
-! La table est salée et sucrée à la fois.
-> Stôl je slaný aj sladký zároveň.
-> La table est salée et sucrée = stôl je slaný aj sladký
-> à la fois = zároveň
+! Sur la table, il y a du salé et du sucré.
+> Na stole je slané aj sladké.
+> Sur la table = na stole
+> il y a du salé et du sucré = je slané aj sladké

@@ -58,11 +58,11 @@ Andrea a Karine si tykajú.
 > Samedi il devrait faire beau = v sobotu má byť slnečno
 + „devrait" je podmieňovací spôsob (conditionnel) od „devoir" — vyjadruje očakávanie, „malo by byť". Nová vec, zatiaľ si ju len zapamätaj.
 
-! 🧑 Super. On doit avoir de bons vêtements, en colline il fait toujours plus frais.
+! 🧑 Super. On doit avoir de bons vêtements, sur les hauteurs il fait toujours plus frais.
 > Super. Musíme mať dobré oblečenie, na kopcoch je vždy chladnejšie.
 > Super = super
 > on doit avoir de bons vêtements = musíme mať dobré oblečenie
-> en colline il fait toujours plus frais = na kopcoch je vždy chladnejšie
+> sur les hauteurs il fait toujours plus frais = na kopcoch je vždy chladnejšie
 
 ! 👩 Je prendrai une veste et des gants.
 > Vezmem si bundu a rukavice.
@@ -100,9 +100,9 @@ Andrea a Karine si tykajú.
 
 ## Ešte pár viet
 
-! S'il fait nuageux, il ne fera pas trop chaud.
+! S'il y a des nuages, il ne fera pas trop chaud.
 > Ak bude oblačno, nebude príliš horúco.
-> S'il fait nuageux = ak bude oblačno
+> S'il y a des nuages = ak bude oblačno
 > il ne fera pas trop chaud = nebude príliš horúco
 
 ! Demain il devrait pleuvoir, alors nous resterons à la maison.
@@ -110,9 +110,9 @@ Andrea a Karine si tykajú.
 > Demain il devrait pleuvoir = zajtra má byť daždivo
 > alors nous resterons à la maison = tak zostaneme doma
 
-! En colline, tu dois avoir des vêtements chauds et un parapluie.
+! Sur les hauteurs, tu dois avoir des vêtements chauds et un parapluie.
 > Na kopcoch musíš mať teplé oblečenie a dáždnik.
-> En colline = na kopcoch
+> Sur les hauteurs = na kopcoch
 > tu dois avoir des vêtements chauds et un parapluie = musíš mať teplé oblečenie a dáždnik
 
 ! Cet été a été plus chaud que le précédent.
