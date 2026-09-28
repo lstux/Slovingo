@@ -36,9 +36,9 @@ Jednoducho „à“ + číslo, žiadny osobitný tvar netreba — jednoduchšie 
 
 | Francúzština | Slovenčina |
 |----------|----------|
-| cinq heures et quart (5:15) | štvrť na šesť |
-| cinq heures et demie (5:30) | pol šiestej |
-| six heures moins le quart (5:45) | trištvrte na šesť |
+| cinq heures et quart | štvrť na šesť (5:15) |
+| cinq heures et demie | pol šiestej (5:30) |
+| six heures moins le quart | trištvrte na šesť (5:45) |
 
 Toto je najčastejšia chyba slovenských študentov francúzštiny. Francúzske „cinq heures et demie“ pomenúva hodinu, ktorá **PREŠLA** (päť) a k nej pridáva minúty. Slovenské „pol šiestej“ pomenúva hodinu, ktorá **PRICHÁDZA** (šiesta), a odpočítava od nej. Obe vyjadrujú presne ten istý čas (5:30!), len francúzske číslo je vždy o jedno nižšie než by ti napovedala slovenská logika. Počuť „cinq heures et demie“ a automaticky preložiť „šesť tridsať“ namiesto správnych „päť tridsať“ je klasika — daj si na to pozor.
 

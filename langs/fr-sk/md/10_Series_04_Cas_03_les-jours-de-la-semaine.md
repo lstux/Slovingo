@@ -40,8 +40,8 @@ Francúzština nepotrebuje žiadnu predložku ani zmenu tvaru slova — stačí 
 
 | Francúzština | Slovenčina |
 |----------|----------|
-| Lundi, je travaille. (tento konkrétny pondelok) | V pondelok pracujem. |
-| Le lundi, je travaille. (každý pondelok, zvyčajne) | V pondelky (zvyčajne) pracujem. |
+| Lundi, je travaille. | V pondelok pracujem. (tento konkrétny pondelok) |
+| Le lundi, je travaille. | V pondelky (zvyčajne) pracujem. (každý pondelok) |
 
 Pridaním „le“ pred deň sa z jednorazovej udalosti stáva pravidelný zvyk. Táto jemná odlišnosť v slovenčine nemá vlastný gramatický nástroj — rieši sa iba kontextom alebo množným číslom.
 

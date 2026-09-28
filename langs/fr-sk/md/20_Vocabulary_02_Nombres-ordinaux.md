@@ -80,9 +80,9 @@ Toto je dôležitá pasca. Na rozdiel od slovenčiny, ktorá pri dátumoch VŽDY
 
 | Slovenčina | Francúzština |
 |---|---|
-| šiesteho augusta (radová) | le six août (základná!) |
-| dvadsiateho januára (radová) | le vingt janvier (základná!) |
-| **prvého** januára (radová) | **le premier** janvier (radová — jediná výnimka!) |
+| šiesteho augusta (po slovensky radová, po francúzsky základná!) | le six août |
+| dvadsiateho januára (po slovensky radová, po francúzsky základná!) | le vingt janvier |
+| **prvého** januára (radová v oboch jazykoch — jediná výnimka!) | **le premier** janvier |
 
 ! {{le six août}}
 > šiesteho augusta

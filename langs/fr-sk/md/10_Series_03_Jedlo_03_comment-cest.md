@@ -26,9 +26,9 @@ Opísať, čo máme na tanieri. Sedem prídavných mien, a dobrá správa: franc
 
 | Francúzština | Slovenčina |
 |----------|----------|
-| le pain est bon (mužský) | chlieb je dobrý |
-| l'eau est bonne (ženský) | voda je dobrá |
-| les plats sont bons (množné číslo) | jedlá sú dobré |
+| le pain est bon | chlieb je dobrý (mužský rod) |
+| l'eau est bonne | voda je dobrá (ženský rod) |
+| les plats sont bons | jedlá sú dobré (množné číslo) |
 
 Francúzština nemá stredný rod, takže úloha je jednoduchšia než v slovenčine: iba dva rody namiesto troch. Pravidlo je takmer vždy rovnaké: pridaj **-e** pre ženský rod, pridaj **-s** pre množné číslo. Prídavné mená, ktoré už končia na -e (ako „acide“), sa v ženskom rode vôbec nemenia.
 

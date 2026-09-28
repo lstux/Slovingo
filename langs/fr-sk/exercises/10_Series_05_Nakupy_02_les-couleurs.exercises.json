@@ -113,118 +113,6 @@
       ]
     },
     {
-      "id": "qcm-un-pull-rouge-mu-sk-rod",
-      "type": "qcm",
-      "l1": "červený sveter",
-      "l2": "un pull rouge (mužský rod)",
-      "choices_l1": [
-        "tento sveter",
-        "modrá košeľa",
-        "zelená sukňa"
-      ],
-      "choices_l2": [
-        "Tu dois mettre un manteau.",
-        "une chemise bleue",
-        "un pantalon noir"
-      ]
-    },
-    {
-      "id": "qcm-une-veste-rouge-ensk-rod",
-      "type": "qcm",
-      "l1": "červená bunda",
-      "l2": "une veste rouge (ženský rod)",
-      "choices_l1": [
-        "nohavice",
-        "veľkosť",
-        "rukavice"
-      ],
-      "choices_l2": [
-        "ce pull (mužský rod)",
-        "un pantalon noir",
-        "une chemise bleue"
-      ]
-    },
-    {
-      "id": "qcm-des-chaussures-rouges-mno-n-slo",
-      "type": "qcm",
-      "l1": "červené topánky",
-      "l2": "des chaussures rouges (množné číslo)",
-      "choices_l1": [
-        "papuče",
-        "tričko",
-        "opasok"
-      ],
-      "choices_l2": [
-        "un pull rouge (mužský rod)",
-        "le maillot de bain",
-        "une chemise bleue"
-      ]
-    },
-    {
-      "id": "qcm-ce-pull-mu-sk-rod",
-      "type": "qcm",
-      "l1": "tento sveter",
-      "l2": "ce pull (mužský rod)",
-      "choices_l1": [
-        "oblečenie",
-        "zelená sukňa",
-        "tričko"
-      ],
-      "choices_l2": [
-        "le maillot de bain",
-        "une veste rouge (ženský rod)",
-        "une jupe verte"
-      ]
-    },
-    {
-      "id": "qcm-cet-imperm-able-mu-sk-rod-pred-samohl-skou",
-      "type": "qcm",
-      "l1": "tento plášť do dažďa",
-      "l2": "cet imperméable (mužský rod pred samohláskou)",
-      "choices_l1": [
-        "Je to za rohom.",
-        "Stojí to päť eur.",
-        "Pripravili sme jedlo."
-      ],
-      "choices_l2": [
-        "une jupe verte",
-        "cette veste (ženský rod)",
-        "des chaussures rouges (množné číslo)"
-      ]
-    },
-    {
-      "id": "qcm-cette-veste-ensk-rod",
-      "type": "qcm",
-      "l1": "táto bunda",
-      "l2": "cette veste (ženský rod)",
-      "choices_l1": [
-        "zelená sukňa",
-        "oblečenie",
-        "topánky"
-      ],
-      "choices_l2": [
-        "ce pull (mužský rod)",
-        "une chemise bleue",
-        "un pantalon noir"
-      ]
-    },
-    {
-      "id": "qcm-ces-chaussures-mno-n-slo",
-      "type": "qcm",
-      "l1": "tieto topánky",
-      "l2": "ces chaussures (množné číslo)",
-      "choices_l1": [
-        "po",
-        "za",
-        "Zostala doma."
-      ],
-      "choices_l2": [
-        "il / elle voit",
-        "tu tournes → Tourne !",
-        "la planche à voile"
-      ]
-    },
-    {
       "id": "qcm-orange",
       "type": "qcm",
       "l1": "oranžový",
@@ -1393,6 +1281,118 @@
         "des",
         "chaussures",
         "marron."
+      ]
+    },
+    {
+      "id": "qcm-un-pull-rouge",
+      "type": "qcm",
+      "l1": "červený sveter (mužský rod)",
+      "l2": "un pull rouge",
+      "choices_l1": [
+        "Je tam stôl.",
+        "chlieb je dobrý (mužský rod)",
+        "tarta, ovocný koláč"
+      ],
+      "choices_l2": [
+        "en ordre, bien, ça va",
+        "salé / salée",
+        "Je ne prends pas de vin."
+      ]
+    },
+    {
+      "id": "qcm-une-veste-rouge",
+      "type": "qcm",
+      "l1": "červená bunda (ženský rod)",
+      "l2": "une veste rouge",
+      "choices_l1": [
+        "V pondelok pracujem. (tento konkrétny pondelok)",
+        "Je jedna hodina.",
+        "je starý / je stará"
+      ],
+      "choices_l2": [
+        "l'an / l'année",
+        "Ce n'est pas bon.",
+        "au revoir (formel)"
+      ]
+    },
+    {
+      "id": "qcm-des-chaussures-rouges",
+      "type": "qcm",
+      "l1": "červené topánky (množné číslo)",
+      "l2": "des chaussures rouges",
+      "choices_l1": [
+        "voda je dobrá (ženský rod)",
+        "kamarát / kamarátka",
+        "spím, spíš, spí"
+      ],
+      "choices_l2": [
+        "le retraité / la retraitée",
+        "le chocolat chaud",
+        "dans la chambre"
+      ]
+    },
+    {
+      "id": "qcm-ce-pull",
+      "type": "qcm",
+      "l1": "tento sveter (mužský rod)",
+      "l2": "ce pull",
+      "choices_l1": [
+        "obývačka (vo francúzštine mužský rod, v slovenčine ženský)",
+        "cider (jablkové víno)",
+        "Hľadám kľúč. → Hľadám ho."
+      ],
+      "choices_l2": [
+        "l'horloge",
+        "les chaussons",
+        "vouloir"
+      ]
+    },
+    {
+      "id": "qcm-cet-imperm-able",
+      "type": "qcm",
+      "l1": "tento plášť do dažďa (mužský rod pred samohláskou)",
+      "l2": "cet imperméable",
+      "choices_l1": [
+        "obývačka (vo francúzštine mužský rod, v slovenčine ženský)",
+        "vysmädnutý (silný výraz)",
+        "vyhladovaný (silný výraz)"
+      ],
+      "choices_l2": [
+        "nous cherchons",
+        "l'après-midi",
+        "encore"
+      ]
+    },
+    {
+      "id": "qcm-cette-veste",
+      "type": "qcm",
+      "l1": "táto bunda (ženský rod)",
+      "l2": "cette veste",
+      "choices_l1": [
+        "upratujem, upratuješ, upratuje",
+        "spálňa (ženský rod)",
+        "Hľadám kľúče. → Hľadám ich."
+      ],
+      "choices_l2": [
+        "de rien",
+        "écouter",
+        "la maison"
+      ]
+    },
+    {
+      "id": "qcm-ces-chaussures",
+      "type": "qcm",
+      "l1": "tieto topánky (množné číslo)",
+      "l2": "ces chaussures",
+      "choices_l1": [
+        "dôchodca / dôchodkyňa",
+        "V pondelok pracujem. (tento konkrétny pondelok)",
+        "Dám si víno."
+      ],
+      "choices_l2": [
+        "l'épicerie",
+        "jamais",
+        "l'heure"
       ]
     }
   ]

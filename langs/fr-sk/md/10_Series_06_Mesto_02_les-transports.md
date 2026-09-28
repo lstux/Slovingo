@@ -26,8 +26,8 @@ Mestská doprava. A dobrá správa: francúzština na rozdiel od slovenčiny nep
 
 | Francúzština | Slovenčina |
 |----------|----------|
-| Je vais au travail. (teraz, jedenkrát) | Idem do práce. |
-| D'habitude, je vais au travail en bus. (zvyk) | Chodím do práce autobusom. |
+| Je vais au travail. | Idem do práce. (teraz, jedenkrát) |
+| D'habitude, je vais au travail en bus. | Chodím do práce autobusom. (zvyk) |
 
 Dobrá správa: francúzština nepotrebuje dve rôzne slovesá ako slovenské ísť/chodiť. Jedno „aller“ stačí na oboje — rozdiel medzi jednorazovou cestou a zvykom sa vyjadrí jednoducho príslovkou ako „d'habitude“ (zvyčajne) alebo kontextom.
 
