@@ -72,7 +72,7 @@ Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových v
 
 ---
 
-## Les phrases
+## Vety
 
 ! Au petit-déjeuner, je mange un œuf et du pain avec du beurre.
 > Na raňajky jem vajce a chlieb s maslom.

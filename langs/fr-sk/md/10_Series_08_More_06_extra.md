@@ -67,7 +67,7 @@ Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových v
 
 ---
 
-## Les phrases
+## Vety
 
 ! Demain nous serons à la plage, s'il fait beau.
 > Zajtra budeme na pláži, ak bude pekne.

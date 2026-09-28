@@ -68,7 +68,7 @@ Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových v
 
 ---
 
-## Les phrases
+## Vety
 
 ! Je vais au musée voir cette exposition.
 > Idem do múzea pozrieť si tú výstavu.

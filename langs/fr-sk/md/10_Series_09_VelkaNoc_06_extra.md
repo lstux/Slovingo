@@ -66,7 +66,7 @@ Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových v
 
 ---
 
-## Les phrases
+## Vety
 
 ! Le samedi saint, nous avons décoré le panier et préparé le repas.
 > Na Bielu sobotu sme ozdobili košík a pripravili jedlo.

@@ -68,7 +68,7 @@ Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových v
 
 ---
 
-## Les phrases
+## Vety
 
 ! Il fait beau et chaud, mais il y aura des nuages ce soir.
 > Je pekne a teplo, ale večer budú oblaky.
