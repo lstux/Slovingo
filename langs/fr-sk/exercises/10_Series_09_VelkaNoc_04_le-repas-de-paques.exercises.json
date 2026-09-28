@@ -1225,12 +1225,11 @@
         "pomohla",
         "pripraviť",
         "stôl.",
-        "Stôl",
-        "je",
-        "slaný",
-        "aj",
-        "sladký",
-        "zároveň."
+        "Máme",
+        "čokoládového",
+        "baránka,",
+        "nie",
+        "skutočného."
       ],
       "tokens_l2": [
         "Elle",
@@ -1245,15 +1244,15 @@
         "préparer",
         "la",
         "table.",
-        "La",
-        "table",
-        "est",
-        "salée",
-        "et",
-        "sucrée",
-        "à",
-        "la",
-        "fois."
+        "Nous",
+        "avons",
+        "un",
+        "agneau",
+        "en",
+        "chocolat,",
+        "pas",
+        "un",
+        "vrai."
       ]
     },
     {
@@ -1412,19 +1411,19 @@
       "type": "fill-blank",
       "l1": "Na stole je slané aj sladké.",
       "l2": "Sur la table, il y a du salé et du sucré.",
-      "missing_l1": "je",
-      "missing_l2": "la",
-      "blank_index_l1": 2,
-      "blank_index_l2": 1,
+      "missing_l1": "stole",
+      "missing_l2": "du",
+      "blank_index_l1": 1,
+      "blank_index_l2": 6,
       "choices_l1": [
-        "na",
-        "sú",
-        "dobrý"
+        "stôl",
+        "stola",
+        "stolom"
       ],
       "choices_l2": [
-        "nous",
-        "mon",
-        "vais"
+        "de",
+        "des",
+        "au"
       ]
     },
     {
@@ -1433,9 +1432,9 @@
       "l1": "Na stole je slané aj sladké.",
       "l2": "Sur la table, il y a du salé et du sucré.",
       "choices_l1": [
-        "Zastávka je blízko, choďte rovno.",
-        "Platím hotovosťou, nie kartou.",
-        "Ideme sa opaľovať na pláži."
+        "Na stole je slané, nie sladké.",
+        "Na stole je syr aj chlieb.",
+        "Na stole je iba sladké."
       ]
     },
     {

@@ -1397,14 +1397,15 @@
         "a",
         "padá",
         "lístie.",
-        "Je",
-        "teplo",
-        "a",
-        "slnečno,",
-        "ale",
-        "večer",
-        "budú",
-        "oblaky."
+        "Ak",
+        "bude",
+        "zajtra",
+        "pekne,",
+        "pôjdeme",
+        "sa",
+        "prechádzať",
+        "do",
+        "parku."
       ],
       "tokens_l2": [
         "En",
@@ -1416,19 +1417,17 @@
         "les",
         "feuilles",
         "tombent.",
-        "Il",
+        "S'il",
         "fait",
-        "chaud",
-        "et",
-        "ensoleillé,",
-        "mais",
-        "il",
-        "y",
-        "aura",
-        "des",
-        "nuages",
-        "ce",
-        "soir."
+        "beau",
+        "demain,",
+        "nous",
+        "irons",
+        "nous",
+        "promener",
+        "dans",
+        "le",
+        "parc."
       ]
     },
     {
@@ -1970,19 +1969,19 @@
       "type": "fill-blank",
       "l1": "Je pekne a teplo, ale večer budú oblaky.",
       "l2": "Il fait beau et chaud, mais il y aura des nuages ce soir.",
-      "missing_l1": "a",
-      "missing_l2": "et",
-      "blank_index_l1": 2,
-      "blank_index_l2": 3,
+      "missing_l1": "budú",
+      "missing_l2": "aura",
+      "blank_index_l1": 6,
+      "blank_index_l2": 8,
       "choices_l1": [
-        "ešte",
-        "o",
-        "kde"
+        "bude",
+        "sú",
+        "boli"
       ],
       "choices_l2": [
-        "a",
-        "ma",
-        "en"
+        "avait",
+        "auras",
+        "aurons"
       ]
     },
     {
@@ -1991,9 +1990,9 @@
       "l1": "Je pekne a teplo, ale večer budú oblaky.",
       "l2": "Il fait beau et chaud, mais il y aura des nuages ce soir.",
       "choices_l1": [
-        "Knižnica je v centre mesta.",
-        "Máme balkón a garáž.",
-        "Stretávam kamaráta v kaviarni a potom ideme do kina."
+        "Je pekne a teplo, ale ráno budú oblaky.",
+        "Je pekne a teplo, ale večer bude dážď.",
+        "Je pekne a chladno, ale večer budú oblaky."
       ]
     },
     {

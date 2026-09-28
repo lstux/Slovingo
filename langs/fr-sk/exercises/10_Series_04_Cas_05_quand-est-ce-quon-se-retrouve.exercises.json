@@ -622,12 +622,12 @@
         "pracujem",
         "do",
         "siedmej.",
-        "Pol",
-        "siedmej,",
-        "to",
-        "je",
-        "šesť",
-        "tridsať?"
+        "V",
+        "stredu",
+        "áno.",
+        "Ale",
+        "nie",
+        "skoro."
       ],
       "tokens_l2": [
         "Non,",
@@ -637,15 +637,11 @@
         "jusqu'à",
         "sept",
         "heures.",
-        "Six",
-        "heures",
-        "et",
-        "demie,",
-        "c'est",
-        "six",
-        "heures",
-        "trente",
-        "?"
+        "Mercredi",
+        "oui.",
+        "Mais",
+        "pas",
+        "tôt."
       ]
     },
     {
@@ -893,12 +889,11 @@
         "Kedy",
         "máš",
         "stretnutie?",
-        "Pol",
-        "siedmej,",
-        "to",
-        "je",
-        "šesť",
-        "tridsať?"
+        "Áno,",
+        "presne.",
+        "Nie",
+        "päť",
+        "tridsať!"
       ],
       "tokens_l2": [
         "Quand",
@@ -906,15 +901,13 @@
         "ton",
         "rendez-vous",
         "?",
-        "Six",
-        "heures",
-        "et",
-        "demie,",
-        "c'est",
-        "six",
+        "Oui,",
+        "exactement.",
+        "Pas",
+        "cinq",
         "heures",
         "trente",
-        "?"
+        "!"
       ]
     },
     {
@@ -928,12 +921,11 @@
         "ráno",
         "idem",
         "skoro.",
-        "Pol",
-        "siedmej,",
-        "to",
-        "je",
-        "šesť",
-        "tridsať?"
+        "Áno,",
+        "presne.",
+        "Nie",
+        "päť",
+        "tridsať!"
       ],
       "tokens_l2": [
         "Jeudi",
@@ -941,15 +933,13 @@
         "j'y",
         "vais",
         "tôt.",
-        "Six",
-        "heures",
-        "et",
-        "demie,",
-        "c'est",
-        "six",
+        "Oui,",
+        "exactement.",
+        "Pas",
+        "cinq",
         "heures",
         "trente",
-        "?"
+        "!"
       ]
     },
     {

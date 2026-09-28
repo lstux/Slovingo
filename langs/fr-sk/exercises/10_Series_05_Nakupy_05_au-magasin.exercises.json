@@ -610,14 +610,9 @@
         "zelené.",
         "Nie",
         "čierne.",
-        "To",
-        "je",
-        "lacné!",
-        "Kúp",
-        "si",
-        "aj",
-        "to",
-        "zelené."
+        "Dobre.",
+        "Platím",
+        "kartou."
       ],
       "tokens_l2": [
         "Bleu",
@@ -625,14 +620,11 @@
         "vert.",
         "Pas",
         "noir.",
-        "C'est",
-        "bon",
-        "marché",
-        "!",
-        "Achète",
-        "aussi",
-        "le",
-        "vert."
+        "D'accord.",
+        "Je",
+        "paie",
+        "par",
+        "carte."
       ]
     },
     {
@@ -646,14 +638,9 @@
         "Akú",
         "veľkosť",
         "hľadáte?",
-        "To",
-        "je",
-        "lacné!",
-        "Kúp",
-        "si",
-        "aj",
-        "to",
-        "zelené."
+        "Chcem",
+        "kúpiť",
+        "tričko."
       ],
       "tokens_l2": [
         "Bonjour.",
@@ -661,14 +648,11 @@
         "taille",
         "cherchez-vous",
         "?",
-        "C'est",
-        "bon",
-        "marché",
-        "!",
-        "Achète",
-        "aussi",
-        "le",
-        "vert."
+        "Je",
+        "veux",
+        "acheter",
+        "un",
+        "tee-shirt."
       ]
     },
     {
@@ -711,9 +695,12 @@
         "pekné.",
         "Chcete",
         "skúsiť?",
-        "Akú",
-        "farbu",
-        "chceš?"
+        "Áno,",
+        "veľkosť",
+        "XL.",
+        "Nech",
+        "sa",
+        "páči."
       ],
       "tokens_l2": [
         "Ce",
@@ -725,10 +712,10 @@
         "voulez",
         "essayer",
         "?",
-        "Quelle",
-        "couleur",
-        "veux-tu",
-        "?"
+        "Oui,",
+        "taille",
+        "XL.",
+        "Tenez."
       ]
     },
     {
@@ -773,14 +760,11 @@
         "malé.",
         "Máte",
         "väčšie?",
-        "To",
+        "Obchod",
         "je",
-        "lacné!",
-        "Kúp",
-        "si",
-        "aj",
-        "to",
-        "zelené."
+        "otvorený",
+        "do",
+        "siedmej."
       ],
       "tokens_l2": [
         "C'est",
@@ -794,14 +778,13 @@
         "plus",
         "grand",
         "?",
-        "C'est",
-        "bon",
-        "marché",
-        "!",
-        "Achète",
-        "aussi",
-        "le",
-        "vert."
+        "Le",
+        "magasin",
+        "est",
+        "ouvert",
+        "jusqu'à",
+        "sept",
+        "heures."
       ]
     },
     {

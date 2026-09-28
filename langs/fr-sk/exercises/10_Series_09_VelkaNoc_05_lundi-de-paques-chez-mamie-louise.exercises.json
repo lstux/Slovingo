@@ -786,15 +786,11 @@
         "je",
         "to",
         "jednoduché!",
-        "Dali",
-        "sme",
-        "jej",
-        "najkrajšie",
-        "vajíčko,",
-        "dobre",
-        "si",
-        "ho",
-        "zaslúžila."
+        "Pozri",
+        "za",
+        "sochou,",
+        "v",
+        "záhrade."
       ],
       "tokens_l2": [
         "Ne",
@@ -803,18 +799,13 @@
         "c'est",
         "facile",
         "!",
-        "On",
-        "lui",
-        "a",
-        "donné",
+        "Regarde",
+        "derrière",
+        "la",
+        "statue,",
+        "dans",
         "le",
-        "plus",
-        "bel",
-        "œuf,",
-        "elle",
-        "l'a",
-        "bien",
-        "mérité."
+        "jardin."
       ]
     },
     {
@@ -1385,19 +1376,19 @@
       "type": "fill-blank",
       "l1": "A Chloé našla tri! Dáme jej najkrajšie vajíčko, dobre si ho zaslúžila.",
       "l2": "Et Chloé en a trouvé trois ! On lui donne le plus bel œuf, elle l'a bien mérité.",
-      "missing_l1": "si",
-      "missing_l2": "le",
-      "blank_index_l1": 9,
-      "blank_index_l2": 10,
+      "missing_l1": "jej",
+      "missing_l2": "bel",
+      "blank_index_l1": 5,
+      "blank_index_l2": 12,
       "choices_l1": [
-        "deň",
-        "ako",
-        "v"
+        "mu",
+        "ju",
+        "ich"
       ],
       "choices_l2": [
-        "sur",
-        "ne",
-        "il"
+        "beau",
+        "belle",
+        "beaux"
       ]
     },
     {
@@ -1406,9 +1397,9 @@
       "l1": "A Chloé našla tri! Dáme jej najkrajšie vajíčko, dobre si ho zaslúžila.",
       "l2": "Et Chloé en a trouvé trois ! On lui donne le plus bel œuf, elle l'a bien mérité.",
       "choices_l1": [
-        "Mám hnedé topánky.",
-        "Deti chcú ovocie.",
-        "Dobre. Platím kartou."
+        "A Chloé našla dve! Dáme jej najkrajšie vajíčko, dobre si ho zaslúžila.",
+        "A Chloé našla tri! Dáme jej najväčšie vajíčko, dobre si ho zaslúžila.",
+        "A Karine našla tri! Dáme jej najkrajšie vajíčko, dobre si ho zaslúžila."
       ]
     },
     {

@@ -814,11 +814,12 @@
         "ísť",
         "s",
         "tebou?",
-        "Máš",
-        "osušku?",
-        "Pomáha",
-        "proti",
-        "piesku."
+        "Nemáme",
+        "stan,",
+        "budeme",
+        "spať",
+        "v",
+        "hoteli."
       ],
       "tokens_l2": [
         "Je",
@@ -827,18 +828,15 @@
         "avec",
         "toi",
         "?",
-        "Tu",
-        "as",
-        "une",
-        "serviette",
+        "Nous",
+        "n'avons",
+        "pas",
         "de",
-        "plage",
-        "?",
-        "Elle",
-        "aide",
-        "contre",
-        "le",
-        "sable."
+        "tente,",
+        "nous",
+        "dormirons",
+        "à",
+        "l'hôtel."
       ]
     },
     {
@@ -1301,19 +1299,19 @@
       "type": "fill-blank",
       "l1": "Máš osušku? Na piesok sa hodí.",
       "l2": "Tu as une serviette de plage ? C'est pratique contre le sable.",
-      "missing_l1": "Na",
-      "missing_l2": "le",
-      "blank_index_l1": 2,
-      "blank_index_l2": 10,
+      "missing_l1": "Máš",
+      "missing_l2": "as",
+      "blank_index_l1": 0,
+      "blank_index_l2": 1,
       "choices_l1": [
-        "má",
-        "mám",
-        "ja"
+        "Mám",
+        "Máme",
+        "Majú"
       ],
       "choices_l2": [
-        "en",
-        "n'ai",
-        "du"
+        "a",
+        "ai",
+        "es"
       ]
     },
     {
@@ -1321,19 +1319,19 @@
       "type": "fill-blank",
       "l1": "Som unavený, potrebujem odpočinok.",
       "l2": "Je suis fatigué, j'ai besoin de repos.",
-      "missing_l1": "unavený",
+      "missing_l1": "potrebujem",
       "missing_l2": "de",
-      "blank_index_l1": 1,
+      "blank_index_l1": 2,
       "blank_index_l2": 5,
       "choices_l1": [
-        "áno",
-        "to",
-        "deti"
+        "potrebuješ",
+        "potrebuje",
+        "potrebujú"
       ],
       "choices_l2": [
-        "sont",
+        "du",
         "le",
-        "tu"
+        "des"
       ]
     },
     {
@@ -1342,9 +1340,9 @@
       "l1": "Máš osušku? Na piesok sa hodí.",
       "l2": "Tu as une serviette de plage ? C'est pratique contre le sable.",
       "choices_l1": [
-        "Na raňajky jem chlieb a syr.",
-        "Aké je tvoje meno?",
-        "Čakám tu už dlho."
+        "Máš slnečník? Na piesok sa hodí.",
+        "Máš osušku? Na slnko sa hodí.",
+        "Mám osušku. Na piesok sa hodí."
       ]
     },
     {
@@ -1353,9 +1351,9 @@
       "l1": "Som unavený, potrebujem odpočinok.",
       "l2": "Je suis fatigué, j'ai besoin de repos.",
       "choices_l1": [
-        "Ďakujem. Máte pekný byt.",
-        "Kde je môj telefón?",
-        "Chcem skúsiť toto tričko."
+        "Som hladný, potrebujem odpočinok.",
+        "Som unavený, potrebujem spánok.",
+        "Nie som unavený, nepotrebujem odpočinok."
       ]
     },
     {
