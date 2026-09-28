@@ -158,7 +158,8 @@ Translate-table de Format-SMD.txt).
   "target_headers": ["slovak", "slovaque", "slovenčina", "sk", "..."],
   "target_header_roots": ["slovak", "slovenčina"],
   "native_headers": ["french", "français", "fr"],
-  "native_header_roots": ["français", "french"]
+  "native_header_roots": ["français", "french"],
+  "character_headings": ["personnages"]
 }
 ```
 
@@ -167,6 +168,14 @@ Translate-table de Format-SMD.txt).
 - `target_header_roots` / `native_header_roots` : correspondance par
   préfixe, pour couvrir les variantes fléchies d'un même mot-clé qu'on ne
   veut pas toutes lister explicitement.
+- `character_headings` (optionnel) : mots-clés du titre de la section qui
+  présente les personnages d'un dialogue (liste « émoji Nom, description »
+  juste en dessous). C'est de là que `assemble.py` tire la liste des
+  personnages affichée dans les Réglages (une voix par personnage).
+  Recherche insensible à la casse, n'importe où dans le titre. Par défaut
+  `["personnages"]` ; un cours dont les fiches sont écrites en slovaque met
+  `["postavy"]`. Sans correspondance, la section des voix par personnage
+  n'apparaît tout simplement pas.
 
 ---
 

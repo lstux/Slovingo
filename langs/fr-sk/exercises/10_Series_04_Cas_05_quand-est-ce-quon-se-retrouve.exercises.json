@@ -141,66 +141,6 @@
       ]
     },
     {
-      "id": "blank-six-heures-et-demie-c-est-six-heures-trente",
-      "type": "fill-blank",
-      "l1": "Pol siedmej, to je šesť tridsať?",
-      "l2": "Six heures et demie, c'est six heures trente ?",
-      "missing_l1": "je",
-      "missing_l2": "et",
-      "blank_index_l1": 3,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "oni išli",
-        "málo",
-        "tu"
-      ],
-      "choices_l2": [
-        "nous pouvons",
-        "je travaille",
-        "en"
-      ]
-    },
-    {
-      "id": "blank-oui-exactement-pas-sept-heures-trente",
-      "type": "fill-blank",
-      "l1": "Áno, presne. Nie sedem tridsať!",
-      "l2": "Oui, exactement. Pas sept heures trente !",
-      "missing_l1": "Nie",
-      "missing_l2": "Pas",
-      "blank_index_l1": 2,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "čo",
-        "na stoličke",
-        "teplejší ako"
-      ],
-      "choices_l2": [
-        "on",
-        "je serai",
-        "Quelle"
-      ]
-    },
-    {
-      "id": "blank-d-accord-o-est-ce-que-vous-attendez",
-      "type": "fill-blank",
-      "l1": "Dobre. Kde čakáte?",
-      "l2": "D'accord. Où est-ce que vous attendez ?",
-      "missing_l1": "Kde",
-      "missing_l2": "vous",
-      "blank_index_l1": 1,
-      "blank_index_l2": 4,
-      "choices_l1": [
-        "do",
-        "na pošte",
-        "z"
-      ],
-      "choices_l2": [
-        "sont",
-        "avec",
-        "à Lyon"
-      ]
-    },
-    {
       "id": "blank-la-gare-je-vais-arriver-l-heure",
       "type": "fill-blank",
       "l1": "Na stanici. Prídem načas.",
@@ -482,54 +422,6 @@
         "Mám dve deti. Bývame spolu.",
         "Je štvrť na tri.",
         "Týždeň má sedem dní."
-      ]
-    },
-    {
-      "id": "listen-six-heures-et-demie-c-est-six-heures-trente",
-      "type": "listen",
-      "l1": "Pol siedmej, to je šesť tridsať?",
-      "l2": "Six heures et demie, c'est six heures trente ?",
-      "choices_l2": [
-        "J'ai trente ans.",
-        "Je cherche la clé.",
-        "L'enfant dort dans la chambre."
-      ],
-      "choices_l1": [
-        "Týždeň má sedem dní.",
-        "Je malý. Máme tri izby.",
-        "Čakám už dvadsať minút."
-      ]
-    },
-    {
-      "id": "listen-oui-exactement-pas-sept-heures-trente",
-      "type": "listen",
-      "l1": "Áno, presne. Nie sedem tridsať!",
-      "l2": "Oui, exactement. Pas sept heures trente !",
-      "choices_l2": [
-        "Mon père est professeur.",
-        "Tu veux encore de la soupe ?",
-        "Le matin, je commence à huit heures."
-      ],
-      "choices_l1": [
-        "Pol siedmej, to je šesť tridsať?",
-        "Koľko máš rokov?",
-        "Týždeň má sedem dní."
-      ]
-    },
-    {
-      "id": "listen-d-accord-o-est-ce-que-vous-attendez",
-      "type": "listen",
-      "l1": "Dobre. Kde čakáte?",
-      "l2": "D'accord. Où est-ce que vous attendez ?",
-      "choices_l2": [
-        "Mes enfants sont petits.",
-        "Un croissant et un café au lait, s'il te plaît.",
-        "La soupe est salée."
-      ],
-      "choices_l1": [
-        "To je najkrajší výhľad, aký som kedy videl.",
-        "Ideme do divadla.",
-        "Sedím na gauči a čítam knihu."
       ]
     },
     {
@@ -879,107 +771,6 @@
       ]
     },
     {
-      "id": "order-six-heures-et-demie-c-est-six-heures-trente",
-      "type": "order",
-      "l1": "Pol siedmej, to je šesť tridsať?",
-      "l2": "Six heures et demie, c'est six heures trente ?",
-      "tokens_l1": [
-        "Pol",
-        "siedmej,",
-        "to",
-        "je",
-        "šesť",
-        "tridsať?",
-        "Prídem",
-        "o",
-        "trištvrte",
-        "na",
-        "osem."
-      ],
-      "tokens_l2": [
-        "Six",
-        "heures",
-        "et",
-        "demie,",
-        "c'est",
-        "six",
-        "heures",
-        "trente",
-        "?",
-        "J'arrive",
-        "à",
-        "huit",
-        "heures",
-        "moins",
-        "le",
-        "quart."
-      ]
-    },
-    {
-      "id": "order-oui-exactement-pas-sept-heures-trente",
-      "type": "order",
-      "l1": "Áno, presne. Nie sedem tridsať!",
-      "l2": "Oui, exactement. Pas sept heures trente !",
-      "tokens_l1": [
-        "Áno,",
-        "presne.",
-        "Nie",
-        "sedem",
-        "tridsať!",
-        "Asi",
-        "o",
-        "pol",
-        "siedmej",
-        "večer."
-      ],
-      "tokens_l2": [
-        "Oui,",
-        "exactement.",
-        "Pas",
-        "sept",
-        "heures",
-        "trente",
-        "!",
-        "Vers",
-        "six",
-        "heures",
-        "et",
-        "demie",
-        "du",
-        "soir."
-      ]
-    },
-    {
-      "id": "order-d-accord-o-est-ce-que-vous-attendez",
-      "type": "order",
-      "l1": "Dobre. Kde čakáte?",
-      "l2": "D'accord. Où est-ce que vous attendez ?",
-      "tokens_l1": [
-        "Dobre.",
-        "Kde",
-        "čakáte?",
-        "Eric,",
-        "kedy",
-        "máte",
-        "čas?"
-      ],
-      "tokens_l2": [
-        "D'accord.",
-        "Où",
-        "est-ce",
-        "que",
-        "vous",
-        "attendez",
-        "?",
-        "Eric,",
-        "quand",
-        "avez-vous",
-        "le",
-        "temps",
-        "?"
-      ]
-    },
-    {
       "id": "order-la-gare-je-vais-arriver-l-heure",
       "type": "order",
       "l1": "Na stanici. Prídem načas.",
@@ -1219,6 +1010,198 @@
         "ton",
         "rendez-vous",
         "?"
+      ]
+    },
+    {
+      "id": "blank-six-heures-et-demie-c-est-six-heures-trente",
+      "type": "fill-blank",
+      "l1": "Pol siedmej… to je šesť tridsať?",
+      "l2": "Six heures et demie… c'est six heures trente ?",
+      "missing_l1": "je",
+      "missing_l2": "et",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "deň",
+        "dobrý",
+        "večer"
+      ],
+      "choices_l2": [
+        "suis",
+        "la",
+        "plaît"
+      ]
+    },
+    {
+      "id": "blank-oui-exactement-pas-cinq-heures-trente",
+      "type": "fill-blank",
+      "l1": "Áno, presne. Nie päť tridsať!",
+      "l2": "Oui, exactement. Pas cinq heures trente !",
+      "missing_l1": "Nie",
+      "missing_l2": "Pas",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "ešte",
+        "večer",
+        "kde"
+      ],
+      "choices_l2": [
+        "j'ai",
+        "tu",
+        "et"
+      ]
+    },
+    {
+      "id": "blank-tr-s-bien-on-se-retrouve-o",
+      "type": "fill-blank",
+      "l1": "Výborne. Kde sa stretneme?",
+      "l2": "Très bien. On se retrouve où ?",
+      "missing_l1": "sa",
+      "missing_l2": "où",
+      "blank_index_l1": 2,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "čas",
+        "má",
+        "o"
+      ],
+      "choices_l2": [
+        "pas",
+        "maison",
+        "bonjour"
+      ]
+    },
+    {
+      "id": "listen-six-heures-et-demie-c-est-six-heures-trente",
+      "type": "listen",
+      "l1": "Pol siedmej… to je šesť tridsať?",
+      "l2": "Six heures et demie… c'est six heures trente ?",
+      "choices_l1": [
+        "Prepáčte, hovoríte po anglicky?",
+        "Mama varí a ja umývam poháre.",
+        "Dám si pot-au-feu a pivo."
+      ]
+    },
+    {
+      "id": "listen-oui-exactement-pas-cinq-heures-trente",
+      "type": "listen",
+      "l1": "Áno, presne. Nie päť tridsať!",
+      "l2": "Oui, exactement. Pas cinq heures trente !",
+      "choices_l1": [
+        "Môj brat má jeden rok.",
+        "Karine má dvadsať rokov. Je študentka.",
+        "Papuče sú na chodbe."
+      ]
+    },
+    {
+      "id": "listen-tr-s-bien-on-se-retrouve-o",
+      "type": "listen",
+      "l1": "Výborne. Kde sa stretneme?",
+      "l2": "Très bien. On se retrouve où ?",
+      "choices_l1": [
+        "Dám si pot-au-feu a pivo.",
+        "Najprv obed, potom tarta.",
+        "Ovocie je sladké."
+      ]
+    },
+    {
+      "id": "order-six-heures-et-demie-c-est-six-heures-trente",
+      "type": "order",
+      "l1": "Pol siedmej… to je šesť tridsať?",
+      "l2": "Six heures et demie… c'est six heures trente ?",
+      "tokens_l1": [
+        "Pol",
+        "siedmej…",
+        "to",
+        "je",
+        "šesť",
+        "tridsať?",
+        "Na",
+        "stanici.",
+        "Prídem",
+        "načas."
+      ],
+      "tokens_l2": [
+        "Six",
+        "heures",
+        "et",
+        "demie…",
+        "c'est",
+        "six",
+        "heures",
+        "trente",
+        "?",
+        "À",
+        "la",
+        "gare.",
+        "Je",
+        "vais",
+        "arriver",
+        "à",
+        "l'heure."
+      ]
+    },
+    {
+      "id": "order-oui-exactement-pas-cinq-heures-trente",
+      "type": "order",
+      "l1": "Áno, presne. Nie päť tridsať!",
+      "l2": "Oui, exactement. Pas cinq heures trente !",
+      "tokens_l1": [
+        "Áno,",
+        "presne.",
+        "Nie",
+        "päť",
+        "tridsať!",
+        "Tak",
+        "príď",
+        "skoro!"
+      ],
+      "tokens_l2": [
+        "Oui,",
+        "exactement.",
+        "Pas",
+        "cinq",
+        "heures",
+        "trente",
+        "!",
+        "Alors",
+        "viens",
+        "tôt",
+        "!"
+      ]
+    },
+    {
+      "id": "order-tr-s-bien-on-se-retrouve-o",
+      "type": "order",
+      "l1": "Výborne. Kde sa stretneme?",
+      "l2": "Très bien. On se retrouve où ?",
+      "tokens_l1": [
+        "Výborne.",
+        "Kde",
+        "sa",
+        "stretneme?",
+        "Prídem",
+        "o",
+        "trištvrte",
+        "na",
+        "osem."
+      ],
+      "tokens_l2": [
+        "Très",
+        "bien.",
+        "On",
+        "se",
+        "retrouve",
+        "où",
+        "?",
+        "J'arrive",
+        "à",
+        "huit",
+        "heures",
+        "moins",
+        "le",
+        "quart."
       ]
     }
   ]

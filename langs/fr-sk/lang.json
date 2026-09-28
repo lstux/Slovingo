@@ -32,18 +32,21 @@
     "series": "Série",
     "dialog": "Dialógy",
     "vocabulary": "Slovná zásoba",
-    "annex": "Príloha"
+    "annex": "Príloha",
+    "merci": "Ďakujem"
   },
   "subgroups": {
-    "series_rodina": "Rodina",
-    "series_doma": "Doma",
-    "series_jedlo": "Jedlo",
-    "series_cas": "Čas",
-    "series_nakupy": "Nákupy",
-    "series_mesto": "Mesto",
-    "series_pocasie": "Počasie",
-    "series_more": "More",
-    "series_velkanoc": "Veľká noc"
+    "kitsurvie": "Kit prežitia",
+    "rodina": "Rodina",
+    "doma": "Doma",
+    "jedlo": "Jedlo",
+    "cas": "Čas",
+    "nakupy": "Nákupy",
+    "mesto": "Mesto",
+    "pocasie": "Počasie",
+    "more": "More",
+    "velkanoc": "Veľká noc",
+    "merci": "Ďakujem"
   },
   "ui": {
     "home": "Domov",
@@ -126,6 +129,9 @@
       "slovak",
       "slovenčina",
       "slovencina"
+    ],
+    "character_headings": [
+      "postavy"
     ]
   }
 }
