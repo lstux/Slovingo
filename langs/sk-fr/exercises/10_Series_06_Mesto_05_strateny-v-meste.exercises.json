@@ -632,8 +632,8 @@
         "zlej",
         "zastávke.",
         "Marek!",
-        "Som",
-        "stratený."
+        "Zablúdil",
+        "som."
       ]
     },
     {
@@ -656,8 +656,7 @@
         "Le",
         "musée",
         "est",
-        "après",
-        "le",
+        "au",
         "coin,",
         "à",
         "côté",
@@ -1005,21 +1004,25 @@
         "pour",
         "l'aide",
         "!",
-        "De",
-        "rien.",
-        "À",
-        "bientôt",
-        "!"
+        "J'irai",
+        "à",
+        "pied.",
+        "Je",
+        "veux",
+        "voir",
+        "la",
+        "ville."
       ],
       "tokens_l2": [
         "Dobre.",
         "Ďakujem",
         "za",
         "pomoc!",
-        "Nemáš",
-        "za",
-        "čo.",
-        "Dovidenia!"
+        "Pôjdem",
+        "pešo.",
+        "Chcem",
+        "vidieť",
+        "mesto."
       ]
     },
     {
@@ -1211,19 +1214,19 @@
       "type": "fill-blank",
       "l1": "De rien. À tout à l'heure !",
       "l2": "Nemáš za čo. Zatiaľ ahoj!",
-      "missing_l1": "À",
-      "missing_l2": "čo",
-      "blank_index_l1": 2,
-      "blank_index_l2": 2,
+      "missing_l1": "tout",
+      "missing_l2": "Nemáš",
+      "blank_index_l1": 3,
+      "blank_index_l2": 0,
       "choices_l1": [
-        "de",
-        "mais",
-        "au"
+        "toute",
+        "tous",
+        "toutes"
       ],
       "choices_l2": [
-        "dobre",
-        "ešte",
-        "deň"
+        "Nemám",
+        "Nemá",
+        "Nemajú"
       ]
     },
     {
@@ -1232,9 +1235,9 @@
       "l1": "De rien. À tout à l'heure !",
       "l2": "Nemáš za čo. Zatiaľ ahoj!",
       "choices_l1": [
-        "Oui, taille XL. Tenez.",
-        "J'arrive vers deux heures. Attends, s'il te plaît.",
-        "Je veux un ticket."
+        "De rien. À demain !",
+        "Merci. À tout à l'heure !",
+        "De rien. Au revoir !"
       ]
     },
     {

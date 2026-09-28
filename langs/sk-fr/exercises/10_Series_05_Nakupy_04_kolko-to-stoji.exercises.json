@@ -910,27 +910,22 @@
         "ça",
         "coûte",
         "?",
-        "J'essaie",
-        "la",
-        "jupe",
-        "bleue.",
-        "Vous",
-        "avez",
-        "la",
-        "taille",
-        "M",
-        "?"
+        "Je",
+        "paie",
+        "en",
+        "liquide,",
+        "pas",
+        "par",
+        "carte."
       ],
       "tokens_l2": [
         "Koľko",
         "to",
         "stojí?",
-        "Skúsim",
-        "modrú",
-        "sukňu.",
-        "Máte",
-        "veľkosť",
-        "M?"
+        "Platím",
+        "hotovosťou,",
+        "nie",
+        "kartou."
       ]
     },
     {
@@ -1054,27 +1049,18 @@
         "les",
         "chaussures",
         "?",
-        "J'essaie",
-        "la",
-        "jupe",
-        "bleue.",
-        "Vous",
-        "avez",
-        "la",
-        "taille",
-        "M",
-        "?"
+        "C'est",
+        "en",
+        "promotion."
       ],
       "tokens_l2": [
         "Koľko",
         "stoja",
         "topánky?",
-        "Skúsim",
-        "modrú",
-        "sukňu.",
-        "Máte",
-        "veľkosť",
-        "M?"
+        "Je",
+        "to",
+        "v",
+        "akcii."
       ]
     },
     {
@@ -1146,15 +1132,13 @@
         "C'est",
         "cher",
         "!",
-        "J'essaie",
-        "la",
-        "jupe",
-        "bleue.",
         "Vous",
-        "avez",
-        "la",
-        "taille",
-        "M",
+        "payez",
+        "par",
+        "carte",
+        "ou",
+        "en",
+        "liquide",
         "?"
       ],
       "tokens_l2": [
@@ -1165,12 +1149,10 @@
         "To",
         "je",
         "drahé!",
-        "Skúsim",
-        "modrú",
-        "sukňu.",
-        "Máte",
-        "veľkosť",
-        "M?"
+        "Platíte",
+        "kartou",
+        "alebo",
+        "hotovosťou?"
       ]
     },
     {
@@ -1322,19 +1304,19 @@
       "type": "fill-blank",
       "l1": "Je vais essayer la jupe bleue. Vous avez la taille M ?",
       "l2": "Skúsim si modrú sukňu. Máte veľkosť M?",
-      "missing_l1": "la",
-      "missing_l2": "si",
-      "blank_index_l1": 3,
-      "blank_index_l2": 1,
+      "missing_l1": "avez",
+      "missing_l2": "modrú",
+      "blank_index_l1": 7,
+      "blank_index_l2": 2,
       "choices_l1": [
-        "plaît",
-        "je",
-        "ma"
+        "avons",
+        "as",
+        "ont"
       ],
       "choices_l2": [
-        "máš",
-        "ako",
-        "kde"
+        "modrá",
+        "modrý",
+        "modré"
       ]
     },
     {
@@ -1343,9 +1325,9 @@
       "l1": "Je vais essayer la jupe bleue. Vous avez la taille M ?",
       "l2": "Skúsim si modrú sukňu. Máte veľkosť M?",
       "choices_l1": [
-        "Je suis assis sur la chaise.",
-        "Le couteau est dans la cuisine.",
-        "Qu'est-ce que tu achètes ?"
+        "Je vais essayer la jupe rouge. Vous avez la taille M ?",
+        "Je vais essayer la jupe bleue. Vous avez la taille L ?",
+        "Je vais acheter la jupe bleue. Vous avez la taille M ?"
       ]
     },
     {

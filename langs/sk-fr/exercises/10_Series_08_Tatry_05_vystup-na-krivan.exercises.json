@@ -657,7 +657,7 @@
         "pravdu,",
         "je",
         "slnečno.",
-        "Vitaj",
+        "Vitajte",
         "v",
         "Tatrách,",
         "Eric!"
@@ -904,6 +904,7 @@
         "opatrne.",
         "Nie",
         "je",
+        "to",
         "súťaž."
       ]
     },
@@ -1341,19 +1342,19 @@
       "type": "fill-blank",
       "l1": "Je suis fatigué. Pouvons-nous faire une pause ?",
       "l2": "Som unavený. Môžeme si oddýchnuť?",
-      "missing_l1": "une",
-      "missing_l2": "si",
-      "blank_index_l1": 5,
-      "blank_index_l2": 3,
+      "missing_l1": "suis",
+      "missing_l2": "Som",
+      "blank_index_l1": 1,
+      "blank_index_l2": 0,
       "choices_l1": [
-        "pas",
-        "dans",
-        "la"
+        "es",
+        "est",
+        "sommes"
       ],
       "choices_l2": [
-        "ale",
-        "mám",
-        "siedmej"
+        "Si",
+        "Je",
+        "Sme"
       ]
     },
     {
@@ -1362,9 +1363,9 @@
       "l1": "Je suis fatigué. Pouvons-nous faire une pause ?",
       "l2": "Som unavený. Môžeme si oddýchnuť?",
       "choices_l1": [
-        "Le magasin est ouvert.",
-        "La chaise est dans la cuisine.",
-        "Je vais à la pharmacie."
+        "Nous sommes fatigués. Pouvons-nous faire une pause ?",
+        "Je suis fatigué. Pouvons-nous dormir ici ?",
+        "Je suis fatigué. Je veux me reposer."
       ]
     },
     {

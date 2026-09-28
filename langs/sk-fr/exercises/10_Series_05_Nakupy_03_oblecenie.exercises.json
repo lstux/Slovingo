@@ -960,6 +960,7 @@
         "veľkosť",
         "M.",
         "Chcem",
+        "si",
         "skúsiť",
         "toto",
         "tričko."
@@ -998,6 +999,7 @@
         "Máte",
         "väčšiu?",
         "Skúsim",
+        "si",
         "to",
         "v",
         "obchode",
@@ -1392,18 +1394,18 @@
       "l1": "Je vais essayer le pantalon noir.",
       "l2": "Skúsim si čierne nohavice.",
       "missing_l1": "le",
-      "missing_l2": "si",
+      "missing_l2": "čierne",
       "blank_index_l1": 3,
-      "blank_index_l2": 1,
+      "blank_index_l2": 2,
       "choices_l1": [
-        "à",
-        "en",
-        "est"
+        "la",
+        "les",
+        "une"
       ],
       "choices_l2": [
-        "prosím",
-        "nemám",
-        "prídem"
+        "čierny",
+        "čierna",
+        "čiernu"
       ]
     },
     {
@@ -1412,9 +1414,9 @@
       "l1": "Je vais essayer le pantalon noir.",
       "l2": "Skúsim si čierne nohavice.",
       "choices_l1": [
-        "Quand arrives-tu ?",
-        "Moi je ne veux pas de halušky. Je veux du gâteau !",
-        "Nous avons quatre verres et quatre assiettes."
+        "Je vais essayer le pantalon bleu.",
+        "Je vais acheter le pantalon noir.",
+        "Je vais essayer la jupe noire."
       ]
     },
     {
