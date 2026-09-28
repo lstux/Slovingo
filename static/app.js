@@ -946,6 +946,26 @@ function showTtsWarning() {
  *     auto-advance) know when the audio is actually done playing,
  *     independently of any highlightElement.
  */
+/**
+ * Strip a dialogue speaker marker (an emoji, re-prefixed into the
+ * card's visible text by renderAudioCard()) from text about to be
+ * read aloud. Without this, the speech engine reads the emoji's
+ * Unicode name out loud (e.g. "Fuchs Gesicht" / "Hase Gesicht" for
+ * 🦊 / 🐰 in German) instead of skipping it, since click-to-speak and
+ * playDialogue() both read the same DOM text the emoji is shown in.
+ * @param {string} text Text as read from the .audio-text element
+ *     (i.e. possibly prefixed with "<speaker> ").
+ * @param {string} [speaker] card.dataset.speaker, the exact marker
+ *     renderAudioCard() prefixed, if any.
+ * @returns {string} `text` with a leading `speaker` marker removed.
+ */
+function stripSpeakerForSpeech(text, speaker) {
+    if (speaker && text.startsWith(speaker)) {
+        return text.slice(speaker.length).trim();
+    }
+    return text;
+}
+
 function speak(text, rate, pitch, voiceURI, highlightElement, onEnd) {
     if (!("speechSynthesis" in window)) {
         alert("Speech synthesis is not available on this device.");
@@ -1066,7 +1086,10 @@ function initializeAudioCards() {
         const text = card.querySelector(".audio-text");
         if (!text) return;
         const voice = effectiveCharacterVoice(card.dataset.speaker);
-        text.onclick = () => speak(text.textContent.trim(), voice.rate, voice.pitch, voice.voiceURI, text);
+        text.onclick = () => speak(
+            stripSpeakerForSpeech(text.textContent.trim(), card.dataset.speaker),
+            voice.rate, voice.pitch, voice.voiceURI, text
+        );
 
         const translation = card.querySelector(".audio-translation");
         if (translation) {
@@ -1175,8 +1198,8 @@ function playDialogue(audioCards) {
             return;
         }
         
-        const text = textEl.textContent.trim();
-        
+        const text = stripSpeakerForSpeech(textEl.textContent.trim(), card.dataset.speaker);
+
         stopSpeaking();
         clearContinueButton();
         currentUtterance = new SpeechSynthesisUtterance(text);
