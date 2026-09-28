@@ -89,7 +89,7 @@ Passé composé sa tvorí z pomocného slovesa „avoir“ (v prítomnom čase) 
 
 ## 🇫🇷 Francúzsky kútik
 
-**Vajíčko, láskavé slovo — francúzština má tiež svoje.** Podobne ako slovenský zdrobnený tvar {{vajíčko}}, aj francúzština v tomto kontexte skôr povie {{les œufs de Pâques}} než holé „les œufs“ — kontext ich už sám osebe robí láskavými.
+**Vajíčko, láskavé slovo — francúzština má tiež svoje.** Podobne ako slovenský zdrobnený tvar vajíčko, aj francúzština v tomto kontexte skôr povie {{les œufs de Pâques}} než holé „les œufs“ — kontext ich už sám osebe robí láskavými.
 
 **Hlavne čokoládové vajíčka.** Vo Francúzsku sú veľkonočné vajíčka predovšetkým čokoládové. Farbenie skutočných vajíčok existuje, najmä ako zábava pre deti, ale nie je to taká silná tradícia ako slovenské kraslice.
 

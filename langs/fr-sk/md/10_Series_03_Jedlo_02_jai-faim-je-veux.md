@@ -116,7 +116,7 @@ Tu si francúzština a slovenčina navzájom pomáhajú: obe použijú „mať /
 
 ## 🇫🇷 Francúzsky kútik
 
-**Bon appétit — presne rovnaký zvyk.** Presne ako slovenské {{Dobrú chuť}}, aj francúzske {{Bon appétit}} sa hovorí pred jedlom. Rozdiel: vo formálnejších kontextoch sa vo Francúzsku niekedy dokonca vynecháva, kým na Slovensku je prakticky povinné.
+**Bon appétit — presne rovnaký zvyk.** Presne ako slovenské Dobrú chuť, aj francúzske {{Bon appétit}} sa hovorí pred jedlom. Rozdiel: vo formálnejších kontextoch sa vo Francúzsku niekedy dokonca vynecháva, kým na Slovensku je prakticky povinné.
 
 **Obed kratší, večera dôležitejšia.** Francúzsky obed je zvyčajne kratší a menej vydatný než slovenský, zatiaľ čo večera je hlavným jedlom dňa — presný opak slovenského zvyku.
 

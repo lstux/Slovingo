@@ -113,54 +113,6 @@
       ]
     },
     {
-      "id": "qcm-le-pain-est-bon-mu-sk",
-      "type": "qcm",
-      "l1": "chlieb je dobrý",
-      "l2": "le pain est bon (mužský)",
-      "choices_l1": [
-        "Nedám si víno.",
-        "Pripravili sme jedlo.",
-        "quiche lorraine (slaný koláč z Lotrinska)"
-      ],
-      "choices_l2": [
-        "le gigot d'agneau",
-        "Tu prends un café ?",
-        "la cloche en chocolat"
-      ]
-    },
-    {
-      "id": "qcm-l-eau-est-bonne-ensk",
-      "type": "qcm",
-      "l1": "voda je dobrá",
-      "l2": "l'eau est bonne (ženský)",
-      "choices_l1": [
-        "Dal/dala som Chloé vajíčko. → Dal/dala som jej vajíčko.",
-        "chlieb je dobrý",
-        "ratatouille (dusená provensálska zelenina)"
-      ],
-      "choices_l2": [
-        "le café au lait",
-        "manger des fruits",
-        "Je prends une bière."
-      ]
-    },
-    {
-      "id": "qcm-les-plats-sont-bons-mno-n-slo",
-      "type": "qcm",
-      "l1": "jedlá sú dobré",
-      "l2": "les plats sont bons (množné číslo)",
-      "choices_l1": [
-        "Hľadám kľúč. → Hľadám ho.",
-        "Aké je to?",
-        "Mám knihu. → Mám ju."
-      ],
-      "choices_l2": [
-        "la vie chère",
-        "plus long que",
-        "Nous voudrions une chambre avec vue sur mer."
-      ]
-    },
-    {
       "id": "qcm-c-est-bon",
       "type": "qcm",
       "l1": "Je to dobré.",
@@ -1306,6 +1258,54 @@
         "viande",
         "est",
         "mauvaise."
+      ]
+    },
+    {
+      "id": "qcm-le-pain-est-bon",
+      "type": "qcm",
+      "l1": "chlieb je dobrý (mužský rod)",
+      "l2": "le pain est bon",
+      "choices_l1": [
+        "študent / študentka",
+        "dôchodca / dôchodkyňa",
+        "upratujem, upratuješ, upratuje"
+      ],
+      "choices_l2": [
+        "la salle de bain",
+        "il / elle cherche",
+        "en ordre, bien, ça va"
+      ]
+    },
+    {
+      "id": "qcm-l-eau-est-bonne",
+      "type": "qcm",
+      "l1": "voda je dobrá (ženský rod)",
+      "l2": "l'eau est bonne",
+      "choices_l1": [
+        "učiteľ / učiteľka",
+        "on / ona má",
+        "je mladý / je mladá"
+      ],
+      "choices_l2": [
+        "il / elle mange",
+        "Je cherche la clé. → Je la cherche.",
+        "Ce sont des pièces."
+      ]
+    },
+    {
+      "id": "qcm-les-plats-sont-bons",
+      "type": "qcm",
+      "l1": "jedlá sú dobré (množné číslo)",
+      "l2": "les plats sont bons",
+      "choices_l1": [
+        "Hľadám kľúč. → Hľadám ho.",
+        "vyhladovaný (silný výraz)",
+        "je starý / je stará"
+      ],
+      "choices_l2": [
+        "dans un appartement",
+        "il est vieux / elle est vieille",
+        "Je n'ai pas faim."
       ]
     }
   ]

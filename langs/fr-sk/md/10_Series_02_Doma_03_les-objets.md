@@ -124,9 +124,9 @@ Slovenčina tiež pozná krátke zámená (ho, ju, ich), takže princíp ti nie 
 
 ## 🇫🇷 Francúzsky kútik
 
-**Papuče pre hosťa nie sú samozrejmosť.** Na rozdiel od slovenského zvyku ponúknuť hosťovi {{papuče}} hneď pri vstupe, vo Francúzsku je to skôr výnimka — hostia si často nechajú ponožky, alebo dokonca topánky.
+**Papuče pre hosťa nie sú samozrejmosť.** Na rozdiel od slovenského zvyku ponúknuť hosťovi papuče hneď pri vstupe, vo Francúzsku je to skôr výnimka — hostia si často nechajú ponožky, alebo dokonca topánky.
 
-**Uvítací drink existuje, ale iný.** Podobne ako slovenský {{pohárik slivovice}}, aj Francúzi ponúkajú hosťovi uvítací nápoj — často {{un kir}}, biele víno s trochou ríbezľového likéru, namiesto pálenky.
+**Uvítací drink existuje, ale iný.** Podobne ako slovenský pohárik slivovice, aj Francúzi ponúkajú hosťovi uvítací nápoj — často {{un kir}}, biele víno s trochou ríbezľového likéru, namiesto pálenky.
 
 **Zdrobneniny existujú, ale menej systematicky.** Francúzština pozná zdrobneniny (une petite table, un petit livre), ale netvorí ich pridaním prípony ako slovenčina (stôl → stolík). Jednoducho použije prídavné meno {{petit}} pred slovom.
 

@@ -2,7 +2,7 @@
 
 @ img/Rue_Victor-Hugo_(Lyon,_2025).jpg | Obchodná ulica v Lyone, rue Victor-Hugo — Wikimedia Commons
 
-Andrea pomáha Ericovi vybrať oblečenie, s pomocou predavačky. Prejde sa tu celá slovná zásoba série. Žiadne nové slovo, okrem tých označených v poznámkach.
+Andrea pomáha Ericovi vybrať oblečenie, s pomocou predavačky. Prejde sa tu celá slovná zásoba série. Nové slová, ktoré sa v rozhovore objavia, nájdeš vysvetlené v preklade pod každou replikou.
 
 ---
 

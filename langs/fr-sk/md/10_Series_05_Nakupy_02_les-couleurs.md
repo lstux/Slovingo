@@ -26,9 +26,9 @@ Farby, ktoré sa zhodujú ako každé iné prídavné meno. A nové slovká **ce
 
 | Francúzština | Slovenčina |
 |----------|----------|
-| un pull rouge (mužský rod) | červený sveter |
-| une veste rouge (ženský rod) | červená bunda |
-| des chaussures rouges (množné číslo) | červené topánky |
+| un pull rouge | červený sveter (mužský rod) |
+| une veste rouge | červená bunda (ženský rod) |
+| des chaussures rouges | červené topánky (množné číslo) |
 
 Rovnaké pravidlo ako pri iných prídavných menách: -e pre ženský rod, -s pre množné číslo. „rouge“ už končí na -e, takže ženský tvar je zhodný s mužským.
 
@@ -36,10 +36,10 @@ Rovnaké pravidlo ako pri iných prídavných menách: -e pre ženský rod, -s p
 
 | Francúzština | Slovenčina |
 |----------|----------|
-| ce pull (mužský rod) | tento sveter |
-| cet imperméable (mužský rod pred samohláskou) | tento plášť do dažďa |
-| cette veste (ženský rod) | táto bunda |
-| ces chaussures (množné číslo) | tieto topánky |
+| ce pull | tento sveter (mužský rod) |
+| cet imperméable | tento plášť do dažďa (mužský rod pred samohláskou) |
+| cette veste | táto bunda (ženský rod) |
+| ces chaussures | tieto topánky (množné číslo) |
 
 Nová vec: francúzske ukazovacie zámeno sa zhoduje s podstatným menom rovnako ako člen — mužský tvar „ce“ sa pred samohláskou mení na „cet“ (kvôli výslovnosti), ženský tvar je „cette“, a množné číslo je vždy „ces“, bez ohľadu na rod.
 
@@ -115,7 +115,7 @@ Nová vec: francúzske ukazovacie zámeno sa zhoduje s podstatným menom rovnako
 
 ## 🇫🇷 Francúzsky kútik
 
-**Bleu má vo francúzštine podobné rozpätie.** Podobne ako slovenské {{modrý}}, aj francúzske {{bleu}} niekedy zahŕňa aj to, čo by Slovák nazval tyrkysovou — rozdiel je skôr v odtieňoch než v systéme.
+**Bleu má vo francúzštine podobné rozpätie.** Podobne ako slovenské modrý, aj francúzske {{bleu}} niekedy zahŕňa aj to, čo by Slovák nazval tyrkysovou — rozdiel je skôr v odtieňoch než v systéme.
 
 **Modrá, biela, červená — trikolóra aj tu.** Francúzska vlajka spája presne tieto tri farby, podobne ako slovenská. Rozdiel je v usporiadaní: francúzska je zvislá (modrá-biela-červená), slovenská vodorovná (biela-modrá-červená).
 

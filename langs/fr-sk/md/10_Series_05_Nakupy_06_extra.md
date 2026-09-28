@@ -2,7 +2,7 @@
 
 @ img/Coupole_des_galeries_Lafayette,_Paris,_juin_2014.jpg | Galeries Lafayette, francúzsky obchodný dom — Wikimedia Commons
 
-Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet.
+Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet. Ak sa vo vete objaví pár slov navyše, sú vysvetlené v preklade pod ňou.
 
 ---
 
@@ -118,10 +118,11 @@
 > en quarante = vo veľkosti štyridsať
 + Pri topánkach sa nehovorí „taille“, ale „pointure“ — alebo jednoducho „en quarante“.
 
-! Le marché a lieu chaque samedi, le magasin est ouvert tous les jours.
-> Trh je každú sobotu, obchod je otvorený každý deň.
-> Le marché a lieu chaque samedi = trh je každú sobotu
-> le magasin est ouvert tous les jours = obchod je otvorený každý deň
+! Chaque samedi, il y a un marché. J'achète des pommes.
+> Každú sobotu je trh. Kupujem jablká.
+> Chaque samedi = každú sobotu
+> il y a un marché = je trh
+> j'achète des pommes = kupujem jablká
 + „chaque“ znamená každý.
 
 ! Cette couleur ne me plaît pas. Vous l'avez en bleu ?
@@ -129,29 +130,28 @@
 > Cette couleur ne me plaît pas = nepáči sa mi táto farba
 > vous l'avez en bleu = máte to v modrej
 
-! Le distributeur est fermé ? Ce n'est pas possible !
-> Bankomat je zatvorený? To nie je možné!
-> Le distributeur est fermé = bankomat je zatvorený
-> ce n'est pas possible = to nie je možné
+! Il n'y a pas de distributeur ici ? Alors je paie par carte.
+> Nie je tu bankomat? Tak platím kartou.
+> Il n'y a pas de distributeur ici = nie je tu bankomat
+> alors je paie par carte = tak platím kartou
 
 ! Je n'ai pas mon portefeuille. Il est à la maison.
 > Nemám peňaženku. Je doma.
 > Je n'ai pas mon portefeuille = nemám peňaženku
 > il est à la maison = je doma
 
-! Je veux une réduction, parce que c'est trop cher.
-> Chcem zľavu, lebo to je príliš drahé.
-> Je veux une réduction = chcem zľavu
-> parce que c'est trop cher = lebo to je príliš drahé
+! C'est cher. Vous pouvez me faire une réduction ?
+> To je drahé. Môžete mi dať zľavu?
+> C'est cher = to je drahé
+> Vous pouvez me faire une réduction = môžete mi dať zľavu
 
-! Le panier est plein, le chariot est vide.
-> Košík je plný, vozík je prázdny.
-> Le panier est plein = košík je plný
-> le chariot est vide = vozík je prázdny
+! Je prends un panier, pas un chariot.
+> Beriem si košík, nie vozík.
+> Je prends un panier = beriem si košík
+> pas un chariot = nie vozík
 
-! Je vais m'acheter de nouvelles chaussures et je vais jeter mon vieux portefeuille.
-> Kúpim si nové topánky a starú peňaženku dám preč.
-> Je vais m'acheter = kúpim si
-> de nouvelles chaussures = nové topánky
-> et je vais jeter = a dám preč
-> mon vieux portefeuille = starú peňaženku
+! Je vais acheter des chaussures noires et un pull gris.
+> Kúpim si čierne topánky a sivý sveter.
+> Je vais acheter = kúpim si
+> des chaussures noires = čierne topánky
+> et un pull gris = a sivý sveter

@@ -25,6 +25,8 @@ Radové číslovky vyjadrujú poradie:
 
 ⚠️ „premier“ je jediné nepravidelné a jediné, ktoré má ženský tvar odlišný od pridania „-ième“: {{premier}} (mužský) / {{première}} (ženský). Od „deuxième“ vyššie sa tvar vôbec nemení podľa rodu — jedna z mála chvíľ, keď je francúzština jednoduchšia než slovenčina, ktorá mení rod pri každej radovej číslovke (prvý/prvá/prvé).
 
+💡 Popri „deuxième“ existuje aj {{second}} / {{seconde}} (druhý / druhá), hlavne v ustálených výrazoch: {{la Seconde Guerre mondiale}} (druhá svetová vojna), {{en seconde classe}} (v druhej triede). Pozor na výslovnosť: „c“ sa tu číta ako „g“ — „sögon“, „sögond“.
+
 ---
 
 ## 2. Od 11 vyššie
@@ -80,9 +82,9 @@ Toto je dôležitá pasca. Na rozdiel od slovenčiny, ktorá pri dátumoch VŽDY
 
 | Slovenčina | Francúzština |
 |---|---|
-| šiesteho augusta (radová) | le six août (základná!) |
-| dvadsiateho januára (radová) | le vingt janvier (základná!) |
-| **prvého** januára (radová) | **le premier** janvier (radová — jediná výnimka!) |
+| šiesteho augusta (po slovensky radová, po francúzsky základná!) | le six août |
+| dvadsiateho januára (po slovensky radová, po francúzsky základná!) | le vingt janvier |
+| **prvého** januára (radová v oboch jazykoch — jediná výnimka!) | **le premier** janvier |
 
 ! {{le six août}}
 > šiesteho augusta

@@ -113,26 +113,10 @@
       ]
     },
     {
-      "id": "qcm-un-salon-mu-sk-rod",
-      "type": "qcm",
-      "l1": "obývačka (v slovenčine ženský rod)",
-      "l2": "un salon (mužský rod)",
-      "choices_l1": [
-        "To sú izby.",
-        "To je izba.",
-        "Chcel by som izbu."
-      ],
-      "choices_l2": [
-        "une chambre (ženský rod)",
-        "Nous voudrions une chambre avec vue sur mer.",
-        "la maison de campagne"
-      ]
-    },
-    {
       "id": "qcm-une-chambre-ensk-rod",
       "type": "qcm",
       "l1": "spálňa",
-      "l2": "une chambre (ženský rod)",
+      "l2": "la chambre (à coucher)",
       "choices_l1": [
         "balkón",
         "obývačka",
@@ -148,7 +132,7 @@
       "id": "qcm-une-salle-de-bain-ensk-rod",
       "type": "qcm",
       "l1": "kúpeľňa",
-      "l2": "une salle de bain (ženský rod)",
+      "l2": "la salle de bain",
       "choices_l1": [
         "terasa",
         "kuchyňa",
@@ -1069,6 +1053,54 @@
         "C'est",
         "notre",
         "maison."
+      ]
+    },
+    {
+      "id": "qcm-un-salon",
+      "type": "qcm",
+      "l1": "obývačka (vo francúzštine mužský rod, v slovenčine ženský)",
+      "l2": "un salon",
+      "choices_l1": [
+        "on / ona je",
+        "študent / študentka",
+        "učiteľ / učiteľka"
+      ],
+      "choices_l2": [
+        "le jardin",
+        "le bureau",
+        "l'ami"
+      ]
+    },
+    {
+      "id": "qcm-une-chambre",
+      "type": "qcm",
+      "l1": "spálňa (ženský rod)",
+      "l2": "une chambre",
+      "choices_l1": [
+        "kamarát / kamarátka",
+        "je mladý / je mladá",
+        "ako sa máš"
+      ],
+      "choices_l2": [
+        "la cousine",
+        "mon frère",
+        "la chambre"
+      ]
+    },
+    {
+      "id": "qcm-une-salle-de-bain",
+      "type": "qcm",
+      "l1": "kúpeľňa (ženský rod)",
+      "l2": "une salle de bain",
+      "choices_l1": [
+        "ako sa máš",
+        "kamarát / kamarátka",
+        "dôchodca / dôchodkyňa"
+      ],
+      "choices_l2": [
+        "la femme / l'épouse",
+        "il est vieux / elle est vieille",
+        "grand / grande"
       ]
     }
   ]

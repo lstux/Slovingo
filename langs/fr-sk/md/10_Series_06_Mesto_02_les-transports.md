@@ -26,8 +26,8 @@ Mestská doprava. A dobrá správa: francúzština na rozdiel od slovenčiny nep
 
 | Francúzština | Slovenčina |
 |----------|----------|
-| Je vais au travail. (teraz, jedenkrát) | Idem do práce. |
-| D'habitude, je vais au travail en bus. (zvyk) | Chodím do práce autobusom. |
+| Je vais au travail. | Idem do práce. (teraz, jedenkrát) |
+| D'habitude, je vais au travail en bus. | Chodím do práce autobusom. (zvyk) |
 
 Dobrá správa: francúzština nepotrebuje dve rôzne slovesá ako slovenské ísť/chodiť. Jedno „aller“ stačí na oboje — rozdiel medzi jednorazovou cestou a zvykom sa vyjadrí jednoducho príslovkou ako „d'habitude“ (zvyčajne) alebo kontextom.
 
@@ -111,7 +111,7 @@ Zatiaľ čo slovenčina vyžaduje inštrumentál („autobusOM“), francúzšti
 
 ## 🇫🇷 Francúzsky kútik
 
-**TCL, skratka, ktorú pozná každý v Lyone.** Podobne ako slovenská skratka {{MHD}}, aj Lyon má svoju: {{TCL}} (Transports en Commun Lyonnais) sa objavuje na aplikáciách, lístkoch aj tabuliach — nikto nehovorí celý názov.
+**TCL, skratka, ktorú pozná každý v Lyone.** Podobne ako slovenská skratka MHD, aj Lyon má svoju: {{TCL}} (Transports en Commun Lyonnais) sa objavuje na aplikáciách, lístkoch aj tabuliach — nikto nehovorí celý názov.
 
 **Lyonská doprava kombinuje metro, električky aj autobusy.** Na rozdiel od Bratislavy, ktorá metro nemá, Lyon má aj metro, aj električky, aj autobusy — jeden lístok často platí na všetky tri.
 

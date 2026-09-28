@@ -2,7 +2,7 @@
 
 @ img/Easter-Eggs.jpg | Veľkonočný stôl — Wikimedia Commons
 
-Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet. Posledná kartička celej cesty!
+Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet. Ak sa vo vete objaví pár slov navyše, sú vysvetlené v preklade pod ňou. Posledná kartička celej cesty!
 
 ---
 

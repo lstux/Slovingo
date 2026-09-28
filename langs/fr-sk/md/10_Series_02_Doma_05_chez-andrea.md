@@ -2,7 +2,7 @@
 
 @ img/Cpe_front_building.JPG | Budova v Lyone — Wikimedia Commons
 
-Andrea prijíma Erica a Karine vo svojom byte v Lyone. Prejde sa tu celá slovná zásoba série, v jednom súvislom rozhovore. Žiadne nové slovo, okrem tých označených v poznámkach.
+Andrea prijíma Erica a Karine vo svojom byte v Lyone. Prejde sa tu celá slovná zásoba série, v jednom súvislom rozhovore. Nové slová, ktoré sa v rozhovore objavia, nájdeš vysvetlené v preklade pod každou replikou.
 
 ---
 
@@ -122,7 +122,7 @@ Eric a Andrea si vykajú. Eric a Karine si tykajú.
 
 **Na návštevu sa neprichádza s prázdnymi rukami — aj tu.** Rovnako ako na Slovensku, aj vo Francúzsku sa na návštevu neprichádza bez ničoho: fľaša vína, koláč alebo kvety pre domácu paniu sa očakávajú.
 
-**Žiadne jedno univerzálne „Nech sa páči“.** Francúzština nemá jeden všeobecný výraz ako slovenské {{Nech sa páči}} — namiesto toho použije viac fráz podľa situácie: {{Entrez}} (poďte ďalej), {{Asseyez-vous}} (sadnite si), {{Servez-vous}} (poslúžte si).
+**Žiadne jedno univerzálne „Nech sa páči“.** Francúzština nemá jeden všeobecný výraz ako slovenské Nech sa páči — namiesto toho použije viac fráz podľa situácie: {{Entrez}} (poďte ďalej), {{Asseyez-vous}} (sadnite si), {{Servez-vous}} (poslúžte si).
 
 **Odmietnuť jedlo tu funguje inak.** Na rozdiel od slovenského zvyku, kde odmietnutie jedla signalizuje zdvorilosť a vedie k ďalšiemu naliehaniu, vo Francúzsku sa „non merci“ väčšinou jednoducho rešpektuje.
 

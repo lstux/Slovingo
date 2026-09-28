@@ -117,7 +117,7 @@ Toto je nová vec: francúzske prídavné mená VÄČŠINOU stoja ZA podstatným
 
 **Veľkosti podľa medzinárodného systému, aj tu.** Podobne ako na Slovensku, aj vo Francúzsku sa bežne používa S, M, L, XL — jednoduchý orientačný bod. Pre topánky sa používa európska číselná stupnica ({{la pointure}}), rovnaká ako na Slovensku: kto nosí štyridsiatku, pýta si {{du quarante}}.
 
-**Soldes majú svoje presné obdobie zo zákona.** Na rozdiel od slovenského {{výpredaj}}, ktorý môže byť kedykoľvek, vo Francúzsku sú {{les soldes}} presne stanovené zákonom, dvakrát ročne, v presne určených termínoch.
+**Soldes majú svoje presné obdobie zo zákona.** Na rozdiel od slovenského výpredaj, ktorý môže byť kedykoľvek, vo Francúzsku sú {{les soldes}} presne stanovené zákonom, dvakrát ročne, v presne určených termínoch.
 
 **Skúšobná kabínka sa pýta rovnako jednoducho.** Stačí ukázať kus oblečenia a spýtať sa {{Où est la cabine d'essayage ?}} — predavačka ukáže smer, bez ďalších formalít.
 
