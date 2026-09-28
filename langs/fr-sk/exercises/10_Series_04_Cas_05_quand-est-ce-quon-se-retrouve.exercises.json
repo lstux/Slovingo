@@ -1037,19 +1037,19 @@
       "type": "fill-blank",
       "l1": "Áno, presne. Nie päť tridsať!",
       "l2": "Oui, exactement. Pas cinq heures trente !",
-      "missing_l1": "Nie",
-      "missing_l2": "Pas",
-      "blank_index_l1": 2,
-      "blank_index_l2": 2,
+      "missing_l1": "päť",
+      "missing_l2": "heures",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
       "choices_l1": [
-        "ešte",
-        "večer",
-        "kde"
+        "šesť",
+        "štyri",
+        "sedem"
       ],
       "choices_l2": [
-        "j'ai",
-        "tu",
-        "et"
+        "heure",
+        "demie",
+        "quart"
       ]
     },
     {
@@ -1057,19 +1057,19 @@
       "type": "fill-blank",
       "l1": "Výborne. Kde sa stretneme?",
       "l2": "Très bien. On se retrouve où ?",
-      "missing_l1": "sa",
-      "missing_l2": "où",
-      "blank_index_l1": 2,
-      "blank_index_l2": 5,
+      "missing_l1": "Kde",
+      "missing_l2": "retrouve",
+      "blank_index_l1": 1,
+      "blank_index_l2": 4,
       "choices_l1": [
-        "čas",
-        "má",
-        "o"
+        "Kedy",
+        "Ako",
+        "Prečo"
       ],
       "choices_l2": [
-        "pas",
-        "maison",
-        "bonjour"
+        "retrouvons",
+        "retrouves",
+        "retrouvent"
       ]
     },
     {
@@ -1089,9 +1089,9 @@
       "l1": "Áno, presne. Nie päť tridsať!",
       "l2": "Oui, exactement. Pas cinq heures trente !",
       "choices_l1": [
-        "Môj brat má jeden rok.",
-        "Karine má dvadsať rokov. Je študentka.",
-        "Papuče sú na chodbe."
+        "Áno, presne. Nie šesť tridsať!",
+        "Áno, presne. Nie päť pätnásť!",
+        "Nie, nie presne. Päť tridsať!"
       ]
     },
     {
@@ -1100,9 +1100,9 @@
       "l1": "Výborne. Kde sa stretneme?",
       "l2": "Très bien. On se retrouve où ?",
       "choices_l1": [
-        "Dám si pot-au-feu a pivo.",
-        "Najprv obed, potom tarta.",
-        "Ovocie je sladké."
+        "Výborne. Kedy sa stretneme?",
+        "Výborne. Kde sa stretneme zajtra?",
+        "Výborne. Kde si?"
       ]
     },
     {

@@ -1217,14 +1217,14 @@
       "l1": "izba, miestnosť",
       "l2": "la pièce",
       "choices_l1": [
-        "práca",
-        "čau",
-        "brat"
+        "spálňa, izba na spanie",
+        "kuchyňa",
+        "záhrada"
       ],
       "choices_l2": [
-        "aujourd'hui",
-        "ma sœur",
-        "je fais"
+        "la chambre",
+        "la cuisine",
+        "le jardin"
       ]
     },
     {
@@ -1233,14 +1233,14 @@
       "l1": "spálňa, izba na spanie",
       "l2": "la chambre",
       "choices_l1": [
-        "študent / študentka",
-        "on / ona má",
-        "dôchodca / dôchodkyňa"
+        "izba, miestnosť",
+        "kuchyňa",
+        "dom"
       ],
       "choices_l2": [
-        "les parents",
-        "le prénom",
-        "je comprends"
+        "la pièce",
+        "la cuisine",
+        "la maison"
       ]
     }
   ]

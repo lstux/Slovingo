@@ -1467,14 +1467,14 @@
       "l1": "V pondelok pracujem. (tento konkrétny pondelok)",
       "l2": "Lundi, je travaille.",
       "choices_l1": [
-        "upratujem, upratuješ, upratuje",
-        "je starý / je stará",
-        "quiche lorraine (slaný koláč z Lotrinska)"
+        "V pondelky (zvyčajne) pracujem. (každý pondelok)",
+        "V utorok pracujem. (tento konkrétny utorok)",
+        "V pondelok nepracujem. (tento konkrétny pondelok)"
       ],
       "choices_l2": [
-        "frais / fraîche",
-        "ils / elles travaillent",
-        "le jus de fruits"
+        "Le lundi, je travaille.",
+        "Mardi, je travaille.",
+        "Lundi, je ne travaille pas."
       ]
     },
     {
@@ -1483,14 +1483,14 @@
       "l1": "V pondelky (zvyčajne) pracujem. (každý pondelok)",
       "l2": "Le lundi, je travaille.",
       "choices_l1": [
-        "dôchodca / dôchodkyňa",
-        "je starý / je stará",
-        "Hľadám kľúč. → Hľadám ho."
+        "V pondelok pracujem. (tento konkrétny pondelok)",
+        "V utorky (zvyčajne) pracujem. (každý utorok)",
+        "V pondelky (zvyčajne) nepracujem. (každý pondelok)"
       ],
       "choices_l2": [
-        "le chocolat chaud",
-        "il / elle veut",
-        "manger de la viande"
+        "Lundi, je travaille.",
+        "Le mardi, je travaille.",
+        "Le lundi, je ne travaille pas."
       ]
     }
   ]

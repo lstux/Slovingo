@@ -1061,14 +1061,14 @@
       "l1": "obývačka (vo francúzštine mužský rod, v slovenčine ženský)",
       "l2": "un salon",
       "choices_l1": [
-        "on / ona je",
-        "študent / študentka",
-        "učiteľ / učiteľka"
+        "spálňa (ženský rod)",
+        "kúpeľňa (ženský rod)",
+        "kuchyňa"
       ],
       "choices_l2": [
-        "le jardin",
-        "le bureau",
-        "l'ami"
+        "une chambre",
+        "une salle de bain",
+        "un balcon"
       ]
     },
     {
@@ -1077,14 +1077,14 @@
       "l1": "spálňa (ženský rod)",
       "l2": "une chambre",
       "choices_l1": [
-        "kamarát / kamarátka",
-        "je mladý / je mladá",
-        "ako sa máš"
+        "obývačka (vo francúzštine mužský rod, v slovenčine ženský)",
+        "kúpeľňa (ženský rod)",
+        "kuchyňa"
       ],
       "choices_l2": [
-        "la cousine",
-        "mon frère",
-        "la chambre"
+        "un salon",
+        "une salle de bain",
+        "une cuisine"
       ]
     },
     {
@@ -1093,14 +1093,14 @@
       "l1": "kúpeľňa (ženský rod)",
       "l2": "une salle de bain",
       "choices_l1": [
-        "ako sa máš",
-        "kamarát / kamarátka",
-        "dôchodca / dôchodkyňa"
+        "obývačka (vo francúzštine mužský rod, v slovenčine ženský)",
+        "spálňa (ženský rod)",
+        "záchod"
       ],
       "choices_l2": [
-        "la femme / l'épouse",
-        "il est vieux / elle est vieille",
-        "grand / grande"
+        "un salon",
+        "une chambre",
+        "les toilettes"
       ]
     }
   ]

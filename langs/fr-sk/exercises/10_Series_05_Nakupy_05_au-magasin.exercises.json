@@ -1072,19 +1072,19 @@
       "type": "fill-blank",
       "l1": "Akú farbu chcete?",
       "l2": "Quelle couleur voulez-vous ?",
-      "missing_l1": "chcete",
-      "missing_l2": "couleur",
-      "blank_index_l1": 2,
-      "blank_index_l2": 1,
+      "missing_l1": "farbu",
+      "missing_l2": "Quelle",
+      "blank_index_l1": 1,
+      "blank_index_l2": 0,
       "choices_l1": [
-        "nemám",
-        "mi",
-        "dnes"
+        "farba",
+        "farby",
+        "farbou"
       ],
       "choices_l2": [
-        "mais",
-        "travaille",
-        "du"
+        "Quel",
+        "Quels",
+        "Quelles"
       ]
     },
     {
@@ -1092,19 +1092,19 @@
       "type": "fill-blank",
       "l1": "To je lacné! Kúpte si aj to zelené.",
       "l2": "C'est bon marché ! Achetez aussi le vert.",
-      "missing_l1": "je",
-      "missing_l2": "le",
-      "blank_index_l1": 1,
-      "blank_index_l2": 6,
+      "missing_l1": "Kúpte",
+      "missing_l2": "Achetez",
+      "blank_index_l1": 3,
+      "blank_index_l2": 4,
       "choices_l1": [
-        "to",
-        "čas",
-        "máte"
+        "Kúp",
+        "Kúpme",
+        "Kúpiť"
       ],
       "choices_l2": [
-        "où",
-        "du",
-        "une"
+        "Achète",
+        "Acheter",
+        "Acheté"
       ]
     },
     {
@@ -1113,9 +1113,9 @@
       "l1": "Akú farbu chcete?",
       "l2": "Quelle couleur voulez-vous ?",
       "choices_l1": [
-        "Meškám. Prídem o štvrť na deväť.",
-        "Moja mama je učiteľka.",
-        "Oranžové jablko je sladké."
+        "Akú veľkosť chcete?",
+        "Akú farbu hľadáte?",
+        "Akú farbu chceš?"
       ]
     },
     {
@@ -1124,9 +1124,9 @@
       "l1": "To je lacné! Kúpte si aj to zelené.",
       "l2": "C'est bon marché ! Achetez aussi le vert.",
       "choices_l1": [
-        "Nie, v pondelok pracujem do siedmej.",
-        "Mám tridsať rokov.",
-        "Večer som doma."
+        "To je drahé! Kúpte si aj to zelené.",
+        "To je lacné! Kúpte si aj to modré.",
+        "To je lacné! Kúp si aj to zelené."
       ]
     },
     {

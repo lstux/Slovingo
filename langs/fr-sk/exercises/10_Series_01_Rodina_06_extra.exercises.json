@@ -1945,14 +1945,14 @@
       "l1": "izba, miestnosť",
       "l2": "la pièce",
       "choices_l1": [
-        "priateľ",
-        "päť rokov",
-        "pracuje"
+        "spálňa, izba na spanie",
+        "kuchyňa",
+        "záhrada"
       ],
       "choices_l2": [
-        "j'ai",
-        "l'hôpital",
-        "ensemble"
+        "la chambre",
+        "la cuisine",
+        "le jardin"
       ]
     },
     {
@@ -1961,14 +1961,14 @@
       "l1": "spálňa, izba na spanie",
       "l2": "la chambre",
       "choices_l1": [
-        "je mladý / je mladá",
-        "dôchodca / dôchodkyňa",
-        "on / ona je"
+        "izba, miestnosť",
+        "kuchyňa",
+        "dom"
       ],
       "choices_l2": [
-        "la ville",
-        "l'appartement",
-        "le travail"
+        "la pièce",
+        "la cuisine",
+        "la maison"
       ]
     },
     {
@@ -1976,19 +1976,19 @@
       "type": "fill-blank",
       "l1": "Môj otec a moja mama bývajú spolu na vidieku.",
       "l2": "Mon père et ma mère habitent ensemble à la campagne.",
-      "missing_l1": "na",
-      "missing_l2": "la",
-      "blank_index_l1": 7,
-      "blank_index_l2": 8,
+      "missing_l1": "bývajú",
+      "missing_l2": "habitent",
+      "blank_index_l1": 5,
+      "blank_index_l2": 5,
       "choices_l1": [
-        "sa",
-        "ako",
-        "môj"
+        "bývame",
+        "býva",
+        "bývaš"
       ],
       "choices_l2": [
-        "pardon",
-        "mes",
-        "mon"
+        "habite",
+        "habitons",
+        "habitez"
       ]
     },
     {
@@ -1996,19 +1996,19 @@
       "type": "fill-blank",
       "l1": "Moja babka je stará, ale veľa pracuje v záhrade.",
       "l2": "Ma grand-mère est vieille, mais elle travaille beaucoup au jardin.",
-      "missing_l1": "je",
-      "missing_l2": "est",
-      "blank_index_l1": 2,
-      "blank_index_l2": 2,
+      "missing_l1": "pracuje",
+      "missing_l2": "au",
+      "blank_index_l1": 6,
+      "blank_index_l2": 8,
       "choices_l1": [
-        "otec",
-        "som",
-        "čo"
+        "pracujem",
+        "pracujú",
+        "pracuješ"
       ],
       "choices_l2": [
-        "la",
-        "de",
-        "pas"
+        "à",
+        "aux",
+        "du"
       ]
     },
     {
@@ -2017,9 +2017,9 @@
       "l1": "Môj otec a moja mama bývajú spolu na vidieku.",
       "l2": "Mon père et ma mère habitent ensemble à la campagne.",
       "choices_l1": [
-        "Moja sestra je lekárka.",
-        "Ahoj priateľ! Čau!",
-        "Kto je to?"
+        "Môj otec a moja mama bývajú spolu v meste.",
+        "Môj brat a moja sestra bývajú spolu na vidieku.",
+        "Môj otec a moja mama pracujú spolu na vidieku."
       ]
     },
     {
@@ -2028,9 +2028,9 @@
       "l1": "Moja babka je stará, ale veľa pracuje v záhrade.",
       "l2": "Ma grand-mère est vieille, mais elle travaille beaucoup au jardin.",
       "choices_l1": [
-        "Mám brata. Má tri roky.",
-        "Moji rodičia pracujú.",
-        "Môj brat býva blízko."
+        "Moja babka je stará, ale veľa pracuje v kuchyni.",
+        "Moja mama je stará, ale veľa pracuje v záhrade.",
+        "Môj dedko je starý, ale veľa pracuje v záhrade."
       ]
     },
     {

@@ -1615,19 +1615,19 @@
       "type": "fill-blank",
       "l1": "Skúsim tieto topánky v štyridsiatke.",
       "l2": "J'essaie ces chaussures en quarante.",
-      "missing_l1": "v",
-      "missing_l2": "en",
-      "blank_index_l1": 3,
-      "blank_index_l2": 3,
+      "missing_l1": "tieto",
+      "missing_l2": "ces",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
       "choices_l1": [
-        "sú",
-        "dobrý",
-        "môj"
+        "tento",
+        "táto",
+        "toto"
       ],
       "choices_l2": [
-        "je",
-        "du",
-        "veux"
+        "ce",
+        "cet",
+        "cette"
       ]
     },
     {
@@ -1636,9 +1636,9 @@
       "l1": "Skúsim tieto topánky v štyridsiatke.",
       "l2": "J'essaie ces chaussures en quarante.",
       "choices_l1": [
-        "Ako sa voláš?",
-        "Čakám už dvadsať minút.",
-        "Sedím na gauči a čítam knihu."
+        "Skúsim tieto topánky v štyridsaťdvojke.",
+        "Kúpim tieto topánky v štyridsiatke.",
+        "Skúsim tento sveter v štyridsiatke."
       ]
     },
     {
@@ -1680,19 +1680,19 @@
       "type": "fill-blank",
       "l1": "Každú sobotu je trh. Kupujem jablká.",
       "l2": "Chaque samedi, il y a un marché. J'achète des pommes.",
-      "missing_l1": "je",
-      "missing_l2": "il",
-      "blank_index_l1": 2,
-      "blank_index_l2": 2,
+      "missing_l1": "sobotu",
+      "missing_l2": "des",
+      "blank_index_l1": 1,
+      "blank_index_l2": 8,
       "choices_l1": [
-        "môj",
-        "otec",
-        "máte"
+        "sobota",
+        "soboty",
+        "sobote"
       ],
       "choices_l2": [
-        "s'il",
-        "vous",
-        "ma"
+        "du",
+        "de",
+        "une"
       ]
     },
     {
@@ -1700,19 +1700,19 @@
       "type": "fill-blank",
       "l1": "Nie je tu bankomat? Tak platím kartou.",
       "l2": "Il n'y a pas de distributeur ici ? Alors je paie par carte.",
-      "missing_l1": "je",
-      "missing_l2": "je",
-      "blank_index_l1": 1,
-      "blank_index_l2": 9,
+      "missing_l1": "platím",
+      "missing_l2": "de",
+      "blank_index_l1": 5,
+      "blank_index_l2": 4,
       "choices_l1": [
-        "nemám",
-        "koľko",
-        "veľa"
+        "platíš",
+        "platí",
+        "platíme"
       ],
       "choices_l2": [
-        "vais",
-        "tu",
-        "heures"
+        "du",
+        "un",
+        "le"
       ]
     },
     {
@@ -1720,19 +1720,19 @@
       "type": "fill-blank",
       "l1": "To je drahé. Môžete mi dať zľavu?",
       "l2": "C'est cher. Vous pouvez me faire une réduction ?",
-      "missing_l1": "je",
+      "missing_l1": "mi",
       "missing_l2": "une",
-      "blank_index_l1": 1,
+      "blank_index_l1": 4,
       "blank_index_l2": 6,
       "choices_l1": [
-        "sú",
-        "ešte",
-        "ale"
+        "ma",
+        "ja",
+        "mňa"
       ],
       "choices_l2": [
-        "mon",
         "un",
-        "est"
+        "des",
+        "du"
       ]
     },
     {
@@ -1740,19 +1740,19 @@
       "type": "fill-blank",
       "l1": "Beriem si košík, nie vozík.",
       "l2": "Je prends un panier, pas un chariot.",
-      "missing_l1": "si",
-      "missing_l2": "un",
-      "blank_index_l1": 1,
-      "blank_index_l2": 2,
+      "missing_l1": "Beriem",
+      "missing_l2": "prends",
+      "blank_index_l1": 0,
+      "blank_index_l2": 1,
       "choices_l1": [
-        "deti",
-        "ďakujem",
-        "veľa"
+        "Berieš",
+        "Berie",
+        "Berieme"
       ],
       "choices_l2": [
-        "n'ai",
-        "le",
-        "nous"
+        "prend",
+        "prenons",
+        "prennent"
       ]
     },
     {
@@ -1760,19 +1760,19 @@
       "type": "fill-blank",
       "l1": "Kúpim si čierne topánky a sivý sveter.",
       "l2": "Je vais acheter des chaussures noires et un pull gris.",
-      "missing_l1": "a",
-      "missing_l2": "et",
-      "blank_index_l1": 4,
-      "blank_index_l2": 6,
+      "missing_l1": "čierne",
+      "missing_l2": "noires",
+      "blank_index_l1": 2,
+      "blank_index_l2": 5,
       "choices_l1": [
-        "veľa",
-        "moja",
-        "siedmej"
+        "čierny",
+        "čierna",
+        "čiernu"
       ],
       "choices_l2": [
-        "nous",
-        "cuisine",
-        "enfants"
+        "noir",
+        "noire",
+        "noirs"
       ]
     },
     {
@@ -1781,9 +1781,9 @@
       "l1": "Každú sobotu je trh. Kupujem jablká.",
       "l2": "Chaque samedi, il y a un marché. J'achète des pommes.",
       "choices_l1": [
-        "Môj brat je študent. Nepracuje.",
-        "Predavačka je veľmi milá.",
-        "Káva je horúca."
+        "Každú nedeľu je trh. Kupujem jablká.",
+        "Každú sobotu je trh. Kupujem hrušky.",
+        "Každú sobotu je trh. Predávam jablká."
       ]
     },
     {
@@ -1792,9 +1792,9 @@
       "l1": "Nie je tu bankomat? Tak platím kartou.",
       "l2": "Il n'y a pas de distributeur ici ? Alors je paie par carte.",
       "choices_l1": [
-        "Dvere sú tam.",
-        "Mám stretnutie vo štvrtok poobede.",
-        "V piatok je večer dlhý."
+        "Nie je tu bankomat? Tak platím hotovosťou.",
+        "Je tu bankomat? Tak platím kartou.",
+        "Nie je tu banka? Tak platím kartou."
       ]
     },
     {
@@ -1803,9 +1803,9 @@
       "l1": "To je drahé. Môžete mi dať zľavu?",
       "l2": "C'est cher. Vous pouvez me faire une réduction ?",
       "choices_l1": [
-        "Otec upratuje pivnicu a garáž.",
-        "Mám syna a dcéru.",
-        "Toto modré tričko je pekné. Chcete skúsiť?"
+        "To je lacné. Môžete mi dať zľavu?",
+        "To je drahé. Môžete mi dať tašku?",
+        "To je drahé. Môžem vám dať zľavu?"
       ]
     },
     {
@@ -1814,9 +1814,9 @@
       "l1": "Beriem si košík, nie vozík.",
       "l2": "Je prends un panier, pas un chariot.",
       "choices_l1": [
-        "Otvorím okno? Je tu teplo.",
-        "Dobrý deň. Akú veľkosť hľadáte?",
-        "Oddychujem na posteli a počúvam."
+        "Beriem si vozík, nie košík.",
+        "Beriem si košík, nie tašku.",
+        "Berieš si košík, nie vozík."
       ]
     },
     {
@@ -1825,9 +1825,9 @@
       "l1": "Kúpim si čierne topánky a sivý sveter.",
       "l2": "Je vais acheter des chaussures noires et un pull gris.",
       "choices_l1": [
-        "Meškám asi desať minút.",
-        "Náš balkón je malý, ale dvor je veľký.",
-        "Potom je pot-au-feu. Máš rád mäso?"
+        "Kúpim si čierne topánky a biely sveter.",
+        "Kúpim si hnedé topánky a sivý sveter.",
+        "Kúpim si čiernu bundu a sivý sveter."
       ]
     },
     {

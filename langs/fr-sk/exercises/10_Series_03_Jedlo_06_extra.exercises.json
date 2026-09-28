@@ -2100,14 +2100,14 @@
       "l1": "výborný, lahodný",
       "l2": "délicieux / délicieuse",
       "choices_l1": [
-        "Mám hlad.",
-        "môj brat",
-        "piť vodu"
+        "chutný",
+        "sladký",
+        "zlý"
       ],
       "choices_l2": [
-        "petit / petite",
-        "Je prends du vin.",
-        "il est jeune / elle est jeune"
+        "savoureux / savoureuse",
+        "sucré / sucrée",
+        "mauvais / mauvaise"
       ]
     },
     {
@@ -2115,19 +2115,19 @@
       "type": "fill-blank",
       "l1": "Quiche je výborná. Chcem ešte.",
       "l2": "La quiche est délicieuse. J'en veux encore.",
-      "missing_l1": "je",
-      "missing_l2": "est",
-      "blank_index_l1": 1,
-      "blank_index_l2": 2,
+      "missing_l1": "Chcem",
+      "missing_l2": "veux",
+      "blank_index_l1": 3,
+      "blank_index_l2": 5,
       "choices_l1": [
-        "áno",
-        "tiež",
-        "pracuje"
+        "Chceš",
+        "Chce",
+        "Chceme"
       ],
       "choices_l2": [
-        "les",
-        "il",
-        "veux"
+        "veut",
+        "voulons",
+        "veulent"
       ]
     },
     {
@@ -2136,9 +2136,9 @@
       "l1": "Quiche je výborná. Chcem ešte.",
       "l2": "La quiche est délicieuse. J'en veux encore.",
       "choices_l1": [
-        "Kto je to?",
-        "Môj syn je študent. Býva v meste.",
-        "Moji rodičia bývajú na vidieku. Sú starí."
+        "Quiche je výborná. Nechcem viac.",
+        "Polievka je výborná. Chcem ešte.",
+        "Quiche je studená. Chcem ešte."
       ]
     },
     {

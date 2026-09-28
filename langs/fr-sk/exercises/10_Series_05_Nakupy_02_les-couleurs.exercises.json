@@ -1289,14 +1289,14 @@
       "l1": "červený sveter (mužský rod)",
       "l2": "un pull rouge",
       "choices_l1": [
-        "Je tam stôl.",
-        "chlieb je dobrý (mužský rod)",
-        "tarta, ovocný koláč"
+        "červená bunda (ženský rod)",
+        "červené topánky (množné číslo)",
+        "modrý sveter (mužský rod)"
       ],
       "choices_l2": [
-        "en ordre, bien, ça va",
-        "salé / salée",
-        "Je ne prends pas de vin."
+        "une veste rouge",
+        "des chaussures rouges",
+        "un pull bleu"
       ]
     },
     {
@@ -1305,14 +1305,14 @@
       "l1": "červená bunda (ženský rod)",
       "l2": "une veste rouge",
       "choices_l1": [
-        "V pondelok pracujem. (tento konkrétny pondelok)",
-        "Je jedna hodina.",
-        "je starý / je stará"
+        "červený sveter (mužský rod)",
+        "červené topánky (množné číslo)",
+        "čierna bunda (ženský rod)"
       ],
       "choices_l2": [
-        "l'an / l'année",
-        "Ce n'est pas bon.",
-        "au revoir (formel)"
+        "un pull rouge",
+        "des chaussures rouges",
+        "une veste noire"
       ]
     },
     {
@@ -1321,14 +1321,14 @@
       "l1": "červené topánky (množné číslo)",
       "l2": "des chaussures rouges",
       "choices_l1": [
-        "voda je dobrá (ženský rod)",
-        "kamarát / kamarátka",
-        "spím, spíš, spí"
+        "červený sveter (mužský rod)",
+        "červená bunda (ženský rod)",
+        "čierne topánky (množné číslo)"
       ],
       "choices_l2": [
-        "le retraité / la retraitée",
-        "le chocolat chaud",
-        "dans la chambre"
+        "un pull rouge",
+        "une veste rouge",
+        "des chaussures noires"
       ]
     },
     {
@@ -1337,14 +1337,14 @@
       "l1": "tento sveter (mužský rod)",
       "l2": "ce pull",
       "choices_l1": [
-        "obývačka (vo francúzštine mužský rod, v slovenčine ženský)",
-        "cider (jablkové víno)",
-        "Hľadám kľúč. → Hľadám ho."
+        "tento plášť do dažďa (mužský rod pred samohláskou)",
+        "táto bunda (ženský rod)",
+        "tieto topánky (množné číslo)"
       ],
       "choices_l2": [
-        "l'horloge",
-        "les chaussons",
-        "vouloir"
+        "cet imperméable",
+        "cette veste",
+        "ces chaussures"
       ]
     },
     {
@@ -1353,14 +1353,14 @@
       "l1": "tento plášť do dažďa (mužský rod pred samohláskou)",
       "l2": "cet imperméable",
       "choices_l1": [
-        "obývačka (vo francúzštine mužský rod, v slovenčine ženský)",
-        "vysmädnutý (silný výraz)",
-        "vyhladovaný (silný výraz)"
+        "tento sveter (mužský rod)",
+        "táto bunda (ženský rod)",
+        "tieto topánky (množné číslo)"
       ],
       "choices_l2": [
-        "nous cherchons",
-        "l'après-midi",
-        "encore"
+        "ce pull",
+        "cette veste",
+        "ces chaussures"
       ]
     },
     {
@@ -1369,14 +1369,14 @@
       "l1": "táto bunda (ženský rod)",
       "l2": "cette veste",
       "choices_l1": [
-        "upratujem, upratuješ, upratuje",
-        "spálňa (ženský rod)",
-        "Hľadám kľúče. → Hľadám ich."
+        "tento sveter (mužský rod)",
+        "tento plášť do dažďa (mužský rod pred samohláskou)",
+        "tieto topánky (množné číslo)"
       ],
       "choices_l2": [
-        "de rien",
-        "écouter",
-        "la maison"
+        "ce pull",
+        "cet imperméable",
+        "ces chaussures"
       ]
     },
     {
@@ -1385,14 +1385,14 @@
       "l1": "tieto topánky (množné číslo)",
       "l2": "ces chaussures",
       "choices_l1": [
-        "dôchodca / dôchodkyňa",
-        "V pondelok pracujem. (tento konkrétny pondelok)",
-        "Dám si víno."
+        "tento sveter (mužský rod)",
+        "tento plášť do dažďa (mužský rod pred samohláskou)",
+        "táto bunda (ženský rod)"
       ],
       "choices_l2": [
-        "l'épicerie",
-        "jamais",
-        "l'heure"
+        "ce pull",
+        "cet imperméable",
+        "cette veste"
       ]
     }
   ]
