@@ -168,14 +168,45 @@ def extract_sentences(content: list[dict[str, Any]]) -> list[dict[str, Any]]:
 # Corpus loading
 # ============================================================================
 
+def find_manual_exercises_path(path: Path, meta: dict[str, Any]) -> Path | None:
+    """Locate a hand-written {sheet}.exercises.json for the sheet at
+    `path`, checking every place the project puts one, in priority
+    order:
+
+    1. Next to the .md file itself (md_dir/{stem}.exercises.json) --
+       the original, still-supported convention.
+    2. In the lang dir's exercises/ persistence folder (see
+       docs/CI-Pipeline.md), named after the sheet's filename stem
+       (exercises/{stem}.exercises.json).
+    3. Same exercises/ folder, but named after the sheet's id instead
+       (exercises/{id}.exercises.json) -- covers exercise files saved
+       under their id rather than their source filename.
+
+    Returns the first match, or None if the sheet has no manual
+    exercises anywhere.
+    """
+    lang_dir = path.parent.parent
+    candidates = [
+        path.parent / f"{path.stem}.exercises.json",
+        lang_dir / "exercises" / f"{path.stem}.exercises.json",
+        lang_dir / "exercises" / f"{meta['id']}.exercises.json",
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    return None
+
+
 def load_corpus(md_dir: Path, lang_cfg: dict[str, Any]) -> list[dict[str, Any]]:
     """Parse every sheet in `md_dir` (filesystem order) into the raw
     material exercises are built from. Introduction sheets are
     excluded outright -- no exercises are generated for that category.
 
-    Also checks for an accompanying {id}.exercises.json file next to each
-    .md sheet. If present, it can override exercise generation (mode:
-    "replace") or supplement it (mode: "append", the default).
+    Also checks for a hand-written {sheet}.exercises.json for each
+    sheet, next to the .md file or in the lang dir's exercises/
+    persistence folder (see find_manual_exercises_path()). If present,
+    it can override exercise generation (mode: "replace") or
+    supplement it (mode: "append", the default).
     """
     records = []
     for path in sorted(md_dir.glob("*.md")):
@@ -183,11 +214,10 @@ def load_corpus(md_dir: Path, lang_cfg: dict[str, Any]) -> list[dict[str, Any]]:
         if meta["category"] == "introduction":
             continue
 
-        # Check for accompanying .exercises.json file
-        exercises_json_path = path.parent / f"{path.stem}.exercises.json"
+        exercises_json_path = find_manual_exercises_path(path, meta)
         manual_exercises = None
         manual_mode = "replace"
-        if exercises_json_path.exists():
+        if exercises_json_path is not None:
             try:
                 with exercises_json_path.open(encoding="utf-8") as f:
                     manual_data = json.load(f)

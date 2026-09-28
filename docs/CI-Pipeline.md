@@ -31,7 +31,7 @@ qu'attend `src/build.py` pour un "lang dir" (voir son docstring) :
 Slovingo-<code>/
 ├── md/            fiches SMD sources (le seul format à éditer à la main)
 ├── img/           images référencées par les fiches (optionnel)
-├── exercises/     exceptions d'exercices persistantes (si utilisé)
+├── exercises/     exceptions d'exercices persistantes (si utilisé -- voir plus bas)
 ├── lang.json      config de la langue (target_lang, native_lang, site...)
 ├── .gitignore     ignore dist/ et json/ (voir plus bas)
 └── .github/
@@ -46,6 +46,25 @@ problème concret : `build.py` ne régénère **pas** un fichier
 exceptions faites main). Un `json/` committé et périmé se ferait donc
 silencieusement garder tel quel au lieu d'être régénéré à partir des `.md`
 à jour.
+
+### Exercices manuels : où les mettre
+
+Pour une fiche `md/{stem}.md`, `smd2exercises.load_corpus()`
+(`find_manual_exercises_path()`) cherche un fichier d'exercices écrit à la
+main aux emplacements suivants, dans cet ordre, et s'arrête au premier
+trouvé :
+
+1. `md/{stem}.exercises.json` (à côté de la fiche elle-même) ;
+2. `exercises/{stem}.exercises.json` (même nom que la fiche, dans le
+   dossier de persistance) ;
+3. `exercises/{id}.exercises.json` (nommé d'après l'id de la fiche --
+   celui qu'on retrouve dans `data.json`/`exercises.json`, par ex.
+   `series-rodina-ma-famille` -- plutôt que d'après son nom de fichier).
+
+Le fichier trouvé peut soit remplacer entièrement les exercices générés
+(`"mode": "replace"`, le défaut), soit les compléter
+(`"mode": "append"`). Une fiche sans aucun de ces trois fichiers reçoit
+uniquement des exercices générés automatiquement.
 
 ## Le reusable workflow (dans ce repo)
 
