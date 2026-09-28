@@ -101,12 +101,12 @@ Eric et Ján se tutoient. Eric vouvoie Babka Zuzana.
 > bývate = habitez-vous
 
 ! 👦 Bývam v Lyone, v byte. A vy?
-> J'habite à Košice, dans un appartement. Et vous ?
+> J'habite à Lyon, dans un appartement. Et vous ?
 > Bývam = j'habite
 > v Lyone = à Lyon
-+ Les villes étrangères se déclinent aussi : Lyon → v Lyone, comme dom → v dome.
 > v byte = dans un appartement
 > A vy = et vous
++ Les villes étrangères se déclinent aussi : Lyon → v Lyone, comme dom → v dome.
 
 ! 👵 Bývam tu, v dome. Mám záhradu.
 > J'habite ici, dans une maison. J'ai un jardin.

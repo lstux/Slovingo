@@ -20,6 +20,9 @@ For every sheet with a manual exercises file:
   the text of the edited side is replaced, and its fill-blank /
   word-order data is re-derived from the new text when possible, so
   the hand-tuned distractors of the other side are kept;
+- exercises written the wrong way round (l1 and l2 swapped: l1 must
+  be the native language, l2 the target language) are turned back
+  the right way first, then checked like the others;
 - other manual exercises about a pair the sheet no longer teaches
   are dropped;
 - for every pair the sheet now teaches but that no kept manual
@@ -32,6 +35,14 @@ For every sheet with a manual exercises file:
 Pairs that were deliberately left without any exercise in a manual
 file are not touched: only pairs that are genuinely new to the file
 get generated exercises.
+
+Per-file control, with a top-level "sync" key in the exercises file:
+- "full" (default): everything above;
+- "no-add": fix and update, drop what can't be fixed, but never add
+  generated exercises (a file kept short on purpose);
+- "off": never touched, and never reported by build.py (free-form
+  exercises, e.g. a closing "thank you" page). Files in "append"
+  mode are never touched either: their exercises are extras.
 
 Dry run by default (prints what would change); pass --apply to write.
 Added exercises get automatic distractors -- worth a manual look
@@ -93,9 +104,52 @@ def _reblank(ex: dict[str, Any], side: str, new_text: str) -> bool:
     return True
 
 
+def swap_sides(ex: dict[str, Any]) -> dict[str, Any]:
+    """A copy of `ex` with every l1/l2 field swapped (l1 <-> l2,
+    choices_l1 <-> choices_l2, tokens_..., missing_..., blank_index_...)."""
+    new = {}
+    for key, value in ex.items():
+        if key in ("l1", "l2"):
+            new["l2" if key == "l1" else "l1"] = value
+        elif key.endswith("_l1"):
+            new[key[:-3] + "_l2"] = value
+        elif key.endswith("_l2"):
+            new[key[:-3] + "_l1"] = value
+        else:
+            new[key] = value
+    # Keep the generator's field order (id, type, l1, l2, ...) so the
+    # file stays readable.
+    order = ["id", "type", "l1", "l2", "missing_l1", "missing_l2", "blank_index_l1",
+             "blank_index_l2", "choices_l1", "choices_l2", "tokens_l1", "tokens_l2"]
+    ordered = {k: new[k] for k in order if k in new}
+    ordered.update({k: v for k, v in new.items() if k not in ordered})
+    return json.loads(json.dumps(ordered))
+
+
+def is_inverted(ex: dict[str, Any], known: set[tuple[str, str]]) -> bool:
+    """True when the exercise looks written the wrong way round: none of
+    its pairs is known as is, but at least one is known (or one side
+    is known) once l1 and l2 are swapped."""
+    pairs = sx.exercise_pairs(ex)
+    if any(p in known for p in pairs):
+        return False
+    l1s = {p[0] for p in known}
+    l2s = {p[1] for p in known}
+    return any((b, a) in known or b in l1s or a in l2s for a, b in pairs)
+
+
 def update_in_place(ex: dict[str, Any], known: set[tuple[str, str]]) -> dict[str, Any] | None:
     """A copy of stale exercise `ex` pointed at the current version of
-    its pair(s), or None when that can't be done safely."""
+    its pair(s), or None when that can't be done safely. Exercises
+    written the wrong way round are swapped back first."""
+    if is_inverted(ex, known):
+        if ex.get("type") == "listen":
+            # Its choices are one-sided (native side only): once swapped
+            # they would be in the wrong language. Not recoverable.
+            return None
+        ex = swap_sides(ex)
+        if all(p in known for p in sx.exercise_pairs(ex)):
+            return ex
     new = json.loads(json.dumps(ex))
     if ex.get("type") == "match":
         targets = [resolve_pair(p, known) for p in sx.exercise_pairs(ex)]
@@ -145,8 +199,8 @@ def sync_record(record: dict[str, Any], generated: list[dict[str, Any]]) -> tupl
             updated.append((ex, fixed))
 
     covered = {pair for ex in kept for pair in sx.exercise_pairs(ex)}
-    if not dropped:
-        return kept, [], [], updated
+    if not dropped or record.get("manual_sync") == "no-add":
+        return kept, dropped, [], updated
     new_pairs = sx.current_pairs(record) - covered
     dropped_match = any(ex.get("type") == "match" for ex in dropped)
 

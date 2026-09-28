@@ -397,26 +397,6 @@
       ]
     },
     {
-      "id": "blank-stret-vam-kamar-ta-v-kaviarni",
-      "type": "fill-blank",
-      "l1": "Je rencontre un ami au café.",
-      "l2": "Stretávam kamaráta v kaviarni.",
-      "missing_l1": "un",
-      "missing_l2": "v",
-      "blank_index_l1": 2,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "vois",
-        "une",
-        "film"
-      ],
-      "choices_l2": [
-        "pri",
-        "po",
-        "za"
-      ]
-    },
-    {
       "id": "blank-ideme-do-re-taur-cie",
       "type": "fill-blank",
       "l1": "Nous allons au restaurant.",
@@ -534,26 +514,6 @@
         "budeme",
         "budú",
         "ste"
-      ]
-    },
-    {
-      "id": "blank-stretnem-a-na-n-mest-o-piatej",
-      "type": "fill-blank",
-      "l1": "Je te retrouve sur la place à cinq heures.",
-      "l2": "Stretnem ťa na námestí o piatej.",
-      "missing_l1": "la",
-      "missing_l2": "na",
-      "blank_index_l1": 4,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "le",
-        "Les",
-        "film"
-      ],
-      "choices_l2": [
-        "pred",
-        "so",
-        "po"
       ]
     },
     {
@@ -705,22 +665,6 @@
       ]
     },
     {
-      "id": "listen-stret-vam-kamar-ta-v-kaviarni",
-      "type": "listen",
-      "l1": "Je rencontre un ami au café.",
-      "l2": "Stretávam kamaráta v kaviarni.",
-      "choices_l1": [
-        "Nous voulons visiter le théâtre.",
-        "Nous allons au café tous les jours.",
-        "Le concert est intéressant."
-      ],
-      "choices_l2": [
-        "Chceš ísť do kina?",
-        "Choďte rovno, kino je vedľa divadla.",
-        "Vidím kostol a múzeum."
-      ]
-    },
-    {
       "id": "listen-ideme-do-re-taur-cie",
       "type": "listen",
       "l1": "Nous allons au restaurant.",
@@ -814,22 +758,6 @@
         "Ideme do reštaurácie.",
         "Stretávam kamaráta v kaviarni.",
         "Koncert je zaujímavý."
-      ]
-    },
-    {
-      "id": "listen-stretnem-a-na-n-mest-o-piatej",
-      "type": "listen",
-      "l1": "Je te retrouve sur la place à cinq heures.",
-      "l2": "Stretnem ťa na námestí o piatej.",
-      "choices_l1": [
-        "Le concert est intéressant.",
-        "Je rencontre un ami au café.",
-        "Tu vois cette statue ?"
-      ],
-      "choices_l2": [
-        "Vidím kostol a múzeum.",
-        "Stretávam kamaráta v kaviarni.",
-        "Prechádzame sa po meste."
       ]
     },
     {
@@ -992,38 +920,6 @@
         "sa",
         "v",
         "parku.",
-        "Aký",
-        "je",
-        "program",
-        "dnes",
-        "večer?"
-      ]
-    },
-    {
-      "id": "order-stret-vam-kamar-ta-v-kaviarni",
-      "type": "order",
-      "l1": "Je rencontre un ami au café.",
-      "l2": "Stretávam kamaráta v kaviarni.",
-      "tokens_l1": [
-        "Je",
-        "rencontre",
-        "un",
-        "ami",
-        "au",
-        "café.",
-        "Quel",
-        "est",
-        "le",
-        "programme",
-        "ce",
-        "soir",
-        "?"
-      ],
-      "tokens_l2": [
-        "Stretávam",
-        "kamaráta",
-        "v",
-        "kaviarni.",
         "Aký",
         "je",
         "program",
@@ -1218,43 +1114,6 @@
       ]
     },
     {
-      "id": "order-stretnem-a-na-n-mest-o-piatej",
-      "type": "order",
-      "l1": "Je te retrouve sur la place à cinq heures.",
-      "l2": "Stretnem ťa na námestí o piatej.",
-      "tokens_l1": [
-        "Je",
-        "te",
-        "retrouve",
-        "sur",
-        "la",
-        "place",
-        "à",
-        "cinq",
-        "heures.",
-        "Quel",
-        "est",
-        "le",
-        "programme",
-        "ce",
-        "soir",
-        "?"
-      ],
-      "tokens_l2": [
-        "Stretnem",
-        "ťa",
-        "na",
-        "námestí",
-        "o",
-        "piatej.",
-        "Aký",
-        "je",
-        "program",
-        "dnes",
-        "večer?"
-      ]
-    },
-    {
       "id": "order-chceme-s-na-v-stavu",
       "type": "order",
       "l1": "Nous voulons aller à l'exposition.",
@@ -1411,19 +1270,143 @@
       ]
     },
     {
+      "id": "blank-stret-vam-sa-s-kamar-tom-v-kaviarni",
+      "type": "fill-blank",
+      "l1": "Je retrouve un ami au café.",
+      "l2": "Stretávam sa s kamarátom v kaviarni.",
+      "missing_l1": "un",
+      "missing_l2": "v",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "veux",
+        "dans",
+        "ça"
+      ],
+      "choices_l2": [
+        "na",
+        "koľko",
+        "ale"
+      ]
+    },
+    {
+      "id": "blank-stretneme-sa-na-n-mest-o-piatej",
+      "type": "fill-blank",
+      "l1": "On se retrouve sur la place à cinq heures.",
+      "l2": "Stretneme sa na námestí o piatej.",
+      "missing_l1": "la",
+      "missing_l2": "na",
+      "blank_index_l1": 4,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "est",
+        "j'ai",
+        "à"
+      ],
+      "choices_l2": [
+        "deti",
+        "chcem",
+        "koľko"
+      ]
+    },
+    {
+      "id": "listen-stret-vam-sa-s-kamar-tom-v-kaviarni",
+      "type": "listen",
+      "l1": "Je retrouve un ami au café.",
+      "l2": "Stretávam sa s kamarátom v kaviarni.",
+      "choices_l1": [
+        "Quelle est la date aujourd'hui ? Regarde le calendrier.",
+        "Le sac rose me plaît.",
+        "Maman est dans le salon."
+      ]
+    },
+    {
+      "id": "listen-stretneme-sa-na-n-mest-o-piatej",
+      "type": "listen",
+      "l1": "On se retrouve sur la place à cinq heures.",
+      "l2": "Stretneme sa na námestí o piatej.",
+      "choices_l1": [
+        "Nous avons quatre verres et quatre assiettes.",
+        "Non, merci. Je n'ai plus faim.",
+        "Le canapé est dans le salon."
+      ]
+    },
+    {
+      "id": "order-stret-vam-sa-s-kamar-tom-v-kaviarni",
+      "type": "order",
+      "l1": "Je retrouve un ami au café.",
+      "l2": "Stretávam sa s kamarátom v kaviarni.",
+      "tokens_l1": [
+        "Je",
+        "retrouve",
+        "un",
+        "ami",
+        "au",
+        "café.",
+        "Nous",
+        "voulons",
+        "visiter",
+        "le",
+        "théâtre."
+      ],
+      "tokens_l2": [
+        "Stretávam",
+        "sa",
+        "s",
+        "kamarátom",
+        "v",
+        "kaviarni.",
+        "Chceme",
+        "navštíviť",
+        "divadlo."
+      ]
+    },
+    {
+      "id": "order-stretneme-sa-na-n-mest-o-piatej",
+      "type": "order",
+      "l1": "On se retrouve sur la place à cinq heures.",
+      "l2": "Stretneme sa na námestí o piatej.",
+      "tokens_l1": [
+        "On",
+        "se",
+        "retrouve",
+        "sur",
+        "la",
+        "place",
+        "à",
+        "cinq",
+        "heures.",
+        "Le",
+        "film",
+        "était",
+        "ennuyeux."
+      ],
+      "tokens_l2": [
+        "Stretneme",
+        "sa",
+        "na",
+        "námestí",
+        "o",
+        "piatej.",
+        "Film",
+        "bol",
+        "nudný."
+      ]
+    },
+    {
       "id": "match-vid-m-kostol-a-m-zeum-sentences",
       "type": "match",
       "l1": [
         "Je vois l'église et le musée.",
         "Nous voulons visiter le théâtre.",
         "Je me promène dans le parc.",
-        "Je rencontre un ami au café."
+        "Je retrouve un ami au café."
       ],
       "l2": [
         "Vidím kostol a múzeum.",
         "Chceme navštíviť divadlo.",
         "Prechádzam sa v parku.",
-        "Stretávam kamaráta v kaviarni."
+        "Stretávam sa s kamarátom v kaviarni."
       ]
     }
   ]

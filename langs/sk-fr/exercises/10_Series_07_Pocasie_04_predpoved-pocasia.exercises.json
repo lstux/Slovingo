@@ -464,7 +464,7 @@
       "id": "blank-mus-me-meni-pl-n-bude-b-rka",
       "type": "fill-blank",
       "l1": "Nous devons changer de plan, il va y avoir un orage.",
-      "l2": "Musíme meniť plán, bude búrka.",
+      "l2": "Musíme zmeniť plán, bude búrka.",
       "missing_l1": "de",
       "missing_l2": "bude",
       "blank_index_l1": 3,
@@ -756,7 +756,7 @@
       "id": "listen-mus-me-meni-pl-n-bude-b-rka",
       "type": "listen",
       "l1": "Nous devons changer de plan, il va y avoir un orage.",
-      "l2": "Musíme meniť plán, bude búrka.",
+      "l2": "Musíme zmeniť plán, bude búrka.",
       "choices_l1": [
         "Le temps change chaque jour.",
         "Quelles sont les prévisions pour demain ?",
@@ -1128,7 +1128,7 @@
       "id": "order-mus-me-meni-pl-n-bude-b-rka",
       "type": "order",
       "l1": "Nous devons changer de plan, il va y avoir un orage.",
-      "l2": "Musíme meniť plán, bude búrka.",
+      "l2": "Musíme zmeniť plán, bude búrka.",
       "tokens_l1": [
         "Nous",
         "devons",
@@ -1154,7 +1154,7 @@
       ],
       "tokens_l2": [
         "Musíme",
-        "meniť",
+        "zmeniť",
         "plán,",
         "bude",
         "búrka.",

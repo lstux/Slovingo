@@ -1,26 +1,6 @@
 {
   "exercises": [
     {
-      "id": "blank-marek-som-straten",
-      "type": "fill-blank",
-      "l1": "Marek ! Je suis perdu.",
-      "l2": "Marek! Som stratený.",
-      "missing_l1": "Je",
-      "missing_l2": "Som",
-      "blank_index_l1": 2,
-      "blank_index_l2": 1,
-      "choices_l1": [
-        "Ils",
-        "Tu",
-        "Nous"
-      ],
-      "choices_l2": [
-        "sú",
-        "ste",
-        "budú"
-      ]
-    },
-    {
       "id": "blank-h-ad-m-m-zeum-vyst-pil-som-na-zlej-zast-vke",
       "type": "fill-blank",
       "l1": "Je cherche le musée. Je suis descendu au mauvais arrêt.",
@@ -83,7 +63,7 @@
     {
       "id": "blank-uvid-kostol-m-zeum-je-za-rohom-ved-a-kostola",
       "type": "fill-blank",
-      "l1": "Tu verras une église. Le musée est après le coin, à côté de l'église.",
+      "l1": "Tu verras une église. Le musée est au coin, à côté de l'église.",
       "l2": "Uvidíš kostol. Múzeum je za rohom, vedľa kostola.",
       "missing_l1": "Le",
       "missing_l2": "je",
@@ -241,26 +221,6 @@
       ]
     },
     {
-      "id": "blank-nem-za-o-dovidenia",
-      "type": "fill-blank",
-      "l1": "De rien. À bientôt !",
-      "l2": "Nemáš za čo. Dovidenia!",
-      "missing_l1": "À",
-      "missing_l2": "čo",
-      "blank_index_l1": 2,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "loin",
-        "sur",
-        "avec"
-      ],
-      "choices_l2": [
-        "zlej",
-        "Aha",
-        "len"
-      ]
-    },
-    {
       "id": "blank-cho-rovno-potom-vpravo-pri-banke",
       "type": "fill-blank",
       "l1": "Va tout droit, puis à droite près de la banque.",
@@ -344,7 +304,7 @@
       "id": "listen-marek-som-straten",
       "type": "listen",
       "l1": "Marek ! Je suis perdu.",
-      "l2": "Marek! Som stratený.",
+      "l2": "Marek! Zablúdil som.",
       "choices_l1": [
         "On se retrouve là-bas plus tard ?",
         "J'irai à pied. Je veux voir la ville.",
@@ -423,7 +383,7 @@
     {
       "id": "listen-uvid-kostol-m-zeum-je-za-rohom-ved-a-kostola",
       "type": "listen",
-      "l1": "Tu verras une église. Le musée est après le coin, à côté de l'église.",
+      "l1": "Tu verras une église. Le musée est au coin, à côté de l'église.",
       "l2": "Uvidíš kostol. Múzeum je za rohom, vedľa kostola.",
       "choices_l1": [
         "Non, seulement dix minutes. Ou prends le tram.",
@@ -549,22 +509,6 @@
       ]
     },
     {
-      "id": "listen-nem-za-o-dovidenia",
-      "type": "listen",
-      "l1": "De rien. À bientôt !",
-      "l2": "Nemáš za čo. Dovidenia!",
-      "choices_l1": [
-        "C'est loin à pied ?",
-        "D'accord. Merci pour l'aide !",
-        "Marek ! Je suis perdu."
-      ],
-      "choices_l2": [
-        "Pôjdem pešo. Chcem vidieť mesto.",
-        "Uvidíš kostol. Múzeum je za rohom, vedľa kostola.",
-        "Je to ďaleko pešo?"
-      ]
-    },
-    {
       "id": "listen-cho-rovno-potom-vpravo-pri-banke",
       "type": "listen",
       "l1": "Va tout droit, puis à droite près de la banque.",
@@ -632,7 +576,7 @@
       "id": "order-marek-som-straten",
       "type": "order",
       "l1": "Marek ! Je suis perdu.",
-      "l2": "Marek! Som stratený.",
+      "l2": "Marek! Zablúdil som.",
       "tokens_l1": [
         "Marek",
         "!",
@@ -649,8 +593,8 @@
       ],
       "tokens_l2": [
         "Marek!",
-        "Som",
-        "stratený.",
+        "Zablúdil",
+        "som.",
         "Stretneme",
         "sa",
         "tam",
@@ -776,7 +720,7 @@
     {
       "id": "order-uvid-kostol-m-zeum-je-za-rohom-ved-a-kostola",
       "type": "order",
-      "l1": "Tu verras une église. Le musée est après le coin, à côté de l'église.",
+      "l1": "Tu verras une église. Le musée est au coin, à côté de l'église.",
       "l2": "Uvidíš kostol. Múzeum je za rohom, vedľa kostola.",
       "tokens_l1": [
         "Tu",
@@ -786,8 +730,7 @@
         "Le",
         "musée",
         "est",
-        "après",
-        "le",
+        "au",
         "coin,",
         "à",
         "côté",
@@ -1080,34 +1023,6 @@
       ]
     },
     {
-      "id": "order-nem-za-o-dovidenia",
-      "type": "order",
-      "l1": "De rien. À bientôt !",
-      "l2": "Nemáš za čo. Dovidenia!",
-      "tokens_l1": [
-        "De",
-        "rien.",
-        "À",
-        "bientôt",
-        "!",
-        "D'accord.",
-        "Merci",
-        "pour",
-        "l'aide",
-        "!"
-      ],
-      "tokens_l2": [
-        "Nemáš",
-        "za",
-        "čo.",
-        "Dovidenia!",
-        "Dobre.",
-        "Ďakujem",
-        "za",
-        "pomoc!"
-      ]
-    },
-    {
       "id": "order-cho-rovno-potom-vpravo-pri-banke",
       "type": "order",
       "l1": "Va tout droit, puis à droite près de la banque.",
@@ -1285,10 +1200,72 @@
         "Ah. Va tout droit puis à gauche."
       ],
       "l2": [
-        "Marek! Som stratený.",
+        "Marek! Zablúdil som.",
         "Čo hľadáš?",
         "Hľadám múzeum. Vystúpil som na zlej zastávke.",
         "Aha. Choď rovno a potom vľavo."
+      ]
+    },
+    {
+      "id": "blank-nem-za-o-zatia-ahoj",
+      "type": "fill-blank",
+      "l1": "De rien. À tout à l'heure !",
+      "l2": "Nemáš za čo. Zatiaľ ahoj!",
+      "missing_l1": "À",
+      "missing_l2": "čo",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "de",
+        "mais",
+        "au"
+      ],
+      "choices_l2": [
+        "dobre",
+        "ešte",
+        "deň"
+      ]
+    },
+    {
+      "id": "listen-nem-za-o-zatia-ahoj",
+      "type": "listen",
+      "l1": "De rien. À tout à l'heure !",
+      "l2": "Nemáš za čo. Zatiaľ ahoj!",
+      "choices_l1": [
+        "Oui, taille XL. Tenez.",
+        "J'arrive vers deux heures. Attends, s'il te plaît.",
+        "Je veux un ticket."
+      ]
+    },
+    {
+      "id": "order-nem-za-o-zatia-ahoj",
+      "type": "order",
+      "l1": "De rien. À tout à l'heure !",
+      "l2": "Nemáš za čo. Zatiaľ ahoj!",
+      "tokens_l1": [
+        "De",
+        "rien.",
+        "À",
+        "tout",
+        "à",
+        "l'heure",
+        "!",
+        "C'est",
+        "loin",
+        "à",
+        "pied",
+        "?"
+      ],
+      "tokens_l2": [
+        "Nemáš",
+        "za",
+        "čo.",
+        "Zatiaľ",
+        "ahoj!",
+        "Je",
+        "to",
+        "ďaleko",
+        "pešo?"
       ]
     }
   ]

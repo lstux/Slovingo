@@ -183,8 +183,8 @@
     {
       "id": "blank-b-vam-v-ko-iciach-v-byte-a-vy",
       "type": "fill-blank",
-      "l1": "J'habite à Košice, dans un appartement. Et vous ?",
-      "l2": "Bývam v Košiciach, v byte. A vy?",
+      "l1": "J'habite à Lyon, dans un appartement. Et vous ?",
+      "l2": "Bývam v Lyone, v byte. A vy?",
       "missing_l1": "Et",
       "missing_l2": "v",
       "blank_index_l1": 6,
@@ -539,8 +539,8 @@
     {
       "id": "listen-b-vam-v-ko-iciach-v-byte-a-vy",
       "type": "listen",
-      "l1": "J'habite à Košice, dans un appartement. Et vous ?",
-      "l2": "Bývam v Košiciach, v byte. A vy?",
+      "l1": "J'habite à Lyon, dans un appartement. Et vous ?",
+      "l2": "Bývam v Lyone, v byte. A vy?",
       "choices_l1": [
         "C'est ma grand-mère. Elle habite ici, au village.",
         "Katka ! Va dans le jardin.",
@@ -1003,12 +1003,12 @@
     {
       "id": "order-b-vam-v-ko-iciach-v-byte-a-vy",
       "type": "order",
-      "l1": "J'habite à Košice, dans un appartement. Et vous ?",
-      "l2": "Bývam v Košiciach, v byte. A vy?",
+      "l1": "J'habite à Lyon, dans un appartement. Et vous ?",
+      "l2": "Bývam v Lyone, v byte. A vy?",
       "tokens_l1": [
         "J'habite",
         "à",
-        "Košice,",
+        "Lyon,",
         "dans",
         "un",
         "appartement.",
@@ -1027,7 +1027,7 @@
       "tokens_l2": [
         "Bývam",
         "v",
-        "Košiciach,",
+        "Lyone,",
         "v",
         "byte.",
         "A",

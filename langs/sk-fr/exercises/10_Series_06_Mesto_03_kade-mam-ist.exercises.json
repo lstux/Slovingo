@@ -83,7 +83,7 @@
     {
       "id": "qcm-za-rohom",
       "type": "qcm",
-      "l1": "après le coin",
+      "l1": "au coin",
       "l2": "za rohom",
       "choices_l1": [
         "C'est devant l'église.",
@@ -179,7 +179,7 @@
     {
       "id": "qcm-je-to-za-rohom",
       "type": "qcm",
-      "l1": "C'est après le coin.",
+      "l1": "C'est au coin.",
       "l2": "Je to za rohom.",
       "choices_l1": [
         "Allez tout droit !",
@@ -393,26 +393,6 @@
       ]
     },
     {
-      "id": "blank-je-to-za-rohom",
-      "type": "fill-blank",
-      "l1": "C'est après le coin.",
-      "l2": "Je to za rohom.",
-      "missing_l1": "le",
-      "missing_l2": "to",
-      "blank_index_l1": 2,
-      "blank_index_l2": 1,
-      "choices_l1": [
-        "Les",
-        "feux",
-        "pour"
-      ],
-      "choices_l2": [
-        "Ja",
-        "My",
-        "vy"
-      ]
-    },
-    {
       "id": "blank-cho-vpravo-nie-v-avo",
       "type": "fill-blank",
       "l1": "Va à droite, pas à gauche !",
@@ -553,26 +533,6 @@
       ]
     },
     {
-      "id": "blank-banka-je-ved-a-m-zea-za-rohom",
-      "type": "fill-blank",
-      "l1": "La banque est à côté du musée, après le coin.",
-      "l2": "Banka je vedľa múzea, za rohom.",
-      "missing_l1": "le",
-      "missing_l2": "je",
-      "blank_index_l1": 8,
-      "blank_index_l2": 1,
-      "choices_l1": [
-        "feux",
-        "pour",
-        "puis"
-      ],
-      "choices_l2": [
-        "si",
-        "budeme",
-        "budú"
-      ]
-    },
-    {
       "id": "blank-na-kri-ovatke-cho-te-vpravo",
       "type": "fill-blank",
       "l1": "Au carrefour, allez à droite.",
@@ -707,7 +667,7 @@
     {
       "id": "listen-je-to-za-rohom",
       "type": "listen",
-      "l1": "C'est après le coin.",
+      "l1": "C'est au coin.",
       "l2": "Je to za rohom.",
       "choices_l1": [
         "Excusez-moi, où est la poste ?",
@@ -835,7 +795,7 @@
     {
       "id": "listen-banka-je-ved-a-m-zea-za-rohom",
       "type": "listen",
-      "l1": "La banque est à côté du musée, après le coin.",
+      "l1": "La banque est à côté du musée, au coin.",
       "l2": "Banka je vedľa múzea, za rohom.",
       "choices_l1": [
         "Les feux sont rouges.",
@@ -993,12 +953,11 @@
     {
       "id": "order-je-to-za-rohom",
       "type": "order",
-      "l1": "C'est après le coin.",
+      "l1": "C'est au coin.",
       "l2": "Je to za rohom.",
       "tokens_l1": [
         "C'est",
-        "après",
-        "le",
+        "au",
         "coin.",
         "Merci",
         "pour",
@@ -1231,7 +1190,7 @@
     {
       "id": "order-banka-je-ved-a-m-zea-za-rohom",
       "type": "order",
-      "l1": "La banque est à côté du musée, après le coin.",
+      "l1": "La banque est à côté du musée, au coin.",
       "l2": "Banka je vedľa múzea, za rohom.",
       "tokens_l1": [
         "La",
@@ -1241,8 +1200,7 @@
         "côté",
         "du",
         "musée,",
-        "après",
-        "le",
+        "au",
         "coin.",
         "Le",
         "musée",
@@ -1420,7 +1378,7 @@
       "l1": [
         "Excusez-moi, où est la poste ?",
         "Allez tout droit puis à gauche.",
-        "C'est après le coin.",
+        "C'est au coin.",
         "Va à droite, pas à gauche !"
       ],
       "l2": [

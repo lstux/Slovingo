@@ -721,22 +721,6 @@
       ]
     },
     {
-      "id": "qcm-syrov-n-tierka",
-      "type": "qcm",
-      "l1": "la tartinade au fromage",
-      "l2": "syrová nátierka",
-      "choices_l1": [
-        "l'agneau (petit, pascal)",
-        "le vendredi saint",
-        "le dimanche de Pâques"
-      ],
-      "choices_l2": [
-        "vosk",
-        "Veľkonočná nedeľa",
-        "stužka"
-      ]
-    },
-    {
       "id": "qcm-po-ehna",
       "type": "qcm",
       "l1": "bénir",
@@ -1040,7 +1024,7 @@
       "id": "blank-na-stole-boli-bar-nok-unka-chren-a-syrov-n-tierka",
       "type": "fill-blank",
       "l1": "Sur la table il y avait de l'agneau, du jambon, du raifort et de la tartinade au fromage.",
-      "l2": "Na stole boli baránok, šunka, chren a syrová nátierka.",
+      "l2": "Na stole boli baránok, šunka, chren a hrudka.",
       "missing_l1": "la",
       "missing_l2": "a",
       "blank_index_l1": 1,
@@ -1292,7 +1276,7 @@
       "id": "listen-na-stole-boli-bar-nok-unka-chren-a-syrov-n-tierka",
       "type": "listen",
       "l1": "Sur la table il y avait de l'agneau, du jambon, du raifort et de la tartinade au fromage.",
-      "l2": "Na stole boli baránok, šunka, chren a syrová nátierka.",
+      "l2": "Na stole boli baránok, šunka, chren a hrudka.",
       "choices_l1": [
         "Cette coutume change, mais la tradition reste dans la famille.",
         "Les garçons sont venus avec le fouet et du parfum, pas avec de l'eau.",
@@ -1772,7 +1756,7 @@
       "id": "order-na-stole-boli-bar-nok-unka-chren-a-syrov-n-tierka",
       "type": "order",
       "l1": "Sur la table il y avait de l'agneau, du jambon, du raifort et de la tartinade au fromage.",
-      "l2": "Na stole boli baránok, šunka, chren a syrová nátierka.",
+      "l2": "Na stole boli baránok, šunka, chren a hrudka.",
       "tokens_l1": [
         "Sur",
         "la",
@@ -1810,8 +1794,7 @@
         "šunka,",
         "chren",
         "a",
-        "syrová",
-        "nátierka.",
+        "hrudka.",
         "Táto",
         "tradícia",
         "je",
@@ -2143,6 +2126,22 @@
         "Na Zelený štvrtok sme upratovali celý dom.",
         "Kňaz požehnal košík so šunkou, chlebom a vajíčkami.",
         "Na Veľký piatok sme sa postili a nejedli sme mäso."
+      ]
+    },
+    {
+      "id": "qcm-hrudka",
+      "type": "qcm",
+      "l1": "le « fromage » pascal aux œufs",
+      "l2": "hrudka",
+      "choices_l1": [
+        "Nous prenons un gâteau.",
+        "froid → plus froid",
+        "Tu y vas à pied (en général) ?"
+      ],
+      "choices_l2": [
+        "pôst",
+        "tiež",
+        "v izbe"
       ]
     }
   ]

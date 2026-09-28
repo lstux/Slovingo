@@ -217,12 +217,14 @@ def load_corpus(md_dir: Path, lang_cfg: dict[str, Any]) -> list[dict[str, Any]]:
         exercises_json_path = find_manual_exercises_path(path, meta)
         manual_exercises = None
         manual_mode = "replace"
+        manual_sync = "full"
         if exercises_json_path is not None:
             try:
                 with exercises_json_path.open(encoding="utf-8") as f:
                     manual_data = json.load(f)
                     manual_exercises = manual_data.get("exercises", [])
                     manual_mode = manual_data.get("mode", "replace")
+                    manual_sync = manual_data.get("sync", "full")
             except (json.JSONDecodeError, OSError) as e:
                 print(f"Warning: Could not load {exercises_json_path}: {e}", file=sys.stderr)
 
@@ -236,6 +238,7 @@ def load_corpus(md_dir: Path, lang_cfg: dict[str, Any]) -> list[dict[str, Any]]:
             "manual_exercises": manual_exercises,
             "manual_mode": manual_mode if manual_exercises else "replace",
             "manual_path": str(exercises_json_path) if exercises_json_path is not None else None,
+            "manual_sync": manual_sync,
         })
     return records
 
@@ -266,10 +269,15 @@ def find_stale_manual_exercises(record: dict[str, Any]) -> list[dict[str, Any]]:
     or vocabulary row was edited or removed after the exercises file
     was written). Such exercises would otherwise keep showing the old
     text forever, since manual files are never regenerated. See
-    sync_exercises.py to update them. Sheets that teach no pair at all
-    are skipped (their manual exercises are free-form by design)."""
+    sync_exercises.py to update them.
+
+    Not checked at all (free-form by design):
+    - files in "append" mode: their exercises are extras on top of the
+      generated ones, not meant to mirror the sheet;
+    - files with "sync": "off";
+    - sheets that teach no pair at all."""
     manual = record.get("manual_exercises") or []
-    if not manual:
+    if not manual or record.get("manual_mode") == "append" or record.get("manual_sync") == "off":
         return []
     known = current_pairs(record)
     if not known:
