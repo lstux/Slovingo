@@ -126,13 +126,18 @@ def dedupe_pairs(pairs: Iterable[tuple[str, str]]) -> list[tuple[str, str]]:
 # Extracting exercise raw material from parsed sheet content
 # ============================================================================
 
-def extract_vocab_pairs(content: list[dict[str, Any]]) -> list[tuple[str, str]]:
-    """Return (l1, l2) pairs from every 2-column translate-table in
-    `content`. A table without a detected speakable_column, or with
-    more than 2 columns, is not vocabulary in the l1/l2 sense and is
-    skipped (e.g. the "Element/Info" table in Introduction sheets).
-    """
-    pairs = []
+def extract_vocab_tables(content: list[dict[str, Any]]) -> list[list[tuple[str, str]]]:
+    """Return every 2-column translate-table in `content` as its own
+    list of (l1, l2) pairs, table membership preserved. A table
+    without a detected speakable_column, or with more than 2 columns,
+    is not vocabulary in the l1/l2 sense and is skipped (e.g. the
+    "Element/Info" table in Introduction sheets).
+
+    A sheet's tables are usually thematically grouped already (colours
+    together, rooms together, days together...), so "another pair from
+    the same table" is a cheap, generic stand-in for "same semantic
+    category" -- no tagging needed. See pick_shape_matched_distractors()."""
+    tables = []
     for block in content:
         if block["type"] != "table" or block.get("speakable_column") is None:
             continue
@@ -140,12 +145,22 @@ def extract_vocab_pairs(content: list[dict[str, Any]]) -> list[tuple[str, str]]:
             continue
         l2_col = block["speakable_column"]
         l1_col = 1 - l2_col
+        pairs = []
         for row in block["rows"]:
             l1 = strip_markup(row[l1_col]).strip()
             l2 = strip_markup(row[l2_col]).strip()
             if l1 and l2:
                 pairs.append((l1, l2))
-    return pairs
+        if pairs:
+            tables.append(pairs)
+    return tables
+
+
+def extract_vocab_pairs(content: list[dict[str, Any]]) -> list[tuple[str, str]]:
+    """Return (l1, l2) pairs from every 2-column translate-table in
+    `content`, table membership flattened away. See extract_vocab_tables()
+    to keep it."""
+    return [pair for table in extract_vocab_tables(content) for pair in table]
 
 
 def extract_sentences(content: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -230,10 +245,12 @@ def load_corpus(md_dir: Path, lang_cfg: dict[str, Any]) -> list[dict[str, Any]]:
 
         md_text = path.read_text(encoding="utf-8")
         parsed = parse_sheet(md_text, lang_cfg)
+        vocab_tables = extract_vocab_tables(parsed["content"])
         records.append({
             "id": meta["id"],
             "category": meta["category"],
-            "vocab_pairs": extract_vocab_pairs(parsed["content"]),
+            "vocab_pairs": [pair for table in vocab_tables for pair in table],
+            "vocab_tables": vocab_tables,
             "sentences": extract_sentences(parsed["content"]),
             "manual_exercises": manual_exercises,
             "manual_mode": manual_mode if manual_exercises else "replace",
@@ -293,32 +310,76 @@ def find_stale_manual_exercises(record: dict[str, Any]) -> list[dict[str, Any]]:
 # ============================================================================
 
 def pick_shape_matched_distractors(
-    answer: str, primary_pool: list[str], fallback_pool: list[str], n: int
+    answer: str, primary_pool: list[str], fallback_pool: list[str], n: int,
+    category_pool: list[str] | None = None,
 ) -> list[str] | None:
-    """Pick n distractors of the same shape (word/phrase) as `answer`.
+    """Pick n distractors of the same shape (word/phrase) as `answer`,
+    drawn from pools tried in priority order and topped up from the
+    next one when a pool is too thin, rather than failing outright --
+    mirrors v1's "corpus still small" fallback:
 
-    Prefers `primary_pool` (e.g. already-seen vocabulary for a series
-    sheet); tops up from `fallback_pool` (the whole corpus) when the
-    primary pool is too thin, rather than failing outright -- mirrors
-    v1's "corpus still small" fallback. Returns None if there still
-    aren't enough candidates even after falling back.
+    1. `category_pool`, when given -- other items from the very same
+       vocabulary table as the answer (see extract_vocab_tables()). A
+       sheet's tables are usually already grouped by theme (colours,
+       rooms, days...), so this is a cheap stand-in for "same semantic
+       category" without any tagging;
+    2. `primary_pool` -- e.g. already-seen vocabulary for a series sheet;
+    3. `fallback_pool` -- the whole corpus.
+
+    Returns None if there still aren't enough candidates after all
+    three pools.
     """
     shape = word_shape(answer)
     answer_l = answer.lower()
 
-    candidates = dedupe_keep_order(
-        w for w in primary_pool if w.lower() != answer_l and word_shape(w) == shape
-    )
-    if len(candidates) < n:
+    candidates: list[str] = []
+    seen = {answer_l}
+    for pool in (category_pool or []), primary_pool, fallback_pool:
+        if len(candidates) >= n:
+            break
         extra = dedupe_keep_order(
-            w for w in fallback_pool
-            if w.lower() != answer_l and word_shape(w) == shape and w.lower() not in {c.lower() for c in candidates}
+            w for w in pool if w.lower() not in seen and word_shape(w) == shape
         )
-        candidates = candidates + extra
+        candidates += extra
+        seen |= {w.lower() for w in extra}
 
     if len(candidates) < n:
         return None
     return random.sample(candidates, n)
+
+
+def pick_length_matched_distractors(
+    answer: str, pools: list[list[str]], n: int, slack: int = 2
+) -> list[str] | None:
+    """Pick n distractors close in length to `answer` (a proxy for "same
+    structure, only 1-2 words differ" -- a listen distractor should force
+    listening closely, not stand out by being obviously shorter/longer).
+
+    `pools` are tried in priority order (e.g. this sheet's other
+    sentences, then already-seen ones, then the whole corpus), each
+    topping up the candidate pool when the previous one is too thin.
+    Among all gathered candidates, the ones within `slack` tokens of
+    the answer's length are strongly preferred; only if that isn't
+    enough are farther-off candidates used to fill the rest.
+    """
+    answer_l = answer.lower()
+    answer_len = len(tokenize(answer))
+
+    candidates: list[str] = []
+    seen = {answer_l}
+    for pool in pools:
+        extra = dedupe_keep_order(w for w in pool if w.lower() not in seen)
+        candidates += extra
+        seen |= {w.lower() for w in extra}
+
+    if len(candidates) < n:
+        return None
+
+    close = [c for c in candidates if abs(len(tokenize(c)) - answer_len) <= slack]
+    far = [c for c in candidates if c not in close]
+    if len(close) >= n:
+        return random.sample(close, n)
+    return close + random.sample(far, n - len(close))
 
 
 def build_word_frequency(texts: Iterable[str]) -> Counter:
@@ -359,18 +420,25 @@ def choose_blank_index(tokens: list[str], selection_freq: Counter) -> int:
 
 
 def pick_frequency_distractors(
-    answer: str, primary_freq: Counter, global_freq: Counter, n: int
+    answer: str, primary_freq: Counter, global_freq: Counter, n: int,
+    local_freq: Counter | None = None,
 ) -> list[str] | None:
     """Pick n plausible fill-blank distractors: frequent words (likely
-    grammatical, so a fair trap) from `primary_freq`, topped up from
-    `global_freq` when too few, then from any word in the corpus as a
-    last resort. Returns None if still short after all fallbacks.
+    grammatical, so a fair trap), tried from `local_freq` (this sheet's
+    own sentences, when given -- its grammatical words are the most
+    topical trap), then `primary_freq`, topped up from `global_freq`
+    when too few, then from any word in the corpus as a last resort.
+    Returns None if still short after all fallbacks.
     """
     answer_l = answer.lower()
 
     candidates = dedupe_keep_order(
-        w for w, _ in primary_freq.most_common(FREQUENT_WORDS_CONSIDERED) if w != answer_l
+        w for w, _ in (local_freq or Counter()).most_common(FREQUENT_WORDS_CONSIDERED) if w != answer_l
     )
+    if len(candidates) < n:
+        candidates = dedupe_keep_order(
+            candidates + [w for w, _ in primary_freq.most_common(FREQUENT_WORDS_CONSIDERED) if w != answer_l]
+        )
     if len(candidates) < n:
         candidates = dedupe_keep_order(
             candidates + [w for w, _ in global_freq.most_common(FREQUENT_WORDS_CONSIDERED) if w != answer_l]
@@ -402,17 +470,28 @@ def generate_qcm(
 
     primary = dedupe_pairs(primary_pairs)
     glob = dedupe_pairs(global_pairs)
+    # Which table (if any) each pair of this sheet belongs to, so its
+    # tablemates can be tried first as distractors -- see
+    # extract_vocab_tables() and pick_shape_matched_distractors().
+    table_of: dict[tuple[str, str], list[tuple[str, str]]] = {}
+    for table in sheet.get("vocab_tables", []):
+        deduped = dedupe_pairs(table)
+        for pair in deduped:
+            table_of[pair] = deduped
 
     exercises = []
     for l1, l2 in local_pairs:
+        table = table_of.get((l1, l2), [])
         choices_l1 = pick_shape_matched_distractors(
             l1,
+            category_pool=[p_l1 for p_l1, p_l2 in table if p_l2.lower() != l2.lower()],
             primary_pool=[p_l1 for p_l1, p_l2 in primary if p_l2.lower() != l2.lower()],
             fallback_pool=[p_l1 for p_l1, p_l2 in glob if p_l2.lower() != l2.lower()],
             n=QCM_CHOICES - 1,
         )
         choices_l2 = pick_shape_matched_distractors(
             l2,
+            category_pool=[p_l2 for p_l1, p_l2 in table if p_l1.lower() != l1.lower()],
             primary_pool=[p_l2 for p_l1, p_l2 in primary if p_l1.lower() != l1.lower()],
             fallback_pool=[p_l2 for p_l1, p_l2 in glob if p_l1.lower() != l1.lower()],
             n=QCM_CHOICES - 1,
@@ -444,11 +523,13 @@ def generate_fill_blank(
     l2_primary_freq = build_word_frequency(s["l2"] for s in primary_sentences)
     l1_global_freq = l1_selection_freq
     l2_global_freq = l2_selection_freq
+    l1_local_freq = build_word_frequency(s["l1"] for s in sheet["sentences"])
+    l2_local_freq = build_word_frequency(s["l2"] for s in sheet["sentences"])
 
     exercises = []
     for s in sheet["sentences"]:
-        l1_blank = _build_blank(s["l1"], l1_selection_freq, l1_primary_freq, l1_global_freq)
-        l2_blank = _build_blank(s["l2"], l2_selection_freq, l2_primary_freq, l2_global_freq)
+        l1_blank = _build_blank(s["l1"], l1_selection_freq, l1_primary_freq, l1_global_freq, l1_local_freq)
+        l2_blank = _build_blank(s["l2"], l2_selection_freq, l2_primary_freq, l2_global_freq, l2_local_freq)
         if l1_blank is None or l2_blank is None:
             continue
 
@@ -468,7 +549,8 @@ def generate_fill_blank(
 
 
 def _build_blank(
-    text: str, selection_freq: Counter, primary_freq: Counter, global_freq: Counter
+    text: str, selection_freq: Counter, primary_freq: Counter, global_freq: Counter,
+    local_freq: Counter | None = None,
 ) -> dict[str, Any] | None:
     tokens = tokenize(text)
     if len(tokens) < MIN_TOKENS_FOR_BLANK:
@@ -477,7 +559,7 @@ def _build_blank(
     missing = strip_punct(tokens[idx])
     if not missing:
         return None
-    choices = pick_frequency_distractors(missing, primary_freq, global_freq, FILL_BLANK_CHOICES)
+    choices = pick_frequency_distractors(missing, primary_freq, global_freq, FILL_BLANK_CHOICES, local_freq)
     if choices is None:
         return None
     return {"blank_index": idx, "missing": missing, "choices": choices}
@@ -493,10 +575,14 @@ def generate_listen(
     exercises = []
     for s in sheet["sentences"]:
         answer_l1 = s["l1"]
-        choices_l1 = pick_shape_matched_distractors(
+        same_sheet = [o["l1"] for o in sheet["sentences"] if o["l1"].lower() != answer_l1.lower()]
+        choices_l1 = pick_length_matched_distractors(
             answer_l1,
-            primary_pool=[p["l1"] for p in primary_sentences if p["l1"].lower() != answer_l1.lower()],
-            fallback_pool=[p["l1"] for p in global_sentences if p["l1"].lower() != answer_l1.lower()],
+            pools=[
+                same_sheet,
+                [p["l1"] for p in primary_sentences if p["l1"].lower() != answer_l1.lower()],
+                [p["l1"] for p in global_sentences if p["l1"].lower() != answer_l1.lower()],
+            ],
             n=LISTEN_CHOICES - 1,
         )
         if choices_l1 is None:
