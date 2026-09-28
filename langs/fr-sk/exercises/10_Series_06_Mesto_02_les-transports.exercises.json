@@ -1336,14 +1336,14 @@
       "l1": "Idem do práce. (teraz, jedenkrát)",
       "l2": "Je vais au travail.",
       "choices_l1": [
-        "pot-au-feu (varené hovädzie so zeleninou)",
-        "Je desať hodín.",
-        "spálňa, izba na spanie"
+        "Chodím do práce autobusom. (zvyk)",
+        "Idem na trh. (teraz, jedenkrát)",
+        "Idem na stanicu. (teraz, jedenkrát)"
       ],
       "choices_l2": [
-        "en ordre, bien, ça va",
-        "Il est dix heures.",
-        "la vie chère"
+        "D'habitude, je vais au travail en bus.",
+        "Je vais au marché.",
+        "Je vais à la gare."
       ]
     },
     {
@@ -1352,14 +1352,14 @@
       "l1": "Chodím do práce autobusom. (zvyk)",
       "l2": "D'habitude, je vais au travail en bus.",
       "choices_l1": [
-        "štvrť na šesť (5:15)",
-        "quiche lorraine (slaný koláč z Lotrinska)",
-        "tarta, ovocný koláč"
+        "Idem do práce. (teraz, jedenkrát)",
+        "Chodím do práce električkou. (zvyk)",
+        "Chodím do práce pešo. (zvyk)"
       ],
       "choices_l2": [
-        "tout de suite",
-        "la quiche lorraine",
-        "dans la rue"
+        "Je vais au travail.",
+        "D'habitude, je vais au travail en tram.",
+        "D'habitude, je vais au travail à pied."
       ]
     }
   ]

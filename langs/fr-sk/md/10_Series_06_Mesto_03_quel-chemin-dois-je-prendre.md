@@ -59,7 +59,7 @@ Slovesá na -er strácajú v rozkazovacom spôsobe pre „tu“ koncové „s“
 > puis à gauche = a potom vľavo
 
 ! C'est juste au coin de la rue.
-> Je to za rohom.
+> Je to hneď za rohom.
 > C'est juste au coin de la rue = je to hneď za rohom
 + Doslova „na rohu ulice“. Francúzština nepovie „après le coin“ — slovenské „za rohom“ sa prekladá „au coin de la rue“.
 

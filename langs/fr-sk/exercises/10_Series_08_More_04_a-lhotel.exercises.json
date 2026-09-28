@@ -1356,19 +1356,19 @@
       "type": "fill-blank",
       "l1": "Na balkóne je taký pokoj!",
       "l2": "Sur le balcon, quelle tranquillité !",
-      "missing_l1": "je",
-      "missing_l2": "le",
-      "blank_index_l1": 2,
-      "blank_index_l2": 1,
+      "missing_l1": "balkóne",
+      "missing_l2": "quelle",
+      "blank_index_l1": 1,
+      "blank_index_l2": 3,
       "choices_l1": [
-        "dobrý",
-        "kde",
-        "v"
+        "balkón",
+        "balkóna",
+        "balkónom"
       ],
       "choices_l2": [
-        "s'il",
-        "plaît",
-        "veux"
+        "quel",
+        "quels",
+        "quelles"
       ]
     },
     {
@@ -1377,9 +1377,9 @@
       "l1": "Na balkóne je taký pokoj!",
       "l2": "Sur le balcon, quelle tranquillité !",
       "choices_l1": [
-        "Skúsim tieto topánky v štyridsiatke.",
-        "Musíš mať dáždnik, prší.",
-        "V lete nosím slnečné okuliare."
+        "Na pláži je taký pokoj!",
+        "Na balkóne je taký hluk!",
+        "V izbe je taký pokoj!"
       ]
     },
     {

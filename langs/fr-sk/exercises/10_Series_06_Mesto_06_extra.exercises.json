@@ -1096,12 +1096,15 @@
         "stanica?",
         "Je",
         "ďaleko?",
-        "Toto",
-        "námestie",
-        "je",
-        "pekné,",
-        "ale",
-        "hlučné."
+        "Prechádzame",
+        "sa",
+        "v",
+        "parku",
+        "a",
+        "potom",
+        "ideme",
+        "do",
+        "kina."
       ],
       "tokens_l2": [
         "Où",
@@ -1113,12 +1116,17 @@
         "est",
         "loin",
         "?",
-        "Cette",
-        "place",
-        "est",
-        "jolie,",
-        "mais",
-        "bruyante."
+        "Nous",
+        "nous",
+        "promenons",
+        "dans",
+        "le",
+        "parc,",
+        "puis",
+        "nous",
+        "allons",
+        "au",
+        "cinéma."
       ]
     },
     {
@@ -1136,13 +1144,16 @@
         "ideme",
         "do",
         "kina.",
-        "Kúpim",
-        "si",
-        "nový",
-        "bicykel",
-        "a",
-        "starý",
-        "predám."
+        "Múzeum",
+        "je",
+        "otvorené",
+        "do",
+        "šiestej,",
+        "ale",
+        "v",
+        "pondelok",
+        "je",
+        "zatvorené."
       ],
       "tokens_l2": [
         "Je",
@@ -1157,19 +1168,19 @@
         "va",
         "au",
         "cinéma.",
-        "Je",
-        "vais",
-        "m'acheter",
-        "un",
-        "nouveau",
-        "vélo",
-        "et",
-        "je",
-        "vais",
-        "vendre",
-        "mon",
-        "vieux",
-        "vélo."
+        "Le",
+        "musée",
+        "est",
+        "ouvert",
+        "jusqu'à",
+        "six",
+        "heures,",
+        "mais",
+        "il",
+        "est",
+        "fermé",
+        "le",
+        "lundi."
       ]
     },
     {
@@ -1226,13 +1237,11 @@
         "kartou,",
         "nemám",
         "hotovosť.",
-        "Kúpim",
-        "si",
-        "nový",
-        "bicykel",
-        "a",
-        "starý",
-        "predám."
+        "Kde",
+        "je",
+        "stanica?",
+        "Je",
+        "ďaleko?"
       ],
       "tokens_l2": [
         "Je",
@@ -1246,19 +1255,15 @@
         "pas",
         "de",
         "liquide.",
-        "Je",
-        "vais",
-        "m'acheter",
-        "un",
-        "nouveau",
-        "vélo",
-        "et",
-        "je",
-        "vais",
-        "vendre",
-        "mon",
-        "vieux",
-        "vélo."
+        "Où",
+        "est",
+        "la",
+        "gare",
+        "?",
+        "Elle",
+        "est",
+        "loin",
+        "?"
       ]
     },
     {
@@ -1267,14 +1272,14 @@
       "l1": "za rohom, na rohu ulice",
       "l2": "au coin de la rue",
       "choices_l1": [
-        "V pondelok pracujem.",
-        "štvrť na šesť",
-        "Dáš si kávu?"
+        "rovno",
+        "vľavo",
+        "vpravo"
       ],
       "choices_l2": [
-        "vous tournez → Tournez !",
-        "Comment c'est ?",
-        "Il est deux heures."
+        "tout droit",
+        "à gauche",
+        "à droite"
       ]
     },
     {
@@ -1282,19 +1287,19 @@
       "type": "fill-blank",
       "l1": "Toto námestie je pekné, ale malé.",
       "l2": "Cette place est jolie, mais petite.",
-      "missing_l1": "je",
-      "missing_l2": "est",
-      "blank_index_l1": 2,
-      "blank_index_l2": 2,
+      "missing_l1": "Toto",
+      "missing_l2": "Cette",
+      "blank_index_l1": 0,
+      "blank_index_l2": 0,
       "choices_l1": [
-        "ďakujem",
-        "siedmej",
-        "mám"
+        "Tento",
+        "Táto",
+        "Tieto"
       ],
       "choices_l2": [
-        "les",
-        "n'ai",
-        "mais"
+        "Ce",
+        "Cet",
+        "Ces"
       ]
     },
     {
@@ -1302,19 +1307,19 @@
       "type": "fill-blank",
       "l1": "Múzeum je otvorené do šiestej, ale v pondelok je zatvorené.",
       "l2": "Le musée est ouvert jusqu'à six heures, mais il est fermé le lundi.",
-      "missing_l1": "je",
-      "missing_l2": "le",
-      "blank_index_l1": 1,
-      "blank_index_l2": 11,
+      "missing_l1": "otvorené",
+      "missing_l2": "ouvert",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
       "choices_l1": [
-        "si",
-        "v",
-        "mi"
+        "otvorený",
+        "otvorená",
+        "otvorení"
       ],
       "choices_l2": [
-        "dans",
-        "du",
-        "n'ai"
+        "ouverte",
+        "ouverts",
+        "ouvrir"
       ]
     },
     {
@@ -1322,19 +1327,19 @@
       "type": "fill-blank",
       "l1": "Idem električkou zo zastávky pred poštou.",
       "l2": "Je prends le tram à l'arrêt devant la poste.",
-      "missing_l1": "pred",
-      "missing_l2": "le",
-      "blank_index_l1": 4,
-      "blank_index_l2": 2,
+      "missing_l1": "električkou",
+      "missing_l2": "devant",
+      "blank_index_l1": 1,
+      "blank_index_l2": 6,
       "choices_l1": [
-        "ešte",
-        "veľa",
-        "ďakujem"
+        "električka",
+        "električku",
+        "električke"
       ],
       "choices_l2": [
-        "un",
-        "nous",
-        "sont"
+        "derrière",
+        "sur",
+        "sous"
       ]
     },
     {
@@ -1342,19 +1347,19 @@
       "type": "fill-blank",
       "l1": "V sobotu chodím do knižnice na bicykli.",
       "l2": "Le samedi, je vais à la bibliothèque à vélo.",
-      "missing_l1": "na",
-      "missing_l2": "la",
-      "blank_index_l1": 5,
-      "blank_index_l2": 5,
+      "missing_l1": "chodím",
+      "missing_l2": "à",
+      "blank_index_l1": 2,
+      "blank_index_l2": 4,
       "choices_l1": [
-        "idem",
-        "máš",
-        "mám"
+        "chodíš",
+        "chodí",
+        "chodíme"
       ],
       "choices_l2": [
-        "veux",
-        "à",
-        "mais"
+        "au",
+        "en",
+        "aux"
       ]
     },
     {
@@ -1362,19 +1367,19 @@
       "type": "fill-blank",
       "l1": "Prepáčte, stratil som sa. Kde je stanica?",
       "l2": "Pardon, je suis perdu. Où est la gare ?",
-      "missing_l1": "je",
-      "missing_l2": "est",
-      "blank_index_l1": 5,
-      "blank_index_l2": 5,
+      "missing_l1": "stratil",
+      "missing_l2": "suis",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
       "choices_l1": [
-        "na",
-        "máte",
-        "o"
+        "stratila",
+        "stratili",
+        "stratilo"
       ],
       "choices_l2": [
-        "la",
-        "mon",
-        "enfants"
+        "es",
+        "ai",
+        "est"
       ]
     },
     {
@@ -1382,19 +1387,19 @@
       "type": "fill-blank",
       "l1": "Radnica je vedľa pošty, blízko fontány.",
       "l2": "La mairie est à côté de la poste, près de la fontaine.",
-      "missing_l1": "je",
-      "missing_l2": "est",
-      "blank_index_l1": 1,
-      "blank_index_l2": 2,
+      "missing_l1": "vedľa",
+      "missing_l2": "près",
+      "blank_index_l1": 2,
+      "blank_index_l2": 8,
       "choices_l1": [
-        "siedmej",
-        "v",
-        "mám"
+        "pri",
+        "pred",
+        "za"
       ],
       "choices_l2": [
-        "au",
-        "tu",
-        "pas"
+        "loin",
+        "devant",
+        "derrière"
       ]
     },
     {
@@ -1402,19 +1407,19 @@
       "type": "fill-blank",
       "l1": "Idem autobusom a potom pokračujem pešo.",
       "l2": "Je prends le bus, puis je continue à pied.",
-      "missing_l1": "a",
-      "missing_l2": "le",
-      "blank_index_l1": 2,
-      "blank_index_l2": 2,
+      "missing_l1": "autobusom",
+      "missing_l2": "à",
+      "blank_index_l1": 1,
+      "blank_index_l2": 7,
       "choices_l1": [
-        "sa",
-        "máš",
-        "nemám"
+        "autobus",
+        "autobusu",
+        "autobuse"
       ],
       "choices_l2": [
-        "il",
-        "aujourd'hui",
-        "plaît"
+        "en",
+        "au",
+        "par"
       ]
     },
     {
@@ -1422,19 +1427,19 @@
       "type": "fill-blank",
       "l1": "Na križovatke zabočte vľavo: kostol je na námestí.",
       "l2": "Au carrefour, tournez à gauche : l'église est sur la place.",
-      "missing_l1": "je",
-      "missing_l2": "est",
-      "blank_index_l1": 5,
-      "blank_index_l2": 7,
+      "missing_l1": "zabočte",
+      "missing_l2": "tournez",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
       "choices_l1": [
-        "dnes",
-        "do",
-        "máš"
+        "zaboč",
+        "zabočme",
+        "zabočiť"
       ],
       "choices_l2": [
-        "plaît",
-        "c'est",
-        "une"
+        "tourne",
+        "tournons",
+        "tourner"
       ]
     },
     {
@@ -1442,19 +1447,19 @@
       "type": "fill-blank",
       "l1": "Prechádzame sa v parku a potom ideme do kina.",
       "l2": "Nous nous promenons dans le parc, puis nous allons au cinéma.",
-      "missing_l1": "v",
-      "missing_l2": "le",
-      "blank_index_l1": 2,
-      "blank_index_l2": 4,
+      "missing_l1": "ideme",
+      "missing_l2": "nous",
+      "blank_index_l1": 6,
+      "blank_index_l2": 1,
       "choices_l1": [
-        "na",
-        "nie",
-        "veľa"
+        "idem",
+        "idú",
+        "ideš"
       ],
       "choices_l2": [
-        "n'ai",
-        "heures",
-        "ma"
+        "vous",
+        "se",
+        "me"
       ]
     },
     {
@@ -1463,9 +1468,9 @@
       "l1": "Toto námestie je pekné, ale malé.",
       "l2": "Cette place est jolie, mais petite.",
       "choices_l1": [
-        "Kde je môj telefón?",
-        "V piatok je večer dlhý.",
-        "Dám si polievku a potom pot-au-feu."
+        "Toto námestie je pekné, ale veľké.",
+        "Tento park je pekný, ale malý.",
+        "Toto námestie je škaredé a malé."
       ]
     },
     {
@@ -1474,9 +1479,9 @@
       "l1": "Múzeum je otvorené do šiestej, ale v pondelok je zatvorené.",
       "l2": "Le musée est ouvert jusqu'à six heures, mais il est fermé le lundi.",
       "choices_l1": [
-        "Týždeň má sedem dní.",
-        "Je jedna hodina.",
-        "Hovoríte po francúzsky?"
+        "Múzeum je otvorené do siedmej, ale v pondelok je zatvorené.",
+        "Múzeum je otvorené do šiestej, ale v nedeľu je zatvorené.",
+        "Knižnica je otvorená do šiestej, ale v pondelok je zatvorená."
       ]
     },
     {
@@ -1485,9 +1490,9 @@
       "l1": "Idem električkou zo zastávky pred poštou.",
       "l2": "Je prends le tram à l'arrêt devant la poste.",
       "choices_l1": [
-        "Môj brat pracuje v obchode.",
-        "Moji rodičia sú dôchodcovia. Bývajú blízko.",
-        "Aké je vaše meno?"
+        "Idem autobusom zo zastávky pred poštou.",
+        "Idem električkou zo zastávky pred bankou.",
+        "Idem električkou zo zastávky za poštou."
       ]
     },
     {
@@ -1496,9 +1501,9 @@
       "l1": "V sobotu chodím do knižnice na bicykli.",
       "l2": "Le samedi, je vais à la bibliothèque à vélo.",
       "choices_l1": [
-        "Mám stretnutie o desiatej.",
-        "Moja sestra má dva roky.",
-        "Dobre. Kde čakáte?"
+        "V nedeľu chodím do knižnice na bicykli.",
+        "V sobotu chodím do knižnice pešo.",
+        "V sobotu chodím do múzea na bicykli."
       ]
     },
     {
@@ -1507,9 +1512,9 @@
       "l1": "Prepáčte, stratil som sa. Kde je stanica?",
       "l2": "Pardon, je suis perdu. Où est la gare ?",
       "choices_l1": [
-        "Dvere sú tam.",
-        "To je môj kamarát.",
-        "Mama varí a ja umývam poháre."
+        "Prepáčte, stratil som sa. Kde je pošta?",
+        "Prepáčte, stratil som sa. Kde je zastávka?",
+        "Prepáčte, som tu nový. Kde je stanica?"
       ]
     },
     {
@@ -1518,9 +1523,9 @@
       "l1": "Radnica je vedľa pošty, blízko fontány.",
       "l2": "La mairie est à côté de la poste, près de la fontaine.",
       "choices_l1": [
-        "Zelenina je čerstvá a zemiaky sú teplé.",
-        "Čakám o siedmej.",
-        "Okno je veľké."
+        "Radnica je vedľa banky, blízko fontány.",
+        "Radnica je vedľa pošty, blízko kostola.",
+        "Radnica je ďaleko od pošty, blízko fontány."
       ]
     },
     {
@@ -1529,9 +1534,9 @@
       "l1": "Idem autobusom a potom pokračujem pešo.",
       "l2": "Je prends le bus, puis je continue à pied.",
       "choices_l1": [
-        "Dobrý deň. Akú veľkosť hľadáte?",
-        "Raňajky sú o siedmej.",
-        "Obchod je otvorený."
+        "Idem električkou a potom pokračujem pešo.",
+        "Idem autobusom a potom pokračujem vlakom.",
+        "Idem pešo a potom pokračujem autobusom."
       ]
     },
     {
@@ -1540,9 +1545,9 @@
       "l1": "Na križovatke zabočte vľavo: kostol je na námestí.",
       "l2": "Au carrefour, tournez à gauche : l'église est sur la place.",
       "choices_l1": [
-        "Teraz je päť hodín.",
-        "Moja chata je malá, ale pekná.",
-        "Chodím do práce autobusom."
+        "Na križovatke zabočte vpravo: kostol je na námestí.",
+        "Na križovatke zabočte vľavo: pošta je na námestí.",
+        "Na križovatke choďte rovno: kostol je na námestí."
       ]
     },
     {
@@ -1551,9 +1556,9 @@
       "l1": "Prechádzame sa v parku a potom ideme do kina.",
       "l2": "Nous nous promenons dans le parc, puis nous allons au cinéma.",
       "choices_l1": [
-        "Moja chata je malá, ale pekná.",
-        "Bývam tu, v dome. Mám záhradu.",
-        "Pol siedmej, to je šesť tridsať?"
+        "Prechádzame sa v parku a potom ideme do divadla.",
+        "Prechádzame sa v meste a potom ideme do kina.",
+        "Prechádzame sa v parku a potom ideme domov."
       ]
     },
     {

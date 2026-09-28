@@ -659,11 +659,14 @@
         "Musíme",
         "byť",
         "pripravení.",
-        "Som",
-        "unavený.",
-        "Môžeme",
-        "si",
-        "oddýchnuť?"
+        "To",
+        "je",
+        "najkrajší",
+        "výhľad,",
+        "aký",
+        "som",
+        "kedy",
+        "videla."
       ],
       "tokens_l2": [
         "Oui,",
@@ -675,14 +678,15 @@
         "devons",
         "être",
         "prêts.",
-        "Je",
-        "suis",
-        "fatigué.",
-        "Nous",
-        "pouvons",
-        "nous",
-        "reposer",
-        "?"
+        "C'est",
+        "le",
+        "plus",
+        "beau",
+        "panorama",
+        "que",
+        "j'aie",
+        "jamais",
+        "vu."
       ]
     },
     {
@@ -851,7 +855,7 @@
         "aký",
         "som",
         "kedy",
-        "videl."
+        "videla."
       ],
       "tokens_l2": [
         "Les",
@@ -1236,19 +1240,19 @@
       "type": "fill-blank",
       "l1": "Andrea, vieš plávať?",
       "l2": "Andrea, tu sais nager ?",
-      "missing_l1": "plávať",
-      "missing_l2": "tu",
-      "blank_index_l1": 2,
-      "blank_index_l2": 1,
+      "missing_l1": "vieš",
+      "missing_l2": "sais",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
       "choices_l1": [
-        "bude",
-        "máte",
-        "sú"
+        "viem",
+        "vie",
+        "vieme"
       ],
       "choices_l2": [
-        "sont",
-        "veux",
-        "la"
+        "sait",
+        "savons",
+        "savez"
       ]
     },
     {
@@ -1256,19 +1260,19 @@
       "type": "fill-blank",
       "l1": "Som unavená. Môžeme si oddýchnuť?",
       "l2": "Je suis fatiguée. Nous pouvons nous reposer ?",
-      "missing_l1": "si",
-      "missing_l2": "Nous",
-      "blank_index_l1": 3,
-      "blank_index_l2": 3,
+      "missing_l1": "Môžeme",
+      "missing_l2": "nous",
+      "blank_index_l1": 2,
+      "blank_index_l2": 5,
       "choices_l1": [
-        "ďakujem",
-        "mi",
-        "siedmej"
+        "Môžem",
+        "Môžeš",
+        "Môžu"
       ],
       "choices_l2": [
-        "pas",
-        "c'est",
-        "mais"
+        "vous",
+        "se",
+        "me"
       ]
     },
     {
@@ -1281,14 +1285,14 @@
       "blank_index_l1": 1,
       "blank_index_l2": 2,
       "choices_l1": [
-        "som",
-        "nemám",
-        "ďakujem"
+        "do",
+        "o",
+        "k"
       ],
       "choices_l2": [
-        "y",
-        "du",
-        "veux"
+        "le",
+        "les",
+        "un"
       ]
     },
     {
@@ -1297,9 +1301,9 @@
       "l1": "Andrea, vieš plávať?",
       "l2": "Andrea, tu sais nager ?",
       "choices_l1": [
-        "Máte čiernu čiapku?",
-        "Nie, ďakujem. Som plný.",
-        "Máme štyri poháre a štyri taniere."
+        "Andrea, vieš variť?",
+        "Andrea, chceš plávať?",
+        "Andrea, vieš lyžovať?"
       ]
     },
     {
@@ -1308,9 +1312,9 @@
       "l1": "Som unavená. Môžeme si oddýchnuť?",
       "l2": "Je suis fatiguée. Nous pouvons nous reposer ?",
       "choices_l1": [
-        "Ako sa máš? Som v poriadku, ďakujem.",
-        "Tiež v poriadku, ďakujem.",
-        "Kedy ideš domov?"
+        "Som unavená. Môžeme ísť domov?",
+        "Som unavená. Môžeš si oddýchnuť?",
+        "Som hladná. Môžeme si oddýchnuť?"
       ]
     },
     {
@@ -1319,9 +1323,9 @@
       "l1": "Vitajte pri mori, Andrea!",
       "l2": "Bienvenue à la mer, Andrea !",
       "choices_l1": [
-        "Pracujem v škole.",
-        "Po daždi je dúha.",
-        "Je to výborné! (Chutí mi to!)"
+        "Vitajte v horách, Andrea!",
+        "Vitajte pri mori, Karine!",
+        "Vitajte v Lyone, Andrea!"
       ]
     },
     {

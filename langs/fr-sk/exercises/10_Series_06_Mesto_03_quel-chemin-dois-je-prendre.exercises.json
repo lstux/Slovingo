@@ -938,10 +938,9 @@
         "priamo",
         "pred",
         "vami.",
-        "Je",
-        "to",
-        "za",
-        "rohom."
+        "Vráťte",
+        "sa",
+        "naspäť."
       ],
       "tokens_l2": [
         "Le",
@@ -950,10 +949,9 @@
         "juste",
         "devant",
         "vous.",
-        "C'est",
-        "après",
-        "le",
-        "coin."
+        "Retournez",
+        "en",
+        "arrière."
       ]
     },
     {
@@ -993,10 +991,10 @@
         "Kade",
         "mám",
         "ísť?",
-        "Je",
-        "to",
-        "za",
-        "rohom."
+        "Choď",
+        "vpravo,",
+        "nie",
+        "vľavo!"
       ],
       "tokens_l2": [
         "Par",
@@ -1004,10 +1002,13 @@
         "dois-je",
         "aller",
         "?",
-        "C'est",
-        "après",
-        "le",
-        "coin."
+        "Va",
+        "à",
+        "droite,",
+        "pas",
+        "à",
+        "gauche",
+        "!"
       ]
     },
     {
@@ -1286,9 +1287,11 @@
         "côté",
         "du",
         "musée,",
-        "après",
-        "le",
-        "coin."
+        "au",
+        "coin",
+        "de",
+        "la",
+        "rue."
       ]
     },
     {
@@ -1297,14 +1300,14 @@
       "l1": "za rohom, na rohu ulice",
       "l2": "au coin de la rue",
       "choices_l1": [
-        "To je lacné.",
-        "V pondelky (zvyčajne) pracujem.",
-        "Stojí to päť eur."
+        "rovno",
+        "vľavo",
+        "vpravo"
       ],
       "choices_l2": [
-        "dans la rue",
-        "il / elle boit",
-        "l'étudiant / l'étudiante"
+        "tout droit",
+        "à gauche",
+        "à droite"
       ]
     },
     {
@@ -1313,55 +1316,56 @@
       "l1": "Je to za rohom.",
       "l2": "C'est au coin de la rue.",
       "choices_l1": [
-        "Prídem. (doslova: „idem prísť“)",
-        "jedlá sú dobré",
-        "Dám si pivo."
+        "Je to vedľa banky.",
+        "Je to pred kostolom.",
+        "Je to blízko."
       ],
       "choices_l2": [
-        "au marché (à + le)",
-        "Il y a une table.",
-        "D'habitude, je vais au travail en bus. (zvyk)"
+        "C'est à côté de la banque.",
+        "C'est devant l'église.",
+        "C'est près d'ici."
       ]
     },
     {
       "id": "blank-c-est-juste-au-coin-de-la-rue",
       "type": "fill-blank",
-      "l1": "Je to za rohom.",
+      "l1": "Je to hneď za rohom.",
       "l2": "C'est juste au coin de la rue.",
-      "missing_l1": "to",
-      "missing_l2": "la",
-      "blank_index_l1": 1,
-      "blank_index_l2": 5,
+      "missing_l1": "za",
+      "missing_l2": "au",
+      "blank_index_l1": 3,
+      "blank_index_l2": 2,
       "choices_l1": [
-        "býva",
-        "chcem",
-        "môj"
+        "pred",
+        "na",
+        "v"
       ],
       "choices_l2": [
-        "mon",
-        "sont",
-        "veux"
+        "à",
+        "aux",
+        "du"
       ]
     },
     {
       "id": "listen-c-est-juste-au-coin-de-la-rue",
       "type": "listen",
-      "l1": "Je to za rohom.",
+      "l1": "Je to hneď za rohom.",
       "l2": "C'est juste au coin de la rue.",
       "choices_l1": [
-        "V kuchyni je stolička.",
-        "Marek, si voľný v pondelok?",
-        "Comment ça va ?"
+        "Je to hneď pred kostolom.",
+        "Je to hneď vedľa banky.",
+        "Nie je to za rohom."
       ]
     },
     {
       "id": "order-c-est-juste-au-coin-de-la-rue",
       "type": "order",
-      "l1": "Je to za rohom.",
+      "l1": "Je to hneď za rohom.",
       "l2": "C'est juste au coin de la rue.",
       "tokens_l1": [
         "Je",
         "to",
+        "hneď",
         "za",
         "rohom.",
         "Na",

@@ -1404,10 +1404,11 @@
         "s",
         "celou",
         "rodinou.",
-        "Zvony",
-        "mlčali",
-        "celý",
-        "týždeň."
+        "Táto",
+        "tradícia",
+        "je",
+        "veľmi",
+        "stará."
       ],
       "tokens_l2": [
         "Nous",
@@ -1417,14 +1418,11 @@
         "toute",
         "la",
         "famille.",
-        "Les",
-        "cloches",
-        "se",
-        "sont",
-        "tues",
-        "toute",
-        "la",
-        "semaine."
+        "Cette",
+        "tradition",
+        "est",
+        "très",
+        "ancienne."
       ]
     },
     {
@@ -1467,19 +1465,19 @@
       "type": "fill-blank",
       "l1": "Zvony mlčali od štvrtka do nedele.",
       "l2": "Les cloches se sont tues du jeudi au dimanche.",
-      "missing_l1": "do",
+      "missing_l1": "mlčali",
       "missing_l2": "sont",
-      "blank_index_l1": 4,
+      "blank_index_l1": 1,
       "blank_index_l2": 3,
       "choices_l1": [
-        "dnes",
-        "mi",
-        "môj"
+        "mlčal",
+        "mlčala",
+        "mlčia"
       ],
       "choices_l2": [
-        "heures",
-        "j'ai",
-        "en"
+        "ont",
+        "est",
+        "sommes"
       ]
     },
     {
@@ -1488,9 +1486,9 @@
       "l1": "Zvony mlčali od štvrtka do nedele.",
       "l2": "Les cloches se sont tues du jeudi au dimanche.",
       "choices_l1": [
-        "Zastávka je blízko, choďte rovno.",
-        "Moja mama má päťdesiat rokov.",
-        "Mám vedierko a slnečník v taške."
+        "Zvony zvonili od štvrtka do nedele.",
+        "Zvony mlčali od piatku do nedele.",
+        "Zvony mlčali od štvrtka do soboty."
       ]
     },
     {
