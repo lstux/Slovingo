@@ -1,12 +1,12 @@
-# Kit de survie (extra) — Všetko dokopy
+# Kit prežitia (extra) — Všetko dokopy
 
 @ img/Paris_at_night.jpg | Paríž v noci — Wikimedia Commons
 
-Žiadne nové slovo. Celá slovná zásoba Kitu je tu zhrnutá a potom poskladaná do nových viet. Keď ich zvládneš, vieš pozdraviť, poďakovať, ospravedlniť sa, predstaviť sa a povedať, že nerozumieš — a to na prežitie úplne stačí.
+Žiadne nové slovo. Celá slovná zásoba Kitu prežitia je tu zhrnutá a potom poskladaná do nových viet. Keď ich zvládneš, vieš pozdraviť, poďakovať, ospravedlniť sa, predstaviť sa a povedať, že nerozumieš — a to na prežitie úplne stačí.
 
 ---
 
-## Celá slovná zásoba Kitu
+## Celá slovná zásoba Kitu prežitia
 
 | Francúzština | Slovenčina |
 |----------|----------|

@@ -1,4 +1,4 @@
-# Kit de survie (3/4) — Enchanté !
+# Kit prežitia (3/4) — Enchanté !
 
 @ img/Hall_gare_Lyon-Part-Dieu.JPG | Stanica Lyon-Part-Dieu — Wikimedia Commons
 

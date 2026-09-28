@@ -1,4 +1,4 @@
-# Kit de survie (2/4) — Merci, s'il vous plaît
+# Kit prežitia (2/4) — Merci, s'il vous plaît
 
 @ img/Vincent_van_Gogh_-_Cafe_Terrace_at_Night_(1888).jpg | Kaviareň s terasou (Van Gogh) — Wikimedia Commons
 

@@ -1,4 +1,4 @@
-# Kit de survie (1/4) — Bonjour !
+# Kit prežitia (1/4) — Bonjour !
 
 @ img/A_Paris_Street_Scene.jpg | Ulica vo francúzskom meste — Wikimedia Commons
 
