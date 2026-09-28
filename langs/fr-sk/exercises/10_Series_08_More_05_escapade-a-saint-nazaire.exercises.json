@@ -81,26 +81,6 @@
       ]
     },
     {
-      "id": "blank-eric-tu-sais-nager",
-      "type": "fill-blank",
-      "l1": "Eric, vieš plávať?",
-      "l2": "Eric, tu sais nager ?",
-      "missing_l1": "plávať",
-      "missing_l2": "tu",
-      "blank_index_l1": 2,
-      "blank_index_l2": 1,
-      "choices_l1": [
-        "príliv, odliv",
-        "hotel",
-        "chladiaci box"
-      ],
-      "choices_l2": [
-        "je",
-        "je mange",
-        "nous habitons"
-      ]
-    },
-    {
       "id": "blank-oui-et-j-ai-aussi-de-l-eau-et-de-la-nourriture-dans-le-sac",
       "type": "fill-blank",
       "l1": "Áno! A mám aj vodu a jedlo v taške.",
@@ -181,26 +161,6 @@
       ]
     },
     {
-      "id": "blank-je-suis-fatigu-nous-pouvons-nous-reposer",
-      "type": "fill-blank",
-      "l1": "Som unavený. Môžeme si oddýchnuť?",
-      "l2": "Je suis fatigué. Nous pouvons nous reposer ?",
-      "missing_l1": "si",
-      "missing_l2": "Nous",
-      "blank_index_l1": 3,
-      "blank_index_l2": 3,
-      "choices_l1": [
-        "ona išla",
-        "sme",
-        "nie"
-      ],
-      "choices_l2": [
-        "environ",
-        "tu peux",
-        "tu cherches"
-      ]
-    },
-    {
       "id": "blank-oui-ici-il-y-a-un-bel-endroit-prenons-de-l-eau",
       "type": "fill-blank",
       "l1": "Áno, tu je pekné miesto. Dajme si vodu.",
@@ -243,7 +203,7 @@
     {
       "id": "blank-c-est-le-plus-beau-panorama-que-j-aie-jamais-vu",
       "type": "fill-blank",
-      "l1": "To je najkrajší výhľad, aký som kedy videl.",
+      "l1": "To je najkrajší výhľad, aký som kedy videla.",
       "l2": "C'est le plus beau panorama que j'aie jamais vu.",
       "missing_l1": "je",
       "missing_l2": "le",
@@ -258,26 +218,6 @@
         "tu vois",
         "C'est bon.",
         "je peux"
-      ]
-    },
-    {
-      "id": "blank-bienvenue-la-mer-eric",
-      "type": "fill-blank",
-      "l1": "Vitaj pri mori, Eric!",
-      "l2": "Bienvenue à la mer, Eric !",
-      "missing_l1": "Eric",
-      "missing_l2": "la",
-      "blank_index_l1": 3,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "môj otec",
-        "moja sestra",
-        "mama"
-      ],
-      "choices_l2": [
-        "très",
-        "en",
-        "tu"
       ]
     },
     {
@@ -441,22 +381,6 @@
       ]
     },
     {
-      "id": "listen-eric-tu-sais-nager",
-      "type": "listen",
-      "l1": "Eric, vieš plávať?",
-      "l2": "Eric, tu sais nager ?",
-      "choices_l2": [
-        "J'habite dans un immeuble.",
-        "Il est déjà tard.",
-        "Le déjeuner est à midi."
-      ],
-      "choices_l1": [
-        "Mám vedierko a slnečník v taške.",
-        "Táto pláž je krajšia, ale tamtá je lacnejšia.",
-        "Pobrežie je dlhé."
-      ]
-    },
-    {
       "id": "listen-oui-et-j-ai-aussi-de-l-eau-et-de-la-nourriture-dans-le-sac",
       "type": "listen",
       "l1": "Áno! A mám aj vodu a jedlo v taške.",
@@ -521,22 +445,6 @@
       ]
     },
     {
-      "id": "listen-je-suis-fatigu-nous-pouvons-nous-reposer",
-      "type": "listen",
-      "l1": "Som unavený. Môžeme si oddýchnuť?",
-      "l2": "Je suis fatigué. Nous pouvons nous reposer ?",
-      "choices_l2": [
-        "Le trottoir est étroit.",
-        "La plage est belle.",
-        "Dans l'hôtel il fait chaud et c'est confortable."
-      ],
-      "choices_l1": [
-        "Košík je plný vajíčok.",
-        "Nie som hladný, ale som smädný.",
-        "Som unavený. Plávam od rána."
-      ]
-    },
-    {
       "id": "listen-oui-ici-il-y-a-un-bel-endroit-prenons-de-l-eau",
       "type": "listen",
       "l1": "Áno, tu je pekné miesto. Dajme si vodu.",
@@ -571,7 +479,7 @@
     {
       "id": "listen-c-est-le-plus-beau-panorama-que-j-aie-jamais-vu",
       "type": "listen",
-      "l1": "To je najkrajší výhľad, aký som kedy videl.",
+      "l1": "To je najkrajší výhľad, aký som kedy videla.",
       "l2": "C'est le plus beau panorama que j'aie jamais vu.",
       "choices_l2": [
         "As-tu un frère ?",
@@ -582,22 +490,6 @@
         "Neboj sa, je to jednoduché!",
         "Idem do múzea pozrieť si tú výstavu.",
         "Mamie, prišli sme na hľadanie vajíčok!"
-      ]
-    },
-    {
-      "id": "listen-bienvenue-la-mer-eric",
-      "type": "listen",
-      "l1": "Vitaj pri mori, Eric!",
-      "l2": "Bienvenue à la mer, Eric !",
-      "choices_l2": [
-        "Merci, c'est excellent.",
-        "Les chaussettes sont mouillées !",
-        "Je suis en retard. Je vais arriver à huit heures et quart."
-      ],
-      "choices_l1": [
-        "Ideme sa opaľovať na pláži.",
-        "To je najkrajšia pláž na pobreží.",
-        "Máš plavky a krém na opaľovanie?"
       ]
     },
     {
@@ -848,42 +740,6 @@
       ]
     },
     {
-      "id": "order-eric-tu-sais-nager",
-      "type": "order",
-      "l1": "Eric, vieš plávať?",
-      "l2": "Eric, tu sais nager ?",
-      "tokens_l1": [
-        "Eric,",
-        "vieš",
-        "plávať?",
-        "Chcel",
-        "by",
-        "som",
-        "ísť",
-        "na",
-        "pláž",
-        "aj",
-        "budúci",
-        "rok."
-      ],
-      "tokens_l2": [
-        "Eric,",
-        "tu",
-        "sais",
-        "nager",
-        "?",
-        "Je",
-        "voudrais",
-        "aller",
-        "à",
-        "la",
-        "plage",
-        "l'année",
-        "prochaine",
-        "aussi."
-      ]
-    },
-    {
       "id": "order-oui-et-j-ai-aussi-de-l-eau-et-de-la-nourriture-dans-le-sac",
       "type": "order",
       "l1": "Áno! A mám aj vodu a jedlo v taške.",
@@ -1060,48 +916,6 @@
       ]
     },
     {
-      "id": "order-je-suis-fatigu-nous-pouvons-nous-reposer",
-      "type": "order",
-      "l1": "Som unavený. Môžeme si oddýchnuť?",
-      "l2": "Je suis fatigué. Nous pouvons nous reposer ?",
-      "tokens_l1": [
-        "Som",
-        "unavený.",
-        "Môžeme",
-        "si",
-        "oddýchnuť?",
-        "Pri",
-        "mori",
-        "je",
-        "vzduch",
-        "čistý",
-        "a",
-        "ticho",
-        "krásne."
-      ],
-      "tokens_l2": [
-        "Je",
-        "suis",
-        "fatigué.",
-        "Nous",
-        "pouvons",
-        "nous",
-        "reposer",
-        "?",
-        "Près",
-        "de",
-        "la",
-        "mer,",
-        "l'air",
-        "est",
-        "pur",
-        "et",
-        "le",
-        "silence",
-        "magnifique."
-      ]
-    },
-    {
       "id": "order-oui-ici-il-y-a-un-bel-endroit-prenons-de-l-eau",
       "type": "order",
       "l1": "Áno, tu je pekné miesto. Dajme si vodu.",
@@ -1194,7 +1008,7 @@
     {
       "id": "order-c-est-le-plus-beau-panorama-que-j-aie-jamais-vu",
       "type": "order",
-      "l1": "To je najkrajší výhľad, aký som kedy videl.",
+      "l1": "To je najkrajší výhľad, aký som kedy videla.",
       "l2": "C'est le plus beau panorama que j'aie jamais vu.",
       "tokens_l1": [
         "To",
@@ -1204,7 +1018,7 @@
         "aký",
         "som",
         "kedy",
-        "videl.",
+        "videla.",
         "Áno,",
         "tu",
         "je",
@@ -1235,43 +1049,6 @@
         "Prenons",
         "de",
         "l'eau."
-      ]
-    },
-    {
-      "id": "order-bienvenue-la-mer-eric",
-      "type": "order",
-      "l1": "Vitaj pri mori, Eric!",
-      "l2": "Bienvenue à la mer, Eric !",
-      "tokens_l1": [
-        "Vitaj",
-        "pri",
-        "mori,",
-        "Eric!",
-        "To",
-        "je",
-        "najkrajší",
-        "výhľad,",
-        "aký",
-        "som",
-        "kedy",
-        "videl."
-      ],
-      "tokens_l2": [
-        "Bienvenue",
-        "à",
-        "la",
-        "mer,",
-        "Eric",
-        "!",
-        "C'est",
-        "le",
-        "plus",
-        "beau",
-        "panorama",
-        "que",
-        "j'aie",
-        "jamais",
-        "vu."
       ]
     },
     {
@@ -1452,6 +1229,200 @@
         "la",
         "baie",
         "!"
+      ]
+    },
+    {
+      "id": "blank-andrea-tu-sais-nager",
+      "type": "fill-blank",
+      "l1": "Andrea, vieš plávať?",
+      "l2": "Andrea, tu sais nager ?",
+      "missing_l1": "plávať",
+      "missing_l2": "tu",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "bude",
+        "máte",
+        "sú"
+      ],
+      "choices_l2": [
+        "sont",
+        "veux",
+        "la"
+      ]
+    },
+    {
+      "id": "blank-je-suis-fatigu-e-nous-pouvons-nous-reposer",
+      "type": "fill-blank",
+      "l1": "Som unavená. Môžeme si oddýchnuť?",
+      "l2": "Je suis fatiguée. Nous pouvons nous reposer ?",
+      "missing_l1": "si",
+      "missing_l2": "Nous",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "ďakujem",
+        "mi",
+        "siedmej"
+      ],
+      "choices_l2": [
+        "pas",
+        "c'est",
+        "mais"
+      ]
+    },
+    {
+      "id": "blank-bienvenue-la-mer-andrea",
+      "type": "fill-blank",
+      "l1": "Vitajte pri mori, Andrea!",
+      "l2": "Bienvenue à la mer, Andrea !",
+      "missing_l1": "pri",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "som",
+        "nemám",
+        "ďakujem"
+      ],
+      "choices_l2": [
+        "y",
+        "du",
+        "veux"
+      ]
+    },
+    {
+      "id": "listen-andrea-tu-sais-nager",
+      "type": "listen",
+      "l1": "Andrea, vieš plávať?",
+      "l2": "Andrea, tu sais nager ?",
+      "choices_l1": [
+        "Máte čiernu čiapku?",
+        "Nie, ďakujem. Som plný.",
+        "Máme štyri poháre a štyri taniere."
+      ]
+    },
+    {
+      "id": "listen-je-suis-fatigu-e-nous-pouvons-nous-reposer",
+      "type": "listen",
+      "l1": "Som unavená. Môžeme si oddýchnuť?",
+      "l2": "Je suis fatiguée. Nous pouvons nous reposer ?",
+      "choices_l1": [
+        "Ako sa máš? Som v poriadku, ďakujem.",
+        "Tiež v poriadku, ďakujem.",
+        "Kedy ideš domov?"
+      ]
+    },
+    {
+      "id": "listen-bienvenue-la-mer-andrea",
+      "type": "listen",
+      "l1": "Vitajte pri mori, Andrea!",
+      "l2": "Bienvenue à la mer, Andrea !",
+      "choices_l1": [
+        "Pracujem v škole.",
+        "Po daždi je dúha.",
+        "Je to výborné! (Chutí mi to!)"
+      ]
+    },
+    {
+      "id": "order-andrea-tu-sais-nager",
+      "type": "order",
+      "l1": "Andrea, vieš plávať?",
+      "l2": "Andrea, tu sais nager ?",
+      "tokens_l1": [
+        "Andrea,",
+        "vieš",
+        "plávať?",
+        "Som",
+        "unavená.",
+        "Môžeme",
+        "si",
+        "oddýchnuť?"
+      ],
+      "tokens_l2": [
+        "Andrea,",
+        "tu",
+        "sais",
+        "nager",
+        "?",
+        "Je",
+        "suis",
+        "fatiguée.",
+        "Nous",
+        "pouvons",
+        "nous",
+        "reposer",
+        "?"
+      ]
+    },
+    {
+      "id": "order-je-suis-fatigu-e-nous-pouvons-nous-reposer",
+      "type": "order",
+      "l1": "Som unavená. Môžeme si oddýchnuť?",
+      "l2": "Je suis fatiguée. Nous pouvons nous reposer ?",
+      "tokens_l1": [
+        "Som",
+        "unavená.",
+        "Môžeme",
+        "si",
+        "oddýchnuť?",
+        "Andrea,",
+        "vieš",
+        "plávať?"
+      ],
+      "tokens_l2": [
+        "Je",
+        "suis",
+        "fatiguée.",
+        "Nous",
+        "pouvons",
+        "nous",
+        "reposer",
+        "?",
+        "Andrea,",
+        "tu",
+        "sais",
+        "nager",
+        "?"
+      ]
+    },
+    {
+      "id": "order-bienvenue-la-mer-andrea",
+      "type": "order",
+      "l1": "Vitajte pri mori, Andrea!",
+      "l2": "Bienvenue à la mer, Andrea !",
+      "tokens_l1": [
+        "Vitajte",
+        "pri",
+        "mori,",
+        "Andrea!",
+        "Áno,",
+        "tu",
+        "je",
+        "pekné",
+        "miesto.",
+        "Dajme",
+        "si",
+        "vodu."
+      ],
+      "tokens_l2": [
+        "Bienvenue",
+        "à",
+        "la",
+        "mer,",
+        "Andrea",
+        "!",
+        "Oui,",
+        "ici",
+        "il",
+        "y",
+        "a",
+        "un",
+        "bel",
+        "endroit.",
+        "Prenons",
+        "de",
+        "l'eau."
       ]
     }
   ]

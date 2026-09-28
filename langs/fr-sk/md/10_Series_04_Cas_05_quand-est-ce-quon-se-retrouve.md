@@ -2,7 +2,7 @@
 
 @ img/Hall_gare_Lyon-Part-Dieu.JPG | Interiér stanice Lyon-Part-Dieu — Wikimedia Commons
 
-Andrea, Eric a Marek sa snažia nájsť spoločný termín. Prejde sa tu celá slovná zásoba série. Žiadne nové slovo, okrem tých označených v poznámkach.
+Andrea, Eric a Marek sa snažia nájsť spoločný termín. Prejde sa tu celá slovná zásoba série. Nové slová, ktoré sa v rozhovore objavia, nájdeš vysvetlené v preklade pod každou replikou.
 
 ---
 

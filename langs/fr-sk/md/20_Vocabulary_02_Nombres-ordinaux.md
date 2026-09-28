@@ -25,6 +25,8 @@ Radové číslovky vyjadrujú poradie:
 
 ⚠️ „premier“ je jediné nepravidelné a jediné, ktoré má ženský tvar odlišný od pridania „-ième“: {{premier}} (mužský) / {{première}} (ženský). Od „deuxième“ vyššie sa tvar vôbec nemení podľa rodu — jedna z mála chvíľ, keď je francúzština jednoduchšia než slovenčina, ktorá mení rod pri každej radovej číslovke (prvý/prvá/prvé).
 
+💡 Popri „deuxième“ existuje aj {{second}} / {{seconde}} (druhý / druhá), hlavne v ustálených výrazoch: {{la Seconde Guerre mondiale}} (druhá svetová vojna), {{en seconde classe}} (v druhej triede). Pozor na výslovnosť: „c“ sa tu číta ako „g“ — „sögon“, „sögond“.
+
 ---
 
 ## 2. Od 11 vyššie

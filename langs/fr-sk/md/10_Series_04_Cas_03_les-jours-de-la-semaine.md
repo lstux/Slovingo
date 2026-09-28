@@ -127,7 +127,7 @@ Pridaním „le“ pred deň sa z jednorazovej udalosti stáva pravidelný zvyk.
 
 **Nedeľa je vo Francúzsku tichá.** Väčšina obchodov má v nedeľu zo zákona zatvorené, s výnimkami: pekárne, potraviny doobeda, turistické zóny. Na Slovensku sú naopak obchody v nedeľu bežne otvorené a zatvárajú len počas niektorých sviatkov.
 
-**Meniny existujú, ale slávia sa menej.** Francúzsky kalendár tiež priraďuje meno ku každému dňu, ale osláviť svoju {{fête}} je oveľa menej rozšírené než na Slovensku.
+**Streda, deň detí.** Vo väčšine francúzskych základných škôl sa v stredu popoludní, často aj celý deň, neučí. Deti majú krúžky, šport alebo sú u starých rodičov — preto je {{le mercredi}} typickým dňom detských filmov a aktivít.
 
 ---
 

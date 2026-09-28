@@ -122,7 +122,7 @@ Hovoríme o tom, čo robia členovia rodiny. Dve nové slovesá, **travailler** 
 
 **Ženský rod povolaní sa ešte len ustaľuje.** Na rozdiel od slovenčiny, kde je ženský tvar povolania samozrejmosťou už desaťročia, francúzština sa s tvarmi ako {{professeure}}, {{écrivaine}} alebo {{autrice}} popasúva ešte len posledné roky — staršia generácia niekedy stále používa mužský tvar aj pre ženy.
 
-**Priezvisko sa nemení.** Francúzske priezviská ostávajú rovnaké bez ohľadu na pohlavie — žiadny ekvivalent slovenskej prípony -ová. Madame Dupont a Monsieur Dupont nesú úplne rovnaké priezvisko.
+**Métro, boulot, dodo.** Týmto výrazom Francúzi s úsmevom opisujú jednotvárny pracovný život: {{métro, boulot, dodo}} — metro, robota, spánok. {{Le boulot}} je hovorové slovo pre prácu, v bežnej reči rovnako časté ako {{le travail}}.
 
 ---
 

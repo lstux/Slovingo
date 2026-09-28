@@ -2,7 +2,7 @@
 
 @ img/Paris_at_night.jpg | Francúzske mesto v noci — Wikimedia Commons
 
-Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet.
+Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet. Ak sa vo vete objaví pár slov navyše, sú vysvetlené v preklade pod ňou.
 
 ---
 
@@ -75,10 +75,10 @@
 > Je vais au musée = idem do múzea
 > voir cette exposition = pozrieť si tú výstavu
 
-! Cette place est jolie, mais bruyante.
-> Toto námestie je pekné, ale hlučné.
+! Cette place est jolie, mais petite.
+> Toto námestie je pekné, ale malé.
 > Cette place est jolie = toto námestie je pekné
-> mais bruyante = ale hlučné
+> mais petite = ale malé
 
 ! Où est la gare ? Elle est loin ?
 > Kde je stanica? Je ďaleko?
@@ -101,48 +101,49 @@
 > Je paie le ticket par carte = platím cestovný lístok kartou
 > je n'ai pas de liquide = nemám hotovosť
 
-! Le vendeur est gentil et le musée est ouvert jusqu'à huit heures.
-> Predavač je milý a múzeum je otvorené do ôsmej.
-> Le vendeur est gentil = predavač je milý
-> et le musée est ouvert = a múzeum je otvorené
-> jusqu'à huit heures = do ôsmej
+! Le musée est ouvert jusqu'à six heures, mais il est fermé le lundi.
+> Múzeum je otvorené do šiestej, ale v pondelok je zatvorené.
+> Le musée est ouvert = múzeum je otvorené
+> jusqu'à six heures = do šiestej
+> mais il est fermé le lundi = ale v pondelok je zatvorené
 
-! Je prends le tram à l'arrêt numéro quarante.
-> Beriem električku na zastávke číslo štyridsať.
-> Je prends le tram = beriem električku
-> à l'arrêt numéro quarante = na zastávke číslo štyridsať
+! Je prends le tram à l'arrêt devant la poste.
+> Idem električkou zo zastávky pred poštou.
+> Je prends le tram = idem električkou
+> à l'arrêt = zo zastávky
+> devant la poste = pred poštou
 
-! Le marché a lieu le samedi, la bibliothèque est ouverte tous les jours.
-> Trh je v sobotu, knižnica je otvorená každý deň.
-> Le marché a lieu le samedi = trh je v sobotu
-> la bibliothèque est ouverte tous les jours = knižnica je otvorená každý deň
+! Le samedi, je vais à la bibliothèque à vélo.
+> V sobotu chodím do knižnice na bicykli.
+> Le samedi = v sobotu
+> je vais à la bibliothèque = chodím do knižnice
+> à vélo = na bicykli
 
-! Cette direction ne me plaît pas. Je suis perdu.
-> Tento smer sa mi nepáči. Som stratený.
-> Cette direction ne me plaît pas = tento smer sa mi nepáči
-> je suis perdu = som stratený
+! Pardon, je suis perdu. Où est la gare ?
+> Prepáčte, stratil som sa. Kde je stanica?
+> Pardon = prepáčte
+> je suis perdu = stratil som sa
+> Où est la gare = kde je stanica
 
-! La mairie est fermée ? Ce n'est pas possible !
-> Radnica je zatvorená? To nie je možné!
-> La mairie est fermée = radnica je zatvorená
-> ce n'est pas possible = to nie je možné
+! La mairie est à côté de la poste, près de la fontaine.
+> Radnica je vedľa pošty, blízko fontány.
+> La mairie est = radnica je
+> à côté de la poste = vedľa pošty
+> près de la fontaine = blízko fontány
 
-! Je n'ai pas mon vélo. Il est à la maison.
-> Nemám so sebou bicykel. Je doma.
-> Je n'ai pas mon vélo = nemám so sebou bicykel
-> il est à la maison = je doma
+! Je prends le bus, puis je continue à pied.
+> Idem autobusom a potom pokračujem pešo.
+> Je prends le bus = idem autobusom
+> puis je continue à pied = potom pokračujem pešo
 
-! J'ai besoin d'aide, parce que je suis vraiment perdu.
-> Potrebujem pomoc, lebo som naozaj stratený.
-> J'ai besoin d'aide = potrebujem pomoc
-> parce que je suis vraiment perdu = lebo som naozaj stratený
+! Au carrefour, tournez à gauche : l'église est sur la place.
+> Na križovatke zabočte vľavo: kostol je na námestí.
+> Au carrefour = na križovatke
+> tournez à gauche = zabočte vľavo
+> l'église est sur la place = kostol je na námestí
 
-! Le parc est plein de monde, la rue est vide.
-> Park je plný ľudí, ulica je prázdna.
-> Le parc est plein de monde = park je plný ľudí
-> la rue est vide = ulica je prázdna
-
-! Je vais m'acheter un nouveau vélo et je vais vendre mon vieux vélo.
-> Kúpim si nový bicykel a starý predám.
-> Je vais m'acheter un nouveau vélo = kúpim si nový bicykel
-> et je vais vendre mon vieux vélo = a starý predám
+! Nous nous promenons dans le parc, puis nous allons au cinéma.
+> Prechádzame sa v parku a potom ideme do kina.
+> Nous nous promenons = prechádzame sa
+> dans le parc = v parku
+> puis nous allons au cinéma = potom ideme do kina

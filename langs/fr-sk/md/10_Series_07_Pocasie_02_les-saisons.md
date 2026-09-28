@@ -31,7 +31,7 @@
 | en automne | na jeseň |
 | en hiver | v zime |
 
-Francúzština tu má podobne nesystematický vzor ako slovenčina! „au“ pre jar, „en“ pre ostatné tri — čiastočne paralelné s tým, že slovenčina tiež strieda na/v bez jasného pravidla.
+Tu má francúzština jasné pravidlo: pred samohláskou „en“ ({{en été}}, {{en automne}}, {{en hiver}}), pred spoluhláskou „au“ ({{au printemps}}). Jar je jediné ročné obdobie, ktoré začína spoluhláskou — preto je výnimkou. Slovenčina strieda na/v bez takého pravidla.
 
 ### Comparatif: plus...que / moins...que / aussi...que
 
