@@ -129,7 +129,7 @@ Francúzština nemá stredný rod, takže úloha je jednoduchšia než v sloven�
 
 **Kyslé nie je zlé, len iné.** Presne ako v slovenčine, aj francúzska kuchyňa pozná kyslé chute — citrón, ocot, kváskový chlieb — hoci fermentovanej zeleniny (ako slovenská kapusta) je vo francúzskej kuchyni menej.
 
-**Namiesto kofoly, diabolo.** Namiesto slovenskej {{kofoly}} si francúzske deti častejšie objednajú {{un diabolo}} — sýtenú vodu so sirupom (mätovým, granátovým...), oveľa menej sladkú než klasickú kolu.
+**Namiesto kofoly, diabolo.** Namiesto slovenskej kofoly si francúzske deti častejšie objednajú {{un diabolo}} — sýtenú vodu so sirupom (mätovým, granátovým...), oveľa menej sladkú než klasickú kolu.
 
 ---
 

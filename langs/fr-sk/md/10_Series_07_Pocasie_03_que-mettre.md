@@ -125,9 +125,9 @@ Podobne ako pri „vouloir“, aj po „devoir“ nasleduje priamo infinitív �
 
 **Vrstvenie oblečenia sa cení aj tu, len menej extrémne.** Na rozdiel od slovenského dôrazu na obliekanie „na cibuľu“ kvôli veľkým výkyvom teplôt, vo Francúzsku sú výkyvy miernejšie — no vrstvenie sa aj tak odporúča, najmä v horách.
 
-**Prázdniny sa neviažu na lyžovačku tak silno.** Na rozdiel od slovenských {{jarných prázdnin}} určených na lyžovačku, francúzske {{vacances d'hiver}} sú síce tiež v zime, ale rodiny ich trávia rôzne — nielen na horách.
+**Prázdniny sa neviažu na lyžovačku tak silno.** Na rozdiel od slovenských jarných prázdnin určených na lyžovačku, francúzske {{vacances d'hiver}} sú síce tiež v zime, ale rodiny ich trávia rôzne — nielen na horách.
 
-**Devoir má vo francúzštine viac odtieňov.** Na rozdiel od slovenského {{musieť}}, ktoré funguje takmer univerzálne, francúzština rozlišuje „devoir“ (musieť) od zdvorilejšieho „il faudrait“ (bolo by treba) — jemnosť, ktorú si osvojíš postupne.
+**Devoir má vo francúzštine viac odtieňov.** Na rozdiel od slovenského musieť, ktoré funguje takmer univerzálne, francúzština rozlišuje „devoir“ (musieť) od zdvorilejšieho „il faudrait“ (bolo by treba) — jemnosť, ktorú si osvojíš postupne.
 
 ---
 

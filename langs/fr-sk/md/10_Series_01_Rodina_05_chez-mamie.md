@@ -132,7 +132,7 @@ Eric a Karine si tykajú. Eric vyká Mamie Louise.
 
 **Obed u babky.** Prísť k francúzskej babke bez hladu je taktická chyba. Jedlo je pripravené, je ho veľa, a veta {{Servez-vous, je vous en prie}} — „poslúžte si, prosím“ — počas obeda zaznie viackrát.
 
-**Bonjour a Au revoir, nie jedno slovo pre oboje.** Na rozdiel od slovenského {{Ahoj}}, ktoré funguje pri príchode aj odchode, francúzština má dve rôzne slová: {{Bonjour}} pri príchode, {{Au revoir}} pri odchode. S niekým, komu vykáš, použiješ obe zdvorilo.
+**Bonjour a Au revoir, nie jedno slovo pre oboje.** Na rozdiel od slovenského Ahoj, ktoré funguje pri príchode aj odchode, francúzština má dve rôzne slová: {{Bonjour}} pri príchode, {{Au revoir}} pri odchode. S niekým, komu vykáš, použiješ obe zdvorilo.
 
 ---
 

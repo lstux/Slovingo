@@ -109,7 +109,7 @@ Slovesá na -er strácajú v rozkazovacom spôsobe pre „tu“ koncové „s“
 
 ## 🇫🇷 Francúzsky kútik
 
-**Excusez-moi otvára všetky dvere.** Podobne ako slovenské {{prepáčte}}, aj toto slovko slúži na oslovenie cudzieho človeka, prepchanie sa davom, alebo skutočné ospravedlnenie. Jedno z najužitočnejších slov v turistickej slovnej zásobe.
+**Excusez-moi otvára všetky dvere.** Podobne ako slovenské prepáčte, aj toto slovko slúži na oslovenie cudzieho človeka, prepchanie sa davom, alebo skutočné ospravedlnenie. Jedno z najužitočnejších slov v turistickej slovnej zásobe.
 
 **Francúzi radi ukazujú cestu — aj s telefónom v ruke.** Na rozdiel od slovenského zvyku vysvetľovať cestu ústne s gestom rukou, vo Francúzsku je bežnejšie, že si ľudia rovno vytiahnu telefón a ukážu trasu na mape — rýchlejšie, ale menej osobné.
 

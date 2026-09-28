@@ -96,11 +96,11 @@ Rozdelenie nie je dokonale systematické — „au théâtre“ a „au musée�
 
 ## 🇫🇷 Francúzsky kútik
 
-**Lyon má tiež svoj slávny most.** Podobne ako slovenský {{Nový most}} v Bratislave, aj Lyon má svoje obľúbené mosty cez rieku Rhône — napríklad {{pont Wilson}}, obľúbené miesto na prechádzku pri vode.
+**Lyon má tiež svoj slávny most.** Podobne ako slovenský Nový most v Bratislave, aj Lyon má svoje obľúbené mosty cez rieku Rhône — napríklad {{pont Wilson}}, obľúbené miesto na prechádzku pri vode.
 
-**Vianočné trhy, klasika aj tu.** Podobne ako slovenské {{Hlavné námestie}} počas Vianoc, aj vo Francúzsku sa hlavné námestia v decembri menia na vianočné trhy, {{le marché de Noël}}, s vareným vínom a drevenými stánkami.
+**Vianočné trhy, klasika aj tu.** Podobne ako slovenské Hlavné námestie počas Vianoc, aj vo Francúzsku sa hlavné námestia v decembri menia na vianočné trhy, {{le marché de Noël}}, s vareným vínom a drevenými stánkami.
 
-**Théâtre a musée majú svoje historické budovy.** Podobne ako slovenské {{Slovenské národné divadlo}}, aj francúzske mestá majú svoje historické divadelné budovy z 19. storočia, popri modernejších sálach.
+**Théâtre a musée majú svoje historické budovy.** Podobne ako slovenské Slovenské národné divadlo, aj francúzske mestá majú svoje historické divadelné budovy z 19. storočia, popri modernejších sálach.
 
 ---
 

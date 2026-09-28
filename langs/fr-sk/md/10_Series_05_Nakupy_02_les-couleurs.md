@@ -115,7 +115,7 @@ Nová vec: francúzske ukazovacie zámeno sa zhoduje s podstatným menom rovnako
 
 ## 🇫🇷 Francúzsky kútik
 
-**Bleu má vo francúzštine podobné rozpätie.** Podobne ako slovenské {{modrý}}, aj francúzske {{bleu}} niekedy zahŕňa aj to, čo by Slovák nazval tyrkysovou — rozdiel je skôr v odtieňoch než v systéme.
+**Bleu má vo francúzštine podobné rozpätie.** Podobne ako slovenské modrý, aj francúzske {{bleu}} niekedy zahŕňa aj to, čo by Slovák nazval tyrkysovou — rozdiel je skôr v odtieňoch než v systéme.
 
 **Modrá, biela, červená — trikolóra aj tu.** Francúzska vlajka spája presne tieto tri farby, podobne ako slovenská. Rozdiel je v usporiadaní: francúzska je zvislá (modrá-biela-červená), slovenská vodorovná (biela-modrá-červená).
 

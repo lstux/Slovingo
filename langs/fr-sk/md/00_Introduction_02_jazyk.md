@@ -39,7 +39,7 @@ V skratke: francúzština je blízka sesternica taliančiny a španielčiny, a v
 
 # 3. Francúzština a jej regionálne jazyky
 
-Na rozdiel od slovensko-českého páru, ktorý ostal navzájom veľmi zrozumiteľný, Francúzsko malo historicky viacero vlastných jazykov — {{oksitánčinu}} na juhu, {{bretónčinu}} na západe, {{alsaskú nemčinu}} na východe, a ďalšie. Centralizovaná moc z Paríža ich od 19. storočia systematicky potláčala v prospech štandardnej francúzštiny. Dnes existujú snahy o ich oživenie, najmä pri bretónčine, ktorá má vlastnú dvojjazyčnú školu ({{Diwan}}).
+Na rozdiel od slovensko-českého páru, ktorý ostal navzájom veľmi zrozumiteľný, Francúzsko malo historicky viacero vlastných jazykov — oksitánčinu ({{l'occitan}}) na juhu, bretónčinu ({{le breton}}) na západe, alsaskú nemčinu ({{l'alsacien}}) na východe, a ďalšie. Centralizovaná moc z Paríža ich od 19. storočia systematicky potláčala v prospech štandardnej francúzštiny. Dnes existujú snahy o ich oživenie, najmä pri bretónčine, ktorá má vlastnú dvojjazyčnú školu ({{Diwan}}).
 
 ---
 

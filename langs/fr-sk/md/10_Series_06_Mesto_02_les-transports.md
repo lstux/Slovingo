@@ -111,7 +111,7 @@ Zatiaľ čo slovenčina vyžaduje inštrumentál („autobusOM“), francúzšti
 
 ## 🇫🇷 Francúzsky kútik
 
-**TCL, skratka, ktorú pozná každý v Lyone.** Podobne ako slovenská skratka {{MHD}}, aj Lyon má svoju: {{TCL}} (Transports en Commun Lyonnais) sa objavuje na aplikáciách, lístkoch aj tabuliach — nikto nehovorí celý názov.
+**TCL, skratka, ktorú pozná každý v Lyone.** Podobne ako slovenská skratka MHD, aj Lyon má svoju: {{TCL}} (Transports en Commun Lyonnais) sa objavuje na aplikáciách, lístkoch aj tabuliach — nikto nehovorí celý názov.
 
 **Lyonská doprava kombinuje metro, električky aj autobusy.** Na rozdiel od Bratislavy, ktorá metro nemá, Lyon má aj metro, aj električky, aj autobusy — jeden lístok často platí na všetky tri.
 
