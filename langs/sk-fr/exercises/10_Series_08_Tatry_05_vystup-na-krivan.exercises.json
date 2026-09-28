@@ -164,7 +164,7 @@
       "id": "blank-cho-pomaly-a-opatrne-nie-je-s-a",
       "type": "fill-blank",
       "l1": "Va lentement et prudemment. Ce n'est pas une course.",
-      "l2": "Choď pomaly a opatrne. Nie je súťaž.",
+      "l2": "Choď pomaly a opatrne. Nie je to súťaž.",
       "missing_l1": "et",
       "missing_l2": "je",
       "blank_index_l1": 2,
@@ -178,26 +178,6 @@
         "budú",
         "budem",
         "bol"
-      ]
-    },
-    {
-      "id": "blank-som-unaven-m-eme-odpo-va",
-      "type": "fill-blank",
-      "l1": "Je suis fatigué. Pouvons-nous nous reposer ?",
-      "l2": "Som unavený. Môžeme odpočívať?",
-      "missing_l1": "nous",
-      "missing_l2": "unavený",
-      "blank_index_l1": 4,
-      "blank_index_l2": 1,
-      "choices_l1": [
-        "elles",
-        "Elle",
-        "Ce"
-      ],
-      "choices_l2": [
-        "vrchole",
-        "náročnejšie",
-        "najkrajší"
       ]
     },
     {
@@ -264,7 +244,7 @@
       "id": "blank-vitaj-v-tatr-ch-eric",
       "type": "fill-blank",
       "l1": "Bienvenue dans les Tatras, Eric !",
-      "l2": "Vitaj v Tatrách, Eric!",
+      "l2": "Vitajte v Tatrách, Eric!",
       "missing_l1": "les",
       "missing_l2": "v",
       "blank_index_l1": 2,
@@ -508,7 +488,7 @@
       "id": "listen-cho-pomaly-a-opatrne-nie-je-s-a",
       "type": "listen",
       "l1": "Va lentement et prudemment. Ce n'est pas une course.",
-      "l2": "Choď pomaly a opatrne. Nie je súťaž.",
+      "l2": "Choď pomaly a opatrne. Nie je to súťaž.",
       "choices_l1": [
         "Je suis fatigué. Pouvons-nous nous reposer ?",
         "C'est raide !",
@@ -518,22 +498,6 @@
         "Toto je najkrajší výhľad, aký som kedy videl.",
         "Po červenej značke. Je to náročnejšie, ale výhľad je krajší.",
         "Máš mapu a kompas?"
-      ]
-    },
-    {
-      "id": "listen-som-unaven-m-eme-odpo-va",
-      "type": "listen",
-      "l1": "Je suis fatigué. Pouvons-nous nous reposer ?",
-      "l2": "Som unavený. Môžeme odpočívať?",
-      "choices_l1": [
-        "Regarde ! On voit le lac et toute la vallée !",
-        "Allons-y ! Je veux être au sommet avant le déjeuner.",
-        "C'est le plus beau panorama que j'aie jamais vu."
-      ],
-      "choices_l2": [
-        "Po červenej značke. Je to náročnejšie, ale výhľad je krajší.",
-        "Je to strmé!",
-        "Áno, tu je pekné miesto. Dáme si vodu."
       ]
     },
     {
@@ -588,7 +552,7 @@
       "id": "listen-vitaj-v-tatr-ch-eric",
       "type": "listen",
       "l1": "Bienvenue dans les Tatras, Eric !",
-      "l2": "Vitaj v Tatrách, Eric!",
+      "l2": "Vitajte v Tatrách, Eric!",
       "choices_l1": [
         "Tu as une carte et une boussole ?",
         "Je suis fatigué. Pouvons-nous nous reposer ?",
@@ -980,7 +944,7 @@
       "id": "order-cho-pomaly-a-opatrne-nie-je-s-a",
       "type": "order",
       "l1": "Va lentement et prudemment. Ce n'est pas une course.",
-      "l2": "Choď pomaly a opatrne. Nie je súťaž.",
+      "l2": "Choď pomaly a opatrne. Nie je to súťaž.",
       "tokens_l1": [
         "Va",
         "lentement",
@@ -1006,6 +970,7 @@
         "opatrne.",
         "Nie",
         "je",
+        "to",
         "súťaž.",
         "Chcel",
         "by",
@@ -1015,48 +980,6 @@
         "Kriváň",
         "budúci",
         "rok."
-      ]
-    },
-    {
-      "id": "order-som-unaven-m-eme-odpo-va",
-      "type": "order",
-      "l1": "Je suis fatigué. Pouvons-nous nous reposer ?",
-      "l2": "Som unavený. Môžeme odpočívať?",
-      "tokens_l1": [
-        "Je",
-        "suis",
-        "fatigué.",
-        "Pouvons-nous",
-        "nous",
-        "reposer",
-        "?",
-        "Nous",
-        "pourrions",
-        "passer",
-        "la",
-        "nuit",
-        "au",
-        "refuge",
-        "et",
-        "continuer",
-        "le",
-        "matin."
-      ],
-      "tokens_l2": [
-        "Som",
-        "unavený.",
-        "Môžeme",
-        "odpočívať?",
-        "Mohli",
-        "by",
-        "sme",
-        "prespať",
-        "v",
-        "chate",
-        "a",
-        "ísť",
-        "ďalej",
-        "ráno."
       ]
     },
     {
@@ -1190,7 +1113,7 @@
       "id": "order-vitaj-v-tatr-ch-eric",
       "type": "order",
       "l1": "Bienvenue dans les Tatras, Eric !",
-      "l2": "Vitaj v Tatrách, Eric!",
+      "l2": "Vitajte v Tatrách, Eric!",
       "tokens_l1": [
         "Bienvenue",
         "dans",
@@ -1210,7 +1133,7 @@
         "déjeuner."
       ],
       "tokens_l2": [
-        "Vitaj",
+        "Vitajte",
         "v",
         "Tatrách,",
         "Eric!",
@@ -1411,6 +1334,77 @@
         "Máš mapu a kompas?",
         "Áno, a aj lekárničku. Musíme byť pripravení.",
         "Kade ideme?"
+      ]
+    },
+    {
+      "id": "blank-som-unaven-m-eme-si-odd-chnu",
+      "type": "fill-blank",
+      "l1": "Je suis fatigué. Pouvons-nous faire une pause ?",
+      "l2": "Som unavený. Môžeme si oddýchnuť?",
+      "missing_l1": "une",
+      "missing_l2": "si",
+      "blank_index_l1": 5,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "pas",
+        "dans",
+        "la"
+      ],
+      "choices_l2": [
+        "ale",
+        "mám",
+        "siedmej"
+      ]
+    },
+    {
+      "id": "listen-som-unaven-m-eme-si-odd-chnu",
+      "type": "listen",
+      "l1": "Je suis fatigué. Pouvons-nous faire une pause ?",
+      "l2": "Som unavený. Môžeme si oddýchnuť?",
+      "choices_l1": [
+        "Le magasin est ouvert.",
+        "La chaise est dans la cuisine.",
+        "Je vais à la pharmacie."
+      ]
+    },
+    {
+      "id": "order-som-unaven-m-eme-si-odd-chnu",
+      "type": "order",
+      "l1": "Je suis fatigué. Pouvons-nous faire une pause ?",
+      "l2": "Som unavený. Môžeme si oddýchnuť?",
+      "tokens_l1": [
+        "Je",
+        "suis",
+        "fatigué.",
+        "Pouvons-nous",
+        "faire",
+        "une",
+        "pause",
+        "?",
+        "Regarde",
+        "!",
+        "On",
+        "voit",
+        "le",
+        "lac",
+        "et",
+        "toute",
+        "la",
+        "vallée",
+        "!"
+      ],
+      "tokens_l2": [
+        "Som",
+        "unavený.",
+        "Môžeme",
+        "si",
+        "oddýchnuť?",
+        "Pozri!",
+        "Vidno",
+        "jazero",
+        "a",
+        "celú",
+        "dolinu!"
       ]
     }
   ]

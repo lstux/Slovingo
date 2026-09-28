@@ -115,7 +115,7 @@
     {
       "id": "qcm-ja-sk-sim",
       "type": "qcm",
-      "l1": "j'essaie",
+      "l1": "je vais essayer",
       "l2": "ja skúsim",
       "choices_l1": [
         "essayer",
@@ -131,7 +131,7 @@
     {
       "id": "qcm-ty-sk-si",
       "type": "qcm",
-      "l1": "tu essaies",
+      "l1": "tu vas essayer",
       "l2": "ty skúsiš",
       "choices_l1": [
         "essayer",
@@ -147,7 +147,7 @@
     {
       "id": "qcm-on-ona-sk-si",
       "type": "qcm",
-      "l1": "il / elle essaie",
+      "l1": "il / elle va essayer",
       "l2": "on / ona skúsi",
       "choices_l1": [
         "une jupe verte",
@@ -340,11 +340,11 @@
       "id": "blank-chcem-sk-si-toto-tri-ko",
       "type": "fill-blank",
       "l1": "Je veux essayer ce tee-shirt.",
-      "l2": "Chcem skúsiť toto tričko.",
+      "l2": "Chcem si skúsiť toto tričko.",
       "missing_l1": "veux",
       "missing_l2": "toto",
       "blank_index_l1": 1,
-      "blank_index_l2": 2,
+      "blank_index_l2": 3,
       "choices_l1": [
         "voulons",
         "veulent",
@@ -414,26 +414,6 @@
         "si",
         "Bude",
         "bol"
-      ]
-    },
-    {
-      "id": "blank-sk-sim-ierne-nohavice",
-      "type": "fill-blank",
-      "l1": "J'essaie le pantalon noir.",
-      "l2": "Skúsim čierne nohavice.",
-      "missing_l1": "le",
-      "missing_l2": "čierne",
-      "blank_index_l1": 1,
-      "blank_index_l2": 1,
-      "choices_l1": [
-        "Ces",
-        "jupe",
-        "la"
-      ],
-      "choices_l2": [
-        "skúsiť",
-        "čiernu",
-        "sukňa"
       ]
     },
     {
@@ -520,11 +500,11 @@
       "id": "blank-sk-sim-to-v-obchode-v-sobotu",
       "type": "fill-blank",
       "l1": "Je vais essayer ça au magasin samedi.",
-      "l2": "Skúsim to v obchode v sobotu.",
+      "l2": "Skúsim si to v obchode v sobotu.",
       "missing_l1": "au",
       "missing_l2": "v",
       "blank_index_l1": 4,
-      "blank_index_l2": 2,
+      "blank_index_l2": 3,
       "choices_l1": [
         "Ces",
         "M",
@@ -660,7 +640,7 @@
       "id": "listen-chcem-sk-si-toto-tri-ko",
       "type": "listen",
       "l1": "Je veux essayer ce tee-shirt.",
-      "l2": "Chcem skúsiť toto tričko.",
+      "l2": "Chcem si skúsiť toto tričko.",
       "choices_l1": [
         "Je veux un pull bon marché.",
         "J'ai la taille M.",
@@ -718,22 +698,6 @@
         "Skúsim to v obchode v sobotu.",
         "Zelená sukňa sa mi páči.",
         "Kupujem modré tričko a čierne nohavice."
-      ]
-    },
-    {
-      "id": "listen-sk-sim-ierne-nohavice",
-      "type": "listen",
-      "l1": "J'essaie le pantalon noir.",
-      "l2": "Skúsim čierne nohavice.",
-      "choices_l1": [
-        "Cette veste est chère.",
-        "Où est la cabine d'essayage ?",
-        "Cette chemise est petite. Vous en avez une plus grande ?"
-      ],
-      "choices_l2": [
-        "Táto košeľa je malá. Máte väčšiu?",
-        "Mám veľkosť M.",
-        "Zelená sukňa sa mi páči."
       ]
     },
     {
@@ -804,7 +768,7 @@
       "id": "listen-sk-sim-to-v-obchode-v-sobotu",
       "type": "listen",
       "l1": "Je vais essayer ça au magasin samedi.",
-      "l2": "Skúsim to v obchode v sobotu.",
+      "l2": "Skúsim si to v obchode v sobotu.",
       "choices_l1": [
         "Quelle taille avez-vous ?",
         "J'ai la taille M.",
@@ -916,7 +880,7 @@
       "id": "order-chcem-sk-si-toto-tri-ko",
       "type": "order",
       "l1": "Je veux essayer ce tee-shirt.",
-      "l2": "Chcem skúsiť toto tričko.",
+      "l2": "Chcem si skúsiť toto tričko.",
       "tokens_l1": [
         "Je",
         "veux",
@@ -934,6 +898,7 @@
       ],
       "tokens_l2": [
         "Chcem",
+        "si",
         "skúsiť",
         "toto",
         "tričko.",
@@ -1038,31 +1003,6 @@
         "obchode",
         "v",
         "sobotu."
-      ]
-    },
-    {
-      "id": "order-sk-sim-ierne-nohavice",
-      "type": "order",
-      "l1": "J'essaie le pantalon noir.",
-      "l2": "Skúsim čierne nohavice.",
-      "tokens_l1": [
-        "J'essaie",
-        "le",
-        "pantalon",
-        "noir.",
-        "Ces",
-        "chaussures",
-        "sont",
-        "confortables."
-      ],
-      "tokens_l2": [
-        "Skúsim",
-        "čierne",
-        "nohavice.",
-        "Tieto",
-        "topánky",
-        "sú",
-        "pohodlné."
       ]
     },
     {
@@ -1197,7 +1137,7 @@
       "id": "order-sk-sim-to-v-obchode-v-sobotu",
       "type": "order",
       "l1": "Je vais essayer ça au magasin samedi.",
-      "l2": "Skúsim to v obchode v sobotu.",
+      "l2": "Skúsim si to v obchode v sobotu.",
       "tokens_l1": [
         "Je",
         "vais",
@@ -1214,6 +1154,7 @@
       ],
       "tokens_l2": [
         "Skúsim",
+        "si",
         "to",
         "v",
         "obchode",
@@ -1439,10 +1380,71 @@
         "Cette chemise est petite. Vous en avez une plus grande ?"
       ],
       "l2": [
-        "Chcem skúsiť toto tričko.",
+        "Chcem si skúsiť toto tričko.",
         "Akú veľkosť máte?",
         "Mám veľkosť M.",
         "Táto košeľa je malá. Máte väčšiu?"
+      ]
+    },
+    {
+      "id": "blank-sk-sim-si-ierne-nohavice",
+      "type": "fill-blank",
+      "l1": "Je vais essayer le pantalon noir.",
+      "l2": "Skúsim si čierne nohavice.",
+      "missing_l1": "le",
+      "missing_l2": "si",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "à",
+        "en",
+        "est"
+      ],
+      "choices_l2": [
+        "prosím",
+        "nemám",
+        "prídem"
+      ]
+    },
+    {
+      "id": "listen-sk-sim-si-ierne-nohavice",
+      "type": "listen",
+      "l1": "Je vais essayer le pantalon noir.",
+      "l2": "Skúsim si čierne nohavice.",
+      "choices_l1": [
+        "Quand arrives-tu ?",
+        "Moi je ne veux pas de halušky. Je veux du gâteau !",
+        "Nous avons quatre verres et quatre assiettes."
+      ]
+    },
+    {
+      "id": "order-sk-sim-si-ierne-nohavice",
+      "type": "order",
+      "l1": "Je vais essayer le pantalon noir.",
+      "l2": "Skúsim si čierne nohavice.",
+      "tokens_l1": [
+        "Je",
+        "vais",
+        "essayer",
+        "le",
+        "pantalon",
+        "noir.",
+        "Cette",
+        "robe",
+        "est",
+        "très",
+        "jolie."
+      ],
+      "tokens_l2": [
+        "Skúsim",
+        "si",
+        "čierne",
+        "nohavice.",
+        "Tieto",
+        "šaty",
+        "sú",
+        "veľmi",
+        "pekné."
       ]
     }
   ]

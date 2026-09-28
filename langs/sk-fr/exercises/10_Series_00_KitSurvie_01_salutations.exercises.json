@@ -1,131 +1,100 @@
 {
+  "sync": "no-add",
   "exercises": [
     {
       "id": "qcm-dobrydeni",
       "type": "qcm",
-      "l1": "dobrý deň",
-      "l2": "bonjour",
+      "l1": "bonjour",
+      "l2": "dobrý deň",
       "choices_l1": [
-        "ahoj",
-        "čau",
-        "ako sa máš"
-      ],
-      "choices_l2": [
         "salut",
         "au revoir",
         "comment ça va"
+      ],
+      "choices_l2": [
+        "ahoj",
+        "čau",
+        "ako sa máš"
       ]
     },
     {
       "id": "qcm-ahoj",
       "type": "qcm",
-      "l1": "ahoj",
-      "l2": "salut",
+      "l1": "salut",
+      "l2": "ahoj",
       "choices_l1": [
-        "dobrý deň",
-        "čau",
-        "ako sa máš"
-      ],
-      "choices_l2": [
         "bonjour",
         "au revoir",
         "comment ça va"
+      ],
+      "choices_l2": [
+        "dobrý deň",
+        "čau",
+        "ako sa máš"
       ]
     },
     {
       "id": "qcm-cau",
       "type": "qcm",
-      "l1": "čau",
-      "l2": "ciao, au revoir",
+      "l1": "ciao, salut, au revoir",
+      "l2": "čau",
       "choices_l1": [
-        "dobrý deň",
-        "ahoj",
-        "ako sa máš"
-      ],
-      "choices_l2": [
         "bonjour",
         "salut",
         "comment ça va"
+      ],
+      "choices_l2": [
+        "dobrý deň",
+        "ahoj",
+        "ako sa máš"
       ]
     },
     {
       "id": "qcm-akosamaš",
       "type": "qcm",
-      "l1": "ako sa máš",
-      "l2": "comment ça va",
+      "l1": "comment ça va",
+      "l2": "ako sa máš",
       "choices_l1": [
-        "dobrý deň",
-        "ahoj",
-        "čau"
-      ],
-      "choices_l2": [
         "bonjour",
         "salut",
         "au revoir"
-      ]
-    },
-    {
-      "id": "qcm-priatel",
-      "type": "qcm",
-      "l1": "priateľ",
-      "l2": "l'ami",
-      "choices_l1": [
-        "dobrý deň",
-        "dnes",
-        "ahoj"
       ],
       "choices_l2": [
-        "bonjour",
-        "aujourd'hui",
-        "salut"
+        "dobrý deň",
+        "ahoj",
+        "čau"
       ]
     },
     {
       "id": "qcm-dnes",
       "type": "qcm",
-      "l1": "dnes",
-      "l2": "aujourd'hui",
+      "l1": "aujourd'hui",
+      "l2": "dnes",
       "choices_l1": [
-        "priateľ",
-        "ahoj",
-        "dobrý deň"
-      ],
-      "choices_l2": [
         "l'ami",
         "salut",
         "bonjour"
+      ],
+      "choices_l2": [
+        "priateľ",
+        "ahoj",
+        "dobrý deň"
       ]
     },
     {
       "id": "match-salutations",
       "type": "match",
       "l1": [
+        "Bonjour.",
+        "Salut !",
+        "Ciao ! Salut !",
+        "Comment ça va ?"
+      ],
+      "l2": [
         "Dobrý deň.",
         "Ahoj!",
         "Čau!",
         "Ako sa máš?"
-      ],
-      "l2": [
-        "Bonjour.",
-        "Salut !",
-        "Au revoir !",
-        "Comment ça va ?"
-      ]
-    },
-    {
-      "id": "match-salutations-extended",
-      "type": "match",
-      "l1": [
-        "Dobrý deň! Ako sa máš?",
-        "Ahoj priateľ!",
-        "Ahoj! Čau!",
-        "Dnes je dobrý deň."
-      ],
-      "l2": [
-        "Bonjour ! Comment ça va ?",
-        "Salut l'ami !",
-        "Salut ! Au revoir !",
-        "Aujourd'hui c'est un bon jour."
       ]
     }
   ]

@@ -1,131 +1,36 @@
 {
+  "sync": "no-add",
   "exercises": [
-    {
-      "id": "qcm-vela",
-      "type": "qcm",
-      "l1": "veľa",
-      "l2": "beaucoup",
-      "choices_l1": [
-        "meno",
-        "poznať",
-        "dovidenia"
-      ],
-      "choices_l2": [
-        "le prénom",
-        "connaître",
-        "au revoir"
-      ]
-    },
-    {
-      "id": "qcm-meno",
-      "type": "qcm",
-      "l1": "meno",
-      "l2": "le prénom",
-      "choices_l1": [
-        "veľa",
-        "poznať",
-        "dovidenia"
-      ],
-      "choices_l2": [
-        "beaucoup",
-        "connaître",
-        "au revoir"
-      ]
-    },
-    {
-      "id": "qcm-poznat",
-      "type": "qcm",
-      "l1": "poznať",
-      "l2": "connaître",
-      "choices_l1": [
-        "veľa",
-        "meno",
-        "po anglicky"
-      ],
-      "choices_l2": [
-        "beaucoup",
-        "le prénom",
-        "anglais"
-      ]
-    },
     {
       "id": "qcm-poang",
       "type": "qcm",
-      "l1": "po anglicky",
-      "l2": "anglais",
+      "l1": "anglais",
+      "l2": "po anglicky",
       "choices_l1": [
-        "veľa",
-        "po francúzsky",
-        "poznať"
-      ],
-      "choices_l2": [
         "beaucoup",
         "français",
         "connaître"
-      ]
-    },
-    {
-      "id": "match-vocab-kit",
-      "type": "match",
-      "l1": [
-        "Dobrý deň! Ako sa máš?",
-        "Som v poriadku, ďakujem. A ty?",
-        "Ahoj priateľ! Čau!",
-        "Dnes je dobrý deň."
       ],
-      "l2": [
-        "Bonjour ! Comment ça va ?",
-        "Je vais bien, merci. Et toi ?",
-        "Salut l'ami ! Au revoir !",
-        "Aujourd'hui c'est un bon jour."
+      "choices_l2": [
+        "veľa",
+        "po francúzsky",
+        "poznať"
       ]
     },
     {
       "id": "match-vocab-politesse",
       "type": "match",
       "l1": [
-        "Prosím, pomôž mi.",
-        "Pomoc! Prepáčte, nerozumiem.",
-        "Rozumiem, ďakujem.",
-        "Nie, ďakujem. Áno, prosím."
-      ],
-      "l2": [
         "S'il te plaît, aide-moi.",
         "À l'aide ! Pardon, je ne comprends pas.",
         "Je comprends, merci.",
         "Non, merci. Oui, s'il te plaît."
-      ]
-    },
-    {
-      "id": "match-vocab-questions",
-      "type": "match",
-      "l1": [
-        "Hovoríte po francúzsky? Rozumieš?",
-        "Prepáčte, hovoríte po anglicky?",
-        "Čo to znamená?",
-        "Ďakujem veľa, priateľ!"
       ],
       "l2": [
-        "Vous parlez français ? Tu comprends ?",
-        "Pardon, vous parlez anglais ?",
-        "Qu'est-ce que ça veut dire ?",
-        "Merci beaucoup, l'ami !"
-      ]
-    },
-    {
-      "id": "match-vocab-formules",
-      "type": "match",
-      "l1": [
-        "Aké je vaše meno?",
-        "Je milé vás poznať.",
-        "Nič, dovidenia!",
-        "Tiež dovidenia, priateľ!"
-      ],
-      "l2": [
-        "Quel est votre prénom ?",
-        "C'est agréable de vous connaître.",
-        "De rien, au revoir !",
-        "Au revoir aussi, l'ami !"
+        "Prosím, pomôž mi.",
+        "Pomoc! Prepáčte, nerozumiem.",
+        "Rozumiem, ďakujem.",
+        "Nie, ďakujem. Áno, prosím."
       ]
     }
   ]

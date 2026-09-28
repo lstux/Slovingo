@@ -66,6 +66,41 @@ Le fichier trouvé peut soit remplacer entièrement les exercices générés
 (`"mode": "append"`). Une fiche sans aucun de ces trois fichiers reçoit
 uniquement des exercices générés automatiquement.
 
+### Garder les exercices manuels alignés sur les fiches
+
+Un fichier d'exercices manuel n'est jamais régénéré par le build (c'est
+voulu : il contient des distracteurs choisis à la main). Conséquence :
+quand on corrige une phrase ou une ligne de vocabulaire dans le `.md`,
+ses exercices continuent d'afficher l'ancien texte. `build.py` le signale
+par un avertissement, et `src/sync_exercises.py` le corrige :
+
+```
+python3 src/sync_exercises.py --lang-dir langs/fr-sk            # aperçu
+python3 src/sync_exercises.py --lang-dir langs/fr-sk --apply    # écrit
+```
+
+- les exercices encore à jour sont gardés tels quels ;
+- si un seul côté a changé (par ex. seulement la traduction), le texte
+  est mis à jour en place et les distracteurs faits main sont gardés ;
+- les exercices écrits à l'envers (`l1` et `l2` inversés — `l1` doit
+  être la langue maternelle, `l2` la langue apprise) sont remis à
+  l'endroit ;
+- les autres sont retirés, et les nouvelles phrases reçoivent les
+  exercices générés automatiquement (à relire : leurs distracteurs sont
+  automatiques).
+
+Réglage par fichier, avec une clé `"sync"` au premier niveau du fichier :
+
+| Valeur | Effet |
+|---|---|
+| `"full"` (défaut) | tout ce qui précède |
+| `"no-add"` | corrige et met à jour, mais n'ajoute jamais d'exercices générés (fichier volontairement court) |
+| `"off"` | jamais touché ni signalé (exercices libres, par ex. une page de remerciements) |
+
+Les fichiers en `"mode": "append"` ne sont jamais touchés non plus :
+leurs exercices s'ajoutent aux exercices générés, ils ne suivent pas le
+texte de la fiche.
+
 ## Le reusable workflow (dans ce repo)
 
 Fichier : [`.github/workflows/build-release.yml`](../.github/workflows/build-release.yml)

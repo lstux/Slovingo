@@ -64,7 +64,7 @@
       "id": "blank-ja-viem-mus-me-meni-pl-n",
       "type": "fill-blank",
       "l1": "Je sais. Nous devons changer de plan.",
-      "l2": "Ja viem. Musíme meniť plán.",
+      "l2": "Ja viem. Musíme zmeniť plán.",
       "missing_l1": "de",
       "missing_l2": "Musíme",
       "blank_index_l1": 5,
@@ -124,7 +124,7 @@
       "id": "blank-dobr-n-pad-a-pozerajme-i-bude-lep-ie-po-asie-na-v-kend",
       "type": "fill-blank",
       "l1": "Bonne idée. Et regardons si le temps sera meilleur pour le week-end.",
-      "l2": "Dobrý nápad. A pozerajme, či bude lepšie počasie na víkend.",
+      "l2": "Dobrý nápad. A pozrime sa, či bude lepšie počasie na víkend.",
       "missing_l1": "le",
       "missing_l2": "A",
       "blank_index_l1": 5,
@@ -392,7 +392,7 @@
       "id": "listen-ja-viem-mus-me-meni-pl-n",
       "type": "listen",
       "l1": "Je sais. Nous devons changer de plan.",
-      "l2": "Ja viem. Musíme meniť plán.",
+      "l2": "Ja viem. Musíme zmeniť plán.",
       "choices_l1": [
         "D'accord. On se retrouve samedi matin à la gare.",
         "Mauvaises. Il va pleuvoir toute la journée.",
@@ -440,7 +440,7 @@
       "id": "listen-dobr-n-pad-a-pozerajme-i-bude-lep-ie-po-asie-na-v-kend",
       "type": "listen",
       "l1": "Bonne idée. Et regardons si le temps sera meilleur pour le week-end.",
-      "l2": "Dobrý nápad. A pozerajme, či bude lepšie počasie na víkend.",
+      "l2": "Dobrý nápad. A pozrime sa, či bude lepšie počasie na víkend.",
       "choices_l1": [
         "J'espère que les prévisions auront raison !",
         "Je sais. Nous devons changer de plan.",
@@ -730,7 +730,7 @@
       "id": "order-ja-viem-mus-me-meni-pl-n",
       "type": "order",
       "l1": "Je sais. Nous devons changer de plan.",
-      "l2": "Ja viem. Musíme meniť plán.",
+      "l2": "Ja viem. Musíme zmeniť plán.",
       "tokens_l1": [
         "Je",
         "sais.",
@@ -751,7 +751,7 @@
         "Ja",
         "viem.",
         "Musíme",
-        "meniť",
+        "zmeniť",
         "plán.",
         "Aká",
         "je",
@@ -837,7 +837,7 @@
       "id": "order-dobr-n-pad-a-pozerajme-i-bude-lep-ie-po-asie-na-v-kend",
       "type": "order",
       "l1": "Bonne idée. Et regardons si le temps sera meilleur pour le week-end.",
-      "l2": "Dobrý nápad. A pozerajme, či bude lepšie počasie na víkend.",
+      "l2": "Dobrý nápad. A pozrime sa, či bude lepšie počasie na víkend.",
       "tokens_l1": [
         "Bonne",
         "idée.",
@@ -863,7 +863,8 @@
         "Dobrý",
         "nápad.",
         "A",
-        "pozerajme,",
+        "pozrime",
+        "sa,",
         "či",
         "bude",
         "lepšie",
@@ -1296,7 +1297,7 @@
         "Aká je predpoveď na zajtra?",
         "Zle. Bude pršať celý deň.",
         "Ale mali sme ísť na turistiku!",
-        "Ja viem. Musíme meniť plán."
+        "Ja viem. Musíme zmeniť plán."
       ]
     }
   ]

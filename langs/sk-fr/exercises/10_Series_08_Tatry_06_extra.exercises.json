@@ -1001,26 +1001,6 @@
       ]
     },
     {
-      "id": "blank-modr-zna-ka-je-ah-ia-ako-erven-ale-dlh-ia",
-      "type": "fill-blank",
-      "l1": "Le balisage bleu est plus facile que le rouge, mais plus long.",
-      "l2": "Modrá značka je ľahšia ako červená, ale dlhšia.",
-      "missing_l1": "le",
-      "missing_l2": "je",
-      "blank_index_l1": 7,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "sacs",
-        "Les",
-        "la"
-      ],
-      "choices_l2": [
-        "ste",
-        "budú",
-        "bol"
-      ]
-    },
-    {
       "id": "blank-m-me-rezerv-ciu-na-dve-postele-a-spacie-vaky",
       "type": "fill-blank",
       "l1": "Nous avons une réservation pour deux lits et des sacs de couchage.",
@@ -1274,22 +1254,6 @@
         "Trasa je náročná, ale výhľad z vrcholu stojí za to.",
         "Nemôžeme ísť ďalej, je tu zákaz vstupu.",
         "Skala je strmá, choďte opatrne a pomaly."
-      ]
-    },
-    {
-      "id": "listen-modr-zna-ka-je-ah-ia-ako-erven-ale-dlh-ia",
-      "type": "listen",
-      "l1": "Le balisage bleu est plus facile que le rouge, mais plus long.",
-      "l2": "Modrá značka je ľahšia ako červená, ale dlhšia.",
-      "choices_l1": [
-        "Le poteau indicateur montre l'itinéraire vers le lac.",
-        "Nous devons avoir une trousse de secours et une lampe, s'il fait nuit.",
-        "Le sentier passe à travers la forêt le long du ruisseau."
-      ],
-      "choices_l2": [
-        "Trasa je náročná, ale výhľad z vrcholu stojí za to.",
-        "V noci sú v horách krásne hviezdy a veľké ticho.",
-        "Chodník vedie cez les popri potoku."
       ]
     },
     {
@@ -1710,62 +1674,6 @@
       ]
     },
     {
-      "id": "order-modr-zna-ka-je-ah-ia-ako-erven-ale-dlh-ia",
-      "type": "order",
-      "l1": "Le balisage bleu est plus facile que le rouge, mais plus long.",
-      "l2": "Modrá značka je ľahšia ako červená, ale dlhšia.",
-      "tokens_l1": [
-        "Le",
-        "balisage",
-        "bleu",
-        "est",
-        "plus",
-        "facile",
-        "que",
-        "le",
-        "rouge,",
-        "mais",
-        "plus",
-        "long.",
-        "Nous",
-        "sommes",
-        "fatigués,",
-        "nous",
-        "voudrions",
-        "nous",
-        "reposer",
-        "au",
-        "refuge",
-        "et",
-        "avoir",
-        "un",
-        "thé",
-        "chaud."
-      ],
-      "tokens_l2": [
-        "Modrá",
-        "značka",
-        "je",
-        "ľahšia",
-        "ako",
-        "červená,",
-        "ale",
-        "dlhšia.",
-        "Sme",
-        "unavení,",
-        "chceli",
-        "by",
-        "sme",
-        "odpočívať",
-        "v",
-        "chate",
-        "a",
-        "mať",
-        "teplý",
-        "čaj."
-      ]
-    },
-    {
       "id": "order-m-me-rezerv-ciu-na-dve-postele-a-spacie-vaky",
       "type": "order",
       "l1": "Nous avons une réservation pour deux lits et des sacs de couchage.",
@@ -2175,6 +2083,93 @@
         "Trasa je náročná, ale výhľad z vrcholu stojí za to.",
         "Musíme mať lekárničku a baterku, ak bude tma.",
         "Chodník vedie cez les popri potoku."
+      ]
+    },
+    {
+      "id": "blank-trasa-po-modrej-je-ah-ia-ako-po-ervenej-ale-dlh-ia",
+      "type": "fill-blank",
+      "l1": "Le parcours par le bleu est plus facile que par le rouge, mais plus long.",
+      "l2": "Trasa po modrej je ľahšia ako po červenej, ale dlhšia.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "au",
+        "ma",
+        "ne"
+      ],
+      "choices_l2": [
+        "dobrý",
+        "sú",
+        "bude"
+      ]
+    },
+    {
+      "id": "listen-trasa-po-modrej-je-ah-ia-ako-po-ervenej-ale-dlh-ia",
+      "type": "listen",
+      "l1": "Le parcours par le bleu est plus facile que par le rouge, mais plus long.",
+      "l2": "Trasa po modrej je ľahšia ako po červenej, ale dlhšia.",
+      "choices_l1": [
+        "La voiture grise est belle.",
+        "Mercredi je n'ai pas le temps.",
+        "Il pleut. Je n'ai pas de parapluie."
+      ]
+    },
+    {
+      "id": "order-trasa-po-modrej-je-ah-ia-ako-po-ervenej-ale-dlh-ia",
+      "type": "order",
+      "l1": "Le parcours par le bleu est plus facile que par le rouge, mais plus long.",
+      "l2": "Trasa po modrej je ľahšia ako po červenej, ale dlhšia.",
+      "tokens_l1": [
+        "Le",
+        "parcours",
+        "par",
+        "le",
+        "bleu",
+        "est",
+        "plus",
+        "facile",
+        "que",
+        "par",
+        "le",
+        "rouge,",
+        "mais",
+        "plus",
+        "long.",
+        "Nous",
+        "devons",
+        "avoir",
+        "une",
+        "trousse",
+        "de",
+        "secours",
+        "et",
+        "une",
+        "lampe,",
+        "s'il",
+        "fait",
+        "nuit."
+      ],
+      "tokens_l2": [
+        "Trasa",
+        "po",
+        "modrej",
+        "je",
+        "ľahšia",
+        "ako",
+        "po",
+        "červenej,",
+        "ale",
+        "dlhšia.",
+        "Musíme",
+        "mať",
+        "lekárničku",
+        "a",
+        "baterku,",
+        "ak",
+        "bude",
+        "tma."
       ]
     }
   ]

@@ -115,7 +115,7 @@
     {
       "id": "qcm-poliali-ma-vodou",
       "type": "qcm",
-      "l1": "Ils m'ont arrosé d'eau.",
+      "l1": "Ils m'ont arrosée d'eau.",
       "l2": "Poliali ma vodou.",
       "choices_l1": [
         "J'ai reçu une récompense.",
@@ -131,7 +131,7 @@
     {
       "id": "qcm-ibal-ma-sused",
       "type": "qcm",
-      "l1": "Le voisin m'a fouetté (symboliquement).",
+      "l1": "Le voisin m'a fouettée (symboliquement).",
       "l2": "Šibal ma sused.",
       "choices_l1": [
         "Je leur ai donné des œufs.",
@@ -327,7 +327,7 @@
     {
       "id": "blank-poliali-ma-vodou",
       "type": "fill-blank",
-      "l1": "Ils m'ont arrosé d'eau.",
+      "l1": "Ils m'ont arrosée d'eau.",
       "l2": "Poliali ma vodou.",
       "missing_l1": "d'eau",
       "missing_l2": "ma",
@@ -603,7 +603,7 @@
     {
       "id": "listen-poliali-ma-vodou",
       "type": "listen",
-      "l1": "Ils m'ont arrosé d'eau.",
+      "l1": "Ils m'ont arrosée d'eau.",
       "l2": "Poliali ma vodou.",
       "choices_l1": [
         "Les garçons sont venus avec le fouet.",
@@ -851,12 +851,12 @@
     {
       "id": "order-poliali-ma-vodou",
       "type": "order",
-      "l1": "Ils m'ont arrosé d'eau.",
+      "l1": "Ils m'ont arrosée d'eau.",
       "l2": "Poliali ma vodou.",
       "tokens_l1": [
         "Ils",
         "m'ont",
-        "arrosé",
+        "arrosée",
         "d'eau.",
         "Le",
         "lundi",
@@ -1375,7 +1375,7 @@
       "type": "match",
       "l1": [
         "Le lundi de Pâques les garçons rendent visite aux filles.",
-        "Ils m'ont arrosé d'eau.",
+        "Ils m'ont arrosée d'eau.",
         "Je leur ai donné des œufs comme récompense.",
         "Toutes les femmes n'aiment pas la šibačka."
       ],

@@ -547,7 +547,7 @@
     {
       "id": "qcm-za-rohom",
       "type": "qcm",
-      "l1": "après le coin",
+      "l1": "au coin",
       "l2": "za rohom",
       "choices_l1": [
         "à la poste",
@@ -943,11 +943,11 @@
     {
       "id": "blank-zast-vka-je-za-rohom-bl-zko-font-ny",
       "type": "fill-blank",
-      "l1": "L'arrêt est après le coin, près de la fontaine.",
+      "l1": "L'arrêt est au coin, près de la fontaine.",
       "l2": "Zastávka je za rohom, blízko fontány.",
       "missing_l1": "la",
       "missing_l2": "je",
-      "blank_index_l1": 7,
+      "blank_index_l1": 6,
       "blank_index_l2": 1,
       "choices_l1": [
         "le",
@@ -1231,7 +1231,7 @@
     {
       "id": "listen-zast-vka-je-za-rohom-bl-zko-font-ny",
       "type": "listen",
-      "l1": "L'arrêt est après le coin, près de la fontaine.",
+      "l1": "L'arrêt est au coin, près de la fontaine.",
       "l2": "Zastávka je za rohom, blízko fontány.",
       "choices_l1": [
         "Je vois la statue sur la place. Elle est intéressante.",
@@ -1551,13 +1551,12 @@
     {
       "id": "order-zast-vka-je-za-rohom-bl-zko-font-ny",
       "type": "order",
-      "l1": "L'arrêt est après le coin, près de la fontaine.",
+      "l1": "L'arrêt est au coin, près de la fontaine.",
       "l2": "Zastávka je za rohom, blízko fontány.",
       "tokens_l1": [
         "L'arrêt",
         "est",
-        "après",
-        "le",
+        "au",
         "coin,",
         "près",
         "de",
@@ -2084,7 +2083,7 @@
         "Je vais à la poste, ensuite à la banque.",
         "Allez tout droit, la bibliothèque est à côté de la mairie.",
         "Je vais au parc à pied, mais au théâtre j'y vais en bus.",
-        "L'arrêt est après le coin, près de la fontaine."
+        "L'arrêt est au coin, près de la fontaine."
       ],
       "l2": [
         "Idem na poštu, potom do banky.",

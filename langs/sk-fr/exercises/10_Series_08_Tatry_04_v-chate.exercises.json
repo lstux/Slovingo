@@ -161,22 +161,6 @@
       ]
     },
     {
-      "id": "qcm-mohli-by-sme-odpo-va",
-      "type": "qcm",
-      "l1": "Pourrions-nous nous reposer ?",
-      "l2": "Mohli by sme odpočívať?",
-      "choices_l1": [
-        "Ce serait joli.",
-        "elle a été, elle était",
-        "il a été, il était"
-      ],
-      "choices_l2": [
-        "Bolo by to pekné.",
-        "Chcel by som čaj.",
-        "Chcela by som čaj."
-      ]
-    },
-    {
       "id": "qcm-bolo-by-to-pekn",
       "type": "qcm",
       "l1": "Ce serait joli.",
@@ -1517,6 +1501,22 @@
         "Máte voľný nocľah?",
         "Som unavený. Chcem odpočívať.",
         "Dáme si teplú polievku a čaj."
+      ]
+    },
+    {
+      "id": "qcm-mohli-by-sme-si-odd-chnu",
+      "type": "qcm",
+      "l1": "Pourrions-nous faire une pause ?",
+      "l2": "Mohli by sme si oddýchnuť?",
+      "choices_l1": [
+        "le plan, le projet",
+        "sur le pont",
+        "le sac de couchage"
+      ],
+      "choices_l2": [
+        "varím → nevarím",
+        "Páči sa mi to.",
+        "Je päť hodín."
       ]
     }
   ]

@@ -1069,26 +1069,6 @@
       ]
     },
     {
-      "id": "blank-sk-sim-top-nky-vo-ve-kosti-tyridsa",
-      "type": "fill-blank",
-      "l1": "J'essaie les chaussures en taille quarante.",
-      "l2": "Skúsim topánky vo veľkosti štyridsať.",
-      "missing_l1": "en",
-      "missing_l2": "vo",
-      "blank_index_l1": 3,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "se",
-        "me",
-        "y"
-      ],
-      "choices_l2": [
-        "z",
-        "bez",
-        "medzi"
-      ]
-    },
-    {
       "id": "blank-trh-je-v-sobotu-obchod-je-otvoren-ka-d-de",
       "type": "fill-blank",
       "l1": "Le marché a lieu le samedi, le magasin est ouvert tous les jours.",
@@ -1338,22 +1318,6 @@
         "Trh je v sobotu, obchod je otvorený každý deň.",
         "Táto sukňa je pekná, ale drahá.",
         "Nepáči sa mi táto farba. Máte to v modrej?"
-      ]
-    },
-    {
-      "id": "listen-sk-sim-top-nky-vo-ve-kosti-tyridsa",
-      "type": "listen",
-      "l1": "J'essaie les chaussures en taille quarante.",
-      "l2": "Skúsim topánky vo veľkosti štyridsať.",
-      "choices_l1": [
-        "Je veux une veste noire, pas marron.",
-        "Le marché a lieu le samedi, le magasin est ouvert tous les jours.",
-        "Combien coûte ce pull ? Il est en promotion ?"
-      ],
-      "choices_l2": [
-        "Táto sukňa je pekná, ale drahá.",
-        "Platím kartou, nemám hotovosť.",
-        "Koľko stojí tento sveter? Je v akcii?"
       ]
     },
     {
@@ -1766,41 +1730,6 @@
       ]
     },
     {
-      "id": "order-sk-sim-top-nky-vo-ve-kosti-tyridsa",
-      "type": "order",
-      "l1": "J'essaie les chaussures en taille quarante.",
-      "l2": "Skúsim topánky vo veľkosti štyridsať.",
-      "tokens_l1": [
-        "J'essaie",
-        "les",
-        "chaussures",
-        "en",
-        "taille",
-        "quarante.",
-        "Le",
-        "panier",
-        "est",
-        "plein,",
-        "le",
-        "chariot",
-        "est",
-        "vide."
-      ],
-      "tokens_l2": [
-        "Skúsim",
-        "topánky",
-        "vo",
-        "veľkosti",
-        "štyridsať.",
-        "Košík",
-        "je",
-        "plný,",
-        "vozík",
-        "je",
-        "prázdny."
-      ]
-    },
-    {
       "id": "order-trh-je-v-sobotu-obchod-je-otvoren-ka-d-de",
       "type": "order",
       "l1": "Le marché a lieu le samedi, le magasin est ouvert tous les jours.",
@@ -2127,6 +2056,75 @@
         "Táto sukňa je pekná, ale drahá.",
         "Koľko stojí tento sveter? Je v akcii?",
         "Kupujem mäso v mäsiarstve a syr v potravinách."
+      ]
+    },
+    {
+      "id": "blank-sk-sim-si-top-nky-vo-ve-kosti-tyridsa",
+      "type": "fill-blank",
+      "l1": "Je vais essayer les chaussures en taille quarante.",
+      "l2": "Skúsim si topánky vo veľkosti štyridsať.",
+      "missing_l1": "les",
+      "missing_l2": "si",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "merci",
+        "au",
+        "un"
+      ],
+      "choices_l2": [
+        "deti",
+        "je",
+        "nie"
+      ]
+    },
+    {
+      "id": "listen-sk-sim-si-top-nky-vo-ve-kosti-tyridsa",
+      "type": "listen",
+      "l1": "Je vais essayer les chaussures en taille quarante.",
+      "l2": "Skúsim si topánky vo veľkosti štyridsať.",
+      "choices_l1": [
+        "Le sac rose me plaît.",
+        "C'est un peu petit. Vous en avez un plus grand ?",
+        "Le bus a dix minutes de retard."
+      ]
+    },
+    {
+      "id": "order-sk-sim-si-top-nky-vo-ve-kosti-tyridsa",
+      "type": "order",
+      "l1": "Je vais essayer les chaussures en taille quarante.",
+      "l2": "Skúsim si topánky vo veľkosti štyridsať.",
+      "tokens_l1": [
+        "Je",
+        "vais",
+        "essayer",
+        "les",
+        "chaussures",
+        "en",
+        "taille",
+        "quarante.",
+        "Le",
+        "panier",
+        "est",
+        "plein,",
+        "le",
+        "chariot",
+        "est",
+        "vide."
+      ],
+      "tokens_l2": [
+        "Skúsim",
+        "si",
+        "topánky",
+        "vo",
+        "veľkosti",
+        "štyridsať.",
+        "Košík",
+        "je",
+        "plný,",
+        "vozík",
+        "je",
+        "prázdny."
       ]
     }
   ]

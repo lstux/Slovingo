@@ -49,22 +49,6 @@
       ]
     },
     {
-      "id": "qcm-syrov-n-tierka",
-      "type": "qcm",
-      "l1": "la tartinade au fromage",
-      "l2": "syrová nátierka",
-      "choices_l1": [
-        "Je mange de l'agneau.",
-        "l'agneau (petit, pascal)",
-        "Je mange du jambon."
-      ],
-      "choices_l2": [
-        "šunka",
-        "baránok",
-        "chren"
-      ]
-    },
-    {
       "id": "qcm-po-ehna",
       "type": "qcm",
       "l1": "bénir",
@@ -190,22 +174,6 @@
         "štipľavý",
         "šunka",
         "požehnať"
-      ]
-    },
-    {
-      "id": "qcm-chcem-syrov-n-tierku",
-      "type": "qcm",
-      "l1": "Je veux de la tartinade au fromage.",
-      "l2": "Chcem syrovú nátierku.",
-      "choices_l1": [
-        "Je mange du jambon.",
-        "J'ai du raifort.",
-        "Le prêtre a béni la nourriture."
-      ],
-      "choices_l2": [
-        "Na Veľký piatok sme sa postili.",
-        "Šibal ma sused.",
-        "Na Bielu sobotu sme piekli."
       ]
     },
     {
@@ -364,7 +332,7 @@
       "id": "blank-jedli-sme-bar-nka-a-syrov-n-tierku",
       "type": "fill-blank",
       "l1": "Nous avons mangé de l'agneau et de la tartinade au fromage.",
-      "l2": "Jedli sme baránka a syrovú nátierku.",
+      "l2": "Jedli sme baránka a hrudku.",
       "missing_l1": "la",
       "missing_l2": "a",
       "blank_index_l1": 7,
@@ -656,7 +624,7 @@
       "id": "listen-jedli-sme-bar-nka-a-syrov-n-tierku",
       "type": "listen",
       "l1": "Nous avons mangé de l'agneau et de la tartinade au fromage.",
-      "l2": "Jedli sme baránka a syrovú nátierku.",
+      "l2": "Jedli sme baránka a hrudku.",
       "choices_l1": [
         "Le pain était frais et chaud.",
         "Nous n'avons pas mangé de viande le vendredi saint.",
@@ -948,7 +916,7 @@
       "id": "order-jedli-sme-bar-nka-a-syrov-n-tierku",
       "type": "order",
       "l1": "Nous avons mangé de l'agneau et de la tartinade au fromage.",
-      "l2": "Jedli sme baránka a syrovú nátierku.",
+      "l2": "Jedli sme baránka a hrudku.",
       "tokens_l1": [
         "Nous",
         "avons",
@@ -981,8 +949,7 @@
         "sme",
         "baránka",
         "a",
-        "syrovú",
-        "nátierku.",
+        "hrudku.",
         "Na",
         "Bielu",
         "sobotu",
@@ -1460,22 +1427,6 @@
       ]
     },
     {
-      "id": "match-bar-nok-vocab",
-      "type": "match",
-      "l1": [
-        "l'agneau (petit, pascal)",
-        "le jambon",
-        "le raifort",
-        "la tartinade au fromage"
-      ],
-      "l2": [
-        "baránok",
-        "šunka",
-        "chren",
-        "syrová nátierka"
-      ]
-    },
-    {
       "id": "match-na-stole-je-unka-vaj-ka-a-chren-sentences",
       "type": "match",
       "l1": [
@@ -1487,8 +1438,56 @@
       "l2": [
         "Na stole je šunka, vajíčka a chren.",
         "Kňaz požehnal jedlo pred obedom.",
-        "Jedli sme baránka a syrovú nátierku.",
+        "Jedli sme baránka a hrudku.",
         "Chren je veľmi štipľavý!"
+      ]
+    },
+    {
+      "id": "qcm-hrudka",
+      "type": "qcm",
+      "l1": "le « fromage » pascal aux œufs",
+      "l2": "hrudka",
+      "choices_l1": [
+        "tu as décoré (femme)",
+        "sur le pont",
+        "Le vendredi saint nous avons jeûné."
+      ],
+      "choices_l2": [
+        "kancelária",
+        "sladký",
+        "dobre"
+      ]
+    },
+    {
+      "id": "qcm-chcem-hrudku",
+      "type": "qcm",
+      "l1": "Je veux de la hrudka.",
+      "l2": "Chcem hrudku.",
+      "choices_l1": [
+        "il / elle travaille",
+        "Je vais au travail (maintenant).",
+        "ce sera difficile"
+      ],
+      "choices_l2": [
+        "ja idem",
+        "nedeľa",
+        "obloha"
+      ]
+    },
+    {
+      "id": "match-bar-nok-vocab",
+      "type": "match",
+      "l1": [
+        "l'agneau (petit, pascal)",
+        "le jambon",
+        "le raifort",
+        "le « fromage » pascal aux œufs"
+      ],
+      "l2": [
+        "baránok",
+        "šunka",
+        "chren",
+        "hrudka"
       ]
     }
   ]

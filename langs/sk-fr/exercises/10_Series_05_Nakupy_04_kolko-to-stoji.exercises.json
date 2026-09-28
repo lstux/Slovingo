@@ -545,26 +545,6 @@
       ]
     },
     {
-      "id": "blank-sk-sim-modr-suk-u-m-te-ve-kos-m",
-      "type": "fill-blank",
-      "l1": "J'essaie la jupe bleue. Vous avez la taille M ?",
-      "l2": "Skúsim modrú sukňu. Máte veľkosť M?",
-      "missing_l1": "la",
-      "missing_l2": "Máte",
-      "blank_index_l1": 1,
-      "blank_index_l2": 3,
-      "choices_l1": [
-        "le",
-        "paie",
-        "Les"
-      ],
-      "choices_l2": [
-        "Nemáš",
-        "Máme",
-        "Nemáme"
-      ]
-    },
-    {
       "id": "blank-nohavice-stoja-dvadsa-eur-to-je-drah",
       "type": "fill-blank",
       "l1": "Le pantalon coûte vingt euros. C'est cher !",
@@ -806,22 +786,6 @@
         "Skúsim modrú sukňu. Máte veľkosť M?",
         "To je lacné.",
         "Platíte kartou alebo hotovosťou?"
-      ]
-    },
-    {
-      "id": "listen-sk-sim-modr-suk-u-m-te-ve-kos-m",
-      "type": "listen",
-      "l1": "J'essaie la jupe bleue. Vous avez la taille M ?",
-      "l2": "Skúsim modrú sukňu. Máte veľkosť M?",
-      "choices_l1": [
-        "Je voudrais une réduction, s'il vous plaît.",
-        "C'est bon marché.",
-        "Je paie en liquide, pas par carte."
-      ],
-      "choices_l2": [
-        "Chcem červené tričko. Koľko stojí?",
-        "Je to v akcii.",
-        "Cena je vysoká."
       ]
     },
     {
@@ -1169,40 +1133,6 @@
       ]
     },
     {
-      "id": "order-sk-sim-modr-suk-u-m-te-ve-kos-m",
-      "type": "order",
-      "l1": "J'essaie la jupe bleue. Vous avez la taille M ?",
-      "l2": "Skúsim modrú sukňu. Máte veľkosť M?",
-      "tokens_l1": [
-        "J'essaie",
-        "la",
-        "jupe",
-        "bleue.",
-        "Vous",
-        "avez",
-        "la",
-        "taille",
-        "M",
-        "?",
-        "Ça",
-        "coûte",
-        "trois",
-        "euros."
-      ],
-      "tokens_l2": [
-        "Skúsim",
-        "modrú",
-        "sukňu.",
-        "Máte",
-        "veľkosť",
-        "M?",
-        "Stojí",
-        "to",
-        "tri",
-        "eurá."
-      ]
-    },
-    {
       "id": "order-nohavice-stoja-dvadsa-eur-to-je-drah",
       "type": "order",
       "l1": "Le pantalon coûte vingt euros. C'est cher !",
@@ -1385,6 +1315,74 @@
         "Stojí to tri eurá.",
         "To je drahé!",
         "To je lacné."
+      ]
+    },
+    {
+      "id": "blank-sk-sim-si-modr-suk-u-m-te-ve-kos-m",
+      "type": "fill-blank",
+      "l1": "Je vais essayer la jupe bleue. Vous avez la taille M ?",
+      "l2": "Skúsim si modrú sukňu. Máte veľkosť M?",
+      "missing_l1": "la",
+      "missing_l2": "si",
+      "blank_index_l1": 3,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "plaît",
+        "je",
+        "ma"
+      ],
+      "choices_l2": [
+        "máš",
+        "ako",
+        "kde"
+      ]
+    },
+    {
+      "id": "listen-sk-sim-si-modr-suk-u-m-te-ve-kos-m",
+      "type": "listen",
+      "l1": "Je vais essayer la jupe bleue. Vous avez la taille M ?",
+      "l2": "Skúsim si modrú sukňu. Máte veľkosť M?",
+      "choices_l1": [
+        "Je suis assis sur la chaise.",
+        "Le couteau est dans la cuisine.",
+        "Qu'est-ce que tu achètes ?"
+      ]
+    },
+    {
+      "id": "order-sk-sim-si-modr-suk-u-m-te-ve-kos-m",
+      "type": "order",
+      "l1": "Je vais essayer la jupe bleue. Vous avez la taille M ?",
+      "l2": "Skúsim si modrú sukňu. Máte veľkosť M?",
+      "tokens_l1": [
+        "Je",
+        "vais",
+        "essayer",
+        "la",
+        "jupe",
+        "bleue.",
+        "Vous",
+        "avez",
+        "la",
+        "taille",
+        "M",
+        "?",
+        "Ça",
+        "coûte",
+        "trois",
+        "euros."
+      ],
+      "tokens_l2": [
+        "Skúsim",
+        "si",
+        "modrú",
+        "sukňu.",
+        "Máte",
+        "veľkosť",
+        "M?",
+        "Stojí",
+        "to",
+        "tri",
+        "eurá."
       ]
     }
   ]

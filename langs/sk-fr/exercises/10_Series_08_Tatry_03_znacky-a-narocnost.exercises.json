@@ -145,22 +145,6 @@
       ]
     },
     {
-      "id": "qcm-t-to-trasa-je-lt",
-      "type": "qcm",
-      "l1": "Ce parcours est jaune.",
-      "l2": "Táto trasa je žltá.",
-      "choices_l1": [
-        "C'est plus facile.",
-        "Suis le bleu.",
-        "Je suis le balisage rouge."
-      ],
-      "choices_l2": [
-        "Toto je ľahšie.",
-        "Idem po červenej značke.",
-        "Toto je náročnejšie."
-      ]
-    },
-    {
       "id": "qcm-toto-je-ah-ie",
       "type": "qcm",
       "l1": "C'est plus facile.",
@@ -361,26 +345,6 @@
       ]
     },
     {
-      "id": "blank-modr-zna-ka-je-ah-ia",
-      "type": "fill-blank",
-      "l1": "Le balisage bleu est plus facile.",
-      "l2": "Modrá značka je ľahšia.",
-      "missing_l1": "est",
-      "missing_l2": "je",
-      "blank_index_l1": 3,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "était",
-        "est-ce",
-        "sont"
-      ],
-      "choices_l2": [
-        "Bude",
-        "sme",
-        "bol"
-      ]
-    },
-    {
       "id": "blank-kade-ide-lt-zna-ka",
       "type": "fill-blank",
       "l1": "Par où passe le balisage jaune ?",
@@ -418,26 +382,6 @@
         "budem",
         "sme",
         "ste"
-      ]
-    },
-    {
-      "id": "blank-zelen-zna-ka-je-kr-tka-a-ahk",
-      "type": "fill-blank",
-      "l1": "Le balisage vert est court et facile.",
-      "l2": "Zelená značka je krátka a ľahká.",
-      "missing_l1": "est",
-      "missing_l2": "je",
-      "blank_index_l1": 3,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "suis",
-        "C'est",
-        "sommes"
-      ],
-      "choices_l2": [
-        "sú",
-        "boli",
-        "budú"
       ]
     },
     {
@@ -518,26 +462,6 @@
         "bol",
         "budem",
         "boli"
-      ]
-    },
-    {
-      "id": "blank-m-eme-s-po-zelenej-je-ah-ia-ako-modr",
-      "type": "fill-blank",
-      "l1": "Nous pouvons suivre le vert, il est plus facile que le bleu.",
-      "l2": "Môžeme ísť po zelenej, je ľahšia ako modrá.",
-      "missing_l1": "le",
-      "missing_l2": "je",
-      "blank_index_l1": 3,
-      "blank_index_l2": 4,
-      "choices_l1": [
-        "Les",
-        "vue",
-        "vaut"
-      ],
-      "choices_l2": [
-        "sme",
-        "budem",
-        "Bude"
       ]
     },
     {
@@ -673,22 +597,6 @@
       ]
     },
     {
-      "id": "listen-modr-zna-ka-je-ah-ia",
-      "type": "listen",
-      "l1": "Le balisage bleu est plus facile.",
-      "l2": "Modrá značka je ľahšia.",
-      "choices_l1": [
-        "C'est le parcours le plus difficile de la montagne.",
-        "Le balisage vert est court et facile.",
-        "Nous devons suivre les balisages attentivement."
-      ],
-      "choices_l2": [
-        "Chceme ísť po červenej, ale je príliš náročná.",
-        "Smerovník ukazuje dve trasy.",
-        "Táto trasa je náročná."
-      ]
-    },
-    {
       "id": "listen-kade-ide-lt-zna-ka",
       "type": "listen",
       "l1": "Par où passe le balisage jaune ?",
@@ -718,22 +626,6 @@
         "Táto trasa je náročná.",
         "Musíme sledovať značky pozorne.",
         "Smerovník ukazuje dve trasy."
-      ]
-    },
-    {
-      "id": "listen-zelen-zna-ka-je-kr-tka-a-ahk",
-      "type": "listen",
-      "l1": "Le balisage vert est court et facile.",
-      "l2": "Zelená značka je krátka a ľahká.",
-      "choices_l1": [
-        "Le balisage bleu est plus facile.",
-        "C'est le parcours le plus difficile de la montagne.",
-        "Par où passe le balisage jaune ?"
-      ],
-      "choices_l2": [
-        "Kade ide žltá značka?",
-        "Smerovník ukazuje dve trasy.",
-        "Musíme sledovať značky pozorne."
       ]
     },
     {
@@ -798,22 +690,6 @@
         "Zelená značka je krátka a ľahká.",
         "Kade ide žltá značka?",
         "Modrá značka je ľahšia."
-      ]
-    },
-    {
-      "id": "listen-m-eme-s-po-zelenej-je-ah-ia-ako-modr",
-      "type": "listen",
-      "l1": "Nous pouvons suivre le vert, il est plus facile que le bleu.",
-      "l2": "Môžeme ísť po zelenej, je ľahšia ako modrá.",
-      "choices_l1": [
-        "Le poteau indicateur montre deux itinéraires.",
-        "Ce parcours est difficile.",
-        "Je ne vois aucun balisage !"
-      ],
-      "choices_l2": [
-        "Toto je najnáročnejšia trasa v horách.",
-        "Musíme mať mapu, lebo trasa je dlhá a náročná.",
-        "Výhľad z vrcholu je nádherný."
       ]
     },
     {
@@ -967,34 +843,6 @@
       ]
     },
     {
-      "id": "order-modr-zna-ka-je-ah-ia",
-      "type": "order",
-      "l1": "Le balisage bleu est plus facile.",
-      "l2": "Modrá značka je ľahšia.",
-      "tokens_l1": [
-        "Le",
-        "balisage",
-        "bleu",
-        "est",
-        "plus",
-        "facile.",
-        "Ce",
-        "parcours",
-        "est",
-        "difficile."
-      ],
-      "tokens_l2": [
-        "Modrá",
-        "značka",
-        "je",
-        "ľahšia.",
-        "Táto",
-        "trasa",
-        "je",
-        "náročná."
-      ]
-    },
-    {
       "id": "order-kade-ide-lt-zna-ka",
       "type": "order",
       "l1": "Par où passe le balisage jaune ?",
@@ -1057,40 +905,6 @@
         "sledovať",
         "značky",
         "pozorne."
-      ]
-    },
-    {
-      "id": "order-zelen-zna-ka-je-kr-tka-a-ahk",
-      "type": "order",
-      "l1": "Le balisage vert est court et facile.",
-      "l2": "Zelená značka je krátka a ľahká.",
-      "tokens_l1": [
-        "Le",
-        "balisage",
-        "vert",
-        "est",
-        "court",
-        "et",
-        "facile.",
-        "Le",
-        "chemin",
-        "est",
-        "raide,",
-        "allez",
-        "prudemment."
-      ],
-      "tokens_l2": [
-        "Zelená",
-        "značka",
-        "je",
-        "krátka",
-        "a",
-        "ľahká.",
-        "Cesta",
-        "je",
-        "strmá,",
-        "choďte",
-        "opatrne."
       ]
     },
     {
@@ -1242,45 +1056,6 @@
         "vrcholu",
         "je",
         "nádherný."
-      ]
-    },
-    {
-      "id": "order-m-eme-s-po-zelenej-je-ah-ia-ako-modr",
-      "type": "order",
-      "l1": "Nous pouvons suivre le vert, il est plus facile que le bleu.",
-      "l2": "Môžeme ísť po zelenej, je ľahšia ako modrá.",
-      "tokens_l1": [
-        "Nous",
-        "pouvons",
-        "suivre",
-        "le",
-        "vert,",
-        "il",
-        "est",
-        "plus",
-        "facile",
-        "que",
-        "le",
-        "bleu.",
-        "Je",
-        "ne",
-        "vois",
-        "aucun",
-        "balisage",
-        "!"
-      ],
-      "tokens_l2": [
-        "Môžeme",
-        "ísť",
-        "po",
-        "zelenej,",
-        "je",
-        "ľahšia",
-        "ako",
-        "modrá.",
-        "Nevidím",
-        "žiadnu",
-        "značku!"
       ]
     },
     {
@@ -1485,18 +1260,237 @@
       ]
     },
     {
+      "id": "qcm-na-tejto-trase-je-lt-zna-ka",
+      "type": "qcm",
+      "l1": "Ce parcours est balisé en jaune.",
+      "l2": "Na tejto trase je žltá značka.",
+      "choices_l1": [
+        "il / elle habite",
+        "il / elle cherche",
+        "de rien (vouvoiement)"
+      ],
+      "choices_l2": [
+        "jedlá sú dobré",
+        "Dám si pivo.",
+        "on / ona môže"
+      ]
+    },
+    {
+      "id": "blank-trasa-po-modrej-je-ah-ia",
+      "type": "fill-blank",
+      "l1": "Le parcours par le bleu est plus facile.",
+      "l2": "Trasa po modrej je ľahšia.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "et",
+        "du",
+        "nous"
+      ],
+      "choices_l2": [
+        "idem",
+        "sú",
+        "dobrý"
+      ]
+    },
+    {
+      "id": "blank-trasa-po-zelenej-je-kr-tka-a-ahk",
+      "type": "fill-blank",
+      "l1": "Le parcours par le vert est court et facile.",
+      "l2": "Trasa po zelenej je krátka a ľahká.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "mais",
+        "il",
+        "en"
+      ],
+      "choices_l2": [
+        "kde",
+        "máš",
+        "má"
+      ]
+    },
+    {
+      "id": "blank-m-eme-s-po-zelenej-t-trasa-je-ah-ia",
+      "type": "fill-blank",
+      "l1": "Nous pouvons suivre le vert, ce parcours-là est plus facile.",
+      "l2": "Môžeme ísť po zelenej, tá trasa je ľahšia.",
+      "missing_l1": "le",
+      "missing_l2": "je",
+      "blank_index_l1": 3,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "vais",
+        "des",
+        "vous"
+      ],
+      "choices_l2": [
+        "deti",
+        "mám",
+        "sú"
+      ]
+    },
+    {
+      "id": "listen-trasa-po-modrej-je-ah-ia",
+      "type": "listen",
+      "l1": "Le parcours par le bleu est plus facile.",
+      "l2": "Trasa po modrej je ľahšia.",
+      "choices_l1": [
+        "Les enfants boivent du lait froid.",
+        "Aujourd'hui j'y vais à pied.",
+        "L'addition, s'il vous plaît."
+      ]
+    },
+    {
+      "id": "listen-trasa-po-zelenej-je-kr-tka-a-ahk",
+      "type": "listen",
+      "l1": "Le parcours par le vert est court et facile.",
+      "l2": "Trasa po zelenej je krátka a ľahká.",
+      "choices_l1": [
+        "Pardon ! / Excusez-moi !",
+        "Je vais sur la place. Tu viens avec moi ?",
+        "Ça me plaît."
+      ]
+    },
+    {
+      "id": "listen-m-eme-s-po-zelenej-t-trasa-je-ah-ia",
+      "type": "listen",
+      "l1": "Nous pouvons suivre le vert, ce parcours-là est plus facile.",
+      "l2": "Môžeme ísť po zelenej, tá trasa je ľahšia.",
+      "choices_l1": [
+        "J'arrive tôt, pas tard.",
+        "Bonjour. Moi, je suis Zuzana.",
+        "L'œuf est dans l'assiette."
+      ]
+    },
+    {
+      "id": "order-trasa-po-modrej-je-ah-ia",
+      "type": "order",
+      "l1": "Le parcours par le bleu est plus facile.",
+      "l2": "Trasa po modrej je ľahšia.",
+      "tokens_l1": [
+        "Le",
+        "parcours",
+        "par",
+        "le",
+        "bleu",
+        "est",
+        "plus",
+        "facile.",
+        "Ce",
+        "parcours",
+        "est",
+        "difficile."
+      ],
+      "tokens_l2": [
+        "Trasa",
+        "po",
+        "modrej",
+        "je",
+        "ľahšia.",
+        "Táto",
+        "trasa",
+        "je",
+        "náročná."
+      ]
+    },
+    {
+      "id": "order-trasa-po-zelenej-je-kr-tka-a-ahk",
+      "type": "order",
+      "l1": "Le parcours par le vert est court et facile.",
+      "l2": "Trasa po zelenej je krátka a ľahká.",
+      "tokens_l1": [
+        "Le",
+        "parcours",
+        "par",
+        "le",
+        "vert",
+        "est",
+        "court",
+        "et",
+        "facile.",
+        "La",
+        "vue",
+        "depuis",
+        "le",
+        "sommet",
+        "est",
+        "magnifique."
+      ],
+      "tokens_l2": [
+        "Trasa",
+        "po",
+        "zelenej",
+        "je",
+        "krátka",
+        "a",
+        "ľahká.",
+        "Výhľad",
+        "z",
+        "vrcholu",
+        "je",
+        "nádherný."
+      ]
+    },
+    {
+      "id": "order-m-eme-s-po-zelenej-t-trasa-je-ah-ia",
+      "type": "order",
+      "l1": "Nous pouvons suivre le vert, ce parcours-là est plus facile.",
+      "l2": "Môžeme ísť po zelenej, tá trasa je ľahšia.",
+      "tokens_l1": [
+        "Nous",
+        "pouvons",
+        "suivre",
+        "le",
+        "vert,",
+        "ce",
+        "parcours-là",
+        "est",
+        "plus",
+        "facile.",
+        "Le",
+        "parcours",
+        "par",
+        "le",
+        "bleu",
+        "est",
+        "plus",
+        "facile."
+      ],
+      "tokens_l2": [
+        "Môžeme",
+        "ísť",
+        "po",
+        "zelenej,",
+        "tá",
+        "trasa",
+        "je",
+        "ľahšia.",
+        "Trasa",
+        "po",
+        "modrej",
+        "je",
+        "ľahšia."
+      ]
+    },
+    {
       "id": "match-idem-po-ervenej-zna-ke-sentences",
       "type": "match",
       "l1": [
         "Je suis le balisage rouge.",
         "Ce parcours est difficile.",
-        "Le balisage bleu est plus facile.",
+        "Le parcours par le bleu est plus facile.",
         "Par où passe le balisage jaune ?"
       ],
       "l2": [
         "Idem po červenej značke.",
         "Táto trasa je náročná.",
-        "Modrá značka je ľahšia.",
+        "Trasa po modrej je ľahšia.",
         "Kade ide žltá značka?"
       ]
     }
