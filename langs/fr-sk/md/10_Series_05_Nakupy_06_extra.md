@@ -69,7 +69,7 @@ Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových v
 
 ---
 
-## Les phrases
+## Vety
 
 ! Je vais à l'épicerie acheter du pain et des pommes.
 > Idem do potravín kúpiť chlieb a jablká.

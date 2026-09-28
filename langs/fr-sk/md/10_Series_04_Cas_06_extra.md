@@ -67,7 +67,7 @@ Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových v
 
 ---
 
-## Les phrases
+## Vety
 
 ! Demain, c'est vendredi. Je suis libre.
 > Zajtra je piatok. Mám voľno.

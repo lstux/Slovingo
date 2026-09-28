@@ -4,11 +4,11 @@
 
 ### Sekundy, minúty, hodiny
 
-| Slovenčina | Francúzština |
+| Francúzština | Slovenčina |
 |----------|-----------|
-| sekunda | la seconde |
-| minúta | la minute |
-| hodina | l'heure |
+| la seconde | sekunda |
+| la minute | minúta |
+| l'heure | hodina |
 
 | Počet | Hodina | Minúta | Sekunda |
 |--------|-------|--------|---------|
@@ -21,11 +21,11 @@ Dobrá správa: francúzske podstatné mená sa v množnom čísle správajú v�
 
 ### Dni, mesiace, roky
 
-| Slovenčina | Francúzština |
+| Francúzština | Slovenčina |
 |----------|-----------|
-| deň | le jour |
-| mesiac | le mois |
-| rok | l'année / l'an |
+| le jour | deň |
+| le mois | mesiac |
+| l'année / l'an | rok |
 
 | Počet | Deň | Mesiac | Rok |
 |--------|------|------|-------|
@@ -61,34 +61,34 @@ S minútami:
 
 ## 3. Dni v týždni
 
-| Slovenčina | Francúzština |
+| Francúzština | Slovenčina |
 |----------|-----------|
-| pondelok | lundi |
-| utorok | mardi |
-| streda | mercredi |
-| štvrtok | jeudi |
-| piatok | vendredi |
-| sobota | samedi |
-| nedeľa | dimanche |
+| lundi | pondelok |
+| mardi | utorok |
+| mercredi | streda |
+| jeudi | štvrtok |
+| vendredi | piatok |
+| samedi | sobota |
+| dimanche | nedeľa |
 
 ---
 
 ## 4. Mesiace v roku
 
-| Slovenčina | Francúzština |
+| Francúzština | Slovenčina |
 |----------|-----------|
-| január | janvier |
-| február | février |
-| marec | mars |
-| apríl | avril |
-| máj | mai |
-| jún | juin |
-| júl | juillet |
-| august | août |
-| september | septembre |
-| október | octobre |
-| november | novembre |
-| december | décembre |
+| janvier | január |
+| février | február |
+| mars | marec |
+| avril | apríl |
+| mai | máj |
+| juin | jún |
+| juillet | júl |
+| août | august |
+| septembre | september |
+| octobre | október |
+| novembre | november |
+| décembre | december |
 
 Podobne ako dni v týždni, aj mesiace sa vo francúzštine píšu s malým začiatočným písmenom — rovnako ako v slovenčine, na rozdiel napríklad od angličtiny.
 
@@ -98,26 +98,26 @@ Podobne ako dni v týždni, aj mesiace sa vo francúzštine píšu s malým zač
 
 ### Dnes, zajtra, včera
 
-| Slovenčina | Francúzština |
+| Francúzština | Slovenčina |
 |----------|-----------|
-| dnes | aujourd'hui |
-| zajtra | demain |
-| včera | hier |
+| aujourd'hui | dnes |
+| demain | zajtra |
+| hier | včera |
 
 ### Tento týždeň, tento mesiac, tento rok
 
-| Slovenčina | Francúzština |
+| Francúzština | Slovenčina |
 |----------|-----------|
-| tento týždeň | cette semaine |
-| tento mesiac | ce mois |
-| tento rok | cette année |
+| cette semaine | tento týždeň |
+| ce mois | tento mesiac |
+| cette année | tento rok |
 
 ### Minulý / budúci rok
 
-| Slovenčina | Francúzština |
+| Francúzština | Slovenčina |
 |----------|-----------|
-| minulý rok | l'année dernière |
-| budúci rok | l'année prochaine |
+| l'année dernière | minulý rok |
+| l'année prochaine | budúci rok |
 
 ---
 
@@ -146,10 +146,10 @@ Podobne ako dni v týždni, aj mesiace sa vo francúzštine píšu s malým zač
 
 ### Poludnie a polnoc
 
-| Slovenčina | Francúzština |
+| Francúzština | Slovenčina |
 |----------|-----------|
-| poludnie | midi |
-| polnoc | minuit |
+| midi | poludnie |
+| minuit | polnoc |
 
 ! Il est midi.
 > Je poludnie.
@@ -159,11 +159,11 @@ Podobne ako dni v týždni, aj mesiace sa vo francúzštine píšu s malým zač
 
 ### Pol hodiny a štvrťhodiny
 
-| Slovenčina | Francúzština |
+| Francúzština | Slovenčina |
 |----------|-----------|
-| pol hodiny | une demi-heure |
-| štvrťhodina | un quart d'heure |
-| trištvrte hodiny | trois quarts d'heure |
+| une demi-heure | pol hodiny |
+| un quart d'heure | štvrťhodina |
+| trois quarts d'heure | trištvrte hodiny |
 
 Povedať hodinu s polovicami:
 

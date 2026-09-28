@@ -1,4 +1,4 @@
-# 🇫🇷 Memo čísel vo francúzštine, od 0 po milión
+# 🔢 Les nombres (Čísla)
 
 ## 🔢 0 až 10
 

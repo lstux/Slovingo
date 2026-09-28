@@ -71,7 +71,7 @@ Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových v
 
 ---
 
-## Les phrases
+## Vety
 
 ! L'argent est dans le sac.
 > Peniaze sú v taške.
