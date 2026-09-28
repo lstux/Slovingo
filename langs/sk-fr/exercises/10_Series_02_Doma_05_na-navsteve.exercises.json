@@ -1193,19 +1193,19 @@
       "type": "fill-blank",
       "l1": "Et moi, je range le salon !",
       "l2": "A ja uprácem obývačku!",
-      "missing_l1": "je",
+      "missing_l1": "range",
       "missing_l2": "ja",
-      "blank_index_l1": 2,
+      "blank_index_l1": 3,
       "blank_index_l2": 1,
       "choices_l1": [
-        "elle",
-        "bien",
-        "une"
+        "ranges",
+        "rangent",
+        "rangez"
       ],
       "choices_l2": [
-        "kamarát",
-        "máš",
-        "dobrý"
+        "ty",
+        "on",
+        "my"
       ]
     },
     {
@@ -1214,9 +1214,9 @@
       "l1": "Je peux aider ?",
       "l2": "Môžem pomôcť?",
       "choices_l1": [
-        "Mon grand-père est retraité et il est ici.",
-        "Salut, mon pote !",
-        "La lampe est sur la table, mais le livre est sur l'étagère."
+        "Tu peux aider ?",
+        "Je veux aider ?",
+        "Je peux entrer ?"
       ]
     },
     {
@@ -1225,9 +1225,9 @@
       "l1": "Et moi, je range le salon !",
       "l2": "A ja uprácem obývačku!",
       "choices_l1": [
-        "Ma grand-mère ne travaille pas. Elle est vieille.",
-        "Je n'ai pas de frère. J'ai une sœur.",
-        "Mon fils est étudiant. Il habite en ville."
+        "Et moi, je range la cuisine !",
+        "Et toi, tu ranges le salon !",
+        "Et moi, je range la chambre !"
       ]
     },
     {

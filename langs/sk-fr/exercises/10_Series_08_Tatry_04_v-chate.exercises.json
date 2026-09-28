@@ -1509,14 +1509,14 @@
       "l1": "Pourrions-nous faire une pause ?",
       "l2": "Mohli by sme si oddýchnuť?",
       "choices_l1": [
-        "le plan, le projet",
-        "sur le pont",
-        "le sac de couchage"
+        "Pourrions-nous dormir ici ?",
+        "Je voudrais un thé. (homme)",
+        "Ce serait joli."
       ],
       "choices_l2": [
-        "varím → nevarím",
-        "Páči sa mi to.",
-        "Je päť hodín."
+        "Mohli by sme tu prespať?",
+        "Chcel by som čaj.",
+        "Bolo by to pekné."
       ]
     }
   ]

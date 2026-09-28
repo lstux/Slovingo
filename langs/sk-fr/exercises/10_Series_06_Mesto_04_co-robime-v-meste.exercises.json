@@ -1274,19 +1274,19 @@
       "type": "fill-blank",
       "l1": "Je retrouve un ami au café.",
       "l2": "Stretávam sa s kamarátom v kaviarni.",
-      "missing_l1": "un",
-      "missing_l2": "v",
-      "blank_index_l1": 2,
-      "blank_index_l2": 4,
+      "missing_l1": "au",
+      "missing_l2": "kamarátom",
+      "blank_index_l1": 4,
+      "blank_index_l2": 3,
       "choices_l1": [
-        "veux",
-        "dans",
-        "ça"
+        "à",
+        "aux",
+        "du"
       ],
       "choices_l2": [
-        "na",
-        "koľko",
-        "ale"
+        "kamarát",
+        "kamaráta",
+        "kamarátovi"
       ]
     },
     {
@@ -1294,19 +1294,19 @@
       "type": "fill-blank",
       "l1": "On se retrouve sur la place à cinq heures.",
       "l2": "Stretneme sa na námestí o piatej.",
-      "missing_l1": "la",
-      "missing_l2": "na",
-      "blank_index_l1": 4,
-      "blank_index_l2": 2,
+      "missing_l1": "retrouve",
+      "missing_l2": "námestí",
+      "blank_index_l1": 2,
+      "blank_index_l2": 3,
       "choices_l1": [
-        "est",
-        "j'ai",
-        "à"
+        "retrouvons",
+        "retrouves",
+        "retrouvent"
       ],
       "choices_l2": [
-        "deti",
-        "chcem",
-        "koľko"
+        "námestie",
+        "námestia",
+        "námestím"
       ]
     },
     {
@@ -1315,9 +1315,9 @@
       "l1": "Je retrouve un ami au café.",
       "l2": "Stretávam sa s kamarátom v kaviarni.",
       "choices_l1": [
-        "Quelle est la date aujourd'hui ? Regarde le calendrier.",
-        "Le sac rose me plaît.",
-        "Maman est dans le salon."
+        "Je retrouve une amie au café.",
+        "Je retrouve un ami au parc.",
+        "Nous retrouvons un ami au café."
       ]
     },
     {
@@ -1326,9 +1326,9 @@
       "l1": "On se retrouve sur la place à cinq heures.",
       "l2": "Stretneme sa na námestí o piatej.",
       "choices_l1": [
-        "Nous avons quatre verres et quatre assiettes.",
-        "Non, merci. Je n'ai plus faim.",
-        "Le canapé est dans le salon."
+        "On se retrouve sur la place à six heures.",
+        "On se retrouve devant l'église à cinq heures.",
+        "On se retrouve au café à cinq heures."
       ]
     },
     {

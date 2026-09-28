@@ -2134,14 +2134,14 @@
       "l1": "le « fromage » pascal aux œufs",
       "l2": "hrudka",
       "choices_l1": [
-        "Nous prenons un gâteau.",
-        "froid → plus froid",
-        "Tu y vas à pied (en général) ?"
+        "l'agneau (petit, pascal)",
+        "le jambon",
+        "le raifort"
       ],
       "choices_l2": [
-        "pôst",
-        "tiež",
-        "v izbe"
+        "baránok",
+        "šunka",
+        "chren"
       ]
     }
   ]

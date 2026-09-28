@@ -1448,14 +1448,14 @@
       "l1": "le « fromage » pascal aux œufs",
       "l2": "hrudka",
       "choices_l1": [
-        "tu as décoré (femme)",
-        "sur le pont",
-        "Le vendredi saint nous avons jeûné."
+        "l'agneau (petit, pascal)",
+        "le jambon",
+        "le raifort"
       ],
       "choices_l2": [
-        "kancelária",
-        "sladký",
-        "dobre"
+        "baránok",
+        "šunka",
+        "chren"
       ]
     },
     {
@@ -1464,14 +1464,14 @@
       "l1": "Je veux de la hrudka.",
       "l2": "Chcem hrudku.",
       "choices_l1": [
-        "il / elle travaille",
-        "Je vais au travail (maintenant).",
-        "ce sera difficile"
+        "Je veux du jambon.",
+        "Je veux du raifort.",
+        "Je veux de l'agneau."
       ],
       "choices_l2": [
-        "ja idem",
-        "nedeľa",
-        "obloha"
+        "Chcem šunku.",
+        "Chcem chren.",
+        "Chcem baránka."
       ]
     },
     {
