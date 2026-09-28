@@ -46,6 +46,29 @@
 "use strict";
 
 // ============================================================================
+// Localization helpers
+// ============================================================================
+
+/**
+ * Get a UI label from LANG.ui with fallback to a default value.
+ * Substitutes placeholders like {native_lang}, {target_lang}, etc.
+ */
+function uiLabel(key, defaultValue) {
+    let value = (typeof LANG === "object" && LANG.ui && LANG.ui[key]) || defaultValue;
+    if (!value) return defaultValue;
+
+    // Substitute language name placeholders
+    if (typeof LANG === "object" && LANG.native_lang && LANG.target_lang) {
+        value = value.replace("{native_lang}", LANG.native_lang.name);
+        value = value.replace("{target_lang}", LANG.target_lang.name);
+        value = value.replace("{native_lang_code}", LANG.native_lang.code);
+        value = value.replace("{target_lang_code}", LANG.target_lang.code);
+    }
+
+    return value;
+}
+
+// ============================================================================
 // 0. Exercise type registry -- the single source of truth for what an
 //    exercise type IS: its data fields (read by editeur-exercices.html
 //    to build its forms), how a merged exercise resolves into a
@@ -89,28 +112,28 @@ const MATCH_ITEMS = 4;
 const EXERCISE_TYPES = {
     qcm: {
         icon: "🔤",
-        label: "QCM",
+        label: () => uiLabel("exercise_type_qcm", "QCM"),
         expectedChoices: QCM_CHOICES - 1,
         fields: [
-            { key: "l1", label: "Français", kind: "text" },
-            { key: "l2", label: "Slovaque", kind: "text" },
-            { key: "choices_l1", label: "Distracteurs (FR)", kind: "list" },
-            { key: "choices_l2", label: "Distracteurs (SK)", kind: "list" },
+            { key: "l1", label: () => uiLabel("exercise_field_l1", "L1"), kind: "text" },
+            { key: "l2", label: () => uiLabel("exercise_field_l2", "L2"), kind: "text" },
+            { key: "choices_l1", label: () => uiLabel("exercise_field_distractors_l1", "Distractors (L1)"), kind: "list" },
+            { key: "choices_l2", label: () => uiLabel("exercise_field_distractors_l2", "Distractors (L2)"), kind: "list" },
         ],
         resolveView: resolveQcmView,
         render: renderQcm,
     },
     "fill-blank": {
         icon: "✏️",
-        label: "Trou",
+        label: () => uiLabel("exercise_type_fill_blank", "Fill-blank"),
         expectedChoices: FILL_BLANK_CHOICES,
         fields: [
             {
-                key: "l1", label: "Phrase (FR)", kind: "sentence-blank",
+                key: "l1", label: () => uiLabel("exercise_field_sentence_l1", "Sentence (L1)"), kind: "sentence-blank",
                 missingKey: "missing_l1", blankIndexKey: "blank_index_l1", choicesKey: "choices_l1",
             },
             {
-                key: "l2", label: "Phrase (SK)", kind: "sentence-blank",
+                key: "l2", label: () => uiLabel("exercise_field_sentence_l2", "Sentence (L2)"), kind: "sentence-blank",
                 missingKey: "missing_l2", blankIndexKey: "blank_index_l2", choicesKey: "choices_l2",
             },
         ],
@@ -119,33 +142,33 @@ const EXERCISE_TYPES = {
     },
     listen: {
         icon: "🔊",
-        label: "Écoute",
+        label: () => uiLabel("exercise_type_listen", "Listen"),
         needsVoice: true,
         expectedChoices: LISTEN_CHOICES - 1,
         fields: [
-            { key: "l1", label: "Traduction (FR)", kind: "text" },
-            { key: "l2", label: "Phrase (SK, écoutée)", kind: "text" },
-            { key: "choices_l1", label: "Distracteurs (FR)", kind: "list" },
+            { key: "l1", label: () => uiLabel("exercise_field_translation_l1", "Translation (L1)"), kind: "text" },
+            { key: "l2", label: () => uiLabel("exercise_field_sentence_l2_heard", "Sentence (L2, heard)"), kind: "text" },
+            { key: "choices_l1", label: () => uiLabel("exercise_field_distractors_l1", "Distractors (L1)"), kind: "list" },
         ],
         resolveView: resolveListenView,
         render: renderListen,
     },
     order: {
         icon: "🔀",
-        label: "Ordre",
+        label: () => uiLabel("exercise_type_order", "Order"),
         fields: [
-            { key: "l1", label: "Traduction (FR)", kind: "sentence-tokens", tokensKey: "tokens_l1" },
-            { key: "l2", label: "Phrase (SK, à remettre en ordre)", kind: "sentence-tokens", tokensKey: "tokens_l2" },
+            { key: "l1", label: () => uiLabel("exercise_field_translation_l1", "Translation (L1)"), kind: "sentence-tokens", tokensKey: "tokens_l1" },
+            { key: "l2", label: () => uiLabel("exercise_field_sentence_l2_to_reorder", "Sentence (L2, to reorder)"), kind: "sentence-tokens", tokensKey: "tokens_l2" },
         ],
         resolveView: resolveOrderView,
         render: renderOrder,
     },
     match: {
         icon: "🔗",
-        label: "Matching",
+        label: () => uiLabel("exercise_type_match", "Matching"),
         fields: [
-            { key: "l1", label: "Items (FR)", kind: "list" },
-            { key: "l2", label: "Items (SK)", kind: "list" },
+            { key: "l1", label: () => uiLabel("exercise_field_items_l1", "Items (L1)"), kind: "list" },
+            { key: "l2", label: () => uiLabel("exercise_field_items_l2", "Items (L2)"), kind: "list" },
         ],
         resolveView: resolveMatchView,
         render: renderMatch,
@@ -158,7 +181,9 @@ const ALL_TYPES = Object.keys(EXERCISE_TYPES);
 
 function typeLabel(type) {
     const entry = EXERCISE_TYPES[type];
-    return entry ? `${entry.icon} ${entry.label}` : type;
+    if (!entry) return type;
+    const label = typeof entry.label === "function" ? entry.label() : entry.label;
+    return `${entry.icon} ${label}`;
 }
 
 function typeIcon(type) {
@@ -660,15 +685,15 @@ async function renderSelectionScreen() {
 
     const sections = buildExerciseSections();
     if (!sections.length) {
-        content.appendChild(el("p", { text: "No exercises available yet." }));
+        content.appendChild(el("p", { text: uiLabel("exercise_pool_empty", "No exercises available yet.") }));
         return;
     }
 
     const header = el("div", { className: "exo-selection-header" }, [
-        el("h2", { text: "Choose your sheets" }),
+        el("h2", { text: uiLabel("exercise_selection_title", "Choose your sheets") }),
         el("p", {
             className: "exo-selection-hint",
-            text: "Check one or more sheets (or a whole group), then start a mixed quiz.",
+            text: uiLabel("exercise_selection_hint", "Check one or more sheets (or a whole group), then start a mixed quiz."),
         }),
     ]);
     header.appendChild(renderQuickFilters(sections));
@@ -709,18 +734,18 @@ function renderQuickFilters(sections) {
         updateLaunchBar();
     };
 
-    row.appendChild(el("button", { className: "chip", text: "All", onclick: () => setAll(() => true) }));
+    row.appendChild(el("button", { className: "chip", text: uiLabel("filter_all", "All"), onclick: () => setAll(() => true) }));
     row.appendChild(el("button", {
         className: "chip",
-        text: "Already practiced",
+        text: uiLabel("filter_already_practiced", "Already practiced"),
         onclick: () => setAll((s) => !!(getSheetProgress(s.id) || {}).last),
     }));
     row.appendChild(el("button", {
         className: "chip",
-        text: "Not started",
+        text: uiLabel("filter_not_started", "Not started"),
         onclick: () => setAll((s) => !(getSheetProgress(s.id) || {}).last),
     }));
-    row.appendChild(el("button", { className: "chip", text: "None", onclick: () => setAll(() => false) }));
+    row.appendChild(el("button", { className: "chip", text: uiLabel("filter_none", "None"), onclick: () => setAll(() => false) }));
     return row;
 }
 
@@ -844,13 +869,13 @@ function buildLaunchBar() {
     bar.appendChild(el("p", { className: "exo-launch-summary", attrs: { id: "exo-launch-summary" } }));
 
     bar.appendChild(el("div", { className: "exo-launch-qcount" }, [
-        el("label", { text: "Number of questions", attrs: { for: "exo-launch-n" } }),
+        el("label", { text: uiLabel("session_question_count_label", "Number of questions"), attrs: { for: "exo-launch-n" } }),
         el("input", { attrs: { type: "number", id: "exo-launch-n", min: "1", value: String(SETTINGS.defaultQuestionCount) } }),
     ]));
 
     bar.appendChild(el("button", {
         className: "exo-launch-btn",
-        text: "▶️ Start the session",
+        text: uiLabel("session_start_button", "▶️ Start the session"),
         attrs: { id: "exo-launch-btn" },
         onclick: launchSession,
     }));
@@ -880,7 +905,7 @@ function updateLaunchBar() {
     if (selectedSheets.length) {
         summaryEl.textContent = `${selectedSheets.length} sheet(s) selected - ${pool} exercise(s) available`;
     } else {
-        summaryEl.textContent = "Select at least one sheet to get started.";
+        summaryEl.textContent = uiLabel("session_start_need_selection", "Select at least one sheet to get started.");
     }
 
     const input = document.getElementById("exo-launch-n");
@@ -1050,7 +1075,7 @@ function startSessionFromQuery(query) {
     if (!validIds.length) {
         const content = document.getElementById("content");
         content.innerHTML = "";
-        content.appendChild(el("p", { className: "exo-error", text: "Could not load the selected sheet(s)." }));
+        content.appendChild(el("p", { className: "exo-error", text: uiLabel("session_load_error", "Could not load the selected sheet(s).") }));
         return;
     }
 
@@ -1481,8 +1506,13 @@ function updateProgress() {
 
     const text = document.getElementById("exo-progress");
     text.innerHTML = "";
-    text.appendChild(el("span", { text: `Question ${current} / ${total}` }));
-    text.appendChild(el("span", { text: `Score ${state.score}` }));
+    const qCountDisplay = uiLabel("session_question_count_display", "Question {current} / {total}")
+        .replace("{current}", String(current))
+        .replace("{total}", String(total));
+    text.appendChild(el("span", { text: qCountDisplay }));
+    const scoreDisplay = uiLabel("session_score_display", "Score {score}")
+        .replace("{score}", String(state.score));
+    text.appendChild(el("span", { text: scoreDisplay }));
 }
 
 function renderCurrentView() {
@@ -1514,10 +1544,13 @@ function markAnswer(container, isCorrect, view, userAnswer) {
     }
 
     const canReplay = ttsAvailable();
+    const feedbackText = isCorrect
+        ? uiLabel("session_answer_correct", "✅ Correct!")
+        : uiLabel("session_answer_incorrect_prefix", "❌ Missed — answer: ") + view.answer;
     const feedbackLine = [
         el("span", {
             className: isCorrect ? "exo-feedback-ok" : "exo-feedback-ko",
-            text: isCorrect ? "✅ Correct!" : `❌ Missed — answer: ${view.answer}`,
+            text: feedbackText,
         }),
     ];
     if (canReplay) {
@@ -1535,9 +1568,12 @@ function markAnswer(container, isCorrect, view, userAnswer) {
     ]);
     container.appendChild(feedback);
 
+    const nextButtonText = state.current + 1 < state.exercises.length
+        ? uiLabel("session_next_button", "Next →")
+        : uiLabel("session_next_button_final", "See score →");
     container.appendChild(el("button", {
         className: "exo-next",
-        text: state.current + 1 < state.exercises.length ? "Next →" : "See score →",
+        text: nextButtonText,
         onclick: () => goToExercise(state.current + 1),
     }));
 
@@ -1588,7 +1624,7 @@ function markAnswer(container, isCorrect, view, userAnswer) {
 
 function renderQcm(view) {
     const container = el("div", { className: "exo-card exo-qcm" });
-    container.appendChild(el("div", { className: "exo-question-label", text: "Translate:" }));
+    container.appendChild(el("div", { className: "exo-question-label", text: uiLabel("exercise_qcm_question_label", "Translate:") }));
     container.appendChild(el("div", { className: "exo-question", text: view.question }));
 
     if (state.answerMode === "choice") {
@@ -1619,10 +1655,10 @@ function renderQcm(view) {
 
 function renderFillBlank(view) {
     const container = el("div", { className: "exo-card exo-fill-blank" });
-    container.appendChild(el("div", { className: "exo-question-label", text: "Complete the sentence:" }));
+    container.appendChild(el("div", { className: "exo-question-label", text: uiLabel("exercise_fillblank_question_label", "Complete the sentence:") }));
 
     const sentence = el("div", { className: "exo-sentence" });
-    const blank = el("span", { className: "exo-blank", text: "___" });
+    const blank = el("span", { className: "exo-blank", text: uiLabel("exercise_fillblank_blank_display", "___") });
     view.tokens.forEach((token, i) => {
         if (i === view.blankIndex) {
             sentence.appendChild(blank);
@@ -1662,16 +1698,16 @@ function renderFillBlank(view) {
 
 function renderListen(view) {
     const container = el("div", { className: "exo-card exo-listen" });
-    container.appendChild(el("div", { className: "exo-question-label", text: "Listen and find the sentence:" }));
+    container.appendChild(el("div", { className: "exo-question-label", text: uiLabel("exercise_listen_question_label", "Listen and find the sentence:") }));
 
     container.appendChild(el("button", {
         className: "exo-audio-btn exo-audio-btn-big",
-        text: "🔊 Listen",
+        text: uiLabel("exercise_listen_play_button", "🔊 Listen"),
         onclick: () => speakSafe(view.audio),
     }));
     container.appendChild(el("button", {
         className: "exo-audio-btn",
-        text: "🐢 Slowly",
+        text: uiLabel("exercise_listen_slow_button", "🐢 Slowly"),
         onclick: () => speakSafe(view.audio, SETTINGS.rate * SETTINGS.slowRatio),
     }));
 
@@ -1710,14 +1746,14 @@ function renderListen(view) {
  */
 function renderOrder(view) {
     const container = el("div", { className: "exo-card exo-order" });
-    container.appendChild(el("div", { className: "exo-question-label", text: "Put the words in order:" }));
+    container.appendChild(el("div", { className: "exo-question-label", text: uiLabel("exercise_order_question_label", "Put the words in order:") }));
     if (view.translation) {
         container.appendChild(el("div", { className: "exo-question", text: view.translation }));
     }
 
     const answerStrip = el("div", { className: "exo-order-answer" });
     const bank = el("div", { className: "exo-order-bank" });
-    const submit = el("button", { className: "exo-submit", text: "Check", attrs: { disabled: "disabled" } });
+    const submit = el("button", { className: "exo-submit", text: uiLabel("exercise_submit_button", "Check"), attrs: { disabled: "disabled" } });
 
     const placed = [];
     const MIN_PLACED_TOKENS = 3;  // Allow check only if at least this many tokens are placed
@@ -1795,7 +1831,7 @@ function renderMatch(view) {
     const rightBank = el("div", { className: "exo-match-bank" });
     const dropZones = new Map();  // leftIdx -> drop zone DOM element
 
-    const submit = el("button", { className: "exo-submit", text: "Check", attrs: { disabled: "disabled" } });
+    const submit = el("button", { className: "exo-submit", text: uiLabel("exercise_submit_button", "Check"), attrs: { disabled: "disabled" } });
 
     const matches = new Map();  // leftIdx -> { item: targetItem, correctIdx, element: DOM }
     const targetItemsToIndex = new Map();  // target text -> correct source index
@@ -2005,7 +2041,7 @@ function renderTypeInput(container, view, onValidate) {
     const input = el("input", { attrs: { type: "text", placeholder: "Your answer…", autocomplete: "off" } });
     const submit = el("button", {
         className: "exo-submit",
-        text: "Check",
+        text: uiLabel("exercise_submit_button", "Check"),
         onclick: () => {
             const value = input.value;
             input.disabled = true;
@@ -2101,7 +2137,7 @@ function renderSummary() {
     }
 
     const actions = el("div", { className: "exo-summary-actions" }, [
-        el("button", { className: "exo-next", text: "🔁 Start over", onclick: () => startPool() }),
+        el("button", { className: "exo-next", text: uiLabel("session_restart_button", "🔁 Start over"), onclick: () => startPool() }),
         el("button", {
             className: "exo-secondary", text: "⬅ New selection",
             onclick: () => { window.location.hash = "#/exercises"; },

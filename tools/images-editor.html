@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestionnaire d'images — Slovingo</title>
+<style>
+:root {
+    --bg: #f6f2ea;
+    --surface: #fffdf8;
+    --surface-2: #ece3d3;
+    --text: #2b2118;
+    --text-soft: #6d5c48;
+    --line: #ddd0ba;
+    --accent: #a8362b;
+    --accent-2: #7d6420;
+    --ok: #2e9e5b;
+    --warn: #d68910;
+    --bad: #d1483c;
+    --radius: 10px;
+    --radius-sm: 6px;
+    font-size: 15px;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #15110d;
+        --surface: #1e1811;
+        --surface-2: #2a2117;
+        --text: #f0e7d8;
+        --text-soft: #b0a08b;
+        --line: #382c1e;
+        --accent: #e0705f;
+        --accent-2: #cfa445;
+    }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.4;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 1.1em;
+    margin: 0;
+    margin-right: auto;
+}
+
+button {
+    font: inherit;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+    background: var(--surface-2);
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover:not(:disabled) {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: #fff;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+button.secondary {
+    background: var(--surface-2);
+    color: var(--text);
+}
+
+.stats {
+    display: flex;
+    gap: 12px;
+    font-size: 0.9em;
+    color: var(--text-soft);
+    align-items: center;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.stat-icon {
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.dropzone-hint {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-soft);
+    border: 2px dashed var(--line);
+    border-radius: var(--radius);
+}
+
+.group {
+    margin-bottom: 40px;
+}
+
+.group-title {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 0 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--surface-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.card-image .placeholder {
+    color: var(--text-soft);
+    font-size: 3em;
+}
+
+.card-image .error {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(209, 72, 60, 0.1);
+    font-size: 0.85em;
+    text-align: center;
+    padding: 8px;
+    color: var(--bad);
+}
+
+.card-status {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.status-icon {
+    font-size: 1.1em;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.card-title {
+    font-weight: 600;
+    margin: 0 0 6px 0;
+    word-break: break-word;
+}
+
+.card-fiche {
+    font-size: 0.85em;
+    color: var(--text-soft);
+    margin: 0 0 8px 0;
+}
+
+.card-src {
+    font-size: 0.8em;
+    font-family: "Courier New", monospace;
+    background: var(--surface-2);
+    padding: 4px 6px;
+    border-radius: 3px;
+    word-break: break-all;
+    color: var(--accent-2);
+    margin: 0 0 8px 0;
+    max-height: 60px;
+    overflow-y: auto;
+}
+
+.card-caption {
+    font-size: 0.9em;
+    color: var(--text-soft);
+    font-style: italic;
+    margin: 0;
+}
+
+.card-warnings {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+}
+
+.warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 0.85em;
+    color: var(--warn);
+    margin-bottom: 4px;
+}
+
+.warning:last-child {
+    margin-bottom: 0;
+}
+
+.warning-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Statut badges */
+.status-local-ok {
+    background: var(--ok);
+}
+
+.status-external {
+    background: #6b8dd6;
+}
+
+.status-missing {
+    background: var(--bad);
+}
+
+/* Duplicates highlight */
+.card.duplicate-marker {
+    border-color: var(--warn);
+    background: rgba(214, 137, 16, 0.05);
+}
+
+.badge-duplicate {
+    display: inline-block;
+    background: var(--warn);
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.75em;
+    font-weight: 600;
+    margin-left: 6px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>📸 Gestionnaire d'images — Slovingo</h1>
+    <button id="btn-open">Ouvrir dossier lang</button>
+    <div class="stats">
+        <div class="stat-item">
+            <span class="stat-icon">✓</span>
+            <span>Locales : <strong id="stat-local">0</strong></span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-icon">🌐</span>
+            <span>Externes : <strong id="stat-external">0</strong></span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-icon">✗</span>
+            <span>Manquantes : <strong id="stat-missing">0</strong></span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-icon">⚠️</span>
+            <span>Doublons : <strong id="stat-dupes">0</strong></span>
+        </div>
+    </div>
+</header>
+
+<main id="content">
+    <p class="dropzone-hint">
+        Ouvre un dossier de langue (langs/sk-fr ou similar) pour charger les images.<br>
+        Clique sur « Ouvrir dossier lang » ci-dessus.
+    </p>
+</main>
+
+<script>
+// ============================================================================
+// Types & constants
+// ============================================================================
+
+const IMAGE_FORMATS = new Set(['png', 'jpg', 'jpeg', 'gif', 'webp', 'bmp', 'svg']);
+
+// ============================================================================
+// State
+// ============================================================================
+
+let langDir = null;
+let jsonDir = null;
+let imgDir = null;
+let sheets = new Map();
+let stats = { local: 0, external: 0, missing: 0, dupes: 0 };
+
+// ============================================================================
+// File opening
+// ============================================================================
+
+document.getElementById('btn-open').addEventListener('click', openLangDir);
+
+async function openLangDir() {
+    try {
+        langDir = await window.showDirectoryPicker();
+        jsonDir = await langDir.getDirectoryHandle('json');
+        imgDir = await langDir.getDirectoryHandle('img').catch(() => null);
+
+        await loadSheets();
+        renderContent();
+    } catch (err) {
+        if (err && err.name === 'AbortError') return;
+        alert(`Erreur : ${err.message}`);
+    }
+}
+
+async function loadSheets() {
+    sheets.clear();
+
+    if (!jsonDir) return;
+
+    for await (const entry of jsonDir.values()) {
+        if (!entry.name.endsWith('.content.json')) continue;
+
+        try {
+            const file = await entry.getFile();
+            const text = await file.text();
+            const data = JSON.parse(text);
+
+            sheets.set(entry.name, data);
+        } catch (err) {
+            console.error(`Erreur en lisant ${entry.name}:`, err);
+        }
+    }
+}
+
+// ============================================================================
+// Image verification
+// ============================================================================
+
+async function checkImageStatus(src) {
+    if (!src) return { status: 'missing', reason: 'aucune src' };
+
+    // URL externe (Wikimedia Commons, etc.)
+    if (src.startsWith('http://') || src.startsWith('https://')) {
+        return { status: 'external', url: src };
+    }
+
+    // Chemin local
+    if (src.startsWith('img/')) {
+        const filename = src.substring(4);
+        if (imgDir) {
+            try {
+                await imgDir.getFileHandle(filename);
+                return { status: 'local-ok' };
+            } catch (err) {
+                return { status: 'missing', reason: `fichier introuvable: ${filename}` };
+            }
+        } else {
+            return { status: 'missing', reason: 'dossier img/ absent' };
+        }
+    }
+
+    return { status: 'unknown', reason: `format inconnu: ${src}` };
+}
+
+async function testExternalImage(url) {
+    return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = url;
+        setTimeout(() => resolve(false), 5000);
+    });
+}
+
+// ============================================================================
+// Render
+// ============================================================================
+
+async function renderContent() {
+    if (!sheets.size) {
+        document.getElementById('content').innerHTML = `
+            <p class="dropzone-hint">Aucune fiche trouvée dans le dossier json/.</p>
+        `;
+        return;
+    }
+
+    // Calcul des stats et groupage
+    stats = { local: 0, external: 0, missing: 0, dupes: 0 };
+    const groups = new Map();
+    const imageSources = new Map();
+
+    for (const [name, sheet] of sheets) {
+        const img = sheet.image;
+        if (!img || !img.src) continue;
+
+        const subgroup = sheet.subgroup || 'autres';
+        if (!groups.has(subgroup)) {
+            groups.set(subgroup, []);
+        }
+        groups.get(subgroup).push({ name, sheet });
+
+        // Tracking pour doublons
+        if (!imageSources.has(subgroup)) {
+            imageSources.set(subgroup, new Map());
+        }
+        const sources = imageSources.get(subgroup);
+        if (!sources.has(img.src)) {
+            sources.set(img.src, []);
+        }
+        sources.get(img.src).push(name);
+    }
+
+    // Détection des doublons
+    const duplicates = new Set();
+    for (const sources of imageSources.values()) {
+        for (const [src, names] of sources) {
+            if (names.length > 1) {
+                names.forEach(n => duplicates.add(n));
+                stats.dupes += names.length;
+            }
+        }
+    }
+
+    // Rendu
+    let html = '';
+
+    for (const [subgroup, items] of groups) {
+        html += `<div class="group">
+            <h2 class="group-title">${escapeHtml(subgroup)} <span style="font-size: 0.7em; color: var(--text-soft);">(${items.length})</span></h2>
+            <div class="cards-grid">`;
+
+        for (const { name, sheet } of items) {
+            html += await renderCard(name, sheet, duplicates.has(name), imageSources.get(subgroup));
+        }
+
+        html += `</div></div>`;
+    }
+
+    document.getElementById('content').innerHTML = html;
+    updateStats();
+}
+
+async function renderCard(name, sheet, isDuplicate, groupSources) {
+    const img = sheet.image;
+    const src = img?.src || '';
+    const caption = img?.caption || '';
+    const status = await checkImageStatus(src);
+
+    // Update stats
+    if (status.status === 'local-ok') stats.local++;
+    else if (status.status === 'external') stats.external++;
+    else if (status.status === 'missing') stats.missing++;
+
+    const ficheId = name.replace(/\.content\.json$/, '');
+    const statusIcon = getStatusIcon(status.status);
+    const statusLabel = getStatusLabel(status.status);
+
+    let cardHtml = `
+        <div class="card ${isDuplicate ? 'duplicate-marker' : ''}">
+            <div class="card-image">
+                ${await renderImagePreview(src, status)}
+                <div class="card-status status-${status.status}">
+                    <span class="status-icon">${statusIcon}</span>
+                    <span>${statusLabel}</span>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">
+                    ${escapeHtml(sheet.title || ficheId)}
+                    ${isDuplicate ? '<span class="badge-duplicate">DOUBLON</span>' : ''}
+                </h3>
+                <p class="card-fiche">${escapeHtml(ficheId)}</p>
+                <p class="card-src" title="${escapeHtml(src)}">${escapeHtml(src)}</p>
+                <p class="card-caption">${escapeHtml(caption)}</p>
+    `;
+
+    if (isDuplicate && groupSources) {
+        const duplicateNames = groupSources.get(src) || [];
+        cardHtml += `
+            <div class="card-warnings">
+                <div class="warning">
+                    <span class="warning-icon">⚠️</span>
+                    <span>Utilisée dans <strong>${duplicateNames.length}</strong> fiche(s) de ce groupe</span>
+                </div>
+            </div>
+        `;
+    }
+
+    if (status.reason) {
+        cardHtml += `
+            <div class="card-warnings">
+                <div class="warning">
+                    <span class="warning-icon">⚠️</span>
+                    <span>${escapeHtml(status.reason)}</span>
+                </div>
+            </div>
+        `;
+    }
+
+    cardHtml += `</div></div>`;
+
+    return cardHtml;
+}
+
+async function renderImagePreview(src, status) {
+    if (!src) {
+        return `<div class="placeholder">❌</div>`;
+    }
+
+    if (status.status === 'external') {
+        const ok = await testExternalImage(src);
+        if (ok) {
+            return `<img src="${escapeHtml(src)}" alt="preview">`;
+        } else {
+            return `
+                <div class="placeholder">🌐</div>
+                <div class="error">Lien externe cassé</div>
+            `;
+        }
+    }
+
+    if (status.status === 'local-ok') {
+        const path = src.startsWith('img/') ? src : `img/${src}`;
+        try {
+            const file = await imgDir.getFileHandle(path.substring(4));
+            const blob = await file.getFile();
+            const url = URL.createObjectURL(blob);
+            return `<img src="${url}" alt="preview">`;
+        } catch (err) {
+            return `<div class="placeholder">❌</div>`;
+        }
+    }
+
+    if (status.status === 'missing') {
+        return `
+            <div class="placeholder">❓</div>
+            <div class="error">Fichier local manquant</div>
+        `;
+    }
+
+    return `<div class="placeholder">❓</div>`;
+}
+
+function getStatusIcon(status) {
+    switch (status) {
+        case 'local-ok': return '✓';
+        case 'external': return '🌐';
+        case 'missing': return '✗';
+        default: return '?';
+    }
+}
+
+function getStatusLabel(status) {
+    switch (status) {
+        case 'local-ok': return 'Local';
+        case 'external': return 'Externe';
+        case 'missing': return 'Manquante';
+        default: return 'Inconnu';
+    }
+}
+
+function updateStats() {
+    document.getElementById('stat-local').textContent = stats.local;
+    document.getElementById('stat-external').textContent = stats.external;
+    document.getElementById('stat-missing').textContent = stats.missing;
+    document.getElementById('stat-dupes').textContent = stats.dupes;
+}
+
+function escapeHtml(text) {
+    const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+    return (text || '').replace(/[&<>"']/g, c => map[c]);
+}
+</script>
+
+</body>
+</html>
