@@ -93,12 +93,12 @@ Eric et Andrea se vouvoient. Eric et Ján se tutoient.
 > poháre = les verres
 > prosím = s'il vous plaît
 
-! 🧒 A ja uprácem obývačku!
-> Et moi, je range le salon !
+! 🧒 A ja upracem obývačku!
+> Et moi, je vais ranger le salon !
 > A = et
 > ja = moi
-> uprácem = je vais ranger
-+ {{upratať}}, forme ponctuelle de {{upratovať}} : {{uprácem}} annonce ce qu'on va faire.
+> upracem = je vais ranger
++ {{upratať}}, forme ponctuelle de {{upratovať}} : {{upracem}} annonce ce qu'on va faire.
 > obývačku = le salon
 
 ! 👩 Taniere sú v skrini, v kuchyni.
