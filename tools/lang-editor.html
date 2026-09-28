@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slovingo lang.json Editor</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        h1 { margin-top: 0; color: #222; }
+        .toolbar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        button {
+            padding: 8px 16px;
+            background: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover { background: #0052a3; }
+        button.secondary {
+            background: #666;
+        }
+        button.secondary:hover { background: #555; }
+        button.danger {
+            background: #d32f2f;
+        }
+        button.danger:hover { background: #b71c1c; }
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        .search-box {
+            flex: 1;
+            min-width: 200px;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .section {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .section-header {
+            background: #f9f9f9;
+            padding: 12px 15px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        .section-header:hover { background: #f0f0f0; }
+        .section-header.collapsed::before { content: "▶"; }
+        .section-header.expanded::before { content: "▼"; }
+        .section-header::before {
+            margin-right: 10px;
+            display: inline-block;
+            width: 10px;
+        }
+        .section-content {
+            padding: 15px;
+            display: none;
+        }
+        .section-content.expanded { display: block; }
+        .field-group {
+            margin-bottom: 15px;
+        }
+        .field-group:last-child { margin-bottom: 0; }
+        .field-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .field-label .required {
+            color: #d32f2f;
+            margin-left: 3px;
+        }
+        .field-label .optional {
+            color: #999;
+            font-size: 12px;
+            margin-left: 5px;
+            font-weight: normal;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #0066cc;
+            box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+        .dict-editor {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .dict-entry {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+        .dict-entry:last-child { margin-bottom: 0; }
+        .dict-entry input {
+            flex: 1;
+            min-height: 32px;
+        }
+        .dict-entry button {
+            padding: 4px 8px;
+            font-size: 12px;
+        }
+        .add-field-btn {
+            padding: 6px 12px;
+            font-size: 13px;
+            background: #4caf50;
+        }
+        .add-field-btn:hover { background: #388e3c; }
+        .export-section {
+            background: #f0f7ff;
+            border: 1px solid #0066cc;
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .export-section h3 {
+            margin-top: 0;
+            color: #0066cc;
+        }
+        .json-preview {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin-bottom: 10px;
+        }
+        .export-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .error {
+            background: #ffebee;
+            border: 1px solid #ef5350;
+            color: #c62828;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .success {
+            background: #e8f5e9;
+            border: 1px solid #66bb6a;
+            color: #2e7d32;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 Slovingo lang.json Editor</h1>
+
+        <div id="message"></div>
+
+        <div class="toolbar">
+            <div class="file-input-wrapper">
+                <button onclick="document.getElementById('fileInput').click()">📂 Load JSON</button>
+                <input type="file" id="fileInput" accept=".json" onchange="loadFile(event)">
+            </div>
+            <button onclick="createNew()">✨ New</button>
+            <button class="secondary" onclick="downloadExample()">📋 Example</button>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search fields..." onkeyup="filterFields()">
+            </div>
+        </div>
+
+        <div id="editorContainer"></div>
+
+        <div class="export-section">
+            <h3>📦 Export</h3>
+            <div id="jsonPreview" class="json-preview"></div>
+            <div class="export-buttons">
+                <button onclick="downloadJSON()">⬇️ Download JSON</button>
+                <button class="secondary" onclick="copyToClipboard()">📋 Copy to Clipboard</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const SCHEMA = {
+            target_lang: {
+                code: { label: "Language code", required: true },
+                name: { label: "Language name", required: true },
+                tts_code: { label: "TTS code", required: true },
+                flag: { label: "Flag emoji", required: false },
+                css_class: { label: "CSS class", required: false },
+                voice_hint: { label: "Voice hint", required: false },
+                tts_sample_phrase: { label: "TTS sample phrase", required: false }
+            },
+            native_lang: {
+                code: { label: "Language code", required: true },
+                name: { label: "Language name", required: true },
+                tts_code: { label: "TTS code", required: true },
+                flag: { label: "Flag emoji", required: false },
+                css_class: { label: "CSS class", required: false }
+            },
+            site: {
+                title: { label: "Site title", required: true },
+                short_name: { label: "Short name", required: false },
+                description: { label: "Description", required: false },
+                theme_color: { label: "Theme color (hex)", required: false },
+                storage_prefix: { label: "Storage prefix", required: false },
+                url_path: { label: "URL path", required: false },
+                user_name_default: { label: "Default username", required: false },
+                user_name_placeholder: { label: "Username placeholder", required: false },
+                deploy_host: { label: "Deploy host", required: false },
+                deploy_path: { label: "Deploy path", required: false }
+            },
+            categories: { dict: true, label: "Categories" },
+            subgroups: { dict: true, label: "Subgroups" },
+            ui: { dict: true, label: "UI strings" },
+            generator: {
+                target_headers: { label: "Target headers (one per line)", required: false, array: true },
+                target_header_roots: { label: "Target header roots (one per line)", required: false, array: true },
+                native_headers: { label: "Native headers (one per line)", required: false, array: true },
+                native_header_roots: { label: "Native header roots (one per line)", required: false, array: true },
+                character_headings: { label: "Character headings (one per line)", required: false, array: true }
+            }
+        };
+
+        let data = {};
+
+        function createNew() {
+            data = {
+                target_lang: { code: "", name: "", tts_code: "" },
+                native_lang: { code: "", name: "", tts_code: "" },
+                site: { title: "" },
+                categories: {},
+                subgroups: {},
+                ui: {},
+                generator: {}
+            };
+            render();
+            showMessage("New file created", "success");
+        }
+
+        function loadFile(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    data = JSON.parse(e.target.result);
+                    render();
+                    showMessage("File loaded successfully", "success");
+                } catch (err) {
+                    showMessage("Error parsing JSON: " + err.message, "error");
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function downloadExample() {
+            const example = {
+                target_lang: {
+                    code: "sk",
+                    name: "slovaque",
+                    tts_code: "sk-SK",
+                    flag: "🇸🇰",
+                    css_class: "col-target",
+                    voice_hint: "slovak",
+                    tts_sample_phrase: "Ahoj!"
+                },
+                native_lang: {
+                    code: "fr",
+                    name: "français",
+                    tts_code: "fr-FR",
+                    flag: "🇫🇷",
+                    css_class: "col-native"
+                },
+                site: {
+                    title: "Ahoj Slovenčina",
+                    short_name: "Ahoj SK",
+                    description: "Apprentissage du slovaque",
+                    theme_color: "#0b4ea2",
+                    storage_prefix: "sk-fr"
+                },
+                categories: {
+                    introduction: "Avant de commencer",
+                    series: "Séries"
+                },
+                subgroups: {},
+                ui: {
+                    home: "Accueil",
+                    exercises: "Exercices"
+                },
+                generator: {
+                    target_headers: ["slovak", "slovaque"],
+                    native_headers: ["french", "français"]
+                }
+            };
+            data = example;
+            render();
+            showMessage("Example loaded", "success");
+        }
+
+        function render() {
+            const container = document.getElementById("editorContainer");
+            container.innerHTML = "";
+
+            for (const [section, schema] of Object.entries(SCHEMA)) {
+                const sectionEl = document.createElement("div");
+                sectionEl.className = "section";
+                sectionEl.dataset.section = section;
+
+                const header = document.createElement("div");
+                header.className = "section-header expanded";
+                header.textContent = section.charAt(0).toUpperCase() + section.slice(1);
+                header.onclick = () => toggleSection(sectionEl);
+
+                const content = document.createElement("div");
+                content.className = "section-content expanded";
+
+                if (schema.dict) {
+                    content.appendChild(renderDictEditor(section, data[section] || {}));
+                } else if (schema.array || schema.array === undefined) {
+                    for (const [key, fieldSchema] of Object.entries(schema)) {
+                        if (fieldSchema.array) {
+                            content.appendChild(renderArrayField(section, key, fieldSchema));
+                        } else {
+                            content.appendChild(renderField(section, key, fieldSchema));
+                        }
+                    }
+                }
+
+                sectionEl.appendChild(header);
+                sectionEl.appendChild(content);
+                container.appendChild(sectionEl);
+            }
+
+            updatePreview();
+        }
+
+        function renderField(section, key, schema) {
+            const group = document.createElement("div");
+            group.className = "field-group";
+            group.dataset.key = key;
+
+            const label = document.createElement("label");
+            label.className = "field-label";
+            label.innerHTML = `
+                ${schema.label}
+                ${schema.required ? '<span class="required">*</span>' : '<span class="optional">(optional)</span>'}
+            `;
+
+            const input = document.createElement("input");
+            input.type = "text";
+            input.value = data[section]?.[key] || "";
+            input.onchange = () => {
+                if (!data[section]) data[section] = {};
+                data[section][key] = input.value;
+                updatePreview();
+            };
+
+            group.appendChild(label);
+            group.appendChild(input);
+            return group;
+        }
+
+        function renderArrayField(section, key, schema) {
+            const group = document.createElement("div");
+            group.className = "field-group";
+            group.dataset.key = key;
+
+            const label = document.createElement("label");
+            label.className = "field-label";
+            label.innerHTML = `
+                ${schema.label}
+                ${schema.required ? '<span class="required">*</span>' : '<span class="optional">(optional)</span>'}
+            `;
+
+            const textarea = document.createElement("textarea");
+            const arr = data[section]?.[key] || [];
+            textarea.value = Array.isArray(arr) ? arr.join("\n") : "";
+            textarea.onchange = () => {
+                if (!data[section]) data[section] = {};
+                data[section][key] = textarea.value
+                    .split("\n")
+                    .map(line => line.trim())
+                    .filter(line => line.length > 0);
+                updatePreview();
+            };
+
+            group.appendChild(label);
+            group.appendChild(textarea);
+            return group;
+        }
+
+        function renderDictEditor(section, dict) {
+            const container = document.createElement("div");
+
+            const editor = document.createElement("div");
+            editor.className = "dict-editor";
+
+            for (const [key, value] of Object.entries(dict)) {
+                const entry = createDictEntry(section, key, value);
+                editor.appendChild(entry);
+            }
+
+            const addBtn = document.createElement("button");
+            addBtn.className = "add-field-btn";
+            addBtn.textContent = "+ Add entry";
+            addBtn.onclick = () => {
+                const entry = createDictEntry(section, "", "");
+                editor.insertBefore(entry, addBtn);
+            };
+
+            container.appendChild(editor);
+            container.appendChild(addBtn);
+            return container;
+        }
+
+        function createDictEntry(section, key, value) {
+            const entry = document.createElement("div");
+            entry.className = "dict-entry";
+
+            const keyInput = document.createElement("input");
+            keyInput.type = "text";
+            keyInput.placeholder = "Key";
+            keyInput.value = key;
+
+            const valueInput = document.createElement("input");
+            valueInput.type = "text";
+            valueInput.placeholder = "Value";
+            valueInput.value = value;
+
+            const deleteBtn = document.createElement("button");
+            deleteBtn.className = "danger";
+            deleteBtn.textContent = "Delete";
+            deleteBtn.onclick = () => {
+                entry.remove();
+                updateDictFromEditor(section);
+            };
+
+            const updateOnChange = () => updateDictFromEditor(section);
+            keyInput.onchange = updateOnChange;
+            valueInput.onchange = updateOnChange;
+
+            entry.appendChild(keyInput);
+            entry.appendChild(valueInput);
+            entry.appendChild(deleteBtn);
+            return entry;
+        }
+
+        function updateDictFromEditor(section) {
+            const sectionEl = document.querySelector(`[data-section="${section}"]`);
+            const entries = sectionEl.querySelectorAll(".dict-entry");
+            data[section] = {};
+
+            entries.forEach(entry => {
+                const inputs = entry.querySelectorAll("input");
+                const key = inputs[0].value.trim();
+                const value = inputs[1].value.trim();
+                if (key) {
+                    data[section][key] = value;
+                }
+            });
+            updatePreview();
+        }
+
+        function toggleSection(el) {
+            const header = el.querySelector(".section-header");
+            const content = el.querySelector(".section-content");
+            header.classList.toggle("expanded");
+            header.classList.toggle("collapsed");
+            content.classList.toggle("expanded");
+        }
+
+        function filterFields() {
+            const query = document.getElementById("searchInput").value.toLowerCase();
+            document.querySelectorAll(".section").forEach(section => {
+                const visible = query === "" || section.dataset.section.includes(query);
+                section.classList.toggle("hidden", !visible);
+            });
+        }
+
+        function updatePreview() {
+            const clean = cleanData(data);
+            const preview = document.getElementById("jsonPreview");
+            preview.textContent = JSON.stringify(clean, null, 2);
+        }
+
+        function cleanData(obj) {
+            const cleaned = {};
+            for (const [key, value] of Object.entries(obj)) {
+                if (typeof value === "object" && value !== null) {
+                    const cleanedValue = cleanData(value);
+                    if (Object.keys(cleanedValue).length > 0) {
+                        cleaned[key] = cleanedValue;
+                    }
+                } else if (value !== "") {
+                    cleaned[key] = value;
+                }
+            }
+            return cleaned;
+        }
+
+        function downloadJSON() {
+            const clean = cleanData(data);
+            const json = JSON.stringify(clean, null, 2);
+            const blob = new Blob([json], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "lang.json";
+            a.click();
+            URL.revokeObjectURL(url);
+            showMessage("Downloaded!", "success");
+        }
+
+        function copyToClipboard() {
+            const clean = cleanData(data);
+            const json = JSON.stringify(clean, null, 2);
+            navigator.clipboard.writeText(json).then(() => {
+                showMessage("Copied to clipboard!", "success");
+            });
+        }
+
+        function showMessage(text, type) {
+            const msg = document.getElementById("message");
+            msg.textContent = text;
+            msg.className = type;
+            setTimeout(() => msg.textContent = "", 3000);
+        }
+
+        // Init
+        createNew();
+    </script>
+</body>
+</html>
