@@ -1,8 +1,8 @@
-# Kit de Survie (2/4) — Základná zdvorilosť
+# Kit prežitia (2/4) — Merci, s'il vous plaît
 
-@ TODO_img/choisir-image.jpg | TODO : choisir une image (politesse, savoir-vivre...) sur Wikimedia Commons
+@ img/Vincent_van_Gogh_-_Cafe_Terrace_at_Night_(1888).jpg | Kaviareň s terasou (Van Gogh) — Wikimedia Commons
 
-Predchádzajúca fiche ťa nechala bez odpovede na otázku. Tu je, plus kľúčové slová, ktoré ti otvoria dvere: merci, s'il te plaît, pardon.
+Čarovné slovíčka: ďakujem, prosím, prepáčte. A otázka, ktorú budeš počuť desaťkrát denne: **Ça va ?** Dobrá správa: odpoveď je často presne to isté slovo.
 
 ---
 
@@ -10,119 +10,157 @@ Predchádzajúca fiche ťa nechala bez odpovede na otázku. Tu je, plus kľúčo
 
 | Francúzština | Slovenčina |
 |----------|----------|
-| je suis | som |
-| en ordre, bien, ça va | v poriadku |
 | merci | ďakujem |
-| s'il te plaît | prosím |
-| pardon, excusez-moi | prepáčte |
-| aussi | tiež |
+| s'il vous plaît | prosím (keď vykáš) |
+| s'il te plaît | prosím (keď tykáš) |
+| de rien | nie je za čo |
+| pardon | pardon, prepáč(te) |
+| excusez-moi | prepáčte |
+| ça va | ako sa máš / mám sa dobre |
 
 ---
 
 ## Dnešná gramatika
 
-### Odpovedať na « Ako sa máš? »
+### Ça va ? — Ça va !
 
-**{{Som}}** = ja som. **{{V poriadku}}** = v poriadku, dobre. Dohromady: **{{Som v poriadku}}** (ide mi dobre), doslova „som v poriadku". To je štandardná odpoveď na {{Ako sa máš?}}. Môžeš ju tiež skrátiť na len **{{V poriadku}}, menej formálne.
+| Francúzština | Slovenčina |
+|----------|----------|
+| Ça va ? | Ako sa máš? / Ako sa máte? |
+| Ça va. | Mám sa dobre. / Dobre. |
+| Ça va bien. | Mám sa dobre. |
+| Ça va très bien ! | Mám sa veľmi dobre! |
 
-### Prosím a ďakujem
+To isté slovo je otázka aj odpoveď — rozdiel robí iba intonácia: pri otázke hlas na konci stúpa, pri odpovedi klesá. **Ça va ?** je hovorové a hodí sa na tykanie aj na neformálne vykanie. Zdvorilejšia verzia, keď vykáš, je **Comment allez-vous ?** (Ako sa máte?).
 
-Dve nevyhnutné slová. **{{Prosím}}** = prosím / prosím vás (kontext rozhoduje). **{{Ďakujem}}** = ďakujem. Môžeš ich používať samostatne alebo kombinovať s inými slovami.
+### S'il te plaît / s'il vous plaît
 
-### Prepáčte
+| Francúzština | Slovenčina |
+|----------|----------|
+| Un café, s'il te plaît. | Kávu, prosím. (kamarátovi) |
+| Un café, s'il vous plaît. | Kávu, prosím. (čašníkovi) |
 
-Môže to znamenať „prepáčte", „ospravedlňujeme sa", alebo „prosím vás" (formálne, ako keď chceš niekoho obťažovať). Je to tajná zbraň na zdvorilosť v kaviarni alebo v obchode.
-
-### Tiež
-
-„Tiež" / „aj". Praktické na vrátenie zdvorilosti bez opakovania všetkého: namiesto preformulovania celej vety postačí jednoduché {{Tiež}}.
+Slovenské „prosím“ sa nemení, francúzske áno: **s'il te plaît** pre toho, komu tykáš, **s'il vous plaît** pre toho, komu vykáš. Doslova „ak sa ti / vám to páči“. V kaviarni, v obchode, na úrade vždy **s'il vous plaît**.
 
 ---
 
 ## Vety
 
-! Comment ça va ? Je vais bien, merci.
-> Ako sa máš? Som v poriadku, ďakujem.
-> Comment ça va = ako sa máš
-> Je vais bien = som v poriadku
-> merci = ďakujem
-+ Otázka a odpoveď, konečne spolu.
-
-! Bien aussi, merci.
-> Tiež v poriadku, ďakujem.
-> Bien aussi = tiež v poriadku
+! Ça va ? — Ça va, merci !
+> Ako sa máš? — Dobre, ďakujem!
+> Ça va ? = ako sa máš?
+> Ça va = dobre
 > merci = ďakujem
 
-! S'il te plaît.
-> Prosím.
-> S'il te plaît = prosím
-+ Príliš jednoduché, ale používame to neustále.
-
-! Merci.
-> Ďakujem.
-> Merci = ďakujem
-+ Tiež: základné a nevyhnutné.
-
-! Pardon ! / Excusez-moi !
-> Prepáčte!
-> Pardon = prepáčte
-+ Kričíš to, keď šlapneš niekomu na nohu, alebo keď chceš obťažovať niekoho v obchode.
-
-! Salut ! Comment ça va ? Je vais bien, merci, et toi ?
-> Ahoj! Ako sa máš? Som v poriadku, ďakujem, a ty?
-> Salut = ahoj
-> Comment ça va = ako sa máš
-> Je vais bien = som v poriadku
-> merci = ďakujem
+! Ça va bien, et toi ?
+> Mám sa dobre, a ty?
+> Ça va bien = mám sa dobre
 > et toi = a ty
 
+! Comment allez-vous ?
+> Ako sa máte?
+> Comment = ako
+> allez-vous = sa máte
++ Zdvorilá verzia pre ľudí, ktorým vykáš. Odpoveď: „Très bien, merci. Et vous ?“
+
+! Un café, s'il vous plaît.
+> Kávu, prosím.
+> Un café = kávu
+> s'il vous plaît = prosím
++ „s'il vous plaît“ sa vyslovuje dohromady, rýchlo: „siluple“.
+
+! Merci ! — De rien !
+> Ďakujem! — Nie je za čo!
+> Merci = ďakujem
+> De rien = nie je za čo
++ Doslova „za nič“ — ale v slovenčine sa povie „nie je za čo“ alebo „rado sa stalo“.
+
+! Pardon !
+> Pardon! / Prepáčte!
+> Pardon = pardon, prepáčte
++ Keď do niekoho vrazíš, šliapneš mu na nohu alebo sa potrebuješ pretlačiť cez dav.
+
+! Excusez-moi, Madame…
+> Prepáčte, pani…
+> Excusez-moi = prepáčte
+> Madame = pani
++ Na zdvorilé oslovenie cudzieho človeka, napríklad keď sa chceš na niečo opýtať.
+
 ---
 
-## 🇸🇰 Róg slovenčiny
+## Opakujeme
 
-**« Ďakujem » bez prestávky.** Slováci sú zdvorili. Budeš počuť {{ďakujem}} *neustále* v každodenných interakciách. Pekár ti dá chlieb: {{ďakujem}}. Zaplatíš: {{ďakujem}}. Je to len štandardná zdvorilosť — nebuď prekvapený, je to len ako to funguje.
+! Bonjour, Monsieur. Un café, s'il vous plaît.
+> Dobrý deň. Kávu, prosím.
+> Bonjour = dobrý deň
+> Monsieur = pán
+> Un café = kávu
+> s'il vous plaît = prosím
 
-**« Prepáčte » má viacero funkcií.** Môže to znamenať „prepáčte, som nešikovný", „prepáčte, vás obťažujem" (formálne), alebo dokonca „prosím vás" (keď sa priblížiš k niekomu). Kontext rozhoduje.
+! Salut, Julie ! Ça va ?
+> Ahoj, Julie! Ako sa máš?
+> Salut = ahoj
+> Ça va ? = ako sa máš?
+
+! Merci, au revoir !
+> Ďakujem, dovidenia!
+> Merci = ďakujem
+> au revoir = dovidenia
 
 ---
 
-## Doplnkový slovník
+## 🇫🇷 Francúzsky kútik
+
+**Slovenské „prosím“ má vo francúzštine štyri podoby.** Keď o niečo žiadaš: {{s'il vous plaît}}. Keď niekto poďakuje: {{de rien}} alebo zdvorilejšie {{je vous en prie}}. Keď niekomu niečo podávaš („nech sa páči“): {{voilà}} alebo {{tenez}}. A keď si nepočul/a, čo niekto povedal: {{Pardon ?}}. Slovenčina to všetko zvládne jedným slovom — francúzština nie.
+
+**„Ça va ?“ nie je skutočná otázka.** Podobne ako anglické „How are you?“ sa {{Ça va ?}} často používa len ako pozdrav. Nikto nečaká podrobnú správu o tvojom zdraví — stačí {{Ça va, et toi ?}}.
+
+**Pardon alebo excusez-moi?** Obe slová sa dajú použiť skoro všade. {{Pardon}} je kratšie a rýchlejšie — keď do niekoho vrazíš. {{Excusez-moi}} je o niečo zdvorilejšie — keď niekoho oslovuješ a chceš ho vyrušiť otázkou.
+
+---
+
+## Doplnková slovná zásoba
 
 | Francúzština | Slovenčina |
 |----------|----------|
-| non | nie |
 | oui | áno |
-| aide | pomôž |
-| l'aide | pomoc |
-| de rien | nič |
+| non | nie |
+| merci beaucoup | ďakujem pekne |
+| très bien | veľmi dobre |
+| pas mal | celkom dobre |
+| je vous en prie | prosím (odpoveď na ďakujem) |
+| voilà | nech sa páči, tu je |
 
 ---
 
-## Ďalšie vety
+## Ešte pár viet
 
-! Non, merci.
-> Nie, ďakujem.
+! Oui, merci. / Non, merci.
+> Áno, ďakujem. / Nie, ďakujem.
+> Oui = áno
 > Non = nie
 > merci = ďakujem
-+ Vzorec na zdvorilú odmietnutie.
 
-! Oui, s'il te plaît.
-> Áno, prosím.
-> Oui = áno
-> s'il te plaît = prosím
+! Merci beaucoup !
+> Ďakujem pekne!
+> Merci beaucoup = ďakujem pekne
++ Doslova „ďakujem veľa“. Francúzi ho používajú tak často ako my „ďakujem pekne“.
 
-! Aide-moi, s'il te plaît.
-> Pomôž mi, prosím.
-> Aide-moi = pomôž mi
-> s'il te plaît = prosím
-+ Zdvorilosť volaní o pomoc.
-
-! À l'aide !
-> Pomoc!
-> À l'aide = pomoc
-+ Kratšia verzia s podstatným menom {{pomoc}} namiesto slovesa {{pomôž}}.
-
-! Rien, merci. / De rien, merci.
-> Nič, ďakujem.
-> Rien = nič
+! Très bien, merci. Et vous ?
+> Veľmi dobre, ďakujem. A vy?
+> Très bien = veľmi dobre
 > merci = ďakujem
+> Et vous = a vy
+
+! Pas mal, et toi ?
+> Celkom dobre, a ty?
+> Pas mal = celkom dobre
+> et toi = a ty
++ Doslova „nie zle“ — typická francúzska skromnosť.
+
+! Voilà votre café. — Merci ! — Je vous en prie.
+> Tu je vaša káva. — Ďakujem! — Prosím.
+> Voilà = tu je, nech sa páči
+> votre café = vaša káva
+> Merci = ďakujem
+> Je vous en prie = prosím

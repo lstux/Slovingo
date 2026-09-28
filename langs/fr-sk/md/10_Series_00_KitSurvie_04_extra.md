@@ -1,140 +1,151 @@
-# Kit de Survie (extra) — Všetko dokopy
+# Kit prežitia (extra) — Všetko dokopy
 
-@ TODO_img/choisir-image.jpg | TODO : choisir une image (récapitulatif, phrasebook...) sur Wikimedia Commons
+@ img/Paris_at_night.jpg | Paríž v noci — Wikimedia Commons
 
-Žiadne nové slová tu. Všetok slovník Kit de Survie je zjednotený, potom znova kombinovaný v nových vetách. Si pripravený na sériu Rodina.
+Žiadne nové slovo. Celá slovná zásoba Kitu prežitia je tu zhrnutá a potom poskladaná do nových viet. Keď ich zvládneš, vieš pozdraviť, poďakovať, ospravedlniť sa, predstaviť sa a povedať, že nerozumieš — a to na prežitie úplne stačí.
 
 ---
 
-## Celý slovník Kit de Survie
+## Celá slovná zásoba Kitu prežitia
 
 | Francúzština | Slovenčina |
 |----------|----------|
 | bonjour | dobrý deň |
-| comment ça va | ako sa máš |
-| salut | ahoj |
-| ciao, au revoir | čau |
-| l'ami | priateľ |
-| aujourd'hui | dnes |
-| je suis | som |
-| en ordre, bien, ça va | v poriadku |
+| bonsoir | dobrý večer |
+| salut | ahoj, čau |
+| au revoir | dovidenia |
+| bonne nuit | dobrú noc |
+| Madame | pani |
+| Monsieur | pán |
+| Mademoiselle | slečna (dnes zriedkavé) |
+| bonne journée | pekný deň |
+| bonne soirée | pekný večer |
+| à bientôt | čoskoro sa uvidíme |
+| à demain | do zajtra |
+| tout le monde | všetci |
 | merci | ďakujem |
-| s'il te plaît | prosím |
-| pardon, excusez-moi | prepáčte |
-| aussi | tiež |
-| non | nie |
+| merci beaucoup | ďakujem pekne |
+| s'il vous plaît | prosím (keď vykáš) |
+| s'il te plaît | prosím (keď tykáš) |
+| de rien | nie je za čo |
+| je vous en prie | prosím (odpoveď na ďakujem) |
+| pardon | pardon, prepáč(te) |
+| excusez-moi | prepáčte |
+| ça va | ako sa máš / mám sa dobre |
+| comment allez-vous ? | ako sa máte? |
+| très bien | veľmi dobre |
+| pas mal | celkom dobre |
 | oui | áno |
-| aide | pomôž |
-| l'aide | pomoc |
-| de rien | nič |
-| tu comprends | rozumieš |
-| je comprends | rozumiem |
+| non | nie |
+| voilà | nech sa páči, tu je |
+| je m'appelle | volám sa |
+| vous vous appelez comment ? | ako sa voláte? |
+| enchanté / enchantée | teší ma |
+| je suis slovaque | som Slovák / Slovenka |
+| je suis français / française | som Francúz / Francúzka |
+| le prénom | krstné meno |
+| le nom | priezvisko |
+| vous parlez français ? | hovoríte po francúzsky? |
+| vous parlez anglais ? | hovoríte po anglicky? |
+| un peu | trochu |
 | je ne comprends pas | nerozumiem |
-| quoi | čo |
-| ça veut dire | znamená |
-| vous parlez | hovoríte |
-| français | po francúzsky |
-| au revoir (formel) | dovidenia |
-| beaucoup | veľa |
-| le prénom | meno |
-| connaître | poznať |
-| anglais | po anglicky |
+| répétez, s'il vous plaît | zopakujte, prosím |
+| plus lentement | pomalšie |
+| qu'est-ce que ça veut dire ? | čo to znamená? |
+| d'accord | dobre, v poriadku |
 
 ---
 
 ## Vety
 
-! Bonjour ! Comment ça va ?
-> Dobrý deň! Ako sa máš?
+! Bonjour, Madame. Comment allez-vous ?
+> Dobrý deň. Ako sa máte?
 > Bonjour = dobrý deň
-> Comment ça va = ako sa máš
+> Madame = pani
+> Comment allez-vous = ako sa máte
 
-! Je vais bien, merci. Et toi ?
-> Som v poriadku, ďakujem. A ty?
-> Je vais bien = som v poriadku
+! Très bien, merci. Et vous ?
+> Veľmi dobre, ďakujem. A vy?
+> Très bien = veľmi dobre
 > merci = ďakujem
-> Et toi = a ty
+> Et vous = a vy
 
-! Salut l'ami ! Au revoir !
-> Ahoj priateľ! Čau!
+! Salut tout le monde ! Ça va ?
+> Ahojte všetci! Ako sa máte?
 > Salut = ahoj
-> l'ami = priateľ
-> Au revoir = čau
+> tout le monde = všetci
+> Ça va ? = ako sa máte?
 
-! Aujourd'hui c'est un bon jour.
-> Dnes je dobrý deň.
-> Aujourd'hui = dnes
-> c'est = je
-> un bon jour = dobrý deň
+! Je m'appelle Andrea. Je suis slovaque.
+> Volám sa Andrea. Som Slovenka.
+> Je m'appelle = volám sa
+> Je suis = som
+> slovaque = Slovenka
 
-! S'il te plaît, aide-moi.
-> Prosím, pomôž mi.
-> S'il te plaît = prosím
-> aide-moi = pomôž mi
+! Enchanté, Andrea ! Je m'appelle Eric.
+> Teší ma, Andrea! Volám sa Eric.
+> Enchanté = teší ma
+> Je m'appelle = volám sa
 
-! À l'aide ! Pardon, je ne comprends pas.
-> Pomoc! Prepáčte, nerozumiem.
-> À l'aide = pomoc
+! Pardon, je ne comprends pas.
+> Prepáčte, nerozumiem.
 > Pardon = prepáčte
 > je ne comprends pas = nerozumiem
 
-! Je comprends, merci.
-> Rozumiem, ďakujem.
-> Je comprends = rozumiem
-> merci = ďakujem
+! Plus lentement, s'il vous plaît.
+> Pomalšie, prosím.
+> Plus lentement = pomalšie
+> s'il vous plaît = prosím
 
-! Non, merci. Oui, s'il te plaît.
-> Nie, ďakujem. Áno, prosím.
-> Non = nie
-> merci = ďakujem
-> Oui = áno
-> s'il te plaît = prosím
-
-! Vous parlez français ? Tu comprends ?
-> Hovoríte po francúzsky? Rozumieš?
-> Vous parlez français = hovoríte po francúzsky
-> Tu comprends = rozumieš
-
-! Pardon, vous parlez anglais ?
+! Excusez-moi, Monsieur, vous parlez anglais ?
 > Prepáčte, hovoríte po anglicky?
-> Pardon = prepáčte
-> Vous parlez anglais = hovoríte po anglicky
+> Excusez-moi = prepáčte
+> Monsieur = pán
+> vous parlez anglais = hovoríte po anglicky
 
-! Qu'est-ce que ça veut dire ?
-> Čo to znamená?
-> Qu'est-ce que = čo
-> ça veut dire = znamená
+! Oui, un peu. — D'accord, merci !
+> Áno, trochu. — Dobre, ďakujem!
+> Oui = áno
+> un peu = trochu
+> D'accord = dobre
+> merci = ďakujem
 
-! Merci beaucoup, l'ami !
-> Ďakujem veľa, priateľ!
-> Merci beaucoup = ďakujem veľa
-> l'ami = priateľ
+! Qu'est-ce que ça veut dire, « à bientôt » ?
+> Čo znamená „à bientôt“?
+> Qu'est-ce que ça veut dire = čo to znamená
 
-! Quel est votre prénom ?
-> Aké je vaše meno?
-> Quel est votre prénom = aké je vaše meno
+! Un café, s'il vous plaît. — Voilà !
+> Kávu, prosím. — Nech sa páči!
+> Un café = kávu
+> s'il vous plaît = prosím
+> Voilà = nech sa páči
 
-! C'est agréable de vous connaître.
-> Je milé vás poznať.
-> C'est agréable = je milé
-> vous connaître = vás poznať
+! Merci beaucoup ! — Je vous en prie.
+> Ďakujem pekne! — Prosím.
+> Merci beaucoup = ďakujem pekne
+> Je vous en prie = prosím
 
-! De rien, au revoir !
-> Nič, dovidenia!
-> De rien = nič
-> au revoir = dovidenia
+! Au revoir, Madame. Bonne journée !
+> Dovidenia. Pekný deň!
+> Au revoir = dovidenia
+> Madame = pani
+> Bonne journée = pekný deň
 
-! Au revoir aussi, l'ami !
-> Tiež dovidenia, priateľ!
-> Au revoir aussi = tiež dovidenia
-> l'ami = priateľ
+! Salut, à demain !
+> Čau, do zajtra!
+> Salut = čau
+> à demain = do zajtra
+
+! Bonsoir, Monsieur. — Bonsoir !
+> Dobrý večer. — Dobrý večer!
+> Bonsoir = dobrý večer
+> Monsieur = pán
+
+! Bonne nuit, à demain !
+> Dobrú noc, do zajtra!
+> Bonne nuit = dobrú noc
+> à demain = do zajtra
 
 ---
 
-## 🇸🇰 Róg slovenčiny
-
-**Máš minimálne potrebné.** S týmito niekoľkými vetami — pozdraviť, poďakovať, ospravedlniť sa, povedať, že nerozumieš — už vieš prežiť viac-menej akúkoľvek základnú interakciu v slovenskej. Zvyšok je slovník: série ti ho dajú, tému za témou.
-
-**Vykanie sa bude objavovať často.** Stretol si sa s ním v dialógu s Andrea a v niekoľkých vetách tu ({{ako sa máte}}, {{vaše}}, {{hovoríte}}). Neznepokojuj sa tým príliš zatiaľ: série sa opäť budú zaoberať témou podrobne. Na začiatok si len zapamätaj, že existuje a že mení tvar slovesa a privlastňovacích zámen.
-
-**Pripravený na sériu Rodina.** Logickým pokračovaním Kit de Survie je prvá skutočná séria: rodina, privlastňovacie zámená {{môj}}/{{moja}}, a slovesá {{byť}} a {{mať}}. Teraz máš všetko potrebné na to, aby si povedal dobrý deň, ďakujem a prepáčte, zatiaľ čo sa učíš všetko toto.
+Hotovo: toto je tvoja prvá sada na prežitie. Ďalej pokračuje séria Rodina — rodina, **mon** / **ma** a dve najdôležitejšie slovesá, **être** a **avoir**.
