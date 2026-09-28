@@ -808,7 +808,7 @@ function buildFieldBlock(ex, field) {
     block.className = "field-block";
     const label = document.createElement("label");
     label.className = "field-label";
-    label.textContent = field.label;
+    label.textContent = typeof field.label === "function" ? field.label() : field.label;
     block.appendChild(label);
 
     try {
@@ -828,7 +828,8 @@ function buildFieldBlock(ex, field) {
             block.appendChild(err);
         }
     } catch (err) {
-        console.error(`Erreur lors du rendu du champ « ${field.label} » :`, err);
+        const fieldLabel = typeof field.label === "function" ? field.label() : field.label;
+        console.error(`Erreur lors du rendu du champ « ${fieldLabel} » :`, err);
         const errorDiv = document.createElement("p");
         errorDiv.className = "hint";
         errorDiv.style.color = "var(--bad)";
