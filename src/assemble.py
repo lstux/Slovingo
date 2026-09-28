@@ -29,12 +29,15 @@ from typing import Any
 
 from smd2data import SheetNameError, parse_sheet_filename
 
-# A "Les personnages" heading (case/diacritic-insensitive on the key
-# word) followed by a list block is the documented convention for
+# A "Les personnages" heading (case-insensitive on the key word)
+# followed by a list block is the documented convention for
 # introducing a dialogue's cast (see Fiches-Serie.txt /
 # Fiches-Dialogue.txt) -- used here to harvest an emoji -> name map
-# automatically, rather than maintaining one by hand.
-CHARACTER_HEADING_RE = re.compile(r"personnages", re.IGNORECASE)
+# automatically, rather than maintaining one by hand. The key word
+# depends on the course's native language ("Postavy" in a course
+# written in Slovak), so a lang.json can override it with
+# generator.character_headings; this is only the default.
+DEFAULT_CHARACTER_HEADINGS = ["personnages"]
 CHARACTER_LIST_ITEM_RE = re.compile(r"^(\S+)\s+(.+)$")
 
 
@@ -52,11 +55,24 @@ def load_json(path: Path) -> dict[str, Any]:
         return json.load(f)
 
 
-def extract_characters(content: list[dict[str, Any]]) -> dict[str, str]:
+def character_heading_re(headings: list[str] | None = None) -> re.Pattern[str]:
+    """Compile the heading matcher for a cast section, from a list of
+    key words (lang.json's generator.character_headings), falling
+    back to DEFAULT_CHARACTER_HEADINGS. Matching is a case-insensitive
+    substring search, so "Postavy" also matches "## 🎭 Postavy".
+    """
+    words = [w for w in (headings or DEFAULT_CHARACTER_HEADINGS) if w]
+    return re.compile("|".join(re.escape(w) for w in words), re.IGNORECASE)
+
+
+def extract_characters(
+    content: list[dict[str, Any]], heading_re: re.Pattern[str] | None = None
+) -> dict[str, str]:
     """Find the emoji -> name pairs introduced by a "Les personnages"
     section in one sheet's content blocks.
 
-    Looks for a heading matching CHARACTER_HEADING_RE immediately
+    Looks for a heading matching `heading_re` (default: see
+    character_heading_re()) immediately
     followed by a list block, and parses each item as "EMOJI Name,
     optional trailing description" (e.g. "Babka Zuzana, leur
     grand-mère" -> "Babka Zuzana"). A sheet with no such section
@@ -64,14 +80,16 @@ def extract_characters(content: list[dict[str, Any]]) -> dict[str, str]:
 
     Args:
         content: A sheet's `content` block list (see smd2data.py).
+        heading_re: Matcher for the cast section's heading.
 
     Returns:
         {emoji: name}, name taken as written (before any comma),
         for every character introduced on this sheet.
     """
+    heading_re = heading_re or character_heading_re()
     characters: dict[str, str] = {}
     for index, block in enumerate(content):
-        if block["type"] != "heading" or not CHARACTER_HEADING_RE.search(block["text"]):
+        if block["type"] != "heading" or not heading_re.search(block["text"]):
             continue
         if index + 1 >= len(content) or content[index + 1]["type"] != "list":
             continue
@@ -86,25 +104,30 @@ def extract_characters(content: list[dict[str, Any]]) -> dict[str, str]:
     return characters
 
 
-def build_characters_map(metas: list[dict[str, Any]], json_dir: Path) -> dict[str, str]:
+def build_characters_map(
+    metas: list[dict[str, Any]], json_dir: Path, character_headings: list[str] | None = None
+) -> dict[str, str]:
     """The corpus-wide emoji -> name map, one entry per distinct
     speaker emoji, built by majority vote across every sheet that
     introduces that character -- a stray typo or an inconsistent
     description on one sheet doesn't change the name used everywhere
     else (see extract_characters()).
     """
+    heading_re = character_heading_re(character_headings)
     votes: dict[str, Counter] = {}
     for meta in metas:
         content_path = json_dir / f"{meta['id']}.content.json"
         if not content_path.exists():
             continue
         sheet = load_json(content_path)
-        for emoji, name in extract_characters(sheet["content"]).items():
+        for emoji, name in extract_characters(sheet["content"], heading_re).items():
             votes.setdefault(emoji, Counter())[name] += 1
     return {emoji: counter.most_common(1)[0][0] for emoji, counter in votes.items()}
 
 
-def build_data_json(metas: list[dict[str, Any]], json_dir: Path) -> dict[str, Any]:
+def build_data_json(
+    metas: list[dict[str, Any]], json_dir: Path, character_headings: list[str] | None = None
+) -> dict[str, Any]:
     """Assemble dist/data.json: sheets grouped by (category, subgroup),
     in first-seen order, each group holding its sheets in filesystem
     order. `subgroup` can be None -- sheets without one still share a
@@ -113,7 +136,8 @@ def build_data_json(metas: list[dict[str, Any]], json_dir: Path) -> dict[str, An
     no subgroup heading. Also includes `characters`, the corpus-wide
     emoji -> name map (see build_characters_map()), so the Settings
     screen can list dialogue characters by name without re-scanning
-    the whole corpus in the browser.
+    the whole corpus in the browser. `character_headings` comes from
+    lang.json's generator.character_headings (optional).
     """
     groups: "OrderedDict[tuple[str, str | None], dict[str, Any]]" = OrderedDict()
 
@@ -140,7 +164,7 @@ def build_data_json(metas: list[dict[str, Any]], json_dir: Path) -> dict[str, An
             "content": sheet["content"],
         })
 
-    return {"groups": list(groups.values()), "characters": build_characters_map(metas, json_dir)}
+    return {"groups": list(groups.values()), "characters": build_characters_map(metas, json_dir, character_headings)}
 
 
 def build_exercises_json(metas: list[dict[str, Any]], json_dir: Path) -> dict[str, Any]:

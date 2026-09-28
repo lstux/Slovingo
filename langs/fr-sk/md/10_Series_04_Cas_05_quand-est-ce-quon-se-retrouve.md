@@ -59,6 +59,19 @@ Eric a Andrea si vykajú. Andrea a Marek si tykajú.
 > du soir = večer
 + Pozor, „six heures et demie“ = pol siedmej — francúzske číslo je vždy o jedno nižšie, než by napovedala slovenská logika.
 
+! 👩 Six heures et demie… c'est six heures trente ?
+> Pol siedmej… to je šesť tridsať?
+> Six heures et demie = pol siedmej
+> c'est = to je
+> six heures trente = šesť tridsať
++ Andrea si to overuje nahlas — presne kvôli pasci z predchádzajúcich kartičiek.
+
+! 👦 Oui, exactement. Pas cinq heures trente !
+> Áno, presne. Nie päť tridsať!
+> Oui, exactement = áno, presne
+> pas cinq heures trente = nie päť tridsať
++ Päť tridsať by bolo „pol šiestej“ — to je tá chyba, ktorej sa treba vyhnúť.
+
 ! 👩 D'accord. On se retrouve mercredi à six heures et demie.
 > Dobre. Stretneme sa v stredu o pol siedmej.
 > D'accord = dobre
@@ -66,21 +79,10 @@ Eric a Andrea si vykajú. Andrea a Marek si tykajú.
 > mercredi = v stredu
 > à six heures et demie = o pol siedmej
 
-! 👦 Six heures et demie, c'est six heures trente ?
-> Pol siedmej, to je šesť tridsať?
-> Six heures et demie = pol siedmej
-> c'est = to je
-> six heures trente = šesť tridsať
-
-! 👩 Oui, exactement. Pas sept heures trente !
-> Áno, presne. Nie sedem tridsať!
-> Oui, exactement = áno, presne
-> pas sept heures trente = nie sedem tridsať
-
-! 👦 D'accord. Où est-ce que vous attendez ?
-> Dobre. Kde čakáte?
-> D'accord = dobre
-> où est-ce que vous attendez = kde čakáte
+! 👦 Très bien. On se retrouve où ?
+> Výborne. Kde sa stretneme?
+> Très bien = výborne
+> on se retrouve où = kde sa stretneme
 
 ! 👩 À la gare. Je vais arriver à l'heure.
 > Na stanici. Prídem načas.
@@ -107,7 +109,7 @@ Eric a Andrea si vykajú. Andrea a Marek si tykajú.
 
 **Potvrdiť deň vopred je bežné aj tu.** Stretnutie dohodnuté týždeň vopred sa vo Francúzsku tiež často potvrdzuje krátkou správou deň predtým alebo ráno v daný deň.
 
-**„Six heures et demie“ — pasca funguje v oboch smeroch.** Francúz povie „six heures et demie“ a myslí šesť tridsať — na rozdiel od inštinktu prevziať slovenskú logiku „pol siedmej“. Overiť si to nahlas, ako to robí Eric, je úplne bežné.
+**„Six heures et demie“ — pasca funguje v oboch smeroch.** Francúz povie „six heures et demie“ a myslí šesť tridsať, teda „pol siedmej“ — nie „pol šiestej“, ako by napovedal slovenský inštinkt. Overiť si to nahlas, ako to robí Andrea, je úplne bežné.
 
 **Gare de Lyon-Part-Dieu — obľúbený bod stretnutia.** V Lyone slúži hlavná stanica {{Part-Dieu}} ako obľúbené miesto stretnutia, podobne ako bratislavská Hlavná stanica — je odtiaľ ľahké pokračovať autobusom či električkou kamkoľvek v meste.
 

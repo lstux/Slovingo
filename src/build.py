@@ -125,7 +125,9 @@ def run_build(
 
     # 3. Assembly.
     metas = assemble.ordered_sheet_ids(md_dir)
-    data = assemble.build_data_json(metas, json_dir)
+    data = assemble.build_data_json(
+        metas, json_dir, lang_cfg.get("generator", {}).get("character_headings")
+    )
     exercises = assemble.build_exercises_json(metas, json_dir)
     dist_dir.mkdir(parents=True, exist_ok=True)
     (dist_dir / "data.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
