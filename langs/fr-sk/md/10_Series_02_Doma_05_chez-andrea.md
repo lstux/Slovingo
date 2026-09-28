@@ -2,7 +2,7 @@
 
 @ img/Cpe_front_building.JPG | Budova v Lyone — Wikimedia Commons
 
-Andrea prijíma Erica a Karine vo svojom byte v Lyone. Prejde sa tu celá slovná zásoba série, v jednom súvislom rozhovore. Žiadne nové slovo, okrem tých označených v poznámkach.
+Andrea prijíma Erica a Karine vo svojom byte v Lyone. Prejde sa tu celá slovná zásoba série, v jednom súvislom rozhovore. Nové slová, ktoré sa v rozhovore objavia, nájdeš vysvetlené v preklade pod každou replikou.
 
 ---
 

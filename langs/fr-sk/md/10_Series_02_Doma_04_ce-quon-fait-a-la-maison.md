@@ -27,10 +27,17 @@
 | Francúzština | Slovenčina |
 |----------|----------|
 | je range, tu ranges, il range | upratujem, upratuješ, upratuje |
+| je finis, tu finis, il finit | končím, končíš, končí |
 | je dors, tu dors, il dort | spím, spíš, spí |
 | j'ouvre, tu ouvres, il ouvre | otváram, otváraš, otvára |
 
-Väčšina slovies na **-er** (ako « ranger ») sa časuje veľmi pravidelne — to je najväčšia a najjednoduchšia skupina. Slovesá ako « dormir » patria do nepravidelnejšej skupiny. A pozor na prekvapenie: « ouvrir » sa napriek koncovke -ir časuje ako sloveso na -er (j'ouvre, nie „j'ouvris“). Nepravidelnosti majú svoju logiku, len inú, než by si čakal/a.
+Francúzske slovesá sa tradične delia do troch skupín:
+
+- **1. skupina — slovesá na -er** (ako « ranger »): najväčšia a najpravidelnejšia skupina.
+- **2. skupina — slovesá na -ir s tvarom -issons** (ako « finir », končiť: je finis, nous finissons): tiež pravidelné.
+- **3. skupina — všetky ostatné**, nepravidelné: « dormir » (je dors), « faire », « aller »...
+
+A pozor na prekvapenie: « ouvrir » patrí do 3. skupiny, hoci sa v prítomnom čase časuje ako sloveso na -er (j'ouvre, tu ouvres) — nie ako « finir » (nie „j'ouvris“). Nepravidelnosti majú svoju logiku, len inú, než by si čakal/a.
 
 ### Zápor ne...pas
 
@@ -125,11 +132,11 @@ Francúzska zápora má dve časti, « ne » a « pas », ktoré obopínajú slo
 
 ## 🇫🇷 Francúzsky kútik
 
-**Obed kratší, večera hlavné jedlo.** Francúzsky obed ({{le déjeuner}}) je zvyčajne kratší než slovenský — často pol hodiny, bez polievky, medzi dvanástou a druhou. Večera ({{le dîner}}) je naopak hlavným jedlom dňa, presný opak ľahkej slovenskej večere.
+**Tri domáce práce, tri výrazy s „faire“.** Upratovať sa povie {{faire le ménage}}, umývať riad {{faire la vaisselle}} a prať {{faire la lessive}}. Sloveso „faire“ (robiť) je pri domácich prácach všadeprítomné.
 
 **Veľké upratovanie existuje aj tu.** Podobne ako slovenské upratovanie pred sviatkami, aj francúzske rodiny robia {{le grand ménage}} pred Vianocami alebo Veľkou nocou.
 
-**Okná sa nevetrajú tak často.** Na rozdiel od slovenského zvyku vetrať aj v zime, francúzske domácnosti majú povesť, že okná otvárajú menej často — ústredné kúrenie sa považuje za dostatočné.
+**Kutilstvo, národný šport.** Francúzi radi opravujú a vylepšujú domácnosť sami — {{le bricolage}} (domáce majstrovanie) je obľúbená víkendová činnosť a veľké obchody pre kutilov nájdeš pri takmer každom meste.
 
 ---
 

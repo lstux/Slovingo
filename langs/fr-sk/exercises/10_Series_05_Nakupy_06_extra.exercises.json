@@ -1057,26 +1057,6 @@
       ]
     },
     {
-      "id": "blank-le-distributeur-est-ferm-ce-n-est-pas-possible",
-      "type": "fill-blank",
-      "l1": "Bankomat je zatvorený? To nie je možné!",
-      "l2": "Le distributeur est fermé ? Ce n'est pas possible !",
-      "missing_l1": "je",
-      "missing_l2": "est",
-      "blank_index_l1": 1,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "za",
-        "spolu",
-        "na námestí"
-      ],
-      "choices_l2": [
-        "ma",
-        "pour",
-        "Nous"
-      ]
-    },
-    {
       "id": "blank-je-n-ai-pas-mon-portefeuille-il-est-la-maison",
       "type": "fill-blank",
       "l1": "Nemám peňaženku. Je doma.",
@@ -1094,66 +1074,6 @@
         "je cherche",
         "pas",
         "nous marcherons"
-      ]
-    },
-    {
-      "id": "blank-je-veux-une-r-duction-parce-que-c-est-trop-cher",
-      "type": "fill-blank",
-      "l1": "Chcem zľavu, lebo to je príliš drahé.",
-      "l2": "Je veux une réduction, parce que c'est trop cher.",
-      "missing_l1": "je",
-      "missing_l2": "une",
-      "blank_index_l1": 4,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "po",
-        "na moste",
-        "hľadá"
-      ],
-      "choices_l2": [
-        "le prénom",
-        "la",
-        "Nous"
-      ]
-    },
-    {
-      "id": "blank-le-panier-est-plein-le-chariot-est-vide",
-      "type": "fill-blank",
-      "l1": "Košík je plný, vozík je prázdny.",
-      "l2": "Le panier est plein, le chariot est vide.",
-      "missing_l1": "je",
-      "missing_l2": "le",
-      "blank_index_l1": 1,
-      "blank_index_l2": 4,
-      "choices_l1": [
-        "ja som",
-        "som",
-        "táto bunda"
-      ],
-      "choices_l2": [
-        "il",
-        "où",
-        "tu habites"
-      ]
-    },
-    {
-      "id": "blank-je-vais-m-acheter-de-nouvelles-chaussures-et-je-vais-jeter-mon-vieux-portefeuille",
-      "type": "fill-blank",
-      "l1": "Kúpim si nové topánky a starú peňaženku dám preč.",
-      "l2": "Je vais m'acheter de nouvelles chaussures et je vais jeter mon vieux portefeuille.",
-      "missing_l1": "a",
-      "missing_l2": "je",
-      "blank_index_l1": 4,
-      "blank_index_l2": 7,
-      "choices_l1": [
-        "do lekárne",
-        "nie",
-        "na moste"
-      ],
-      "choices_l2": [
-        "ensemble",
-        "tu essaies",
-        "as"
       ]
     },
     {
@@ -1285,22 +1205,6 @@
       ]
     },
     {
-      "id": "listen-le-distributeur-est-ferm-ce-n-est-pas-possible",
-      "type": "listen",
-      "l1": "Bankomat je zatvorený? To nie je možné!",
-      "l2": "Le distributeur est fermé ? Ce n'est pas possible !",
-      "choices_l2": [
-        "Lundi, je commence à sept heures du matin.",
-        "Quelle est la date aujourd'hui ? Regarde le calendrier.",
-        "Les enfants sont dans la chambre."
-      ],
-      "choices_l1": [
-        "Platíte kartou alebo hotovosťou?",
-        "Dobre. Platím kartou.",
-        "Chcem kúpiť topánky, ale sú drahé."
-      ]
-    },
-    {
       "id": "listen-je-n-ai-pas-mon-portefeuille-il-est-la-maison",
       "type": "listen",
       "l1": "Nemám peňaženku. Je doma.",
@@ -1314,54 +1218,6 @@
         "To je drahé!",
         "Áno, tu je pekné miesto. Dajme si vodu.",
         "Dáme si tartu a kávu."
-      ]
-    },
-    {
-      "id": "listen-je-veux-une-r-duction-parce-que-c-est-trop-cher",
-      "type": "listen",
-      "l1": "Chcem zľavu, lebo to je príliš drahé.",
-      "l2": "Je veux une réduction, parce que c'est trop cher.",
-      "choices_l2": [
-        "Ça me plaît.",
-        "Les enfants aident à la maison.",
-        "Non, lundi je travaille jusqu'à sept heures."
-      ],
-      "choices_l1": [
-        "Kuchyňa je malá.",
-        "A ja upracem obývačku!",
-        "Veľmi sa zabávame, ale potrebujeme odpočinok."
-      ]
-    },
-    {
-      "id": "listen-le-panier-est-plein-le-chariot-est-vide",
-      "type": "listen",
-      "l1": "Košík je plný, vozík je prázdny.",
-      "l2": "Le panier est plein, le chariot est vide.",
-      "choices_l2": [
-        "La quiche est très savoureuse.",
-        "Hier, comme aujourd'hui, je n'ai pas le temps.",
-        "L'année a douze mois."
-      ],
-      "choices_l1": [
-        "Si voľný v sobotu?",
-        "Kaviareň je zaujímavá a blízko zastávky.",
-        "Film je nudný."
-      ]
-    },
-    {
-      "id": "listen-je-vais-m-acheter-de-nouvelles-chaussures-et-je-vais-jeter-mon-vieux-portefeuille",
-      "type": "listen",
-      "l1": "Kúpim si nové topánky a starú peňaženku dám preč.",
-      "l2": "Je vais m'acheter de nouvelles chaussures et je vais jeter mon vieux portefeuille.",
-      "choices_l2": [
-        "Jeudi matin, j'y vais tôt.",
-        "Les enfants boivent du lait.",
-        "Je lave les verres et les assiettes."
-      ],
-      "choices_l1": [
-        "Dám si jablčný mušt.",
-        "Chodím do práce autobusom.",
-        "A v stredu?"
       ]
     },
     {
@@ -1714,49 +1570,6 @@
       ]
     },
     {
-      "id": "order-le-distributeur-est-ferm-ce-n-est-pas-possible",
-      "type": "order",
-      "l1": "Bankomat je zatvorený? To nie je možné!",
-      "l2": "Le distributeur est fermé ? Ce n'est pas possible !",
-      "tokens_l1": [
-        "Bankomat",
-        "je",
-        "zatvorený?",
-        "To",
-        "nie",
-        "je",
-        "možné!",
-        "Chcem",
-        "zľavu,",
-        "lebo",
-        "to",
-        "je",
-        "príliš",
-        "drahé."
-      ],
-      "tokens_l2": [
-        "Le",
-        "distributeur",
-        "est",
-        "fermé",
-        "?",
-        "Ce",
-        "n'est",
-        "pas",
-        "possible",
-        "!",
-        "Je",
-        "veux",
-        "une",
-        "réduction,",
-        "parce",
-        "que",
-        "c'est",
-        "trop",
-        "cher."
-      ]
-    },
-    {
       "id": "order-je-n-ai-pas-mon-portefeuille-il-est-la-maison",
       "type": "order",
       "l1": "Nemám peňaženku. Je doma.",
@@ -1798,131 +1611,6 @@
       ]
     },
     {
-      "id": "order-je-veux-une-r-duction-parce-que-c-est-trop-cher",
-      "type": "order",
-      "l1": "Chcem zľavu, lebo to je príliš drahé.",
-      "l2": "Je veux une réduction, parce que c'est trop cher.",
-      "tokens_l1": [
-        "Chcem",
-        "zľavu,",
-        "lebo",
-        "to",
-        "je",
-        "príliš",
-        "drahé.",
-        "Košík",
-        "je",
-        "plný,",
-        "vozík",
-        "je",
-        "prázdny."
-      ],
-      "tokens_l2": [
-        "Je",
-        "veux",
-        "une",
-        "réduction,",
-        "parce",
-        "que",
-        "c'est",
-        "trop",
-        "cher.",
-        "Le",
-        "panier",
-        "est",
-        "plein,",
-        "le",
-        "chariot",
-        "est",
-        "vide."
-      ]
-    },
-    {
-      "id": "order-le-panier-est-plein-le-chariot-est-vide",
-      "type": "order",
-      "l1": "Košík je plný, vozík je prázdny.",
-      "l2": "Le panier est plein, le chariot est vide.",
-      "tokens_l1": [
-        "Košík",
-        "je",
-        "plný,",
-        "vozík",
-        "je",
-        "prázdny.",
-        "Koľko",
-        "stojí",
-        "tento",
-        "sveter?",
-        "Je",
-        "v",
-        "akcii?"
-      ],
-      "tokens_l2": [
-        "Le",
-        "panier",
-        "est",
-        "plein,",
-        "le",
-        "chariot",
-        "est",
-        "vide.",
-        "Combien",
-        "coûte",
-        "ce",
-        "pull",
-        "?",
-        "Il",
-        "est",
-        "en",
-        "promotion",
-        "?"
-      ]
-    },
-    {
-      "id": "order-je-vais-m-acheter-de-nouvelles-chaussures-et-je-vais-jeter-mon-vieux-portefeuille",
-      "type": "order",
-      "l1": "Kúpim si nové topánky a starú peňaženku dám preč.",
-      "l2": "Je vais m'acheter de nouvelles chaussures et je vais jeter mon vieux portefeuille.",
-      "tokens_l1": [
-        "Kúpim",
-        "si",
-        "nové",
-        "topánky",
-        "a",
-        "starú",
-        "peňaženku",
-        "dám",
-        "preč.",
-        "Táto",
-        "sukňa",
-        "je",
-        "pekná,",
-        "ale",
-        "drahá."
-      ],
-      "tokens_l2": [
-        "Je",
-        "vais",
-        "m'acheter",
-        "de",
-        "nouvelles",
-        "chaussures",
-        "et",
-        "je",
-        "vais",
-        "jeter",
-        "mon",
-        "vieux",
-        "portefeuille.",
-        "Cette",
-        "jupe",
-        "est",
-        "jolie,",
-        "mais",
-        "chère."
-      ]
-    },
-    {
       "id": "blank-j-essaie-ces-chaussures-en-quarante",
       "type": "fill-blank",
       "l1": "Skúsim tieto topánky v štyridsiatke.",
@@ -1943,26 +1631,6 @@
       ]
     },
     {
-      "id": "blank-le-march-a-lieu-chaque-samedi-le-magasin-est-ouvert-tous-les-jours",
-      "type": "fill-blank",
-      "l1": "Trh je každú sobotu, obchod je otvorený každý deň.",
-      "l2": "Le marché a lieu chaque samedi, le magasin est ouvert tous les jours.",
-      "missing_l1": "je",
-      "missing_l2": "le",
-      "blank_index_l1": 1,
-      "blank_index_l2": 6,
-      "choices_l1": [
-        "v",
-        "koľko",
-        "dobrý"
-      ],
-      "choices_l2": [
-        "du",
-        "est",
-        "tu"
-      ]
-    },
-    {
       "id": "listen-j-essaie-ces-chaussures-en-quarante",
       "type": "listen",
       "l1": "Skúsim tieto topánky v štyridsiatke.",
@@ -1971,17 +1639,6 @@
         "Ako sa voláš?",
         "Čakám už dvadsať minút.",
         "Sedím na gauči a čítam knihu."
-      ]
-    },
-    {
-      "id": "listen-le-march-a-lieu-chaque-samedi-le-magasin-est-ouvert-tous-les-jours",
-      "type": "listen",
-      "l1": "Trh je každú sobotu, obchod je otvorený každý deň.",
-      "l2": "Le marché a lieu chaque samedi, le magasin est ouvert tous les jours.",
-      "choices_l1": [
-        "Idem do lekárne.",
-        "Ráno mám čas.",
-        "Skúsim modrú sukňu. Máte veľkosť M?"
       ]
     },
     {
@@ -2019,56 +1676,374 @@
       ]
     },
     {
-      "id": "order-le-march-a-lieu-chaque-samedi-le-magasin-est-ouvert-tous-les-jours",
+      "id": "blank-chaque-samedi-il-y-a-un-march-j-ach-te-des-pommes",
+      "type": "fill-blank",
+      "l1": "Každú sobotu je trh. Kupujem jablká.",
+      "l2": "Chaque samedi, il y a un marché. J'achète des pommes.",
+      "missing_l1": "je",
+      "missing_l2": "il",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "môj",
+        "otec",
+        "máte"
+      ],
+      "choices_l2": [
+        "s'il",
+        "vous",
+        "ma"
+      ]
+    },
+    {
+      "id": "blank-il-n-y-a-pas-de-distributeur-ici-alors-je-paie-par-carte",
+      "type": "fill-blank",
+      "l1": "Nie je tu bankomat? Tak platím kartou.",
+      "l2": "Il n'y a pas de distributeur ici ? Alors je paie par carte.",
+      "missing_l1": "je",
+      "missing_l2": "je",
+      "blank_index_l1": 1,
+      "blank_index_l2": 9,
+      "choices_l1": [
+        "nemám",
+        "koľko",
+        "veľa"
+      ],
+      "choices_l2": [
+        "vais",
+        "tu",
+        "heures"
+      ]
+    },
+    {
+      "id": "blank-c-est-cher-vous-pouvez-me-faire-une-r-duction",
+      "type": "fill-blank",
+      "l1": "To je drahé. Môžete mi dať zľavu?",
+      "l2": "C'est cher. Vous pouvez me faire une réduction ?",
+      "missing_l1": "je",
+      "missing_l2": "une",
+      "blank_index_l1": 1,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "sú",
+        "ešte",
+        "ale"
+      ],
+      "choices_l2": [
+        "mon",
+        "un",
+        "est"
+      ]
+    },
+    {
+      "id": "blank-je-prends-un-panier-pas-un-chariot",
+      "type": "fill-blank",
+      "l1": "Beriem si košík, nie vozík.",
+      "l2": "Je prends un panier, pas un chariot.",
+      "missing_l1": "si",
+      "missing_l2": "un",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "deti",
+        "ďakujem",
+        "veľa"
+      ],
+      "choices_l2": [
+        "n'ai",
+        "le",
+        "nous"
+      ]
+    },
+    {
+      "id": "blank-je-vais-acheter-des-chaussures-noires-et-un-pull-gris",
+      "type": "fill-blank",
+      "l1": "Kúpim si čierne topánky a sivý sveter.",
+      "l2": "Je vais acheter des chaussures noires et un pull gris.",
+      "missing_l1": "a",
+      "missing_l2": "et",
+      "blank_index_l1": 4,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "veľa",
+        "moja",
+        "siedmej"
+      ],
+      "choices_l2": [
+        "nous",
+        "cuisine",
+        "enfants"
+      ]
+    },
+    {
+      "id": "listen-chaque-samedi-il-y-a-un-march-j-ach-te-des-pommes",
+      "type": "listen",
+      "l1": "Každú sobotu je trh. Kupujem jablká.",
+      "l2": "Chaque samedi, il y a un marché. J'achète des pommes.",
+      "choices_l1": [
+        "Môj brat je študent. Nepracuje.",
+        "Predavačka je veľmi milá.",
+        "Káva je horúca."
+      ]
+    },
+    {
+      "id": "listen-il-n-y-a-pas-de-distributeur-ici-alors-je-paie-par-carte",
+      "type": "listen",
+      "l1": "Nie je tu bankomat? Tak platím kartou.",
+      "l2": "Il n'y a pas de distributeur ici ? Alors je paie par carte.",
+      "choices_l1": [
+        "Dvere sú tam.",
+        "Mám stretnutie vo štvrtok poobede.",
+        "V piatok je večer dlhý."
+      ]
+    },
+    {
+      "id": "listen-c-est-cher-vous-pouvez-me-faire-une-r-duction",
+      "type": "listen",
+      "l1": "To je drahé. Môžete mi dať zľavu?",
+      "l2": "C'est cher. Vous pouvez me faire une réduction ?",
+      "choices_l1": [
+        "Otec upratuje pivnicu a garáž.",
+        "Mám syna a dcéru.",
+        "Toto modré tričko je pekné. Chcete skúsiť?"
+      ]
+    },
+    {
+      "id": "listen-je-prends-un-panier-pas-un-chariot",
+      "type": "listen",
+      "l1": "Beriem si košík, nie vozík.",
+      "l2": "Je prends un panier, pas un chariot.",
+      "choices_l1": [
+        "Otvorím okno? Je tu teplo.",
+        "Dobrý deň. Akú veľkosť hľadáte?",
+        "Oddychujem na posteli a počúvam."
+      ]
+    },
+    {
+      "id": "listen-je-vais-acheter-des-chaussures-noires-et-un-pull-gris",
+      "type": "listen",
+      "l1": "Kúpim si čierne topánky a sivý sveter.",
+      "l2": "Je vais acheter des chaussures noires et un pull gris.",
+      "choices_l1": [
+        "Meškám asi desať minút.",
+        "Náš balkón je malý, ale dvor je veľký.",
+        "Potom je pot-au-feu. Máš rád mäso?"
+      ]
+    },
+    {
+      "id": "order-chaque-samedi-il-y-a-un-march-j-ach-te-des-pommes",
       "type": "order",
-      "l1": "Trh je každú sobotu, obchod je otvorený každý deň.",
-      "l2": "Le marché a lieu chaque samedi, le magasin est ouvert tous les jours.",
+      "l1": "Každú sobotu je trh. Kupujem jablká.",
+      "l2": "Chaque samedi, il y a un marché. J'achète des pommes.",
       "tokens_l1": [
-        "Trh",
+        "Každú",
+        "sobotu",
         "je",
-        "každú",
-        "sobotu,",
-        "obchod",
-        "je",
-        "otvorený",
-        "každý",
-        "deň.",
-        "Predavačka",
-        "je",
-        "milá",
-        "a",
-        "obchod",
-        "je",
-        "otvorený",
-        "do",
-        "ôsmej."
+        "trh.",
+        "Kupujem",
+        "jablká.",
+        "Chcem",
+        "čiernu",
+        "bundu,",
+        "nie",
+        "hnedú."
       ],
       "tokens_l2": [
-        "Le",
-        "marché",
-        "a",
-        "lieu",
-        "chaque",
+        "Chaque",
         "samedi,",
-        "le",
-        "magasin",
-        "est",
-        "ouvert",
-        "tous",
-        "les",
-        "jours.",
-        "La",
-        "vendeuse",
-        "est",
-        "gentille",
+        "il",
+        "y",
+        "a",
+        "un",
+        "marché.",
+        "J'achète",
+        "des",
+        "pommes.",
+        "Je",
+        "veux",
+        "une",
+        "veste",
+        "noire,",
+        "pas",
+        "marron."
+      ]
+    },
+    {
+      "id": "order-il-n-y-a-pas-de-distributeur-ici-alors-je-paie-par-carte",
+      "type": "order",
+      "l1": "Nie je tu bankomat? Tak platím kartou.",
+      "l2": "Il n'y a pas de distributeur ici ? Alors je paie par carte.",
+      "tokens_l1": [
+        "Nie",
+        "je",
+        "tu",
+        "bankomat?",
+        "Tak",
+        "platím",
+        "kartou.",
+        "Kupujem",
+        "mäso",
+        "v",
+        "mäsiarstve",
+        "a",
+        "syr",
+        "v",
+        "potravinách."
+      ],
+      "tokens_l2": [
+        "Il",
+        "n'y",
+        "a",
+        "pas",
+        "de",
+        "distributeur",
+        "ici",
+        "?",
+        "Alors",
+        "je",
+        "paie",
+        "par",
+        "carte.",
+        "J'achète",
+        "la",
+        "viande",
+        "à",
+        "la",
+        "boucherie",
         "et",
         "le",
-        "magasin",
+        "fromage",
+        "à",
+        "l'épicerie."
+      ]
+    },
+    {
+      "id": "order-c-est-cher-vous-pouvez-me-faire-une-r-duction",
+      "type": "order",
+      "l1": "To je drahé. Môžete mi dať zľavu?",
+      "l2": "C'est cher. Vous pouvez me faire une réduction ?",
+      "tokens_l1": [
+        "To",
+        "je",
+        "drahé.",
+        "Môžete",
+        "mi",
+        "dať",
+        "zľavu?",
+        "Koľko",
+        "stojí",
+        "tento",
+        "sveter?",
+        "Je",
+        "v",
+        "akcii?"
+      ],
+      "tokens_l2": [
+        "C'est",
+        "cher.",
+        "Vous",
+        "pouvez",
+        "me",
+        "faire",
+        "une",
+        "réduction",
+        "?",
+        "Combien",
+        "coûte",
+        "ce",
+        "pull",
+        "?",
+        "Il",
         "est",
-        "ouvert",
-        "jusqu'à",
-        "huit",
-        "heures."
+        "en",
+        "promotion",
+        "?"
+      ]
+    },
+    {
+      "id": "order-je-prends-un-panier-pas-un-chariot",
+      "type": "order",
+      "l1": "Beriem si košík, nie vozík.",
+      "l2": "Je prends un panier, pas un chariot.",
+      "tokens_l1": [
+        "Beriem",
+        "si",
+        "košík,",
+        "nie",
+        "vozík.",
+        "Nepáči",
+        "sa",
+        "mi",
+        "táto",
+        "farba.",
+        "Máte",
+        "to",
+        "v",
+        "modrej?"
+      ],
+      "tokens_l2": [
+        "Je",
+        "prends",
+        "un",
+        "panier,",
+        "pas",
+        "un",
+        "chariot.",
+        "Cette",
+        "couleur",
+        "ne",
+        "me",
+        "plaît",
+        "pas.",
+        "Vous",
+        "l'avez",
+        "en",
+        "bleu",
+        "?"
+      ]
+    },
+    {
+      "id": "order-je-vais-acheter-des-chaussures-noires-et-un-pull-gris",
+      "type": "order",
+      "l1": "Kúpim si čierne topánky a sivý sveter.",
+      "l2": "Je vais acheter des chaussures noires et un pull gris.",
+      "tokens_l1": [
+        "Kúpim",
+        "si",
+        "čierne",
+        "topánky",
+        "a",
+        "sivý",
+        "sveter.",
+        "Koľko",
+        "stojí",
+        "tento",
+        "sveter?",
+        "Je",
+        "v",
+        "akcii?"
+      ],
+      "tokens_l2": [
+        "Je",
+        "vais",
+        "acheter",
+        "des",
+        "chaussures",
+        "noires",
+        "et",
+        "un",
+        "pull",
+        "gris.",
+        "Combien",
+        "coûte",
+        "ce",
+        "pull",
+        "?",
+        "Il",
+        "est",
+        "en",
+        "promotion",
+        "?"
       ]
     }
   ]

@@ -29,7 +29,7 @@ Veľkonočný obed, s jedlami, aké sa jedia iba pri tejto príležitosti. Zhŕ�
 | Nous avons préparé le repas, puis nous sommes allés à la messe. | Pripravili sme jedlo, potom sme išli na omšu. |
 | Elle a fait le gigot, et elle est restée dans la cuisine tout l'après-midi. | Urobila jahňacie stehno, a zostala v kuchyni celé poobedie. |
 
-Zhrnutie: väčšina slovies ide s „avoir“ (bez zhody príčastia), malá skupina slovies pohybu a stavu ide s „être“ (so zhodou príčastia s podmetom). Toto rozdelenie je jadrom celého passé composé — zapamätaj si aspoň najbežnejšie slovesá s „être“: aller, venir, arriver, partir, entrer, sortir, monter, descendre, rester, naître, mourir.
+Zhrnutie: väčšina slovies ide s „avoir“ (bez zhody príčastia), malá skupina slovies pohybu a stavu ide s „être“ (so zhodou príčastia s podmetom). Toto rozdelenie je jadrom celého passé composé — zapamätaj si aspoň najbežnejšie slovesá s „être“: aller, venir, arriver, partir, entrer, sortir, monter, descendre, rester, naître, mourir — a k tomu všetky zvratné slovesá: {{elle s'est réunie}}, {{les cloches se sont tues}}.
 
 ---
 

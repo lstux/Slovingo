@@ -2,7 +2,7 @@
 
 @ img/Col_de_la_Sibérie_-_Haut_Beaujolais.jpg | Vidiecka krajina, Beaujolais — Wikimedia Commons
 
-Karine berie Erica na obed k svojej babke, na vidiek neďaleko Lyonu. Stretávame sa tu s celou slovnou zásobou série, v jednom súvislom rozhovore. Žiadne nové slovo, okrem tých označených v poznámkach.
+Karine berie Erica na obed k svojej babke, na vidiek neďaleko Lyonu. Stretávame sa tu s celou slovnou zásobou série, v jednom súvislom rozhovore. Nové slová, ktoré sa v rozhovore objavia, nájdeš vysvetlené v preklade pod každou replikou.
 
 ---
 

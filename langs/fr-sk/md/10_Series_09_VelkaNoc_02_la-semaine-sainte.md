@@ -30,7 +30,7 @@ Každý deň veľkonočného týždňa má svoje meno a svoj zvyk. Kombinujeme d
 | Je suis arrivé tôt. | Prišiel som skoro. |
 | Elle est restée à la maison. | Zostala doma. |
 
-Malá skupina slovies (najmä slovesá pohybu: aller, venir, arriver, partir, entrer, sortir, monter, descendre, rester, naître, mourir) tvorí passé composé s „être“ namiesto „avoir“. Pri týchto slovesách sa príčastie minulé ZHODUJE s podmetom v rode a čísle — presne ako slovenské farbil/farbila!
+Malá skupina slovies (najmä slovesá pohybu: aller, venir, arriver, partir, entrer, sortir, monter, descendre, rester, naître, mourir) tvorí passé composé s „être“ namiesto „avoir“. Okrem nich idú s „être“ aj **všetky zvratné slovesá** (so „se“): {{se lever}} → {{je me suis levé}}, {{se réunir}} → {{nous nous sommes réunis}}. Pri týchto slovesách sa príčastie minulé ZHODUJE s podmetom v rode a čísle — presne ako slovenské farbil/farbila!
 
 ### Zhoda príčastia s podmetom (slovesá s être)
 
