@@ -1105,14 +1105,14 @@
       "l1": "štvrť na šesť (5:15)",
       "l2": "cinq heures et quart",
       "choices_l1": [
-        "on / ona je",
-        "spím, spíš, spí",
-        "chlieb je dobrý (mužský rod)"
+        "pol šiestej (5:30)",
+        "trištvrte na šesť (5:45)",
+        "štvrť na sedem (6:15)"
       ],
       "choices_l2": [
-        "la quiche lorraine",
-        "il / elle a",
-        "froid / froide"
+        "cinq heures et demie",
+        "six heures moins le quart",
+        "six heures et quart"
       ]
     },
     {
@@ -1121,14 +1121,14 @@
       "l1": "pol šiestej (5:30)",
       "l2": "cinq heures et demie",
       "choices_l1": [
-        "Nie je tam posteľ.",
-        "obývačka (vo francúzštine mužský rod, v slovenčine ženský)",
-        "Dám si quiche."
+        "štvrť na šesť (5:15)",
+        "trištvrte na šesť (5:45)",
+        "pol siedmej (6:30)"
       ],
       "choices_l2": [
-        "Tu prends un café ?",
-        "Je prends une bière.",
-        "le retraité / la retraitée"
+        "cinq heures et quart",
+        "six heures moins le quart",
+        "six heures et demie"
       ]
     },
     {
@@ -1137,14 +1137,14 @@
       "l1": "trištvrte na šesť (5:45)",
       "l2": "six heures moins le quart",
       "choices_l1": [
-        "kúpeľňa (ženský rod)",
-        "Je jedna hodina.",
-        "Dám si víno."
+        "štvrť na šesť (5:15)",
+        "pol šiestej (5:30)",
+        "trištvrte na sedem (6:45)"
       ],
       "choices_l2": [
-        "je dors, tu dors, il dort",
-        "bon / bonne",
-        "Ce sont des pièces."
+        "cinq heures et quart",
+        "cinq heures et demie",
+        "sept heures moins le quart"
       ]
     }
   ]

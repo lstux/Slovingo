@@ -1127,14 +1127,14 @@
       "l1": "výborný, lahodný",
       "l2": "délicieux / délicieuse",
       "choices_l1": [
-        "vstávať",
-        "pracujem",
-        "obchod"
+        "chutný",
+        "sladký",
+        "zlý"
       ],
       "choices_l2": [
-        "la salle de bain",
-        "manger des fruits",
-        "je dors, tu dors, il dort"
+        "savoureux / savoureuse",
+        "sucré / sucrée",
+        "mauvais / mauvaise"
       ]
     },
     {
@@ -1142,19 +1142,19 @@
       "type": "fill-blank",
       "l1": "Voda je teplá. Chcem studenú vodu.",
       "l2": "L'eau est chaude. Je veux de l'eau froide.",
-      "missing_l1": "je",
-      "missing_l2": "est",
-      "blank_index_l1": 1,
-      "blank_index_l2": 1,
+      "missing_l1": "studenú",
+      "missing_l2": "de",
+      "blank_index_l1": 4,
+      "blank_index_l2": 5,
       "choices_l1": [
-        "máme",
-        "hľadám",
-        "rokov"
+        "studená",
+        "studený",
+        "studenej"
       ],
       "choices_l2": [
         "du",
-        "à",
-        "a"
+        "des",
+        "la"
       ]
     },
     {
@@ -1167,14 +1167,14 @@
       "blank_index_l1": 1,
       "blank_index_l2": 1,
       "choices_l1": [
-        "prepáčte",
-        "hľadám",
-        "máš"
+        "ten",
+        "tá",
+        "tie"
       ],
       "choices_l2": [
-        "et",
-        "sont",
-        "la"
+        "délicieuse",
+        "délicieuses",
+        "délicieusement"
       ]
     },
     {
@@ -1183,9 +1183,9 @@
       "l1": "Voda je teplá. Chcem studenú vodu.",
       "l2": "L'eau est chaude. Je veux de l'eau froide.",
       "choices_l1": [
-        "Nad skriňou je zrkadlo.",
-        "Prepáčte, hovoríte po anglicky?",
-        "Dvere sú tam."
+        "Voda je studená. Chcem teplú vodu.",
+        "Káva je teplá. Chcem studenú kávu.",
+        "Voda je teplá. Chcem studené mlieko."
       ]
     },
     {
@@ -1194,9 +1194,9 @@
       "l1": "Je to výborné! (Chutí mi to!)",
       "l2": "C'est délicieux !",
       "choices_l1": [
-        "Mám brata. Má tri roky.",
-        "Ahoj priateľ! Čau!",
-        "Moja mama je učiteľka."
+        "Je to slané!",
+        "Je to studené!",
+        "Nie je to dobré!"
       ]
     },
     {
@@ -1266,14 +1266,14 @@
       "l1": "chlieb je dobrý (mužský rod)",
       "l2": "le pain est bon",
       "choices_l1": [
-        "študent / študentka",
-        "dôchodca / dôchodkyňa",
-        "upratujem, upratuješ, upratuje"
+        "voda je dobrá (ženský rod)",
+        "jedlá sú dobré (množné číslo)",
+        "Nie je to dobré."
       ],
       "choices_l2": [
-        "la salle de bain",
-        "il / elle cherche",
-        "en ordre, bien, ça va"
+        "l'eau est bonne",
+        "les plats sont bons",
+        "Ce n'est pas bon."
       ]
     },
     {
@@ -1282,14 +1282,14 @@
       "l1": "voda je dobrá (ženský rod)",
       "l2": "l'eau est bonne",
       "choices_l1": [
-        "učiteľ / učiteľka",
-        "on / ona má",
-        "je mladý / je mladá"
+        "chlieb je dobrý (mužský rod)",
+        "jedlá sú dobré (množné číslo)",
+        "Je to dobré."
       ],
       "choices_l2": [
-        "il / elle mange",
-        "Je cherche la clé. → Je la cherche.",
-        "Ce sont des pièces."
+        "le pain est bon",
+        "les plats sont bons",
+        "C'est bon."
       ]
     },
     {
@@ -1298,14 +1298,14 @@
       "l1": "jedlá sú dobré (množné číslo)",
       "l2": "les plats sont bons",
       "choices_l1": [
-        "Hľadám kľúč. → Hľadám ho.",
-        "vyhladovaný (silný výraz)",
-        "je starý / je stará"
+        "chlieb je dobrý (mužský rod)",
+        "voda je dobrá (ženský rod)",
+        "Nie je to dobré."
       ],
       "choices_l2": [
-        "dans un appartement",
-        "il est vieux / elle est vieille",
-        "Je n'ai pas faim."
+        "le pain est bon",
+        "l'eau est bonne",
+        "Ce n'est pas bon."
       ]
     }
   ]

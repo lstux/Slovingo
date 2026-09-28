@@ -1249,19 +1249,19 @@
       "type": "fill-blank",
       "l1": "Môžete mi dať zľavu, prosím?",
       "l2": "Vous pouvez me faire une réduction, s'il vous plaît ?",
-      "missing_l1": "prosím",
-      "missing_l2": "une",
-      "blank_index_l1": 4,
-      "blank_index_l2": 4,
+      "missing_l1": "Môžete",
+      "missing_l2": "pouvez",
+      "blank_index_l1": 0,
+      "blank_index_l2": 1,
       "choices_l1": [
-        "sú",
-        "mama",
-        "to"
+        "Môžem",
+        "Môžeš",
+        "Môžu"
       ],
       "choices_l2": [
-        "au",
-        "heures",
-        "la"
+        "peux",
+        "pouvons",
+        "peuvent"
       ]
     },
     {
@@ -1270,9 +1270,9 @@
       "l1": "Môžete mi dať zľavu, prosím?",
       "l2": "Vous pouvez me faire une réduction, s'il vous plaît ?",
       "choices_l1": [
-        "Deti pozerajú televízor v obývačke.",
-        "Deti pijú mlieko na večeru.",
-        "Na stanici. Prídem načas."
+        "Môžete mi dať tašku, prosím?",
+        "Môžem vám dať zľavu, prosím?",
+        "Môžete mi dať účet, prosím?"
       ]
     },
     {

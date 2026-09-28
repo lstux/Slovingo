@@ -1079,19 +1079,19 @@
       "type": "fill-blank",
       "l1": "Dnes nemám čas. Zajtra tiež nie.",
       "l2": "Aujourd'hui, je n'ai pas le temps. Demain non plus.",
-      "missing_l1": "nie",
-      "missing_l2": "le",
-      "blank_index_l1": 5,
-      "blank_index_l2": 4,
+      "missing_l1": "nemám",
+      "missing_l2": "n'ai",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
       "choices_l1": [
-        "rokov",
-        "veľa",
-        "si"
+        "nemáš",
+        "nemá",
+        "nemáme"
       ],
       "choices_l2": [
-        "maison",
-        "a",
-        "au"
+        "n'as",
+        "n'a",
+        "n'avons"
       ]
     },
     {
@@ -1100,9 +1100,9 @@
       "l1": "Dnes nemám čas. Zajtra tiež nie.",
       "l2": "Aujourd'hui, je n'ai pas le temps. Demain non plus.",
       "choices_l1": [
-        "Karine má dvadsať rokov. Je študentka.",
-        "Moji rodičia sú dôchodcovia. Bývajú blízko.",
-        "Kde sú papuče? Na chodbe?"
+        "Dnes mám čas. Zajtra nie.",
+        "Dnes nemám čas. Zajtra áno.",
+        "Zajtra nemám čas. Dnes tiež nie."
       ]
     },
     {
