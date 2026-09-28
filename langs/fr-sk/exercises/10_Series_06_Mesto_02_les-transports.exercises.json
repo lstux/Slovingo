@@ -113,26 +113,10 @@
       ]
     },
     {
-      "id": "qcm-je-vais-au-travail-teraz-jedenkr-t",
-      "type": "qcm",
-      "l1": "Idem do práce.",
-      "l2": "Je vais au travail. (teraz, jedenkrát)",
-      "choices_l1": [
-        "V pondelky (zvyčajne) pracujem.",
-        "V pondelok pracujem.",
-        "Prišiel som skoro."
-      ],
-      "choices_l2": [
-        "le samedi saint",
-        "le jeudi saint",
-        "le jour férié"
-      ]
-    },
-    {
       "id": "qcm-d-habitude-je-vais-au-travail-en-bus-zvyk",
       "type": "qcm",
       "l1": "Chodím do práce autobusom.",
-      "l2": "D'habitude, je vais au travail en bus. (zvyk)",
+      "l2": "D'habitude, je vais au travail en bus.",
       "choices_l1": [
         "V pondelky (zvyčajne) pracujem.",
         "Prišiel som skoro.",
@@ -1344,6 +1328,38 @@
         "tous",
         "les",
         "jours."
+      ]
+    },
+    {
+      "id": "qcm-je-vais-au-travail",
+      "type": "qcm",
+      "l1": "Idem do práce. (teraz, jedenkrát)",
+      "l2": "Je vais au travail.",
+      "choices_l1": [
+        "pot-au-feu (varené hovädzie so zeleninou)",
+        "Je desať hodín.",
+        "spálňa, izba na spanie"
+      ],
+      "choices_l2": [
+        "en ordre, bien, ça va",
+        "Il est dix heures.",
+        "la vie chère"
+      ]
+    },
+    {
+      "id": "qcm-d-habitude-je-vais-au-travail-en-bus",
+      "type": "qcm",
+      "l1": "Chodím do práce autobusom. (zvyk)",
+      "l2": "D'habitude, je vais au travail en bus.",
+      "choices_l1": [
+        "štvrť na šesť (5:15)",
+        "quiche lorraine (slaný koláč z Lotrinska)",
+        "tarta, ovocný koláč"
+      ],
+      "choices_l2": [
+        "tout de suite",
+        "la quiche lorraine",
+        "dans la rue"
       ]
     }
   ]

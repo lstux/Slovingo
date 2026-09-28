@@ -26,9 +26,9 @@ Miestnosti bytu, a jedna z prvých vecí, ktoré prekvapia Slováka na francúz�
 
 | Francúzština | Slovenčina |
 |----------|----------|
-| un salon (mužský rod) | obývačka (v slovenčine ženský rod) |
-| une chambre (ženský rod) | spálňa |
-| une salle de bain (ženský rod) | kúpeľňa |
+| un salon | obývačka (vo francúzštine mužský rod, v slovenčine ženský) |
+| une chambre | spálňa (ženský rod) |
+| une salle de bain | kúpeľňa (ženský rod) |
 
 Zlá správa hneď na úvod: francúzsky rod sa musí naučiť naspamäť spolu s každým slovom (najlepšie priamo s členom le/la). Neexistuje spoľahlivé pravidlo ako v slovenčine. Dobrá správa: rody sa medzi jazykmi vôbec nemusia zhodovať, a to je úplne normálne — netreba v tom hľadať logiku.
 

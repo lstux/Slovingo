@@ -31,7 +31,7 @@
 | en automne | na jeseň |
 | en hiver | v zime |
 
-Francúzština tu má podobne nesystematický vzor ako slovenčina! „au“ pre jar, „en“ pre ostatné tri — čiastočne paralelné s tým, že slovenčina tiež strieda na/v bez jasného pravidla.
+Tu má francúzština jasné pravidlo: pred samohláskou „en“ ({{en été}}, {{en automne}}, {{en hiver}}), pred spoluhláskou „au“ ({{au printemps}}). Jar je jediné ročné obdobie, ktoré začína spoluhláskou — preto je výnimkou. Slovenčina strieda na/v bez takého pravidla.
 
 ### Comparatif: plus...que / moins...que / aussi...que
 
@@ -113,7 +113,7 @@ Dobrá správa: francúzsky komparatív je oveľa jednoduchší než slovenský 
 
 **Jeseň má vo Francúzsku tiež svoje farby, len inde.** Namiesto tatranských smrekovcov ponúka francúzsky vidiek vinice, ktoré sa na jeseň sfarbujú do červena a zlata — {{les vendanges}} (oberačka hrozna) je jeden z jesenných rituálov.
 
-**Jar sa spája s Veľkou nocou, aj tu.** Podobne ako slovenská {{jar}}, aj francúzske {{le printemps}} sa spája s Veľkou nocou a prebúdzaním prírody, hoci oslavy majú inú podobu.
+**Jar sa spája s Veľkou nocou, aj tu.** Podobne ako slovenská jar, aj francúzske {{le printemps}} sa spája s Veľkou nocou a prebúdzaním prírody, hoci oslavy majú inú podobu.
 
 **Zima znamená lyžovačku aj vo Francúzsku.** Francúzske Alpy patria medzi najobľúbenejšie lyžiarske destinácie na svete, podobne ako slovenské Tatry v menšom meradle — rodiny si plánujú {{les vacances d'hiver}} na lyžovanie.
 

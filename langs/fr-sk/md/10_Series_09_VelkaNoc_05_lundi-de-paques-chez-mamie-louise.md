@@ -2,7 +2,7 @@
 
 @ img/Luxembourg_Chocolate_Easter_Eggs.JPG | Čokoládové vajíčka na hľadanie v záhrade — Wikimedia Commons
 
-Veľkonočný pondelok u Mamie Louise: Karine a Eric prídu na hľadanie vajíčok, s malou Chloé. Prejde sa tu celá slovná zásoba série. Žiadne nové slovo, okrem tých označených v poznámkach.
+Veľkonočný pondelok u Mamie Louise: Karine a Eric prídu na hľadanie vajíčok, s malou Chloé. Prejde sa tu celá slovná zásoba série. Nové slová, ktoré sa v rozhovore objavia, nájdeš vysvetlené v preklade pod každou replikou.
 
 ---
 
@@ -101,7 +101,7 @@ Všetci si tykajú, okrem Erica, ktorý Mamie Louise z úcty stále vyká. Mamie
 
 ## 🇫🇷 Francúzsky kútik
 
-**Hľadanie vajíčok namiesto šibačky.** Zatiaľ čo slovenská Veľká noc má šibačku, francúzska tradícia je úplne iná — a nekladie žiadny dôraz na fyzický kontakt medzi mužmi a ženami. Hľadanie vajíčok je rodinná, detská zábava, bez rodového rozmeru.
+**Tykanie jedným smerom.** Mamie Louise už Ericovi tyká ({{Je te l'ai caché}}), no Eric jej ďalej vyká. Vo Francúzsku je to bežné: starší človek môže mladšiemu začať tykať, kým mladší zo zdvorilosti vyká ďalej — kým ho ten starší sám nepozve k tykaniu ({{On peut se tutoyer ?}}).
 
 **„Joyeuses Pâques“, nie jedna formulka na všetko.** Podobne ako „Bonjour“/„Au revoir“, aj francúzske veľkonočné pozdravy sú presné: {{Joyeuses Pâques}} sa hovorí len počas veľkonočného víkendu, nie inokedy.
 

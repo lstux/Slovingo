@@ -1,138 +1,173 @@
-# Kit de Survie (3/4) — Prvé stretnutie
+# Kit prežitia (3/4) — Enchanté !
 
-@ TODO_img/choisir-image.jpg | TODO : choisir une image (rencontre, deux personnes qui se saluent...) sur Wikimedia Commons
+@ img/Hall_gare_Lyon-Part-Dieu.JPG | Stanica Lyon-Part-Dieu — Wikimedia Commons
 
-Eric sa stretáva s Andrea po prvý raz. Uzatváramy kit s tým, ako povedať, že nerozumieš, spýtať sa, či hovorí francúzsky — a posledné úplne nové slovo, skryté v dialógu.
+Andrea, Slovenka, ktorá sa učí po francúzsky, stretne v Lyone Erica. Prvé predstavenie sa, a hlavne tri vety, ktoré ťa zachránia, keď nerozumieš: **Je ne comprends pas**, **Répétez, s'il vous plaît** a **Plus lentement !**
 
 ---
 
-## Slovník dialógu
+## Slovná zásoba dialógu
 
 | Francúzština | Slovenčina |
 |----------|----------|
-| tu comprends | rozumieš |
-| je comprends | rozumiem |
+| je m'appelle | volám sa |
+| vous vous appelez comment ? | ako sa voláte? |
+| enchanté / enchantée | teší ma |
+| je suis slovaque | som Slovák / Slovenka |
+| vous parlez français ? | hovoríte po francúzsky? |
+| un peu | trochu |
 | je ne comprends pas | nerozumiem |
-| quoi | čo |
-| ça veut dire | znamená |
-| vous parlez | hovoríte |
-| français (une langue) | po francúzsky |
+| répétez, s'il vous plaît | zopakujte, prosím |
+| plus lentement | pomalšie |
 
 ---
 
 ## Postavy
 
-- 👦 Eric, Francúz
-- 👩 Andrea, slovenská kamarátka
+- 👩 Andrea, Slovenka, ktorá sa učí po francúzsky
+- 👦 Eric, Francúz z Lyonu
 
-Eric a Andrea si vykajú: je to ich prvé stretnutie.
+Eric a Andrea sa vidia prvýkrát, takže si vykajú.
 
 ---
 
 ## Dialóg
 
-! 👩 Bonjour ! Comment allez-vous ?
-> Dobrý deň! Ako sa máte?
+! 👦 Bonjour, Madame !
+> Dobrý deň!
 > Bonjour = dobrý deň
-> Comment allez-vous = ako sa máte
-+ {{Ako sa máte}} je forma vykania od {{Ako sa máš}}, ktorú vidíš v fiche 1.
+> Madame = pani
 
-! 👦 Bonjour. Je vais bien, merci. Et vous ?
-> Dobrý deň. Som v poriadku, ďakujem. A vy?
+! 👩 Bonjour, Monsieur.
+> Dobrý deň.
 > Bonjour = dobrý deň
-> Je vais bien = som v poriadku
-> merci = ďakujem
+> Monsieur = pán
+
+! 👦 Je m'appelle Eric. Et vous, vous vous appelez comment ?
+> Volám sa Eric. A vy, ako sa voláte?
+> Je m'appelle = volám sa
 > Et vous = a vy
+> vous vous appelez comment = ako sa voláte
++ Toto je hovorová verzia otázky. Formálnejšie by znela „Comment vous appelez-vous ?“ — význam je rovnaký.
 
-! 👩 Bien aussi, merci.
-> Tiež v poriadku, ďakujem.
-> Bien aussi = tiež v poriadku
-> merci = ďakujem
+! 👩 Je m'appelle Andrea. Enchantée !
+> Volám sa Andrea. Teší ma!
+> Je m'appelle = volám sa
+> Enchantée = teší ma
++ „Enchantée“ s -e na konci, lebo hovorí žena. Eric by napísal „Enchanté“. Výslovnosť je rovnaká.
 
-! 👦 Parlez-vous français ?
-> Hovoríte po francúzsky?
-> Parlez-vous = hovoríte
-> français = po francúzsky
-+ Pravdepodobne najužitočnejšia otázka celého kitu: ak je odpoveď áno, polovica tvojich komunikačných problémov zmizne naraz. Vzor **{{po}}** + jazyk v tvare „-y" funguje pre akýkoľvek jazyk: {{po francúzsky}} (po francúzsky), {{po anglicky}} (po anglicky). V praxi budeš stretávať viac angličinárov ako frankofonov v slovenskej, — {{Hovoríte po anglicky?}} ti bude ešte viac sa hodiť.
+! 👦 Enchanté ! Vous êtes italienne ?
+> Teší ma! Ste Talianka?
+> Enchanté = teší ma
+> Vous êtes = ste
+> italienne = Talianka
 
-! 👩 Oui, je parle français.
-> Áno, hovorím po francúzsky.
+! 👩 Non, je suis slovaque.
+> Nie, som Slovenka.
+> Non = nie
+> je suis = som
+> slovaque = Slovenka
++ „slovaque“ končí na -e už v mužskom tvare, takže sa nemení: muž aj žena povedia „je suis slovaque“. Národnosti sa vo francúzštine píšu s malým písmenom, keď stoja za „je suis“.
+
+! 👦 Ah, la Slovaquie ! Vous parlez français ?
+> Aha, Slovensko! Hovoríte po francúzsky?
+> la Slovaquie = Slovensko
+> Vous parlez français = hovoríte po francúzsky
+
+! 👩 Un peu.
+> Trochu.
+> Un peu = trochu
+
+! 👦 Et vous habitez à Lyon depuis longtemps ?
+> A bývate v Lyone už dlho?
+> vous habitez = bývate
+> à Lyon = v Lyone
+> depuis longtemps = už dlho
++ Eric hovorí rýchlo a Andrea tejto vete nerozumie. Nevadí — nasledujúce tri vety sú presne na to.
+
+! 👩 Pardon ? Je ne comprends pas. Répétez, s'il vous plaît. Plus lentement !
+> Prosím? Nerozumiem. Zopakujte to, prosím. Pomalšie!
+> Pardon ? = prosím?
+> Je ne comprends pas = nerozumiem
+> Répétez = zopakujte
+> s'il vous plaît = prosím
+> Plus lentement = pomalšie
++ Zápor „ne … pas“ obopína sloveso: je NE comprends PAS. V hovorovej reči sa „ne“ často vynecháva: „je comprends pas“.
+
+! 👦 Vous… habitez… à Lyon ?
+> Bývate… v Lyone?
+> Vous habitez = bývate
+> à Lyon = v Lyone
+
+! 👩 Ah ! Oui, j'habite à Lyon. Merci !
+> Aha! Áno, bývam v Lyone. Ďakujem!
 > Oui = áno
-> je parle = hovorím
-> français = po francúzsky
-+ {{Hovorím}} je forma „ja" rovnakého slovesa ako {{hovoríte}} (vy hovoríte).
-
-! 👦 Pardon, je ne comprends pas. Qu'est-ce que ça veut dire « dovidenia » ?
-> Prepáčte, nerozumiem. Čo to znamená "dovidenia"?
-> Pardon = prepáčte
-> je ne comprends pas = nerozumiem
-> qu'est-ce que... ça veut dire = čo... znamená
-> ça = to
-+ {{dovidenia}} je úplne nové slovo: Andrea ti ho priamo vysvetlí.
-
-! 👩 « Dovidenia » veut dire « au revoir ».
-> Dovidenia znamená "au revoir".
-> ça veut dire = znamená
-+ Andrea odpovedá priamo daním francúzskeho prekladu — praktické keď niekto nerozumie slovu.
-
-! 👦 Merci !
-> Ďakujem!
+> j'habite = bývam
+> à Lyon = v Lyone
 > Merci = ďakujem
 
-! 👩 De rien ! Au revoir !
-> Nič! Dovidenia!
-> De rien = nič
+! 👦 De rien ! Au revoir, Andrea. À bientôt !
+> Nie je za čo! Dovidenia, Andrea. Čoskoro sa uvidíme!
+> De rien = nie je za čo
 > Au revoir = dovidenia
+> À bientôt = čoskoro sa uvidíme
 
-! 👦 Au revoir !
-> Dovidenia!
+! 👩 Au revoir, Eric !
+> Dovidenia, Eric!
 > Au revoir = dovidenia
 
 ---
 
-## 🇸🇰 Róg slovenčiny
+## 🇫🇷 Francúzsky kútik
 
-**Dovidenia, formálne zbohom.** Na rozdiel od {{Ahoj}} alebo {{Čau}}, ktoré sú neformálne, {{Dovidenia}} je „správne" zbohom, ktoré používaš s osobou, ktorej vykáš, alebo s osobou, ktorú stretávaš po prvý raz. Zapamätaj si obe: formálne a neformálne nemajú rovnaké slovo v slovenčine, zatiaľ čo vo francúzštine hovoríš „au revoir" v oboch prípadoch.
+**Enchanté(e) — iba pri prvom stretnutí.** {{Enchanté}} sa hovorí len vtedy, keď sa s niekým zoznamuješ. Pri ďalšom stretnutí už stačí {{bonjour}} alebo {{salut}}.
 
-**« Nič » na povedanie « de rien ».** Videl si to v predchádzajúcej fiche ako „nič" samotné. V odpovedi na {{ďakujem}} to sa stáva ekvivalentom nášho „de rien" alebo „nie je za čo".
+**Nehanbi sa povedať „Plus lentement !“** Francúzi hovoria rýchlo a slová spájajú. Keď povieš {{Répétez, s'il vous plaît}} alebo {{Plus lentement, s'il vous plaît}}, nikto sa neurazí — práve naopak, väčšina ľudí ochotne spomalí a často aj pochváli tvoju snahu hovoriť po francúzsky.
+
+**Podanie ruky alebo bozky?** Pri prvom, formálnom stretnutí sa podáva ruka, ako Eric a Andrea. Ak ťa predstaví spoločný kamarát v neformálnom prostredí, pokojne sa môže prejsť rovno na {{la bise}}.
 
 ---
 
-## Doplnkový slovník
+## Doplnková slovná zásoba
 
 | Francúzština | Slovenčina |
 |----------|----------|
-| beaucoup | veľa |
-| le prénom | meno |
-| connaître | poznať |
-| anglais (une langue) | po anglicky |
+| le prénom | krstné meno |
+| le nom | priezvisko |
+| je suis français / française | som Francúz / Francúzka |
+| vous parlez anglais ? | hovoríte po anglicky? |
+| d'accord | dobre, v poriadku |
+| qu'est-ce que ça veut dire ? | čo to znamená? |
 
 ---
 
-## Niektoré vety s týmto slovníkom
+## Ešte pár viet
 
-! Merci beaucoup !
-> Ďakujem veľa!
-> Merci beaucoup = ďakujem veľa
-> = ďakujem
+! Vous parlez anglais ?
+> Hovoríte po anglicky?
+> Vous parlez = hovoríte
+> anglais = po anglicky
 
-! Quel est votre prénom ?
-> Aké je vaše meno?
-> Quel = aké
-> est = je
-> votre = vaše
-> prénom = meno
-+ Vykanie: {{vaše}} (vaše) namiesto {{tvoje}} (tvoje).
+! Je suis française, et vous ?
+> Som Francúzka, a vy?
+> Je suis = som
+> française = Francúzka
+> et vous = a vy
++ „français“ → „française“: ženský tvar pridá -e a koncové „s“ sa zrazu vysloví ako „z“: „fransez“.
 
-! C'est agréable de vous connaître.
-> Je milé vás poznať.
-> C'est agréable = je milé
-> vous = vás
-> connaître = poznať
-+ Zdvorilosť, ktorú používáš na konci prvého stretnutia, trochu ako „rád som ťa spoznal" vo francúzštine.
+! Qu'est-ce que ça veut dire ?
+> Čo to znamená?
+> Qu'est-ce que = čo
+> ça veut dire = to znamená
++ Doslova „čo to chce povedať“. Najužitočnejšia otázka pre každého, kto sa učí jazyk.
 
-! Pardon, vous parlez anglais ?
-> Prepáčte, hovoríte po anglicky?
-> Pardon = prepáčte
-> vous parlez anglais = hovoríte po anglicky
-+ Verzia, ktorá ti bude najviac sa hodiť, štatisticky.
+! Quel est votre nom ?
+> Aké je vaše priezvisko?
+> Quel est = aké je
+> votre nom = vaše priezvisko
++ Pozor: „le nom“ je priezvisko, krstné meno je „le prénom“.
+
+! D'accord, merci !
+> Dobre, ďakujem!
+> D'accord = dobre
+> merci = ďakujem

@@ -2,7 +2,7 @@
 
 @ img/Neat_Living_Room.jpg | Francúzsky interiér — Wikimedia Commons
 
-Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet.
+Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet. Ak sa vo vete objaví pár slov navyše, sú vysvetlené v preklade pod ňou.
 
 ---
 

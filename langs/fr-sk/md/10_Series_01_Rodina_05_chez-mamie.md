@@ -2,7 +2,7 @@
 
 @ img/Col_de_la_Sibérie_-_Haut_Beaujolais.jpg | Vidiecka krajina, Beaujolais — Wikimedia Commons
 
-Karine berie Erica na obed k svojej babke, na vidiek neďaleko Lyonu. Stretávame sa tu s celou slovnou zásobou série, v jednom súvislom rozhovore. Žiadne nové slovo, okrem tých označených v poznámkach.
+Karine berie Erica na obed k svojej babke, na vidiek neďaleko Lyonu. Stretávame sa tu s celou slovnou zásobou série, v jednom súvislom rozhovore. Nové slová, ktoré sa v rozhovore objavia, nájdeš vysvetlené v preklade pod každou replikou.
 
 ---
 
@@ -132,7 +132,7 @@ Eric a Karine si tykajú. Eric vyká Mamie Louise.
 
 **Obed u babky.** Prísť k francúzskej babke bez hladu je taktická chyba. Jedlo je pripravené, je ho veľa, a veta {{Servez-vous, je vous en prie}} — „poslúžte si, prosím“ — počas obeda zaznie viackrát.
 
-**Bonjour a Au revoir, nie jedno slovo pre oboje.** Na rozdiel od slovenského {{Ahoj}}, ktoré funguje pri príchode aj odchode, francúzština má dve rôzne slová: {{Bonjour}} pri príchode, {{Au revoir}} pri odchode. S niekým, komu vykáš, použiješ obe zdvorilo.
+**Bonjour a Au revoir, nie jedno slovo pre oboje.** Na rozdiel od slovenského Ahoj, ktoré funguje pri príchode aj odchode, francúzština má dve rôzne slová: {{Bonjour}} pri príchode, {{Au revoir}} pri odchode. S niekým, komu vykáš, použiješ obe zdvorilo.
 
 ---
 

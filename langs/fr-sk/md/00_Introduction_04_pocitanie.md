@@ -34,7 +34,7 @@
 
 > **Iba 1 sa mení podľa rodu**:
 > {{un homme}} = jeden muž · {{une femme}} = jedna žena
-> Od dvoch vyššie sa francúzske číslovky rodom vôbec nemenia — na rozdiel od slovenského dva/dve.
+> Od dvoch vyššie sa francúzske číslovky rodom vôbec nemenia — na rozdiel od slovenského dva/dve. Jediná výnimka: zložené čísla končiace na 1, napríklad {{vingt et un ans}} (21 rokov), ale {{vingt et une personnes}} (21 osôb).
 
 ---
 
@@ -50,6 +50,8 @@ Desiatky od 20 do 60 fungujú pravidelne:
 | 50 | cinquante |
 | 60 | soixante |
 
+Medzi desiatkami: 21, 31, 41, 51 a 61 sa tvoria so spojkou „et“ (a) — {{vingt et un}}, {{trente et un}}, {{soixante et un}}. Všetky ostatné sa spájajú spojovníkom: {{vingt-deux}}, {{trente-cinq}}, {{quarante-huit}}.
+
 Potom prichádza prekvapenie. Namiesto pravidelných „septante“, „huitante“, „nonante“ (v Belgicku a vo Švajčiarsku sa naozaj hovorí „septante“ a „nonante“; „huitante“ počuť len v niektorých švajčiarskych kantónoch, inak sa aj tam povie „quatre-vingts“) používa štandardná francúzština vo Francúzsku počítanie po dvadsiatkach, ktorého pôvod sa dodnes presne nevie:
 
 | Číslo | Francúzština | Doslovný rozklad |
@@ -61,7 +63,7 @@ Potom prichádza prekvapenie. Namiesto pravidelných „septante“, „huitante
 | 90 | quatre-vingt-dix | „štyri-dvadsať-desať“ |
 | 91 | quatre-vingt-onze | „štyri-dvadsať-jedenásť“ |
 
-Nič sa nedá logicky odvodiť — jednoducho si to treba zapamätať. Dobrá správa: raz osvojené, tieto tvary fungujú vždy rovnako.
+Logiku to má — ako ukazuje doslovný rozklad —, len inú než slovenčina: od 60 sa počíta po dvadsiatkach. Dobrá správa: raz osvojené, tieto tvary fungujú vždy rovnako.
 
 ---
 

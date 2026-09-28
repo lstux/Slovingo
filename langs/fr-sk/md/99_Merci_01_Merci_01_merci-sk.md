@@ -10,7 +10,7 @@ Vážnejšie povedané: táto malá aplikácia vznikla z pomerne jednoduchej tú
 
 Chcem sa preto poďakovať jednej konkrétnej osobe, ktorá sa v tom možno spozná, že vo mne prebudila chuť objaviť nový jazyk a novú krajinu.
 
-{{Koľko jazykov vieš, toľkokrát si človekom.}}
+Koľko jazykov vieš, toľkokrát si človekom.
 
 Neviem, kam táto cesta povedie, ani koľko ľudí bude túto aplikáciu niekedy používať. Ale ak vďaka nej niekto dostane chuť naučiť sa pár slov po francúzsky alebo po slovensky, spoznať nejakú krajinu, kultúru, alebo si jednoducho nájsť nových priateľov… bude to už samo osebe krásny úspech.
 

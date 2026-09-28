@@ -2,15 +2,15 @@
 
 @ img/Stnaz-1.jpg | Prístav Saint-Nazaire — Wikimedia Commons
 
-Andrea a Karine sa stretávajú s Ericom v Saint-Nazaire na dlho plánovaný výlet. Prejde sa tu celá slovná zásoba série. Žiadne nové slovo, okrem tých označených v poznámkach.
+Andrea a Karine sa stretávajú s Ericom v Saint-Nazaire na dlho plánovaný výlet. Prejde sa tu celá slovná zásoba série. Nové slová, ktoré sa v rozhovore objavia, nájdeš vysvetlené v preklade pod každou replikou.
 
 ---
 
 ## Postavy
 
-- 👩 Andrea
+- 👩 Andrea, ktorá objavuje Atlantik
 - 🧑 Karine
-- 👦 Eric, ktorý objavuje more
+- 👦 Eric
 
 Andrea a Karine si tykajú, rovnako ako Eric a Karine. Eric a Andrea si vykajú.
 
@@ -18,14 +18,14 @@ Andrea a Karine si tykajú, rovnako ako Eric a Karine. Eric a Andrea si vykajú.
 
 ## Dialóg
 
-! 👩 Enfin ! Les prévisions avaient raison, il fait beau.
+! 👦 Enfin ! Les prévisions avaient raison, il fait beau.
 > Konečne! Predpoveď mala pravdu, je slnečno.
 > Enfin = konečne
 > les prévisions avaient raison = predpoveď mala pravdu
 > il fait beau = je slnečno
 + „avaient" je iný minulý čas (imparfait) — zatiaľ si len zapamätaj celú frázu „avoir raison" (mať pravdu).
 
-! 👦 Tu as le maillot de bain et la crème solaire ?
+! 👩 Tu as le maillot de bain et la crème solaire ?
 > Máš plavky a krém na opaľovanie?
 > Tu as le maillot de bain = máš plavky
 > et la crème solaire = a krém na opaľovanie
@@ -35,34 +35,34 @@ Andrea a Karine si tykajú, rovnako ako Eric a Karine. Eric a Andrea si vykajú.
 > Oui, et aussi une serviette = áno, a aj osušku
 > nous devons être prêts = musíme byť pripravení
 
-! 👦 On va où ?
+! 👩 On va où ?
 > Kam ideme?
 > On va où = kam ideme
 
-! 👩 À la plage de La Baule. C'est plus loin, mais la plage est plus belle.
+! 👦 À la plage de La Baule. C'est plus loin, mais la plage est plus belle.
 > Na pláž do La Baule. Je to ďalej, ale pláž je krajšia.
 > À la plage de La Baule = na pláž do La Baule
 > c'est plus loin = je to ďalej
 > mais la plage est plus belle = ale pláž je krajšia
 
-! 🧑 Eric, tu sais nager ?
-> Eric, vieš plávať?
-> Eric, tu sais nager = Eric, vieš plávať
+! 🧑 Andrea, tu sais nager ?
+> Andrea, vieš plávať?
+> Andrea, tu sais nager = Andrea, vieš plávať
 
-! 👦 Oui ! Et j'ai aussi de l'eau et de la nourriture dans le sac.
+! 👩 Oui ! Et j'ai aussi de l'eau et de la nourriture dans le sac.
 > Áno! A mám aj vodu a jedlo v taške.
 > Oui = áno
 > et j'ai aussi de l'eau et de la nourriture = a mám aj vodu a jedlo
 > dans le sac = v taške
 
-! 👩 Allons-y ! Je veux être à la plage avant midi.
+! 👦 Allons-y ! Je veux être à la plage avant midi.
 > Poďme! Chcem byť na pláži pred obedom.
 > Allons-y = poďme
 > je veux être à la plage = chcem byť na pláži
 > avant midi = pred obedom
 + „allons-y“ je rovnaký typ tvaru ako slovenské „poďme“ — imperatív prvej osoby množného čísla.
 
-! 👦 Les vagues sont hautes !
+! 👩 Les vagues sont hautes !
 > Vlny sú vysoké!
 > Les vagues sont hautes = vlny sú vysoké
 
@@ -71,12 +71,12 @@ Andrea a Karine si tykajú, rovnako ako Eric a Karine. Eric a Andrea si vykajú.
 > Nage lentement et prudemment = plávaj pomaly a opatrne
 > ce n'est pas une compétition = nie je to súťaž
 
-! 👦 Je suis fatigué. Nous pouvons nous reposer ?
-> Som unavený. Môžeme si oddýchnuť?
-> Je suis fatigué = som unavený
+! 👩 Je suis fatiguée. Nous pouvons nous reposer ?
+> Som unavená. Môžeme si oddýchnuť?
+> Je suis fatiguée = som unavená
 > nous pouvons nous reposer = môžeme si oddýchnuť
 
-! 👩 Oui, ici il y a un bel endroit. Prenons de l'eau.
+! 👦 Oui, ici il y a un bel endroit. Prenons de l'eau.
 > Áno, tu je pekné miesto. Dajme si vodu.
 > Oui, ici il y a un bel endroit = áno, tu je pekné miesto
 > prenons de l'eau = dajme si vodu
@@ -86,16 +86,16 @@ Andrea a Karine si tykajú, rovnako ako Eric a Karine. Eric a Andrea si vykajú.
 > Regarde = pozri
 > on voit le phare et toute la baie = vidno maják a celý záliv
 
-! 👦 C'est le plus beau panorama que j'aie jamais vu.
-> To je najkrajší výhľad, aký som kedy videl.
+! 👩 C'est le plus beau panorama que j'aie jamais vu.
+> To je najkrajší výhľad, aký som kedy videla.
 > C'est le plus beau panorama = to je najkrajší výhľad
-> que j'aie jamais vu = aký som kedy videl
+> que j'aie jamais vu = aký som kedy videla
 + „j'aie" je konjunktív (subjonctif), veľmi pokročilý tvar, ktorý sa tu používa po superlatíve. Zatiaľ si len zapamätaj celú frázu.
 
-! 👩 Bienvenue à la mer, Eric !
-> Vitaj pri mori, Eric!
-> Bienvenue à la mer = vitaj pri mori
-> Eric = Eric
+! 👦 Bienvenue à la mer, Andrea !
+> Vitajte pri mori, Andrea!
+> Bienvenue à la mer = vitajte pri mori
+> Andrea = Andrea
 
 ---
 

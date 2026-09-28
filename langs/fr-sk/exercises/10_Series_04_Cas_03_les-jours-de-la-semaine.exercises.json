@@ -225,38 +225,6 @@
       ]
     },
     {
-      "id": "qcm-lundi-je-travaille-tento-konkr-tny-pondelok",
-      "type": "qcm",
-      "l1": "V pondelok pracujem.",
-      "l2": "Lundi, je travaille. (tento konkrétny pondelok)",
-      "choices_l1": [
-        "urobil / urobila (nepravidelné!)",
-        "Idem do práce.",
-        "chcel by som / chcela by som"
-      ],
-      "choices_l2": [
-        "le jeudi saint",
-        "Elle a fait le gigot, et elle est restée dans la cuisine tout l'après-midi.",
-        "Je suis arrivé tôt."
-      ]
-    },
-    {
-      "id": "qcm-le-lundi-je-travaille-ka-d-pondelok-zvy-ajne",
-      "type": "qcm",
-      "l1": "V pondelky (zvyčajne) pracujem.",
-      "l2": "Le lundi, je travaille. (každý pondelok, zvyčajne)",
-      "choices_l1": [
-        "Sú tam štyri stoličky.",
-        "Dám si pivo.",
-        "bolo by to"
-      ],
-      "choices_l2": [
-        "Elle a fait le gigot, et elle est restée dans la cuisine tout l'après-midi.",
-        "Lundi, je travaille. (tento konkrétny pondelok)",
-        "le jeudi saint"
-      ]
-    },
-    {
       "id": "qcm-la-semaine",
       "type": "qcm",
       "l1": "týždeň",
@@ -1491,6 +1459,38 @@
         "toujours",
         "en",
         "retard."
+      ]
+    },
+    {
+      "id": "qcm-lundi-je-travaille",
+      "type": "qcm",
+      "l1": "V pondelok pracujem. (tento konkrétny pondelok)",
+      "l2": "Lundi, je travaille.",
+      "choices_l1": [
+        "upratujem, upratuješ, upratuje",
+        "je starý / je stará",
+        "quiche lorraine (slaný koláč z Lotrinska)"
+      ],
+      "choices_l2": [
+        "frais / fraîche",
+        "ils / elles travaillent",
+        "le jus de fruits"
+      ]
+    },
+    {
+      "id": "qcm-le-lundi-je-travaille",
+      "type": "qcm",
+      "l1": "V pondelky (zvyčajne) pracujem. (každý pondelok)",
+      "l2": "Le lundi, je travaille.",
+      "choices_l1": [
+        "dôchodca / dôchodkyňa",
+        "je starý / je stará",
+        "Hľadám kľúč. → Hľadám ho."
+      ],
+      "choices_l2": [
+        "le chocolat chaud",
+        "il / elle veut",
+        "manger de la viande"
       ]
     }
   ]
