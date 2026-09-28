@@ -128,8 +128,8 @@ Tu si francúzština a slovenčina navzájom pomáhajú: obe použijú „mať /
 
 | Francúzština | Slovenčina |
 |----------|----------|
-| affamé | hladný |
-| assoiffé | smädný |
+| affamé | vyhladovaný (silný výraz) |
+| assoiffé | vysmädnutý (silný výraz) |
 | rassasié | plný |
 | peu | málo |
 | beaucoup | veľa |

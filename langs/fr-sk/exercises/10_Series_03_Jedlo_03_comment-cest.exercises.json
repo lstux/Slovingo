@@ -289,22 +289,6 @@
       ]
     },
     {
-      "id": "qcm-plaire-au-go-t",
-      "type": "qcm",
-      "l1": "chutiť",
-      "l2": "plaire au goût",
-      "choices_l1": [
-        "víno",
-        "obed",
-        "jeme"
-      ],
-      "choices_l2": [
-        "manger du pain",
-        "sucré / sucrée",
-        "manger des fruits"
-      ]
-    },
-    {
       "id": "qcm-go-ter",
       "type": "qcm",
       "l1": "ochutnať",
@@ -418,26 +402,6 @@
         "est",
         "je suis",
         "est-ce"
-      ]
-    },
-    {
-      "id": "blank-l-eau-est-chaude-j-en-veux-de-la-froide",
-      "type": "fill-blank",
-      "l1": "Voda je teplá. Chcem studenú.",
-      "l2": "L'eau est chaude. J'en veux de la froide.",
-      "missing_l1": "je",
-      "missing_l2": "est",
-      "blank_index_l1": 1,
-      "blank_index_l2": 1,
-      "choices_l1": [
-        "Zostala doma.",
-        "veľmi",
-        "hľadá"
-      ],
-      "choices_l2": [
-        "je fais",
-        "et",
-        "nous buvons"
       ]
     },
     {
@@ -561,26 +525,6 @@
       ]
     },
     {
-      "id": "blank-a-me-pla-t",
-      "type": "fill-blank",
-      "l1": "Chutí mi to.",
-      "l2": "Ça me plaît.",
-      "missing_l1": "to",
-      "missing_l2": "plaît",
-      "blank_index_l1": 2,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "kedy",
-        "nič",
-        "a"
-      ],
-      "choices_l2": [
-        "environ",
-        "se",
-        "as-tu"
-      ]
-    },
-    {
       "id": "blank-c-est-un-peu-sal",
       "type": "fill-blank",
       "l1": "Je to trochu slané.",
@@ -701,22 +645,6 @@
       ]
     },
     {
-      "id": "listen-l-eau-est-chaude-j-en-veux-de-la-froide",
-      "type": "listen",
-      "l1": "Voda je teplá. Chcem studenú.",
-      "l2": "L'eau est chaude. J'en veux de la froide.",
-      "choices_l2": [
-        "J'habite dans un appartement.",
-        "Ma cousine s'appelle Marie.",
-        "Je ne dors pas. J'écoute."
-      ],
-      "choices_l1": [
-        "Čokoláda sa roztopila na slnku.",
-        "Zdobili ste vajíčka spolu?",
-        "Polievka je teplá a chutná. Chcem ešte."
-      ]
-    },
-    {
       "id": "listen-le-fromage-est-acide",
       "type": "listen",
       "l1": "Syr je kyslý.",
@@ -810,22 +738,6 @@
         "Mamie nám dala vajíčka a koláč ako odmenu.",
         "Quiche je slaná a trochu kyslá.",
         "Dali sme jej najkrajšie vajíčko, dobre si ho zaslúžila."
-      ]
-    },
-    {
-      "id": "listen-a-me-pla-t",
-      "type": "listen",
-      "l1": "Chutí mi to.",
-      "l2": "Ça me plaît.",
-      "choices_l2": [
-        "Tu veux encore de la soupe ?",
-        "Mon père et ma maman habitent ensemble à la campagne.",
-        "J'ai soif. Je veux du lait."
-      ],
-      "choices_l1": [
-        "To je drahé!",
-        "Mám knihu. Mám ju tu.",
-        "V hoteli je teplo a útulno."
       ]
     },
     {
@@ -1018,36 +930,6 @@
       ]
     },
     {
-      "id": "order-l-eau-est-chaude-j-en-veux-de-la-froide",
-      "type": "order",
-      "l1": "Voda je teplá. Chcem studenú.",
-      "l2": "L'eau est chaude. J'en veux de la froide.",
-      "tokens_l1": [
-        "Voda",
-        "je",
-        "teplá.",
-        "Chcem",
-        "studenú.",
-        "Mlieko",
-        "je",
-        "studené."
-      ],
-      "tokens_l2": [
-        "L'eau",
-        "est",
-        "chaude.",
-        "J'en",
-        "veux",
-        "de",
-        "la",
-        "froide.",
-        "Le",
-        "lait",
-        "est",
-        "froid."
-      ]
-    },
-    {
       "id": "order-le-fromage-est-acide",
       "type": "order",
       "l1": "Syr je kyslý.",
@@ -1237,33 +1119,6 @@
       ]
     },
     {
-      "id": "order-a-me-pla-t",
-      "type": "order",
-      "l1": "Chutí mi to.",
-      "l2": "Ça me plaît.",
-      "tokens_l1": [
-        "Chutí",
-        "mi",
-        "to.",
-        "Chlieb",
-        "je",
-        "čerstvý",
-        "a",
-        "dobrý."
-      ],
-      "tokens_l2": [
-        "Ça",
-        "me",
-        "plaît.",
-        "Le",
-        "pain",
-        "est",
-        "frais",
-        "et",
-        "bon."
-      ]
-    },
-    {
       "id": "order-c-est-un-peu-sal",
       "type": "order",
       "l1": "Je to trochu slané.",
@@ -1312,6 +1167,145 @@
         "un",
         "peu",
         "salé."
+      ]
+    },
+    {
+      "id": "qcm-d-licieux-d-licieuse",
+      "type": "qcm",
+      "l1": "výborný, lahodný",
+      "l2": "délicieux / délicieuse",
+      "choices_l1": [
+        "vstávať",
+        "pracujem",
+        "obchod"
+      ],
+      "choices_l2": [
+        "la salle de bain",
+        "manger des fruits",
+        "je dors, tu dors, il dort"
+      ]
+    },
+    {
+      "id": "blank-l-eau-est-chaude-je-veux-de-l-eau-froide",
+      "type": "fill-blank",
+      "l1": "Voda je teplá. Chcem studenú vodu.",
+      "l2": "L'eau est chaude. Je veux de l'eau froide.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "máme",
+        "hľadám",
+        "rokov"
+      ],
+      "choices_l2": [
+        "du",
+        "à",
+        "a"
+      ]
+    },
+    {
+      "id": "blank-c-est-d-licieux",
+      "type": "fill-blank",
+      "l1": "Je to výborné! (Chutí mi to!)",
+      "l2": "C'est délicieux !",
+      "missing_l1": "to",
+      "missing_l2": "délicieux",
+      "blank_index_l1": 1,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "prepáčte",
+        "hľadám",
+        "máš"
+      ],
+      "choices_l2": [
+        "et",
+        "sont",
+        "la"
+      ]
+    },
+    {
+      "id": "listen-l-eau-est-chaude-je-veux-de-l-eau-froide",
+      "type": "listen",
+      "l1": "Voda je teplá. Chcem studenú vodu.",
+      "l2": "L'eau est chaude. Je veux de l'eau froide.",
+      "choices_l1": [
+        "Nad skriňou je zrkadlo.",
+        "Prepáčte, hovoríte po anglicky?",
+        "Dvere sú tam."
+      ]
+    },
+    {
+      "id": "listen-c-est-d-licieux",
+      "type": "listen",
+      "l1": "Je to výborné! (Chutí mi to!)",
+      "l2": "C'est délicieux !",
+      "choices_l1": [
+        "Mám brata. Má tri roky.",
+        "Ahoj priateľ! Čau!",
+        "Moja mama je učiteľka."
+      ]
+    },
+    {
+      "id": "order-l-eau-est-chaude-je-veux-de-l-eau-froide",
+      "type": "order",
+      "l1": "Voda je teplá. Chcem studenú vodu.",
+      "l2": "L'eau est chaude. Je veux de l'eau froide.",
+      "tokens_l1": [
+        "Voda",
+        "je",
+        "teplá.",
+        "Chcem",
+        "studenú",
+        "vodu.",
+        "Deti",
+        "pijú",
+        "studené",
+        "mlieko."
+      ],
+      "tokens_l2": [
+        "L'eau",
+        "est",
+        "chaude.",
+        "Je",
+        "veux",
+        "de",
+        "l'eau",
+        "froide.",
+        "Les",
+        "enfants",
+        "boivent",
+        "du",
+        "lait",
+        "froid."
+      ]
+    },
+    {
+      "id": "order-c-est-d-licieux",
+      "type": "order",
+      "l1": "Je to výborné! (Chutí mi to!)",
+      "l2": "C'est délicieux !",
+      "tokens_l1": [
+        "Je",
+        "to",
+        "výborné!",
+        "(Chutí",
+        "mi",
+        "to!)",
+        "Toto",
+        "mäso",
+        "je",
+        "zlé."
+      ],
+      "tokens_l2": [
+        "C'est",
+        "délicieux",
+        "!",
+        "Cette",
+        "viande",
+        "est",
+        "mauvaise."
       ]
     }
   ]

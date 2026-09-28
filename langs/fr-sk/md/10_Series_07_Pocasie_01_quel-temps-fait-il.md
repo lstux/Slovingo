@@ -96,7 +96,7 @@ Slovenčina tieto vety tvorí úplne bez podmetu: „je“ + príslovka stačí.
 
 **Francúzske podnebie je miernejšie než slovenské.** Vďaka blízkosti Atlantiku má väčšina Francúzska miernejšie zimy a menej extrémne letá než kontinentálne Slovensko — výnimkou sú hory a východ krajiny.
 
-**Il pleut, il neige — bez skutočného podmetu, presne ako v slovenčine!** Toto je jedna z mála chvíľ, keď francúzska neosobná väzba takmer doslovne kopíruje slovenskú (Prší = Il pleut) — skutočná úľava po všetkých tých zhodách, ktoré si už stretol.
+**Il pleut, il neige — bez skutočného podmetu, presne ako v slovenčine!** Toto je jedna z mála chvíľ, keď francúzska neosobná väzba takmer doslovne kopíruje slovenskú (Prší = Il pleut) — skutočná úľava po všetkých tých zhodách, ktoré si už stretol/a.
 
 ---
 

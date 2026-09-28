@@ -45,10 +45,10 @@ Podobne ako pri „vouloir“, aj po „devoir“ nasleduje priamo infinitív �
 
 | Francúzština | Slovenčina |
 |----------|----------|
-| je mets | oblečiem si |
-| tu mets | oblečieš si |
-| il / elle met | oblečie si |
-| nous mettons | oblečieme si |
+| je mets | obliekam si |
+| tu mets | obliekaš si |
+| il / elle met | oblieka si |
+| nous mettons | obliekame si |
 
 ---
 
@@ -97,7 +97,7 @@ Podobne ako pri „vouloir“, aj po „devoir“ nasleduje priamo infinitív �
 + „tu n'as pas besoin de“ = nemusíš — doslova „nemáš potrebu“.
 
 ! Mets quelque chose de chaud !
-> Obliecť si niečo teplé!
+> Obleč si niečo teplé!
 > Mets quelque chose de chaud = obleč si niečo teplé
 
 ---
@@ -137,7 +137,7 @@ Podobne ako pri „vouloir“, aj po „devoir“ nasleduje priamo infinitív �
 |----------|----------|
 | les bottes | čižmy |
 | l'imperméable | plášť do dažďa |
-| la crème solaire | krémy na opaľovanie |
+| la crème solaire | krém na opaľovanie |
 | la casquette | šiltovka |
 | les chaussettes | ponožky |
 | la température de l'air | teplota vzduchu |

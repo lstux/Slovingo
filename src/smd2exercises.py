@@ -235,8 +235,49 @@ def load_corpus(md_dir: Path, lang_cfg: dict[str, Any]) -> list[dict[str, Any]]:
             "sentences": extract_sentences(parsed["content"]),
             "manual_exercises": manual_exercises,
             "manual_mode": manual_mode if manual_exercises else "replace",
+            "manual_path": str(exercises_json_path) if exercises_json_path is not None else None,
         })
     return records
+
+
+# ============================================================================
+# Manual exercises vs. current sheet content
+# ============================================================================
+
+def exercise_pairs(exercise: dict[str, Any]) -> list[tuple[str, str]]:
+    """The (l1, l2) pair(s) an exercise is about: one pair for every
+    type, except "match", which holds parallel l1/l2 lists."""
+    if exercise.get("type") == "match":
+        return list(zip(exercise.get("l1", []), exercise.get("l2", [])))
+    return [(exercise.get("l1", ""), exercise.get("l2", ""))]
+
+
+def current_pairs(record: dict[str, Any]) -> set[tuple[str, str]]:
+    """Every (l1, l2) pair the sheet currently teaches: vocabulary
+    table rows and audio-card sentences, as the generator sees them."""
+    pairs = {(l1.strip(), l2.strip()) for l1, l2 in record["vocab_pairs"]}
+    pairs |= {(s["l1"].strip(), s["l2"].strip()) for s in record["sentences"]}
+    return pairs
+
+
+def find_stale_manual_exercises(record: dict[str, Any]) -> list[dict[str, Any]]:
+    """Manual exercises that no longer match the sheet: at least one of
+    their (l1, l2) pairs is no longer taught by the .md (the sentence
+    or vocabulary row was edited or removed after the exercises file
+    was written). Such exercises would otherwise keep showing the old
+    text forever, since manual files are never regenerated. See
+    sync_exercises.py to update them. Sheets that teach no pair at all
+    are skipped (their manual exercises are free-form by design)."""
+    manual = record.get("manual_exercises") or []
+    if not manual:
+        return []
+    known = current_pairs(record)
+    if not known:
+        # A sheet with no vocabulary table and no audio-card (e.g. the
+        # closing "thank you" page): its manual exercises are free-form
+        # on purpose, there is nothing for them to go stale against.
+        return []
+    return [ex for ex in manual if any(pair not in known for pair in exercise_pairs(ex))]
 
 
 # ============================================================================

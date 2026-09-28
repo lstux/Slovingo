@@ -144,10 +144,12 @@ Konečne niečo jednoduchšie: francúzske „euros“ má len jeden tvar množn
 > Je to v akcii.
 > C'est en promotion = je to v akcii
 
-! Je veux une réduction, s'il vous plaît.
-> Chcem zľavu, prosím.
-> Je veux une réduction = chcem zľavu
+! Vous pouvez me faire une réduction, s'il vous plaît ?
+> Môžete mi dať zľavu, prosím?
+> Vous pouvez me faire = môžete mi dať
+> une réduction = zľavu
 > s'il vous plaît = prosím
++ „Je veux une réduction“ by znelo veľmi príkro. Zdvorilá otázka s „vous pouvez“ (môžete) funguje oveľa lepšie.
 
 ! Où est le distributeur ?
 > Kde je bankomat?

@@ -95,10 +95,11 @@ Rovnako jednoduché ako komparatív: „le plus/le moins“ pred prídavným men
 > Nous devons mettre de la crème solaire = musíme si dať krém na opaľovanie
 > le soleil est le plus fort à midi = slnko je najsilnejšie na obed
 
-! Je peux nager, mais je ne peux pas plonger.
+! Je sais nager, mais je ne sais pas plonger.
 > Viem plávať, ale neviem sa potápať.
-> Je peux nager = viem plávať
-> mais je ne peux pas plonger = ale neviem sa potápať
+> Je sais nager = viem plávať
+> mais je ne sais pas plonger = ale neviem sa potápať
++ Pozor: „viem plávať“ (mám tú schopnosť) je „je sais nager“, od slovesa „savoir“. „Je peux nager“ znamená „môžem plávať“ (smiem, mám možnosť).
 
 ---
 
@@ -106,7 +107,7 @@ Rovnako jednoduché ako komparatív: „le plus/le moins“ pred prídavným men
 
 **La Baule, jedna z najdlhších pláží v Európe.** Neďaleko Saint-Nazaire sa nachádza {{La Baule}} so svojou deväťkilometrovou plážou — jedna z najdlhších piesočných pláží v Európe, obľúbená destinácia francúzskych rodín od 19. storočia.
 
-**Windsurfing sa narodil na francúzskom pobreží.** Atlantické pobrežie, so svojím silným vetrom, patrí medzi kolísky francúzskeho windsurfingu a surfovania — {{Biarritz}} na juhu je dodnes svetovou mekkou surferov.
+**Atlantik, raj surferov.** Atlantické pobrežie so silným vetrom a vysokými vlnami láka surferov aj windsurferov z celej Európy — {{Biarritz}} na juhu je považovaný za kolísku európskeho surfovania.
 
 **Hrad z piesku, univerzálna detská zábava.** Podobne ako stavanie snehuliaka v zime, aj stavanie hradu z piesku v lete patrí medzi univerzálne detské rituály — vo Francúzsku aj na Slovensku.
 

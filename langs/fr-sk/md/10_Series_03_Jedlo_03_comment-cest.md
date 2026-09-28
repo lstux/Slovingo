@@ -76,13 +76,12 @@ Francúzština nemá stredný rod, takže úloha je jednoduchšia než v sloven�
 > Les fruits sont = ovocie je
 > sucrés = sladké
 
-! L'eau est chaude. J'en veux de la froide.
-> Voda je teplá. Chcem studenú.
+! L'eau est chaude. Je veux de l'eau froide.
+> Voda je teplá. Chcem studenú vodu.
 > L'eau est = voda je
 > chaude = teplá
-> j'en veux = chcem
-> de la froide = studenú
-+ „en“ nahrádza „de l'eau“, aby sa slovo neopakovalo — podobný princíp ako zámená le/la/les.
+> je veux = chcem
+> de l'eau froide = studenú vodu
 
 ! Le fromage est acide.
 > Syr je kyslý.
@@ -126,9 +125,9 @@ Francúzština nemá stredný rod, takže úloha je jednoduchšia než v sloven�
 
 ## 🇫🇷 Francúzsky kútik
 
-**„Ça me plaît“, nie „milujem to“.** Namiesto doslovného „j'aime ça“ Francúzi pri jedle bežne povedia {{Ça me plaît}} alebo jednoducho {{c'est bon}} — podobne nepriamy spôsob ako slovenské {{Chutí mi to}}, hoci štruktúra vety nie je taká obrátená ako v slovenčine.
+**„C'est bon !“ namiesto „chutí mi to“.** Francúzština nemá sloveso, ktoré by presne zodpovedalo slovenskému „chutiť“. Pri stole sa najčastejšie povie {{C'est bon !}} alebo {{C'est délicieux !}}, a o jedle, ktoré máš rád všeobecne, {{J'aime bien ça}}.
 
-**Kyslé nie je zlé, len iné.** Presne ako v slovenčine, aj francúzska kuchyňa pozná kyslé chute — citrón, ocot, kysnuté cesto — hoci fermentovanej zeleniny (ako slovenská kapusta) je vo francúzskej kuchyni menej.
+**Kyslé nie je zlé, len iné.** Presne ako v slovenčine, aj francúzska kuchyňa pozná kyslé chute — citrón, ocot, kváskový chlieb — hoci fermentovanej zeleniny (ako slovenská kapusta) je vo francúzskej kuchyni menej.
 
 **Namiesto kofoly, diabolo.** Namiesto slovenskej {{kofoly}} si francúzske deti častejšie objednajú {{un diabolo}} — sýtenú vodu so sirupom (mätovým, granátovým...), oveľa menej sladkú než klasickú kolu.
 
@@ -143,7 +142,7 @@ Francúzština nemá stredný rod, takže úloha je jednoduchšia než v sloven�
 | mauvais / mauvaise | zlý |
 | très | veľmi |
 | un peu | trochu |
-| plaire au goût | chutiť |
+| délicieux / délicieuse | výborný, lahodný |
 | goûter | ochutnať |
 
 ---
@@ -156,9 +155,10 @@ Francúzština nemá stredný rod, takže úloha je jednoduchšia než v sloven�
 > est = je
 > brûlant = horúca
 
-! Ça me plaît.
-> Chutí mi to.
-> Ça me plaît = chutí mi to
+! C'est délicieux !
+> Je to výborné! (Chutí mi to!)
+> C'est délicieux = je to výborné
++ Takto Francúz pochváli jedlo — slovenské „chutí mi to“ nemá vo francúzštine doslovný ekvivalent.
 
 ! Goûte !
 > Ochutnaj!

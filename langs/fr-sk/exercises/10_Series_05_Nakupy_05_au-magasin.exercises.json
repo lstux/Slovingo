@@ -21,26 +21,6 @@
       ]
     },
     {
-      "id": "blank-quelle-couleur-veux-tu",
-      "type": "fill-blank",
-      "l1": "Akú farbu chceš?",
-      "l2": "Quelle couleur veux-tu ?",
-      "missing_l1": "chceš",
-      "missing_l2": "couleur",
-      "blank_index_l1": 2,
-      "blank_index_l2": 1,
-      "choices_l1": [
-        "čakať",
-        "začínať",
-        "spať"
-      ],
-      "choices_l2": [
-        "clair",
-        "blanc",
-        "rouge"
-      ]
-    },
-    {
       "id": "blank-bleu-ou-vert-pas-noir",
       "type": "fill-blank",
       "l1": "Modré alebo zelené. Nie čierne.",
@@ -221,26 +201,6 @@
       ]
     },
     {
-      "id": "blank-c-est-bon-march-ach-te-aussi-le-vert",
-      "type": "fill-blank",
-      "l1": "To je lacné! Kúp si aj to zelené.",
-      "l2": "C'est bon marché ! Achète aussi le vert.",
-      "missing_l1": "je",
-      "missing_l2": "le",
-      "blank_index_l1": 1,
-      "blank_index_l2": 6,
-      "choices_l1": [
-        "v byte",
-        "oblečieme si",
-        "on išiel"
-      ],
-      "choices_l2": [
-        "je fais",
-        "tu veux",
-        "Quelle"
-      ]
-    },
-    {
       "id": "blank-d-accord-je-paie-par-carte",
       "type": "fill-blank",
       "l1": "Dobre. Platím kartou.",
@@ -354,22 +314,6 @@
         "Táto košeľa je malá. Máte väčšiu?",
         "Chcem skúsiť toto tričko.",
         "Zelená sukňa sa mi páči."
-      ]
-    },
-    {
-      "id": "listen-quelle-couleur-veux-tu",
-      "type": "listen",
-      "l1": "Akú farbu chceš?",
-      "l2": "Quelle couleur veux-tu ?",
-      "choices_l2": [
-        "Un moment, s'il te plaît.",
-        "La fenêtre est grande.",
-        "Combien coûtent les chaussures ?"
-      ],
-      "choices_l1": [
-        "Budem plávať rýchlo.",
-        "Našiel/našla som tri vajíčka, a ty, koľko si ich našiel/našla?",
-        "V lete nosím slnečné okuliare."
       ]
     },
     {
@@ -533,22 +477,6 @@
       ]
     },
     {
-      "id": "listen-c-est-bon-march-ach-te-aussi-le-vert",
-      "type": "listen",
-      "l1": "To je lacné! Kúp si aj to zelené.",
-      "l2": "C'est bon marché ! Achète aussi le vert.",
-      "choices_l2": [
-        "Je bois du chocolat chaud, pas de café.",
-        "Vous voulez de l'eau minérale ?",
-        "Du pain et du beurre, s'il te plaît."
-      ],
-      "choices_l1": [
-        "To je drahé!",
-        "Cítim pohodu na balkóne.",
-        "Kedy ideš domov?"
-      ]
-    },
-    {
       "id": "listen-d-accord-je-paie-par-carte",
       "type": "listen",
       "l1": "Dobre. Platím kartou.",
@@ -669,37 +597,6 @@
         "s'il",
         "vous",
         "plaît."
-      ]
-    },
-    {
-      "id": "order-quelle-couleur-veux-tu",
-      "type": "order",
-      "l1": "Akú farbu chceš?",
-      "l2": "Quelle couleur veux-tu ?",
-      "tokens_l1": [
-        "Akú",
-        "farbu",
-        "chceš?",
-        "Platím",
-        "hotovosťou.",
-        "Máte",
-        "drobné?"
-      ],
-      "tokens_l2": [
-        "Quelle",
-        "couleur",
-        "veux-tu",
-        "?",
-        "Je",
-        "paie",
-        "en",
-        "liquide.",
-        "Vous",
-        "avez",
-        "de",
-        "la",
-        "monnaie",
-        "?"
       ]
     },
     {
@@ -1008,46 +905,6 @@
       ]
     },
     {
-      "id": "order-c-est-bon-march-ach-te-aussi-le-vert",
-      "type": "order",
-      "l1": "To je lacné! Kúp si aj to zelené.",
-      "l2": "C'est bon marché ! Achète aussi le vert.",
-      "tokens_l1": [
-        "To",
-        "je",
-        "lacné!",
-        "Kúp",
-        "si",
-        "aj",
-        "to",
-        "zelené.",
-        "Platím",
-        "hotovosťou.",
-        "Máte",
-        "drobné?"
-      ],
-      "tokens_l2": [
-        "C'est",
-        "bon",
-        "marché",
-        "!",
-        "Achète",
-        "aussi",
-        "le",
-        "vert.",
-        "Je",
-        "paie",
-        "en",
-        "liquide.",
-        "Vous",
-        "avez",
-        "de",
-        "la",
-        "monnaie",
-        "?"
-      ]
-    },
-    {
       "id": "order-d-accord-je-paie-par-carte",
       "type": "order",
       "l1": "Dobre. Platím kartou.",
@@ -1208,6 +1065,131 @@
         "paie",
         "par",
         "carte."
+      ]
+    },
+    {
+      "id": "blank-quelle-couleur-voulez-vous",
+      "type": "fill-blank",
+      "l1": "Akú farbu chcete?",
+      "l2": "Quelle couleur voulez-vous ?",
+      "missing_l1": "chcete",
+      "missing_l2": "couleur",
+      "blank_index_l1": 2,
+      "blank_index_l2": 1,
+      "choices_l1": [
+        "nemám",
+        "mi",
+        "dnes"
+      ],
+      "choices_l2": [
+        "mais",
+        "travaille",
+        "du"
+      ]
+    },
+    {
+      "id": "blank-c-est-bon-march-achetez-aussi-le-vert",
+      "type": "fill-blank",
+      "l1": "To je lacné! Kúpte si aj to zelené.",
+      "l2": "C'est bon marché ! Achetez aussi le vert.",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "to",
+        "čas",
+        "máte"
+      ],
+      "choices_l2": [
+        "où",
+        "du",
+        "une"
+      ]
+    },
+    {
+      "id": "listen-quelle-couleur-voulez-vous",
+      "type": "listen",
+      "l1": "Akú farbu chcete?",
+      "l2": "Quelle couleur voulez-vous ?",
+      "choices_l1": [
+        "Meškám. Prídem o štvrť na deväť.",
+        "Moja mama je učiteľka.",
+        "Oranžové jablko je sladké."
+      ]
+    },
+    {
+      "id": "listen-c-est-bon-march-achetez-aussi-le-vert",
+      "type": "listen",
+      "l1": "To je lacné! Kúpte si aj to zelené.",
+      "l2": "C'est bon marché ! Achetez aussi le vert.",
+      "choices_l1": [
+        "Nie, v pondelok pracujem do siedmej.",
+        "Mám tridsať rokov.",
+        "Večer som doma."
+      ]
+    },
+    {
+      "id": "order-quelle-couleur-voulez-vous",
+      "type": "order",
+      "l1": "Akú farbu chcete?",
+      "l2": "Quelle couleur voulez-vous ?",
+      "tokens_l1": [
+        "Akú",
+        "farbu",
+        "chcete?",
+        "Dobrý",
+        "deň.",
+        "Akú",
+        "veľkosť",
+        "hľadáte?"
+      ],
+      "tokens_l2": [
+        "Quelle",
+        "couleur",
+        "voulez-vous",
+        "?",
+        "Bonjour.",
+        "Quelle",
+        "taille",
+        "cherchez-vous",
+        "?"
+      ]
+    },
+    {
+      "id": "order-c-est-bon-march-achetez-aussi-le-vert",
+      "type": "order",
+      "l1": "To je lacné! Kúpte si aj to zelené.",
+      "l2": "C'est bon marché ! Achetez aussi le vert.",
+      "tokens_l1": [
+        "To",
+        "je",
+        "lacné!",
+        "Kúpte",
+        "si",
+        "aj",
+        "to",
+        "zelené.",
+        "Áno,",
+        "kde",
+        "je",
+        "kabínka?"
+      ],
+      "tokens_l2": [
+        "C'est",
+        "bon",
+        "marché",
+        "!",
+        "Achetez",
+        "aussi",
+        "le",
+        "vert.",
+        "Oui,",
+        "où",
+        "est",
+        "la",
+        "cabine",
+        "?"
       ]
     }
   ]

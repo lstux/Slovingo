@@ -113,9 +113,9 @@ Eric vyká Mamie Louise. Eric, Karine a Chloé si tykajú.
 
 **Nedeľný obed je maratón — aj vo Francúzsku.** Predjedlo, hlavné jedlo, syr, dezert, a na záver káva. Počítaj s celým popoludním, a neobeduj vopred.
 
-**„Ešte trochu“ nie je otázka — ani tu.** Odmietnuť druhú porciu sa berie ako zdvorilosť, teda ako pozvanie naliehať znova. Funguje prijať malú porciu a jesť ju pomaly.
+**Babky sú výnimka.** Vo Francúzsku sa zdvorilé „non merci“ zvyčajne rešpektuje. Babka ako Mamie Louise však ponúkne aj druhý a tretíkrát — ako tá slovenská. Osvedčený trik: prijať malú porciu a jesť ju pomaly.
 
-**Aimer funguje inak než mať rád.** {{Aimer}} sa používa rovnako pre jedlo aj pre ľudí — j'aime la tarte, j'aime Chloé — presne ako slovenské mať rád, ale bez zmeny formy podľa rodu hovoriaceho.
+**Aimer: pri jedle áno, pri ľuďoch pozor.** {{J'aime la tarte}} = mám rád tartu. Ale {{J'aime Chloé}} znamená „ľúbim Chloé“ — to je vyznanie lásky! Keď chceš povedať, že máš niekoho rád ako kamaráta, pridaj „bien“: {{J'aime bien Chloé}}. Tvar sa pritom nemení podľa rodu hovoriaceho.
 
 ---
 

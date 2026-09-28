@@ -72,10 +72,11 @@ Dobrá správa: francúzske « an » sa nedelí na tri tvary ako slovenské rok/
 > un an = jeden rok
 + V jednotnom čísle ostáva « an » bez « s »: « un an », nikdy « un ans ».
 
-! J'ai un petit enfant.
+! J'ai un jeune enfant.
 > Mám malé dieťa.
 > J'ai = mám
-> un petit enfant = malé dieťa
+> un jeune enfant = malé dieťa
++ Nie „un petit enfant“: vyslovene znie rovnako ako „un petit-enfant“, teda vnúča.
 
 ! Mes enfants sont petits.
 > Moje deti sú malé.

@@ -8,12 +8,12 @@ Predtým, než sa ponoríme do slovnej zásoby a gramatiky: kto hovorí po franc
 
 # 1. Koľko hovoriacich, a kde
 
-{{Le français}} (francúzština) je materinským jazykom pre približne 67 miliónov ľudí vo Francúzsku, ale ako druhý alebo administratívny jazyk ju používa oveľa viac ľudí po celom svete — odhady sa pohybujú okolo 230 až 300 miliónov hovoriacich.
+{{Le français}} (francúzština) je materinským jazykom pre približne 67 miliónov ľudí vo Francúzsku, ale ako druhý alebo administratívny jazyk ju používa oveľa viac ľudí po celom svete — podľa Medzinárodnej organizácie Frankofónie (OIF) je to dnes okolo 320 miliónov hovoriacich.
 
 | Krajina / Región | Situácia |
 |---|---|
 | Belgicko (Valónsko) | úradný jazyk popri holandčine a nemčine |
-| Švajčiarsko (Románia) | jeden zo štyroch úradných jazykov |
+| Švajčiarsko (Romandia, francúzska časť) | jeden zo štyroch úradných jazykov |
 | Kanada (Québec) | úradný jazyk provincie, silná frankofónna identita |
 | Mnohé africké krajiny | úradný alebo administratívny jazyk, rýchlo rastúci počet hovoriacich |
 | Slovensko | veľmi okrajovo — francúzština sa vyučuje len na časti škôl, oveľa menej rozšírená než angličtina či nemčina |
@@ -54,7 +54,7 @@ Francúzština je:
 
 # 5. Latinská abeceda, ale s vlastnými zvláštnosťami
 
-Francúzština sa píše latinkou, doplnenou o niekoľko diakritických znamienok (é, è, ê, ë, à, ù, ç, œ...) — podstatne menej než slovenská abeceda. Zvláštnosť je inde: veľa písmen sa vôbec nevyslovuje. Detail výslovnosti je témou samostatnej fiche.
+Francúzština sa píše latinkou, doplnenou o niekoľko diakritických znamienok (é, è, ê, ë, à, ù, ç, œ...) — podstatne menej než slovenská abeceda. Zvláštnosť je inde: veľa písmen sa vôbec nevyslovuje. Detail výslovnosti je témou samostatnej kartičky.
 
 ---
 
@@ -76,7 +76,7 @@ Smer je tu takmer jednosmerný: francúzština dala slovenčine (a väčšine eu
 
 # 7. Trochu histórie
 
-Súčasná spisovná francúzština sa ustálila oveľa skôr než slovenčina: {{Académie française}}, inštitúcia dodnes dohliadajúca na jazyk, bola založená už v roku 1635 kardinálom Richelieu. Pre porovnanie, slovenčina sa kodifikovala až v 19. storočí, vďaka {{Ľudovítovi Štúrovi}} — takmer o dve storočia neskôr.
+Súčasná spisovná francúzština sa ustálila oveľa skôr než slovenčina: {{Académie française}}, inštitúcia dodnes dohliadajúca na jazyk, bola založená už v roku 1635 kardinálom Richelieu. Pre porovnanie, slovenčinu prvýkrát kodifikoval Anton Bernolák v roku 1787 a dnešná spisovná slovenčina vychádza z kodifikácie Ľudovíta Štúra z roku 1843 — viac ako o dve storočia neskôr.
 
 ---
 

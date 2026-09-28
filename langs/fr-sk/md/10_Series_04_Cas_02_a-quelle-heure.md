@@ -80,12 +80,11 @@ Toto je najčastejšia chyba slovenských študentov francúzštiny. Francúzske
 > Je suis en retard = meškám
 > d'environ dix minutes = asi desať minút
 
-! J'arrive précisément à deux heures.
+! J'arrive à deux heures précises.
 > Prídem presne o druhej.
 > J'arrive = prídem
-> précisément = presne
-> à deux heures = o druhej
-+ „arriver“ znamená prísť, prichádzať: j'arrive, tu arrives, il arrive.
+> à deux heures précises = presne o druhej
++ „arriver“ znamená prísť, prichádzať: j'arrive, tu arrives, il arrive. Pri hodinách sa „presne“ povie „précises“ (za číslom) alebo hovorovo „pile“: „à deux heures pile“. Slovo „précisément“ sa používa skôr vo význame „práve, presne tak“.
 
 ---
 

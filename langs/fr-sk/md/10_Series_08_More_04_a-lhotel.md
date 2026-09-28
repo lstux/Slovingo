@@ -149,7 +149,7 @@ Francúzsky kondicionál sa tvorí jednoducho — k budúcemu kmeňu slovesa (te
 > Il y a un beau silence = je krásne ticho
 > près de la mer = pri mori
 
-! Je ressens la tranquillité sur le balcon.
-> Cítim pohodu na balkóne.
-> Je ressens la tranquillité = cítim pohodu
-> sur le balcon = na balkóne
+! Sur le balcon, quelle tranquillité !
+> Na balkóne je taký pokoj!
+> Sur le balcon = na balkóne
+> quelle tranquillité = taký pokoj

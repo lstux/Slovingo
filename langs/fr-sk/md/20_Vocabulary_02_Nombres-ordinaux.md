@@ -40,7 +40,7 @@ Radové číslovky vyjadrujú poradie:
 | tridsiaty | {{trentième}} |
 | stý | {{centième}} |
 
-### 🧩 Dva drobné pravopisné zvláštnosti
+### 🧩 Dve drobné pravopisné zvláštnosti
 
 - **cinquième**: k „cinq“ sa pred „-ième“ pridáva „u“ (nie „cinqième“).
 - **neuvième**: „neuf“ mení „f“ na „v“ pred „-ième“ (nie „neufième“).

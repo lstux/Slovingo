@@ -132,7 +132,7 @@
       "id": "qcm-il-fera-nuageux",
       "type": "qcm",
       "l1": "Bude oblačno.",
-      "l2": "Il fera nuageux.",
+      "l2": "Il y aura des nuages.",
       "choices_l1": [
         "tráva",
         "prší",
@@ -358,26 +358,6 @@
         "ça",
         "je cherche",
         "c'est"
-      ]
-    },
-    {
-      "id": "blank-l-apr-s-midi-il-fera-nuageux",
-      "type": "fill-blank",
-      "l1": "Poobede bude oblačno.",
-      "l2": "L'après-midi il fera nuageux.",
-      "missing_l1": "bude",
-      "missing_l2": "il",
-      "blank_index_l1": 1,
-      "blank_index_l2": 1,
-      "choices_l1": [
-        "chcú",
-        "budú",
-        "otvárať"
-      ],
-      "choices_l2": [
-        "le plus...",
-        "tu vas",
-        "sont"
       ]
     },
     {
@@ -676,7 +656,7 @@
       "id": "listen-l-apr-s-midi-il-fera-nuageux",
       "type": "listen",
       "l1": "Poobede bude oblačno.",
-      "l2": "L'après-midi il fera nuageux.",
+      "l2": "L'après-midi, le temps sera nuageux.",
       "choices_l2": [
         "Bonjour, Eric. Entrez, je vous en prie.",
         "Quand commences-tu ? À huit heures ?",
@@ -968,7 +948,7 @@
       "id": "order-l-apr-s-midi-il-fera-nuageux",
       "type": "order",
       "l1": "Poobede bude oblačno.",
-      "l2": "L'après-midi il fera nuageux.",
+      "l2": "L'après-midi, le temps sera nuageux.",
       "tokens_l1": [
         "Poobede",
         "bude",
@@ -978,9 +958,10 @@
         "slnečno."
       ],
       "tokens_l2": [
-        "L'après-midi",
-        "il",
-        "fera",
+        "L'après-midi,",
+        "le",
+        "temps",
+        "sera",
         "nuageux.",
         "Demain",
         "il",

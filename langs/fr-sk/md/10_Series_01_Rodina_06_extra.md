@@ -51,10 +51,11 @@
 | le bureau | kancelária |
 | le magasin | obchod |
 | la ville | mesto |
-| la campagne | dedina, vidiek |
+| la campagne | vidiek |
 | la maison | dom |
 | l'appartement | byt |
-| la pièce / la chambre | izba |
+| la pièce | izba, miestnosť |
+| la chambre | spálňa, izba na spanie |
 | la cuisine | kuchyňa |
 | le jardin | záhrada |
 | l'immeuble | panelák |
@@ -155,34 +156,34 @@
 > dans un immeuble = v paneláku
 > tout près = blízko
 
-! Quand est ton anniversaire ?
+! C'est quand, ton anniversaire ?
 > Kedy máš narodeniny?
-> Quand est = kedy je
+> C'est quand = kedy je
 > ton anniversaire = tvoje narodeniny
 
 ! Mon père et ma mère habitent ensemble à la campagne.
-> Môj otec a moja mama bývajú spolu na dedine.
+> Môj otec a moja mama bývajú spolu na vidieku.
 > Mon père = môj otec
 > et = a
 > ma mère = moja mama
 > habitent = bývajú
 > ensemble = spolu
-> à la campagne = na dedine
+> à la campagne = na vidieku
 
 ! Quel est ton prénom ?
 > Aké je tvoje meno?
 > Quel est = aké je
 > ton prénom = tvoje meno
 
-! Ma grand-mère est vieille, mais elle fait beaucoup dans le jardin.
-> Moja babka je stará, ale robí veľa v záhrade.
+! Ma grand-mère est vieille, mais elle travaille beaucoup au jardin.
+> Moja babka je stará, ale veľa pracuje v záhrade.
 > Ma grand-mère = moja babka
 > est = je
 > vieille = stará
 > mais = ale
-> elle fait = robí
+> elle travaille = pracuje
 > beaucoup = veľa
-> dans le jardin = v záhrade
+> au jardin = v záhrade
 
 ! Mon grand-père est retraité et il est ici.
 > Môj dedko je dôchodca a je tu.

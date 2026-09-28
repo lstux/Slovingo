@@ -2,7 +2,7 @@
 
 @ img/Easter-Eggs.jpg | Veľkonočný stôl — Wikimedia Commons
 
-Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet. Posledná fiche celej cesty!
+Žiadne nové slovo. Celá slovná zásoba série je tu zhrnutá a potom prekombinovaná do nových viet. Posledná kartička celej cesty!
 
 ---
 
@@ -140,4 +140,4 @@
 
 ---
 
-Toto je posledná fiche série Veľká noc — a posledná fiche celej cesty francúzštiny pre slovenčinu! Gratulujeme, prešiel/prešla si všetkých deväť sérií.
+Toto je posledná kartička série Veľká noc — a posledná kartička celej cesty francúzštiny pre slovenčinu! Gratulujeme, prešiel/prešla si všetkých deväť sérií.

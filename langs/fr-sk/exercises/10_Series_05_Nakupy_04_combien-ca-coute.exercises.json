@@ -593,26 +593,6 @@
       ]
     },
     {
-      "id": "blank-je-veux-une-r-duction-s-il-vous-pla-t",
-      "type": "fill-blank",
-      "l1": "Chcem zľavu, prosím.",
-      "l2": "Je veux une réduction, s'il vous plaît.",
-      "missing_l1": "prosím",
-      "missing_l2": "une",
-      "blank_index_l1": 2,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "veľmi",
-        "hľadáme",
-        "z"
-      ],
-      "choices_l2": [
-        "je nagerai",
-        "très",
-        "je mange"
-      ]
-    },
-    {
       "id": "blank-o-est-le-distributeur",
       "type": "fill-blank",
       "l1": "Kde je bankomat?",
@@ -838,22 +818,6 @@
         "Je to trochu malé. Máte väčšie?",
         "Otvorím okno? Je tu teplo.",
         "Kde sú moje okuliare?"
-      ]
-    },
-    {
-      "id": "listen-je-veux-une-r-duction-s-il-vous-pla-t",
-      "type": "listen",
-      "l1": "Chcem zľavu, prosím.",
-      "l2": "Je veux une réduction, s'il vous plaît.",
-      "choices_l2": [
-        "J'ai un rendez-vous à dix heures.",
-        "Six heures et demie, c'est six heures trente ?",
-        "Je prends un cidre."
-      ],
-      "choices_l1": [
-        "Obchod je otvorený.",
-        "Platím cestovný lístok kartou, nemám hotovosť.",
-        "Bankomat je zatvorený? To nie je možné!"
       ]
     },
     {
@@ -1255,34 +1219,6 @@
       ]
     },
     {
-      "id": "order-je-veux-une-r-duction-s-il-vous-pla-t",
-      "type": "order",
-      "l1": "Chcem zľavu, prosím.",
-      "l2": "Je veux une réduction, s'il vous plaît.",
-      "tokens_l1": [
-        "Chcem",
-        "zľavu,",
-        "prosím.",
-        "Stojí",
-        "to",
-        "tri",
-        "eurá."
-      ],
-      "tokens_l2": [
-        "Je",
-        "veux",
-        "une",
-        "réduction,",
-        "s'il",
-        "vous",
-        "plaît.",
-        "Ça",
-        "coûte",
-        "trois",
-        "euros."
-      ]
-    },
-    {
       "id": "order-o-est-le-distributeur",
       "type": "order",
       "l1": "Kde je bankomat?",
@@ -1306,6 +1242,76 @@
         "coûte",
         "trois",
         "euros."
+      ]
+    },
+    {
+      "id": "blank-vous-pouvez-me-faire-une-r-duction-s-il-vous-pla-t",
+      "type": "fill-blank",
+      "l1": "Môžete mi dať zľavu, prosím?",
+      "l2": "Vous pouvez me faire une réduction, s'il vous plaît ?",
+      "missing_l1": "prosím",
+      "missing_l2": "une",
+      "blank_index_l1": 4,
+      "blank_index_l2": 4,
+      "choices_l1": [
+        "sú",
+        "mama",
+        "to"
+      ],
+      "choices_l2": [
+        "au",
+        "heures",
+        "la"
+      ]
+    },
+    {
+      "id": "listen-vous-pouvez-me-faire-une-r-duction-s-il-vous-pla-t",
+      "type": "listen",
+      "l1": "Môžete mi dať zľavu, prosím?",
+      "l2": "Vous pouvez me faire une réduction, s'il vous plaît ?",
+      "choices_l1": [
+        "Deti pozerajú televízor v obývačke.",
+        "Deti pijú mlieko na večeru.",
+        "Na stanici. Prídem načas."
+      ]
+    },
+    {
+      "id": "order-vous-pouvez-me-faire-une-r-duction-s-il-vous-pla-t",
+      "type": "order",
+      "l1": "Môžete mi dať zľavu, prosím?",
+      "l2": "Vous pouvez me faire une réduction, s'il vous plaît ?",
+      "tokens_l1": [
+        "Môžete",
+        "mi",
+        "dať",
+        "zľavu,",
+        "prosím?",
+        "Chcem",
+        "toto",
+        "červené",
+        "tričko.",
+        "Koľko",
+        "stojí?"
+      ],
+      "tokens_l2": [
+        "Vous",
+        "pouvez",
+        "me",
+        "faire",
+        "une",
+        "réduction,",
+        "s'il",
+        "vous",
+        "plaît",
+        "?",
+        "Je",
+        "veux",
+        "ce",
+        "tee-shirt",
+        "rouge.",
+        "Combien",
+        "coûte-t-il",
+        "?"
       ]
     }
   ]

@@ -46,7 +46,7 @@
 | devoir | musieť |
 | les bottes | čižmy |
 | l'imperméable | plášť do dažďa |
-| la crème solaire | krémy na opaľovanie |
+| la crème solaire | krém na opaľovanie |
 | la casquette | šiltovka |
 | les chaussettes | ponožky |
 | les vêtements | oblečenie |
@@ -70,9 +70,9 @@
 
 ## Les phrases
 
-! Il fait chaud et ensoleillé, mais il y aura des nuages ce soir.
-> Je teplo a slnečno, ale večer budú oblaky.
-> Il fait chaud et ensoleillé = je teplo a slnečno
+! Il fait beau et chaud, mais il y aura des nuages ce soir.
+> Je pekne a teplo, ale večer budú oblaky.
+> Il fait beau et chaud = je pekne a teplo
 > mais il y aura des nuages ce soir = ale večer budú oblaky
 
 ! En automne, il pleut souvent et les feuilles tombent.

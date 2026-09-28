@@ -31,7 +31,7 @@ Oblečenie, veľkosti, a sloveso **essayer** (skúsiť). Tu si všimneš niečo 
 | il / elle essaie | skúša |
 | nous essayons | skúšame |
 
-„y“ sa mení na „i“ pred nemým „e“ (essaie), ale zostáva „y“ pred vyslovenou samohláskou (essayons) — podobná logika ako pri „acheter“ z predošlej fiche.
+„y“ sa mení na „i“ pred nemým „e“ (essaie), ale zostáva „y“ pred vyslovenou samohláskou (essayons) — podobná logika ako pri „acheter“ z predošlej kartičky.
 
 ### Farba PO slove — a vlastne väčšina prídavných mien!
 
@@ -115,7 +115,7 @@ Toto je nová vec: francúzske prídavné mená VÄČŠINOU stoja ZA podstatným
 
 ## 🇫🇷 Francúzsky kútik
 
-**Veľkosti podľa medzinárodného systému, aj tu.** Podobne ako na Slovensku, aj vo Francúzsku sa bežne používa S, M, L, XL — jednoduchý orientačný bod. Pre topánky sa však vo Francúzsku používa francúzska číselná stupnica ({{pointure}}), mierne odlišná od tej slovenskej.
+**Veľkosti podľa medzinárodného systému, aj tu.** Podobne ako na Slovensku, aj vo Francúzsku sa bežne používa S, M, L, XL — jednoduchý orientačný bod. Pre topánky sa používa európska číselná stupnica ({{la pointure}}), rovnaká ako na Slovensku: kto nosí štyridsiatku, pýta si {{du quarante}}.
 
 **Soldes majú svoje presné obdobie zo zákona.** Na rozdiel od slovenského {{výpredaj}}, ktorý môže byť kedykoľvek, vo Francúzsku sú {{les soldes}} presne stanovené zákonom, dvakrát ročne, v presne určených termínoch.
 

@@ -43,7 +43,7 @@
     {
       "id": "blank-c-est-ma-grand-m-re-elle-habite-ici-la-campagne",
       "type": "fill-blank",
-      "l1": "To je moja babka. Býva tu, na dedine.",
+      "l1": "To je moja babka. Býva tu, na vidieku.",
       "l2": "C'est ma grand-mère. Elle habite ici, à la campagne.",
       "missing_l1": "je",
       "missing_l2": "la",
@@ -283,7 +283,7 @@
     {
       "id": "blank-ma-grand-m-re-habite-la-campagne-et-ma-tante-habite-en-ville",
       "type": "fill-blank",
-      "l1": "Moja babka býva na dedine a moja teta býva v meste.",
+      "l1": "Moja babka býva na vidieku a moja teta býva v meste.",
       "l2": "Ma grand-mère habite à la campagne et ma tante habite en ville.",
       "missing_l1": "na",
       "missing_l2": "la",
@@ -411,7 +411,7 @@
     {
       "id": "listen-c-est-ma-grand-m-re-elle-habite-ici-la-campagne",
       "type": "listen",
-      "l1": "To je moja babka. Býva tu, na dedine.",
+      "l1": "To je moja babka. Býva tu, na vidieku.",
       "l2": "C'est ma grand-mère. Elle habite ici, à la campagne.",
       "choices_l2": [
         "Nous habitons ensemble.",
@@ -619,7 +619,7 @@
     {
       "id": "listen-ma-grand-m-re-habite-la-campagne-et-ma-tante-habite-en-ville",
       "type": "listen",
-      "l1": "Moja babka býva na dedine a moja teta býva v meste.",
+      "l1": "Moja babka býva na vidieku a moja teta býva v meste.",
       "l2": "Ma grand-mère habite à la campagne et ma tante habite en ville.",
       "choices_l2": [
         "Ma sœur est médecin.",
@@ -748,7 +748,7 @@
     {
       "id": "order-c-est-ma-grand-m-re-elle-habite-ici-la-campagne",
       "type": "order",
-      "l1": "To je moja babka. Býva tu, na dedine.",
+      "l1": "To je moja babka. Býva tu, na vidieku.",
       "l2": "C'est ma grand-mère. Elle habite ici, à la campagne.",
       "tokens_l1": [
         "To",
@@ -758,7 +758,7 @@
         "Býva",
         "tu,",
         "na",
-        "dedine.",
+        "vidieku.",
         "Bývam",
         "v",
         "Lyone,",
@@ -1181,14 +1181,14 @@
     {
       "id": "order-ma-grand-m-re-habite-la-campagne-et-ma-tante-habite-en-ville",
       "type": "order",
-      "l1": "Moja babka býva na dedine a moja teta býva v meste.",
+      "l1": "Moja babka býva na vidieku a moja teta býva v meste.",
       "l2": "Ma grand-mère habite à la campagne et ma tante habite en ville.",
       "tokens_l1": [
         "Moja",
         "babka",
         "býva",
         "na",
-        "dedine",
+        "vidieku",
         "a",
         "moja",
         "teta",

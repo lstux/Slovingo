@@ -125,7 +125,7 @@ Pridaním „le“ pred deň sa z jednorazovej udalosti stáva pravidelný zvyk.
 
 **Dni majú pôvod v latinčine a rímskych bohoch.** {{Lundi}} pochádza z „dňa Mesiaca“ (lune), {{mardi}} z boha Marsa, {{mercredi}} z Merkúra. Podobne ako slovenské štvrtok/piatok pomenované číslom, francúzske dni majú vlastnú logiku, len inú — rímsko-mytologickú.
 
-**Nedeľa je vo Francúzsku ešte zatvorenejšia.** Väčšina obchodov je zo zákona zatvorená v nedeľu (s výnimkami ako pekárne alebo menšie obchody), podobne prísne ako na Slovensku, ak nie prísnejšie v niektorých regiónoch.
+**Nedeľa je vo Francúzsku tichá.** Väčšina obchodov má v nedeľu zo zákona zatvorené, s výnimkami: pekárne, potraviny doobeda, turistické zóny. Na Slovensku sú naopak obchody v nedeľu bežne otvorené a zatvárajú len počas niektorých sviatkov.
 
 **Meniny existujú, ale slávia sa menej.** Francúzsky kalendár tiež priraďuje meno ku každému dňu, ale osláviť svoju {{fête}} je oveľa menej rozšírené než na Slovensku.
 

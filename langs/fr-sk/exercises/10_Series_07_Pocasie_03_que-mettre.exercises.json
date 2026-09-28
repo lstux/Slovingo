@@ -227,7 +227,7 @@
     {
       "id": "qcm-je-mets",
       "type": "qcm",
-      "l1": "oblečiem si",
+      "l1": "obliekam si",
       "l2": "je mets",
       "choices_l1": [
         "do",
@@ -243,7 +243,7 @@
     {
       "id": "qcm-tu-mets",
       "type": "qcm",
-      "l1": "oblečieš si",
+      "l1": "obliekaš si",
       "l2": "tu mets",
       "choices_l1": [
         "do lekárne",
@@ -259,7 +259,7 @@
     {
       "id": "qcm-il-elle-met",
       "type": "qcm",
-      "l1": "oblečie si",
+      "l1": "oblieka si",
       "l2": "il / elle met",
       "choices_l1": [
         "Kde",
@@ -275,7 +275,7 @@
     {
       "id": "qcm-nous-mettons",
       "type": "qcm",
-      "l1": "oblečieme si",
+      "l1": "obliekame si",
       "l2": "nous mettons",
       "choices_l1": [
         "do",
@@ -323,7 +323,7 @@
     {
       "id": "qcm-la-cr-me-solaire",
       "type": "qcm",
-      "l1": "krémy na opaľovanie",
+      "l1": "krém na opaľovanie",
       "l2": "la crème solaire",
       "choices_l1": [
         "Dám si quiche.",
@@ -543,7 +543,7 @@
     {
       "id": "blank-mets-quelque-chose-de-chaud",
       "type": "fill-blank",
-      "l1": "Obliecť si niečo teplé!",
+      "l1": "Obleč si niečo teplé!",
       "l2": "Mets quelque chose de chaud !",
       "missing_l1": "si",
       "missing_l2": "de",
@@ -835,7 +835,7 @@
     {
       "id": "listen-mets-quelque-chose-de-chaud",
       "type": "listen",
-      "l1": "Obliecť si niečo teplé!",
+      "l1": "Obleč si niečo teplé!",
       "l2": "Mets quelque chose de chaud !",
       "choices_l2": [
         "Ma tante est professeure et elle travaille beaucoup.",
@@ -1245,10 +1245,10 @@
     {
       "id": "order-mets-quelque-chose-de-chaud",
       "type": "order",
-      "l1": "Obliecť si niečo teplé!",
+      "l1": "Obleč si niečo teplé!",
       "l2": "Mets quelque chose de chaud !",
       "tokens_l1": [
-        "Obliecť",
+        "Obleč",
         "si",
         "niečo",
         "teplé!",

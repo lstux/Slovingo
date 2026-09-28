@@ -143,6 +143,7 @@ Podobne ako zámená le/la/les (priamy predmet), francúzština má aj zámená 
 > très amusant = veľmi zábavné
 + „c'était" je iný minulý čas (imparfait), nie passé composé — používa sa na opis, nie na jednorazový dej. Zatiaľ si len zapamätaj celú frázu.
 
-! Nous avons passé un jour joyeux.
+! Nous avons passé une journée joyeuse.
 > Strávili sme radostný deň.
-> Nous avons passé un jour joyeux = strávili sme radostný deň
+> Nous avons passé une journée joyeuse = strávili sme radostný deň
++ „la journée“ je deň z pohľadu toho, čo sa počas neho deje; preto „passer une journée“, nie „un jour“.

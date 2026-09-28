@@ -60,10 +60,10 @@ Vouloir, devoir a pouvoir sa tvoria rovnako ako slovenské chcieť, musieť a m�
 > Je ne peux pas nager = nemôžem plávať
 > sans palmes = bez plutiev
 
-! Tu as une serviette de plage ? Elle aide contre le sable.
-> Máš osušku? Pomáha proti piesku.
+! Tu as une serviette de plage ? C'est pratique contre le sable.
+> Máš osušku? Na piesok sa hodí.
 > Tu as une serviette de plage = máš osušku
-> elle aide contre le sable = pomáha proti piesku
+> c'est pratique contre le sable = na piesok sa hodí
 
 ! J'ai le seau et le parasol dans le sac.
 > Mám vedierko a slnečník v taške.
@@ -138,9 +138,9 @@ Vouloir, devoir a pouvoir sa tvoria rovnako ako slovenské chcieť, musieť a m�
 > Le sac de couchage est = spací vak je
 > chaud = teplý
 
-! Je sens la fatigue, j'ai besoin de repos.
-> Cítim únavu, potrebujem odpočinok.
-> Je sens la fatigue = cítim únavu
+! Je suis fatigué, j'ai besoin de repos.
+> Som unavený, potrebujem odpočinok.
+> Je suis fatigué = som unavený
 > j'ai besoin de repos = potrebujem odpočinok
 
 ! Je veux me baigner, mais l'eau est froide.

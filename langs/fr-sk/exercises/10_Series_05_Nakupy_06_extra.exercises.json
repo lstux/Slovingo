@@ -1037,46 +1037,6 @@
       ]
     },
     {
-      "id": "blank-j-essaie-ces-chaussures-en-taille-quarante",
-      "type": "fill-blank",
-      "l1": "Skúsim topánky vo veľkosti štyridsať.",
-      "l2": "J'essaie ces chaussures en taille quarante.",
-      "missing_l1": "topánky",
-      "missing_l2": "en",
-      "blank_index_l1": 1,
-      "blank_index_l2": 3,
-      "choices_l1": [
-        "zelená sukňa",
-        "sveter",
-        "šiltovka"
-      ],
-      "choices_l2": [
-        "tu peux",
-        "je dois",
-        "en arrière"
-      ]
-    },
-    {
-      "id": "blank-le-march-a-lieu-le-samedi-le-magasin-est-ouvert-tous-les-jours",
-      "type": "fill-blank",
-      "l1": "Trh je v sobotu, obchod je otvorený každý deň.",
-      "l2": "Le marché a lieu le samedi, le magasin est ouvert tous les jours.",
-      "missing_l1": "je",
-      "missing_l2": "le",
-      "blank_index_l1": 1,
-      "blank_index_l2": 4,
-      "choices_l1": [
-        "na stole",
-        "tiež",
-        "hľadáš"
-      ],
-      "choices_l2": [
-        "je travaille",
-        "s'appelle",
-        "nous pouvons"
-      ]
-    },
-    {
       "id": "blank-cette-couleur-ne-me-pla-t-pas-vous-l-avez-en-bleu",
       "type": "fill-blank",
       "l1": "Nepáči sa mi táto farba. Máte to v modrej?",
@@ -1306,38 +1266,6 @@
         "Platím cestovný lístok kartou, nemám hotovosť.",
         "Dobre. Platím kartou.",
         "Kde je bankomat?"
-      ]
-    },
-    {
-      "id": "listen-j-essaie-ces-chaussures-en-taille-quarante",
-      "type": "listen",
-      "l1": "Skúsim topánky vo veľkosti štyridsať.",
-      "l2": "J'essaie ces chaussures en taille quarante.",
-      "choices_l2": [
-        "Je me lève et j'ouvre la fenêtre.",
-        "À cinq heures.",
-        "J'y vais maintenant."
-      ],
-      "choices_l1": [
-        "Je jedna hodina.",
-        "Sú tri hodiny.",
-        "Chcel by som ísť na pláž aj budúci rok."
-      ]
-    },
-    {
-      "id": "listen-le-march-a-lieu-le-samedi-le-magasin-est-ouvert-tous-les-jours",
-      "type": "listen",
-      "l1": "Trh je v sobotu, obchod je otvorený každý deň.",
-      "l2": "Le marché a lieu le samedi, le magasin est ouvert tous les jours.",
-      "choices_l2": [
-        "Je lave les verres et les assiettes.",
-        "Chloé ! Va dans le jardin.",
-        "Le samedi, il y a un marché."
-      ],
-      "choices_l1": [
-        "Mám rád jeseň, lebo farby sú pekné.",
-        "Chodíme do kaviarne každý deň.",
-        "Ak bude zajtra pekne, pôjdeme sa prechádzať do parku."
       ]
     },
     {
@@ -1734,92 +1662,6 @@
       ]
     },
     {
-      "id": "order-j-essaie-ces-chaussures-en-taille-quarante",
-      "type": "order",
-      "l1": "Skúsim topánky vo veľkosti štyridsať.",
-      "l2": "J'essaie ces chaussures en taille quarante.",
-      "tokens_l1": [
-        "Skúsim",
-        "topánky",
-        "vo",
-        "veľkosti",
-        "štyridsať.",
-        "Chcem",
-        "zľavu,",
-        "lebo",
-        "to",
-        "je",
-        "príliš",
-        "drahé."
-      ],
-      "tokens_l2": [
-        "J'essaie",
-        "ces",
-        "chaussures",
-        "en",
-        "taille",
-        "quarante.",
-        "Je",
-        "veux",
-        "une",
-        "réduction,",
-        "parce",
-        "que",
-        "c'est",
-        "trop",
-        "cher."
-      ]
-    },
-    {
-      "id": "order-le-march-a-lieu-le-samedi-le-magasin-est-ouvert-tous-les-jours",
-      "type": "order",
-      "l1": "Trh je v sobotu, obchod je otvorený každý deň.",
-      "l2": "Le marché a lieu le samedi, le magasin est ouvert tous les jours.",
-      "tokens_l1": [
-        "Trh",
-        "je",
-        "v",
-        "sobotu,",
-        "obchod",
-        "je",
-        "otvorený",
-        "každý",
-        "deň.",
-        "Bankomat",
-        "je",
-        "zatvorený?",
-        "To",
-        "nie",
-        "je",
-        "možné!"
-      ],
-      "tokens_l2": [
-        "Le",
-        "marché",
-        "a",
-        "lieu",
-        "le",
-        "samedi,",
-        "le",
-        "magasin",
-        "est",
-        "ouvert",
-        "tous",
-        "les",
-        "jours.",
-        "Le",
-        "distributeur",
-        "est",
-        "fermé",
-        "?",
-        "Ce",
-        "n'est",
-        "pas",
-        "possible",
-        "!"
-      ]
-    },
-    {
       "id": "order-cette-couleur-ne-me-pla-t-pas-vous-l-avez-en-bleu",
       "type": "order",
       "l1": "Nepáči sa mi táto farba. Máte to v modrej?",
@@ -2078,6 +1920,155 @@
         "jolie,",
         "mais",
         "chère."
+      ]
+    },
+    {
+      "id": "blank-j-essaie-ces-chaussures-en-quarante",
+      "type": "fill-blank",
+      "l1": "Skúsim tieto topánky v štyridsiatke.",
+      "l2": "J'essaie ces chaussures en quarante.",
+      "missing_l1": "v",
+      "missing_l2": "en",
+      "blank_index_l1": 3,
+      "blank_index_l2": 3,
+      "choices_l1": [
+        "sú",
+        "dobrý",
+        "môj"
+      ],
+      "choices_l2": [
+        "je",
+        "du",
+        "veux"
+      ]
+    },
+    {
+      "id": "blank-le-march-a-lieu-chaque-samedi-le-magasin-est-ouvert-tous-les-jours",
+      "type": "fill-blank",
+      "l1": "Trh je každú sobotu, obchod je otvorený každý deň.",
+      "l2": "Le marché a lieu chaque samedi, le magasin est ouvert tous les jours.",
+      "missing_l1": "je",
+      "missing_l2": "le",
+      "blank_index_l1": 1,
+      "blank_index_l2": 6,
+      "choices_l1": [
+        "v",
+        "koľko",
+        "dobrý"
+      ],
+      "choices_l2": [
+        "du",
+        "est",
+        "tu"
+      ]
+    },
+    {
+      "id": "listen-j-essaie-ces-chaussures-en-quarante",
+      "type": "listen",
+      "l1": "Skúsim tieto topánky v štyridsiatke.",
+      "l2": "J'essaie ces chaussures en quarante.",
+      "choices_l1": [
+        "Ako sa voláš?",
+        "Čakám už dvadsať minút.",
+        "Sedím na gauči a čítam knihu."
+      ]
+    },
+    {
+      "id": "listen-le-march-a-lieu-chaque-samedi-le-magasin-est-ouvert-tous-les-jours",
+      "type": "listen",
+      "l1": "Trh je každú sobotu, obchod je otvorený každý deň.",
+      "l2": "Le marché a lieu chaque samedi, le magasin est ouvert tous les jours.",
+      "choices_l1": [
+        "Idem do lekárne.",
+        "Ráno mám čas.",
+        "Skúsim modrú sukňu. Máte veľkosť M?"
+      ]
+    },
+    {
+      "id": "order-j-essaie-ces-chaussures-en-quarante",
+      "type": "order",
+      "l1": "Skúsim tieto topánky v štyridsiatke.",
+      "l2": "J'essaie ces chaussures en quarante.",
+      "tokens_l1": [
+        "Skúsim",
+        "tieto",
+        "topánky",
+        "v",
+        "štyridsiatke.",
+        "Nemám",
+        "peňaženku.",
+        "Je",
+        "doma."
+      ],
+      "tokens_l2": [
+        "J'essaie",
+        "ces",
+        "chaussures",
+        "en",
+        "quarante.",
+        "Je",
+        "n'ai",
+        "pas",
+        "mon",
+        "portefeuille.",
+        "Il",
+        "est",
+        "à",
+        "la",
+        "maison."
+      ]
+    },
+    {
+      "id": "order-le-march-a-lieu-chaque-samedi-le-magasin-est-ouvert-tous-les-jours",
+      "type": "order",
+      "l1": "Trh je každú sobotu, obchod je otvorený každý deň.",
+      "l2": "Le marché a lieu chaque samedi, le magasin est ouvert tous les jours.",
+      "tokens_l1": [
+        "Trh",
+        "je",
+        "každú",
+        "sobotu,",
+        "obchod",
+        "je",
+        "otvorený",
+        "každý",
+        "deň.",
+        "Predavačka",
+        "je",
+        "milá",
+        "a",
+        "obchod",
+        "je",
+        "otvorený",
+        "do",
+        "ôsmej."
+      ],
+      "tokens_l2": [
+        "Le",
+        "marché",
+        "a",
+        "lieu",
+        "chaque",
+        "samedi,",
+        "le",
+        "magasin",
+        "est",
+        "ouvert",
+        "tous",
+        "les",
+        "jours.",
+        "La",
+        "vendeuse",
+        "est",
+        "gentille",
+        "et",
+        "le",
+        "magasin",
+        "est",
+        "ouvert",
+        "jusqu'à",
+        "huit",
+        "heures."
       ]
     }
   ]

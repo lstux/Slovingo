@@ -360,7 +360,7 @@
       "id": "blank-ma-maman-est-professeure",
       "type": "fill-blank",
       "l1": "Moja mama je učiteľka.",
-      "l2": "Ma maman est professeure.",
+      "l2": "Ma mère est professeure.",
       "missing_l1": "je",
       "missing_l2": "est",
       "blank_index_l1": 2,
@@ -632,7 +632,7 @@
       "id": "listen-ma-maman-est-professeure",
       "type": "listen",
       "l1": "Moja mama je učiteľka.",
-      "l2": "Ma maman est professeure.",
+      "l2": "Ma mère est professeure.",
       "choices_l2": [
         "Ma sœur a deux ans.",
         "Qui est-ce ?",
@@ -866,7 +866,7 @@
       "id": "order-ma-maman-est-professeure",
       "type": "order",
       "l1": "Moja mama je učiteľka.",
-      "l2": "Ma maman est professeure.",
+      "l2": "Ma mère est professeure.",
       "tokens_l1": [
         "Moja",
         "mama",
@@ -879,7 +879,7 @@
       ],
       "tokens_l2": [
         "Ma",
-        "maman",
+        "mère",
         "est",
         "professeure.",
         "Moi",

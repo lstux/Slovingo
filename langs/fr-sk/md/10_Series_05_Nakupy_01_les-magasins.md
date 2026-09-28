@@ -97,7 +97,7 @@ Pri „nous achetons“ sa „è“ mení späť na „e“ — bežná pravopis
 
 **Sobotňajší trh, aj tu klasika.** Podobne ako na Slovensku, aj vo francúzskych mestách je {{le marché}} sobotňajším rituálom — čerstvá zelenina, syr od farmára, často priamo na námestí pred kostolom.
 
-**Vratné fľaše prichádzajú aj do Francúzska.** Podobne ako slovenská {{záloha}}, Francúzsko od roku 2023 postupne zavádza systém vratných obalov, {{la consigne}} — zatiaľ však menej rozšírený než na Slovensku.
+**Zálohované fľaše vo Francúzsku nenájdeš.** Slovensko má zálohový systém na plastové fľaše a plechovky od roku 2022. Francúzsko o celoštátnom systéme vratných obalov, {{la consigne}}, dlho diskutovalo, no vláda od neho nakoniec upustila — prázdne fľaše sa tam jednoducho hádžu do žltého kontajnera na triedený odpad.
 
 ---
 

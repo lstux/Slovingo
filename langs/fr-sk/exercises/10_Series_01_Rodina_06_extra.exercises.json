@@ -20,7 +20,7 @@
       "id": "qcm-la-maman",
       "type": "qcm",
       "l1": "mama",
-      "l2": "la maman",
+      "l2": "la mère",
       "choices_l1": [
         "babka",
         "sestra",
@@ -659,7 +659,7 @@
     {
       "id": "qcm-la-campagne",
       "type": "qcm",
-      "l1": "dedina, vidiek",
+      "l1": "vidiek",
       "l2": "la campagne",
       "choices_l1": [
         "práčovňa",
@@ -702,22 +702,6 @@
         "la cour",
         "la terrasse",
         "maison"
-      ]
-    },
-    {
-      "id": "qcm-la-pi-ce-la-chambre",
-      "type": "qcm",
-      "l1": "izba",
-      "l2": "la pièce / la chambre",
-      "choices_l1": [
-        "panelák",
-        "dvere",
-        "záchod"
-      ],
-      "choices_l2": [
-        "dans la chambre",
-        "la salle de bain",
-        "un salon (mužský rod)"
       ]
     },
     {
@@ -1137,46 +1121,6 @@
       ]
     },
     {
-      "id": "blank-quand-est-ton-anniversaire",
-      "type": "fill-blank",
-      "l1": "Kedy máš narodeniny?",
-      "l2": "Quand est ton anniversaire ?",
-      "missing_l1": "máš",
-      "missing_l2": "est",
-      "blank_index_l1": 1,
-      "blank_index_l2": 1,
-      "choices_l1": [
-        "choďte!",
-        "robíš",
-        "umývať"
-      ],
-      "choices_l2": [
-        "tu vas",
-        "nous marcherons",
-        "je"
-      ]
-    },
-    {
-      "id": "blank-mon-p-re-et-ma-maman-habitent-ensemble-la-campagne",
-      "type": "fill-blank",
-      "l1": "Môj otec a moja mama bývajú spolu na dedine.",
-      "l2": "Mon père et ma maman habitent ensemble à la campagne.",
-      "missing_l1": "na",
-      "missing_l2": "la",
-      "blank_index_l1": 7,
-      "blank_index_l2": 8,
-      "choices_l1": [
-        "v dome",
-        "kedy",
-        "naj-"
-      ],
-      "choices_l2": [
-        "le",
-        "je dois",
-        "nous habitons"
-      ]
-    },
-    {
       "id": "blank-quel-est-ton-pr-nom",
       "type": "fill-blank",
       "l1": "Aké je tvoje meno?",
@@ -1194,26 +1138,6 @@
         "est-ce",
         "nous essayons",
         "le plus..."
-      ]
-    },
-    {
-      "id": "blank-ma-grand-m-re-est-vieille-mais-elle-fait-beaucoup-dans-le-jardin",
-      "type": "fill-blank",
-      "l1": "Moja babka je stará, ale robí veľa v záhrade.",
-      "l2": "Ma grand-mère est vieille, mais elle fait beaucoup dans le jardin.",
-      "missing_l1": "je",
-      "missing_l2": "le",
-      "blank_index_l1": 2,
-      "blank_index_l2": 9,
-      "choices_l1": [
-        "teplejší ako",
-        "hľadá",
-        "vonku"
-      ],
-      "choices_l2": [
-        "du",
-        "en",
-        "ensemble"
       ]
     },
     {
@@ -1432,7 +1356,7 @@
       "id": "listen-quand-est-ton-anniversaire",
       "type": "listen",
       "l1": "Kedy máš narodeniny?",
-      "l2": "Quand est ton anniversaire ?",
+      "l2": "C'est quand, ton anniversaire ?",
       "choices_l2": [
         "Quel est ton prénom ?",
         "Ma maison de campagne est loin.",
@@ -1442,22 +1366,6 @@
         "Je to trochu malé. Máte väčšie?",
         "Na stole je pohár a tanier.",
         "Kto je to?"
-      ]
-    },
-    {
-      "id": "listen-mon-p-re-et-ma-maman-habitent-ensemble-la-campagne",
-      "type": "listen",
-      "l1": "Môj otec a moja mama bývajú spolu na dedine.",
-      "l2": "Mon père et ma maman habitent ensemble à la campagne.",
-      "choices_l2": [
-        "Moi, c'est Chloé ! J'ai huit ans.",
-        "J'ai deux enfants. Ils sont petits.",
-        "J'habite dans un immeuble."
-      ],
-      "choices_l1": [
-        "Moji rodičia bývajú na dedine. Sú starí.",
-        "Deti stavajú hrad z piesku.",
-        "Moji rodičia pracujú."
       ]
     },
     {
@@ -1474,22 +1382,6 @@
         "Nemám peňaženku. Je doma.",
         "Fontána je na námestí.",
         "Vstávam a otváram okno."
-      ]
-    },
-    {
-      "id": "listen-ma-grand-m-re-est-vieille-mais-elle-fait-beaucoup-dans-le-jardin",
-      "type": "listen",
-      "l1": "Moja babka je stará, ale robí veľa v záhrade.",
-      "l2": "Ma grand-mère est vieille, mais elle fait beaucoup dans le jardin.",
-      "choices_l2": [
-        "Je suis professeur. Je travaille dans une école.",
-        "Mes parents sont retraités. Ils habitent tout près.",
-        "Les enfants sont dans le jardin."
-      ],
-      "choices_l1": [
-        "Deti sú spokojné, našli všetky vajíčka.",
-        "Mama je v obývačke.",
-        "Mama upiekla koláč."
       ]
     },
     {
@@ -1942,7 +1834,7 @@
       "id": "order-quand-est-ton-anniversaire",
       "type": "order",
       "l1": "Kedy máš narodeniny?",
-      "l2": "Quand est ton anniversaire ?",
+      "l2": "C'est quand, ton anniversaire ?",
       "tokens_l1": [
         "Kedy",
         "máš",
@@ -1958,8 +1850,8 @@
         "záhrade."
       ],
       "tokens_l2": [
-        "Quand",
-        "est",
+        "C'est",
+        "quand,",
         "ton",
         "anniversaire",
         "?",
@@ -1974,46 +1866,6 @@
         "dans",
         "le",
         "jardin."
-      ]
-    },
-    {
-      "id": "order-mon-p-re-et-ma-maman-habitent-ensemble-la-campagne",
-      "type": "order",
-      "l1": "Môj otec a moja mama bývajú spolu na dedine.",
-      "l2": "Mon père et ma maman habitent ensemble à la campagne.",
-      "tokens_l1": [
-        "Môj",
-        "otec",
-        "a",
-        "moja",
-        "mama",
-        "bývajú",
-        "spolu",
-        "na",
-        "dedine.",
-        "Moje",
-        "deti",
-        "sú",
-        "v",
-        "izbe."
-      ],
-      "tokens_l2": [
-        "Mon",
-        "père",
-        "et",
-        "ma",
-        "maman",
-        "habitent",
-        "ensemble",
-        "à",
-        "la",
-        "campagne.",
-        "Mes",
-        "enfants",
-        "sont",
-        "dans",
-        "la",
-        "chambre."
       ]
     },
     {
@@ -2044,45 +1896,6 @@
         "dans",
         "la",
         "chambre."
-      ]
-    },
-    {
-      "id": "order-ma-grand-m-re-est-vieille-mais-elle-fait-beaucoup-dans-le-jardin",
-      "type": "order",
-      "l1": "Moja babka je stará, ale robí veľa v záhrade.",
-      "l2": "Ma grand-mère est vieille, mais elle fait beaucoup dans le jardin.",
-      "tokens_l1": [
-        "Moja",
-        "babka",
-        "je",
-        "stará,",
-        "ale",
-        "robí",
-        "veľa",
-        "v",
-        "záhrade.",
-        "Moja",
-        "sesternica",
-        "sa",
-        "volá",
-        "Mária."
-      ],
-      "tokens_l2": [
-        "Ma",
-        "grand-mère",
-        "est",
-        "vieille,",
-        "mais",
-        "elle",
-        "fait",
-        "beaucoup",
-        "dans",
-        "le",
-        "jardin.",
-        "Ma",
-        "cousine",
-        "s'appelle",
-        "Marie."
       ]
     },
     {
@@ -2124,6 +1937,182 @@
         "et",
         "un",
         "jardin."
+      ]
+    },
+    {
+      "id": "qcm-la-pi-ce",
+      "type": "qcm",
+      "l1": "izba, miestnosť",
+      "l2": "la pièce",
+      "choices_l1": [
+        "priateľ",
+        "päť rokov",
+        "pracuje"
+      ],
+      "choices_l2": [
+        "j'ai",
+        "l'hôpital",
+        "ensemble"
+      ]
+    },
+    {
+      "id": "qcm-la-chambre",
+      "type": "qcm",
+      "l1": "spálňa, izba na spanie",
+      "l2": "la chambre",
+      "choices_l1": [
+        "je mladý / je mladá",
+        "dôchodca / dôchodkyňa",
+        "on / ona je"
+      ],
+      "choices_l2": [
+        "la ville",
+        "l'appartement",
+        "le travail"
+      ]
+    },
+    {
+      "id": "blank-mon-p-re-et-ma-m-re-habitent-ensemble-la-campagne",
+      "type": "fill-blank",
+      "l1": "Môj otec a moja mama bývajú spolu na vidieku.",
+      "l2": "Mon père et ma mère habitent ensemble à la campagne.",
+      "missing_l1": "na",
+      "missing_l2": "la",
+      "blank_index_l1": 7,
+      "blank_index_l2": 8,
+      "choices_l1": [
+        "sa",
+        "ako",
+        "môj"
+      ],
+      "choices_l2": [
+        "pardon",
+        "mes",
+        "mon"
+      ]
+    },
+    {
+      "id": "blank-ma-grand-m-re-est-vieille-mais-elle-travaille-beaucoup-au-jardin",
+      "type": "fill-blank",
+      "l1": "Moja babka je stará, ale veľa pracuje v záhrade.",
+      "l2": "Ma grand-mère est vieille, mais elle travaille beaucoup au jardin.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 2,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "otec",
+        "som",
+        "čo"
+      ],
+      "choices_l2": [
+        "la",
+        "de",
+        "pas"
+      ]
+    },
+    {
+      "id": "listen-mon-p-re-et-ma-m-re-habitent-ensemble-la-campagne",
+      "type": "listen",
+      "l1": "Môj otec a moja mama bývajú spolu na vidieku.",
+      "l2": "Mon père et ma mère habitent ensemble à la campagne.",
+      "choices_l1": [
+        "Moja sestra je lekárka.",
+        "Ahoj priateľ! Čau!",
+        "Kto je to?"
+      ]
+    },
+    {
+      "id": "listen-ma-grand-m-re-est-vieille-mais-elle-travaille-beaucoup-au-jardin",
+      "type": "listen",
+      "l1": "Moja babka je stará, ale veľa pracuje v záhrade.",
+      "l2": "Ma grand-mère est vieille, mais elle travaille beaucoup au jardin.",
+      "choices_l1": [
+        "Mám brata. Má tri roky.",
+        "Moji rodičia pracujú.",
+        "Môj brat býva blízko."
+      ]
+    },
+    {
+      "id": "order-mon-p-re-et-ma-m-re-habitent-ensemble-la-campagne",
+      "type": "order",
+      "l1": "Môj otec a moja mama bývajú spolu na vidieku.",
+      "l2": "Mon père et ma mère habitent ensemble à la campagne.",
+      "tokens_l1": [
+        "Môj",
+        "otec",
+        "a",
+        "moja",
+        "mama",
+        "bývajú",
+        "spolu",
+        "na",
+        "vidieku.",
+        "Môj",
+        "bratranec",
+        "je",
+        "mladý.",
+        "Má",
+        "osemnásť",
+        "rokov."
+      ],
+      "tokens_l2": [
+        "Mon",
+        "père",
+        "et",
+        "ma",
+        "mère",
+        "habitent",
+        "ensemble",
+        "à",
+        "la",
+        "campagne.",
+        "Mon",
+        "cousin",
+        "est",
+        "jeune.",
+        "Il",
+        "a",
+        "dix-huit",
+        "ans."
+      ]
+    },
+    {
+      "id": "order-ma-grand-m-re-est-vieille-mais-elle-travaille-beaucoup-au-jardin",
+      "type": "order",
+      "l1": "Moja babka je stará, ale veľa pracuje v záhrade.",
+      "l2": "Ma grand-mère est vieille, mais elle travaille beaucoup au jardin.",
+      "tokens_l1": [
+        "Moja",
+        "babka",
+        "je",
+        "stará,",
+        "ale",
+        "veľa",
+        "pracuje",
+        "v",
+        "záhrade.",
+        "Moja",
+        "sesternica",
+        "sa",
+        "volá",
+        "Mária."
+      ],
+      "tokens_l2": [
+        "Ma",
+        "grand-mère",
+        "est",
+        "vieille,",
+        "mais",
+        "elle",
+        "travaille",
+        "beaucoup",
+        "au",
+        "jardin.",
+        "Ma",
+        "cousine",
+        "s'appelle",
+        "Marie."
       ]
     }
   ]

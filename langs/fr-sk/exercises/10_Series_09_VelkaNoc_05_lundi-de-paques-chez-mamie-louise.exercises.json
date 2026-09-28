@@ -221,26 +221,6 @@
       ]
     },
     {
-      "id": "blank-on-lui-a-donn-le-plus-bel-uf-elle-l-a-bien-m-rit",
-      "type": "fill-blank",
-      "l1": "Dali sme jej najkrajšie vajíčko, dobre si ho zaslúžila.",
-      "l2": "On lui a donné le plus bel œuf, elle l'a bien mérité.",
-      "missing_l1": "sme",
-      "missing_l2": "le",
-      "blank_index_l1": 1,
-      "blank_index_l2": 4,
-      "choices_l1": [
-        "každý",
-        "oblečiem si",
-        "priamo"
-      ],
-      "choices_l2": [
-        "je voudrais",
-        "pas",
-        "nous buvons"
-      ]
-    },
-    {
       "id": "blank-venez-j-ai-pr-par-le-gigot-on-se-r-unit-table",
       "type": "fill-blank",
       "l1": "Poďte, pripravila som jahňacie stehno. Zíďme sa pri stole!",
@@ -554,22 +534,6 @@
         "Poznáš príliv a odliv?",
         "Jeme ovocie a zeleninu.",
         "Je to veľmi chutné."
-      ]
-    },
-    {
-      "id": "listen-on-lui-a-donn-le-plus-bel-uf-elle-l-a-bien-m-rit",
-      "type": "listen",
-      "l1": "Dali sme jej najkrajšie vajíčko, dobre si ho zaslúžila.",
-      "l2": "On lui a donné le plus bel œuf, elle l'a bien mérité.",
-      "choices_l2": [
-        "On se retrouve samedi à cinq heures moins le quart.",
-        "Cette pomme orange est sucrée.",
-        "La fenêtre est grande."
-      ],
-      "choices_l1": [
-        "Obed je o dvanástej.",
-        "Konečne! Už som schovala vajíčka v záhrade.",
-        "Nechcem víno. Chcem minerálku."
       ]
     },
     {
@@ -1118,49 +1082,6 @@
       ]
     },
     {
-      "id": "order-on-lui-a-donn-le-plus-bel-uf-elle-l-a-bien-m-rit",
-      "type": "order",
-      "l1": "Dali sme jej najkrajšie vajíčko, dobre si ho zaslúžila.",
-      "l2": "On lui a donné le plus bel œuf, elle l'a bien mérité.",
-      "tokens_l1": [
-        "Dali",
-        "sme",
-        "jej",
-        "najkrajšie",
-        "vajíčko,",
-        "dobre",
-        "si",
-        "ho",
-        "zaslúžila.",
-        "Ďakujem,",
-        "Mamie.",
-        "Bol",
-        "to",
-        "krásny",
-        "deň."
-      ],
-      "tokens_l2": [
-        "On",
-        "lui",
-        "a",
-        "donné",
-        "le",
-        "plus",
-        "bel",
-        "œuf,",
-        "elle",
-        "l'a",
-        "bien",
-        "mérité.",
-        "Merci,",
-        "Mamie.",
-        "C'était",
-        "une",
-        "belle",
-        "journée."
-      ]
-    },
-    {
       "id": "order-venez-j-ai-pr-par-le-gigot-on-se-r-unit-table",
       "type": "order",
       "l1": "Poďte, pripravila som jahňacie stehno. Zíďme sa pri stole!",
@@ -1457,6 +1378,89 @@
         "rien",
         "trouvé",
         "!"
+      ]
+    },
+    {
+      "id": "blank-et-chlo-en-a-trouv-trois-on-lui-donne-le-plus-bel-uf-elle-l-a-bien-m-rit",
+      "type": "fill-blank",
+      "l1": "A Chloé našla tri! Dáme jej najkrajšie vajíčko, dobre si ho zaslúžila.",
+      "l2": "Et Chloé en a trouvé trois ! On lui donne le plus bel œuf, elle l'a bien mérité.",
+      "missing_l1": "si",
+      "missing_l2": "le",
+      "blank_index_l1": 9,
+      "blank_index_l2": 10,
+      "choices_l1": [
+        "deň",
+        "ako",
+        "v"
+      ],
+      "choices_l2": [
+        "sur",
+        "ne",
+        "il"
+      ]
+    },
+    {
+      "id": "listen-et-chlo-en-a-trouv-trois-on-lui-donne-le-plus-bel-uf-elle-l-a-bien-m-rit",
+      "type": "listen",
+      "l1": "A Chloé našla tri! Dáme jej najkrajšie vajíčko, dobre si ho zaslúžila.",
+      "l2": "Et Chloé en a trouvé trois ! On lui donne le plus bel œuf, elle l'a bien mérité.",
+      "choices_l1": [
+        "Mám hnedé topánky.",
+        "Deti chcú ovocie.",
+        "Dobre. Platím kartou."
+      ]
+    },
+    {
+      "id": "order-et-chlo-en-a-trouv-trois-on-lui-donne-le-plus-bel-uf-elle-l-a-bien-m-rit",
+      "type": "order",
+      "l1": "A Chloé našla tri! Dáme jej najkrajšie vajíčko, dobre si ho zaslúžila.",
+      "l2": "Et Chloé en a trouvé trois ! On lui donne le plus bel œuf, elle l'a bien mérité.",
+      "tokens_l1": [
+        "A",
+        "Chloé",
+        "našla",
+        "tri!",
+        "Dáme",
+        "jej",
+        "najkrajšie",
+        "vajíčko,",
+        "dobre",
+        "si",
+        "ho",
+        "zaslúžila.",
+        "Ďakujem,",
+        "Mamie.",
+        "Bol",
+        "to",
+        "krásny",
+        "deň."
+      ],
+      "tokens_l2": [
+        "Et",
+        "Chloé",
+        "en",
+        "a",
+        "trouvé",
+        "trois",
+        "!",
+        "On",
+        "lui",
+        "donne",
+        "le",
+        "plus",
+        "bel",
+        "œuf,",
+        "elle",
+        "l'a",
+        "bien",
+        "mérité.",
+        "Merci,",
+        "Mamie.",
+        "C'était",
+        "une",
+        "belle",
+        "journée."
       ]
     }
   ]

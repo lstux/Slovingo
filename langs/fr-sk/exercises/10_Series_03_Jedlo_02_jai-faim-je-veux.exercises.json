@@ -243,7 +243,7 @@
     {
       "id": "qcm-affam",
       "type": "qcm",
-      "l1": "hladný",
+      "l1": "vyhladovaný (silný výraz)",
       "l2": "affamé",
       "choices_l1": [
         "voľný",
@@ -259,7 +259,7 @@
     {
       "id": "qcm-assoiff",
       "type": "qcm",
-      "l1": "smädný",
+      "l1": "vysmädnutý (silný výraz)",
       "l2": "assoiffé",
       "choices_l1": [
         "únava",

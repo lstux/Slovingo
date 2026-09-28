@@ -323,7 +323,7 @@
     {
       "id": "qcm-affam",
       "type": "qcm",
-      "l1": "hladný",
+      "l1": "vyhladovaný (silný výraz)",
       "l2": "affamé",
       "choices_l1": [
         "ticho",
@@ -339,7 +339,7 @@
     {
       "id": "qcm-assoiff",
       "type": "qcm",
-      "l1": "smädný",
+      "l1": "vysmädnutý (silný výraz)",
       "l2": "assoiffé",
       "choices_l1": [
         "mladý",
@@ -641,22 +641,6 @@
       ]
     },
     {
-      "id": "qcm-plaire-au-go-t",
-      "type": "qcm",
-      "l1": "chutiť",
-      "l2": "plaire au goût",
-      "choices_l1": [
-        "jablko",
-        "minerálka",
-        "jablčný mušt"
-      ],
-      "choices_l2": [
-        "la cloche en chocolat",
-        "la crème solaire",
-        "le pain est bon (mužský)"
-      ]
-    },
-    {
       "id": "qcm-go-ter",
       "type": "qcm",
       "l1": "ochutnať",
@@ -931,7 +915,7 @@
     {
       "id": "qcm-le-cidre",
       "type": "qcm",
-      "l1": "jablčný mušt",
+      "l1": "cider (jablkové víno)",
       "l2": "le cidre",
       "choices_l1": [
         "pijeme",
@@ -967,11 +951,11 @@
     {
       "id": "blank-le-cidre-est-sucr-et-froid",
       "type": "fill-blank",
-      "l1": "Jablčný mušt je sladký a studený.",
+      "l1": "Cider je sladký a studený.",
       "l2": "Le cidre est sucré et froid.",
       "missing_l1": "je",
       "missing_l2": "est",
-      "blank_index_l1": 2,
+      "blank_index_l1": 1,
       "blank_index_l2": 2,
       "choices_l1": [
         "oblečieme si",
@@ -1247,11 +1231,11 @@
     {
       "id": "blank-les-cr-pes-sont-bonnes-mais-le-cidre-est-tr-s-fort",
       "type": "fill-blank",
-      "l1": "Palacinky sú dobré, ale jablčný mušt je veľmi silný.",
+      "l1": "Palacinky sú dobré, ale cider je veľmi silný.",
       "l2": "Les crêpes sont bonnes, mais le cidre est très fort.",
       "missing_l1": "je",
       "missing_l2": "le",
-      "blank_index_l1": 6,
+      "blank_index_l1": 5,
       "blank_index_l2": 5,
       "choices_l1": [
         "ale",
@@ -1262,26 +1246,6 @@
         "où",
         "quand",
         "je dois"
-      ]
-    },
-    {
-      "id": "blank-la-quiche-me-pla-t-j-en-veux-encore",
-      "type": "fill-blank",
-      "l1": "Quiche mi chutí. Chcem ešte.",
-      "l2": "La quiche me plaît. J'en veux encore.",
-      "missing_l1": "Chcem",
-      "missing_l2": "veux",
-      "blank_index_l1": 3,
-      "blank_index_l2": 5,
-      "choices_l1": [
-        "robiť",
-        "prechádza sa",
-        "schovať"
-      ],
-      "choices_l2": [
-        "vouloir",
-        "ranger",
-        "avons"
       ]
     },
     {
@@ -1303,7 +1267,7 @@
     {
       "id": "listen-le-cidre-est-sucr-et-froid",
       "type": "listen",
-      "l1": "Jablčný mušt je sladký a studený.",
+      "l1": "Cider je sladký a studený.",
       "l2": "Le cidre est sucré et froid.",
       "choices_l2": [
         "Mes parents sont retraités. Ils habitent tout près.",
@@ -1527,7 +1491,7 @@
     {
       "id": "listen-les-cr-pes-sont-bonnes-mais-le-cidre-est-tr-s-fort",
       "type": "listen",
-      "l1": "Palacinky sú dobré, ale jablčný mušt je veľmi silný.",
+      "l1": "Palacinky sú dobré, ale cider je veľmi silný.",
       "l2": "Les crêpes sont bonnes, mais le cidre est très fort.",
       "choices_l2": [
         "Moi, c'est Chloé ! J'ai huit ans.",
@@ -1538,22 +1502,6 @@
         "Chcete ešte quiche?",
         "Obed je o dvanástej.",
         "Na Bielu sobotu sme ozdobili košík a pripravili jedlo."
-      ]
-    },
-    {
-      "id": "listen-la-quiche-me-pla-t-j-en-veux-encore",
-      "type": "listen",
-      "l1": "Quiche mi chutí. Chcem ešte.",
-      "l2": "La quiche me plaît. J'en veux encore.",
-      "choices_l2": [
-        "Mon frère travaille dans un magasin.",
-        "Mes enfants sont petits.",
-        "Je me lève et j'ouvre la fenêtre."
-      ],
-      "choices_l1": [
-        "Vodu, prosím. Mám smäd.",
-        "Potom je pot-au-feu. Máš rád mäso?",
-        "Syr príde po hlavnom jedle."
       ]
     },
     {
@@ -1607,11 +1555,10 @@
     {
       "id": "order-le-cidre-est-sucr-et-froid",
       "type": "order",
-      "l1": "Jablčný mušt je sladký a studený.",
+      "l1": "Cider je sladký a studený.",
       "l2": "Le cidre est sucré et froid.",
       "tokens_l1": [
-        "Jablčný",
-        "mušt",
+        "Cider",
         "je",
         "sladký",
         "a",
@@ -2111,15 +2058,14 @@
     {
       "id": "order-les-cr-pes-sont-bonnes-mais-le-cidre-est-tr-s-fort",
       "type": "order",
-      "l1": "Palacinky sú dobré, ale jablčný mušt je veľmi silný.",
+      "l1": "Palacinky sú dobré, ale cider je veľmi silný.",
       "l2": "Les crêpes sont bonnes, mais le cidre est très fort.",
       "tokens_l1": [
         "Palacinky",
         "sú",
         "dobré,",
         "ale",
-        "jablčný",
-        "mušt",
+        "cider",
         "je",
         "veľmi",
         "silný.",
@@ -2149,39 +2095,92 @@
       ]
     },
     {
-      "id": "order-la-quiche-me-pla-t-j-en-veux-encore",
+      "id": "qcm-d-licieux-d-licieuse",
+      "type": "qcm",
+      "l1": "výborný, lahodný",
+      "l2": "délicieux / délicieuse",
+      "choices_l1": [
+        "Mám hlad.",
+        "môj brat",
+        "piť vodu"
+      ],
+      "choices_l2": [
+        "petit / petite",
+        "Je prends du vin.",
+        "il est jeune / elle est jeune"
+      ]
+    },
+    {
+      "id": "blank-la-quiche-est-d-licieuse-j-en-veux-encore",
+      "type": "fill-blank",
+      "l1": "Quiche je výborná. Chcem ešte.",
+      "l2": "La quiche est délicieuse. J'en veux encore.",
+      "missing_l1": "je",
+      "missing_l2": "est",
+      "blank_index_l1": 1,
+      "blank_index_l2": 2,
+      "choices_l1": [
+        "áno",
+        "tiež",
+        "pracuje"
+      ],
+      "choices_l2": [
+        "les",
+        "il",
+        "veux"
+      ]
+    },
+    {
+      "id": "listen-la-quiche-est-d-licieuse-j-en-veux-encore",
+      "type": "listen",
+      "l1": "Quiche je výborná. Chcem ešte.",
+      "l2": "La quiche est délicieuse. J'en veux encore.",
+      "choices_l1": [
+        "Kto je to?",
+        "Môj syn je študent. Býva v meste.",
+        "Moji rodičia bývajú na vidieku. Sú starí."
+      ]
+    },
+    {
+      "id": "order-la-quiche-est-d-licieuse-j-en-veux-encore",
       "type": "order",
-      "l1": "Quiche mi chutí. Chcem ešte.",
-      "l2": "La quiche me plaît. J'en veux encore.",
+      "l1": "Quiche je výborná. Chcem ešte.",
+      "l2": "La quiche est délicieuse. J'en veux encore.",
       "tokens_l1": [
         "Quiche",
-        "mi",
-        "chutí.",
+        "je",
+        "výborná.",
         "Chcem",
         "ešte.",
-        "Dám",
-        "si",
-        "polievku",
+        "Na",
+        "raňajky",
+        "jem",
+        "vajce",
         "a",
-        "potom",
-        "pot-au-feu."
+        "chlieb",
+        "s",
+        "maslom."
       ],
       "tokens_l2": [
         "La",
         "quiche",
-        "me",
-        "plaît.",
+        "est",
+        "délicieuse.",
         "J'en",
         "veux",
         "encore.",
-        "Je",
-        "prends",
-        "une",
-        "soupe",
-        "et",
-        "ensuite",
+        "Au",
+        "petit-déjeuner,",
+        "je",
+        "mange",
         "un",
-        "pot-au-feu."
+        "œuf",
+        "et",
+        "du",
+        "pain",
+        "avec",
+        "du",
+        "beurre."
       ]
     }
   ]

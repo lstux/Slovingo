@@ -45,11 +45,11 @@ Eric a Marek si už tykajú.
 > Tout droit et à gauche = rovno a vľavo
 > et ensuite = a potom
 
-! 👨 Tu verras une église. Le musée est après le coin, à côté de l'église.
+! 👨 Tu verras une église. Le musée est au coin de la rue, à côté de l'église.
 > Uvidíš kostol. Múzeum je za rohom, vedľa kostola.
 > Tu verras = uvidíš
 > une église = kostol
-> le musée est après le coin = múzeum je za rohom
+> le musée est au coin de la rue = múzeum je za rohom
 > à côté de l'église = vedľa kostola
 
 ! 👦 C'est loin à pied ?

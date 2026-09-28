@@ -65,22 +65,6 @@
       ]
     },
     {
-      "id": "qcm-apr-s-le-coin",
-      "type": "qcm",
-      "l1": "za rohom",
-      "l2": "après le coin",
-      "choices_l1": [
-        "banka",
-        "chodník",
-        "roh"
-      ],
-      "choices_l2": [
-        "dans le parc",
-        "les transports en commun",
-        "à la pharmacie (à + la)"
-      ]
-    },
-    {
       "id": "qcm-continuer",
       "type": "qcm",
       "l1": "pokračovať",
@@ -174,22 +158,6 @@
         "J'ai teint des œufs.",
         "il / elle voit",
         "il / elle travaille"
-      ]
-    },
-    {
-      "id": "qcm-c-est-apr-s-le-coin",
-      "type": "qcm",
-      "l1": "Je to za rohom.",
-      "l2": "C'est après le coin.",
-      "choices_l1": [
-        "Je to dobré.",
-        "Urobila jahňacie stehno, a zostala v kuchyni celé poobedie.",
-        "Dám si víno."
-      ],
-      "choices_l2": [
-        "sur le pont",
-        "Nous sommes allés à l'église.",
-        "après le coin"
       ]
     },
     {
@@ -393,26 +361,6 @@
       ]
     },
     {
-      "id": "blank-c-est-apr-s-le-coin",
-      "type": "fill-blank",
-      "l1": "Je to za rohom.",
-      "l2": "C'est après le coin.",
-      "missing_l1": "to",
-      "missing_l2": "le",
-      "blank_index_l1": 1,
-      "blank_index_l2": 2,
-      "choices_l1": [
-        "je",
-        "k",
-        "tú"
-      ],
-      "choices_l2": [
-        "au",
-        "nous voyons",
-        "du"
-      ]
-    },
-    {
       "id": "blank-va-droite-pas-gauche",
       "type": "fill-blank",
       "l1": "Choď vpravo, nie vľavo!",
@@ -553,26 +501,6 @@
       ]
     },
     {
-      "id": "blank-la-banque-est-c-t-du-mus-e-apr-s-le-coin",
-      "type": "fill-blank",
-      "l1": "Banka je vedľa múzea, za rohom.",
-      "l2": "La banque est à côté du musée, après le coin.",
-      "missing_l1": "je",
-      "missing_l2": "le",
-      "blank_index_l1": 1,
-      "blank_index_l2": 8,
-      "choices_l1": [
-        "ale",
-        "v dome",
-        "ja"
-      ],
-      "choices_l2": [
-        "ça",
-        "nous buvons",
-        "as"
-      ]
-    },
-    {
       "id": "blank-au-carrefour-tournez-droite",
       "type": "fill-blank",
       "l1": "Na križovatke choďte vpravo.",
@@ -705,22 +633,6 @@
       ]
     },
     {
-      "id": "listen-c-est-apr-s-le-coin",
-      "type": "listen",
-      "l1": "Je to za rohom.",
-      "l2": "C'est après le coin.",
-      "choices_l2": [
-        "C'est ma grand-mère. Elle habite ici, à la campagne.",
-        "Quelle est la date aujourd'hui ? Regarde le calendrier.",
-        "Marek, tu es libre lundi ?"
-      ],
-      "choices_l1": [
-        "V sobotu a v nedeľu som doma.",
-        "Vidíš tú fontánu na námestí?",
-        "Chodím do školy pešo."
-      ]
-    },
-    {
       "id": "listen-va-droite-pas-gauche",
       "type": "listen",
       "l1": "Choď vpravo, nie vľavo!",
@@ -836,7 +748,7 @@
       "id": "listen-la-banque-est-c-t-du-mus-e-apr-s-le-coin",
       "type": "listen",
       "l1": "Banka je vedľa múzea, za rohom.",
-      "l2": "La banque est à côté du musée, après le coin.",
+      "l2": "La banque est à côté du musée, au coin de la rue.",
       "choices_l2": [
         "Six heures et demie, c'est six heures trente ?",
         "Alors viens tôt !",
@@ -981,30 +893,6 @@
         "puis",
         "à",
         "gauche.",
-        "Retournez",
-        "en",
-        "arrière."
-      ]
-    },
-    {
-      "id": "order-c-est-apr-s-le-coin",
-      "type": "order",
-      "l1": "Je to za rohom.",
-      "l2": "C'est après le coin.",
-      "tokens_l1": [
-        "Je",
-        "to",
-        "za",
-        "rohom.",
-        "Vráťte",
-        "sa",
-        "naspäť."
-      ],
-      "tokens_l2": [
-        "C'est",
-        "après",
-        "le",
-        "coin.",
         "Retournez",
         "en",
         "arrière."
@@ -1222,7 +1110,7 @@
       "id": "order-la-banque-est-c-t-du-mus-e-apr-s-le-coin",
       "type": "order",
       "l1": "Banka je vedľa múzea, za rohom.",
-      "l2": "La banque est à côté du musée, après le coin.",
+      "l2": "La banque est à côté du musée, au coin de la rue.",
       "tokens_l1": [
         "Banka",
         "je",
@@ -1244,9 +1132,11 @@
         "côté",
         "du",
         "musée,",
-        "après",
-        "le",
-        "coin.",
+        "au",
+        "coin",
+        "de",
+        "la",
+        "rue.",
         "Allez",
         "tout",
         "droit,",
@@ -1399,6 +1289,99 @@
         "après",
         "le",
         "coin."
+      ]
+    },
+    {
+      "id": "qcm-au-coin-de-la-rue",
+      "type": "qcm",
+      "l1": "za rohom, na rohu ulice",
+      "l2": "au coin de la rue",
+      "choices_l1": [
+        "To je lacné.",
+        "V pondelky (zvyčajne) pracujem.",
+        "Stojí to päť eur."
+      ],
+      "choices_l2": [
+        "dans la rue",
+        "il / elle boit",
+        "l'étudiant / l'étudiante"
+      ]
+    },
+    {
+      "id": "qcm-c-est-au-coin-de-la-rue",
+      "type": "qcm",
+      "l1": "Je to za rohom.",
+      "l2": "C'est au coin de la rue.",
+      "choices_l1": [
+        "Prídem. (doslova: „idem prísť“)",
+        "jedlá sú dobré",
+        "Dám si pivo."
+      ],
+      "choices_l2": [
+        "au marché (à + le)",
+        "Il y a une table.",
+        "D'habitude, je vais au travail en bus. (zvyk)"
+      ]
+    },
+    {
+      "id": "blank-c-est-juste-au-coin-de-la-rue",
+      "type": "fill-blank",
+      "l1": "Je to za rohom.",
+      "l2": "C'est juste au coin de la rue.",
+      "missing_l1": "to",
+      "missing_l2": "la",
+      "blank_index_l1": 1,
+      "blank_index_l2": 5,
+      "choices_l1": [
+        "býva",
+        "chcem",
+        "môj"
+      ],
+      "choices_l2": [
+        "mon",
+        "sont",
+        "veux"
+      ]
+    },
+    {
+      "id": "listen-c-est-juste-au-coin-de-la-rue",
+      "type": "listen",
+      "l1": "Je to za rohom.",
+      "l2": "C'est juste au coin de la rue.",
+      "choices_l1": [
+        "V kuchyni je stolička.",
+        "Marek, si voľný v pondelok?",
+        "Comment ça va ?"
+      ]
+    },
+    {
+      "id": "order-c-est-juste-au-coin-de-la-rue",
+      "type": "order",
+      "l1": "Je to za rohom.",
+      "l2": "C'est juste au coin de la rue.",
+      "tokens_l1": [
+        "Je",
+        "to",
+        "za",
+        "rohom.",
+        "Na",
+        "križovatke",
+        "choďte",
+        "vpravo."
+      ],
+      "tokens_l2": [
+        "C'est",
+        "juste",
+        "au",
+        "coin",
+        "de",
+        "la",
+        "rue.",
+        "Au",
+        "carrefour,",
+        "tournez",
+        "à",
+        "droite."
       ]
     }
   ]
