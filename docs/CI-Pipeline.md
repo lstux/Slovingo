@@ -87,7 +87,12 @@ python3 src/sync_exercises.py --lang-dir langs/fr-sk --apply    # écrit
   l'endroit ;
 - les autres sont retirés, et les nouvelles phrases reçoivent les
   exercices générés automatiquement (à relire : leurs distracteurs sont
-  automatiques).
+  automatiques) ;
+- dans les exercices « remettre dans l'ordre », les mots parasites
+  (une autre phrase de la fiche, mélangée aux mots de la phrase cible)
+  sont remis à jour quand cette phrase n'existe plus telle quelle : on
+  prend sa nouvelle version si on la reconnaît, sinon la phrase de la
+  fiche qui partage le moins de mots avec la phrase cible.
 
 Réglage par fichier, avec une clé `"sync"` au premier niveau du fichier :
 

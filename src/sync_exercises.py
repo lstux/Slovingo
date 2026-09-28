@@ -32,6 +32,12 @@ For every sheet with a manual exercises file:
   exercises, a generated one is added when it contains such a pair
   and a manual "match" was dropped.
 
+- "put the words in order" exercises whose parasite words (the extra
+  sentence mixed into their tokens) are no longer one of the sheet's
+  sentences get a current one: the edited version of the same
+  sentence when it can be identified, otherwise the sheet sentence
+  sharing the fewest words with the target.
+
 Pairs that were deliberately left without any exercise in a manual
 file are not touched: only pairs that are genuinely new to the file
 get generated exercises.
@@ -177,6 +183,88 @@ def update_in_place(ex: dict[str, Any], known: set[tuple[str, str]]) -> dict[str
     return new
 
 
+def _split_order_tokens(tokens: list[str], text: str) -> tuple[list[str], list[str]] | None:
+    """Split an order exercise's tokens into (target tokens, parasite
+    tokens): the leading tokens that spell `text` (possibly regrouped
+    into multi-word chips), and whatever follows. None if the tokens
+    don't start with `text`."""
+    acc = []
+    for i, tok in enumerate(tokens):
+        acc.append(tok)
+        if " ".join(acc).split() == text.split():
+            return tokens[:i + 1], tokens[i + 1:]
+    return None
+
+
+def sentence_pairs(record: dict[str, Any]) -> set[tuple[str, str]]:
+    """The sheet's audio-card sentences long enough to serve as an order
+    exercise's parasite -- the same pool generate_order() draws from."""
+    pairs = set()
+    for s in record["sentences"]:
+        l1, l2 = s["l1"].strip(), s["l2"].strip()
+        if len(sx.tokenize(l1)) >= sx.MIN_TOKENS_FOR_BLANK and len(sx.tokenize(l2)) >= sx.MIN_TOKENS_FOR_BLANK:
+            pairs.add((l1, l2))
+    return pairs
+
+
+def refresh_parasite(ex: dict[str, Any], pool: set[tuple[str, str]], rng: random.Random) -> dict[str, Any] | None:
+    """A copy of order exercise `ex` whose parasite words (the extra
+    sentence mixed into its tokens) are taken from the sheet's current
+    text, or None when nothing needs to change.
+
+    The parasite is kept when it is still one of the sheet's sentences;
+    when only one of its sides was edited, it follows the edit (same
+    rule as resolve_pair()); otherwise it is replaced by another
+    sentence of the sheet, picked among those sharing the fewest words
+    with the target -- a parasite that repeats the target's own words
+    makes the exercise confusing rather than harder."""
+    if ex.get("type") != "order":
+        return None
+    split1 = _split_order_tokens(ex.get("tokens_l1") or [], ex["l1"])
+    split2 = _split_order_tokens(ex.get("tokens_l2") or [], ex["l2"])
+    if split1 is None or split2 is None:
+        return None
+    parasite = (" ".join(split1[1]), " ".join(split2[1]))
+    if not parasite[0] and not parasite[1]:
+        return None  # target alone, on purpose
+    if parasite in pool:
+        return None
+    target_pair = (ex["l1"], ex["l2"])
+    candidates = sorted(p for p in pool if p != target_pair)
+    replacement = resolve_pair(parasite, pool)
+    if replacement is None or replacement == target_pair:
+        if not candidates:
+            return None
+        target_words = {w.lower() for w in sx.tokenize(ex["l2"])}
+
+        def overlap(pair: tuple[str, str]) -> int:
+            return len(target_words & {w.lower() for w in sx.tokenize(pair[1])})
+
+        fewest = min(overlap(p) for p in candidates)
+        replacement = rng.choice([p for p in candidates if overlap(p) == fewest])
+    new = json.loads(json.dumps(ex))
+    new["tokens_l1"] = split1[0] + sx.tokenize(replacement[0])
+    new["tokens_l2"] = split2[0] + sx.tokenize(replacement[1])
+    return new
+
+
+def refresh_parasites(record: dict[str, Any], exercises: list[dict[str, Any]], rng: random.Random) -> tuple[list[dict[str, Any]], list]:
+    """Apply refresh_parasite() to every order exercise of a manual file
+    (not "off", not "append"). Returns (new list, [(old, new), ...])."""
+    if record.get("manual_mode") == "append" or record.get("manual_sync") == "off":
+        return exercises, []
+    pool = sentence_pairs(record)
+    out, changed = [], []
+    for ex in exercises:
+        fixed = refresh_parasite(ex, pool, rng)
+        if fixed is None:
+            out.append(ex)
+        else:
+            out.append(fixed)
+            changed.append((ex, fixed))
+    return out, changed
+
+
 def sync_record(record: dict[str, Any], generated: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list, list, list]:
     """Return (new exercise list, dropped, added, updated) for one
     sheet with a manual exercises file. `updated` holds (old, new)."""
@@ -242,21 +330,28 @@ def main() -> None:
     auto_records = [dict(r, manual_exercises=None, manual_mode="replace") for r in records]
     generated = sx.build_exercises_for_corpus(auto_records)
 
-    total_dropped = total_added = total_updated = changed_files = 0
+    total_dropped = total_added = total_updated = total_parasites = changed_files = 0
+    # Parasite replacements use their own generator, so that they don't
+    # shift the generated distractors of a given --seed.
+    rng = random.Random(args.seed)
     for record in records:
         if not record.get("manual_exercises") or not record.get("manual_path"):
             continue
         new_list, dropped, added, updated = sync_record(record, generated[record["id"]]["exercises"])
-        if not dropped and not updated:
+        new_list, reparasited = refresh_parasites(record, new_list, rng)
+        if not dropped and not updated and not reparasited:
             continue
         changed_files += 1
         total_dropped += len(dropped)
         total_added += len(added)
         total_updated += len(updated)
+        total_parasites += len(reparasited)
         path = Path(record["manual_path"])
-        print(f"\n{path}: ~{len(updated)} updated / -{len(dropped)} / +{len(added)}")
+        print(f"\n{path}: ~{len(updated)} updated / -{len(dropped)} / +{len(added)} / {len(reparasited)} parasite(s)")
         for old, new in updated:
             print(f"  ~ {old.get('type'):11} {old.get('id')}")
+        for old, new in reparasited:
+            print(f"  p {old.get('type'):11} {old.get('id')}")
         for ex in dropped:
             print(f"  - {ex.get('type'):11} {ex.get('id')}")
         for ex in added:
@@ -269,7 +364,8 @@ def main() -> None:
 
     verb = "Updated" if args.apply else "Would update"
     print(f"\n{verb} {changed_files} file(s): {total_updated} exercise(s) updated in place, "
-          f"{total_dropped} stale exercise(s) dropped, {total_added} generated exercise(s) added.")
+          f"{total_dropped} stale exercise(s) dropped, {total_added} generated exercise(s) added, "
+          f"{total_parasites} order parasite(s) refreshed.")
     if not args.apply and changed_files:
         print("Dry run -- pass --apply to write.")
 

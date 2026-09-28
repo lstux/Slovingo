@@ -632,8 +632,8 @@
         "zlej",
         "zastávke.",
         "Marek!",
-        "Som",
-        "stratený."
+        "Zablúdil",
+        "som."
       ]
     },
     {
@@ -656,8 +656,7 @@
         "Le",
         "musée",
         "est",
-        "après",
-        "le",
+        "au",
         "coin,",
         "à",
         "côté",
@@ -1005,21 +1004,25 @@
         "pour",
         "l'aide",
         "!",
-        "De",
-        "rien.",
-        "À",
-        "bientôt",
-        "!"
+        "J'irai",
+        "à",
+        "pied.",
+        "Je",
+        "veux",
+        "voir",
+        "la",
+        "ville."
       ],
       "tokens_l2": [
         "Dobre.",
         "Ďakujem",
         "za",
         "pomoc!",
-        "Nemáš",
-        "za",
-        "čo.",
-        "Dovidenia!"
+        "Pôjdem",
+        "pešo.",
+        "Chcem",
+        "vidieť",
+        "mesto."
       ]
     },
     {

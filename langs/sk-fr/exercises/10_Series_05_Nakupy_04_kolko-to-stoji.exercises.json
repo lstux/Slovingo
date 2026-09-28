@@ -910,27 +910,22 @@
         "ça",
         "coûte",
         "?",
-        "J'essaie",
-        "la",
-        "jupe",
-        "bleue.",
-        "Vous",
-        "avez",
-        "la",
-        "taille",
-        "M",
-        "?"
+        "Je",
+        "paie",
+        "en",
+        "liquide,",
+        "pas",
+        "par",
+        "carte."
       ],
       "tokens_l2": [
         "Koľko",
         "to",
         "stojí?",
-        "Skúsim",
-        "modrú",
-        "sukňu.",
-        "Máte",
-        "veľkosť",
-        "M?"
+        "Platím",
+        "hotovosťou,",
+        "nie",
+        "kartou."
       ]
     },
     {
@@ -1054,27 +1049,18 @@
         "les",
         "chaussures",
         "?",
-        "J'essaie",
-        "la",
-        "jupe",
-        "bleue.",
-        "Vous",
-        "avez",
-        "la",
-        "taille",
-        "M",
-        "?"
+        "C'est",
+        "en",
+        "promotion."
       ],
       "tokens_l2": [
         "Koľko",
         "stoja",
         "topánky?",
-        "Skúsim",
-        "modrú",
-        "sukňu.",
-        "Máte",
-        "veľkosť",
-        "M?"
+        "Je",
+        "to",
+        "v",
+        "akcii."
       ]
     },
     {
@@ -1146,15 +1132,13 @@
         "C'est",
         "cher",
         "!",
-        "J'essaie",
-        "la",
-        "jupe",
-        "bleue.",
         "Vous",
-        "avez",
-        "la",
-        "taille",
-        "M",
+        "payez",
+        "par",
+        "carte",
+        "ou",
+        "en",
+        "liquide",
         "?"
       ],
       "tokens_l2": [
@@ -1165,12 +1149,10 @@
         "To",
         "je",
         "drahé!",
-        "Skúsim",
-        "modrú",
-        "sukňu.",
-        "Máte",
-        "veľkosť",
-        "M?"
+        "Platíte",
+        "kartou",
+        "alebo",
+        "hotovosťou?"
       ]
     },
     {

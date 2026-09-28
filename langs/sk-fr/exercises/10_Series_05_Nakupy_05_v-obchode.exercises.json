@@ -846,18 +846,23 @@
         "paie",
         "par",
         "carte.",
-        "Quelle",
-        "couleur",
-        "veux-tu",
-        "?"
+        "Le",
+        "magasin",
+        "est",
+        "ouvert",
+        "jusqu'à",
+        "sept",
+        "heures."
       ],
       "tokens_l2": [
         "Dobre.",
         "Platím",
         "kartou.",
-        "Akú",
-        "farbu",
-        "chceš?"
+        "Obchod",
+        "je",
+        "otvorený",
+        "do",
+        "siedmej."
       ]
     },
     {
@@ -875,15 +880,10 @@
         "elles",
         "sont",
         "chères.",
-        "Ce",
-        "tee-shirt",
-        "bleu",
-        "est",
-        "joli.",
-        "Vous",
-        "voulez",
-        "essayer",
-        "?"
+        "Oui,",
+        "taille",
+        "XL.",
+        "Tenez."
       ],
       "tokens_l2": [
         "Chcem",
@@ -892,13 +892,12 @@
         "ale",
         "sú",
         "drahé.",
-        "Toto",
-        "modré",
-        "tričko",
-        "je",
-        "pekné.",
-        "Chcete",
-        "skúsiť?"
+        "Áno,",
+        "veľkosť",
+        "XL.",
+        "Nech",
+        "sa",
+        "páči."
       ]
     },
     {
@@ -914,14 +913,15 @@
         "autre",
         "couleur",
         "?",
-        "C'est",
-        "bon",
-        "marché",
-        "!",
-        "Achète",
-        "aussi",
-        "le",
-        "vert."
+        "Ce",
+        "tee-shirt",
+        "bleu",
+        "est",
+        "joli.",
+        "Vous",
+        "voulez",
+        "l'essayer",
+        "?"
       ],
       "tokens_l2": [
         "Máte",
@@ -929,14 +929,15 @@
         "v",
         "inej",
         "farbe?",
-        "To",
+        "Toto",
+        "modré",
+        "tričko",
         "je",
-        "lacné!",
-        "Kúp",
+        "pekné.",
+        "Chcete",
         "si",
-        "aj",
-        "to",
-        "zelené."
+        "ho",
+        "skúsiť?"
       ]
     },
     {

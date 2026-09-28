@@ -950,32 +950,22 @@
         "les",
         "balisages",
         "attentivement.",
-        "Nous",
-        "pouvons",
-        "suivre",
-        "le",
-        "vert,",
+        "Ici",
         "il",
-        "est",
-        "plus",
-        "facile",
-        "que",
-        "le",
-        "bleu."
+        "y",
+        "a",
+        "interdiction",
+        "d'entrer."
       ],
       "tokens_l2": [
         "Musíme",
         "sledovať",
         "značky",
         "pozorne.",
-        "Môžeme",
-        "ísť",
-        "po",
-        "zelenej,",
+        "Tu",
         "je",
-        "ľahšia",
-        "ako",
-        "modrá."
+        "zákaz",
+        "vstupu."
       ]
     },
     {
@@ -1176,25 +1166,22 @@
         "a",
         "interdiction",
         "d'entrer.",
-        "Le",
-        "balisage",
-        "vert",
-        "est",
-        "court",
-        "et",
-        "facile."
+        "Nous",
+        "devons",
+        "suivre",
+        "les",
+        "balisages",
+        "attentivement."
       ],
       "tokens_l2": [
         "Tu",
         "je",
         "zákaz",
         "vstupu.",
-        "Zelená",
-        "značka",
-        "je",
-        "krátka",
-        "a",
-        "ľahká."
+        "Musíme",
+        "sledovať",
+        "značky",
+        "pozorne."
       ]
     },
     {
@@ -1216,13 +1203,12 @@
         "vaut",
         "la",
         "peine.",
-        "Le",
-        "balisage",
-        "vert",
-        "est",
-        "court",
-        "et",
-        "facile."
+        "Nous",
+        "devons",
+        "suivre",
+        "les",
+        "balisages",
+        "attentivement."
       ],
       "tokens_l2": [
         "Trasa",
@@ -1235,12 +1221,10 @@
         "stojí",
         "za",
         "to.",
-        "Zelená",
-        "značka",
-        "je",
-        "krátka",
-        "a",
-        "ľahká."
+        "Musíme",
+        "sledovať",
+        "značky",
+        "pozorne."
       ]
     },
     {
