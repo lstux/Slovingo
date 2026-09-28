@@ -37,12 +37,12 @@ On assemble **les dizaines et les unités en un seul mot** :
 | 100 | {{sto}} | sto |
 | 200 | {{dvesto}} | dves-to |
 | 300 | {{tristo}} | tris-to |
-| 400 | {{štyristo}} | chteu-ris-to |
+| 400 | {{štyristo}} | chti-ri-sto |
 | 500 | {{päťsto}} | päť-sto |
 | 600 | {{šesťsto}} | chechť-sto |
 | 700 | {{sedemsto}} | se-dem-sto |
 | 800 | {{osemsto}} | o-sem-sto |
-| 900 | {{deväťsto}} | de-vaïté-sto |
+| 900 | {{deväťsto}} | dé-vèť-sto |
 
 ### 🧩 Nombres de 101 à 999
 
@@ -88,7 +88,7 @@ On met le nombre **devant** {{tisíc}} :
 - **12 345** = {{dvanásťtisíc tristo štyridsaťpäť}}
 - **99 999** = {{deväťdesiatdeväťtisíc deväťsto deväťdesiatdeväť}}
 - **100 000** = {{stotisíc}}
-- **250 000** = {{dvesto päťdesiat tisíc}}
+- **250 000** = {{dvestopäťdesiattisíc}}
 
 ---
 

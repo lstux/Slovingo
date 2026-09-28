@@ -13,7 +13,7 @@
 | vysoký / vysoká | haut(e), grand(e) (pour une personne) |
 | nízky / nízka | bas(se), petit(e) (pour une personne) |
 
-+ Pour parler de la taille d'une personne, on utilise "vysoký/vysoká" (grand) et "nízky/nízka" (petit), différents de "veľký/malý" utilisés pour les objets.
+> 💡 Pour parler de la taille d'une personne, on utilise "vysoký/vysoká" (grand) et "nízky/nízka" (petit), différents de "veľký/malý" utilisés pour les objets.
 
 ---
 
@@ -44,7 +44,7 @@
 > Cette fille est très grande.
 > tá dievčina = cette fille · veľmi vysoká = très grande
 
-+ "aký/aká/aké" (comment, quel) s'accorde en genre avec le nom qu'il qualifie, tout comme la réponse qui suit.
+> 💡 "aký/aká/aké" (comment, quel) s'accorde en genre avec le nom qu'il qualifie, tout comme la réponse qui suit.
 
 ! Toto mesto je staré, ale veľmi pekné.
 > Cette ville est vieille mais très belle.

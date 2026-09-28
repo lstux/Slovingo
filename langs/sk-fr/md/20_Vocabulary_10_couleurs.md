@@ -44,7 +44,7 @@ Exemples concrets :
 
 ## 3. Décrire des objets
 
-! Aký je to farba?
+! Aká je to farba?
 > Quelle est cette couleur ?
 
 ! Toto tričko je modré.
@@ -55,7 +55,7 @@ Exemples concrets :
 > J'ai un sac noir.
 > mám = j'ai · čiernu = noire (accusatif féminin) · tašku = sac (féminin)
 
-+ L'adjectif se met aussi à l'accusatif quand il complète un verbe comme "avoir" : čierna devient čiernu.
+> 💡 L'adjectif se met aussi à l'accusatif quand il complète un verbe comme "avoir" : čierna devient čiernu.
 
 ! Máte to aj v inej farbe?
 > Vous l'avez aussi dans une autre couleur ?
@@ -78,7 +78,7 @@ Exemples concrets :
 - {{svetlozelený}} = vert clair
 - {{tmavozelený}} = vert foncé
 
-+ On colle simplement "svetlo-" ou "tmavo-" devant la couleur, en un seul mot.
+> 💡 On colle simplement "svetlo-" ou "tmavo-" devant la couleur, en un seul mot.
 
 ---
 

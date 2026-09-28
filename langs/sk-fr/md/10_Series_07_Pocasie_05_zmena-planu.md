@@ -35,10 +35,10 @@ Andrea et Ján se tutoient.
 > na turistiku = randonner
 + « mali sme » est le passé de *mať* au pluriel. Retiens la formule pour l'instant.
 
-! 👩 Ja viem. Musíme meniť plán.
+! 👩 Ja viem. Musíme zmeniť plán.
 > Je sais. Nous devons changer de plan.
 > Ja viem = je sais
-> Musíme meniť = nous devons changer
+> Musíme zmeniť = nous devons changer
 > plán = de plan
 
 ! 🧒 Ak bude pršať, čo urobíme?
@@ -53,10 +53,10 @@ Andrea et Ján se tutoient.
 > do múzea = au musée
 > Je vnútri = c'est à l'intérieur
 
-! 🧒 Dobrý nápad. A pozerajme, či bude lepšie počasie na víkend.
+! 🧒 Dobrý nápad. A pozrime sa, či bude lepšie počasie na víkend.
 > Bonne idée. Et regardons si le temps sera meilleur pour le week-end.
 > Dobrý nápad = bonne idée
-> pozerajme = regardons
+> pozrime sa = regardons
 > či = si (indirect)
 > bude lepšie počasie = le temps sera meilleur
 > na víkend = pour le week-end

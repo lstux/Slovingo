@@ -26,8 +26,8 @@ La coutume la plus déroutante de Pâques en Slovaquie : le lundi de Pâques, ga
 
 | Slovaque | Français |
 |----------|----------|
-| Poliali ma vodou. | Ils m'ont arrosé d'eau. |
-| Šibal ma sused. | Le voisin m'a fouetté (symboliquement). |
+| Poliali ma vodou. | Ils m'ont arrosée d'eau. |
+| Šibal ma sused. | Le voisin m'a fouettée (symboliquement). |
 | Dala som im vajíčka. | Je leur ai donné des œufs. |
 
 ### Donner une récompense
@@ -51,8 +51,8 @@ Après « dať » (donner), la personne qui reçoit se met au datif : *chlapcom*
 > dievčatá = aux filles
 
 ! Poliali ma vodou.
-> Ils m'ont arrosé d'eau.
-> Poliali ma = ils m'ont arrosé
+> Ils m'ont arrosée d'eau.
+> Poliali ma = ils m'ont arrosée
 > vodou = d'eau
 
 ! Dala som im vajíčka ako odmenu.

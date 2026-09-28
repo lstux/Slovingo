@@ -112,11 +112,11 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 > odpočívať v chate = nous reposer au refuge
 > a mať teplý čaj = et avoir un thé chaud
 
-! Modrá značka je ľahšia ako červená, ale dlhšia.
-> Le balisage bleu est plus facile que le rouge, mais plus long.
-> Modrá značka = le balisage bleu
+! Trasa po modrej je ľahšia ako po červenej, ale dlhšia.
+> Le parcours par le bleu est plus facile que par le rouge, mais plus long.
+> Trasa po modrej = le parcours par le bleu
 > je ľahšia = est plus facile
-> ako červená = que le rouge
+> ako po červenej = que par le rouge
 > ale dlhšia = mais plus long
 
 ! Máme rezerváciu na dve postele a spacie vaky.

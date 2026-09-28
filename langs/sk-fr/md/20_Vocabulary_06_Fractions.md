@@ -16,124 +16,117 @@ Dire « un tiers », « une moitié », « trois quarts » — les fractions du 
 | 1/8 (un huitième) | {{jedna osmina}} |
 | 1/10 (un dixième) | {{jedna desatina}} |
 
+Les fractions sont des noms féminins en **-ina** : {{tretina}}, {{štvrtina}}, {{pätina}}... Seule la moitié a son propre mot, {{polovica}}.
+
 ---
 
-## 🧩 Les fractions au pluriel (2 et plus)
+## 🧩 Deux, trois, cinq… : le même réflexe que pour les années
 
-**2 et 3 utilisent le nominatif pluriel**, **4 et plus utilisent le génitif pluriel** :
+La règle est exactement celle de *rok / roky / rokov* : **2 à 4 → nominatif pluriel**, **5 et plus → génitif pluriel**.
 
-| Français | Slovaque | Notes |
+| Français | Slovaque | Forme |
 |---|---|---|
 | 2/3 (deux tiers) | {{dve tretiny}} | nominatif pluriel |
-| 2/4 (deux quarts) | {{dve štvrtiny}} | nominatif pluriel |
 | 3/4 (trois quarts) | {{tri štvrtiny}} | nominatif pluriel |
-| 4/5 (quatre cinquièmes) | {{štyri pätiny}} | génitif pluriel |
-| 5/8 (cinq huitièmes) | {{päť osmin}} | génitif pluriel |
-| 7/10 (sept dixièmes) | {{sedem desatin}} | génitif pluriel |
+| 4/5 (quatre cinquièmes) | {{štyri pätiny}} | nominatif pluriel |
+| 5/8 (cinq huitièmes) | {{päť osmín}} | génitif pluriel |
+| 7/10 (sept dixièmes) | {{sedem desatín}} | génitif pluriel |
 
-> ⚠️ **Le changement de cas est important** ! Ne dis pas *tri pätiny* pour 2/5, mais {{dve pätiny}}. 😉
-
----
-
-## 🍰 Usage courant : les recettes et les portions
-
-| Usage | Slovaque | Exemple |
-|---|---|---|
-| une moitié de pomme | {{polovica jablka}} | Chcem {{polovicu jablka}}. |
-| un quart de litre | {{štvrtina litra}} | Môj šálka je {{jedna štvrtina litra}}. |
-| trois quarts d'heure | {{tri štvrtiny hodiny}} | Čakaj {{tri štvrtiny hodiny}}. |
-| deux tiers de tasse | {{dve tretiny šálky}} | Pridaj {{dve tretiny šálky}} mlieka. |
-
-### Exemples complets
-
-! Koľko cukru?
-> Combien de sucre ?
-
-? Potrebuješ {{jednu polovicu šálky}}.
-> Tu as besoin d'une moitié de tasse.
-
-! Koľko chleba?
-> Combien de pain ?
-
-? Jedna štvrtina bochníka.
-> Un quart de pain.
+> ⚠️ Au génitif pluriel, la voyelle s'allonge : {{osmín}}, {{desatín}}, {{pätín}}.
 
 ---
 
-## 💰 Les fractions dans les prix et pourcentages
+## ✂️ « Pol » : le raccourci du quotidien
 
-| Expression | Slovaque |
+Dans la vie courante, on utilise surtout {{pol}} (demi) et {{štvrť}} (quart), suivis du génitif :
+
+| Français | Slovaque |
 |---|---|
-| une moitié du prix | {{polovica ceny}} |
-| un tiers du prix | {{tretina ceny}} |
-| un quart de réduction | {{zľava štvrtinou}} |
-| trois quarts de rabais | {{tri štvrtiny zľavy}} |
+| une demi-heure | {{pol hodiny}} |
+| un quart d'heure | {{štvrť hodiny}} |
+| trois quarts d'heure | {{trištvrte hodiny}} |
+| un demi-kilo | {{pol kila}} |
+| un quart de litre | {{štvrť litra}} |
+| une demi-tasse | {{pol šálky}} |
+| moitié-moitié | {{pol na pol}} |
 
-### Exemples
+! Koľko času potrebuješ?
+> De combien de temps as-tu besoin ?
+> Koľko času = combien de temps
+> potrebuješ = tu as besoin
+
+! Pol hodiny.
+> Une demi-heure.
+> Pol hodiny = une demi-heure
+
+! Stačí mi štvrť hodiny.
+> Un quart d'heure me suffit.
+> Stačí mi = me suffit
+> štvrť hodiny = un quart d'heure
+
+---
+
+## 🛒 Au marché et en cuisine
+
+! Pol kila múky, prosím.
+> Un demi-kilo de farine, s'il vous plaît.
+> Pol kila = un demi-kilo
+> múky = de farine
+> prosím = s'il vous plaît
+
+! Dajte mi štvrť kila šunky.
+> Donnez-moi un quart de kilo de jambon.
+> Dajte mi = donnez-moi
+> štvrť kila = un quart de kilo
+> šunky = de jambon
+
+! Pridaj pol šálky mlieka.
+> Ajoute une demi-tasse de lait.
+> Pridaj = ajoute
+> pol šálky = une demi-tasse
+> mlieka = de lait
+
+! Chcem polovicu jablka.
+> Je veux la moitié d'une pomme.
+> Chcem = je veux
+> polovicu = la moitié
+> jablka = d'une pomme
++ Objet de l'action, {{polovica}} devient {{polovicu}}, comme tous les féminins en -a.
+
+! Jedna tretina modrej a dve tretiny bielej.
+> Un tiers de bleu et deux tiers de blanc.
+> Jedna tretina = un tiers
+> modrej = de bleu
+> dve tretiny = deux tiers
+> bielej = de blanc
+
+---
+
+## 💰 Dans les prix
+
+| Français | Slovaque |
+|---|---|
+| à moitié prix | {{za polovicu ceny}} |
+| un tiers du prix | {{tretina ceny}} |
+| une réduction d'un quart | {{zľava o štvrtinu}} |
 
 ! Aká je zľava?
 > Quelle est la réduction ?
+> Aká = quelle
+> je = est
+> zľava = la réduction
 
-? Je to {{jedna štvrtina}} z ceny.
+! Je to štvrtina z ceny.
 > C'est un quart du prix.
-
----
-
-## ⏱️ Les fractions de temps
-
-| Temps | Slovaque |
-|---|---|
-| une moitié d'heure (30 min) | {{pol hodiny}} |
-| un quart d'heure (15 min) | {{štvrthodinky}} |
-| trois quarts d'heure (45 min) | {{tri štvrtiny hodiny}} |
-| une demie-heure | {{pol hodiny}} |
-
-> **{{Pol hodiny}}** est une expression très commune pour dire « une demi-heure ». C'est un raccourci de {{polovica hodiny}}.
-
-### Exemples
-
-! Koľko času potrebuješ?
-> Combien de temps tu as besoin ?
-
-? {{Pol hodiny}}. (30 minutes)
-> Une demi-heure.
-
-? {{Štvrthodinky}}. (15 minutes)
-> Un quart d'heure.
-
----
-
-## 🎨 Les fractions dans les proportions
-
-| Proportion | Slovaque |
-|---|---|
-| moitié-moitié | {{polovici na polovicu}} |
-| un tiers - deux tiers | {{tretina - dve tretiny}} |
-| un quart - trois quarts | {{štvrtina - tri štvrtiny}} |
-
-### Exemple : la teinture
-
-! Ako sa to zmiešava?
-> Comment ça se mélange ?
-
-? {{Jedna tretina modrej a dve tretiny bielej.}}
-> Un tiers de bleu et deux tiers de blanc.
-
----
-
-## 📏 Les fractions dans les mesures
-
-| Mesure | Slovaque | Exemple |
-|---|---|---|
-| un demi-kilo | {{pol kila}} | {{Pol kila múky}}, prosím. |
-| un quart de litre | {{štvrtina litra}} | Chcem {{štvrtinu litra}} mlieka. |
-| trois quarts de kilo | {{tri štvrtiny kila}} | Daj mi {{tri štvrtiny kila}} šunky. |
+> Je to = c'est
+> štvrtina = un quart
+> z ceny = du prix
 
 ---
 
 ## 🎯 Résumé : les mots clés
 
-| Mot | Sens |
+| Slovaque | Français |
 |---|---|
 | {{polovica}} | moitié |
 | {{tretina}} | tiers |
@@ -142,14 +135,14 @@ Dire « un tiers », « une moitié », « trois quarts » — les fractions du 
 | {{šestina}} | sixième |
 | {{osmina}} | huitième |
 | {{desatina}} | dixième |
-| {{pol}} | demi (raccourci) |
+| {{pol}} | demi (raccourci courant) |
+| {{štvrť}} | quart (raccourci courant) |
 
 ---
 
 ## 🧠 Exercices rapides
 
-! Ako sa to vyslovuje?
-> Comment ça se prononce ?
+Comment dit-on :
 
 - 1/2 = ?
 - 3/4 = ?
@@ -161,14 +154,13 @@ Dire « un tiers », « une moitié », « trois quarts » — les fractions du 
 *- 1/2 = {{jedna polovica}}*
 *- 3/4 = {{tri štvrtiny}}*
 *- 2/5 = {{dve pätiny}}*
-*- 5/8 = {{päť osmin}}*
-*- 7/10 = {{sedem desatin}})*
+*- 5/8 = {{päť osmín}}*
+*- 7/10 = {{sedem desatín}})*
 
 ---
 
 ## 💡 Conseil pratique
 
-- **{{Pol}}** est un raccourci super courant pour {{polovica}}.
-- Les fractions se changent selon le contexte (nominatif singulier, nominatif pluriel, génitif pluriel).
-- À l'oral, on simplifie souvent : au lieu de dire la fraction complète, on dit juste le mot pour la fraction ({{tretina}} pour "un tiers", {{polovica}} pour "une moitié").
-
+- Pour les heures, les poids et les volumes, on dit presque toujours {{pol}}, {{štvrť}} et {{trištvrte}} plutôt que {{polovica}} ou {{štvrtina}}.
+- Les formes en -ina servent surtout pour les parts, les proportions et les calculs.
+- Même règle de nombre que partout ailleurs : 2-4 → nominatif pluriel, 5+ → génitif pluriel.

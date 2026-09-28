@@ -35,7 +35,7 @@ Une voyelle longue dure environ deux fois plus longtemps.
 | é | méta | é long |
 | i | vidím | i comme en français |
 | í | prší | ii long |
-| o | dom | o comme "eau" |
+| o | dom | o, un peu plus ouvert que dans "eau" |
 | ó | tón | oo long |
 | u | ruka | ou |
 | ú | múka | ou long |
@@ -43,6 +43,18 @@ Une voyelle longue dure environ deux fois plus longtemps.
 | ý | dobrý | identique à í |
 | ä | päť | entre è et a (souvent proche de "è") |
 | ô | stôl | "uo" prononcé rapidement |
+
+### Les diphtongues
+
+Trois combinaisons se prononcent d'un seul coup de voix, comme une voyelle longue :
+
+| Slovaque | Exemple de mot slovaque | Prononciation approximative |
+|---|---|---|
+| ia | piatok | "ya" rapide |
+| ie | chlieb | "yé" rapide |
+| iu | cudziu | "you" rapide |
+
+Avec {{ô}}, ce sont les quatre diphtongues du slovaque. {{ie}} est partout : {{chlieb}}, {{mlieko}}, {{biely}}.
 
 ---
 
@@ -58,9 +70,12 @@ Une voyelle longue dure environ deux fois plus longtemps.
 | h | hora | h aspiré léger |
 | ch | chlieb | racle de gorge comme en allemand "Bach" |
 | ď | ďakujem | d mouillé |
-| ť | deň / ťa | t mouillé |
+| ť | ťava / kosť | t mouillé |
 | ň | kôň | gn comme "montagne" |
 | ľ | ľudia | l mouillé |
+| ĺ | vĺk / stĺp | l long (fait office de voyelle) |
+| dz | medzi | d et z liés en un seul son |
+| dž | džús | dj comme dans "jean" à l'anglaise |
 | r | ruka | r roulé |
 | ŕ | vŕba | r roulé long |
 
@@ -133,7 +148,24 @@ Ces consonnes sont prononcées avec la langue proche du palais.
 | ň | gn |
 | ľ | ly |
 
+### Attention : de, te, ne, le, di, ti, ni, li
 
+Devant **e** et **i**, les consonnes {{d}}, {{t}}, {{n}}, {{l}} deviennent molles **sans que l'accent soit écrit** :
+
+| Écrit | Se prononce | Exemple |
+|---|---|---|
+| de | ďe | {{deň}} (ďeň) |
+| te | ťe | {{teta}} (ťeta) |
+| ne | ňe | {{nemám}} (ňemám) |
+| ti | ťi | {{ticho}} (ťicho) |
+| di | ďi | {{divadlo}} (ďivadlo) |
+| li | ľi | {{list}} (ľist) |
+
+C'est le piège n° 1 d'un francophone. Il y a quelques exceptions (mots d'emprunt comme {{telefón}}, {{tenis}}, et quelques mots courants comme {{ten}}, {{jeden}}, {{vtedy}}), qu'on apprend au fil de l'eau.
+
+### Les consonnes sonores s'assourdissent en fin de mot
+
+En fin de mot, **b, d, z, ž, h, v** se prononcent comme **p, t, s, š, ch, f** : {{chlieb}} se dit « chliep », {{hrad}} se dit « hrat ». Même principe qu'en allemand.
 
 ---
 
@@ -185,11 +217,12 @@ Le français utilise :
 
 Le slovaque ne les utilise pas.
 
-| Français | Slovaque |
-|---|---|
-| bon | bon + voyelle prononcée |
-| sans | s-a-n-s |
-| vin | v-i-n |
+| Mot slovaque | À prononcer | Et surtout pas |
+|---|---|---|
+| {{pán}} | p-aa-n, le **n** bien entendu | « pan » nasal |
+| {{banka}} | ban-ka | « bãka » |
+| {{Tomáš}} | to-maach | — |
+| {{dom}} | dom, le **m** bien fermé | « don » |
 
 ---
 

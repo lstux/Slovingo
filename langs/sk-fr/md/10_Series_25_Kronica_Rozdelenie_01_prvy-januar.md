@@ -2,7 +2,7 @@
 
 @ img/National_Council_of_the_Slovak_Republic,_Bratislava,_Slovakia.jpg | Le Conseil national de la République slovaque, Bratislava — Wikimedia Commons
 
-Le 1er janvier 1993, la {{Československo}} a cessé d'exister : la {{rozdelenie}}, la séparation, est devenue deux États — la Slovaquie et la République tchèque. Il n'y a pas eu de {{referendum}} : la décision a été prise par accord entre {{politici}}, sans consultation populaire directe.
+Le 1er janvier 1993, la Tchécoslovaquie, {{Československo}}, a cessé d'exister : avec la {{rozdelenie}}, la séparation, le pays est devenu deux États — la Slovaquie et la République tchèque. Il n'y a pas eu de {{referendum}} : la décision a été prise par accord entre {{politici}}, sans consultation populaire directe.
 
 ---
 
@@ -65,8 +65,8 @@ Pour ceux qui avaient de la famille de l'autre côté de la nouvelle {{hranica}}
 > Personne n'a rien demandé aux gens ordinaires.
 > obyčajných ľudí = aux gens ordinaires
 
-! Nové občianstvo si museli vybaviť všetci.
-> Tout le monde a dû faire les démarches pour la nouvelle citoyenneté.
+! Nové doklady si museli vybaviť všetci.
+> Tout le monde a dû faire les démarches pour de nouveaux papiers.
 > si museli vybaviť = ont dû faire les démarches
 
 ! Tá hranica bola zrazu úplne iná, aj keď vyzerala rovnako.

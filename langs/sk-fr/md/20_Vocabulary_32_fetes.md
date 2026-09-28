@@ -14,7 +14,7 @@
 | svadba | mariage |
 | oslava | fête, célébration |
 
-+ En Slovaquie, on fête aussi les "meniny" : chaque prénom est associé à une date dans le calendrier, et on la célèbre comme un petit anniversaire.
+> 💡 En Slovaquie, on fête aussi les "meniny" : chaque prénom est associé à une date dans le calendrier, et on la célèbre comme un petit anniversaire.
 
 ---
 
@@ -49,9 +49,9 @@
 | hostia | invités |
 | oslavovať | fêter, célébrer |
 
-! Pozývam ťa na moje narodeninové oslavy.
+! Pozývam ťa na moju narodeninovú oslavu.
 > Je t'invite à ma fête d'anniversaire.
-> pozývam ťa = je t'invite · na moje narodeninové oslavy = à ma fête d'anniversaire
+> pozývam ťa = je t'invite · na moju narodeninovú oslavu = à ma fête d'anniversaire
 
 ! Kúpil som ti malý darček.
 > Je t'ai acheté un petit cadeau.
@@ -61,17 +61,22 @@
 
 ## 4. Le calendrier des fêtes en Slovaquie
 
-| Slovenčina | Français |
-|-----------|----------|
-| 1. január | Jour de l'An |
-| Veľká noc | Pâques (date variable) |
-| 1. máj | Fête du travail |
-| 5. júl | Fête de Cyrille et Méthode |
-| 29. august | Anniversaire du soulèvement national slovaque |
-| 1. september | Jour de la Constitution |
-| 24.-26. december | Noël |
+| Slovenčina | Français | Chômé ? |
+|-----------|----------|---------|
+| 1. január | Jour de l'An, naissance de la République slovaque | oui |
+| 6. január | Épiphanie (Traja králi) | oui |
+| Veľký piatok, Veľkonočný pondelok | Vendredi saint, lundi de Pâques | oui |
+| 1. máj | Fête du travail | oui |
+| 8. máj | Victoire sur le fascisme | suspendu en 2026 |
+| 5. júl | Fête de Cyrille et Méthode | oui |
+| 29. august | Anniversaire du soulèvement national slovaque (SNP) | oui |
+| 1. september | Jour de la Constitution | non, depuis 2024 |
+| 15. september | Notre-Dame des Sept Douleurs | suspendu en 2026 |
+| 1. november | Toussaint | oui |
+| 17. november | Journée de la lutte pour la liberté et la démocratie | non, depuis 2025 |
+| 24.-26. december | Noël | oui |
 
-+ Ces dates sont des jours fériés officiels en Slovaquie ; certaines (comme le 29 août ou le 1er septembre) sont propres à l'histoire du pays et n'ont pas d'équivalent direct en France.
+> 💡 Toutes ces dates restent des fêtes officielles, mais plusieurs ne sont plus chômées depuis les mesures d'économies budgétaires de 2024-2025 (état 2026). Certaines, comme le 29 août ou le 17 novembre, sont propres à l'histoire du pays.
 
 ---
 

@@ -12,7 +12,7 @@ Lundi de Pâques chez Babka Zuzana : Ján et Eric passent la voir, munis d'un pe
 - 🧒 Ján, son petit-fils
 - 👦 Eric, qui découvre la coutume
 
-Ján et Eric tutoient Babka Zuzana, comme dans la série Rodina.
+Ján tutoie sa babka ; Eric et Babka Zuzana se vouvoient.
 
 ---
 
@@ -60,18 +60,18 @@ Ján et Eric tutoient Babka Zuzana, comme dans la série Rodina.
 > Tu máte = voici, tenez
 > vajíčka = des œufs
 
-! 👦 Ďakujeme! A toto je pre teba parfum, nie voda.
+! 👦 Ďakujeme! A toto je pre vás parfum, nie voda.
 > Merci ! Et voici du parfum pour toi, pas de l'eau.
 > Ďakujeme = merci
 > A toto je = et voici
-> pre teba = pour toi
+> pre vás = pour vous
 > parfum = du parfum
 > nie voda = pas de l'eau
 
-! 👵 Aký si milý, Eric! Poď dnu, urobila som koláč.
+! 👵 Aký ste milý, Eric! Poďte dnu, urobila som koláč.
 > Comme tu es gentil, Eric ! Entre, j'ai fait un gâteau.
-> Aký si milý = comme tu es gentil
-> Poď dnu = entre
+> Aký ste milý = comme vous êtes gentil
+> Poďte dnu = entrez
 > urobila som koláč = j'ai fait un gâteau
 
 ! 🧒 Babka, čo si robila na Bielu sobotu?

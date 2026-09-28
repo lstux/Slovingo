@@ -2,7 +2,7 @@
 
 @ img/velkanoc_01_easter_saris.jpg | Décorations de Pâques à Šariš, Slovaquie — Wikimedia Commons, CC BY-SA
 
-Dernière série du parcours : Pâques, avec ses œufs peints et ses coutumes bien particulières. On commence par les préparatifs, et le **passé composé**, temps qu'on a déjà croisé de loin (*bol*, *bola*) et qu'on construit ici pour de bon.
+Pâques, avec ses œufs peints et ses coutumes bien particulières. On commence par les préparatifs, et le **passé composé**, temps qu'on a déjà croisé de loin (*bol*, *bola*) et qu'on construit ici pour de bon.
 
 ---
 
@@ -96,7 +96,7 @@ Le passé se forme avec le radical du verbe + **-l** (masculin) ou **-la** (fém
 
 ## 🇸🇰 Coin slovaque
 
-**Vajíčko, le mot affectueux.** Le diminutif de *vajce* (l'œuf) est presque toujours utilisé pour parler des œufs de Pâques : la forme neutre *vajce* semble presque froide dans ce contexte précis.
+**Vajíčko, le mot affectueux.** Le diminutif de *vajce* (l'œuf) est presque toujours utilisé pour parler des œufs de Pâques : la forme de base *vajce* semble presque froide dans ce contexte précis.
 
 **Les techniques de décoration varient énormément selon les régions.** Cire fondue, paille tressée, gravure à l'aiguille, teinture à l'oignon : chaque région slovaque a ses techniques de {{kraslice}}, transmises souvent de mère en fille depuis des générations.
 

@@ -71,7 +71,7 @@ Et à la fin de l'année venait le {{vysvedčenie}}, le bulletin — un jour tou
 > Voici mon premier cahier, de ma première année.
 > môj prvý zošit = mon premier cahier
 
-! Po základnej škole si museli vybrať, gymnázium alebo odborná škola.
+! Po základnej škole si museli vybrať gymnázium alebo odbornú školu.
 > Après l'école de base, il fallait choisir entre le lycée général et l'école professionnelle.
 > si museli vybrať = il fallait choisir
 

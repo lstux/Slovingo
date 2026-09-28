@@ -27,7 +27,7 @@
 > Je vais au travail en bus.
 > idem = je vais · autobusom = en bus (instrumental) · do práce = au travail
 
-+ En slovaque, le moyen de transport se met à l'instrumental (autobusom, vlakom, autom) plutôt qu'avec une préposition comme "en" en français.
+> 💡 En slovaque, le moyen de transport se met à l'instrumental (autobusom, vlakom, autom) plutôt qu'avec une préposition comme "en" en français.
 
 ! Radšej chodím pešo.
 > Je préfère marcher (aller à pied).

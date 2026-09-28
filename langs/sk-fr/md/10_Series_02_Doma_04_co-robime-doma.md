@@ -30,7 +30,7 @@ Ce qu'on fait dans chaque pièce. Sept verbes du quotidien, et les trois famille
 | varím, varíš, varí | je cuisine, tu cuisines, il cuisine |
 | upratujem, upratuješ, upratuje | je range, tu ranges, il range |
 
-La terminaison de l'infinitif annonce la famille : **-ať** donne -ám, **-iť** donne -ím, **-ovať** donne -ujem.
+La terminaison de l'infinitif annonce le plus souvent la famille : **-ať** donne -ám, **-iť** donne -ím, **-ovať** donne -ujem. Quelques verbes courants font exception, comme {{spať}} → {{spím}} ou {{písať}} → {{píšem}} : ceux-là s'apprennent tels quels.
 
 ### Dire non
 

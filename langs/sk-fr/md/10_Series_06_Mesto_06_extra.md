@@ -44,7 +44,7 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 | rovno | tout droit |
 | vľavo | à gauche |
 | vpravo | à droite |
-| za rohom | après le coin |
+| za rohom | au coin |
 | priamo | juste, directement |
 | roh | le coin |
 | ďalej | plus loin |
@@ -95,10 +95,10 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 > autobusom = en bus
 
 ! Zastávka je za rohom, blízko fontány.
-> L'arrêt est après le coin, près de la fontaine.
+> L'arrêt est au coin, près de la fontaine.
 > Zastávka = l'arrêt
 > je = est
-> za rohom = après le coin
+> za rohom = au coin
 > blízko fontány = près de la fontaine
 
 ! Vidím sochu na námestí. Je zaujímavá.

@@ -12,7 +12,7 @@
 | desiata | collation du matin |
 | olovrant | goûter |
 
-+ "raňajky" est toujours au pluriel en slovaque, même pour parler d'un seul petit-déjeuner.
+> 💡 "raňajky" est toujours au pluriel en slovaque, même pour parler d'un seul petit-déjeuner.
 
 ---
 

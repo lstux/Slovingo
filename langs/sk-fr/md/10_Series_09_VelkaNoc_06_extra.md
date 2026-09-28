@@ -55,7 +55,7 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 | baránok | l'agneau (pascal) |
 | šunka | le jambon |
 | chren | le raifort |
-| syrová nátierka | la tartinade au fromage |
+| hrudka | le « fromage » pascal aux œufs |
 | požehnať | bénir |
 | jesť | manger |
 | stôl | la table |
@@ -119,11 +119,11 @@ Aucun mot nouveau. Tout le vocabulaire de la série est rassemblé, puis recombi
 > ale = mais
 > tradícia zostáva v rodine = la tradition reste dans la famille
 
-! Na stole boli baránok, šunka, chren a syrová nátierka.
+! Na stole boli baránok, šunka, chren a hrudka.
 > Sur la table il y avait de l'agneau, du jambon, du raifort et de la tartinade au fromage.
 > Na stole = sur la table
 > boli = il y avait
-> baránok, šunka, chren a syrová nátierka = agneau, jambon, raifort et tartinade au fromage
+> baránok, šunka, chren a hrudka = agneau, jambon, raifort et hrudka
 
 ! Susedka nám dala parfum namiesto vody.
 > La voisine nous a donné du parfum au lieu de l'eau.

@@ -2,7 +2,7 @@
 
 @ img/tatry_02_zamkovsky_winter.jpg | Le refuge Zamkovského sous la neige, Hautes Tatras — Wikimedia Commons, CC BY-SA
 
-Ce qu'on met dans le sac. Le verbe **môcť**, pouvoir, complète la série des modaux commencée avec *chcieť* et *musieť*.
+Ce qu'on met dans le sac. Le verbe **môcť**, pouvoir, rejoint *chcieť* (vouloir) et *musieť* (devoir) dans la famille des modaux.
 
 ---
 
@@ -93,7 +93,7 @@ Ce qu'on met dans le sac. Le verbe **môcť**, pouvoir, complète la série des 
 > Peux-tu porter la carte ?
 > Môžeš niesť = peux-tu porter
 > mapu = la carte
-+ « niesť » signifie porter (transporter), différent de « nosiť » vu dans la série Počasie pour les vêtements.
++ « niesť » signifie porter (transporter), différent de « nosiť » qui s'emploie pour les vêtements qu'on porte.
 
 ---
 

@@ -80,23 +80,25 @@ Eric et Andrea se vouvoient. Eric et Ján se tutoient.
 > o dvanástej = à midi
 + « obed » est le déjeuner, et « o dvanástej » veut dire à douze heures. Les heures viendront en leur temps.
 
-! 👦 Môžem pomáhať?
-> Puis-je aider ?
+! 👦 Môžem pomôcť?
+> Je peux aider ?
 > Môžem = puis-je
-> pomáhať = aider
-+ « môcť » signifie pouvoir. « Môžem » suffit pour l'instant.
+> pomôcť = aider (une fois, là maintenant)
++ « môcť » signifie pouvoir. {{pomôcť}} est la forme ponctuelle de {{pomáhať}} : on la retient pour proposer son aide.
 
-! 👩 Áno. Umývajte poháre, prosím.
+! 👩 Áno. Umyte poháre, prosím.
 > Oui. Lavez les verres, s'il vous plaît.
-> Umývajte = lavez
+> Umyte = lavez
++ {{umyť}} : laver (une fois, jusqu'au bout), forme ponctuelle de {{umývať}}.
 > poháre = les verres
 > prosím = s'il vous plaît
 
-! 🧒 A ja upratujem obývačku!
-> Et moi je range le salon !
+! 🧒 A ja uprácem obývačku!
+> Et moi, je range le salon !
 > A = et
 > ja = moi
-> upratujem = je range
+> uprácem = je vais ranger
++ {{upratať}}, forme ponctuelle de {{upratovať}} : {{uprácem}} annonce ce qu'on va faire.
 > obývačku = le salon
 
 ! 👩 Taniere sú v skrini, v kuchyni.
@@ -106,19 +108,19 @@ Eric et Andrea se vouvoient. Eric et Ján se tutoient.
 > v skrini = dans l'armoire
 > v kuchyni = dans la cuisine
 
-! 👦 Otváram okno? Je tu teplo.
+! 👦 Otvorím okno? Je tu teplo.
 > J'ouvre la fenêtre ? Il fait chaud ici.
-> Otváram = j'ouvre
+> Otvorím = j'ouvre (tout de suite)
 > okno = la fenêtre
 > Je tu teplo = il fait chaud ici
-+ « teplo » veut dire chaud. La tournure « je teplo » n'a pas de sujet, exactement comme « il fait chaud ».
++ Pour proposer de faire quelque chose, le slovaque utilise la forme ponctuelle : {{otvoriť}} plutôt que {{otvárať}}. « teplo » veut dire chaud. La tournure « je teplo » n'a pas de sujet, exactement comme « il fait chaud ».
 
-! 👩 Áno, prosím. A zatvárajte dvere.
+! 👩 Áno, prosím. A zatvorte dvere.
 > Oui, s'il vous plaît. Et fermez la porte.
 > Áno = oui
 > prosím = s'il vous plaît
 > A = et
-> zatvárajte = fermez
+> zatvorte = fermez
 > dvere = la porte
 
 ---

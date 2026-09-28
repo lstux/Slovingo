@@ -2,7 +2,7 @@
 
 @ img/tatry_05_strbske_panorama.jpg | Panorama depuis Štrbské Pleso, Hautes Tatras — Wikimedia Commons, CC BY-SA
 
-Andrea et Ján retrouvent Eric à Štrbské Pleso pour l'ascension promise dans la série Počasie. Tout le vocabulaire de la série y passe. Aucun mot nouveau, sauf ceux signalés dans les remarques.
+Andrea et Ján retrouvent Eric à Štrbské Pleso pour l'ascension du Kriváň. Tout le vocabulaire de la série y passe. Aucun mot nouveau, sauf ceux signalés dans les remarques.
 
 ---
 
@@ -12,7 +12,7 @@ Andrea et Ján retrouvent Eric à Štrbské Pleso pour l'ascension promise dans 
 - 🧒 Ján
 - 👦 Eric, qui découvre la montagne
 
-Tous se tutoient.
+Andrea et Ján se tutoient, Ján et Eric aussi. Eric et Andrea se vouvoient.
 
 ---
 
@@ -75,17 +75,18 @@ Tous se tutoient.
 > C'est raide !
 > Je to strmé = c'est raide
 
-! 🧒 Choď pomaly a opatrne. Nie je súťaž.
+! 🧒 Choď pomaly a opatrne. Nie je to súťaž.
 > Va lentement et prudemment. Ce n'est pas une course.
 > Choď pomaly = va lentement
 > a opatrne = et prudemment
-> Nie je súťaž = ce n'est pas une course
+> Nie je to súťaž = ce n'est pas une course
 + « pomaly » signifie lentement, et « súťaž » une compétition, une course.
 
-! 👦 Som unavený. Môžeme odpočívať?
-> Je suis fatigué. Pouvons-nous nous reposer ?
+! 👦 Som unavený. Môžeme si oddýchnuť?
+> Je suis fatigué. Pouvons-nous faire une pause ?
 > Som unavený = je suis fatigué
-> Môžeme odpočívať = pouvons-nous nous reposer
+> Môžeme si oddýchnuť = pouvons-nous nous reposer (un moment)
++ {{oddýchnuť si}} : se reposer un moment, faire une pause (action ponctuelle). {{odpočívať}} décrit le repos qui dure.
 
 ! 👩 Áno, tu je pekné miesto. Dáme si vodu.
 > Oui, ici il y a un bel endroit. Prenons de l'eau.
@@ -105,9 +106,9 @@ Tous se tutoient.
 > najkrajší výhľad = le plus beau panorama
 > aký som kedy videl = que j'aie jamais vu
 
-! 👩 Vitaj v Tatrách, Eric!
+! 👩 Vitajte v Tatrách, Eric!
 > Bienvenue dans les Tatras, Eric !
-> Vitaj = bienvenue
+> Vitajte = bienvenue (vouvoiement)
 > v Tatrách = dans les Tatras
 
 ---
@@ -118,7 +119,7 @@ Tous se tutoient.
 
 **Poďme, l'expression qui donne le départ.** Cette forme d'impératif à la première personne du pluriel accompagne le début de toute activité de groupe : une randonnée, un repas, une sortie. On l'entend dès qu'un plan devient concret.
 
-**« Vitaj v Tatrách » n'est jamais dit à la légère.** Présenter la montagne à quelqu'un qui la découvre pour la première fois est un moment que beaucoup de Slovaques prennent très au sérieux, presque comme un rite de passage amical.
+**« Vitajte v Tatrách » n'est jamais dit à la légère.** Présenter la montagne à quelqu'un qui la découvre pour la première fois est un moment que beaucoup de Slovaques prennent très au sérieux, presque comme un rite de passage amical.
 
 ---
 

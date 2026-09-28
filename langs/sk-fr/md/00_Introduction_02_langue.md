@@ -2,7 +2,7 @@
 
 @ img/1920px-Slovaks_around_the_world.svg.png | Diaspora slovaque — Wikimedia Commons
 
-Avant de plonger dans le vocabulaire et la grammaire, qui parle slovaque, d'où vient cette langue, et à quelle famille elle appartient?
+Avant de plonger dans le vocabulaire et la grammaire, qui parle slovaque, d'où vient cette langue, et à quelle famille elle appartient ?
 
 ---
 
@@ -18,7 +18,7 @@ On trouve aussi des communautés slovaques en dehors du pays :
 | Hongrie | Minorité slovaque historique |
 | République tchèque | Forte présence, intercompréhension facile |
 | États-Unis / Canada | Diaspora issue des vagues d'émigration du 19e-20e siècle |
-| Rhône-Alpes | Une centaine (il paraît, à vérifier :D ) |
+| Auvergne-Rhône-Alpes | Une centaine (il paraît, à vérifier :D ) |
 | Lyon | Au moins une perle |
 
 Ce n'est donc pas une langue totalement confidentielle : petite en nombre, mais bien vivante.

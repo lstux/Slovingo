@@ -2,7 +2,7 @@
 
 @ img/velkanoc_02_easter_lemesany.jpg | Décorations pascales à Lemešany, Slovaquie — Wikimedia Commons, CC BY-SA
 
-Chaque jour de la semaine sainte porte un nom et une coutume particulière. On combine ici les jours de la semaine, déjà vus dans la série Čas, avec le passé composé de la fiche précédente.
+Chaque jour de la semaine sainte porte un nom et une coutume particulière. On combine ici les jours de la semaine avec le passé composé de la fiche précédente.
 
 ---
 
@@ -30,7 +30,7 @@ Chaque jour de la semaine sainte porte un nom et une coutume particulière. On c
 | Na Veľký piatok sme sa postili. | Le vendredi saint nous avons jeûné. |
 | Na Bielu sobotu sme piekli. | Le samedi saint nous avons fait de la pâtisserie. |
 
-Ces noms de jours fonctionnent comme des expressions figées : ils s'utilisent toujours avec **na**, comme les jours ordinaires.
+Ces noms de jours fonctionnent comme des expressions figées : ils s'utilisent avec **na** (alors que les jours ordinaires prennent **v** : {{v piatok}}, mais {{na Veľký piatok}}).
 
 ### Le passé au négatif
 
@@ -117,11 +117,11 @@ La négation **ne-** se colle directement devant le verbe conjugué, exactement 
 
 ## 🇸🇰 Coin slovaque
 
-**Le vendredi saint est un jour officiellement férié depuis longtemps.** {{Veľký piatok}} est jour chômé en Slovaquie depuis le début des années 1990, au même titre que le lundi de Pâques — bien avant l'indépendance du pays en 1993.
+**Le vendredi saint est chômé.** {{Veľký piatok}} est un jour férié en Slovaquie, au même titre que le lundi de Pâques — alors qu'en France, seule l'Alsace-Moselle chôme le vendredi saint.
 
-**Le jeudi saint marque la fin du silence des cloches.** Selon la tradition, les cloches des églises se taisent entre le Zelený štvrtok et la veillée pascale, remplacées par des crécelles en bois qu'on entend résonner dans certains villages.
+**Le jeudi saint marque le début du silence des cloches.** Selon la tradition, les cloches des églises se taisent entre le Zelený štvrtok et la veillée pascale, remplacées par des crécelles en bois qu'on entend résonner dans certains villages.
 
-**Chaque jour a sa couleur et sa tâche.** Le nom même des jours guide les activités : « vert » pour le nettoyage de printemps, « grand » pour le jeûne, « blanc » pour la pâtisserie. Ce n'est pas un hasard si le calendrier ressemble à une check-list.
+**Chaque jour a ses coutumes.** Le jeudi « vert », on mange traditionnellement quelque chose de vert (épinards, orties) ; le vendredi « grand » est jour de jeûne ; le samedi « blanc », on termine le ménage et les préparatifs de la fête. Les origines exactes des noms sont discutées, mais les coutumes, elles, sont bien vivantes.
 
 ---
 

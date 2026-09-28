@@ -26,9 +26,11 @@ Les vêtements, les tailles, et le verbe **skúsiť** pour essayer. On combine i
 
 | Slovaque | Français |
 |----------|----------|
-| ja skúsim | j'essaie |
-| ty skúsiš | tu essaies |
-| on / ona skúsi | il / elle essaie |
+| ja skúsim | je vais essayer |
+| ty skúsiš | tu vas essayer |
+| on / ona skúsi | il / elle va essayer |
+
+{{Skúsiť}} décrit une action ponctuelle : sa forme « présente » a un sens de futur proche. Pour un vêtement, on ajoute {{si}} : {{skúsiť si}}, essayer sur soi.
 
 ### Combiner couleur et objet
 
@@ -45,10 +47,10 @@ La couleur s'accorde toujours avec le nom qui suit, jamais avec la personne qui 
 
 ## Des phrases
 
-! Chcem skúsiť toto tričko.
+! Chcem si skúsiť toto tričko.
 > Je veux essayer ce tee-shirt.
 > Chcem = je veux
-> skúsiť = essayer
+> si skúsiť = essayer (sur soi)
 > toto = ce
 > tričko = tee-shirt
 
@@ -74,9 +76,9 @@ La couleur s'accorde toujours avec le nom qui suit, jamais avec la personne qui 
 > väčšiu = plus grande
 + « väčší » est le comparatif de veľký, plus grand. On y reviendra ailleurs ; retiens l'expression pour l'instant.
 
-! Skúsim čierne nohavice.
-> J'essaie le pantalon noir.
-> Skúsim = j'essaie
+! Skúsim si čierne nohavice.
+> Je vais essayer le pantalon noir.
+> Skúsim si = je vais essayer
 > čierne = noir
 > nohavice = le pantalon
 
@@ -111,9 +113,9 @@ La couleur s'accorde toujours avec le nom qui suit, jamais avec la personne qui 
 > čierne = noir
 > nohavice = un pantalon
 
-! Skúsim to v obchode v sobotu.
+! Skúsim si to v obchode v sobotu.
 > Je vais essayer ça au magasin samedi.
-> Skúsim = j'essaie
+> Skúsim si = je vais essayer
 > to = cela
 > v obchode = au magasin
 > v sobotu = samedi

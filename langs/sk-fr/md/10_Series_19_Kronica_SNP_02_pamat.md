@@ -35,9 +35,9 @@ Après-guerre, la mémoire du SNP devient elle-même un enjeu politique. Sous le
 
 Le 29 août reste aujourd'hui jour férié en Slovaquie, et le nom « SNP » est partout dans le paysage — la place centrale de Banská Bystrica, un musée dédié sur place, et jusqu'au grand {{most}} qui traverse le Danube à Bratislava, surmonté de son restaurant en forme de soucoupe. Un des rares consensus historiques largement partagés dans le pays, malgré les débats sur les détails.
 
-! 💬 Skoro každé mesto má ulicu SNP. Niekedy zabudneme si spýtať prečo.
+! 💬 Skoro každé mesto má ulicu SNP. Niekedy sa zabudneme spýtať prečo.
 > Presque chaque ville a une rue SNP. Parfois on oublie de se demander pourquoi.
-> zabudneme si spýtať = on oublie de se demander
+> sa zabudneme spýtať = on oublie de se demander
 
 ## Encore quelques phrases
 

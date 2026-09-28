@@ -17,7 +17,7 @@
 | vlasy | cheveux |
 | krk | cou |
 
-+ "oko" et "ucho" sont des mots neutres au singulier mais leur pluriel (oči, uši) suit une déclinaison irrégulière, comme en français "œil / yeux".
+> 💡 "oko" et "ucho" sont des mots neutres au singulier mais leur pluriel (oči, uši) suit une déclinaison irrégulière, comme en français "œil / yeux".
 
 ---
 
@@ -35,7 +35,7 @@
 | brucho | ventre |
 | hruď | poitrine |
 
-+ "ruka" veut dire à la fois "bras" et "main", "noha" à la fois "jambe" et "pied" : le slovaque ne distingue pas ces parties comme le français.
+> 💡 "ruka" veut dire à la fois "bras" et "main", "noha" à la fois "jambe" et "pied" : le slovaque ne distingue pas ces parties comme le français.
 
 ---
 
@@ -49,7 +49,7 @@
 > J'ai mal aux jambes.
 > bolia ma = ça me fait mal (pluriel) · nohy = jambes
 
-+ "bolí" au singulier, "bolia" au pluriel : le verbe s'accorde avec la partie du corps qui fait mal, pas avec la personne.
+> 💡 "bolí" au singulier, "bolia" au pluriel : le verbe s'accorde avec la partie du corps qui fait mal, pas avec la personne.
 
 ! Mám dlhé vlasy.
 > J'ai les cheveux longs.
@@ -72,9 +72,9 @@
 | sval | muscle |
 | pokožka | épiderme |
 
-! Mám rýchle srdce.
+! Srdce mi bije rýchlo.
 > Mon cœur bat vite.
-> mám = j'ai · rýchle = rapide · srdce = cœur
+> srdce = cœur · mi = à moi · bije = bat · rýchlo = vite
 
 ---
 

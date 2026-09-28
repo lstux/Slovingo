@@ -10,9 +10,9 @@ La fiche précédente t'a laissé en plan avec {{ako sa máš}} sans réponse. L
 
 | Slovaque | Français |
 |----------|----------|
-| som | je suis |
-| v poriadku | en ordre, bien, ça va |
 | dobre | bien |
+| mám sa | je vais (réponse à « ako sa máš ») |
+| v poriadku | en ordre, OK, ça va |
 | ďakujem | merci |
 | prosím | s'il te plaît |
 | prepáčte | pardon, excusez-moi |
@@ -24,13 +24,15 @@ La fiche précédente t'a laissé en plan avec {{ako sa máš}} sans réponse. L
 
 ### Répondre à « {{Ako sa máš?}} »
 
-**{{Som}}** = je suis. **{{V poriadku}}** = en ordre, bien. Ensemble : **{{Som v poriadku}}** (je vais bien), littéralement « je suis en ordre ». C'est une réponse standard à {{Ako sa máš?}}. On peut aussi la raccourcir en juste **{{V poriadku}}**, moins formel.
+La réponse la plus naturelle tient en un mot : **{{Dobre}}** (bien), l'adverbe de {{dobrý}} déjà croisé dans {{dobrý deň}}. **{{Dobre, ďakujem}}**, c'est notre « bien, merci ».
 
-Il existe une autre réponse, tout aussi courante, voire plus naturelle à l'oral : **{{Dobre}}** (bien), l'adverbe de {{dobrý}} déjà croisé dans {{dobrý deň}}. **{{Som v poriadku}}** sonne un peu plus « rien à signaler, tout est correct », alors que **{{Dobre}}** est plus chaleureux, l'équivalent de notre « bien, merci ». Les deux sont interchangeables la plupart du temps.
+La version complète reprend la question : {{Ako sa máš?}} → **{{Mám sa dobre}}**, littéralement « je m'ai bien ». Même construction bizarre dans les deux sens, donc facile à retenir en bloc.
+
+**{{V poriadku}}** (« en ordre ») veut dire « OK, ça va, pas de souci ». On l'entend surtout pour rassurer : {{Som v poriadku}}, c'est « je vais bien, je n'ai rien » — après une chute, par exemple — plutôt qu'une réponse de politesse.
 
 ### {{Prosím}} et {{ďakujem}}
 
-Deux mots indispensables. **{{Prosím}}** = s'il te plaît / s'il vous plaît (le contexte décide). **{{Ďakujem}}** = merci. On peut les utiliser seuls ou les combiner avec d'autres mots.
+Deux mots indispensables. **{{Prosím}}** = s'il te plaît / s'il vous plaît (le contexte décide), et c'est aussi la réponse normale à un merci : « je t'en prie, de rien ». **{{Ďakujem}}** = merci. On peut les utiliser seuls ou les combiner avec d'autres mots.
 
 ### {{Prepáčte}}
 
@@ -44,17 +46,17 @@ Deux mots indispensables. **{{Prosím}}** = s'il te plaît / s'il vous plaît (l
 
 ## Des phrases
 
-! Ako sa máš? Som v poriadku, ďakujem.
+! Ako sa máš? Mám sa dobre, ďakujem.
 > Comment ça va ? Je vais bien, merci.
 > Ako sa máš = comment ça va
-> Som v poriadku = je vais bien
+> Mám sa dobre = je vais bien
 > ďakujem = merci
 + Question et réponse, enfin réunies.
 
-! Tiež v poriadku, ďakujem.
+! Tiež dobre, ďakujem.
 > Bien aussi, merci.
 > Tiež = aussi
-> v poriadku = bien
+> dobre = bien
 > ďakujem = merci
 
 ! Ako sa máš? Dobre, ďakujem, a ty?
@@ -63,7 +65,7 @@ Deux mots indispensables. **{{Prosím}}** = s'il te plaît / s'il vous plaît (l
 > Dobre = bien
 > ďakujem = merci
 > a ty = et toi
-+ Aussi naturel que {{Som v poriadku}}, en plus court.
++ La réponse la plus courante, et la plus courte.
 
 ! Prosím.
 > S'il te plaît.
@@ -80,18 +82,18 @@ Deux mots indispensables. **{{Prosím}}** = s'il te plaît / s'il vous plaît (l
 > Prepáčte = pardon
 + On crie ça quand on marche sur les pieds de quelqu'un, ou qu'on veut déranger quelqu'un dans une boutique.
 
-! Ahoj! Ako sa máš? Som v poriadku, ďakujem, a ty?
-> Salut ! Comment ça va ? Je vais bien, merci, et toi ?
-> Ahoj = salut
-> Ako sa máš = comment ça va
-> Som v poriadku = je vais bien
-> a ty = et toi
+! Si v poriadku? Áno, som v poriadku.
+> Ça va, tu n'as rien ? Oui, je vais bien.
+> Si v poriadku = tu vas bien, tu n'as rien
+> Áno = oui
+> som v poriadku = je vais bien
++ Le vrai usage de {{v poriadku}} : rassurer quelqu'un. {{Áno}} (oui) arrive dans le vocabulaire complémentaire.
 
 ---
 
 ## 🇸🇰 Coin slovaque
 
-**« Ďakujem » sans s'en lasser.** Les Slovaques sont polis. Tu vas entendre {{ďakujem}} *tout le temps* dans les interactions du quotidien. Le boulanger te donne ton pain : {{ďakujem}}. Tu paies : {{ďakujem}}. C'est rien qu'une courtoisie hyper standard — ne sois pas surpris, c'est juste comment ça marche.
+**« Ďakujem » sans s'en lasser.** Les Slovaques sont polis. Tu vas entendre {{ďakujem}} *tout le temps* dans les interactions du quotidien. Le boulanger te donne ton pain : {{ďakujem}}. Tu paies : {{ďakujem}}. Ce n'est qu'une courtoisie hyper standard — ne sois pas surpris, c'est comme ça que ça marche.
 
 **« Prepáčte » est multifonction.** Ça peut vouloir dire « pardon je suis maladroit », « pardon de vous déranger » (formel), ou carrément « s'il vous plaît » (quand on aborde quelqu'un). Le contexte décide.
 
@@ -103,9 +105,9 @@ Deux mots indispensables. **{{Prosím}}** = s'il te plaît / s'il vous plaît (l
 |----------|----------|
 | nie | non |
 | áno | oui |
-| pomôž | aide |
+| pomôž | aide ! (impératif) |
 | pomoc | l'aide |
-| nič | rien, de rien |
+| nič | rien |
 
 ---
 
@@ -135,6 +137,7 @@ Deux mots indispensables. **{{Prosím}}** = s'il te plaît / s'il vous plaît (l
 + Version courte avec le nom {{pomoc}} au lieu du verbe {{pomôž}}.
 
 ! Nič, ďakujem.
-> Rien, merci. / De rien, merci.
-> Nič = rien, de rien
+> Rien, merci.
+> Nič = rien
 > ďakujem = merci
++ La réponse à « tu veux quelque chose ? ». Attention : {{nič}} ne veut pas dire « de rien » — pour répondre à un merci, on dit {{Prosím}}.

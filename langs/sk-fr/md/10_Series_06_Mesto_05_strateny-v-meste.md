@@ -11,17 +11,17 @@ Eric a raté son arrêt et cherche son chemin. Il croise Marek par hasard. Tout 
 - 👦 Eric, perdu dans la ville
 - 👨 Marek, croisé par hasard
 
-Eric et Marek se tutoient déjà, comme dans la série Čas.
+Eric et Marek se tutoient.
 
 ---
 
 ## Le dialogue
 
-! 👦 Marek! Som stratený.
+! 👦 Marek! Zablúdil som.
 > Marek ! Je suis perdu.
 > Marek = Marek
-> Som = je suis
-> stratený = perdu
+> Zablúdil som = je me suis perdu
++ {{zablúdiť}} : se perdre, s'égarer (en chemin). Retiens la forme du passé telle quelle.
 
 ! 👨 Čo hľadáš?
 > Que cherches-tu ?
@@ -50,12 +50,12 @@ Eric et Marek se tutoient déjà, comme dans la série Čas.
 > A potom = et ensuite
 
 ! 👨 Uvidíš kostol. Múzeum je za rohom, vedľa kostola.
-> Tu verras une église. Le musée est après le coin, à côté de l'église.
+> Tu verras une église. Le musée est au coin, à côté de l'église.
 > Uvidíš = tu verras
 > kostol = une église
 > Múzeum = le musée
 > je = est
-> za rohom = après le coin
+> za rohom = au coin
 > vedľa kostola = à côté de l'église
 
 ! 👦 Je to ďaleko pešo?
@@ -106,10 +106,11 @@ Eric et Marek se tutoient déjà, comme dans la série Čas.
 > Dobre = d'accord
 > Ďakujem za pomoc = merci pour l'aide
 
-! 👨 Nemáš za čo. Dovidenia!
-> De rien. À bientôt !
+! 👨 Nemáš za čo. Zatiaľ ahoj!
+> De rien. À tout à l'heure !
 > Nemáš za čo = de rien
-> Dovidenia = à bientôt, au revoir
+> Zatiaľ ahoj = salut, à tout à l'heure
++ Entre amis qui se tutoient, on se quitte avec {{ahoj}} ou {{čau}}, pas avec {{dovidenia}}. {{Zatiaľ}} veut dire « en attendant ».
 
 ---
 

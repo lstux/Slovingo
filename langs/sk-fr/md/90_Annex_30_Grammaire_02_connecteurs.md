@@ -39,10 +39,11 @@ Ces petits mots structurent le discours : ils relient les idées, nuancent une a
 > však = n'est-ce pas
 + En fin de phrase, "však" fonctionne comme une question de confirmation ("n'est-ce pas ?"). En début de phrase, il signifie plutôt "cependant, mais".
 
-! Nemôžem prísť, totiž mám prácu.
+! Nemôžem prísť, mám totiž prácu.
 > Je ne peux pas venir, en effet j'ai du travail.
 > Nemôžem prísť = je ne peux pas venir
-> totiž mám prácu = en effet j'ai du travail
+> mám totiž prácu = en effet j'ai du travail
++ {{Totiž}} ne se met jamais en tête : il se glisse en deuxième position.
 
 ! Je síce drahé, ale kvalitné.
 > C'est certes cher, mais de qualité.

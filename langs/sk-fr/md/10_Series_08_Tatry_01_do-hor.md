@@ -33,7 +33,7 @@ Première fiche de la série la plus attendue : la montagne. Le vocabulaire de b
 | vy budete | vous serez |
 | oni budú | ils / elles seront |
 
-C'est ce même *budem* qu'on a croisé dans les séries Čas et Počasie (*budem meškať*, *bude pršať*). Il sert aussi de brique pour construire le futur des autres verbes.
+Ce *budem* sert aussi de brique pour construire le futur des autres verbes.
 
 ### Le futur des autres verbes
 

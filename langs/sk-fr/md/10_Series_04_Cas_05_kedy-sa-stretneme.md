@@ -125,7 +125,7 @@ Eric et Andrea se vouvoient. Andrea et Marek se tutoient.
 
 **Pol siedmej reste le piège numéro un.** Six heures trente, pas sept heures trente. Dans le doute, demander {{To je šesť tridsať?}} n'a rien d'embarrassant : beaucoup d'étrangers posent la question, et personne ne s'en formalise.
 
-**La gare comme point de repère.** {{Hlavná stanica}}, la gare principale de Košice, sert de point de ralliement autant que de gare. C'est aussi le nœud d'où partent les bus et les tramways vers le reste de la ville.
+**La gare comme point de repère.** La {{stanica}} de Košice sert de point de ralliement autant que de gare. C'est aussi le nœud d'où partent les bus et les tramways vers le reste de la ville.
 
 ---
 

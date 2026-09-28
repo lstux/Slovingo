@@ -17,7 +17,7 @@ Avant 1843, il n'existait pas vraiment de « slovaque écrit » officiel. Les le
 | kniha | le livre |
 | noviny | le journal |
 
-Le 2 février 1843, un petit groupe réuni autour du linguiste {{Ľudovít Štúr}} prend une décision qui va tout changer : fixer une nouvelle norme écrite, basée cette fois sur les {{nárečia}} du centre du pays plutôt que sur celles de l'Ouest ou sur le tchèque. Štúr lui-même s'en était expliqué quelques années plus tôt dans une lettre à l'historien tchèque František Palacký : pour beaucoup de Slovaques ordinaires, le tchèque littéraire utilisé jusque-là par les protestants du pays était devenu difficile à comprendre. Rester dans le giron du tchèque, c'était accepter de parler la langue des autres pour écrire la sienne.
+Le 14 février 1843, à Bratislava, un petit groupe réuni autour du linguiste {{Ľudovít Štúr}} prend une décision qui va tout changer : fixer une nouvelle norme écrite, basée cette fois sur les {{nárečia}} du centre du pays plutôt que sur ceux de l'Ouest ou sur le tchèque. Štúr lui-même s'en était expliqué quelques années plus tôt dans une lettre à l'historien tchèque František Palacký : pour beaucoup de Slovaques ordinaires, le tchèque littéraire utilisé jusque-là par les protestants du pays était devenu difficile à comprendre. Rester dans le giron du tchèque, c'était accepter de parler la langue des autres pour écrire la sienne.
 
 ! 💬 Prečo by sme mali písať jazykom, ktorému bežní ľudia nerozumejú?
 > Pourquoi devrions-nous écrire dans une langue que les gens ordinaires ne comprennent pas ?

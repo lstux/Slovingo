@@ -17,7 +17,7 @@ Né en 1880 dans un petit village slovaque, Milan Rastislav Štefánik n'a rien 
 | vojna | la guerre |
 | vlasť | la patrie |
 
-Comme {{astronóm}}, il observe la Lune, participe à des expéditions pour étudier des éclipses solaires jusque dans le Pacifique, et devient l'un des premiers à photographier le ciel depuis Tahiti lors du passage de la comète de Halley. Un {{hvezdáreň}} plutôt qu'un champ de bataille : rien ne semblait le destiner à une carrière militaire ou politique.
+Comme {{astronóm}}, il observe la Lune, participe à des expéditions pour étudier des éclipses solaires jusque dans le Pacifique, et devient l'un des premiers à photographier le ciel depuis Tahiti lors du passage de la comète de Halley. Une {{hvezdáreň}} plutôt qu'un champ de bataille : rien ne semblait le destiner à une carrière militaire ou politique.
 
 ! 💬 Nikdy som nemyslel, že skončím ako generál, keď som začínal pri ďalekohľade.
 > Je n'aurais jamais pensé finir général, moi qui ai commencé derrière un télescope.

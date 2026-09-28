@@ -10,7 +10,7 @@
 | dážď | pluie |
 | sneh | neige |
 | vietor | vent |
-| oblak / mraky | nuage / nuages |
+| oblak / oblaky | nuage / nuages |
 | hmla | brouillard |
 | búrka | orage |
 | dúha | arc-en-ciel |
@@ -35,7 +35,7 @@
 > Il neige depuis ce matin.
 > sneží = il neige · už od rána = déjà depuis le matin
 
-+ "prší" et "sneží" sont des verbes impersonnels : ils n'ont pas de sujet, comme "il pleut" en français.
+> 💡 "prší" et "sneží" sont des verbes impersonnels : ils n'ont pas de sujet, comme "il pleut" en français.
 
 ! Fúka silný vietor.
 > Il y a un vent fort qui souffle.
@@ -62,11 +62,11 @@
 > Aujourd'hui il fait terriblement chaud.
 > dnes = aujourd'hui · strašne = terriblement · horúco = très chaud
 
-! Má dvadsať stupňov.
-> Il fait vingt degrés.
-> má = il a (littéralement) · dvadsať stupňov = vingt degrés
+! Vonku je dvadsať stupňov.
+> Il fait vingt degrés dehors.
+> vonku = dehors · je = est · dvadsať stupňov = vingt degrés
 
-+ Pour la température, le slovaque utilise littéralement "il a" (má) plutôt que "il fait" comme en français.
+> 💡 Pour la température, pas de « il fait » : on dit simplement « est » ({{je}}), comme pour « je zima ».
 
 ---
 
@@ -79,7 +79,7 @@
 | jeseň | automne |
 | zima | hiver |
 
-+ Attention : "zima" veut dire à la fois "hiver" (nom) et "froid" (dans "je zima" = il fait froid). Le contexte permet de distinguer les deux sens.
+> 💡 Attention : "zima" veut dire à la fois "hiver" (nom) et "froid" (dans "je zima" = il fait froid). Le contexte permet de distinguer les deux sens.
 
 ! V lete je väčšinou teplo.
 > En été il fait généralement chaud.
@@ -111,5 +111,5 @@
 ## ⚠️ Pièges pour les francophones
 
 - "prší", "sneží", "fúka" sont des verbes **sans sujet** : pas d'équivalent de "il" à ajouter devant, contrairement au français.
-- Pour la température, le slovaque dit littéralement "il a X degrés" ({{má dvadsať stupňov}}), pas "il fait X degrés".
+- Pour la température, le slovaque dit simplement "il est X degrés" ({{je dvadsať stupňov}}), sans équivalent de "il fait".
 - "zima" a deux sens (hiver / froid) : {{zima}} comme saison vs {{je zima}} pour dire qu'il fait froid.

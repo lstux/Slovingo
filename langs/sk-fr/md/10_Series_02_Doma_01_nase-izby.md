@@ -30,6 +30,8 @@ Les pièces du logement, et le point qui commande toute la grammaire slovaque : 
 | izba, kuchyňa | féminin : finale en -a ou -ňa |
 | okno, mesto | neutre : finale en -o ou -e |
 
+Attention, quelques féminins se terminent par une consonne : {{posteľ}} (le lit), {{garáž}}, {{noc}}, {{soľ}}. On les apprend au fur et à mesure.
+
 Ce n'est pas une décoration : le genre décide de la forme des adjectifs, des possessifs et des terminaisons à venir. Autant le repérer tout de suite.
 
 ### C'est / ce sont

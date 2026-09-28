@@ -111,7 +111,7 @@ Le possessif s'accorde avec le genre du nom qui suit, pas avec la personne qui p
 
 **Babka et dedko, pas « stará mama ».** Les formes officielles existent (*stará mama*, *starý otec*), mais dans la vraie vie tout le monde dit {{babka}} et {{dedko}}. C'est chaleureux et parfaitement standard.
 
-**Matka n'est pas le mot du quotidien.** C'est la forme neutre, celle des documents ou du dictionnaire, symétrique de {{otec}}. Dans la vraie vie, presque tout le monde dit plutôt {{mama}} — déjà familier, un cran en dessous de *matka*, comme « maman » face à « mère ». Et le slovaque adore encore diminutiver : *mama* devient {{mamička}}, *otec* devient {{ocko}}. Ce n'est pas réservé aux enfants — un adulte appellera sa mère *mamička* sans que personne ne sourcille.
+**Matka n'est pas le mot du quotidien.** C'est la forme officielle, celle des documents ou du dictionnaire, symétrique de {{otec}}. Dans la vraie vie, presque tout le monde dit plutôt {{mama}} — déjà familier, un cran en dessous de *matka*, comme « maman » face à « mère ». Et le slovaque adore encore diminutiver : *mama* devient {{mamička}}, *otec* devient {{ocko}}. Ce n'est pas réservé aux enfants — un adulte appellera sa mère *mamička* sans que personne ne sourcille.
 
 **Le déjeuner du dimanche.** Beaucoup de familles se retrouvent le dimanche midi chez la babka. C'est une institution, et refuser une deuxième assiette est considéré comme une insulte modérée. Tu es prévenu.
 

@@ -29,7 +29,7 @@ La halte au refuge de montagne. Première approche du **conditionnel**, pour exp
 |----------|----------|
 | Chcel by som čaj. | Je voudrais un thé. (homme) |
 | Chcela by som čaj. | Je voudrais un thé. (femme) |
-| Mohli by sme odpočívať? | Pourrions-nous nous reposer ? |
+| Mohli by sme si oddýchnuť? | Pourrions-nous faire une pause ? |
 | Bolo by to pekné. | Ce serait joli. |
 
 Le conditionnel se forme avec le passé du verbe (déjà croisé sous la forme *bol/bola*) suivi de **by**. C'est plus poli et plus doux que le présent direct.
