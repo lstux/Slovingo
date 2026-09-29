@@ -81,7 +81,7 @@ function resetSettingsToDefaults() {
 // ============================================================================
 
 function renderSettingsScreen() {
-    applyTheme("uvod");
+    applyTheme("default");
     setKicker("");
     setPageTitle((LANG.ui && LANG.ui.settings) || "Settings");
     setToolbarButtons({});

@@ -33,16 +33,10 @@ let DATA = null;
 let EXERCISES = null;
 
 /**
- * Series subgroup slugs that have a dedicated color theme in
- * style.css (see the [data-theme="..."] rules). Anything else --
- * other categories, or a series subgroup without its own theme yet
- * (e.g. the Kronika story arcs) -- falls back to the neutral "uvod"
- * theme.
+ * Key of the neutral theme (see the [data-theme="default"] rule in
+ * style.css). Used for every sheet with no theme of its own.
  */
-const SERIES_THEME_KEYS = new Set([
-    "rodina", "doma", "jedlo", "cas", "nakupy",
-    "mesto", "pocasie", "tatry", "velkanoc",
-]);
+const DEFAULT_THEME = "default";
 
 // ============================================================================
 // Tracking de la dernière fiche Séries (pour "Continuer")
@@ -574,12 +568,23 @@ function adjacentSheetId(sheetId, direction) {
     return target >= 0 && target < ids.length ? ids[target] : null;
 }
 
-/** @param {object|undefined} group @returns {string} A theme key for [data-theme]. */
+/**
+ * Theme key for [data-theme] (see style.css). A series group gets the
+ * theme its course assigns to its subgroup in lang.json's
+ * `subgroup_themes` map ({ "familie": "family", ... }). Everything
+ * else -- other categories, a subgroup with no entry -- gets the
+ * neutral theme. A key style.css doesn't know renders as the neutral
+ * theme too, since it only redefines variables that :root already sets.
+ *
+ * @param {object|undefined} group
+ * @returns {string}
+ */
 function themeForGroup(group) {
-    if (group && group.category === "series" && SERIES_THEME_KEYS.has(group.subgroup)) {
-        return group.subgroup;
+    const themes = (LANG && LANG.subgroup_themes) || {};
+    if (group && group.category === "series" && typeof themes[group.subgroup] === "string") {
+        return themes[group.subgroup];
     }
-    return "uvod";
+    return DEFAULT_THEME;
 }
 
 /**
@@ -702,7 +707,7 @@ function renderSheet(sheetId) {
 }
 
 function renderNotFound(sheetId) {
-    applyTheme("uvod");
+    applyTheme(DEFAULT_THEME);
     setKicker("");
     setPageTitle("404");
     updateToolbarForSheetView(false);
@@ -722,7 +727,7 @@ function renderNotFound(sheetId) {
 
 /** Render the home screen: every group, each with its sheets. */
 function renderHome() {
-    applyTheme("uvod");
+    applyTheme(DEFAULT_THEME);
     setKicker("");
     setPageTitle((LANG.site && LANG.site.title) || "Slovingo");
     updateToolbarForSheetView(false);
@@ -844,7 +849,7 @@ function renderSheetCard(sheet, group, nextCardNumber) {
  * separate step -- this just avoids a dead link in the toolbar.
  */
 function renderExercisesPlaceholder() {
-    applyTheme("uvod");
+    applyTheme(DEFAULT_THEME);
     setKicker("");
     setPageTitle((LANG.site && LANG.site.title) || "Slovingo");
     updateToolbarForSheetView(false);

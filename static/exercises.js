@@ -670,7 +670,7 @@ function buildExerciseSections() {
 }
 
 async function renderSelectionScreen() {
-    applyTheme("uvod");
+    applyTheme("default");
     setKicker("");
     setPageTitle((LANG.site && LANG.site.title) || "Slovingo");
     setToolbarButtons({});
@@ -1085,7 +1085,7 @@ function startSessionFromQuery(query) {
     state.sheetId = validIds.length === 1 ? validIds[0] : null;
 
     const group = state.sheetId ? findGroupForSheet(state.sheetId) : null;
-    applyTheme(group ? themeForGroup(group) : "uvod");
+    applyTheme(group ? themeForGroup(group) : "default");
 
     // Single sheet: same kicker/title split as the sheet page itself
     // (kickerFor()/splitTitle(), both in app.js) -- "Série Rodina

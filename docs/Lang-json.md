@@ -140,6 +140,32 @@ partout où l'override existait précisément pour ça. Vérifie ta propre
 `lang.json` si tu as un doute — voir les issues liées à ce document dans les
 dépôts concernés.
 
+## subgroup_themes
+
+Associe un sous-groupe de série à un **thème visuel** (couleurs, motif, photo
+de bandeau) défini dans `static/style.css`. Les clés suivent exactement la
+même règle que `subgroups` (le slug du sous-groupe, en minuscules, sans
+préfixe de catégorie) ; les valeurs sont des clés de thème.
+
+```json
+"subgroup_themes": {
+  "familie": "family",
+  "haus": "house"
+}
+```
+
+Clés de thème disponibles : `default`, `family`, `house`, `food`, `time`,
+`shopping`, `city`, `weather`, `mountains`, `easter`.
+
+- Un sous-groupe absent de `subgroup_themes` utilise `default`, tout comme
+  les fiches hors série (Introduction, Vocabulaire, Annexes...).
+- Une clé de thème inconnue de `style.css` s'affiche aussi comme `default`.
+- Le thème `<clé>` lit sa photo de bandeau dans `img/style_<clé>.jpg` du
+  cours (facultative : sans fichier, le motif et le dégradé suffisent).
+- Plusieurs sous-groupes (voire plusieurs cours) peuvent partager un thème.
+
+Le champ est facultatif : sans lui, toutes les fiches utilisent `default`.
+
 ## ui
 
 Toutes les chaînes d'interface (boutons, réglages, messages). Vois la liste
