@@ -148,7 +148,8 @@
             align-items: flex-start;
         }
         .dict-entry:last-child { margin-bottom: 0; }
-        .dict-entry input {
+        .dict-entry input,
+        .dict-entry select {
             flex: 1;
             min-height: 32px;
         }
@@ -240,6 +241,13 @@
     </div>
 
     <script>
+        // Visual theme keys defined in static/style.css ([data-theme="..."]).
+        // Keep in sync with that file (and docs/Lang-json.md).
+        const THEME_KEYS = [
+            "default", "family", "house", "food", "time", "shopping", "city",
+            "weather", "mountains", "easter", "basics", "animals", "games", "sea"
+        ];
+
         const SCHEMA = {
             target_lang: {
                 code: { label: "Language code", required: true },
@@ -271,6 +279,7 @@
             },
             categories: { dict: true, label: "Categories" },
             subgroups: { dict: true, label: "Subgroups" },
+            subgroup_themes: { dict: true, label: "Subgroup themes", values: THEME_KEYS },
             ui: { dict: true, label: "UI strings" },
             generator: {
                 target_headers: { label: "Target headers (one per line)", required: false, array: true },
@@ -290,6 +299,7 @@
                 site: { title: "" },
                 categories: {},
                 subgroups: {},
+                subgroup_themes: {},
                 ui: {},
                 generator: {}
             };
@@ -343,6 +353,9 @@
                     series: "Séries"
                 },
                 subgroups: {},
+                subgroup_themes: {
+                    rodina: "family"
+                },
                 ui: {
                     home: "Accueil",
                     exercises: "Exercices"
@@ -465,7 +478,7 @@
             addBtn.textContent = "+ Add entry";
             addBtn.onclick = () => {
                 const entry = createDictEntry(section, "", "");
-                editor.insertBefore(entry, addBtn);
+                editor.appendChild(entry);
             };
 
             container.appendChild(editor);
@@ -482,10 +495,29 @@
             keyInput.placeholder = "Key";
             keyInput.value = key;
 
-            const valueInput = document.createElement("input");
-            valueInput.type = "text";
-            valueInput.placeholder = "Value";
-            valueInput.value = value;
+            const allowed = SCHEMA[section]?.values;
+            let valueInput;
+            if (allowed) {
+                // Closed list of values: a menu avoids typos in theme keys.
+                // A value missing from the list (older or custom key) is kept
+                // as an extra option instead of being silently dropped.
+                valueInput = document.createElement("select");
+                const choices = ["", ...allowed];
+                if (value && !allowed.includes(value)) choices.push(value);
+                for (const choice of choices) {
+                    const opt = document.createElement("option");
+                    opt.value = choice;
+                    opt.textContent = choice === "" ? "(none: default)"
+                        : (allowed.includes(choice) ? choice : `${choice} (unknown)`);
+                    valueInput.appendChild(opt);
+                }
+                valueInput.value = value || "";
+            } else {
+                valueInput = document.createElement("input");
+                valueInput.type = "text";
+                valueInput.placeholder = "Value";
+                valueInput.value = value;
+            }
 
             const deleteBtn = document.createElement("button");
             deleteBtn.className = "danger";
@@ -511,7 +543,7 @@
             data[section] = {};
 
             entries.forEach(entry => {
-                const inputs = entry.querySelectorAll("input");
+                const inputs = entry.querySelectorAll("input, select");
                 const key = inputs[0].value.trim();
                 const value = inputs[1].value.trim();
                 if (key) {

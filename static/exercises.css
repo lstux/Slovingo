@@ -7,7 +7,7 @@
  * rayons) — ce fichier ne redéfinit aucun token, il les applique.
  *
  * Le thème du <body> change dynamiquement (voir exercises.js,
- * applyTheme()) : neutre ("uvod") sur l'écran de sélection, celui de
+ * applyTheme()) : neutre ("default") sur l'écran de sélection, celui de
  * la fiche pendant une session. Sur l'écran de sélection, chaque
  * carte porte son propre data-theme pour un liseré de couleur
  * individuel, repérable avant même d'avoir cliqué.
