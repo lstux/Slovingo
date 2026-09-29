@@ -142,7 +142,7 @@ dépôts concernés.
 
 ## subgroup_themes
 
-Associe un sous-groupe de série à un **thème visuel** (couleurs, motif, photo
+Associe un sous-groupe à un **thème visuel** (couleurs, motif, photo
 de bandeau) défini dans `static/style.css`. Les clés suivent exactement la
 même règle que `subgroups` (le slug du sous-groupe, en minuscules, sans
 préfixe de catégorie) ; les valeurs sont des clés de thème.

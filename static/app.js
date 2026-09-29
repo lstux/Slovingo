@@ -581,7 +581,7 @@ function adjacentSheetId(sheetId, direction) {
  */
 function themeForGroup(group) {
     const themes = (LANG && LANG.subgroup_themes) || {};
-    if (group && group.category === "series" && typeof themes[group.subgroup] === "string") {
+    if (group && group.subgroup && typeof themes[group.subgroup] === "string") {
         return themes[group.subgroup];
     }
     return DEFAULT_THEME;
