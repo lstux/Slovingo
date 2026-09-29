@@ -282,8 +282,8 @@ html[data-photos="off"] { --photo: none !important; --texture-opacity: 0 !import
     --line:      light-dark(#e7dcb2, #3b311a);
     --accent:    light-dark(#8a6a00, #ffd23f);
     --accent-2:  light-dark(#b02a2a, #ff7b6e);
-    --band-a:    light-dark(#a07800, #5c4600);
-    --band-b:    light-dark(#5e4600, #2a1f00);
+    --band-a:    light-dark(#b98900, #7a5f00);
+    --band-b:    light-dark(#7d5c00, #2f2400);
     --display-weight: 600;
     --photo: var(--photo-basics, none);
     --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='56'%3E%3Cg fill='none' stroke='white' stroke-width='1.5'%3E%3Cpath d='M6 8h24a4 4 0 014 4v9a4 4 0 01-4 4H18l-6 6v-6H6a4 4 0 01-4-4v-9a4 4 0 014-4z'/%3E%3Cpath d='M42 34h16a4 4 0 014 4v7a4 4 0 01-4 4h-3v5l-5-5H42a4 4 0 01-4-4v-7a4 4 0 014-4z'/%3E%3Cpath d='M10 15h16M10 20h10M44 40h14'/%3E%3C/g%3E%3C/svg%3E");
