@@ -76,6 +76,10 @@
     --photo-shopping:  url("img/style_shopping.jpg");
     --photo-weather:   url("img/style_weather.jpg");
     --photo-easter:    url("img/style_easter.jpg");
+    --photo-basics:    url("img/style_basics.jpg");
+    --photo-animals:   url("img/style_animals.jpg");
+    --photo-games:     url("img/style_games.jpg");
+    --photo-sea:       url("img/style_sea.jpg");
 }
 
 /* Bascule manuelle clair / sombre (facultative, non utilisée par défaut :
@@ -266,6 +270,75 @@ html[data-photos="off"] { --photo: none !important; --texture-opacity: 0 !import
     --band-b:    light-dark(#42286e, #1a1030);
     --photo: var(--photo-easter, none);
     --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cg fill='none' stroke='white' stroke-width='1.6'%3E%3Cpath d='M0 11q11 11 22 0t22 0'/%3E%3Cpath d='M0 22q11 -11 22 0t22 0'/%3E%3Cpath d='M0 33q11 11 22 0t22 0'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* — 10 · basics — le kit de survie : les premiers mots, rouge trousse de secours, bulles de dialogue. */
+[data-theme="basics"] {
+    --bg:        light-dark(#fbf3f1, #180f0e);
+    --surface:   light-dark(#fffaf9, #221615);
+    --surface-2: light-dark(#f1e0dc, #2e1d1b);
+    --text:      light-dark(#2e1c19, #f3e4e1);
+    --text-soft: light-dark(#715551, #b39a96);
+    --line:      light-dark(#e6d0cb, #3b2825);
+    --accent:    light-dark(#c0281f, #ff7b6e);
+    --accent-2:  light-dark(#8a6500, #e8b83e);
+    --band-a:    light-dark(#c0281f, #6e1712);
+    --band-b:    light-dark(#7a1712, #2e0a08);
+    --display-weight: 600;
+    --photo: var(--photo-basics, none);
+    --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='56'%3E%3Cg fill='none' stroke='white' stroke-width='1.5'%3E%3Cpath d='M6 8h24a4 4 0 014 4v9a4 4 0 01-4 4H18l-6 6v-6H6a4 4 0 01-4-4v-9a4 4 0 014-4z'/%3E%3Cpath d='M42 34h16a4 4 0 014 4v7a4 4 0 01-4 4h-3v5l-5-5H42a4 4 0 01-4-4v-7a4 4 0 014-4z'/%3E%3Cpath d='M10 15h16M10 20h10M44 40h14'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* — 11 · animals — les animaux : miel, foin, pelage. */
+[data-theme="animals"] {
+    --bg:        light-dark(#fbf4e6, #171109);
+    --surface:   light-dark(#fffbf1, #211a0f);
+    --surface-2: light-dark(#f2e5c8, #2d2416);
+    --text:      light-dark(#2e2410, #f1e8d4);
+    --text-soft: light-dark(#6f6140, #b3a583);
+    --line:      light-dark(#e6d8b6, #3a2f1b);
+    --accent:    light-dark(#9a6210, #e8b04e);
+    --accent-2:  light-dark(#4f7a2a, #a3cf6a);
+    --band-a:    light-dark(#a8680f, #5e3a08);
+    --band-b:    light-dark(#62390a, #2a1804);
+    --display-weight: 500;
+    --photo: var(--photo-animals, none);
+    --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cg fill='none' stroke='white' stroke-width='1.5'%3E%3Cellipse cx='18' cy='26' rx='5.5' ry='4.5'/%3E%3Ccircle cx='10' cy='18' r='2.4'/%3E%3Ccircle cx='15' cy='13' r='2.4'/%3E%3Ccircle cx='21' cy='13' r='2.4'/%3E%3Ccircle cx='26' cy='18' r='2.4'/%3E%3Cellipse cx='48' cy='56' rx='5.5' ry='4.5'/%3E%3Ccircle cx='40' cy='48' r='2.4'/%3E%3Ccircle cx='45' cy='43' r='2.4'/%3E%3Ccircle cx='51' cy='43' r='2.4'/%3E%3Ccircle cx='56' cy='48' r='2.4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* — 12 · games — les jeux : chartreuse vif, rose de jouet, dés. */
+[data-theme="games"] {
+    --bg:        light-dark(#f4f8e8, #10140a);
+    --surface:   light-dark(#fcfef4, #181e0e);
+    --surface-2: light-dark(#e6efcc, #212a14);
+    --text:      light-dark(#1f2a0c, #e9f2d2);
+    --text-soft: light-dark(#5a6a3a, #a4b47f);
+    --line:      light-dark(#d6e3b3, #2c3818);
+    --accent:    light-dark(#4f7a00, #b8e04a);
+    --accent-2:  light-dark(#c42a5c, #ff7fa5);
+    --band-a:    light-dark(#4f7a00, #2c4a05);
+    --band-b:    light-dark(#2e4a05, #131f03);
+    --font-display: var(--font-grotesk);
+    --display-weight: 700;
+    --display-spacing: -0.03em;
+    --photo: var(--photo-games, none);
+    --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cg fill='none' stroke='white' stroke-width='1.5'%3E%3Crect x='4' y='4' width='22' height='22' rx='4'/%3E%3Ccircle cx='10' cy='10' r='1.6'/%3E%3Ccircle cx='15' cy='15' r='1.6'/%3E%3Ccircle cx='20' cy='20' r='1.6'/%3E%3Crect x='30' y='30' width='22' height='22' rx='4'/%3E%3Ccircle cx='36' cy='36' r='1.6'/%3E%3Ccircle cx='46' cy='36' r='1.6'/%3E%3Ccircle cx='36' cy='46' r='1.6'/%3E%3Ccircle cx='46' cy='46' r='1.6'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* — 13 · sea — la mer : turquoise, sable, écailles de vagues. */
+[data-theme="sea"] {
+    --bg:        light-dark(#eef6f6, #0b1415);
+    --surface:   light-dark(#fafefe, #121e20);
+    --surface-2: light-dark(#d9eaea, #1b2b2d);
+    --text:      light-dark(#142526, #dcefee);
+    --text-soft: light-dark(#52696a, #90adae);
+    --line:      light-dark(#c6dddd, #243739);
+    --accent:    light-dark(#0b7a75, #45d1c4);
+    --accent-2:  light-dark(#b8641a, #f0a35e);
+    --band-a:    light-dark(#0b7a75, #0b3f3d);
+    --band-b:    light-dark(#064443, #04201f);
+    --photo: var(--photo-sea, none);
+    --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24'%3E%3Cg fill='none' stroke='white' stroke-width='1.5'%3E%3Cpath d='M12 24a12 12 0 0124 0'/%3E%3Cpath d='M16 24a8 8 0 0116 0'/%3E%3Cpath d='M20 24a4 4 0 018 0'/%3E%3Cpath d='M-12 12a12 12 0 0124 0'/%3E%3Cpath d='M-8 12a8 8 0 0116 0'/%3E%3Cpath d='M-4 12a4 4 0 018 0'/%3E%3Cpath d='M36 12a12 12 0 0124 0'/%3E%3Cpath d='M40 12a8 8 0 0116 0'/%3E%3Cpath d='M44 12a4 4 0 018 0'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 /*

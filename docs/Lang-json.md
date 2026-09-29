@@ -155,7 +155,8 @@ préfixe de catégorie) ; les valeurs sont des clés de thème.
 ```
 
 Clés de thème disponibles : `default`, `family`, `house`, `food`, `time`,
-`shopping`, `city`, `weather`, `mountains`, `easter`.
+`shopping`, `city`, `weather`, `mountains`, `easter`, `basics` (premiers mots,
+kit de survie), `animals`, `games`, `sea`.
 
 - Un sous-groupe absent de `subgroup_themes` utilise `default`, tout comme
   les fiches hors série (Introduction, Vocabulaire, Annexes...).
