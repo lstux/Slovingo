@@ -272,18 +272,18 @@ html[data-photos="off"] { --photo: none !important; --texture-opacity: 0 !import
     --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cg fill='none' stroke='white' stroke-width='1.6'%3E%3Cpath d='M0 11q11 11 22 0t22 0'/%3E%3Cpath d='M0 22q11 -11 22 0t22 0'/%3E%3Cpath d='M0 33q11 11 22 0t22 0'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-/* — 10 · basics — le kit de survie : les premiers mots, rouge trousse de secours, bulles de dialogue. */
+/* — 10 · basics — le kit de survie : les premiers mots, jaune soleil, bulles de dialogue. */
 [data-theme="basics"] {
-    --bg:        light-dark(#fbf3f1, #180f0e);
-    --surface:   light-dark(#fffaf9, #221615);
-    --surface-2: light-dark(#f1e0dc, #2e1d1b);
-    --text:      light-dark(#2e1c19, #f3e4e1);
-    --text-soft: light-dark(#715551, #b39a96);
-    --line:      light-dark(#e6d0cb, #3b2825);
-    --accent:    light-dark(#c0281f, #ff7b6e);
-    --accent-2:  light-dark(#8a6500, #e8b83e);
-    --band-a:    light-dark(#c0281f, #6e1712);
-    --band-b:    light-dark(#7a1712, #2e0a08);
+    --bg:        light-dark(#fbf6e2, #171308);
+    --surface:   light-dark(#fffcee, #211b0c);
+    --surface-2: light-dark(#f3e9c2, #2d2510);
+    --text:      light-dark(#2b2410, #f3ebd0);
+    --text-soft: light-dark(#6b5f36, #b5a878);
+    --line:      light-dark(#e7dcb2, #3b311a);
+    --accent:    light-dark(#8a6a00, #ffd23f);
+    --accent-2:  light-dark(#b02a2a, #ff7b6e);
+    --band-a:    light-dark(#a07800, #5c4600);
+    --band-b:    light-dark(#5e4600, #2a1f00);
     --display-weight: 600;
     --photo: var(--photo-basics, none);
     --pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='56'%3E%3Cg fill='none' stroke='white' stroke-width='1.5'%3E%3Cpath d='M6 8h24a4 4 0 014 4v9a4 4 0 01-4 4H18l-6 6v-6H6a4 4 0 01-4-4v-9a4 4 0 014-4z'/%3E%3Cpath d='M42 34h16a4 4 0 014 4v7a4 4 0 01-4 4h-3v5l-5-5H42a4 4 0 01-4-4v-7a4 4 0 014-4z'/%3E%3Cpath d='M10 15h16M10 20h10M44 40h14'/%3E%3C/g%3E%3C/svg%3E");
