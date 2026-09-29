@@ -181,6 +181,8 @@ async function boot() {
 
     window.addEventListener("hashchange", route);
 
+    initSwipeNavigation();
+
     // Afficher le streak, la jauge, et le bouton continuer au démarrage
     if (typeof updateStreakDisplay === "function") {
         updateStreakDisplay();
@@ -1425,4 +1427,154 @@ function handleExercisesButtonClick() {
     } else {
         window.location.hash = "#/exercises";
     }
+}
+
+// ============================================================================
+// Swipe navigation (touch screens)
+// ============================================================================
+
+/**
+ * Swipe left -> next sheet, swipe right -> previous sheet, on touch
+ * screens. It reuses the pager buttons (#pager-top-prev/next): when
+ * they are visible and enabled, a swipe is just a click on them, so
+ * the swipe can never go somewhere the buttons wouldn't, and it is
+ * inactive on views without a pager (home, exercises, settings).
+ *
+ * While the finger moves, #content follows it (damped) as visual
+ * feedback; on release past the threshold it slides out, the sheet
+ * changes, and the new one slides in. Below the threshold it snaps
+ * back. Vertical scrolling is left entirely to the browser (passive
+ * listeners, and the gesture is dropped as soon as it looks vertical).
+ */
+function initSwipeNavigation() {
+    const content = document.getElementById("content");
+    if (!content || !("ontouchstart" in window)) return;
+
+    const EDGE_PX = 24;          // ignore OS edge gestures (iOS back swipe...)
+    const LOCK_PX = 10;          // movement needed to decide the axis
+    const MIN_DISTANCE_PX = 60;  // absolute distance to commit...
+    const MIN_DISTANCE_RATIO = 0.25;  // ...or this fraction of the width
+    const FLICK_DISTANCE_PX = 40;     // shorter but fast swipe (a flick)
+    const FLICK_SPEED = 0.5;          // px per ms
+    const DRAG_DAMPING = 0.45;
+    const REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    let gesture = null; // {x, y, t, axis: null|"h"|"v", dx, target}
+
+    const pagerButton = (direction) =>
+        document.getElementById(direction < 0 ? "pager-top-prev" : "pager-top-next");
+
+    const canNavigate = (direction) => {
+        const btn = pagerButton(direction);
+        return !!btn && !btn.disabled && !btn.classList.contains("exo-toolbar-hidden");
+    };
+
+    /** True if the touch started somewhere that scrolls or edits horizontally. */
+    const startsInHorizontalWidget = (el) => {
+        for (; el && el !== document.body; el = el.parentElement) {
+            if (/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName) || el.isContentEditable) return true;
+            if (el.scrollWidth > el.clientWidth + 1) {
+                const overflowX = getComputedStyle(el).overflowX;
+                if (overflowX === "auto" || overflowX === "scroll") return true;
+            }
+        }
+        return false;
+    };
+
+    const setOffset = (px) => {
+        content.style.transition = "none";
+        content.style.transform = px ? `translateX(${px}px)` : "";
+        content.style.opacity = px ? String(1 - Math.min(Math.abs(px) / 400, 0.4)) : "";
+    };
+
+    const clearStyles = () => {
+        content.style.transition = "";
+        content.style.transform = "";
+        content.style.opacity = "";
+    };
+
+    const snapBack = () => {
+        if (REDUCED_MOTION.matches) { clearStyles(); return; }
+        content.style.transition = "transform 160ms ease-out, opacity 160ms ease-out";
+        content.style.transform = "";
+        content.style.opacity = "";
+    };
+
+    /** Slide the current sheet out, navigate, slide the new one in. */
+    const commit = (direction) => {
+        const btn = pagerButton(direction);
+        if (REDUCED_MOTION.matches) { clearStyles(); btn.click(); return; }
+
+        const sign = direction > 0 ? -1 : 1; // next: leaves to the left
+        content.style.transition = "transform 130ms ease-in, opacity 130ms ease-in";
+        content.style.transform = `translateX(${sign * 35}%)`;
+        content.style.opacity = "0";
+
+        setTimeout(() => {
+            // route() (registered first) re-renders on hashchange; we run right after.
+            window.addEventListener("hashchange", () => {
+                content.style.transition = "none";
+                content.style.transform = `translateX(${-sign * 15}%)`;
+                content.style.opacity = "0";
+                void content.offsetWidth; // commit the start state
+                content.style.transition = "transform 180ms ease-out, opacity 180ms ease-out";
+                content.style.transform = "";
+                content.style.opacity = "";
+            }, { once: true });
+            btn.click();
+            // Safety net: never leave the page faded out.
+            setTimeout(clearStyles, 600);
+        }, 130);
+    };
+
+    document.addEventListener("touchstart", (e) => {
+        gesture = null;
+        if (e.touches.length !== 1) return;
+        if (!canNavigate(1) && !canNavigate(-1)) return;
+        const t = e.touches[0];
+        if (t.clientX < EDGE_PX || t.clientX > window.innerWidth - EDGE_PX) return;
+        if (startsInHorizontalWidget(e.target)) return;
+        gesture = { x: t.clientX, y: t.clientY, t: e.timeStamp, axis: null, dx: 0 };
+    }, { passive: true });
+
+    document.addEventListener("touchmove", (e) => {
+        if (!gesture || e.touches.length !== 1) { if (gesture) { setOffset(0); gesture = null; } return; }
+        const t = e.touches[0];
+        const dx = t.clientX - gesture.x;
+        const dy = t.clientY - gesture.y;
+
+        if (gesture.axis === null) {
+            if (Math.abs(dx) < LOCK_PX && Math.abs(dy) < LOCK_PX) return;
+            gesture.axis = Math.abs(dx) > Math.abs(dy) * 1.5 ? "h" : "v";
+        }
+        if (gesture.axis === "v") { gesture = null; return; }
+
+        gesture.dx = dx;
+        // Follow the finger; much stiffer if there's nowhere to go that way.
+        const available = canNavigate(dx < 0 ? 1 : -1);
+        setOffset(dx * (available ? DRAG_DAMPING : 0.12));
+    }, { passive: true });
+
+    document.addEventListener("touchend", (e) => {
+        if (!gesture) return;
+        const g = gesture;
+        gesture = null;
+        if (g.axis !== "h") return;
+
+        const dx = g.dx;
+        const direction = dx < 0 ? 1 : -1;
+        const elapsed = Math.max(e.timeStamp - g.t, 1);
+        const far = Math.abs(dx) >= Math.max(MIN_DISTANCE_PX, window.innerWidth * MIN_DISTANCE_RATIO);
+        const flick = Math.abs(dx) >= FLICK_DISTANCE_PX && Math.abs(dx) / elapsed >= FLICK_SPEED;
+
+        if ((far || flick) && canNavigate(direction)) {
+            commit(direction);
+        } else {
+            snapBack();
+        }
+    }, { passive: true });
+
+    document.addEventListener("touchcancel", () => {
+        if (gesture) { gesture = null; snapBack(); }
+    }, { passive: true });
 }
