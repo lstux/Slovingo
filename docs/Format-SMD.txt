@@ -117,6 +117,29 @@ par :
 Le Javascript ajoute automatiquement le comportement de lecture.
  
 Cette syntaxe peut être utilisée partout (paragraphes, listes, tableaux, cartes audio...).
+
+Langue du speakable (préfixe optionnel) :
+
+Sans préfixe, {{texte}} est lu dans la langue apprise. Un préfixe "xx:" (code
+ISO court de lang.json : target_lang.code ou native_lang.code) choisit
+explicitement la langue de lecture :
+
+Le mot {{Maus}} signifie « {{fr:souris}} ».
+{{de:Guten Tag}} est équivalent à {{Guten Tag}} (langue apprise, explicite).
+
+- {{fr:...}} (langue native) : lu avec la voix native (Réglages > Audio),
+  affiché avec un soulignement en pointillés et une icône 🗣️ à la place du 🔊.
+- un préfixe qui n'est ni le code de la langue apprise ni celui de la langue
+  native (ex. {{Remarque: ...}}) n'est pas interprété : tout le texte est lu
+  dans la langue apprise, comme avant.
+- lecture au clic uniquement (pas de lecture automatique de la traduction).
+- smd2data.py n'a rien de spécial à faire : {{fr:texte}} devient [[fr:texte]]
+  dans le JSON, le préfixe est interprété par le Javascript (renderText() dans
+  app.js) à partir de lang.json.
+- limite connue : dans une audio-card, la phrase entière est lue avec la voix
+  de la langue apprise ; un {{fr:...}} placé dans le texte de la phrase ("!")
+  n'est donc pas lu à part. L'utiliser dans les traductions, remarques,
+  paragraphes, listes et tableaux.
  
 ---
 
@@ -155,7 +178,8 @@ Syntaxe| Signification
 premier ">"| Traduction naturelle
 autres ">"| Traduction littérale / décomposition
 "+"| Remarques, notes, explications
-"{{...}}"| Élément prononçable (speakable)
+"{{...}}"| Élément prononçable (speakable), langue apprise
+"{{fr:...}}"| Élément prononçable en langue native (préfixe = code ISO)
 émoji en tête de "!"| Marqueur de locuteur (dialogues)
 "@ url \| légende" ou "![alt](url)"| Illustration
  
