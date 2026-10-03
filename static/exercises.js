@@ -1347,14 +1347,14 @@ function resolveFillBlankView(ex, direction) {
             type: "fill-blank", direction: dir,
             tokens: ex.l2.split(" "), blankIndex: ex.blank_index_l2,
             answer: ex.missing_l2, choices: shuffle([ex.missing_l2, ...ex.choices_l2]),
-            audio: ex.l2, translation: ex.l1,
+            audio: ex.l2, translation: ex.l1, showTranslation: ex.show_translation === true,
         };
     }
     return {
         type: "fill-blank", direction: dir,
         tokens: ex.l1.split(" "), blankIndex: ex.blank_index_l1,
         answer: ex.missing_l1, choices: shuffle([ex.missing_l1, ...ex.choices_l1]),
-        audio: ex.l2, translation: ex.l2,
+        audio: ex.l2, translation: ex.l2, showTranslation: ex.show_translation === true,
     };
 }
 
@@ -1658,12 +1658,25 @@ function renderQcm(view) {
 function renderFillBlank(view) {
     const container = el("div", { className: "exo-card exo-fill-blank" });
     container.appendChild(el("div", { className: "exo-question-label", text: uiLabel("exercise_fillblank_question_label", "Complete the sentence:") }));
+    // Opt-in per exercise ("show_translation": true): show the sentence
+    // in the other language up front, as the order exercise does --
+    // useful for young learners, for whom a bare cloze is guesswork.
+    if (view.showTranslation && view.translation) {
+        container.appendChild(el("div", { className: "exo-question", text: view.translation }));
+    }
 
     const sentence = el("div", { className: "exo-sentence" });
     const blank = el("span", { className: "exo-blank", text: uiLabel("exercise_fillblank_blank_display", "___") });
     view.tokens.forEach((token, i) => {
         if (i === view.blankIndex) {
+            // Keep punctuation glued to the missing word ("danke!" with
+            // answer "danke" shows "___!"), instead of dropping it.
+            const at = view.answer ? token.indexOf(view.answer) : -1;
+            if (at > 0) sentence.appendChild(document.createTextNode(token.slice(0, at)));
             sentence.appendChild(blank);
+            if (at !== -1 && at + view.answer.length < token.length) {
+                sentence.appendChild(document.createTextNode(token.slice(at + view.answer.length)));
+            }
         } else {
             sentence.appendChild(document.createTextNode(token));
         }
@@ -2040,7 +2053,7 @@ function renderMatch(view) {
 
 function renderTypeInput(container, view, onValidate) {
     const wrap = el("div", { className: "exo-type-input" });
-    const input = el("input", { attrs: { type: "text", placeholder: "Your answer…", autocomplete: "off" } });
+    const input = el("input", { attrs: { type: "text", placeholder: uiLabel("exercise_type_placeholder", "Your answer…"), autocomplete: "off" } });
     const submit = el("button", {
         className: "exo-submit",
         text: uiLabel("exercise_submit_button", "Check"),
@@ -2144,7 +2157,7 @@ function renderSummary() {
     const actions = el("div", { className: "exo-summary-actions" }, [
         el("button", { className: "exo-next", text: uiLabel("session_restart_button", "🔁 Start over"), onclick: () => startPool() }),
         el("button", {
-            className: "exo-secondary", text: "⬅ New selection",
+            className: "exo-secondary", text: uiLabel("exercise_new_selection_button", "⬅ New selection"),
             onclick: () => { window.location.hash = "#/exercises"; },
         }),
     ]);
