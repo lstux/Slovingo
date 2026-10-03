@@ -59,6 +59,15 @@
     --photo-tint: 0.72;
     --texture-opacity: 0.05;
 
+    /* Facteurs appliqués PAR-DESSUS les réglages de chaque thème
+       (--photo-tint, --pattern-opacity, --photo-grayscale), pour que
+       la photo reste lisible sous la teinte et le motif. Plus forts
+       en mode clair, où le dégradé en multiply écrasait les couleurs
+       de la photo. 1 = réglage du thème tel quel. */
+    --tint-scale: 0.8;
+    --pattern-scale: 0.75;
+    --grayscale-scale: 0.8;
+
     /* Valeurs par défaut, écrasées par chaque thème */
     --font-display: var(--font-serif);
     --display-weight: 700;
@@ -86,6 +95,20 @@
    color-scheme: light dark laisse le système décider). */
 html[data-mode="light"] { color-scheme: light; }
 html[data-mode="dark"]  { color-scheme: dark; }
+
+/* Bandeaux : teinte, motif et désaturation allégés en mode clair. */
+@media (prefers-color-scheme: light) {
+    :root:not([data-mode="dark"]) {
+        --tint-scale: 0.6;
+        --pattern-scale: 0.5;
+        --grayscale-scale: 0.6;
+    }
+}
+html[data-mode="light"] {
+    --tint-scale: 0.6;
+    --pattern-scale: 0.5;
+    --grayscale-scale: 0.6;
+}
 
 /* Coupe-circuit photo : si un jour on veut désactiver les images
    d'un coup (ex : connexion lente), sans y toucher fiche par fiche. */
@@ -463,7 +486,7 @@ footer {
     inset: 0;
     z-index: -3;
     background: var(--photo) center 60% / cover no-repeat;
-    filter: grayscale(var(--photo-grayscale)) contrast(1.05);
+    filter: grayscale(calc(var(--photo-grayscale) * var(--grayscale-scale))) contrast(1.05);
 }
 
 /* La teinte du thème posée en multiply : c'est elle qui fait qu'une
@@ -475,7 +498,7 @@ footer {
     z-index: -2;
     background: linear-gradient(155deg, var(--band-a), var(--band-b));
     mix-blend-mode: multiply;
-    opacity: var(--photo-tint);
+    opacity: calc(var(--photo-tint) * var(--tint-scale));
 }
 
 .band__pattern {
@@ -483,7 +506,7 @@ footer {
     inset: 0;
     z-index: -1;
     background-image: var(--pattern);
-    opacity: var(--pattern-opacity);
+    opacity: calc(var(--pattern-opacity) * var(--pattern-scale));
 }
 
 /* Le bandeau ne s'arrête pas net : il se dissout dans la page. */
