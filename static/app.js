@@ -270,6 +270,35 @@ function escapeHtml(text) {
 }
 
 /**
+ * Split an optional language prefix off the inside of a speakable
+ * marker: "fr:Bonjour" -> {kind: "native", text: "Bonjour"} when "fr"
+ * is the course's native_lang.code, and likewise "target" for
+ * target_lang.code. smd2data.py turns {{fr:Bonjour}} into
+ * [[fr:Bonjour]] untouched, so the prefix is interpreted here, against
+ * the course's own language codes. Anything else (no prefix, or a
+ * "word:" that is not one of the two codes, e.g. "{{Poznamka: x}}") is
+ * left whole and spoken in the target language, as before.
+ *
+ * @param {string} inner Text between the [[ ]] markers.
+ * @returns {{kind: "target"|"native", text: string}}
+ */
+function parseSpeakableLang(inner) {
+    const match = /^([A-Za-z]{2,3}):\s*(.+)$/s.exec(inner);
+    if (match && LANG) {
+        const code = match[1].toLowerCase();
+        const nativeCode = ((LANG.native_lang && LANG.native_lang.code) || "").toLowerCase();
+        const targetCode = ((LANG.target_lang && LANG.target_lang.code) || "").toLowerCase();
+        if (nativeCode && code === nativeCode && code !== targetCode) {
+            return { kind: "native", text: match[2].trim() };
+        }
+        if (targetCode && code === targetCode) {
+            return { kind: "target", text: match[2].trim() };
+        }
+    }
+    return { kind: "target", text: inner };
+}
+
+/**
  * Render a content-block text field to HTML: resolves [[speakable]]
  * markers, **bold**, *italic*, `code`, and [text](url) links -- the
  * client-side mirror of smd2data.py's resolve_speakable() plus v1's
@@ -301,7 +330,7 @@ function renderText(text) {
     const speakables = [];
     working = working.replace(/\[\[(.+?)\]\]/g, (_match, inner) => {
         const index = speakables.length;
-        speakables.push(inner.trim());
+        speakables.push(parseSpeakableLang(inner.trim()));
         return `\u0000SPEAKABLE${index}\u0000`;
     });
 
@@ -315,9 +344,10 @@ function renderText(text) {
     working = working.replace(/\*(.+?)\*/g, "<em>$1</em>");
 
     // Replace speakable sentinels back
-    speakables.forEach((inner, index) => {
+    speakables.forEach((item, index) => {
         const placeholder = `\u0000SPEAKABLE${index}\u0000`;
-        const replacement = `<span class="speakable speakable-hint">${escapeHtml(inner)}</span>`;
+        const nativeClass = item.kind === "native" ? " speakable-native" : "";
+        const replacement = `<span class="speakable speakable-hint${nativeClass}" data-lang="${item.kind}">${escapeHtml(item.text)}</span>`;
         working = working.split(placeholder).join(replacement);
     });
 
@@ -873,7 +903,9 @@ function renderExercisesPlaceholder() {
 
 let currentUtterance = null;
 let targetVoiceAvailable = false;
+let nativeVoiceAvailable = false;
 let ttsWarningShown = false;
+let nativeTtsWarningShown = false;
 
 /**
  * Find the voice to speak with. If the person picked a specific one
@@ -882,18 +914,36 @@ let ttsWarningShown = false;
  * prefix -> voice name containing voice_hint -> none.
  */
 function findTargetVoice(preferredVoiceURI) {
+    return findVoice("target", preferredVoiceURI);
+}
+
+/** Same as findTargetVoice(), for the learner's native language. */
+function findNativeVoice(preferredVoiceURI) {
+    return findVoice("native", preferredVoiceURI);
+}
+
+/**
+ * @param {"target"|"native"} kind Which of the course's two languages
+ *     to find a voice for. The native voice has its own Settings
+ *     choice (SETTINGS.nativeVoiceURI) and falls back on
+ *     native_lang.tts_code / voice_hint exactly like the target one.
+ * @param {string|null} [preferredVoiceURI]
+ */
+function findVoice(kind, preferredVoiceURI) {
     const voices = window.speechSynthesis.getVoices();
     if (!voices.length) {
         return null;
     }
 
-    const uri = preferredVoiceURI !== undefined ? preferredVoiceURI : (SETTINGS && SETTINGS.voiceURI);
+    const langCfg = kind === "native" ? LANG.native_lang : LANG.target_lang;
+    const settingsUri = SETTINGS && (kind === "native" ? SETTINGS.nativeVoiceURI : SETTINGS.voiceURI);
+    const uri = preferredVoiceURI !== undefined ? preferredVoiceURI : settingsUri;
     if (uri) {
         const chosen = voices.find((v) => v.voiceURI === uri);
         if (chosen) return chosen;
     }
 
-    const ttsCode = (LANG.target_lang.tts_code || "").toLowerCase();
+    const ttsCode = (langCfg.tts_code || "").toLowerCase();
     const ttsPrefix = ttsCode.split("-")[0];
 
     if (ttsCode) {
@@ -904,7 +954,7 @@ function findTargetVoice(preferredVoiceURI) {
         const prefixed = voices.find((v) => v.lang.toLowerCase().startsWith(ttsPrefix));
         if (prefixed) return prefixed;
     }
-    const hint = (LANG.target_lang.voice_hint || "").toLowerCase();
+    const hint = (langCfg.voice_hint || "").toLowerCase();
     if (hint) {
         const named = voices.find((v) => v.name.toLowerCase().includes(hint));
         if (named) return named;
@@ -912,14 +962,19 @@ function findTargetVoice(preferredVoiceURI) {
     return null;
 }
 
-/** Show a one-time toast when no target-language voice is available. */
-function showTtsWarning() {
-    if (ttsWarningShown) return;
-    ttsWarningShown = true;
+/**
+ * Show a one-time toast (per language) when no voice is available.
+ * @param {"target"|"native"} [kind]
+ */
+function showTtsWarning(kind) {
+    const isNative = kind === "native";
+    if (isNative ? nativeTtsWarningShown : ttsWarningShown) return;
+    if (isNative) nativeTtsWarningShown = true; else ttsWarningShown = true;
 
     const template = (LANG.ui && LANG.ui.tts_unavailable)
         || "No {target_name} voice is available on this device.";
-    const message = template.replace("{target_name}", LANG.target_lang.name);
+    const langName = (isNative ? LANG.native_lang : LANG.target_lang).name;
+    const message = template.replace("{target_name}", langName);
 
     const toast = document.createElement("div");
     toast.className = "tts-toast";
@@ -952,6 +1007,11 @@ function showTtsWarning() {
  *     cancelled, or errored) -- lets callers (e.g. exercises.js's
  *     auto-advance) know when the audio is actually done playing,
  *     independently of any highlightElement.
+ * @param {"target"|"native"} [kind="target"] Language to speak in:
+ *     the learned language by default, or the learner's native
+ *     language (used for {{fr:...}} elements). Selects the utterance
+ *     lang, the voice (SETTINGS.nativeVoiceURI) and the availability
+ *     check.
  */
 /**
  * Strip a dialogue speaker marker (an emoji, re-prefixed into the
@@ -973,14 +1033,15 @@ function stripSpeakerForSpeech(text, speaker) {
     return text;
 }
 
-function speak(text, rate, pitch, voiceURI, highlightElement, onEnd) {
+function speak(text, rate, pitch, voiceURI, highlightElement, onEnd, kind) {
+    const isNative = kind === "native";
     if (!("speechSynthesis" in window)) {
         alert("Speech synthesis is not available on this device.");
         if (onEnd) onEnd();
         return;
     }
-    if (!targetVoiceAvailable) {
-        showTtsWarning();
+    if (!(isNative ? nativeVoiceAvailable : targetVoiceAvailable)) {
+        showTtsWarning(isNative ? "native" : "target");
         if (onEnd) onEnd();
         return;
     }
@@ -990,10 +1051,10 @@ function speak(text, rate, pitch, voiceURI, highlightElement, onEnd) {
 
     stopSpeaking();
     currentUtterance = new SpeechSynthesisUtterance(text);
-    currentUtterance.lang = LANG.target_lang.tts_code;
+    currentUtterance.lang = (isNative ? LANG.native_lang : LANG.target_lang).tts_code;
     currentUtterance.rate = effectiveRate;
     currentUtterance.pitch = effectivePitch;
-    const voice = findTargetVoice(voiceURI);
+    const voice = findVoice(isNative ? "native" : "target", voiceURI);
     if (voice) {
         currentUtterance.voice = voice;
     }
@@ -1035,9 +1096,12 @@ function stopSpeaking() {
  */
 function updateTtsAvailability() {
     targetVoiceAvailable = !!findTargetVoice();
+    nativeVoiceAvailable = !!findNativeVoice();
 
     document.querySelectorAll(".audio-buttons button, .speakable").forEach((el) => {
-        if (targetVoiceAvailable) {
+        const isNative = el.dataset.lang === "native";
+        const available = isNative ? nativeVoiceAvailable : targetVoiceAvailable;
+        if (available) {
             el.style.opacity = "";
             el.style.cursor = "";
             if (el.classList.contains("speakable")) {
@@ -1046,7 +1110,7 @@ function updateTtsAvailability() {
         } else {
             el.style.opacity = "0.4";
             el.style.cursor = "not-allowed";
-            el.title = `No ${LANG.target_lang.name} voice available`;
+            el.title = `No ${(isNative ? LANG.native_lang : LANG.target_lang).name} voice available`;
         }
     });
 }
@@ -1298,12 +1362,14 @@ function replaceAskUserNameInputs(containerElement) {
 /** Wire up every .speakable element currently in the DOM. */
 function initializeSpeakableElements() {
     document.querySelectorAll(".speakable").forEach((el) => {
-        el.title = targetVoiceAvailable
+        const isNative = el.dataset.lang === "native";
+        const available = isNative ? nativeVoiceAvailable : targetVoiceAvailable;
+        el.title = available
             ? "Click to listen"
-            : `No ${LANG.target_lang.name} voice available`;
+            : `No ${(isNative ? LANG.native_lang : LANG.target_lang).name} voice available`;
         el.addEventListener("click", () => {
             const text = el.textContent.trim();
-            if (text) speak(text);
+            if (text) speak(text, undefined, undefined, undefined, undefined, undefined, isNative ? "native" : "target");
         });
     });
 }

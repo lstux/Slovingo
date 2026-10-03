@@ -939,6 +939,18 @@ footer {
 
 .speakable:active { transform: scale(0.97); }
 
+/* Variante langue native ({{fr:...}}) : même geste (un clic), mais un
+   soulignement en pointillés et une autre icône pour distinguer à
+   l'oeil la langue apprise de la langue maternelle. */
+.speakable-hint.speakable-native {
+    background: color-mix(in srgb, var(--text-soft) 12%, transparent);
+    box-shadow: none;
+    border-bottom: 2px dashed color-mix(in srgb, var(--text-soft) 55%, transparent);
+    font-weight: 500;
+}
+.speakable-hint.speakable-native::after { content: " 🗣️"; }
+.speakable-hint.speakable-native:hover { background: color-mix(in srgb, var(--text-soft) 22%, transparent); }
+
 
 /* ==========================================================================
    10. Index (page d'accueil)
