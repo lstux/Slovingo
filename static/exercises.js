@@ -35,8 +35,8 @@
  *
  * Depends on app.js (speak(), targetVoiceAvailable, applyTheme(),
  * setKicker(), setPageTitle(), setToolbarButtons(),
- * setExercisesButtonMode(), setPagerNav(), hidePagerNav(),
- * flatSheetIds(), kickerFor(), splitTitle(), themeForGroup(),
+ * setExercisesButtonMode(), setPagerNav(), hidePagerNav(), adjacentSheetId(),
+ * kickerFor(), splitTitle(), themeForGroup(),
  * categoryLabelFor(), subgroupLabelFor(), escapeHtml(), LANG, DATA,
  * EXERCISES) and progress.js (loadProgressStore(), getSheetProgress(),
  * pct(), scoreRatioClass(), averageScore()). Classic scripts sharing
@@ -1036,26 +1036,6 @@ function expandExerciseCount(exercises) {
 // Starting a session
 // ============================================================================
 
-/**
- * The nearest sheet before/after `sheetId`, in the whole-course
- * order (see app.js's flatSheetIds()), that actually HAS exercises --
- * skipping over sheets that don't (Introduction, or an Annex sheet
- * with no audio-card/translate-table to build exercises from), so
- * the pager never lands on a dead end.
- * @param {string} sheetId
- * @param {1|-1} direction
- * @returns {string|null}
- */
-function adjacentExerciseSheetId(sheetId, direction) {
-    const ids = flatSheetIds();
-    let index = ids.indexOf(sheetId) + direction;
-    while (index >= 0 && index < ids.length) {
-        if (EXERCISES.sheets[ids[index]]) return ids[index];
-        index += direction;
-    }
-    return null;
-}
-
 /** @param {URLSearchParams} query */
 function startSessionFromQuery(query) {
     const cardIds = (query.get("cards") || "").split(",").filter(Boolean);
@@ -1104,19 +1084,16 @@ function startSessionFromQuery(query) {
     setToolbarButtons({});
     setExercisesButtonMode(state.sheetId ? "back-to-sheet" : "selection", state.sheetId);
 
-    // Pager: only meaningful for a single-sheet session -- jumps
-    // straight to the previous/next practicable sheet's own session
-    // (same question count as the "Exercises" button's direct
-    // launch, from Settings), skipping the selection screen
-    // entirely. Hidden for a mixed session, same as on the selection
-    // screen itself.
+    // Pager: only meaningful for a single-sheet session -- goes to
+    // the previous/next SHEET itself (same target as the pager on the
+    // sheet page), not to that sheet's exercises. Hidden for a mixed
+    // session, same as on the selection screen itself.
     if (state.sheetId) {
-        const prevId = adjacentExerciseSheetId(state.sheetId, -1);
-        const nextId = adjacentExerciseSheetId(state.sheetId, 1);
-        const n = SETTINGS.defaultQuestionCount;
+        const prevId = adjacentSheetId(state.sheetId, -1);
+        const nextId = adjacentSheetId(state.sheetId, 1);
         setPagerNav(
-            prevId ? `#/exercises/session?cards=${encodeURIComponent(prevId)}&n=${n}` : null,
-            nextId ? `#/exercises/session?cards=${encodeURIComponent(nextId)}&n=${n}` : null,
+            prevId ? `#/sheet/${encodeURIComponent(prevId)}` : null,
+            nextId ? `#/sheet/${encodeURIComponent(nextId)}` : null,
         );
     } else {
         hidePagerNav();
