@@ -83,8 +83,10 @@ def collect_used_keys(static_dir: Path) -> dict[str, dict[str, Any]]:
                     # (e.g. app.js's "continue-label"): not a translatable key.
                     continue
                 entry = used.setdefault(key, {"default": None, "files": []})
+                # Kept as written: a leading/trailing space is often
+                # significant (" days" after a counter, "answer: " + answer).
                 if default and default.strip() and entry["default"] is None:
-                    entry["default"] = default.strip()
+                    entry["default"] = default
                 if path.name not in entry["files"]:
                     entry["files"].append(path.name)
     return used
