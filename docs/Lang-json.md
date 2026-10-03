@@ -173,6 +173,20 @@ Toutes les chaînes d'interface (boutons, réglages, messages). Vois la liste
 complète directement dans un `lang.json` existant : elle est longue mais
 plate, une simple table clé → texte traduit.
 
+**Clés manquantes.** Chaque texte d'interface a un repli en anglais écrit dans
+le code : une clé absente de `ui` ne casse rien, l'apprenant voit simplement de
+l'anglais. Pour que ça ne passe plus inaperçu, `build.py` affiche un
+avertissement (non bloquant, et une annotation `::warning` dans GitHub Actions)
+qui liste les clés manquantes. La liste de référence n'est pas tenue à la
+main : elle est lue dans le code du front-end (`static/*.js`, `index.html`).
+Pour le détail, avec le texte anglais de chaque clé :
+
+```
+python3 src/check_ui_keys.py --lang-dir langs/<cours>              # liste
+python3 src/check_ui_keys.py --lang-dir langs/<cours> --template   # + extrait JSON à traduire
+python3 src/check_ui_keys.py --lang-dir langs/<cours> --strict     # code de sortie 1 s'il en manque (CI)
+```
+
 ## generator
 
 Mots-clés utilisés par `smd2data.py` pour détecter automatiquement, dans
@@ -218,4 +232,5 @@ Translate-table de Format-SMD.txt).
 4. Adapte `generator` aux mots que les en-têtes de tes translate-tables
    utiliseront réellement.
 5. `ui` peut rester identique à un cours existant dans la même langue
-   native, en ajustant seulement ce qui te semble mal traduit.
+   native, en ajustant seulement ce qui te semble mal traduit. Vérifie qu'il
+   ne manque rien avec `python3 src/check_ui_keys.py --lang-dir langs/<cours>`.
