@@ -947,6 +947,9 @@ footer {
     box-shadow: none;
     border-bottom: 2px dashed color-mix(in srgb, var(--text-soft) 55%, transparent);
     font-weight: 500;
+    /* Une consigne en langue native peut faire toute une phrase : elle
+       doit pouvoir passer à la ligne (contrairement au mot isolé). */
+    white-space: normal;
 }
 .speakable-hint.speakable-native::after { content: " 🗣️"; }
 .speakable-hint.speakable-native:hover { background: color-mix(in srgb, var(--text-soft) 22%, transparent); }
