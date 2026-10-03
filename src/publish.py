@@ -50,6 +50,10 @@ default to ./static and ./deploy.json):
     # Every language dir under langs/:
     python3 src/publish.py --langs-root langs
 
+    # Update the language dir(s) from their git remote first (git pull
+    # --ff-only), then build and deploy:
+    python3 src/publish.py --lang-dir langs/sk-fr --pull
+
     # For real (default is a dry run):
     python3 src/publish.py ... --execute
 
@@ -109,6 +113,37 @@ def build_rsync_command(
     cmd.append(f"{dist_dir}/")
     cmd.append(target)
     return cmd
+
+
+def pull_lang_dir(lang_dir: Path) -> bool:
+    """Run `git pull --ff-only` inside one language dir.
+
+    --ff-only on purpose: a publish step should never create a merge
+    commit or stop halfway through a conflict. If the local branch has
+    diverged from its remote, the pull fails and the caller aborts
+    rather than building and deploying a state nobody looked at.
+
+    Args:
+        lang_dir: The language directory (a git checkout of its own,
+            e.g. langs/sk-fr).
+
+    Returns:
+        True if the pull succeeded (including "Already up to date"),
+        False otherwise (git missing, not a git checkout, no upstream,
+        diverged history, network error...). git's own message has
+        already been printed by then.
+    """
+    if shutil.which("git") is None:
+        print("Error: git not found on this machine, can't use --pull.", file=sys.stderr)
+        return False
+
+    cmd = ["git", "-C", str(lang_dir), "pull", "--ff-only"]
+    print(f"$ {' '.join(cmd)}")
+    result = subprocess.run(cmd)
+    if result.returncode != 0:
+        print(f"Error: git pull exited with status {result.returncode} for {lang_dir.name}", file=sys.stderr)
+        return False
+    return True
 
 
 def publish_one(lang_dir: Path, deploy_cfg: dict, execute: bool, delete: bool) -> int:
@@ -203,7 +238,15 @@ def main() -> None:
         "--skip-build", action="store_true",
         help="Deploy dist/ as it already is, without rebuilding first",
     )
+    parser.add_argument(
+        "--pull", action="store_true",
+        help="Run `git pull --ff-only` in each language dir before building "
+             "(aborts if it fails; can't be combined with --skip-build)",
+    )
     args = parser.parse_args()
+
+    if args.pull and args.skip_build:
+        parser.error("--pull and --skip-build don't make sense together: the pulled changes would not be in dist/.")
 
     lang_dirs = discover_lang_dirs(args.langs_root) if args.langs_root else [args.lang_dir]
     if not lang_dirs:
@@ -231,6 +274,14 @@ def main() -> None:
             file=sys.stderr,
         )
         sys.exit(1)
+
+    if args.pull:
+        # Every pull happens before any build, and one failure stops
+        # everything: better no publish than a publish of stale content.
+        for lang_dir in lang_dirs:
+            if not pull_lang_dir(lang_dir):
+                sys.exit(1)
+        print()
 
     if not args.skip_build:
         try:
