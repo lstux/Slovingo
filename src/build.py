@@ -36,11 +36,13 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import sys
 from pathlib import Path
 
 import assemble
+import check_ui_keys
 import smd2exercises
 from gen_icons import draw_flag_icon, find_emoji_font
 from gen_manifest import build_manifest
@@ -97,6 +99,17 @@ def run_build(
         lang_cfg = json.load(f)
 
     print(f"=== {lang_dir.name} ===")
+
+    # 0. Interface strings: a `ui` key the front-end uses but lang.json
+    #    lacks is silent (the learner just sees English), so say so.
+    #    Non-fatal: the build still succeeds.
+    missing_ui = check_ui_keys.missing_ui_keys(lang_cfg, static_dir)
+    if missing_ui:
+        message = check_ui_keys.format_warning(lang_dir.name, missing_ui, lang_dir)
+        print(message, file=sys.stderr)
+        if os.environ.get("GITHUB_ACTIONS") == "true":
+            # GitHub Actions annotation: shown on the run summary page.
+            print(f"::warning title=Missing ui keys in {lang_dir.name}/lang.json::{message.removeprefix('Warning: ')}")
 
     json_dir.mkdir(parents=True, exist_ok=True)
     md_files = sorted(md_dir.glob("*.md"))
