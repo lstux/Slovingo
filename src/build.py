@@ -51,7 +51,7 @@ from smd2data import SheetNameError, build_sheet_json
 # every language, not generated from content.
 STATIC_FILES = [
     "index.html", "app.js", "exercises.js", "progress.js", "settings.js",
-    "style.css", "exercises.css",
+    "celebrate.js", "style.css", "exercises.css",
 ]
 
 ICON_SPECS = [

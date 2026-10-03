@@ -38,6 +38,7 @@ const DEFAULT_SETTINGS = {
     displayFont: "grotesk",        // "serif", "mono", or "grotesk" for h2/h3 on index
     autoAdvanceEnabled: true,       // move to the next exercise by itself on a correct answer
     autoAdvanceDelay: 2,            // delay before doing so (seconds)
+    celebrationEnabled: true,       // confetti / fireworks on the end-of-session score
 };
 
 /**
@@ -728,6 +729,23 @@ function renderExerciseSettingsSection() {
         if (autoAdvanceDelayInput) autoAdvanceDelayInput.disabled = !autoAdvanceCheckbox.checked;
     });
     rows.push(autoAdvanceDelaySlider);
+
+    // End-of-session celebration (confetti / fireworks), on by default.
+    // prefers-reduced-motion disables it regardless of this setting.
+    const celebrationRow = el("div", { className: "settings-row" });
+    celebrationRow.appendChild(el("label", {
+        text: (LANG.ui && LANG.ui.celebration_effects) || "Celebration effects on the final score",
+        attrs: { for: "settings-celebration" },
+    }));
+    const celebrationCheckbox = el("input", {
+        attrs: { type: "checkbox", id: "settings-celebration" },
+    });
+    celebrationCheckbox.checked = SETTINGS.celebrationEnabled !== false;
+    celebrationCheckbox.addEventListener("change", () => {
+        saveSettings({ celebrationEnabled: celebrationCheckbox.checked });
+    });
+    celebrationRow.appendChild(celebrationCheckbox);
+    rows.push(celebrationRow);
 
     return settingsSection((LANG.ui && LANG.ui.settings_exercises) || "Exercises", rows);
 }

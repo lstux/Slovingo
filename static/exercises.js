@@ -1252,6 +1252,8 @@ function startPool() {
         return;
     }
 
+    if (typeof stopCelebration === "function") stopCelebration();
+
     state.exercises = buildBalancedPool(pool, state.sessionSize || 10);
     state.score = 0;
     state.mistakes = [];
@@ -2146,6 +2148,13 @@ function renderSummary() {
     summary.appendChild(actions);
 
     area.appendChild(summary);
+
+    // Party time (celebrate.js): intensity depends on the score, and
+    // the user can switch it off in the settings.
+    const celebrationEnabled = !SETTINGS || SETTINGS.celebrationEnabled !== false;
+    if (celebrationEnabled && typeof celebrate === "function") {
+        celebrate(state.score, total, summary.querySelector(".exo-score"));
+    }
 }
 
 // Exposed for the standalone editor (editeur-exercices.html), loaded
