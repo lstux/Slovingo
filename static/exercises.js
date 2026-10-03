@@ -1523,6 +1523,10 @@ function markAnswer(container, isCorrect, view, userAnswer) {
     }
 
     const canReplay = ttsAvailable();
+    // The listen exercise already played its sentence when the question
+    // was shown: don't read the right answer out again at the check (too
+    // repetitive over a session). The 🔊 button stays for a manual replay.
+    const replayOnCheck = canReplay && view.type !== "listen";
     const feedbackText = isCorrect
         ? uiLabel("session_answer_correct", "✅ Correct!")
         : uiLabel("session_answer_incorrect_prefix", "❌ Missed — answer: ") + view.answer;
@@ -1574,7 +1578,7 @@ function markAnswer(container, isCorrect, view, userAnswer) {
     // "end" callback can't advance past where the person already is.
     const advanceToken = ++autoAdvanceToken;
     let delayElapsed = !willAutoAdvance;
-    let ttsFinished = !(willAutoAdvance && canReplay);
+    let ttsFinished = !(willAutoAdvance && replayOnCheck);
 
     const maybeAdvance = () => {
         if (advanceToken !== autoAdvanceToken) return;
@@ -1583,7 +1587,7 @@ function markAnswer(container, isCorrect, view, userAnswer) {
         }
     };
 
-    if (canReplay) {
+    if (replayOnCheck) {
         speakSafe(view.audio, undefined, undefined, undefined, undefined, () => {
             ttsFinished = true;
             maybeAdvance();

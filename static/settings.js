@@ -26,6 +26,7 @@ const DEFAULT_SETTINGS = {
     voiceURI: null,             // null = automatic best match for the target language
     nativeVoiceURI: null,       // same, for the native language ({{fr:...}} elements)
     rate: 0.9,                   // normal TTS playback rate
+    nativeRate: 0.9,             // same, for the native-language voice ({{fr:...}} elements)
     slowRatio: 0.7,               // "slow" rate = rate * slowRatio
     pitch: 1.0,                   // voice pitch (Web Speech API range: 0-2, 1 = natural)
     defaultQuestionCount: 12,     // selection screen AND quick-launch use the same value
@@ -440,7 +441,7 @@ function renderAudioSettingsSection() {
             saveSettings({ nativeVoiceURI: nativeSelect.value || null });
             updateTtsAvailability();
             const nativeSample = LANG.native_lang.tts_sample_phrase || LANG.native_lang.name || "Test";
-            speak(nativeSample, SETTINGS.rate, SETTINGS.pitch, nativeSelect.value || null, undefined, undefined, "native");
+            speak(nativeSample, undefined, undefined, nativeSelect.value || null, undefined, undefined, "native");
         });
     }
 
@@ -481,6 +482,23 @@ function renderAudioSettingsSection() {
         onChange: (v) => saveSettings({ pitch: v }),
         onTest: () => speakSafe(samplePhrase, SETTINGS.rate, SETTINGS.pitch),
     }));
+
+    // Native-language playback rate -- same idea as the first slider,
+    // for the voice that reads {{fr:...}} elements. Skipped when the
+    // course declares no native tts_code (no native voice to speed up).
+    if (LANG.native_lang && LANG.native_lang.tts_code) {
+        const nativeSample = LANG.native_lang.tts_sample_phrase || LANG.native_lang.name || "Test";
+        rows.push(renderSlider({
+            id: "settings-rate-native",
+            labelText: ((LANG.ui && LANG.ui.playback_speed_native) || "Playback speed ({lang})")
+                .replace("{lang}", LANG.native_lang.name),
+            min: 0.5, max: 1.5, step: 0.05,
+            value: SETTINGS.nativeRate != null ? SETTINGS.nativeRate : SETTINGS.rate,
+            formatValue: (v) => `${Math.round(v * 100)}%`,
+            onChange: (v) => saveSettings({ nativeRate: v }),
+            onTest: () => speak(nativeSample, undefined, undefined, undefined, undefined, undefined, "native"),
+        }));
+    }
 
     return settingsSection((LANG.ui && LANG.ui.settings_audio) || "Audio", rows);
 }
