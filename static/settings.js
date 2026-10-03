@@ -24,6 +24,7 @@
 
 const DEFAULT_SETTINGS = {
     voiceURI: null,             // null = automatic best match for the target language
+    nativeVoiceURI: null,       // same, for the native language ({{fr:...}} elements)
     rate: 0.9,                   // normal TTS playback rate
     slowRatio: 0.7,               // "slow" rate = rate * slowRatio
     pitch: 1.0,                   // voice pitch (Web Speech API range: 0-2, 1 = natural)
@@ -38,6 +39,7 @@ const DEFAULT_SETTINGS = {
     displayFont: "grotesk",        // "serif", "mono", or "grotesk" for h2/h3 on index
     autoAdvanceEnabled: true,       // move to the next exercise by itself on a correct answer
     autoAdvanceDelay: 2,            // delay before doing so (seconds)
+    celebrationEnabled: true,       // confetti / fireworks on the end-of-session score
 };
 
 /**
@@ -405,6 +407,43 @@ function renderAudioSettingsSection() {
         speakSafe(samplePhrase, SETTINGS.rate, SETTINGS.pitch, voiceSelect.value || null);
     });
 
+    // Native-language voice picker -- only used by {{fr:...}}-style
+    // elements (see Format-SMD.txt). Same logic as above, matched on
+    // native_lang.tts_code. Skipped when the course declares no
+    // native tts_code.
+    if (LANG.native_lang && LANG.native_lang.tts_code) {
+        const nativeRow = el("div", { className: "settings-row" });
+        const nativeLabel = ((LANG.ui && LANG.ui.voice_native) || "Voice ({lang})")
+            .replace("{lang}", LANG.native_lang.name);
+        nativeRow.appendChild(el("label", { text: nativeLabel, attrs: { for: "settings-voice-native" } }));
+        const nativeSelect = el("select", { attrs: { id: "settings-voice-native" } });
+        nativeRow.appendChild(nativeSelect);
+        rows.push(nativeRow);
+
+        const populateNativeVoiceOptions = () => {
+            nativeSelect.innerHTML = "";
+            nativeSelect.appendChild(el("option", { text: (LANG.ui && LANG.ui.voice_automatic) || "Automatic", attrs: { value: "" } }));
+
+            const nativePrefix = (LANG.native_lang.tts_code || "").split("-")[0].toLowerCase();
+            const nativeVoices = ("speechSynthesis" in window ? window.speechSynthesis.getVoices() : [])
+                .filter((v) => v.lang.toLowerCase().startsWith(nativePrefix));
+            nativeVoices.forEach((voice) => {
+                nativeSelect.appendChild(el("option", { text: `${voice.name} (${voice.lang})`, attrs: { value: voice.voiceURI } }));
+            });
+            nativeSelect.value = SETTINGS.nativeVoiceURI || "";
+        };
+        populateNativeVoiceOptions();
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.addEventListener("voiceschanged", populateNativeVoiceOptions);
+        }
+        nativeSelect.addEventListener("change", () => {
+            saveSettings({ nativeVoiceURI: nativeSelect.value || null });
+            updateTtsAvailability();
+            const nativeSample = LANG.native_lang.tts_sample_phrase || LANG.native_lang.name || "Test";
+            speak(nativeSample, SETTINGS.rate, SETTINGS.pitch, nativeSelect.value || null, undefined, undefined, "native");
+        });
+    }
+
     // Normal playback rate.
     const samplePhrase = (LANG.target_lang && LANG.target_lang.tts_sample_phrase) || (LANG.target_lang && LANG.target_lang.name) || "Test";
     rows.push(renderSlider({
@@ -728,6 +767,23 @@ function renderExerciseSettingsSection() {
         if (autoAdvanceDelayInput) autoAdvanceDelayInput.disabled = !autoAdvanceCheckbox.checked;
     });
     rows.push(autoAdvanceDelaySlider);
+
+    // End-of-session celebration (confetti / fireworks), on by default.
+    // prefers-reduced-motion disables it regardless of this setting.
+    const celebrationRow = el("div", { className: "settings-row" });
+    celebrationRow.appendChild(el("label", {
+        text: (LANG.ui && LANG.ui.celebration_effects) || "Celebration effects on the final score",
+        attrs: { for: "settings-celebration" },
+    }));
+    const celebrationCheckbox = el("input", {
+        attrs: { type: "checkbox", id: "settings-celebration" },
+    });
+    celebrationCheckbox.checked = SETTINGS.celebrationEnabled !== false;
+    celebrationCheckbox.addEventListener("change", () => {
+        saveSettings({ celebrationEnabled: celebrationCheckbox.checked });
+    });
+    celebrationRow.appendChild(celebrationCheckbox);
+    rows.push(celebrationRow);
 
     return settingsSection((LANG.ui && LANG.ui.settings_exercises) || "Exercises", rows);
 }

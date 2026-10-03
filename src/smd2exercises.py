@@ -65,15 +65,18 @@ FREQUENT_WORDS_CONSIDERED = 40  # how many top-frequency words feed the
 # Small text helpers
 # ============================================================================
 
-SPEAKABLE_MARKER_RE = re.compile(r"\[\[(.+?)\]\]")
+# Optional lowercase language prefix ("fr:") of a native-language
+# speakable, {{fr:texte}} -> [[fr:texte]]; see docs/Format-SMD.txt.
+SPEAKABLE_MARKER_RE = re.compile(r"\[\[(?:[a-z]{2,3}:\s*)?(.+?)\]\]")
 BOLD_RE = re.compile(r"\*\*(.+?)\*\*")
 SLUG_RE = re.compile(r"[^a-z0-9]+")
 PUNCT_CHARS = ".,!?;:\"'()„“”«»…"
 
 
 def strip_markup(text: str) -> str:
-    """Remove the [[speakable]] and **bold** markers left by smd2data,
-    so exercise text is plain and TTS-safe."""
+    """Remove the [[speakable]] (including a [[xx:...]] language prefix)
+    and **bold** markers left by smd2data, so exercise text is plain
+    and TTS-safe."""
     text = SPEAKABLE_MARKER_RE.sub(r"\1", text)
     text = BOLD_RE.sub(r"\1", text)
     return text

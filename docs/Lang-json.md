@@ -43,6 +43,13 @@ Décrivent respectivement la langue apprise et la langue de l'apprenant.
 - `css_class` : classe appliquée aux cellules de la colonne correspondante
   dans une translate-table (voir Format-SMD.txt).
 
+La langue native peut aussi porter `voice_hint` et `tts_sample_phrase` (mêmes
+rôles que pour `target_lang`), utilisés par la lecture des éléments
+`{{fr:...}}` (voir Format-SMD.txt, section 3) : `tts_code` sert à choisir la
+voix, `tts_sample_phrase` à la tester dans les Réglages (à défaut, le nom de
+la langue est lu). Le préfixe d'un `{{xx:...}}` est comparé à `code` de
+`native_lang` et de `target_lang`.
+
 ## site
 
 Métadonnées générales du site généré (PWA, manifeste, thème).
@@ -172,6 +179,10 @@ Le champ est facultatif : sans lui, toutes les fiches utilisent `default`.
 Toutes les chaînes d'interface (boutons, réglages, messages). Vois la liste
 complète directement dans un `lang.json` existant : elle est longue mais
 plate, une simple table clé → texte traduit.
+
+Clé facultative `voice_native` : libellé du sélecteur de voix de la langue
+native dans les Réglages, avec `{lang}` remplacé par `native_lang.name`
+(défaut : `"Voice ({lang})"`, par exemple `"Voix ({lang})"`).
 
 **Clés manquantes.** Chaque texte d'interface a un repli en anglais écrit dans
 le code : une clé absente de `ui` ne casse rien, l'apprenant voit simplement de
