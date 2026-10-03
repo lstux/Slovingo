@@ -8,7 +8,9 @@
  * The intensity depends on the score ratio (same thresholds as
  * scoreRatioClass() in progress.js):
  *
- *     < 50 %          nothing (no party for 2/10)
+ *     0 %             "misfire"   the fuse crackles, the rocket hops and gives up
+ *     1 - 49 %        "dud"       three rockets: one fizzles out, one "explodes"
+ *                                 into three sad confetti, one goes pop
  *     50 - 79 %       "sparkle"   a small, discreet burst of glitter
  *     80 - 99 %       "confetti"  two confetti cannons
  *     100 %           "fireworks" rockets + finale confetti
@@ -30,6 +32,9 @@
     const MAX_PARTICLES = 450;
     const GRAVITY = 900;            // px/s^2
     const TRAIL_LENGTH = 7;         // positions kept for spark / rocket trails
+
+    // Rocket body and trail: amber stays visible on light and dark themes.
+    const ROCKET_COLOR = "#f59e0b";
 
     const FALLBACK_COLORS = ["#ffc83d", "#ff5d8f", "#4cc9f0", "#7bd88f", "#b794f6", "#ff8a4c"];
 
@@ -112,26 +117,40 @@
     // ------------------------------------------------------------------
 
     /** A glitter dot: small, fast, twinkles, fades. */
-    function glitter(x, y, angle, speed, color, life) {
+    function glitter(x, y, angle, speed, color, life, opts = {}) {
         addParticle({
             kind: "dot", x, y,
             vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed,
-            drag: 1.6, gravity: GRAVITY * 0.35,
-            size: rand(1.5, 3.2), color, life, age: 0,
+            drag: 1.6, gravity: opts.gravity ?? GRAVITY * 0.35,
+            size: opts.size ?? rand(1.5, 3.2), color, life, age: 0,
             twinkle: rand(8, 18),
         });
     }
 
-    /** A paper confetti: rotating rectangle with flutter. */
-    function confettiPiece(x, y, angle, speed, color) {
+    /**
+     * A paper confetti: rotating rectangle with flutter.
+     * opts: gravity (px/s^2), big (bigger piece, for the sad volley), life.
+     */
+    function confettiPiece(x, y, angle, speed, color, opts = {}) {
         addParticle({
             kind: "paper", x, y,
             vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed,
-            drag: 1.1, gravity: GRAVITY * 0.55,
-            w: rand(6, 11), h: rand(3, 6),
+            drag: 1.1, gravity: opts.gravity ?? GRAVITY * 0.55,
+            w: opts.big ? rand(10, 15) : rand(6, 11),
+            h: opts.big ? rand(5, 8) : rand(3, 6),
             rot: rand(0, Math.PI * 2), vrot: rand(-9, 9),
             flip: rand(0, Math.PI * 2), vflip: rand(4, 10),
-            color, life: rand(2.6, 4.2), age: 0,
+            color, life: opts.life ?? rand(2.6, 4.2), age: 0,
+        });
+    }
+
+    /** A puff of grey smoke: grows, drifts up, fades. */
+    function smoke(x, y, size, life) {
+        addParticle({
+            kind: "smoke", x, y,
+            vx: rand(-12, 12), vy: -rand(14, 30),
+            drag: 0.8, gravity: -10,
+            size, color: "#9a9a9a", life, age: 0,
         });
     }
 
@@ -182,17 +201,45 @@
         });
     }
 
-    function launchRocket(colors) {
-        const x = rand(width * 0.15, width * 0.85);
-        rockets.push({
-            x, y: height + 5,
+    /**
+     * Rocket modes:
+     *   "normal"  climbs high and explodes properly (fireworks)
+     *   "fizzle"  wobbles, runs out of steam, drips a few sparks
+     *   "weak"    "explodes" into three sad confetti pieces
+     *   "pop"     a tiny pop: two sparks and a puff of smoke
+     *   "misfire" hops a few pixels off the ground and gives up
+     * `over` overrides any field of the rocket (position, speed...).
+     */
+    function launchRocket(colors, mode = "normal", over = {}) {
+        const rocket = {
+            mode, colors, hist: [],
+            x: rand(width * 0.15, width * 0.85),
+            y: height + 5,
             vx: rand(-40, 40),
             vy: -rand(height * 0.9, height * 1.25),
             targetY: rand(height * 0.15, height * 0.45),
             color: pick(colors),
-            colors,
-            hist: [],
-        });
+            wobble: false,
+        };
+        if (mode === "fizzle") {
+            rocket.vx = 0;
+            rocket.vy = -rand(height * 0.62, height * 0.75);
+            rocket.targetY = rand(height * 0.48, height * 0.58);
+            rocket.wobble = true;
+        } else if (mode === "weak") {
+            rocket.vx = rand(-15, 15);
+            rocket.vy = -rand(height * 0.85, height * 1.0);
+            rocket.targetY = rand(height * 0.30, height * 0.40);
+        } else if (mode === "pop") {
+            rocket.vx = rand(-15, 15);
+            rocket.vy = -rand(height * 0.7, height * 0.8);
+            rocket.targetY = rand(height * 0.55, height * 0.65);
+        } else if (mode === "misfire") {
+            rocket.vx = 0;
+            rocket.vy = -rand(200, 240);
+            rocket.targetY = 0;
+        }
+        rockets.push(Object.assign(rocket, over));
     }
 
     function explode(rocket) {
@@ -206,6 +253,72 @@
             const s = speed * rand(0.55, 1);
             spark(rocket.x, rocket.y, angle, s, i % 5 === 0 ? alt : main);
         }
+    }
+
+    /** Run a function `delayMs` from now (relative to the running animation). */
+    function later(delayMs, fn) {
+        spawnQueue.push({ at: performance.now() - startedAt + delayMs, fn });
+    }
+
+    /** A few weak embers dripping down from a spent rocket. */
+    function drips(x, y, count) {
+        const embers = ["#e08a2c", "#b9722a", "#d9a441"];
+        for (let i = 0; i < count; i++) {
+            glitter(x + rand(-4, 4), y, rand(0.4, Math.PI - 0.4), rand(15, 55), pick(embers),
+                rand(0.7, 1.1), { gravity: GRAVITY * 0.9, size: rand(1.6, 2.6) });
+        }
+    }
+
+    /** What happens when a rocket reaches the top of its climb. */
+    function detonate(rocket) {
+        const { x, y } = rocket;
+        switch (rocket.mode) {
+        case "fizzle":
+            drips(x, y, 4);
+            smoke(x, y, 7, 1.3);
+            break;
+        case "weak":
+            for (let i = 0; i < 3; i++) {
+                confettiPiece(x, y, -Math.PI / 2 + rand(-1.3, 1.3), rand(30, 90), pick(rocket.colors),
+                    { gravity: GRAVITY * 1.1, big: true, life: 2.4 });
+            }
+            smoke(x, y, 6, 1.1);
+            break;
+        case "pop":
+            for (let i = 0; i < 2; i++) {
+                spark(x, y, rand(0, Math.PI * 2), rand(40, 90), "#ffd86b");
+            }
+            smoke(x, y, 10, 1.7);
+            break;
+        case "misfire":
+            drips(x, y, 2);
+            smoke(x, y, 8, 1.6);
+            later(250, () => smoke(x + rand(-6, 6), y - 6, 6, 1.2));
+            break;
+        default:
+            explode(rocket);
+        }
+    }
+
+    /** Score below 50 %: rockets go up... and it doesn't go very well. */
+    function effectDud(colors) {
+        spawnQueue.push({ at: 0, fn: () => launchRocket(colors, "fizzle", { x: width * rand(0.2, 0.32) }) });
+        spawnQueue.push({ at: 500, fn: () => launchRocket(colors, "weak", { x: width * rand(0.45, 0.55) }) });
+        spawnQueue.push({ at: 1000, fn: () => launchRocket(colors, "pop", { x: width * rand(0.68, 0.8) }) });
+    }
+
+    /** Score of 0: the fuse crackles, the rocket hops and gives up. */
+    function effectMisfire(colors) {
+        const x = width / 2;
+        const base = height - 80;
+        [0, 150, 300, 450, 600].forEach((at) => {
+            spawnQueue.push({
+                at,
+                fn: () => glitter(x + rand(-3, 3), base, -Math.PI / 2 + rand(-1, 1), rand(20, 60),
+                    "#e08a2c", rand(0.4, 0.6), { gravity: GRAVITY * 0.5, size: rand(2, 3.2) }),
+            });
+        });
+        spawnQueue.push({ at: 800, fn: () => launchRocket(colors, "misfire", { x, y: base }) });
     }
 
     function effectFireworks(colors) {
@@ -262,14 +375,16 @@
             if (r.hist.length > TRAIL_LENGTH) r.hist.shift();
             r.x += r.vx * dt;
             r.y += r.vy * dt;
+            // A tired rocket weaves left and right as it climbs.
+            if (r.wobble) r.x += Math.sin(r.y * 0.09) * 1.4;
             r.vy += GRAVITY * 0.35 * dt;
-            drawTrail(r.hist, r.x, r.y, 2.2, "#fff6d6", 1);
-            ctx.fillStyle = "#fff6d6";
+            drawTrail(r.hist, r.x, r.y, 2.6, ROCKET_COLOR, 1);
+            ctx.fillStyle = ROCKET_COLOR;
             ctx.beginPath();
-            ctx.arc(r.x, r.y, 2.2, 0, Math.PI * 2);
+            ctx.arc(r.x, r.y, 2.6, 0, Math.PI * 2);
             ctx.fill();
             if (r.y <= r.targetY || r.vy >= 0) {
-                explode(r);
+                detonate(r);
                 return false;
             }
             return true;
@@ -289,6 +404,17 @@
             p.x += p.vx * dt;
             p.y += p.vy * dt;
             if (p.y > height + 40 || p.x < -60 || p.x > width + 60) return false;
+
+            if (p.kind === "smoke") {
+                // Soft grey puff: swells while fading out.
+                const s = p.age / p.life;
+                ctx.globalAlpha = 0.34 * (1 - s);
+                ctx.fillStyle = p.color;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size * (1 + 2.4 * s), 0, Math.PI * 2);
+                ctx.fill();
+                return true;
+            }
 
             const t = p.age / p.life;
             const fade = t < 0.65 ? 1 : 1 - (t - 0.65) / 0.35;
@@ -343,14 +469,14 @@
     // Public API
     // ------------------------------------------------------------------
 
-    /** @returns {"none"|"sparkle"|"confetti"|"fireworks"} */
+    /** @returns {"none"|"misfire"|"dud"|"sparkle"|"confetti"|"fireworks"} */
     function celebrationLevel(correct, total) {
         if (!total) return "none";
         const ratio = correct / total;
         if (ratio >= 1 && total >= MIN_FOR_FIREWORKS) return "fireworks";
         if (ratio >= 0.8) return "confetti";
         if (ratio >= 0.5) return "sparkle";
-        return "none";
+        return correct === 0 ? "misfire" : "dud";
     }
 
     /**
@@ -374,6 +500,8 @@
 
         if (level === "sparkle") effectSparkle(origin, colors);
         else if (level === "confetti") effectConfetti(colors);
+        else if (level === "dud") effectDud(colors);
+        else if (level === "misfire") effectMisfire(colors);
         else effectFireworks(colors);
 
         startedAt = performance.now();
