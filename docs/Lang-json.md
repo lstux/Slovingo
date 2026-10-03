@@ -184,6 +184,10 @@ Clé facultative `voice_native` : libellé du sélecteur de voix de la langue
 native dans les Réglages, avec `{lang}` remplacé par `native_lang.name`
 (défaut : `"Voice ({lang})"`, par exemple `"Voix ({lang})"`).
 
+Clé facultative `playback_speed_native` : libellé du curseur de vitesse de la
+voix native dans les Réglages, avec `{lang}` remplacé par `native_lang.name`
+(défaut : `"Playback speed ({lang})"`, par exemple `"Vitesse de lecture ({lang})"`).
+
 **Clés manquantes.** Chaque texte d'interface a un repli en anglais écrit dans
 le code : une clé absente de `ui` ne casse rien, l'apprenant voit simplement de
 l'anglais. Pour que ça ne passe plus inaperçu, `build.py` affiche un

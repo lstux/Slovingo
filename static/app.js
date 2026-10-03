@@ -999,7 +999,8 @@ function showTtsWarning(kind) {
 /**
  * Speak text using Web Speech API.
  * @param {string} text The text to speak
- * @param {number} [rate] Playback rate (default from SETTINGS)
+ * @param {number} [rate] Playback rate (default from SETTINGS: rate, or
+ *     nativeRate when `kind` is "native")
  * @param {number} [pitch] Voice pitch (default from SETTINGS)
  * @param {string} [voiceURI] Voice URI (default automatic)
  * @param {HTMLElement} [highlightElement] Element to add .speaking class during playback
@@ -1046,7 +1047,12 @@ function speak(text, rate, pitch, voiceURI, highlightElement, onEnd, kind) {
         return;
     }
 
-    const effectiveRate = rate === undefined ? (SETTINGS ? SETTINGS.rate : 0.9) : rate;
+    // Default rate: each language has its own Settings slider (the
+    // native one falls back on the target rate if never set).
+    const defaultRate = SETTINGS
+        ? (isNative && SETTINGS.nativeRate != null ? SETTINGS.nativeRate : SETTINGS.rate)
+        : 0.9;
+    const effectiveRate = rate === undefined ? defaultRate : rate;
     const effectivePitch = pitch === undefined ? (SETTINGS ? SETTINGS.pitch : 1.0) : pitch;
 
     stopSpeaking();
