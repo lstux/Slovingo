@@ -1807,9 +1807,9 @@ function renderOrder(view) {
         markAnswer(container, correct, view, userAnswer);
     };
 
-    container.appendChild(el("div", { className: "exo-order-strip-label", text: "Your answer:" }));
+    container.appendChild(el("div", { className: "exo-order-strip-label", text: uiLabel("exercise_order_answer_label", "Your answer:") }));
     container.appendChild(answerStrip);
-    container.appendChild(el("div", { className: "exo-order-strip-label", text: "Available words:" }));
+    container.appendChild(el("div", { className: "exo-order-strip-label", text: uiLabel("exercise_order_bank_label", "Available words:") }));
     container.appendChild(bank);
     container.appendChild(submit);
 
@@ -1826,7 +1826,7 @@ function renderOrder(view) {
  */
 function renderMatch(view) {
     const container = el("div", { className: "exo-card exo-match" });
-    container.appendChild(el("div", { className: "exo-question-label", text: "Drag the pairs:" }));
+    container.appendChild(el("div", { className: "exo-question-label", text: uiLabel("exercise_match_question_label", "Drag the pairs:") }));
 
     const matchGrid = el("div", { className: "exo-match-grid" });
     const leftColumn = el("div", { className: "exo-match-column exo-match-left" });
@@ -2029,7 +2029,7 @@ function renderMatch(view) {
 
     matchGrid.appendChild(leftColumn);
     container.appendChild(matchGrid);
-    container.appendChild(el("div", { className: "exo-match-bank-label", text: "Drag these:" }));
+    container.appendChild(el("div", { className: "exo-match-bank-label", text: uiLabel("exercise_match_bank_label", "Drag these:") }));
     container.appendChild(rightBank);
     container.appendChild(submit);
 
@@ -2094,7 +2094,7 @@ function renderSummary() {
     const updated = state.sheetId ? getSheetProgress(state.sheetId) : null;
 
     const summary = el("div", { className: "exo-card exo-summary" }, [
-        el("h3", { text: "Result" }),
+        el("h3", { text: uiLabel("exercise_result_title", "Result") }),
         el("p", { className: "exo-score", text: `${state.score} / ${total} (${scorePct}%)` }),
     ]);
 
@@ -2102,13 +2102,16 @@ function renderSummary() {
         const prevDate = new Date(previous.last.date).toLocaleDateString();
         summary.appendChild(el("p", {
             className: "exo-history-line",
-            text: `Previous try: ${previous.last.score}/${previous.last.total} (${prevDate})`,
+            text: uiLabel("exercise_previous_try", "Previous try: {score}/{total} ({date})")
+                .replace("{score}", previous.last.score)
+                .replace("{total}", previous.last.total)
+                .replace("{date}", prevDate),
         }));
     }
 
     if (updated && updated.cumulative && updated.cumulative.sessionsCount > 1) {
         const cumLine = el("div", { className: "exo-cumulative" });
-        cumLine.appendChild(el("p", { className: "exo-history-line", text: "Cumulative average:" }));
+        cumLine.appendChild(el("p", { className: "exo-history-line", text: uiLabel("exercise_cumulative_average", "Cumulative average:") }));
         const row = el("div", { className: "exo-cumulative-row" });
         ALL_TYPES.forEach((type) => {
             const stats = updated.cumulative.byType[type];
@@ -2131,10 +2134,10 @@ function renderSummary() {
             const label = view.type === "qcm" ? view.question : (view.audio || "");
             list.appendChild(el("li", {
                 html: `<strong>${escapeHtml(label)}</strong> → ${escapeHtml(view.answer)}` +
-                      (userAnswer ? ` <span class="exo-your-answer">(you: ${escapeHtml(userAnswer)})</span>` : ""),
+                      (userAnswer ? ` <span class="exo-your-answer">(${escapeHtml(uiLabel("exercise_your_answer", "you:"))} ${escapeHtml(userAnswer)})</span>` : ""),
             }));
         });
-        summary.appendChild(el("p", { text: "To review:" }));
+        summary.appendChild(el("p", { text: uiLabel("exercise_to_review", "To review:") }));
         summary.appendChild(list);
     }
 

@@ -66,6 +66,12 @@ Le fichier trouvé peut soit remplacer entièrement les exercices générés
 (`"mode": "append"`). Une fiche sans aucun de ces trois fichiers reçoit
 uniquement des exercices générés automatiquement.
 
+Les fiches d'**introduction** n'ont jamais d'exercices générés. Elles
+n'apparaissent dans l'écran des exercices que si elles ont un fichier
+manuel : ses exercices sont alors utilisés seuls, quel que soit le
+`mode`. Leur contenu n'alimente pas les distracteurs des autres fiches
+(les exercices générés restent identiques avec ou sans ces fichiers).
+
 ### Garder les exercices manuels alignés sur les fiches
 
 Un fichier d'exercices manuel n'est jamais régénéré par le build (c'est

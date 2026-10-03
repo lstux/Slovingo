@@ -217,8 +217,10 @@ def find_manual_exercises_path(path: Path, meta: dict[str, Any]) -> Path | None:
 
 def load_corpus(md_dir: Path, lang_cfg: dict[str, Any]) -> list[dict[str, Any]]:
     """Parse every sheet in `md_dir` (filesystem order) into the raw
-    material exercises are built from. Introduction sheets are
-    excluded outright -- no exercises are generated for that category.
+    material exercises are built from. Introduction sheets get no
+    generated exercises: they are skipped, unless they have a
+    hand-written exercises file (then those exercises, and only
+    those, are used -- see build_exercises_for_corpus()).
 
     Also checks for a hand-written {sheet}.exercises.json for each
     sheet, next to the .md file or in the lang dir's exercises/
@@ -229,10 +231,9 @@ def load_corpus(md_dir: Path, lang_cfg: dict[str, Any]) -> list[dict[str, Any]]:
     records = []
     for path in sorted(md_dir.glob("*.md")):
         meta = parse_sheet_filename(path)
-        if meta["category"] == "introduction":
-            continue
-
         exercises_json_path = find_manual_exercises_path(path, meta)
+        if meta["category"] == "introduction" and exercises_json_path is None:
+            continue
         manual_exercises = None
         manual_mode = "replace"
         manual_sync = "full"
@@ -739,8 +740,12 @@ def build_exercises_for_corpus(records: list[dict[str, Any]]) -> dict[str, dict[
     Returns a dict of sheet id -> {source pools not included, just
     the "exercises" list} keyed for writing one file per sheet.
     """
-    global_pairs = [pair for r in records for pair in r["vocab_pairs"]]
-    global_sentences = [s for r in records for s in r["sentences"]]
+    # Introduction sheets (present only when they have a manual file)
+    # never feed the distractor pools: generated exercises stay exactly
+    # what they were before those sheets could have exercises.
+    pool_records = [r for r in records if r["category"] != "introduction"]
+    global_pairs = [pair for r in pool_records for pair in r["vocab_pairs"]]
+    global_sentences = [s for r in pool_records for s in r["sentences"]]
 
     series_pairs_so_far: list[tuple[str, str]] = []
     series_sentences_so_far: list[dict[str, Any]] = []
@@ -758,8 +763,9 @@ def build_exercises_for_corpus(records: list[dict[str, Any]]) -> dict[str, dict[
         manual_exercises = record.get("manual_exercises")
         manual_mode = record.get("manual_mode", "replace")
 
-        if manual_exercises and manual_mode == "replace":
-            # Replace mode: use ONLY manual exercises, skip generation
+        if manual_exercises and (manual_mode == "replace" or record["category"] == "introduction"):
+            # Replace mode: use ONLY manual exercises, skip generation.
+            # Introduction sheets are never generated, whatever the mode.
             exercises = manual_exercises
         else:
             # Generate exercises normally
@@ -774,6 +780,8 @@ def build_exercises_for_corpus(records: list[dict[str, Any]]) -> dict[str, dict[
             if manual_exercises and manual_mode == "append":
                 exercises.extend(manual_exercises)
 
+        if not exercises and record["category"] == "introduction":
+            continue  # an introduction sheet whose manual file is empty
         output[record["id"]] = {"exercises": exercises}
 
         if is_series:
