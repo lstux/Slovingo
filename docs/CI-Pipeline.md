@@ -66,6 +66,17 @@ Le fichier trouvé peut soit remplacer entièrement les exercices générés
 (`"mode": "append"`). Une fiche sans aucun de ces trois fichiers reçoit
 uniquement des exercices générés automatiquement.
 
+Les fiches d'**introduction** n'ont jamais d'exercices générés. Elles
+n'apparaissent dans l'écran des exercices que si elles ont un fichier
+manuel : ses exercices sont alors utilisés seuls, quel que soit le
+`mode`. Leur contenu n'alimente pas les distracteurs des autres fiches
+(les exercices générés restent identiques avec ou sans ces fichiers).
+
+Option propre aux exercices manuels : `"show_translation": true` sur un
+exercice `fill-blank` affiche la phrase dans l'autre langue au-dessus du
+texte à trous, avant la réponse (comme le fait déjà l'exercice `order`).
+Sans cette clé, rien ne change.
+
 ### Garder les exercices manuels alignés sur les fiches
 
 Un fichier d'exercices manuel n'est jamais régénéré par le build (c'est

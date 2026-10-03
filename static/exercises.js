@@ -1347,14 +1347,14 @@ function resolveFillBlankView(ex, direction) {
             type: "fill-blank", direction: dir,
             tokens: ex.l2.split(" "), blankIndex: ex.blank_index_l2,
             answer: ex.missing_l2, choices: shuffle([ex.missing_l2, ...ex.choices_l2]),
-            audio: ex.l2, translation: ex.l1,
+            audio: ex.l2, translation: ex.l1, showTranslation: ex.show_translation === true,
         };
     }
     return {
         type: "fill-blank", direction: dir,
         tokens: ex.l1.split(" "), blankIndex: ex.blank_index_l1,
         answer: ex.missing_l1, choices: shuffle([ex.missing_l1, ...ex.choices_l1]),
-        audio: ex.l2, translation: ex.l2,
+        audio: ex.l2, translation: ex.l2, showTranslation: ex.show_translation === true,
     };
 }
 
@@ -1658,12 +1658,25 @@ function renderQcm(view) {
 function renderFillBlank(view) {
     const container = el("div", { className: "exo-card exo-fill-blank" });
     container.appendChild(el("div", { className: "exo-question-label", text: uiLabel("exercise_fillblank_question_label", "Complete the sentence:") }));
+    // Opt-in per exercise ("show_translation": true): show the sentence
+    // in the other language up front, as the order exercise does --
+    // useful for young learners, for whom a bare cloze is guesswork.
+    if (view.showTranslation && view.translation) {
+        container.appendChild(el("div", { className: "exo-question", text: view.translation }));
+    }
 
     const sentence = el("div", { className: "exo-sentence" });
     const blank = el("span", { className: "exo-blank", text: uiLabel("exercise_fillblank_blank_display", "___") });
     view.tokens.forEach((token, i) => {
         if (i === view.blankIndex) {
+            // Keep punctuation glued to the missing word ("danke!" with
+            // answer "danke" shows "___!"), instead of dropping it.
+            const at = view.answer ? token.indexOf(view.answer) : -1;
+            if (at > 0) sentence.appendChild(document.createTextNode(token.slice(0, at)));
             sentence.appendChild(blank);
+            if (at !== -1 && at + view.answer.length < token.length) {
+                sentence.appendChild(document.createTextNode(token.slice(at + view.answer.length)));
+            }
         } else {
             sentence.appendChild(document.createTextNode(token));
         }
@@ -1807,9 +1820,9 @@ function renderOrder(view) {
         markAnswer(container, correct, view, userAnswer);
     };
 
-    container.appendChild(el("div", { className: "exo-order-strip-label", text: "Your answer:" }));
+    container.appendChild(el("div", { className: "exo-order-strip-label", text: uiLabel("exercise_order_answer_label", "Your answer:") }));
     container.appendChild(answerStrip);
-    container.appendChild(el("div", { className: "exo-order-strip-label", text: "Available words:" }));
+    container.appendChild(el("div", { className: "exo-order-strip-label", text: uiLabel("exercise_order_bank_label", "Available words:") }));
     container.appendChild(bank);
     container.appendChild(submit);
 
@@ -1826,7 +1839,7 @@ function renderOrder(view) {
  */
 function renderMatch(view) {
     const container = el("div", { className: "exo-card exo-match" });
-    container.appendChild(el("div", { className: "exo-question-label", text: "Drag the pairs:" }));
+    container.appendChild(el("div", { className: "exo-question-label", text: uiLabel("exercise_match_question_label", "Drag the pairs:") }));
 
     const matchGrid = el("div", { className: "exo-match-grid" });
     const leftColumn = el("div", { className: "exo-match-column exo-match-left" });
@@ -2029,7 +2042,7 @@ function renderMatch(view) {
 
     matchGrid.appendChild(leftColumn);
     container.appendChild(matchGrid);
-    container.appendChild(el("div", { className: "exo-match-bank-label", text: "Drag these:" }));
+    container.appendChild(el("div", { className: "exo-match-bank-label", text: uiLabel("exercise_match_bank_label", "Drag these:") }));
     container.appendChild(rightBank);
     container.appendChild(submit);
 
@@ -2040,7 +2053,7 @@ function renderMatch(view) {
 
 function renderTypeInput(container, view, onValidate) {
     const wrap = el("div", { className: "exo-type-input" });
-    const input = el("input", { attrs: { type: "text", placeholder: "Your answer…", autocomplete: "off" } });
+    const input = el("input", { attrs: { type: "text", placeholder: uiLabel("exercise_type_placeholder", "Your answer…"), autocomplete: "off" } });
     const submit = el("button", {
         className: "exo-submit",
         text: uiLabel("exercise_submit_button", "Check"),
@@ -2094,7 +2107,7 @@ function renderSummary() {
     const updated = state.sheetId ? getSheetProgress(state.sheetId) : null;
 
     const summary = el("div", { className: "exo-card exo-summary" }, [
-        el("h3", { text: "Result" }),
+        el("h3", { text: uiLabel("exercise_result_title", "Result") }),
         el("p", { className: "exo-score", text: `${state.score} / ${total} (${scorePct}%)` }),
     ]);
 
@@ -2102,13 +2115,16 @@ function renderSummary() {
         const prevDate = new Date(previous.last.date).toLocaleDateString();
         summary.appendChild(el("p", {
             className: "exo-history-line",
-            text: `Previous try: ${previous.last.score}/${previous.last.total} (${prevDate})`,
+            text: uiLabel("exercise_previous_try", "Previous try: {score}/{total} ({date})")
+                .replace("{score}", previous.last.score)
+                .replace("{total}", previous.last.total)
+                .replace("{date}", prevDate),
         }));
     }
 
     if (updated && updated.cumulative && updated.cumulative.sessionsCount > 1) {
         const cumLine = el("div", { className: "exo-cumulative" });
-        cumLine.appendChild(el("p", { className: "exo-history-line", text: "Cumulative average:" }));
+        cumLine.appendChild(el("p", { className: "exo-history-line", text: uiLabel("exercise_cumulative_average", "Cumulative average:") }));
         const row = el("div", { className: "exo-cumulative-row" });
         ALL_TYPES.forEach((type) => {
             const stats = updated.cumulative.byType[type];
@@ -2131,17 +2147,17 @@ function renderSummary() {
             const label = view.type === "qcm" ? view.question : (view.audio || "");
             list.appendChild(el("li", {
                 html: `<strong>${escapeHtml(label)}</strong> → ${escapeHtml(view.answer)}` +
-                      (userAnswer ? ` <span class="exo-your-answer">(you: ${escapeHtml(userAnswer)})</span>` : ""),
+                      (userAnswer ? ` <span class="exo-your-answer">(${escapeHtml(uiLabel("exercise_your_answer", "you:"))} ${escapeHtml(userAnswer)})</span>` : ""),
             }));
         });
-        summary.appendChild(el("p", { text: "To review:" }));
+        summary.appendChild(el("p", { text: uiLabel("exercise_to_review", "To review:") }));
         summary.appendChild(list);
     }
 
     const actions = el("div", { className: "exo-summary-actions" }, [
         el("button", { className: "exo-next", text: uiLabel("session_restart_button", "🔁 Start over"), onclick: () => startPool() }),
         el("button", {
-            className: "exo-secondary", text: "⬅ New selection",
+            className: "exo-secondary", text: uiLabel("exercise_new_selection_button", "⬅ New selection"),
             onclick: () => { window.location.hash = "#/exercises"; },
         }),
     ]);
