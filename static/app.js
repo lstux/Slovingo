@@ -325,6 +325,11 @@ function route() {
         cancelExerciseAutoAdvance();
     }
 
+    // Le badge de score vit dans le bandeau (index.html), qui persiste
+    // d'une route à l'autre : on le retire ici, renderSheet() le remet
+    // si la fiche affichée a un score.
+    clearSheetScoreBadge();
+
     const hash = window.location.hash || "#/";
     const sheetMatch = hash.match(/^#\/sheet\/(.+)$/);
 
@@ -836,7 +841,13 @@ function renderSheet(sheetId) {
  * Display exercise score badge in title and exercise status at bottom.
  * @param {string} sheetId
  */
+function clearSheetScoreBadge() {
+    document.querySelectorAll(".band__title-row .sheet-score-badge").forEach((el) => el.remove());
+}
+
 function displaySheetExerciseStatus(sheetId) {
+    clearSheetScoreBadge();
+
     // Récupérer le progrès pour cette fiche
     const progress = typeof getSheetProgress === "function" ? getSheetProgress(sheetId) : null;
 
@@ -872,18 +883,21 @@ function displaySheetExerciseStatus(sheetId) {
         existingStatus.remove();
     }
 
+    // Même lien que le bouton "Exercices" de la barre d'outils.
+    const questionCount = (SETTINGS && SETTINGS.defaultQuestionCount) || 12;
+    const exercisesHref = `#/exercises/session?cards=${encodeURIComponent(sheetId)}&n=${questionCount}`;
+
     const statusDiv = document.createElement("div");
     statusDiv.className = "sheet-exercise-status";
     statusDiv.innerHTML = `
         <hr>
         <p class="sheet-exercise-status__message">
-            ✔️ <span data-ui="exercises_done">You have practiced these exercises.</span>
-            <strong>${score}/${total}</strong> correct
-            (<span class="${statusClass === "exo-score-good" ? "status-good" : statusClass === "exo-score-mid" ? "status-mid" : "status-bad"}"> ${pctScore}%</span>)
+            ✔️ 🎯 <strong>${score}/${total}</strong>
+            (<span class="${statusClass === "exo-score-good" ? "status-good" : statusClass === "exo-score-mid" ? "status-mid" : "status-bad"}">${pctScore}%</span>)
         </p>
         <p class="sheet-exercise-status__link">
-            <a href="#/exercises/session?cards=${encodeURIComponent(sheetId)}&mode=review">
-                📖 <span data-ui="review_exercises">Review exercises</span>
+            <a href="${exercisesHref}">
+                🎯 ➜
             </a>
         </p>
     `;
