@@ -848,60 +848,42 @@ function clearSheetScoreBadge() {
 function displaySheetExerciseStatus(sheetId) {
     clearSheetScoreBadge();
 
-    // Récupérer le progrès pour cette fiche
-    const progress = typeof getSheetProgress === "function" ? getSheetProgress(sheetId) : null;
-
-    if (!progress || !progress.last) {
-        // Pas d'exercices faits, afficher rien ou une indication subtle
-        return;
-    }
-
-    const { score, total } = progress.last;
-    const pctScore = total ? Math.round((score / total) * 100) : 0;
-    const ratio = total ? score / total : 0;
-    let statusClass = "exo-score-good";
-    if (ratio < 0.8 && ratio >= 0.5) statusClass = "exo-score-mid";
-    else if (ratio < 0.5) statusClass = "exo-score-bad";
-
-    // 1. Ajouter un badge de score au titre
-    const titleRow = document.querySelector(".band__title-row");
-    if (titleRow) {
-        let scoreBadge = titleRow.querySelector(".sheet-score-badge");
-        if (!scoreBadge) {
-            scoreBadge = document.createElement("span");
-            scoreBadge.className = `sheet-score-badge ${statusClass}`;
-            titleRow.appendChild(scoreBadge);
-        }
-        scoreBadge.textContent = `${pctScore}%`;
-        scoreBadge.className = `sheet-score-badge ${statusClass}`;
-    }
-
-    // 2. Ajouter une section en bas du contenu avec le score et le lien
     const content = document.getElementById("content");
     const existingStatus = content.querySelector(".sheet-exercise-status");
     if (existingStatus) {
         existingStatus.remove();
     }
 
+    const progress = typeof getSheetProgress === "function" ? getSheetProgress(sheetId) : null;
+    const done = Boolean(progress && progress.last);
+
     // Même lien que le bouton "Exercices" de la barre d'outils.
     const questionCount = (SETTINGS && SETTINGS.defaultQuestionCount) || 12;
     const exercisesHref = `#/exercises/session?cards=${encodeURIComponent(sheetId)}&n=${questionCount}`;
 
-    const statusDiv = document.createElement("div");
-    statusDiv.className = "sheet-exercise-status";
-    statusDiv.innerHTML = `
-        <hr>
-        <p class="sheet-exercise-status__message">
-            ✔️ 🎯 <strong>${score}/${total}</strong>
-            (<span class="${statusClass === "exo-score-good" ? "status-good" : statusClass === "exo-score-mid" ? "status-mid" : "status-bad"}">${pctScore}%</span>)
-        </p>
-        <p class="sheet-exercise-status__link">
-            <a href="${exercisesHref}">
-                🎯 ➜
-            </a>
-        </p>
-    `;
-    content.appendChild(statusDiv);
+    let resultHtml = "○ —";
+    if (done) {
+        const { score, total } = progress.last;
+        const pctScore = total ? Math.round((score / total) * 100) : 0;
+        const level = scoreRatioClass(score, total); // "good" | "mid" | "bad"
+
+        // Pastille de score à côté du titre (uniquement si déjà fait).
+        const titleRow = document.querySelector(".band__title-row");
+        if (titleRow) {
+            const badge = document.createElement("span");
+            badge.className = `sheet-score-badge exo-score-${level}`;
+            badge.textContent = `${pctScore}%`;
+            titleRow.appendChild(badge);
+        }
+
+        resultHtml = `✔️ ${score}/${total} · <span class="status-${level}">${pctScore}%</span>`;
+    }
+
+    // Une seule ligne discrète, présente que les exercices soient faits ou non.
+    const statusEl = document.createElement("p");
+    statusEl.className = "sheet-exercise-status";
+    statusEl.innerHTML = `${resultHtml} · <a href="${exercisesHref}">🎯 ➜</a>`;
+    content.appendChild(statusEl);
 }
 
 function renderNotFound(sheetId) {
