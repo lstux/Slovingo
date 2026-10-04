@@ -827,6 +827,67 @@ function renderSheet(sheetId) {
         saveLastSeriesSheet(sheet.id);
         // NE PAS appeler updateContinueButton() ici - le bouton doit rester caché sur une fiche!
     }
+
+    // Afficher le score et l'historique d'exercices s'il existe
+    displaySheetExerciseStatus(sheet.id);
+}
+
+/**
+ * Display exercise score badge in title and exercise status at bottom.
+ * @param {string} sheetId
+ */
+function displaySheetExerciseStatus(sheetId) {
+    // Récupérer le progrès pour cette fiche
+    const progress = typeof getSheetProgress === "function" ? getSheetProgress(sheetId) : null;
+
+    if (!progress || !progress.last) {
+        // Pas d'exercices faits, afficher rien ou une indication subtle
+        return;
+    }
+
+    const { score, total } = progress.last;
+    const pctScore = total ? Math.round((score / total) * 100) : 0;
+    const ratio = total ? score / total : 0;
+    let statusClass = "exo-score-good";
+    if (ratio < 0.8 && ratio >= 0.5) statusClass = "exo-score-mid";
+    else if (ratio < 0.5) statusClass = "exo-score-bad";
+
+    // 1. Ajouter un badge de score au titre
+    const titleRow = document.querySelector(".band__title-row");
+    if (titleRow) {
+        let scoreBadge = titleRow.querySelector(".sheet-score-badge");
+        if (!scoreBadge) {
+            scoreBadge = document.createElement("span");
+            scoreBadge.className = `sheet-score-badge ${statusClass}`;
+            titleRow.appendChild(scoreBadge);
+        }
+        scoreBadge.textContent = `${pctScore}%`;
+        scoreBadge.className = `sheet-score-badge ${statusClass}`;
+    }
+
+    // 2. Ajouter une section en bas du contenu avec le score et le lien
+    const content = document.getElementById("content");
+    const existingStatus = content.querySelector(".sheet-exercise-status");
+    if (existingStatus) {
+        existingStatus.remove();
+    }
+
+    const statusDiv = document.createElement("div");
+    statusDiv.className = "sheet-exercise-status";
+    statusDiv.innerHTML = `
+        <hr>
+        <p class="sheet-exercise-status__message">
+            ✔️ <span data-ui="exercises_done">You have practiced these exercises.</span>
+            <strong>${score}/${total}</strong> correct
+            (<span class="${statusClass === "exo-score-good" ? "status-good" : statusClass === "exo-score-mid" ? "status-mid" : "status-bad"}"> ${pctScore}%</span>)
+        </p>
+        <p class="sheet-exercise-status__link">
+            <a href="#/exercises/session?cards=${encodeURIComponent(sheetId)}&mode=review">
+                📖 <span data-ui="review_exercises">Review exercises</span>
+            </a>
+        </p>
+    `;
+    content.appendChild(statusDiv);
 }
 
 function renderNotFound(sheetId) {

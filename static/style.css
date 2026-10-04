@@ -555,6 +555,32 @@ footer {
 }
 .band__credit::before { content: var(--credit); }
 
+/* Badge de score à côté du titre */
+.sheet-score-badge {
+    flex-shrink: 0;
+    display: inline-block;
+    min-width: 50px;
+    padding: 6px 12px;
+    border-radius: var(--pill);
+    font-weight: 700;
+    font-size: 0.9em;
+    text-align: center;
+    color: white;
+    margin-left: auto;
+}
+
+.sheet-score-badge.exo-score-good {
+    background: color-mix(in srgb, #2e9e5b 85%, transparent);
+}
+
+.sheet-score-badge.exo-score-mid {
+    background: color-mix(in srgb, #d68910 85%, transparent);
+}
+
+.sheet-score-badge.exo-score-bad {
+    background: color-mix(in srgb, #d1483c 85%, transparent);
+}
+
 /* Sous-titre de l'index (nombre de fiches), affiché comme un kicker
    quand il n'y a pas de bandeau dédié. */
 .index-subtitle {
@@ -1568,6 +1594,54 @@ button.index-card {
     body { font-size: 16px; }
     .audio-card { gap: 8px; padding: 10px 12px; }
     .audio-buttons button { width: 40px; height: 40px; font-size: 18px; }
+}
+
+/* Section d'historique d'exercices en bas de fiche */
+.sheet-exercise-status {
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--line);
+}
+
+.sheet-exercise-status__message {
+    margin: 0 0 12px;
+    font-size: 0.95em;
+    color: var(--text);
+}
+
+.sheet-exercise-status__message strong {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.status-good { color: #2e9e5b; font-weight: 600; }
+.status-mid { color: #d68910; font-weight: 600; }
+.status-bad { color: #d1483c; font-weight: 600; }
+
+.sheet-exercise-status__link {
+    margin: 0;
+}
+
+.sheet-exercise-status__link a {
+    display: inline-block;
+    padding: 10px 16px;
+    background: color-mix(in srgb, var(--accent) 15%, transparent);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background .15s ease, color .15s ease;
+}
+
+.sheet-exercise-status__link a:hover {
+    background: color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.sheet-exercise-status__link a:active {
+    transform: scale(0.97);
 }
 
 @media (prefers-reduced-motion: reduce) {
