@@ -1,0 +1,128 @@
+<!--
+  Slovingo Adventure Map
+  Étape 1 — Squelette statique
+
+  Structure HTML pour la carte d'accueil interactive.
+  Le contenu réel sera injecté par app.js via les données du générateur.
+-->
+
+<section
+  id="adventure-map"
+  class="adventure-map"
+  aria-label="Slovingo Adventure Map"
+  role="region"
+>
+
+  <!-- Arrière-plan paysage -->
+  <div class="map-background">
+    <!-- Placeholder pour le fond illustré des Tatras -->
+  </div>
+
+  <!-- Couche de décoration optionnelle -->
+  <div class="map-decorations" aria-hidden="true">
+    <!-- Éléments visuels statiques (montagnes, forêts, etc.) -->
+  </div>
+
+  <!-- Chemin SVG (deux couches : cachée + découverte) -->
+  <svg
+    class="map-route"
+    viewBox="0 0 1000 1000"
+    aria-hidden="true"
+    role="presentation"
+  >
+    <defs>
+      <mask id="route-mask">
+        <rect width="1000" height="1000" fill="white"/>
+      </mask>
+    </defs>
+
+    <!-- Chemin complet très transparent (référence) -->
+    <path
+      class="route route--hidden"
+      d="M 120,880 C 250,760 180,700 360,620 C 450,570 380,500 520,420 C 600,370 500,320 650,280 C 750,250 700,180 800,120 L 840,80"
+      aria-hidden="true"
+    />
+
+    <!-- Chemin découvert (opaque, révélé progressivement) -->
+    <g class="route-segments">
+      <path
+        id="route-segment-0"
+        class="route route--visible route-segment"
+        d="M 120,880 C 250,760 180,700 360,620"
+        aria-hidden="true"
+      />
+    </g>
+  </svg>
+
+  <!-- Couche de brouillard (masque optionnel des zones non découvertes) -->
+  <div class="map-fog" aria-hidden="true" role="presentation">
+    <div class="fog-zone fog-zone--01"></div>
+    <div class="fog-zone fog-zone--02"></div>
+    <div class="fog-zone fog-zone--03"></div>
+    <div class="fog-zone fog-zone--04"></div>
+    <div class="fog-zone fog-zone--05"></div>
+    <div class="fog-zone fog-zone--06"></div>
+  </div>
+
+  <!-- Conteneur des nœuds (étapes du parcours) -->
+  <div class="map-nodes" id="map-nodes">
+    <!-- Les boutons des étapes seront générés ici par JS -->
+  </div>
+
+  <!-- Le renard 🦊 -->
+  <div
+    id="map-fox"
+    class="map-fox"
+    aria-hidden="true"
+    role="img"
+    aria-label="Fox companion"
+  >
+    🦊
+  </div>
+
+  <!-- Le château 🏰 (objectif final) -->
+  <div
+    id="map-castle"
+    class="map-destination map-destination--final"
+    aria-hidden="true"
+    role="img"
+    aria-label="Final castle"
+  >
+    🏰
+  </div>
+
+</section>
+
+<!-- Popover d'information sur une étape -->
+<aside id="map-popover" class="map-popover" hidden role="dialog" aria-modal="true">
+  <div class="popover-content">
+    <button class="popover-close" type="button" aria-label="Close">×</button>
+    <h2 id="popover-title"></h2>
+    <p id="popover-label"></p>
+    <div id="popover-progress" class="popover-progress"></div>
+    <a id="popover-action" class="popover-action-btn" href="#">
+      <span data-ui="explore">Explore</span>
+    </a>
+  </div>
+</aside>
+
+<!-- Accès direct aux ressources hors parcours -->
+<nav class="direct-access" aria-label="Direct resources">
+  <ul class="direct-access-list">
+    <li>
+      <a href="#" class="direct-access-link" data-resource="vocabulaire">
+        📚 <span data-ui="vocabulaire">Vocabulaire</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="direct-access-link" data-resource="revisions">
+        🔄 <span data-ui="revisions">Révisions</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="direct-access-link" data-resource="annexes">
+        📎 <span data-ui="annexes">Annexes</span>
+      </a>
+    </li>
+  </ul>
+</nav>
