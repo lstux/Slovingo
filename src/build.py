@@ -44,7 +44,7 @@ from pathlib import Path
 import assemble
 import check_ui_keys
 import smd2exercises
-from gen_icons import draw_flag_icon, find_emoji_font
+from gen_icons import companions_from_config, draw_flag_icon, find_emoji_font
 from gen_manifest import build_manifest
 from gen_service_worker import render as render_service_worker
 from smd2data import SheetNameError, build_sheet_json
@@ -191,6 +191,7 @@ def run_build(
     icons_dir.mkdir(parents=True, exist_ok=True)
     icon_written, icon_skipped = 0, 0
     font_path = None
+    companions = companions_from_config(lang_cfg)
     for filename, size, safe_zone_ratio in ICON_SPECS:
         out = icons_dir / filename
         if out.exists() and not force_icons:
@@ -198,7 +199,7 @@ def run_build(
             continue
         if font_path is None:
             font_path = find_emoji_font()
-        icon = draw_flag_icon(size, lang_cfg["target_lang"]["flag"], font_path, safe_zone_ratio)
+        icon = draw_flag_icon(size, lang_cfg["target_lang"]["flag"], font_path, safe_zone_ratio, companions)
         icon.convert("RGB").save(out, "PNG")
         icon_written += 1
     print(f"Icons: {icon_written} written, {icon_skipped} kept as-is")
