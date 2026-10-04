@@ -229,6 +229,22 @@
   margin-right: 0.25rem;
 }
 
+/* Animation d'arrivée du nœud */
+@keyframes node-arrive {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.map-node.is-arriving {
+  animation: node-arrive 0.4s ease-out;
+}
+
 /* Icône du nœud */
 .map-node__icon {
   font-size: 2rem;
@@ -259,6 +275,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 3rem;
+  height: 3rem;
 }
 
 /* Animation d'arrivée du renard */

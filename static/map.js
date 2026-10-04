@@ -78,6 +78,7 @@ async function initMap() {
   // Rendre les éléments statiques
   renderNodes(MAP_STEPS, mapState);
   updateFoxPosition(mapState, false);
+  updateMapVisibility(mapState);
 
   // Attacher les écouteurs d'événements
   attachEventListeners();
@@ -305,6 +306,68 @@ function getPositionForStep(stepId) {
 }
 
 // ============================================
+// Mise à jour de la visibilité (fog, castle)
+// ============================================
+
+function updateMapVisibility(mapState) {
+  // Révéler progressivement les zones de brouillard selon la dernière série validée
+  const lastValidatedIndex = mapState.lastValidatedIndex;
+
+  // Calculer le nombre de zones à révéler (une zone par 2 séries environ)
+  const numSeries = MAP_STEPS.filter(s => s.type === 'series').length;
+  const zonesPerSeries = 6 / Math.max(1, numSeries); // 6 fog zones au total
+  const zonesToReveal = Math.ceil((lastValidatedIndex + 1) * zonesPerSeries);
+
+  // Révéler les zones
+  for (let i = 1; i <= 6; i++) {
+    const fogZone = document.querySelector(`.fog-zone--0${i}`);
+    if (fogZone) {
+      if (i <= zonesToReveal) {
+        fogZone.classList.add('is-revealed');
+      } else {
+        fogZone.classList.remove('is-revealed');
+      }
+    }
+  }
+
+  // Révéler le château si beaucoup de séries sont validées
+  const castle = document.getElementById('map-castle');
+  if (castle) {
+    const allSeriesValidated = MAP_STEPS.filter(s => s.type === 'series').length > 0 &&
+                               MAP_STEPS.filter(s => s.type === 'series' && mapState.validated.includes(s.id)).length ===
+                               MAP_STEPS.filter(s => s.type === 'series').length;
+
+    if (allSeriesValidated || lastValidatedIndex >= MAP_STEPS.filter(s => s.type === 'series').length - 2) {
+      castle.classList.add('is-revealed');
+    } else {
+      castle.classList.remove('is-revealed');
+    }
+  }
+
+  // Révéler les segments du chemin
+  revealPathSegments(mapState);
+}
+
+// ============================================
+// Révélation du chemin
+// ============================================
+
+function revealPathSegments(mapState) {
+  // Pour la V1, révéler tous les segments jusqu'à la dernière étape validée
+  // (Dans une future version, on peut animer les segments progressivement)
+
+  const discoveredCount = mapState.discovered.length;
+
+  // Chaque segment correspond à une étape
+  for (let i = 0; i < discoveredCount; i++) {
+    const segment = document.getElementById(`route-segment-${i}`);
+    if (segment) {
+      segment.classList.add('is-discovered');
+    }
+  }
+}
+
+// ============================================
 // Gestion des popovers
 // ============================================
 
@@ -381,6 +444,16 @@ function handleSeriesValidated(event) {
   const mapState = getMapState(currentState.progress);
   renderNodes(MAP_STEPS, mapState);
 
+  // Déterminer la prochaine étape recommandée
+  const nextStep = MAP_STEPS.find(s => s.id === mapState.currentStep);
+
+  if (nextStep) {
+    // Placer le renard à la prochaine étape et animer
+    currentState.lastVisited = nextStep.id;
+    saveProgress();
+    updateFoxPosition(mapState, true);
+  }
+
   // Animer la révélation
   animateDiscovery(seriesId, mapState);
 }
@@ -408,13 +481,19 @@ function attachEventListeners() {
 // ============================================
 
 function animateDiscovery(seriesId, mapState) {
-  // TODO: Implémenter l'animation de découverte
-  // - Phase 1: Afficher un message de félicitation
-  // - Phase 2: Animation du renard
-  // - Phase 3: Illuminer le chemin
-  // - Phase 4: Révéler la brume
-  // - Phase 5: Déplacer le renard
-  // - Phase 6: Mettre à jour l'étape courante
+  // Phase 1: Message de félicitation (optionnel, peut être dans les fiches)
+  // Phase 2: Animation du renard (avec la transition CSS)
+  // Phase 3: Révéler le brouillard et le chemin
+  updateMapVisibility(mapState);
+
+  // Phase 4: Mettre en évidence la nouvelle étape
+  const nextNode = document.querySelector(`[data-step-id="${mapState.currentStep}"]`);
+  if (nextNode) {
+    nextNode.classList.add('is-arriving');
+    setTimeout(() => {
+      nextNode.classList.remove('is-arriving');
+    }, 400); // Match animation duration
+  }
 }
 
 // ============================================
