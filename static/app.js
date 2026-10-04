@@ -883,18 +883,21 @@ function displaySheetExerciseStatus(sheetId) {
         existingStatus.remove();
     }
 
+    // Même lien que le bouton "Exercices" de la barre d'outils.
+    const questionCount = (SETTINGS && SETTINGS.defaultQuestionCount) || 12;
+    const exercisesHref = `#/exercises/session?cards=${encodeURIComponent(sheetId)}&n=${questionCount}`;
+
     const statusDiv = document.createElement("div");
     statusDiv.className = "sheet-exercise-status";
     statusDiv.innerHTML = `
         <hr>
         <p class="sheet-exercise-status__message">
-            ✔️ <span data-ui="exercises_done">You have practiced these exercises.</span>
-            <strong>${score}/${total}</strong> correct
-            (<span class="${statusClass === "exo-score-good" ? "status-good" : statusClass === "exo-score-mid" ? "status-mid" : "status-bad"}"> ${pctScore}%</span>)
+            ✔️ 🎯 <strong>${score}/${total}</strong>
+            (<span class="${statusClass === "exo-score-good" ? "status-good" : statusClass === "exo-score-mid" ? "status-mid" : "status-bad"}">${pctScore}%</span>)
         </p>
         <p class="sheet-exercise-status__link">
-            <a href="#/exercises/session?cards=${encodeURIComponent(sheetId)}&mode=review">
-                📖 <span data-ui="review_exercises">Review exercises</span>
+            <a href="${exercisesHref}">
+                🎯 ➜
             </a>
         </p>
     `;
