@@ -65,7 +65,9 @@ Métadonnées générales du site généré (PWA, manifeste, thème).
   "user_name_default": "Eric",
   "user_name_placeholder": "Ton prénom",
   "deploy_host": "www.example.org",
-  "deploy_path": "/var/www/example.org/htdocs/slovingo/sk-fr/"
+  "deploy_path": "/var/www/example.org/htdocs/slovingo/sk-fr/",
+  "icon_style": "kids",
+  "icon_companions": ["🦊", "🐰"]
 }
 ```
 
@@ -77,6 +79,15 @@ Métadonnées générales du site généré (PWA, manifeste, thème).
   **USER_NAME** ci-dessous.
 - `deploy_host` / `deploy_path` : utilisés par `src/publish.py` pour le
   déploiement (optionnel, seulement si tu utilises ce script tel quel).
+- `icon_style` (facultatif) : `"flag"` (défaut) dessine le drapeau de la langue
+  apprise sur le dégradé ; `"kids"` réduit le drapeau et ajoute deux
+  personnages dessous (version enfant). Toute autre valeur est une erreur.
+- `icon_companions` (facultatif, seulement avec `"icon_style": "kids"`) : liste
+  d'emojis dessinés sous le drapeau, de gauche à droite. Défaut : `["🦊", "🐰"]`.
+  Ils rétrécissent s'ils sont nombreux, pour rester dans la zone de sécurité.
+- Les icônes sont **persistantes** : un build ne remplace pas celles qui
+  existent déjà. Après avoir changé `icon_style` ou `icon_companions`, lance le
+  build avec `--force-icons` (ou supprime `dist/icons/`).
 
 ## categories
 
