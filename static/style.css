@@ -952,11 +952,12 @@ footer {
     background: color-mix(in srgb, var(--accent) 12%, transparent);
     box-shadow: inset 0 -2px 0 color-mix(in srgb, var(--accent) 40%, transparent);
     font-weight: 600;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 /* Le petit haut-parleur ne s'affiche que pour les mots/phrases
-   isolés ({{...}}), pas pour les cellules de translate-table. */
+   isolés ({{...}}), pas pour les cellules de translate-table.
+   Le texte passe à la ligne naturellement si trop long. */
 .speakable-hint::after { content: " 🔊"; font-size: 0.75em; opacity: 0.65; }
 .speakable-hint:hover { background: color-mix(in srgb, var(--accent) 22%, transparent); }
 
@@ -970,9 +971,6 @@ footer {
     box-shadow: none;
     border-bottom: 2px dashed color-mix(in srgb, var(--text-soft) 55%, transparent);
     font-weight: 500;
-    /* Une consigne en langue native peut faire toute une phrase : elle
-       doit pouvoir passer à la ligne (contrairement au mot isolé). */
-    white-space: normal;
 }
 .speakable-hint.speakable-native::after { content: " 🗣️"; }
 .speakable-hint.speakable-native:hover { background: color-mix(in srgb, var(--text-soft) 22%, transparent); }
