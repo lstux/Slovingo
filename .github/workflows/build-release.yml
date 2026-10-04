@@ -49,7 +49,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-          # No requirements.txt: Slovingo has zero external dependencies.
+
+      - name: Install optional dependencies (Pillow for icon generation)
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r engine/requirements.txt || echo "⚠️ Optional dependencies not available; build will use fallback icons"
 
       - name: Place content into build.py's expected layout
         run: |
