@@ -325,6 +325,11 @@ function route() {
         cancelExerciseAutoAdvance();
     }
 
+    // Le badge de score vit dans le bandeau (index.html), qui persiste
+    // d'une route à l'autre : on le retire ici, renderSheet() le remet
+    // si la fiche affichée a un score.
+    clearSheetScoreBadge();
+
     const hash = window.location.hash || "#/";
     const sheetMatch = hash.match(/^#\/sheet\/(.+)$/);
 
@@ -836,7 +841,13 @@ function renderSheet(sheetId) {
  * Display exercise score badge in title and exercise status at bottom.
  * @param {string} sheetId
  */
+function clearSheetScoreBadge() {
+    document.querySelectorAll(".band__title-row .sheet-score-badge").forEach((el) => el.remove());
+}
+
 function displaySheetExerciseStatus(sheetId) {
+    clearSheetScoreBadge();
+
     // Récupérer le progrès pour cette fiche
     const progress = typeof getSheetProgress === "function" ? getSheetProgress(sheetId) : null;
 
