@@ -1439,6 +1439,110 @@ button.index-card {
 
 
 /* ==========================================================================
+   10bis. Image Lightbox (click-to-zoom modal)
+   ========================================================================== */
+
+.image-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-lightbox__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+.image-lightbox__container {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image-lightbox__controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: var(--bg);
+    border-radius: var(--radius);
+}
+
+.image-lightbox__zoom-in,
+.image-lightbox__zoom-out {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--line);
+    background: var(--bg);
+    color: var(--text);
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: border-color .15s ease, background .15s ease;
+}
+
+.image-lightbox__zoom-in:hover,
+.image-lightbox__zoom-out:hover {
+    border-color: var(--accent);
+    background: var(--surface);
+}
+
+.image-lightbox__scale {
+    min-width: 60px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-soft);
+}
+
+.image-lightbox__close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color .15s ease;
+}
+
+.image-lightbox__close:hover {
+    color: var(--accent);
+}
+
+.image-lightbox__img {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    transform-origin: center;
+    transition: transform .1s ease;
+    cursor: grab;
+}
+
+.image-lightbox__img:active {
+    cursor: grabbing;
+}
+
+
+/* ==========================================================================
    11. Adaptation mobile
    ========================================================================== */
 

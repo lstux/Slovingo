@@ -221,6 +221,96 @@ document.addEventListener("DOMContentLoaded", boot);
 // ============================================================================
 
 /**
+ * Enable click-to-zoom on all images in the page via a lightbox modal.
+ * Adds listeners to images that haven't been enabled yet, using a
+ * data-lightbox-enabled flag to avoid double-binding.
+ */
+function enableImageLightbox() {
+    document.querySelectorAll("img:not(.image-lightbox__img)").forEach((img) => {
+        if (!img.dataset.lightboxEnabled) {
+            img.style.cursor = "pointer";
+            img.addEventListener("click", () => openImageLightbox(img.src));
+            img.dataset.lightboxEnabled = "true";
+        }
+    });
+}
+
+/**
+ * Open the lightbox modal with an image, and set up zoom controls.
+ * @param {string} src
+ */
+function openImageLightbox(src) {
+    let lightbox = document.getElementById("image-lightbox");
+    if (!lightbox) {
+        lightbox = document.createElement("div");
+        lightbox.id = "image-lightbox";
+        lightbox.className = "image-lightbox";
+        lightbox.innerHTML = `
+            <div class="image-lightbox__overlay"></div>
+            <div class="image-lightbox__container">
+                <button class="image-lightbox__close" aria-label="Close">✕</button>
+                <div class="image-lightbox__controls">
+                    <button class="image-lightbox__zoom-out" aria-label="Zoom out">−</button>
+                    <span class="image-lightbox__scale">100%</span>
+                    <button class="image-lightbox__zoom-in" aria-label="Zoom in">+</button>
+                </div>
+                <img class="image-lightbox__img" src="" alt="" />
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+    }
+
+    const img = lightbox.querySelector(".image-lightbox__img");
+    img.src = src;
+
+    let scale = 1;
+    const scaleDisplay = lightbox.querySelector(".image-lightbox__scale");
+    const zoomInBtn = lightbox.querySelector(".image-lightbox__zoom-in");
+    const zoomOutBtn = lightbox.querySelector(".image-lightbox__zoom-out");
+    const closeBtn = lightbox.querySelector(".image-lightbox__close");
+    const overlay = lightbox.querySelector(".image-lightbox__overlay");
+    const container = lightbox.querySelector(".image-lightbox__container");
+
+    function updateScale() {
+        img.style.transform = `scale(${scale})`;
+        scaleDisplay.textContent = `${Math.round(scale * 100)}%`;
+    }
+
+    zoomInBtn.addEventListener("click", () => {
+        scale = Math.min(scale + 0.2, 3);
+        updateScale();
+    });
+
+    zoomOutBtn.addEventListener("click", () => {
+        scale = Math.max(scale - 0.2, 1);
+        updateScale();
+    });
+
+    img.addEventListener("wheel", (e) => {
+        e.preventDefault();
+        scale += e.deltaY < 0 ? 0.1 : -0.1;
+        scale = Math.max(1, Math.min(scale, 3));
+        updateScale();
+    }, { passive: false });
+
+    function closeImageLightbox() {
+        lightbox.style.display = "none";
+        scale = 1;
+        updateScale();
+    }
+
+    closeBtn.addEventListener("click", closeImageLightbox);
+    overlay.addEventListener("click", closeImageLightbox);
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && lightbox.style.display === "flex") {
+            closeImageLightbox();
+        }
+    });
+
+    lightbox.style.display = "flex";
+}
+
+/**
  * Hash-based routing:
  *   #/                  -- home (browse all sheets)
  *   #/sheet/<id>         -- one sheet
@@ -252,6 +342,7 @@ function route() {
         renderHome();
     }
     window.scrollTo(0, 0);
+    enableImageLightbox();
 }
 
 // ============================================================================
