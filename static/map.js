@@ -33,14 +33,40 @@ let currentState = {
 };
 
 // ============================================
+// Chargement des données
+// ============================================
+
+async function loadMapData() {
+  try {
+    const response = await fetch('map.json');
+    if (!response.ok) {
+      console.warn('Failed to load map.json:', response.status);
+      return null;
+    }
+    return await response.json();
+  } catch (e) {
+    console.warn('Failed to fetch map.json:', e);
+    return null;
+  }
+}
+
+// ============================================
 // Initialisation
 // ============================================
 
-function initMap() {
-  // Récupérer les données injectées par le générateur
+async function initMap() {
+  // Récupérer les données injectées par le générateur (fallback)
+  // OU charger depuis map.json
   if (typeof window.SLOVINGO_MAP !== 'undefined') {
     MAP_STEPS = window.SLOVINGO_MAP.steps || [];
     MAP_RESOURCES = window.SLOVINGO_MAP.resources || [];
+  } else {
+    const mapData = await loadMapData();
+    if (mapData) {
+      MAP_STEPS = mapData.steps || [];
+      MAP_RESOURCES = mapData.resources || [];
+      window.SLOVINGO_MAP = mapData;
+    }
   }
 
   // Charger la progression existante

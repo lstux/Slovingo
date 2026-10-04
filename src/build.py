@@ -47,6 +47,7 @@ import smd2exercises
 from gen_icons import companions_from_config, draw_flag_icon, find_emoji_font
 from gen_manifest import build_manifest
 from gen_service_worker import render as render_service_worker
+from map_generator import build_map_json
 from smd2data import SheetNameError, build_sheet_json
 
 # Static front-end files copied as-is into dist/ -- shared across
@@ -54,6 +55,7 @@ from smd2data import SheetNameError, build_sheet_json
 STATIC_FILES = [
     "index.html", "app.js", "exercises.js", "progress.js", "settings.js",
     "celebrate.js", "style.css", "exercises.css",
+    "map.html", "map.css", "map.js",  # Adventure map
 ]
 
 ICON_SPECS = [
@@ -155,6 +157,11 @@ def run_build(
     (dist_dir / "data.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     (dist_dir / "exercises.json").write_text(json.dumps(exercises, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Assembled: {dist_dir}/data.json, {dist_dir}/exercises.json")
+
+    # 3.5 Adventure Map metadata.
+    map_data = build_map_json(md_dir, lang_cfg)
+    (dist_dir / "map.json").write_text(json.dumps(map_data, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Map: {dist_dir}/map.json ({len(map_data['steps'])} steps, {len(map_data['resources'])} resources)")
 
     # 4. Static front-end files, copied as-is. lang.json is written
     #    from the in-memory config minus `generator` -- build-only

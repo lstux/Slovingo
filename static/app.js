@@ -905,6 +905,63 @@ function renderNotFound(sheetId) {
 // 6. Home view
 // ============================================================================
 
+/**
+ * Inject the adventure map HTML into the content area.
+ * This creates the main structure for the map that map.js will populate.
+ */
+function renderAdventureMap() {
+    const mapHTML = `
+        <section id="adventure-map" class="adventure-map" aria-label="Slovingo Adventure Map" role="region">
+            <div class="map-background"></div>
+            <div class="map-decorations" aria-hidden="true"></div>
+            <svg class="map-route" viewBox="0 0 1000 1000" aria-hidden="true" role="presentation">
+                <defs><mask id="route-mask"><rect width="1000" height="1000" fill="white"/></mask></defs>
+                <path class="route route--hidden" d="M 120,880 C 250,760 180,700 360,620 C 450,570 380,500 520,420 C 600,370 500,320 650,280 C 750,250 700,180 800,120 L 840,80" aria-hidden="true"></path>
+                <g class="route-segments"><path id="route-segment-0" class="route route--visible route-segment" d="M 120,880 C 250,760 180,700 360,620" aria-hidden="true"></path></g>
+            </svg>
+            <div class="map-fog" aria-hidden="true" role="presentation">
+                <div class="fog-zone fog-zone--01"></div>
+                <div class="fog-zone fog-zone--02"></div>
+                <div class="fog-zone fog-zone--03"></div>
+                <div class="fog-zone fog-zone--04"></div>
+                <div class="fog-zone fog-zone--05"></div>
+                <div class="fog-zone fog-zone--06"></div>
+            </div>
+            <div class="map-nodes" id="map-nodes"></div>
+            <div id="map-fox" class="map-fox" aria-hidden="true" role="img" aria-label="Fox companion">🦊</div>
+            <div id="map-castle" class="map-destination map-destination--final" aria-hidden="true" role="img" aria-label="Final castle">🏰</div>
+        </section>
+        <aside id="map-popover" class="map-popover" hidden role="dialog" aria-modal="true">
+            <div class="popover-content">
+                <button class="popover-close" type="button" aria-label="Close">×</button>
+                <h2 id="popover-title"></h2>
+                <p id="popover-label"></p>
+                <div id="popover-progress" class="popover-progress"></div>
+                <a id="popover-action" class="popover-action-btn" href="#">Explore</a>
+            </div>
+        </aside>
+        <nav class="direct-access" aria-label="Direct resources">
+            <ul class="direct-access-list">
+                <li><a href="#" class="direct-access-link" data-resource="vocabulaire">📚 Vocabulaire</a></li>
+                <li><a href="#" class="direct-access-link" data-resource="revisions">🔄 Révisions</a></li>
+                <li><a href="#" class="direct-access-link" data-resource="annexes">📎 Annexes</a></li>
+            </ul>
+        </nav>
+    `;
+
+    const content = document.getElementById("content");
+    const mapContainer = document.createElement("div");
+    mapContainer.innerHTML = mapHTML;
+    while (mapContainer.firstChild) {
+        content.appendChild(mapContainer.firstChild);
+    }
+
+    // Initialize map after HTML is injected
+    if (typeof initMap === "function") {
+        initMap().catch(e => console.warn("Failed to initialize map:", e));
+    }
+}
+
 /** Render the home screen: every group, each with its sheets. */
 function renderHome() {
     applyTheme(DEFAULT_THEME);
@@ -916,6 +973,9 @@ function renderHome() {
 
     const content = document.getElementById("content");
     content.innerHTML = "";
+
+    // Render the adventure map first
+    renderAdventureMap();
     // Running counter for .index-num, shared across every group on the
     // page -- matches v1, which numbered sheets continuously along the
     // whole curriculum rather than restarting at 1 in each series.
