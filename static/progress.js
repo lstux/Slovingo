@@ -167,3 +167,55 @@ function calculateSeriesProgress() {
 
     return { completed, total };
 }
+
+// ============================================================================
+// Fiches visitées (utilisé par la carte d'accueil)
+// ============================================================================
+
+/** @returns {string} Clé localStorage des fiches visitées ({sheetId: true}). */
+function visitedSheetsKey() {
+    const prefix = (LANG && LANG.site && LANG.site.storage_prefix) || "slovingo";
+    return `${prefix}-visited-sheets`;
+}
+
+/** @returns {string} Clé localStorage de la dernière fiche consultée (toutes catégories). */
+function lastSheetKey() {
+    const prefix = (LANG && LANG.site && LANG.site.storage_prefix) || "slovingo";
+    return `${prefix}-last-sheet`;
+}
+
+/** @returns {object} {sheetId: true} pour chaque fiche déjà ouverte. */
+function getVisitedSheets() {
+    try {
+        return JSON.parse(localStorage.getItem(visitedSheetsKey())) || {};
+    } catch (err) {
+        return {};
+    }
+}
+
+/**
+ * Enregistrer l'ouverture d'une fiche : la marque comme visitée et en
+ * fait la dernière consultée. Toutes catégories (contrairement à
+ * saveLastSeriesSheet, qui ne sert qu'au bouton "Continuer").
+ * @param {string} sheetId
+ */
+function recordSheetOpened(sheetId) {
+    try {
+        const visited = getVisitedSheets();
+        visited[sheetId] = true;
+        localStorage.setItem(visitedSheetsKey(), JSON.stringify(visited));
+        localStorage.setItem(lastSheetKey(), JSON.stringify({ sheetId }));
+    } catch (err) {
+        // ignore
+    }
+}
+
+/** @returns {string|null} Id de la dernière fiche consultée. */
+function getLastSheetId() {
+    try {
+        const data = JSON.parse(localStorage.getItem(lastSheetKey()));
+        return (data && data.sheetId) || null;
+    } catch (err) {
+        return null;
+    }
+}
