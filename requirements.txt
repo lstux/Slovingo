@@ -1,1 +1,4 @@
 Pillow>=10.0.0
+
+# Optional: coloured console UI for src/tower.py (it falls back to plain text without it)
+# rich>=13

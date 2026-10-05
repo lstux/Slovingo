@@ -5,3 +5,5 @@ langs/**/json/*
 
 # Courses are separate repositories, fetched by src/langs.py
 /langs/*/
+
+/.tower.json

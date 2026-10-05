@@ -73,6 +73,7 @@ git clone https://github.com/…/slovingo.git
 cd slovingo
 python3 src/langs.py                 # choisir les cours à récupérer (interactif)
 # ou : python3 src/langs.py sk-fr de-fr-kids   |   --all   |   --list   |   de-fr-kids@une-branche
+python3 src/tower.py                # tour de contrôle : cours, déploiement, dépendances, build et publication (console)
 python3 src/publish.py --lang-dir langs/sk-fr
 # Ouvrir langs/sk-fr/dist/index.html dans un navigateur
 ```
