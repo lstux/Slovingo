@@ -323,21 +323,36 @@ async function renderMap(container) {
         : state;
     const section = buildScene(steps, shown);
     wrap.appendChild(section);
-    const popover = buildPopover();
-    wrap.appendChild(popover.element);
-    // The fox walks to the clicked step, then the popover opens. Nothing
-    // waits on the fox but the popover: the link inside it is what opens
+    const bubble = buildBubble(section);
+    // The fox walks to the clicked step, then its bubble opens. Nothing
+    // waits on the fox but the bubble: the links inside it are what open
     // a sheet, so access stays free.
     section.addEventListener("click", async (event) => {
+        if (event.target.closest(".map-bubble")) {
+            return;
+        }
         const node = event.target.closest(".map-node");
         if (!node) {
+            bubble.close(); // a click anywhere else on the map
             return;
         }
         const index = Number(node.dataset.index);
+        if (bubble.index === index) {
+            bubble.close(true); // second click on the same step
+            return;
+        }
+        bubble.close();
         if (await walkFox(section, steps, index)) {
-            popover.open(index, node);
+            bubble.open(index, node);
         }
     });
+    section.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && bubble.isOpen) {
+            bubble.close(true);
+        }
+    });
+    // The bubble is placed in pixels: a refit (rotation) would strand it.
+    section.addEventListener("map:refit", () => bubble.close());
     const nav = buildResourcesNav(data.resources || []);
     if (nav) {
         wrap.appendChild(nav);
@@ -393,6 +408,7 @@ function fitMapToScreen(section) {
             lastWidth = window.innerWidth;
             lastHeight = window.innerHeight;
             fit();
+            section.dispatchEvent(new Event("map:refit"));
         }
     };
     window.addEventListener("resize", onResize);
@@ -673,20 +689,8 @@ async function walkFox(section, steps, toIndex) {
 }
 
 // ============================================================================
-// 6. Popover
+// 6. Step bubble
 // ============================================================================
-
-/**
- * The sheet a step opens: the last one opened inside it, else its first.
- * @returns {{href: string|null, resumed: boolean}}
- */
-function stepTarget(step) {
-    const lastId = getLastSheetId();
-    if (lastId && step.sheets.includes(lastId)) {
-        return { href: `#/sheet/${encodeURIComponent(lastId)}`, resumed: true };
-    }
-    return { href: step.href, resumed: false };
-}
 
 /** @returns {{id: string, title: string}|null} A sheet of the course, by id. */
 function findSheet(sheetId) {
@@ -700,117 +704,128 @@ function findSheet(sheetId) {
 }
 
 /**
- * List the step's sheets (with their last score) so any of them is one
- * click away. Hidden for a step with a single sheet: the action button
- * already leads there.
+ * The bubble that opens under (or over) a step when it is clicked: the
+ * step's score and its sheets, one tap each. It lives inside the map,
+ * anchored to the step, so the rest of the map stays in view; it closes
+ * on a click anywhere else on the map, Escape, its x, or a second click
+ * on the same step. No listener is ever put on `document`.
  */
-function fillSheetList(list, step) {
-    list.textContent = "";
-    list.hidden = step.sheets.length < 2;
-    if (list.hidden) {
-        return;
-    }
-    const lastId = getLastSheetId();
-    step.sheets.forEach((sheetId) => {
-        const sheet = findSheet(sheetId);
-        if (!sheet) {
-            return;
-        }
-        const item = el("li");
-        const link = el("a", "map-popover__sheet", splitTitle(sheet.title).title);
-        link.href = `#/sheet/${encodeURIComponent(sheetId)}`;
-        if (sheetId === lastId) {
-            link.setAttribute("aria-current", "true");
-        }
-        const progress = getSheetProgress(sheetId);
-        if (progress && progress.last) {
-            const badge = el("span", "map-popover__score", `${progress.last.score}/${progress.last.total}`);
-            link.appendChild(badge);
-        }
-        item.appendChild(link);
-        list.appendChild(item);
-    });
-}
-
-function buildPopover() {
-    // Full-screen backdrop holding the dialog: clicking the backdrop
-    // closes it, so no listener needs to live on `document`.
-    const element = el("div", "map-popover-backdrop");
+function buildBubble(section) {
+    const element = el("div", "map-bubble");
     element.hidden = true;
-    const dialog = el("aside", "map-popover");
-    dialog.setAttribute("role", "dialog");
-    dialog.setAttribute("aria-labelledby", "map-popover-title");
+    element.setAttribute("role", "dialog");
+    element.setAttribute("aria-labelledby", "map-bubble-title");
 
-    const close = el("button", "map-popover__close", "×");
+    const head = el("div", "map-bubble__head");
+    const heading = el("div", "map-bubble__heading");
+    const title = el("h2", "map-bubble__title");
+    title.id = "map-bubble-title";
+    // One short line under the title ("not discovered yet", or the
+    // castle's message). The rows are enough to say it can be explored.
+    const note = el("p", "map-bubble__note");
+    heading.append(title, note);
+    const score = el("span", "map-bubble__score");
+    const close = el("button", "map-bubble__close", "×");
     close.type = "button";
     close.setAttribute("aria-label", uiLabel("map_close", "Close"));
-    const title = el("h2", "map-popover__title");
-    title.id = "map-popover-title";
-    const note = el("p", "map-popover__note");
-    const action = el("a", "map-popover__action");
-    const sheetList = el("ol", "map-popover__sheets");
-    dialog.append(close, title, note, action, sheetList);
-    element.appendChild(dialog);
+    head.append(heading, score, close);
+    const list = el("ul", "map-bubble__list");
+    element.append(head, list);
+    section.appendChild(element);
 
+    let openIndex = -1;
     let opener = null;
-    const hide = () => {
+
+    function hide(restoreFocus) {
         element.hidden = true;
-        if (opener) {
+        openIndex = -1;
+        if (restoreFocus && opener) {
             opener.focus();
-            opener = null;
         }
-    };
+        opener = null;
+    }
+    close.addEventListener("click", () => hide(true));
 
-    close.addEventListener("click", hide);
-    element.addEventListener("click", (event) => {
-        if (event.target === element) {
-            hide();
-        }
-    });
-    element.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-            hide();
-        }
-    });
-
-    function open(index, node) {
-        const data = MAP_DATA.steps[index];
-        const state = deriveMapState(MAP_DATA.steps, MAP_DATA.config).steps[index];
-        const target = stepTarget(data);
-
-        title.textContent = data.title;
-        const lines = [];
-        if (state.score !== null) {
-            lines.push(`${state.score}%`);
-        }
-        if (!state.discovered) {
-            lines.push(uiLabel("map_undiscovered", "This part of the path is not discovered yet. You can still explore it."));
-        }
-        if (data.type === "final") {
-            lines.push(uiLabel("map_castle_soon", "The final exam is coming soon."));
-        }
-        note.textContent = lines.join(" · ");
-
-        if (target.href) {
-            action.hidden = false;
-            action.href = target.href;
-            action.textContent = target.resumed
-                ? uiLabel("map_continue", "Continue")
-                : state.discovered
-                    ? uiLabel("map_start", "Start")
-                    : uiLabel("map_explore", "Explore");
-        } else {
-            action.hidden = true;
-        }
-
-        fillSheetList(sheetList, data);
-
-        opener = node;
-        element.hidden = false;
-        (action.hidden ? close : action).focus();
+    /** One link per sheet; the one to resume is marked. */
+    function fillRows(step) {
+        list.textContent = "";
+        const lastId = getLastSheetId();
+        step.sheets.forEach((sheetId) => {
+            const sheet = findSheet(sheetId);
+            if (!sheet) {
+                return;
+            }
+            const row = el("a", "map-bubble__row");
+            row.href = `#/sheet/${encodeURIComponent(sheetId)}`;
+            row.appendChild(el("span", "map-bubble__row-title", splitTitle(sheet.title).title));
+            if (sheetId === lastId) {
+                row.setAttribute("aria-current", "true");
+                row.prepend(el("span", "map-sr-only", uiLabel("map_continue", "Continue") + ": "));
+            }
+            const progress = getSheetProgress(sheetId);
+            if (progress && progress.last) {
+                row.appendChild(el("span", "map-bubble__row-score", `${progress.last.score}/${progress.last.total}`));
+            }
+            const item = el("li");
+            item.appendChild(row);
+            list.appendChild(item);
+        });
     }
 
-    return { element, open };
+    /** Anchor under the step, or over it when there is more room there. */
+    function place(node) {
+        const box = section.getBoundingClientRect();
+        const anchor = node.getBoundingClientRect();
+        const margin = 6;
+        const gap = 8;
+
+        element.style.maxHeight = "";
+        const width = element.offsetWidth;
+        const height = element.offsetHeight;
+        const centre = anchor.left + anchor.width / 2 - box.left;
+        const left = Math.min(Math.max(centre - width / 2, margin), box.width - width - margin);
+
+        const roomBelow = box.bottom - anchor.bottom - gap - margin;
+        const roomAbove = anchor.top - box.top - gap - margin;
+        const below = height <= roomBelow || roomBelow >= roomAbove;
+        const room = Math.max(120, below ? roomBelow : roomAbove);
+        const shown = Math.min(height, room);
+
+        element.style.maxHeight = `${Math.floor(room)}px`;
+        element.style.left = `${Math.round(left)}px`;
+        element.style.top = `${Math.round(below ? anchor.bottom - box.top + gap : anchor.top - box.top - gap - shown)}px`;
+        element.style.setProperty("--arrow-x", `${Math.round(Math.min(Math.max(centre - left, 18), width - 18))}px`);
+        element.classList.toggle("map-bubble--above", !below);
+    }
+
+    function open(index, node) {
+        const step = MAP_DATA.steps[index];
+        const state = deriveMapState(MAP_DATA.steps, MAP_DATA.config).steps[index];
+
+        title.textContent = step.title;
+        score.textContent = state.score !== null ? `${state.score}%` : "";
+        if (step.type === "final") {
+            note.textContent = uiLabel("map_castle_soon", "The final exam is coming soon.");
+        } else {
+            note.textContent = state.discovered ? "" : uiLabel("map_not_discovered", "not discovered yet");
+        }
+        fillRows(step);
+
+        opener = node;
+        openIndex = index;
+        element.hidden = false;
+        place(node);
+        const target = list.querySelector("[aria-current]") || list.querySelector("a") || close;
+        target.focus({ preventScroll: true });
+    }
+
+    return {
+        element,
+        open,
+        close: hide,
+        get index() { return openIndex; },
+        get isOpen() { return openIndex >= 0; },
+    };
 }
 
 // ============================================================================
