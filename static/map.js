@@ -97,10 +97,19 @@ function stepScore(step) {
  * @returns {{steps: object[], currentIndex: number, lastValidatedIndex: number}}
  */
 function deriveMapState(steps, config) {
+    return deriveFromFlags(steps, stepFlags(steps, config));
+}
+
+/**
+ * Per-step facts read from the stored progress: score, whether the
+ * step is validated, whether the learner started it.
+ * @returns {{score: number|null, validated: boolean, started: boolean}[]}
+ */
+function stepFlags(steps, config) {
     const threshold = (config && config.validationThreshold) || MAP_DEFAULTS.validationThreshold;
     const visited = getVisitedSheets();
 
-    const states = steps.map((step) => {
+    return steps.map((step) => {
         const visitedCount = step.sheets.filter((id) => visited[id]).length;
         const score = step.type === "final" ? null : stepScore(step);
         let validated = false;
@@ -111,6 +120,15 @@ function deriveMapState(steps, config) {
         }
         return { score, validated, started: visitedCount > 0 || score !== null };
     });
+}
+
+/**
+ * Pure part of the derivation: validated flags in, discovered/current
+ * out. Kept separate so the map can also be drawn "as it was" before
+ * a validation, to animate the change.
+ */
+function deriveFromFlags(steps, flags) {
+    const states = flags.map((flag) => ({ ...flag }));
 
     let lastValidatedIndex = -1;
     states.forEach((state, index) => {
@@ -161,6 +179,57 @@ function nodeStateText(state) {
     if (state.started && state.discovered) return uiLabel("map_in_progress", "in progress");
     if (state.discovered) return uiLabel("map_discovered", "discovered");
     return uiLabel("map_not_discovered", "not discovered yet");
+}
+
+// ============================================================================
+// 2b. What the map has already shown (to animate only what is new)
+// ============================================================================
+
+/**
+ * The map is always derived from the progress; this only remembers
+ * which validated steps the learner has already SEEN on the map, so
+ * that the reveal animation plays once, and never replays after a
+ * refresh or a long absence. It is display memory, not progress.
+ */
+function seenKey() {
+    const prefix = (LANG && LANG.site && LANG.site.storage_prefix) || "slovingo";
+    return `${prefix}-map-seen`;
+}
+
+/** @returns {string[]|null} Validated step ids last shown, null if never shown. */
+function loadSeenValidated() {
+    try {
+        const data = JSON.parse(localStorage.getItem(seenKey()));
+        return data && Array.isArray(data.validated) ? data.validated : null;
+    } catch (err) {
+        return null;
+    }
+}
+
+function saveSeenValidated(steps, state) {
+    try {
+        const validated = steps.filter((step, index) => state.steps[index].validated).map((step) => step.id);
+        localStorage.setItem(seenKey(), JSON.stringify({ validated }));
+    } catch (err) {
+        // ignore
+    }
+}
+
+/**
+ * Indices of the steps validated since the map was last shown.
+ * Empty on the very first display: someone who already has progress
+ * must not watch their whole history replay.
+ */
+function newlyValidatedIndexes(steps, state) {
+    const seen = loadSeenValidated();
+    if (seen === null) {
+        return [];
+    }
+    return steps.map((step, index) => index).filter((index) => state.steps[index].validated && !seen.includes(steps[index].id));
+}
+
+function prefersReducedMotion() {
+    return typeof matchMedia === "function" && matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
 // ============================================================================
@@ -227,8 +296,18 @@ async function renderMap(container) {
         return;
     }
 
-    const state = deriveMapState(steps, data.config);
-    const section = buildScene(steps, state);
+    const flags = stepFlags(steps, data.config);
+    const state = deriveFromFlags(steps, flags);
+    const newly = newlyValidatedIndexes(steps, state);
+    // Saved BEFORE any animation: the progress is already stored, and an
+    // interrupted animation must never replay.
+    saveSeenValidated(steps, state);
+    const animate = newly.length > 0 && !prefersReducedMotion();
+    // When animating, draw the map as it was, then switch to the new state.
+    const shown = animate
+        ? deriveFromFlags(steps, flags.map((flag, index) => ({ ...flag, validated: flag.validated && !newly.includes(index) })))
+        : state;
+    const section = buildScene(steps, shown);
     wrap.appendChild(section);
     const popover = buildPopover();
     wrap.appendChild(popover.element);
@@ -245,6 +324,65 @@ async function renderMap(container) {
     wrap.hidden = false;
 
     placeFox(section, steps);
+
+    if (newly.length) {
+        celebrate(section, steps, state, newly, animate);
+    }
+}
+
+/**
+ * The "magic moment" after a validation, 3.5 s at most, never blocking
+ * (the toast ignores pointer events, every node stays clickable):
+ *   0 s     toast: series completed + score
+ *   0.5 s   the fox hops
+ *   1.1 s   fog lifts, path lights up, next step becomes current
+ *   3.5 s   toast removed
+ * With reduced motion the new state is already drawn and only the
+ * (static) message is shown.
+ */
+function celebrate(section, steps, state, newly, animate) {
+    const index = newly[newly.length - 1];
+    const step = steps[index];
+    const score = state.steps[index].score;
+    const toast = el("div", "map-toast");
+    toast.setAttribute("role", "status");
+    toast.textContent = step.type === "series"
+        ? `🎉 ${uiLabel("map_series_done", "Series completed!")} ${step.title}${score !== null ? ` · ${score}%` : ""}`
+        : `🎉 ${uiLabel("map_step_done", "Step completed!")} ${step.title}`;
+    section.appendChild(toast);
+
+    const alive = () => section.isConnected;
+    if (!animate) {
+        setTimeout(() => toast.remove(), 4000);
+        return;
+    }
+
+    const fox = section.querySelector("#map-fox");
+    setTimeout(() => alive() && fox.classList.add("is-celebrating"), 500);
+    setTimeout(() => {
+        if (alive()) {
+            fox.classList.remove("is-celebrating");
+            applyState(section, steps, state);
+        }
+    }, 1100);
+    setTimeout(() => toast.remove(), 3500);
+}
+
+/** Move an already-built scene to `state`: nodes, path, fog. */
+function applyState(section, steps, state) {
+    section.querySelectorAll(".map-node").forEach((node) => {
+        const index = Number(node.dataset.index);
+        if (updateNode(node, steps[index], state.steps[index])) {
+            node.classList.add("is-new");
+            setTimeout(() => node.classList.remove("is-new"), 900);
+        }
+    });
+    section.querySelectorAll(".route-segment").forEach((segment) => {
+        segment.classList.toggle("is-discovered", state.steps[Number(segment.dataset.segment) + 1].discovered);
+    });
+    section.querySelectorAll(".fog-zone").forEach((zone) => {
+        zone.classList.toggle("is-revealed", state.steps[Number(zone.dataset.index)].discovered);
+    });
 }
 
 /** Build the scene: background, scenery, route, fog, nodes, fox. */
@@ -315,6 +453,7 @@ function buildFog(steps, state) {
             return;
         }
         const zone = el("div", "fog-zone");
+        zone.dataset.index = String(index);
         zone.style.left = `${step.x}%`;
         zone.style.top = `${step.y}%`;
         zone.classList.toggle("is-revealed", state.steps[index].discovered);
@@ -324,11 +463,27 @@ function buildFog(steps, state) {
 }
 
 function buildNode(step, index, nodeState) {
-    const node = el("button", `map-node map-node--${step.type} ${nodeStateClass(nodeState)}`);
+    const node = el("button", `map-node map-node--${step.type}`);
     node.type = "button";
     node.dataset.index = String(index);
     node.style.left = `${step.x}%`;
     node.style.top = `${step.y}%`;
+    node.appendChild(el("span", "map-node__icon", step.icon));
+    node.appendChild(el("span", "map-node__label", step.title));
+    updateNode(node, step, nodeState);
+    return node;
+}
+
+/**
+ * Set a node's state class, accessible name and score badge.
+ * @returns {boolean} true if its state class changed.
+ */
+function updateNode(node, step, nodeState) {
+    const stateClass = nodeStateClass(nodeState);
+    const changed = !node.classList.contains(stateClass);
+    ["is-validated", "is-current", "is-in-progress", "is-discovered", "is-future"].forEach((name) => {
+        node.classList.toggle(name, name === stateClass);
+    });
 
     const parts = [step.title];
     if (nodeState.score !== null) {
@@ -337,12 +492,17 @@ function buildNode(step, index, nodeState) {
     parts.push(nodeStateText(nodeState));
     node.setAttribute("aria-label", parts.join(", "));
 
-    node.appendChild(el("span", "map-node__icon", step.icon));
-    node.appendChild(el("span", "map-node__label", step.title));
+    let badge = node.querySelector(".map-node__score");
     if (nodeState.score !== null) {
-        node.appendChild(el("span", "map-node__score", `${nodeState.score}%`));
+        if (!badge) {
+            badge = el("span", "map-node__score");
+            node.appendChild(badge);
+        }
+        badge.textContent = `${nodeState.score}%`;
+    } else if (badge) {
+        badge.remove();
     }
-    return node;
+    return changed;
 }
 
 // ============================================================================
