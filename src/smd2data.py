@@ -42,6 +42,13 @@ SPEAKABLE_RE = re.compile(r"\{\{(.+?)\}\}")
 IMAGE_RE = re.compile(r"^@\s+(\S+)\s*\|\s*(.+)$")
 IMAGE_MARKDOWN_RE = re.compile(r"^!\[([^\]]*)\]\(([^\s)]+)(?:\s+[\"']([^\"']*)[\"'])?\s*\)$")
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+)$")
+# Geographic map block: "% lat, lon | label | z15 | topo" (one pin per
+# line), optionally opened by "%~ title" (route) or "%: title" (pins
+# only). See parse_geomap() and docs/Format-SMD.txt section 5.
+GEOMAP_HEADER_RE = re.compile(r"^%([~:])(?:\s+(.*))?$")
+GEOMAP_POINT_RE = re.compile(r"^%\s+(-?\d+(?:\.\d+)?)\s*,\s*(-?\d+(?:\.\d+)?)\s*(?:\|(.*))?$")
+GEOMAP_ZOOM_RE = re.compile(r"^z(\d{1,2})$", re.IGNORECASE)
+GEOMAP_LAYERS = ("osm", "topo", "light", "dark")
 UNORDERED_ITEM_RE = re.compile(r"^[-*]\s+(.+)$")
 ORDERED_ITEM_RE = re.compile(r"^\d+\.\s+(.+)$")
 HR_RE = re.compile(r"^([-*_])(?:\s*\1){2,}\s*$")
@@ -273,6 +280,78 @@ def parse_table(
 # Body parsing (everything after title + leading illustration)
 # ============================================================================
 
+def parse_geomap(lines: list[str], index: int) -> tuple[dict[str, Any], int]:
+    """Parse a geographic map block starting at lines[index].
+
+    Syntax (every line starts with "%", see docs/Format-SMD.txt):
+
+        %~ Optional title          <- header: points are joined as a route
+        %: Optional title          <- header: pins only (title, no route)
+        % 48.1440, 17.1070 | Label | z15 | topo
+
+    The header is optional; without it the block is pins only and has
+    no title. Point lines are "% lat, lon" followed by optional
+    "| field" parts: the first non-numeric field is the pin label, a
+    "zNN" field sets the zoom (1-19) and a layer keyword (osm, topo,
+    light, dark) picks the base map. Zoom and layer are map-wide: the
+    first occurrence wins. Without a zoom the front-end fits the map
+    to its points.
+
+    Returns:
+        (block, next_index) where block is
+        {"type": "geomap", "title", "route", "zoom", "layer", "points"}.
+    """
+    n = len(lines)
+    title: str | None = None
+    route = False
+    zoom: int | None = None
+    layer: str | None = None
+    points: list[dict[str, Any]] = []
+
+    header = GEOMAP_HEADER_RE.match(lines[index].strip())
+    if header:
+        route = header.group(1) == "~"
+        title = (header.group(2) or "").strip() or None
+        index += 1
+
+    while index < n:
+        stripped = lines[index].strip()
+        point = GEOMAP_POINT_RE.match(stripped)
+        if not point:
+            break
+        lat, lon = float(point.group(1)), float(point.group(2))
+        if not (-90 <= lat <= 90 and -180 <= lon <= 180):
+            print(f"warning: geomap point out of range, ignored: {stripped}", file=sys.stderr)
+            index += 1
+            continue
+        label = None
+        for field in (f.strip() for f in (point.group(3) or "").split("|")):
+            if not field:
+                continue
+            zoom_match = GEOMAP_ZOOM_RE.match(field)
+            if zoom_match and 1 <= int(zoom_match.group(1)) <= 19:
+                zoom = zoom if zoom is not None else int(zoom_match.group(1))
+            elif field.lower() in GEOMAP_LAYERS:
+                layer = layer if layer is not None else field.lower()
+            elif label is None:
+                label = field
+        points.append({"lat": lat, "lon": lon, "label": resolve_speakable(label) if label else None})
+        index += 1
+
+    if not points:
+        print(f"warning: geomap block without any valid point near line {index}", file=sys.stderr)
+
+    block = {
+        "type": "geomap",
+        "title": resolve_speakable(title) if title else None,
+        "route": route,
+        "zoom": zoom,
+        "layer": layer or "osm",
+        "points": points,
+    }
+    return block, index
+
+
 def parse_content(
     md_text: str, target_headers: list[str], target_header_roots: list[str]
 ) -> list[dict[str, Any]]:
@@ -329,6 +408,15 @@ def parse_content(
                 table_lines.append(lines[index])
                 index += 1
             blocks.append(parse_table(table_lines, target_headers, target_header_roots))
+            continue
+
+        # Geographic map: "% lat, lon | label ..." lines, optionally
+        # opened by a "%~ title" / "%: title" header (parse_geomap()).
+        if GEOMAP_HEADER_RE.match(stripped) or GEOMAP_POINT_RE.match(stripped):
+            flush_list()
+            geomap_block, index = parse_geomap(lines, index)
+            if geomap_block["points"]:
+                blocks.append(geomap_block)
             continue
 
         # Illustration mid-content. The leading illustration (right

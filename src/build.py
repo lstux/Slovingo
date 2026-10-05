@@ -56,7 +56,12 @@ STATIC_FILES = [
     "index.html", "app.js", "exercises.js", "progress.js", "settings.js",
     "celebrate.js", "style.css", "exercises.css",
     "map.css", "map.js",  # Adventure map (map.json is generated)
+    "geomap.css", "geomap.js",  # Geographic maps in sheets ("% lat, lon" blocks)
 ]
+
+# Static directories copied wholesale into dist/ (third-party code
+# vendored so the PWA works offline: Leaflet, for the geomap blocks).
+STATIC_DIRS = ["vendor"]
 
 ICON_SPECS = [
     ("icon-192.png", 192, 0.72),
@@ -168,6 +173,8 @@ def run_build(
     #    header-detection lists the browser never needs.
     for filename in STATIC_FILES:
         shutil.copyfile(static_dir / filename, dist_dir / filename)
+    for dirname in STATIC_DIRS:
+        shutil.copytree(static_dir / dirname, dist_dir / dirname, dirs_exist_ok=True)
     runtime_lang_cfg = {k: v for k, v in lang_cfg.items() if k != "generator"}
     (dist_dir / "lang.json").write_text(
         json.dumps(runtime_lang_cfg, ensure_ascii=False, indent=2), encoding="utf-8"

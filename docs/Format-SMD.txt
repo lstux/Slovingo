@@ -170,6 +170,48 @@ Le caractère @ est choisi pour ne pas entrer en collision avec "!" (audio-card)
 
 ---
 
+5. Carte géographique
+
+Permet d'insérer une carte Leaflet avec une ou plusieurs épingles, ou un trajet. Chaque ligne commence par "%" (caractère libre : pas de collision avec "!", ">", "+", "@").
+
+Une épingle :
+
+% 48.1486, 17.1077 | Bratislavský hrad
+
+Un trajet (une ligne d'en-tête "%~" relie les points dans l'ordre, numérotés) :
+
+%~ Du centre au château
+% 48.1440, 17.1070 | Hlavné námestie
+% 48.1470, 17.1000 | Michalská brána
+% 48.1486, 17.1077 | Hrad
+
+Plusieurs épingles avec un titre, sans trajet (en-tête "%:") :
+
+%: Les Hautes Tatras
+% 49.1795, 20.0880 | Tatranská Lomnica
+% 49.1190, 20.0090 | Štrbské Pleso
+
+Règles :
+- Lignes "%" consécutives = une seule carte. Une ligne vide, ou toute autre ligne, termine la carte.
+- L'en-tête ("%~ titre" ou "%: titre") est facultatif. Sans en-tête : épingles seules, sans titre.
+- Une ligne de point : "% latitude, longitude" (degrés décimaux, point comme séparateur), puis des champs facultatifs séparés par "|" :
+    libellé          texte affiché dans la bulle de l'épingle
+    zNN              zoom (1 à 19), ex. z15
+    mot-clé de fond  osm (défaut), topo (relief), light, dark
+- Le zoom et le fond valent pour toute la carte ; la première occurrence l'emporte. On les met d'habitude sur la première ligne :
+    % 49.17, 20.09 | Tatry | z12 | topo
+- Sans zoom, la carte s'ajuste automatiquement à l'ensemble des points.
+- Le libellé accepte {{...}} comme le reste du texte, mais ne doit pas contenir de "|".
+- Une ligne "%" mal formée (coordonnées hors limites) est ignorée avec un avertissement du build.
+
+Pour trouver les coordonnées et générer ces lignes : ouvrir tools/geomap-editor.html dans un navigateur (clic sur la carte ou recherche d'un lieu, réglage du fond, du trajet et du zoom), puis copier le code généré dans la fiche .md. L'éditeur sait aussi recharger un bloc existant.
+
+Fonds de carte : OpenStreetMap, OpenTopoMap, CARTO clair/sombre. Aucune clé n'est nécessaire, l'attribution est affichée sur chaque carte et ne doit pas être retirée. Leaflet est embarqué dans static/vendor/leaflet/ et précaché par le service worker ; les tuiles, elles, viennent du réseau (hors-ligne, la carte est remplacée par la liste des points).
+
+Rendu : le bloc devient {"type": "geomap", "title", "route", "zoom", "layer", "points": [{"lat", "lon", "label"}]} dans data.json, affiché par static/geomap.js.
+
+---
+
 Résumé de la syntaxe
  
 Syntaxe| Signification
