@@ -60,7 +60,9 @@ Nothing to touch in Python: everything language-dependent (voice, colors, title)
 ```bash
 git clone https://github.com/…/slovingo.git
 cd slovingo
+python3 src/langs.py sk-fr           # fetch an existing course as a template
 cp -r langs/sk-fr langs/my-language
+rm -rf langs/my-language/.git
 python3 src/publish.py --lang-dir langs/my-language
 ```
 
@@ -69,6 +71,8 @@ python3 src/publish.py --lang-dir langs/my-language
 ```bash
 git clone https://github.com/…/slovingo.git
 cd slovingo
+python3 src/langs.py                 # pick the courses to fetch (interactive)
+# or: python3 src/langs.py sk-fr de-fr-kids   |   --all   |   --list   |   de-fr-kids@some-branch
 python3 src/publish.py --lang-dir langs/sk-fr
 # Open langs/sk-fr/dist/index.html in your browser
 ```
