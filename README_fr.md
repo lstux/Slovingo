@@ -60,7 +60,9 @@ Rien à toucher côté Python : tout ce qui dépend de la langue (voix, couleurs
 ```bash
 git clone https://github.com/…/slovingo.git
 cd slovingo
+python3 src/langs.py sk-fr           # récupérer un cours existant comme modèle
 cp -r langs/sk-fr langs/ma-langue
+rm -rf langs/ma-langue/.git
 python3 src/publish.py --lang-dir langs/ma-langue
 ```
 
@@ -69,6 +71,8 @@ python3 src/publish.py --lang-dir langs/ma-langue
 ```bash
 git clone https://github.com/…/slovingo.git
 cd slovingo
+python3 src/langs.py                 # choisir les cours à récupérer (interactif)
+# ou : python3 src/langs.py sk-fr de-fr-kids   |   --all   |   --list   |   de-fr-kids@une-branche
 python3 src/publish.py --lang-dir langs/sk-fr
 # Ouvrir langs/sk-fr/dist/index.html dans un navigateur
 ```

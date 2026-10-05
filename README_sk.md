@@ -60,7 +60,9 @@ Kartička je bežný Markdown plus pár syntaktických trikov (formát **SMD**):
 ```bash
 git clone https://github.com/…/slovingo.git
 cd slovingo
+python3 src/langs.py sk-fr           # stiahni existujúci kurz ako vzor
 cp -r langs/sk-fr langs/môj-jazyk
+rm -rf langs/môj-jazyk/.git
 python3 src/publish.py --lang-dir langs/môj-jazyk
 ```
 
@@ -69,6 +71,8 @@ python3 src/publish.py --lang-dir langs/môj-jazyk
 ```bash
 git clone https://github.com/…/slovingo.git
 cd slovingo
+python3 src/langs.py                 # vyber kurzy na stiahnutie (interaktívne)
+# alebo: python3 src/langs.py sk-fr de-fr-kids   |   --all   |   --list   |   de-fr-kids@vetva
 python3 src/publish.py --lang-dir langs/sk-fr
 # Otvor langs/sk-fr/dist/index.html v prehliadači
 ```
