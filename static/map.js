@@ -372,6 +372,20 @@ async function renderMap(container) {
 const MAP_BOTTOM_GAP = 16;
 const MAP_MIN_HEIGHT = 380;
 const MAP_MAX_HEIGHT = 760;
+// Vertical room each step needs so that neighbouring labels never touch.
+// The path only spans ~67% of the map's height (top 9% .. 76%, the castle
+// below), hence the division in neededHeight().
+const MAP_STEP_GAP = 42;
+const MAP_PATH_SHARE = 0.67;
+
+/**
+ * Height needed by a course with many series: the screen-fitting height
+ * is only a maximum for ordinary courses; a long course gets a taller map
+ * (the page scrolls) instead of squeezing its steps together.
+ */
+function neededHeight(stepCount) {
+    return Math.round((MAP_STEP_GAP * Math.max(stepCount - 2, 1)) / MAP_PATH_SHARE);
+}
 
 let fitCleanup = null;
 
@@ -391,7 +405,8 @@ function fitMapToScreen(section) {
     const fit = () => {
         const top = section.getBoundingClientRect().top + window.scrollY;
         const room = window.innerHeight - top - MAP_BOTTOM_GAP;
-        const height = Math.min(MAP_MAX_HEIGHT, Math.max(MAP_MIN_HEIGHT, room));
+        const fitted = Math.min(MAP_MAX_HEIGHT, Math.max(MAP_MIN_HEIGHT, room));
+        const height = Math.max(fitted, neededHeight(Number(section.dataset.steps) || 0));
         section.style.setProperty("--map-height", `${Math.round(height)}px`);
     };
     fit();
@@ -474,6 +489,7 @@ function applyState(section, steps, state) {
 function buildScene(steps, state) {
     const section = el("section", "adventure-map");
     section.id = "adventure-map";
+    section.dataset.steps = String(steps.length);
     section.setAttribute("aria-label", uiLabel("map_title", "Adventure map"));
 
     section.appendChild(el("div", "map-background"));
@@ -513,8 +529,7 @@ function buildScene(steps, state) {
 function buildRoute(steps, state) {
     const svg = document.createElementNS(SVG_NS, "svg");
     svg.setAttribute("class", "map-route");
-    const viewBoxHeight = mapData?.config?.viewBoxHeight || 1000;
-    svg.setAttribute("viewBox", `0 0 1000 ${viewBoxHeight}`);
+    svg.setAttribute("viewBox", "0 0 1000 1000");
     svg.setAttribute("preserveAspectRatio", "none");
     svg.setAttribute("aria-hidden", "true");
 
