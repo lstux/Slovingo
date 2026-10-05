@@ -55,7 +55,7 @@ from smd2data import SheetNameError, build_sheet_json
 STATIC_FILES = [
     "index.html", "app.js", "exercises.js", "progress.js", "settings.js",
     "celebrate.js", "style.css", "exercises.css",
-    "map.html", "map.css", "map.js",  # Adventure map
+    "map.css", "map.js",  # Adventure map (map.json is generated)
 ]
 
 ICON_SPECS = [
