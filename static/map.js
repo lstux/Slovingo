@@ -688,6 +688,41 @@ async function walkFox(section, steps, toIndex) {
     return true;
 }
 
+const FOX_DIVE_MS = 450;
+
+/**
+ * The fox jumps into a sheet row of the bubble (shrinking as it goes),
+ * then `done` runs -- that is what opens the sheet. A guard keeps a
+ * double tap from starting it twice. Never used with reduced motion
+ * (the caller opens the sheet at once).
+ */
+function diveFox(section, row, done) {
+    const fox = section.querySelector("#map-fox");
+    if (!fox || fox._diving) {
+        return;
+    }
+    fox._diving = true;
+    fox._walk = Symbol("dive"); // a walk in progress must not undo this
+    fox.classList.remove("is-walking", "is-celebrating");
+
+    const box = section.getBoundingClientRect();
+    const target = row.getBoundingClientRect();
+    // The row's left end, where its marker is, not its middle.
+    const x = ((target.left + 22 - box.left) / box.width) * 100;
+    const y = ((target.top + target.height / 2 - box.top) / box.height) * 100;
+
+    fox.style.setProperty("--fox-duration", `${FOX_DIVE_MS}ms`);
+    fox.classList.add("is-diving");
+    setFoxAt(fox, x, y);
+    setTimeout(() => row.classList.add("is-entered"), FOX_DIVE_MS * 0.7);
+    setTimeout(() => {
+        fox._diving = false;
+        if (section.isConnected) {
+            done();
+        }
+    }, FOX_DIVE_MS + 40);
+}
+
 // ============================================================================
 // 6. Step bubble
 // ============================================================================
@@ -766,6 +801,17 @@ function buildBubble(section) {
             if (progress && progress.last) {
                 row.appendChild(el("span", "map-bubble__row-score", `${progress.last.score}/${progress.last.total}`));
             }
+            row.addEventListener("click", (event) => {
+                // Plain left click only: ctrl/middle click keep their
+                // usual meaning, and reduced motion opens at once.
+                if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || prefersReducedMotion()) {
+                    return;
+                }
+                event.preventDefault();
+                diveFox(section, row, () => {
+                    window.location.hash = row.getAttribute("href");
+                });
+            });
             const item = el("li");
             item.appendChild(row);
             list.appendChild(item);
