@@ -32,17 +32,23 @@ const MAP_DEFAULTS = {
     validationThreshold: 85,
 };
 
-/** Static scenery, placeholder until real artwork exists. */
+/**
+ * Static scenery, placeholder until real artwork exists. The path runs
+ * from the top (meadow) down to the castle, so the Tatras stand behind
+ * the castle at the bottom.
+ */
 const MAP_DECORATIONS = [
-    { icon: "🏔️", x: 12, y: 7, size: 3.2 },
-    { icon: "🏔️", x: 44, y: 4, size: 2.6 },
-    { icon: "🏔️", x: 90, y: 9, size: 3 },
-    { icon: "🌲", x: 8, y: 52, size: 1.8 },
-    { icon: "🌲", x: 13, y: 58, size: 1.5 },
-    { icon: "🌲", x: 92, y: 40, size: 1.8 },
-    { icon: "🌲", x: 88, y: 46, size: 1.5 },
-    { icon: "🌲", x: 6, y: 80, size: 1.6 },
-    { icon: "🏞️", x: 40, y: 92, size: 1.8 },
+    { icon: "🌲", x: 6, y: 24, size: 1.6 },
+    { icon: "🌲", x: 10, y: 33, size: 1.4 },
+    { icon: "🌲", x: 94, y: 48, size: 1.6 },
+    { icon: "🌲", x: 90, y: 57, size: 1.4 },
+    { icon: "🌲", x: 6, y: 62, size: 1.6 },
+    { icon: "🌲", x: 11, y: 71, size: 1.4 },
+    { icon: "🏞️", x: 12, y: 84, size: 1.6 },
+    { icon: "🏔️", x: 13, y: 95, size: 2.8 },
+    { icon: "🏔️", x: 88, y: 94, size: 3 },
+    { icon: "🏔️", x: 31, y: 97, size: 2 },
+    { icon: "🏔️", x: 69, y: 97, size: 2.2 },
 ];
 
 const SVG_NS = "http://www.w3.org/2000/svg";
@@ -338,12 +344,59 @@ async function renderMap(container) {
     }
     wrap.hidden = false;
 
+    fitMapToScreen(section);
     placeFox(section, steps);
 
     if (newly.length) {
         celebrate(section, steps, state, newly, animate);
     }
     return true;
+}
+
+// Room left under the map so it is not glued to the screen's bottom edge.
+const MAP_BOTTOM_GAP = 16;
+const MAP_MIN_HEIGHT = 380;
+const MAP_MAX_HEIGHT = 760;
+
+let fitCleanup = null;
+
+/**
+ * Size the map so that it fits the screen: from where it starts down to
+ * the bottom of the viewport. The space above it (title band, toolbar)
+ * is measured, not guessed, so it keeps working if that header changes.
+ * Re-fitted on a width change (rotation) or a big height change, but
+ * not on the small ones a mobile browser makes when its address bar
+ * slides away -- the map would jump under the learner's thumb.
+ */
+function fitMapToScreen(section) {
+    if (fitCleanup) {
+        fitCleanup();
+        fitCleanup = null;
+    }
+    const fit = () => {
+        const top = section.getBoundingClientRect().top + window.scrollY;
+        const room = window.innerHeight - top - MAP_BOTTOM_GAP;
+        const height = Math.min(MAP_MAX_HEIGHT, Math.max(MAP_MIN_HEIGHT, room));
+        section.style.setProperty("--map-height", `${Math.round(height)}px`);
+    };
+    fit();
+
+    let lastWidth = window.innerWidth;
+    let lastHeight = window.innerHeight;
+    const onResize = () => {
+        if (!section.isConnected) {
+            fitCleanup();
+            fitCleanup = null;
+            return;
+        }
+        if (window.innerWidth !== lastWidth || Math.abs(window.innerHeight - lastHeight) > 120) {
+            lastWidth = window.innerWidth;
+            lastHeight = window.innerHeight;
+            fit();
+        }
+    };
+    window.addEventListener("resize", onResize);
+    fitCleanup = () => window.removeEventListener("resize", onResize);
 }
 
 /**
@@ -406,7 +459,6 @@ function buildScene(steps, state) {
     const section = el("section", "adventure-map");
     section.id = "adventure-map";
     section.setAttribute("aria-label", uiLabel("map_title", "Adventure map"));
-    section.style.setProperty("--map-min-height", `${Math.max(560, steps.length * 92)}px`);
 
     section.appendChild(el("div", "map-background"));
 
@@ -527,7 +579,7 @@ function updateNode(node, step, nodeState) {
 
 /**
  * Put the fox on the map. With nothing opened yet it starts off the
- * bottom edge, next to the first step, and walks in.
+ * top edge, next to the first step, and walks in.
  */
 function placeFox(section, steps) {
     const fox = section.querySelector("#map-fox");
@@ -536,17 +588,31 @@ function placeFox(section, steps) {
     const [targetX, targetY] = foxSpot(steps[targetIndex]);
     fox.dataset.step = String(targetIndex);
 
-    if (index >= 0) {
-        setFoxAt(fox, targetX, targetY);
-        return;
+    // First position: set without a transition, otherwise the fox would
+    // glide in from the stylesheet's default corner on every page load.
+    placeInstantly(fox, targetX, index >= 0 ? targetY : -12);
+    if (index < 0) {
+        // Nothing opened yet: walk in from above the map.
+        requestAnimationFrame(() => requestAnimationFrame(() => setFoxAt(fox, targetX, targetY)));
     }
-    setFoxAt(fox, targetX, 110);
-    requestAnimationFrame(() => requestAnimationFrame(() => setFoxAt(fox, targetX, targetY)));
 }
 
-/** Where the fox stands for a step: beside the node, not on top of it. */
+/** Move the fox with no transition (the next move animates again). */
+function placeInstantly(fox, x, y) {
+    fox.style.transition = "none";
+    setFoxAt(fox, x, y);
+    fox.getBoundingClientRect(); // flush, so "none" applies to this move only
+    fox.style.transition = "";
+}
+
+/**
+ * Where the fox stands for a step: beside the icon, on the side the
+ * path comes from / goes to (towards the middle of the map), and level
+ * with the icon so it never hides the label underneath.
+ */
 function foxSpot(step) {
-    return [step.x + 6, step.y + 3];
+    const side = step.x < 50 ? 1 : -1;
+    return [step.x + side * 9, step.y - 2];
 }
 
 function setFoxAt(fox, x, y) {

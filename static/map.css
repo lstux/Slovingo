@@ -10,7 +10,10 @@
     --map-validated: #2e7d32;
     --fox-duration: 1.2s;
     --fog-duration: 1.5s;
-    margin: 1rem 0 1.5rem;
+    margin: 1rem auto 1.5rem;
+    /* A phone-shaped map: on a wide screen the path stays readable
+       instead of stretching across the whole width. */
+    max-width: 34rem;
 }
 
 /* ---------------------------------------------------------------- scene */
@@ -18,19 +21,22 @@
 .adventure-map {
     position: relative;
     width: 100%;
-    min-height: var(--map-min-height, 560px);
+    /* --map-height is set by map.js to fit the screen (fitMapToScreen). */
+    height: var(--map-height, 70svh);
+    min-height: 380px;
     overflow: hidden;
     border-radius: var(--radius-lg, 16px);
     isolation: isolate;
 }
 
-/* Placeholder landscape: sky to meadow. Replaced by real artwork later. */
+/* Placeholder landscape: meadow at the start (top), rock and sky around
+   the castle (bottom). Replaced by real artwork later. */
 .map-background {
     position: absolute;
     inset: 0;
     z-index: 0;
     background:
-        linear-gradient(to bottom, #cfe5f5 0%, #e6f0e0 38%, #b5d49a 70%, #8fbc72 100%);
+        linear-gradient(to bottom, #a9d18a 0%, #c9e0b0 40%, #dfe8e4 75%, #c3d3e3 100%);
 }
 
 .map-decorations {
@@ -217,7 +223,7 @@
 .map-fox {
     position: absolute;
     left: var(--fox-x, 20%);
-    top: var(--fox-y, 110%);
+    top: var(--fox-y, -12%);
     transform: translate(-50%, -50%);
     z-index: 5;
     font-size: 2.4rem;

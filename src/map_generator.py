@@ -22,7 +22,7 @@ here. A step's id is built from the subgroup name, not the number, so it
 stays stable if series are renumbered.
 
 Coordinates are presentation data, in percent of the map (0-100).
-They are generated along a winding path, and can be overridden per step
+They are generated along a zigzag path (top to bottom), and can be overridden per step
 in lang.json:
 
     "map": {
@@ -47,7 +47,8 @@ from smd2data import parse_sheet_filename
 VALIDATION_THRESHOLD = 85
 """Average score (percent) at which a series counts as validated."""
 
-CASTLE_POSITION = (78.0, 12.0)
+CASTLE_POSITION = (50.0, 88.0)
+"""Where a lone castle goes; also the bottom end of the path."""
 
 DEFAULT_ICONS = {
     "intro": "👋",
@@ -92,22 +93,27 @@ def series_number(path: Path) -> int | None:
 
 
 def generate_positions(count: int) -> list[tuple[float, float]]:
-    """Positions (x, y in percent) for `count` steps along a winding
-    path from the bottom-left (start) to the top-right (castle).
+    """Positions (x, y in percent) for `count` steps along a path that
+    runs from the top of the map (start) down to the castle at the
+    bottom (always the last position, centred).
 
-    The last position is always the castle's. Deterministic, so a
-    rebuild never moves the steps around.
+    The path zigzags left and right: two consecutive steps are always
+    far apart horizontally, so their labels never collide even when the
+    map is only ~400 px tall. Deterministic, so a rebuild never moves
+    the steps around.
     """
     if count <= 0:
         return []
     if count == 1:
         return [CASTLE_POSITION]
 
+    top = 9.0
+    last = CASTLE_POSITION[1] - 12.0  # leave room for the castle and its label
     positions: list[tuple[float, float]] = []
     for i in range(count - 1):
-        t = i / (count - 1)
-        x = 50 - 30 * math.cos(i * 0.9)
-        y = 88 - 76 * t
+        y = top + (last - top) * i / max(count - 2, 1)
+        side = -1 if i % 2 == 0 else 1
+        x = 50 + side * (24 + 5 * math.sin(i * 2.1))
         positions.append((round(x, 1), round(y, 1)))
     positions.append(CASTLE_POSITION)
     return positions
