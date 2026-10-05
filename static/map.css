@@ -355,6 +355,68 @@
     display: none;
 }
 
+.map-popover {
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.map-popover__sheets {
+    display: grid;
+    gap: 0.25rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.map-popover__sheets[hidden] {
+    display: none;
+}
+
+.map-popover__sheet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-height: 44px;
+    padding: 0.4rem 0.7rem;
+    border-radius: var(--radius, 11px);
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+}
+
+.map-popover__sheet:hover,
+.map-popover__sheet:focus-visible {
+    border-color: var(--map-accent);
+}
+
+.map-popover__sheet[aria-current="true"] {
+    border-color: var(--map-accent);
+    font-weight: 600;
+}
+
+.map-popover__score {
+    flex: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--map-accent);
+}
+
+/* ------------------------------------------------- the whole sheet list */
+
+.all-sheets {
+    margin-top: 1rem;
+}
+
+.all-sheets > summary {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 0.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 /* ------------------------------------------------------- direct access */
 
 .direct-access {

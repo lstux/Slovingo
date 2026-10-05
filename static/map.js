@@ -281,6 +281,7 @@ function svgPath(className, d) {
  * next); it is filled once map.json is available.
  *
  * @param {HTMLElement} container The home view's content element.
+ * @returns {Promise<boolean>} true if a map was drawn.
  */
 async function renderMap(container) {
     const wrap = el("div", "map-wrap");
@@ -289,11 +290,11 @@ async function renderMap(container) {
 
     const data = await loadMapData();
     if (!data || !wrap.isConnected) {
-        return;
+        return false;
     }
     const steps = data.steps || [];
     if (steps.filter((step) => step.type !== "final").length === 0) {
-        return;
+        return false;
     }
 
     const flags = stepFlags(steps, data.config);
@@ -335,6 +336,7 @@ async function renderMap(container) {
     if (newly.length) {
         celebrate(section, steps, state, newly, animate);
     }
+    return true;
 }
 
 /**
@@ -613,6 +615,50 @@ function stepTarget(step) {
     return { href: step.href, resumed: false };
 }
 
+/** @returns {{id: string, title: string}|null} A sheet of the course, by id. */
+function findSheet(sheetId) {
+    for (const group of (typeof DATA !== "undefined" && DATA && DATA.groups) || []) {
+        const sheet = group.sheets.find((candidate) => candidate.id === sheetId);
+        if (sheet) {
+            return sheet;
+        }
+    }
+    return null;
+}
+
+/**
+ * List the step's sheets (with their last score) so any of them is one
+ * click away. Hidden for a step with a single sheet: the action button
+ * already leads there.
+ */
+function fillSheetList(list, step) {
+    list.textContent = "";
+    list.hidden = step.sheets.length < 2;
+    if (list.hidden) {
+        return;
+    }
+    const lastId = getLastSheetId();
+    step.sheets.forEach((sheetId) => {
+        const sheet = findSheet(sheetId);
+        if (!sheet) {
+            return;
+        }
+        const item = el("li");
+        const link = el("a", "map-popover__sheet", splitTitle(sheet.title).title);
+        link.href = `#/sheet/${encodeURIComponent(sheetId)}`;
+        if (sheetId === lastId) {
+            link.setAttribute("aria-current", "true");
+        }
+        const progress = getSheetProgress(sheetId);
+        if (progress && progress.last) {
+            const badge = el("span", "map-popover__score", `${progress.last.score}/${progress.last.total}`);
+            link.appendChild(badge);
+        }
+        item.appendChild(link);
+        list.appendChild(item);
+    });
+}
+
 function buildPopover() {
     // Full-screen backdrop holding the dialog: clicking the backdrop
     // closes it, so no listener needs to live on `document`.
@@ -629,7 +675,8 @@ function buildPopover() {
     title.id = "map-popover-title";
     const note = el("p", "map-popover__note");
     const action = el("a", "map-popover__action");
-    dialog.append(close, title, note, action);
+    const sheetList = el("ol", "map-popover__sheets");
+    dialog.append(close, title, note, action, sheetList);
     element.appendChild(dialog);
 
     let opener = null;
@@ -683,6 +730,8 @@ function buildPopover() {
             action.hidden = true;
         }
 
+        fillSheetList(sheetList, data);
+
         opener = node;
         element.hidden = false;
         (action.hidden ? close : action).focus();
@@ -716,6 +765,10 @@ function buildResourcesNav(resources) {
             event.preventDefault();
             const section = document.querySelector(`.index-section[data-category="${resource.id}"]`);
             if (section) {
+                const outer = section.closest("details.all-sheets");
+                if (outer) {
+                    outer.open = true;
+                }
                 section.open = true;
                 section.scrollIntoView({ behavior: "smooth", block: "start" });
             }
