@@ -311,10 +311,17 @@ async function renderMap(container) {
     wrap.appendChild(section);
     const popover = buildPopover();
     wrap.appendChild(popover.element);
-    section.addEventListener("click", (event) => {
+    // The fox walks to the clicked step, then the popover opens. Nothing
+    // waits on the fox but the popover: the link inside it is what opens
+    // a sheet, so access stays free.
+    section.addEventListener("click", async (event) => {
         const node = event.target.closest(".map-node");
-        if (node) {
-            popover.open(Number(node.dataset.index), node);
+        if (!node) {
+            return;
+        }
+        const index = Number(node.dataset.index);
+        if (await walkFox(section, steps, index)) {
+            popover.open(index, node);
         }
     });
     const nav = buildResourcesNav(data.resources || []);
@@ -516,21 +523,78 @@ function updateNode(node, step, nodeState) {
 function placeFox(section, steps) {
     const fox = section.querySelector("#map-fox");
     const index = foxStepIndex(steps);
-    const target = steps[index >= 0 ? index : 0];
-    const setAt = (x, y) => {
-        fox.style.setProperty("--fox-x", `${x}%`);
-        fox.style.setProperty("--fox-y", `${y}%`);
-    };
-    // Beside the node, not on top of it.
-    const targetX = target.x + 6;
-    const targetY = target.y + 3;
+    const targetIndex = index >= 0 ? index : 0;
+    const [targetX, targetY] = foxSpot(steps[targetIndex]);
+    fox.dataset.step = String(targetIndex);
 
     if (index >= 0) {
-        setAt(targetX, targetY);
+        setFoxAt(fox, targetX, targetY);
         return;
     }
-    setAt(targetX, 110);
-    requestAnimationFrame(() => requestAnimationFrame(() => setAt(targetX, targetY)));
+    setFoxAt(fox, targetX, 110);
+    requestAnimationFrame(() => requestAnimationFrame(() => setFoxAt(fox, targetX, targetY)));
+}
+
+/** Where the fox stands for a step: beside the node, not on top of it. */
+function foxSpot(step) {
+    return [step.x + 6, step.y + 3];
+}
+
+function setFoxAt(fox, x, y) {
+    fox.style.setProperty("--fox-x", `${x}%`);
+    fox.style.setProperty("--fox-y", `${y}%`);
+}
+
+const FOX_WALK_MAX_MS = 1200;
+const FOX_HOP_MIN_MS = 120;
+const FOX_HOP_MAX_MS = 600;
+
+/**
+ * Walk the fox to a step, passing through every step in between (it
+ * follows the path, it does not cut across the map). The whole walk
+ * lasts FOX_WALK_MAX_MS at most, however far the step is.
+ *
+ * A newer walk supersedes an older one: the fox simply turns round from
+ * where it is. With reduced motion it jumps.
+ *
+ * @returns {Promise<boolean>} true if the fox arrived, false if this
+ *     walk was superseded on the way.
+ */
+async function walkFox(section, steps, toIndex) {
+    const fox = section.querySelector("#map-fox");
+    const from = Number(fox.dataset.step);
+    const walk = Symbol("walk");
+    fox._walk = walk;
+
+    const last = steps[toIndex];
+    if (!Number.isInteger(from) || from === toIndex || prefersReducedMotion()) {
+        const [x, y] = foxSpot(last);
+        setFoxAt(fox, x, y);
+        fox.dataset.step = String(toIndex);
+        fox.classList.remove("is-walking");
+        return true;
+    }
+
+    const direction = toIndex > from ? 1 : -1;
+    const hops = Math.abs(toIndex - from);
+    const hopMs = Math.min(FOX_HOP_MAX_MS, Math.max(FOX_HOP_MIN_MS, FOX_WALK_MAX_MS / hops));
+    fox.style.setProperty("--fox-duration", `${hopMs}ms`);
+    fox.classList.add("is-walking");
+
+    for (let index = from + direction; ; index += direction) {
+        const [x, y] = foxSpot(steps[index]);
+        fox.dataset.step = String(index);
+        setFoxAt(fox, x, y);
+        await new Promise((resolve) => setTimeout(resolve, hopMs));
+        if (fox._walk !== walk) {
+            return false;
+        }
+        if (index === toIndex) {
+            break;
+        }
+    }
+    fox.classList.remove("is-walking");
+    return true;
 }
 
 // ============================================================================

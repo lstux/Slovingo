@@ -226,6 +226,16 @@
     transition: left var(--fox-duration) ease-in-out, top var(--fox-duration) ease-in-out;
 }
 
+/* The fox bobs while it walks. Keeps the centring transform. */
+.map-fox.is-walking {
+    animation: fox-walk 0.3s ease-in-out infinite;
+}
+
+@keyframes fox-walk {
+    0%, 100% { transform: translate(-50%, -50%); }
+    50% { transform: translate(-50%, calc(-50% - 5px)); }
+}
+
 /* ------------------------------------------------- discovery animation */
 
 /* Message after a validation. Never intercepts a click. */
