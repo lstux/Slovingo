@@ -1,0 +1,50 @@
+/* geomap.css -- geographic map blocks (see geomap.js). Leaflet's own
+   stylesheet is loaded lazily from vendor/leaflet/. */
+
+figure.fiche-geomap {
+    margin: 1.2rem 0;
+}
+
+.fiche-geomap .geomap-title {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.geomap {
+    height: 280px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-2);
+    overflow: hidden;
+    /* keep Leaflet's panes under the app's own popups and menus */
+    position: relative;
+    z-index: 0;
+}
+
+.geomap-fallback {
+    height: auto;
+    padding: 0.6rem 1rem;
+}
+
+.geomap-fallback ol {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.geomap-step span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font: 600 13px/1 system-ui, sans-serif;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+path.geomap-route {
+    stroke: var(--accent);
+}

@@ -490,6 +490,8 @@ function renderBlock(block) {
             return renderTable(block);
         case "audio-card":
             return renderAudioCard(block);
+        case "geomap":
+            return renderGeomap(block);
         default: {
             console.warn(`Unknown content block type: ${block.type}`);
             const fallback = document.createElement("p");
@@ -544,6 +546,29 @@ function renderImage(block) {
         const caption = document.createElement("figcaption");
         caption.innerHTML = renderText(block.caption);
         figure.appendChild(caption);
+    }
+    return figure;
+}
+
+/**
+ * Render a `geomap` block: a figure holding a Leaflet map built lazily
+ * by geomap.js (see smd2data.parse_geomap() for the block shape).
+ * @param {object} block
+ * @returns {HTMLElement}
+ */
+function renderGeomap(block) {
+    const figure = document.createElement("figure");
+    figure.className = "fiche-geomap";
+    if (block.title) {
+        const title = document.createElement("div");
+        title.className = "geomap-title";
+        title.innerHTML = renderText(block.title);
+        figure.appendChild(title);
+    }
+    const container = document.createElement("div");
+    figure.appendChild(container);
+    if (window.Geomap) {
+        window.Geomap.mount(container, block);
     }
     return figure;
 }
