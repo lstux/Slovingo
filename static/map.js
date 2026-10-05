@@ -196,24 +196,23 @@ function createMapNode(step, mapState) {
   const isDiscovered = mapState.discovered.includes(step.id);
   const isValidated = mapState.validated.includes(step.id);
   const isCurrent = step.id === mapState.currentStep;
+  const isProgress = step.type === 'series' && currentState.progress[step.id] !== undefined && !isValidated;
 
   const classes = [
     'map-node',
     `map-node--${step.type}`,
   ];
 
-  if (isDiscovered) {
+  if (isValidated) {
+    classes.push('is-validated');
+  } else if (isCurrent) {
+    classes.push('is-current');
+  } else if (isProgress) {
+    classes.push('is-in-progress');
+  } else if (isDiscovered) {
     classes.push('is-discovered');
   } else {
     classes.push('is-future');
-  }
-
-  if (isValidated) {
-    classes.push('is-validated');
-  }
-
-  if (isCurrent) {
-    classes.push('is-current');
   }
 
   const element = document.createElement('button');
@@ -235,6 +234,14 @@ function createMapNode(step, mapState) {
   element.appendChild(icon);
   element.appendChild(label);
 
+  // Afficher la progression si en cours (après le label)
+  if (isProgress) {
+    const progress = document.createElement('span');
+    progress.className = 'map-node__progress';
+    progress.textContent = `${currentState.progress[step.id]}%`;
+    element.appendChild(progress);
+  }
+
   // Événement au clic
   element.addEventListener('click', (e) => handleNodeClick(e, step, mapState));
 
@@ -250,11 +257,22 @@ function getNodeAriaLabel(step, mapState) {
 
   if (step.type === 'series' && currentState.progress[step.id]) {
     const score = currentState.progress[step.id];
-    parts.push(`${score}% progress`);
+    if (mapState.validated.includes(step.id)) {
+      parts.push(`${score}% completed`);
+    } else {
+      parts.push(`${score}% in progress`);
+    }
   }
 
+  // Ajouter l'état
   if (mapState.validated.includes(step.id)) {
     parts.push('completed');
+  } else if (step.id === mapState.currentStep) {
+    parts.push('current');
+  } else if (mapState.discovered.includes(step.id)) {
+    parts.push('discovered');
+  } else {
+    parts.push('locked');
   }
 
   return parts.join(', ');
