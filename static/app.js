@@ -827,6 +827,11 @@ function renderSheet(sheetId) {
         }
     }
 
+    // Fiche visitée + dernière consultée, toutes catégories (carte d'accueil)
+    if (typeof recordSheetOpened === "function") {
+        recordSheetOpened(sheet.id);
+    }
+
     // Si c'est une fiche Série, enregistrer comme dernière consultée (pour le bouton "Continuer")
     if (group && group.category === "series") {
         saveLastSeriesSheet(sheet.id);
@@ -905,6 +910,21 @@ function renderNotFound(sheetId) {
 // 6. Home view
 // ============================================================================
 
+/**
+ * Render the adventure map at the top of the home view. map.js owns
+ * the map's DOM and logic; this is only the hook. A course with no
+ * map data (or no map.js) simply has no map.
+ */
+function renderAdventureMap() {
+    if (typeof renderMap !== "function") {
+        return Promise.resolve(false);
+    }
+    return renderMap(document.getElementById("content")).catch((err) => {
+        console.warn("Adventure map unavailable:", err);
+        return false;
+    });
+}
+
 /** Render the home screen: every group, each with its sheets. */
 function renderHome() {
     applyTheme(DEFAULT_THEME);
@@ -916,6 +936,21 @@ function renderHome() {
 
     const content = document.getElementById("content");
     content.innerHTML = "";
+
+    // The sheet list lives in one block under the map, closed: the map
+    // (and its step popovers) is the way in. Without a map -- an older
+    // course, or map.json missing -- the list is the only way in, so it
+    // opens by itself.
+    const allSheets = document.createElement("details");
+    allSheets.className = "all-sheets";
+    const allSummary = document.createElement("summary");
+    allSummary.textContent = uiLabel("all_sheets", "All sheets");
+    allSheets.appendChild(allSummary);
+    renderAdventureMap().then((shown) => {
+        if (!shown) {
+            allSheets.open = true;
+        }
+    });
     // Running counter for .index-num, shared across every group on the
     // page -- matches v1, which numbered sheets continuously along the
     // whole curriculum rather than restarting at 1 in each series.
@@ -925,8 +960,9 @@ function renderHome() {
             cardCounter += 1;
             return cardCounter;
         });
-        content.appendChild(section);
+        allSheets.appendChild(section);
     });
+    content.appendChild(allSheets);
 
     // Mettre à jour le streak, la jauge et le bouton "Continuer" sur la page d'accueil
     if (typeof updateStreakDisplay === "function") {
@@ -959,6 +995,7 @@ function renderGroupSection(group, nextCardNumber) {
     const section = document.createElement("details");
     section.className = "index-section";
     section.dataset.theme = themeForGroup(group);
+    section.dataset.category = group.category;
 
     const summary = document.createElement("summary");
     const heading = document.createElement("h2");
