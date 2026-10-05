@@ -18,6 +18,13 @@
  * the fog never intercepts clicks.
  */
 
+/*
+ * Everything below lives in a function scope, NOT the page's global one:
+ * the front-end is a set of classic scripts sharing one global scope,
+ * and a helper named like another script's (exercises.js already has
+ * its own `el`) silently overwrites it. Only renderMap is exported.
+ */
+(function () {
 "use strict";
 
 /** Fallbacks if map.json carries no `config` (see map_generator.py). */
@@ -779,3 +786,6 @@ function buildResourcesNav(resources) {
     nav.appendChild(list);
     return nav;
 }
+
+window.renderMap = renderMap;
+})();
