@@ -73,6 +73,7 @@ git clone https://github.com/…/slovingo.git
 cd slovingo
 python3 src/langs.py                 # vyber kurzy na stiahnutie (interaktívne)
 # alebo: python3 src/langs.py sk-fr de-fr-kids   |   --all   |   --list   |   de-fr-kids@vetva
+python3 src/tower.py                # riadiace centrum: kurzy, nasadenie, závislosti, build a publikovanie (konzola)
 python3 src/publish.py --lang-dir langs/sk-fr
 # Otvor langs/sk-fr/dist/index.html v prehliadači
 ```
