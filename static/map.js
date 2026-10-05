@@ -513,7 +513,8 @@ function buildScene(steps, state) {
 function buildRoute(steps, state) {
     const svg = document.createElementNS(SVG_NS, "svg");
     svg.setAttribute("class", "map-route");
-    svg.setAttribute("viewBox", "0 0 1000 1000");
+    const viewBoxHeight = mapData?.config?.viewBoxHeight || 1000;
+    svg.setAttribute("viewBox", `0 0 1000 ${viewBoxHeight}`);
     svg.setAttribute("preserveAspectRatio", "none");
     svg.setAttribute("aria-hidden", "true");
 

@@ -92,7 +92,7 @@ def series_number(path: Path) -> int | None:
     return None
 
 
-def generate_positions(count: int) -> list[tuple[float, float]]:
+def generate_positions(count: int) -> tuple[list[tuple[float, float]], int]:
     """Positions (x, y in percent) for `count` steps along a path that
     runs from the top of the map (start) down to the castle at the
     bottom (always the last position, centred).
@@ -101,14 +101,28 @@ def generate_positions(count: int) -> list[tuple[float, float]]:
     far apart horizontally, so their labels never collide even when the
     map is only ~400 px tall. Deterministic, so a rebuild never moves
     the steps around.
+
+    For courses with many series, the vertical span is enlarged to
+    maintain clear spacing between steps.
     """
     if count <= 0:
-        return []
+        return [], 1000
     if count == 1:
-        return [CASTLE_POSITION]
+        return [CASTLE_POSITION], 1000
 
-    top = 9.0
-    last = CASTLE_POSITION[1] - 12.0  # leave room for the castle and its label
+    # Scale the vertical span based on number of steps: ensure ~10 pixels
+    # per step in the coordinate system (viewBox 0-1000).
+    # Minimum span: 67 (original 9..76). For count steps, need at least count*10.
+    # For N steps, need spacing of ~10 pixels to keep labels clear.
+    # Original design: top=9, last=76 (67 pixels), fits ~9 steps.
+    # For more steps, extend downward to maintain spacing.
+    top = 0.0
+    min_span = (count - 1) * 10.0  # Total vertical span needed
+    last = max(76.0, min_span)  # Expand if necessary, but stay >= 76
+
+    # Compute viewBox height: castle will be 12 units below last step
+    viewBox_height = int((last + 20) * 10) if last > 76 else 1000
+
     positions: list[tuple[float, float]] = []
     for i in range(count - 1):
         y = top + (last - top) * i / max(count - 2, 1)
@@ -116,7 +130,7 @@ def generate_positions(count: int) -> list[tuple[float, float]]:
         x = 50 + side * (24 + 5 * math.sin(i * 2.1))
         positions.append((round(x, 1), round(y, 1)))
     positions.append(CASTLE_POSITION)
-    return positions
+    return positions, viewBox_height
 
 
 def build_map_json(md_dir: Path, lang_cfg: dict[str, Any]) -> dict[str, Any]:
@@ -203,7 +217,7 @@ def build_map_json(md_dir: Path, lang_cfg: dict[str, Any]) -> dict[str, Any]:
         }
     )
 
-    positions = generate_positions(len(steps))
+    positions, viewBox_height = generate_positions(len(steps))
     overrides = map_cfg.get("positions", {})
     for step, (x, y) in zip(steps, positions):
         step["x"], step["y"] = overrides.get(step["id"], [x, y])
@@ -221,6 +235,7 @@ def build_map_json(md_dir: Path, lang_cfg: dict[str, Any]) -> dict[str, Any]:
             "validationThreshold": VALIDATION_THRESHOLD,
             "foxAnimationDuration": 1200,
             "discoveryAnimationDuration": 1500,
+            "viewBoxHeight": viewBox_height,
         },
     }
 
