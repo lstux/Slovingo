@@ -330,24 +330,27 @@ function applyBackup(normalized) {
 // Settings screen glue
 // ============================================================================
 
-/** Read a File as JSON, confirm, apply, report, reload. Errors never leave the page half-imported. */
+/**
+ * Read a File as JSON, confirm, apply, report, reload. Errors never leave
+ * the page half-imported.
+ *
+ * Only the two button labels are lang.json keys (see renderBackupControls);
+ * these one-off dialogs are plain English on purpose, to keep lang.json
+ * small. The result summary is language-neutral: +new, ↑improved, =unchanged.
+ */
 async function importBackupFile(file) {
     let normalized;
     try {
         normalized = normalizeBackup(JSON.parse(await file.text()));
     } catch (err) {
-        const msg = uiLabel("backup_import_invalid", "This file is not a valid Slovingo backup.");
-        window.alert(`${msg} (${err.message})`);
+        window.alert(`Not a valid Slovingo backup file (${err.message}).`);
         return;
     }
 
-    let question = uiLabel(
-        "backup_import_confirm",
-        "Import this backup? Progress will be merged (best scores kept); settings will be replaced by the ones in the file."
-    );
+    let question = "Import this backup?\nProgress is merged (best scores kept); settings are replaced by the file's.";
     const filePrefix = normalized.course && normalized.course.storagePrefix;
     if (filePrefix && filePrefix !== backupStoragePrefix()) {
-        question = `${uiLabel("backup_import_other_course", "Warning: this backup comes from another course.")}\n\n${question}`;
+        question = `Warning: this backup comes from another course (${filePrefix}).\n\n${question}`;
     }
     if (!window.confirm(question)) return;
 
@@ -355,14 +358,11 @@ async function importBackupFile(file) {
     try {
         summary = applyBackup(normalized);
     } catch (err) {
-        window.alert(`${uiLabel("backup_import_failed", "Import failed (storage full or unavailable).")} (${err.message})`);
+        window.alert(`Import failed: storage full or unavailable (${err.message}).`);
         return;
     }
 
-    window.alert(uiLabel(
-        "backup_import_done",
-        "Import done: {added} new sheet(s), {improved} improved, {unchanged} unchanged."
-    ).replace("{added}", summary.added).replace("{improved}", summary.improved).replace("{unchanged}", summary.unchanged));
+    window.alert(`\u2714 +${summary.added}  \u2191${summary.improved}  =${summary.unchanged}`);
     window.location.reload();
 }
 
