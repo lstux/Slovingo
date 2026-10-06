@@ -115,10 +115,10 @@ const EXERCISE_TYPES = {
         label: () => uiLabel("exercise_type_qcm", "QCM"),
         expectedChoices: QCM_CHOICES - 1,
         fields: [
-            { key: "l1", label: () => uiLabel("exercise_field_l1", "L1"), kind: "text" },
-            { key: "l2", label: () => uiLabel("exercise_field_l2", "L2"), kind: "text" },
-            { key: "choices_l1", label: () => uiLabel("exercise_field_distractors_l1", "Distractors (L1)"), kind: "list" },
-            { key: "choices_l2", label: () => uiLabel("exercise_field_distractors_l2", "Distractors (L2)"), kind: "list" },
+            { key: "l1", label: () => "L1", kind: "text" },
+            { key: "l2", label: () => "L2", kind: "text" },
+            { key: "choices_l1", label: () => "Distractors (L1)", kind: "list" },
+            { key: "choices_l2", label: () => "Distractors (L2)", kind: "list" },
         ],
         resolveView: resolveQcmView,
         render: renderQcm,
@@ -129,11 +129,11 @@ const EXERCISE_TYPES = {
         expectedChoices: FILL_BLANK_CHOICES,
         fields: [
             {
-                key: "l1", label: () => uiLabel("exercise_field_sentence_l1", "Sentence (L1)"), kind: "sentence-blank",
+                key: "l1", label: () => "Sentence (L1)", kind: "sentence-blank",
                 missingKey: "missing_l1", blankIndexKey: "blank_index_l1", choicesKey: "choices_l1",
             },
             {
-                key: "l2", label: () => uiLabel("exercise_field_sentence_l2", "Sentence (L2)"), kind: "sentence-blank",
+                key: "l2", label: () => "Sentence (L2)", kind: "sentence-blank",
                 missingKey: "missing_l2", blankIndexKey: "blank_index_l2", choicesKey: "choices_l2",
             },
         ],
@@ -146,9 +146,9 @@ const EXERCISE_TYPES = {
         needsVoice: true,
         expectedChoices: LISTEN_CHOICES - 1,
         fields: [
-            { key: "l1", label: () => uiLabel("exercise_field_translation_l1", "Translation (L1)"), kind: "text" },
-            { key: "l2", label: () => uiLabel("exercise_field_sentence_l2_heard", "Sentence (L2, heard)"), kind: "text" },
-            { key: "choices_l1", label: () => uiLabel("exercise_field_distractors_l1", "Distractors (L1)"), kind: "list" },
+            { key: "l1", label: () => "Translation (L1)", kind: "text" },
+            { key: "l2", label: () => "Sentence (L2, heard)", kind: "text" },
+            { key: "choices_l1", label: () => "Distractors (L1)", kind: "list" },
         ],
         resolveView: resolveListenView,
         render: renderListen,
@@ -157,8 +157,8 @@ const EXERCISE_TYPES = {
         icon: "🔀",
         label: () => uiLabel("exercise_type_order", "Order"),
         fields: [
-            { key: "l1", label: () => uiLabel("exercise_field_translation_l1", "Translation (L1)"), kind: "sentence-tokens", tokensKey: "tokens_l1" },
-            { key: "l2", label: () => uiLabel("exercise_field_sentence_l2_to_reorder", "Sentence (L2, to reorder)"), kind: "sentence-tokens", tokensKey: "tokens_l2" },
+            { key: "l1", label: () => "Translation (L1)", kind: "sentence-tokens", tokensKey: "tokens_l1" },
+            { key: "l2", label: () => "Sentence (L2, to reorder)", kind: "sentence-tokens", tokensKey: "tokens_l2" },
         ],
         resolveView: resolveOrderView,
         render: renderOrder,
@@ -167,8 +167,8 @@ const EXERCISE_TYPES = {
         icon: "🔗",
         label: () => uiLabel("exercise_type_match", "Matching"),
         fields: [
-            { key: "l1", label: () => uiLabel("exercise_field_items_l1", "Items (L1)"), kind: "list" },
-            { key: "l2", label: () => uiLabel("exercise_field_items_l2", "Items (L2)"), kind: "list" },
+            { key: "l1", label: () => "Items (L1)", kind: "list" },
+            { key: "l2", label: () => "Items (L2)", kind: "list" },
         ],
         resolveView: resolveMatchView,
         render: renderMatch,
@@ -1647,7 +1647,7 @@ function renderFillBlank(view) {
     }
 
     const sentence = el("div", { className: "exo-sentence" });
-    const blank = el("span", { className: "exo-blank", text: uiLabel("exercise_fillblank_blank_display", "___") });
+    const blank = el("span", { className: "exo-blank", text: "___" });
     view.tokens.forEach((token, i) => {
         if (i === view.blankIndex) {
             // Keep punctuation glued to the missing word ("danke!" with

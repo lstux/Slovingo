@@ -340,9 +340,9 @@ function renderThemeSettingsSection() {
     const fontSelect = el("select", { attrs: { id: "settings-display-font" } });
     
     const fontOptions = [
-        { value: "serif", label: (LANG.ui && LANG.ui.font_serif) || "Serif (Fraunces)" },
-        { value: "mono", label: (LANG.ui && LANG.ui.font_mono) || "Monospace (JetBrains)" },
-        { value: "grotesk", label: (LANG.ui && LANG.ui.font_grotesk) || "Grotesk (Space Grotesk)" }
+        { value: "serif", label: "Serif (Fraunces)" },
+        { value: "mono", label: "Monospace (JetBrains)" },
+        { value: "grotesk", label: "Grotesk (Space Grotesk)" }
     ];
     
     fontOptions.forEach(({ value, label }) => {
@@ -465,7 +465,7 @@ function renderAudioSettingsSection() {
         labelText: (LANG.ui && LANG.ui.slow_playback_speed) || "Slow playback speed",
         min: 0.3, max: 1, step: 0.05,
         value: SETTINGS.slowRatio,
-        formatValue: (v) => `${Math.round(v * 100)}% ${(LANG.ui && LANG.ui.of_normal_speed) || "of normal speed"}`,
+        formatValue: (v) => `${Math.round(v * 100)}%`,
         onChange: (v) => saveSettings({ slowRatio: v }),
         onTest: () => speakSafe(samplePhrase, SETTINGS.rate * SETTINGS.slowRatio),
     }));
@@ -830,7 +830,10 @@ function renderDataSettingsSection() {
         },
     });
 
-    return settingsSection((LANG.ui && LANG.ui.settings_data) || "Data", [resetProgressBtn, resetSettingsBtn]);
+    // Backup / restore (backup.js): export and import settings + progress as JSON.
+    const backupControls = typeof renderBackupControls === "function" ? renderBackupControls() : [];
+
+    return settingsSection((LANG.ui && LANG.ui.settings_data) || "Data", [...backupControls, resetProgressBtn, resetSettingsBtn]);
 }
 
 // ============================================================================
