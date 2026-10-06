@@ -1,0 +1,180 @@
+/* credits.css -- the "credits" sheet shown as film end credits (see credits.js).
+   A dark screen, text rising from the bottom, red cinema curtains on the
+   sides and across the top. */
+
+.credits-stage {
+    --curtain-dark: #5a0b12;
+    --curtain-mid: #9b1c27;
+    --curtain-light: #c93a45;
+    --curtain-side: clamp(1.6rem, 9vw, 4.2rem);
+    --curtain-top: clamp(2.2rem, 9vh, 3.8rem);
+    /* The app's own colour variables, redefined for a dark screen, so that
+       everything inside (speakable words, tables...) stays readable. */
+    --text: #f6efe2;
+    --text-soft: #d8c9b4;
+    --accent: #f2c76b;
+    position: relative;
+    height: max(62svh, 380px);
+    margin: 0.5rem 0 1rem;
+    overflow: hidden;
+    border-radius: 6px;
+    background: radial-gradient(ellipse at 50% 40%, #241014 0%, #0d0508 75%);
+    color: #f6efe2;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+}
+
+.credits-reel {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.credits-roll {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0 calc(var(--curtain-side) + 0.9rem);
+    text-align: center;
+    letter-spacing: 0.05em;
+    line-height: 1.9;
+    will-change: transform;
+    /* Before the script sets its transform, the roll waits below the screen. */
+    transform: translate3d(0, 100%, 0);
+}
+
+.credits-roll > * {
+    margin: 0 0 2.4rem;
+    text-align: center;
+    color: inherit;
+    background: none;
+    border: 0;
+    box-shadow: none;
+}
+
+.credits-roll h1,
+.credits-roll h2,
+.credits-roll h3 {
+    margin-top: 3.2rem;
+    color: #f2c76b;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.credits-roll ul,
+.credits-roll ol {
+    padding: 0;
+    list-style: none;
+}
+
+.credits-roll li {
+    margin: 0 0 1rem;
+}
+
+.credits-roll a {
+    color: #f2c76b;
+}
+
+.credits-roll img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.credits-roll table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Curtains: pleated velvet sides and a swagged valance on top. */
+.credits-curtain {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.credits-curtain--left,
+.credits-curtain--right {
+    top: 0;
+    bottom: 0;
+    width: var(--curtain-side);
+    background:
+        repeating-linear-gradient(90deg,
+            var(--curtain-dark) 0,
+            var(--curtain-mid) 22%,
+            var(--curtain-light) 38%,
+            var(--curtain-mid) 56%,
+            var(--curtain-dark) 78%,
+            var(--curtain-dark) 100%) ;
+    background-size: calc(var(--curtain-side) / 2) 100%;
+}
+
+.credits-curtain--left {
+    left: 0;
+    box-shadow: 6px 0 14px rgba(0, 0, 0, 0.55);
+}
+
+.credits-curtain--right {
+    right: 0;
+    box-shadow: -6px 0 14px rgba(0, 0, 0, 0.55);
+}
+
+.credits-curtain--top {
+    left: 0;
+    right: 0;
+    top: 0;
+    height: var(--curtain-top);
+    background: linear-gradient(180deg, var(--curtain-dark) 0%, var(--curtain-mid) 55%, var(--curtain-light) 100%);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+    /* scalloped lower edge */
+    -webkit-mask: radial-gradient(circle at 50% 0, #000 0 62%, transparent 63%) 0 100% / 3.4rem 55% repeat-x,
+                  linear-gradient(#000, #000) 0 0 / 100% 55% no-repeat;
+    mask: radial-gradient(circle at 50% 0, #000 0 62%, transparent 63%) 0 100% / 3.4rem 55% repeat-x,
+          linear-gradient(#000, #000) 0 0 / 100% 55% no-repeat;
+}
+
+.credits-pause {
+    position: absolute;
+    right: calc(var(--curtain-side) + 0.6rem);
+    bottom: 0.6rem;
+    z-index: 3;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid rgba(246, 239, 226, 0.35);
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.55);
+    color: #f6efe2;
+    font: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.credits-pause:hover,
+.credits-pause:focus-visible {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Reduced motion: a still page, read by scrolling. The curtains stay. */
+.credits-stage.is-static {
+    height: auto;
+    cursor: auto;
+}
+
+.credits-stage.is-static .credits-reel {
+    position: static;
+    overflow: visible;
+}
+
+.credits-stage.is-static .credits-roll {
+    position: static;
+    transform: none;
+    padding-top: calc(var(--curtain-top) + 1.2rem);
+    padding-bottom: 2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .credits-roll {
+        transition: none;
+    }
+}

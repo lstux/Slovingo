@@ -330,6 +330,11 @@ function route() {
     // si la fiche affichée a un score.
     clearSheetScoreBadge();
 
+    // The credits scroll (credits.js) must stop when the learner leaves it.
+    if (typeof teardownCredits === "function") {
+        teardownCredits();
+    }
+
     const hash = window.location.hash || "#/";
     const sheetMatch = hash.match(/^#\/sheet\/(.+)$/);
 
@@ -861,6 +866,14 @@ function renderSheet(sheetId) {
     if (group && group.category === "series") {
         saveLastSeriesSheet(sheet.id);
         // NE PAS appeler updateContinueButton() ici - le bouton doit rester caché sur une fiche!
+    }
+
+    if (group && group.category === "credits" && typeof setupCredits === "function") {
+        // The final series: shown as scrolling film credits, with no
+        // exercise status line (its exercises, if any, stay reachable
+        // from the toolbar's Exercises button).
+        setupCredits(content);
+        return;
     }
 
     // Afficher le score et l'historique d'exercices s'il existe

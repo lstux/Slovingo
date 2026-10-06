@@ -31,10 +31,11 @@ from pathlib import Path
 from typing import Any
 
 
-CATEGORIES = ["introduction", "series", "dialog", "vocabulary", "annex"]
+CATEGORIES = ["introduction", "series", "dialog", "vocabulary", "annex", "credits"]
 """The categories with dedicated behaviour elsewhere in the pipeline
-(e.g. "introduction" is skipped for exercise generation, "series" gets
-numbered kickers in the front-end). Any other category segment is
+(e.g. "introduction" and "credits" are skipped for exercise generation,
+"series" gets numbered kickers in the front-end, "credits" is the final
+step of the adventure map and is shown as scrolling film credits). Any other category segment is
 still accepted by parse_sheet_filename() -- see the note there -- this
 list is not an exhaustive whitelist."""
 

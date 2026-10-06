@@ -27,8 +27,13 @@ in lang.json:
 
     "map": {
         "positions": {"series-rodina": [31, 70]},
-        "icons":     {"rodina": "🏠"}
+        "icons":     {"rodina": "🏠", "final": "🏆"},
+        "final_title": "Générique"
     }
+
+The last step is the "credits" series (99_Credits_01_Title.md): see
+build_map_json(). Its icon is map.icons.final (default 🏰), its label
+map.final_title (or categories.credits in lang.json).
 
 Usage:
     python3 map_generator.py --md md_dir --lang lang.json -o dist/map.json
@@ -74,7 +79,7 @@ DEFAULT_ICONS = {
 
 # Categories that make up the path itself. Every other category present
 # in the course (dialog, vocabulary, annex...) is a free-access resource.
-PATH_CATEGORIES = {"introduction", "series"}
+PATH_CATEGORIES = {"introduction", "series", "credits"}
 
 
 def series_number(path: Path) -> int | None:
@@ -138,6 +143,7 @@ def build_map_json(md_dir: Path, lang_cfg: dict[str, Any]) -> dict[str, Any]:
     category_labels = lang_cfg.get("categories", {})
 
     intro_sheets: list[str] = []
+    credits_sheets: list[str] = []
     series_units: dict[tuple[int, str], dict[str, Any]] = {}
     other_categories: list[str] = []
 
@@ -147,6 +153,8 @@ def build_map_json(md_dir: Path, lang_cfg: dict[str, Any]) -> dict[str, Any]:
 
         if category == "introduction":
             intro_sheets.append(meta["id"])
+        elif category == "credits":
+            credits_sheets.append(meta["id"])
         elif category == "series" and meta["subgroup"]:
             number = series_number(path)
             if number is None:
@@ -191,15 +199,21 @@ def build_map_json(md_dir: Path, lang_cfg: dict[str, Any]) -> dict[str, Any]:
             }
         )
 
-    # The castle is the last step. It has no sheets: the mega-exam is
-    # specified separately and is not implemented yet.
+    # The last step is the final series: the "credits" sheets (file
+    # prefix 99_Credits_). Reaching it (every earlier step validated)
+    # sets off the fireworks on the map, and its sheets scroll like film
+    # credits. A course without credits sheets keeps a bare castle with
+    # no sheets (nothing to open), exactly as before.
+    final_title = map_cfg.get("final_title") or category_labels.get("credits") or (
+        "Crédits" if credits_sheets else "Château"
+    )
     steps.append(
         {
             "id": "final-exam",
             "type": "final",
-            "title": "Château",
-            "icon": icons["final"],
-            "sheets": [],
+            "title": final_title,
+            "icon": icons.get("credits", icons["final"]),
+            "sheets": credits_sheets,
         }
     )
 
