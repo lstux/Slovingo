@@ -830,7 +830,10 @@ function renderDataSettingsSection() {
         },
     });
 
-    return settingsSection((LANG.ui && LANG.ui.settings_data) || "Data", [resetProgressBtn, resetSettingsBtn]);
+    // Backup / restore (backup.js): export and import settings + progress as JSON.
+    const backupControls = typeof renderBackupControls === "function" ? renderBackupControls() : [];
+
+    return settingsSection((LANG.ui && LANG.ui.settings_data) || "Data", [...backupControls, resetProgressBtn, resetSettingsBtn]);
 }
 
 // ============================================================================

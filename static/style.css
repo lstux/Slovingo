@@ -1402,7 +1402,8 @@ button.index-card {
 
 .settings-test-btn:hover { border-color: var(--accent); }
 
-.settings-danger-btn {
+.settings-danger-btn,
+.settings-backup-btn {
     display: block;
     width: 100%;
     margin-top: 8px;
@@ -1418,8 +1419,12 @@ button.index-card {
     transition: border-color .15s ease;
 }
 
-.settings-danger-btn:hover { border-color: var(--accent); }
-.settings-danger-btn + .settings-danger-btn { margin-top: 10px; }
+.settings-danger-btn:hover,
+.settings-backup-btn:hover { border-color: var(--accent); }
+.settings-danger-btn + .settings-danger-btn,
+.settings-backup-btn + .settings-backup-btn { margin-top: 10px; }
+/* Backup buttons sit above the destructive ones: keep a gap between the groups. */
+.settings-backup-btn + .settings-danger-btn { margin-top: 18px; }
 
 /* One collapsible <details> per dialogue character -- keeps the page
    manageable once there are more than a couple, reusing the same

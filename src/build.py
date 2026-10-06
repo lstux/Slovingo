@@ -54,6 +54,7 @@ from smd2data import SheetNameError, build_sheet_json
 # every language, not generated from content.
 STATIC_FILES = [
     "index.html", "app.js", "exercises.js", "progress.js", "settings.js",
+    "backup.js",  # Settings > Data: JSON export / import of settings and progress
     "celebrate.js", "style.css", "exercises.css",
     "map.css", "map.js",  # Adventure map (map.json is generated)
     "credits.css", "credits.js",  # Scrolling film credits (the final series)
