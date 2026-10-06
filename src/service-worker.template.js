@@ -32,6 +32,8 @@ const CORE_ASSETS = [
   SCOPE + "exercises.css",
   SCOPE + "map.css",
   SCOPE + "map.js",
+  SCOPE + "credits.css",
+  SCOPE + "credits.js",
   SCOPE + "geomap.css",
   SCOPE + "geomap.js",
   SCOPE + "vendor/leaflet/leaflet.css",

@@ -56,6 +56,7 @@ STATIC_FILES = [
     "index.html", "app.js", "exercises.js", "progress.js", "settings.js",
     "celebrate.js", "style.css", "exercises.css",
     "map.css", "map.js",  # Adventure map (map.json is generated)
+    "credits.css", "credits.js",  # Scrolling film credits (the final series)
     "geomap.css", "geomap.js",  # Geographic maps in sheets ("% lat, lon" blocks)
 ]
 

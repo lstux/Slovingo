@@ -91,10 +91,10 @@ Métadonnées générales du site généré (PWA, manifeste, thème).
 
 ## categories
 
-Traduit les 5 catégories fixes du moteur (`introduction`, `series`, `dialog`,
-`vocabulary`, `annex`) dans la langue de l'apprenant. Ces clés sont fixes,
-n'en ajoute pas d'autres ici : une catégorie non listée dans ce dict retombe
-simplement sur son nom brut.
+Traduit les 6 catégories fixes du moteur (`introduction`, `series`, `dialog`,
+`vocabulary`, `annex`, `credits`) dans la langue de l'apprenant. Ces clés sont
+fixes, n'en ajoute pas d'autres ici : une catégorie non listée dans ce dict
+retombe simplement sur son nom brut.
 
 ```json
 "categories": {
@@ -102,9 +102,52 @@ simplement sur son nom brut.
   "series": "Séries",
   "dialog": "Dialogues",
   "vocabulary": "Vocabulaire",
-  "annex": "Annexe"
+  "annex": "Annexe",
+  "credits": "Générique"
 }
 ```
+
+## map — la carte d'accueil et la série finale
+
+La page d'accueil est une carte d'aventure (une étape par série, un renard, du
+brouillard). Tout est calculé à partir des noms de fichiers : rien à déclarer
+dans `lang.json`, sauf pour personnaliser. Clé facultative :
+
+```json
+"map": {
+  "positions": {"series-rodina": [31, 70]},
+  "icons":     {"rodina": "🏠", "final": "🏆"},
+  "final_title": "Générique"
+}
+```
+
+- `positions` : place une étape à la main (x, y en % de la carte).
+- `icons` : une icône par sous-groupe, et `final` pour la dernière étape
+  (par défaut 🏰).
+- `final_title` : libellé de la dernière étape (sinon `categories.credits`).
+
+### La série finale : `99_Credits_01_Titre.md`
+
+La dernière étape de la carte est la série **Crédits** : une ou plusieurs
+fiches nommées `99_Credits_NN_titre.md` (4 segments, comme l'introduction).
+
+- Elle est « atteinte » quand toutes les étapes avant elle sont validées. À ce
+  moment-là, un feu d'artifice part sur la carte, **une seule fois**. Rien
+  n'est jamais verrouillé : on peut l'ouvrir dès le début.
+- Ses fiches défilent comme un générique de cinéma (texte centré qui monte du
+  bas de l'écran, en boucle, entre des rideaux rouges). Un clic, un toucher ou
+  la barre d'espace met en pause. Avec « réduire les animations », la page est
+  fixe et se lit en faisant défiler.
+- Aucun exercice n'est généré. Un fichier `.exercises.json` écrit à la main
+  reste possible.
+- Sans fichier `99_Credits_*`, le château reste un simple décor (sans fiche).
+
+**Pour tester le feu d'artifice** sans finir le cours : ajoute `?cheat=fireworks`
+à l'adresse de la page (utile sur téléphone), ou tape le code Konami au clavier
+(↑ ↑ ↓ ↓ ← → ← → B A) sur la carte. Rien n'est enregistré.
+
+Clés `ui` utilisées : `map_final_reached`, `credits_pause`, `credits_resume`
+(plus les `map_*` habituels). `check_ui_keys.py` signale celles qui manquent.
 
 ## subgroups — ⚠️ point d'attention
 

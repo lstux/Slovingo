@@ -47,6 +47,10 @@ from smd2data import CATEGORIES, SheetNameError, parse_sheet, parse_sheet_filena
 # Tuning constants
 # ============================================================================
 
+# Categories whose sheets never get generated exercises (they only have
+# some when a hand-written .exercises.json sits next to them).
+NO_GENERATION_CATEGORIES = frozenset({"introduction", "credits"})
+
 MIN_TOKENS_FOR_BLANK = 3     # v1's guard: too short a sentence makes a
                               # blank either trivial or nonsensical.
 WORD_SHAPE_MAX_TOKENS = 2     # <=2 tokens: "word"-like answer/distractor.
@@ -232,7 +236,7 @@ def load_corpus(md_dir: Path, lang_cfg: dict[str, Any]) -> list[dict[str, Any]]:
     for path in sorted(md_dir.glob("*.md")):
         meta = parse_sheet_filename(path)
         exercises_json_path = find_manual_exercises_path(path, meta)
-        if meta["category"] == "introduction" and exercises_json_path is None:
+        if meta["category"] in NO_GENERATION_CATEGORIES and exercises_json_path is None:
             continue
         manual_exercises = None
         manual_mode = "replace"
@@ -743,7 +747,7 @@ def build_exercises_for_corpus(records: list[dict[str, Any]]) -> dict[str, dict[
     # Introduction sheets (present only when they have a manual file)
     # never feed the distractor pools: generated exercises stay exactly
     # what they were before those sheets could have exercises.
-    pool_records = [r for r in records if r["category"] != "introduction"]
+    pool_records = [r for r in records if r["category"] not in NO_GENERATION_CATEGORIES]
     global_pairs = [pair for r in pool_records for pair in r["vocab_pairs"]]
     global_sentences = [s for r in pool_records for s in r["sentences"]]
 
@@ -763,9 +767,10 @@ def build_exercises_for_corpus(records: list[dict[str, Any]]) -> dict[str, dict[
         manual_exercises = record.get("manual_exercises")
         manual_mode = record.get("manual_mode", "replace")
 
-        if manual_exercises and (manual_mode == "replace" or record["category"] == "introduction"):
+        if manual_exercises and (manual_mode == "replace" or record["category"] in NO_GENERATION_CATEGORIES):
             # Replace mode: use ONLY manual exercises, skip generation.
-            # Introduction sheets are never generated, whatever the mode.
+            # Introduction and credits sheets are never generated,
+            # whatever the mode.
             exercises = manual_exercises
         else:
             # Generate exercises normally
@@ -780,8 +785,8 @@ def build_exercises_for_corpus(records: list[dict[str, Any]]) -> dict[str, dict[
             if manual_exercises and manual_mode == "append":
                 exercises.extend(manual_exercises)
 
-        if not exercises and record["category"] == "introduction":
-            continue  # an introduction sheet whose manual file is empty
+        if not exercises and record["category"] in NO_GENERATION_CATEGORIES:
+            continue  # an introduction/credits sheet whose manual file is empty
         output[record["id"]] = {"exercises": exercises}
 
         if is_series:

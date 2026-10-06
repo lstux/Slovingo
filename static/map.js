@@ -122,7 +122,7 @@ function stepFlags(steps, config) {
     const threshold = (config && config.validationThreshold) || MAP_DEFAULTS.validationThreshold;
     const visited = getVisitedSheets();
 
-    return steps.map((step) => {
+    const flags = steps.map((step) => {
         const visitedCount = step.sheets.filter((id) => visited[id]).length;
         const score = step.type === "final" ? null : stepScore(step);
         let validated = false;
@@ -133,6 +133,15 @@ function stepFlags(steps, config) {
         }
         return { score, validated, started: visitedCount > 0 || score !== null };
     });
+    // The final step (the credits series) is reached, shown as "validated",
+    // once every step before it is. A castle without any sheet is only
+    // scenery: it is never reached.
+    steps.forEach((step, index) => {
+        if (step.type === "final" && step.sheets.length > 0) {
+            flags[index].validated = flags.every((flag, other) => other === index || flag.validated);
+        }
+    });
+    return flags;
 }
 
 /**
@@ -310,12 +319,22 @@ async function renderMap(container) {
         return false;
     }
 
+    const cheating = cheatRequested();
     const flags = stepFlags(steps, data.config);
+    if (cheating) {
+        // Test mode (?cheat=fireworks): pretend the whole course is done.
+        // Nothing is stored: the real progress is left untouched.
+        flags.forEach((flag) => { flag.validated = true; });
+    }
     const state = deriveFromFlags(steps, flags);
-    const newly = newlyValidatedIndexes(steps, state);
+    const newly = cheating
+        ? [steps.length - 1]
+        : newlyValidatedIndexes(steps, state);
     // Saved BEFORE any animation: the progress is already stored, and an
     // interrupted animation must never replay.
-    saveSeenValidated(steps, state);
+    if (!cheating) {
+        saveSeenValidated(steps, state);
+    }
     const animate = newly.length > 0 && !prefersReducedMotion();
     // When animating, draw the map as it was, then switch to the new state.
     const shown = animate
@@ -443,6 +462,10 @@ function fitMapToScreen(section) {
 function celebrate(section, steps, state, newly, animate) {
     const index = newly[newly.length - 1];
     const step = steps[index];
+    if (step.type === "final") {
+        finale(section, steps, state, animate);
+        return;
+    }
     const score = state.steps[index].score;
     const toast = el("div", "map-toast");
     toast.setAttribute("role", "status");
@@ -467,6 +490,237 @@ function celebrate(section, steps, state, newly, animate) {
     }, 1100);
     setTimeout(() => toast.remove(), 3500);
 }
+
+// ============================================================================
+// 4b. The finale: the credits series is reached
+// ============================================================================
+
+/**
+ * Reaching the final step (the credits series): the map scrolls to it if
+ * it is out of sight, the step lights up, and fireworks go off over the
+ * map for about five seconds. Nothing is blocked: the fireworks canvas
+ * ignores pointer events. With reduced motion there is no fireworks and
+ * no scrolling: the step is simply drawn reached, with the message.
+ */
+function finale(section, steps, state, animate) {
+    const finalIndex = steps.length - 1;
+    const toast = el("div", "map-toast map-toast--finale");
+    toast.setAttribute("role", "status");
+    toast.textContent = `🎆 ${uiLabel("map_final_reached", "Bravo! You finished the whole journey!")}`;
+    section.appendChild(toast);
+
+    if (!animate) {
+        applyState(section, steps, state);
+        setTimeout(() => toast.remove(), 6000);
+        return;
+    }
+    const node = section.querySelector(`.map-node[data-index="${finalIndex}"]`);
+    if (node) {
+        const rect = node.getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight) {
+            node.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    }
+    setTimeout(() => {
+        if (!section.isConnected) {
+            return;
+        }
+        applyState(section, steps, state);
+        launchFireworks(node);
+    }, 700);
+    setTimeout(() => toast.remove(), 6000);
+}
+
+/**
+ * Fireworks on a full-screen canvas laid over the page (pointer-events:
+ * none). Rockets rise from the bottom and burst around `anchor` (the
+ * castle) in coloured particles that fall under gravity and fade. Ends
+ * by itself after ~5 s, or at once if the map is left.
+ * @param {HTMLElement|null} anchor Element the shells burst around.
+ */
+function launchFireworks(anchor) {
+    if (document.querySelector(".map-fireworks")) {
+        return; // one show at a time
+    }
+    const canvas = el("canvas", "map-fireworks");
+    canvas.setAttribute("aria-hidden", "true");
+    document.body.appendChild(canvas);
+    const ctx = canvas.getContext("2d");
+    if (!ctx) {
+        canvas.remove();
+        return;
+    }
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    let width = 0;
+    let height = 0;
+    const resize = () => {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = Math.round(width * dpr);
+        canvas.height = Math.round(height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    const rect = anchor ? anchor.getBoundingClientRect() : null;
+    const centreX = rect ? rect.left + rect.width / 2 : width / 2;
+    const centreY = rect ? rect.top + rect.height / 2 : height / 2;
+    const spreadX = Math.min(width * 0.45, 260);
+    // Shells burst anywhere from near the top of the screen down to the castle.
+    const topY = Math.max(50, height * 0.12);
+    const bottomY = Math.max(topY + 80, Math.min(centreY, height * 0.8));
+    const small = width < 520;
+
+    const SHOW_MS = 5000;
+    const SHELLS = small ? 9 : 14;
+    const PARTICLES = small ? 46 : 74;
+    const GRAVITY = 140; // px/s^2
+    const rockets = [];
+    const sparks = [];
+    const started = performance.now();
+    let launched = 0;
+    let last = started;
+    let frame = 0;
+
+    const launch = () => {
+        const targetX = centreX + (Math.random() * 2 - 1) * spreadX;
+        const targetY = topY + Math.random() * (bottomY - topY);
+        rockets.push({
+            x: targetX + (Math.random() * 2 - 1) * 30,
+            fromY: height + 10,
+            targetX,
+            targetY,
+            born: performance.now(),
+            duration: 520 + Math.random() * 220,
+            hue: Math.floor(Math.random() * 360),
+            prevX: 0,
+            prevY: 0,
+        });
+    };
+
+    const burst = (x, y, hue) => {
+        const mixed = Math.random() < 0.4;
+        for (let i = 0; i < PARTICLES; i++) {
+            const angle = (Math.PI * 2 * i) / PARTICLES + Math.random() * 0.2;
+            const speed = 70 + Math.random() * 190;
+            sparks.push({
+                x,
+                y,
+                vx: Math.cos(angle) * speed,
+                vy: Math.sin(angle) * speed,
+                age: 0,
+                life: 0.9 + Math.random() * 0.9,
+                hue: mixed ? (hue + (i % 3) * 40) % 360 : hue,
+                size: 1.4 + Math.random() * 1.6,
+            });
+        }
+    };
+
+    const stop = () => {
+        cancelAnimationFrame(frame);
+        window.removeEventListener("resize", resize);
+        canvas.remove();
+    };
+
+    const tick = (now) => {
+        const dt = Math.min((now - last) / 1000, 0.05);
+        last = now;
+        if (anchor && !anchor.isConnected) {
+            stop(); // the learner left the map
+            return;
+        }
+        // Fade the previous frame instead of clearing it: that leaves trails.
+        ctx.globalCompositeOperation = "destination-out";
+        ctx.fillStyle = "rgba(0, 0, 0, 0.22)";
+        ctx.fillRect(0, 0, width, height);
+        ctx.globalCompositeOperation = "lighter";
+
+        const elapsed = now - started;
+        while (launched < SHELLS && elapsed >= launched * (SHOW_MS - 1200) / SHELLS) {
+            launch();
+            launched++;
+        }
+        for (let i = rockets.length - 1; i >= 0; i--) {
+            const rocket = rockets[i];
+            const t = Math.min((now - rocket.born) / rocket.duration, 1);
+            const eased = 1 - (1 - t) * (1 - t);
+            const x = rocket.x + (rocket.targetX - rocket.x) * eased;
+            const y = rocket.fromY + (rocket.targetY - rocket.fromY) * eased;
+            ctx.fillStyle = `hsl(${rocket.hue} 100% 80%)`;
+            ctx.fillRect(x - 1, y - 1, 2, 5);
+            if (t >= 1) {
+                burst(rocket.targetX, rocket.targetY, rocket.hue);
+                rockets.splice(i, 1);
+            }
+        }
+        for (let i = sparks.length - 1; i >= 0; i--) {
+            const spark = sparks[i];
+            spark.age += dt;
+            if (spark.age >= spark.life) {
+                sparks.splice(i, 1);
+                continue;
+            }
+            const drag = Math.pow(0.55, dt * 3);
+            spark.vx *= drag;
+            spark.vy = spark.vy * drag + GRAVITY * dt;
+            spark.x += spark.vx * dt;
+            spark.y += spark.vy * dt;
+            const alpha = 1 - spark.age / spark.life;
+            ctx.fillStyle = `hsl(${spark.hue} 100% ${55 + alpha * 20}% / ${alpha.toFixed(2)})`;
+            ctx.beginPath();
+            ctx.arc(spark.x, spark.y, spark.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        if (launched >= SHELLS && !rockets.length && !sparks.length) {
+            stop();
+            return;
+        }
+        frame = requestAnimationFrame(tick);
+    };
+    frame = requestAnimationFrame(tick);
+}
+
+// ============================================================================
+// 4c. Cheat codes (to try the finale without finishing the course)
+// ============================================================================
+
+/**
+ * `?cheat=fireworks` in the page address: the map is drawn as if the
+ * whole course were done and the finale plays, every time. Nothing is
+ * stored. Handy on a phone, where there is no console.
+ */
+function cheatRequested() {
+    try {
+        return new URLSearchParams(window.location.search).get("cheat") === "fireworks";
+    } catch (err) {
+        return false;
+    }
+}
+
+const KONAMI = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+let konamiProgress = 0;
+
+/**
+ * The Konami code (↑ ↑ ↓ ↓ ← → ← → B A) on a keyboard sets off the
+ * fireworks over the map on screen. Display only: nothing is stored.
+ */
+function onKonamiKey(event) {
+    if (event.target && /^(input|textarea|select)$/i.test(event.target.tagName)) {
+        return;
+    }
+    const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
+    konamiProgress = key === KONAMI[konamiProgress] ? konamiProgress + 1 : (key === KONAMI[0] ? 1 : 0);
+    if (konamiProgress === KONAMI.length) {
+        konamiProgress = 0;
+        const section = document.getElementById("adventure-map");
+        if (section && !prefersReducedMotion()) {
+            const finalNode = section.querySelector(".map-node--final");
+            launchFireworks(finalNode);
+        }
+    }
+}
+document.addEventListener("keydown", onKonamiKey);
 
 /** Move an already-built scene to `state`: nodes, path, fog. */
 function applyState(section, steps, state) {
@@ -866,7 +1120,7 @@ function buildBubble(section) {
 
         title.textContent = step.title;
         score.textContent = state.score !== null ? `${state.score}%` : "";
-        if (step.type === "final") {
+        if (step.type === "final" && step.sheets.length === 0) {
             note.textContent = uiLabel("map_castle_soon", "The final exam is coming soon.");
         } else {
             note.textContent = state.discovered ? "" : uiLabel("map_not_discovered", "not discovered yet");
