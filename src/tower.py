@@ -4,28 +4,28 @@ local workflow.
 
     python3 src/tower.py
 
-Screens (single-key navigation, the available keys are always shown at
-the bottom):
+Two ways in, one plan:
 
-    home          state of the engine, the deployment, the dependencies
-                  and every course (branch, clean/dirty, ahead/behind,
-                  age of the last build)
-    1  Courses    clone / update the course repositories (what
-                  src/langs.py does), choose a branch per course
-    2  Deployment view, edit, validate and test (ssh) deploy.json
-    3  Dependencies  git, Pillow, rsync, ssh, ImageMagick, rich... what
-                  each one is needed for, and how to install it here
-    4  Build & publish  pick courses, course branches, Slovingo branch
-                  and options (force exercises / icons, pull, --delete,
-                  dry run vs real upload), see the exact commands, then
-                  run them
+    home          the languages (branch, git state, last build, last
+                  upload) with a cursor and tick boxes, plus a summary of
+                  the engine, the deployment and the dependencies
+      ⏎           open a language: details, then p / b / d / branch
+      p b d       pull / build / deploy the ticked languages (or, with
+                  none ticked, pick them in a checklist)
+      c  s        deployment config (deploy.json) / dependencies
 
-This tool adds no logic of its own to the pipeline: it assembles and
-runs the existing scripts (langs.py's sync(), build.py, publish.py) and
-always shows the equivalent command lines, so anything it does can be
-replayed by hand. deploy.json is the only file it edits. Its own
-preferences (selected courses, branches, options) live in .tower.json
+    plan          the same screen whichever way you came: tick pull,
+                  build, deploy, the options (exercises, icons, --delete,
+                  real upload), see the exact commands, ⏎ to run them
+
+A language that fails never stops the others: the report lists every
+failure in red at the end. Every command is shown, so anything the tower
+does can be replayed by hand. deploy.json is the only file it edits; its
+own preferences (ticked languages, branches, options) live in .tower.json
 (git-ignored).
+
+Keys: ↑↓ move, ⏎ open/run, Space tick, Esc back; the available keys are
+always listed at the bottom.
 
 `rich` (pip install rich) is optional: with it the UI gets colours,
 boxes and spinners; without it the same screens render as plain text.
@@ -301,21 +301,31 @@ def make_ui(plain: bool) -> PlainUI:
     return PlainUI() if plain or not HAVE_RICH else RichUI()
 
 
+KEY_WORDS = {"up", "down", "left", "right", "esc", "space", "enter"}
+ARROWS = {"[A": "up", "[B": "down", "[C": "right", "[D": "left",
+          "OA": "up", "OB": "down", "OC": "right", "OD": "left"}
+
+
 def read_key() -> str:
     """Read one key press (no Enter needed on a terminal). Returns a
-    lowercase character, "\\n" for Enter, "esc" for Escape/arrows."""
+    lowercase character, "\\n" for Enter, " " for Space, and "up" / "down" /
+    "left" / "right" / "esc" for the arrows and Escape. Not on a terminal
+    (tests, pipes): one line per key, either a character or one of the
+    words above."""
     if not sys.stdin.isatty():
         line = sys.stdin.readline()
         if line == "":
             return "q"
-        return line.strip()[:1].lower() or "\n"
+        word = line.strip().lower()
+        if word in KEY_WORDS:
+            return {"space": " ", "enter": "\n"}.get(word, word)
+        return word[:1] or "\n"
     if os.name == "nt":  # pragma: no cover - Windows
         import msvcrt
 
         ch = msvcrt.getwch()
         if ch in ("\x00", "\xe0"):
-            msvcrt.getwch()
-            return "esc"
+            return {"H": "up", "P": "down", "K": "left", "M": "right"}.get(msvcrt.getwch(), "esc")
         return "\n" if ch == "\r" else ch.lower()
     import termios
     import tty
@@ -326,12 +336,12 @@ def read_key() -> str:
         tty.setcbreak(fd)
         ch = os.read(fd, 1).decode("utf-8", "ignore")
         if ch == "\x1b":
-            # swallow the rest of an escape sequence (arrows etc.)
             import select
 
+            seq = ""
             while select.select([fd], [], [], 0.02)[0]:
-                os.read(fd, 1)
-            return "esc"
+                seq += os.read(fd, 1).decode("utf-8", "ignore")
+            return ARROWS.get(seq, "esc")
     finally:
         termios.tcsetattr(fd, termios.TCSADRAIN, old)
     return "\n" if ch in ("\r", "\n") else ch.lower()
@@ -380,16 +390,15 @@ def run_quiet(argv: list[str], timeout: int = 10) -> tuple[int, str]:
 
 DEFAULT_STATE: dict[str, Any] = {
     "ssh": False,                # clone courses over SSH instead of HTTPS
-    "selection": [],             # selected course codes
+    "selection": [],             # languages ticked on the home screen
     "branches": {},              # code -> wanted branch
     "options": {
         "force_exercises": False,
         "force_icons": False,
-        "pull": True,            # git pull --ff-only the courses before building
         "delete": False,         # rsync --delete
         "execute": False,        # real upload (default: dry run)
     },
-    "action": "build+publish",   # build | build+publish | publish
+    "deployed": {},              # code -> time of the last real upload from the tower
 }
 
 
@@ -749,14 +758,16 @@ def ssh_test(cfg: dict[str, Any]) -> tuple[str, str]:
 
 
 # ---------------------------------------------------------------------------
-# Build & publish plan
+# Plan: what to do, language by language
 # ---------------------------------------------------------------------------
 
-ACTIONS = {
-    "build": "Build seul",
-    "build+publish": "Build + publication",
-    "publish": "Publier sans rebuild (dist/ tel quel)",
-}
+# The three things the tower can do to a course. A run is a subset of them:
+#   pull    git pull --ff-only (and clone / switch branch when needed)
+#   build   src/build.py
+#   deploy  src/publish.py (builds first, unless "build" is unticked)
+STAGES = ("pull", "build", "deploy")
+PRESETS = {"p": {"pull"}, "b": {"build"}, "d": {"build", "deploy"}}
+STAGE_NAMES = {"pull": "Pull", "build": "Build", "deploy": "Deploy"}
 
 
 @dataclass
@@ -771,9 +782,19 @@ class Step:
 
 
 @dataclass
-class Plan:
+class Job:
+    """Everything to do for one language. A failing step stops this job
+    only: the other languages still run."""
+    code: str
     steps: list[Step] = field(default_factory=list)
-    problems: list[str] = field(default_factory=list)
+    problem: str = ""                 # set = this language is skipped (and reported)
+
+
+@dataclass
+class Plan:
+    pre: list[Step] = field(default_factory=list)      # global steps (engine branch)
+    jobs: list[Job] = field(default_factory=list)
+    problems: list[str] = field(default_factory=list)  # global problems: nothing can start
 
 
 def build_plan(
@@ -785,90 +806,106 @@ def build_plan(
     deploy_cfg: Optional[dict[str, Any]],
     deps: list[Dep],
     langs_dir: Path,
+    targets: list[str],
+    stages: set[str],
     py: str = "python3",
 ) -> Plan:
-    """Turn the chosen options into an ordered list of steps (pure: nothing
-    is executed here)."""
+    """Turn the chosen languages / stages / options into one job per
+    language (pure: nothing is executed here)."""
     plan = Plan()
     opts = state["options"]
-    action = state["action"]
-    selection = [c for c in state["selection"] if c in infos]
-    if not selection:
-        plan.problems.append("aucun cours sélectionné (écran 1)")
+    targets = [c for c in targets if c in infos]
+    if not targets:
+        plan.problems.append("aucune langue choisie")
+        return plan
+    if not stages:
+        plan.problems.append("rien à faire : coche au moins pull, build ou deploy")
         return plan
 
-    if engine_target and engine_target != engine.branch:
+    building = "build" in stages
+    deploying = "deploy" in stages
+    pulling = "pull" in stages
+
+    if engine_target and engine_target != engine.branch and (building or deploying):
         if engine.dirty:
             plan.problems.append(f"changer de branche Slovingo impossible : modifications locales sur {engine.branch}")
         else:
-            plan.steps.append(Step("git", f"branche Slovingo : {engine.branch} → {engine_target}",
-                                   ["git", "switch", engine_target]))
+            plan.pre.append(Step("git", f"branche Slovingo : {engine.branch} → {engine_target}",
+                                 ["git", "switch", engine_target]))
 
-    publishing = action in ("build+publish", "publish")
     mode = deploy_mode(deploy_cfg)
-    if publishing:
+    if deploying:
         problems = validate_deploy(deploy_cfg)
         if problems:
             plan.problems.append("déploiement invalide : " + " ; ".join(problems))
-        if mode in ("local", "lan") and len(selection) > 1:
-            plan.problems.append("serveur local/LAN : un seul cours à la fois")
+        if mode in ("local", "lan") and len(targets) > 1:
+            plan.problems.append("serveur local/LAN : une seule langue à la fois")
         if mode == "remote":
             for dep in deps:
                 if dep.key in ("rsync", "ssh") and not dep.found:
                     plan.problems.append(f"{dep.name} manquant (publication distante)")
     for dep in deps:
-        if dep.key in ("git", "pillow") and not dep.found:
-            plan.problems.append(f"{dep.name} manquant")
+        if dep.key == "git" and not dep.found:
+            plan.problems.append("git manquant")
+        if dep.key == "pillow" and not dep.found and (building or deploying):
+            plan.problems.append("Pillow manquant")
 
-    do_pull = bool(opts["pull"])
-    for code in selection:
-        if action == "publish":
-            break  # dist/ is deployed as it is: no clone, no branch change, no pull
+    for code in targets:
         info = infos[code]
+        job = Job(code)
+        plan.jobs.append(job)
         wanted = state["branches"].get(code) or None
+        sync_label = ""
         if info.installed and not info.is_git:
             if wanted:
-                plan.problems.append(f"{code} : pas un clone git, impossible de passer sur la branche {wanted}")
-            continue
-        needs_clone = not info.installed
-        switching = bool(wanted) and info.installed and wanted != info.branch
-        if needs_clone or switching or do_pull:
-            if info.installed and info.dirty and (switching or do_pull):
-                plan.problems.append(f"{code} : modifications locales, impossible de changer de branche / tirer")
+                job.problem = f"pas un clone git, impossible de passer sur la branche {wanted}"
                 continue
-            what = "cloner" if needs_clone else ("changer de branche et tirer" if switching else "tirer (ff-only)")
-            label = f"{code} : {what}" + (f" [{wanted}]" if wanted else "")
-            plan.steps.append(Step("sync", label, code=code, branch=wanted, clone=needs_clone))
+        else:
+            needs_clone = not info.installed
+            switching = bool(wanted) and info.installed and wanted != info.branch
+            sync_needed = pulling or ((needs_clone or switching) and building)
+            if not sync_needed and needs_clone:
+                job.problem = "cours non installé : coche « pull » pour le cloner"
+                continue
+            if sync_needed:
+                if info.installed and info.dirty:
+                    job.problem = (f"modifications locales dans {rel(info.path)} : pull / changement de "
+                                   "branche refusés (commit ou stash, ou décoche « pull »)")
+                    continue
+                what = "cloner" if needs_clone else ("changer de branche et tirer" if switching else "tirer (ff-only)")
+                sync_label = f"{code} : {what}" + (f" [{wanted}]" if wanted else "")
+                job.steps.append(Step("sync", sync_label, code=code, branch=wanted, clone=needs_clone))
 
-    for code in selection:
+        if not (building or deploying):
+            continue
         lang_dir = rel(langs_dir / code)
         flags: list[str] = []
-        if action != "publish":
+        if building:
             if opts["force_exercises"]:
                 flags.append("--force-exercises")
             if opts["force_icons"]:
                 flags.append("--force-icons")
-        if action == "build":
+        if not deploying:
             argv = [py, "src/build.py", "--lang-dir", lang_dir, "--static-dir", "static"] + flags
             label = f"{code} : build"
         else:
             argv = [py, "src/publish.py", "--lang-dir", lang_dir] + flags
             if deploy_path.resolve() != (ROOT / "deploy.json").resolve():
                 argv += ["--deploy-config", str(deploy_path)]
-            if action == "publish":
+            if not building:
                 argv.append("--skip-build")
             if mode == "remote":
                 if opts["execute"]:
                     argv.append("--execute")
                 if opts["delete"]:
                     argv.append("--delete")
-            label = f"{code} : " + ("publier" if action == "publish" else "build + publication")
+            label = f"{code} : " + ("build + déploiement" if building else "déploiement")
             if mode == "remote":
                 label += " (envoi réel)" if opts["execute"] else " (essai à blanc)"
             elif mode in ("local", "lan"):
                 label += " (serveur local, Ctrl+C pour arrêter)"
-        plan.steps.append(Step("run", label, argv, code=code,
-                               serves=action != "build" and mode in ("local", "lan")))
+        job.steps.append(Step("run", label, argv, code=code,
+                              serves=deploying and mode in ("local", "lan")))
     return plan
 
 
@@ -887,7 +924,16 @@ def step_command(step: Step, langs_dir: Path, base: str = langs.DEFAULT_BASE) ->
 
 # ---------------------------------------------------------------------------
 # The application
+#
+#   home ──⏎──▶ language screen ──p/b/d──▶ plan ──⏎──▶ run + report
+#     └──p/b/d (marked languages, or a picker)──────▶ plan
+#
+# Both ways in end on the same plan screen.
 # ---------------------------------------------------------------------------
+
+POINTER = "▶" if unicode_ok() else ">"
+MOVES = {"up": -1, "k": -1, "down": 1, "j": 1}
+
 
 class App:
     def __init__(self, ui: PlainUI, deploy_path: Path, langs_dir: Path, base: Optional[str]) -> None:
@@ -923,7 +969,9 @@ class App:
     def persist(self) -> None:
         save_state(self.state)
 
-    # -- home ---------------------------------------------------------
+    # -- shared pieces ------------------------------------------------
+    COURSE_HEADERS = ["", "", "Langue", "Description", "Branche", "État git", "Build", "Publié"]
+
     def health_lines(self) -> list[Any]:
         e = self.engine
         engine_state = "modifs locales" if e.dirty else "propre"
@@ -938,124 +986,198 @@ class App:
         mode = deploy_mode(self.deploy)
         problems = validate_deploy(self.deploy)
         if mode == "unset":
-            lines.append(("Déploiement  non configuré (écran 2)", "warn"))
+            lines.append(("Déploiement  non configuré (touche c)", "warn"))
         else:
             cfg = self.deploy or {}
             target = ({"local": "serveur local (127.0.0.1)", "lan": "serveur LAN (0.0.0.0)"}.get(mode)
                       or f"{cfg.get('user', '?')}@{cfg.get('host', '?')}:{cfg.get('remote_root', '?')}")
             suffix = "" if not problems else "  — " + "; ".join(problems)
-            lines.append((f"Déploiement  {target}{suffix}", "ok" if not problems else "bad"))
+            if not problems and mode == "remote":
+                real = self.state["options"]["execute"]
+                suffix = "  — ENVOI RÉEL activé" if real else "  — essai à blanc"
+            style = "bad" if problems else ("warn" if suffix.endswith("RÉEL activé") else "ok")
+            lines.append((f"Déploiement  {target}{suffix}", style))
 
         missing = missing_required(self.deps)
         optional = [d for d in self.deps if not d.found and d.level == "optional"]
         if missing:
-            lines.append(("Dépendances  manquantes : " + ", ".join(d.name for d in missing), "bad"))
+            lines.append(("Dépendances  manquantes : " + ", ".join(d.name for d in missing) + "  (touche s)", "bad"))
         elif optional:
             lines.append(("Dépendances  OK (facultatives absentes : " + ", ".join(d.name for d in optional) + ")", "warn"))
         else:
             lines.append(("Dépendances  tout est là", "ok"))
-
-        installed = sum(1 for i in self.infos.values() if i.installed)
-        built = sum(1 for i in self.infos.values() if i.built_at)
-        sel = ", ".join(self.state["selection"]) or "aucun"
-        lines.append((f"Cours        {installed}/{len(self.infos)} installés, {built} buildés — sélection : {sel}", "accent"))
         return lines
 
-    def courses_rows(self, numbered: bool = False) -> list[list[Any]]:
+    def course_rows(self, cursor: Optional[int], marks: list[str]) -> list[list[Any]]:
         rows: list[list[Any]] = []
-        for n, info in enumerate(self.infos.values(), 1):
+        for n, info in enumerate(self.infos.values()):
             wanted = self.state["branches"].get(info.code)
             branch_cell: Any = info.branch or ("—", "dim")
             if wanted and wanted != info.branch:
                 branch_cell = (f"{info.branch or '—'} → {wanted}", "accent")
-            mark = ("●" if info.code in self.state["selection"] else "○", "accent")
-            row: list[Any] = [mark] if numbered else []
-            if numbered:
-                row.insert(0, str(n))
-            row += [(info.code, "accent" if info.installed else "dim"), (info.desc, "dim"), branch_cell,
-                    course_state_cell(info), age(info.built_at)]
-            rows.append(row)
+            rows.append([
+                (POINTER, "key") if n == cursor else "",
+                ("[x]", "accent") if info.code in marks else ("[ ]", "dim"),
+                (info.code, "accent" if info.installed else "dim"),
+                (info.desc, "dim"),
+                branch_cell,
+                course_state_cell(info),
+                age(info.built_at),
+                age(self.state["deployed"].get(info.code)),
+            ])
         return rows
 
-    COURSE_HEADERS = ["Cours", "Description", "Branche", "État git", "Dernier build"]
-
-    def draw_home(self) -> None:
+    def draw_home(self, cursor: Optional[int] = None) -> None:
         ui = self.ui
         ui.clear()
-        ui.banner("control tower — cours, déploiement, build")
+        ui.banner("control tower — langues, déploiement, build")
         ui.panel("État", self.health_lines())
-        ui.table("Cours", self.COURSE_HEADERS, self.courses_rows())
+        ui.table("Langues", self.COURSE_HEADERS, self.course_rows(cursor, self.state["selection"]))
         if not ui.rich:
             ui.say("(pip install rich pour une interface en couleurs)", "dim")
 
+    HOME_HINTS = [("↑↓", "choisir"), ("⏎", "ouvrir la langue"), ("␣", "cocher"), ("a", "tout"),
+                  ("p", "pull"), ("b", "build"), ("d", "deploy"), ("c", "config déploiement"),
+                  ("s", "dépendances"), ("f", "fetch"), ("t", "SSH/HTTPS"), ("r", "rafraîchir"),
+                  ("q", "quitter")]
+
+    @staticmethod
+    def move(cursor: int, key: str, size: int) -> int:
+        return max(0, min(size - 1, cursor + MOVES[key])) if size else 0
+
+    # -- home ---------------------------------------------------------
     def run(self) -> int:
-        screens: dict[str, Callable[[], None]] = {
-            "1": self.screen_courses, "2": self.screen_deploy,
-            "3": self.screen_deps, "4": self.screen_build,
-        }
+        cursor = 0
         while True:
-            self.draw_home()
-            self.ui.footer([("1", "Cours"), ("2", "Déploiement"), ("3", "Dépendances"),
-                            ("4", "Build & publication"), ("r", "Rafraîchir"), ("q", "Quitter")])
+            codes = list(self.infos)
+            cursor = min(cursor, len(codes) - 1)
+            self.draw_home(cursor)
+            self.ui.footer(self.HOME_HINTS)
             key = self.ui.key()
+            sel = self.state["selection"]
             if key in ("q", "esc"):
                 self.persist()
                 return 0
-            if key == "r":
-                self.refresh()
-            elif key in screens:
-                screens[key]()
-                self.persist()
-
-    # -- screen 1: courses --------------------------------------------
-    def pick_numbers(self, prompt: str) -> list[str]:
-        codes = list(self.infos)
-        picked: list[str] = []
-        for token in self.ui.ask(prompt).replace(",", " ").split():
-            if token.isdigit() and 1 <= int(token) <= len(codes):
-                picked.append(codes[int(token) - 1])
-            elif token in self.infos:
-                picked.append(token)
-            else:
-                self.ui.say(f"ignoré : {token!r}", "warn")
-        return picked
-
-    def screen_courses(self) -> None:
-        ui = self.ui
-        while True:
-            ui.clear()
-            ui.rule("1 · Cours")
-            ui.table("", ["#", "Sél."] + self.COURSE_HEADERS, self.courses_rows(numbered=True))
-            ui.say(f"Source : {self.base}/Slovingo-<code>.git  ({'SSH' if self.state['ssh'] else 'HTTPS'})", "dim")
-            ui.footer([("t", "cocher/décocher"), ("a", "tout"), ("n", "rien"), ("b", "branche d'un cours"),
-                       ("g", "cloner / mettre à jour la sélection"), ("f", "fetch (réseau)"),
-                       ("s", "SSH/HTTPS"), ("q", "retour")])
-            key = ui.key()
-            if key in ("q", "esc"):
-                return
-            if key == "t":
-                for code in self.pick_numbers("Numéros à cocher/décocher (ex. 1 3)"):
-                    sel = self.state["selection"]
-                    sel.remove(code) if code in sel else sel.append(code)
+            if key in MOVES:
+                cursor = self.move(cursor, key, len(codes))
+            elif key == " ":
+                code = codes[cursor]
+                sel.remove(code) if code in sel else sel.append(code)
+                cursor = self.move(cursor, "down", len(codes))
             elif key == "a":
-                self.state["selection"] = list(self.infos)
-            elif key == "n":
-                self.state["selection"] = []
+                self.state["selection"] = [] if len(sel) == len(codes) else list(codes)
+            elif key in ("\n", "right", "l"):
+                cursor = codes.index(self.screen_course(codes[cursor]))
+            elif key in PRESETS:
+                self.start_action(key, codes[cursor])
+            elif key == "c":
+                self.screen_deploy()
             elif key == "s":
-                self.state["ssh"] = not self.state["ssh"]
-            elif key == "b":
-                self.choose_course_branch()
+                self.screen_deps()
             elif key == "f":
                 self.fetch_all()
-            elif key == "g":
-                self.sync_selection()
+            elif key == "t":
+                self.state["ssh"] = not self.state["ssh"]
+            elif key == "r":
+                self.refresh()
             self.persist()
 
-    def choose_course_branch(self) -> None:
-        picked = self.pick_numbers("Cours (numéro)")
-        if not picked:
-            return
-        code = picked[0]
+    def start_action(self, key: str, current: str) -> None:
+        """p / b / d from the home screen: marked languages if any, else a
+        picker (the language under the cursor is pre-ticked)."""
+        targets = list(self.state["selection"])
+        if not targets:
+            targets = self.pick_languages(f"{STAGE_NAMES[sorted(PRESETS[key], key=STAGES.index)[-1]]} — sur quelles langues ?", [current])
+            if not targets:
+                return
+        self.screen_plan(targets, set(PRESETS[key]))
+
+    def pick_languages(self, title: str, initial: list[str]) -> list[str]:
+        """Checklist of the languages. ⏎ validates, Échap cancels ([] returned)."""
+        ui = self.ui
+        codes = list(self.infos)
+        marks = [c for c in initial if c in self.infos]
+        cursor = codes.index(marks[0]) if marks else 0
+        while True:
+            ui.clear()
+            ui.rule(title)
+            ui.table("", self.COURSE_HEADERS, self.course_rows(cursor, marks))
+            ui.footer([("↑↓", "choisir"), ("␣", "cocher"), ("a", "tout"), ("⏎", "valider"), ("esc", "annuler")])
+            key = ui.key()
+            if key in MOVES:
+                cursor = self.move(cursor, key, len(codes))
+            elif key == " ":
+                code = codes[cursor]
+                marks.remove(code) if code in marks else marks.append(code)
+                cursor = self.move(cursor, "down", len(codes))
+            elif key == "a":
+                marks = [] if len(marks) == len(codes) else list(codes)
+            elif key == "\n":
+                if marks:
+                    return [c for c in codes if c in marks]
+                ui.say("Coche au moins une langue (espace).", "warn")
+                ui.pause()
+            elif key in ("q", "esc"):
+                return []
+
+    # -- language screen ----------------------------------------------
+    def course_details(self, info: CourseInfo) -> list[Any]:
+        state_text, state_style = course_state_cell(info)
+        wanted = self.state["branches"].get(info.code)
+        lines: list[Any] = [(f"Dossier      {rel(info.path)}", None)]
+        if not info.installed:
+            lines.append((f"Dépôt        {langs.repo_url(info.code, self.base)}", "dim"))
+            lines.append(("État         non installé — « p » (pull) le clone", "warn"))
+            return lines
+        remote = ""
+        if info.is_git:
+            rc, out = run_quiet(["git", "-C", str(info.path), "remote", "get-url", "origin"])
+            remote = out if rc == 0 else ""
+        lines.append((f"Dépôt        {remote or '(pas de remote)'}", "dim"))
+        branch = info.branch or "—"
+        if wanted and wanted != info.branch:
+            branch += f"  → {wanted} (au prochain pull / build)"
+        lines.append((f"Branche      {branch}", "accent" if wanted and wanted != info.branch else None))
+        lines.append((f"État git     {state_text}", state_style))
+        if info.dirty:
+            lines.append(("             pull et changement de branche refusés tant qu'il y a des modifications", "warn"))
+        if info.is_git:
+            rc, out = run_quiet(["git", "-C", str(info.path), "log", "-1", "--format=%h %s (%cr)"])
+            if rc == 0 and out:
+                lines.append((f"Commit       {out}", "dim"))
+        if not info.buildable:
+            lines.append(("Build        pas de lang.json : ce dossier n'est pas buildable", "bad"))
+        else:
+            lines.append((f"Build        {age(info.built_at) if info.built_at else 'jamais buildé'}", None))
+        published = self.state["deployed"].get(info.code)
+        lines.append((f"Publié       {'envoi réel ' + age(published) if published else 'jamais depuis cette tour'}", None))
+        return lines
+
+    def screen_course(self, code: str) -> str:
+        """Detail + actions for one language. ←/→ move to the neighbours.
+        Returns the language we ended on (the home cursor follows)."""
+        ui = self.ui
+        while True:
+            codes = list(self.infos)
+            info = self.infos[code]
+            ui.clear()
+            ui.rule(f"{info.code} · {info.desc}")
+            ui.panel("Détails", self.course_details(info))
+            ui.footer([("p", "pull"), ("b", "build"), ("d", "deploy"), ("g", "changer de branche"),
+                       ("←→", "langue précédente / suivante"), ("esc", "retour")])
+            key = ui.key()
+            if key in ("q", "esc"):
+                return code
+            if key in ("left", "right", "l", "h"):
+                step = 1 if key in ("right", "l") else -1
+                code = codes[(codes.index(code) + step) % len(codes)]
+            elif key in PRESETS:
+                self.screen_plan([code], set(PRESETS[key]))
+            elif key == "g":
+                self.choose_course_branch(code)
+            self.persist()
+
+    def choose_course_branch(self, code: str) -> None:
         info = self.infos[code]
         options: list[str] = []
         if info.installed and info.is_git:
@@ -1089,27 +1211,194 @@ class App:
             run_quiet(["git", "-C", str(ROOT), "fetch", "--quiet", "origin"], timeout=60)
         self.refresh()
 
-    def sync_selection(self) -> None:
+    # -- plan screen: options + exact commands + run --------------------
+    def screen_plan(self, targets: list[str], stages: set[str]) -> None:
         ui = self.ui
-        if not self.state["selection"]:
-            ui.say("Aucun cours sélectionné.", "warn")
-            ui.pause()
+        while True:
+            opts = self.state["options"]
+            mode = deploy_mode(self.deploy)
+            plan = build_plan(self.state, self.infos, self.engine, self.engine_target, self.deploy_path,
+                              self.deploy, self.deps, self.langs_dir, targets, stages)
+            deploying = "deploy" in stages
+            building = "build" in stages
+            remote = deploying and mode == "remote"
+            ui.clear()
+            ui.rule("Plan · " + " + ".join(STAGE_NAMES[s] for s in STAGES if s in stages) if stages else "Plan")
+
+            def box(flag: bool) -> str:
+                return "[x]" if flag else "[ ]"
+
+            lines: list[Any] = [
+                (f"Langues      {', '.join(targets)}", "accent"),
+                (f"{box('pull' in stages)} pull     git pull --ff-only (clone si absent)   (p)", None),
+                (f"{box(building)} build    src/build.py   (b)", None),
+                (f"{box(deploying)} deploy   src/publish.py"
+                 + ("" if building or not deploying else " --skip-build")
+                 + (f"  → {'serveur LAN' if mode == 'lan' else 'serveur local' if mode == 'local' else 'serveur distant' if mode == 'remote' else 'NON CONFIGURÉ'}")
+                 + "   (d)", None),
+                (f"Moteur       {self.engine.branch}"
+                 + (f" → {self.engine_target}" if self.engine_target and self.engine_target != self.engine.branch else "")
+                 + "   (e)", None),
+            ]
+            if building:
+                lines += [(f"{box(opts['force_exercises'])} régénérer les exercices   (x)", None),
+                          (f"{box(opts['force_icons'])} régénérer les icônes   (i)", None)]
+            if remote:
+                lines += [(f"{box(opts['delete'])} supprimer côté serveur ce qui n'existe plus (--delete)   (l)", None),
+                          (f"{box(opts['execute'])} ENVOI RÉEL (sinon : essai à blanc)   (v)",
+                           "bad" if opts["execute"] else "dim")]
+            ui.panel("Options", lines)
+
+            if plan.problems:
+                ui.panel("Problèmes — rien ne peut démarrer", [(p, "bad") for p in plan.problems])
+            planned: list[Any] = []
+            for step in plan.pre:
+                planned += [(f"• {step.label}", "accent"), (f"    $ {step_command(step, self.langs_dir, self.base)}", "dim")]
+            for job in plan.jobs:
+                if job.problem:
+                    planned.append((f"✘ {job.code} : {job.problem}  — sera ignorée", "bad"))
+                    continue
+                if not job.steps:
+                    planned.append((f"• {job.code} : rien à faire", "dim"))
+                for step in job.steps:
+                    planned += [(f"• {step.label}", "accent"), (f"    $ {step_command(step, self.langs_dir, self.base)}", "dim")]
+            if planned:
+                ui.panel("Commandes prévues (une langue qui échoue n'arrête pas les autres)", planned)
+
+            hints = [("p", "pull"), ("b", "build"), ("d", "deploy"), ("e", "moteur")]
+            if building:
+                hints += [("x", "exercices"), ("i", "icônes")]
+            if remote:
+                hints += [("l", "--delete"), ("v", "envoi réel")]
+            hints += [("⏎", "lancer"), ("esc", "retour")]
+            ui.footer(hints)
+            key = ui.key()
+            if key in ("q", "esc"):
+                return
+            if key in PRESETS:
+                stage = sorted(PRESETS[key], key=STAGES.index)[-1]
+                stages.symmetric_difference_update({stage})
+            elif key == "e":
+                self.choose_engine_branch()
+            elif key == "x" and building:
+                opts["force_exercises"] = not opts["force_exercises"]
+            elif key == "i" and building:
+                opts["force_icons"] = not opts["force_icons"]
+            elif key == "l" and remote:
+                opts["delete"] = not opts["delete"]
+            elif key == "v" and remote:
+                opts["execute"] = not opts["execute"]
+            elif key == "\n":
+                if plan.problems:
+                    ui.say("Corrige d'abord les problèmes listés.", "bad")
+                    ui.pause()
+                else:
+                    self.execute_plan(plan, stages, remote)
+                    return
+            self.persist()
+
+    def choose_engine_branch(self) -> None:
+        branches = engine_branches()
+        choice = self.ui.choose("Branche de Slovingo (le moteur)", branches, self.engine.branch)
+        if choice is None:
             return
-        ui.rule("Cloner / mettre à jour")
+        if choice == self.engine.branch:
+            self.engine_target = None
+        elif langs.BRANCH_RE.match(choice):
+            self.engine_target = choice
+        else:
+            self.ui.say(f"nom de branche invalide : {choice!r}", "bad")
+            self.ui.pause()
+
+    # -- run ----------------------------------------------------------
+    def execute_plan(self, plan: Plan, stages: set[str], remote: bool) -> None:
+        ui = self.ui
+        opts = self.state["options"]
+        real_send = remote and opts["execute"]
+        if real_send:
+            cfg = self.deploy or {}
+            if not ui.confirm(f"Envoyer pour de vrai vers {cfg.get('user')}@{cfg.get('host')}:{cfg.get('remote_root')} ?", False):
+                ui.say("Annulé.", "warn")
+                ui.pause()
+                return
+
         results: list[list[Any]] = []
-        for code in self.state["selection"]:
-            branch = self.state["branches"].get(code) or None
-            try:
-                with ui.spinner(f"{code}"):
-                    message = langs.sync(code, branch, self.langs_dir, self.base)
-                results.append([code, ("✔ " + message, "ok")])
-            except langs.SyncError as exc:
-                results.append([code, ("✘ " + str(exc), "bad")])
-        ui.table("", ["Cours", "Résultat"], results)
+        errors: list[str] = []
+        aborted = False
+        for step in plan.pre:
+            ui.rule(step.label)
+            ok, message = self.run_step(step)
+            if not ok:
+                errors.append(f"Moteur — {step.label} : {message}")
+                results.append(["Moteur", (f"✘ {message}", "bad"), ""])
+                aborted = True
+                break
+        if aborted:
+            ui.say("Branche du moteur non changée : rien n'a été lancé.", "bad")
+
+        total = len(plan.jobs)
+        for n, job in enumerate(plan.jobs, 1):
+            if aborted:
+                break
+            ui.rule(f"{n}/{total} · {job.code}")
+            if job.problem:
+                ui.say(f"{job.code} ignorée : {job.problem}", "bad")
+                errors.append(f"{job.code} — ignorée : {job.problem}")
+                results.append([job.code, (f"✘ ignorée : {job.problem}", "bad"), ""])
+                continue
+            started = time.time()
+            failure: Optional[tuple[Step, str]] = None
+            last = ""
+            for step in job.steps:
+                ui.say(step.label, "accent")
+                ok, message = self.run_step(step)
+                if not ok:
+                    failure = (step, message)
+                    ui.say(f"{job.code} : {message}", "bad")
+                    break
+                last = message
+            took = f"{time.time() - started:.1f}s"
+            if failure:
+                step, message = failure
+                errors.append(f"{job.code} — {step.label.split(' : ', 1)[-1]} : {message}")
+                results.append([job.code, (f"✘ échec : {step.label.split(' : ', 1)[-1]} — {message}", "bad"), took])
+            else:
+                if "deploy" in stages and remote and opts["execute"]:
+                    self.state["deployed"][job.code] = time.time()
+                results.append([job.code, ("✔ " + (last or "rien à faire"), "ok"), took])
+
+        if not aborted and self.engine_target:
+            self.engine_target = None
+        ui.rule("Bilan")
+        ui.table("", ["Langue", "Résultat", "Durée"], results)
+        if errors:
+            ui.panel(f"✘ ERREURS — {len(errors)} sur {max(total, 1)}" + (" langue(s)" if total else ""),
+                     [(e, "bad") for e in errors] + [("(la sortie complète de chaque commande est affichée plus haut)", "dim")])
+        else:
+            ui.say(f"Tout est passé : {total} langue(s).", "ok")
+        self.persist()
         self.refresh()
         ui.pause()
 
-    # -- screen 2: deployment -----------------------------------------
+    def run_step(self, step: Step) -> tuple[bool, str]:
+        if step.kind == "sync":
+            try:
+                return True, langs.sync(step.code, step.branch, self.langs_dir, self.base)
+            except langs.SyncError as exc:
+                return False, str(exc)
+        argv = list(step.argv)
+        if argv and argv[0] == "python3":
+            argv[0] = sys.executable
+        print(f"$ {shell_repr(step.argv)}", flush=True)
+        try:
+            code = subprocess.call(argv, cwd=str(ROOT))
+        except KeyboardInterrupt:
+            return step.serves, "serveur arrêté" if step.serves else "interrompu (Ctrl+C)"
+        except OSError as exc:
+            return False, str(exc)
+        return code == 0, "terminé" if code == 0 else f"code de sortie {code}"
+
+    # -- config screen: deployment --------------------------------------
     def deploy_table(self, cfg: dict[str, Any], dirty: bool) -> None:
         mode = deploy_mode(cfg)
         label = {"local": "local (127.0.0.1 seulement)", "lan": "LAN (visible par le téléphone)",
@@ -1138,7 +1427,7 @@ class App:
         note: Optional[tuple[str, str]] = None
         while True:
             ui.clear()
-            ui.rule("2 · Déploiement")
+            ui.rule("Configuration du déploiement")
             self.deploy_table(draft, draft != (saved or dict(DEPLOY_DEFAULTS)))
             if note:
                 ui.say(note[1], note[0])
@@ -1216,11 +1505,11 @@ class App:
                     note = ("bad", f"écriture impossible : {exc}")
         self.refresh()
 
-    # -- screen 3: dependencies ---------------------------------------
+    # -- dependencies screen -------------------------------------------
     def screen_deps(self) -> None:
         ui = self.ui
         ui.clear()
-        ui.rule("3 · Dépendances")
+        ui.rule("Dépendances")
         with ui.spinner("Vérification"):
             self.deps = check_deps(deploy_mode(self.deploy) == "remote")
         ui.table("", ["Outil", "État", "Niveau", "Sert à", "Version / installation"], [dep_row(d) for d in self.deps])
@@ -1232,143 +1521,6 @@ class App:
                 ui.say(f"{dep.name:<12} {dep.hint}", "warn" if dep.level == "optional" else "bad")
         ui.footer([("q", "retour")])
         ui.key()
-
-    # -- screen 4: build & publish ------------------------------------
-    def current_plan(self) -> Plan:
-        return build_plan(self.state, self.infos, self.engine, self.engine_target, self.deploy_path,
-                          self.deploy, self.deps, self.langs_dir)
-
-    def screen_build(self) -> None:
-        ui = self.ui
-        while True:
-            opts = self.state["options"]
-            plan = self.current_plan()
-            mode = deploy_mode(self.deploy)
-            ui.clear()
-            ui.rule("4 · Build & publication")
-
-            def box(flag: bool) -> str:
-                return "[x]" if flag else "[ ]"
-
-            publishing = self.state["action"] != "build"
-            remote = mode == "remote" and publishing
-            lines: list[Any] = [
-                (f"Action        {ACTIONS[self.state['action']]}   (a)", "accent"),
-                (f"Slovingo      {self.engine.branch}" + (f" → {self.engine_target}" if self.engine_target and self.engine_target != self.engine.branch else "") + "   (e)", None),
-                (f"Cours         {', '.join(self.state['selection']) or 'aucun'}   (écran 1)", None),
-                (f"{box(opts['pull'])} tirer les cours (ff-only) avant le build   (p)"
-                 + ("   — sans effet : pas de rebuild" if self.state["action"] == "publish" else ""), None),
-                (f"{box(opts['force_exercises'])} régénérer les exercices   (x)", None),
-                (f"{box(opts['force_icons'])} régénérer les icônes   (i)", None),
-            ]
-            if remote:
-                lines += [(f"{box(opts['delete'])} supprimer côté serveur ce qui n'existe plus (--delete)   (d)", None),
-                          (f"{box(opts['execute'])} ENVOI RÉEL (sinon : essai à blanc)   (v)", "bad" if opts["execute"] else "dim")]
-            elif publishing:
-                lines.append((f"Publication : {'serveur LAN' if mode == 'lan' else 'serveur local' if mode == 'local' else 'non configurée'}", "dim"))
-            ui.panel("Options", lines)
-
-            if plan.problems:
-                ui.panel("Problèmes", [(p, "bad") for p in plan.problems])
-            if plan.steps:
-                lines_plan: list[Any] = []
-                for i, step in enumerate(plan.steps, 1):
-                    lines_plan.append((f"{i}. {step.label}", "accent"))
-                    lines_plan.append((f"   $ {step_command(step, self.langs_dir, self.base)}", "dim"))
-                ui.panel("Commandes prévues", lines_plan)
-            hints = [("a", "action"), ("e", "branche Slovingo"), ("p", "pull"), ("x", "exercices"), ("i", "icônes")]
-            if remote:
-                hints += [("d", "--delete"), ("v", "envoi réel")]
-            hints += [("g", "lancer"), ("q", "retour")]
-            ui.footer(hints)
-            key = ui.key()
-            if key in ("q", "esc"):
-                return
-            if key == "a":
-                order = list(ACTIONS)
-                self.state["action"] = order[(order.index(self.state["action"]) + 1) % len(order)]
-            elif key == "e":
-                self.choose_engine_branch()
-            elif key == "p":
-                opts["pull"] = not opts["pull"]
-            elif key == "x":
-                opts["force_exercises"] = not opts["force_exercises"]
-            elif key == "i":
-                opts["force_icons"] = not opts["force_icons"]
-            elif key == "d" and remote:
-                opts["delete"] = not opts["delete"]
-            elif key == "v" and remote:
-                opts["execute"] = not opts["execute"]
-            elif key == "g":
-                if plan.problems:
-                    ui.say("Corrige d'abord les problèmes listés.", "bad")
-                    ui.pause()
-                else:
-                    self.execute_plan(plan, remote)
-            self.persist()
-
-    def choose_engine_branch(self) -> None:
-        branches = engine_branches()
-        choice = self.ui.choose("Branche de Slovingo (le moteur)", branches, self.engine.branch)
-        if choice is None:
-            return
-        if choice == self.engine.branch:
-            self.engine_target = None
-        elif langs.BRANCH_RE.match(choice):
-            self.engine_target = choice
-        else:
-            self.ui.say(f"nom de branche invalide : {choice!r}", "bad")
-            self.ui.pause()
-
-    def execute_plan(self, plan: Plan, remote: bool) -> None:
-        ui = self.ui
-        opts = self.state["options"]
-        if remote and opts["execute"]:
-            cfg = self.deploy or {}
-            if not ui.confirm(f"Envoyer pour de vrai vers {cfg.get('user')}@{cfg.get('host')}:{cfg.get('remote_root')} ?", False):
-                ui.say("Annulé.", "warn")
-                ui.pause()
-                return
-        elif not ui.confirm(f"Lancer {len(plan.steps)} étape(s) ?", True):
-            return
-
-        results: list[list[Any]] = []
-        failed = False
-        for i, step in enumerate(plan.steps, 1):
-            ui.rule(f"{i}/{len(plan.steps)} · {step.label}")
-            started = time.time()
-            ok, message = self.run_step(step)
-            took = f"{time.time() - started:.1f}s"
-            results.append([str(i), step.label, ("✔ " + message if ok else "✘ " + message, "ok" if ok else "bad"), took])
-            if not ok:
-                failed = True
-                break
-        if self.engine_target and not failed:
-            self.engine_target = None
-        ui.rule("Bilan")
-        ui.table("", ["#", "Étape", "Résultat", "Durée"], results)
-        if failed:
-            ui.say("Arrêt à la première erreur : les étapes suivantes n'ont pas été lancées.", "bad")
-        self.refresh()
-        ui.pause()
-
-    def run_step(self, step: Step) -> tuple[bool, str]:
-        if step.kind == "sync":
-            try:
-                return True, langs.sync(step.code, step.branch, self.langs_dir, self.base)
-            except langs.SyncError as exc:
-                return False, str(exc)
-        argv = list(step.argv)
-        if argv and argv[0] == "python3":
-            argv[0] = sys.executable
-        print(f"$ {shell_repr(step.argv)}", flush=True)
-        try:
-            code = subprocess.call(argv, cwd=str(ROOT))
-        except KeyboardInterrupt:
-            return step.serves, "serveur arrêté" if step.serves else "interrompu (Ctrl+C)"
-        except OSError as exc:
-            return False, str(exc)
-        return code == 0, "terminé" if code == 0 else f"code de sortie {code}"
 
 
 # ---------------------------------------------------------------------------
