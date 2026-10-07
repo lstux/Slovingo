@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img"><title>Le renard : Courage !</title>
+  <defs>
+    <path id="fox-head-shape" d="M92 22 C90 70 90 110 84 160 C74 250 58 322 40 372 C84 398 134 424 192 436 L256 446 L320 436 C378 424 428 398 472 372 C454 322 438 250 428 160 C422 110 422 70 420 22 L312 132 C292 118 274 112 256 112 C238 112 220 118 200 132Z"/>
+    <clipPath id="fox-clip"><use href="#fox-head-shape"/></clipPath>
+  </defs>
+
+  <g id="fox-head">
+    <use href="#fox-head-shape" fill="#ff6212"/>
+    <!-- intérieur des oreilles (le long de l'axe de l'oreille) -->
+    <g id="fox-ear-inner" fill="#ff9211">
+      <ellipse cx="126" cy="98" rx="21" ry="50" transform="rotate(-24 126 98)"/>
+      <ellipse cx="386" cy="98" rx="21" ry="50" transform="rotate(24 386 98)"/>
+    </g>
+    <!-- bouts d'oreilles (découpés dans la forme de la tête) -->
+    <g id="fox-ear-tips" clip-path="url(#fox-clip)" fill="#575b5e">
+      <path d="M40 0 H200 L166 52 L70 84Z"/>
+      <path d="M472 0 H312 L346 52 L442 84Z"/>
+    </g>
+  </g>
+
+  <!-- joues grises + traits blancs -->
+  <g id="fox-cheeks">
+    <path d="M20 370 C90 358 160 372 232 408 L232 484 C150 468 70 430 20 370Z" fill="#dedede"/>
+    <path d="M492 370 C422 358 352 372 280 408 L280 484 C362 468 442 430 492 370Z" fill="#dedede"/>
+    <g fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".9">
+      <path d="M64 394 C98 390 134 398 160 412"/><path d="M92 424 C120 422 146 430 168 444"/>
+      <path d="M448 394 C414 390 378 398 352 412"/><path d="M420 424 C392 422 366 430 344 444"/>
+    </g>
+  </g>
+
+  <!-- museau -->
+  <path id="fox-muzzle" d="M200 392 C200 440 212 480 234 502 C246 514 266 514 278 502 C300 480 312 440 312 392 C312 372 292 364 256 364 C220 364 200 372 200 392Z" fill="#fde8cf"/>
+
+  <g id="fox-eyes" fill="#2d2927"><ellipse cx="178" cy="284" rx="25" ry="32"/><ellipse cx="334" cy="284" rx="25" ry="32"/><g fill="#fff"><ellipse cx="168" cy="268" rx="10" ry="13"/><circle cx="192" cy="302" r="5"/><ellipse cx="324" cy="268" rx="10" ry="13"/><circle cx="348" cy="302" r="5"/></g></g><g fill="none" stroke="#b8430c" stroke-width="11" stroke-linecap="round"><path d="M140 246 Q172 236 208 218"/><path d="M304 218 Q340 236 372 246"/></g>
+  <path id="fox-nose" d="M218 398 C218 384 232 378 256 378 C280 378 294 384 294 398 C294 416 274 432 256 436 C238 432 218 416 218 398Z" fill="#2d2927"/>
+  <g id="fox-mouth" fill="none" stroke="#4a4747" stroke-width="7" stroke-linecap="round"><path d="M256 436 L256 456"/><path d="M238 462 Q256 478 274 462"/></g>
+</svg>

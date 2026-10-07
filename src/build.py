@@ -53,7 +53,9 @@ from smd2data import SheetNameError, build_sheet_json
 # Static front-end files copied as-is into dist/ -- shared across
 # every language, not generated from content.
 STATIC_FILES = [
-    "index.html", "app.js", "exercises.js", "progress.js", "settings.js",
+    "index.html", "app.js", "exercises.js",
+    "exo-mascots.js", "exo-mascots.css",  # Fox (live reactions) and rabbit (result screen)
+    "progress.js", "settings.js",
     "backup.js",  # Settings > Data: JSON export / import of settings and progress
     "celebrate.js", "style.css", "exercises.css",
     "map.css", "map.js",  # Adventure map (map.json is generated)
@@ -62,8 +64,9 @@ STATIC_FILES = [
 ]
 
 # Static directories copied wholesale into dist/ (third-party code
-# vendored so the PWA works offline: Leaflet, for the geomap blocks).
-STATIC_DIRS = ["vendor"]
+# vendored so the PWA works offline: Leaflet, for the geomap blocks;
+# mascots/: the fox and rabbit faces of the exercise screens).
+STATIC_DIRS = ["vendor", "mascots"]
 
 ICON_SPECS = [
     ("icon-192.png", 192, 0.72),

@@ -1107,6 +1107,7 @@ function startSessionFromQuery(query) {
     ]));
     content.appendChild(el("div", { className: "exo-progress-text", attrs: { id: "exo-progress" } }));
     content.appendChild(el("div", { className: "exo-card-area", attrs: { id: "exo-card-area" } }));
+    mountSessionFox(content);
 
     startPool();
 }
@@ -1496,6 +1497,7 @@ function updateProgress() {
 
 function renderCurrentView() {
     updateProgress();
+    reactFox("content", null);
     const area = document.getElementById("exo-card-area");
     area.innerHTML = "";
     const view = state.currentView;
@@ -1511,6 +1513,7 @@ function renderCurrentView() {
  */
 function markAnswer(container, isCorrect, view, userAnswer) {
     container.classList.add(isCorrect ? "exo-correct" : "exo-incorrect");
+    reactFox(isCorrect ? "bravo" : "comfort", isCorrect ? "hop" : "tilt");
 
     if (!state.byType[view.type]) state.byType[view.type] = { correct: 0, total: 0 };
     state.byType[view.type].total += 1;
@@ -2088,6 +2091,7 @@ function renderSummary() {
     const updated = state.sheetId ? getSheetProgress(state.sheetId) : null;
 
     const summary = el("div", { className: "exo-card exo-summary" }, [
+        summaryRabbit(state.score, total),
         el("h3", { text: uiLabel("exercise_result_title", "Result") }),
         el("p", { className: "exo-score", text: `${state.score} / ${total} (${scorePct}%)` }),
     ]);
