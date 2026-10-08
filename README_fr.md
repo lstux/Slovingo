@@ -4,7 +4,13 @@
 
 Apprendre une langue sans appli, sans compte, sans serveur. Juste des fiches texte et un script Python qui génère un mini site en html.
 
-Directement disponible sur **[www.lslinux.org/slovingo](https://www.lslinux.org/slovingo)**.
+**Les cours en ligne :**
+
+- **[Slovaque pour francophones](https://lstux.github.io/Slovingo-sk-fr/)** — *Ahoj Slovenčina!*
+- **[Français pour slovacophones](https://lstux.github.io/Slovingo-fr-sk/)** — *Dis bonjour!*
+- **[Slovaque pour enfants francophones (8-12 ans)](https://lstux.github.io/Slovingo-sk-fr-kids/)** — *Zajka*
+- **[Slovaque pour ados francophones (12-16 ans)](https://lstux.github.io/Slovingo-sk-fr-friends/)** — *Zajka Friends*
+- **[Allemand pour enfants francophones (à partir de 8 ans)](https://lstux.github.io/Slovingo-de-fr-kids/)** — *Fuchsbau*
 
 ## 🎯 Pourquoi Slovingo
 
@@ -18,7 +24,7 @@ Pas de compte, pas d'abonnement, pas de serveur applicatif qui peut disparaître
 - Une fiche affiche vocabulaire, grammaire, audio — tout cliquable et prononçable
 - Clic sur une phrase → traduction + mot à mot + lecture audio
 - QCM, phrases à trous, compréhension audio — générés automatiquement à partir des fiches
-- Une fois installé en PWA, le site reste utilisable hors-ligne même si lslinux.org venait à disparaître un jour
+- Une fois installé en PWA, le site reste utilisable hors-ligne même si le site venait à disparaître un jour
 
 ## ⚠️ Contenu généré par IA
 
@@ -29,8 +35,8 @@ Les fiches ont été écrites avec l'aide de l'IA.
 
 ## 🚀 Pour apprendre
 
-- **[Slovaque pour francophones](https://www.lslinux.org/slovingo/sk-fr/)** — *Ahoj Slovenčina!*
-- **[Français pour slovacophones](https://www.lslinux.org/slovingo/fr-sk/)** — *Dis bonjour!*
+- **[Slovaque pour francophones](https://lstux.github.io/Slovingo-sk-fr/)** — *Ahoj Slovenčina!*
+- **[Français pour slovacophones](https://lstux.github.io/Slovingo-fr-sk/)** — *Dis bonjour!*
 - **Breton pour francophones** — embryon de cours, sans synthèse vocale disponible pour l'instant
 
 Un clic suffit, aucune inscription.
