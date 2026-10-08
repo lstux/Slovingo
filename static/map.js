@@ -340,7 +340,7 @@ async function renderMap(container) {
     const shown = animate
         ? deriveFromFlags(steps, flags.map((flag, index) => ({ ...flag, validated: flag.validated && !newly.includes(index) })))
         : state;
-    const section = buildScene(steps, shown);
+    const section = buildScene(steps, shown, data.config || {});
     wrap.appendChild(section);
     const bubble = buildBubble(section);
     // The fox walks to the clicked step, then its bubble opens. Nothing
@@ -740,13 +740,19 @@ function applyState(section, steps, state) {
 }
 
 /** Build the scene: background, scenery, route, fog, nodes, fox. */
-function buildScene(steps, state) {
+function buildScene(steps, state, config) {
     const section = el("section", "adventure-map");
     section.id = "adventure-map";
     section.dataset.steps = String(steps.length);
     section.setAttribute("aria-label", uiLabel("map_title", "Adventure map"));
 
-    section.appendChild(el("div", "map-background"));
+    const background = el("div", "map-background");
+    // A course may ship its own artwork (config.background, a path under
+    // the site root). Without it, the CSS placeholder landscape is kept.
+    if (config && typeof config.background === "string" && config.background) {
+        background.style.backgroundImage = `url("${encodeURI(config.background)}")`;
+    }
+    section.appendChild(background);
 
     const decorations = el("div", "map-decorations");
     decorations.setAttribute("aria-hidden", "true");

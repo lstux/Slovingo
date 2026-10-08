@@ -47,7 +47,7 @@ import smd2exercises
 from gen_icons import companions_from_config, draw_flag_icon, find_emoji_font
 from gen_manifest import build_manifest
 from gen_service_worker import render as render_service_worker
-from map_generator import build_map_json
+from map_generator import build_map_json, find_map_background
 from smd2data import SheetNameError, build_sheet_json
 
 # Static front-end files copied as-is into dist/ -- shared across
@@ -170,6 +170,9 @@ def run_build(
 
     # 3.5 Adventure Map metadata.
     map_data = build_map_json(md_dir, lang_cfg)
+    background = find_map_background(img_dir)
+    if background:
+        map_data["config"]["background"] = background
     (dist_dir / "map.json").write_text(json.dumps(map_data, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Map: {dist_dir}/map.json ({len(map_data['steps'])} steps, {len(map_data['resources'])} resources)")
 
