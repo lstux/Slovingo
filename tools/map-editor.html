@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Éditeur de positions — carte d'accueil</title>
+<style>
+:root {
+    --bg: #f6f2ea; --surface: #fffdf8; --surface-2: #ece3d3;
+    --text: #2b2118; --text-soft: #6d5c48; --line: #ddd0ba;
+    --accent: #a8362b; --radius: 10px; --radius-sm: 6px; font-size: 15px;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #15110d; --surface: #1e1811; --surface-2: #2a2117;
+        --text: #f0e7d8; --text-soft: #b0a08b; --line: #382c1e; --accent: #e0705f;
+    }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; }
+header { padding: 0.8rem 1.2rem; border-bottom: 1px solid var(--line); }
+header h1 { margin: 0; font-size: 1.2rem; }
+header p { margin: 0.2rem 0 0; color: var(--text-soft); font-size: 0.85rem; }
+main { display: grid; grid-template-columns: minmax(0, auto) minmax(320px, 1fr); gap: 1rem; padding: 1rem; align-items: start; }
+@media (max-width: 860px) { main { grid-template-columns: 1fr; } }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.8rem; }
+.row { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.6rem; }
+label { font-size: 0.9rem; color: var(--text-soft); }
+select, input[type=number], input[type=text], textarea {
+    background: var(--surface-2); color: var(--text); border: 1px solid var(--line);
+    border-radius: var(--radius-sm); padding: 0.3rem 0.4rem; font: inherit;
+}
+input[type=number] { width: 5.2rem; }
+button { background: var(--accent); color: #fff; border: 0; border-radius: var(--radius-sm); padding: 0.4rem 0.8rem; font: inherit; cursor: pointer; }
+button.ghost { background: var(--surface-2); color: var(--text); border: 1px solid var(--line); }
+
+/* stage: the map drawn at phone proportions, percent coordinates */
+#stage {
+    position: relative; width: 340px; height: 600px; overflow: hidden;
+    border-radius: var(--radius); border: 1px solid var(--line);
+    background: linear-gradient(to bottom, #a9d18a 0%, #c9e0b0 40%, #dfe8e4 75%, #c3d3e3 100%);
+    background-size: cover; background-position: center; touch-action: none; user-select: none;
+}
+#route { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+#route polyline { fill: none; stroke: rgba(43, 33, 24, 0.6); stroke-width: 0.5; stroke-dasharray: 1.5 1.5; vector-effect: non-scaling-stroke; stroke-width: 2px; }
+.marker {
+    position: absolute; transform: translate(-50%, -50%); cursor: grab;
+    background: rgba(255, 253, 248, 0.92); color: #2b2118; border: 2px solid #2b2118;
+    border-radius: 999px; padding: 0.15rem 0.5rem; font-size: 0.72rem; white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+.marker.selected { background: var(--accent); color: #fff; border-color: #fff; }
+.marker.final { font-weight: 700; }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+th, td { text-align: left; padding: 0.25rem 0.3rem; border-bottom: 1px solid var(--line); }
+tr.selected td { background: var(--surface-2); }
+td.id { font-family: ui-monospace, monospace; font-size: 0.78rem; color: var(--text-soft); }
+textarea { width: 100%; height: 14rem; font-family: ui-monospace, monospace; font-size: 0.8rem; }
+#status { color: var(--text-soft); font-size: 0.85rem; margin-left: 0.5rem; }
+.hint { color: var(--text-soft); font-size: 0.82rem; margin: 0.4rem 0 0; }
+</style>
+</head>
+<body>
+<header>
+    <h1>Éditeur de positions — carte d'accueil</h1>
+    <p>Charge le <code>map.json</code> d'un cours (<code>dist/map.json</code>), son image de fond si elle existe, puis glisse les étapes. Copie le bloc à mettre dans la clé <code>map</code> du <code>lang.json</code>.</p>
+</header>
+
+<main>
+    <section class="panel">
+        <div class="row">
+            <label>map.json <input type="file" id="json-file" accept=".json,application/json"></label>
+        </div>
+        <div class="row">
+            <label>Image de fond <input type="file" id="bg-file" accept="image/*"></label>
+        </div>
+        <div class="row">
+            <label>Sens de la carte chargée
+                <select id="direction">
+                    <option value="down">Haut → bas (défaut)</option>
+                    <option value="up">Bas → haut</option>
+                    <option value="right">Gauche → droite</option>
+                    <option value="left">Droite → gauche</option>
+                </select>
+            </label>
+        </div>
+        <div id="stage">
+            <svg id="route" viewBox="0 0 100 100" preserveAspectRatio="none"><polyline id="line" points=""></polyline></svg>
+        </div>
+        <p class="hint">Glisse une étape pour la déplacer. Le tracé relie les étapes dans l'ordre (le site le lisse en courbes).</p>
+    </section>
+
+    <section class="panel">
+        <table>
+            <thead><tr><th>id</th><th>titre</th><th>x</th><th>y</th></tr></thead>
+            <tbody id="rows"><tr><td colspan="4">Charge un map.json pour commencer.</td></tr></tbody>
+        </table>
+
+        <h2 style="font-size:1rem;margin:1rem 0 0.4rem">Bloc à copier dans lang.json</h2>
+        <p class="hint">Mets-le dans la clé <code>"map"</code>, en gardant tes autres réglages (icons, direction…). Les positions sont données dans le repère « haut → bas », quel que soit le sens choisi.</p>
+        <textarea id="output" readonly spellcheck="false"></textarea>
+        <div class="row" style="margin-top:0.5rem">
+            <button id="copy" class="ghost">Copier</button>
+            <span id="status"></span>
+        </div>
+    </section>
+</main>
+
+<script>
+(() => {
+    "use strict";
+
+    // Display frame -> default frame ("down"), the inverse of build_map_json's transforms.
+    const TO_DEFAULT = {
+        down: (X, Y) => [X, Y],
+        up: (X, Y) => [X, 100 - Y],
+        right: (X, Y) => [Y, X],
+        left: (X, Y) => [Y, 100 - X],
+    };
+
+    const stage = document.getElementById("stage");
+    const line = document.getElementById("line");
+    const rows = document.getElementById("rows");
+    const output = document.getElementById("output");
+    const status = document.getElementById("status");
+    const directionSelect = document.getElementById("direction");
+
+    let steps = [];          // {id, title, type, x, y} in the display frame
+    let selectedId = null;
+    const markers = new Map();
+
+    const round1 = (v) => Math.round(v * 10) / 10;
+    const clamp = (v) => Math.min(100, Math.max(0, v));
+
+    function setStatus(text, isError = false) {
+        status.textContent = text;
+        status.style.color = isError ? "var(--accent)" : "";
+    }
+
+    function select(id) {
+        selectedId = id;
+        markers.forEach((m, mid) => m.classList.toggle("selected", mid === id));
+        rows.querySelectorAll("tr").forEach((tr) => tr.classList.toggle("selected", tr.dataset.id === id));
+    }
+
+    function redrawRoute() {
+        line.setAttribute("points", steps.map((s) => `${s.x},${s.y}`).join(" "));
+    }
+
+    function placeMarker(step) {
+        const m = markers.get(step.id);
+        m.style.left = `${step.x}%`;
+        m.style.top = `${step.y}%`;
+    }
+
+    function updateOutput() {
+        const direction = directionSelect.value;
+        const positions = {};
+        steps.forEach((s) => {
+            const [x, y] = TO_DEFAULT[direction](s.x, s.y);
+            positions[s.id] = [round1(x), round1(y)];
+        });
+        output.value = JSON.stringify({ positions }, null, 2);
+    }
+
+    function refreshRow(step) {
+        const tr = rows.querySelector(`tr[data-id="${CSS.escape(step.id)}"]`);
+        if (!tr) return;
+        tr.querySelector(".in-x").value = step.x;
+        tr.querySelector(".in-y").value = step.y;
+    }
+
+    function changed(step) {
+        placeMarker(step);
+        refreshRow(step);
+        redrawRoute();
+        updateOutput();
+    }
+
+    function buildAll() {
+        stage.querySelectorAll(".marker").forEach((m) => m.remove());
+        markers.clear();
+        rows.innerHTML = "";
+
+        steps.forEach((step) => {
+            const m = document.createElement("div");
+            m.className = "marker" + (step.type === "final" ? " final" : "");
+            m.textContent = step.title || step.id;
+            m.title = step.id;
+            stage.appendChild(m);
+            markers.set(step.id, m);
+            placeMarker(step);
+            attachDrag(m, step);
+
+            const tr = document.createElement("tr");
+            tr.dataset.id = step.id;
+            tr.innerHTML = `
+                <td class="id"></td><td></td>
+                <td><input class="in-x" type="number" step="0.1" min="0" max="100"></td>
+                <td><input class="in-y" type="number" step="0.1" min="0" max="100"></td>`;
+            tr.querySelector(".id").textContent = step.id;
+            tr.querySelector("td:nth-child(2)").textContent = step.title || "";
+            tr.querySelector(".in-x").value = step.x;
+            tr.querySelector(".in-y").value = step.y;
+            tr.querySelector(".in-x").addEventListener("input", (e) => {
+                const v = parseFloat(e.target.value);
+                if (!Number.isNaN(v)) { step.x = clamp(v); changed(step); }
+            });
+            tr.querySelector(".in-y").addEventListener("input", (e) => {
+                const v = parseFloat(e.target.value);
+                if (!Number.isNaN(v)) { step.y = clamp(v); changed(step); }
+            });
+            tr.addEventListener("click", () => select(step.id));
+            rows.appendChild(tr);
+        });
+
+        redrawRoute();
+        updateOutput();
+    }
+
+    function attachDrag(marker, step) {
+        marker.addEventListener("pointerdown", (event) => {
+            marker.setPointerCapture(event.pointerId);
+            marker.style.cursor = "grabbing";
+            select(step.id);
+        });
+        marker.addEventListener("pointermove", (event) => {
+            if (!marker.hasPointerCapture(event.pointerId)) return;
+            const rect = stage.getBoundingClientRect();
+            step.x = round1(clamp(((event.clientX - rect.left) / rect.width) * 100));
+            step.y = round1(clamp(((event.clientY - rect.top) / rect.height) * 100));
+            changed(step);
+        });
+        const stop = (event) => {
+            marker.style.cursor = "grab";
+            if (marker.hasPointerCapture(event.pointerId)) marker.releasePointerCapture(event.pointerId);
+        };
+        marker.addEventListener("pointerup", stop);
+        marker.addEventListener("pointercancel", stop);
+    }
+
+    document.getElementById("json-file").addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+            try {
+                const data = JSON.parse(reader.result);
+                if (!Array.isArray(data.steps)) throw new Error("pas de tableau « steps »");
+                steps = data.steps
+                    .filter((s) => typeof s.x === "number" && typeof s.y === "number")
+                    .map((s) => ({ id: s.id, title: s.title, type: s.type, x: round1(s.x), y: round1(s.y) }));
+                buildAll();
+                setStatus(`${steps.length} étapes chargées`);
+            } catch (err) {
+                setStatus(`map.json invalide : ${err.message}`, true);
+            }
+        };
+        reader.readAsText(file);
+    });
+
+    document.getElementById("bg-file").addEventListener("change", (event) => {
+        const file = event.target.files[0];
+        if (!file) {
+            stage.style.backgroundImage = "";
+            return;
+        }
+        stage.style.backgroundImage = `url("${URL.createObjectURL(file)}")`;
+    });
+
+    directionSelect.addEventListener("change", updateOutput);
+
+    document.getElementById("copy").addEventListener("click", async () => {
+        try {
+            await navigator.clipboard.writeText(output.value);
+            setStatus("Copié");
+        } catch {
+            output.select();
+            setStatus("Sélectionné : copie avec Ctrl+C");
+        }
+    });
+})();
+</script>
+</body>
+</html>
