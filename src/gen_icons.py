@@ -17,9 +17,8 @@ is shrunk and moved up, and the course's companion emojis (by default
 the fox and the rabbit, override with site.icon_companions) are drawn
 side by side underneath it. Without it, the icon is the plain flag.
 
-Pillow (PIL) is optional: if not installed, a fallback gradient icon
-is generated with a warning. For full emoji rendering, install via
-requirements.txt.
+Pillow (PIL) is required to generate icons: install via requirements.txt.
+Without it, draw_flag_icon() stops with an explicit error message.
 
 Usage:
     python3 gen_icons.py --lang lang.json -o icons/
@@ -29,7 +28,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
 from pathlib import Path
 
 try:
@@ -162,32 +160,13 @@ def draw_flag_icon(
         companions: Emojis drawn under the flag, left to right. None or
             empty = the plain flag icon, unchanged.
     """
-    # Fallback if PIL is not available: create a solid gradient icon
-    # with a warning message.
     if not PIL_AVAILABLE:
-        print(
-            f"⚠️  Pillow not installed — using fallback icon (install via requirements.txt)",
-            file=sys.stderr,
+        # Pillow est une dépendance du build (requirements.txt). Sans lui, pas
+        # d'icône possible : on échoue explicitement plutôt que de planter
+        # plus loin sur un Image non défini.
+        raise SystemExit(
+            "Pillow est requis pour générer les icônes : pip install -r requirements.txt"
         )
-        # Return a simple gradient without emojis/text rendering.
-        canvas = Image.new("RGB", (size, size))
-        stops = GRADIENT_STOPS
-        segments = len(stops) - 1
-        for y in range(size):
-            position = y / max(size - 1, 1) * segments
-            segment = min(int(position), segments - 1)
-            local_t = position - segment
-            r0, g0, b0 = stops[segment]
-            r1, g1, b1 = stops[segment + 1]
-            pixel = (
-                round(r0 + (r1 - r0) * local_t),
-                round(g0 + (g1 - g0) * local_t),
-                round(b0 + (b1 - b0) * local_t),
-            )
-            canvas.putpixel((0, y), pixel)
-        # Stretch the 1-pixel column to the full width.
-        canvas = canvas.resize((size, size))
-        return canvas
 
     canvas = sunset_gradient(size).convert("RGBA")
     flag = render_glyph(flag_emoji, font_path)
