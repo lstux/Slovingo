@@ -746,24 +746,29 @@ function buildScene(steps, state, config) {
     section.dataset.steps = String(steps.length);
     section.setAttribute("aria-label", uiLabel("map_title", "Adventure map"));
 
-    const background = el("div", "map-background");
     // A course may ship its own artwork (config.background, a path under
     // the site root). Without it, the CSS placeholder landscape is kept.
-    if (config && typeof config.background === "string" && config.background) {
+    const hasArtwork = Boolean(config && typeof config.background === "string" && config.background);
+    const background = el("div", "map-background");
+    if (hasArtwork) {
         background.style.backgroundImage = `url("${encodeURI(config.background)}")`;
     }
     section.appendChild(background);
 
-    const decorations = el("div", "map-decorations");
-    decorations.setAttribute("aria-hidden", "true");
-    MAP_DECORATIONS.forEach((item) => {
-        const deco = el("span", "map-decoration", item.icon);
-        deco.style.left = `${item.x}%`;
-        deco.style.top = `${item.y}%`;
-        deco.style.fontSize = `${item.size}rem`;
-        decorations.appendChild(deco);
-    });
-    section.appendChild(decorations);
+    // The artwork already paints its own scenery (forests, falls, peaks):
+    // the generic decorations are only drawn over the placeholder landscape.
+    if (!hasArtwork) {
+        const decorations = el("div", "map-decorations");
+        decorations.setAttribute("aria-hidden", "true");
+        MAP_DECORATIONS.forEach((item) => {
+            const deco = el("span", "map-decoration", item.icon);
+            deco.style.left = `${item.x}%`;
+            deco.style.top = `${item.y}%`;
+            deco.style.fontSize = `${item.size}rem`;
+            decorations.appendChild(deco);
+        });
+        section.appendChild(decorations);
+    }
 
     section.appendChild(buildRoute(steps, state));
     section.appendChild(buildFog(steps, state));

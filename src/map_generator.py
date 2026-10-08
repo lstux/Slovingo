@@ -28,8 +28,14 @@ in lang.json:
     "map": {
         "positions": {"series-rodina": [31, 70]},
         "icons":     {"rodina": "🏠", "final": "🏆"},
-        "final_title": "Générique"
+        "final_title": "Générique",
+        "direction": "down"
     }
+
+"direction" sets where the route goes: "down" (default, from the top to the
+castle at the bottom), "up", "right" (left to right) or "left" (right to
+left). Overrides in "positions" are written in the default "down" frame and
+are transformed like the generated ones.
 
 The last step is the "credits" series (99_Credits_01_Title.md): see
 build_map_json(). Its icon is map.icons.final (default 🏰), its label
@@ -95,6 +101,16 @@ def series_number(path: Path) -> int | None:
     if len(parts) >= 6 and parts[2].isdigit():
         return int(parts[2])
     return None
+
+
+# Route direction -> transform of a (x, y) position written in the default
+# "down" frame. "right" and "left" swap the axes: the route then runs along x.
+MAP_DIRECTIONS = {
+    "down": lambda x, y: (x, y),
+    "up": lambda x, y: (x, 100.0 - y),
+    "right": lambda x, y: (y, x),
+    "left": lambda x, y: (100.0 - y, x),
+}
 
 
 def generate_positions(count: int) -> list[tuple[float, float]]:
@@ -240,10 +256,16 @@ def build_map_json(md_dir: Path, lang_cfg: dict[str, Any]) -> dict[str, Any]:
         }
     )
 
+    direction = map_cfg.get("direction", "down")
+    if direction not in MAP_DIRECTIONS:
+        raise ValueError(f"map.direction must be one of {', '.join(MAP_DIRECTIONS)}, not {direction!r}")
+    transform = MAP_DIRECTIONS[direction]
+
     positions = generate_positions(len(steps))
     overrides = map_cfg.get("positions", {})
     for step, (x, y) in zip(steps, positions):
-        step["x"], step["y"] = overrides.get(step["id"], [x, y])
+        base_x, base_y = overrides.get(step["id"], [x, y])
+        step["x"], step["y"] = (round(v, 1) for v in transform(base_x, base_y))
         step["href"] = f"#/sheet/{step['sheets'][0]}" if step["sheets"] else None
 
     resources = [
