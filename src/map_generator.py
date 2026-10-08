@@ -124,6 +124,29 @@ def generate_positions(count: int) -> list[tuple[float, float]]:
     return positions
 
 
+# Optional background artwork for the adventure map: a course puts its image
+# in img/ under one of these names (first match wins). Without it the map
+# keeps its built-in placeholder landscape.
+MAP_BACKGROUND_STEM = "map_background"
+MAP_BACKGROUND_EXTENSIONS = (".jpg", ".jpeg", ".png", ".webp", ".svg", ".gif")
+
+
+def find_map_background(img_dir: Path) -> str | None:
+    """Return the img/ path of the map background, or None if absent.
+
+    Args:
+        img_dir: The course's img/ directory.
+
+    Returns:
+        A path relative to the site root, e.g. "img/map_background.jpg".
+    """
+    for ext in MAP_BACKGROUND_EXTENSIONS:
+        candidate = img_dir / f"{MAP_BACKGROUND_STEM}{ext}"
+        if candidate.is_file():
+            return f"img/{candidate.name}"
+    return None
+
+
 def build_map_json(md_dir: Path, lang_cfg: dict[str, Any]) -> dict[str, Any]:
     """Build the map.json structure from the .md filenames.
 

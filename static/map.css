@@ -37,6 +37,8 @@
     z-index: 0;
     background:
         linear-gradient(to bottom, #a9d18a 0%, #c9e0b0 40%, #dfe8e4 75%, #c3d3e3 100%);
+    background-size: cover;
+    background-position: center;
 }
 
 .map-decorations {
