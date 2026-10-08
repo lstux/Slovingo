@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img"><title>La lapine : Content</title>
+  <!-- tête + oreilles -->
+  <path id="rabbit-head" fill="#b5c1c6" d="M256 210 C250 150 238 80 222 40 C214 18 196 10 178 10 C150 10 128 34 124 74 C120 130 134 190 132 240 C130 292 92 332 92 394 C92 472 166 504 256 504 C346 504 420 472 420 394 C420 332 382 292 380 240 C378 190 392 130 388 74 C384 34 362 10 334 10 C316 10 298 18 290 40 C274 80 262 150 256 210Z"/>
+  <g id="rabbit-ear-inner" fill="#fba9a9">
+    <path d="M178 52 C160 70 150 120 154 170 C156 192 166 204 178 204 C192 204 202 176 200 130 C198 86 190 58 178 52Z"/>
+    <path d="M334 52 C352 70 362 120 358 170 C356 192 346 204 334 204 C320 204 310 176 312 130 C314 86 322 58 334 52Z"/>
+  </g>
+
+  <!-- liseré blanc qui s'élargit en museau -->
+  <path id="rabbit-blaze" fill="#fff" d="M240 222 C240 214 246 210 256 210 C266 210 272 214 272 222 L274 304 C274 316 288 326 312 344 C348 370 360 410 348 448 C336 482 296 494 256 494 C216 494 176 482 164 448 C152 410 164 370 200 344 C224 326 238 316 238 304Z"/>
+
+  <g id="rabbit-eyes" fill="#2d2927">
+    <ellipse cx="184" cy="298" rx="17" ry="28"/><ellipse cx="328" cy="298" rx="17" ry="28"/>
+    <g fill="#7b7b7b"><ellipse cx="178" cy="287" rx="5" ry="8"/><ellipse cx="322" cy="287" rx="5" ry="8"/></g>
+  </g>
+
+  <g id="rabbit-whiskers" fill="none" stroke="#858585" stroke-width="9" stroke-linecap="round">
+    <path d="M126 400 C106 396 84 394 62 396"/><path d="M124 424 C102 426 80 428 58 432"/><path d="M130 448 C114 456 94 464 78 474"/>
+    <path d="M386 400 C406 396 428 394 450 396"/><path d="M388 424 C410 426 432 428 454 432"/><path d="M382 448 C398 456 418 464 434 474"/>
+  </g>
+
+  <!-- truffe en « Y », sourire et dents du bonheur -->
+  <g id="rabbit-mouth">
+    <path d="M236 376 C242 388 250 394 256 394 C262 394 270 388 276 376" fill="none" stroke="#2d2927" stroke-width="11" stroke-linecap="round"/>
+    <path d="M256 394 L256 412" stroke="#2d2927" stroke-width="10" stroke-linecap="round"/>
+    <path d="M232 414 C240 430 252 430 256 416 C260 430 272 430 280 414" fill="none" stroke="#2d2927" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="240" y="430" width="32" height="34" rx="9" fill="#ffe3b3"/>
+    <path d="M256 434 V462" stroke="#f3cf93" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>
