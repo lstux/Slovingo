@@ -50,10 +50,10 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Install optional dependencies (Pillow for icon generation)
+      - name: Install dependencies (Pillow, required for icon generation)
         run: |
           python3 -m pip install --upgrade pip
-          python3 -m pip install -r engine/requirements.txt || echo "⚠️ Optional dependencies not available; build will use fallback icons"
+          python3 -m pip install -r engine/requirements.txt
 
       - name: Place content into build.py's expected layout
         run: |
