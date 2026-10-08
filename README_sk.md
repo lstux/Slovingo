@@ -4,7 +4,13 @@
 
 Uč sa jazyk bez aplikácie, bez účtu, bez servera. Len textové kartičky a Python skript, ktorý vygeneruje mini-web v HTML.
 
-Priamo dostupné na **[www.lslinux.org/slovingo](https://www.lslinux.org/slovingo)**.
+**Kurzy online:**
+
+- **[Slovenčina pre frankofónov](https://lstux.github.io/Slovingo-sk-fr/)** — *Ahoj Slovenčina!*
+- **[Francúzština pre Slovákov](https://lstux.github.io/Slovingo-fr-sk/)** — *Dis bonjour!*
+- **[Slovenčina pre frankofónske deti (8–12)](https://lstux.github.io/Slovingo-sk-fr-kids/)** — *Zajka*
+- **[Slovenčina pre frankofónskych tínedžerov (12–16)](https://lstux.github.io/Slovingo-sk-fr-friends/)** — *Zajka Friends*
+- **[Nemčina pre frankofónske deti (od 8 rokov)](https://lstux.github.io/Slovingo-de-fr-kids/)** — *Fuchsbau*
 
 ## 🎯 Prečo Slovingo
 
@@ -18,7 +24,7 @@ Najznámejšie aplikácie nemajú kurz slovenčiny. Ling bol vyskúšaný, ale n
 - Kartička zobrazuje slovnú zásobu, gramatiku, zvuk — všetko klikateľné a vysloviteľné
 - Klik na vetu → preklad + rozklad slovo po slove + prehratie zvuku
 - Testy, vety s medzerami, počúvanie — generované automaticky z kartičiek
-- Po nainštalovaní ako PWA funguje aj naďalej offline, aj keby lslinux.org jedného dňa zanikol
+- Po nainštalovaní ako PWA funguje aj naďalej offline, aj keby stránka jedného dňa zanikla
 
 ## ⚠️ Obsah generovaný AI
 
@@ -29,8 +35,8 @@ Kartičky boli napísané s pomocou AI.
 
 ## 🚀 Ako sa učiť
 
-- **[Slovenčina pre frankofónov](https://www.lslinux.org/slovingo/sk-fr/)** — *Ahoj Slovenčina!*
-- **[Francúzština pre Slovákov](https://www.lslinux.org/slovingo/fr-sk/)** — *Dis bonjour!*
+- **[Slovenčina pre frankofónov](https://lstux.github.io/Slovingo-sk-fr/)** — *Ahoj Slovenčina!*
+- **[Francúzština pre Slovákov](https://lstux.github.io/Slovingo-fr-sk/)** — *Dis bonjour!*
 - **Bretónčina pre frankofónov** — začiatočný kurz, zatiaľ bez syntézy reči
 
 Klikni a ide sa. Žiadna registrácia.

@@ -4,7 +4,13 @@
 
 Learn a language without an app, without an account, without a server. Just text files and a Python script that generates a mini website in html.
 
-Directly available at **[www.lslinux.org/slovingo](https://www.lslinux.org/slovingo)**.
+**Courses online:**
+
+- **[Slovak for French speakers](https://lstux.github.io/Slovingo-sk-fr/)** — *Ahoj Slovenčina!*
+- **[French for Slovak speakers](https://lstux.github.io/Slovingo-fr-sk/)** — *Dis bonjour!*
+- **[Slovak for French kids (8–12)](https://lstux.github.io/Slovingo-sk-fr-kids/)** — *Zajka*
+- **[Slovak for French teens (12–16)](https://lstux.github.io/Slovingo-sk-fr-friends/)** — *Zajka Friends*
+- **[German for French kids (8+)](https://lstux.github.io/Slovingo-de-fr-kids/)** — *Fuchsbau*
 
 ## 🎯 Why Slovingo
 
@@ -18,7 +24,7 @@ No account, no subscription, no app server that can vanish tomorrow. Just Markdo
 - A card shows vocabulary, grammar, audio — all clickable and pronounceable
 - Click a sentence → translation + word-by-word breakdown + audio
 - Multiple choice, fill-in-the-blanks, listening — auto-generated from the cards
-- Once installed as a PWA, it keeps working offline even if lslinux.org were to disappear one day
+- Once installed as a PWA, it keeps working offline even if the site were to disappear one day
 
 ## ⚠️ AI-generated content
 
@@ -29,8 +35,8 @@ The cards were written with AI assistance.
 
 ## 🚀 To learn
 
-- **[Slovak for French speakers](https://www.lslinux.org/slovingo/sk-fr/)** — *Ahoj Slovenčina!*
-- **[French for Slovak speakers](https://www.lslinux.org/slovingo/fr-sk/)** — *Dis bonjour!*
+- **[Slovak for French speakers](https://lstux.github.io/Slovingo-sk-fr/)** — *Ahoj Slovenčina!*
+- **[French for Slovak speakers](https://lstux.github.io/Slovingo-fr-sk/)** — *Dis bonjour!*
 - **Breton for French speakers** — an early-stage course, no text-to-speech available for it yet
 
 Click, and you're good to go. No sign-up.
