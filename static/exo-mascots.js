@@ -4,9 +4,10 @@
  * Ported from MathPulse. Faces live in mascots/<who>-<mood>.svg
  * (moods: content | bravo | think | comfort). No text, so no lang.json key.
  *
- *   - The FOX sits in a corner during a session and reacts to each
- *     answer: bravo + hop (correct), comfort + tilt (wrong). It goes
- *     back to "content" when the next question shows up.
+ *   - The FOX sits in the top-right corner of the question card (so it
+ *     never covers an answer or the check button) and reacts to the
+ *     answer: bravo + hop (correct), comfort + tilt (wrong). Each new
+ *     question brings a fresh card, hence a fresh "content" fox.
  *   - The RABBIT shows up on the result screen, with a mood that
  *     follows the score, and bounces in.
  *
@@ -24,13 +25,11 @@ function mascotFace(who, mood) {
     });
 }
 
-/** Put the session fox in the page (once per session screen). */
-function mountSessionFox(container) {
-    const existing = document.getElementById("exo-fox");
-    if (existing) existing.remove();
-    const box = el("div", { className: "exo-fox", attrs: { id: "exo-fox", "data-mood": "content", "aria-hidden": "true" } },
-        [mascotFace("fox", "content")]);
-    container.appendChild(box);
+/** Put the fox in the top-right corner of a question card (one per card). */
+function mountFoxInCard(card) {
+    card.classList.add("exo-has-fox");
+    card.appendChild(el("div", { className: "exo-fox", attrs: { id: "exo-fox", "data-mood": "content", "aria-hidden": "true" } },
+        [mascotFace("fox", "content")]));
 }
 
 /** Change the fox's face and replay a one-shot animation (hop | tilt | nod). */
@@ -44,10 +43,8 @@ function reactFox(mood, anim) {
     if (anim) box.classList.add(anim);
 }
 
-/** Result screen: hide the fox, return the rabbit for this score. */
+/** Result screen: the rabbit for this score. */
 function summaryRabbit(correct, total) {
-    const box = document.getElementById("exo-fox");
-    if (box) box.remove();
     const ratio = total ? correct / total : 0;
     const mood = ratio >= 0.8 ? "bravo" : ratio >= 0.5 ? "content" : "comfort";
     return el("div", { className: "exo-rabbit", attrs: { "data-mood": mood, "aria-hidden": "true" } },
