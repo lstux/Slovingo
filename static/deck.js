@@ -503,6 +503,19 @@ function renderDeck(content, sheet) {
     controls.querySelector(".deck-prev").onclick = () => deckGo(-1);
     controls.querySelector(".deck-next").onclick = () => deckNext();
 
+    // The progress bar is a map of the cards: a tap jumps to the card
+    // under the finger (card i covers the i-th slice of the bar).
+    const bar = controls.querySelector(".deck-bar");
+    bar.addEventListener("click", (e) => {
+        if (!activeDeck) return;
+        const rect = bar.getBoundingClientRect();
+        if (rect.width === 0) return;
+        const fraction = (e.clientX - rect.left) / rect.width;
+        const total = activeDeck.elements.length;
+        const target = Math.min(total - 1, Math.max(0, Math.floor(fraction * total)));
+        deckShow(target);
+    });
+
     attachDeckSwipe(stage);
     deckShow(0);
 }
