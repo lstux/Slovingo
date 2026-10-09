@@ -71,17 +71,8 @@
     opacity: 0.7;
 }
 
-.exo-filter-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 14px;
-}
-
-/* Boutons "Tout / Déjà pratiquées / Non commencées / Aucune" au-dessus
-   des filtres de type/sens : des raccourcis de sélection en masse, pas
-   des filtres persistants. */
+/* Boutons "Tout / Déjà pratiquées / Non commencées / Aucune" : des
+   raccourcis de sélection en masse, pas des filtres persistants. */
 .exo-quick-filters {
     display: flex;
     flex-wrap: wrap;
@@ -274,19 +265,6 @@ label.index-card {
     font-family: var(--font-display);
     font-weight: var(--display-weight);
     letter-spacing: var(--display-spacing);
-}
-
-.exo-mode-toggle {
-    display: flex;
-    gap: 14px;
-    font-size: 0.9em;
-}
-
-.exo-mode-toggle label {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    cursor: pointer;
 }
 
 /* Barre de progression : le suivi visuel de la session, dans les

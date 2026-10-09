@@ -697,14 +697,6 @@ async function renderSelectionScreen() {
         }),
     ]);
     header.appendChild(renderQuickFilters(sections));
-    const filterRow = el("div", { className: "exo-filter-row" }, [
-        renderTypeCheckboxes(state.activeTypes, updateLaunchBar),
-        renderDirectionSelector(state.direction, (value) => {
-            state.direction = value;
-            updateLaunchBar();
-        }),
-    ]);
-    header.appendChild(filterRow);
     content.appendChild(header);
 
     sections.forEach(({ group, sheets }) => {
@@ -895,7 +887,9 @@ function updateLaunchBar() {
     if (!bar) return;
 
     const selectedSheets = [...selectedSheetIds];
-    const effectiveTypes = ALL_TYPES.filter((t) => state.activeTypes.has(t) && typePlayable(t));
+    // Types come from Settings only (nothing to pick on this screen).
+    const settingsTypes = new Set(SETTINGS.defaultTypes);
+    const effectiveTypes = ALL_TYPES.filter((t) => settingsTypes.has(t) && typePlayable(t));
     const pool = selectedSheets.reduce((sum, id) => {
         const counts = EXERCISES.sheets[id].counts;
         return sum + effectiveTypes.reduce((s, t) => s + (counts[t] || 0), 0);
@@ -927,12 +921,8 @@ function launchSession() {
     const query = new URLSearchParams();
     query.set("cards", [...selectedSheetIds].join(","));
     query.set("n", String(n));
-    if (state.activeTypes.size < ALL_TYPES.length) {
-        query.set("types", [...state.activeTypes].join(","));
-    }
-    if (state.direction !== "l1-l2") {
-        query.set("direction", state.direction);
-    }
+    // Types, direction and answer mode are not in the URL: the session
+    // reads them from Settings (see startSessionFromQuery()).
     window.location.hash = `#/exercises/session?${query.toString()}`;
 }
 
@@ -1239,50 +1229,15 @@ function startPool() {
     goToExercise(0);
 }
 
+/**
+ * Session header: just the sheet title. Types, direction and answer mode
+ * come from Settings only -- there is nothing to change mid-session (it
+ * would restart the pool and throw away the progress of the current set).
+ */
 function buildSessionToolbar() {
-    const toolbar = el("div", { className: "exo-toolbar" }, [
+    return el("div", { className: "exo-toolbar" }, [
         el("h2", { text: `🎯 ${state.sheetTitle}` }),
     ]);
-
-    const controlsRow = el("div", { className: "exo-filter-row" }, [
-        renderTypeCheckboxes(state.activeTypes, () => {
-            startPool();
-        }),
-        renderDirectionSelector(state.direction, (value) => {
-            state.direction = value;
-            startPool();
-        }),
-    ]);
-
-    const modeToggle = el("div", { className: "exo-mode-toggle" }, [
-        el("label", {}, [
-            el("input", {
-                attrs: {
-                    type: "radio", name: "exo-mode", value: "choice",
-                    ...(state.answerMode === "choice" ? { checked: "checked" } : {}),
-                },
-            }),
-            document.createTextNode(" Choices"),
-        ]),
-        el("label", {}, [
-            el("input", {
-                attrs: {
-                    type: "radio", name: "exo-mode", value: "type",
-                    ...(state.answerMode === "type" ? { checked: "checked" } : {}),
-                },
-            }),
-            document.createTextNode(" Free typing"),
-        ]),
-    ]);
-    modeToggle.querySelectorAll("input").forEach((input) => {
-        input.addEventListener("change", (e) => {
-            state.answerMode = e.target.value;
-            renderCurrentView();
-        });
-    });
-    controlsRow.appendChild(modeToggle);
-    toolbar.appendChild(controlsRow);
-    return toolbar;
 }
 
 // ============================================================================
