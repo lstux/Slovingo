@@ -115,6 +115,66 @@
     cursor: pointer;
 }
 
+/* Dialogue: a chat, one bubble per line. Lines appear one by one (see
+   deck.js); the list scrolls so the newest line stays at the bottom. */
+.deck-dialogue {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 58vh;
+    overflow-y: auto;
+    padding: 4px 2px;
+    overscroll-behavior: contain;
+}
+.deck-line {
+    display: none;
+    max-width: 88%;
+}
+.deck-line.is-shown {
+    display: flex;
+    animation: deck-in 220ms ease-out;
+}
+.deck-line[data-side="left"] { align-self: flex-start; }
+.deck-line[data-side="right"] { align-self: flex-end; }
+.deck-bubble {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 14px;
+    border: 1px solid var(--line, #ddd);
+    border-radius: 16px;
+    background: var(--bg, #fff);
+}
+.deck-line[data-side="left"] .deck-bubble { border-bottom-left-radius: 4px; }
+.deck-line[data-side="right"] .deck-bubble {
+    border-bottom-right-radius: 4px;
+    background: color-mix(in srgb, var(--accent, #2a6fdb) 12%, var(--bg, #fff));
+}
+.deck-speaker { font-size: 1.2rem; line-height: 1; }
+.deck-line-text {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.35;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.deck-line-text.speaking { color: var(--accent, #2a6fdb); }
+/* Inside a bubble the translation takes no reserved space: it is simply
+   added when revealed, and the list grows with it. */
+.deck-line .deck-phrase-detail {
+    display: none;
+    min-height: 0;
+    opacity: 1;
+    transform: none;
+    transition: none;
+}
+.deck-line .deck-phrase-detail.is-shown {
+    display: flex;
+    animation: deck-fade 300ms ease-out;
+}
+@keyframes deck-fade { from { opacity: 0; } to { opacity: 1; } }
+
 /* Controls */
 .deck-controls {
     display: flex;
@@ -140,6 +200,7 @@
 .deck-count { font-size: 0.8rem; opacity: 0.6; }
 
 @media (prefers-reduced-motion: reduce) {
-    .deck-step { animation: none; }
+    .deck-step, .deck-line.is-shown, .deck-line .deck-phrase-detail.is-shown { animation: none; }
+    .deck-dialogue { scroll-behavior: auto; }
     .deck-phrase-detail { transition: none; transform: none; }
 }

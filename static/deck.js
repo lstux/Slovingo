@@ -12,6 +12,12 @@
  *   - phrase  : one example sentence, no card frame. It is read aloud
  *               on arrival; when the speech ends its translation and
  *               details fade in by themselves. A tap re-reads it.
+ *   - dialogue: a run of lines with a speaker, shown as a chat: each
+ *               line appears, is read in its character's voice, then its
+ *               translation fades in under it. The list scrolls so the
+ *               newest line stays at the bottom. Speakers alternate
+ *               sides (first speaker left, second right). A tap re-reads
+ *               a line.
  *   - end     : the rabbit, and the way on to the next sheet
  *
  * ("## " headings have no screen: they label the steps that follow.)
@@ -56,15 +62,16 @@ function storeViewMode(mode) {
 }
 
 /**
- * Deck mode is offered on series and introduction sheets, and not on
- * sheets that contain a dialogue (speaker emoji): those read better as
- * a page. Vocabulary and annex sheets keep the page view.
+ * Reference sheets have no lesson to walk through (word lists, grammar
+ * tables, the one-line merci sheet, the film credits): they keep the
+ * page view. Any other sheet that has sentences or prose can be a deck.
  */
-const DECK_CATEGORIES = ["series", "introduction"];
+const REFERENCE_CATEGORIES = ["vocabulary", "annex", "merci", "credits"];
 
 function isDeckEligible(group, sheet) {
-    if (!group || !DECK_CATEGORIES.includes(group.category)) return false;
-    return !sheet.content.some((block) => block.type === "audio-card" && block.speaker);
+    if (!group || REFERENCE_CATEGORIES.includes(group.category)) return false;
+    return sheet.content.some((b) =>
+        b.type === "audio-card" || b.type === "paragraph" || b.type === "list" || b.type === "blockquote");
 }
 
 /** Stop everything the deck started (speech, timers) and forget it. */
@@ -129,16 +136,8 @@ function targetFirst(block) {
     return block;
 }
 
-/** An example sentence: the phrase, and its (initially hidden) details. */
-function buildPhraseNode(block) {
-    const wrap = document.createElement("div");
-    wrap.className = "deck-phrase";
-
-    const text = document.createElement("p");
-    text.className = "deck-phrase-text";
-    text.innerHTML = renderText(block.phrase);
-    wrap.appendChild(text);
-
+/** The translation and details of an audio-card, initially hidden. */
+function deckBuildDetailNode(block) {
     const detail = document.createElement("div");
     detail.className = "deck-phrase-detail";
     if (block.natural) {
@@ -159,8 +158,55 @@ function buildPhraseNode(block) {
         p.innerHTML = renderText(note);
         detail.appendChild(p);
     });
-    wrap.appendChild(detail);
+    return detail;
+}
+
+/** An example sentence: the phrase, and its (initially hidden) details. */
+function buildPhraseNode(block) {
+    const wrap = document.createElement("div");
+    wrap.className = "deck-phrase";
+
+    const text = document.createElement("p");
+    text.className = "deck-phrase-text";
+    text.innerHTML = renderText(block.phrase);
+    wrap.appendChild(text);
+    wrap.appendChild(deckBuildDetailNode(block));
     return wrap;
+}
+
+/**
+ * A dialogue as a chat: one bubble per line, speakers alternate sides in
+ * the order they first speak. Lines are hidden until deckPlayDialogue() shows
+ * them one by one.
+ */
+function deckBuildDialogueNode(lines) {
+    const speakers = [];
+    lines.forEach((b) => { if (!speakers.includes(b.speaker)) speakers.push(b.speaker); });
+
+    const box = document.createElement("div");
+    box.className = "deck-dialogue";
+    lines.forEach((block) => {
+        const line = document.createElement("div");
+        line.className = "deck-line";
+        line.dataset.side = speakers.indexOf(block.speaker) % 2 === 0 ? "left" : "right";
+        line.dataset.speaker = block.speaker;
+
+        const bubble = document.createElement("div");
+        bubble.className = "deck-bubble";
+        const who = document.createElement("span");
+        who.className = "deck-speaker";
+        who.setAttribute("aria-hidden", "true");
+        who.textContent = block.speaker;
+        const text = document.createElement("p");
+        text.className = "deck-line-text";
+        text.innerHTML = renderText(block.phrase);
+        // A tap re-reads this line only.
+        text.addEventListener("click", () => deckReplayDialogueLine(line));
+        bubble.append(who, text, deckBuildDetailNode(block));
+        line.appendChild(bubble);
+        box.appendChild(line);
+    });
+    return box;
 }
 
 /**
@@ -195,6 +241,17 @@ function buildDeckSteps(sheet) {
             return;
         }
 
+        if (block.type === "audio-card" && block.speaker) {
+            // Consecutive speaker lines in the same section form one dialogue.
+            const last = steps[steps.length - 1];
+            if (last && last.kind === "dialogue" && last.chapter === chapter && last.sub === sub) {
+                last.lines.push(block);
+            } else {
+                steps.push({ kind: "dialogue", chapter, sub, lines: [block] });
+            }
+            return;
+        }
+
         if (block.type === "audio-card") {
             steps.push({ kind: "phrase", chapter, sub, nodes: [buildPhraseNode(block)] });
             return;
@@ -203,6 +260,11 @@ function buildDeckSteps(sheet) {
         // paragraph, list, blockquote, geomap
         steps.push({ kind: "text", chapter, sub, nodes: [renderBlock(block)], isGrammar: !!sub });
         sub = "";
+    });
+
+    // Dialogue nodes are built once the runs of lines are known.
+    steps.forEach((step) => {
+        if (step.kind === "dialogue") step.nodes = [deckBuildDialogueNode(step.lines)];
     });
 
     steps.push({ kind: "end", chapter: "", sub: "", nodes: [] });
@@ -285,6 +347,76 @@ function mountDeckFox(stepEl) {
 /** Whether a target-language voice can be used (no alert, no warning). */
 function canSpeakTarget() {
     return "speechSynthesis" in window && typeof targetVoiceAvailable !== "undefined" && targetVoiceAvailable;
+}
+
+/**
+ * Read one dialogue line aloud (in its character's voice), then reveal
+ * its translation. onDone runs after the reveal, if still wanted.
+ */
+function deckReadDialogueLine(d, line, isAlive, onDone) {
+    const textEl = line.querySelector(".deck-line-text");
+    const detail = line.querySelector(".deck-phrase-detail");
+    const reveal = () => {
+        if (!isAlive()) return;
+        clearTimeout(d.revealTimer);
+        detail.classList.add("is-shown");
+        deckFox("content", "nod");
+        if (onDone) onDone();
+    };
+
+    if (!canSpeakTarget()) {
+        reveal();
+        return;
+    }
+
+    deckFox("think", null);
+    const text = textEl.textContent.replace(/\s+/g, " ").trim();
+    const voice = effectiveCharacterVoice(line.dataset.speaker);
+    d.revealTimer = setTimeout(reveal, 3000 + text.length * 150);
+    speak(text, voice.rate, voice.pitch, voice.voiceURI, textEl, reveal);
+}
+
+/**
+ * Play the lines of the dialogue step at `index`, top to bottom. Each line
+ * appears, is read, then its translation shows; the list keeps the newest
+ * line at the bottom. A new step or a re-read cancels the chain (playId).
+ */
+function deckPlayDialogue(index) {
+    const d = activeDeck;
+    if (!d) return;
+    const box = d.elements[index].querySelector(".deck-dialogue");
+    const lines = [...box.querySelectorAll(".deck-line")];
+    const myId = ++d.playId;
+    const alive = () => !!activeDeck && d.playId === myId;
+
+    lines.forEach((l) => {
+        l.classList.remove("is-shown");
+        l.querySelector(".deck-phrase-detail").classList.remove("is-shown");
+    });
+
+    const showFrom = (i) => {
+        if (!alive()) return;
+        if (i >= lines.length) {
+            deckFox("content", "nod");
+            return;
+        }
+        const line = lines[i];
+        line.classList.add("is-shown");
+        box.scrollTop = box.scrollHeight;
+        deckReadDialogueLine(d, line, alive, () => {
+            box.scrollTop = box.scrollHeight;
+            setTimeout(() => showFrom(i + 1), 450);
+        });
+    };
+    showFrom(0);
+}
+
+/** Tap on a dialogue line: read that line again, and stop the chain. */
+function deckReplayDialogueLine(line) {
+    const d = activeDeck;
+    if (!d) return;
+    const myId = ++d.playId;
+    deckReadDialogueLine(d, line, () => !!activeDeck && d.playId === myId, null);
 }
 
 /**
@@ -412,6 +544,7 @@ function deckShow(index) {
     else deckFox("content", null);
 
     if (step.kind === "phrase") playPhrase(index);
+    if (step.kind === "dialogue") deckPlayDialogue(index);
 
     const total = d.elements.length;
     d.controls.querySelector(".deck-count").textContent = `${index + 1} / ${total}`;
