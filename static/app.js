@@ -821,8 +821,11 @@ function kickerFor(group, sheet) {
  * @param {object} group
  */
 function renderSheetBody(content, sheet, group) {
+    teardownDeck(); // stop the previous deck's speech and timers, if any
     const eligible = isDeckEligible(group, sheet);
     const mode = eligible ? getStoredViewMode() : "page";
+    // The toolbar's "Translations" button acts on page-view audio-cards only.
+    document.getElementById("nav-translations").classList.toggle("exo-toolbar-hidden", mode === "deck");
     if (eligible) {
         content.appendChild(buildViewModeToggle(sheet, group, mode));
     }
@@ -830,7 +833,6 @@ function renderSheetBody(content, sheet, group) {
         renderDeck(content, sheet);
         return;
     }
-    activeDeck = null;
 
     if (sheet.image) {
         content.appendChild(renderImage(sheet.image));
