@@ -65,15 +65,16 @@ function buildViewModeToggle(sheet, group, current) {
     bar.className = "view-mode-toggle";
     bar.setAttribute("role", "group");
 
+    // Icons only: no text to translate, the lang.json ui map stays untouched.
     [
-        ["page", "📄", deckLabel("view_page", "Page")],
-        ["deck", "🃏", deckLabel("view_deck", "Step by step")],
-    ].forEach(([mode, icon, label]) => {
+        ["page", "📄"],
+        ["deck", "🃏"],
+    ].forEach(([mode, icon]) => {
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "view-mode-btn" + (mode === current ? " is-active" : "");
         btn.setAttribute("aria-pressed", String(mode === current));
-        btn.textContent = `${icon} ${label}`;
+        btn.textContent = icon;
         btn.onclick = () => {
             if (mode === current) return;
             storeViewMode(mode);
@@ -197,7 +198,7 @@ function buildStepElement(step, total, index) {
         });
         const hint = document.createElement("p");
         hint.className = "deck-hint";
-        hint.textContent = deckLabel("deck_tap_reveal", "Tap to reveal");
+        hint.textContent = "👆";
         el.appendChild(body);
         el.appendChild(hint);
         return el;
@@ -244,7 +245,7 @@ function renderDeck(content, sheet) {
     const controls = document.createElement("nav");
     controls.className = "deck-controls";
     controls.innerHTML = `
-        <button type="button" class="deck-prev" aria-label="${deckLabel("deck_prev", "Previous")}">‹</button>
+        <button type="button" class="deck-prev">‹</button>
         <div class="deck-meter">
             <div class="deck-bar"><div class="deck-bar-fill"></div></div>
             <span class="deck-count"></span>
@@ -300,17 +301,13 @@ function deckShow(index) {
     d.controls.querySelector(".deck-bar-fill").style.width = `${((index + 1) / total) * 100}%`;
     d.controls.querySelector(".deck-prev").disabled = index === 0;
 
+    // Last step: "›" moves on to the next sheet if there is one, "✔" otherwise.
     const next = d.controls.querySelector(".deck-next");
     const isLast = index === total - 1;
     const pagerNext = document.getElementById("pager-top-next");
-    if (isLast && pagerNext && !pagerNext.disabled) {
-        next.textContent = deckLabel("deck_next_sheet", "Next sheet ›");
-    } else if (isLast) {
-        next.textContent = deckLabel("deck_done", "Done ✔");
-    } else {
-        next.textContent = "›";
-    }
-    next.disabled = isLast && (!pagerNext || pagerNext.disabled);
+    const hasNextSheet = !!pagerNext && !pagerNext.disabled;
+    next.textContent = isLast && !hasNextSheet ? "✔" : "›";
+    next.disabled = isLast && !hasNextSheet;
 
     current.scrollIntoView({ block: "nearest" });
 }
