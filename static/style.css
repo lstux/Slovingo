@@ -797,7 +797,9 @@ footer {
 .translate-table td.col-target.speakable:hover::after { opacity: 0.7; }
 
 @media (max-width: 600px) {
-    .translate-table { display: block; overflow-x: auto; white-space: nowrap; }
+    /* Full width, cells wrap: a narrow table must not shrink to its content
+       (the old display:block + nowrap left an empty strip on the right). */
+    .translate-table { width: 100%; }
 }
 
 

@@ -102,9 +102,7 @@
 .deck-body > :first-child { margin-top: 0; }
 .deck-body > :last-child { margin-bottom: 0; }
 
-/* A table on a single screen: wide, target language first */
-.deck-step-table .deck-body { font-size: 1rem; }
-.deck-step-table table { width: 100%; }
+/* Tables: see .translate-table in style.css (full width on phones). */
 
 /* Example sentence: no frame, no buttons; the translation fades in by
    itself once the sentence has been read. Its space is reserved from
