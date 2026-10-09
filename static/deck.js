@@ -3,8 +3,8 @@
  *
  * Same JSON blocks as the "Page" view, shown one step at a time:
  *
- *   - intro      : the illustration and the opening lines
- *   - chapter    : a divider for each "## " heading
+ *   - intro      : the illustration
+ *   - ("## " headings have no screen: they label the steps that follow)
  *   - flip       : one row of a translate-table; tap to reveal the
  *                  target column, which is spoken on reveal
  *   - phrase     : one audio-card; the sentence is spoken on arrival,
@@ -114,9 +114,9 @@ function buildDeckSteps(sheet) {
         if (block.type === "heading") {
             seenHeading = true;
             if (block.level <= 2) {
+                // No screen of its own: the title is shown as the kicker of the next steps.
                 chapter = block.text;
                 sub = "";
-                steps.push({ kind: "chapter", chapter, sub: "", nodes: [renderBlock(block)] });
             } else if (block.level === 3) {
                 // H3 is a kicker shown above the next step, not a screen of its own.
                 sub = block.text;
@@ -237,11 +237,6 @@ function renderDeck(content, sheet) {
         return el;
     });
 
-    // The audio-cards inside the deck get their buttons and handlers here,
-    // exactly as in page mode (they are in the DOM now).
-    initializeAudioCards();
-    initializeSpeakableElements();
-
     const controls = document.createElement("nav");
     controls.className = "deck-controls";
     controls.innerHTML = `
@@ -255,6 +250,13 @@ function renderDeck(content, sheet) {
 
     content.appendChild(stage);
     content.appendChild(controls);
+
+    // The audio-cards inside the deck get their buttons and handlers here,
+    // exactly as in page mode. They must already be in the document:
+    // initializeAudioCards() and initializeSpeakableElements() query it.
+    initializeAudioCards();
+    initializeSpeakableElements();
+    updateTtsAvailability();
 
     activeDeck = { stage, elements, steps, index: 0, sheet, controls };
     controls.querySelector(".deck-prev").onclick = () => deckGo(-1);
