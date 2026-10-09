@@ -9,7 +9,9 @@
 
 /* Stage: one step visible at a time */
 .deck-stage {
-    min-height: 16rem;
+    /* Fixed minimum height: the card and the controls stay put from one
+       step to the next, even when a step is short. */
+    min-height: 24rem;
     touch-action: pan-y;   /* vertical scroll stays native, horizontal is ours */
 }
 .deck-step {
@@ -195,8 +197,25 @@
 }
 .deck-controls button:disabled { opacity: 0.35; cursor: default; }
 .deck-meter { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
-.deck-bar { width: 100%; height: 4px; background: var(--line, #ddd); border-radius: 2px; overflow: hidden; }
-.deck-bar-fill { height: 100%; background: var(--accent, #2a6fdb); transition: width 180ms ease-out; }
+.deck-bar {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background: var(--line, #ddd);
+    border-radius: 2px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+/* A larger invisible hit area, so the thin bar is easy to tap. */
+.deck-bar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -12px;
+    bottom: -12px;
+}
+.deck-bar-fill { height: 100%; border-radius: 2px; background: var(--accent, #2a6fdb); transition: width 180ms ease-out; }
 .deck-count { font-size: 0.8rem; opacity: 0.6; }
 
 @media (prefers-reduced-motion: reduce) {
