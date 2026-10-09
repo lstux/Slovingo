@@ -8,12 +8,12 @@
 :root {
     --bg: #f6f2ea; --surface: #fffdf8; --surface-2: #ece3d3;
     --text: #2b2118; --text-soft: #6d5c48; --line: #ddd0ba;
-    --accent: #a8362b; --radius: 10px; --radius-sm: 6px; font-size: 15px;
+    --accent: #a8362b; --ok: #2e7d4f; --radius: 10px; --radius-sm: 6px; font-size: 15px;
 }
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #15110d; --surface: #1e1811; --surface-2: #2a2117;
-        --text: #f0e7d8; --text-soft: #b0a08b; --line: #382c1e; --accent: #e0705f;
+        --text: #f0e7d8; --text-soft: #b0a08b; --line: #382c1e; --accent: #e0705f; --ok: #6fcf97;
     }
 }
 * { box-sizing: border-box; }
@@ -26,13 +26,15 @@ main { display: grid; grid-template-columns: minmax(0, auto) minmax(320px, 1fr);
 .panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.8rem; }
 .row { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.6rem; }
 label { font-size: 0.9rem; color: var(--text-soft); }
-select, input[type=number], input[type=text], textarea {
+select, input[type=number], textarea {
     background: var(--surface-2); color: var(--text); border: 1px solid var(--line);
     border-radius: var(--radius-sm); padding: 0.3rem 0.4rem; font: inherit;
 }
-input[type=number] { width: 5.2rem; }
+input[type=number] { width: 5rem; }
 button { background: var(--accent); color: #fff; border: 0; border-radius: var(--radius-sm); padding: 0.4rem 0.8rem; font: inherit; cursor: pointer; }
 button.ghost { background: var(--surface-2); color: var(--text); border: 1px solid var(--line); }
+button:disabled { opacity: 0.5; cursor: default; }
+[hidden] { display: none !important; }
 
 /* stage: the map drawn at phone proportions, percent coordinates */
 #stage {
@@ -42,40 +44,43 @@ button.ghost { background: var(--surface-2); color: var(--text); border: 1px sol
     background-size: cover; background-position: center; touch-action: none; user-select: none;
 }
 #route { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
-#route polyline { fill: none; stroke: rgba(43, 33, 24, 0.6); stroke-width: 0.5; stroke-dasharray: 1.5 1.5; vector-effect: non-scaling-stroke; stroke-width: 2px; }
+#route polyline { fill: none; stroke: rgba(43, 33, 24, 0.6); stroke-dasharray: 5 5; vector-effect: non-scaling-stroke; stroke-width: 2px; }
 .marker {
     position: absolute; transform: translate(-50%, -50%); cursor: grab;
+    display: flex; align-items: center; gap: 0.3rem;
     background: rgba(255, 253, 248, 0.92); color: #2b2118; border: 2px solid #2b2118;
-    border-radius: 999px; padding: 0.15rem 0.5rem; font-size: 0.72rem; white-space: nowrap;
+    border-radius: 999px; padding: 0.1rem 0.5rem; font-size: 0.72rem; white-space: nowrap;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
+.marker .icon { font-size: 1.05rem; line-height: 1; }
+.marker.auto { border-style: dashed; opacity: 0.85; }
 .marker.selected { background: var(--accent); color: #fff; border-color: #fff; }
 .marker.final { font-weight: 700; }
 table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
 th, td { text-align: left; padding: 0.25rem 0.3rem; border-bottom: 1px solid var(--line); }
 tr.selected td { background: var(--surface-2); }
 td.id { font-family: ui-monospace, monospace; font-size: 0.78rem; color: var(--text-soft); }
-textarea { width: 100%; height: 14rem; font-family: ui-monospace, monospace; font-size: 0.8rem; }
-#status { color: var(--text-soft); font-size: 0.85rem; margin-left: 0.5rem; }
+textarea { width: 100%; height: 12rem; font-family: ui-monospace, monospace; font-size: 0.8rem; }
+#status { color: var(--text-soft); font-size: 0.85rem; }
+#status.error { color: var(--accent); }
+#status.ok { color: var(--ok); }
 .hint { color: var(--text-soft); font-size: 0.82rem; margin: 0.4rem 0 0; }
 </style>
 </head>
 <body>
 <header>
-    <h1>Éditeur de positions — carte d'accueil</h1>
-    <p>Charge le <code>map.json</code> d'un cours (<code>dist/map.json</code>), son image de fond si elle existe, puis glisse les étapes. Copie le bloc à mettre dans la clé <code>map</code> du <code>lang.json</code>.</p>
+    <h1>Éditeur de positions — carte d'accueil <span id="course-name"></span></h1>
+    <p id="intro">Lance <code>python3 tools/map_editor.py &lt;dossier-du-cours&gt;</code> pour tout charger depuis le cours. Sans serveur, charge à la main un <code>map.json</code> (<code>dist/map.json</code>) et l'image de fond.</p>
 </header>
 
 <main>
     <section class="panel">
-        <div class="row">
-            <label>map.json <input type="file" id="json-file" accept=".json,application/json"></label>
+        <div id="manual" hidden>
+            <div class="row"><label>map.json <input type="file" id="json-file" accept=".json,application/json"></label></div>
+            <div class="row"><label>Image de fond <input type="file" id="bg-file" accept="image/*"></label></div>
         </div>
         <div class="row">
-            <label>Image de fond <input type="file" id="bg-file" accept="image/*"></label>
-        </div>
-        <div class="row">
-            <label>Sens de la carte chargée
+            <label>Sens du parcours
                 <select id="direction">
                     <option value="down">Haut → bas (défaut)</option>
                     <option value="up">Bas → haut</option>
@@ -87,21 +92,27 @@ textarea { width: 100%; height: 14rem; font-family: ui-monospace, monospace; fon
         <div id="stage">
             <svg id="route" viewBox="0 0 100 100" preserveAspectRatio="none"><polyline id="line" points=""></polyline></svg>
         </div>
-        <p class="hint">Glisse une étape pour la déplacer. Le tracé relie les étapes dans l'ordre (le site le lisse en courbes).</p>
+        <p class="hint">Glisse une étape pour la fixer à cet endroit. Contour pointillé = étape automatique (zigzag). Le tracé est droit ici, le site le lisse en courbes.</p>
     </section>
 
     <section class="panel">
+        <div class="row" id="server-actions" hidden>
+            <button id="save">Enregistrer dans lang.json</button>
+            <button id="reload" class="ghost">Recharger le cours</button>
+            <button id="pin-all" class="ghost">Tout fixer</button>
+            <button id="unpin-all" class="ghost">Tout libérer</button>
+        </div>
+        <div class="row"><span id="status"></span></div>
         <table>
-            <thead><tr><th>id</th><th>titre</th><th>x</th><th>y</th></tr></thead>
-            <tbody id="rows"><tr><td colspan="4">Charge un map.json pour commencer.</td></tr></tbody>
+            <thead><tr><th></th><th>id</th><th>titre</th><th>x</th><th>y</th><th title="Fixée à cette position">fixée</th></tr></thead>
+            <tbody id="rows"><tr><td colspan="6">Chargement…</td></tr></tbody>
         </table>
 
-        <h2 style="font-size:1rem;margin:1rem 0 0.4rem">Bloc à copier dans lang.json</h2>
-        <p class="hint">Mets-le dans la clé <code>"map"</code>, en gardant tes autres réglages (icons, direction…). Les positions sont données dans le repère « haut → bas », quel que soit le sens choisi.</p>
+        <h2 style="font-size:1rem;margin:1rem 0 0.4rem">Bloc pour lang.json</h2>
+        <p class="hint" id="output-hint">À fusionner dans la clé <code>"map"</code> (garde tes autres réglages). Seules les étapes fixées sont listées, dans le repère « haut → bas ».</p>
         <textarea id="output" readonly spellcheck="false"></textarea>
         <div class="row" style="margin-top:0.5rem">
             <button id="copy" class="ghost">Copier</button>
-            <span id="status"></span>
         </div>
     </section>
 </main>
@@ -110,7 +121,14 @@ textarea { width: 100%; height: 14rem; font-family: ui-monospace, monospace; fon
 (() => {
     "use strict";
 
-    // Display frame -> default frame ("down"), the inverse of build_map_json's transforms.
+    // Frame conversions. A position is written in the "down" frame in lang.json;
+    // the map shows it in the frame of the chosen direction (as build_map_json does).
+    const FROM_DEFAULT = {
+        down: (x, y) => [x, y],
+        up: (x, y) => [x, 100 - y],
+        right: (x, y) => [y, x],
+        left: (x, y) => [100 - y, x],
+    };
     const TO_DEFAULT = {
         down: (X, Y) => [X, Y],
         up: (X, Y) => [X, 100 - Y],
@@ -118,104 +136,121 @@ textarea { width: 100%; height: 14rem; font-family: ui-monospace, monospace; fon
         left: (X, Y) => [Y, 100 - X],
     };
 
-    const stage = document.getElementById("stage");
-    const line = document.getElementById("line");
-    const rows = document.getElementById("rows");
-    const output = document.getElementById("output");
-    const status = document.getElementById("status");
-    const directionSelect = document.getElementById("direction");
+    const $ = (id) => document.getElementById(id);
+    const stage = $("stage"), line = $("line"), rows = $("rows"), output = $("output"), statusEl = $("status");
+    const directionSelect = $("direction");
 
-    let steps = [];          // {id, title, type, x, y} in the display frame
-    let selectedId = null;
+    let steps = [];            // {id,title,icon,type,x,y,auto,pinned} in the display frame
+    let shownDirection = "down";
+    let token = null;          // set in server mode
+    let dirty = false;
     const markers = new Map();
 
     const round1 = (v) => Math.round(v * 10) / 10;
     const clamp = (v) => Math.min(100, Math.max(0, v));
 
-    function setStatus(text, isError = false) {
-        status.textContent = text;
-        status.style.color = isError ? "var(--accent)" : "";
+    function setStatus(text, kind = "") {
+        statusEl.textContent = text;
+        statusEl.className = kind;
+    }
+    function markDirty() {
+        dirty = true;
+        if (token) setStatus("Modifications non enregistrées", "");
+    }
+    window.addEventListener("beforeunload", (event) => {
+        if (dirty && token) { event.preventDefault(); event.returnValue = ""; }
+    });
+
+    function pinnedPositions() {
+        const positions = {};
+        steps.filter((s) => s.pinned).forEach((s) => {
+            const [x, y] = TO_DEFAULT[shownDirection](s.x, s.y);
+            positions[s.id] = [round1(x), round1(y)];
+        });
+        return positions;
+    }
+
+    function updateOutput() {
+        const block = {};
+        if (shownDirection !== "down") block.direction = shownDirection;
+        block.positions = pinnedPositions();
+        output.value = JSON.stringify(block, null, 2);
     }
 
     function select(id) {
-        selectedId = id;
         markers.forEach((m, mid) => m.classList.toggle("selected", mid === id));
         rows.querySelectorAll("tr").forEach((tr) => tr.classList.toggle("selected", tr.dataset.id === id));
     }
 
-    function redrawRoute() {
-        line.setAttribute("points", steps.map((s) => `${s.x},${s.y}`).join(" "));
-    }
-
-    function placeMarker(step) {
+    function redraw(step) {
         const m = markers.get(step.id);
         m.style.left = `${step.x}%`;
         m.style.top = `${step.y}%`;
-    }
-
-    function updateOutput() {
-        const direction = directionSelect.value;
-        const positions = {};
-        steps.forEach((s) => {
-            const [x, y] = TO_DEFAULT[direction](s.x, s.y);
-            positions[s.id] = [round1(x), round1(y)];
-        });
-        output.value = JSON.stringify({ positions }, null, 2);
-    }
-
-    function refreshRow(step) {
+        m.classList.toggle("auto", !step.pinned);
         const tr = rows.querySelector(`tr[data-id="${CSS.escape(step.id)}"]`);
-        if (!tr) return;
-        tr.querySelector(".in-x").value = step.x;
-        tr.querySelector(".in-y").value = step.y;
+        if (tr) {
+            tr.querySelector(".in-x").value = step.x;
+            tr.querySelector(".in-y").value = step.y;
+            tr.querySelector(".in-pin").checked = step.pinned;
+        }
+        line.setAttribute("points", steps.map((s) => `${s.x},${s.y}`).join(" "));
+        updateOutput();
     }
 
-    function changed(step) {
-        placeMarker(step);
-        refreshRow(step);
-        redrawRoute();
-        updateOutput();
+    function moved(step) {
+        step.pinned = true;
+        redraw(step);
+        markDirty();
     }
 
     function buildAll() {
         stage.querySelectorAll(".marker").forEach((m) => m.remove());
         markers.clear();
         rows.innerHTML = "";
-
         steps.forEach((step) => {
             const m = document.createElement("div");
             m.className = "marker" + (step.type === "final" ? " final" : "");
-            m.textContent = step.title || step.id;
+            if (step.icon) {
+                const icon = document.createElement("span");
+                icon.className = "icon";
+                icon.textContent = step.icon;
+                m.appendChild(icon);
+            }
+            const label = document.createElement("span");
+            label.textContent = step.title || step.id;
+            m.appendChild(label);
             m.title = step.id;
             stage.appendChild(m);
             markers.set(step.id, m);
-            placeMarker(step);
             attachDrag(m, step);
 
             const tr = document.createElement("tr");
             tr.dataset.id = step.id;
-            tr.innerHTML = `
-                <td class="id"></td><td></td>
+            tr.innerHTML = `<td class="icon"></td><td class="id"></td><td class="title"></td>
                 <td><input class="in-x" type="number" step="0.1" min="0" max="100"></td>
-                <td><input class="in-y" type="number" step="0.1" min="0" max="100"></td>`;
+                <td><input class="in-y" type="number" step="0.1" min="0" max="100"></td>
+                <td><input class="in-pin" type="checkbox"></td>`;
+            tr.querySelector(".icon").textContent = step.icon || "";
             tr.querySelector(".id").textContent = step.id;
-            tr.querySelector("td:nth-child(2)").textContent = step.title || "";
-            tr.querySelector(".in-x").value = step.x;
-            tr.querySelector(".in-y").value = step.y;
-            tr.querySelector(".in-x").addEventListener("input", (e) => {
+            tr.querySelector(".title").textContent = step.title || "";
+            const bind = (cls, key) => tr.querySelector(cls).addEventListener("input", (e) => {
                 const v = parseFloat(e.target.value);
-                if (!Number.isNaN(v)) { step.x = clamp(v); changed(step); }
+                if (!Number.isNaN(v)) { step[key] = clamp(v); moved(step); }
             });
-            tr.querySelector(".in-y").addEventListener("input", (e) => {
-                const v = parseFloat(e.target.value);
-                if (!Number.isNaN(v)) { step.y = clamp(v); changed(step); }
+            bind(".in-x", "x");
+            bind(".in-y", "y");
+            const pin = tr.querySelector(".in-pin");
+            pin.disabled = !step.auto;                  // manual map.json mode: always fixed
+            pin.addEventListener("change", () => {
+                step.pinned = pin.checked;
+                if (!step.pinned && step.auto) [step.x, step.y] = step.auto;
+                redraw(step);
+                markDirty();
             });
-            tr.addEventListener("click", () => select(step.id));
+            tr.addEventListener("click", (e) => { if (e.target.tagName !== "INPUT") select(step.id); });
             rows.appendChild(tr);
         });
-
-        redrawRoute();
-        updateOutput();
+        steps.forEach(redraw);
     }
 
     function attachDrag(marker, step) {
@@ -229,7 +264,7 @@ textarea { width: 100%; height: 14rem; font-family: ui-monospace, monospace; fon
             const rect = stage.getBoundingClientRect();
             step.x = round1(clamp(((event.clientX - rect.left) / rect.width) * 100));
             step.y = round1(clamp(((event.clientY - rect.top) / rect.height) * 100));
-            changed(step);
+            moved(step);
         });
         const stop = (event) => {
             marker.style.cursor = "grab";
@@ -239,7 +274,49 @@ textarea { width: 100%; height: 14rem; font-family: ui-monospace, monospace; fon
         marker.addEventListener("pointercancel", stop);
     }
 
-    document.getElementById("json-file").addEventListener("change", (event) => {
+    // Changing the direction re-expresses every position in the new frame.
+    directionSelect.addEventListener("change", () => {
+        const next = directionSelect.value;
+        const convert = (xy) => FROM_DEFAULT[next](...TO_DEFAULT[shownDirection](xy[0], xy[1])).map(round1);
+        steps.forEach((s) => {
+            [s.x, s.y] = convert([s.x, s.y]);
+            if (s.auto) s.auto = convert(s.auto);
+        });
+        shownDirection = next;
+        steps.forEach(redraw);
+        markDirty();
+    });
+
+    function loadCourse(course) {
+        token = course.token || null;
+        shownDirection = course.direction;
+        directionSelect.value = course.direction;
+        steps = course.steps.map((s) => ({ ...s }));
+        stage.style.backgroundImage = course.background ? `url("${course.background}?t=${Date.now()}")` : "";
+        buildAll();
+        dirty = false;
+    }
+
+    async function loadFromServer() {
+        const response = await fetch("/api/course", { cache: "no-store" });
+        const course = await response.json();
+        if (!response.ok) throw new Error(course.error || response.statusText);
+        $("course-name").textContent = `— ${course.name}`;
+        $("manual").hidden = true;
+        $("server-actions").hidden = false;
+        $("intro").textContent = "Étapes, icônes et fond lus depuis le dossier du cours. Les étapes fixées sont écrites dans lang.json au clic sur Enregistrer.";
+        loadCourse(course);
+        setStatus(`${steps.length} étapes, ${steps.filter((s) => s.pinned).length} fixée(s)`);
+    }
+
+    function enterManualMode() {
+        $("manual").hidden = false;
+        rows.innerHTML = '<tr><td colspan="6">Charge un map.json pour commencer.</td></tr>';
+        updateOutput();
+    }
+
+    // --- manual mode (no server): map.json + background image ---
+    $("json-file").addEventListener("change", (event) => {
         const file = event.target.files[0];
         if (!file) return;
         const reader = new FileReader();
@@ -247,38 +324,69 @@ textarea { width: 100%; height: 14rem; font-family: ui-monospace, monospace; fon
             try {
                 const data = JSON.parse(reader.result);
                 if (!Array.isArray(data.steps)) throw new Error("pas de tableau « steps »");
-                steps = data.steps
+                const parsed = data.steps
                     .filter((s) => typeof s.x === "number" && typeof s.y === "number")
-                    .map((s) => ({ id: s.id, title: s.title, type: s.type, x: round1(s.x), y: round1(s.y) }));
+                    .map((s) => ({ id: s.id, title: s.title, icon: s.icon || "", type: s.type,
+                                   x: round1(s.x), y: round1(s.y), auto: null, pinned: true }));
+                steps = parsed;
+                shownDirection = directionSelect.value;
                 buildAll();
                 setStatus(`${steps.length} étapes chargées`);
             } catch (err) {
-                setStatus(`map.json invalide : ${err.message}`, true);
+                setStatus(`map.json invalide : ${err.message}`, "error");
             }
         };
         reader.readAsText(file);
     });
-
-    document.getElementById("bg-file").addEventListener("change", (event) => {
+    $("bg-file").addEventListener("change", (event) => {
         const file = event.target.files[0];
-        if (!file) {
-            stage.style.backgroundImage = "";
-            return;
-        }
-        stage.style.backgroundImage = `url("${URL.createObjectURL(file)}")`;
+        stage.style.backgroundImage = file ? `url("${URL.createObjectURL(file)}")` : "";
     });
 
-    directionSelect.addEventListener("change", updateOutput);
+    // --- server mode actions ---
+    $("save").addEventListener("click", async () => {
+        try {
+            const response = await fetch("/api/save", {
+                method: "POST",
+                headers: { "Content-Type": "application/json", "X-Editor-Token": token },
+                body: JSON.stringify({ direction: shownDirection, positions: pinnedPositions() }),
+            });
+            const result = await response.json();
+            if (!response.ok) throw new Error(result.error || response.statusText);
+            dirty = false;
+            setStatus(`Enregistré dans lang.json (${result.pinned} étape(s) fixée(s))`, "ok");
+        } catch (err) {
+            setStatus(`Échec de l'enregistrement : ${err.message}`, "error");
+        }
+    });
+    $("reload").addEventListener("click", async () => {
+        if (dirty && !confirm("Abandonner les modifications non enregistrées ?")) return;
+        try { await loadFromServer(); } catch (err) { setStatus(`Échec : ${err.message}`, "error"); }
+    });
+    $("pin-all").addEventListener("click", () => { steps.forEach((s) => { s.pinned = true; redraw(s); }); markDirty(); });
+    $("unpin-all").addEventListener("click", () => {
+        steps.forEach((s) => { if (s.auto) { s.pinned = false; [s.x, s.y] = s.auto; redraw(s); } });
+        markDirty();
+    });
 
-    document.getElementById("copy").addEventListener("click", async () => {
+    $("copy").addEventListener("click", async () => {
         try {
             await navigator.clipboard.writeText(output.value);
-            setStatus("Copié");
+            setStatus("Copié", "ok");
         } catch {
             output.select();
             setStatus("Sélectionné : copie avec Ctrl+C");
         }
     });
+
+    (async () => {
+        try {
+            await loadFromServer();
+        } catch (err) {
+            if (location.protocol === "file:") enterManualMode();
+            else { enterManualMode(); setStatus(`Cours non chargé : ${err.message}`, "error"); }
+        }
+    })();
 })();
 </script>
 </body>
