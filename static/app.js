@@ -813,6 +813,41 @@ function kickerFor(group, sheet) {
  * blocks, in order.
  * @param {string} sheetId
  */
+/**
+ * The body of a sheet: the page view, or the step-by-step view (deck.js)
+ * for series sheets that allow it. The toggle sits above either one.
+ * @param {HTMLElement} content  #content, already emptied
+ * @param {object} sheet
+ * @param {object} group
+ */
+function renderSheetBody(content, sheet, group) {
+    const eligible = isDeckEligible(group, sheet);
+    const mode = eligible ? getStoredViewMode() : "page";
+    if (eligible) {
+        content.appendChild(buildViewModeToggle(sheet, group, mode));
+    }
+    if (mode === "deck") {
+        renderDeck(content, sheet);
+        return;
+    }
+    activeDeck = null;
+
+    if (sheet.image) {
+        content.appendChild(renderImage(sheet.image));
+    }
+    sheet.content.forEach((block) => {
+        content.appendChild(renderBlock(block));
+    });
+
+    // Replace [ASK_USER_NAME] marker spans with actual input elements
+    replaceAskUserNameInputs(content);
+
+    initializeAudioCards();
+    initializeDialoguePlayback(content);
+    initializeSpeakableElements();
+    updateTtsAvailability();
+}
+
 function renderSheet(sheetId) {
     const group = findGroupForSheet(sheetId);
     const sheet = group ? group.sheets.find((s) => s.id === sheetId) : null;
@@ -834,20 +869,7 @@ function renderSheet(sheetId) {
 
     const content = document.getElementById("content");
     content.innerHTML = "";
-    if (sheet.image) {
-        content.appendChild(renderImage(sheet.image));
-    }
-    sheet.content.forEach((block) => {
-        content.appendChild(renderBlock(block));
-    });
-
-    // Replace [ASK_USER_NAME] marker spans with actual input elements
-    replaceAskUserNameInputs(content);
-
-    initializeAudioCards();
-    initializeDialoguePlayback(content);
-    initializeSpeakableElements();
-    updateTtsAvailability();
+    renderSheetBody(content, sheet, group);
 
     // Enregistrer cette visite (pour le streak)
     if (typeof recordSheetVisit === "function") {
@@ -1824,6 +1846,8 @@ function initSwipeNavigation() {
 
     document.addEventListener("touchstart", (e) => {
         gesture = null;
+        // Step-by-step view: the deck owns horizontal swipes (deck.js).
+        if (document.querySelector(".deck-stage")) return;
         if (e.touches.length !== 1) return;
         if (!canNavigate(1) && !canNavigate(-1)) return;
         const t = e.touches[0];
