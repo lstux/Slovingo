@@ -1,26 +1,55 @@
 /* deck.css -- "Step by step" view of a series sheet (see deck.js). */
 
-/* Toggle "Page | Pas à pas", at the top of the sheet */
+/* Slide switch "page | pas à pas", discreet, top right of the sheet */
 .view-mode-toggle {
-    display: inline-flex;
-    gap: 0.25rem;
-    margin: 0 0 1rem;
-    padding: 0.25rem;
-    border: 1px solid var(--line, #ccc);
-    border-radius: var(--pill, 999px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0 0 0.6rem;
 }
-.view-mode-btn {
-    border: 0;
-    border-radius: var(--pill, 999px);
-    padding: 0.35rem 0.9rem;
+.view-switch-icon {
+    font-size: 0.85rem;
+    opacity: 0.55;
+}
+.view-switch {
+    position: relative;
+    width: 34px;
+    height: 18px;
+    padding: 0;
+    border: 1px solid var(--line, #bbb);
+    border-radius: 999px;
     background: transparent;
-    color: inherit;
-    font: inherit;
     cursor: pointer;
+    transition: background 150ms ease, border-color 150ms ease;
 }
-.view-mode-btn.is-active {
+/* Bigger touch target than the visible switch */
+.view-switch::after {
+    content: "";
+    position: absolute;
+    inset: -12px -8px;
+}
+.view-switch-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--line, #999);
+    transition: transform 150ms ease, background 150ms ease;
+}
+.view-switch[aria-checked="true"] {
     background: var(--accent, #2a6fdb);
-    color: var(--bg, #fff);
+    border-color: var(--accent, #2a6fdb);
+}
+.view-switch[aria-checked="true"] .view-switch-thumb {
+    transform: translateX(16px);
+    background: var(--bg, #fff);
+}
+.view-switch:focus-visible {
+    outline: 2px solid var(--accent, #2a6fdb);
+    outline-offset: 2px;
 }
 
 /* Stage: one step visible at a time */
@@ -31,8 +60,8 @@
 .deck-step {
     display: none;
     flex-direction: column;
-    gap: 0.75rem;
-    padding: 1.25rem;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem 1.25rem;
     border: 1px solid var(--line, #ccc);
     border-radius: 14px;
     background: var(--bg, #fff);
@@ -45,10 +74,20 @@
     from { opacity: 0; transform: translateX(12px); }
     to   { opacity: 1; transform: none; }
 }
-@media (prefers-reduced-motion: reduce) {
-    .deck-step { animation: none; }
-}
 
+/* Header row: section title on the left, the fox's corner on the right.
+   The fox keeps its 44px size, so the row never changes height. */
+.deck-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-height: 44px;
+}
+.deck-head .exo-fox {
+    position: static;
+    flex: none;
+}
 .deck-kicker {
     margin: 0;
     font-size: 0.8rem;
@@ -63,42 +102,65 @@
 .deck-body > :first-child { margin-top: 0; }
 .deck-body > :last-child { margin-bottom: 0; }
 
-/* Flip card (translate-table row) */
-.deck-flip {
-    cursor: pointer;
-    min-height: 6rem;
+/* A table on a single screen: wide, target language first */
+.deck-step-table .deck-body { font-size: 1rem; }
+.deck-step-table table { width: 100%; }
+
+/* Example sentence: no frame, no buttons; the translation fades in by
+   itself once the sentence has been read. Its space is reserved from
+   the start, so nothing jumps when it appears. */
+.deck-phrase {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-.deck-flip-front { font-size: 1.4rem; font-weight: 600; text-align: center; }
-.deck-flip-back {
-    display: none;
-    margin-top: 0.75rem;
-    padding-top: 0.75rem;
-    border-top: 1px dashed var(--line, #ccc);
-    font-size: 1.25rem;
+    gap: 1rem;
+    padding: 0.5rem 0 0;
     text-align: center;
 }
-.deck-flip.is-flipped .deck-flip-back { display: block; }
-.deck-hint {
+.deck-phrase-text {
     margin: 0;
-    font-size: 0.8rem;
-    opacity: 0.5;
-    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.35;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
-
-/* Pitfall paragraphs: stand out a little */
-.deck-piege {
-    padding: 0.75rem 1rem;
-    border-left: 4px solid var(--accent, #d9822b);
-    background: rgba(0, 0, 0, 0.03);
-    border-radius: 8px;
+.deck-phrase-text.speaking { color: var(--accent, #2a6fdb); }
+.deck-phrase-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-height: 5rem;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 350ms ease, transform 350ms ease;
 }
+.deck-phrase-detail.is-shown {
+    opacity: 1;
+    transform: none;
+}
+.deck-phrase-detail p { margin: 0; }
+.deck-phrase-natural { font-size: 1.15rem; }
+.deck-phrase-literal { font-size: 0.95rem; opacity: 0.7; }
+.deck-phrase-detail .comments { font-size: 0.9rem; }
 
-/* Audio-card inside a step: keep the existing card look, larger text */
-.deck-step-phrase .audio-card { margin: 0; }
-.deck-step-phrase .audio-text { font-size: 1.35rem; font-weight: 600; cursor: pointer; }
+/* End of the sheet: the rabbit, and the way on */
+.deck-step-end {
+    align-items: center;
+    padding-top: 1.25rem;
+}
+.deck-end-next {
+    display: block;
+    margin: 0.5rem auto 0;
+    min-width: 4rem;
+    min-height: 3rem;
+    border: 1px solid var(--line, #ccc);
+    border-radius: 999px;
+    background: var(--accent, #2a6fdb);
+    color: var(--bg, #fff);
+    font: inherit;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
 
 /* Controls */
 .deck-controls {
@@ -111,7 +173,7 @@
     min-width: 3rem;
     min-height: 3rem;
     border: 1px solid var(--line, #ccc);
-    border-radius: var(--pill, 999px);
+    border-radius: 999px;
     background: var(--bg, #fff);
     color: inherit;
     font: inherit;
@@ -119,8 +181,13 @@
     cursor: pointer;
 }
 .deck-controls button:disabled { opacity: 0.35; cursor: default; }
-.deck-next { padding: 0 1rem; font-size: 1rem !important; }
 .deck-meter { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
 .deck-bar { width: 100%; height: 4px; background: var(--line, #ddd); border-radius: 2px; overflow: hidden; }
 .deck-bar-fill { height: 100%; background: var(--accent, #2a6fdb); transition: width 180ms ease-out; }
 .deck-count { font-size: 0.8rem; opacity: 0.6; }
+
+@media (prefers-reduced-motion: reduce) {
+    .deck-step { animation: none; }
+    .deck-phrase-detail { transition: none; transform: none; }
+    .view-switch, .view-switch-thumb { transition: none; }
+}
