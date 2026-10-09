@@ -63,18 +63,6 @@
 .deck-body > :first-child { margin-top: 0; }
 .deck-body > :last-child { margin-bottom: 0; }
 
-/* Chapter divider */
-.deck-step-chapter {
-    justify-content: center;
-    min-height: 10rem;
-    text-align: center;
-}
-.deck-step-chapter .deck-body h2,
-.deck-step-chapter .deck-body h1 {
-    font-family: var(--font-display, inherit);
-    margin: 0;
-}
-
 /* Flip card (translate-table row) */
 .deck-flip {
     cursor: pointer;
