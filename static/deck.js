@@ -56,11 +56,14 @@ function storeViewMode(mode) {
 }
 
 /**
- * Deck mode is offered on series sheets only, and not on sheets that
- * contain a dialogue (speaker emoji): those read better as a page.
+ * Deck mode is offered on series and introduction sheets, and not on
+ * sheets that contain a dialogue (speaker emoji): those read better as
+ * a page. Vocabulary and annex sheets keep the page view.
  */
+const DECK_CATEGORIES = ["series", "introduction"];
+
 function isDeckEligible(group, sheet) {
-    if (!group || group.category !== "series") return false;
+    if (!group || !DECK_CATEGORIES.includes(group.category)) return false;
     return !sheet.content.some((block) => block.type === "audio-card" && block.speaker);
 }
 
