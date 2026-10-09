@@ -137,7 +137,7 @@ function targetFirst(block) {
 }
 
 /** The translation and details of an audio-card, initially hidden. */
-function deckBuildDetailNode(block) {
+function deckBuildDetailNode(block, options = {}) {
     const detail = document.createElement("div");
     detail.className = "deck-phrase-detail";
     if (block.natural) {
@@ -146,6 +146,9 @@ function deckBuildDetailNode(block) {
         p.innerHTML = renderText(block.natural);
         detail.appendChild(p);
     }
+    // options.naturalOnly: just the translation (dialogue lines), no
+    // word-by-word breakdown and no notes.
+    if (options.naturalOnly) return detail;
     block.literal.forEach((line) => {
         const p = document.createElement("p");
         p.className = "deck-phrase-literal";
@@ -202,7 +205,7 @@ function deckBuildDialogueNode(lines) {
         text.innerHTML = renderText(block.phrase);
         // A tap re-reads this line only.
         text.addEventListener("click", () => deckReplayDialogueLine(line));
-        bubble.append(who, text, deckBuildDetailNode(block));
+        bubble.append(who, text, deckBuildDetailNode(block, { naturalOnly: true }));
         line.appendChild(bubble);
         box.appendChild(line);
     });
