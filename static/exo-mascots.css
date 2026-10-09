@@ -3,19 +3,22 @@
 
 .exo-face { display: block; width: 96px; height: 96px; user-select: none; }
 
-/* Fox: small, in the corner, never in the way of taps */
+/* Fox: top-right corner of the question card, out of the way of answers */
+.exo-card.exo-has-fox { position: relative; }
+.exo-has-fox .exo-question-label,
+.exo-has-fox .exo-question,
+.exo-has-fox .exo-sentence { padding-right: 54px; }
 .exo-fox {
-    position: fixed;
-    left: 12px;
-    bottom: 64px;
-    width: 56px;
-    height: 56px;
-    z-index: 5;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 44px;
+    height: 44px;
     pointer-events: none;
     transform-origin: 50% 90%;
     animation: exo-breathe 3.6s ease-in-out infinite;
 }
-.exo-fox .exo-face { width: 56px; height: 56px; }
+.exo-fox .exo-face { width: 44px; height: 44px; }
 .exo-fox.hop  { animation: exo-fox-hop .6s cubic-bezier(.2, .8, .3, 1) 1; }
 .exo-fox.tilt { animation: exo-fox-tilt .8s ease-in-out 1; }
 .exo-fox.nod  { animation: exo-fox-nod .7s ease-in-out 1; }
@@ -37,7 +40,22 @@
 
 /* Rabbit: arrives with a bounce on top of the result card */
 .exo-rabbit { display: flex; justify-content: center; margin-bottom: 8px; }
-.exo-rabbit .exo-face { animation: exo-rabbit-in .7s cubic-bezier(.2, .8, .3, 1) backwards; }
+.exo-rabbit .exo-face {
+    transform-origin: 50% 90%;
+    animation: exo-rabbit-in .7s cubic-bezier(.2, .8, .3, 1) backwards,
+               exo-breathe 3.6s ease-in-out 1s infinite;
+}
+/* Once settled: a happy hop (good score) or a comforting sway (low score), then it just breathes */
+.exo-rabbit[data-mood="bravo"] .exo-face {
+    animation: exo-rabbit-in .7s cubic-bezier(.2, .8, .3, 1) backwards,
+               exo-fox-hop .6s cubic-bezier(.2, .8, .3, 1) .9s 2,
+               exo-breathe 3.6s ease-in-out 2.2s infinite;
+}
+.exo-rabbit[data-mood="comfort"] .exo-face {
+    animation: exo-rabbit-in .7s cubic-bezier(.2, .8, .3, 1) backwards,
+               exo-fox-tilt .8s ease-in-out .9s 1,
+               exo-breathe 3.6s ease-in-out 1.8s infinite;
+}
 @keyframes exo-rabbit-in {
     0% { transform: translateX(-40px) scale(.7); opacity: 0; }
     65% { transform: translateX(6px) scale(1.05); opacity: 1; }
@@ -52,5 +70,5 @@
 
 @media (prefers-reduced-motion: reduce) {
     .exo-fox, .exo-fox.hop, .exo-fox.tilt, .exo-fox.nod,
-    .exo-rabbit .exo-face, .exo-correct .exo-feedback, .exo-card { animation: none; }
+    .exo-rabbit .exo-face, .exo-rabbit[data-mood] .exo-face, .exo-correct .exo-feedback, .exo-card { animation: none; }
 }

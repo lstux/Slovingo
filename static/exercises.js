@@ -1107,7 +1107,6 @@ function startSessionFromQuery(query) {
     ]));
     content.appendChild(el("div", { className: "exo-progress-text", attrs: { id: "exo-progress" } }));
     content.appendChild(el("div", { className: "exo-card-area", attrs: { id: "exo-card-area" } }));
-    mountSessionFox(content);
 
     startPool();
 }
@@ -1497,12 +1496,13 @@ function updateProgress() {
 
 function renderCurrentView() {
     updateProgress();
-    reactFox("content", null);
     const area = document.getElementById("exo-card-area");
     area.innerHTML = "";
     const view = state.currentView;
     const entry = EXERCISE_TYPES[view.type];
-    area.appendChild(entry ? entry.render(view) : renderListen(view));
+    const card = entry ? entry.render(view) : renderListen(view);
+    area.appendChild(card);
+    mountFoxInCard(card);
 }
 
 /**
