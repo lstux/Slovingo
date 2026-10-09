@@ -73,39 +73,38 @@ function teardownDeck() {
     activeDeck = null;
 }
 
-// Leaving the sheet (or the page view) must not leave a voice talking.
-window.addEventListener("hashchange", teardownDeck);
+/** The sheet last rendered by renderSheetBody(), for the toolbar switch. */
+let deckSheetContext = null;
 
 /**
- * Small slide switch at the top right of the sheet: off = page,
- * on = step by step (🃏). Symbols only, so nothing to translate.
+ * The 🃏 button of the toolbar (left of Settings). Pressed = step by step.
+ * It is only offered on eligible sheets, and hidden everywhere else.
  */
-function buildViewModeToggle(sheet, group, current) {
-    const bar = document.createElement("div");
-    bar.className = "view-mode-toggle";
-
-    const icon = document.createElement("span");
-    icon.className = "view-switch-icon";
-    icon.setAttribute("aria-hidden", "true");
-    icon.textContent = "🃏";
-
-    const sw = document.createElement("button");
-    sw.type = "button";
-    sw.className = "view-switch";
-    sw.setAttribute("role", "switch");
-    sw.setAttribute("aria-label", "🃏");
-    sw.setAttribute("aria-checked", String(current === "deck"));
-    sw.innerHTML = '<span class="view-switch-thumb"></span>';
-    sw.onclick = () => {
-        storeViewMode(current === "deck" ? "page" : "deck");
-        const content = document.getElementById("content");
-        content.innerHTML = "";
-        renderSheetBody(content, sheet, group);
-    };
-
-    bar.append(icon, sw);
-    return bar;
+function deckShowToolbarSwitch(eligible, isDeck, sheet, group) {
+    const btn = document.getElementById("nav-deck");
+    deckSheetContext = eligible ? { sheet, group } : null;
+    btn.classList.toggle("exo-toolbar-hidden", !eligible);
+    btn.setAttribute("aria-pressed", String(eligible && isDeck));
 }
+
+/** Toolbar click: flip between page and step by step, keep the same sheet. */
+function deckToggleFromToolbar() {
+    if (!deckSheetContext) return;
+    const { sheet, group } = deckSheetContext;
+    storeViewMode(getStoredViewMode() === "deck" ? "page" : "deck");
+    const content = document.getElementById("content");
+    content.innerHTML = "";
+    renderSheetBody(content, sheet, group);
+}
+
+document.getElementById("nav-deck").addEventListener("click", deckToggleFromToolbar);
+
+// Leaving a sheet: stop the deck, and hide its switch until a sheet renders it again.
+// (Registered before app.js's router, so it runs first.)
+window.addEventListener("hashchange", () => {
+    teardownDeck();
+    deckShowToolbarSwitch(false, false, null, null);
+});
 
 // ----------------------------------------------------------------------------
 // Step building

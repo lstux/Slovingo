@@ -791,6 +791,20 @@ function splitTitle(rawTitle) {
 }
 
 /**
+ * "Série Rodina (1/5)" -> "Rodina 1/5": the series name and the position,
+ * without the word in front. Only when the series name is found in the
+ * kicker, otherwise the kicker is kept as it was written.
+ */
+function shortSeriesKicker(group, kicker) {
+    const label = subgroupLabelFor(group);
+    const pos = kicker.match(/\((\d+\/\d+)\)\s*$/);
+    if (pos && label && kicker.includes(label)) {
+        return `${label} ${pos[1]}`;
+    }
+    return kicker;
+}
+
+/**
  * Build the small breadcrumb line shown above a sheet's title: the
  * kicker parsed out of the sheet's own title (splitTitle()) when it
  * has one, falling back to the series' "Subgroup - fiche NN" or the
@@ -799,7 +813,7 @@ function splitTitle(rawTitle) {
 function kickerFor(group, sheet) {
     const { kicker } = splitTitle(sheet.title);
     if (kicker) {
-        return kicker;
+        return group.category === "series" ? shortSeriesKicker(group, kicker) : kicker;
     }
     if (group.category === "series") {
         const index = group.sheets.findIndex((s) => s.id === sheet.id) + 1;
@@ -826,9 +840,7 @@ function renderSheetBody(content, sheet, group) {
     const mode = eligible ? getStoredViewMode() : "page";
     // The toolbar's "Translations" button acts on page-view audio-cards only.
     document.getElementById("nav-translations").classList.toggle("exo-toolbar-hidden", mode === "deck");
-    if (eligible) {
-        content.appendChild(buildViewModeToggle(sheet, group, mode));
-    }
+    deckShowToolbarSwitch(eligible, mode === "deck", sheet, group);
     if (mode === "deck") {
         renderDeck(content, sheet);
         return;
