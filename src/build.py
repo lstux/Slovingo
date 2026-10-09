@@ -61,6 +61,7 @@ STATIC_FILES = [
     "map.css", "map.js",  # Adventure map (map.json is generated)
     "credits.css", "credits.js",  # Scrolling film credits (the final series)
     "geomap.css", "geomap.js",  # Geographic maps in sheets ("% lat, lon" blocks)
+    "deck.css", "deck.js",  # Step-by-step view of series sheets
 ]
 
 # Static directories copied wholesale into dist/ (third-party code
