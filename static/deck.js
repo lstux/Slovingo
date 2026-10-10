@@ -216,13 +216,20 @@ function deckBuildDialogueNode(lines) {
  * Turn sheet.content into a flat list of steps. Each step is
  * { kind, chapter, sub, nodes, isGrammar? }.
  */
+/** Longest run of plain text (characters) shown on one step. */
+const TEXT_STEP_MAX_CHARS = 400;
+
 function buildDeckSteps(sheet) {
     const steps = [];
     let chapter = "";
     let sub = "";
 
+    // The intro picture opens the sheet; the plain text right after it
+    // (before the first exercise-like block) is shown on the same screen.
+    let introStep = null;
     if (sheet.image) {
-        steps.push({ kind: "intro", chapter: "", sub: "", nodes: [renderImage(sheet.image)] });
+        introStep = { kind: "intro", chapter: "", sub: "", nodes: [renderImage(sheet.image)], chars: 0 };
+        steps.push(introStep);
     }
 
     sheet.content.forEach((block) => {
@@ -238,6 +245,33 @@ function buildDeckSteps(sheet) {
         }
 
         if (block.type === "image" || block.type === "hr") return;
+
+        const isPlainText = ["paragraph", "list", "blockquote"].includes(block.type);
+        if (isPlainText) {
+            // Short paragraphs of one section share a screen, up to a
+            // comfortable reading length. The intro picture's screen takes
+            // the text that follows it the same way.
+            const node = renderBlock(block);
+            const chars = node.textContent.length;
+            const last = steps[steps.length - 1];
+            if (last && last.kind === "text" && last.chapter === chapter && last.sub === sub
+                && !sub && last.chars + chars <= TEXT_STEP_MAX_CHARS) {
+                last.nodes.push(node);
+                last.chars += chars;
+                return;
+            }
+            if (introStep && last === introStep && !chapter && !sub
+                && introStep.chars + chars <= TEXT_STEP_MAX_CHARS) {
+                introStep.nodes.push(node);
+                introStep.chars += chars;
+                return;
+            }
+            steps.push({ kind: "text", chapter, sub, nodes: [node], chars, isGrammar: !!sub });
+            sub = "";
+            introStep = null;
+            return;
+        }
+        introStep = null;
 
         if (block.type === "table") {
             steps.push({ kind: "table", chapter, sub, nodes: [renderTable(targetFirst(block))] });
@@ -260,7 +294,7 @@ function buildDeckSteps(sheet) {
             return;
         }
 
-        // paragraph, list, blockquote, geomap
+        // geomap
         steps.push({ kind: "text", chapter, sub, nodes: [renderBlock(block)], isGrammar: !!sub });
         sub = "";
     });
