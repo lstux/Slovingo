@@ -218,8 +218,12 @@ function buildDeckSteps(sheet) {
     let chapter = "";
     let sub = "";
 
+    // The intro picture opens the sheet; the plain text right after it
+    // (before the first exercise-like block) is shown on the same screen.
+    let introStep = null;
     if (sheet.image) {
-        steps.push({ kind: "intro", chapter: "", sub: "", nodes: [renderImage(sheet.image)] });
+        introStep = { kind: "intro", chapter: "", sub: "", nodes: [renderImage(sheet.image)] };
+        steps.push(introStep);
     }
 
     sheet.content.forEach((block) => {
@@ -235,6 +239,13 @@ function buildDeckSteps(sheet) {
         }
 
         if (block.type === "image" || block.type === "hr") return;
+
+        const isPlainText = ["paragraph", "list", "blockquote"].includes(block.type);
+        if (introStep && isPlainText && steps[steps.length - 1] === introStep && !chapter && !sub) {
+            introStep.nodes.push(renderBlock(block));
+            return;
+        }
+        introStep = null;
 
         if (block.type === "table") {
             steps.push({ kind: "table", chapter, sub, nodes: [renderTable(targetFirst(block))] });
