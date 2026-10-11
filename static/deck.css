@@ -103,6 +103,15 @@
     align-items: center;
     padding-top: 1.25rem;
 }
+.deck-exercise-link {
+    display: block;
+    margin: 0.5rem auto 0;
+    padding: 0.5rem 1rem;
+    color: var(--accent, #2a6fdb);
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+}
 .deck-end-next {
     display: block;
     margin: 0.5rem auto 0;

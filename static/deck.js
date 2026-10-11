@@ -304,16 +304,29 @@ function buildDeckSteps(sheet) {
         if (step.kind === "dialogue") step.nodes = [deckBuildDialogueNode(step.lines)];
     });
 
-    steps.push({ kind: "end", chapter: "", sub: "", nodes: [] });
+    steps.push({ kind: "end", chapter: "", sub: "", nodes: buildEndNodes(sheet) });
     return steps;
 }
 
-/** The rabbit of the end screen, and its way on to the next sheet. */
-function buildEndNodes() {
+/**
+ * The rabbit of the end screen, the link to this sheet's exercises, and
+ * the way on to the next sheet.
+ */
+function buildEndNodes(sheet) {
     const nodes = [];
     if (typeof el === "function" && typeof mascotFace === "function") {
         nodes.push(el("div", { className: "exo-rabbit", attrs: { "data-mood": "bravo", "aria-hidden": "true" } },
             [mascotFace("rabbit", "bravo")]));
+    }
+    if (sheet && sheet.id) {
+        // Same link as the exercises line under a sheet in page mode.
+        const questionCount = (typeof SETTINGS !== "undefined" && SETTINGS.defaultQuestionCount) || 12;
+        const link = document.createElement("a");
+        link.className = "deck-exercise-link";
+        link.href = `#/exercises/session?cards=${encodeURIComponent(sheet.id)}&n=${questionCount}`;
+        const label = (typeof LANG !== "undefined" && LANG.ui && LANG.ui.exercises) || "Exercises";
+        link.textContent = `🎯 ${label} ➜`;
+        nodes.push(link);
     }
     const pagerNext = document.getElementById("pager-top-next");
     if (pagerNext && !pagerNext.disabled) {
@@ -346,7 +359,7 @@ function buildStepElement(step, index) {
 
     const body = document.createElement("div");
     body.className = "deck-body";
-    (step.kind === "end" ? buildEndNodes() : step.nodes).forEach((n) => body.appendChild(n));
+    step.nodes.forEach((n) => body.appendChild(n));
     stepEl.appendChild(body);
 
     if (step.kind === "phrase") {
