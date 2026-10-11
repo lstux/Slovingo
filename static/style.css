@@ -50,7 +50,7 @@
     --step-1: 1.15rem;
     --step-2: 1.45rem;
     --step-3: 2rem;
-    --step-4: 2.6rem;
+    --step-4: 2.1rem;
 
     --band-height: 220px;
     --pattern-opacity: 0.15;
@@ -1578,7 +1578,7 @@ button.index-card {
    ========================================================================== */
 
 @media (max-width: 600px) {
-    :root { --step-4: 2.1rem; --band-height: 170px; }
+    :root { --step-4: 1.7rem; --band-height: 170px; }
     body { padding: 0 0 50px; font-size: 17px; }
     .wrap { padding: 0 14px; }
     .band .wrap { padding-top: 34px; }
