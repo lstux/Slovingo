@@ -1481,10 +1481,13 @@ function markAnswer(container, isCorrect, view, userAnswer) {
     }
 
     const canReplay = ttsAvailable();
+    // Matching pairs: no sound at the check (the view's audio is a single
+    // word, which would be read out of context), and no 🔊 button either.
+    const hasAudio = canReplay && view.type !== "match";
     // The listen exercise already played its sentence when the question
     // was shown: don't read the right answer out again at the check (too
     // repetitive over a session). The 🔊 button stays for a manual replay.
-    const replayOnCheck = canReplay && view.type !== "listen";
+    const replayOnCheck = hasAudio && view.type !== "listen";
     const feedbackText = isCorrect
         ? uiLabel("session_answer_correct", "✅ Correct!")
         : uiLabel("session_answer_incorrect_prefix", "❌ Missed — answer: ") + view.answer;
@@ -1494,7 +1497,7 @@ function markAnswer(container, isCorrect, view, userAnswer) {
             text: feedbackText,
         }),
     ];
-    if (canReplay) {
+    if (hasAudio) {
         feedbackLine.push(el("button", {
             className: "exo-feedback-audio",
             text: "🔊",
