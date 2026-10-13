@@ -39,6 +39,16 @@ déploiement et des dépendances.
 | `s` | dépendances |
 | `f` / `t` / `r` | `git fetch` / bascule HTTPS-SSH / rafraîchir |
 
+**HTTPS / SSH.** `t` (ou `langs.py --ssh`) choisit le protocole. Il s'applique
+aux nouveaux clones **et** aux clones existants : au prochain pull, l'`origin`
+d'un `langs/<code>` est réécrit (`git remote set-url`) vers
+`git@github.com:lstux/Slovingo-<code>.git` (ou l'inverse), ce qui permet de
+`git push` depuis la tower sans repasser par un token HTTPS. Seuls les
+`origin` de la forme `lstux/Slovingo-<code>` (HTTPS ou SSH) sont réécrits :
+un fork, un miroir ou une base personnalisée (`--base`,
+`SLOVINGO_REPO_BASE`) n'est jamais modifié. La fiche d'une langue affiche
+l'`origin` réel. La commande `set-url` apparaît dans le plan (sans effet si l'`origin` est déjà dans le bon protocole).
+
 **Fiche langue.** Dossier, dépôt, branche, état git, dernier commit, âge du
 build, dernier envoi. `p` `b` `d` lancent l'action sur cette langue, `g`
 change sa branche, `←` `→` passent à la langue voisine.

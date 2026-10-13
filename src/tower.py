@@ -916,9 +916,14 @@ def step_command(step: Step, langs_dir: Path, base: str = langs.DEFAULT_BASE) ->
         if step.clone:
             branch = f"--branch {shlex.quote(step.branch)} " if step.branch else ""
             return f"git clone {branch}{langs.repo_url(step.code, base)} {target}"
+        # langs.sync() first aligns origin with the chosen protocol (standard
+        # lstux/Slovingo-<code> remotes only, a no-op otherwise), then pulls.
+        align = ""
+        if base in (langs.DEFAULT_BASE, langs.SSH_BASE):
+            align = f"git -C {target} remote set-url origin {langs.repo_url(step.code, base)} ; "
         if step.branch:
-            return f"git -C {target} checkout {shlex.quote(step.branch)} && git -C {target} pull --ff-only"
-        return f"git -C {target} pull --ff-only"
+            return f"{align}git -C {target} checkout {shlex.quote(step.branch)} && git -C {target} pull --ff-only"
+        return f"{align}git -C {target} pull --ff-only"
     return shell_repr(step.argv)
 
 
@@ -1131,7 +1136,7 @@ class App:
             return lines
         remote = ""
         if info.is_git:
-            rc, out = run_quiet(["git", "-C", str(info.path), "remote", "get-url", "origin"])
+            rc, out = run_quiet(["git", "-C", str(info.path), "config", "--get", "remote.origin.url"])
             remote = out if rc == 0 else ""
         lines.append((f"Dépôt        {remote or '(pas de remote)'}", "dim"))
         branch = info.branch or "—"
