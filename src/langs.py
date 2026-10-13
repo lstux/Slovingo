@@ -95,6 +95,41 @@ def repo_url(code: str, base: str) -> str:
     return f"{base.rstrip('/')}/Slovingo-{code}.git"
 
 
+def standard_origin(code: str, url: str) -> bool:
+    """True when `url` is the HTTPS or SSH form of lstux/Slovingo-<code>.
+
+    Only those remotes are ever rewritten: a fork, a mirror or a custom
+    --base / SLOVINGO_REPO_BASE is left exactly as the user set it up.
+    """
+    def norm(u: str) -> str:
+        u = u.strip().rstrip("/")
+        return (u[:-4] if u.endswith(".git") else u).lower()
+
+    return norm(url) in (norm(repo_url(code, DEFAULT_BASE)), norm(repo_url(code, SSH_BASE)))
+
+
+def align_origin(code: str, target: Path, base: str) -> str | None:
+    """Make an existing clone's `origin` match the chosen protocol.
+
+    Switching HTTPS <-> SSH used to affect new clones only, so a course cloned
+    over HTTPS could not push. Returns "SSH" / "HTTPS" when the remote was
+    rewritten, None when nothing needed (or was allowed) to change.
+    """
+    if base not in (DEFAULT_BASE, SSH_BASE):
+        return None  # custom base: not ours to rewrite
+    try:
+        # Raw config value: `git remote get-url` would apply url.*.insteadOf
+        # rewrites and hide what is really stored.
+        current = git("config", "--get", "remote.origin.url", cwd=target)
+    except SyncError:
+        return None  # no origin: nothing to align
+    wanted = repo_url(code, base)
+    if current == wanted or not standard_origin(code, current):
+        return None
+    git("remote", "set-url", "origin", wanted, cwd=target)
+    return "SSH" if base == SSH_BASE else "HTTPS"
+
+
 def status(lang_dir: Path) -> str:
     """One-line state of langs/<code>: absent / not a clone / branch + dirty."""
     if not lang_dir.exists():
@@ -122,8 +157,14 @@ def sync(code: str, branch: str | None, langs_dir: Path, base: str) -> str:
 
     if not (target / ".git").exists():
         raise SyncError(f"{target} exists but is not a git clone; left untouched")
+    # Done before the dirty-tree check: rewriting the remote URL never touches
+    # the working tree, and it is what lets you push from a clone with edits.
+    switched = align_origin(code, target, base)
     if git("status", "--porcelain", cwd=target):
-        raise SyncError(f"{target} has local changes; commit or stash them first")
+        raise SyncError(
+            f"{target} has local changes; commit or stash them first"
+            + (f" (origin switched to {switched})" if switched else "")
+        )
 
     git("fetch", "--quiet", "origin", cwd=target)
     if branch:
@@ -131,12 +172,13 @@ def sync(code: str, branch: str | None, langs_dir: Path, base: str) -> str:
         if current != branch:
             git("checkout", "--quiet", branch, cwd=target)
     current = git("rev-parse", "--abbrev-ref", "HEAD", cwd=target)
+    note = f", origin -> {switched}" if switched else ""
     if current == "HEAD":
-        return "up to date (detached HEAD, fetched only)"
+        return f"up to date (detached HEAD, fetched only{note})"
     before = git("rev-parse", "HEAD", cwd=target)
     git("pull", "--quiet", "--ff-only", cwd=target)
     after = git("rev-parse", "HEAD", cwd=target)
-    return f"updated ({current})" if before != after else f"already up to date ({current})"
+    return f"updated ({current}{note})" if before != after else f"already up to date ({current}{note})"
 
 
 def interactive_menu(langs_dir: Path) -> list[str]:
