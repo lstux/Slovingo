@@ -189,7 +189,7 @@ def main() -> None:
     out_dir = args.out_dir or (args.lang_dir / "dist-api")
     index = export(args.lang_dir, out_dir, args.max_sheet_bytes)
     total = sum(s["bytes"] for s in index["sheets"])
-    print(f"Watch export: {len(index['sheets'])} sheet(s), {total} bytes of sheets -> {out_dir}")
+    print(f"API export: {len(index['sheets'])} sheet(s), {total} bytes of sheets -> {out_dir}")
 
 
 if __name__ == "__main__":
