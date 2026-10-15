@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""watch_export.py
+"""export_api.py
 
-Export a language dir as a compact, per-sheet JSON set meant for tiny
-clients (e.g. a smartwatch with a few hundred KB of RAM) that cannot
-afford to download and parse the full dist/data.json.
+Export a language dir as a compact, per-sheet JSON set: a small static API
+for light clients (smartwatch, widget, bot...) that cannot afford to download
+and parse the full dist/data.json. Any static host can serve it, e.g. GitHub
+Pages.
 
-Output layout (default: <lang-dir>/dist-watch/):
+Output layout (default: <lang-dir>/dist-api/):
 
     index.json              course metadata + list of sheets (no content)
     sheets/<id>.json        one sheet, reduced to simple text blocks
@@ -32,7 +33,7 @@ Exercises are copied as generated (same fields as exercises.json), minus
 the file-level "mode"/"sync" keys.
 
 Usage:
-    python3 src/watch_export.py --lang-dir langs/sk-fr-kids [-o OUT_DIR]
+    python3 src/export_api.py --lang-dir langs/sk-fr-kids [-o OUT_DIR]
                                 [--max-sheet-bytes 20000]
 """
 
@@ -67,7 +68,7 @@ def flatten(text: Any) -> str:
 
 
 def compact_block(block: dict[str, Any]) -> dict[str, Any] | None:
-    """Reduce one content block, or None if the watch should skip it."""
+    """Reduce one content block, or None if the API leaves it out."""
     kind = block.get("type")
     if kind == "heading":
         return {"t": "h", "l": block.get("level", 2), "x": flatten(block.get("text"))}
@@ -180,12 +181,12 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     parser.add_argument("--lang-dir", type=Path, required=True)
     parser.add_argument("-o", "--out-dir", type=Path, default=None,
-                        help="Output dir (default: <lang-dir>/dist-watch)")
+                        help="Output dir (default: <lang-dir>/dist-api)")
     parser.add_argument("--max-sheet-bytes", type=int, default=DEFAULT_MAX_SHEET_BYTES,
                         help="Warn when a compact sheet exceeds this size")
     args = parser.parse_args()
 
-    out_dir = args.out_dir or (args.lang_dir / "dist-watch")
+    out_dir = args.out_dir or (args.lang_dir / "dist-api")
     index = export(args.lang_dir, out_dir, args.max_sheet_bytes)
     total = sum(s["bytes"] for s in index["sheets"])
     print(f"Watch export: {len(index['sheets'])} sheet(s), {total} bytes of sheets -> {out_dir}")

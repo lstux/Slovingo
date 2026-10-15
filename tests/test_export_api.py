@@ -1,4 +1,4 @@
-"""Tests for src/watch_export.py (self-contained: builds a tiny course in a tmp dir)."""
+"""Tests for src/export_api.py (self-contained: builds a tiny course in a tmp dir)."""
 
 import json
 import sys
@@ -8,7 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-import watch_export  # noqa: E402
+import export_api  # noqa: E402
 
 LANG = {
     "target_lang": {"code": "sk", "name": "slovaque", "tts_code": "sk-SK"},
@@ -56,7 +56,7 @@ class WatchExportTest(unittest.TestCase):
         (self.lang_dir / "exercises" / f"{stem}.exercises.json").write_text(
             json.dumps(EXERCISES), encoding="utf-8")
         self.out = Path(self.tmp.name) / "out"
-        self.index = watch_export.export(self.lang_dir, self.out, 20_000)
+        self.index = export_api.export(self.lang_dir, self.out, 20_000)
 
     def tearDown(self):
         self.tmp.cleanup()
@@ -89,7 +89,7 @@ class WatchExportTest(unittest.TestCase):
         self.assertEqual(ex["exercises"], EXERCISES["exercises"])
 
     def test_flatten(self):
-        self.assertEqual(watch_export.flatten("[[fr:Bravo]] **ok** [[ahoj]]"), "Bravo ok ahoj")
+        self.assertEqual(export_api.flatten("[[fr:Bravo]] **ok** [[ahoj]]"), "Bravo ok ahoj")
 
 
 if __name__ == "__main__":
