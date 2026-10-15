@@ -256,6 +256,18 @@ python3 src/check_ui_keys.py --lang-dir langs/<cours> --template   # + extrait J
 python3 src/check_ui_keys.py --lang-dir langs/<cours> --strict     # code de sortie 1 s'il en manque (CI)
 ```
 
+## greeting — la ligne de bienvenue (optionnel)
+
+Phrase d'accueil des clients légers (écran d'accueil de la montre), dans la langue cible
+(`t`) avec sa traduction (`n`, facultative). `[USER_NAME]` est remplacé par le prénom du
+joueur. Sans ce bloc, le client n'affiche pas de salutation. `export_api.py` le recopie
+dans `index.json` (clé `greeting`), et ajoute à chaque fiche de série son `theme`
+(d'après `subgroup_themes`) pour que le client choisisse un pictogramme et une couleur.
+
+```json
+"greeting": { "t": "Ahoj, [USER_NAME]!", "n": "Salut, [USER_NAME] !" }
+```
+
 ## cheers — petits mots de fin d'exercice (optionnel)
 
 Phrases d'encouragement affichées à l'écran de score, par palier. Chacune donne la

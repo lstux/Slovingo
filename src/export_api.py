@@ -12,7 +12,11 @@ Output layout (default: <lang-dir>/dist-api/):
     sheets/<id>.json        one sheet, reduced to simple text blocks
     exercises/<id>.json     that sheet's exercises (only if it has any)
 
-index.json also carries the optional "cheers" of lang.json (little phrases of the
+Each sheet entry of index.json has a "theme" when lang.json's "subgroup_themes" gives one
+to its subgroup (basics, family, house, food...: the themes of the HTML site), so that a
+client can pick a pictogram and a colour per series. index.json also carries the optional
+"greeting" of lang.json ({"t":"Ahoj, [USER_NAME]!","n":"Salut, [USER_NAME] !"}, welcome
+line of the home screen, [USER_NAME] stands for the player's name) and the optional "cheers" of lang.json (little phrases of the
 end-of-quiz screen, one list per score tier, see docs/Lang-json.md):
 
     "cheers":{"perfect":[{"t":"Výborne!","n":"Excellent !"},..],"great":[..],
@@ -166,6 +170,22 @@ def compact_cheers(lang_cfg: dict[str, Any]) -> dict[str, list[dict[str, str]]]:
     return out
 
 
+def compact_greeting(lang_cfg: dict[str, Any]) -> dict[str, str]:
+    """The optional "greeting" of lang.json as {"t":..,"n":..} (n facultative), {} if absent or malformed."""
+    raw = lang_cfg.get("greeting")
+    if not isinstance(raw, dict):
+        return {}
+    text = flatten(raw.get("t", ""))
+    if not text:
+        print(f"warning: greeting without \"t\" ignored: {raw!r}", file=sys.stderr)
+        return {}
+    greeting = {"t": text}
+    translation = flatten(raw.get("n", ""))
+    if translation:
+        greeting["n"] = translation
+    return greeting
+
+
 def export(lang_dir: Path, out_dir: Path, max_sheet_bytes: int) -> dict[str, Any]:
     lang_cfg = json.loads((lang_dir / "lang.json").read_text(encoding="utf-8"))
     md_files = sorted((lang_dir / "md").glob("*.md"))
@@ -175,6 +195,7 @@ def export(lang_dir: Path, out_dir: Path, max_sheet_bytes: int) -> dict[str, Any
     (out_dir / "sheets").mkdir(parents=True, exist_ok=True)
     (out_dir / "exercises").mkdir(parents=True, exist_ok=True)
 
+    themes = lang_cfg.get("subgroup_themes") or {}
     entries = []
     for md in md_files:
         sheet = build_sheet_json(md, lang_cfg)
@@ -191,17 +212,19 @@ def export(lang_dir: Path, out_dir: Path, max_sheet_bytes: int) -> dict[str, Any
                 dumps({"id": sheet["id"], "exercises": exercises}), encoding="utf-8"
             )
 
-        entries.append(
-            {
-                "id": sheet["id"],
-                "cat": sheet["category"],
-                "sub": sheet["subgroup"],
-                "sub_label": sheet["subgroup_label"],
-                "title": compact["title"],
-                "bytes": size,
-                "ex": dict(Counter(e["type"] for e in exercises)),
-            }
-        )
+        entry = {
+            "id": sheet["id"],
+            "cat": sheet["category"],
+            "sub": sheet["subgroup"],
+            "sub_label": sheet["subgroup_label"],
+            "title": compact["title"],
+            "bytes": size,
+            "ex": dict(Counter(e["type"] for e in exercises)),
+        }
+        theme = themes.get(sheet["subgroup"]) if sheet["category"] == "series" else None
+        if isinstance(theme, str) and theme:
+            entry["theme"] = theme
+        entries.append(entry)
 
     site = lang_cfg.get("site", {})
     index = {
@@ -212,6 +235,9 @@ def export(lang_dir: Path, out_dir: Path, max_sheet_bytes: int) -> dict[str, Any
         "native": {k: lang_cfg["native_lang"].get(k) for k in ("code", "name", "tts_code")},
         "sheets": entries,
     }
+    greeting = compact_greeting(lang_cfg)
+    if greeting:
+        index["greeting"] = greeting
     cheers = compact_cheers(lang_cfg)
     if cheers:
         index["cheers"] = cheers
