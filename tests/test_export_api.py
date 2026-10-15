@@ -88,6 +88,16 @@ class WatchExportTest(unittest.TestCase):
         self.assertEqual(set(ex), {"id", "exercises"})
         self.assertEqual(ex["exercises"], EXERCISES["exercises"])
 
+    def test_theme_and_greeting(self):
+        self.assertNotIn("theme", self.index["sheets"][0])
+        self.assertNotIn("greeting", self.index)
+        cfg = dict(LANG, subgroup_themes={"kitsurvie": "basics"},
+                   greeting={"t": "Ahoj, [USER_NAME]!", "n": "Salut, [USER_NAME] !"})
+        (self.lang_dir / "lang.json").write_text(json.dumps(cfg), encoding="utf-8")
+        index = export_api.export(self.lang_dir, self.out, 20_000)
+        self.assertEqual(index["sheets"][0]["theme"], "basics")
+        self.assertEqual(index["greeting"], {"t": "Ahoj, [USER_NAME]!", "n": "Salut, [USER_NAME] !"})
+
     def test_no_cheers_by_default(self):
         self.assertNotIn("cheers", self.index)
 
