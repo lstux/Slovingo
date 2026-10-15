@@ -12,6 +12,12 @@ Output layout (default: <lang-dir>/dist-api/):
     sheets/<id>.json        one sheet, reduced to simple text blocks
     exercises/<id>.json     that sheet's exercises (only if it has any)
 
+index.json also carries the optional "cheers" of lang.json (little phrases of the
+end-of-quiz screen, one list per score tier, see docs/Lang-json.md):
+
+    "cheers":{"perfect":[{"t":"Výborne!","n":"Excellent !"},..],"great":[..],
+              "good":[..],"ok":[..],"retry":[..]}   t = target language, n = translation
+
 This is an *additional* output: it reads the same sources as build.py
 (md/, exercises/ or json/, lang.json) and touches nothing else.
 
@@ -127,6 +133,39 @@ def load_exercises(lang_dir: Path, md_stem: str, sheet_id: str) -> list[dict[str
     return []
 
 
+CHEER_TIERS = ("perfect", "great", "good", "ok", "retry")
+
+
+def compact_cheers(lang_cfg: dict[str, Any]) -> dict[str, list[dict[str, str]]]:
+    """The optional "cheers" of lang.json reduced to {tier: [{"t":..,"n":..}]}.
+
+    Unknown tiers and malformed entries are skipped (with a warning) so that a typo
+    in a course never breaks the export; empty tiers are left out.
+    """
+    raw = lang_cfg.get("cheers")
+    if not isinstance(raw, dict):
+        return {}
+    out: dict[str, list[dict[str, str]]] = {}
+    for tier in CHEER_TIERS:
+        phrases = []
+        for entry in raw.get(tier) or []:
+            text = flatten(entry.get("t", "")) if isinstance(entry, dict) else ""
+            if not text:
+                print(f"warning: cheers.{tier}: entry without \"t\" skipped: {entry!r}", file=sys.stderr)
+                continue
+            phrase = {"t": text}
+            translation = flatten(entry.get("n", ""))
+            if translation:
+                phrase["n"] = translation
+            phrases.append(phrase)
+        if phrases:
+            out[tier] = phrases
+    for tier in raw:
+        if tier not in CHEER_TIERS:
+            print(f"warning: cheers.{tier}: unknown tier ignored", file=sys.stderr)
+    return out
+
+
 def export(lang_dir: Path, out_dir: Path, max_sheet_bytes: int) -> dict[str, Any]:
     lang_cfg = json.loads((lang_dir / "lang.json").read_text(encoding="utf-8"))
     md_files = sorted((lang_dir / "md").glob("*.md"))
@@ -173,6 +212,9 @@ def export(lang_dir: Path, out_dir: Path, max_sheet_bytes: int) -> dict[str, Any
         "native": {k: lang_cfg["native_lang"].get(k) for k in ("code", "name", "tts_code")},
         "sheets": entries,
     }
+    cheers = compact_cheers(lang_cfg)
+    if cheers:
+        index["cheers"] = cheers
     (out_dir / "index.json").write_text(dumps(index), encoding="utf-8")
     return index
 

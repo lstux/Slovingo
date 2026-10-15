@@ -88,6 +88,23 @@ class WatchExportTest(unittest.TestCase):
         self.assertEqual(set(ex), {"id", "exercises"})
         self.assertEqual(ex["exercises"], EXERCISES["exercises"])
 
+    def test_no_cheers_by_default(self):
+        self.assertNotIn("cheers", self.index)
+
+    def test_cheers_are_exported_and_cleaned(self):
+        cfg = dict(LANG, cheers={
+            "perfect": [{"t": "Výborne!", "n": "Excellent !"}, {"t": "Hotovo"}, {"n": "sans t"}, "texte"],
+            "good": [],
+            "great": [{"t": "[[Super]]!", "n": "**Super** !"}],
+            "bogus": [{"t": "x"}],
+        })
+        (self.lang_dir / "lang.json").write_text(json.dumps(cfg), encoding="utf-8")
+        index = export_api.export(self.lang_dir, self.out, 20_000)
+        self.assertEqual(index["cheers"], {
+            "perfect": [{"t": "Výborne!", "n": "Excellent !"}, {"t": "Hotovo"}],
+            "great": [{"t": "Super!", "n": "Super !"}],
+        })
+
     def test_flatten(self):
         self.assertEqual(export_api.flatten("[[fr:Bravo]] **ok** [[ahoj]]"), "Bravo ok ahoj")
 

@@ -256,6 +256,35 @@ python3 src/check_ui_keys.py --lang-dir langs/<cours> --template   # + extrait J
 python3 src/check_ui_keys.py --lang-dir langs/<cours> --strict     # code de sortie 1 s'il en manque (CI)
 ```
 
+## cheers — petits mots de fin d'exercice (optionnel)
+
+Phrases d'encouragement affichées à l'écran de score, par palier. Chacune donne la
+phrase dans la langue cible (`t`) et sa traduction (`n`, facultative) : c'est l'occasion
+d'apprendre quelques mots en passant. Le client en tire une au hasard dans le palier
+qui correspond au score. Tout le bloc est facultatif : sans lui, les clients n'affichent
+aucune phrase.
+
+```json
+"cheers": {
+  "perfect": [ { "t": "Výborne!", "n": "Excellent !" }, { "t": "To je ľahké?!", "n": "C'est trop facile ?!" } ],
+  "great":   [ ... ],
+  "good":    [ ... ],
+  "ok":      [ ... ],
+  "retry":   [ ... ]
+}
+```
+
+| Palier | Score |
+|--------|-------|
+| `perfect` | 100 % |
+| `great` | 90 à 99 % |
+| `good` | 70 à 89 % |
+| `ok` | 50 à 69 % |
+| `retry` | moins de 50 % |
+
+`export_api.py` recopie le bloc dans `index.json` (clé `cheers`) pour les clients légers
+(montre). Les paliers inconnus et les entrées sans `t` sont ignorés avec un avertissement.
+
 ## generator
 
 Mots-clés utilisés par `smd2data.py` pour détecter automatiquement, dans
