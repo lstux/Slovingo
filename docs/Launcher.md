@@ -59,6 +59,11 @@ cours (`src/export_api.py` : `index.json`, `sheets/<id>.json`, `exercises/<id>.j
    `lstux/Slovingo-<code>`, branche `main`).
 2. Relancer le workflow « GitHub Pages (launcher + cours) ».
 
+Un cours introuvable ou qui échoue à se construire est ignoré (avertissement dans
+le résumé du workflow) : les autres sont publiés quand même. Le build n'échoue que
+si aucun cours n'a pu être construit. Pour retirer un cours du site, l'enlever de
+`launcher/course-ids.json`.
+
 ## Build
 
 ```
