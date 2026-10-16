@@ -1,0 +1,92 @@
+name: GitHub Pages (launcher + cours)
+
+# Publie, sur une seule origine GitHub Pages :
+#   /Slovingo/              la page d'accueil (choix du cours, installable en PWA)
+#   /Slovingo/<cours>/      chaque cours, construit depuis la branche main de
+#                           son repo lstux/Slovingo-<cours>
+#
+# La liste des cours est dans launcher/course-ids.json.
+#
+# Les repos de cours continuent de publier leur propre site
+# (lstux.github.io/Slovingo-<cours>/) : ce workflow est indépendant.
+#
+# Déclenchement : push sur main (moteur ou page d'accueil modifiés), chaque nuit
+# (pour prendre en compte les nouveautés des cours), ou à la main.
+# Le déploiement n'a lieu que depuis main : l'environnement github-pages refuse
+# les autres branches par défaut.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "static/**"
+      - "launcher/**"
+      - "requirements.txt"
+      - ".github/workflows/pages.yml"
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout moteur (ce repo)
+        uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+
+      - name: Dépendances (Pillow, pour les icônes)
+        run: python3 -m pip install -r requirements.txt
+
+      - name: Police emoji (icônes)
+        run: sudo apt-get update && sudo apt-get install -y fonts-noto-color-emoji
+
+      - name: Récupérer les cours (branche main)
+        run: |
+          mkdir -p content
+          for code in $(python3 -c "import json;print(' '.join(json.load(open('launcher/course-ids.json'))['courses']))"); do
+            git clone --depth 1 --branch main "https://github.com/${GITHUB_REPOSITORY_OWNER}/Slovingo-${code}" "content/${code}"
+          done
+
+      - name: Construire le site
+        run: |
+          python3 src/build_site.py \
+            --content-root content \
+            --launcher-dir launcher \
+            --static-dir static \
+            --base-path "/${{ github.event.repository.name }}/" \
+            --out _site
+
+      - uses: actions/configure-pages@v6
+        with:
+          enablement: true
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

@@ -16,6 +16,10 @@
 // separate per-sheet HTML page left to fall back on.
 
 const CACHE_VERSION = "__CACHE_VERSION__";
+// Les cours partagent une origine (ex. lstux.github.io) : ne jamais toucher aux
+// caches des autres cours ni de la page d'accueil. On ne supprime que les
+// anciennes versions de CE cours ("<storage_prefix>-vN").
+const CACHE_PREFIX = "__CACHE_PREFIX__";
 const SCOPE = "__SCOPE__";
 
 // Files required for the app to boot and work fully offline. Update
@@ -83,7 +87,7 @@ self.addEventListener("activate", (event) => {
     caches.keys().then((keys) =>
       Promise.all(
         keys
-          .filter((key) => key !== CACHE_VERSION)
+          .filter((key) => key.startsWith(CACHE_PREFIX) && key !== CACHE_VERSION)
           .map((key) => caches.delete(key))
       )
     )
