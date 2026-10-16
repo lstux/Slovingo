@@ -1423,6 +1423,8 @@ button.index-card {
 
 .settings-danger-btn:hover,
 .settings-backup-btn:hover { border-color: var(--accent); }
+/* The "change course" button is an <a>. */
+a.settings-backup-btn { box-sizing: border-box; text-decoration: none; }
 .settings-danger-btn + .settings-danger-btn,
 .settings-backup-btn + .settings-backup-btn { margin-top: 10px; }
 /* Backup buttons sit above the destructive ones: keep a gap between the groups. */

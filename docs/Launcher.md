@@ -26,6 +26,20 @@ site-ci vient en plus.
 - Le manifest de la page d'accueil a un `id` explicite (`slovingo-launcher`) et
   des `start_url` / `scope` relatifs (`./`), donc indépendants du nom du repo.
 
+## Lien « Changer de cours »
+
+Dans les réglages d'un cours (en haut), un bouton « Changer de cours » mène à
+`../?choose`, donc à la liste des cours de la page d'accueil. Il n'apparaît que si
+le cours est publié dans ce site : `build_site.py` ajoute `site.launcher_url: "../"`
+au `lang.json` du cours au moment du build. Un cours publié seul n'a pas cette clé,
+donc pas de lien.
+
+Le texte vient de `ui.change_course`. Si le cours ne le définit pas, `build_site.py`
+met un texte par défaut dans la langue du cours (fr, sk, en, de) ; un `lang.json`
+peut toujours le surcharger. Un build isolé affiche un avertissement
+`check_ui_keys` de plus pour cette clé : sans effet visible, puisque le lien
+n'y est pas affiché.
+
 ## Liste des cours en JSON (« API »)
 
 `/Slovingo/courses.json` sert à la fois à la page d'accueil et à d'autres clients
