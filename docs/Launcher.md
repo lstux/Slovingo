@@ -28,7 +28,7 @@ site-ci vient en plus.
 
 ## Lien « Changer de cours »
 
-Dans les réglages d'un cours (en haut), un bouton « Changer de cours » mène à
+Dans les réglages d'un cours (tout en bas), un bouton « Changer de cours » mène à
 `../?choose`, donc à la liste des cours de la page d'accueil. Il n'apparaît que si
 le cours est publié dans ce site : `build_site.py` ajoute `site.launcher_url: "../"`
 au `lang.json` du cours au moment du build. Un cours publié seul n'a pas cette clé,
