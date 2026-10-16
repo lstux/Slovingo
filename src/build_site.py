@@ -29,6 +29,10 @@ Inputs:
     --base-path PATH     where the site is served, e.g. /Slovingo/
     --courses CODE...    courses to include (default: launcher/course-ids.json)
 
+A course that is missing or fails to build is skipped with a warning (a GitHub
+annotation in CI) and the others are still published; the build only fails if no
+course at all could be built.
+
 Usage:
     python3 src/build_site.py --content-root content --launcher-dir launcher \\
         --static-dir static --base-path /Slovingo/ --out _site
@@ -160,14 +164,27 @@ def main() -> None:
     args.out.mkdir(parents=True, exist_ok=True)
 
     entries = []
+    skipped = []
     with tempfile.TemporaryDirectory() as tmp:
         for code in ids:
             print(f"== {code} -> {base_path}{code}/")
-            entries.append(build_course(code, args.content_root, args.static_dir, base_path, Path(tmp), args.out))
+            try:
+                entries.append(build_course(code, args.content_root, args.static_dir, base_path, Path(tmp), args.out))
+            except (Exception, SystemExit) as exc:
+                # One broken course must not prevent publishing the others.
+                shutil.rmtree(args.out / code, ignore_errors=True)
+                skipped.append(code)
+                print(f"::warning title=Cours ignore ({code})::{exc}")
+                print(f"!! {code} skipped: {exc}", file=sys.stderr)
+
+    if not entries:
+        raise SystemExit("No course could be built: nothing to publish")
 
     write_launcher(args.launcher_dir, args.out, entries)
     (args.out / ".nojekyll").touch()
     print(f"Site written to {args.out}: launcher + {len(entries)} course(s)")
+    if skipped:
+        print(f"Skipped (see warnings above): {', '.join(skipped)}")
 
 
 if __name__ == "__main__":

@@ -57,7 +57,8 @@ jobs:
         run: |
           mkdir -p content
           for code in $(python3 -c "import json;print(' '.join(json.load(open('launcher/course-ids.json'))['courses']))"); do
-            git clone --depth 1 --branch main "https://github.com/${GITHUB_REPOSITORY_OWNER}/Slovingo-${code}" "content/${code}"
+            git clone --depth 1 --branch main "https://github.com/${GITHUB_REPOSITORY_OWNER}/Slovingo-${code}" "content/${code}" \
+              || echo "::warning title=Cours ignoré (${code})::Slovingo-${code} (branche main) n'a pas pu être récupéré"
           done
 
       - name: Construire le site
