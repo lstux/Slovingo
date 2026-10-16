@@ -256,8 +256,6 @@ function renderSettingsScreen() {
     const content = document.getElementById("content");
     content.innerHTML = "";
 
-    const courseSwitchSection = renderCourseSwitchSection();
-    if (courseSwitchSection) content.appendChild(courseSwitchSection);
     content.appendChild(renderProfileSection());
     content.appendChild(renderThemeSettingsSection());
     content.appendChild(renderAudioSettingsSection());
@@ -266,6 +264,8 @@ function renderSettingsScreen() {
     if (characterSection) content.appendChild(characterSection);
     content.appendChild(renderExerciseSettingsSection());
     content.appendChild(renderDataSettingsSection());
+    const courseSwitchSection = renderCourseSwitchSection();
+    if (courseSwitchSection) content.appendChild(courseSwitchSection);
 }
 
 /**
