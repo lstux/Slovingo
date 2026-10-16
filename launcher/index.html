@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slovingo</title>
+<meta name="theme-color" content="#e8590c">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<style>
+  :root {
+    --bg: #fff7ed; --card: #ffffff; --ink: #2b2118; --muted: #7a6a5c;
+    --line: #f0dcc8; --accent: #e8590c; --shadow: 0 2px 10px rgba(120, 70, 20, .10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #1d1712; --card: #2a2119; --ink: #f6ebdd; --muted: #b9a998; --line: #3d3125; --shadow: none; }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 17px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 34rem; margin: 0 auto; padding: 2rem 16px 3rem; }
+  h1 { margin: 0 0 .25rem; font-size: 2rem; }
+  .sub { margin: 0 0 1.5rem; color: var(--muted); }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
+  a.course { display: flex; gap: .9rem; align-items: center; padding: .9rem 1rem; text-decoration: none;
+    color: inherit; background: var(--card); border: 1px solid var(--line);
+    border-left: 6px solid var(--c, var(--accent)); border-radius: 14px; box-shadow: var(--shadow); }
+  a.course:active, a.course:focus-visible { outline: 3px solid var(--c, var(--accent)); outline-offset: 2px; }
+  .flag { font-size: 2.2rem; line-height: 1; flex: none; }
+  .txt { min-width: 0; }
+  .txt strong { display: block; font-size: 1.1rem; }
+  .txt span { display: block; color: var(--muted); font-size: .92rem; }
+  .pals { font-size: 1.1rem; margin-top: .15rem; }
+  .last { font-size: .8rem; color: var(--c, var(--accent)); font-weight: 600; }
+  #status { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Slovingo</h1>
+  <p class="sub">Choisis ton cours</p>
+  <p id="status">Chargement…</p>
+  <ul id="list" hidden></ul>
+</main>
+<script>
+(function () {
+  "use strict";
+  var KEY = "slovingo:last-course";
+  var statusEl = document.getElementById("status");
+  var listEl = document.getElementById("list");
+  var forceChoose = new URLSearchParams(location.search).has("choose");
+
+  function recall() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function remember(id) { try { localStorage.setItem(KEY, id); } catch (e) {} }
+
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js").catch(function () {});
+  }
+
+  function render(courses, last) {
+    courses.forEach(function (c) {
+      var li = document.createElement("li");
+      var a = document.createElement("a");
+      a.className = "course";
+      a.href = c.id + "/";
+      if (c.theme_color) a.style.setProperty("--c", c.theme_color);
+
+      var flag = document.createElement("div");
+      flag.className = "flag";
+      flag.textContent = c.flag || "📘";
+
+      var txt = document.createElement("div");
+      txt.className = "txt";
+      var title = document.createElement("strong");
+      title.textContent = c.title || c.id;
+      txt.appendChild(title);
+      if (c.description) {
+        var d = document.createElement("span");
+        d.textContent = c.description;
+        txt.appendChild(d);
+      }
+      if (c.companions && c.companions.length) {
+        var p = document.createElement("div");
+        p.className = "pals";
+        p.textContent = c.companions.join(" ");
+        txt.appendChild(p);
+      }
+      if (c.id === last) {
+        var l = document.createElement("div");
+        l.className = "last";
+        l.textContent = "Dernier cours";
+        txt.appendChild(l);
+      }
+
+      a.appendChild(flag);
+      a.appendChild(txt);
+      a.addEventListener("click", function () { remember(c.id); });
+      li.appendChild(a);
+      listEl.appendChild(li);
+    });
+    statusEl.hidden = true;
+    listEl.hidden = false;
+  }
+
+  fetch("courses.json")
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (data) {
+      var courses = (data && data.courses) || [];
+      var last = recall();
+      var known = courses.some(function (c) { return c.id === last; });
+      if (known && !forceChoose) {
+        // Retour direct au dernier cours ; ?choose force l'affichage de la liste.
+        location.replace(last + "/");
+        return;
+      }
+      if (!courses.length) { statusEl.textContent = "Aucun cours disponible."; return; }
+      render(courses, known ? last : null);
+    })
+    .catch(function () { statusEl.textContent = "Impossible de charger la liste des cours."; });
+})();
+</script>
+</body>
+</html>
