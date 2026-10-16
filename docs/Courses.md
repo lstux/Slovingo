@@ -13,12 +13,11 @@ This page tracks the Slovingo language course repositories and their deployment 
 | German (de → fr) | [Slovingo-de-fr](https://github.com/lstux/Slovingo-de-fr) | Public | ✓ | 2026-10-05 |
 | German Kids (8–12, de → fr) | [Slovingo-de-fr-kids](https://github.com/lstux/Slovingo-de-fr-kids) | Public | ✓ | 2026-10-05 |
 | Breton (bzh → fr) | [Slovingo-bzh-fr](https://github.com/lstux/Slovingo-bzh-fr) | Public | ✓ | 2026-09-29 |
+| French Kids (8–12, fr → sk) — *Líštička*, pilot: Introduction + Survival Kit | [Slovingo-fr-sk-kids](https://github.com/lstux/Slovingo-fr-sk-kids) | Public | ✓ | 2026-10-15 |
 
 ## In Preparation
 
-| Course | Repository | Status |
-|--------|------------|--------|
-| French Kids (8–12, fr → sk) | [Slovingo-fr-sk-kids](https://github.com/lstux/Slovingo-fr-sk-kids) | ⏳ Not yet created |
+No course is waiting to be created at the moment.
 
 ---
 
