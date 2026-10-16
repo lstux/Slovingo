@@ -294,6 +294,11 @@ aucune phrase.
 | `ok` | 50 à 69 % |
 | `retry` | moins de 50 % |
 
+Dans l'application web, la 🐰 de l'écran de résultat « dit » la phrase dans une bulle
+sous elle : `t` en gras, `n` en plus petit. Toucher la bulle lit `t` à voix haute (voix
+de la langue cible, si la synthèse vocale est disponible). Sans `cheers`, ou avec un
+palier vide, il n'y a pas de bulle.
+
 `export_api.py` recopie le bloc dans `index.json` (clé `cheers`) pour les clients légers
 (montre). Les paliers inconnus et les entrées sans `t` sont ignorés avec un avertissement.
 
