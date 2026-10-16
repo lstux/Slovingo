@@ -12,8 +12,10 @@ course (e.g. /Slovingo/ contains /Slovingo/sk-fr-kids/), so a single install
 gives access to all of them. The launcher remembers the last course chosen
 and sends the user straight back to it.
 
-Each course is built exactly like a standalone one (src/build.py), with only
-site.url_path rewritten to <base-path><course>/. storage_prefix is left
+Each course is built exactly like a standalone one (src/build.py), with only a few
+lang.json settings adapted (see apply_bundle_settings): site.url_path rewritten to
+<base-path><course>/, and site.launcher_url set so the course shows a "Change course"
+link in its settings. storage_prefix is left
 untouched, so progress saved by a course is the same wherever it is served
 from on the same origin.
 
@@ -64,6 +66,36 @@ LAUNCHER_FILES = ["index.html", "manifest.json", "service-worker.js"]
 LAUNCHER_GLYPH = "🦊"
 
 
+# "Change course" label, by native language code, used when a course does not
+# define ui.change_course itself (a course's own lang.json always wins).
+CHANGE_COURSE_LABELS = {
+    "fr": "Changer de cours",
+    "sk": "Zmeniť kurz",
+    "en": "Change course",
+    "de": "Kurs wechseln",
+}
+
+
+def apply_bundle_settings(cfg: dict, base_path: str, code: str) -> dict:
+    """Adapt a course's lang.json (in place) for publication inside the bundle.
+
+    - site.url_path: where the course is served (<base_path><code>/);
+    - site.launcher_url: relative URL of the launcher, from the course. Its presence
+      is what makes the front-end show the "Change course" link in the settings: a
+      standalone build has no such key, hence no link;
+    - ui.change_course: default label in the course's native language.
+    """
+    site = cfg["site"]
+    site["url_path"] = f"{base_path}{code}/"
+    site["launcher_url"] = "../"
+    ui = cfg.setdefault("ui", {})
+    if not ui.get("change_course"):
+        label = CHANGE_COURSE_LABELS.get(cfg.get("native_lang", {}).get("code", ""))
+        if label:
+            ui["change_course"] = label
+    return cfg
+
+
 def normalize_base_path(path: str) -> str:
     return "/" + path.strip("/") + "/" if path.strip("/") else "/"
 
@@ -93,7 +125,7 @@ def build_course(code: str, content_root: Path, static_dir: Path, base_path: str
 
     lang_path = lang_dir / "lang.json"
     cfg = json.loads(lang_path.read_text(encoding="utf-8"))
-    cfg["site"]["url_path"] = f"{base_path}{code}/"
+    apply_bundle_settings(cfg, base_path, code)
     lang_path.write_text(json.dumps(cfg, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     subprocess.run(

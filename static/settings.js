@@ -256,6 +256,8 @@ function renderSettingsScreen() {
     const content = document.getElementById("content");
     content.innerHTML = "";
 
+    const courseSwitchSection = renderCourseSwitchSection();
+    if (courseSwitchSection) content.appendChild(courseSwitchSection);
     content.appendChild(renderProfileSection());
     content.appendChild(renderThemeSettingsSection());
     content.appendChild(renderAudioSettingsSection());
@@ -264,6 +266,25 @@ function renderSettingsScreen() {
     if (characterSection) content.appendChild(characterSection);
     content.appendChild(renderExerciseSettingsSection());
     content.appendChild(renderDataSettingsSection());
+}
+
+/**
+ * "Change course" section. Only present when the course is published inside the
+ * multi-course site: build_site.py sets site.launcher_url (URL of the launcher,
+ * relative to the course). A standalone course has none, hence no link. The
+ * launcher's ?choose shows the course list instead of going straight back to the
+ * last course.
+ */
+function renderCourseSwitchSection() {
+    const launcherUrl = LANG.site && LANG.site.launcher_url;
+    if (!launcherUrl) return null;
+    const label = (LANG.ui && LANG.ui.change_course) || "Change course";
+    const link = el("a", {
+        className: "settings-backup-btn",
+        text: "\ud83d\udd04 " + label,
+        attrs: { href: launcherUrl + "?choose" },
+    });
+    return settingsSection((LANG.site && LANG.site.title) || label, [link]);
 }
 
 function settingsSection(titleText, children) {
