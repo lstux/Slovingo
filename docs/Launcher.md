@@ -26,6 +26,33 @@ site-ci vient en plus.
 - Le manifest de la page d'accueil a un `id` explicite (`slovingo-launcher`) et
   des `start_url` / `scope` relatifs (`./`), donc indépendants du nom du repo.
 
+## Liste des cours en JSON (« API »)
+
+`/Slovingo/courses.json` sert à la fois à la page d'accueil et à d'autres clients
+(montre, widget…) :
+
+```json
+{
+  "version": 1,
+  "courses": [
+    {
+      "id": "sk-fr-kids",
+      "path": "sk-fr-kids/",
+      "api": "sk-fr-kids/api/index.json",
+      "title": "Zajka - apprends le Slovaque",
+      "short_name": "Zajka",
+      "description": "…",
+      "flag": "🇸🇰",
+      "companions": ["🦊", "🐰"],
+      "theme_color": "#0b4ea2"
+    }
+  ]
+}
+```
+
+Les chemins sont relatifs à `courses.json`. `api` pointe vers l'API légère du
+cours (`src/export_api.py` : `index.json`, `sheets/<id>.json`, `exercises/<id>.json`).
+
 ## Ajouter un cours
 
 1. Ajouter son code dans `launcher/course-ids.json` (le repo doit s'appeler

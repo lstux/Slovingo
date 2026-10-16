@@ -17,6 +17,10 @@ site.url_path rewritten to <base-path><course>/. storage_prefix is left
 untouched, so progress saved by a course is the same wherever it is served
 from on the same origin.
 
+courses.json doubles as a tiny public API: the list of available courses with, for
+each, its path and the URL of its own light API (<course>/api/index.json). Paths are
+relative to courses.json, so any client (T-Watch, widget...) can follow them.
+
 Inputs:
     --content-root DIR   a directory holding one checkout per course, named
                          after the course code (DIR/sk-fr-kids/, ...)
@@ -106,8 +110,9 @@ def build_course(code: str, content_root: Path, static_dir: Path, base_path: str
 
     site = cfg["site"]
     kids = site.get("icon_style") == "kids"
-    return {
+    entry = {
         "id": code,
+        "path": f"{code}/",
         "title": site["title"],
         "short_name": site.get("short_name", site["title"]),
         "description": site.get("description", ""),
@@ -115,13 +120,16 @@ def build_course(code: str, content_root: Path, static_dir: Path, base_path: str
         "companions": companions_from_config(cfg) if kids else [],
         "theme_color": site.get("theme_color", ""),
     }
+    if (dest / "api" / "index.json").is_file():
+        entry["api"] = f"{code}/api/index.json"  # light JSON API of the course (export_api.py)
+    return entry
 
 
 def write_launcher(launcher_dir: Path, out: Path, entries: list[dict]) -> None:
     for name in LAUNCHER_FILES:
         shutil.copy2(launcher_dir / name, out / name)
     (out / "courses.json").write_text(
-        json.dumps({"courses": entries}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        json.dumps({"version": 1, "courses": entries}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
 
     icons_dir = out / "icons"
