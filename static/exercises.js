@@ -2053,6 +2053,9 @@ function renderSummary() {
         el("h3", { text: uiLabel("exercise_result_title", "Result") }),
         el("p", { className: "exo-score", text: `${state.score} / ${total} (${scorePct}%)` }),
     ]);
+    // What the rabbit says (optional lang.json "cheers"): a bubble just under it.
+    const cheer = summaryCheer(state.score, total);
+    if (cheer) summary.insertBefore(cheer, summary.children[1]);
 
     if (previous && previous.last) {
         const prevDate = new Date(previous.last.date).toLocaleDateString();

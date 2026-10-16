@@ -62,6 +62,40 @@
     100% { transform: translateX(0) scale(1); }
 }
 
+/* What the rabbit says on the result screen (lang.json "cheers"): a speech bubble under
+   it, tail pointing up. It is a <button> when the phrase can be read aloud. */
+.exo-cheer {
+    position: relative;
+    display: block;
+    max-width: 22rem;
+    margin: 6px auto 14px;
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--bg);
+    color: var(--text);
+    font: inherit;
+    text-align: center;
+    animation: exo-fade-in .4s ease .5s backwards;
+}
+button.exo-cheer { width: calc(100% - 32px); cursor: pointer; }
+button.exo-cheer:hover, button.exo-cheer:focus-visible { border-color: var(--accent); }
+.exo-cheer::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    margin-left: -6px;
+    background: var(--bg);
+    border-left: 1px solid var(--line);
+    border-top: 1px solid var(--line);
+    transform: rotate(45deg);
+}
+.exo-cheer-text { display: block; font-size: var(--step-1); }
+.exo-cheer-native { display: block; margin-top: 2px; font-size: .9rem; color: var(--text-soft); }
+
 /* Answer feedback: success pulse, new question fade-in */
 .exo-correct .exo-feedback { animation: exo-success-pulse .45s cubic-bezier(.2, .8, .3, 1); }
 .exo-card { animation: exo-fade-in .25s ease; }
@@ -70,5 +104,5 @@
 
 @media (prefers-reduced-motion: reduce) {
     .exo-fox, .exo-fox.hop, .exo-fox.tilt, .exo-fox.nod,
-    .exo-rabbit .exo-face, .exo-rabbit[data-mood] .exo-face, .exo-correct .exo-feedback, .exo-card { animation: none; }
+    .exo-rabbit .exo-face, .exo-rabbit[data-mood] .exo-face, .exo-cheer, .exo-correct .exo-feedback, .exo-card { animation: none; }
 }
