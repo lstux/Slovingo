@@ -57,14 +57,45 @@ sans progression ni réglages enregistrés.
 - **Éteindre** : la flèche de retour de l'écran d'accueil coupe l'alimentation sur batterie ; sur USB
   la carte se met en sommeil profond et le bouton OK la réveille.
 
+## Diagnostic : écran noir, moniteur muet
+
+Deux outils, à utiliser dans cet ordre.
+
+**1. Le programme de diagnostic seul** (sans LVGL ni app) : écran, port série, SD, batterie, boutons.
+
+```bash
+pio run -e t-hmi-diag -t upload
+pio device monitor -e t-hmi-diag
+```
+
+Il allume le rétroéclairage, remplit l'écran en rouge, vert puis bleu, puis affiche l'état de la SD, de
+la batterie et du tactile (`IRQ=0` quand on touche l'écran, `OK=0` / `BOOT=0` quand on appuie sur un bouton).
+
+- Les trois couleurs s'affichent : la carte, le flash et la config de l'écran sont bons, le problème est dans l'app.
+- Rétroéclairage allumé mais écran blanc ou brouillé : le programme tourne, l'écran n'est pas piloté
+  (broches, `TFT_eSPI`, `memory_type`).
+- Carte entièrement éteinte et rien sur le port série : le programme ne démarre pas (mauvais mode de flash,
+  mauvaise adresse, carte restée en mode téléchargement : appuyer sur RST ou débrancher/rebrancher l'USB).
+
+**2. Le firmware normal, avec le diagnostic de démarrage** (`-D SLV_DIAG=1` dans `platformio.ini`, mettre `0`
+pour le retirer). Au démarrage il écrit sur le port série une bannière (puce, flash, PSRAM, raison du dernier
+reset) puis chaque étape : `board_init`, `sd_mount`, `display_init`, `touch_init`, `lvgl_port_init`, `app_setup`,
+`app_activate`, `setup_done`, puis une ligne toutes les 5 s dans `loop`. Le dernier jalon franchi est gardé en
+mémoire RTC, qui survit à un plantage : après un reset anormal, la bannière **et l'écran** (en rouge, 5 s) disent
+à quelle étape le programme s'est arrêté.
+
+Le port USB de la carte disparaît et réapparaît à chaque redémarrage : si le moniteur reste vide, le relancer
+après avoir appuyé sur RST. Le firmware attend jusqu'à 2,5 s qu'il soit ouvert avant d'écrire.
+
 ## État du code
 
-Écrit d'après le dépôt officiel LilyGo (brochage, écran, tactile, SD), **jamais compilé avec PlatformIO
-ni essayé sur la carte**. Seule vérification faite : compilation de contrôle du code de l'app et de
-`src/compat/` sur un ordinateur, avec LVGL 7.11 et ArduinoJson 6.21 réels et des en-têtes Arduino
-factices. Les fichiers qui parlent directement au matériel (`board.cpp`, `touch.cpp`, `lvgl_port.cpp`,
-`main.cpp`, `src/compat/hardware/wifictl.cpp`, `src/compat/utils/uri_load/uri_load.cpp`) n'ont donc
-pas été compilés. Points à surveiller au premier essai :
+Écrit d'après le dépôt officiel LilyGo (brochage, écran, tactile, SD). Vérifications faites sur un
+ordinateur : le code de l'app et `src/compat/` compilent avec le vrai LVGL 7.11 et le vrai ArduinoJson 6.21 ;
+les fichiers qui parlent au matériel (`board.cpp`, `touch.cpp`, `lvgl_port.cpp`, `main.cpp`, `diag*.cpp`) passent un
+contrôle de syntaxe, mais contre des en-têtes Arduino factices écrits par moi, ce qui ne prouve rien sur l'API
+réelle. `wifictl.cpp` et `uri_load.cpp` (API Wi-Fi d'Arduino-ESP32) n'ont même pas passé ce contrôle. Le build
+PlatformIO a ensuite été corrigé et compile chez l'utilisateur ; au premier essai sur la carte,
+l'écran restait noir (voir Diagnostic ci-dessus). Points à surveiller :
 
 - le téléchargement HTTPS ne vérifie pas le certificat du serveur (`setInsecure()`), les cours étant publics ;
 - la tâche de téléchargement de l'app a 12 Ko de pile : à surveiller pendant la poignée de main TLS ;

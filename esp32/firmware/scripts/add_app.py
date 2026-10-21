@@ -10,25 +10,25 @@ from os.path import join, isdir
 
 Import("env")
 
-app_dir = join(env.subst("$PROJECT_DIR"), "..", "twatch-app", "slovingo")
-if not isdir(app_dir):
-    raise SystemExit("Dossier de l'app introuvable : " + app_dir)
+# l'environnement de diagnostic (t-hmi-diag) n'a pas l'app
+if env["PIOENV"] != "t-hmi-diag":
+    app_dir = join(env.subst("$PROJECT_DIR"), "..", "twatch-app", "slovingo")
+    if not isdir(app_dir):
+        raise SystemExit("Dossier de l'app introuvable : " + app_dir)
 
-# les en-tetes de l'app (slovingo_*.h, polices, images)
-env.Append(CPPPATH=[app_dir])
+    # les en-tetes de l'app (slovingo_*.h, polices, images)
+    env.Append(CPPPATH=[app_dir])
 
-build_sources = env.BuildSources.method
+    build_sources = env.BuildSources.method
 
+    def build_sources_with_app(e, variant_dir, src_dir, src_filter=None):
+        build_sources(e, variant_dir, src_dir, src_filter)
+        if src_dir == "$PROJECT_SRC_DIR":
+            build_sources(
+                e,
+                join("$BUILD_DIR", "slovingo_app"),
+                app_dir,
+                "-<*> +<*.cpp> +<font/*.c> +<images/*.c> -<slovingo_app.cpp>",
+            )
 
-def build_sources_with_app(e, variant_dir, src_dir, src_filter=None):
-    build_sources(e, variant_dir, src_dir, src_filter)
-    if src_dir == "$PROJECT_SRC_DIR":
-        build_sources(
-            e,
-            join("$BUILD_DIR", "slovingo_app"),
-            app_dir,
-            "-<*> +<*.cpp> +<font/*.c> +<images/*.c> -<slovingo_app.cpp>",
-        )
-
-
-env.AddMethod(build_sources_with_app, "BuildSources")
+    env.AddMethod(build_sources_with_app, "BuildSources")
