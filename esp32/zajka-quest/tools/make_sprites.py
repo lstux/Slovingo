@@ -88,7 +88,7 @@ def fox_poses():
 
 def rabbit_poses():
     hipL, hipR = (212, 520), (268, 520)
-    # le bras gauche tient la cle (pivot a l'epaule), le bras droit salue
+    # le bras gauche pend pres du sac (pivot a l'epaule), le bras droit salue
     shL, shR = (188, 380), (292, 382)
 
     def pose(lean=0.0, legL=0.0, legR=0.0, armL=0.0, armR=0.0, bob=0.0, liftL=0.0, liftR=0.0):
@@ -100,7 +100,7 @@ def rabbit_poses():
             "legR": f"translate(0 {-liftR}) rotate({legR} {hipR[0]} {hipR[1]})",
             "rbf-arm-wave": f"{body} rotate({armR} {shR[0]} {shR[1]})",
             "rbf-torso": body,
-            "rbf-arm-wrench": f"{body} rotate({armL} {shL[0]} {shL[1]})",
+            "rbf-arm-bag": f"{body} rotate({armL} {shL[0]} {shL[1]})",
             "rbf-head": body,
         }
 
@@ -211,6 +211,6 @@ if __name__ == "__main__":
     # fox-full : jambes = 2 paths, 2 rects, 2 uses ; indices pairs = jambe gauche
     build("fox-full.svg", fox_poses, "foxf-legs", {0, 2, 4}, {1, 3, 5},
           (30, 50, 360, 700), "fox_32x48.png")
-    # rabbit-full : 2 paths, 1 g (rayures, les deux ensemble), 2 uses
-    build("rabbit-full.svg", rabbit_poses, "rbf-legs", {0, 2, 3}, {1, 4},
+    # rabbit-full : 2 paths (jambes), 2 paths (short), 2 uses (baskets) ; pairs = jambe gauche
+    build("rabbit-full.svg", rabbit_poses, "rbf-legs", {0, 2, 4}, {1, 3, 5},
           (60, 50, 340, 700), "rabbit_32x48.png")
