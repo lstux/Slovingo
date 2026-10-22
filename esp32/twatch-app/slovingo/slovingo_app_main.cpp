@@ -1654,7 +1654,20 @@ static void slv_order_text( bool full, lv_color_t color ) {
  * order: a tapped word leaves the list, the answer is checked when all the words are placed
  */
 static void slv_order_pick( int k ) {
-    if ( slv_q_answered || k < 0 || k >= slv_q.shown_cnt || !slv_built_lbl )
+    if ( slv_q_answered || k < 0 || !slv_built_lbl )
+        return;
+
+#ifdef SLV_BIG_SCREEN
+    /* the button after the words: take every word back */
+    if ( k == slv_q.shown_cnt ) {
+        for ( int i = 0; i < slv_q.shown_cnt; i++ )
+            lv_obj_set_hidden( slv_item[ i ], false );
+        slv_q.picked_cnt = 0;
+        slv_order_text( false, lv_color_hex( 0xFFFFFF ) );
+        return;
+    }
+#endif
+    if ( k >= slv_q.shown_cnt )
         return;
 
     slv_q.picked[ slv_q.picked_cnt++ ] = k;
@@ -2281,6 +2294,9 @@ static void slv_show( slv_screen_t screen ) {
                 for ( int k = 0; k < slv_q.shown_cnt; k++ )
                     slv_add_chip( flow, slv_q.shown[ k ] );
                 lv_tileview_add_element( slv_tile, flow );
+#ifdef SLV_BIG_SCREEN
+                slv_tint( slv_add_button( "Effacer" ), 0x5A3A3A );
+#endif
             }
             else {
                 for ( int i = 0; i < slv_q.choice_cnt; i++ )
