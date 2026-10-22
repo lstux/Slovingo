@@ -8,7 +8,7 @@
 
     #include "lvgl.h"
 
-    #define THEME_ICON_SIZE         48
+    #define THEME_ICON_SIZE         40
     #define THEME_ICON_PADDING      6
     #define THEME_PADDING           10
     #define THEME_CONT_HEIGHT       45

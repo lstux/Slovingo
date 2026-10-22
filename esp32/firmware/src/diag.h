@@ -19,8 +19,10 @@
     void diag_init( void );
     /** @brief a step of the start: written on the serial port and kept over a crash */
     void diag_step( const char *name );
-    /** @brief after tft.begin(): red, green, blue test, then the reset info on the screen */
+    /** @brief after tft.begin(): the reset info on the screen, only when the previous run crashed */
     void diag_screen_ready( void );
+    /** @brief text on the screen (the diagnostic program calls it with the red, green, blue test) */
+    void diag_screen_start( bool color_test );
     /** @brief stop drawing on the screen (call before lvgl takes it over); the serial port stays */
     void diag_screen_done( void );
     /** @brief a line of text on the screen (and the serial port) */
@@ -35,6 +37,7 @@
     static inline void diag_init( void ) {}
     static inline void diag_step( const char *name ) { (void)name; }
     static inline void diag_screen_ready( void ) {}
+    static inline void diag_screen_start( bool color_test ) { (void)color_test; }
     static inline void diag_screen_done( void ) {}
     static inline void diag_heartbeat( void ) {}
     #define diag_line( ... )    ((void)0)

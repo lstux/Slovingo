@@ -36,7 +36,7 @@ void setup( void ) {
     tft.begin();
     tft.setRotation( BOARD_ROTATION );
     tft.fillScreen( TFT_BLACK );
-    diag_screen_ready();
+    diag_screen_start( true );
 
     diag_step( sd_ok ? "sd: carte montee" : "sd: PAS DE CARTE" );
     diag_line( sd_ok ? TFT_GREEN : TFT_ORANGE, "SD : %s", sd_ok ? "carte montee" : "pas de carte" );

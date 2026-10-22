@@ -92,7 +92,7 @@ la batterie et du tactile (`IRQ=0` quand on touche l'écran, `OK=0` / `BOOT=0` q
 pour le retirer). Au démarrage il écrit sur le port série une bannière (puce, flash, PSRAM, raison du dernier
 reset) puis chaque étape : `board_init`, `sd_mount`, `display_init`, `touch_init`, `lvgl_port_init`, `app_setup`,
 `app_activate`, `setup_done`, puis une ligne toutes les 5 s dans `loop`. Le dernier jalon franchi est gardé en
-mémoire RTC, qui survit à un plantage : après un reset anormal, la bannière **et l'écran** (en rouge, 5 s) disent
+mémoire RTC, qui survit à un plantage : après un reset anormal, la bannière **et l'écran** (5 s, seulement dans ce cas ; le test rouge-vert-bleu reste dans `t-hmi-diag`) disent
 à quelle étape le programme s'est arrêté.
 
 Le port USB de la carte disparaît et réapparaît à chaque redémarrage : si le moniteur reste vide, le relancer

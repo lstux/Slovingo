@@ -109,11 +109,19 @@ void diag_line( uint16_t color, const char *format, ... ) {
 }
 
 void diag_screen_ready( void ) {
-    /* a full screen of each colour: shows at once whether the display is driven and the colour order */
-    const uint16_t colors[] = { TFT_RED, TFT_GREEN, TFT_BLUE };
-    for ( uint8_t i = 0; i < 3; i++ ) {
-        tft.fillScreen( colors[ i ] );
-        delay( 350 );
+    /* the normal firmware shows something only after a crash (the serial port has the rest) */
+    if ( diag_previous_run_crashed() )
+        diag_screen_start( false );
+}
+
+void diag_screen_start( bool color_test ) {
+    if ( color_test ) {
+        /* a full screen of each colour: shows at once whether the display is driven and the colour order */
+        const uint16_t colors[] = { TFT_RED, TFT_GREEN, TFT_BLUE };
+        for ( uint8_t i = 0; i < 3; i++ ) {
+            tft.fillScreen( colors[ i ] );
+            delay( 350 );
+        }
     }
     tft.fillScreen( TFT_BLACK );
     screen_ready = true;

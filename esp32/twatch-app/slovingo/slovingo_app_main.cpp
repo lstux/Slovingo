@@ -122,12 +122,14 @@ static uint8_t slv_theme_of( const char *key ) {
  */
 #ifdef SLV_BIG_SCREEN
     /* 320x240 screen with a stylus or a finger: more air, bigger targets */
-    #define SLV_SIDE_MARGIN     8
-    #define SLV_GAP             8
-    #define SLV_ITEM_GAP        8
-    #define SLV_BTN_PAD_X       12
-    #define SLV_BTN_PAD_Y       9
-    #define SLV_CHIP_PAD_X      12
+    #define SLV_SIDE_MARGIN     6
+    #define SLV_GAP             3
+    #define SLV_ITEM_GAP        5
+    #define SLV_BTN_PAD_X       10
+    #define SLV_BTN_PAD_Y       4
+    #define SLV_CHIP_PAD_X      10
+    #define SLV_LOADING_MIN_MS  600     /* the loading screen stays at least this long */
+    #define SLV_SPLASH_MS       1500    /* ... and this long the first time (start of the app) */
     #define SLV_SLIDE_MS        220     /* slide of a page that comes in */
 #else
 #define SLV_SIDE_MARGIN     2       /* px left and right of the text */
@@ -354,6 +356,8 @@ static lv_coord_t slv_content_w( void ) {
 
 #ifdef SLV_BIG_SCREEN
 /* direction of the slide of the next screen: 1 comes from the right, -1 from the left, 0 none */
+static uint32_t slv_loading_since = 0;
+static bool slv_splash = true;      /* first loading screen of the run */
 static int slv_slide = 0;
 
 /* button colour: a light top fading to the colour, darker while pressed */
@@ -546,13 +550,13 @@ static lv_obj_t *slv_add_prompt( const char *text ) {
     lv_obj_set_style_local_bg_opa( card, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_COVER );
     lv_obj_set_style_local_radius( card, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 14 );
     lv_obj_set_style_local_border_width( card, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 0 );
-    lv_obj_set_style_local_pad_all( card, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 12 );
+    lv_obj_set_style_local_pad_all( card, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 6 );
     lv_obj_set_click( card, false );
     lv_obj_set_drag_parent( card, true );
 
     lv_obj_t *label = lv_label_create( card, NULL );
     lv_label_set_long_mode( label, LV_LABEL_LONG_BREAK );
-    lv_obj_set_width( label, slv_content_w() - 24 );
+    lv_obj_set_width( label, slv_content_w() - 12 );
     lv_label_set_align( label, LV_LABEL_ALIGN_CENTER );
     lv_obj_add_style( label, LV_LABEL_PART_MAIN, &slv_style22 );
     lv_obj_set_style_local_text_color( label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex( 0xE8F4FD ) );
@@ -564,7 +568,7 @@ static lv_obj_t *slv_add_prompt( const char *text ) {
 static void slv_add_progress( int value ) {
     lv_obj_t *bar = lv_bar_create( slv_page, NULL );
 
-    lv_obj_set_size( bar, slv_content_w(), 8 );
+    lv_obj_set_size( bar, slv_content_w(), 4 );
     lv_bar_set_range( bar, 0, 100 );
     lv_bar_set_value( bar, value, LV_ANIM_OFF );
     lv_obj_set_style_local_bg_color( bar, LV_BAR_PART_BG, LV_STATE_DEFAULT, lv_color_hex( 0x23272E ) );
@@ -808,7 +812,7 @@ static int slv_playable_count( JsonObject sheet ) {
     #define SLV_RD_DIALOG_CHARS 360     /* characters of dialogue on a page */
     #define SLV_RD_DIALOG_LINES 5
     #define SLV_RD_TABLE_ROWS   5
-    #define SLV_CARD_PAD        8
+    #define SLV_CARD_PAD        5
 #else
     #define SLV_RD_TEXT_CHARS   260     /* characters of text on a page */
     #define SLV_RD_DIALOG_CHARS 200     /* characters of dialogue on a page */
@@ -1959,6 +1963,13 @@ static void slv_lv_task( lv_task_t * task ) {
     if ( !slv_done )
         return;
 
+#ifdef SLV_BIG_SCREEN
+    /* a cached answer comes at once: leave the loading screen time to be seen */
+    if ( slv_screen == SCR_LOADING && lv_tick_get() < slv_loading_since + ( slv_splash ? SLV_SPLASH_MS : SLV_LOADING_MIN_MS ) )
+        return;
+    slv_splash = false;
+#endif
+
     slv_done = false;
     slv_busy = false;
     SpiRamJsonDocument *doc = slv_res_doc;
@@ -2116,6 +2127,10 @@ static void slv_set_nav( bool prev_ok, bool next_ok ) {
 static void slv_show( slv_screen_t screen ) {
     char text[ 160 ];
 
+#ifdef SLV_BIG_SCREEN
+    if ( screen == SCR_LOADING && ( slv_screen != SCR_LOADING || !slv_loading_since ) )
+        slv_loading_since = lv_tick_get() ? lv_tick_get() : 1;
+#endif
     slv_screen = screen;
     slv_pending = false;
     slv_advance_at = 0;
@@ -2236,7 +2251,6 @@ static void slv_show( slv_screen_t screen ) {
             snprintf( text, sizeof( text ), "%d/%d  Score: %d", slv_q_pos + 1, slv_q_cnt, slv_score );
             lv_label_set_text( slv_progress_lbl, text );
 #ifdef SLV_BIG_SCREEN
-            slv_add_progress( slv_q_cnt ? slv_q_pos * 100 / slv_q_cnt : 0 );
             slv_add_prompt( slv_q.prompt );
 #else
             slv_add_label( slv_q.prompt, true );
