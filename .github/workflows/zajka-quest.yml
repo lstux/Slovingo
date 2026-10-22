@@ -32,9 +32,10 @@ jobs:
           path: ~/.platformio
           key: pio-${{ runner.os }}-${{ hashFiles('esp32/zajka-quest/platformio.ini') }}
 
-      - name: Simulateur PC (titre, carte du chapitre, retour au titre)
+      - name: Simulateur PC (cours embarque, titre, carte du chapitre, retour au titre)
         run: |
           make -C sim
+          ./build/sim --course
           mkdir -p /tmp/zq
           ./build/sim --script sim/demo.txt --out /tmp/zq --expect titre,chapitre,titre
 

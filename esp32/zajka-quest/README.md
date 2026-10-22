@@ -5,8 +5,8 @@ Une aventure en vue de dessus dans l'univers de [Zajka Friends](https://github.c
 les lieux et parle aux personnages. C'est le pendant calme de [Zajka Run](../zajka-run/) : on peut
 finir le jeu sans comprendre le slovaque, mais le comprendre rend le voyage plus riche.
 
-> **État : squelette.** Écran titre et carte du chapitre 1 seulement. Viennent ensuite le
-> convertisseur du cours, la carte de Košice, les dialogues et la sauvegarde.
+> **État : squelette.** Écran titre et carte du chapitre 1, et le contenu de l'épisode 1
+> converti depuis le cours. Viennent ensuite la carte de Košice, les dialogues et la sauvegarde.
 
 ## Décisions
 
@@ -47,7 +47,8 @@ tenant **B**. Le `.fw` est aussi dans les *Artifacts* du workflow « Zajka Quest
 ```
 src/main_odroid.cpp   matériel : écran (LovyanGFX, DMA par bandes), boutons, son (DAC), lanceur
 src/game/             le jeu, sans Arduino ; gfx, audio et input sont repris de Zajka Run
-src/game/gen/         données générées (images, polices) : ne pas éditer
+src/game/course.h     structures du contenu du cours (répliques, mots, exercices)
+src/game/gen/         données générées (images, polices, cours) : ne pas éditer
 art/                  images sources (PNG) ; les sprites 32 × 48 sont ceux de Run, provisoires
 tools/                générateurs (Python 3 + Pillow, numpy) ; build_assets.py régénère src/game/gen/
 sim/                  simulateur PC : même code de jeu, captures PPM et son WAV
@@ -56,11 +57,29 @@ sim/                  simulateur PC : même code de jeu, captures PPM et son WAV
 `tools/make_sprites.py` et `tools/import_ai.py` sont encore ceux de Run (planches de profil
 32 × 48) ; ils seront étendus aux planches 4 directions, aux tuiles et aux portraits.
 
+## Le contenu du cours
+
+Les répliques, le vocabulaire et les exercices viennent du dépôt
+[Slovingo-sk-fr-friends](https://github.com/lstux/Slovingo-sk-fr-friends), converti par
+`tools/build_course.py` en `src/game/gen/course_data.inc` (commité, comme les images) :
+
+```sh
+python3 src/langs.py sk-fr-friends            # à la racine du dépôt : le cours dans langs/
+python3 tools/build_course.py --dump          # voir ce qui est lu
+python3 tools/build_course.py                 # régénérer après un changement du cours
+```
+
+Les fiches converties sont listées dans `EPISODES` en tête du script (pour l'instant l'épisode 1
+de la série Košice). Le script garde le dialogue (`! 🦊 …`, `> traduction`, `> mot = sens`,
+`+ aide`), les « répliques en plus », les nouveaux mots et les exercices `qcm`, `listen` et
+`order`. `[USER_NAME]` devient le nom choisi par le joueur (par défaut celui de `lang.json`).
+
 ## Tester sur PC
 
 ```sh
 python3 tools/build_assets.py      # après un changement dans art/
 make -C sim
+build/sim --course                 # résumé du cours embarqué, glyphes manquants dans la police
 build/sim --script sim/demo.txt --out /tmp/zq --expect titre,chapitre,titre
 ```
 

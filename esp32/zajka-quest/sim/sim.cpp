@@ -4,6 +4,7 @@
 //   make -C sim                                        compile build/sim
 //   build/sim --script sim/demo.txt --out /tmp/zq      rejoue un script (voir demo.txt)
 //   build/sim --frames 600 --every 120 --out /tmp/zq   une capture toutes les 2 s
+//   build/sim --course                                 resume du cours embarque, glyphes manquants
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,7 +12,9 @@
 #include <string>
 #include <vector>
 
+#include "../src/game/course.h"
 #include "../src/game/game.h"
+#include "../src/game/gen/assets.h"
 
 static uint16_t fb[SCREEN_W * SCREEN_H];
 
@@ -68,6 +71,50 @@ static uint16_t parseButtons(const char* s) {
   return b;
 }
 
+// --course : resume du cours embarque et verification que la police sait tout dessiner.
+static int missingGlyphs(const char* s, const char* where) {
+  int bad = 0;
+  for (const unsigned char* p = (const unsigned char*)s; s && *p;) {
+    uint32_t cp = *p;
+    int n = cp < 0x80 ? 1 : cp < 0xE0 ? 2 : cp < 0xF0 ? 3 : 4;
+    if (n > 1) cp &= (0xFF >> (n + 1));
+    for (int i = 1; i < n; i++) cp = (cp << 6) | (p[i] & 0x3F);
+    p += n;
+    if (cp == (uint32_t)NAME_MARK) continue;
+    bool found = false;
+    for (int i = 0; i < font_small.count && !found; i++) found = font_small.cp[i] == cp;
+    if (!found) {
+      printf("  glyphe absent U+%04X dans %s : %s\n", cp, where, s);
+      bad++;
+    }
+  }
+  return bad;
+}
+
+static int checkCourse() {
+  int bad = 0, lines = 0;
+  for (int e = 0; e < COURSE_NUM_EPISODES; e++) {
+    const Episode& ep = *COURSE_EPISODES[e];
+    printf("cours : %s, série %d « %s », épisode %d « %s » : %d répliques (+%d), %d mots, %d exercices\n",
+           ep.id, ep.seriesNum, ep.series, ep.episodeNum, ep.title, ep.nDialog, ep.nExtra, ep.nWords,
+           ep.nExercises);
+    for (int pass = 0; pass < 2; pass++) {
+      const Line* L = pass ? ep.extra : ep.dialog;
+      int n = pass ? ep.nExtra : ep.nDialog;
+      for (int i = 0; i < n; i++, lines++) {
+        bad += missingGlyphs(L[i].sk, ep.id) + missingGlyphs(L[i].fr, ep.id);
+        if (L[i].help) bad += missingGlyphs(L[i].help, ep.id);
+        for (int g = 0; g < L[i].nGloss; g++)
+          bad += missingGlyphs(L[i].gloss[g].sk, ep.id) + missingGlyphs(L[i].gloss[g].fr, ep.id);
+      }
+    }
+    for (int i = 0; i < ep.nWords; i++) bad += missingGlyphs(ep.words[i].sk, ep.id) + missingGlyphs(ep.words[i].fr, ep.id);
+  }
+  printf("cours : %d épisode(s), %d répliques, nom par défaut « %s », %d glyphe(s) manquant(s)\n",
+         COURSE_NUM_EPISODES, lines, COURSE_DEFAULT_NAME, bad);
+  return bad == 0 && COURSE_NUM_EPISODES > 0 ? 0 : 1;
+}
+
 static const char* stateName(GameState s) {
   switch (s) {
     case S_TITLE: return "titre";
@@ -92,6 +139,8 @@ int main(int argc, char** argv) {
     else if (a == "--shots") {
       char* s = argv[++i];
       for (char* t = strtok(s, ","); t; t = strtok(nullptr, ",")) shots.push_back(atoi(t));
+    } else if (a == "--course") {
+      return checkCourse();
     } else if (a == "--expect") {
       char* s = argv[++i];
       for (char* t = strtok(s, ","); t; t = strtok(nullptr, ",")) expect.push_back(t);
