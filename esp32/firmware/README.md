@@ -15,6 +15,15 @@ sans copie. `src/compat/` remplace les quelques fonctions du firmware de la mont
 | retour haptique | aucun (pas de moteur) |
 | flèche de retour de l'écran d'accueil | éteint l'appareil (voir ci-dessous) |
 
+## Interface grand écran
+
+`-D SLV_BIG_SCREEN=1` (dans `platformio.ini`, absent du build de la montre) active dans le code de l'app :
+marges et boutons plus grands aux coins arrondis et dégradés, question du quiz dans une carte avec barre
+de progression, barre de progression dans la lecture, pages de lecture plus longues (texte 440 caractères,
+dialogue 5 répliques, tableau 5 lignes, voir `SLV_RD_*` en tête de `slovingo_app_main.cpp`) et un
+glissement de 220 ms quand une page ou un écran change (swipe, flèches, boutons, question suivante).
+Retirer le flag redonne exactement l'interface de la montre.
+
 ## Compiler
 
 ```bash

@@ -120,12 +120,23 @@ static uint8_t slv_theme_of( const char *key ) {
 /*
  * margins of the text pages, tighter than the theme ones to give the text more room
  */
+#ifdef SLV_BIG_SCREEN
+    /* 320x240 screen with a stylus or a finger: more air, bigger targets */
+    #define SLV_SIDE_MARGIN     8
+    #define SLV_GAP             8
+    #define SLV_ITEM_GAP        8
+    #define SLV_BTN_PAD_X       12
+    #define SLV_BTN_PAD_Y       9
+    #define SLV_CHIP_PAD_X      12
+    #define SLV_SLIDE_MS        220     /* slide of a page that comes in */
+#else
 #define SLV_SIDE_MARGIN     2       /* px left and right of the text */
 #define SLV_GAP             2       /* px above and below the page */
 #define SLV_ITEM_GAP        5       /* px between two blocks (buttons, labels) */
 #define SLV_BTN_PAD_X       4       /* px inside a button, left and right of its text */
 #define SLV_BTN_PAD_Y       2       /* px inside a button, above and below its text */
 #define SLV_CHIP_PAD_X      6       /* px inside a word button of the order exercises, left and right */
+#endif
 
 /*
  * texts of the interface (the course content has its own language)
@@ -329,6 +340,64 @@ static lv_coord_t slv_content_w( void ) {
     return( lv_disp_get_hor_res( NULL ) - 2 * SLV_SIDE_MARGIN );
 }
 
+#ifdef SLV_BIG_SCREEN
+/* direction of the slide of the next screen: 1 comes from the right, -1 from the left, 0 none */
+static int slv_slide = 0;
+
+/* button colour: a light top fading to the colour, darker while pressed */
+static void slv_paint( lv_obj_t *btn, uint32_t color ) {
+    lv_color_t base = lv_color_hex( color );
+    lv_color_t top = lv_color_mix( LV_COLOR_WHITE, base, 28 );
+    lv_color_t dark = lv_color_mix( LV_COLOR_BLACK, base, 70 );
+
+    lv_obj_set_style_local_bg_color( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, top );
+    lv_obj_set_style_local_bg_grad_color( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, base );
+    lv_obj_set_style_local_bg_grad_dir( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, LV_GRAD_DIR_VER );
+    lv_obj_set_style_local_bg_color( btn, LV_BTN_PART_MAIN, LV_STATE_PRESSED, base );
+    lv_obj_set_style_local_bg_grad_color( btn, LV_BTN_PART_MAIN, LV_STATE_PRESSED, dark );
+    lv_obj_set_style_local_bg_grad_dir( btn, LV_BTN_PART_MAIN, LV_STATE_PRESSED, LV_GRAD_DIR_VER );
+}
+
+/* look of every button: rounded, no border, a neutral blue-grey until tinted */
+static void slv_btn_look( lv_obj_t *btn ) {
+    lv_obj_set_style_local_radius( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, 12 );
+    lv_obj_set_style_local_border_width( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, 0 );
+    lv_obj_set_style_local_shadow_width( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, 0 );
+    slv_paint( btn, 0x34405A );
+}
+
+/* the page that comes in slides from the side, easing out */
+static void slv_slide_in( int dir ) {
+    lv_anim_del( slv_page, NULL );
+    lv_obj_set_x( slv_page, 0 );
+    if ( !dir )
+        return;
+
+    lv_coord_t from = dir * lv_disp_get_hor_res( NULL );
+    lv_obj_set_x( slv_page, from );
+    lv_anim_t anim;
+    lv_anim_init( &anim );
+    lv_anim_set_var( &anim, slv_page );
+    lv_anim_set_exec_cb( &anim, (lv_anim_exec_xcb_t)lv_obj_set_x );
+    lv_anim_set_values( &anim, from, 0 );
+    lv_anim_set_time( &anim, SLV_SLIDE_MS );
+    lv_anim_path_t path;
+    lv_anim_path_init( &path );
+    lv_anim_path_set_cb( &path, lv_anim_path_ease_out );
+    lv_anim_set_path( &anim, &path );
+    lv_anim_start( &anim );
+}
+
+/* the question: a card with the text centred */
+static lv_obj_t *slv_add_prompt( const char *text );
+/* progress of the quiz or of the pages of the reader */
+static void slv_add_progress( int value );
+#else
+static inline void slv_paint( lv_obj_t *btn, uint32_t color ) {
+    lv_obj_set_style_local_bg_color( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex( color ) );
+}
+#endif
+
 /*
  * label with the slovingo font, text is cleaned up for the font
  */
@@ -340,6 +409,12 @@ static lv_obj_t *slv_add_label( const char *text, bool big ) {
     lv_label_set_long_mode( label, LV_LABEL_LONG_BREAK );
     lv_obj_set_width( label, slv_content_w() );
     lv_obj_add_style( label, LV_LABEL_PART_MAIN, big ? &slv_style22 : &slv_style16 );
+#ifdef SLV_BIG_SCREEN
+    if ( big ) {
+        lv_label_set_align( label, LV_LABEL_ALIGN_CENTER );
+        lv_obj_set_style_local_text_color( label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex( 0xE8F4FD ) );
+    }
+#endif
     return( label );
 }
 
@@ -359,6 +434,9 @@ static lv_obj_t *slv_add_button( const char *text ) {
     lv_obj_set_style_local_pad_top( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, SLV_BTN_PAD_Y );
     lv_obj_set_style_local_pad_bottom( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, SLV_BTN_PAD_Y );
     lv_obj_set_event_cb( btn, slv_item_event_cb );
+#ifdef SLV_BIG_SCREEN
+    slv_btn_look( btn );
+#endif
 
     lv_obj_t *label = lv_label_create( btn, NULL );
     lv_label_set_long_mode( label, LV_LABEL_LONG_BREAK );
@@ -376,7 +454,7 @@ static lv_obj_t *slv_add_button( const char *text ) {
 static void slv_tint( lv_obj_t *btn, uint32_t color ) {
     if ( !color )
         return;
-    lv_obj_set_style_local_bg_color( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex( color ) );
+    slv_paint( btn, color );
     /* the colours are dark: the text is always white, whatever the theme of the watch */
     lv_obj_set_style_local_text_color( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE );
     lv_obj_set_style_local_text_color( btn, LV_BTN_PART_MAIN, LV_STATE_PRESSED, LV_COLOR_WHITE );
@@ -399,6 +477,9 @@ static lv_obj_t *slv_add_button_icon( const char *text, const lv_img_dsc_t *icon
     lv_obj_set_style_local_pad_bottom( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, SLV_BTN_PAD_Y );
     lv_obj_set_style_local_pad_inner( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, 6 );
     lv_obj_set_event_cb( btn, slv_item_event_cb );
+#ifdef SLV_BIG_SCREEN
+    slv_btn_look( btn );
+#endif
     slv_tint( btn, color );
 
     lv_obj_t *img = lv_img_create( btn, NULL );
@@ -439,6 +520,49 @@ static lv_obj_t *slv_add_head( const lv_img_dsc_t *icon, const char *text, bool 
     lv_label_set_text( label, text );
     return( label );
 }
+
+#ifdef SLV_BIG_SCREEN
+static lv_obj_t *slv_add_prompt( const char *text ) {
+    char buffer[ 512 ];
+
+    slovingo_sanitize( text, buffer, sizeof( buffer ) );
+    lv_obj_t *card = lv_cont_create( slv_page, NULL );
+    lv_cont_set_layout( card, LV_LAYOUT_COLUMN_MID );
+    lv_cont_set_fit2( card, LV_FIT_NONE, LV_FIT_TIGHT );
+    lv_obj_set_width( card, slv_content_w() );
+    lv_obj_set_style_local_bg_color( card, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex( 0x1B2A41 ) );
+    lv_obj_set_style_local_bg_opa( card, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_COVER );
+    lv_obj_set_style_local_radius( card, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 14 );
+    lv_obj_set_style_local_border_width( card, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 0 );
+    lv_obj_set_style_local_pad_all( card, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 12 );
+    lv_obj_set_click( card, false );
+    lv_obj_set_drag_parent( card, true );
+
+    lv_obj_t *label = lv_label_create( card, NULL );
+    lv_label_set_long_mode( label, LV_LABEL_LONG_BREAK );
+    lv_obj_set_width( label, slv_content_w() - 24 );
+    lv_label_set_align( label, LV_LABEL_ALIGN_CENTER );
+    lv_obj_add_style( label, LV_LABEL_PART_MAIN, &slv_style22 );
+    lv_obj_set_style_local_text_color( label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex( 0xE8F4FD ) );
+    lv_label_set_text( label, buffer );
+    return( label );
+}
+
+/* a thin bar, value 0..100 */
+static void slv_add_progress( int value ) {
+    lv_obj_t *bar = lv_bar_create( slv_page, NULL );
+
+    lv_obj_set_size( bar, slv_content_w(), 8 );
+    lv_bar_set_range( bar, 0, 100 );
+    lv_bar_set_value( bar, value, LV_ANIM_OFF );
+    lv_obj_set_style_local_bg_color( bar, LV_BAR_PART_BG, LV_STATE_DEFAULT, lv_color_hex( 0x23272E ) );
+    lv_obj_set_style_local_radius( bar, LV_BAR_PART_BG, LV_STATE_DEFAULT, 4 );
+    lv_obj_set_style_local_bg_color( bar, LV_BAR_PART_INDIC, LV_STATE_DEFAULT, lv_color_hex( 0x4FC3F7 ) );
+    lv_obj_set_style_local_radius( bar, LV_BAR_PART_INDIC, LV_STATE_DEFAULT, 4 );
+    lv_obj_set_click( bar, false );
+    lv_obj_set_drag_parent( bar, true );
+}
+#endif
 
 /* the fox bounces while the course is loading */
 static void slv_add_bouncing_fox( void ) {
@@ -483,6 +607,9 @@ static lv_obj_t *slv_add_chip( lv_obj_t *parent, const char *text ) {
     lv_obj_set_style_local_pad_top( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, SLV_BTN_PAD_Y + 2 );
     lv_obj_set_style_local_pad_bottom( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, SLV_BTN_PAD_Y + 2 );
     lv_obj_set_event_cb( btn, slv_item_event_cb );
+#ifdef SLV_BIG_SCREEN
+    slv_btn_look( btn );
+#endif
 
     lv_obj_t *label = lv_label_create( btn, NULL );
     lv_label_set_long_mode( label, LV_LABEL_LONG_EXPAND );
@@ -664,13 +791,21 @@ static int slv_playable_count( JsonObject sheet ) {
  * ---------------------------------------------------------------------- */
 
 #define SLV_NONE            255
-#define SLV_RD_TEXT_CHARS   260     /* characters of text on a page */
-#define SLV_RD_DIALOG_CHARS 200     /* characters of dialogue on a page */
-#define SLV_RD_DIALOG_LINES 3
-#define SLV_RD_TABLE_ROWS   3
+#ifdef SLV_BIG_SCREEN
+    #define SLV_RD_TEXT_CHARS   440     /* characters of text on a page */
+    #define SLV_RD_DIALOG_CHARS 360     /* characters of dialogue on a page */
+    #define SLV_RD_DIALOG_LINES 5
+    #define SLV_RD_TABLE_ROWS   5
+    #define SLV_CARD_PAD        8
+#else
+    #define SLV_RD_TEXT_CHARS   260     /* characters of text on a page */
+    #define SLV_RD_DIALOG_CHARS 200     /* characters of dialogue on a page */
+    #define SLV_RD_DIALOG_LINES 3
+    #define SLV_RD_TABLE_ROWS   3
+    #define SLV_CARD_PAD        3
+#endif
 #define SLV_MAX_PAGES       160
 #define SLV_MAX_SPEAKERS    8
-#define SLV_CARD_PAD        3
 #define SLV_COLOR_TITLE     0x4FC3F7
 #define SLV_COLOR_DIM       0xA0A7B0
 #define SLV_COLOR_GLOSS     0x8AB4F8
@@ -1094,6 +1229,9 @@ static void slv_reader_render( void ) {
     slv_rd_page_t *page = &slv_rd[ slv_rd_cur ];
     JsonArray blocks = (*slv_sheet)["blocks"];
 
+#ifdef SLV_BIG_SCREEN
+    slv_add_progress( ( slv_rd_cur + 1 ) * 100 / slv_rd_cnt );
+#endif
     if ( slv_rd_cur == 0 )
         slv_add_label( slv_cur_sheet_obj()["title"] | "?", true );
     if ( page->head != SLV_NONE ) {
@@ -1425,9 +1563,9 @@ static void slv_answer( int choice ) {
     if ( choice == slv_q.correct )
         slv_score++;
 
-    lv_obj_set_style_local_bg_color( slv_item[ slv_q.correct ], LV_BTN_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex( 0x2E7D32 ) );
+    slv_paint( slv_item[ slv_q.correct ], 0x2E7D32 );
     if ( choice != slv_q.correct )
-        lv_obj_set_style_local_bg_color( slv_item[ choice ], LV_BTN_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex( 0xC62828 ) );
+        slv_paint( slv_item[ choice ], 0xC62828 );
 
     /* no next button: the next question comes by itself, a wrong answer stays on screen a little longer */
     slv_feedback( choice == slv_q.correct );
@@ -1530,6 +1668,9 @@ static void slv_next_question( void ) {
         return;
     }
     slv_make_question( slv_q_order[ slv_q_pos ] );
+#ifdef SLV_BIG_SCREEN
+    slv_slide = 1;
+#endif
     slv_goto( SCR_QUIZ );
 }
 
@@ -1904,7 +2045,12 @@ static void slv_show( slv_screen_t screen ) {
             slv_set_mood( MOOD_NEUTRAL );
             snprintf( text, sizeof( text ), "%d/%d  Score: %d", slv_q_pos + 1, slv_q_cnt, slv_score );
             lv_label_set_text( slv_progress_lbl, text );
+#ifdef SLV_BIG_SCREEN
+            slv_add_progress( slv_q_cnt ? slv_q_pos * 100 / slv_q_cnt : 0 );
+            slv_add_prompt( slv_q.prompt );
+#else
             slv_add_label( slv_q.prompt, true );
+#endif
             if ( *slv_q.hint )
                 slv_add_label( slv_q.hint, false );
             if ( slv_q.kind == SLV_KIND_ORDER ) {
@@ -1989,6 +2135,13 @@ static void slv_show( slv_screen_t screen ) {
     for ( int i = 0; i < slv_item_cnt; i++ )
         lv_tileview_add_element( slv_tile, slv_item[ i ] );
     lv_obj_set_y( lv_page_get_scrollable( slv_page ), 0 );
+#ifdef SLV_BIG_SCREEN
+    /* the loading screen keeps the direction for the screen it waits for */
+    if ( screen != SCR_LOADING ) {
+        slv_slide_in( slv_slide );
+        slv_slide = 0;
+    }
+#endif
 }
 
 /* ------------------------------------------------------------------------
@@ -2049,6 +2202,11 @@ static void slv_item_event_cb( lv_obj_t * obj, lv_event_t event ) {
     if ( item < 0 )
         return;
 
+#ifdef SLV_BIG_SCREEN
+    /* forward: the next screen comes from the right (the quiz and the reader manage their own) */
+    if ( slv_screen != SCR_QUIZ && slv_screen != SCR_READER )
+        slv_slide = 1;
+#endif
     switch ( slv_screen ) {
         case SCR_GROUPS:    slv_open_group( item );
                             break;
@@ -2104,6 +2262,9 @@ static void slv_back_event_cb( lv_obj_t * obj, lv_event_t event ) {
 
     keyboard_hide();
 
+#ifdef SLV_BIG_SCREEN
+    slv_slide = ( slv_screen == SCR_LOADING || slv_screen == SCR_GROUPS ) ? 0 : -1;
+#endif
     switch ( slv_screen ) {
         case SCR_LOADING:   /* the worker cannot be stopped, wait for its answer */
                             break;
@@ -2159,6 +2320,9 @@ static void slv_read_next_sheet( void ) {
 /* dir -1 or 1: previous or next page of the reader (the next sheet after the last page),
    sheet of the sheet screen, series of the sheets screen */
 static void slv_navigate( int dir ) {
+#ifdef SLV_BIG_SCREEN
+    slv_slide = dir;
+#endif
     switch ( slv_screen ) {
         case SCR_READER:
             if ( slv_rd_cur + dir >= 0 && slv_rd_cur + dir < slv_rd_cnt ) {
@@ -2184,6 +2348,10 @@ static void slv_navigate( int dir ) {
         default:
             break;
     }
+#ifdef SLV_BIG_SCREEN
+    if ( !slv_pending && !slv_busy )    /* nothing to turn to: no slide for the next screen */
+        slv_slide = 0;
+#endif
 }
 
 static void slv_nav_event_cb( lv_obj_t * obj, lv_event_t event ) {
