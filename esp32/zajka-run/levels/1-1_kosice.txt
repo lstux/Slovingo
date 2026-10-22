@@ -1,0 +1,26 @@
+# Zajka Run, niveau 1 : Kosice, rue Hlavna.
+# Legende : # sol  B bloc  ? bonus  = corniche (traversable par dessous)  ^ pointes
+#           o medovnik  S depart  C lampadaire (point de passage)  F arret de tram (fin)
+#           p pigeon  w guepe  P ressort  T tram  | butee invisible (tram, ennemis)
+#           l banc  k bac a fleurs (decor)
+name: Košice
+subtitle: Hlavná ulica
+hint: Ahoj! To si ty?
+theme: kosice
+music: 0
+---
+                                                                                                                                                                                                                    
+                                                                                                                                                                                                                    
+                                                                                                                                                                                                                    
+                                                              oooooo                                                                                                                                                
+                                                            =========                                                    w                                                                                          
+                                                                                                                                 w       ooo                                                                        
+               ooo                                                                            oooo      oo                                                                       oooooo                             
+                                                                                             ======    ====                                             ooo                                                         
+                              oo             ooo                                                                                                       o   o           w                                            
+              B?B?B                   oo    =====  oo                                                                 B?B   oooo         ???          o     o                      BB                               
+         oooo                  B     o  o                                                                                                                                         BBBB                              
+                              BB                                                                                                  B                                              BBBBBB                             
+   S  l                p     BBB          k       ^^^^   p   P    k   p     C   l   |  T                        |  k              B   p         l             C     p      p    BBBBBBBB    k       F               
+#####################################    ###################################################################################    ######################       #######################################################
+#####################################    ###################################################################################    ######################       #######################################################

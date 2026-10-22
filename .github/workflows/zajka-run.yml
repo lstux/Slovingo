@@ -1,0 +1,52 @@
+name: Zajka Run (ODROID-GO)
+
+# Compile le jeu Zajka Run (esp32/zajka-run) : firmware PlatformIO + ZajkaRun.fw pour le
+# firmware d'origine de l'ODROID-GO, et un test du jeu dans le simulateur PC.
+# Les fichiers sont dans les « Artifacts » de l'execution (onglet Actions).
+
+on:
+  push:
+    paths:
+      - "esp32/zajka-run/**"
+      - ".github/workflows/zajka-run.yml"
+  pull_request:
+    paths:
+      - "esp32/zajka-run/**"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: esp32/zajka-run
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - uses: actions/cache@v4
+        with:
+          path: ~/.platformio
+          key: pio-${{ runner.os }}-${{ hashFiles('esp32/zajka-run/platformio.ini') }}
+
+      - name: Simulateur PC (le niveau se charge, se joue et se termine)
+        run: |
+          make -C sim
+          ./build/sim --bot --start-x 2950 --frames 1200 --out /tmp | tee /tmp/sim.log
+          grep -q "fin atteinte" /tmp/sim.log
+
+      - name: PlatformIO
+        run: pip install platformio
+
+      - name: Build firmware
+        run: pio run
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ZajkaRun-odroid-go
+          path: |
+            esp32/zajka-run/.pio/build/odroid-go/ZajkaRun.fw
+            esp32/zajka-run/.pio/build/odroid-go/firmware.bin
