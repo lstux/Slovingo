@@ -1403,7 +1403,11 @@ static void slv_make_order( int ex_idx, JsonObject exercise ) {
     slv_q.kind = SLV_KIND_ORDER;
     slv_q.word_cnt = n;
     slovingo_sanitize( exercise["l1"] | "", slv_q.prompt, sizeof( slv_q.prompt ) );
+#ifdef SLV_BIG_SCREEN
+    snprintf( slv_q.hint, sizeof( slv_q.hint ), "%s", TXT_ORDER );
+#else
     snprintf( slv_q.hint, sizeof( slv_q.hint ), "%s (%d)", TXT_ORDER, n );
+#endif
 
     for ( int k = 0; k < n; k++ )
         memcpy( slv_q.shown[ k ], slv_q.word[ k ], SLV_TOKEN_LEN );
@@ -1650,23 +1654,25 @@ static void slv_order_text( bool full, lv_color_t color ) {
     lv_obj_set_style_local_text_color( slv_built_lbl, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, color );
 }
 
+#ifdef SLV_BIG_SCREEN
+static lv_obj_t *slv_reset_btn = NULL;      /* order: the icon that takes every word back */
+
+static void slv_order_reset( void ) {
+    if ( slv_q_answered || slv_q.kind != SLV_KIND_ORDER || !slv_built_lbl )
+        return;
+    for ( int i = 0; i < slv_q.shown_cnt; i++ )
+        lv_obj_set_hidden( slv_item[ i ], false );
+    slv_q.picked_cnt = 0;
+    slv_order_text( false, lv_color_hex( 0xFFFFFF ) );
+}
+#endif
+
 /*
  * order: a tapped word leaves the list, the answer is checked when all the words are placed
  */
 static void slv_order_pick( int k ) {
     if ( slv_q_answered || k < 0 || !slv_built_lbl )
         return;
-
-#ifdef SLV_BIG_SCREEN
-    /* the button after the words: take every word back */
-    if ( k == slv_q.shown_cnt ) {
-        for ( int i = 0; i < slv_q.shown_cnt; i++ )
-            lv_obj_set_hidden( slv_item[ i ], false );
-        slv_q.picked_cnt = 0;
-        slv_order_text( false, lv_color_hex( 0xFFFFFF ) );
-        return;
-    }
-#endif
     if ( k >= slv_q.shown_cnt )
         return;
 
@@ -2268,6 +2274,39 @@ static void slv_show( slv_screen_t screen ) {
 #else
             slv_add_label( slv_q.prompt, true );
 #endif
+#ifdef SLV_BIG_SCREEN
+            slv_reset_btn = NULL;
+            if ( slv_q.kind == SLV_KIND_ORDER ) {
+                /* the instruction, and at its right the icon that takes the words back */
+                lv_obj_t *row = lv_cont_create( slv_page, NULL );
+                lv_cont_set_layout( row, LV_LAYOUT_ROW_MID );
+                lv_cont_set_fit2( row, LV_FIT_NONE, LV_FIT_TIGHT );
+                lv_obj_set_width( row, slv_content_w() );
+                lv_obj_set_style_local_bg_opa( row, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_TRANSP );
+                lv_obj_set_style_local_border_width( row, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 0 );
+                lv_obj_set_style_local_pad_all( row, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 0 );
+                lv_obj_set_style_local_pad_inner( row, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, SLV_ITEM_GAP );
+                lv_obj_set_click( row, false );
+                lv_obj_set_drag_parent( row, true );
+
+                lv_obj_t *hint = lv_label_create( row, NULL );
+                lv_label_set_long_mode( hint, LV_LABEL_LONG_BREAK );
+                lv_obj_set_width( hint, slv_content_w() - 44 - SLV_ITEM_GAP );
+                lv_obj_add_style( hint, LV_LABEL_PART_MAIN, &slv_style16 );
+                lv_label_set_text( hint, slv_q.hint );
+
+                slv_reset_btn = lv_btn_create( row, NULL );
+                lv_obj_set_size( slv_reset_btn, 44, 32 );
+                lv_obj_add_style( slv_reset_btn, LV_BTN_PART_MAIN, ws_get_button_style() );
+                lv_obj_set_event_cb( slv_reset_btn, slv_item_event_cb );
+                slv_btn_look( slv_reset_btn );
+                slv_paint( slv_reset_btn, 0x5A3A3A );
+                lv_obj_set_style_local_text_color( slv_reset_btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE );
+                lv_label_set_text( lv_label_create( slv_reset_btn, NULL ), LV_SYMBOL_REFRESH );
+                lv_tileview_add_element( slv_tile, slv_reset_btn );
+            }
+            else
+#endif
             if ( *slv_q.hint )
                 slv_add_label( slv_q.hint, false );
 #ifdef SLV_BIG_SCREEN
@@ -2295,7 +2334,6 @@ static void slv_show( slv_screen_t screen ) {
                     slv_add_chip( flow, slv_q.shown[ k ] );
                 lv_tileview_add_element( slv_tile, flow );
 #ifdef SLV_BIG_SCREEN
-                slv_tint( slv_add_button( "Effacer" ), 0x5A3A3A );
 #endif
             }
             else {
@@ -2425,6 +2463,12 @@ static void slv_item_event_cb( lv_obj_t * obj, lv_event_t event ) {
     if ( event != LV_EVENT_CLICKED )
         return;
 
+#ifdef SLV_BIG_SCREEN
+    if ( obj == slv_reset_btn && slv_screen == SCR_QUIZ ) {
+        slv_order_reset();
+        return;
+    }
+#endif
     int item = slv_item_index( obj );
     if ( item < 0 )
         return;
