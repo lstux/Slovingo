@@ -36,7 +36,17 @@ Sheet block format ("t" = type, minified JSON):
                                                       lit = word-by-word, nt = notes
     {"t":"list","items":[..],"o":false}               list (o = ordered)
 
-Dropped on purpose: images, horizontal rules, maps. Inline markup
+    {"t":"img","src":"img/<id>-0.jpg","x":"Caption","w":280,"h":140}
+                                                      illustration: a small baseline JPEG
+                                                      exported next to the sheets (see below)
+
+Images are optional: only local ones (img/... of the course, not yet an http URL) are
+exported, shrunk to fit IMAGE_MAX_W x IMAGE_MAX_H and re-encoded as baseline JPEG into
+<out>/img/. Without Pillow, with --no-images, or when a file is missing or unreadable,
+the image is left out (with a warning) and the export goes on. Clients that do not know
+the "img" block ignore it.
+
+Dropped on purpose: horizontal rules, maps. Inline markup
 ([[word]], [[fr:text]], **bold**) is flattened to plain text.
 
 Exercises are copied as generated (same fields as exercises.json), minus
@@ -63,6 +73,11 @@ from smd2data import build_sheet_json  # noqa: E402
 
 DEFAULT_MAX_SHEET_BYTES = 20_000
 
+# Illustrations are drawn on a 320x240 screen next to a few lines of text.
+IMAGE_MAX_W = 280
+IMAGE_MAX_H = 140
+IMAGE_QUALITY = 72
+
 # [[fr:text]] / [[word]] (speakable markup) and **bold**.
 _SPEAKABLE_RE = re.compile(r"\[\[(?:[a-z]{2,3}:)?(.*?)\]\]", re.DOTALL)
 _BOLD_RE = re.compile(r"\*\*(.+?)\*\*", re.DOTALL)
@@ -75,6 +90,66 @@ def flatten(text: Any) -> str:
     text = _SPEAKABLE_RE.sub(r"\1", text)
     text = _BOLD_RE.sub(r"\1", text)
     return text.strip()
+
+
+class ImageExporter:
+    """Shrinks the local illustrations of a course into <out>/img/ (optional, never fatal)."""
+
+    def __init__(self, lang_dir: Path, out_dir: Path, enabled: bool = True) -> None:
+        self.lang_dir = lang_dir
+        self.out_dir = out_dir
+        self.enabled = enabled
+        self.count = 0
+        self.bytes = 0
+
+    def export(self, src: str, caption: str, name: str) -> dict[str, Any] | None:
+        """The "img" block for one illustration, or None when it cannot be exported."""
+        if not self.enabled or not src:
+            return None
+        if re.match(r"^[a-z][a-z0-9+.-]*://", src, re.IGNORECASE):
+            print(f"warning: {name}: remote image {src} not exported (fetch_images.py brings it home)", file=sys.stderr)
+            return None
+        path = (self.lang_dir / src).resolve()
+        try:
+            path.relative_to(self.lang_dir.resolve())
+        except ValueError:
+            print(f"warning: {name}: image outside the course dir skipped: {src}", file=sys.stderr)
+            return None
+        if not path.is_file():
+            print(f"warning: {name}: image not found: {src}", file=sys.stderr)
+            return None
+        try:
+            from PIL import Image, ImageOps  # imported late: Pillow is optional here
+        except ImportError:
+            print("warning: Pillow is not installed, images are not exported", file=sys.stderr)
+            self.enabled = False
+            return None
+        try:
+            with Image.open(path) as img:
+                img = ImageOps.exif_transpose(img)
+                if img.mode in ("RGBA", "LA", "P"):
+                    img = img.convert("RGBA")
+                    background = Image.new("RGB", img.size, (255, 255, 255))
+                    background.paste(img, mask=img.getchannel("A"))
+                    img = background
+                else:
+                    img = img.convert("RGB")
+                img.thumbnail((IMAGE_MAX_W, IMAGE_MAX_H), Image.LANCZOS)
+                target = self.out_dir / "img" / f"{name}.jpg"
+                target.parent.mkdir(parents=True, exist_ok=True)
+                # baseline (not progressive): the light clients decode it with a tiny decoder
+                img.save(target, "JPEG", quality=IMAGE_QUALITY, optimize=True, progressive=False)
+                width, height = img.size
+        except Exception as exc:  # a broken picture must not break the export
+            print(f"warning: {name}: image {src} skipped ({exc})", file=sys.stderr)
+            return None
+        self.count += 1
+        self.bytes += target.stat().st_size
+        block: dict[str, Any] = {"t": "img", "src": f"img/{name}.jpg", "w": width, "h": height}
+        caption = flatten(caption)
+        if caption:
+            block["x"] = caption
+        return block
 
 
 def compact_block(block: dict[str, Any]) -> dict[str, Any] | None:
@@ -113,8 +188,29 @@ def compact_block(block: dict[str, Any]) -> dict[str, Any] | None:
     return None  # hr, map, anything unknown
 
 
-def compact_sheet(sheet: dict[str, Any]) -> dict[str, Any]:
-    blocks = [b for b in map(compact_block, sheet["content"]) if b]
+def compact_sheet(sheet: dict[str, Any], images: ImageExporter | None = None) -> dict[str, Any]:
+    blocks: list[dict[str, Any]] = []
+    shown = 0
+
+    def add_image(src: str, caption: str) -> None:
+        nonlocal shown
+        if images is None:
+            return
+        out = images.export(src, caption, f"{sheet['id']}-{shown}")
+        if out:
+            blocks.append(out)
+            shown += 1
+
+    lead = sheet.get("image")
+    if lead:
+        add_image(lead.get("src", ""), lead.get("caption", ""))
+    for block in sheet["content"]:
+        if block.get("type") == "image":
+            add_image(block.get("src", ""), block.get("caption", ""))
+            continue
+        compact = compact_block(block)
+        if compact:
+            blocks.append(compact)
     return {"id": sheet["id"], "title": flatten(sheet["title"]), "blocks": blocks}
 
 
@@ -186,7 +282,7 @@ def compact_greeting(lang_cfg: dict[str, Any]) -> dict[str, str]:
     return greeting
 
 
-def export(lang_dir: Path, out_dir: Path, max_sheet_bytes: int) -> dict[str, Any]:
+def export(lang_dir: Path, out_dir: Path, max_sheet_bytes: int, with_images: bool = True) -> dict[str, Any]:
     lang_cfg = json.loads((lang_dir / "lang.json").read_text(encoding="utf-8"))
     md_files = sorted((lang_dir / "md").glob("*.md"))
     if not md_files:
@@ -196,10 +292,11 @@ def export(lang_dir: Path, out_dir: Path, max_sheet_bytes: int) -> dict[str, Any
     (out_dir / "exercises").mkdir(parents=True, exist_ok=True)
 
     themes = lang_cfg.get("subgroup_themes") or {}
+    images = ImageExporter(lang_dir, out_dir, with_images)
     entries = []
     for md in md_files:
         sheet = build_sheet_json(md, lang_cfg)
-        compact = compact_sheet(sheet)
+        compact = compact_sheet(sheet, images)
         body = dumps(compact)
         size = len(body.encode("utf-8"))
         if size > max_sheet_bytes:
@@ -242,6 +339,8 @@ def export(lang_dir: Path, out_dir: Path, max_sheet_bytes: int) -> dict[str, Any
     if cheers:
         index["cheers"] = cheers
     (out_dir / "index.json").write_text(dumps(index), encoding="utf-8")
+    if images.count:
+        print(f"API export: {images.count} image(s), {images.bytes} bytes -> {out_dir / 'img'}")
     return index
 
 
@@ -252,10 +351,12 @@ def main() -> None:
                         help="Output dir (default: <lang-dir>/dist-api)")
     parser.add_argument("--max-sheet-bytes", type=int, default=DEFAULT_MAX_SHEET_BYTES,
                         help="Warn when a compact sheet exceeds this size")
+    parser.add_argument("--no-images", action="store_true",
+                        help="Do not export the illustrations (no img blocks, no img/ folder)")
     args = parser.parse_args()
 
     out_dir = args.out_dir or (args.lang_dir / "dist-api")
-    index = export(args.lang_dir, out_dir, args.max_sheet_bytes)
+    index = export(args.lang_dir, out_dir, args.max_sheet_bytes, with_images=not args.no_images)
     total = sum(s["bytes"] for s in index["sheets"])
     print(f"API export: {len(index['sheets'])} sheet(s), {total} bytes of sheets -> {out_dir}")
 
