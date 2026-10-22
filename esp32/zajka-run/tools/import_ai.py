@@ -7,7 +7,7 @@ unie des coins), recadre, reduit a la taille du jeu, aligne les images d'animati
 reduit la palette. Ensuite : python3 tools/build_assets.py, puis compiler.
 
     # fonds du niveau (theme kosice par defaut)
-    python3 tools/import_ai.py far   ~/Telechargements/kosice_far.png
+    python3 tools/import_ai.py far   ~/Telechargements/kosice_far.png --mirror
     python3 tools/import_ai.py mid   ~/Telechargements/kosice_mid.png
     python3 tools/import_ai.py tiles ~/Telechargements/kosice_tiles.png
     # une ligne d'animation d'un personnage (voir ANIMS : idle run jump fall hurt win)
@@ -29,7 +29,8 @@ from PIL import Image
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ART = os.path.join(ROOT, "art")
 ANIMS = ["idle", "run", "jump", "fall", "hurt", "win"]
-SIZES = {"far": (480, 240), "mid": (640, 176), "tiles": (128, 64)}
+SIZES = {"far": (480, 240), "mid": (640, 148), "tiles": (128, 64)}  # far/mid : hauteur fixe, largeur libre
+SCREEN_W_MIN = 320
 OUTLINE = (26, 26, 46, 255)
 
 
@@ -41,9 +42,9 @@ def key_out(img, key=None, tol=150):
         return Image.fromarray(a.astype(np.uint8))
     corners = np.array([a[0, 0, :3], a[0, -1, :3], a[-1, 0, :3], a[-1, -1, :3]])
     if key is None:
-        key = np.median(corners, axis=0)
-        if np.abs(corners - np.array([255, 0, 255])).sum(1).min() < 150:
-            key = np.array([255, 0, 255])
+        # magenta des qu'il couvre une part notable de l'image (les coins peuvent etre un cadre noir)
+        near_mag = (np.abs(a[..., :3] - np.array([255, 0, 255])).sum(-1) < 150).mean()
+        key = np.array([255, 0, 255]) if near_mag > 0.02 else np.median(corners, axis=0)
     key = np.array(key)
     rgb = a[..., :3]
     d = np.abs(rgb - key[None, None, :]).sum(-1)
@@ -149,6 +150,41 @@ def fit_frame(fr, fw, fh, colors, pad_bottom=1):
     return outline(cell)
 
 
+def mirror_loop(img):
+    """Image + son reflet : raccord parfait quand le fond boucle a l'horizontale."""
+    out = Image.new("RGBA", (img.width * 2, img.height))
+    out.paste(img, (0, 0))
+    out.paste(img.transpose(Image.FLIP_LEFT_RIGHT), (img.width, 0))
+    return out
+
+
+def strip_ground(fr):
+    """Retire un trait de sol sous l'objet : lignes du bas faites seulement de pixels sombres."""
+    a = np.array(fr)
+    for y in range(a.shape[0] - 1, -1, -1):
+        op = a[y, :, 3] > 0
+        if not op.any():
+            continue
+        lum = a[y, :, :3].mean(-1)
+        if (lum[op] < 80).all():
+            a[y, :, 3] = 0
+        else:
+            break
+    return Image.fromarray(a)
+
+
+def grid_cells(src, cols=8, rows=4, margin=0.03):
+    """Coupe une planche de tuiles en cases (sans les traits de grille)."""
+    W, H = src.size
+    cw, ch = W / cols, H / rows
+    cells = {}
+    for r in range(rows):
+        for c in range(cols):
+            mx, my = cw * margin, ch * margin
+            cells[(r, c)] = src.crop((int(c * cw + mx), int(r * ch + my), int((c + 1) * cw - mx), int((r + 1) * ch - my)))
+    return cells
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("kind", choices=["far", "mid", "tiles", "sprite", "object"])
@@ -158,29 +194,56 @@ def main():
     ap.add_argument("--colors", type=int, default=0)
     ap.add_argument("--no-key", action="store_true")
     ap.add_argument("--key", default=None)
+    ap.add_argument("--mirror", action="store_true", help="far/mid : ajoute le reflet pour boucler sans raccord")
+    ap.add_argument("--strip-ground", action="store_true", help="sprite/object : retire un trait de sol")
+    ap.add_argument("--cells", default=None,
+                    help="tiles : tuile=ligne,colonne[,f] ... ex. '1=0,1 3=0,1,L 4=0,1,R 6=0,5 5=0,5,f' "
+                         "(f : retournee, L/R : ajoute un bord gauche/droit) quand l'IA n'a pas respecte l'ordre")
     a = ap.parse_args()
     key = tuple(int(a.key[i:i + 2], 16) for i in (0, 2, 4)) if a.key else None
 
     if a.kind in SIZES:
         src = Image.open(a.args[0]).convert("RGBA")
         w, h = SIZES[a.kind]
-        if a.kind == "far":
-            img = cover(src, w, h)
-            img = quantize_rgba(img, a.colors or 200)
-        elif a.kind == "mid":
-            img = src if a.no_key else key_out(src, key)
-            img = cover(img, w, h)
+        if a.kind in ("far", "mid"):
+            # hauteur fixe, largeur libre (le fond boucle) : rien n'est rogne
+            img = src if (a.kind == "far" or a.no_key) else key_out(src, key)
+            nw = max(SCREEN_W_MIN, int(round(img.width * h / img.height)))
+            img = img.resize((nw, h), Image.LANCZOS)
             al = np.array(img)
-            al[..., 3] = np.where(al[..., 3] >= 128, 255, 0)
-            img = quantize_rgba(Image.fromarray(al), a.colors or 200)
-        else:  # tiles : grille 8 x 4 de tuiles
+            al[..., 3] = 255 if a.kind == "far" else np.where(al[..., 3] >= 128, 255, 0)
+            img = Image.fromarray(al)
+            if a.mirror:
+                img = mirror_loop(img)
+            img = quantize_rgba(img, a.colors or 200)
+        elif a.cells:
+            img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+            src = src if a.no_key else key_out(src, key)
+            cells = grid_cells(src)
+            for spec in a.cells.split():
+                idx, rc = spec.split("=")
+                parts = rc.split(",")
+                cell = cells[(int(parts[0]), int(parts[1]))]
+                t = shrink(cell, 16, 16)
+                flags = parts[2] if len(parts) > 2 else ""
+                if "f" in flags:
+                    t = t.transpose(Image.FLIP_LEFT_RIGHT)
+                ta = np.array(t)
+                if "L" in flags:
+                    ta[:, 0, :] = (70, 62, 56, 255)
+                if "R" in flags:
+                    ta[:, 15, :] = (70, 62, 56, 255)
+                n = int(idx)
+                img.paste(Image.fromarray(ta), ((n % 8) * 16, (n // 8) * 16))
+            img = quantize_rgba(img, a.colors or 96)
+        else:  # tiles : grille 8 x 4 de tuiles dans l'ordre attendu
             img = src if a.no_key else key_out(src, key)
             img = shrink(img, w, h)
             img = quantize_rgba(img, a.colors or 96)
         out = os.path.join(ART, a.theme, a.kind + ".png")
         os.makedirs(os.path.dirname(out), exist_ok=True)
         img.save(out)
-        print("ecrit", os.path.relpath(out, ROOT))
+        print("ecrit", os.path.relpath(out, ROOT), img.size)
         return
 
     if a.kind == "sprite":
@@ -195,6 +258,8 @@ def main():
     sheet = Image.open(sheet_path).convert("RGBA")
     src = Image.open(path).convert("RGBA")
     src = src if a.no_key else key_out(src, key)
+    if a.strip_ground:
+        src = strip_ground(src)
     frames = frames_from(crop_alpha(src), a.frames)
     need_w = fw * len(frames)
     if sheet.width < need_w or sheet.height < (row + 1) * fh:
@@ -204,6 +269,8 @@ def main():
     # efface la ligne puis place les nouvelles images
     sheet.paste(Image.new("RGBA", (sheet.width, fh), (0, 0, 0, 0)), (0, row * fh))
     for i, fr in enumerate(frames):
+        if a.strip_ground:
+            fr = strip_ground(fr)
         sheet.paste(fit_frame(fr, fw, fh, a.colors or 48), (i * fw, row * fh))
     sheet.save(sheet_path)
     print(f"ecrit {os.path.relpath(sheet_path, ROOT)} : ligne {row}, {len(frames)} image(s) de {fw}x{fh}")
