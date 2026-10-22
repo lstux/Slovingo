@@ -202,8 +202,12 @@ typedef struct {
 
 typedef enum {
     SLV_KIND_CHOICE,        /* qcm and fill-blank: tap the right answer */
-    SLV_KIND_ORDER          /* order: tap the words in the right order */
+    SLV_KIND_ORDER,         /* order: tap the words in the right order */
+    SLV_KIND_MATCH          /* match (big screen only): link each word to its translation */
 } slv_kind_t;
+
+#define SLV_MATCH_MAX       4
+#define SLV_MATCH_LEN       80
 
 typedef struct {
     slv_kind_t kind;
@@ -219,6 +223,14 @@ typedef struct {
     uint8_t shown_cnt;
     uint8_t picked[ SLV_MAX_TOKENS ];   /* buttons tapped so far, in tap order */
     uint8_t picked_cnt;
+    /* match: pair i is left[ i ] / right[ i ]; the right column shows the pairs in the order perm[] */
+    char m_left[ SLV_MATCH_MAX ][ SLV_MATCH_LEN ];
+    char m_right[ SLV_MATCH_MAX ][ SLV_MATCH_LEN ];
+    uint8_t m_perm[ SLV_MATCH_MAX ];
+    uint8_t m_cnt;
+    uint8_t m_done;                     /* bit i: pair i is linked */
+    int8_t m_sel;                       /* pair selected in the left column, -1 none */
+    uint8_t m_errors;
 } slv_question_t;
 
 static slovingo_config_t slovingo_config;
@@ -1449,6 +1461,12 @@ static bool slv_is_playable( JsonObject exercise ) {
         return( true );
     if ( !strcmp( type, "order" ) )
         return( slv_order_words( exercise["tokens_l2"], NULL ) > 0 );
+#ifdef SLV_BIG_SCREEN
+    if ( !strcmp( type, "match" ) ) {
+        size_t n = exercise["l1"].size();
+        return( n >= 3 && n == exercise["l2"].size() );
+    }
+#endif
     return( false );
 }
 
@@ -1465,6 +1483,39 @@ static void slv_make_question( int ex_idx ) {
     if ( !strcmp( type, "order" ) ) {
         slv_make_order( ex_idx, exercise );
     }
+#ifdef SLV_BIG_SCREEN
+    else if ( !strcmp( type, "match" ) ) {
+        JsonArray l1 = exercise["l1"];
+        JsonArray l2 = exercise["l2"];
+        int n = l1.size() < l2.size() ? l1.size() : l2.size();
+
+        if ( n > SLV_MATCH_MAX )
+            n = SLV_MATCH_MAX;
+        slv_q.kind = SLV_KIND_MATCH;
+        slv_q.m_cnt = n;
+        slv_q.m_sel = -1;
+        for ( int i = 0; i < n; i++ ) {
+            slovingo_sanitize( l2[ i ] | "", slv_q.m_left[ i ], SLV_MATCH_LEN );
+            slovingo_sanitize( l1[ i ] | "", slv_q.m_right[ i ], SLV_MATCH_LEN );
+            slv_q.m_perm[ i ] = i;
+        }
+        /* shuffle the right column, not left as it came */
+        for ( int tries = 0; tries < 5; tries++ ) {
+            for ( int i = n - 1; i > 0; i-- ) {
+                int j = SLV_RAND() % ( i + 1 );
+                uint8_t tmp = slv_q.m_perm[ i ];
+                slv_q.m_perm[ i ] = slv_q.m_perm[ j ];
+                slv_q.m_perm[ j ] = tmp;
+            }
+            bool same = true;
+            for ( int i = 0; i < n; i++ )
+                same = same && slv_q.m_perm[ i ] == i;
+            if ( !same )
+                break;
+        }
+        snprintf( slv_q.prompt, sizeof( slv_q.prompt ), "%s", "Relie chaque mot \xC3\xA0 sa traduction" );
+    }
+#endif
     else if ( !strcmp( type, "fill-blank" ) ) {
         const char *sentence = exercise["l2"] | "";
         const char *missing = exercise["missing_l2"] | "";
@@ -1626,6 +1677,137 @@ static void slv_order_pick( int k ) {
     slv_advance_at = lv_tick_get() + ( ok ? SLV_ADVANCE_OK_MS : SLV_ADVANCE_KO_MS );
 }
 
+#ifdef SLV_BIG_SCREEN
+#define SLV_MATCH_IDLE      0x34405A
+#define SLV_MATCH_SELECTED  0x1F6FEB
+#define SLV_MATCH_OK        0x2E7D32
+#define SLV_MATCH_BAD       0xC62828
+#define SLV_MATCH_FLASH_MS  450
+
+static lv_obj_t *slv_match_flash = NULL;        /* wrong right-hand button, back to normal at slv_match_flash_at */
+static uint32_t slv_match_flash_at = 0;
+
+/* colours of the buttons from the state of the question (also used when the screen is rebuilt) */
+static void slv_match_paint( void ) {
+    int n = slv_q.m_cnt;
+
+    for ( int i = 0; i < n; i++ ) {
+        bool done = ( slv_q.m_done >> i ) & 1;
+        slv_paint( slv_item[ i ], done ? SLV_MATCH_OK : ( slv_q.m_sel == i ? SLV_MATCH_SELECTED : SLV_MATCH_IDLE ) );
+    }
+    for ( int j = 0; j < n; j++ )
+        slv_paint( slv_item[ n + j ], ( slv_q.m_done >> slv_q.m_perm[ j ] ) & 1 ? SLV_MATCH_OK : SLV_MATCH_IDLE );
+}
+
+/* item i < n: a word on the left; item n + j: the translation shown j-th on the right */
+static void slv_match_tap( int item ) {
+    int n = slv_q.m_cnt;
+
+    if ( slv_q_answered || item < 0 || item >= 2 * n )
+        return;
+
+    if ( item < n ) {
+        if ( ( slv_q.m_done >> item ) & 1 )
+            return;
+        slv_q.m_sel = ( slv_q.m_sel == item ) ? -1 : item;
+        slv_match_paint();
+        return;
+    }
+
+    int pair = slv_q.m_perm[ item - n ];
+    if ( slv_q.m_sel < 0 || ( slv_q.m_done >> pair ) & 1 )
+        return;
+
+    if ( pair != slv_q.m_sel ) {
+        slv_q.m_errors++;
+        slv_set_mood( MOOD_SAD );
+        slv_paint( slv_item[ item ], SLV_MATCH_BAD );
+        slv_match_flash = slv_item[ item ];
+        slv_match_flash_at = lv_tick_get() + SLV_MATCH_FLASH_MS;
+        return;
+    }
+
+    slv_q.m_done |= 1 << pair;
+    slv_q.m_sel = -1;
+    slv_match_paint();
+    if ( slv_q.m_done != ( 1 << n ) - 1 ) {
+        slv_set_mood( MOOD_HAPPY );
+        return;
+    }
+
+    /* every pair is linked: the point is for a series without mistake */
+    slv_q_answered = true;
+    bool ok = slv_q.m_errors == 0;
+    if ( ok )
+        slv_score++;
+    slv_feedback( ok );
+    slv_advance_at = lv_tick_get() + ( ok ? SLV_ADVANCE_OK_MS : SLV_ADVANCE_KO_MS );
+}
+
+/* a word button of the match exercise, half the page wide */
+static lv_obj_t *slv_add_match_btn( lv_obj_t *parent, lv_coord_t width, const char *text ) {
+    lv_obj_t *btn = lv_btn_create( parent, NULL );
+
+    lv_btn_set_fit2( btn, LV_FIT_NONE, LV_FIT_TIGHT );
+    lv_obj_set_width( btn, width );
+    lv_obj_add_style( btn, LV_BTN_PART_MAIN, ws_get_button_style() );
+    lv_obj_set_style_local_pad_left( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, 6 );
+    lv_obj_set_style_local_pad_right( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, 6 );
+    lv_obj_set_style_local_pad_top( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, SLV_BTN_PAD_Y );
+    lv_obj_set_style_local_pad_bottom( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, SLV_BTN_PAD_Y );
+    lv_obj_set_event_cb( btn, slv_item_event_cb );
+    slv_btn_look( btn );
+    lv_obj_set_style_local_text_color( btn, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE );
+    lv_obj_set_style_local_text_color( btn, LV_BTN_PART_MAIN, LV_STATE_PRESSED, LV_COLOR_WHITE );
+
+    lv_obj_t *label = lv_label_create( btn, NULL );
+    lv_label_set_long_mode( label, LV_LABEL_LONG_BREAK );
+    lv_obj_set_width( label, width - 12 );
+    lv_label_set_align( label, LV_LABEL_ALIGN_CENTER );
+    lv_label_set_text( label, text );
+    lv_obj_add_style( label, LV_LABEL_PART_MAIN, &slv_style16 );
+
+    if ( slv_item_cnt < SLV_MAX_ITEMS )
+        slv_item[ slv_item_cnt++ ] = btn;
+    return( btn );
+}
+
+/* two columns: the words on the left, the translations (shuffled) on the right */
+static void slv_match_build( void ) {
+    lv_coord_t width = ( slv_content_w() - SLV_ITEM_GAP ) / 2;
+    lv_obj_t *cols = lv_cont_create( slv_page, NULL );
+
+    lv_cont_set_layout( cols, LV_LAYOUT_ROW_TOP );
+    lv_cont_set_fit2( cols, LV_FIT_NONE, LV_FIT_TIGHT );
+    lv_obj_set_width( cols, slv_content_w() );
+    lv_obj_set_style_local_bg_opa( cols, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_TRANSP );
+    lv_obj_set_style_local_border_width( cols, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 0 );
+    lv_obj_set_style_local_pad_all( cols, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 0 );
+    lv_obj_set_style_local_pad_inner( cols, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, SLV_ITEM_GAP );
+    lv_obj_set_click( cols, false );
+    lv_obj_set_drag_parent( cols, true );
+
+    lv_obj_t *col[ 2 ];
+    for ( int c = 0; c < 2; c++ ) {
+        col[ c ] = lv_cont_create( cols, NULL );
+        lv_cont_set_layout( col[ c ], LV_LAYOUT_COLUMN_MID );
+        lv_cont_set_fit2( col[ c ], LV_FIT_NONE, LV_FIT_TIGHT );
+        lv_obj_set_width( col[ c ], width );
+        lv_obj_set_style_local_bg_opa( col[ c ], LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_TRANSP );
+        lv_obj_set_style_local_border_width( col[ c ], LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 0 );
+        lv_obj_set_style_local_pad_all( col[ c ], LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 0 );
+        lv_obj_set_style_local_pad_inner( col[ c ], LV_CONT_PART_MAIN, LV_STATE_DEFAULT, SLV_ITEM_GAP );
+        lv_obj_set_click( col[ c ], false );
+        lv_obj_set_drag_parent( col[ c ], true );
+    }
+    for ( int i = 0; i < slv_q.m_cnt; i++ )
+        slv_add_match_btn( col[ 0 ], width, slv_q.m_left[ i ] );
+    for ( int j = 0; j < slv_q.m_cnt; j++ )
+        slv_add_match_btn( col[ 1 ], width, slv_q.m_right[ slv_q.m_perm[ j ] ] );
+    slv_match_paint();
+}
+#endif
+
 /*
  * one of the phrases the course gives for the score: tier perfect (100 %), great (90),
  * good (70), ok (50) or retry, one picked at random. A course without "cheers" gives nothing.
@@ -1760,6 +1942,14 @@ static void slv_lv_task( lv_task_t * task ) {
         slv_pending = false;
         slv_show( slv_pending_screen );
     }
+
+#ifdef SLV_BIG_SCREEN
+    if ( slv_match_flash && lv_tick_get() >= slv_match_flash_at ) {
+        if ( slv_screen == SCR_QUIZ && slv_q.kind == SLV_KIND_MATCH && !slv_q_answered )
+            slv_match_paint();
+        slv_match_flash = NULL;
+    }
+#endif
 
     if ( slv_advance_at && slv_screen == SCR_QUIZ && slv_q_answered && lv_tick_get() >= slv_advance_at ) {
         slv_advance_at = 0;
@@ -2053,6 +2243,13 @@ static void slv_show( slv_screen_t screen ) {
 #endif
             if ( *slv_q.hint )
                 slv_add_label( slv_q.hint, false );
+#ifdef SLV_BIG_SCREEN
+            if ( slv_q.kind == SLV_KIND_MATCH ) {
+                slv_match_flash = NULL;
+                slv_match_build();
+            }
+            else
+#endif
             if ( slv_q.kind == SLV_KIND_ORDER ) {
                 slv_built_lbl = slv_add_label( "", false );
                 /* the words flow on several lines, each button as wide as its word */
@@ -2219,7 +2416,13 @@ static void slv_item_event_cb( lv_obj_t * obj, lv_event_t event ) {
                             break;
         case SCR_READER:    slv_reader_tap( item );
                             break;
-        case SCR_QUIZ:      if ( slv_q.kind == SLV_KIND_ORDER )
+        case SCR_QUIZ:
+#ifdef SLV_BIG_SCREEN
+                            if ( slv_q.kind == SLV_KIND_MATCH )
+                                slv_match_tap( item );
+                            else
+#endif
+                            if ( slv_q.kind == SLV_KIND_ORDER )
                                 slv_order_pick( item );
                             else
                                 slv_answer( item );

@@ -22,7 +22,9 @@ marges et boutons plus grands aux coins arrondis et dégradés, question du quiz
 de progression, barre de progression dans la lecture, pages de lecture plus longues (texte 440 caractères,
 dialogue 5 répliques, tableau 5 lignes, voir `SLV_RD_*` en tête de `slovingo_app_main.cpp`) et un
 glissement de 220 ms quand une page ou un écran change (swipe, flèches, boutons, question suivante).
-Retirer le flag redonne exactement l'interface de la montre.
+Elle ajoute aussi l'exercice **« relier »** (type `match` du cours) : deux colonnes, on touche un mot puis sa
+traduction ; la paire juste devient verte, une erreur clignote en rouge, et le point est pour une série sans erreur.
+Retirer le flag redonne exactement l'interface de la montre (qui ne joue pas les `match`).
 
 ## Compiler
 
