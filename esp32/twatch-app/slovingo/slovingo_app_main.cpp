@@ -51,6 +51,9 @@
 #include "gui/widget_factory.h"
 #include "gui/widget_styles.h"
 #include "utils/alloc.h"
+#ifdef SLV_BIG_SCREEN
+    #include "utils/jpeg_decode.h"
+#endif
 
 LV_FONT_DECLARE( slovingo_16px );
 LV_FONT_DECLARE( slovingo_22px );
@@ -832,7 +835,8 @@ static int slv_playable_count( JsonObject sheet ) {
 typedef enum {
     RD_TEXT,
     RD_DIALOG,
-    RD_TABLE
+    RD_TABLE,
+    RD_IMAGE
 } slv_rd_kind_t;
 
 typedef struct {
@@ -929,6 +933,12 @@ static void slv_reader_paginate( void ) {
                 slv_rd_add( RD_TABLE, r ? SLV_NONE : head, i, i, r, ( r + SLV_RD_TABLE_ROWS < n ) ? r + SLV_RD_TABLE_ROWS : n );
             head = SLV_NONE;
         }
+#ifdef SLV_BIG_SCREEN
+        else if ( !strcmp( type, "img" ) ) {            /* an illustration has a page of its own */
+            slv_rd_add( RD_IMAGE, head, i, i, 0, 0 );
+            head = SLV_NONE;
+        }
+#endif
         else if ( !strcmp( type, "card" ) ) {
             if ( last && head == SLV_NONE && last->kind == RD_DIALOG && lines < SLV_RD_DIALOG_LINES && chars + len <= SLV_RD_DIALOG_CHARS ) {
                 last->last = i;
@@ -1234,6 +1244,59 @@ static void slv_reader_rows( JsonObject block, int from, int to ) {
     }
 }
 
+#ifdef SLV_BIG_SCREEN
+/* decoded illustrations of the page on screen: freed when the screen changes */
+#define SLV_MAX_PICS    3
+static struct {
+    lv_img_dsc_t dsc;
+    uint16_t *pixels;
+} slv_pic[ SLV_MAX_PICS ];
+static int slv_pic_cnt = 0;
+
+static void slv_pics_free( void ) {
+    for ( int i = 0; i < slv_pic_cnt; i++ )
+        free( slv_pic[ i ].pixels );
+    slv_pic_cnt = 0;
+}
+
+/* an illustration read from the cache (the worker brought it with the sheet), then its caption */
+static void slv_reader_image( JsonObject block ) {
+    const char *src = block["src"] | "";
+    size_t size = 0;
+    uint8_t *jpg = ( *src && slv_pic_cnt < SLV_MAX_PICS ) ? slovingo_image_load( slovingo_config.url, src, &size ) : NULL;
+
+    if ( jpg ) {
+        uint16_t *pixels = NULL;
+        uint16_t w = 0;
+        uint16_t h = 0;
+
+        if ( jpeg_decode_rgb565( jpg, size, &pixels, &w, &h ) ) {
+            lv_img_dsc_t *dsc = &slv_pic[ slv_pic_cnt ].dsc;
+            memset( dsc, 0, sizeof( *dsc ) );
+            dsc->header.cf = LV_IMG_CF_TRUE_COLOR;
+            dsc->header.w = w;
+            dsc->header.h = h;
+            dsc->data_size = (uint32_t)w * h * 2;
+            dsc->data = (const uint8_t*)pixels;
+            slv_pic[ slv_pic_cnt++ ].pixels = pixels;
+
+            lv_obj_t *img = lv_img_create( slv_page, NULL );
+            lv_img_set_src( img, dsc );
+            lv_obj_set_click( img, false );
+            lv_obj_set_drag_parent( img, true );
+        }
+        free( jpg );
+    }
+
+    const char *caption = block["x"] | "";
+    if ( *caption ) {
+        lv_obj_t *label = slv_add_label( caption, false );
+        lv_label_set_align( label, LV_LABEL_ALIGN_CENTER );
+        lv_obj_set_style_local_text_color( label, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex( SLV_COLOR_DIM ) );
+    }
+}
+#endif
+
 static void slv_reader_render( void ) {
     char text[ 512 ];
 
@@ -1287,6 +1350,11 @@ static void slv_reader_render( void ) {
             else if ( !strcmp( type, "card" ) ) {
                 slv_reader_card( block );
             }
+#ifdef SLV_BIG_SCREEN
+            else if ( !strcmp( type, "img" ) ) {
+                slv_reader_image( block );
+            }
+#endif
         }
     }
 
@@ -1920,6 +1988,20 @@ static void slv_worker( void *arg ) {
     SpiRamJsonDocument *doc = NULL;
 
     slv_res = slovingo_fetch_json( slv_req == REQ_COURSES ? SLOVINGO_LAUNCHER_URL : slovingo_config.url, slv_req_path, slv_req_force, &doc );
+#if defined( SLV_BIG_SCREEN ) && !defined( NATIVE_64BIT )
+    /* the illustrations of the sheet are brought to the cache now, the reader draws them from there */
+    if ( slv_req == REQ_SHEET && doc && slv_res == SLOVINGO_OK ) {
+        int fetched = 0;
+        for ( JsonObject block : (*doc)["blocks"].as<JsonArray>() ) {
+            if ( fetched >= 8 )
+                break;
+            if ( !strcmp( block["t"] | "", "img" ) ) {
+                slovingo_image_prefetch( slovingo_config.url, block["src"] | "" );
+                fetched++;
+            }
+        }
+    }
+#endif
     slv_res_doc = doc;
     slv_done = true;
 #ifndef NATIVE_64BIT
@@ -2157,6 +2239,9 @@ static void slv_show( slv_screen_t screen ) {
     slv_url_textarea = NULL;
     slv_built_lbl = NULL;
     lv_page_clean( slv_page );
+#ifdef SLV_BIG_SCREEN
+    slv_pics_free();
+#endif
     slv_confetti_clear();
 
     lv_obj_set_hidden( slv_refresh_btn, !( screen == SCR_GROUPS || screen == SCR_ERROR ) );

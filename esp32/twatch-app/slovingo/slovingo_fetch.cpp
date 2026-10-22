@@ -190,6 +190,71 @@ slovingo_result_t slovingo_fetch_json( const char *base_url, const char *path, b
     return( result );
 }
 
+#if defined( SLV_BIG_SCREEN ) && !defined( NATIVE_64BIT )
+
+static void slovingo_image_names( const char *base_url, const char *path, char *url, size_t url_len, char *name, size_t name_len ) {
+    size_t base_len = strlen( base_url );
+
+    snprintf( url, url_len, "%s%s%s", base_url, ( base_len && base_url[ base_len - 1 ] == '/' ) ? "" : "/", path );
+    snprintf( name, name_len, "/slv%08x.jpg", (unsigned int)slovingo_hash( url ) );
+}
+
+bool slovingo_image_prefetch( const char *base_url, const char *path ) {
+    char url[ 256 ];
+    char name[ SLOVINGO_CACHE_NAME_LEN ];
+
+    slovingo_image_names( base_url, path, url, sizeof( url ), name, sizeof( name ) );
+    if ( SPIFFS.exists( name ) )
+        return( true );
+    if ( !WiFi.isConnected() )
+        return( false );
+
+    for ( int attempt = 0; attempt < 2; attempt++ ) {
+        if ( attempt )
+            vTaskDelay( SLOVINGO_RETRY_WAIT_MS / portTICK_PERIOD_MS );
+        uri_load_dsc_t *dsc = uri_load_to_ram( url );
+        if ( !dsc )
+            continue;
+        bool stored = false;
+        if ( dsc->data && dsc->size && dsc->size <= SLOVINGO_IMAGE_MAX_BYTES ) {
+            slovingo_cache_store( name, dsc->data, dsc->size );
+            stored = SPIFFS.exists( name );
+        }
+        uri_load_free_all( dsc );
+        return( stored );
+    }
+    return( false );
+}
+
+uint8_t *slovingo_image_load( const char *base_url, const char *path, size_t *size ) {
+    char url[ 256 ];
+    char name[ SLOVINGO_CACHE_NAME_LEN ];
+
+    *size = 0;
+    slovingo_image_names( base_url, path, url, sizeof( url ), name, sizeof( name ) );
+    if ( !SPIFFS.exists( name ) )
+        return( NULL );
+
+    fs::File file = SPIFFS.open( name, FILE_READ );
+    if ( !file )
+        return( NULL );
+    size_t length = file.size();
+    uint8_t *buffer = length ? (uint8_t*)MALLOC( length ) : NULL;
+    if ( buffer ) {
+        size_t got = file.read( buffer, length );
+        if ( got != length ) {
+            free( buffer );
+            buffer = NULL;
+            got = 0;
+        }
+        *size = got;
+    }
+    file.close();
+    return( buffer );
+}
+
+#endif
+
 const char *slovingo_result_text( slovingo_result_t result ) {
     switch ( result ) {
         case SLOVINGO_OK:           return( "OK" );

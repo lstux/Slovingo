@@ -21,6 +21,7 @@
     #define _SLOVINGO_FETCH_H
 
     #include <stddef.h>
+    #include <stdint.h>
     #include "utils/json_psram_allocator.h"
 
     /** @brief how long to wait for the wifi when it has to be switched on */
@@ -51,6 +52,25 @@
      * @return  SLOVINGO_OK or the reason of the failure
      */
     slovingo_result_t slovingo_fetch_json( const char *base_url, const char *path, bool force_net, SpiRamJsonDocument **doc );
+#ifdef SLV_BIG_SCREEN
+    #define SLOVINGO_IMAGE_MAX_BYTES    ( 160 * 1024 )  /** @brief bigger illustrations are not kept */
+
+    /**
+     * @brief make sure an illustration of the export is in the cache (blocking, worker task only)
+     *
+     * Already there: nothing to do. Otherwise downloaded when the wifi is connected. Failing is not
+     * an error, the page is just shown without the picture.
+     *
+     * @return  true when the picture is in the cache
+     */
+    bool slovingo_image_prefetch( const char *base_url, const char *path );
+    /**
+     * @brief the cached file of an illustration, nothing is downloaded
+     * @return  a buffer in PSRAM to free(), NULL if the picture is not in the cache
+     */
+    uint8_t *slovingo_image_load( const char *base_url, const char *path, size_t *size );
+#endif
+
     /**
      * @brief short french text for a result code
      */

@@ -26,6 +26,11 @@ Elle ajoute aussi l'exercice **« relier »** (type `match` du cours) : deux col
 traduction ; la paire juste devient verte, une erreur clignote en rouge, et le point est pour une série sans erreur.
 Retirer le flag redonne exactement l'interface de la montre (qui ne joue pas les `match`).
 
+**Illustrations** : si l'API du cours contient des blocs `img` (générés par `src/export_api.py` à partir des images
+locales `img/` du cours, voir `docs/`), la T-HMI les télécharge avec la fiche dans le cache de la carte SD, les décode
+(JPEG baseline, bibliothèque TJpg_Decoder) et les affiche sur une page de lecture avec leur légende. Sans Wi-Fi
+elle utilise le cache ; une image absente ou illisible est simplement omise. La montre ignore ces blocs.
+
 ## Compiler
 
 ```bash
