@@ -26,6 +26,12 @@ Elle ajoute aussi l'exercice **« relier »** (type `match` du cours) : deux col
 traduction ; la paire juste devient verte, une erreur clignote en rouge, et le point est pour une série sans erreur.
 Retirer le flag redonne exactement l'interface de la montre (qui ne joue pas les `match`).
 
+**Cache** : un fichier du cours (index, fiche, exercices, image) plus jeune que `cache_hours` heures (12 par défaut,
+clé de `/slovingo.json`, `0` = toujours la version en ligne) est lu tel quel, même sans réseau. Un plus vieux est
+retéléchargé : le Wi-Fi est allumé si besoin (jusqu'à 20 s), et le cache sert de repli s'il ne se connecte pas
+(pas de nouvelle tentative avant 5 min). L'horloge n'est juste qu'après une première connexion Wi-Fi : au premier
+chargement d'une session, tout est donc considéré comme vieux. La montre garde son comportement (cache d'abord).
+
 **Illustrations** : si l'API du cours contient des blocs `img` (générés par `src/export_api.py` à partir des images
 locales `img/` du cours, voir `docs/`), la T-HMI les télécharge avec la fiche dans le cache de la carte SD, les décode
 (JPEG baseline, bibliothèque TJpg_Decoder) et les affiche sur une page de lecture avec leur légende. Sans Wi-Fi

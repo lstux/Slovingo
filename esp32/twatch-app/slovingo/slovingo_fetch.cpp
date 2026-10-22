@@ -22,6 +22,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #ifndef NATIVE_64BIT
     #include <Arduino.h>
@@ -115,6 +116,31 @@ static SpiRamJsonDocument *slovingo_cache_load( const char *name ) {
 
 #endif // NATIVE_64BIT
 
+#if defined( SLV_BIG_SCREEN ) && !defined( NATIVE_64BIT )
+
+static int slovingo_cache_hours = 12;
+static uint32_t slovingo_wifi_failed_at = 0;        /* millis() of the last wifi that did not connect, 0 none */
+
+void slovingo_set_cache_hours( int hours ) {
+    slovingo_cache_hours = hours < 0 ? 0 : hours;
+}
+
+/* a cached file younger than the limit; the clock is only right once the wifi was connected, until then nothing is "young" */
+static bool slovingo_cache_fresh( const char *name ) {
+    time_t now = time( NULL );
+
+    if ( slovingo_cache_hours <= 0 || now < 1700000000 || !SPIFFS.exists( name ) )
+        return( false );
+    fs::File file = SPIFFS.open( name, FILE_READ );
+    if ( !file )
+        return( false );
+    time_t written = file.getLastWrite();
+    file.close();
+    return( written >= 1700000000 && now >= written && ( now - written ) < (time_t)slovingo_cache_hours * 3600 );
+}
+
+#endif
+
 slovingo_result_t slovingo_fetch_json( const char *base_url, const char *path, bool force_net, SpiRamJsonDocument **doc ) {
     char url[ 256 ];
     size_t base_len = strlen( base_url );
@@ -129,16 +155,32 @@ slovingo_result_t slovingo_fetch_json( const char *base_url, const char *path, b
 
     bool online = WiFi.isConnected();
 
+#ifdef SLV_BIG_SCREEN
+    /* a young cache is enough; an old one gives way to the live version when there is a network */
+    if ( !force_net && slovingo_cache_fresh( cache ) ) {
+        *doc = slovingo_cache_load( cache );
+        if ( *doc )
+            return( SLOVINGO_OK );
+    }
+    if ( !online && slovingo_wifi_failed_at && millis() - slovingo_wifi_failed_at < SLOVINGO_WIFI_RETRY_MS ) {
+        *doc = slovingo_cache_load( cache );
+        return( *doc ? SLOVINGO_OK : SLOVINGO_ERR_NOWIFI );
+    }
+#else
     if ( !online && !force_net ) {
         *doc = slovingo_cache_load( cache );
         if ( *doc )
             return( SLOVINGO_OK );
     }
+#endif
     if ( !online ) {
         wifictl_on();
         for ( int waited = 0; waited < SLOVINGO_WIFI_WAIT_MS && !WiFi.isConnected(); waited += 250 )
             vTaskDelay( 250 / portTICK_PERIOD_MS );
         online = WiFi.isConnected();
+#ifdef SLV_BIG_SCREEN
+        slovingo_wifi_failed_at = online ? 0 : ( millis() ? millis() : 1 );
+#endif
         if ( !online ) {
             *doc = slovingo_cache_load( cache );
             return( *doc ? SLOVINGO_OK : SLOVINGO_ERR_NOWIFI );
@@ -204,10 +246,12 @@ bool slovingo_image_prefetch( const char *base_url, const char *path ) {
     char name[ SLOVINGO_CACHE_NAME_LEN ];
 
     slovingo_image_names( base_url, path, url, sizeof( url ), name, sizeof( name ) );
-    if ( SPIFFS.exists( name ) )
+    bool cached = SPIFFS.exists( name );
+
+    if ( cached && slovingo_cache_fresh( name ) )
         return( true );
     if ( !WiFi.isConnected() )
-        return( false );
+        return( cached );
 
     for ( int attempt = 0; attempt < 2; attempt++ ) {
         if ( attempt )
@@ -221,9 +265,9 @@ bool slovingo_image_prefetch( const char *base_url, const char *path ) {
             stored = SPIFFS.exists( name );
         }
         uri_load_free_all( dsc );
-        return( stored );
+        return( stored || cached );
     }
-    return( false );
+    return( cached );
 }
 
 uint8_t *slovingo_image_load( const char *base_url, const char *path, size_t *size ) {

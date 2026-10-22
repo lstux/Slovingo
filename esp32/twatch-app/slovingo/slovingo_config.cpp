@@ -31,6 +31,7 @@ bool slovingo_config_t::onSave( JsonDocument& doc ) {
     doc["chosen"] = chosen;
     doc["questions"] = questions;
     doc["name"] = name;
+    doc["cache_hours"] = cache_hours;
 
     return true;
 }
@@ -52,6 +53,9 @@ bool slovingo_config_t::onLoad( JsonDocument& doc ) {
     const char *player = doc["name"] | SLOVINGO_DEFAULT_NAME;
     snprintf( name, sizeof( name ), "%s", *player ? player : SLOVINGO_DEFAULT_NAME );
 
+    int hours = doc["cache_hours"] | SLOVINGO_CACHE_HOURS_DEFAULT;
+    cache_hours = hours < 0 ? 0 : ( hours > 24 * 365 ? 24 * 365 : hours );
+
     return true;
 }
 
@@ -60,5 +64,6 @@ bool slovingo_config_t::onDefault( void ) {
     chosen = false;
     questions = SLOVINGO_QUESTIONS_DEFAULT;
     snprintf( name, sizeof( name ), "%s", SLOVINGO_DEFAULT_NAME );
+    cache_hours = SLOVINGO_CACHE_HOURS_DEFAULT;
     return true;
 }

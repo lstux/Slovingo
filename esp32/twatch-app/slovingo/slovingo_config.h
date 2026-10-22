@@ -28,6 +28,7 @@
     #define SLOVINGO_QUESTIONS_DEFAULT  10
     #define SLOVINGO_QUESTIONS_MAX      30
     #define SLOVINGO_NAME_LEN           24
+    #define SLOVINGO_CACHE_HOURS_DEFAULT    12
     #define SLOVINGO_DEFAULT_NAME       "L\xC3\xAD\xC5\xA1ka"      /** @brief "Liska" (fox), what [USER_NAME] stands for in the course */
 
     #define SLOVINGO_LAUNCHER_URL       "https://lstux.github.io/Slovingo/"   /** @brief site of the engine: courses.json lists the courses */
@@ -46,6 +47,9 @@
         uint8_t questions = SLOVINGO_QUESTIONS_DEFAULT;
         /** @brief name of the player, shown where the course has [USER_NAME] */
         char name[ SLOVINGO_NAME_LEN ] = SLOVINGO_DEFAULT_NAME;
+        /** @brief big screen: a cached file younger than this many hours is used as it is, an older one is downloaded again
+            when the wifi allows it; 0 = always the live version (the watch does not use it) */
+        uint16_t cache_hours = SLOVINGO_CACHE_HOURS_DEFAULT;
 
         protected:
         ////////////// Available for overloading: //////////////

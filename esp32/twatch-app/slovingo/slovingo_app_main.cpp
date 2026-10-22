@@ -2796,6 +2796,9 @@ void slovingo_app_main_setup( uint32_t tile_num ) {
 
     slovingo_config.load();
     slovingo_set_user_name( slovingo_config.name );
+#ifdef SLV_BIG_SCREEN
+    slovingo_set_cache_hours( slovingo_config.cache_hours );
+#endif
 
     mainbar_add_tile_activate_cb( tile_num, slv_app_activate_cb );
     mainbar_add_tile_hibernate_cb( tile_num, slv_app_hibernate_cb );

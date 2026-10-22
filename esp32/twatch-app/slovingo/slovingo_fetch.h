@@ -53,6 +53,14 @@
      */
     slovingo_result_t slovingo_fetch_json( const char *base_url, const char *path, bool force_net, SpiRamJsonDocument **doc );
 #ifdef SLV_BIG_SCREEN
+    /**
+     * @brief how long a cached file stays good (hours, 0 = never: always the live version)
+     *
+     * Young cache: used as it is, even offline. Older (or the clock is not set yet): downloaded again
+     * when the wifi can be reached (it is switched on if needed), the cache is the fallback.
+     */
+    void slovingo_set_cache_hours( int hours );
+    #define SLOVINGO_WIFI_RETRY_MS      300000      /** @brief after a wifi that did not connect, do not wait for it again for this long */
     #define SLOVINGO_IMAGE_MAX_BYTES    ( 160 * 1024 )  /** @brief bigger illustrations are not kept */
 
     /**
