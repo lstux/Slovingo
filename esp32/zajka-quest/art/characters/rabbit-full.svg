@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 780" role="img" aria-labelledby="rbf-t">
+  <title id="rbf-t">La lapine, en pied</title>
+  <!--
+    Personnage « lapine » en pied, ~3,5 têtes de haut, pose neutre et souriante.
+    Tête : identique à rabbit.svg (réduite à 52 %). Palette en plus :
+      combinaison #c9d2f5 (épaulières #9aa6e6) · rayures #ff6b9d · étoile #fbbf24
+      bottes/ceinture #4b5174 · gants #ffffff · clé à molette #aeb6d4
+    Groupes à modifier pour changer de pose : #rbf-arm-wave, #rbf-arm-wrench.
+  -->
+  <defs>
+    <g id="rbf-boot">
+      <path d="M204 674 H240 L238 716 C238 728 232 736 222 736 H190 C180 736 176 728 182 722 C192 712 204 708 204 674Z" fill="#4b5174"/>
+      <path d="M178 728 H240 V738 C240 742 236 745 232 745 H184 C177 745 174 736 178 728Z" fill="#8a90b4"/>
+      <rect x="204" y="674" width="36" height="8" fill="#6b739c"/>
+    </g>
+  </defs>
+
+  <ellipse id="rbf-shadow" cx="240" cy="745" rx="96" ry="10" fill="#1a1a2e" opacity=".16"/>
+
+  <!-- jambes et bottes -->
+  <g id="rbf-legs">
+    <path d="M186 520 H240 L234 692 H204Z" fill="#c9d2f5"/>
+    <path d="M294 520 H240 L246 692 H276Z" fill="#c9d2f5"/>
+    <g fill="none" stroke="#ff6b9d" stroke-width="7" stroke-linecap="round"><path d="M193 534 L207 672"/><path d="M287 534 L273 672"/></g>
+    <use href="#rbf-boot"/>
+    <use href="#rbf-boot" transform="translate(480 0) scale(-1 1)"/>
+  </g>
+
+  <!-- bras qui salue -->
+  <g id="rbf-arm-wave">
+    <path d="M292 382 C322 394 338 374 346 348" fill="none" stroke="#c9d2f5" stroke-width="30" stroke-linecap="round"/>
+    <path d="M338 358 L354 362" stroke="#ff6b9d" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="349" cy="330" r="16" fill="#fff"/>
+    <g fill="#fff"><ellipse cx="341" cy="314" rx="5" ry="9"/><ellipse cx="350" cy="311" rx="5" ry="10"/><ellipse cx="359" cy="315" rx="5" ry="9"/><ellipse cx="335" cy="333" rx="5" ry="9" transform="rotate(-30 335 333)"/></g>
+  </g>
+
+  <!-- torse -->
+  <g id="rbf-torso">
+    <path d="M184 374 C206 362 274 362 296 374 L298 430 C297 462 300 496 304 526 L176 526 C180 496 183 462 182 430Z" fill="#c9d2f5"/>
+    <path d="M184 374 C206 362 274 362 296 374 L292 398 C270 386 210 386 188 398Z" fill="#9aa6e6"/>
+    <g id="rbf-pilot-badge" transform="translate(240 428)" fill="#fbbf24">
+      <path d="M-11 0 C-18 -6 -28 -7 -36 -3 C-30 -2 -26 0 -24 3 C-29 2 -33 4 -35 8 C-28 9 -18 8 -11 4Z"/>
+      <path d="M11 0 C18 -6 28 -7 36 -3 C30 -2 26 0 24 3 C29 2 33 4 35 8 C28 9 18 8 11 4Z"/>
+      <path transform="translate(0 1) scale(1.6)" d="M0 -7 L1.76 -2.43 L6.66 -2.16 L2.85 .93 L4.11 5.66 L0 3 L-4.11 5.66 L-2.85 .93 L-6.66 -2.16 L-1.76 -2.43Z"/>
+    </g>
+    <rect x="180" y="482" width="120" height="14" rx="6" fill="#4b5174"/>
+    <rect x="230" y="479" width="20" height="20" rx="4" fill="#fbbf24"/>
+    <ellipse cx="240" cy="366" rx="34" ry="10" fill="#fff"/>
+    <path d="M208 368 C226 380 254 380 272 368" fill="none" stroke="#ff6b9d" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- bras gauche : la clé à molette -->
+  <g id="rbf-arm-wrench">
+    <rect x="166" y="500" width="8" height="86" rx="4" fill="#aeb6d4"/>
+    <path d="M160 602 A12 12 0 1 1 180 602" fill="none" stroke="#aeb6d4" stroke-width="7" stroke-linecap="round"/>
+    <path d="M188 380 C168 420 164 460 170 494" fill="none" stroke="#c9d2f5" stroke-width="30" stroke-linecap="round"/>
+    <path d="M160 482 L182 486" stroke="#ff6b9d" stroke-width="9" stroke-linecap="round"/>
+    <circle cx="170" cy="508" r="15" fill="#fff"/>
+  </g>
+
+  <g id="rbf-head" transform="translate(106.9 95.8) scale(.52)">
+    <!-- tête + oreilles -->
+  <path id="rbf-head" fill="#b5c1c6" d="M256 210 C250 150 238 80 222 40 C214 18 196 10 178 10 C150 10 128 34 124 74 C120 130 134 190 132 240 C130 292 92 332 92 394 C92 472 166 504 256 504 C346 504 420 472 420 394 C420 332 382 292 380 240 C378 190 392 130 388 74 C384 34 362 10 334 10 C316 10 298 18 290 40 C274 80 262 150 256 210Z"/>
+  <g id="rbf-ear-inner" fill="#fba9a9">
+    <path d="M178 52 C160 70 150 120 154 170 C156 192 166 204 178 204 C192 204 202 176 200 130 C198 86 190 58 178 52Z"/>
+    <path d="M334 52 C352 70 362 120 358 170 C356 192 346 204 334 204 C320 204 310 176 312 130 C314 86 322 58 334 52Z"/>
+  </g>
+
+  <!-- liseré blanc qui s'élargit en museau -->
+  <path id="rbf-blaze" fill="#fff" d="M240 222 C240 214 246 210 256 210 C266 210 272 214 272 222 L274 304 C274 316 288 326 312 344 C348 370 360 410 348 448 C336 482 296 494 256 494 C216 494 176 482 164 448 C152 410 164 370 200 344 C224 326 238 316 238 304Z"/>
+
+  <g id="rbf-eyes" fill="#2d2927">
+    <ellipse cx="184" cy="298" rx="17" ry="28"/><ellipse cx="328" cy="298" rx="17" ry="28"/>
+    <g fill="#7b7b7b"><ellipse cx="178" cy="287" rx="5" ry="8"/><ellipse cx="322" cy="287" rx="5" ry="8"/></g>
+  </g>
+
+  <g id="rbf-whiskers" fill="none" stroke="#858585" stroke-width="9" stroke-linecap="round">
+    <path d="M126 400 C106 396 84 394 62 396"/><path d="M124 424 C102 426 80 428 58 432"/><path d="M130 448 C114 456 94 464 78 474"/>
+    <path d="M386 400 C406 396 428 394 450 396"/><path d="M388 424 C410 426 432 428 454 432"/><path d="M382 448 C398 456 418 464 434 474"/>
+  </g>
+
+  <!-- truffe en « Y », sourire et dents du bonheur -->
+  <g id="rbf-mouth">
+    <path d="M236 376 C242 388 250 394 256 394 C262 394 270 388 276 376" fill="none" stroke="#2d2927" stroke-width="11" stroke-linecap="round"/>
+    <path d="M256 394 L256 412" stroke="#2d2927" stroke-width="10" stroke-linecap="round"/>
+    <path d="M232 414 C240 430 252 430 256 416 C260 430 272 430 280 414" fill="none" stroke="#2d2927" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="240" y="430" width="32" height="34" rx="9" fill="#ffe3b3"/>
+    <path d="M256 434 V462" stroke="#f3cf93" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  </g>
+</svg>

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 780" role="img" aria-labelledby="foxf-t">
+  <title id="foxf-t">Le renard, en pied</title>
+  <!--
+    Personnage « renard » en pied, ~3,5 têtes de haut, pose neutre et souriante.
+    Tête : identique à fox.svg (réduite à 42 %). Palette en plus :
+      sweat #4655c9 (ombre #3340a8) · pantalon #2b3270 · sac à dos #f2b134 · baskets #f4f6ff
+    Groupes à modifier pour changer de pose : #foxf-arm-l, #foxf-arm-r, #foxf-tail.
+  -->
+  <defs>
+    <path id="foxf-tail-shape" d="M190 520 C120 540 40 500 36 410 C34 350 70 316 104 316 C84 350 96 396 140 430 C166 450 188 456 204 462Z"/>
+    <clipPath id="foxf-tail-clip"><use href="#foxf-tail-shape"/></clipPath>
+    <g id="foxf-shoe">
+      <path d="M192 688 H238 L240 716 C240 730 232 738 218 738 H178 C164 738 160 728 168 720 C182 708 190 704 192 688Z" fill="#f4f6ff"/>
+      <path d="M166 728 H240 V740 C240 744 236 747 232 747 H172 C164 747 160 738 166 728Z" fill="#aab2d4"/>
+      <path d="M176 716 C190 712 204 714 214 722" fill="none" stroke="#f2b134" stroke-width="5" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <ellipse id="foxf-shadow" cx="240" cy="745" rx="106" ry="10" fill="#1a1a2e" opacity=".16"/>
+
+  <!-- queue touffue, bout crème -->
+  <g id="foxf-tail">
+    <use href="#foxf-tail-shape" fill="#ff6212"/>
+    <path d="M0 300 H140 V372 L0 424Z" fill="#fde8cf" clip-path="url(#foxf-tail-clip)"/>
+  </g>
+
+  <!-- jambes et baskets -->
+  <g id="foxf-legs">
+    <path d="M180 496 H240 L232 690 H196Z" fill="#2b3270"/>
+    <path d="M300 496 H240 L248 690 H284Z" fill="#2b3270"/>
+    <rect x="193" y="668" width="41" height="22" rx="6" fill="#444fa0"/>
+    <rect x="246" y="668" width="41" height="22" rx="6" fill="#444fa0"/>
+    <use href="#foxf-shoe"/>
+    <use href="#foxf-shoe" transform="translate(480 0) scale(-1 1)"/>
+  </g>
+
+  <!-- bras gauche : détendu -->
+  <g id="foxf-arm-l">
+    <path d="M182 356 C162 398 156 446 160 492" fill="none" stroke="#4655c9" stroke-width="26" stroke-linecap="round"/>
+    <ellipse cx="160" cy="492" rx="15" ry="7" fill="#3340a8"/>
+    <ellipse cx="160" cy="514" rx="12" ry="18" fill="#ff6212"/>
+    <ellipse cx="173" cy="504" rx="4.5" ry="10" fill="#ff6212" transform="rotate(-18 173 504)"/>
+  </g>
+
+  <!-- cou, torse (sweat), sangles du sac à dos -->
+  <g id="foxf-torso">
+    <path d="M222 296 H258 V346 H222Z" fill="#ff6212"/>
+    <path d="M176 340 C198 326 282 326 304 340 L308 402 C310 440 302 472 300 508 L180 508 C178 472 170 440 172 402Z" fill="#4655c9"/>
+    <path d="M180 496 H300 V508 H180Z" fill="#3340a8"/>
+    <path d="M210 326 L270 326 L240 372Z" fill="#fde8cf"/>
+    <path d="M204 328 L240 382 L276 328" fill="none" stroke="#3340a8" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+    <g fill="none" stroke="#dfe3ff" stroke-width="4" stroke-linecap="round"><path d="M228 384 L226 420"/><path d="M252 384 L254 420"/></g>
+    <g fill="none" stroke="#f2b134" stroke-width="15" stroke-linecap="round"><path d="M200 340 C196 380 196 420 199 452"/><path d="M280 340 C284 380 284 420 281 452"/></g>
+    <path d="M200 396 H280" fill="none" stroke="#d99a1f" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- bras droit : main sur la sangle -->
+  <g id="foxf-arm-r">
+    <path d="M298 358 C322 386 332 414 324 432 C318 444 308 446 300 442" fill="none" stroke="#4655c9" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="296" cy="438" rx="13" ry="11" fill="#ff6212"/>
+    <ellipse cx="289" cy="427" rx="4.5" ry="9" fill="#ff6212" transform="rotate(14 289 427)"/>
+  </g>
+
+  <g id="foxf-head" transform="translate(132.5 98) scale(.42)">
+    <defs>
+    <path id="foxf-head-shape" d="M92 22 C90 70 90 110 84 160 C74 250 58 322 40 372 C84 398 134 424 192 436 L256 446 L320 436 C378 424 428 398 472 372 C454 322 438 250 428 160 C422 110 422 70 420 22 L312 132 C292 118 274 112 256 112 C238 112 220 118 200 132Z"/>
+    <clipPath id="foxf-clip"><use href="#foxf-head-shape"/></clipPath>
+  </defs>
+
+  <g id="foxf-head">
+    <use href="#foxf-head-shape" fill="#ff6212"/>
+    <!-- intérieur des oreilles (le long de l'axe de l'oreille) -->
+    <g id="foxf-ear-inner" fill="#ff9211">
+      <ellipse cx="126" cy="98" rx="21" ry="50" transform="rotate(-24 126 98)"/>
+      <ellipse cx="386" cy="98" rx="21" ry="50" transform="rotate(24 386 98)"/>
+    </g>
+    <!-- bouts d'oreilles (découpés dans la forme de la tête) -->
+    <g id="foxf-ear-tips" clip-path="url(#foxf-clip)" fill="#575b5e">
+      <path d="M40 0 H200 L166 52 L70 84Z"/>
+      <path d="M472 0 H312 L346 52 L442 84Z"/>
+    </g>
+  </g>
+
+  <!-- joues grises + traits blancs -->
+  <g id="foxf-cheeks">
+    <path d="M20 370 C90 358 160 372 232 408 L232 484 C150 468 70 430 20 370Z" fill="#dedede"/>
+    <path d="M492 370 C422 358 352 372 280 408 L280 484 C362 468 442 430 492 370Z" fill="#dedede"/>
+    <g fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" opacity=".9">
+      <path d="M64 394 C98 390 134 398 160 412"/><path d="M92 424 C120 422 146 430 168 444"/>
+      <path d="M448 394 C414 390 378 398 352 412"/><path d="M420 424 C392 422 366 430 344 444"/>
+    </g>
+  </g>
+
+  <!-- museau -->
+  <path id="foxf-muzzle" d="M200 392 C200 440 212 480 234 502 C246 514 266 514 278 502 C300 480 312 440 312 392 C312 372 292 364 256 364 C220 364 200 372 200 392Z" fill="#fde8cf"/>
+
+  <g id="foxf-eyes" fill="#2d2927">
+    <ellipse cx="178" cy="282" rx="24" ry="31"/><ellipse cx="334" cy="282" rx="24" ry="31"/>
+    <g fill="#fff"><ellipse cx="169" cy="268" rx="8.5" ry="11"/><circle cx="191" cy="300" r="4"/>
+       <ellipse cx="325" cy="268" rx="8.5" ry="11"/><circle cx="347" cy="300" r="4"/></g>
+  </g>
+
+  <path id="foxf-nose" d="M218 398 C218 384 232 378 256 378 C280 378 294 384 294 398 C294 416 274 432 256 436 C238 432 218 416 218 398Z" fill="#2d2927"/>
+  <g id="foxf-mouth" fill="none" stroke="#4a4747" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M256 436 L256 458"/>
+    <path d="M234 458 C242 471 254 469 256 458 C258 469 270 471 278 458"/>
+  </g>
+  </g>
+</svg>

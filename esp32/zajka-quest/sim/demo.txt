@@ -1,0 +1,7 @@
+# Parcours de demonstration : ecran titre, puis carte du chapitre 1, puis retour au titre.
+# « debut fin boutons » : boutons tenus de l'image debut a l'image fin (L R U D A B S=START E=SELECT V=VOLUME)
+shot 60
+100 102 S
+shot 200
+260 262 S
+shot 300
