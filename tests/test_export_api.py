@@ -115,6 +115,49 @@ class WatchExportTest(unittest.TestCase):
             "great": [{"t": "Super!", "n": "Super !"}],
         })
 
+    def _sheet_with_local_image(self, extra=""):
+        from PIL import Image
+        (self.lang_dir / "img").mkdir(exist_ok=True)
+        Image.new("RGB", (800, 600), (200, 30, 30)).save(self.lang_dir / "img" / "pic.png")
+        md = next((self.lang_dir / "md").glob("*.md"))
+        text = md.read_text(encoding="utf-8").replace("https://example.org/pic.jpg", "img/pic.png")
+        md.write_text(text + extra, encoding="utf-8")
+
+    def test_local_image_is_shrunk_to_a_baseline_jpeg(self):
+        from PIL import Image
+        self._sheet_with_local_image("\n@ img/pic.png | Encore\n")
+        out = Path(self.tmp.name) / "out2"
+        export_api.export(self.lang_dir, out, 20_000)
+        sheet = json.loads((out / "sheets" / "series-kitsurvie-salutations.json").read_text(encoding="utf-8"))
+        images = [b for b in sheet["blocks"] if b["t"] == "img"]
+        self.assertEqual([b["src"] for b in images],
+                         ["img/series-kitsurvie-salutations-0.jpg", "img/series-kitsurvie-salutations-1.jpg"])
+        self.assertEqual(sheet["blocks"][0]["t"], "img")
+        self.assertEqual(sheet["blocks"][0]["x"], "Une image")
+        with Image.open(out / images[0]["src"]) as jpg:
+            self.assertEqual(jpg.format, "JPEG")
+            self.assertFalse(jpg.info.get("progressive") or jpg.info.get("progression"))
+            self.assertEqual(jpg.size, (images[0]["w"], images[0]["h"]))
+            self.assertLessEqual(jpg.size[0], export_api.IMAGE_MAX_W)
+            self.assertLessEqual(jpg.size[1], export_api.IMAGE_MAX_H)
+
+    def test_images_are_optional(self):
+        self._sheet_with_local_image()
+        out = Path(self.tmp.name) / "out3"
+        export_api.export(self.lang_dir, out, 20_000, with_images=False)
+        self.assertFalse((out / "img").exists())
+        sheet = json.loads((out / "sheets" / "series-kitsurvie-salutations.json").read_text(encoding="utf-8"))
+        self.assertNotIn("img", [b["t"] for b in sheet["blocks"]])
+
+    def test_missing_image_does_not_break_the_export(self):
+        md = next((self.lang_dir / "md").glob("*.md"))
+        md.write_text(md.read_text(encoding="utf-8").replace("https://example.org/pic.jpg", "img/absent.jpg"),
+                      encoding="utf-8")
+        out = Path(self.tmp.name) / "out4"
+        export_api.export(self.lang_dir, out, 20_000)
+        sheet = json.loads((out / "sheets" / "series-kitsurvie-salutations.json").read_text(encoding="utf-8"))
+        self.assertEqual([b["t"] for b in sheet["blocks"]], ["p", "h", "table", "card"])
+
     def test_flatten(self):
         self.assertEqual(export_api.flatten("[[fr:Bravo]] **ok** [[ahoj]]"), "Bravo ok ahoj")
 

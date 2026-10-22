@@ -66,6 +66,10 @@ n'y est pas affiché.
 
 Les chemins sont relatifs à `courses.json`. `api` pointe vers l'API légère du
 cours (`src/export_api.py` : `index.json`, `sheets/<id>.json`, `exercises/<id>.json`).
+Les illustrations locales des fiches (`@ img/fichier.jpg | Légende`) y sont aussi exportées, réduites en
+JPEG baseline (280×140 max) dans `img/<id>-<n>.jpg`, et référencées par des blocs `{"t":"img",…}` des
+fiches. C'est facultatif : sans Pillow, avec `--no-images`, ou pour une image absente ou encore distante
+(`http…`, voir `fetch_images.py`), l'image est omise avec un avertissement et l'export continue.
 
 ## Ajouter un cours
 
