@@ -38,7 +38,6 @@ static const char *reset_reason_text( esp_reset_reason_t reason ) {
         case ESP_RST_WDT:       return( "PLANTAGE (watchdog)" );
         case ESP_RST_DEEPSLEEP: return( "sortie de sommeil profond" );
         case ESP_RST_BROWNOUT:  return( "PLANTAGE (tension trop basse)" );
-        case ESP_RST_USB:       return( "reset USB" );
         default:                return( "inconnu" );
     }
 }
