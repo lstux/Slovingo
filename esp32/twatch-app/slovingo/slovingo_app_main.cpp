@@ -188,6 +188,9 @@ typedef enum {
     SCR_RESULT,
     SCR_SETUP,
     SCR_COURSES
+#ifdef SLV_BIG_SCREEN
+    , SCR_MAP               /* the adventure map of the course, home page */
+#endif
 } slv_screen_t;
 
 typedef enum {
@@ -265,6 +268,11 @@ static int slv_item_cnt = 0;
  * screens
  */
 static slv_screen_t slv_screen = SCR_LOADING;
+#ifdef SLV_BIG_SCREEN
+static lv_obj_t *slv_map_cont = NULL;          /* the map on the right of the map screen */
+static SpiRamJsonDocument *slv_map = NULL;     /* map.json of the course, NULL when it has none */
+static SpiRamJsonDocument *slv_map_new = NULL; /* a map the worker brought, taken over by the lvgl task */
+#endif
 static slv_screen_t slv_pending_screen = SCR_LOADING;
 static bool slv_pending = false;
 static slv_screen_t slv_screen_before_load = SCR_GROUPS;
@@ -330,6 +338,9 @@ static bool slv_block_saved = false;
 static slv_question_t slv_q;
 
 static void slv_show( slv_screen_t screen );
+#ifdef SLV_BIG_SCREEN
+static slv_screen_t slv_home_screen( void );
+#endif
 static void slv_goto( slv_screen_t screen );
 static void slv_load_course( void );
 static void slv_open_courses( void );
@@ -353,7 +364,42 @@ static void slv_textarea_event_cb( lv_obj_t * obj, lv_event_t event );
  * small helpers
  * ---------------------------------------------------------------------- */
 
+#ifdef SLV_BIG_SCREEN
+#define SLV_MAP_DEFAULT_W   134
+#define SLV_MAP_DEFAULT_H   240
+
+static lv_coord_t slv_map_w( void ) {
+    int w = slv_map ? (int)( (*slv_map)["w"] | SLV_MAP_DEFAULT_W ) : SLV_MAP_DEFAULT_W;
+    return( w < 80 ? 80 : ( w > 160 ? 160 : w ) );
+}
+
+/* a title is "Series (4/5) - What it is about": the series is already named above, keep the end */
+static const char *slv_title_tail( const char *title ) {
+    const char *dash = strstr( title, "\xE2\x80\x94" );        /* em dash */
+
+    if ( dash ) {
+        dash += 3;
+    }
+    else {
+        dash = strstr( title, " - " );
+        if ( dash )
+            dash += 2;
+    }
+    while ( dash && *dash == ' ' )
+        dash++;
+    return( dash && *dash ? dash : title );
+}
+#else
+static inline const char *slv_title_tail( const char *title ) {
+    return( title );
+}
+#endif
+
 static lv_coord_t slv_content_w( void ) {
+#ifdef SLV_BIG_SCREEN
+    if ( slv_screen == SCR_MAP )
+        return( lv_disp_get_hor_res( NULL ) - slv_map_w() - 2 * SLV_SIDE_MARGIN );
+#endif
     return( lv_disp_get_hor_res( NULL ) - 2 * SLV_SIDE_MARGIN );
 }
 
@@ -386,25 +432,31 @@ static void slv_btn_look( lv_obj_t *btn ) {
 }
 
 /* the page that comes in slides from the side, easing out */
-static void slv_slide_in( int dir ) {
-    lv_anim_del( slv_page, NULL );
-    lv_obj_set_x( slv_page, 0 );
+static void slv_slide_obj( lv_obj_t *obj, lv_coord_t to, int dir ) {
+    lv_anim_del( obj, NULL );
+    lv_obj_set_x( obj, to );
     if ( !dir )
         return;
 
-    lv_coord_t from = dir * lv_disp_get_hor_res( NULL );
-    lv_obj_set_x( slv_page, from );
+    lv_coord_t from = to + dir * lv_disp_get_hor_res( NULL );
+    lv_obj_set_x( obj, from );
     lv_anim_t anim;
     lv_anim_init( &anim );
-    lv_anim_set_var( &anim, slv_page );
+    lv_anim_set_var( &anim, obj );
     lv_anim_set_exec_cb( &anim, (lv_anim_exec_xcb_t)lv_obj_set_x );
-    lv_anim_set_values( &anim, from, 0 );
+    lv_anim_set_values( &anim, from, to );
     lv_anim_set_time( &anim, SLV_SLIDE_MS );
     lv_anim_path_t path;
     lv_anim_path_init( &path );
     lv_anim_path_set_cb( &path, lv_anim_path_ease_out );
     lv_anim_set_path( &anim, &path );
     lv_anim_start( &anim );
+}
+
+static void slv_slide_in( int dir ) {
+    slv_slide_obj( slv_page, 0, dir );
+    if ( slv_map_cont )
+        slv_slide_obj( slv_map_cont, lv_obj_get_x( slv_map_cont ), dir );
 }
 
 /* the question: a card with the text centred */
@@ -1312,7 +1364,7 @@ static void slv_reader_render( void ) {
     slv_add_progress( ( slv_rd_cur + 1 ) * 100 / slv_rd_cnt );
 #endif
     if ( slv_rd_cur == 0 )
-        slv_add_label( slv_cur_sheet_obj()["title"] | "?", true );
+        slv_add_label( slv_title_tail( slv_cur_sheet_obj()["title"] | "?" ), true );
     if ( page->head != SLV_NONE ) {
         lv_obj_t *head = slv_add_label( blocks[ page->head ]["x"] | "", true );
         lv_obj_set_style_local_text_color( head, LV_LABEL_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex( SLV_COLOR_TITLE ) );
@@ -1989,6 +2041,23 @@ static void slv_worker( void *arg ) {
 
     slv_res = slovingo_fetch_json( slv_req == REQ_COURSES ? SLOVINGO_LAUNCHER_URL : slovingo_config.url, slv_req_path, slv_req_force, &doc );
 #if defined( SLV_BIG_SCREEN ) && !defined( NATIVE_64BIT )
+    /* the adventure map comes with the index of a course that has one */
+    if ( slv_req == REQ_INDEX && doc && slv_res == SLOVINGO_OK ) {
+        delete slv_map_new;
+        slv_map_new = NULL;
+        if ( (*doc)["map"] | false ) {
+            SpiRamJsonDocument *map = NULL;
+            if ( slovingo_fetch_json( slovingo_config.url, "map.json", slv_req_force, &map ) == SLOVINGO_OK && map ) {
+                slv_map_new = map;
+                const char *bg = (*map)["bg"] | "";
+                if ( *bg )
+                    slovingo_image_prefetch( slovingo_config.url, bg );
+            }
+            else {
+                delete map;
+            }
+        }
+    }
     /* the illustrations of the sheet are brought to the cache now, the reader draws them from there */
     if ( slv_req == REQ_SHEET && doc && slv_res == SLOVINGO_OK ) {
         int fetched = 0;
@@ -2096,7 +2165,14 @@ static void slv_lv_task( lv_task_t * task ) {
         case REQ_INDEX:         delete slv_index;
                                 slv_index = doc;
                                 slv_build_groups();
+#ifdef SLV_BIG_SCREEN
+                                delete slv_map;
+                                slv_map = slv_map_new;
+                                slv_map_new = NULL;
+                                slv_show( slv_home_screen() );
+#else
                                 slv_show( SCR_GROUPS );
+#endif
                                 break;
         case REQ_SHEET:         delete slv_sheet;
                                 slv_sheet = doc;
@@ -2214,6 +2290,267 @@ static void slv_hold_screen( bool hold ) {
     slv_hold = hold;
 }
 
+#ifdef SLV_BIG_SCREEN
+/* ------------------------------------------------------------------------
+ * adventure map (home page): the background next to a text panel, one round step per series
+ * ---------------------------------------------------------------------- */
+
+#define SLV_MAP_MAX_STEPS   16
+#define SLV_MAP_NODE        24
+#define SLV_MAP_NODE_CUR    30
+
+typedef enum {
+    MAP_FUTURE,         /* not reached yet (in the fog) */
+    MAP_OPEN,           /* reachable */
+    MAP_STARTED,        /* reachable and begun */
+    MAP_CURRENT,        /* the next one to do */
+    MAP_DONE            /* validated */
+} slv_map_state_t;
+
+static struct {
+    int8_t group;       /* group of the index the step opens, -1 none */
+    uint8_t state;
+} slv_map_step[ SLV_MAP_MAX_STEPS ];
+static int slv_map_cnt = 0;
+static int slv_map_current = 0;
+static int slv_map_done = 0;                    /* validated steps, the final one excepted */
+static int slv_map_total = 0;                   /* steps, the final one excepted */
+static lv_point_t slv_map_pts[ SLV_MAP_MAX_STEPS ];
+
+static bool slv_map_ready( void ) {
+    return( slv_map && slv_index && (*slv_map)["steps"].size() > 0 );
+}
+
+/* the screen after the course is loaded and where "back" leads from the lists */
+static slv_screen_t slv_home_screen( void ) {
+    return( slv_map_ready() ? SCR_MAP : SCR_GROUPS );
+}
+
+static int slv_group_of_sheet( const char *id ) {
+    for ( JsonObject sheet : (*slv_index)["sheets"].as<JsonArray>() ) {
+        if ( strcmp( sheet["id"] | "", id ) )
+            continue;
+        const char *cat = sheet["cat"] | "";
+        const char *sub = sheet["sub"] | "";
+        for ( int i = 0; i < slv_group_cnt; i++ ) {
+            if ( !strcmp( slv_groups[ i ].cat, cat ) && !strcmp( slv_groups[ i ].sub, sub ) )
+                return( i );
+        }
+        return( -1 );
+    }
+    return( -1 );
+}
+
+/*
+ * state of every step from the scores, like the web map: a series is validated at the average
+ * of the course (85 %); the introduction and the survival kit when their exercises were done;
+ * the final step once everything before it is. A step is reachable up to the one after the last validated.
+ */
+static void slv_map_compute( void ) {
+    JsonArray steps = (*slv_map)["steps"];
+    int threshold = (*slv_map)["threshold"] | 85;
+    bool done[ SLV_MAP_MAX_STEPS ];
+    bool started[ SLV_MAP_MAX_STEPS ];
+    int n = steps.size();
+
+    if ( n > SLV_MAP_MAX_STEPS )
+        n = SLV_MAP_MAX_STEPS;
+    slv_map_cnt = n;
+
+    for ( int i = 0; i < n; i++ ) {
+        JsonObject step = steps[ i ];
+        const char *type = step["t"] | "";
+        int sum = 0;
+        int count = 0;
+
+        started[ i ] = false;
+        slv_map_step[ i ].group = -1;
+        for ( JsonVariant sid : step["s"].as<JsonArray>() ) {
+            const char *id = sid.as<const char*>();
+            if ( !id )
+                continue;
+            if ( slv_map_step[ i ].group < 0 )
+                slv_map_step[ i ].group = slv_group_of_sheet( id );
+            for ( JsonObject sheet : (*slv_index)["sheets"].as<JsonArray>() ) {
+                if ( strcmp( sheet["id"] | "", id ) )
+                    continue;
+                int best = slv_best_of( sheet );
+                if ( best >= 0 )
+                    started[ i ] = true;
+                if ( sheet["ex"].size() > 0 ) {
+                    count++;
+                    sum += best > 0 ? best : 0;
+                }
+                break;
+            }
+        }
+        int average = count ? sum / count : -1;
+        if ( !strcmp( type, "series" ) )
+            done[ i ] = average >= threshold;
+        else
+            done[ i ] = count == 0 || average >= SLOVINGO_DONE_PCT;
+    }
+    /* the final step: reached when all the others are, a castle without sheets never */
+    for ( int i = 0; i < n; i++ ) {
+        if ( strcmp( steps[ i ]["t"] | "", "final" ) )
+            continue;
+        bool all = steps[ i ]["s"].size() > 0;
+        for ( int j = 0; j < n; j++ )
+            all = all && ( j == i || done[ j ] );
+        done[ i ] = all;
+    }
+
+    int last_done = -1;
+    int current = -1;
+    slv_map_done = 0;
+    slv_map_total = 0;
+    for ( int i = 0; i < n; i++ ) {
+        bool final = !strcmp( steps[ i ]["t"] | "", "final" );
+        if ( done[ i ] )
+            last_done = i;
+        if ( !final ) {
+            slv_map_total++;
+            if ( done[ i ] )
+                slv_map_done++;
+            else if ( current < 0 )
+                current = i;
+        }
+    }
+    slv_map_current = current >= 0 ? current : n - 1;
+
+    for ( int i = 0; i < n; i++ ) {
+        uint8_t state = MAP_FUTURE;
+        if ( done[ i ] )
+            state = MAP_DONE;
+        else if ( i == slv_map_current )
+            state = MAP_CURRENT;
+        else if ( i <= last_done + 1 )
+            state = started[ i ] ? MAP_STARTED : MAP_OPEN;
+        slv_map_step[ i ].state = state;
+    }
+}
+
+/* picture of the map and its steps, children of the tile at the right of the screen */
+static void slv_map_build( void ) {
+    lv_coord_t hor = lv_disp_get_hor_res( NULL );
+    lv_coord_t ver = lv_disp_get_ver_res( NULL );
+    lv_coord_t w = slv_map_w();
+    lv_coord_t h = (*slv_map)["h"] | SLV_MAP_DEFAULT_H;
+    JsonArray steps = (*slv_map)["steps"];
+
+    if ( h < 100 || h > ver )
+        h = ver;
+    slv_map_cont = lv_cont_create( slv_tile, NULL );
+    lv_obj_set_size( slv_map_cont, w, h );
+    lv_obj_set_pos( slv_map_cont, hor - w, ( ver - h ) / 2 );
+    lv_obj_set_style_local_bg_color( slv_map_cont, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex( 0x1C3A2E ) );
+    lv_obj_set_style_local_bg_opa( slv_map_cont, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_COVER );
+    lv_obj_set_style_local_border_width( slv_map_cont, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 0 );
+    lv_obj_set_style_local_radius( slv_map_cont, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 0 );
+    lv_obj_set_style_local_pad_all( slv_map_cont, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 0 );
+    lv_obj_set_click( slv_map_cont, false );
+    lv_cont_set_layout( slv_map_cont, LV_LAYOUT_OFF );
+
+    /* the background was brought to the cache with the map */
+    const char *bg = (*slv_map)["bg"] | "";
+    size_t size = 0;
+    uint8_t *jpg = ( *bg && slv_pic_cnt < SLV_MAX_PICS ) ? slovingo_image_load( slovingo_config.url, bg, &size ) : NULL;
+    if ( jpg ) {
+        uint16_t *pixels = NULL;
+        uint16_t pw = 0;
+        uint16_t ph = 0;
+
+        if ( jpeg_decode_rgb565( jpg, size, &pixels, &pw, &ph ) ) {
+            lv_img_dsc_t *dsc = &slv_pic[ slv_pic_cnt ].dsc;
+            memset( dsc, 0, sizeof( *dsc ) );
+            dsc->header.cf = LV_IMG_CF_TRUE_COLOR;
+            dsc->header.w = pw;
+            dsc->header.h = ph;
+            dsc->data_size = (uint32_t)pw * ph * 2;
+            dsc->data = (const uint8_t*)pixels;
+            slv_pic[ slv_pic_cnt++ ].pixels = pixels;
+
+            lv_obj_t *img = lv_img_create( slv_map_cont, NULL );
+            lv_img_set_src( img, dsc );
+            lv_obj_set_pos( img, 0, 0 );
+            lv_obj_set_click( img, false );
+        }
+        free( jpg );
+    }
+
+    for ( int i = 0; i < slv_map_cnt; i++ ) {
+        float x = steps[ i ]["x"] | 50.0f;
+        float y = steps[ i ]["y"] | 50.0f;
+        lv_coord_t m = SLV_MAP_NODE_CUR / 2 + 1;
+        lv_coord_t cx = (lv_coord_t)( x * w / 100 );
+        lv_coord_t cy = (lv_coord_t)( y * h / 100 );
+
+        cx = cx < m ? m : ( cx > w - m ? w - m : cx );
+        cy = cy < m ? m : ( cy > h - m ? h - m : cy );
+        slv_map_pts[ i ].x = cx;
+        slv_map_pts[ i ].y = cy;
+    }
+
+    /* the route, from step to step */
+    lv_obj_t *route = lv_line_create( slv_map_cont, NULL );
+    lv_line_set_points( route, slv_map_pts, slv_map_cnt );
+    lv_obj_set_pos( route, 0, 0 );
+    lv_obj_set_style_local_line_color( route, LV_LINE_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex( 0xFFE082 ) );
+    lv_obj_set_style_local_line_width( route, LV_LINE_PART_MAIN, LV_STATE_DEFAULT, 3 );
+    lv_obj_set_style_local_line_opa( route, LV_LINE_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_70 );
+    lv_obj_set_style_local_line_rounded( route, LV_LINE_PART_MAIN, LV_STATE_DEFAULT, true );
+    lv_obj_set_click( route, false );
+
+    for ( int i = 0; i < slv_map_cnt; i++ ) {
+        uint8_t state = slv_map_step[ i ].state;
+        bool final = !strcmp( steps[ i ]["t"] | "", "final" );
+        lv_coord_t d = state == MAP_CURRENT ? SLV_MAP_NODE_CUR : SLV_MAP_NODE;
+        char label[ 8 ];
+        static const uint32_t colors[] = { 0x39424E, 0x4A6FA5, 0x1F6FEB, 0xF9A825, 0x2E7D32 };
+
+        lv_obj_t *node = lv_btn_create( slv_map_cont, NULL );
+        lv_obj_set_size( node, d, d );
+        lv_obj_set_pos( node, slv_map_pts[ i ].x - d / 2, slv_map_pts[ i ].y - d / 2 );
+        lv_obj_add_style( node, LV_BTN_PART_MAIN, ws_get_button_style() );
+        lv_obj_set_style_local_radius( node, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, LV_RADIUS_CIRCLE );
+        lv_obj_set_style_local_bg_color( node, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex( colors[ state ] ) );
+        lv_obj_set_style_local_bg_color( node, LV_BTN_PART_MAIN, LV_STATE_PRESSED, lv_color_hex( colors[ state ] ) );
+        lv_obj_set_style_local_border_width( node, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, state == MAP_CURRENT ? 3 : 2 );
+        lv_obj_set_style_local_border_color( node, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, state == MAP_FUTURE ? lv_color_hex( 0x6B7480 ) : LV_COLOR_WHITE );
+        lv_obj_set_style_local_text_color( node, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, LV_COLOR_WHITE );
+        lv_obj_set_style_local_pad_all( node, LV_BTN_PART_MAIN, LV_STATE_DEFAULT, 0 );
+        lv_obj_set_event_cb( node, slv_item_event_cb );
+
+        if ( state == MAP_DONE )
+            snprintf( label, sizeof( label ), "%s", LV_SYMBOL_OK );
+        else if ( final )
+            snprintf( label, sizeof( label ), "%s", LV_SYMBOL_HOME );
+        else
+            snprintf( label, sizeof( label ), "%d", i + 1 );
+        lv_label_set_text( lv_label_create( node, NULL ), label );
+
+        if ( slv_item_cnt < SLV_MAX_ITEMS )
+            slv_item[ slv_item_cnt++ ] = node;
+    }
+}
+
+/* the text panel at the left of the map: where the player is, and the way on */
+static void slv_map_panel( void ) {
+    JsonArray steps = (*slv_map)["steps"];
+    char text[ 96 ];
+
+    slovingo_sanitize( steps[ slv_map_current ]["title"] | "", text, sizeof( text ) );
+    slv_add_head( &slv_fox_neutral_40, text, true, false );
+
+    snprintf( text, sizeof( text ), "%d / %d", slv_map_done, slv_map_total );
+    slv_add_label( text, false );
+    slv_add_progress( slv_map_total ? slv_map_done * 100 / slv_map_total : 0 );
+
+    slv_tint( slv_add_button( "Continuer" ), 0x1F4E79 );
+    slv_add_button( "Liste" );
+}
+#endif
+
 static void slv_set_nav( bool prev_ok, bool next_ok ) {
     if ( prev_ok )
         lv_obj_clear_state( slv_prev_btn, LV_STATE_DISABLED );
@@ -2238,6 +2575,19 @@ static void slv_show( slv_screen_t screen ) {
     slv_item_cnt = 0;
     slv_url_textarea = NULL;
     slv_built_lbl = NULL;
+#ifdef SLV_BIG_SCREEN
+    /* the map screen: text panel on the left over the whole height, the map on the right */
+    if ( screen == SCR_MAP && slv_map_ready() )
+        lv_obj_set_size( slv_page, lv_disp_get_hor_res( NULL ) - slv_map_w(), lv_disp_get_ver_res( NULL ) );
+    else
+        lv_obj_set_size( slv_page, lv_disp_get_hor_res( NULL ), lv_disp_get_ver_res( NULL ) - THEME_ICON_SIZE );
+    lv_obj_set_pos( slv_page, 0, 0 );
+    if ( slv_map_cont ) {
+        lv_anim_del( slv_map_cont, NULL );
+        lv_obj_del( slv_map_cont );
+        slv_map_cont = NULL;
+    }
+#endif
     lv_page_clean( slv_page );
 #ifdef SLV_BIG_SCREEN
     slv_pics_free();
@@ -2259,6 +2609,13 @@ static void slv_show( slv_screen_t screen ) {
         slv_set_nav( slv_cur_group > 0, slv_cur_group + 1 < slv_group_cnt );
     memset( slv_rd_more, 0, sizeof( slv_rd_more ) );
 
+#ifdef SLV_BIG_SCREEN
+    if ( screen == SCR_MAP && !slv_map_ready() ) {
+        screen = SCR_GROUPS;
+        slv_screen = SCR_GROUPS;
+        lv_obj_set_size( slv_page, lv_disp_get_hor_res( NULL ), lv_disp_get_ver_res( NULL ) - THEME_ICON_SIZE );
+    }
+#endif
     switch ( screen ) {
         case SCR_LOADING:
             slv_add_bouncing_fox();
@@ -2312,13 +2669,13 @@ static void slv_show( slv_screen_t screen ) {
                     JsonObject sheet = (*slv_index)["sheets"][ slv_sheet_idx[ i ] ];
                     int best = slv_best_of( sheet );
                     if ( best >= 0 ) {
-                        snprintf( text, sizeof( text ), "%s  #%s %d%%#", (const char*)( sheet["title"] | "?" ), slv_best_color( best ), best );
+                        snprintf( text, sizeof( text ), "%s  #%s %d%%#", slv_title_tail( sheet["title"] | "?" ), slv_best_color( best ), best );
                         lv_obj_t *btn = slv_add_button( text );
                         slv_label_recolor( btn );
                         slv_tint( btn, slv_themes[ theme ].color );
                     }
                     else {
-                        slv_tint( slv_add_button( sheet["title"] | "?" ), slv_themes[ theme ].color );
+                        slv_tint( slv_add_button( slv_title_tail( sheet["title"] | "?" ) ), slv_themes[ theme ].color );
                     }
                 }
             }
@@ -2328,7 +2685,7 @@ static void slv_show( slv_screen_t screen ) {
             JsonObject sheet = slv_cur_sheet_obj();
             int playable = slv_playable_count( sheet );
 
-            slovingo_sanitize( sheet["title"] | "?", text, sizeof( text ) );
+            slovingo_sanitize( slv_title_tail( sheet["title"] | "?" ), text, sizeof( text ) );
             slv_add_head( &slv_fox_neutral_40, text, false, false );
             int best = slv_best_of( sheet );
             if ( best >= 0 ) {
@@ -2458,6 +2815,14 @@ static void slv_show( slv_screen_t screen ) {
             break;
         }
 
+#ifdef SLV_BIG_SCREEN
+        case SCR_MAP:
+            slv_map_compute();
+            slv_map_panel();
+            slv_map_build();
+            break;
+#endif
+
         case SCR_COURSES:
             slv_add_label( TXT_CHOOSE_COURSE, true );
             if ( !slv_course_cnt )
@@ -2540,6 +2905,10 @@ static void slv_load_course( void ) {
     slv_sheet = NULL;
     delete slv_ex;
     slv_ex = NULL;
+#ifdef SLV_BIG_SCREEN
+    delete slv_map;
+    slv_map = NULL;
+#endif
     slv_build_groups();
     slv_request( REQ_INDEX, "index.json", true );
 }
@@ -2564,6 +2933,15 @@ static void slv_item_event_cb( lv_obj_t * obj, lv_event_t event ) {
         slv_slide = 1;
 #endif
     switch ( slv_screen ) {
+#ifdef SLV_BIG_SCREEN
+        case SCR_MAP:       if ( item == 0 )
+                                slv_open_group( slv_map_step[ slv_map_current ].group );
+                            else if ( item == 1 )
+                                slv_goto( SCR_GROUPS );
+                            else if ( item - 2 < slv_map_cnt )
+                                slv_open_group( slv_map_step[ item - 2 ].group );
+                            break;
+#endif
         case SCR_GROUPS:    slv_open_group( item );
                             break;
         case SCR_SHEETS:    slv_open_sheet( item );
@@ -2625,15 +3003,27 @@ static void slv_back_event_cb( lv_obj_t * obj, lv_event_t event ) {
     keyboard_hide();
 
 #ifdef SLV_BIG_SCREEN
-    slv_slide = ( slv_screen == SCR_LOADING || slv_screen == SCR_GROUPS ) ? 0 : -1;
+    slv_slide = ( slv_screen == SCR_LOADING || ( slv_screen == SCR_GROUPS && !slv_map_ready() ) || slv_screen == SCR_MAP ) ? 0 : -1;
 #endif
     switch ( slv_screen ) {
         case SCR_LOADING:   /* the worker cannot be stopped, wait for its answer */
                             break;
+#ifdef SLV_BIG_SCREEN
+        case SCR_MAP:       mainbar_jump_back();
+                            break;
+        case SCR_GROUPS:    if ( slv_map_ready() )
+                                slv_goto( SCR_MAP );
+                            else
+                                mainbar_jump_back();
+                            break;
+        case SCR_SHEETS:    slv_goto( slv_home_screen() );
+                            break;
+#else
         case SCR_GROUPS:    mainbar_jump_back();
                             break;
         case SCR_SHEETS:    slv_goto( SCR_GROUPS );
                             break;
+#endif
         case SCR_SHEET:     slv_goto( SCR_SHEETS );
                             break;
         case SCR_READER:
@@ -2751,8 +3141,12 @@ static void slv_app_activate_cb( void ) {
         slv_screen = SCR_GROUPS;
         slv_request( REQ_INDEX, "index.json", false );
     }
-    else if ( slv_screen == SCR_SHEET && !slv_pending ) {
-        slv_goto( SCR_SHEET );
+    else if ( ( slv_screen == SCR_SHEET
+#ifdef SLV_BIG_SCREEN
+                || slv_screen == SCR_MAP
+#endif
+              ) && !slv_pending ) {
+        slv_goto( slv_screen );
     }
 }
 

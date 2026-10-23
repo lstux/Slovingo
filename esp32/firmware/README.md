@@ -26,6 +26,16 @@ Elle ajoute aussi l'exercice **« relier »** (type `match` du cours) : deux col
 traduction ; la paire juste devient verte, une erreur clignote en rouge, et le point est pour une série sans erreur.
 Retirer le flag redonne exactement l'interface de la montre (qui ne joue pas les `match`).
 
+**Carte d'accueil** : si l'API du cours a une carte (`"map": true` dans `index.json`, fichiers `map.json` et `img/map.jpg`
+générés par `src/export_api.py`), elle remplace la liste des séries comme page d'accueil : le fond de carte à
+droite, une pastille par série (verte validée, jaune la prochaine, bleue commencée, grise pas atteinte, numéro ou
+coche), et à gauche la série en cours, la progression et deux boutons « Continuer » et « Liste » (l'ancienne
+liste des séries). Une série est validée à 85 % de moyenne (introduction et kit de survie quand leurs exercices sont
+faits), l'étape finale quand tout le reste l'est. Sans carte, la liste reste l'accueil.
+
+Dans les listes de fiches le titre perd son préfixe jusqu'au tiret long (« Rodina (4/5) — Comment est ta famille ? »
+devient « Comment est ta famille ? »).
+
 **Cache** : un fichier du cours (index, fiche, exercices, image) plus jeune que `cache_hours` heures (12 par défaut,
 clé de `/slovingo.json`, `0` = toujours la version en ligne) est lu tel quel, même sans réseau. Un plus vieux est
 retéléchargé : le Wi-Fi est allumé si besoin (jusqu'à 20 s), et le cache sert de repli s'il ne se connecte pas
