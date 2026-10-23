@@ -247,9 +247,7 @@ python3 tools/import_ai.py sprite rabbit win  art/sources/rabbit_win_gemini.jpg 
 python3 tools/import_ai.py sprite rabbit run  art/sources/rabbit_run_gemini.jpg  --grid 1x4 --height-px 46 --anchor-x 16
 ```
 
-Le saut du renard est plus petit que les autres poses : Gemini l'a dessiné avec de très
-longues jambes, il a fallu le réduire pour qu'il tienne dans la case. Pour le refaire, demander
-*a compact JUMP pose, knees tucked up, same proportions as the reference*.
+Le saut a été refait en pose compacte (genoux repliés) : précisez toujours « same body proportions as the reference, about 2.5 heads tall », sinon Gemini allonge les jambes.
 
 ### Tuiles
 
