@@ -12,8 +12,8 @@ Chaque image du jeu peut être remplacée par une image générée, sans toucher
 | `objects/medovnik` | fait (Gemini) | `sources/medovnik_gemini.jpg` |
 | `objects/holub` pigeon | fait (Gemini) | `sources/holub_gemini.jpg` |
 | `objects/osa` guêpe | fait (Gemini) | `sources/osa_gemini.jpg` |
-| `sprites/fox` renard | **à faire** (provisoire) | rendu des SVG |
-| `sprites/rabbit` Andrea | **à faire** (provisoire, déjà en tenue d'été) | rendu des SVG |
+| `sprites/fox` renard (cases 48×48) | fait (Gemini) | `sources/fox_<anim>_gemini.jpg` |
+| `sprites/rabbit` Andrea | fait (Gemini : idle, win, run sur 4 images) | `sources/rabbit_<anim>_gemini.jpg` |
 | `objects/pruzina`, `lampa`, `zastavka`, `elektricka`, `lavicka`, `fx` | fait (Gemini) | `sources/<nom>_gemini.jpg` |
 | `objects/hud` icônes 8×8 | garder (trop petit pour une IA) | dessiné à la main |
 
@@ -227,6 +227,29 @@ A small flying enemy for a side-view platform game: a cartoon wasp with yellow a
 ```
 
 `python3 tools/import_ai.py object osa art/sources/osa_gemini.jpg --frames 2`
+
+### Réimporter les personnages
+
+Gemini rend souvent les planches en grille et change les proportions d'une génération à
+l'autre : on cale le renard sur la taille de sa tête (jusqu'au haut du sweat bleu), Andrea
+sur sa hauteur debout, et la tête toujours au même x pour éviter les sautillements.
+
+```
+H=17.5; X=27
+python3 tools/import_ai.py sprite fox idle art/sources/fox_idle_gemini.jpg --grid 2x2 --head-px $H --anchor-x $X
+python3 tools/import_ai.py sprite fox run  art/sources/fox_run_gemini.jpg  --grid 3x2 --head-px $H --anchor-x $X
+python3 tools/import_ai.py sprite fox jump art/sources/fox_jump_gemini.jpg --head-px $H --anchor-x $X
+python3 tools/import_ai.py sprite fox fall art/sources/fox_fall_gemini.jpg --head-px $H --anchor-x $X
+python3 tools/import_ai.py sprite fox hurt art/sources/fox_hurt_gemini.jpg --head-px $H --anchor-x $X
+python3 tools/import_ai.py sprite fox win  art/sources/fox_win_gemini.jpg  --grid 3x2 --pick 1,2 --head-px $H --anchor-x $X
+python3 tools/import_ai.py sprite rabbit idle art/sources/rabbit_idle_gemini.jpg --grid 1x4 --height-px 46 --anchor-x 16
+python3 tools/import_ai.py sprite rabbit win  art/sources/rabbit_win_gemini.jpg  --grid 1x4 --pick 1,2 --height-px 46 --anchor-x 16
+python3 tools/import_ai.py sprite rabbit run  art/sources/rabbit_run_gemini.jpg  --grid 1x4 --height-px 46 --anchor-x 16
+```
+
+Le saut du renard est plus petit que les autres poses : Gemini l'a dessiné avec de très
+longues jambes, il a fallu le réduire pour qu'il tienne dans la case. Pour le refaire, demander
+*a compact JUMP pose, knees tucked up, same proportions as the reference*.
 
 ### Tuiles
 

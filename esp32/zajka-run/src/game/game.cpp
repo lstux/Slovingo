@@ -29,6 +29,8 @@ constexpr int HEARTS_PER_LIFE = 50;
 constexpr int TRAM_ROOF = 20;
 // renard : x du centre de la tete dans sa case de 48 px (tools/import_ai.py --anchor-x 27)
 constexpr int FOX_ANCHOR = 27;
+// Andrea : 4 images de course (planche Gemini), seulement sur l'ecran titre
+constexpr int RABBIT_RUN_FRAMES = 4;
 
 // animations de la planche du renard / d'Andrea (une ligne par animation)
 enum { A_IDLE, A_RUN, A_JUMP, A_FALL, A_HURT, A_WIN };
@@ -785,7 +787,7 @@ void Game::drawTitle(Band& b) {
   int ground = SCREEN_H - 2 * TILE;
   int run = (frame_ / 6) % 6;
   b.frame(spr_fox, A_RUN * spr_fox.cols + run, 136 - FOX_ANCHOR, ground - 47);
-  b.frame(spr_rabbit, A_RUN * spr_rabbit.cols + (run + 3) % 6, 168, ground - 47);
+  b.frame(spr_rabbit, A_RUN * spr_rabbit.cols + (frame_ / 8 + 2) % RABBIT_RUN_FRAMES, 168, ground - 47);
   // titre
   b.fillRect(0, 26, SCREEN_W, 58, 0x18E6);
   b.fillRect(0, 26, SCREEN_W, 2, ORANGE);

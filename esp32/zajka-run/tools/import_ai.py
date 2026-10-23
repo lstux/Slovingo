@@ -199,7 +199,7 @@ def grid_frames(img, rows, cols):
     return out
 
 
-def fit_character(frames, fw, fh, colors, head_px, anchor_x, pad_bottom=1):
+def fit_character(frames, fw, fh, colors, head_px, anchor_x, pad_bottom=1, height_px=0):
     """Personnage : meme taille de tete dans toutes les poses (les IA changent les proportions
     d'une image a l'autre), pieds en bas de la case, centre de la tete toujours a anchor_x
     (pas de sautillement d'une image a l'autre). La tete va du haut des oreilles au haut du
@@ -216,7 +216,11 @@ def fit_character(frames, fw, fh, colors, head_px, anchor_x, pad_bottom=1):
         # ligne de sweat assez large : une manche levee ne compte pas
         rows = np.where(blue.mean(1) > 0.12)[0]
         heads.append(int(rows[0]) if len(rows) and rows[0] > 5 else fr.height // 3)
-    s0 = head_px / float(np.median(heads))
+    if height_px:   # personnage sans sweat bleu, poses debout : on cale sur la hauteur totale
+        s0 = height_px / float(np.median([fr.height for fr in frames]))
+        heads = [fr.height // 3 for fr in frames]
+    else:
+        s0 = head_px / float(np.median(heads))
     s0 = min([s0] + [min((fh - pad_bottom - 1) / fr.height, (fw - 2) / fr.width) for fr in frames])
     cells = []
     for fr, head_h in zip(frames, heads):
@@ -285,6 +289,8 @@ def main():
     ap.add_argument("--pick", default=None, help="images a garder, numerotees de 1 (ex. 1,2)")
     ap.add_argument("--head-px", type=float, default=0,
                     help="sprite : taille de la tete en pixels (meme taille dans toutes les poses)")
+    ap.add_argument("--height-px", type=float, default=0,
+                    help="sprite : hauteur du personnage debout (mediane des images), a la place de --head-px")
     ap.add_argument("--anchor-x", type=float, default=0, help="sprite : position x du centre de la tete dans la case")
     ap.add_argument("--uniform", action="store_true",
                     help="sprite/object : meme echelle pour toutes les images (garde les tailles relatives)")
@@ -369,8 +375,9 @@ def main():
     sheet.paste(Image.new("RGBA", (sheet.width, fh), (0, 0, 0, 0)), (0, row * fh))
     if a.strip_ground:
         frames = [strip_ground(fr) for fr in frames]
-    if a.head_px:
-        cells = fit_character(frames, fw, fh, a.colors or 48, a.head_px, a.anchor_x or fw * 0.55)
+    if a.head_px or a.height_px:
+        cells = fit_character(frames, fw, fh, a.colors or 48, a.head_px, a.anchor_x or fw * 0.55,
+                              height_px=a.height_px)
     elif a.uniform:
         cells = fit_strip(frames, fw, fh, a.colors or 48)
     else:
