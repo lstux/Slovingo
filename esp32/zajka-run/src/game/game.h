@@ -13,12 +13,17 @@ enum EType : uint8_t {
   E_PLATFORM,   // passerelle mobile (state 0 horizontale, 1 verticale)
   E_BOTTLE,     // bouteille d'eau : rend un coeur
   E_SQUIRREL,   // ecureuil qui bondit vers le renard
+  E_JET,        // jet de la fontaine : crachote, puis propulse vers le haut
+  E_WIND,       // zone de vent (rafales vers la gauche)
+  E_ROCKSPAWN,  // en haut d'une paroi : laisse tomber des pierres
+  E_ROCK,       // pierre qui tombe
+  E_HUT,        // decor : la chata (refuge) des Tatras
 };
 
 // Sauvegarde : niveaux debloques, meilleurs temps et medovniky par niveau.
 struct SaveData {
   uint32_t magic = 0x5A52554E;  // "ZRUN"
-  uint8_t version = 1, unlocked = 1, pad[2] = {0, 0};
+  uint8_t version = 2, unlocked = 1, pad[2] = {0, 0};
   uint16_t bestTime[8] = {0};   // en secondes, 0 = jamais termine
   uint8_t bestHearts[8] = {0};
 };
@@ -89,6 +94,9 @@ class Game {
   void updateClimb(const Input& in);
   float platformTop(const Entity& e) const;
   void levelCleared();
+  void updateCrumbles();
+  void updateWeather();
+  void postProcess(Band& b);
   void updateEntities();
   void interact();
   void hurtPlayer(float fromX);
@@ -129,4 +137,14 @@ class Game {
   Storage* storage_ = nullptr;
   SaveData save_;
   int sel_ = 0;          // niveau choisi sur l'ecran titre
+  struct Crumble {
+    int16_t tx, ty, t;
+  };
+  Crumble crumbles_[24];
+  int ncrumbles_ = 0;
+  int weatherLevel_ = 0;  // 0 rien, 1 pluie, 2 pluie et nuit
+  int windT_ = 0;         // dans une rafale (images restantes)
+  int flash_ = 0, thunderIn_ = 0, nextBolt_ = 240;
+  uint32_t rng_ = 12345;
+  uint32_t rnd() { rng_ = rng_ * 1103515245u + 12345u; return rng_ >> 8; }
 };

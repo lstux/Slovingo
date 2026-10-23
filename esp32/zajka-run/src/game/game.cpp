@@ -34,6 +34,11 @@ constexpr int RABBIT_RUN_FRAMES = 4;
 constexpr float CLIMB_V = 1.6f;
 constexpr float PLATFORM_V = 0.8f, PLATFORM_VV = 0.6f;
 constexpr int PLATFORM_W = 48, PLATFORM_H = 8;
+constexpr int CRUMBLE_DELAY = 32, CRUMBLE_BACK = 300;   // images avant l'effondrement, avant le retour
+constexpr int JET_PERIOD = 200, JET_SPUTTER = 110, JET_FULL = 140, JET_H = 64;
+constexpr float JET_V = 6.0f, JET_V_HOLD = 6.6f;   // tenir A pour passer le mur de la vasque
+constexpr int WIND_W = 8 * 16, WIND_H = 10 * 16, WIND_PERIOD = 240, WIND_ON = 150;
+constexpr int ROCK_PERIOD = 150;
 
 // animations de la planche du renard / d'Andrea (une ligne par animation)
 // A_CLIMB : 7e ligne de la planche si elle existe, sinon l'image de saut retournee a chaque pas
@@ -130,12 +135,24 @@ void Game::startLevel(int index, bool fresh) {
         break;
       case 'b': k = spawn(E_BOTTLE, tx + 3, ty + 2); ent_[k].w = 10; ent_[k].h = 14; break;
       case 's': k = spawn(E_SQUIRREL, tx + 1, ty + 4); ent_[k].w = 14; ent_[k].h = 12; ent_[k].dir = -1; break;
+      case 'J':
+        k = spawn(E_JET, tx, ty);
+        ent_[k].w = 12;
+        ent_[k].h = JET_H;
+        ent_[k].timer = (s.tx * 37) % JET_PERIOD;   // jets decales les uns des autres
+        break;
+      case 'z': k = spawn(E_WIND, tx, ty + TILE - WIND_H); ent_[k].w = WIND_W; ent_[k].h = WIND_H; break;
+      case 'r': k = spawn(E_ROCKSPAWN, tx, ty); ent_[k].timer = (s.tx * 23) % ROCK_PERIOD; break;
+      case 'R': k = spawn(E_HUT, tx, ty + TILE - 64); break;
       case 'l': k = spawn(E_BENCH, tx, ty); break;
       case 'k': k = spawn(E_FLOWERS, tx, ty); break;
       default: break;
     }
   }
   respawn_ = false;
+  ncrumbles_ = 0;
+  weatherLevel_ = 0;
+  flash_ = thunderIn_ = 0;
   if (fresh) {
     checkX_ = lvl_.startX;
     checkY_ = lvl_.startY;
@@ -264,8 +281,10 @@ void Game::step(const Input& in) {
 void Game::updatePlay(const Input& in) {
   levelTime_++;
   updatePlayer(in);
+  updateCrumbles();
   updateEntities();
   interact();
+  updateWeather();
   if (p_.y > lvl_.pixelH() + 8) killPlayer();
   updateCamera(false);
 }
@@ -280,6 +299,10 @@ void Game::updatePlayer(const Input& in) {
   bool left = in.down(BTN_LEFT), right = in.down(BTN_RIGHT);
   bool run = in.down(BTN_B);
   float maxv = run ? RUN_MAX : WALK_MAX;
+  if (windT_ > 0) {   // face au vent : on avance moins vite
+    windT_--;
+    maxv -= 0.9f;
+  }
   float acc = p.onGround ? (run ? RUN_ACCEL : ACCEL) : AIR_ACCEL;
   if (p.invuln > INVULN - 20) { left = right = false; }  // recul apres un coup
   if (right && !left) {
@@ -546,6 +569,57 @@ void Game::collectHeart(float x, float y, bool popped) {
   }
 }
 
+// ---------------------------------------------------------------- sol qui s'effondre
+void Game::updateCrumbles() {
+  // le renard debout sur une case fragile la met en route
+  if (p_.onGround) {
+    int by = (ifloor(p_.y) + PH) >> 4;
+    for (int tx = ifloor(p_.x) >> 4; tx <= (ifloor(p_.x) + PW - 1) >> 4; tx++) {
+      if (lvl_.at(tx, by) != T_CRUMBLE) continue;
+      bool known = false;
+      for (int i = 0; i < ncrumbles_; i++)
+        if (crumbles_[i].tx == tx && crumbles_[i].ty == by) known = true;
+      if (!known && ncrumbles_ < (int)(sizeof(crumbles_) / sizeof(crumbles_[0])))
+        crumbles_[ncrumbles_++] = Crumble{(int16_t)tx, (int16_t)by, 0};
+    }
+  }
+  for (int i = 0; i < ncrumbles_; i++) {
+    Crumble& c = crumbles_[i];
+    c.t++;
+    if (c.t == CRUMBLE_DELAY) {
+      lvl_.set(c.tx, c.ty, T_EMPTY);
+      fx(E_DUST, c.tx * TILE, c.ty * TILE);
+      audio_->play(SFX_CRUMBLE);
+    }
+    if (c.t >= CRUMBLE_DELAY + CRUMBLE_BACK) {
+      // revient, sauf si le renard est dedans
+      bool inside = overlap(p_.x, p_.y, PW, PH, c.tx * TILE, c.ty * TILE, TILE, TILE);
+      if (inside) {
+        c.t--;
+        continue;
+      }
+      lvl_.set(c.tx, c.ty, T_CRUMBLE);
+      crumbles_[i--] = crumbles_[--ncrumbles_];
+    }
+  }
+}
+
+// ---------------------------------------------------------------- orage (niveau des Tatras)
+void Game::updateWeather() {
+  if (!lvl_.def->weather) return;
+  float k = p_.x / (float)lvl_.pixelW();
+  weatherLevel_ = k < 0.25f ? 0 : (k < 0.55f ? 1 : 2);
+  if (flash_ > 0) flash_--;
+  if (thunderIn_ > 0 && --thunderIn_ == 0) audio_->play(SFX_THUNDER);
+  if (weatherLevel_ >= 1 && --nextBolt_ <= 0) {
+    // d'abord l'eclair, ensuite le tonnerre (najprv blesk, potom hrom)
+    flash_ = 5;
+    thunderIn_ = 18 + rnd() % 30;
+    shake_ = 4;
+    nextBolt_ = (weatherLevel_ == 2 ? 170 : 330) + rnd() % 200;
+  }
+}
+
 void Game::updateEntities() {
   for (int i = 0; i < nent_; i++) {
     Entity& e = ent_[i];
@@ -696,6 +770,36 @@ void Game::updateEntities() {
       case E_BOTTLE:
         e.timer++;
         break;
+      case E_JET:
+        e.timer = (e.timer + 1) % JET_PERIOD;
+        if (e.state > 0) e.state--;   // pas de double propulsion
+        break;
+      case E_WIND:
+        e.timer = (e.timer + 1) % WIND_PERIOD;
+        break;
+      case E_ROCKSPAWN:
+        if (fabsf(p_.x - e.x) < 220 && ++e.timer >= ROCK_PERIOD) {
+          e.timer = 0;
+          int k = spawn(E_ROCK, e.x + 2, e.y);
+          if (k >= 0) {
+            ent_[k].w = 12;
+            ent_[k].h = 12;
+          }
+        }
+        break;
+      case E_ROCK: {
+        e.vy += 0.22f;
+        if (e.vy > 6) e.vy = 6;
+        e.y += e.vy;
+        e.timer++;
+        int bx = (ifloor(e.x) + 6) >> 4, by = (ifloor(e.y) + e.h) >> 4;
+        TileKind k = lvl_.kindAt(bx, by);
+        if (e.timer > 8 && (k == K_SOLID || k == K_WATER || e.y > lvl_.pixelH())) {
+          fx(E_DUST, e.x - 2, (float)(by * TILE - 14));
+          e.type = E_NONE;
+        }
+        break;
+      }
       case E_POP:
         e.vy += 0.3f;
         e.y += e.vy;
@@ -746,6 +850,38 @@ void Game::interact() {
       case E_HEART:
         if (overlap(px, py, PW, PH, e.x, e.y, e.w, e.h)) {
           collectHeart(e.x - 2, e.y - 2, false);
+          e.type = E_NONE;
+        }
+        break;
+      case E_JET: {
+        // colonne d'eau au-dessus de la buse, seulement quand le jet est plein
+        if (e.timer < JET_FULL) break;
+        float top = e.y + TILE - JET_H;
+        bool in = overlap(px, py, PW, PH, e.x + 2, top, e.w, JET_H);
+        if (in && e.state) e.state = 20;   // une seule propulsion tant qu'on reste dans la colonne
+        if (in && !e.state) {
+          p.vy = holdA_ ? -JET_V_HOLD : -JET_V;
+          p.onGround = false;
+          p.riding = -1;
+          p.climbing = false;
+          p.coyote = 0;
+          e.state = 20;
+          audio_->play(SFX_SPRING);
+        }
+        break;
+      }
+      case E_WIND:
+        if (e.timer > 30 && e.timer < WIND_ON && !p.climbing && overlap(px, py, PW, PH, e.x, e.y, e.w, e.h)) {
+          // rafale de face : on avance encore en marchant, mieux en courant (B)
+          p.vx -= p.onGround ? 0.07f : 0.10f;
+          if (p.vx < -1.6f) p.vx = -1.6f;
+          windT_ = 2;
+        }
+        break;
+      case E_ROCK:
+        if (overlap(px + 2, py + 2, PW - 4, PH - 4, e.x, e.y, e.w, e.h)) {
+          hurtPlayer(e.x + 6);
+          fx(E_DUST, e.x - 2, e.y);
           e.type = E_NONE;
         }
         break;
@@ -875,12 +1011,44 @@ void Game::updateCamera(bool snap) {
 // ---------------------------------------------------------------- rendu
 void Game::renderBand(Band& b) {
   drawWorld(b);
+  postProcess(b);
   if (state_ == S_TITLE) {
     drawTitle(b);
     return;
   }
   drawHud(b);
   drawOverlay(b);
+}
+
+// pluie, nuit qui tombe et eclairs (niveau des Tatras), sur le decor mais sous le HUD
+void Game::postProcess(Band& b) {
+  if (!lvl_.def->weather || state_ == S_TITLE) return;
+  int n = SCREEN_W * b.h;
+  if (flash_ > 0) {
+    for (int i = 0; i < n; i++) b.buf[i] |= 0x39E7;   // tout s'eclaire
+  } else if (weatherLevel_ == 2) {
+    for (int i = 0; i < n; i++) b.buf[i] = (b.buf[i] >> 1) & 0x7BEF;   // moitie moins de lumiere
+  } else if (weatherLevel_ == 1) {
+    for (int i = 0; i < n; i++) {
+      uint16_t c = b.buf[i];
+      b.buf[i] = c - ((c >> 2) & 0x39E7);   // un quart de moins
+    }
+  }
+  if (weatherLevel_ >= 1) {
+    // pluie : traits obliques qui tombent vite, plus nombreux quand l'orage est la
+    int drops = weatherLevel_ == 2 ? 90 : 45;
+    uint16_t col = weatherLevel_ == 2 ? 0x8C71 : 0xAD97;
+    for (int i = 0; i < drops; i++) {
+      int x = (int)((i * 2654435761u >> 7) % 340) - (int)((frame_ * 3) % 340) ;
+      int y = (int)(((i * 40503u) + frame_ * 11u) % 260) - 10;
+      x = ((x % 340) + 340) % 340 - 10;
+      for (int k = 0; k < 6; k++) {
+        int yy = y + k, xx = x - k / 2;
+        if (yy < b.y0 || yy >= b.y0 + b.h || xx < 0 || xx >= SCREEN_W) continue;
+        b.buf[(yy - b.y0) * SCREEN_W + xx] = col;
+      }
+    }
+  }
 }
 
 void Game::drawWorld(Band& b) {
@@ -897,7 +1065,8 @@ void Game::drawWorld(Band& b) {
   // decor et objets derriere le joueur
   for (int i = 0; i < nent_; i++) {
     const Entity& e = ent_[i];
-    if (e.type == E_BENCH || e.type == E_FLOWERS || e.type == E_CHECK || e.type == E_GOAL || e.type == E_TRAM)
+    if (e.type == E_BENCH || e.type == E_FLOWERS || e.type == E_CHECK || e.type == E_GOAL || e.type == E_TRAM ||
+        e.type == E_HUT)
       drawEntity(b, e);
   }
 
@@ -912,14 +1081,23 @@ void Game::drawWorld(Band& b) {
       int dy = ty * TILE - cy;
       if (bumpT_ > 0 && tx == bumpTx_ && ty == bumpTy_) dy -= (bumpT_ > 4 ? 8 - bumpT_ : bumpT_);
       if (t == T_WATER_TOP && ((frame_ / 16 + tx) & 1)) t = T_WATER_TOP2;  // vaguelettes
-      b.blit(ts, (t % 8) * TILE, (t / 8) * TILE, TILE, TILE, tx * TILE - cx, dy);
+      int dx = 0;
+      if (t == T_CRUMBLE) {
+        for (int i = 0; i < ncrumbles_; i++)
+          if (crumbles_[i].tx == tx && crumbles_[i].ty == ty && crumbles_[i].t < CRUMBLE_DELAY) {
+            t = T_CRUMBLE_HIT;                               // ca se fissure...
+            dx = (crumbles_[i].t / 2) % 2 ? 1 : -1;         // ... et ca tremble
+          }
+      }
+      b.blit(ts, (t % 8) * TILE, (t / 8) * TILE, TILE, TILE, tx * TILE - cx + dx, dy);
     }
   }
 
   for (int i = 0; i < nent_; i++) {
     const Entity& e = ent_[i];
     if (e.type == E_NONE || e.type == E_BENCH || e.type == E_FLOWERS || e.type == E_CHECK ||
-        e.type == E_GOAL || e.type == E_TRAM || e.type == E_DUST || e.type == E_SPARK || e.type == E_TEXT)
+        e.type == E_GOAL || e.type == E_TRAM || e.type == E_DUST || e.type == E_SPARK || e.type == E_TEXT ||
+        e.type == E_HUT)
       continue;
     drawEntity(b, e);
   }
@@ -934,7 +1112,7 @@ void Game::drawEntity(Band& b, const Entity& e) {
   int cx = (int)camX_, cy = (int)camY_;
   int sx = (int)lroundf(e.x) - cx, sy = (int)lroundf(e.y) - cy;
   if (sx < -110 || sx > SCREEN_W + 10) return;
-  if (sy > b.y0 + b.h || sy + 64 < b.y0) return;
+  if (sy > b.y0 + b.h || sy + (e.h > 64 ? e.h : 64) < b.y0) return;
   switch (e.type) {
     case E_HEART: {
       int bob = ((frame_ + (int)e.baseX) / 20) % 2;
@@ -961,10 +1139,10 @@ void Game::drawEntity(Band& b, const Entity& e) {
       bool cleared = state_ == S_CLEAR;
       int row = cleared ? A_WIN : A_IDLE;
       int f = cleared ? (stateTime_ / 14) % 2 : (e.timer / 14) % 4;
-      if (lvl_.def->npc[0]) {
-        // pan Orol sur son rocher, Andrea a cote
+      if (lvl_.def->npc) {
+        // le personnage du niveau (pan Orol, le jardinier, le chatar), Andrea a cote
         b.frame(spr_rabbit, row * spr_rabbit.cols + f, sx, sy, true);
-        b.frame(spr_orol, cleared && stateTime_ > 40 ? (stateTime_ / 20) % 2 : 0, sx + 26, sy);
+        b.frame(*lvl_.def->npc, cleared && stateTime_ > 40 ? (stateTime_ / 20) % 2 : 0, sx + 26, sy);
       } else {
         // Andrea attend a l'arret de tram
         b.frame(spr_zastavka, 0, sx, sy);
@@ -974,6 +1152,28 @@ void Game::drawEntity(Band& b, const Entity& e) {
     }
     case E_PLATFORM:
       b.frame(spr_platforma, 0, sx, sy);
+      break;
+    case E_JET: {
+      // buse au sol, colonne d'eau au-dessus (image 0 eteint, 1 crachote, 2-3 plein)
+      int f = e.timer < JET_SPUTTER ? 0 : (e.timer < JET_FULL ? 1 : 2 + (frame_ / 4) % 2);
+      b.frame(spr_tryska, f, sx, sy + TILE - spr_tryska.fh);
+      break;
+    }
+    case E_WIND:
+      if (e.timer > 30 && e.timer < WIND_ON) {
+        // rafale : quelques traits blancs qui filent vers la gauche
+        for (int i = 0; i < 9; i++) {
+          int lx = sx + e.w - (int)((frame_ * 6 + i * 47) % (e.w + 20));
+          int ly = sy + 10 + (i * 37) % (e.h - 20);
+          b.fillRect(lx, ly, 10 + (i % 3) * 4, 1, 0xE73C);
+        }
+      }
+      break;
+    case E_ROCK:
+      b.frame(spr_kamen, (e.timer / 6) % 2, sx - 2, sy - 2);
+      break;
+    case E_HUT:
+      b.frame(spr_chata, 0, sx, sy);
       break;
     case E_BOTTLE:
       b.frame(spr_flasa, 0, sx - 3, sy - 2 - ((frame_ / 20) % 2));
@@ -1120,7 +1320,7 @@ void Game::drawOverlay(Band& b) {
         for (int i = 0; i < nent_; i++) {
           if (ent_[i].type != E_GOAL) continue;
           // la bulle sort de la bouche de pan Orol, ou d'Andrea a l'arret de tram
-          int ax = (int)ent_[i].x - (int)camX_ + (lvl_.def->npc[0] ? 44 : 36);
+          int ax = (int)ent_[i].x - (int)camX_ + (lvl_.def->npc ? 44 : 36);
           int ay = (int)ent_[i].y - (int)camY_ - 26;
           const char* hint = lvl_.def->hint;
           int w = textWidth(font_small, hint) + 12;

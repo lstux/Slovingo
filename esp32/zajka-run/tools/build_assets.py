@@ -23,6 +23,8 @@ GEN = os.path.join(ROOT, "src", "game", "gen")
 THEMES = {
     "kosice": {"check": "spr_lampa", "decor": "spr_lavicka", "under": ((0x28, 0x2C, 0x28), (0x18, 0x18, 0x18))},
     "raj": {"check": "spr_rozcestnik", "decor": "spr_les", "under": ((0x20, 0x3a, 0x30), (0x10, 0x20, 0x20))},
+    "sucho": {"check": "spr_lampa", "decor": "spr_lavicka", "under": ((0x4a, 0x36, 0x24), (0x2a, 0x1e, 0x16))},
+    "tatry": {"check": "spr_rozcestnik", "decor": "spr_hory", "under": ((0x30, 0x34, 0x3a), (0x18, 0x1a, 0x20))},
 }
 FONTS = [
     # nom, fichier, taille, seuil
@@ -195,7 +197,8 @@ def main():
         o.data.append(
             f"const LevelDef level_{lid} = {{ {c_str(meta.get('name', lid))}, {c_str(meta.get('subtitle', ''))}, "
             f"{c_str(meta.get('hint', ''))}, &theme_{meta.get('theme', 'kosice')}, {int(meta.get('music', 0))}, "
-            f"{c_str(meta.get('npc', ''))}, {c_str(meta.get('next', ''))}, "
+            f"{('&spr_' + meta['npc']) if meta.get('npc') else 'nullptr'}, {int(meta.get('weather', 0))}, "
+            f"{c_str(meta.get('next', ''))}, "
             f"{len(rows[0])}, {len(rows)}, {lid}_rows }};\n")
         levels.append(lid)
     o.data.append("const LevelDef* const ALL_LEVELS[] = { " + ", ".join(f"&level_{l}" for l in levels) + " };\n")

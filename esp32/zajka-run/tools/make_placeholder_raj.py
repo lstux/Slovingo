@@ -32,7 +32,8 @@ def save(img, rel):
     path = os.path.join(ART, rel)
     stem = os.path.basename(rel).split("_")[0].replace(".png", "")
     if not FORCE:
-        key = os.path.basename(os.path.dirname(rel)) + "_" + stem if rel.startswith("raj/") else stem
+        folder = os.path.dirname(rel)
+        key = stem if folder == "objects" else folder + "_" + stem
         if glob.glob(os.path.join(ART, "sources", key + "*")):
             print(f"{rel} : source IA presente, non regenere (--force pour l'ecraser)")
             return

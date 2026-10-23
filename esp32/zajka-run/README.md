@@ -9,10 +9,22 @@ Niveau 1 : **Košice, rue Hlavná**. Pavés, maisons bourgeoises, théâtre à c
 Dóm svätej Alžbety, tram Tatra à prendre comme ascenseur, pigeons, guêpes et
 **medovníky** (cœurs en pain d'épices) à ramasser. 50 medovníky = une vie.
 
-Niveau 2 : **Slovenský raj, la gorge de Suchá Belá** (série Raj du cours). Forêt sèche,
+Les niveaux suivent l'ordre du cours :
+
+Niveau 2 : **Sucho, la sécheresse à Košice**. Canicule, la fontaine chantante devant le théâtre
+est à sec : ses **buses** crachotent puis propulsent le renard (A maintenu pour monter plus haut),
+le **sol desséché** s'effondre après un instant, étang boueux à éviter, et pán Záhradník,
+le jardinier, à l'arrivée.
+
+Niveau 3 : **Slovenský raj, la gorge de Suchá Belá** (série Raj du cours). Forêt sèche,
 ruisseau, puis la gorge : **échelles** (croix haut/bas, A pour sauter), passerelles
 au-dessus du torrent (l'eau fait perdre une vie), passerelles mobiles et ascenseur,
 écureuils, **bouteilles d'eau** qui rendent un cœur, et pán Orol, le garde du parc, à l'arrivée.
+
+Niveau 4 : **Vysoké Tatry, l'orage**. Montée vers le refuge : le ciel s'assombrit, la pluie
+puis l'orage arrivent (éclairs et tonnerre), **chaînes** à grimper, **éboulis** qui cèdent,
+**rafales de vent** qui repoussent le renard, pierres qui tombent, lac glacé, et le chatár
+du refuge à l'arrivée.
 
 La progression est sauvegardée (niveaux débloqués, meilleur temps et medovníky par niveau) ;
 sur l'écran titre, gauche/droite choisit le niveau.
@@ -65,12 +77,14 @@ tourne à 60 Hz fixes, l'affichage autour de 30 images/s.
 ## Modifier
 
 - **Un niveau** : éditer `levels/1-1_kosice.txt` (caractères expliqués en tête), puis
-  `python3 tools/build_assets.py`. Un nouveau fichier `levels/1-2_xxx.txt` devient le niveau suivant.
+  `python3 tools/build_assets.py`. Les fichiers sont joués dans l'ordre de leur nom (`1-5_xxx.txt` serait le suivant).
 - **Les graphismes** : voir `art/PROMPTS.md` (prompts Gemini / ChatGPT, état de chaque
   image, puis `tools/import_ai.py` pour les importer ; les images IA d'origine sont gardées
   dans `art/sources/`). Tous les graphismes viennent maintenant de Gemini (sauf les icônes du HUD).
   Les générateurs provisoires (`tools/make_placeholder_art.py`, `tools/make_sprites.py`) restent
   pour de nouveaux niveaux ; `make_placeholder_art.py` écrase les images importées.
+  Les images provisoires de Sucho, Raj et Tatry viennent de `make_placeholder_levels.py` et
+  `make_placeholder_raj.py`, qui ne touchent jamais une image IA importée.
 - **La physique** : constantes en tête de `src/game/game.cpp` (vitesse, gravité, saut...).
 
 ## Tester sur PC

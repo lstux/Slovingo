@@ -14,7 +14,8 @@ struct LevelDef {
   const char* hint;       // phrase en slovaque affichee a l'arrivee
   const Theme* theme;
   int music;
-  const char* npc;        // personnage a l'arrivee avec Andrea ("" : arret de tram seul, "orol" : pan Orol)
+  const Sheet* npc;       // personnage a l'arrivee avec Andrea (nullptr : arret de tram seul)
+  int weather;            // 0 beau temps, 1 orage qui monte au fil du niveau (pluie, nuit, eclairs)
   const char* next;       // prochaine etape annoncee a la fin du dernier niveau
   int w, h;
   const char* const* rows;
@@ -40,6 +41,8 @@ enum TileId : uint8_t {
   T_WATER_TOP = 15,   // surface (animee avec T_WATER_TOP2)
   T_WATER = 16,
   T_WATER_TOP2 = 17,
+  T_CRUMBLE = 18,     // sol craquele / eboulis : s'effondre quand on reste dessus
+  T_CRUMBLE_HIT = 19, // le meme qui se fissure (affichage seulement)
 };
 
 enum TileKind : uint8_t { K_AIR, K_SOLID, K_ONEWAY, K_HAZARD, K_LADDER, K_WATER };

@@ -16,8 +16,12 @@ Chaque image du jeu peut être remplacée par une image générée, sans toucher
 | `sprites/rabbit` Andrea | fait (Gemini : idle, win, run sur 4 images) | `sources/rabbit_<anim>_gemini.jpg` |
 | `objects/pruzina`, `lampa`, `zastavka`, `elektricka`, `lavicka`, `fx` | fait (Gemini) | `sources/<nom>_gemini.jpg` |
 | `objects/hud` icônes 8×8 | garder (trop petit pour une IA) | dessiné à la main |
-| `raj/far`, `raj/mid`, `raj/tiles` (niveau 1-2) | **à faire** (provisoires) | `make_placeholder_raj.py` |
+| `sucho/far`, `sucho/mid`, `sucho/tiles` (niveau 1-2) | **à faire** (provisoires) | `make_placeholder_levels.py` |
+| `objects/tryska`, `zahradnik` | **à faire** (provisoires) | `make_placeholder_levels.py` |
+| `raj/far`, `raj/mid`, `raj/tiles` (niveau 1-3) | **à faire** (provisoires) | `make_placeholder_raj.py` |
 | `objects/platforma`, `flasa`, `vevericka`, `orol`, `rozcestnik`, `les` | **à faire** (provisoires) | `make_placeholder_raj.py` |
+| `tatry/far`, `tatry/mid`, `tatry/tiles` (niveau 1-4) | **à faire** (provisoires) | `make_placeholder_levels.py` |
+| `objects/kamen`, `chata`, `chatar`, `hory` | **à faire** (provisoires) | `make_placeholder_levels.py` |
 | `sprites/fox` ligne `climb` (échelle) | **à faire** (pose du saut en attendant) | — |
 
 ## Marche à suivre
@@ -29,7 +33,66 @@ Chaque image du jeu peut être remplacée par une image générée, sans toucher
 
 Si l'IA ajoute un trait de sol sous un objet : `--strip-ground`. Si les images n'ont pas la même taille exprès (ressort comprimé, petit nuage) : `--uniform`. Si elle mélange l'ordre des tuiles : `--cells` (voir la réimportation des tuiles en bas de page).
 
-## Niveau 1-2 : Slovenský raj (à faire)
+## Niveau 1-2 : Sucho, la sécheresse à Košice (à faire)
+
+La série Sucho du cours : canicule, la fontaine chantante devant le théâtre est à sec. Buses de la fontaine qui propulsent (jet), sol desséché qui s'effondre, étang boueux, et le jardinier (pán Záhradník, un blaireau) à l'arrivée. Images provisoires : `tools/make_placeholder_levels.py` (ne remplace jamais une image IA importée).
+
+### Fond lointain (`sucho/far.png`)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 48 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Wide side-scrolling game background, aspect ratio 2:1. A scorching summer heatwave over the city of Košice in eastern Slovakia: pale washed-out blue sky turning hazy yellow near the horizon, a big white-yellow sun, no clouds. In the far distance, dry yellow-brown hills burnt by the drought, and pale rows of panel housing blocks (sídliská) half lost in the heat haze. Everything sits in the lower half of the image; the upper half is sky. Atmospheric perspective: distant elements are pale and low-contrast.
+```
+
+```
+python3 tools/import_ai.py far art/sources/sucho_far_gemini.jpg --theme sucho --mirror
+```
+
+### Le parc du théâtre et la gare (`sucho/mid.png`)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 64 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Side-scrolling game background layer, very wide panorama (aspect ratio about 4:1), seen straight from the side. The centre of Košice during a drought: on the left a park with trees whose leaves have turned yellow from the heat; in the middle the cream-coloured neo-baroque State Theatre of Košice with its green copper dome and arched windows, and in front of it the singing fountain (Spievajúca fontána), a wide stone basin that is completely EMPTY and dry, with its metal nozzles sticking out; on the right the Košice railway station building with a clock. Dry yellowed grass along the bottom edge; the bottom edge of the image is the ground. Everything above the roofs and tree tops is flat solid magenta #FF00FF.
+```
+
+```
+python3 tools/import_ai.py mid art/sources/sucho_mid_gemini.jpg --theme sucho
+```
+
+### Tuiles (`sucho/tiles.png`)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 64 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Game tileset sheet, exactly 8 columns by 4 rows of square tiles, each tile 16x16 pixels, upscaled x8 (1024x512 image), perfectly aligned on the grid, flat magenta #FF00FF where a tile is empty, no grid lines. Theme: parched park ground in a drought. Tiles in reading order: 0 empty; 1 dry ground seen from the side: a thin strip of yellowed dry grass on top of cracked light-brown earth; 2 plain cracked dry earth; 3 same as 1 with a left edge; 4 same as 1 with a right edge; 5 same as 2 with a left edge; 6 same as 2 with a right edge; 7 a grey stone paving block; 8 a wooden crate decorated with a red gingerbread heart with white icing; 9 the same crate, empty and faded; 10, 11, 12 a thin stone ledge (left end, middle, right end); 13 sharp metal spikes; 14 empty; 15 the surface of a muddy pond, greyish green with small pale ripples on top; 16 deep muddy water, darker green; 17 the same surface as 15 with the ripples shifted (second animation frame); 18 a slab of dry earth with deep dark cracks, looking fragile; 19 the same slab breaking apart, cracks wider, small pieces falling; 20 to 31 empty.
+```
+
+```
+python3 tools/import_ai.py tiles art/sources/sucho_tiles_gemini.jpg --theme sucho
+```
+
+### Buse de la fontaine (`objects/tryska_16x64`, 4 images)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 24 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+A fountain nozzle for a side-view platform game, from the singing fountain of Košice: a short grey metal nozzle at the bottom, seen exactly from the side. 4 frames in a single horizontal row, evenly spaced with wide gaps, same scale, nozzle on the same baseline: 1 nozzle off, no water; 2 nozzle sputtering a few drops just above it; 3 a powerful vertical jet of light blue and white water rising four times the nozzle width high, with a foamy top; 4 the same full jet with the foam and the white streaks shifted (animation). Each frame is 1 wide by 4 tall and must read clearly at 16x64 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+```
+
+```
+python3 tools/import_ai.py object tryska art/sources/tryska_gemini.jpg --frames 4 --uniform
+```
+
+### Pán Záhradník, le jardinier (`objects/zahradnik_32x48`, 2 images)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 32 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Pán Záhradník, the old gardener of the park: an anthropomorphic badger standing upright on two legs, grey fur with the black and white striped face of a badger, wearing a green work dungarees, a straw hat, holding an empty metal watering can, looking worried by the drought. Side view, FACING LEFT. 2 frames in a single horizontal row, evenly spaced with wide gaps, same scale, feet on the same baseline: standing with the watering can, then raising one arm to greet. Each frame is 2 wide by 3 tall and must read clearly at 32x48 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+```
+
+```
+python3 tools/import_ai.py object zahradnik art/sources/zahradnik_gemini.jpg --frames 2 --uniform
+```
+
+## Niveau 1-3 : Slovenský raj (à faire)
 
 La gorge de Suchá Belá (série Raj du cours) : échelles, passerelles au-dessus du torrent, écureuils, bouteille d'eau, et pán Orol à l'arrivée. Les images actuelles sont provisoires (`tools/make_placeholder_raj.py`, qui ne remplace jamais une image IA importée).
 
@@ -146,6 +209,87 @@ python3 tools/import_ai.py sprite fox climb art/sources/fox_climb_gemini.jpg --f
 ```
 
 Tant que cette ligne manque, le jeu montre la pose du saut, retournée à chaque barreau.
+
+## Niveau 1-4 : Vysoké Tatry, l'orage (à faire)
+
+La série Tatry du cours : montée vers le refuge, la pluie et l'orage arrivent au fil du niveau (le jeu assombrit l'image et dessine la pluie lui-même, les images restent de jour). Chaînes à grimper, éboulis qui cèdent, rafales de vent, pierres qui tombent, lac glacé, et le gardien du refuge (chatár, un ours) à l'arrivée.
+
+### Fond lointain (`tatry/far.png`)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 48 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Wide side-scrolling game background, aspect ratio 2:1. The High Tatras (Vysoké Tatry) in Slovakia before a storm: a grey-blue sky with heavy dark storm clouds building up on one side, light still breaking through on the other. In the distance, the jagged granite peaks of the High Tatras (like Kriváň and Gerlachovský štít), grey rock with small patches of old snow. Everything sits in the lower half of the image; the upper half is sky. Atmospheric perspective: distant elements are pale and low-contrast. No buildings.
+```
+
+```
+python3 tools/import_ai.py far art/sources/tatry_far_gemini.jpg --theme tatry --mirror
+```
+
+### Pentes de granit et pleso (`tatry/mid.png`)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 64 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Side-scrolling game background layer, very wide panorama (aspect ratio about 4:1), seen straight from the side. A high mountain valley in the High Tatras above the tree line: steep grey granite slopes and scree fields with big fallen boulders, patches of dwarf mountain pine (kosodrevina) along the bottom, and on the right a small dark blue glacial lake (pleso) with a pale shoreline. The bottom edge of the image is the ground. Everything above the mountain slopes is flat solid magenta #FF00FF.
+```
+
+```
+python3 tools/import_ai.py mid art/sources/tatry_mid_gemini.jpg --theme tatry
+```
+
+### Tuiles (`tatry/tiles.png`)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 64 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Game tileset sheet, exactly 8 columns by 4 rows of square tiles, each tile 16x16 pixels, upscaled x8 (1024x512 image), perfectly aligned on the grid, flat magenta #FF00FF where a tile is empty, no grid lines. Theme: a granite mountain trail in the High Tatras. Tiles in reading order: 0 empty; 1 mountain ground seen from the side: a thin strip of short alpine grass on top of grey granite; 2 plain grey granite with pink speckles; 3 same as 1 with a left edge; 4 same as 1 with a right edge; 5 same as 2 with a left edge; 6 same as 2 with a right edge; 7 a big granite boulder block; 8 a wooden crate decorated with a red gingerbread heart with white icing; 9 the same crate, empty and faded; 10, 11, 12 wooden trail steps / a thin wooden plank (left end, middle, right end); 13 sharp pointed rocks; 14 a vertical steel chain fixed to the rock, like the safety chains on Tatra trails, one chain segment that tiles vertically; 15 the surface of a cold mountain lake, dark blue with small white ripples on top; 16 deep lake water, darker blue; 17 the same surface as 15 with the ripples shifted (second animation frame); 18 loose scree, a pile of small grey stones that looks unstable; 19 the same scree sliding apart with dark gaps; 20 to 31 empty.
+```
+
+```
+python3 tools/import_ai.py tiles art/sources/tatry_tiles_gemini.jpg --theme tatry
+```
+
+### Pierre qui tombe (`objects/kamen_16x16`, 2 images)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 16 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+A falling rock for a side-view platform game: a round-ish grey granite stone with a lighter edge on top and a few cracks. 2 frames in a single horizontal row, evenly spaced with wide gaps, same size: the stone, then the same stone rotated a quarter turn (it tumbles). Each frame must read clearly at 16x16 pixels. Flat solid magenta #FF00FF background everywhere, no shadow.
+```
+
+```
+python3 tools/import_ai.py object kamen art/sources/kamen_gemini.jpg --frames 2 --uniform
+```
+
+### Le refuge (`objects/chata_96x64`, 1 image)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 32 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+A mountain hut (horská chata) in the High Tatras for a side-view platform game, seen exactly from the side: a ground floor of grey stone blocks, an upper floor of dark wooden planks, a steep dark brown roof, a stone chimney, a warm yellow lit window and a wooden door. A single image, proportions exactly 3 wide by 2 tall. It must read clearly at 96x64 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+```
+
+```
+python3 tools/import_ai.py object chata art/sources/chata_gemini.jpg --strip-ground
+```
+
+### Chatár, le gardien du refuge (`objects/chatar_32x48`, 2 images)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 32 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+The chatár, keeper of the mountain hut: an old anthropomorphic brown bear standing upright on two legs, with a white beard, wearing a red Nordic wool sweater with a white pattern, a navy blue knitted beanie and sturdy hiking boots. Side view, FACING LEFT. 2 frames in a single horizontal row, evenly spaced with wide gaps, same scale, feet on the same baseline: standing calmly, then raising one paw to greet. Each frame is 2 wide by 3 tall and must read clearly at 32x48 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+```
+
+```
+python3 tools/import_ai.py object chatar art/sources/chatar_gemini.jpg --frames 2 --uniform
+```
+
+### Décor de montagne (`objects/hory_32x16`, 2 images)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 24 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Two mountain decoration props for a side-view platform game, seen exactly from the side, in a single horizontal row with a wide gap between them: first a low bush of dwarf mountain pine (kosodrevina), dark green; second a small cairn of stacked grey stones (mužík) marking the trail. Both the same height and on the same baseline, each twice as wide as tall. Each must read clearly at 32x16 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+```
+
+```
+python3 tools/import_ai.py object hory art/sources/hory_gemini.jpg --frames 2
+```
 
 ## Le renard (joindre `art/characters/fox-reference.png`)
 
@@ -383,4 +527,4 @@ Tuiles du jeu : 1 dessus du sol (pavés), 2 sol plein, 3/4 dessus bord gauche/dr
 
 ## Niveaux suivants
 
-Chaque série du cours peut devenir un monde avec ses propres `far.png` / `mid.png` / `tiles.png` : Slovenský raj (gorges, échelles), Vysoké Tatry (Štrbské Pleso, orage), Liptov (crue), Banská Štiavnica (mine), Bratislava (château, Danube).
+Chaque série du cours peut devenir un monde avec ses propres `far.png` / `mid.png` / `tiles.png` : Liptov (crue), Banská Štiavnica (mine), Bratislava (château, Danube).

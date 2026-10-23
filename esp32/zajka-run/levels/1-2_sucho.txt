@@ -1,0 +1,26 @@
+# Zajka Run, niveau 2 : Košice dans la sécheresse (série Sucho du cours).
+# Légende de Košice, plus : X sol fendu qui s'effondre  J jet de la fontaine  ~ boue de l'étang
+#   s écureuil  b bouteille d'eau  F arrivée (le jardinier et Andrea, à la fontaine chantante)
+name: Sucho
+subtitle: Mestský park · Spievajúca fontána
+hint: Dobrý deň. Hľadáte vodu?
+theme: sucho
+music: 0
+npc: zahradnik
+next: Slovenský raj
+---
+                                                                                                                                                                                                                    
+                                                                                                                                                                                                                    
+                                                                                                                                                                                 ?                                  
+                                                                                                                                                                  o                                                 
+                                                                                                                                                                 o            =======                               
+                                                                                                                                                       ooooo           ooooo                                        
+                                                                                                                                    oo                =======      BBB=======                                       
+                                                                             w                                                                                     BBB                                              
+                                               w                                      b                                             ### XXXX                       BBB          w                                   
+               oooo  B?B                          ooo                                                    ooo  ?B?       ooo         ###                            BBB                     ooooo                    
+                                    oooo                        oo   oo   oo   oo   oo   oo             =====                    ######                            BBB                                              
+                                                  ###                                                                            ######                            BBB                                              
+   S    k   b              p    l          s      ###  s   C    XX   XX   XX   XX   XX   XX     k   p               p   ^^^   l  ######        s  C     J       J  BBB    J     J       p         k    F            
+####################################XXXX########################                              #########################################      ######################BBB##############################################
+####################################    ########################~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#########################################      ######################BBB##############################################

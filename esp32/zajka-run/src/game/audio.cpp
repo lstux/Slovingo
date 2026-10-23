@@ -32,8 +32,12 @@ static const Step S_BELL[] = {{2, 2093, 2093, 90, 7, 0}, {2, 0, 0, 50, 0, 0}, {2
 static const Step S_GAMEOVER[] = {{1, 523, 523, 220, 9, 7}, {1, 392, 392, 220, 9, 7}, {1, 330, 330, 220, 9, 7},
                                   {1, 262, 247, 700, 9, 0}, {0, 0, 0, 0, 0, 0}};
 
+// tonnerre : grondement de bruit qui descend ; eboulement : craquement court
+static const Step S_THUNDER[] = {{4, 2200, 900, 120, 14, 12}, {4, 900, 120, 1500, 12, 0}, {0, 0, 0, 0, 0, 0}};
+static const Step S_CRUMBLE[] = {{4, 3000, 600, 90, 9, 4}, {4, 900, 300, 160, 6, 0}, {0, 0, 0, 0, 0, 0}};
+
 static const Step* const SFX_TABLE[SFX_COUNT] = {S_JUMP, S_COIN,  S_STOMP, S_HURT,  S_SPRING, S_BUMP,    S_LIFE,
-                                                 S_DIE,  S_WIN,   S_CHECK, S_PAUSE, S_BELL,   S_GAMEOVER};
+                                                 S_DIE,  S_WIN,   S_CHECK, S_PAUSE, S_BELL,   S_GAMEOVER, S_THUNDER, S_CRUMBLE};
 
 // ---------------------------------------------------------------- musique
 // « Hlavná » : air original, re majeur avec le 4e degre hausse (couleur lydienne, frequente
@@ -93,6 +97,30 @@ static const Chord LS_EM = {40, 47, 67}, LS_A = {45, 52, 61}, LS_D = {38, 45, 66
 static const Chord* const BARS_LES[16] = {&LS_EM, &LS_EM, &LS_A, &LS_EM, &LS_G, &LS_D, &LS_A, &LS_EM,
                                           &LS_G,  &LS_D,  &LS_EM, &LS_BM, &LS_G, &LS_A, &LS_EM, &LS_EM};
 
+// « Hory » (Tatry) : air original, re mineur, plus enleve, avec charleston.
+static const Note MELODY_HORY[] = {
+    {74, 2}, {77, 2}, {81, 4},                     // Dm
+    {79, 2}, {77, 2}, {76, 2}, {74, 2},            // Dm
+    {79, 2}, {82, 2}, {81, 2}, {79, 2},            // Gm
+    {77, 4}, {74, 4},                              // Dm
+    {77, 2}, {79, 2}, {82, 2}, {81, 2},            // Bb
+    {81, 2}, {77, 2}, {72, 4},                     // F
+    {73, 2}, {76, 2}, {79, 2}, {81, 2},            // A
+    {76, 6}, {0, 2},                               // A
+    {74, 2}, {74, 1}, {76, 1}, {77, 2}, {81, 2},   // Dm
+    {86, 4}, {81, 4},                              // Dm
+    {82, 2}, {81, 2}, {79, 2}, {77, 2},            // Gm
+    {77, 2}, {76, 2}, {74, 4},                     // Dm
+    {77, 2}, {79, 2}, {82, 2}, {86, 2},            // Bb
+    {85, 4}, {81, 4},                              // A
+    {77, 2}, {76, 2}, {74, 2}, {73, 2},            // Dm
+    {74, 6}, {0, 2},                               // Dm
+};
+static const Chord HO_DM = {38, 45, 65}, HO_GM = {43, 50, 58}, HO_BB = {46, 53, 62}, HO_F = {41, 48, 57},
+                   HO_A = {45, 52, 61};
+static const Chord* const BARS_HORY[16] = {&HO_DM, &HO_DM, &HO_GM, &HO_DM, &HO_BB, &HO_F, &HO_A, &HO_A,
+                                           &HO_DM, &HO_DM, &HO_GM, &HO_DM, &HO_BB, &HO_A, &HO_DM, &HO_DM};
+
 struct Song {
   const Note* mel;
   int n;
@@ -104,6 +132,7 @@ struct Song {
 static const Song SONGS[] = {
     {MELODY, (int)(sizeof(MELODY) / sizeof(MELODY[0])), BARS, AUDIO_RATE * 60 / 144 / 4, true, 1},          // 0 Hlavna
     {MELODY_LES, (int)(sizeof(MELODY_LES) / sizeof(MELODY_LES[0])), BARS_LES, AUDIO_RATE * 60 / 112 / 4, false, 2},  // 1 Les
+    {MELODY_HORY, (int)(sizeof(MELODY_HORY) / sizeof(MELODY_HORY[0])), BARS_HORY, AUDIO_RATE * 60 / 132 / 4, true, 0},  // 2 Hory
 };
 static const int NUM_SONGS = sizeof(SONGS) / sizeof(SONGS[0]);
 

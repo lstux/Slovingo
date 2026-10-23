@@ -52,6 +52,8 @@ void Level::load(const LevelDef* d) {
         t = l ? T_LEDGE_L : (r ? T_LEDGE_R : T_LEDGE);
       } else if (c == '^') {
         t = T_SPIKES;
+      } else if (c == 'X') {
+        t = T_CRUMBLE;
       } else if (c == 'H') {
         t = T_LADDER;
       } else if (c == '~') {
