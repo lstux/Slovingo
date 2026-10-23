@@ -164,11 +164,73 @@ def fit_strip(frames, fw, fh, colors, pad_bottom=1):
     s = min((fh - pad_bottom - 1) / (bot - top), (fw - 2) / max_w)
     cells = []
     for f, bb in zip(frames, boxes):
-        part = f.crop((bb[0], top, bb[2], bot))
+        part = f.crop((bb[0], bb[1], bb[2], bb[3]))
         nw, nh = max(1, int(round(part.width * s))), max(1, int(round(part.height * s)))
         part = quantize_rgba(shrink(part, nw, nh), colors)
         cell = Image.new("RGBA", (fw, fh), (0, 0, 0, 0))
         cell.alpha_composite(part, ((fw - nw) // 2, fh - pad_bottom - nh))
+        cells.append(outline(cell))
+    return cells
+
+
+def remove_rules(img):
+    """Efface les traits de separation qu'une IA ajoute parfois (lignes ou colonnes sombres
+    qui traversent presque toute l'image)."""
+    a = np.array(img)
+    op = a[..., 3] > 0
+    lum = a[..., :3].mean(-1)
+    dark = op & (lum < 70)
+    rows = dark.mean(1) > 0.6
+    cols = dark.mean(0) > 0.6
+    for y in np.where(rows)[0]:
+        a[max(0, y - 1):y + 2, :, 3] = 0
+    for x in np.where(cols)[0]:
+        a[:, max(0, x - 1):x + 2, 3] = 0
+    return Image.fromarray(a)
+
+
+def grid_frames(img, rows, cols):
+    """Decoupe une planche en grille (rows x cols), images lues ligne par ligne."""
+    W, H = img.size
+    out = []
+    for r in range(rows):
+        for c in range(cols):
+            out.append(img.crop((int(c * W / cols), int(r * H / rows), int((c + 1) * W / cols), int((r + 1) * H / rows))))
+    return out
+
+
+def fit_character(frames, fw, fh, colors, head_px, anchor_x, pad_bottom=1):
+    """Personnage : meme taille de tete dans toutes les poses (les IA changent les proportions
+    d'une image a l'autre), pieds en bas de la case, centre de la tete toujours a anchor_x
+    (pas de sautillement d'une image a l'autre). La tete va du haut des oreilles au haut du
+    sweat (premiere ligne nettement bleue) ; sans sweat bleu, toute la hauteur compte."""
+    # une seule echelle par planche (les images d'une meme generation sont a la meme echelle) :
+    # mediane des tailles de tete, puis plafond pour que chaque pose tienne dans la case
+    frames = [crop_alpha(fr) for fr in frames]
+    heads = []
+    for fr in frames:
+        a = np.array(fr)
+        op = a[..., 3] > 0
+        r, g, b = (a[..., i].astype(int) for i in range(3))
+        blue = op & (b > 140) & (r < 110) & (b - r > 60)
+        # ligne de sweat assez large : une manche levee ne compte pas
+        rows = np.where(blue.mean(1) > 0.12)[0]
+        heads.append(int(rows[0]) if len(rows) and rows[0] > 5 else fr.height // 3)
+    s0 = head_px / float(np.median(heads))
+    s0 = min([s0] + [min((fh - pad_bottom - 1) / fr.height, (fw - 2) / fr.width) for fr in frames])
+    cells = []
+    for fr, head_h in zip(frames, heads):
+        a = np.array(fr)
+        op = a[..., 3] > 0
+        s = s0
+        nw, nh = max(1, int(round(fr.width * s))), max(1, int(round(fr.height * s)))
+        hx = np.where(op[:max(1, head_h)].any(0))[0]
+        head_cx = (hx.min() + hx.max()) / 2 * s if len(hx) else nw / 2
+        part = quantize_rgba(shrink(fr, nw, nh), colors)
+        x = int(round(anchor_x - head_cx))
+        x = max(1, min(fw - 1 - nw, x))
+        cell = Image.new("RGBA", (fw, fh), (0, 0, 0, 0))
+        cell.alpha_composite(part, (x, fh - pad_bottom - nh))
         cells.append(outline(cell))
     return cells
 
@@ -219,6 +281,11 @@ def main():
     ap.add_argument("--key", default=None)
     ap.add_argument("--mirror", action="store_true", help="far/mid : ajoute le reflet pour boucler sans raccord")
     ap.add_argument("--strip-ground", action="store_true", help="sprite/object : retire un trait de sol")
+    ap.add_argument("--grid", default=None, help="sprite/object : planche en grille LIGNESxCOLONNES (ex. 3x2)")
+    ap.add_argument("--pick", default=None, help="images a garder, numerotees de 1 (ex. 1,2)")
+    ap.add_argument("--head-px", type=float, default=0,
+                    help="sprite : taille de la tete en pixels (meme taille dans toutes les poses)")
+    ap.add_argument("--anchor-x", type=float, default=0, help="sprite : position x du centre de la tete dans la case")
     ap.add_argument("--uniform", action="store_true",
                     help="sprite/object : meme echelle pour toutes les images (garde les tailles relatives)")
     ap.add_argument("--cells", default=None,
@@ -283,9 +350,16 @@ def main():
     sheet = Image.open(sheet_path).convert("RGBA")
     src = Image.open(path).convert("RGBA")
     src = src if a.no_key else key_out(src, key)
+    src = remove_rules(src)
     if a.strip_ground:
         src = strip_ground(src)
-    frames = frames_from(crop_alpha(src), a.frames)
+    if a.grid:
+        gr, gc = (int(v) for v in a.grid.lower().split("x"))
+        frames = grid_frames(src, gr, gc)
+    else:
+        frames = frames_from(crop_alpha(src), a.frames)
+    if a.pick:
+        frames = [frames[int(i) - 1] for i in a.pick.split(",")]
     need_w = fw * len(frames)
     if sheet.width < need_w or sheet.height < (row + 1) * fh:
         big = Image.new("RGBA", (max(sheet.width, need_w), max(sheet.height, (row + 1) * fh)), (0, 0, 0, 0))
@@ -295,7 +369,9 @@ def main():
     sheet.paste(Image.new("RGBA", (sheet.width, fh), (0, 0, 0, 0)), (0, row * fh))
     if a.strip_ground:
         frames = [strip_ground(fr) for fr in frames]
-    if a.uniform:
+    if a.head_px:
+        cells = fit_character(frames, fw, fh, a.colors or 48, a.head_px, a.anchor_x or fw * 0.55)
+    elif a.uniform:
         cells = fit_strip(frames, fw, fh, a.colors or 48)
     else:
         cells = [fit_frame(fr, fw, fh, a.colors or 48) for fr in frames]

@@ -11,6 +11,7 @@ couleurs ramenees a la palette du personnage, contour sombre d'un pixel.
 Une planche dessinee a la main ou generee par IA peut remplacer ces PNG : meme grille
 (images de FRAME_W x FRAME_H, une ligne par animation, voir ANIMS), fond transparent.
 """
+import glob
 import os
 import sys
 import xml.etree.ElementTree as ET
@@ -150,7 +151,13 @@ def pixelize(rgba, palette, outline=True):
     return out
 
 
-def build(svg_name, poses_fn, legs_id, left_idx, right_idx, crop, out_name):
+def build(svg_name, poses_fn, legs_id, left_idx, right_idx, crop, out_name, fw=FRAME_W, anchor=None, force=False):
+    """anchor : x du centre du corps dans la case (meme convention que tools/import_ai.py --anchor-x)."""
+    name = out_name.split("_")[0]
+    if not force and glob.glob(os.path.join(ROOT, "art", "sources", name + "_*")):
+        print(f"{out_name} : images IA presentes dans art/sources/, planche provisoire non regeneree (--force pour l'ecraser)")
+        return
+    anchor = fw / 2 - 2 if anchor is None else anchor
     svg = os.path.join(CHAR, svg_name)
     r = Renderer(svg)
     split_legs(r, legs_id, left_idx, right_idx)
@@ -158,18 +165,18 @@ def build(svg_name, poses_fn, legs_id, left_idx, right_idx, crop, out_name):
     pal = np.vstack([pal, np.array([OUTLINE], dtype=np.float32)])
     poses = poses_fn()
     ncols = max(len(poses[a]) for a in ANIMS)
-    sheet = Image.new("RGBA", (ncols * FRAME_W, len(ANIMS) * FRAME_H), (0, 0, 0, 0))
+    sheet = Image.new("RGBA", (ncols * fw, len(ANIMS) * FRAME_H), (0, 0, 0, 0))
     x0, y0, w, h = crop
     for row, anim in enumerate(ANIMS):
         for col, p in enumerate(poses[anim]):
             # rendu dans une cellule FRAME_W x FRAME_H, pieds en bas, centre du corps au milieu
             scale = BODY_H / h
-            cw, ch = FRAME_W / scale, FRAME_H / scale
-            cx = 240 - cw / 2 + 2 / scale      # corps un peu a droite : la queue depasse a gauche
+            cw, ch = fw / scale, FRAME_H / scale
+            cx = 240 - anchor / scale          # centre du corps (x=240 dans les SVG) a anchor
             cy = (y0 + h) - ch + 1 / scale
-            img = r.render(FRAME_H, pose=p, width_px=FRAME_W, crop=(cx, cy, cw, ch))
+            img = r.render(FRAME_H, pose=p, width_px=fw, crop=(cx, cy, cw, ch))
             px = pixelize(img, pal)
-            sheet.paste(Image.fromarray(px), (col * FRAME_W, row * FRAME_H))
+            sheet.paste(Image.fromarray(px), (col * fw, row * FRAME_H))
     os.makedirs(OUT, exist_ok=True)
     sheet.save(os.path.join(OUT, out_name))
     print("ecrit", out_name, sheet.size)
@@ -207,10 +214,11 @@ def build_fw_tile():
 
 
 if __name__ == "__main__":
+    FORCE = "--force" in sys.argv
     build_fw_tile()
     # fox-full : jambes = 2 paths, 2 rects, 2 uses ; indices pairs = jambe gauche
     build("fox-full.svg", fox_poses, "foxf-legs", {0, 2, 4}, {1, 3, 5},
-          (30, 50, 360, 700), "fox_32x48.png")
+          (30, 50, 360, 700), "fox_48x48.png", fw=48, anchor=27, force=FORCE)
     # rabbit-full : 2 paths (jambes), 2 paths (short), 2 uses (baskets) ; pairs = jambe gauche
     build("rabbit-full.svg", rabbit_poses, "rbf-legs", {0, 2, 4}, {1, 3, 5},
-          (60, 50, 340, 700), "rabbit_32x48.png")
+          (60, 50, 340, 700), "rabbit_32x48.png", force=FORCE)

@@ -27,6 +27,8 @@ constexpr int INVULN = 90;
 constexpr int HEARTS_PER_LIFE = 50;
 // tram : ligne du toit dans l'image 96x48 (sous le pantographe), mesuree sur art/objects/elektricka_96x48.png
 constexpr int TRAM_ROOF = 20;
+// renard : x du centre de la tete dans sa case de 48 px (tools/import_ai.py --anchor-x 27)
+constexpr int FOX_ANCHOR = 27;
 
 // animations de la planche du renard / d'Andrea (une ligne par animation)
 enum { A_IDLE, A_RUN, A_JUMP, A_FALL, A_HURT, A_WIN };
@@ -752,7 +754,7 @@ void Game::drawPlayer(Band& b) {
   int row = p.anim, f = p.animFrame;
   if (state_ == S_CLEAR) f = (stateTime_ / 14) % 2;
   if (state_ == S_DYING) row = A_HURT, f = 0;
-  int sx = p.facingLeft ? hx - 17 : hx - 14;
+  int sx = p.facingLeft ? hx - (spr_fox.fw - 1 - FOX_ANCHOR) : hx - FOX_ANCHOR;
   b.frame(spr_fox, row * spr_fox.cols + f, sx, feet - 47, p.facingLeft);
 }
 
@@ -782,7 +784,7 @@ void Game::drawTitle(Band& b) {
   // personnages au milieu de l'ecran
   int ground = SCREEN_H - 2 * TILE;
   int run = (frame_ / 6) % 6;
-  b.frame(spr_fox, A_RUN * spr_fox.cols + run, 120, ground - 47);
+  b.frame(spr_fox, A_RUN * spr_fox.cols + run, 136 - FOX_ANCHOR, ground - 47);
   b.frame(spr_rabbit, A_RUN * spr_rabbit.cols + (run + 3) % 6, 168, ground - 47);
   // titre
   b.fillRect(0, 26, SCREEN_W, 58, 0x18E6);
