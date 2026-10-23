@@ -1,40 +1,66 @@
-# Le chapitre 1 en entier : rue Hlavna (un passant), le tram (episodes 1 a 5 avec Andrea),
-# le soir chez sa tante (episode 6), la nuit sous le pommier, ecran de fin.
-# A lancer avec --auto : le robot mene les conversations et l'horloge du script s'arrete pendant
-# ce temps (« debut fin boutons » : L R U D A B S=START E=SELECT, en images hors dialogue).
-# Verifie par la CI :
-#   build/sim --script sim/chapter.txt --auto --save /tmp/zq.sav --expect titre,chapitre,
-#     carte:kosice_hlavna,parle:passant,carte:kosice_tram,parle:Andrea,bonus:2,parle:Andrea,bonus:4,
-#     parle:Andrea,bonus:5,parle:Andrea,bonus:6,parle:Andrea,bonus:8,carte:kosice_teta,
-#     parle:Andrea,bonus:9,fin,titre
+# Le chapitre 1 en entier : rue Hlavna (panneaux, ticket a la trafika, passant, conducteur),
+# le tram (episodes 1 et 2, le revizor et le composteur, episodes 3 a 5), le soir chez la tante
+# (episode 6), la nuit sous le pommier, l'ecran de fin, puis l'entree dans le chapitre 2.
+# A lancer avec --auto : le robot mene les conversations et ferme les messages ; l'horloge du
+# script s'arrete pendant ce temps (« debut fin boutons » : L R U D A B S=START E=SELECT).
 10 12 S
 60 62 A
-# rue Hlavna : de (4, 9) a droite jusqu'au passant (18, 8), on lui parle, puis jusqu'a (23, 9)
-100 299 R
-320 322 U
-340 342 A
-360 440 R
-# en bas jusqu'a la porte du tram (23, 11)
-460 500 D
-# dans le tram (le Narrateur, puis) : en haut jusqu'a (9, 2), a droite jusqu'a (11, 2), face a Andrea
-540 575 U
-600 626 R
-650 652 U
-# cinq conversations : les episodes 1 a 5 ; a la fin du 5, on descend avec Andrea chez sa tante
-670 672 A
-700 702 A
-730 732 A
-760 762 A
-790 792 A
-shot 830
-# chez la tante (le Narrateur, puis) : de (10, 13) en haut jusqu'a (10, 6), Andrea est a droite
-840 935 U
-950 951 R
-965 967 A
-# episode 6 joue : en haut (10, 5), a droite le long de l'allee jusqu'a (17, 5), le pommier au-dessus
-990 1000 U
-1020 1120 R
-1140 1141 U
-1160 1162 A
-# ecran de fin, puis retour au titre
-1300 1302 A
+# panneau « mesto » (2, 8) : a gauche jusqu'a (2, 9), en haut, A
+100 135 L
+150 151 U
+165 167 A
+# a droite jusqu'a (11, 9), panneau « zastávka » (abri, en bas)
+200 330 R
+345 346 D
+360 362 A
+# trafika : (12, 9) puis en haut jusqu'a (12, 6), le vendeur au-dessus
+380 390 R
+410 450 U
+470 472 A
+# le passant (18, 8) : en bas jusqu'a (12, 9), a droite jusqu'a (18, 9), en haut, A
+500 540 D
+560 645 R
+660 661 U
+675 677 A
+# le conducteur (23, 10) : a droite jusqu'a (23, 9), en bas, A ; il s'ecarte, on monte (23, 11)
+700 770 R
+785 786 D
+800 802 A
+830 850 D
+# dans le tram (le Narrateur) : en haut jusqu'a (9, 2), a droite jusqu'a (11, 2), face a Andrea
+900 935 U
+950 975 R
+990 991 U
+# episodes 1 et 2 ; puis le revizor monte
+1005 1007 A
+1035 1037 A
+# le revizor (12, 3) : le ticket n'est pas composte
+1065 1075 D
+1090 1091 R
+1105 1107 A
+# le composteur (8, 4) : (9, 3), (9, 4), a gauche, A
+1130 1155 L
+1170 1180 D
+1195 1196 L
+1210 1212 A
+# retour au revizor : (9, 3), (11, 3), A
+1230 1240 U
+1255 1280 R
+1295 1297 A
+# Andrea : (11, 2) ; episodes 3, 4 et 5, puis on descend chez la tante
+1320 1330 U
+1345 1347 A
+1375 1377 A
+1405 1407 A
+# chez la tante (le Narrateur) : de (10, 13) en haut jusqu'a (10, 6), Andrea a droite : episode 6
+1455 1550 U
+1565 1566 R
+1580 1582 A
+# en haut (10, 5), a droite le long de l'allee jusqu'a (17, 5), le pommier au-dessus : la nuit
+1605 1615 U
+1635 1735 R
+1755 1756 U
+1775 1777 A
+# ecran de fin, puis le chapitre 2
+1915 1917 A
+1960 1962 A

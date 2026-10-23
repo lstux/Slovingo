@@ -1,0 +1,22 @@
+# Zajka Quest, chapitre 2 : la gare de Kosice (episode 6 de Sucho, « Na stanici »).
+#   H mur    N sol    B guichet    l bancs    _ quai    R train    r porte du train    = rails
+name: Železničná stanica
+ground: N
+music: -1
+1: warp sucho_cesta 28 11 up
+2: npc human down id pokladna on B
+%: zone vlak on r
+3: sign vlak on P
+4: npc human down say 10 1
+---
+HHHHHHHHHHH11HHHHHHHHHHH
+NNNNNNNNNNNNNNNNNNNNNNNN
+NNB2BNNNNNNNNNNNNNN4NNNN
+NNNNNNNNNNNNNNNNNNNNNNNN
+NNlNNNNNlNNNNNlNNNNNlNNN
+NNNNNNNNNNNNNNNNNNNNNNNN
+_______________3________
+________________________
+RRRRRRRRRR%RRRRRRRRRRRRR
+RRRRRRRRRRRRRRRRRRRRRRRR
+========================

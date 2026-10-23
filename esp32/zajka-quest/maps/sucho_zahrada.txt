@@ -1,0 +1,25 @@
+# Zajka Quest, chapitre 2 : le matin, dans le jardin de la tante (episode 1 de Sucho, « Je horuco »).
+#   ^ toit    D maison    d porte    # cloture    g portail    : allee    " herbe    J A pommier
+#   k buisson    _ trottoir    . paves    = rails    Z abri du tram
+name: V záhrade
+ground: "
+music: -1
+1: warp sucho_cesta 1 5 right on .
+2: start down
+3: npc andrea right
+---
+^^^^^^^^^^^^^^^^^^^^^^
+DDDDDDDDDdDDDDDDDDDDDD
+#""""""""":""""""""""#
+#"k""""""":"""""AAA""#
+#""""""""":"""""AJA""#
+#""""""""":::::3"2"""#
+#""""k"""":"""""""k""#
+#""""""""":""""""""""#
+##########g###########
+__________:___________
+.....................1
+.....................1
+======================
+======================
+__________Z___________

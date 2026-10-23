@@ -227,6 +227,64 @@ def draw_tile(name):
         grass(d, 14)
         d.ellipse([1, 3, 14, 15], fill=hexc("#2f7a34"))
         d.ellipse([4, 4, 10, 9], fill=hexc("#4f9a44"))
+    elif name == "trafika":
+        cobbles(d, 15)
+        d.rectangle([1, 3, 14, 15], fill=hexc("#2e7d4f"))        # kiosque vert
+        d.rectangle([0, 1, 15, 4], fill=hexc("#e8443a"))         # auvent rouge
+        d.rectangle([3, 6, 12, 11], fill=hexc("#f2e6c8"))        # comptoir, journaux
+        d.rectangle([4, 7, 6, 10], fill=hexc("#5a88b8"))
+        d.rectangle([8, 7, 11, 9], fill=hexc("#f4d03f"))
+    elif name == "composteur":
+        d.rectangle([0, 0, 15, 15], fill=hexc("#6b6f78"))
+        for y in (3, 7, 11, 15):
+            d.line([(0, y), (15, y)], fill=hexc("#5c6068"))
+        d.rectangle([7, 8, 8, 15], fill=hexc("#9a9ea8"))         # pied
+        d.rectangle([4, 1, 11, 9], fill=hexc("#f4d03f"), outline=hexc("#1a1a2e"))  # boitier jaune
+        d.rectangle([6, 3, 9, 4], fill=hexc("#1a1a2e"))          # fente
+        d.point((9, 7), fill=hexc("#e8443a"))
+    elif name == "panneau":
+        cobbles(d, 16)
+        d.rectangle([7, 6, 8, 15], fill=hexc("#5a5a62"))
+        d.rectangle([1, 1, 14, 7], fill=hexc("#2a5aa8"), outline=hexc("#1a1a2e"))
+        d.line([(3, 4), (12, 4)], fill=hexc("#f4f4f4"))
+    elif name == "fontaine_vide":
+        cobbles(d, 8)
+        d.rectangle([0, 2, 15, 15], fill=hexc("#b8b0a4"))
+        d.rectangle([1, 3, 14, 14], fill=hexc("#9a8e7e"))       # fond sec
+        d.line([(3, 6), (6, 8), (5, 11)], fill=hexc("#7d7264"))  # fissures
+        d.line([(10, 5), (11, 9), (13, 10)], fill=hexc("#7d7264"))
+        d.rectangle([7, 4, 8, 13], fill=hexc("#8a8a8a"))        # jet a l'arret
+    elif name == "eau":
+        d.rectangle([0, 0, 15, 15], fill=hexc("#3f7fc0"))
+        d.line([(2, 4), (6, 4)], fill=hexc("#7cb8ec"))
+        d.line([(9, 10), (13, 10)], fill=hexc("#7cb8ec"))
+    elif name == "boue":
+        d.rectangle([0, 0, 15, 15], fill=hexc("#a88a5e"))       # vase seche, craquelee
+        for pts in ([(0, 5), (5, 6), (8, 3)], [(5, 6), (7, 11), (3, 15)], [(8, 3), (12, 7), (15, 6)],
+                    [(12, 7), (11, 12), (15, 14)]):
+            d.line(pts, fill=hexc("#7e6440"))
+    elif name == "guichet":
+        d.rectangle([0, 0, 15, 15], fill=hexc("#c9b99c"))
+        d.rectangle([0, 9, 15, 15], fill=hexc("#8e6a44"))       # comptoir en bois
+        d.rectangle([2, 1, 13, 8], fill=hexc("#bcd8e8"))        # vitre
+        d.rectangle([5, 6, 10, 8], fill=hexc("#1a1a2e"))        # hygiaphone
+    elif name == "sol_gare":
+        d.rectangle([0, 0, 15, 15], fill=hexc("#d8d0c0"))
+        d.line([(0, 7), (15, 7)], fill=hexc("#b8b0a0"))
+        d.line([(7, 0), (7, 7)], fill=hexc("#b8b0a0"))
+        d.line([(0, 15), (15, 15)], fill=hexc("#b8b0a0"))
+        d.line([(15, 8), (15, 15)], fill=hexc("#b8b0a0"))
+    elif name in ("train", "porte_train"):
+        d.rectangle([0, 0, 15, 15], fill=hexc("#2e5aa8"))       # wagon bleu des ZSSK
+        d.rectangle([0, 0, 15, 2], fill=hexc("#c8c8d0"))
+        d.rectangle([0, 12, 15, 15], fill=hexc("#3a3a3a"))
+        if name == "train":
+            d.rectangle([2, 4, 13, 9], fill=hexc("#9cc7e4"))
+            d.line([(0, 11), (15, 11)], fill=hexc("#f4d03f"))
+        else:
+            d.rectangle([3, 3, 12, 15], fill=hexc("#c8c8d0"))
+            d.rectangle([4, 4, 7, 11], fill=hexc("#9cc7e4"))
+            d.rectangle([8, 4, 11, 11], fill=hexc("#9cc7e4"))
     else:
         raise SystemExit(f"tuile sans dessin : {name}")
     return im
@@ -499,6 +557,94 @@ def character(name, art, pal, tail=None):
     print(f"ecrit art/walk/{name}_16x24.png", sheet.size)
 
 
+def creature(name, rows, pal):
+    """Petit animal (souris, poussin) : un dessin de 16 x 12 en bas de la case, le meme dans les
+    quatre sens, qui sautille un peu pour marcher."""
+    sheet = Image.new("RGBA", (16 * 3, 24 * 4), (0, 0, 0, 0))
+    base = paint(["." * 16] * 12 + rows, pal)
+    for r in range(4):
+        for c in range(3):
+            img = base if c == 0 else base.transform(base.size, Image.AFFINE, (1, 0, 0, 0, 1, 1))
+            if r == 2:
+                img = img.transpose(Image.FLIP_LEFT_RIGHT)
+            sheet.paste(img, (c * 16, r * 24))
+    sheet.save(os.path.join(ART, "walk", f"{name}_16x24.png"))
+    print(f"ecrit art/walk/{name}_16x24.png", sheet.size)
+
+
+MOUSE = ["....kk....kk....",
+         "...kppk..kppk...",
+         "...kpgkkkkgpk...",
+         "....kggggggk....",
+         "...kggeggeggk...",
+         "...kgggggggggk..",
+         "....kggpgggggk..",
+         ".....kkggggggk..",
+         "......kggggggk..",
+         ".....kgggkggk.kk",
+         ".....kkk.kkk.kk.",
+         "................"]
+MOUSE_PAL = {"k": "#1a1a2e", "g": "#a8a8b0", "p": "#f4a8b8", "e": "#111111"}
+CHICK = ["................",
+         "......kkkk......",
+         ".....kyyyyk.....",
+         "....kyeyyeyk....",
+         "....kyyooyyk....",
+         "....kyyyyyyk....",
+         "...kyyyyyyyyk...",
+         "...kyyyyyyyyk...",
+         "....kyyyyyyk....",
+         ".....kkkkkk.....",
+         "......o..o......",
+         ".....oo..oo....."]
+CHICK_PAL = {"k": "#1a1a2e", "y": "#f8d850", "o": "#f08a2a", "e": "#111111"}
+
+
+def item_icons():
+    """Icones 16 x 16 des objets (story/items.txt), fond transparent."""
+    os.makedirs(os.path.join(ART, "items"), exist_ok=True)
+
+    def new():
+        im = Image.new("RGBA", (16, 16), (0, 0, 0, 0))
+        return im, ImageDraw.Draw(im)
+    K = hexc("#1a1a2e")
+    drawn = {}
+    im, d = new()                                   # ticket de tram : carton jaune
+    d.rectangle([2, 4, 13, 11], fill=hexc("#f4d03f"), outline=K)
+    d.line([(5, 6), (10, 6)], fill=hexc("#8a6a1a"))
+    d.line([(5, 8), (8, 8)], fill=hexc("#8a6a1a"))
+    d.rectangle([11, 5, 12, 10], fill=hexc("#e8443a"))
+    drawn["listok"] = im
+    im, d = new()                                   # eau : petite bouteille
+    d.rectangle([6, 1, 9, 3], fill=hexc("#3a6fd0"), outline=K)
+    d.rectangle([4, 4, 11, 14], fill=hexc("#9cd4f4"), outline=K)
+    d.rectangle([5, 8, 10, 13], fill=hexc("#4f9fd8"))
+    drawn["voda"] = im
+    im, d = new()                                   # goutte d'eau
+    d.polygon([(8, 1), (13, 9), (11, 13), (8, 14), (5, 13), (3, 9)], fill=hexc("#4f9fd8"), outline=K)
+    d.rectangle([6, 8, 7, 10], fill=hexc("#d6ecf8"))
+    drawn["kvapka"] = im
+    im, d = new()                                   # sac a dos
+    d.rounded_rectangle([3, 3, 12, 14], 3, fill=hexc("#e0a020"), outline=K)
+    d.rectangle([5, 8, 10, 12], fill=hexc("#c88a10"), outline=K)
+    d.line([(6, 3), (6, 1), (9, 1), (9, 3)], fill=K)
+    drawn["batoh"] = im
+    im, d = new()                                   # carte pliee
+    d.polygon([(1, 3), (5, 2), (10, 3), (14, 2), (14, 13), (10, 14), (5, 13), (1, 14)], fill=hexc("#f2e6c8"), outline=K)
+    d.line([(5, 2), (5, 13)], fill=hexc("#b8a880"))
+    d.line([(10, 3), (10, 14)], fill=hexc("#b8a880"))
+    d.line([(2, 9), (7, 6), (12, 10)], fill=hexc("#e8443a"))
+    drawn["mapa"] = im
+    im, d = new()                                   # billets de train : deux cartons verts
+    d.rectangle([1, 3, 11, 10], fill=hexc("#7fd6b0"), outline=K)
+    d.rectangle([4, 6, 14, 13], fill=hexc("#5fb894"), outline=K)
+    d.line([(6, 9), (12, 9)], fill=hexc("#2e6a4f"))
+    drawn["listky"] = im
+    for name, img in drawn.items():
+        img.save(os.path.join(ART, "items", f"{name}.png"))
+    print("ecrit art/items/ :", " ".join(drawn))
+
+
 def portraits():
     """Portraits 48 x 48 depuis les tetes SVG (art/characters/fox-head.svg, rabbit-head.svg)."""
     from import_ai import crop_alpha, outline, quantize_rgba, shrink
@@ -518,7 +664,10 @@ def portraits():
 
 if __name__ == "__main__":
     tiles()
+    item_icons()
     portraits()
     character("fox", FOX, FOX_PAL, FOX_TAIL_DOWN)
     character("andrea", ANDREA, ANDREA_PAL)
     character("human", HUMAN, HUMAN_PAL)
+    creature("mouse", MOUSE, MOUSE_PAL)
+    creature("chick", CHICK, CHICK_PAL)

@@ -99,7 +99,17 @@ struct Episode {
   uint8_t nBonus;
 };
 
+// Une scene propre au jeu (story/lines.txt), SCRIPTS[SC_...] (gen/scripts.h).
+struct Script {
+  const Line* lines;
+  uint8_t n;
+};
+
 extern const Episode* const COURSE_EPISODES[];
+extern const Word COURSE_VOCAB[];  // tout le vocabulaire des fiches jouees (Slovnik)
+extern const int COURSE_NUM_VOCAB;
+extern const Script SCRIPTS[];
+extern const int NUM_SCRIPTS;
 extern const int COURSE_NUM_EPISODES;
 extern const char* const COURSE_DEFAULT_NAME;
 extern const char* const SPEAKER_NAMES[SPK_COUNT];

@@ -7,12 +7,15 @@ constexpr int WALK_SPEED = 1;  // pixels par image : un pas de case en 16 images
 constexpr int RUN_SPEED = 2;   // B tenu
 constexpr int TURN_DELAY = 6;  // une pression breve tourne le renard sans le faire avancer
 const int DX[4] = {0, 0, -1, 1}, DY[4] = {1, -1, 0, 0};
+const Dir OPPOSITE[4] = {DIR_UP, DIR_DOWN, DIR_RIGHT, DIR_LEFT};
 
 // planche de marche de chaque personnage (16 x 24, lignes bas/haut/gauche/droite)
 const Sheet* sheetFor(Speaker s) {
   switch (s) {
     case SPK_FOX: return &walk_fox;
     case SPK_ANDREA: return &walk_andrea;
+    case SPK_MOUSE: return &walk_mouse;
+    case SPK_CHICK: return &walk_chick;
     default: return &walk_human;  // en attendant les autres planches
   }
 }
@@ -23,6 +26,13 @@ Dir heldDir(const Input& in) {
   if (in.down(BTN_LEFT)) return DIR_LEFT;
   if (in.down(BTN_RIGHT)) return DIR_RIGHT;
   return (Dir)-1;
+}
+
+Dir dirTo(int fx, int fy, int tx, int ty) {
+  if (tx > fx) return DIR_RIGHT;
+  if (tx < fx) return DIR_LEFT;
+  if (ty < fy) return DIR_UP;
+  return DIR_DOWN;
 }
 }  // namespace
 
@@ -38,6 +48,7 @@ void World::load(int mapIndex, int tx, int ty, Dir dir) {
   p_.sheet = sheetFor(SPK_FOX);
   p_.who = SPK_FOX;
   nnpc_ = 0;
+  follower_ = -1;
   for (int i = 0; i < map_->nMarks && nnpc_ < MAX_NPC; i++) {
     const MapMark& m = map_->marks[i];
     if (m.type != M_NPC) continue;
@@ -54,8 +65,9 @@ void World::load(int mapIndex, int tx, int ty, Dir dir) {
   }
   turn_ = bumpWait_ = 0;
   waitRelease_ = true;  // sinon, la croix encore tenue ramenerait le renard dans la porte
-  warp_ = nullptr;
+  warp_ = event_ = nullptr;
   talk_ = -1;
+  if (followerWho_ != SPK_NONE) setFollower(followerWho_);
   snapCamera();
 }
 
@@ -69,10 +81,58 @@ void World::loadStart(int mapIndex) {
   load(mapIndex, m.w / 2, m.h / 2, DIR_DOWN);
 }
 
+void World::setNpcHidden(uint8_t tag, bool hidden) {
+  for (int i = 0; i < nnpc_; i++)
+    if (npc_[i].mark && npc_[i].mark->tag == tag) npc_[i].hidden = hidden;
+}
+
+// Le personnage qui suit : on l'ajoute derriere le renard (et on retire celui de la carte s'il y est).
+void World::setFollower(Speaker who) {
+  followerWho_ = who;
+  if (follower_ >= 0) {
+    // on l'enleve
+    for (int i = follower_; i < nnpc_ - 1; i++) npc_[i] = npc_[i + 1];
+    nnpc_--;
+    follower_ = -1;
+  }
+  if (who == SPK_NONE || nnpc_ >= MAX_NPC) return;
+  for (int i = 0; i < nnpc_; i++)
+    if (npc_[i].who == who) npc_[i].hidden = true;  // le meme, place sur la carte : il nous suit deja
+  Walker& f = npc_[nnpc_];
+  f = Walker();
+  f.who = who;
+  f.sheet = sheetFor(who);
+  f.follower = true;
+  follower_ = nnpc_++;
+  placeFollower();
+}
+
+void World::placeFollower() {
+  if (follower_ < 0) return;
+  Walker& f = npc_[follower_];
+  // derriere le renard si c'est libre, sinon sur une case voisine libre, sinon sur lui
+  Dir tries[4] = {OPPOSITE[p_.dir], DIR_DOWN, DIR_LEFT, DIR_RIGHT};
+  int fx = p_.tx, fy = p_.ty;
+  for (Dir d : tries) {
+    int x = p_.tx + DX[d], y = p_.ty + DY[d];
+    if (walkable(x, y)) {
+      fx = x;
+      fy = y;
+      break;
+    }
+  }
+  f.tx = fx;
+  f.ty = fy;
+  f.px = fx * TILE;
+  f.py = fy * TILE;
+  f.left = 0;
+  f.dir = p_.dir;
+}
+
 bool World::walkable(int tx, int ty) const {
   if (tx < 0 || ty < 0 || tx >= map_->w || ty >= map_->h) return false;
   if (map_->tiles->kinds[map_->base[ty * map_->w + tx]] == TK_SOLID) return false;
-  return npcAt(tx, ty) < 0;
+  return npcAt(tx, ty, false) < 0;  // on passe a travers celui qui nous suit
 }
 
 int World::tileAt(int tx, int ty) const {
@@ -80,10 +140,16 @@ int World::tileAt(int tx, int ty) const {
   return map_->base[ty * map_->w + tx];
 }
 
-int World::npcAt(int tx, int ty) const {
-  for (int i = 0; i < nnpc_; i++)
+int World::npcAt(int tx, int ty, bool withFollower) const {
+  for (int i = 0; i < nnpc_; i++) {
+    if (npc_[i].hidden || (npc_[i].follower && !withFollower)) continue;
     if (npc_[i].tx == tx && npc_[i].ty == ty) return i;
+  }
   return -1;
+}
+
+bool World::picked(const MapMark& m) const {
+  return picked_ && (picked_[m.pickup >> 3] & (1 << (m.pickup & 7)));
 }
 
 void World::moveWalker(Walker& w, int speed) {
@@ -96,20 +162,34 @@ void World::moveWalker(Walker& w, int speed) {
 }
 
 WorldEvent World::step(const Input& in) {
-  warp_ = nullptr;
+  warp_ = event_ = nullptr;
   talk_ = -1;
   inspectX_ = inspectY_ = -1;
+  frame_++;
   if (bumpWait_ > 0) bumpWait_--;
+  int speed = in.down(BTN_B) ? RUN_SPEED : WALK_SPEED;
+  if (follower_ >= 0) moveWalker(npc_[follower_], speed);
   if (p_.left > 0) {
-    moveWalker(p_, in.down(BTN_B) ? RUN_SPEED : WALK_SPEED);
+    moveWalker(p_, speed);
     if (p_.left == 0) {
-      // arrive sur une case : une porte ?
+      // arrive sur une case : une porte, un objet, une zone ?
       for (int i = 0; i < map_->nMarks; i++) {
         const MapMark& m = map_->marks[i];
-        if (m.type == M_WARP && m.x == p_.tx && m.y == p_.ty) {
+        if (m.x != p_.tx || m.y != p_.ty) continue;
+        if (m.type == M_WARP) {
           warp_ = &m;
           updateCamera();
           return WE_WARP;
+        }
+        if (m.type == M_ITEM && !picked(m)) {
+          event_ = &m;
+          updateCamera();
+          return WE_PICKUP;
+        }
+        if (m.type == M_ZONE) {
+          event_ = &m;
+          updateCamera();
+          return WE_ZONE;
         }
       }
     }
@@ -131,27 +211,59 @@ WorldEvent World::step(const Input& in) {
     } else {
       int nx = p_.tx + DX[d], ny = p_.ty + DY[d];
       if (walkable(nx, ny)) {
+        int ox = p_.tx, oy = p_.ty;
         p_.tx = nx;
         p_.ty = ny;
         p_.left = TILE;
-        moveWalker(p_, in.down(BTN_B) ? RUN_SPEED : WALK_SPEED);
+        moveWalker(p_, speed);
+        // celui qui suit prend la case que le renard quitte
+        if (follower_ >= 0) {
+          Walker& f = npc_[follower_];
+          if (f.left > 0) {  // pas encore arrive : on le pose
+            f.px = f.tx * TILE;
+            f.py = f.ty * TILE;
+            f.left = 0;
+          }
+          if (f.tx != ox || f.ty != oy) {
+            int adx = f.tx - ox, ady = f.ty - oy;
+            if (adx * adx + ady * ady == 1) {
+              f.dir = dirTo(f.tx, f.ty, ox, oy);
+              f.tx = ox;
+              f.ty = oy;
+              f.left = TILE;
+              moveWalker(f, speed);
+            } else {  // trop loin (apres un detour impossible) : il nous rejoint
+              f.tx = ox;
+              f.ty = oy;
+              f.px = ox * TILE;
+              f.py = oy * TILE;
+              f.dir = p_.dir;
+            }
+          }
+        }
       } else if (bumpWait_ == 0) {
         bumpWait_ = 20;
         ev = WE_BUMP;
       }
     }
     if (p_.left == 0 && in.hit(BTN_A)) {
-      int n = npcAt(p_.tx + DX[p_.dir], p_.ty + DY[p_.dir]);
-      if (n < 0) {
-        inspectX_ = p_.tx + DX[p_.dir];
-        inspectY_ = p_.ty + DY[p_.dir];
-        ev = WE_INSPECT;
-      } else {
+      int fx = p_.tx + DX[p_.dir], fy = p_.ty + DY[p_.dir];
+      int n = npcAt(fx, fy, true);
+      if (n >= 0) {
         talk_ = n;
-        // le PNJ se tourne vers le renard
-        static const Dir opposite[4] = {DIR_UP, DIR_DOWN, DIR_RIGHT, DIR_LEFT};
-        npc_[n].dir = opposite[p_.dir];
+        npc_[n].dir = OPPOSITE[p_.dir];  // le PNJ se tourne vers le renard
         ev = WE_TALK;
+      } else {
+        inspectX_ = fx;
+        inspectY_ = fy;
+        ev = WE_INSPECT;
+        for (int i = 0; i < map_->nMarks; i++) {
+          const MapMark& m = map_->marks[i];
+          if (m.type == M_SIGN && m.x == fx && m.y == fy) {
+            event_ = &m;
+            ev = WE_SIGN;
+          }
+        }
       }
     }
   }
@@ -184,8 +296,6 @@ void World::drawTiles(Band& b, const uint8_t* layer, bool skipEmpty) {
   int cols = img.w / TILE;
   int ty0 = (camY_ + b.y0) >> 4, ty1 = (camY_ + b.y0 + b.h - 1) >> 4;
   int tx0 = camX_ >> 4, tx1 = (camX_ + SCREEN_W - 1) >> 4;
-  if (camY_ + b.y0 < 0) ty0 = (camY_ + b.y0 - 15) / 16;  // division vers -infini
-  if (camX_ < 0) tx0 = (camX_ - 15) / 16;
   for (int ty = ty0; ty <= ty1; ty++) {
     for (int tx = tx0; tx <= tx1; tx++) {
       int t = 0;
@@ -199,6 +309,7 @@ void World::drawTiles(Band& b, const uint8_t* layer, bool skipEmpty) {
 }
 
 void World::drawWalker(Band& b, const Walker& w) {
+  if (w.hidden) return;
   int frame = 0;  // 0 debout, 1 et 2 : un pied puis l'autre
   if (w.left > TILE / 2) frame = 1 + (w.steps & 1);
   b.frame(*w.sheet, w.dir * w.sheet->cols + frame, w.px - camX_, w.py - (CHAR_H - TILE) - camY_);
@@ -206,6 +317,13 @@ void World::drawWalker(Band& b, const Walker& w) {
 
 void World::render(Band& b) {
   drawTiles(b, map_->base, false);
+  // objets a ramasser : posés sur leur case, ils sautillent un peu
+  for (int i = 0; i < map_->nMarks; i++) {
+    const MapMark& m = map_->marks[i];
+    if (m.type != M_ITEM || picked(m) || m.item < 0) continue;
+    int bob = ((frame_ / 20) & 1) ? -1 : 0;
+    b.frame(item_icons, m.item, m.x * TILE - camX_, m.y * TILE - camY_ + bob);
+  }
   // personnages du haut vers le bas : celui de devant cache celui de derriere
   const Walker* order[MAX_NPC + 1];
   int n = 0;
@@ -221,8 +339,8 @@ void World::render(Band& b) {
   if (map_->over) drawTiles(b, map_->over, true);
   if (map_->night) {
     // nuit : chaque couleur a moitie, avec un peu de bleu
-    int n = SCREEN_W * b.h;
-    for (int i = 0; i < n; i++) {
+    int count = SCREEN_W * b.h;
+    for (int i = 0; i < count; i++) {
       uint16_t c = b.buf[i];
       uint16_t r = (c >> 11) & 31, g = (c >> 5) & 63, bl = c & 31;
       r = r * 2 / 5;

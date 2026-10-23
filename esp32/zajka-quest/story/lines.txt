@@ -1,0 +1,116 @@
+# Répliques propres à Zajka Quest (elles ne sont pas dans le cours) : vendeurs, contrôleur,
+# objectifs du menu… À FAIRE RELIRE PAR UN SLOVAQUE.
+#
+# Format : « [nom] », puis une réplique par ligne : « emoji texte slovaque | traduction ».
+# Une réplique du renard suivie de « || autre || autre » devient un choix (la première est la
+# bonne). « + aide » ajoute une aide (SELECT) à la réplique précédente. Sans emoji : pas de nom.
+# Le jeu les appelle par leur nom (SC_NOM dans src/game/gen/scripts.h).
+
+# ---------------------------------------------------------------- chapitre 1 : Košice
+
+[trafika]
+🧑 Dobrý deň. Čo si želáte? | Bonjour. Que désirez-vous ?
+🦊 Lístok na električku, prosím. | Un ticket de tram, s'il vous plaît. || Mapu mesta, prosím. || Vodu, prosím.
+🧑 Nech sa páči. Jeden lístok. | Voilà. Un ticket.
+
+[trafika_potom]
+🧑 Električka stojí na zastávke. Tam, za fontánou. | Le tram attend à l'arrêt. Là-bas, après la fontaine.
+
+[vodic_bez_listka]
+🧑 Dobrý deň. Máte lístok? | Bonjour. Vous avez un ticket ?
+🦊 Nie... | Non...
+🧑 Lístky predávajú v trafike. Tam, pri lavičke. | On vend les tickets au kiosque. Là-bas, près du banc.
+
+[vodic_s_listkom]
+🧑 Dobrý deň. Máte lístok? | Bonjour. Vous avez un ticket ?
+🦊 Áno. To je môj lístok. | Oui. C'est mon ticket. || Áno. To je môj vlak. || Áno. To je môj kostol.
+🧑 Nastúpte, prosím. | Montez, s'il vous plaît.
+
+[oznacovac]
+💬 Cvak! Lístok je označený. | Clac ! Le ticket est composté.
+
+[oznacovac_znova]
+💬 Lístok je už označený. | Le ticket est déjà composté.
+
+[revizor_nastupuje]
+💬 Električka stojí. Nastupuje revízor. | Le tram s'arrête. Un contrôleur monte.
+
+[andrea_pozor]
+🐰 Pozor, revízor! Máš lístok? | Attention, le contrôleur ! Tu as un ticket ?
+
+[revizor_neoznaceny]
+🧑 Dobrý deň, kontrola lístkov. | Bonjour, contrôle des tickets.
+🦊 To je môj lístok. | C'est mon ticket.
+🧑 Lístok nie je označený. Označte si ho, prosím. | Le ticket n'est pas composté. Compostez-le, s'il vous plaît.
++ Le composteur jaune est près de la porte du tram.
+
+[revizor_ok]
+🧑 Dobrý deň, kontrola lístkov. | Bonjour, contrôle des tickets.
+🦊 To je môj lístok. | C'est mon ticket. || To je môj kamarát. || To je moja zastávka.
+🧑 Ďakujem, je to v poriadku. | Merci, c'est en ordre.
+
+[revizor_potom]
+🧑 Príjemnú cestu. | Bon voyage.
+
+# objectifs (menu START, « Cieľ »)
+[ciel_listok]
+Kúp si lístok v trafike. | Achète un ticket au kiosque.
+[ciel_nastup]
+Choď na zastávku a nastúp do električky. | Va à l'arrêt et monte dans le tram.
+[ciel_andrea]
+Porozprávaj sa s Andreou. | Parle avec Andrea.
+[ciel_revizor]
+Označ si lístok a ukáž ho revízorovi. | Composte ton ticket et montre-le au contrôleur.
+[ciel_jablon]
+Choď spať pod jabloň. | Va dormir sous le pommier.
+[ciel_hotovo]
+Kapitola je hotová. | Le chapitre est terminé.
+
+# ---------------------------------------------------------------- chapitre 2 : Sucho
+
+[andrea_najprv_park]
+🐰 Najprv do parku. Tam je jazierko. | D'abord le parc. Il y a l'étang.
+
+[andrea_kvapky]
+🐰 Zvieratá sú smädné. Hľadajme kvapky vody. | Les animaux ont soif. Cherchons des gouttes d'eau.
+
+[zvierata_smad]
+🐭 Voda... Máš vodu? | De l'eau... Tu as de l'eau ?
+
+[zvierata_malo]
+🐭 To je málo. Ešte, prosím. | C'est peu. Encore, s'il te plaît.
+
+[zvierata_dakujeme]
+🦊 Tu je voda. Pre všetkých. | Voilà de l'eau. Pour tout le monde. || Tu je mapa. Pre všetkých. || Tu je vlak. Pre všetkých.
+🐭 Ďakujeme! | Merci !
+🐥 Ďakujeme! | Merci !
+
+[zvierata_potom]
+🐭 Ďakujeme za vodu. | Merci pour l'eau.
+
+[andrea_fontana]
+🐰 Najprv k fontáne. Poď! | D'abord la fontaine. Viens !
+
+[andrea_najprv_listky]
+🐰 Počkaj, najprv lístky! | Attends, d'abord les billets !
+
+[andrea_teta_listok]
+🐰 Pomôžeš mi? Píšem tete lístok. | Tu m'aides ? J'écris un mot à ma tante.
+🐰 Teta, odišla som na pár dní. Neboj sa. | Tata, je suis partie pour quelques jours. Ne t'inquiète pas. >> Teta, / odišla som / na pár dní. / Neboj sa.
++ Le mot qu'Andrea laisse à sa tante : remets les morceaux dans l'ordre.
+
+[sprievodca]
+🧑 Nastupovať, prosím! | En voiture, s'il vous plaît !
+
+[ciel_park]
+Choď s Andreou do parku. | Va au parc avec Andrea.
+[ciel_kvapky]
+Nájdi päť kvapiek vody pre zvieratá. | Trouve cinq gouttes d'eau pour les animaux.
+[ciel_fontana]
+Choď k fontáne v centre mesta. | Va à la fontaine du centre-ville.
+[ciel_stanica]
+Choď na železničnú stanicu. | Va à la gare.
+[ciel_okienko]
+Kúpte si lístky pri okienku. | Achetez vos billets au guichet.
+[ciel_vlak]
+Nastúp do vlaku. | Monte dans le train.

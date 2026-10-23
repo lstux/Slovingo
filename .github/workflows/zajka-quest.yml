@@ -32,21 +32,22 @@ jobs:
           path: ~/.platformio
           key: pio-${{ runner.os }}-${{ hashFiles('esp32/zajka-quest/platformio.ini') }}
 
-      - name: Simulateur PC (cours embarque, chapitre 1 en entier, reprise)
+      - name: Simulateur PC (cours embarque, chapitres 1 et 2 en entier, reprise)
         run: |
           make -C sim
           ./build/sim --course
           mkdir -p /tmp/zq
-          # le chapitre 1 : passant, tram (episodes 1 a 5), chez la tante (6), le pommier, la fin
-          ./build/sim --script sim/chapter.txt --auto --save /tmp/zq.sav --out /tmp/zq --expect \
-            titre,chapitre,carte:kosice_hlavna,parle:passant,carte:kosice_tram,parle:Andrea,bonus:2,parle:Andrea,bonus:4,parle:Andrea,bonus:5,parle:Andrea,bonus:6,parle:Andrea,bonus:8,carte:kosice_teta,parle:Andrea,bonus:9,fin,titre
-          # la partie reprend sous le pommier, avec ses repliques secretes
-          ./build/sim --script sim/resume.txt --auto --save /tmp/zq.sav --out /tmp/zq --expect reprise,bonus:9,carte:kosice_teta,fin
+          rm -f /tmp/zq.sav
+          # chapitre 1 : panneaux, ticket, conducteur, tram (episodes, revizor, composteur), tante, fin
+          ./build/sim --script sim/chapter.txt --auto --save /tmp/zq.sav --out /tmp/zq --expect "titre,chapitre,carte:kosice_hlavna,mots:1,mots:2,parle:passant,objet:lístok,parle:passant,parle:passant,carte:kosice_tram,parle:Andrea,bonus:2,parle:Andrea,bonus:4,parle:passant,parle:passant,parle:Andrea,bonus:5,parle:Andrea,bonus:6,parle:Andrea,bonus:8,carte:kosice_teta,parle:Andrea,bonus:9,fin,chapitre,carte:sucho_zahrada"
+          # la partie reprend au debut du chapitre 2
+          ./build/sim --script sim/resume.txt --auto --save /tmp/zq.sav --out /tmp/zq --expect reprise,carte:sucho_zahrada
+          # chapitre 2 : jardin, rue, parc (gouttes d'eau), centre, gare, fin
+          ./build/sim --chapter 2 --script sim/chapter2.txt --auto --out /tmp/zq --expect "chapitre,carte:sucho_zahrada,bonus:2,objet:voda,carte:sucho_cesta,mots:1,bonus:3,carte:sucho_park,bonus:4,objet:kvapkax5,parle:passant,parle:Andrea,bonus:6,objet:batoh,carte:sucho_cesta,carte:sucho_hlavna,bonus:7,carte:sucho_stanica,objet:lístky na vlak,fin,titre"
           # sans traduction ouverte ni erreur, et seulement alors, les repliques secretes
           ./build/sim --script sim/chapter.txt --auto-peek --out /tmp/zq --expect carte:kosice_teta,parle:Andrea,bonus:0,fin
           ./build/sim --script sim/chapter.txt --auto-wrong --out /tmp/zq --expect carte:kosice_teta,parle:Andrea,bonus:0,fin
-          # aller-retour rue / tram apres le premier episode
-          ./build/sim --script sim/walk.txt --auto --out /tmp/zq --expect carte:kosice_tram,parle:Andrea,bonus:2,carte:kosice_hlavna
+          ./build/sim --chapter 2 --script sim/chapter2.txt --auto-peek --out /tmp/zq --expect carte:sucho_stanica,bonus:0,fin
 
       - name: PlatformIO
         run: pip install platformio

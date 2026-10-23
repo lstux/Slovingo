@@ -26,3 +26,20 @@
 
 [10_Series_01_Kosice_06_extra]
 🐰 Spi dobre, líška. | Dors bien, renard.
+
+[10_Series_02_Sucho_01_je-horuco]
+🐰 Dobré ráno, ospalec! | Bonjour, la marmotte !
+🐰 Aj ráno hovoríš po slovensky! | Même le matin, tu parles slovaque !
+
+[10_Series_02_Sucho_02_vela-alebo-velmi]
+🐰 Vidíš? Už hovoríš správne. | Tu vois ? Tu parles déjà correctement.
+
+[10_Series_02_Sucho_03_chyba-mi-voda]
+🐰 Dobre povedané. | Bien dit.
+
+[10_Series_02_Sucho_04_co-budeme-robit]
+🐰 Neboj sa, mám mapu. | Ne t'inquiète pas, j'ai une carte.
+🐰 Si super spoločník. | Tu es un super compagnon.
+
+[10_Series_02_Sucho_05_fontana]
+🐰 Hovoríš ako pravý Slovák. | Tu parles comme un vrai Slovaque.

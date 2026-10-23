@@ -12,6 +12,10 @@ ci-dessous sont **complets** : un bloc = un copier-coller. Même méthode que po
 | `tiles/kosice.png` objets de la rue | provisoire | prompt « Objets » |
 | `tiles/kosice.png` tram | provisoire | prompt « Tram » |
 | `tiles/kosice.png` maison de la tante | provisoire | prompt « Maison et jardin » |
+| `tiles/kosice.png` kiosque, composteur, panneau | provisoire | prompt « Ticket et panneaux » |
+| `tiles/kosice.png` parc à sec, fontaine vide, gare | provisoire | prompt « Sucho » |
+| `items/*.png` objets du sac | provisoire | prompt « Objets du sac » |
+| `walk/mouse_16x24.png`, `walk/chick_16x24.png` | provisoire | prompt « Animaux du parc » |
 | `walk/fox_16x24.png` renard qui marche | provisoire | prompt « Renard qui marche » |
 | `walk/andrea_16x24.png` Andrea qui marche | provisoire | prompt « Andrea qui marche » |
 | `walk/human_16x24.png` passants, voyageurs | provisoire | prompt « Passant » |
@@ -117,6 +121,47 @@ A tileset for a family house with a garden on the outskirts of Košice, Slovakia
 
 `python3 tools/import_ai.py tileset art/sources/maison.png --grid 2x4 --names "maison porte_maison cloture portail allee pommier buisson -"`
 
+### Ticket et panneaux (3 tuiles)
+
+```
+16-bit pixel art for a top-down RPG in the style of Pokémon Gold and Zelda: A Link to the Past (Super Nintendo), seen from above at a slight 3/4 angle. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 32 colours), warm summer daylight. No text, no labels, no numbers, no watermark.
+Three small objects, each one centred in its own square cell of a grid of 1 row x 4 columns, on a flat solid magenta #FF00FF background everywhere: no ground, no shadow, no grid lines. Each object fills most of its cell and must read clearly at 16x16 pixels. In reading order:
+1. a small green newspaper kiosk with a red awning and a counter with newspapers;
+2. a yellow tram ticket validator box on a short grey pole, with a black slot;
+3. a blue street sign on a grey post (blank, no letters);
+4. leave this last cell empty (only magenta).
+```
+
+`python3 tools/import_ai.py tileset art/sources/ticket.png --grid 1x4 --names "trafika@paves composteur@plancher panneau@paves -"`
+
+### Sucho : parc à sec, fontaine vide, gare (7 tuiles)
+
+```
+16-bit pixel art for a top-down RPG in the style of Pokémon Gold and Zelda: A Link to the Past (Super Nintendo), seen from above at a slight 3/4 angle. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 32 colours), hot dry summer light. No text, no labels, no numbers, no watermark.
+A tileset for a town in Slovakia during a drought: a grid of 2 rows x 4 columns of SQUARE tiles separated by thin black lines, each one must read clearly at 16x16 pixels. In reading order:
+1. an empty square stone fountain basin, its bottom dry and cracked, on grey cobblestones;
+2. shallow blue pond water (seamless);
+3. dry cracked mud at the bottom of a dried-out pond (seamless);
+4. a railway station ticket window: a wooden counter under a glass window;
+5. light beige stone floor tiles of a station hall (seamless);
+6. the side of a blue passenger train carriage with a light blue window and a yellow stripe (repeats horizontally);
+7. the door of the same train carriage: grey double door with two small windows;
+8. leave this last cell empty (plain grey).
+```
+
+`python3 tools/import_ai.py tileset art/sources/sucho.png --grid 2x4 --names "fontaine_vide eau boue guichet sol_gare train porte_train -"`
+
+## Objets du sac (16 × 16)
+
+Ils s'affichent dans le sac (menu START), dans le message « Do batohu » et, pour les gouttes d'eau,
+posés par terre. Importer chaque case avec `import_ai.py tileset` n'a pas de sens ici : découper à
+la main ou redessiner sur les icônes de `art/items/` (16 × 16, fond transparent).
+
+```
+16-bit pixel art icons for an RPG inventory, in the style of Pokémon Gold (Super Nintendo era). Crisp chunky pixels, hard edges, no anti-aliasing, a dark outline, limited palette. No text, no labels, no numbers, no watermark.
+Six small icons, each centred in its own square cell of a grid of 2 rows x 3 columns, on a flat solid magenta #FF00FF background, no shadow, no grid lines; each must read clearly at 16x16 pixels. In reading order: a yellow tram ticket; a small plastic bottle of water; a single blue water drop; a yellow-orange backpack; a folded paper map with a red route; two green train tickets.
+```
+
 ## Les personnages qui marchent (16 × 24)
 
 Une planche par personnage, à la RPG Maker : 4 lignes (de face, vers la gauche, vers la droite,
@@ -158,6 +203,19 @@ Walking sprite sheet for a top-down RPG (like Pokémon or RPG Maker), drawn in c
 
 Si le personnage paraît trop petit ou trop grand dans sa case : `--height-px 22` (hauteur debout
 en pixels, 23 par défaut).
+
+### Animaux du parc (sans référence)
+
+La souris et le poussin ont soif au bord de l'étang (chapitre 2). Ils sont petits : un seul
+dessin suffit, le jeu le réutilise dans les quatre sens.
+
+```
+16-bit pixel art in the style of Pokémon Gold (Super Nintendo era). Crisp chunky pixels, hard edges, no anti-aliasing, a dark outline, limited palette (about 16 colours). No text, no labels, no grid lines, no watermark.
+Two tiny cute animals of a town park, side by side, each centred in its own square cell of a grid of 1 row x 2 columns: a small grey mouse with pink ears sitting up, and a fluffy yellow chick. Both seen from the front, looking a little thirsty and sad. Each must read clearly at 16x12 pixels. Flat solid magenta #FF00FF background everywhere, no ground, no shadow.
+```
+
+Pour l'instant, à découper à la main dans `art/walk/mouse_16x24.png` et `chick_16x24.png`
+(dessin en bas de la case, 16 × 12).
 
 ## Portraits de la boîte de dialogue (48 × 48)
 

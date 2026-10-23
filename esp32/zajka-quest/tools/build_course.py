@@ -36,6 +36,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 GEN = os.path.join(ROOT, "src", "game", "gen")
 BONUS = os.path.join(ROOT, "story", "bonus.txt")
+LINES = os.path.join(ROOT, "story", "lines.txt")
 DEFAULT_COURSE = os.path.normpath(os.path.join(ROOT, "..", "..", "langs", "sk-fr-friends"))
 
 sys.path.insert(0, HERE)
@@ -49,6 +50,12 @@ EPISODES = [
     "10_Series_01_Kosice_04_pamatas-sa",
     "10_Series_01_Kosice_05_v-elektricke",
     "10_Series_01_Kosice_06_extra",
+    "10_Series_02_Sucho_01_je-horuco",
+    "10_Series_02_Sucho_02_vela-alebo-velmi",
+    "10_Series_02_Sucho_03_chyba-mi-voda",
+    "10_Series_02_Sucho_04_co-budeme-robit",
+    "10_Series_02_Sucho_05_fontana",
+    "10_Series_02_Sucho_06_extra",
 ]
 
 # emoji du cours -> constante Speaker de src/game/course.h, nom affiche dans la boite de dialogue
@@ -191,6 +198,11 @@ def parse_episode(course, stem):
     ep["dialog"] = parse_cards(sec.get("Le dialogue", []) or sec.get("La suite de l'épisode", []), warn)
     ep["extra"] = parse_cards(sec.get("Encore quelques répliques", []), warn)
     ep["words"] = parse_table(sec.get("Les nouveaux mots", []), warn)
+    # tout le vocabulaire de la fiche (nouveaux mots, complementaire...) : pour le Slovnik
+    ep["vocab"] = []
+    for name, lines in sec.items():
+        if "ocabulaire" in name or "nouveaux mots" in name:
+            ep["vocab"] += parse_table(lines, warn)
     if not ep["dialog"]:
         warn.other.append("pas de section « ## Le dialogue »")
     ep["exercises"] = []
@@ -269,6 +281,52 @@ def load_bonus(warn):
     return out
 
 
+def load_lines(warn):
+    """story/lines.txt -> {nom: [replique, ...]} : les repliques propres au jeu.
+
+    [nom]
+    emoji texte | traduction
+    emoji texte | traduction || mauvaise reponse || autre      (replique a choisir)
+    emoji texte | traduction >> morceau / morceau / morceau    (replique a remettre dans l'ordre)
+    + aide (pour la replique precedente)
+    """
+    out, cur = {}, None
+    if not os.path.exists(LINES):
+        return out
+    for n, line in enumerate(open(LINES, encoding="utf-8"), 1):
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("[") and line.endswith("]"):
+            cur = out.setdefault(line[1:-1], [])
+            continue
+        if cur is None:
+            sys.exit(f"story/lines.txt:{n} : replique hors section « [nom] »")
+        if line.startswith("+ "):
+            if not cur:
+                sys.exit(f"story/lines.txt:{n} : aide sans replique")
+            cur[-1]["help"].append(clean(line[2:], warn))
+            continue
+        tokens = None
+        if ">>" in line:
+            line, tok = line.split(">>", 1)
+            tokens = [clean(t.strip(), warn) for t in tok.split(" / ")]
+        main, *alts = [t.strip() for t in line.split("||")]
+        if "|" not in main:
+            sys.exit(f"story/lines.txt:{n} : « texte | traduction » attendu")
+        sk, fr = (t.strip() for t in main.split("|", 1))
+        spk, text = speaker_of(sk)
+        c = {"speaker": spk, "sk": clean(text, warn), "fr": clean(fr, warn), "gloss": [], "help": [], "choice": None}
+        if alts:
+            c["choice"] = ("CH_PICK", "lines", [c["sk"]] + [clean(a, warn) for a in alts])
+        if tokens:
+            if norm(" ".join(tokens)) != norm(c["sk"]):
+                sys.exit(f"story/lines.txt:{n} : les morceaux ne refont pas la replique")
+            c["choice"] = ("CH_ORDER", "lines", tokens)
+        cur.append(c)
+    return out
+
+
 # ---------------------------------------------------------------- sortie C
 def c_str(s):
     if s is None:
@@ -307,7 +365,7 @@ def c_lines(name, cards, out):
     return name
 
 
-def write(episodes, default_name):
+def write(episodes, default_name, scripts):
     out = ["// Genere par tools/build_course.py depuis le cours Slovingo-sk-fr-friends : ne pas modifier.",
            '#include "../course.h"', ""]
     names = []
@@ -342,6 +400,28 @@ def write(episodes, default_name):
         out.append("")
         names.append(p)
     out.append("const Episode* const COURSE_EPISODES[] = { " + ", ".join(f"&{n}" for n in names) + " };")
+    # tout le vocabulaire (Slovnik), sans doublon
+    vocab, seen = [], set()
+    for ep in episodes:
+        for sk, fr in ep["vocab"]:
+            if sk.lower() not in seen:
+                seen.add(sk.lower())
+                vocab.append((sk, fr))
+    out.append(f"const Word COURSE_VOCAB[{max(1, len(vocab))}] = {{\n"
+               + "\n".join(f"  {{{c_str(a)}, {c_str(b)}}}," for a, b in vocab or [("", "")]) + "\n};")
+    out.append(f"const int COURSE_NUM_VOCAB = {len(vocab)};")
+    # repliques propres au jeu (story/lines.txt)
+    snames = []
+    for k, (name, cards) in enumerate(scripts.items()):
+        arr = c_lines(f"gl{k}", cards, out)
+        snames.append((name, arr, len(cards)))
+    out.append(f"const Script SCRIPTS[{max(1, len(snames))}] = {{ "
+               + ", ".join(f"{{{a}, {n}}}" for _, a, n in snames or [("", "nullptr", 0)]) + " };")
+    out.append(f"const int NUM_SCRIPTS = {len(snames)};")
+    with open(os.path.join(GEN, "scripts.h"), "w", encoding="utf-8") as f:
+        f.write("// Genere par tools/build_course.py depuis story/lines.txt : ne pas modifier.\n#pragma once\n\n"
+                + "\n".join(f"constexpr int SC_{re.sub(r'[^A-Za-z0-9]', '_', n).upper()} = {i};"
+                             for i, (n, _, _) in enumerate(snames)) + "\n")
     out.append(f"const int COURSE_NUM_EPISODES = {len(names)};")
     out.append(f"const char* const COURSE_DEFAULT_NAME = {c_str(default_name)};")
     out.append("const char* const SPEAKER_NAMES[SPK_COUNT] = { "
@@ -395,7 +475,10 @@ def main():
             dump(ep)
         print(f"\nnom par défaut du joueur : {default_name}")
         return
-    write(episodes, default_name)
+    lwarn = Warn()
+    scripts = load_lines(lwarn)
+    lwarn.report("story/lines.txt")
+    write(episodes, default_name, scripts)
 
 
 if __name__ == "__main__":

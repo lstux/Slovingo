@@ -1,0 +1,30 @@
+# Zajka Quest, chapitre 2 : Mestsky park, l'etang presque a sec (episodes 3 et 4 de Sucho).
+#   " herbe    : allee    X vase seche (on y marche)    Y eau    T O arbres    k buissons    P panneaux
+name: Mestský park
+ground: "
+music: 0
+1: warp sucho_cesta 38 5 left
+%: zone sucho3
+2: npc mouse down
+3: npc chick down
+4: npc human down say 9 0-1
+5: sign jazierko on P
+6: sign potok on P
+7: sign zvieratá on P
+8: item kvapka
+---
+""""""""""""O""""""""""""""XX"
+"""O""""""""T""""k"""""""XX"""
+"""T"""""""""""""""""""XX"""""
+"""8""k""""""""""""""XX""6""""
+""""""8"""""XXXXXXXXX"""4"""""
+"""""""""""%XXXXXXXX"""""""O""
+1::::::::::%XXYYYYXX"""""""T""
+1::::::::::%XXYYYYXX"""""""8""
+1::::::::::%XXXXXXXX""""""""""
+""""""""""5%XXXXXXXX""""""""k"
+"""""""O"""""2""""3"""O"""""""
+"k"""""T""""""""7"""""T"""""""
+""""O""8""""""""""""k8""""O"""
+""""T"""""k"""""""""""""""T"""
+""""""""""""""""""""""""""8"""

@@ -1,0 +1,32 @@
+# Zajka Quest, chapitre 2 : le centre, rue Hlavna ; la Spievajuca fontana est vide (episode 5 de Sucho).
+#   memes tuiles que kosice_hlavna ; F fontaine vide
+name: Hlavná ulica
+ground: .
+music: 0
+1: warp sucho_cesta 20 1 down
+%: zone sucho5
+2: start right
+3: npc human down say 1 0
+4: npc human down say 4 1
+5: sign fontána on F
+6: npc human left id zahradnik
+7: sign mesto on P
+8: sign zastávka on Z
+!: sign gymnázium on H
+$: sign dóm on P
+---
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+HHHhHHHHHHHhHHHHHHHHHHHHHhHHHHHHHHhHHHHH
+HHHHHHHHHHH!HHHHHHHHHHHHHHHHHHHHHHHHHHHH
+________________%_______________________
+_.......O.......%..,......$O..4........,
+_..i....T...Kl..%......F...T...l....i...
+_...."""""......%...F5F.......""""".....
+_...."*"*"......%..6.,........"*"*".....
+_.7i.....,.....l%.3........l.........i..
+1...2...........%.........,.............
+_____i_____8___________________Z__i_____
+========================================
+========================================
+========================================
+________________________________________

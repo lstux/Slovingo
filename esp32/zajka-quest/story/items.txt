@@ -1,0 +1,8 @@
+# Objets de Zajka Quest : « id | slovaque | français ». Le slovaque vient du vocabulaire du cours
+# quand il y est. Icônes 16 x 16 : art/items/<id>.png (dessinées par tools/make_placeholder_art.py).
+listok | lístok | le ticket de tram
+voda | voda | l'eau
+kvapka | kvapka | une goutte d'eau
+batoh | batoh | le sac à dos
+mapa | mapa | la carte
+listky | lístky na vlak | les billets de train

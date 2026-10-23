@@ -8,6 +8,7 @@
 //   build/sim --script sim/walk.txt --auto             le robot mene les dialogues (bonnes reponses) ;
 //                                                      --auto-peek ouvre la traduction, --auto-wrong se trompe
 //   build/sim --save /tmp/zq.sav ...                    garde la sauvegarde dans un fichier (reprise)
+//   build/sim --chapter 2 --script sim/chapter2.txt --auto   commence au chapitre 2
 //   build/sim --course                                 resume du cours embarque, glyphes manquants
 #include <stdio.h>
 #include <stdlib.h>
@@ -114,6 +115,27 @@ static int checkCourse() {
     }
     for (int i = 0; i < ep.nWords; i++) bad += missingGlyphs(ep.words[i].sk, ep.id) + missingGlyphs(ep.words[i].fr, ep.id);
   }
+  // les mots des panneaux doivent etre dans le vocabulaire du cours (leur traduction au Slovnik)
+  for (int i = 0; i < NUM_SIGN_WORDS; i++) {
+    bool ok = false;
+    for (int k = 0; k < COURSE_NUM_VOCAB && !ok; k++) ok = strcmp(COURSE_VOCAB[k].sk, SIGN_WORDS[i]) == 0;
+    if (!ok) {
+      printf("  panneau « %s » : mot absent du vocabulaire du cours\n", SIGN_WORDS[i]);
+      bad++;
+    }
+  }
+  // les repliques propres au jeu (story/lines.txt)
+  for (int sc = 0; SCRIPTS[sc].lines && sc < 256; sc++) {
+    for (int i = 0; i < SCRIPTS[sc].n; i++, lines++) {
+      const Line& l = SCRIPTS[sc].lines[i];
+      bad += missingGlyphs(l.sk, "story/lines.txt") + missingGlyphs(l.fr, "story/lines.txt");
+      if (l.choice)
+        for (int c = 0; c < l.choice->n; c++) bad += missingGlyphs(l.choice->items[c], "story/lines.txt");
+    }
+    if (sc + 1 >= NUM_SCRIPTS) break;
+  }
+  printf("cours : %d mots au vocabulaire, %d mots sur les panneaux, %d objets\n", COURSE_NUM_VOCAB, NUM_SIGN_WORDS,
+         NUM_ITEMS);
   printf("cours : %d épisode(s), %d répliques, nom par défaut « %s », %d glyphe(s) manquant(s)\n",
          COURSE_NUM_EPISODES, lines, COURSE_DEFAULT_NAME, bad);
   return bad == 0 && COURSE_NUM_EPISODES > 0 ? 0 : 1;
@@ -127,6 +149,8 @@ static const char* stateName(GameState s) {
     case S_FADE: return "fondu";
     case S_DIALOG: return "dialogue";
     case S_END: return "fin";
+    case S_NOTE: return "message";
+    case S_MENU: return "menu";
   }
   return "?";
 }
@@ -139,6 +163,7 @@ int main(int argc, char** argv) {
   int frames = 0, every = 0;
   bool wav = false, autoDialog = false, autoPeek = false, autoWrong = false;
   std::string savePath;  // --save fichier : la sauvegarde survit d'une execution a l'autre
+  int startChapterArg = 0;  // --chapter N : commencer directement au chapitre N (carte du chapitre)
   for (int i = 1; i < argc; i++) {
     std::string a = argv[i];
     if (a == "--out") out = argv[++i];
@@ -148,6 +173,7 @@ int main(int argc, char** argv) {
     else if (a == "--wav") wav = true;
     else if (a == "--auto") autoDialog = true;
     else if (a == "--save") savePath = argv[++i];
+    else if (a == "--chapter") startChapterArg = atoi(argv[++i]);
     else if (a == "--auto-peek") autoDialog = autoPeek = true;    // ouvre la traduction a chaque choix
     else if (a == "--auto-wrong") autoDialog = autoWrong = true;  // se trompe une fois a chaque choix
     else if (a == "--shots") {
@@ -187,13 +213,14 @@ int main(int argc, char** argv) {
   static MemoryStorage storage(savePath.c_str());
   game.begin(&audio, &storage);
   if (game.hasSave()) printf("partie enregistree trouvee\n");
+  if (startChapterArg > 1) game.debugChapter(startChapterArg - 1);
   Input in;
   std::vector<int16_t> pcm;
   int16_t abuf[AUDIO_RATE / 60 + 1];
   GameState last = game.state();
   std::vector<std::string> seen{stateName(last)};
   const char* lastMap = nullptr;  // carte affichee (monde ou fondu)
-  int lastTalks = 0;
+  int lastTalks = 0, lastWords = 0, lastItems[SAVE_ITEMS] = {};
   int lastTx = -1, lastTy = -1;
   // Avec --auto, le robot mene les conversations et l'horloge du script s'arrete pendant ce
   // temps : les images du script ne comptent que hors dialogue.
@@ -202,11 +229,13 @@ int main(int argc, char** argv) {
   const Line* choiceLine = nullptr;
   for (int f = 1; t < frames && guard < frames * 20; f++, guard++) {
     uint16_t raw = 0;
-    bool talking = autoDialog && game.state() == S_DIALOG;
+    bool talking = autoDialog && (game.state() == S_DIALOG || game.state() == S_NOTE);
     if (!talking) {
       t++;
       for (auto& s : segs)
         if (t >= s.from && t <= s.to) raw |= s.btn;
+    } else if (game.state() == S_NOTE) {
+      if (f % 6 == 0 && in.held == 0) raw = BTN_A;  // le robot ferme les messages
     } else {
       const Dialog& d = game.dialog();
       if (d.choosing()) {
@@ -262,6 +291,17 @@ int main(int argc, char** argv) {
       last = game.state();
       seen.push_back(stateName(last));
     }
+    if (game.wordsFound() != lastWords) {
+      lastWords = game.wordsFound();
+      printf("image %5d : Slovnik %d mot(s)\n", f, lastWords);
+      seen.push_back("mots:" + std::to_string(lastWords));
+    }
+    for (int i = 0; i < NUM_ITEMS && i < SAVE_ITEMS; i++)
+      if (game.itemCount(i) != lastItems[i]) {
+        lastItems[i] = game.itemCount(i);
+        printf("image %5d : objet %s x%d\n", f, ITEMS[i].sk, lastItems[i]);
+        seen.push_back(std::string("objet:") + ITEMS[i].sk + (lastItems[i] > 1 ? "x" + std::to_string(lastItems[i]) : ""));
+      }
     if (game.talks() != lastTalks) {
       lastTalks = game.talks();
       Speaker sp = game.lastTalk();
@@ -270,7 +310,7 @@ int main(int argc, char** argv) {
       printf("image %5d : parle a %s\n", f, who);
       seen.push_back(std::string("parle:") + who);
     }
-    if (game.state() == S_WORLD || game.state() == S_FADE) {
+    if (game.state() != S_TITLE && game.state() != S_CHAPTER && game.state() != S_END) {
       const World& w = game.world();
       if (w.map().id != lastMap) {
         lastMap = w.map().id;

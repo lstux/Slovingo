@@ -1,0 +1,61 @@
+# Le chapitre 2 en entier (a lancer avec --chapter 2 --auto) : le jardin au matin (episode 1),
+# la rue (episode 2), le parc et l'etang a sec (episode 3, cinq gouttes d'eau pour les animaux,
+# episode 4), le centre et la fontaine vide (episode 5), la gare (episode 6 : le mot a la tante,
+# les billets, le train), l'ecran de fin.
+# carte du chapitre, puis le jardin (episode 1 tout seul, l'eau, Andrea suit)
+40 42 A
+# vers le portail : a gauche jusqu'a (10, 5), en bas jusqu'a (10, 10), a droite jusqu'a (21, 10)
+60 170 L
+190 260 D
+280 440 R
+# la rue : (1, 4), a droite jusqu'au thermometre (5, 3) ; la zone de l'episode 2 en (8, 4) ;
+# jusqu'a (12, 4), en bas : la goutte d'eau (12, 6), puis a droite jusqu'au parc (39, 6)
+500 510 U
+530 585 R
+600 601 U
+615 617 A
+640 740 R
+760 785 D
+800 1215 R
+# le parc : l'allee jusqu'a l'etang, zone de l'episode 3 en (11, 7)
+1260 1400 R
+# les gouttes d'eau : (6, 4), (3, 3), (7, 12), (21, 12)
+1420 1490 L
+1505 1545 U
+1560 1600 L
+1615 1625 U
+1640 1770 D
+1785 1840 R
+1855 2025 R
+2040 2050 U
+2065 2090 R
+2105 2115 D
+# le poussin (18, 10) : par (21, 10), (19, 10), a gauche, A : l'eau pour les animaux
+2130 2155 U
+2170 2195 L
+2210 2212 A
+# Andrea (derriere, a droite) : episode 4, le sac a dos et la carte
+2240 2241 R
+2255 2257 A
+# sortie : (19, 8), puis a gauche le long de l'allee jusqu'a la rue (0, 8)
+2280 2305 U
+2320 2600 L
+# la rue : a gauche jusqu'a (21, 5), en haut par la ruelle vers le centre (21, 0)
+2660 2905 L
+2920 2990 U
+# le centre : a droite le long de la rue ; la zone de l'episode 5 en (16, 9) ; retour (0, 9)
+3040 3260 R
+3280 3515 L
+# la rue : (20, 4), a droite jusqu'a (28, 4), en bas par la ruelle vers la gare (28, 12)
+3565 3600 D
+3615 3730 R
+3745 3860 D
+# la gare (arrivee, le mot a la tante) : (11, 3), a gauche jusqu'au guichet (3, 2)
+3910 3930 D
+3945 4060 L
+4075 4076 U
+4090 4092 A
+# le train : (10, 3), en bas jusqu'a la porte (10, 8) ; fin du chapitre, retour au titre
+4110 4210 R
+4225 4300 D
+4450 4452 A

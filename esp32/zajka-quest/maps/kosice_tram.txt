@@ -1,5 +1,5 @@
 # Zajka Quest, chapitre 1 : l'interieur du tram (episode 1, « To si ty? »).
-#   W paroi a fenetres    w bas de caisse    - plancher    s siege    | barre    e porte
+#   W paroi a fenetres    w bas de caisse    - plancher    s siege    | barre    e porte    V composteur
 name: V električke
 ground: -
 music: -1
@@ -9,11 +9,12 @@ music: -1
 4: npc human down say 4 0 on s
 5: npc human up say 3 0-1 on s
 6: npc human up say 1 1 on s
+7: npc human left id revizor
 ---
 WWWWWWWWWWWWWWWWWWWW
 Wss-3s-ss-s2-ss-4s-W
 W--|------------|--W
-W------------------W
-W--|------------|--W
+W-----------7------W
+W--|----V-------|--W
 Wss-6s-ss-ss-5s-ss-W
 wwwwwwwww1wwwwwwwwww

@@ -1,0 +1,29 @@
+# Zajka Quest, chapitre 2 : la rue entre le jardin, le parc (a l'est), le centre (au nord) et la gare (au sud).
+#   ^ toits    H facades    h portes    _ trottoirs    . paves    i lampadaires    T arbre    P panneau
+name: Cesta do parku
+ground: .
+music: 0
+1: warp sucho_zahrada 20 10 left
+2: warp sucho_park 1 7 right
+3: warp sucho_hlavna 1 9 right
+4: warp sucho_stanica 11 1 down
+%: zone sucho2
+5: sign horúco on P
+6: sign škola on H
+7: npc human down say 7 0-1 on _
+8: npc human up say 10 0-1 on _
+9: item kvapka
+---
+^^^^^^^^^^^^^^^^^^^.33.^^^^^^^^^^^^^^^^^
+HHHhHHHHHHHhHHHHHHH....HHHHHHHhHHHHHHHHH
+HHHHHHHHHHHHHHHHHHH....HHHHHHHHHHHHHHHHH
+_____5___T______________7_______________
+1.......%..............................2
+1.......%..............................2
+1.......%...9..........................2
+1.......%..............................2
+__i_____________i________i_______8__i___
+HHHHHHHHHHHHHH6HHHHHHHHHHHH....HHHHHHHHH
+HHHHHHhHHHHHHhHHHHHHHHHHHHH....HHHhHHHHH
+^^^^^^^^^^^^^^^^^^^^^^^^^^^....^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^.44.^^^^^^^^^

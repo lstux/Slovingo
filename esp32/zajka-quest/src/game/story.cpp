@@ -1,37 +1,22 @@
-// Histoire du chapitre 1 : Kosice (episodes 1 a 6 de la serie Kosice du cours).
-//
-//   rue Hlavna      on monte dans le tram a l'arret ; deux passants disent des « repliques en plus »
-//   tram            en entrant, le Narrateur plante le decor (debut de l'episode 1) ; chaque fois
-//                   qu'on parle a Andrea, l'episode suivant : 1 « To si ty? » ... 5 « V elektricke ».
-//                   A la fin du 5 (« To je moja zastavka. Pod! »), on descend avec elle.
-//   chez la tante   le soir, devant la maison : le Narrateur, puis l'episode 6 « Dobru noc » avec
-//                   Andrea ; sa derniere replique (la nuit sous le pommier) se joue quand on va
-//                   au pommier. Fin du chapitre.
-//
-// stage_ = nombre d'episodes joues en entier ; flags_ = SaveFlag. Tout est sauvegarde.
+// Outils communs de l'histoire : conversations, episodes du cours, objets, panneaux, passages
+// imposes, fin de chapitre. Ce qui se passe ou est ecrit chapitre par chapitre :
+// chapter1.cpp (Kosice), chapter2.cpp (Sucho).
 #include <stdio.h>
+#include <string.h>
 
 #include "game.h"
 #include "gen/assets.h"
+#include "gen/scripts.h"
 
 namespace {
-constexpr int EP_TRAM_LAST = 4;  // index des episodes du tram : 0 a 4
-constexpr int EP_TETA = 5;       // l'episode 6, chez la tante
 constexpr int BANNER_TIME = 150;
 
 const Episode& episode(int i) { return *COURSE_EPISODES[i < COURSE_NUM_EPISODES ? i : COURSE_NUM_EPISODES - 1]; }
 
-// repliques du Narrateur au debut d'un episode
-int leadingNarrator(const Episode& ep) {
-  int n = 0;
-  while (n < ep.nDialog && ep.dialog[n].speaker == SPK_NARRATOR) n++;
-  return n;
-}
-// ... et a la fin (episode 6 : la nuit sous le pommier)
-int trailingNarrator(const Episode& ep) {
-  int n = 0;
-  while (n < ep.nDialog && ep.dialog[ep.nDialog - 1 - n].speaker == SPK_NARRATOR) n++;
-  return n;
+const char* vocabFr(const char* sk) {
+  for (int i = 0; i < COURSE_NUM_VOCAB; i++)
+    if (strcmp(COURSE_VOCAB[i].sk, sk) == 0) return COURSE_VOCAB[i].fr;
+  return "";
 }
 }  // namespace
 
@@ -41,16 +26,23 @@ int Game::bonusFound() const {
   return n;
 }
 
-int Game::bonusTotal() const {
+// Episodes du cours : 6 par chapitre (COURSE_EPISODES[6 * chapitre + n]).
+int Game::bonusTotal(int chapter) const {
   int n = 0;
-  for (int i = 0; i < COURSE_NUM_EPISODES && i < SAVE_EPISODES; i++) n += COURSE_EPISODES[i]->nBonus;
+  for (int i = 0; i < COURSE_NUM_EPISODES && i < SAVE_EPISODES; i++)
+    if (chapter < 0 || i / 6 == chapter) n += COURSE_EPISODES[i]->nBonus;
   return n;
 }
 
-// Une conversation ; bonusEpisode >= 0 : ses choix peuvent gagner les repliques secretes de cet episode.
-void Game::say(const Line* lines, int n, int bonusEpisode, After after) {
+int Game::goal() const { return chapter_ == 0 ? ch1Goal() : ch2Goal(); }
+
+// ---------------------------------------------------------------- conversations
+// bonusEpisode >= 0 : ses choix peuvent gagner les repliques secretes de cet episode.
+// after / event : ce qui se passe quand la conversation est finie (storyDialogDone).
+void Game::say(const Line* lines, int n, int bonusEpisode, After after, int event) {
+  after_ = after;
+  afterEvent_ = event;
   if (n <= 0) {
-    after_ = after;
     storyDialogDone();
     return;
   }
@@ -60,27 +52,120 @@ void Game::say(const Line* lines, int n, int bonusEpisode, After after) {
   } else {
     dialog_.start(lines, n, COURSE_DEFAULT_NAME);
   }
-  after_ = after;
   setState(S_DIALOG);
 }
 
-// Repliques [from, to) du dialogue de l'episode ep ; banner : affiche son titre.
-void Game::playEpisode(int ep, int from, int to, After after, bool banner) {
+void Game::sayScript(int script, After after, int event) {
+  say(SCRIPTS[script].lines, SCRIPTS[script].n, -1, after, event);
+}
+
+// Repliques [from, to) du dialogue de l'episode ep (index global) ; banner : affiche son titre.
+void Game::playEpisode(int ep, int from, int to, After after, bool banner, int event) {
   if (banner) {
     bannerEp_ = ep;
     banner_ = BANNER_TIME;
   }
-  say(episode(ep).dialog + from, to - from, ep, after);
+  say(episode(ep).dialog + from, to - from, ep, after, event);
 }
 
-// Andrea redit sa derniere replique de l'episode qu'on vient de jouer avec elle.
-void Game::andreaRepeats() {
-  const Episode& ep = episode(stage_ > 0 ? stage_ - 1 : 0);
-  for (int i = ep.nDialog - 1; i >= 0; i--)
-    if (ep.dialog[i].speaker == SPK_ANDREA) {
-      say(&ep.dialog[i], 1, -1, AFTER_NOTHING);
+void Game::sayLast(int ep, Speaker who) {
+  const Episode& e = episode(ep);
+  for (int i = e.nDialog - 1; i >= 0; i--)
+    if (e.dialog[i].speaker == who) {
+      say(&e.dialog[i], 1, -1, AFTER_NOTHING);
       return;
     }
+  audio_->play(SFX_BUMP);
+}
+
+// Passant ou voyageur : ses « repliques en plus » (repere « npc ... say »).
+void Game::passerby(const Walker& w) {
+  const MapMark* mk = w.mark;
+  if (mk && mk->sayCount && mk->sayEp >= 1 && mk->sayEp <= COURSE_NUM_EPISODES) {
+    const Episode& ep = *COURSE_EPISODES[mk->sayEp - 1];
+    int from = mk->sayFrom, n = mk->sayCount;
+    if (from + n > ep.nExtra) n = ep.nExtra - from;
+    if (n > 0) {
+      say(ep.extra + from, n, -1, AFTER_NOTHING);
+      return;
+    }
+  }
+  audio_->play(SFX_BUMP);
+}
+
+// ---------------------------------------------------------------- objets, panneaux
+void Game::give(int item, int count, bool show) {
+  if (item < 0 || item >= SAVE_ITEMS) return;
+  int n = items_[item] + count;
+  items_[item] = (uint8_t)(n > 255 ? 255 : n < 0 ? 0 : n);
+  if (count > 0 && show) {
+    audio_->play(SFX_LIFE);
+    note("Do batohu :", ITEMS[item].sk, ITEMS[item].fr, item);
+  }
+}
+
+void Game::storySign(const MapMark& m) {
+  if (m.word < 0) return;
+  const char* w = SIGN_WORDS[m.word];
+  bool fresh = !(words_[m.word >> 3] & (1 << (m.word & 7)));
+  words_[m.word >> 3] |= (uint8_t)(1 << (m.word & 7));
+  audio_->play(fresh ? SFX_LIFE : SFX_PAUSE);
+  note(fresh ? "Nové slovo !" : "Nápis", w, vocabFr(w));
+}
+
+void Game::storyPickup(const MapMark& m) {
+  picked_[m.pickup >> 3] |= (uint8_t)(1 << (m.pickup & 7));
+  give(m.item);
+}
+
+// ---------------------------------------------------------------- aiguillage par chapitre
+void Game::storyEnteredMap() {
+  if (chapter_ == 0) ch1EnteredMap();
+  else ch2EnteredMap();
+}
+
+void Game::storyTalk(int npc) {
+  const Walker& w = world_.npc(npc);
+  if (chapter_ == 0) ch1Talk(w);
+  else ch2Talk(w);
+}
+
+void Game::storyInspect(int tx, int ty) {
+  if (chapter_ == 0) ch1Inspect(tx, ty);
+  else ch2Inspect(tx, ty);
+}
+
+void Game::storyZone(const MapMark& m) {
+  if (chapter_ == 0) ch1Zone(m);
+  else ch2Zone(m);
+}
+
+bool Game::storyWarp(const MapMark& m) { return chapter_ == 0 ? ch1Warp(m) : ch2Warp(m); }
+
+void Game::storyRefresh() {
+  if (chapter_ == 0) ch1Refresh();
+  else ch2Refresh();
+}
+
+void Game::storyDialogDone() {
+  After a = after_;
+  after_ = AFTER_NOTHING;
+  if (a == AFTER_EPISODE) {
+    stage_++;
+    if (chapter_ == 0) ch1EpisodeDone();
+    else ch2EpisodeDone();
+  } else if (a == AFTER_EVENT) {
+    if (chapter_ == 0) ch1Event(afterEvent_);
+    else ch2Event(afterEvent_);
+  } else if (a == AFTER_SLEEP) {
+    endChapter();
+  }
+  if (state_ == S_WORLD) storyRefresh();
+}
+
+void Game::endChapter() {
+  audio_->play(SFX_WIN);
+  setState(S_END);
 }
 
 // Passage impose par l'histoire : le meme rideau qu'une porte. tx < 0 : au depart de la carte.
@@ -107,80 +192,6 @@ void Game::goTo(int map, int tx, int ty, Dir dir) {
   setState(S_FADE);
 }
 
-void Game::storyEnteredMap() {
-  int m = world_.mapIndex();
-  if (m == MAP_KOSICE_TRAM) {
-    if (stage_ > EP_TRAM_LAST) {
-      // episode 5 fini (partie reprise dans le tram) : on descend chez la tante
-      goTo(MAP_KOSICE_TETA, -1, -1, DIR_UP);
-      return;
-    }
-    if (!(flags_ & SF_TRAM_INTRO)) {
-      flags_ |= SF_TRAM_INTRO;
-      playEpisode(0, 0, leadingNarrator(episode(0)), AFTER_NOTHING, true);
-    }
-  } else if (m == MAP_KOSICE_TETA && !(flags_ & SF_TETA_INTRO)) {
-    flags_ |= SF_TETA_INTRO;
-    playEpisode(EP_TETA, 0, leadingNarrator(episode(EP_TETA)), AFTER_NOTHING, true);
-  }
-}
-
-void Game::storyTalk(int npc) {
-  const Walker& w = world_.npc(npc);
-  int m = world_.mapIndex();
-  if (w.who == SPK_ANDREA) {
-    if (m == MAP_KOSICE_TRAM && stage_ <= EP_TRAM_LAST) {
-      const Episode& ep = episode(stage_);
-      // episode 1 : le debut du Narrateur a deja ete joue en entrant
-      int from = (stage_ == 0 && (flags_ & SF_TRAM_INTRO)) ? leadingNarrator(ep) : 0;
-      playEpisode(stage_, from, ep.nDialog, AFTER_EPISODE, stage_ > 0);
-    } else if (m == MAP_KOSICE_TETA && stage_ == EP_TETA) {
-      const Episode& ep = episode(EP_TETA);
-      playEpisode(EP_TETA, leadingNarrator(ep), ep.nDialog - trailingNarrator(ep), AFTER_EPISODE, false);
-    } else {
-      andreaRepeats();
-    }
-    return;
-  }
-  // passant ou voyageur : ses « repliques en plus »
-  const MapMark* mk = w.mark;
-  if (mk && mk->sayCount && mk->sayEp >= 1 && mk->sayEp <= COURSE_NUM_EPISODES) {
-    const Episode& ep = *COURSE_EPISODES[mk->sayEp - 1];
-    int from = mk->sayFrom, n = mk->sayCount;
-    if (from + n > ep.nExtra) n = ep.nExtra - from;
-    if (n > 0) {
-      say(ep.extra + from, n, -1, AFTER_NOTHING);
-      return;
-    }
-  }
-  audio_->play(SFX_BUMP);
-}
-
-void Game::storyInspect(int tx, int ty) {
-  if (world_.mapIndex() == MAP_KOSICE_TETA && world_.tileAt(tx, ty) == TL_POMMIER && stage_ > EP_TETA) {
-    // la nuit sous le pommier : la derniere replique du Narrateur, puis la fin du chapitre
-    const Episode& ep = episode(EP_TETA);
-    int n = trailingNarrator(ep);
-    say(ep.dialog + ep.nDialog - n, n, -1, AFTER_SLEEP);
-  }
-}
-
-void Game::storyDialogDone() {
-  After a = after_;
-  after_ = AFTER_NOTHING;
-  if (a == AFTER_EPISODE) {
-    stage_++;
-    if (stage_ == EP_TRAM_LAST + 1 && world_.mapIndex() == MAP_KOSICE_TRAM) {
-      // « To je moja zastavka. Pod! » : on descend avec Andrea, le soir, chez sa tante
-      goTo(MAP_KOSICE_TETA, -1, -1, DIR_UP);
-    }
-  } else if (a == AFTER_SLEEP) {
-    flags_ |= SF_SLEPT;
-    audio_->play(SFX_WIN);
-    setState(S_END);
-  }
-}
-
 // ---------------------------------------------------------------- rendu
 void Game::drawBanner(Band& b) {
   if (b.y0 > 34) return;
@@ -195,14 +206,19 @@ void Game::drawBanner(Band& b) {
 }
 
 void Game::drawEnd(Band& b) {
+  static const char* const PLACES[] = {"KOŠICE", "SUCHO"};
+  static const char* const NEXT[] = {"Ďalšia kapitola : Sucho", "Ďalšia kapitola : Slovenský raj"};
   b.fill(0x0841);
   b.fillRect(0, 50, SCREEN_W, 2, 0xFB00);
   b.fillRect(0, 188, SCREEN_W, 2, 0xFB00);
-  centerText(b, font_small, 62, "KOŠICE", 0xFF2A, 0x0000);
-  centerText(b, font_title, 78, "Koniec 1. kapitoly", 0xFFFF, 0x0000);
+  centerText(b, font_small, 62, PLACES[chapter_], 0xFF2A, 0x0000);
   char s[64];
+  snprintf(s, sizeof s, "Koniec %d. kapitoly", chapter_ + 1);
+  centerText(b, font_title, 78, s, 0xFFFF, 0x0000);
   snprintf(s, sizeof s, "Tajné repliky : %d / %d", bonusFound(), bonusTotal());
-  centerText(b, font_small, 124, s, 0xBDF7, -1);
-  centerText(b, font_small, 146, "Ďalšia kapitola : Sucho", 0xBDF7, -1);
-  if (stateTime_ > 120 && (frame_ / 30) % 2 == 0) centerText(b, font_small, 166, "Stlač A", 0xFFFF, -1);
+  centerText(b, font_small, 118, s, 0xBDF7, -1);
+  snprintf(s, sizeof s, "Slovník : %d / %d", wordsFound(), NUM_SIGN_WORDS);
+  centerText(b, font_small, 134, s, 0xBDF7, -1);
+  centerText(b, font_small, 154, NEXT[chapter_], 0xBDF7, -1);
+  if (stateTime_ > 120 && (frame_ / 30) % 2 == 0) centerText(b, font_small, 170, "Stlač A", 0xFFFF, -1);
 }

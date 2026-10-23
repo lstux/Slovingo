@@ -1,32 +1,58 @@
 #include "game.h"
 
 #include <stdio.h>
+#include <string.h>
 
 #include "gen/assets.h"
+#include "gen/scripts.h"
 
 namespace {
 const uint16_t WHITE = 0xFFFF, BLACK = 0x0000;
-const uint16_t YELLOW = 0xFF2A, ORANGE = 0xFB00, DARKBLUE = 0x1926, GREY = 0xBDF7;
+const uint16_t YELLOW = 0xFF2A, ORANGE = 0xFB00, DARKBLUE = 0x1926, GREY = 0xBDF7, DIM = 0x6B4D;
 const uint16_t SKY_TOP = 0x2A4E, SKY_LOW = 0x5C9B, STONE = 0x8C51, STONE_DARK = 0x6B4D;
 
 // le renard et Andrea de l'ecran titre : les planches de Zajka Run (ligne 0 = repos) ;
 // le renard est dans des cases de 48 x 48, la tete a x = 27
 constexpr int IDLE_ROW = 0, IDLE_FRAMES = 4, FOX_ANCHOR = 27;
 constexpr int FADE_HALF = 14;  // images pour fermer le rideau, autant pour le rouvrir
+
+struct ChapterInfo {
+  const char* place;
+  const char* subtitle;
+  int startMap;
+};
+const ChapterInfo CHAPTERS[NUM_CHAPTERS] = {
+    {"Košice", "To si ty?", MAP_KOSICE_HLAVNA},
+    {"Sucho", "Je horúco", MAP_SUCHO_ZAHRADA},
+};
+
+// FR d'un mot du Slovnik (vocabulaire du cours), ou ""
+const char* vocabFr(const char* sk) {
+  for (int i = 0; i < COURSE_NUM_VOCAB; i++)
+    if (strcmp(COURSE_VOCAB[i].sk, sk) == 0) return COURSE_VOCAB[i].fr;
+  return "";
+}
 }  // namespace
 
 // ---------------------------------------------------------------- mise en route
 void Game::begin(Audio* audio, Storage* storage) {
   audio_ = audio;
   storage_ = storage;
+  chapter_ = 0;
   stage_ = 0;
   flags_ = 0;
+  memset(items_, 0, sizeof items_);
+  memset(picked_, 0, sizeof picked_);
+  memset(words_, 0, sizeof words_);
   for (int& b : bonus_) b = 0;
+  world_.setPicked(picked_);
+  world_.setFollower(SPK_NONE);
   after_ = AFTER_NOTHING;
   banner_ = 0;
   lastTalk_ = SPK_NONE;
   hasSave_ = false;
-  if (storage_ && storage_->read(&saved_, sizeof saved_) && saved_.valid() && saved_.map < NUM_MAPS) {
+  if (storage_ && storage_->read(&saved_, sizeof saved_) && saved_.valid() && saved_.map < NUM_MAPS &&
+      saved_.chapter < NUM_CHAPTERS) {
     const MapDef& m = *ALL_MAPS[saved_.map];
     hasSave_ = saved_.tx < m.w && saved_.ty < m.h && saved_.dir >= 0 && saved_.dir <= DIR_RIGHT;
   }
@@ -44,8 +70,12 @@ void Game::save() {
   d.tx = (uint8_t)world_.player().tx;
   d.ty = (uint8_t)world_.player().ty;
   d.dir = world_.player().dir;
+  d.chapter = (uint8_t)chapter_;
   d.stage = (uint8_t)stage_;
   d.flags = flags_;
+  memcpy(d.items, items_, sizeof d.items);
+  memcpy(d.picked, picked_, sizeof d.picked);
+  memcpy(d.words, words_, sizeof d.words);
   for (int i = 0; i < SAVE_EPISODES; i++) d.bonus[i] = (uint8_t)bonus_[i];
   d.check = d.sum();
   if (storage_->write(&d, sizeof d)) {
@@ -58,24 +88,40 @@ void Game::save() {
 void Game::newGame() {
   if (storage_ && hasSave_) storage_->erase();
   hasSave_ = false;
-  stage_ = 0;
-  flags_ = 0;
+  memset(items_, 0, sizeof items_);
+  memset(picked_, 0, sizeof picked_);
+  memset(words_, 0, sizeof words_);
   for (int& b : bonus_) b = 0;
   audio_->play(SFX_PAUSE);
+  startChapter(0);
+}
+
+// Carte du chapitre, puis sa premiere carte (S_CHAPTER -> S_WORLD).
+void Game::startChapter(int chapter) {
+  chapter_ = chapter;
+  stage_ = 0;
+  flags_ = 0;
+  world_.setFollower(SPK_NONE);
   audio_->music(-1);
   setState(S_CHAPTER);
 }
 
 bool Game::continueGame() {
   if (!hasSave_) return false;
+  chapter_ = saved_.chapter;
   stage_ = saved_.stage;
   flags_ = saved_.flags;
+  memcpy(items_, saved_.items, sizeof items_);
+  memcpy(picked_, saved_.picked, sizeof picked_);
+  memcpy(words_, saved_.words, sizeof words_);
   for (int i = 0; i < SAVE_EPISODES; i++) bonus_[i] = saved_.bonus[i];
+  world_.setFollower(SPK_NONE);
   world_.load(saved_.map, saved_.tx, saved_.ty, (Dir)saved_.dir);
   audio_->play(SFX_PAUSE);
   audio_->music(world_.map().music);
   setState(S_WORLD);
-  storyEnteredMap();  // ex. : une partie arretee juste apres l'episode 5 repart vers la tante
+  storyRefresh();
+  storyEnteredMap();  // ex. : une partie arretee juste avant un passage impose le refait
   return true;
 }
 
@@ -112,6 +158,13 @@ void Game::setState(GameState s) {
   stateTime_ = 0;
 }
 
+int Game::wordsFound() const {
+  int n = 0;
+  for (int i = 0; i < NUM_SIGN_WORDS; i++)
+    if (words_[i >> 3] & (1 << (i & 7))) n++;
+  return n;
+}
+
 // ---------------------------------------------------------------- boucle logique
 void Game::step(const Input& in) {
   frame_++;
@@ -131,14 +184,24 @@ void Game::step(const Input& in) {
     case S_CHAPTER:
       if (stateTime_ > 30 && (in.hit(BTN_START) || in.hit(BTN_A))) {
         audio_->play(SFX_PAUSE);
-        world_.loadStart(MAP_KOSICE_HLAVNA);
+        world_.loadStart(CHAPTERS[chapter_].startMap);
         audio_->music(world_.map().music);
         setState(S_WORLD);
+        storyRefresh();
+        save();
+        storyEnteredMap();
       }
       break;
     case S_WORLD:
+      if (in.hit(BTN_START)) {
+        audio_->play(SFX_PAUSE);
+        menuScroll_ = 0;
+        setState(S_MENU);
+        break;
+      }
       switch (world_.step(in)) {
         case WE_WARP:
+          if (!storyWarp(*world_.pendingWarp())) break;
           warp_ = world_.pendingWarp();
           audio_->play(SFX_CHECK);
           setState(S_FADE);
@@ -154,6 +217,15 @@ void Game::step(const Input& in) {
         case WE_INSPECT:
           storyInspect(world_.inspectX(), world_.inspectY());
           break;
+        case WE_SIGN:
+          storySign(*world_.event());
+          break;
+        case WE_PICKUP:
+          storyPickup(*world_.event());
+          break;
+        case WE_ZONE:
+          storyZone(*world_.event());
+          break;
         default:
           break;
       }
@@ -162,6 +234,7 @@ void Game::step(const Input& in) {
       if (stateTime_ == FADE_HALF && warp_) {
         int from = world_.mapIndex();
         world_.load(warp_->target, warp_->tx, warp_->ty, warp_->dir);
+        storyRefresh();
         if (world_.map().music != ALL_MAPS[from]->music) audio_->music(world_.map().music);
         warp_ = nullptr;
       }
@@ -175,17 +248,150 @@ void Game::step(const Input& in) {
       dialog_.step(in, audio_);
       if (!dialog_.active()) {
         setState(S_WORLD);
-        storyDialogDone();  // peut changer d'etat (passage impose, fin du chapitre)
+        storyDialogDone();  // peut changer d'etat (message, passage impose, fin du chapitre)
+        if (state_ == S_WORLD || state_ == S_FADE || state_ == S_END) save();
+      }
+      break;
+    case S_NOTE:
+      if (in.hit(BTN_SELECT)) {
+        noteFr_on_ = !noteFr_on_;
+        audio_->play(SFX_PAUSE);
+      }
+      if (stateTime_ > 20 && (in.hit(BTN_A) || in.hit(BTN_B))) {
+        setState(S_WORLD);
         save();
       }
+      break;
+    case S_MENU:
+      stepMenu(in);
       break;
     case S_END:
       if (stateTime_ > 120 && (in.hit(BTN_A) || in.hit(BTN_START))) {
         audio_->play(SFX_PAUSE);
-        begin(audio_, storage_);
+        if (chapter_ + 1 < NUM_CHAPTERS) {
+          // chapitre suivant : on garde le sac et le Slovnik
+          startChapter(chapter_ + 1);
+        } else {
+          begin(audio_, storage_);
+        }
       }
       break;
   }
+}
+
+// ---------------------------------------------------------------- petit message
+void Game::note(const char* title, const char* sk, const char* fr, int icon) {
+  noteTitle_ = title;
+  noteSk_ = sk;
+  noteFr_ = fr;
+  noteIcon_ = icon;
+  noteFr_on_ = false;
+  setState(S_NOTE);
+}
+
+void Game::drawNote(Band& b) {
+  const int x = 40, y = 84, w = SCREEN_W - 80, h = 64;
+  if (b.y0 > y + h || b.y0 + b.h < y) return;
+  b.fillRect(x, y, w, h, DARKBLUE);
+  b.fillRect(x, y, w, 2, ORANGE);
+  b.fillRect(x, y + h - 2, w, 2, ORANGE);
+  centerText(b, font_small, y + 6, noteTitle_, YELLOW, BLACK);
+  int tx = x + 16;
+  if (noteIcon_ >= 0) {
+    b.frame(item_icons, noteIcon_, tx, y + 26);
+    tx += 22;
+  }
+  b.text(font_big, tx, y + 22, noteSk_, WHITE, BLACK);
+  if (noteFr_on_ && noteFr_ && *noteFr_) b.text(font_small, tx, y + 44, noteFr_, YELLOW, -1);
+  else if (noteFr_ && *noteFr_) b.text(font_small, x + w - 86, y + h - 15, "SELECT : FR", DIM, -1);
+}
+
+// ---------------------------------------------------------------- menu START
+// Trois onglets : Batoh (objets), Slovnik (mots trouves), Ciel (objectif). Gauche / droite : onglet,
+// haut / bas : defiler, SELECT : traduction de l'objectif, B ou START : fermer.
+void Game::stepMenu(const Input& in) {
+  if (in.hit(BTN_B) || in.hit(BTN_START)) {
+    audio_->play(SFX_PAUSE);
+    setState(S_WORLD);
+    return;
+  }
+  if (in.hit(BTN_LEFT)) {
+    menuTab_ = (menuTab_ + 2) % 3;
+    menuScroll_ = 0;
+    audio_->play(SFX_COIN);
+  }
+  if (in.hit(BTN_RIGHT)) {
+    menuTab_ = (menuTab_ + 1) % 3;
+    menuScroll_ = 0;
+    audio_->play(SFX_COIN);
+  }
+  if (in.hit(BTN_DOWN)) menuScroll_++;
+  if (in.hit(BTN_UP) && menuScroll_ > 0) menuScroll_--;
+  if (in.hit(BTN_SELECT)) noteFr_on_ = !noteFr_on_;
+}
+
+void Game::drawMenu(Band& b) {
+  const int x = 16, y = 16, w = SCREEN_W - 32, h = SCREEN_H - 32;
+  b.fillRect(x, y, w, h, DARKBLUE);
+  b.fillRect(x, y, w, 2, ORANGE);
+  b.fillRect(x, y + h - 2, w, 2, ORANGE);
+  const char* tabs[3] = {"Batoh", "Slovník", "Cieľ"};
+  int tw = w / 3;
+  for (int i = 0; i < 3; i++) {
+    int cx = x + i * tw;
+    if (i == menuTab_) b.fillRect(cx + 4, y + 6, tw - 8, 20, 0x2A4E);
+    int tl = textWidth(font_big, tabs[i]);
+    b.text(font_big, cx + (tw - tl) / 2, y + 7, tabs[i], i == menuTab_ ? YELLOW : GREY, BLACK);
+  }
+  b.fillRect(x + 8, y + 30, w - 16, 1, ORANGE);
+  int ly = y + 38;
+  const int rowH = 18, rows = 8;
+  if (menuTab_ == 0) {
+    int shown = 0, idx = 0;
+    for (int i = 0; i < NUM_ITEMS && i < SAVE_ITEMS; i++) {
+      if (!items_[i]) continue;
+      if (idx++ < menuScroll_) continue;
+      if (shown >= rows) break;
+      int yy = ly + shown * rowH;
+      b.frame(item_icons, i, x + 12, yy);
+      char s[64];
+      if (items_[i] > 1) snprintf(s, sizeof s, "%s  ×%d", ITEMS[i].sk, items_[i]);
+      else snprintf(s, sizeof s, "%s", ITEMS[i].sk);
+      b.text(font_small, x + 34, yy + 2, s, WHITE, -1);
+      b.text(font_small, x + 160, yy + 2, ITEMS[i].fr, GREY, -1);
+      shown++;
+    }
+    if (idx == 0) b.text(font_small, x + 12, ly, "Batoh je prázdny.", GREY, -1);
+  } else if (menuTab_ == 1) {
+    char s[48];
+    snprintf(s, sizeof s, "%d / %d", wordsFound(), NUM_SIGN_WORDS);
+    b.text(font_small, x + w - 12 - textWidth(font_small, s), y + 36, s, YELLOW, -1);
+    int shown = 0, idx = 0;
+    for (int i = 0; i < NUM_SIGN_WORDS; i++) {
+      if (!(words_[i >> 3] & (1 << (i & 7)))) continue;
+      if (idx++ < menuScroll_) continue;
+      if (shown >= rows) break;
+      int yy = ly + 4 + shown * rowH;
+      b.text(font_small, x + 12, yy, SIGN_WORDS[i], WHITE, -1);
+      b.text(font_small, x + 130, yy, vocabFr(SIGN_WORDS[i]), GREY, -1);
+      shown++;
+    }
+    if (idx == 0) b.text(font_small, x + 12, ly + 4, "Čítaj nápisy (A).", GREY, -1);
+  } else {
+    int g = goal();
+    if (g >= 0) {
+      const Line& l = SCRIPTS[g].lines[0];
+      b.text(font_big, x + 12, ly + 4, l.sk, WHITE, BLACK);
+      if (noteFr_on_) b.text(font_small, x + 12, ly + 30, l.fr, YELLOW, -1);
+      else b.text(font_small, x + 12, ly + 30, "SELECT : FR", DIM, -1);
+    }
+    char s[64];
+    snprintf(s, sizeof s, "Tajné repliky : %d / %d", bonusFound(), bonusTotal());
+    b.text(font_small, x + 12, y + h - 40, s, GREY, -1);
+    snprintf(s, sizeof s, "Slovník : %d / %d", wordsFound(), NUM_SIGN_WORDS);
+    b.text(font_small, x + 12, y + h - 24, s, GREY, -1);
+  }
+  b.text(font_small, x + w - 72, y + h - 16, "B : späť", DIM, -1);
 }
 
 // ---------------------------------------------------------------- rendu
@@ -206,6 +412,14 @@ void Game::renderBand(Band& b) {
       world_.render(b);
       dialog_.render(b);
       break;
+    case S_NOTE:
+      world_.render(b);
+      drawNote(b);
+      break;
+    case S_MENU:
+      world_.render(b);
+      drawMenu(b);
+      break;
     case S_END:
       drawEnd(b);
       break;
@@ -217,7 +431,7 @@ void Game::renderBand(Band& b) {
     }
   }
   if (banner_ > 0 && (state_ == S_WORLD || state_ == S_DIALOG || state_ == S_FADE)) drawBanner(b);
-  if (savedShow_ > 0 && (state_ == S_WORLD || state_ == S_DIALOG) && b.y0 < 20) {
+  if (savedShow_ > 0 && state_ == S_WORLD && b.y0 < 20 && banner_ == 0) {
     // petit rappel en haut a droite : la partie vient d'etre enregistree
     int w = textWidth(font_small, "Uložené") + 12;
     b.fillRect(SCREEN_W - w - 4, 4, w, 15, DARKBLUE);
@@ -281,9 +495,11 @@ void Game::drawChapter(Band& b) {
   b.fillRect(0, 70, SCREEN_W, 96, DARKBLUE);
   b.fillRect(0, 70, SCREEN_W, 2, ORANGE);
   b.fillRect(0, 164, SCREEN_W, 2, ORANGE);
-  centerText(b, font_small, 78, "KAPITOLA 1", YELLOW, BLACK);
-  centerText(b, font_title, 92, "Košice", WHITE, BLACK);
-  centerText(b, font_small, 128, "To si ty?", GREY, BLACK);
+  char s[32];
+  snprintf(s, sizeof s, "KAPITOLA %d", chapter_ + 1);
+  centerText(b, font_small, 78, s, YELLOW, BLACK);
+  centerText(b, font_title, 92, CHAPTERS[chapter_].place, WHITE, BLACK);
+  centerText(b, font_small, 128, CHAPTERS[chapter_].subtitle, GREY, BLACK);
   if (stateTime_ > 30 && (frame_ / 30) % 2 == 0) centerText(b, font_small, 146, "Stlač A", GREY, -1);
 }
 

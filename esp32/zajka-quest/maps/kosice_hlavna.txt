@@ -2,7 +2,7 @@
 # Tuiles (legende complete : TILESET dans tools/build_assets.py) :
 #   . , paves    _ trottoir    " herbe    * massif de fleurs    ^ toits    H facade    h porte
 #   = rails      E tram        e porte du tram    Z abri de l'arret    l banc    i lampadaire
-#   T tronc      O feuillage (passe devant les personnages)    f fontaine
+#   T tronc      O feuillage (passe devant les personnages)    f fontaine    K trafika    P panneau
 # Chiffres : reperes decrits ci-dessous (« on x » : la tuile sous le repere ; sinon « ground »).
 name: Hlavná ulica
 ground: .
@@ -11,19 +11,26 @@ music: 0
 2: start right
 3: npc human down say 1 0
 4: npc human down say 4 1
+5: npc human down id predavac on K
+6: npc human up id vodic on _
+7: sign mesto on P
+8: sign zastávka on Z
+9: sign električka on E
+!: sign gymnázium on H
+$: sign dóm on P
 ---
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 HHHhHHHHHHHhHHHHHHHHHHHHHhHHHHHHHHhHHHHH
-HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+HHHHHHHHHHH!HHHHHHHHHHHHHHHHHHHHHHHHHHHH
 ________________________________________
-_.......O..........,.......O..4........,
-_..i....T....l.........f...T...l....i...
+_.......O..........,......$O..4........,
+_..i....T...5l.........f...T...l....i...
 _...."""""..........fff.......""""".....
 _...."*"*"...........,........"*"*".....
-_..i.....,.....l..3........l.........i..
+_.7i.....,.....l..3........l.........i..
 _...2.....................,.............
-_____i_____Z___________________Z__i_____
-====================EEE1EEEE============
+_____i_____8___________6_______Z__i_____
+====================E9E1EEEE============
 ====================EEEEEEEE============
 ========================================
 ________________________________________
