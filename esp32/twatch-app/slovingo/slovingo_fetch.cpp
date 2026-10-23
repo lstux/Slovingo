@@ -241,6 +241,47 @@ static void slovingo_image_names( const char *base_url, const char *path, char *
     snprintf( name, name_len, "/slv%08x.jpg", (unsigned int)slovingo_hash( url ) );
 }
 
+/* "slv" + 8 hexadecimal digits + ".json" or ".jpg": the files this module writes */
+static bool slovingo_is_cache_file( const char *name ) {
+    if ( *name == '/' )
+        name++;
+    if ( strncmp( name, "slv", 3 ) )
+        return( false );
+    for ( int i = 3; i < 11; i++ ) {
+        char c = name[ i ];
+        if ( !( ( c >= '0' && c <= '9' ) || ( c >= 'a' && c <= 'f' ) ) )
+            return( false );
+    }
+    return( !strcmp( name + 11, ".json" ) || !strcmp( name + 11, ".jpg" ) );
+}
+
+int slovingo_cache_clear( void ) {
+    int deleted = 0;
+
+    /* the directory is read again after each batch: removing files while walking it is not safe */
+    for ( int round = 0; round < 20; round++ ) {
+        char names[ 16 ][ SLOVINGO_CACHE_NAME_LEN ];
+        int found = 0;
+
+        fs::File root = SPIFFS.open( "/" );
+        if ( !root )
+            break;
+        for ( fs::File file = root.openNextFile(); file && found < 16; file = root.openNextFile() ) {
+            const char *name = file.name();
+            if ( !file.isDirectory() && slovingo_is_cache_file( name ) )
+                snprintf( names[ found++ ], SLOVINGO_CACHE_NAME_LEN, "%s%s", *name == '/' ? "" : "/", name );
+        }
+        root.close();
+        if ( !found )
+            break;
+        for ( int i = 0; i < found; i++ ) {
+            if ( SPIFFS.remove( names[ i ] ) )
+                deleted++;
+        }
+    }
+    return( deleted );
+}
+
 bool slovingo_image_prefetch( const char *base_url, const char *path ) {
     char url[ 256 ];
     char name[ SLOVINGO_CACHE_NAME_LEN ];

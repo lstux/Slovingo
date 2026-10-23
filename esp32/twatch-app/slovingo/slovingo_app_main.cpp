@@ -2830,6 +2830,10 @@ static void slv_show( slv_screen_t screen ) {
             for ( int i = 0; i < slv_course_cnt; i++ )
                 slv_add_button( slv_course[ i ].label );
             slv_add_button( TXT_OTHER_URL );
+#ifdef SLV_BIG_SCREEN
+            /* the last button: forget what was downloaded (courses are fetched again when opened) */
+            slv_tint( slv_add_button( "Vider le cache" ), 0x5A3A3A );
+#endif
             break;
 
         case SCR_SETUP:
@@ -2975,7 +2979,16 @@ static void slv_item_event_cb( lv_obj_t * obj, lv_event_t event ) {
                                 slv_goto( SCR_SHEET );
                             }
                             break;
-        case SCR_COURSES:   if ( item >= slv_course_cnt ) {
+        case SCR_COURSES:
+#ifdef SLV_BIG_SCREEN
+                            if ( item == slv_course_cnt + 1 ) {
+                                char text[ 48 ];
+                                snprintf( text, sizeof( text ), "Cache vid\xC3\xA9 (%d fichiers)", slovingo_cache_clear() );
+                                lv_label_set_text( lv_obj_get_child( slv_item[ item ], NULL ), text );
+                                break;
+                            }
+#endif
+                            if ( item >= slv_course_cnt ) {
                                 slv_goto( SCR_SETUP );
                                 break;
                             }

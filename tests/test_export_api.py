@@ -166,9 +166,11 @@ class WatchExportTest(unittest.TestCase):
         index = export_api.export(self.lang_dir, out, 20_000)
         self.assertTrue(index["map"])
         data = json.loads((out / "map.json").read_text(encoding="utf-8"))
-        self.assertEqual(data["bg"], "img/map.jpg")
-        self.assertLessEqual(data["w"], export_api.MAP_BG_W)
-        self.assertLessEqual(data["h"], export_api.MAP_BG_H)
+        self.assertEqual([bg["src"] for bg in data["bgs"]], ["img/map-280.jpg", "img/map-240.jpg"])
+        for bg, (width, height) in zip(data["bgs"], export_api.MAP_BG_SIZES):
+            self.assertLessEqual(bg["w"], width)
+            self.assertLessEqual(bg["h"], height)
+            self.assertTrue((out / bg["src"]).is_file())
         ids = [st["id"] for st in data["steps"]]
         self.assertIn("series-kitsurvie", ids)
         self.assertEqual(ids[-1], "final-exam")
@@ -180,7 +182,7 @@ class WatchExportTest(unittest.TestCase):
         out = Path(self.tmp.name) / "out6"
         export_api.export(self.lang_dir, out, 20_000, with_images=False)
         data = json.loads((out / "map.json").read_text(encoding="utf-8"))
-        self.assertNotIn("bg", data)
+        self.assertNotIn("bgs", data)
         self.assertTrue(data["steps"])
 
     def test_flatten(self):

@@ -60,6 +60,11 @@
      * when the wifi can be reached (it is switched on if needed), the cache is the fallback.
      */
     void slovingo_set_cache_hours( int hours );
+    /**
+     * @brief delete the cached downloads (index, sheets, exercises, map, pictures); settings, progress and calibration stay
+     * @return  number of files deleted
+     */
+    int slovingo_cache_clear( void );
     #define SLOVINGO_WIFI_RETRY_MS      300000      /** @brief after a wifi that did not connect, do not wait for it again for this long */
     #define SLOVINGO_IMAGE_MAX_BYTES    ( 160 * 1024 )  /** @brief bigger illustrations are not kept */
 
