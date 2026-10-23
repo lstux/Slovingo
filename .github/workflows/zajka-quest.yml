@@ -37,8 +37,11 @@ jobs:
           make -C sim
           ./build/sim --course
           mkdir -p /tmp/zq
-          ./build/sim --script sim/walk.txt --out /tmp/zq \
-            --expect titre,chapitre,carte:kosice_hlavna,carte:kosice_tram,parle:Andrea,carte:kosice_hlavna
+          ./build/sim --script sim/walk.txt --auto --out /tmp/zq \
+            --expect titre,chapitre,carte:kosice_hlavna,carte:kosice_tram,dialogue:fin,parle:Andrea,dialogue:fin,bonus:2,carte:kosice_hlavna
+          # sans traduction ouverte ni erreur, et seulement alors, les repliques secretes
+          ./build/sim --script sim/walk.txt --auto-peek --out /tmp/zq --expect parle:Andrea,dialogue:fin,bonus:0
+          ./build/sim --script sim/walk.txt --auto-wrong --out /tmp/zq --expect parle:Andrea,dialogue:fin,bonus:0
 
       - name: PlatformIO
         run: pip install platformio

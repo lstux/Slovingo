@@ -1,0 +1,11 @@
+# Répliques secrètes de Zajka Quest : le bonus de compréhension.
+#
+# Quand le joueur réussit un choix de réplique du premier coup, sans avoir ouvert la traduction
+# (SELECT), le personnage qui lui répond ajoute la réplique suivante de la liste de l'épisode.
+# Elles ne sont pas dans le cours : elles sont propres au jeu. À FAIRE RELIRE par un Slovaque.
+#
+# Format : une ligne « [fiche] », puis « emoji texte slovaque | traduction française ».
+
+[10_Series_01_Kosice_01_to-si-ty]
+🐰 Stále vieš po slovensky! | Tu parles toujours slovaque !
+🐰 Hovoríš ako Slovák! | Tu parles comme un Slovaque !

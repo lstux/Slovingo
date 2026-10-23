@@ -33,6 +33,19 @@ struct Gloss {
   const char* fr;
 };
 
+// Une replique du renard peut devenir un choix, tire d'un exercice du cours :
+//  CH_ORDER : remettre les morceaux de la phrase dans l'ordre (exercice « order ») ; items = l'ordre juste
+//  CH_PICK  : choisir la bonne phrase (exercice « qcm » : le mot remplace par les mauvaises reponses) ;
+//             items[0] = la bonne, le jeu melange
+enum ChoiceType : uint8_t { CH_ORDER, CH_PICK };
+
+struct Choice {
+  ChoiceType type;
+  const char* exercise;  // id de l'exercice d'origine
+  const char* const* items;
+  uint8_t n;
+};
+
 struct Line {
   Speaker speaker;
   const char* sk;      // la replique
@@ -40,6 +53,7 @@ struct Line {
   const Gloss* gloss;  // explications mot a mot
   uint8_t nGloss;
   const char* help;    // bulle d'aide (« + » dans le cours), ou nullptr
+  const Choice* choice;  // replique du renard a reconstituer, ou nullptr
 };
 
 struct Word {
@@ -81,6 +95,8 @@ struct Episode {
   uint16_t nWords;
   const Exercise* exercises;
   uint16_t nExercises;
+  const Line* bonus;     // repliques secretes (story/bonus.txt), une par bonne reponse sans traduction
+  uint8_t nBonus;
 };
 
 extern const Episode* const COURSE_EPISODES[];

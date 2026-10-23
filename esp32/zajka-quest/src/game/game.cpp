@@ -12,11 +12,23 @@ const uint16_t SKY_TOP = 0x2A4E, SKY_LOW = 0x5C9B, STONE = 0x8C51, STONE_DARK = 
 // planches provisoires du renard et d'Andrea (32 x 48, reprises de Zajka Run) : ligne 0 = repos
 constexpr int IDLE_ROW = 0, IDLE_FRAMES = 4;
 constexpr int FADE_HALF = 14;  // images pour fermer le rideau, autant pour le rouvrir
+
+// Episode 1 « To si ty? » : les premieres repliques du narrateur plantent le decor en entrant dans
+// le tram, le reste se joue en parlant a Andrea.
+const Episode& episode1() { return *COURSE_EPISODES[0]; }
+int introLength(const Episode& ep) {
+  int n = 0;
+  while (n < ep.nDialog && ep.dialog[n].speaker == SPK_NARRATOR) n++;
+  return n;
+}
 }  // namespace
 
 // ---------------------------------------------------------------- mise en route
 void Game::begin(Audio* audio) {
   audio_ = audio;
+  introDone_ = metAndrea_ = false;
+  bonusUsed_ = 0;
+  lastTalk_ = SPK_NONE;
   setState(S_TITLE);
   audio_->music(0);
 }
@@ -64,7 +76,7 @@ void Game::step(const Input& in) {
           break;
         case WE_TALK:
           lastTalk_ = world_.npc(world_.talkNpc()).who;
-          audio_->play(SFX_COIN);  // les dialogues arrivent a l'etape suivante
+          talkTo(lastTalk_);
           break;
         default:
           break;
@@ -77,7 +89,14 @@ void Game::step(const Input& in) {
         if (world_.map().music != ALL_MAPS[from]->music) audio_->music(world_.map().music);
         warp_ = nullptr;
       }
-      if (stateTime_ >= 2 * FADE_HALF) setState(S_WORLD);
+      if (stateTime_ >= 2 * FADE_HALF) {
+        setState(S_WORLD);
+        enteredMap();
+      }
+      break;
+    case S_DIALOG:
+      dialog_.step(in, audio_);
+      if (!dialog_.active()) setState(S_WORLD);
       break;
   }
 }
@@ -96,6 +115,10 @@ void Game::renderBand(Band& b) {
     case S_WORLD:
       world_.render(b);
       break;
+    case S_DIALOG:
+      world_.render(b);
+      dialog_.render(b);
+      break;
     case S_FADE: {
       world_.render(b);
       int t = stateTime_ <= FADE_HALF ? stateTime_ : 2 * FADE_HALF - stateTime_;
@@ -104,6 +127,44 @@ void Game::renderBand(Band& b) {
     }
   }
   if (volumeShow_ > 0) drawVolume(b);
+}
+
+// ---------------------------------------------------------------- histoire du chapitre 1
+void Game::say(const Line* lines, int n, bool withBonus) {
+  if (n <= 0) return;
+  const Episode& ep = episode1();
+  if (withBonus) dialog_.start(lines, n, COURSE_DEFAULT_NAME, ep.bonus, ep.nBonus, &bonusUsed_);
+  else dialog_.start(lines, n, COURSE_DEFAULT_NAME);
+  setState(S_DIALOG);
+}
+
+// En arrivant sur une carte : le narrateur plante le decor du tram, la premiere fois.
+void Game::enteredMap() {
+  const Episode& ep = episode1();
+  if (world_.mapIndex() == MAP_KOSICE_TRAM && !introDone_) {
+    introDone_ = true;
+    say(ep.dialog, introLength(ep), false);
+  }
+}
+
+void Game::talkTo(Speaker who) {
+  const Episode& ep = episode1();
+  if (who == SPK_ANDREA) {
+    if (!metAndrea_) {
+      metAndrea_ = true;
+      int k = introLength(ep);
+      say(ep.dialog + k, ep.nDialog - k, true);
+    } else {
+      // ensuite, Andrea redit sa derniere replique de l'episode
+      for (int i = ep.nDialog - 1; i >= 0; i--)
+        if (ep.dialog[i].speaker == SPK_ANDREA) {
+          say(&ep.dialog[i], 1, false);
+          break;
+        }
+    }
+    return;
+  }
+  audio_->play(SFX_BUMP);  // personne d'autre n'a encore de repliques
 }
 
 // Rideau : deux bandes noires qui se rejoignent au milieu de l'ecran.

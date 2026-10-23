@@ -5,9 +5,25 @@ Une aventure en vue de dessus dans l'univers de [Zajka Friends](https://github.c
 les lieux et parle aux personnages. C'est le pendant calme de [Zajka Run](../zajka-run/) : on peut
 finir le jeu sans comprendre le slovaque, mais le comprendre rend le voyage plus riche.
 
-> **État : prototype.** Écran titre, carte du chapitre 1, puis la rue Hlavná et l'intérieur du
-> tram, où l'on retrouve Andrea. Le contenu de l'épisode 1 est converti depuis le cours. Viennent
-> ensuite les dialogues et la sauvegarde. Les graphismes sont provisoires.
+> **État : prototype.** Écran titre, carte du chapitre 1, la rue Hlavná et l'intérieur du tram,
+> où l'on retrouve Andrea : le dialogue de l'épisode 1 (« To si ty? ») se joue en entier, avec
+> la traduction à la demande et deux choix de réplique. Vient ensuite la sauvegarde. Les
+> graphismes sont provisoires.
+
+## Le dialogue
+
+En montant dans le tram, le Narrateur plante le décor (les premières répliques de l'épisode).
+Parler à Andrea (A, face à elle) joue la suite. Ensuite, elle redit sa dernière réplique.
+
+- **A** termine la phrase qui s'écrit, puis passe à la suivante (tenu : plus vite).
+- **SELECT** passe du slovaque à la traduction française, puis à l'aide du cours (« + »).
+- **Les répliques du renard** deviennent des choix quand un exercice du cours s'y prête :
+  remettre les morceaux dans l'ordre (exercice `order`) ou choisir la bonne phrase parmi celles
+  où un mot est remplacé par les mauvaises réponses d'un `qcm` (« To si ty? » / « To som ty? » /
+  « To je ty? »). Une erreur ne coûte rien : on rechoisit.
+- **Les répliques secrètes** : un choix réussi du premier coup, sans avoir ouvert la traduction,
+  en gagne une, que le personnage dit à la fin de la conversation. Elles sont propres au jeu,
+  dans `story/bonus.txt`, **à faire relire par un Slovaque**.
 
 ## Décisions
 
@@ -49,9 +65,11 @@ tenant **B**. Le `.fw` est aussi dans les *Artifacts* du workflow « Zajka Quest
 src/main_odroid.cpp   matériel : écran (LovyanGFX, DMA par bandes), boutons, son (DAC), lanceur
 src/game/             le jeu, sans Arduino ; gfx, audio et input sont repris de Zajka Run
 src/game/world.*      le monde : cartes en tuiles, déplacement case par case, PNJ, portes, caméra
+src/game/dialog.*     la boîte de dialogue : texte lettre par lettre, SK/FR/aide, choix de réplique
 src/game/course.h     structures du contenu du cours (répliques, mots, exercices)
 src/game/gen/         données générées (images, polices, cours) : ne pas éditer
 maps/*.txt            cartes en texte (légende en tête de chaque fichier)
+story/bonus.txt       répliques secrètes (bonus de compréhension), propres au jeu
 art/tiles/            planche de tuiles 16 × 16 (ordre : TILESET dans tools/build_assets.py)
 art/walk/             planches de marche 16 × 24 (lignes bas, haut, gauche, droite)
 art/sprites/          personnages 32 × 48 de l'écran titre (ceux de Run)
@@ -110,12 +128,15 @@ de la série Košice). Le script garde le dialogue (`! 🦊 …`, `> traduction`
 python3 tools/build_assets.py      # après un changement dans art/
 make -C sim
 build/sim --course                 # résumé du cours embarqué, glyphes manquants dans la police
-build/sim --script sim/walk.txt --out /tmp/zq \
-    --expect titre,chapitre,carte:kosice_hlavna,carte:kosice_tram,parle:Andrea,carte:kosice_hlavna
+build/sim --script sim/walk.txt --auto --out /tmp/zq \
+    --expect titre,chapitre,carte:kosice_tram,parle:Andrea,dialogue:fin,bonus:2,carte:kosice_hlavna
+build/sim --script sim/walk.txt --auto-peek ...   # ouvre la traduction à chaque choix : pas de bonus
+build/sim --script sim/walk.txt --auto-wrong ...  # se trompe une fois à chaque choix : pas de bonus
 ZQ_TRACE=1 build/sim --script mon_script.txt      # affiche chaque case du renard
 ```
 
 Un script liste des plages d'images et des boutons (`100 102 S` = START des images 100 à 102)
 et `shot 200` pour une capture. `--expect` vérifie que le jeu passe par ces états (`titre`,
-`chapitre`, `monde`, `fondu`), ces cartes (`carte:…`) et ces conversations (`parle:…`), dans
-l'ordre.
+`chapitre`, `monde`, `fondu`, `dialogue`), ces cartes (`carte:…`), ces conversations
+(`parle:…`, `dialogue:fin`) et ce nombre de répliques secrètes (`bonus:…`), dans l'ordre. Avec
+`--auto`, un robot mène les conversations et l'horloge du script s'arrête pendant ce temps.

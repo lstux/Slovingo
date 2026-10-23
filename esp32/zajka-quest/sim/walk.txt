@@ -1,7 +1,8 @@
 # Parcours du chapitre 1 : titre, carte du chapitre, rue Hlavna jusqu'au tram, Andrea, retour.
 # « debut fin boutons » : boutons tenus de l'image debut a l'image fin (L R U D A B S=START E=SELECT)
-# Verifie par la CI :
-#   build/sim --script sim/walk.txt --expect titre,chapitre,carte:kosice_hlavna,carte:kosice_tram,parle:Andrea,carte:kosice_hlavna
+# A lancer avec --auto : le robot mene les conversations (l'horloge du script s'arrete pendant ce temps).
+# Verifie par la CI (deux repliques secretes : les deux choix reussis du premier coup) :
+#   build/sim --script sim/walk.txt --auto --expect titre,chapitre,carte:kosice_hlavna,carte:kosice_tram,dialogue:fin,parle:Andrea,dialogue:fin,bonus:2,carte:kosice_hlavna
 10 12 S
 60 62 A
 # rue Hlavna : de (4, 9) vers la droite jusqu'a (23, 9), puis en bas jusqu'a la porte du tram (23, 11)

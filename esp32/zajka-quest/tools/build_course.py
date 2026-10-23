@@ -16,6 +16,11 @@ Ce qui est repris de chaque fiche (format : docs/Format-friends.md du cours) :
   « ## Les nouveaux mots »                le vocabulaire
   exercises/<fiche>.exercises.json        exercices qcm, listen et order
 
+Les repliques du renard deviennent des choix quand un exercice s'y prete : « order » dont la
+phrase est la replique (remettre les morceaux dans l'ordre), sinon « qcm » dont le mot figure
+dans la replique (choisir la bonne phrase parmi celles ou le mot est remplace par les mauvaises
+reponses). Les repliques secretes (bonus de comprehension) viennent de story/bonus.txt.
+
 Le marquage {{fr:...}} / {{...}} est retire, [USER_NAME] devient NAME_MARK (\\001) et les
 caracteres absents de la police du jeu (emojis surtout) sont enleves, avec un avertissement.
 Les fichiers generes sont commites : la compilation PlatformIO n'a pas besoin du cours.
@@ -30,6 +35,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 GEN = os.path.join(ROOT, "src", "game", "gen")
+BONUS = os.path.join(ROOT, "story", "bonus.txt")
 DEFAULT_COURSE = os.path.normpath(os.path.join(ROOT, "..", "..", "langs", "sk-fr-friends"))
 
 sys.path.insert(0, HERE)
@@ -195,8 +201,62 @@ def parse_episode(course, stem):
             if e["choicesSk"] and len(e["choicesSk"]) != len(e["choicesFr"]):
                 warn.other.append(f"{e['id']} : choix SK et FR de longueurs differentes")
             ep["exercises"].append(e)
+    add_choices(ep, warn)
     warn.report(stem)
     return ep
+
+
+def norm(s):
+    return re.sub(r"\s+", " ", s).strip().lower()
+
+
+def add_choices(ep, warn):
+    """Repliques du renard -> choix tires des exercices order, puis qcm."""
+    for c in ep["dialog"]:
+        c["choice"] = None
+        if c["speaker"] != "SPK_FOX":
+            continue
+        for e in ep["exercises"]:
+            if e["type"] == "EX_ORDER" and norm(e["sk"]) == norm(c["sk"]) and len(e["tokensSk"]) >= 2:
+                c["choice"] = ("CH_ORDER", e["id"], e["tokensSk"])
+                break
+        if c["choice"]:
+            continue
+        for e in ep["exercises"]:
+            if e["type"] != "EX_QCM" or not e["choicesSk"]:
+                continue
+            pat = re.compile(r"(?<!\w)" + re.escape(e["sk"]) + r"(?!\w)", re.I)
+            if not pat.search(c["sk"]):
+                continue
+            wrong = []
+            for alt in e["choicesSk"]:
+                cand = pat.sub(lambda m: alt[0].upper() + alt[1:] if m.group(0)[0].isupper() else alt, c["sk"], 1)
+                if norm(cand) != norm(c["sk"]) and cand not in wrong:
+                    wrong.append(cand)
+            if len(wrong) >= 2:
+                c["choice"] = ("CH_PICK", e["id"], [c["sk"]] + wrong[:2])
+                break
+
+
+def load_bonus(warn):
+    """story/bonus.txt -> {fiche: [replique, ...]}."""
+    out, cur = {}, None
+    if not os.path.exists(BONUS):
+        return out
+    for n, line in enumerate(open(BONUS, encoding="utf-8"), 1):
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("[") and line.endswith("]"):
+            cur = out.setdefault(line[1:-1], [])
+            continue
+        if cur is None or "|" not in line:
+            sys.exit(f"story/bonus.txt:{n} : ligne inattendue (attendu « [fiche] » ou « emoji texte | traduction »)")
+        sk, fr = (t.strip() for t in line.split("|", 1))
+        spk, text = speaker_of(sk)
+        cur.append({"speaker": spk, "sk": clean(text, warn), "fr": clean(fr, warn), "gloss": [], "help": [],
+                    "choice": None})
+    return out
 
 
 # ---------------------------------------------------------------- sortie C
@@ -225,8 +285,14 @@ def c_lines(name, cards, out):
             out.append(f"static const Gloss {gname}[{len(c['gloss'])}] = {{ "
                        + ", ".join(f"{{{c_str(a)}, {c_str(b)}}}" for a, b in c["gloss"]) + " };")
         help_ = " ".join(c["help"]) if c["help"] else None
+        chname = "nullptr"
+        if c.get("choice"):
+            kind, exid, items = c["choice"]
+            iname = c_strs(f"{name}_c{i}_items", items, out)
+            chname = f"&{name}_c{i}"
+            out.append(f"static const Choice {name}_c{i} = {{ {kind}, {c_str(exid)}, {iname}, {len(items)} }};")
         rows.append(f"  {{{c['speaker']}, {c_str(c['sk'])}, {c_str(c['fr'])}, {gname}, "
-                    f"{len(c['gloss'])}, {c_str(help_)}}},")
+                    f"{len(c['gloss'])}, {c_str(help_)}, {chname}}},")
     out.append(f"static const Line {name}[{len(cards)}] = {{\n" + "\n".join(rows) + "\n};")
     return name
 
@@ -258,10 +324,11 @@ def write(episodes, default_name):
                             f"{ts}, {tf}, {len(e['tokensSk'])}}},")
             exs = f"{p}_exercises"
             out.append(f"static const Exercise {exs}[{len(rows)}] = {{\n" + "\n".join(rows) + "\n};")
+        bonus = c_lines(f"{p}_bonus", ep["bonus"], out)
         out.append(f"static const Episode {p} = {{ {c_str(ep['id'])}, {c_str(ep['series'])}, {ep['seriesNum']}, "
                    f"{ep['episodeNum']}, {c_str(ep['title'])}, {c_str(ep['place'])},\n"
                    f"  {dialog}, {len(ep['dialog'])}, {extra}, {len(ep['extra'])}, {words}, {len(ep['words'])}, "
-                   f"{exs}, {len(ep['exercises'])} }};")
+                   f"{exs}, {len(ep['exercises'])}, {bonus}, {len(ep['bonus'])} }};")
         out.append("")
         names.append(p)
     out.append("const Episode* const COURSE_EPISODES[] = { " + ", ".join(f"&{n}" for n in names) + " };")
@@ -284,6 +351,10 @@ def dump(ep):
         for c in cards:
             print(f"  [{c['speaker'][4:]:8}] {c['sk'].replace(NAME_MARK, '<NOM>')}")
             print(f"  {'':10} = {c['fr'].replace(NAME_MARK, '<NOM>')}   ({len(c['gloss'])} mots, aide : {'oui' if c['help'] else 'non'})")
+            if c.get("choice"):
+                kind, exid, items = c["choice"]
+                print(f"  {'':10} choix {kind[3:].lower()} ({exid}) : " + " / ".join(items))
+    print(f"-- répliques secrètes ({len(ep['bonus'])}) : " + " / ".join(b["sk"] for b in ep["bonus"]))
     print(f"-- mots ({len(ep['words'])}) : " + ", ".join(f"{a} = {b}" for a, b in ep["words"]))
     print(f"-- exercices ({len(ep['exercises'])}) : " + ", ".join(f"{e['type'][3:].lower()} {e['id']}" for e in ep["exercises"]))
 
@@ -302,6 +373,11 @@ def main():
         if not glob.glob(os.path.join(args.course, "md", s + ".md")):
             sys.exit(f"fiche introuvable : md/{s}.md")
     episodes = [parse_episode(args.course, s) for s in stems]
+    bwarn = Warn()
+    bonus = load_bonus(bwarn)
+    bwarn.report("story/bonus.txt")
+    for ep in episodes:
+        ep["bonus"] = bonus.get(ep["id"], [])
     lang = json.load(open(os.path.join(args.course, "lang.json"), encoding="utf-8"))
     default_name = lang.get("site", {}).get("user_name_default", "Gab")
     if args.dump:

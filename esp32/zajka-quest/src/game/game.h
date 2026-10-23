@@ -5,12 +5,14 @@
 #include <stdint.h>
 
 #include "audio.h"
+#include "dialog.h"
 #include "gfx.h"
 #include "input.h"
 #include "world.h"
 
 // S_FADE : passage d'une carte a l'autre (rideau noir qui se ferme puis se rouvre).
-enum GameState : uint8_t { S_TITLE, S_CHAPTER, S_WORLD, S_FADE };
+// S_DIALOG : une conversation, par-dessus le monde fige.
+enum GameState : uint8_t { S_TITLE, S_CHAPTER, S_WORLD, S_FADE, S_DIALOG };
 
 class Game {
  public:
@@ -21,6 +23,8 @@ class Game {
   GameState state() const { return state_; }
   const World& world() const { return world_; }
   Speaker lastTalk() const { return lastTalk_; }  // dernier PNJ a qui le renard a parle
+  const Dialog& dialog() const { return dialog_; }
+  int bonusFound() const { return bonusUsed_; }   // repliques secretes gagnees
 
  private:
   void setState(GameState s);
@@ -28,6 +32,9 @@ class Game {
   void drawTitle(Band& b);
   void drawChapter(Band& b);
   void drawFade(Band& b, int covered);
+  void talkTo(Speaker who);
+  void enteredMap();
+  void say(const Line* lines, int n, bool withBonus);
   void drawVolume(Band& b);
   void centerText(Band& b, const Font& f, int y, const char* s, uint16_t c, int shadow = 0);
 
@@ -39,4 +46,9 @@ class Game {
   World world_;
   const MapMark* warp_ = nullptr;  // porte en cours de franchissement (S_FADE)
   Speaker lastTalk_ = SPK_NONE;
+  Dialog dialog_;
+  // avancement du chapitre 1 (sera sauvegarde a l'etape suivante)
+  bool introDone_ = false;  // le narrateur a plante le decor du tram
+  bool metAndrea_ = false;  // le dialogue de l'episode 1 a ete joue
+  int bonusUsed_ = 0;
 };

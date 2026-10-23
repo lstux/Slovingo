@@ -5,6 +5,8 @@
 //   build/sim --script sim/demo.txt --out /tmp/zq      rejoue un script (voir demo.txt)
 //   build/sim --frames 600 --every 120 --out /tmp/zq   une capture toutes les 2 s
 //   ZQ_TRACE=1 build/sim --script ...                  affiche chaque case du renard
+//   build/sim --script sim/walk.txt --auto             le robot mene les dialogues (bonnes reponses) ;
+//                                                      --auto-peek ouvre la traduction, --auto-wrong se trompe
 //   build/sim --course                                 resume du cours embarque, glyphes manquants
 #include <stdio.h>
 #include <stdlib.h>
@@ -122,6 +124,7 @@ static const char* stateName(GameState s) {
     case S_CHAPTER: return "chapitre";
     case S_WORLD: return "monde";
     case S_FADE: return "fondu";
+    case S_DIALOG: return "dialogue";
   }
   return "?";
 }
@@ -132,7 +135,7 @@ int main(int argc, char** argv) {
   // etats et cartes attendus, dans l'ordre (--expect titre,chapitre,carte:kosice_tram)
   std::vector<std::string> expect;
   int frames = 0, every = 0;
-  bool wav = false;
+  bool wav = false, autoDialog = false, autoPeek = false, autoWrong = false;
   for (int i = 1; i < argc; i++) {
     std::string a = argv[i];
     if (a == "--out") out = argv[++i];
@@ -140,6 +143,9 @@ int main(int argc, char** argv) {
     else if (a == "--frames") frames = atoi(argv[++i]);
     else if (a == "--every") every = atoi(argv[++i]);
     else if (a == "--wav") wav = true;
+    else if (a == "--auto") autoDialog = true;
+    else if (a == "--auto-peek") autoDialog = autoPeek = true;    // ouvre la traduction a chaque choix
+    else if (a == "--auto-wrong") autoDialog = autoWrong = true;  // se trompe une fois a chaque choix
     else if (a == "--shots") {
       char* s = argv[++i];
       for (char* t = strtok(s, ","); t; t = strtok(nullptr, ",")) shots.push_back(atoi(t));
@@ -183,10 +189,50 @@ int main(int argc, char** argv) {
   const char* lastMap = nullptr;  // carte affichee (monde ou fondu)
   Speaker lastTalk = SPK_NONE;
   int lastTx = -1, lastTy = -1;
-  for (int f = 1; f <= frames; f++) {
+  // Avec --auto, le robot mene les conversations et l'horloge du script s'arrete pendant ce
+  // temps : les images du script ne comptent que hors dialogue.
+  int t = 0, guard = 0;
+  bool wasChoosing = false, peeked = false, erred = false;
+  const Line* choiceLine = nullptr;
+  for (int f = 1; t < frames && guard < frames * 20; f++, guard++) {
     uint16_t raw = 0;
-    for (auto& s : segs)
-      if (f >= s.from && f <= s.to) raw |= s.btn;
+    bool talking = autoDialog && game.state() == S_DIALOG;
+    if (!talking) {
+      t++;
+      for (auto& s : segs)
+        if (t >= s.from && t <= s.to) raw |= s.btn;
+    } else {
+      const Dialog& d = game.dialog();
+      if (d.choosing()) {
+        if (!wasChoosing || d.current() != choiceLine) {
+          peeked = erred = false;
+          choiceLine = d.current();
+          if (getenv("ZQ_TRACE"))
+            printf("image %5d : choix « %s » (erreurs jusqu'ici : %d)\n", f, choiceLine->sk, d.mistakes());
+        }
+        if (f % 4 == 0 && in.held == 0) {  // touches relachees : sinon la pression ne compte pas
+          if (autoPeek && !peeked) {
+            raw = BTN_SELECT;
+            peeked = true;
+          } else if (autoWrong && !erred) {
+            // une option qui n'est pas la bonne, puis A
+            if (d.cursor() == d.correctOption()) raw = BTN_DOWN;
+            else {
+              if (getenv("ZQ_TRACE")) printf("image %5d : erreur voulue (curseur %d, bon %d)\n", f, d.cursor(), d.correctOption());
+              raw = BTN_A;
+              erred = true;
+            }
+          } else if (d.cursor() != d.correctOption()) {
+            raw = BTN_DOWN;
+          } else {
+            raw = BTN_A;
+          }
+        }
+      } else if (f % 6 == 0 && in.held == 0) {
+        raw = BTN_A;
+      }
+      wasChoosing = d.choosing();
+    }
     in.update(raw);
     game.step(in);
     if (wav) {
@@ -195,8 +241,20 @@ int main(int argc, char** argv) {
     }
     if (game.state() != last) {
       printf("image %5d : %s -> %s\n", f, stateName(last), stateName(game.state()));
+      if (last == S_DIALOG) {
+        printf("image %5d : dialogue fini, %d replique(s) secrete(s) en tout, %d erreur(s)\n", f,
+               game.bonusFound(), game.dialog().mistakes());
+        seen.push_back("dialogue:fin");
+        seen.push_back("bonus:" + std::to_string(game.bonusFound()));
+      }
       last = game.state();
       seen.push_back(stateName(last));
+    }
+    if (game.lastTalk() != lastTalk) {
+      lastTalk = game.lastTalk();
+      const char* who = lastTalk == SPK_FOX ? "renard" : SPEAKER_NAMES[lastTalk];
+      printf("image %5d : parle a %s\n", f, who);
+      seen.push_back(std::string("parle:") + who);
     }
     if (game.state() == S_WORLD || game.state() == S_FADE) {
       const World& w = game.world();
@@ -208,17 +266,12 @@ int main(int argc, char** argv) {
       // ZQ_TRACE=1 : la case du renard a chaque changement (pour ecrire les scripts)
       if (getenv("ZQ_TRACE") && (w.player().tx != lastTx || w.player().ty != lastTy))
         printf("image %5d : case (%d, %d)\n", f, w.player().tx, w.player().ty);
-      if (game.lastTalk() != lastTalk) {
-        lastTalk = game.lastTalk();
-        const char* who = lastTalk == SPK_FOX ? "renard" : SPEAKER_NAMES[lastTalk];
-        printf("image %5d : parle a %s\n", f, who);
-        seen.push_back(std::string("parle:") + who);
-      }
       lastTx = w.player().tx;
       lastTy = w.player().ty;
     }
     bool shot = (every && f % every == 0);
-    for (int s : shots) shot |= (s == f);
+    if (!talking)
+      for (int s : shots) shot |= (s == t);
     if (shot) {
       renderFrame(game);
       char name[64];
