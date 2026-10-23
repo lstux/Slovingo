@@ -1,0 +1,6 @@
+# Reprise d'une partie enregistree (a lancer apres walk.txt, avec le meme --save) :
+#   build/sim --script sim/walk.txt --auto --save /tmp/zq.sav
+#   build/sim --script sim/resume.txt --save /tmp/zq.sav --expect reprise,bonus:2,carte:kosice_hlavna
+# START sur « Pokracovat » : retour rue Hlavna, devant le tram, avec les repliques secretes gagnees.
+10 12 S
+shot 40

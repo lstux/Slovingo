@@ -37,8 +37,10 @@ jobs:
           make -C sim
           ./build/sim --course
           mkdir -p /tmp/zq
-          ./build/sim --script sim/walk.txt --auto --out /tmp/zq \
+          ./build/sim --script sim/walk.txt --auto --save /tmp/zq.sav --out /tmp/zq \
             --expect titre,chapitre,carte:kosice_hlavna,carte:kosice_tram,dialogue:fin,parle:Andrea,dialogue:fin,bonus:2,carte:kosice_hlavna
+          # la partie reprend la ou elle a ete enregistree
+          ./build/sim --script sim/resume.txt --save /tmp/zq.sav --out /tmp/zq --expect reprise,bonus:2,carte:kosice_hlavna
           # sans traduction ouverte ni erreur, et seulement alors, les repliques secretes
           ./build/sim --script sim/walk.txt --auto-peek --out /tmp/zq --expect parle:Andrea,dialogue:fin,bonus:0
           ./build/sim --script sim/walk.txt --auto-wrong --out /tmp/zq --expect parle:Andrea,dialogue:fin,bonus:0

@@ -24,13 +24,89 @@ int introLength(const Episode& ep) {
 }  // namespace
 
 // ---------------------------------------------------------------- mise en route
-void Game::begin(Audio* audio) {
+void Game::begin(Audio* audio, Storage* storage) {
   audio_ = audio;
+  storage_ = storage;
   introDone_ = metAndrea_ = false;
   bonusUsed_ = 0;
   lastTalk_ = SPK_NONE;
+  hasSave_ = false;
+  if (storage_ && storage_->read(&saved_, sizeof saved_) && saved_.valid() && saved_.map < NUM_MAPS) {
+    const MapDef& m = *ALL_MAPS[saved_.map];
+    hasSave_ = saved_.tx < m.w && saved_.ty < m.h && saved_.dir >= 0 && saved_.dir <= DIR_RIGHT;
+  }
+  menu_ = 0;
+  confirm_ = false;
   setState(S_TITLE);
   audio_->music(0);
+}
+
+// ---------------------------------------------------------------- sauvegarde
+void Game::save() {
+  if (!storage_) return;
+  SaveData d;
+  d.map = (uint8_t)world_.mapIndex();
+  d.tx = (uint8_t)world_.player().tx;
+  d.ty = (uint8_t)world_.player().ty;
+  d.dir = world_.player().dir;
+  d.flags = (introDone_ ? SF_INTRO_DONE : 0) | (metAndrea_ ? SF_MET_ANDREA : 0);
+  d.bonus = (uint8_t)bonusUsed_;
+  d.check = d.sum();
+  if (storage_->write(&d, sizeof d)) {
+    saved_ = d;
+    hasSave_ = true;
+    savedShow_ = 70;
+  }
+}
+
+void Game::newGame() {
+  if (storage_ && hasSave_) storage_->erase();
+  hasSave_ = false;
+  introDone_ = metAndrea_ = false;
+  bonusUsed_ = 0;
+  audio_->play(SFX_PAUSE);
+  audio_->music(-1);
+  setState(S_CHAPTER);
+}
+
+bool Game::continueGame() {
+  if (!hasSave_) return false;
+  introDone_ = saved_.flags & SF_INTRO_DONE;
+  metAndrea_ = saved_.flags & SF_MET_ANDREA;
+  bonusUsed_ = saved_.bonus;
+  world_.load(saved_.map, saved_.tx, saved_.ty, (Dir)saved_.dir);
+  audio_->play(SFX_PAUSE);
+  audio_->music(world_.map().music);
+  setState(S_WORLD);
+  return true;
+}
+
+// Ecran titre : START ou A. Avec une partie enregistree : continuer ou recommencer (confirme).
+void Game::stepTitle(const Input& in) {
+  bool ok = in.hit(BTN_START) || in.hit(BTN_A);
+  if (!hasSave_) {
+    if (ok) newGame();
+    return;
+  }
+  if (confirm_) {
+    if (in.hit(BTN_A)) newGame();
+    else if (in.hit(BTN_B) || in.hit(BTN_START)) {
+      confirm_ = false;
+      audio_->play(SFX_BUMP);
+    }
+    return;
+  }
+  if (in.hit(BTN_UP) || in.hit(BTN_DOWN)) {
+    menu_ ^= 1;
+    audio_->play(SFX_COIN);
+  }
+  if (ok) {
+    if (menu_ == 0) continueGame();
+    else {
+      confirm_ = true;
+      audio_->play(SFX_PAUSE);
+    }
+  }
 }
 
 void Game::setState(GameState s) {
@@ -43,6 +119,7 @@ void Game::step(const Input& in) {
   frame_++;
   stateTime_++;
   if (volumeShow_ > 0) volumeShow_--;
+  if (savedShow_ > 0) savedShow_--;
   if (in.hit(BTN_VOLUME)) {
     audio_->setVolume((audio_->volume() + 1) % 5);
     volumeShow_ = 90;
@@ -50,11 +127,7 @@ void Game::step(const Input& in) {
   }
   switch (state_) {
     case S_TITLE:
-      if (in.hit(BTN_START) || in.hit(BTN_A)) {
-        audio_->play(SFX_PAUSE);
-        audio_->music(-1);
-        setState(S_CHAPTER);
-      }
+      stepTitle(in);
       break;
     case S_CHAPTER:
       if (stateTime_ > 30 && (in.hit(BTN_START) || in.hit(BTN_A))) {
@@ -91,12 +164,16 @@ void Game::step(const Input& in) {
       }
       if (stateTime_ >= 2 * FADE_HALF) {
         setState(S_WORLD);
+        save();
         enteredMap();
       }
       break;
     case S_DIALOG:
       dialog_.step(in, audio_);
-      if (!dialog_.active()) setState(S_WORLD);
+      if (!dialog_.active()) {
+        setState(S_WORLD);
+        save();
+      }
       break;
   }
 }
@@ -125,6 +202,12 @@ void Game::renderBand(Band& b) {
       drawFade(b, t * (SCREEN_H / 2) / FADE_HALF);
       break;
     }
+  }
+  if (savedShow_ > 0 && (state_ == S_WORLD || state_ == S_DIALOG) && b.y0 < 20) {
+    // petit rappel en haut a droite : la partie vient d'etre enregistree
+    int w = textWidth(font_small, "Uložené") + 12;
+    b.fillRect(SCREEN_W - w - 4, 4, w, 15, DARKBLUE);
+    b.text(font_small, SCREEN_W - w + 2, 5, "Uložené", WHITE, -1);
   }
   if (volumeShow_ > 0) drawVolume(b);
 }
@@ -197,7 +280,23 @@ void Game::drawTitle(Band& b) {
   b.fillRect(0, 82, SCREEN_W, 2, ORANGE);
   centerText(b, font_title, 30, "ZAJKA QUEST", ORANGE, BLACK);
   centerText(b, font_small, 66, "Košice  →  Bratislava", WHITE, BLACK);
-  if ((frame_ / 30) % 2 == 0) centerText(b, font_big, 194, "Stlač START", WHITE, BLACK);
+  if (confirm_) {
+    b.fillRect(40, 176, SCREEN_W - 80, 44, DARKBLUE);
+    b.fillRect(40, 176, SCREEN_W - 80, 2, ORANGE);
+    centerText(b, font_small, 182, "Vymazať uloženú hru?", WHITE, BLACK);
+    centerText(b, font_small, 200, "A : áno     B : nie", GREY, -1);
+  } else if (hasSave_) {
+    const char* items[2] = {"Pokračovať", "Nová hra"};
+    for (int i = 0; i < 2; i++) {
+      int y = 182 + i * 20;
+      uint16_t c = i == menu_ ? YELLOW : WHITE;
+      int w = textWidth(font_big, items[i]);
+      b.text(font_big, (SCREEN_W - w) / 2, y, items[i], c, BLACK);
+      if (i == menu_) b.text(font_big, (SCREEN_W - w) / 2 - 16, y, "›", YELLOW, BLACK);
+    }
+  } else if ((frame_ / 30) % 2 == 0) {
+    centerText(b, font_big, 194, "Stlač START", WHITE, BLACK);
+  }
   b.fillRect(0, SCREEN_H - 14, SCREEN_W, 14, 0x18E6);
   centerText(b, font_small, SCREEN_H - 13, "Slovingo · Zajka Friends", GREY, -1);
 }

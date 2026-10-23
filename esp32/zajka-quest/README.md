@@ -7,8 +7,16 @@ finir le jeu sans comprendre le slovaque, mais le comprendre rend le voyage plus
 
 > **État : prototype.** Écran titre, carte du chapitre 1, la rue Hlavná et l'intérieur du tram,
 > où l'on retrouve Andrea : le dialogue de l'épisode 1 (« To si ty? ») se joue en entier, avec
-> la traduction à la demande et deux choix de réplique. Vient ensuite la sauvegarde. Les
+> la traduction à la demande et deux choix de réplique. La partie est sauvegardée. Les
 > graphismes sont provisoires.
+
+## Sauvegarde
+
+La partie s'enregistre toute seule dans la NVS de l'ESP32 (espace `zquest`), en passant une
+porte et à la fin de chaque conversation : carte, case et orientation du renard, avancement du
+chapitre, répliques secrètes gagnées. Un petit « Uložené » s'affiche en haut à droite.
+À l'écran titre, s'il y a une partie : **Pokračovať** (continuer) ou **Nová hra** (nouvelle
+partie, après confirmation « Vymazať uloženú hru? », A : oui, B : non).
 
 ## Le dialogue
 
@@ -66,6 +74,7 @@ src/main_odroid.cpp   matériel : écran (LovyanGFX, DMA par bandes), boutons, s
 src/game/             le jeu, sans Arduino ; gfx, audio et input sont repris de Zajka Run
 src/game/world.*      le monde : cartes en tuiles, déplacement case par case, PNJ, portes, caméra
 src/game/dialog.*     la boîte de dialogue : texte lettre par lettre, SK/FR/aide, choix de réplique
+src/game/save.*       le bloc de sauvegarde (la console l'écrit en NVS, le simulateur en mémoire)
 src/game/course.h     structures du contenu du cours (répliques, mots, exercices)
 src/game/gen/         données générées (images, polices, cours) : ne pas éditer
 maps/*.txt            cartes en texte (légende en tête de chaque fichier)
@@ -128,8 +137,9 @@ de la série Košice). Le script garde le dialogue (`! 🦊 …`, `> traduction`
 python3 tools/build_assets.py      # après un changement dans art/
 make -C sim
 build/sim --course                 # résumé du cours embarqué, glyphes manquants dans la police
-build/sim --script sim/walk.txt --auto --out /tmp/zq \
+build/sim --script sim/walk.txt --auto --save /tmp/zq.sav --out /tmp/zq \
     --expect titre,chapitre,carte:kosice_tram,parle:Andrea,dialogue:fin,bonus:2,carte:kosice_hlavna
+build/sim --script sim/resume.txt --save /tmp/zq.sav --expect reprise,bonus:2   # reprise de la partie
 build/sim --script sim/walk.txt --auto-peek ...   # ouvre la traduction à chaque choix : pas de bonus
 build/sim --script sim/walk.txt --auto-wrong ...  # se trompe une fois à chaque choix : pas de bonus
 ZQ_TRACE=1 build/sim --script mon_script.txt      # affiche chaque case du renard

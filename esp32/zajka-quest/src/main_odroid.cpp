@@ -4,6 +4,7 @@
 //   ecran ILI9341 320x240 en SPI (MOSI 23, SCLK 18, CS 5, DC 21, retroeclairage 14)
 //   croix : ADC, X sur GPIO34, Y sur GPIO35 ; A 32, B 33, SELECT 27, START 39, MENU 13, VOLUME 0
 //   son : DAC interne sur GPIO25 + GPIO26 (sortie differentielle vers l'ampli du haut-parleur)
+//   sauvegarde : NVS (Preferences), espace « zquest »
 #include <Arduino.h>
 #include <driver/i2s.h>
 #include <esp_ota_ops.h>
@@ -11,10 +12,38 @@
 
 #define LGFX_AUTODETECT
 #include <LovyanGFX.hpp>
+#include <Preferences.h>
 
 #include "game/game.h"
 
+// ---------------------------------------------------------------- sauvegarde (NVS)
+// Un seul bloc d'octets, cle « save » de l'espace « zquest ».
+class NvsStorage : public Storage {
+ public:
+  bool read(void* data, size_t size) override {
+    prefs_.begin("zquest", true);
+    size_t n = prefs_.getBytesLength("save") == size ? prefs_.getBytes("save", data, size) : 0;
+    prefs_.end();
+    return n == size;
+  }
+  bool write(const void* data, size_t size) override {
+    prefs_.begin("zquest", false);
+    size_t n = prefs_.putBytes("save", data, size);
+    prefs_.end();
+    return n == size;
+  }
+  void erase() override {
+    prefs_.begin("zquest", false);
+    prefs_.remove("save");
+    prefs_.end();
+  }
+
+ private:
+  Preferences prefs_;
+};
+
 static LGFX lcd;
+static NvsStorage storage;
 static Audio audio;
 static Game game;
 static Input input;
@@ -138,7 +167,7 @@ void setup() {
   Serial.printf("Zajka Quest : ecran %dx%d, tas libre %u\n", lcd.width(), lcd.height(), ESP.getFreeHeap());
 
   audioBegin();
-  game.begin(&audio);
+  game.begin(&audio, &storage);
 }
 
 void loop() {

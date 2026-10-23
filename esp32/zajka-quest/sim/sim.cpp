@@ -7,6 +7,7 @@
 //   ZQ_TRACE=1 build/sim --script ...                  affiche chaque case du renard
 //   build/sim --script sim/walk.txt --auto             le robot mene les dialogues (bonnes reponses) ;
 //                                                      --auto-peek ouvre la traduction, --auto-wrong se trompe
+//   build/sim --save /tmp/zq.sav ...                    garde la sauvegarde dans un fichier (reprise)
 //   build/sim --course                                 resume du cours embarque, glyphes manquants
 #include <stdio.h>
 #include <stdlib.h>
@@ -136,6 +137,7 @@ int main(int argc, char** argv) {
   std::vector<std::string> expect;
   int frames = 0, every = 0;
   bool wav = false, autoDialog = false, autoPeek = false, autoWrong = false;
+  std::string savePath;  // --save fichier : la sauvegarde survit d'une execution a l'autre
   for (int i = 1; i < argc; i++) {
     std::string a = argv[i];
     if (a == "--out") out = argv[++i];
@@ -144,6 +146,7 @@ int main(int argc, char** argv) {
     else if (a == "--every") every = atoi(argv[++i]);
     else if (a == "--wav") wav = true;
     else if (a == "--auto") autoDialog = true;
+    else if (a == "--save") savePath = argv[++i];
     else if (a == "--auto-peek") autoDialog = autoPeek = true;    // ouvre la traduction a chaque choix
     else if (a == "--auto-wrong") autoDialog = autoWrong = true;  // se trompe une fois a chaque choix
     else if (a == "--shots") {
@@ -180,7 +183,9 @@ int main(int argc, char** argv) {
   }
   static Audio audio;
   static Game game;
-  game.begin(&audio);
+  static MemoryStorage storage(savePath.c_str());
+  game.begin(&audio, &storage);
+  if (game.hasSave()) printf("partie enregistree trouvee\n");
   Input in;
   std::vector<int16_t> pcm;
   int16_t abuf[AUDIO_RATE / 60 + 1];
@@ -241,6 +246,11 @@ int main(int argc, char** argv) {
     }
     if (game.state() != last) {
       printf("image %5d : %s -> %s\n", f, stateName(last), stateName(game.state()));
+      if (last == S_TITLE && game.state() == S_WORLD) {
+        printf("image %5d : reprise de la partie, %d replique(s) secrete(s)\n", f, game.bonusFound());
+        seen.push_back("reprise");
+        seen.push_back("bonus:" + std::to_string(game.bonusFound()));
+      }
       if (last == S_DIALOG) {
         printf("image %5d : dialogue fini, %d replique(s) secrete(s) en tout, %d erreur(s)\n", f,
                game.bonusFound(), game.dialog().mistakes());
@@ -280,7 +290,7 @@ int main(int argc, char** argv) {
     }
   }
   if (wav) saveWav(out + "/audio.wav", pcm);
-  printf("%d images, etat final : %s\n", frames, stateName(game.state()));
+  printf("%d images, etat final : %s, %d sauvegarde(s)\n", frames, stateName(game.state()), storage.writes());
   if (!expect.empty()) {
     // les etats attendus doivent apparaitre dans cet ordre (d'autres peuvent s'intercaler)
     size_t k = 0;
