@@ -36,7 +36,7 @@ Sheet block format ("t" = type, minified JSON):
                                                       lit = word-by-word, nt = notes
     {"t":"list","items":[..],"o":false}               list (o = ordered)
 
-    {"t":"img","src":"img/<id>-0.jpg","x":"Caption","w":280,"h":140}
+    {"t":"img","src":"img/<id>-0.jpg","x":"Caption","w":224,"h":150}
                                                       illustration: a small baseline JPEG
                                                       exported next to the sheets (see below)
 
@@ -48,9 +48,9 @@ the "img" block ignore it.
 
 The adventure map of the home page is exported too (optional, see export_map()): index.json has
 "map": true and map.json holds the steps (one per series) with their position in percent of the
-background, which is shrunk to img/map.jpg (at most MAP_BG_W x MAP_BG_H):
+background, shrunk to every size of MAP_BG_SIZES (img/map-<h>.jpg); the client takes the largest that fits:
 
-    {"bg":"img/map.jpg","w":134,"h":240,"threshold":85,
+    {"bgs":[{"src":"img/map-280.jpg","w":156,"h":280},{"src":"img/map-240.jpg","w":134,"h":240}],"threshold":85,
      "steps":[{"id":"series-rodina","t":"series","title":"Rodina","x":38,"y":80,"s":["series-rodina-ma-famille",..]},..]}
 
 Dropped on purpose: horizontal rules, the map decorations. Inline markup
@@ -81,13 +81,13 @@ from smd2data import build_sheet_json  # noqa: E402
 DEFAULT_MAX_SHEET_BYTES = 20_000
 
 # Illustrations are drawn on a 320x240 screen next to a few lines of text.
-IMAGE_MAX_W = 280
-IMAGE_MAX_H = 140
+IMAGE_MAX_W = 224       # fits a 240 px wide portrait screen as well as a landscape one
+IMAGE_MAX_H = 150
 IMAGE_QUALITY = 72
 
-# Background of the adventure map, drawn next to a text panel on a 320x240 screen.
-MAP_BG_W = 134
-MAP_BG_H = 240
+# Background of the adventure map, drawn next to a text panel: one size per screen layout
+# (portrait 240x320: 280 px high above the footer; landscape 320x240: 240 px high), largest first.
+MAP_BG_SIZES = ((156, 280), (134, 240))
 
 # [[fr:text]] / [[word]] (speakable markup) and **bold**.
 _SPEAKABLE_RE = re.compile(r"\[\[(?:[a-z]{2,3}:)?(.*?)\]\]", re.DOTALL)
@@ -319,9 +319,13 @@ def export_map(lang_dir: Path, lang_cfg: dict[str, Any], out_dir: Path, images: 
     out: dict[str, Any] = {"threshold": data["config"]["validationThreshold"], "steps": steps}
     background = find_map_background(lang_dir / "img")
     if background:
-        block = images.export(background, "", "map", box=(MAP_BG_W, MAP_BG_H))
-        if block:
-            out.update({"bg": block["src"], "w": block["w"], "h": block["h"]})
+        bgs = []
+        for width, height in MAP_BG_SIZES:
+            block = images.export(background, "", f"map-{height}", box=(width, height))
+            if block:
+                bgs.append({"src": block["src"], "w": block["w"], "h": block["h"]})
+        if bgs:
+            out["bgs"] = bgs
     (out_dir / "map.json").write_text(dumps(out), encoding="utf-8")
     return True
 
