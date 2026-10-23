@@ -8,6 +8,7 @@ subtitle: Hlavná ulica
 hint: Ahoj! To si ty?
 theme: kosice
 music: 0
+next: Slovenský raj
 ---
                                                                                                                                                                                                                     
                                                                                                                                                                                                                     

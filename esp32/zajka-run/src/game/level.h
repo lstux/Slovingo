@@ -14,6 +14,8 @@ struct LevelDef {
   const char* hint;       // phrase en slovaque affichee a l'arrivee
   const Theme* theme;
   int music;
+  const char* npc;        // personnage a l'arrivee avec Andrea ("" : arret de tram seul, "orol" : pan Orol)
+  const char* next;       // prochaine etape annoncee a la fin du dernier niveau
   int w, h;
   const char* const* rows;
 };
@@ -34,9 +36,13 @@ enum TileId : uint8_t {
   T_LEDGE = 11,
   T_LEDGE_R = 12,
   T_SPIKES = 13,
+  T_LADDER = 14,
+  T_WATER_TOP = 15,   // surface (animee avec T_WATER_TOP2)
+  T_WATER = 16,
+  T_WATER_TOP2 = 17,
 };
 
-enum TileKind : uint8_t { K_AIR, K_SOLID, K_ONEWAY, K_HAZARD };
+enum TileKind : uint8_t { K_AIR, K_SOLID, K_ONEWAY, K_HAZARD, K_LADDER, K_WATER };
 
 // Objets places dans la carte (convertis en entites au chargement).
 struct Spawn {
@@ -49,7 +55,7 @@ struct Level {
   int w = 0, h = 0;
   uint8_t tiles[MAX_LEVEL_W * MAX_LEVEL_H];
   uint8_t marks[MAX_LEVEL_W * MAX_LEVEL_H];  // butees invisibles '|'
-  Spawn spawns[128];
+  Spawn spawns[160];
   int nspawns = 0;
   int startX = 32, startY = 160;
 
@@ -69,6 +75,8 @@ struct Level {
   }
   static TileKind kind(uint8_t t);
   TileKind kindAt(int tx, int ty) const { return kind(at(tx, ty)); }
+  // haut d'une echelle : on peut s'y tenir debout
+  bool ladderTop(int tx, int ty) const { return at(tx, ty) == T_LADDER && at(tx, ty - 1) != T_LADDER; }
   int pixelW() const { return w * TILE; }
   int pixelH() const { return h * TILE; }
 };

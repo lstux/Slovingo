@@ -39,6 +39,9 @@ struct Theme {
   const Image8* far;
   const Image8* mid;
   const Image8* tiles;
+  const Sheet* check;     // point de passage (2 images : eteint, active)
+  const Sheet* decor;     // decor 'l' (image 0) et 'k' (image 1)
+  uint16_t under, under2; // couleurs sous le niveau du sol (trous)
 };
 
 inline uint16_t rgb(uint8_t r, uint8_t g, uint8_t b) {

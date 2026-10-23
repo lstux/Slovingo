@@ -9,6 +9,10 @@ TileKind Level::kind(uint8_t t) {
     case T_LEDGE:
     case T_LEDGE_R: return K_ONEWAY;
     case T_SPIKES: return K_HAZARD;
+    case T_LADDER: return K_LADDER;
+    case T_WATER:
+    case T_WATER_TOP:
+    case T_WATER_TOP2: return K_WATER;
     default: return K_SOLID;
   }
 }
@@ -48,6 +52,10 @@ void Level::load(const LevelDef* d) {
         t = l ? T_LEDGE_L : (r ? T_LEDGE_R : T_LEDGE);
       } else if (c == '^') {
         t = T_SPIKES;
+      } else if (c == 'H') {
+        t = T_LADDER;
+      } else if (c == '~') {
+        t = ch(x, y - 1) == '~' ? T_WATER : T_WATER_TOP;
       } else if (c == '|') {
         marks[y * w + x] = 1;
       } else if (c == 'S') {

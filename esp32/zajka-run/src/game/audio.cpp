@@ -61,7 +61,6 @@ static const Note MELODY[] = {
     {74, 2}, {78, 2}, {81, 2}, {78, 2},            // D
     {74, 4}, {0, 4},                               // D
 };
-static const int MELODY_N = sizeof(MELODY) / sizeof(MELODY[0]);
 struct Chord {
   uint8_t root, fifth, pah;
 };
@@ -69,7 +68,44 @@ static const Chord CH_D = {50, 57, 66}, CH_A = {45, 52, 61}, CH_A7 = {45, 52, 67
                    CH_BM = {47, 54, 62}, CH_FSM = {42, 49, 57}, CH_EM = {40, 47, 55};
 static const Chord* const BARS[16] = {&CH_D, &CH_D,   &CH_A, &CH_D, &CH_G,  &CH_D, &CH_A7, &CH_D,
                                       &CH_BM, &CH_FSM, &CH_G, &CH_D, &CH_EM, &CH_A, &CH_D,  &CH_D};
-static const int SIXTEENTH = AUDIO_RATE * 60 / 144 / 4;  // 144 a la noire
+
+// « Les » (Slovensky raj) : air original, mi dorien (do diese), plus lent, sans charleston.
+static const Note MELODY_LES[] = {
+    {76, 2}, {79, 2}, {83, 4},                     // Em
+    {81, 2}, {79, 1}, {78, 1}, {76, 4},            // Em
+    {76, 2}, {81, 2}, {85, 2}, {83, 2},            // A
+    {79, 4}, {76, 4},                              // Em
+    {79, 2}, {83, 2}, {86, 2}, {83, 2},            // G
+    {81, 2}, {78, 2}, {74, 4},                     // D
+    {76, 2}, {78, 2}, {81, 2}, {85, 2},            // A
+    {83, 6}, {0, 2},                               // Em
+    {86, 2}, {83, 2}, {79, 2}, {83, 2},            // G
+    {81, 4}, {78, 4},                              // D
+    {79, 2}, {81, 1}, {79, 1}, {78, 2}, {76, 2},   // Em
+    {78, 4}, {74, 2}, {71, 2},                     // Bm
+    {79, 2}, {83, 2}, {86, 2}, {88, 2},            // G
+    {85, 4}, {81, 4},                              // A
+    {83, 2}, {81, 2}, {79, 2}, {78, 2},            // Em
+    {76, 6}, {0, 2},                               // Em
+};
+static const Chord LS_EM = {40, 47, 67}, LS_A = {45, 52, 61}, LS_D = {38, 45, 66}, LS_G = {43, 50, 59},
+                   LS_BM = {47, 54, 62};
+static const Chord* const BARS_LES[16] = {&LS_EM, &LS_EM, &LS_A, &LS_EM, &LS_G, &LS_D, &LS_A, &LS_EM,
+                                          &LS_G,  &LS_D,  &LS_EM, &LS_BM, &LS_G, &LS_A, &LS_EM, &LS_EM};
+
+struct Song {
+  const Note* mel;
+  int n;
+  const Chord* const* bars;
+  int sixteenth;   // echantillons par double croche
+  bool drums;
+  uint8_t melWave;
+};
+static const Song SONGS[] = {
+    {MELODY, (int)(sizeof(MELODY) / sizeof(MELODY[0])), BARS, AUDIO_RATE * 60 / 144 / 4, true, 1},          // 0 Hlavna
+    {MELODY_LES, (int)(sizeof(MELODY_LES) / sizeof(MELODY_LES[0])), BARS_LES, AUDIO_RATE * 60 / 112 / 4, false, 2},  // 1 Les
+};
+static const int NUM_SONGS = sizeof(SONGS) / sizeof(SONGS[0]);
 
 static uint32_t freqInc(float hz) { return (uint32_t)(hz * 4294967296.0f / AUDIO_RATE); }
 static float midiHz(int m) { return 440.0f * powf(2.0f, (m - 69) / 12.0f); }
@@ -146,26 +182,28 @@ void Audio::startSfxStep(int ch) {
 
 void Audio::tickMusic() {
   if (music_ < 0) return;
+  const Song& song = SONGS[music_ % NUM_SONGS];
+  const int SIXTEENTH = song.sixteenth;
   int bar = (row_ / 8) % 16, pos = row_ % 8;
   // melodie
   if (melLeft_ <= 0) {
-    const Note& n = MELODY[melIdx_];
+    const Note& n = song.mel[melIdx_];
     melLeft_ = n.len;
     if (n.midi) {
-      startNote(v_[0], n.midi, n.len * SIXTEENTH * 9 / 10, 1, 6);
+      startNote(v_[0], n.midi, n.len * SIXTEENTH * 9 / 10, song.melWave, song.drums ? 6 : 5);
       v_[0].volEnd = 3;
     } else {
       v_[0].on = false;
     }
-    melIdx_ = (melIdx_ + 1) % MELODY_N;
+    melIdx_ = (melIdx_ + 1) % song.n;
   }
   melLeft_--;
-  const Chord& c = *BARS[bar];
+  const Chord& c = *song.bars[bar];
   if (pos == 0) startNote(v_[2], c.root, SIXTEENTH * 2, 3, 11);
   if (pos == 4) startNote(v_[2], c.fifth, SIXTEENTH * 2, 3, 11);
   if (pos == 2 || pos == 6) {
     startNote(v_[1], c.pah, SIXTEENTH * 3 / 2, 2, 3);
-    startNote(v_[3], 100, SIXTEENTH / 3, 4, 2);
+    if (song.drums) startNote(v_[3], 100, SIXTEENTH / 3, 4, 2);
     v_[3].inc = v_[3].incEnd = freqInc(9000);
   }
   row_ = (row_ + 1) % 128;
@@ -192,7 +230,7 @@ void Audio::render(int16_t* out, int n) {
   }
   for (int i = 0; i < n; i++) {
     if (music_ >= 0 && --stepLeft_ <= 0) {
-      stepLeft_ = SIXTEENTH;
+      stepLeft_ = SONGS[music_ % NUM_SONGS].sixteenth;
       tickMusic();
     }
     int32_t mix = 0;

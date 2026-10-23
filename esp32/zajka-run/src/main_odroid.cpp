@@ -8,6 +8,7 @@
 #include <driver/i2s.h>
 #include <esp_ota_ops.h>
 #include <esp_partition.h>
+#include <Preferences.h>
 
 #define LGFX_AUTODETECT
 #include <LovyanGFX.hpp>
@@ -19,6 +20,25 @@ static Audio audio;
 static Game game;
 static Input input;
 static uint16_t* bands[2];
+
+// Sauvegarde dans la NVS (partition « nvs » du .fw) : niveaux debloques, records.
+class NvsStorage : public Storage {
+ public:
+  bool load(SaveData& d) override {
+    Preferences p;
+    if (!p.begin("zajkarun", true)) return false;
+    bool ok = p.getBytes("save", &d, sizeof d) == sizeof d;
+    p.end();
+    return ok;
+  }
+  void save(const SaveData& d) override {
+    Preferences p;
+    if (!p.begin("zajkarun", false)) return;
+    p.putBytes("save", &d, sizeof d);
+    p.end();
+  }
+};
+static NvsStorage storage;
 
 // ---------------------------------------------------------------- boutons
 static constexpr int PIN_X = 34, PIN_Y = 35;
@@ -138,7 +158,7 @@ void setup() {
   Serial.printf("Zajka Run : ecran %dx%d, tas libre %u\n", lcd.width(), lcd.height(), ESP.getFreeHeap());
 
   audioBegin();
-  game.begin(&audio);
+  game.begin(&audio, &storage);
 }
 
 void loop() {

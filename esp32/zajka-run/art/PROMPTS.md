@@ -16,6 +16,9 @@ Chaque image du jeu peut être remplacée par une image générée, sans toucher
 | `sprites/rabbit` Andrea | fait (Gemini : idle, win, run sur 4 images) | `sources/rabbit_<anim>_gemini.jpg` |
 | `objects/pruzina`, `lampa`, `zastavka`, `elektricka`, `lavicka`, `fx` | fait (Gemini) | `sources/<nom>_gemini.jpg` |
 | `objects/hud` icônes 8×8 | garder (trop petit pour une IA) | dessiné à la main |
+| `raj/far`, `raj/mid`, `raj/tiles` (niveau 1-2) | **à faire** (provisoires) | `make_placeholder_raj.py` |
+| `objects/platforma`, `flasa`, `vevericka`, `orol`, `rozcestnik`, `les` | **à faire** (provisoires) | `make_placeholder_raj.py` |
+| `sprites/fox` ligne `climb` (échelle) | **à faire** (pose du saut en attendant) | — |
 
 ## Marche à suivre
 
@@ -25,6 +28,124 @@ Chaque image du jeu peut être remplacée par une image générée, sans toucher
 4. `python3 tools/build_assets.py`, puis vérifier dans le simulateur : `make -C sim && build/sim --bot --every 120 --out /tmp/zr`.
 
 Si l'IA ajoute un trait de sol sous un objet : `--strip-ground`. Si les images n'ont pas la même taille exprès (ressort comprimé, petit nuage) : `--uniform`. Si elle mélange l'ordre des tuiles : `--cells` (voir la réimportation des tuiles en bas de page).
+
+## Niveau 1-2 : Slovenský raj (à faire)
+
+La gorge de Suchá Belá (série Raj du cours) : échelles, passerelles au-dessus du torrent, écureuils, bouteille d'eau, et pán Orol à l'arrivée. Les images actuelles sont provisoires (`tools/make_placeholder_raj.py`, qui ne remplace jamais une image IA importée).
+
+### Fond lointain (`raj/far.png`)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 48 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Wide side-scrolling game background, aspect ratio 2:1. Clear blue summer sky with a few small white clouds, lighter near the horizon. In the far distance, the jagged blue-grey peaks of the High Tatras (Vysoké Tatry) with small patches of snow on the summits. In front of them, rolling hills covered with dark spruce forest, typical of the Slovak Paradise national park (Slovenský raj) in eastern Slovakia. Everything sits in the lower half of the image; the upper half is sky. Atmospheric perspective: distant elements are pale and low-contrast. No buildings.
+```
+
+```
+python3 tools/import_ai.py far art/sources/raj_far_gemini.jpg --theme raj --mirror
+```
+
+### La gorge de Suchá Belá (`raj/mid.png`)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 64 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Side-scrolling game background layer, very wide panorama (aspect ratio about 4:1), seen straight from the side. A limestone gorge in the Slovak Paradise national park (the Suchá Belá gorge): tall pale grey-cream limestone cliffs and rock towers with vertical cracks, moss on the ledges, dark green spruce trees growing on top of the cliffs and at their feet, two thin white waterfalls falling down the rock face. A dense line of spruce forest along the bottom edge; the bottom edge of the image is the forest floor. Everything above the cliff tops and tree tops is flat solid magenta #FF00FF.
+```
+
+```
+python3 tools/import_ai.py mid art/sources/raj_mid_gemini.jpg --theme raj
+```
+
+### Tuiles (`raj/tiles.png`)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 64 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Game tileset sheet, exactly 8 columns by 4 rows of square tiles, each tile 16x16 pixels, upscaled x8 (1024x512 image), perfectly aligned on the grid, flat magenta #FF00FF where a tile is empty, no grid lines. Theme: a limestone gorge in a Slovak spruce forest. Tiles in reading order: 0 empty; 1 forest floor seen from the side: a thin strip of grass and spruce needles on top of pale grey limestone rock; 2 plain limestone rock; 3 same as 1 with a left edge; 4 same as 1 with a right edge; 5 same as 2 with a left edge; 6 same as 2 with a right edge; 7 a cracked limestone block; 8 a wooden crate decorated with a red gingerbread heart with white icing; 9 the same crate, empty and faded; 10, 11, 12 a metal grating footbridge seen from the side with a thin chain railing (left end, middle, right end); 13 sharp pointed rocks; 14 a metal ladder segment with two side rails and three rungs; 15 the surface of a mountain stream, light blue with small white ripples on top; 16 deep stream water, darker blue; 17 the same surface as 15 with the ripples shifted (second animation frame); 18 to 31 empty.
+```
+
+```
+python3 tools/import_ai.py tiles art/sources/raj_tiles_gemini.jpg --theme raj
+# si Gemini melange l'ordre des cases : --cells "1=L,C 2=L,C ..." (voir Tuiles de Kosice plus bas)
+```
+
+### Passerelle mobile (`objects/platforma_48x16`, 1 image)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 24 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+A moving metal footbridge for a side-view platform game, like the metal walkways bolted over the water in the gorges of the Slovak Paradise: a flat steel grating plank seen exactly from the side, dark grey with a lighter top edge and two short supports underneath. A single image, centred, proportions exactly 3 wide by 1 tall. It must read clearly at 48x16 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+```
+
+```
+python3 tools/import_ai.py object platforma art/sources/platforma_gemini.jpg
+```
+
+### Bouteille d'eau (`objects/flasa_16x16`, 1 image)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 16 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+A collectible item for a platform game: a small light blue plastic water bottle with a dark blue cap and a white label, with a tiny shine. A single image, centred, upright. It must read clearly at 16x16 pixels. Flat solid magenta #FF00FF background everywhere, no shadow.
+```
+
+```
+python3 tools/import_ai.py object flasa art/sources/flasa_gemini.jpg
+```
+
+### Écureuil (`objects/vevericka_16x16`, 3 images)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 24 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+A cute enemy for a side-view platform game: a Eurasian red squirrel with a big bushy red tail and ear tufts, seen from the side, facing right. 3 frames in a single horizontal row, evenly spaced with wide gaps, same scale: sitting upright, then jumping (stretched out in mid-air), then squashed flat with dizzy cross eyes. Each frame must read clearly at 16x16 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+```
+
+```
+python3 tools/import_ai.py object vevericka art/sources/vevericka_gemini.jpg --frames 3 --uniform
+```
+
+### Pán Orol, le garde du parc (`objects/orol_32x48`, 2 images)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 32 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Pán Orol, the friendly park ranger of the Slovak Paradise: an anthropomorphic golden eagle with brown plumage, a golden nape, a yellow beak, wearing a green forest ranger hat with a small badge, perched on a pale limestone rock. Side view, FACING LEFT. 2 frames in a single horizontal row, evenly spaced with wide gaps, same scale, rock on the same baseline: standing calmly, then raising one wing to greet. Each frame is 2 wide by 3 tall (eagle and rock together) and must read clearly at 32x48 pixels. Flat solid magenta #FF00FF background everywhere, no shadow.
+```
+
+```
+python3 tools/import_ai.py object orol art/sources/orol_gemini.jpg --frames 2 --uniform
+```
+
+### Rozcestník, point de passage (`objects/rozcestnik_16x48`, 2 images)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 24 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+A Slovak hiking trail signpost (rozcestník) for a side-view platform game: a wooden post with two yellow arrow-shaped direction signs pointing left and right (no letters, no numbers), and the red-white-red trail marking painted on the post. Seen exactly from the side, tall and thin (proportions 1 wide by 3 tall). 2 frames in a single horizontal row, evenly spaced with wide gaps, same scale: faded colours (not reached yet), then bright colours with a small red flag on top (checkpoint reached). Each frame must read clearly at 16x48 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+```
+
+```
+python3 tools/import_ai.py object rozcestnik art/sources/rozcestnik_gemini.jpg --frames 2 --uniform
+```
+
+### Décor de forêt (`objects/les_32x16`, 2 images)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 32 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Two forest floor decoration props for a side-view platform game, seen exactly from the side, in a single horizontal row with a wide gap between them: first a green fern bush, second a cut tree stump with a small red mushroom with white dots next to it. Both the same height and on the same baseline, each twice as wide as tall. Each must read clearly at 32x16 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+```
+
+```
+python3 tools/import_ai.py object les art/sources/les_gemini.jpg --frames 2
+```
+
+### Le renard sur l'échelle (joindre `art/characters/fox-reference.png`, 2 images)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 40 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Keep EXACTLY the same character as the attached reference image: same clothes, colours, proportions and face. He is an ANTHROPOMORPHIC fox teenager who stands and walks UPRIGHT ON TWO LEGS like a human, NOT a four-legged animal. Orange fur, dark grey ear tips, cream muzzle, grey cheeks, big bushy orange tail with a cream tip, wearing a royal blue hoodie, yellow backpack straps, navy blue trousers and white sneakers. Keep the SAME body proportions as the reference: short legs, big head, about 2.5 heads tall.
+Sprite sheet for a side-view platform game: the character seen from BEHIND, climbing a ladder: a 2-frame CLIMBING animation (left arm and right leg up, then right arm and left leg up), back of the hoodie and backpack visible, tail hanging down. Do not draw the ladder. Both frames in a single horizontal row, evenly spaced with wide gaps, same size. The whole pose fits in a square and must read clearly at 48x48 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+```
+
+```
+python3 tools/import_ai.py sprite fox climb art/sources/fox_climb_gemini.jpg --frames 2 --head-px 17.5 --anchor-x 27
+```
+
+Tant que cette ligne manque, le jeu montre la pose du saut, retournée à chaque barreau.
 
 ## Le renard (joindre `art/characters/fox-reference.png`)
 

@@ -49,6 +49,28 @@ static void saveWav(const std::string& path, const std::vector<int16_t>& s) {
   fclose(f);
 }
 
+// Sauvegarde dans un fichier (--save fichier) : meme format que la NVS de la console.
+class FileStorage : public Storage {
+ public:
+  explicit FileStorage(const std::string& p) : path_(p) {}
+  bool load(SaveData& d) override {
+    FILE* f = fopen(path_.c_str(), "rb");
+    if (!f) return false;
+    bool ok = fread(&d, sizeof d, 1, f) == 1;
+    fclose(f);
+    return ok;
+  }
+  void save(const SaveData& d) override {
+    FILE* f = fopen(path_.c_str(), "wb");
+    if (!f) return;
+    fwrite(&d, sizeof d, 1, f);
+    fclose(f);
+  }
+
+ private:
+  std::string path_;
+};
+
 struct Seg {
   int from, to;
   uint16_t btn;
@@ -111,7 +133,9 @@ int main(int argc, char** argv) {
   std::vector<int> shots;
   int frames = 0, every = 0;
   bool useBot = false, wav = false;
-  float startX = -1;
+  float startX = -1, startY = -1;
+  int level = 0;
+  std::string savePath;
   for (int i = 1; i < argc; i++) {
     std::string a = argv[i];
     if (a == "--out") out = argv[++i];
@@ -121,6 +145,9 @@ int main(int argc, char** argv) {
     else if (a == "--every") every = atoi(argv[++i]);
     else if (a == "--wav") wav = true;
     else if (a == "--start-x") startX = atof(argv[++i]);
+    else if (a == "--start-y") startY = atof(argv[++i]);
+    else if (a == "--level") level = atoi(argv[++i]) - 1;
+    else if (a == "--save") savePath = argv[++i];
     else if (a == "--shots") {
       char* s = argv[++i];
       for (char* t = strtok(s, ","); t; t = strtok(nullptr, ",")) shots.push_back(atoi(t));
@@ -146,7 +173,10 @@ int main(int argc, char** argv) {
   }
   static Audio audio;
   static Game game;
-  game.begin(&audio);
+  static FileStorage* storage = savePath.empty() ? nullptr : new FileStorage(savePath);
+  game.selectLevel(level);
+  game.begin(&audio, storage);
+  game.selectLevel(level);  // meme si la sauvegarde ne l'a pas encore debloque
   Input in;
   std::vector<int16_t> pcm;
   int16_t abuf[AUDIO_RATE / 60 + 1];
@@ -160,7 +190,7 @@ int main(int argc, char** argv) {
     in.update(raw);
     game.step(in);
     if (startX >= 0 && game.state() == S_INTRO) {
-      game.debugTeleport(startX);
+      game.debugTeleport(startX, startY);
       startX = -1;
     }
     if (wav) {
@@ -190,7 +220,7 @@ int main(int argc, char** argv) {
       snprintf(name, sizeof name, "/frame_%05d.ppm", f);
       savePPM(out + name);
     }
-    if (useBot && game.state() == S_END) {
+    if (useBot && (game.state() == S_END || game.state() == S_CLEAR)) {
       printf("fin atteinte a l'image %d\n", f);
       break;
     }

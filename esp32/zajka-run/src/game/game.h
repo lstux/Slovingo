@@ -10,6 +10,25 @@
 enum EType : uint8_t {
   E_NONE, E_HEART, E_PIGEON, E_WASP, E_SPRING, E_CHECK, E_GOAL, E_TRAM,
   E_BENCH, E_FLOWERS, E_POP, E_DUST, E_SPARK, E_TEXT,
+  E_PLATFORM,   // passerelle mobile (state 0 horizontale, 1 verticale)
+  E_BOTTLE,     // bouteille d'eau : rend un coeur
+  E_SQUIRREL,   // ecureuil qui bondit vers le renard
+};
+
+// Sauvegarde : niveaux debloques, meilleurs temps et medovniky par niveau.
+struct SaveData {
+  uint32_t magic = 0x5A52554E;  // "ZRUN"
+  uint8_t version = 1, unlocked = 1, pad[2] = {0, 0};
+  uint16_t bestTime[8] = {0};   // en secondes, 0 = jamais termine
+  uint8_t bestHearts[8] = {0};
+};
+
+// Stockage de la sauvegarde, fourni par la plateforme (NVS sur la console, fichier sur PC).
+class Storage {
+ public:
+  virtual ~Storage() {}
+  virtual bool load(SaveData& d) = 0;
+  virtual void save(const SaveData& d) = 0;
 };
 
 struct Entity {
@@ -33,8 +52,10 @@ struct Player {
   int invuln = 0;
   int hp = 3;
   int anim = 0, animTime = 0, animFrame = 0;
-  int riding = -1;  // index de l'entite qui le porte (tram)
+  int riding = -1;  // index de l'entite qui le porte (tram, passerelle)
   int squash = 0;
+  bool climbing = false;  // sur une echelle
+  float climbDist = 0;
 };
 
 class Game {
@@ -42,7 +63,8 @@ class Game {
   static constexpr int PW = 14, PH = 38;    // boite de collision du renard
   static constexpr int MAX_ENT = 200;
 
-  void begin(Audio* audio);
+  void begin(Audio* audio, Storage* storage = nullptr);
+  void selectLevel(int i) { sel_ = i; }  // simulateur : niveau choisi sur l'ecran titre
   void step(const Input& in);               // 1/60 s
   void renderBand(Band& b);
   uint32_t frameCount() const { return frame_; }
@@ -55,7 +77,7 @@ class Game {
   const Level& level() const { return lvl_; }
   const Entity* entities(int& n) const { n = nent_; return ent_; }
   float camX() const { return camX_; }
-  void debugTeleport(float x);  // simulateur : place le renard (et le point de passage) en x
+  void debugTeleport(float x, float feetY = -1);  // simulateur : place le renard (et le point de passage)
 
  private:
   // logique
@@ -63,6 +85,10 @@ class Game {
   void updatePlayer(const Input& in);
   void movePlayerX(float dx);
   void movePlayerY(float dy, float prevBottom);
+  bool tryStartClimb(const Input& in);
+  void updateClimb(const Input& in);
+  float platformTop(const Entity& e) const;
+  void levelCleared();
   void updateEntities();
   void interact();
   void hurtPlayer(float fromX);
@@ -100,4 +126,7 @@ class Game {
   int volumeShow_ = 0;
   bool holdA_ = false;
   bool respawn_ = false;
+  Storage* storage_ = nullptr;
+  SaveData save_;
+  int sel_ = 0;          // niveau choisi sur l'ecran titre
 };

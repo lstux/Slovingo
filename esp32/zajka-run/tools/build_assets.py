@@ -19,7 +19,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ART = os.path.join(ROOT, "art")
 GEN = os.path.join(ROOT, "src", "game", "gen")
 
-THEMES = ["kosice"]
+# theme : point de passage, decor ('l', 'k') et couleurs sous le sol (fonds de trous)
+THEMES = {
+    "kosice": {"check": "spr_lampa", "decor": "spr_lavicka", "under": ((0x28, 0x2C, 0x28), (0x18, 0x18, 0x18))},
+    "raj": {"check": "spr_rozcestnik", "decor": "spr_les", "under": ((0x20, 0x3a, 0x30), (0x10, 0x20, 0x20))},
+}
 FONTS = [
     # nom, fichier, taille, seuil
     ("font_small", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 10, 110),
@@ -29,7 +33,7 @@ FONTS = [
 FONT_FALLBACK = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 CHARSET = ("".join(chr(c) for c in range(32, 127))
            + "áäčďéěíĺľňóôŕšťúýžÁÄČĎÉÍĹĽŇÓÔŔŠŤÚÝŽ"
-           + "àâçèêëîïùûüÿœÀÂÇÈÊËÎÏÙÛÜŒ«»…×’—–·→›")
+           + "àâçèêëîïùûüÿœÀÂÇÈÊËÎÏÙÛÜŒ«»…×’—–·→›‹")
 
 
 def rgb565(r, g, b):
@@ -167,16 +171,18 @@ def c_str(s):
 def main():
     os.makedirs(GEN, exist_ok=True)
     o = Out()
-    for th in THEMES:
-        o.image(f"{th}_far", Image.open(os.path.join(ART, th, "far.png")))
-        o.image(f"{th}_mid", Image.open(os.path.join(ART, th, "mid.png")))
-        o.image(f"{th}_tiles", Image.open(os.path.join(ART, th, "tiles.png")))
-        o.data.append(f"const Theme theme_{th} = {{ &{th}_far, &{th}_mid, &{th}_tiles }};\n")
-        o.decl.append(f"extern const Theme theme_{th};")
     for p in sorted(glob.glob(os.path.join(ART, "sprites", "*_*x*.png"))
                     + glob.glob(os.path.join(ART, "objects", "*_*x*.png"))):
         name = "spr_" + c_ident(os.path.basename(p).split("_")[0])
         o.sheet(name, p)
+    for th, cfg in THEMES.items():
+        o.image(f"{th}_far", Image.open(os.path.join(ART, th, "far.png")))
+        o.image(f"{th}_mid", Image.open(os.path.join(ART, th, "mid.png")))
+        o.image(f"{th}_tiles", Image.open(os.path.join(ART, th, "tiles.png")))
+        u1, u2 = (rgb565(*c) for c in cfg["under"])
+        o.data.append(f"const Theme theme_{th} = {{ &{th}_far, &{th}_mid, &{th}_tiles, &{cfg['check']}, "
+                      f"&{cfg['decor']}, {u1}, {u2} }};\n")
+        o.decl.append(f"extern const Theme theme_{th};")
     for name, ttf, size, thr in FONTS:
         o.font(name, ttf, size, thr)
     # niveaux
@@ -189,6 +195,7 @@ def main():
         o.data.append(
             f"const LevelDef level_{lid} = {{ {c_str(meta.get('name', lid))}, {c_str(meta.get('subtitle', ''))}, "
             f"{c_str(meta.get('hint', ''))}, &theme_{meta.get('theme', 'kosice')}, {int(meta.get('music', 0))}, "
+            f"{c_str(meta.get('npc', ''))}, {c_str(meta.get('next', ''))}, "
             f"{len(rows[0])}, {len(rows)}, {lid}_rows }};\n")
         levels.append(lid)
     o.data.append("const LevelDef* const ALL_LEVELS[] = { " + ", ".join(f"&level_{l}" for l in levels) + " };\n")

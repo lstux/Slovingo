@@ -9,11 +9,19 @@ Niveau 1 : **Košice, rue Hlavná**. Pavés, maisons bourgeoises, théâtre à c
 Dóm svätej Alžbety, tram Tatra à prendre comme ascenseur, pigeons, guêpes et
 **medovníky** (cœurs en pain d'épices) à ramasser. 50 medovníky = une vie.
 
+Niveau 2 : **Slovenský raj, la gorge de Suchá Belá** (série Raj du cours). Forêt sèche,
+ruisseau, puis la gorge : **échelles** (croix haut/bas, A pour sauter), passerelles
+au-dessus du torrent (l'eau fait perdre une vie), passerelles mobiles et ascenseur,
+écureuils, **bouteilles d'eau** qui rendent un cœur, et pán Orol, le garde du parc, à l'arrivée.
+
+La progression est sauvegardée (niveaux débloqués, meilleur temps et medovníky par niveau) ;
+sur l'écran titre, gauche/droite choisit le niveau.
+
 ## Commandes
 
 | bouton | action |
 |---|---|
-| croix | se déplacer |
+| croix | se déplacer, monter/descendre une échelle |
 | A | sauter (tenir pour sauter plus haut, rebondir plus haut sur un ennemi ou un ressort) |
 | B | courir (indispensable pour le grand trou) |
 | START | pause |
@@ -71,6 +79,8 @@ tourne à 60 Hz fixes, l'affichage autour de 30 images/s.
 make -C sim
 build/sim --bot --every 120 --out /tmp/zr          # le robot joue, une capture toutes les 2 s
 build/sim --bot --start-x 2950 --out /tmp/zr       # démarre près de l'arrivée
+build/sim --level 2 --start-x 1300 --start-y 272 --script s.txt --out /tmp/zr   # niveau 2, position donnée
+build/sim --save /tmp/zr.sav ...                    # sauvegarde dans un fichier
 build/sim --script mon_script.txt --wav --out /tmp/zr
 ```
 

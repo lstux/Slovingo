@@ -1,0 +1,32 @@
+# Zajka Run, niveau 2 : Slovenský raj, la gorge de Suchá Belá (série Raj du cours).
+# Légende de Košice, plus : H échelle  ~ eau  M passerelle mobile horizontale (entre deux |)
+#   V passerelle mobile verticale (entre deux | dans sa colonne)  s écureuil  b bouteille d'eau
+#   C rozcestník (point de passage)  l fougère  k souche  F arrivée (pán Orol et Andrea)
+name: Slovenský raj
+subtitle: Roklina Suchá Belá
+hint: Dobrý deň. Kam idete?
+theme: raj
+music: 1
+npc: orol
+next: Vysoké Tatry
+---
+                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                        
+                                                                                                                                                    ooo?o                             w                                                 
+                                                                                                                                                   ===H===                          oooooo                                              
+                                                                                             w                                        ooowo           H                                                                                 
+                                                                                                                                                      H                        H###========H                                            
+                                                                                          oooooo                                                      H         ooooo          H###        H                                            
+                                                                                      oo                                     |      C             oo  H                        H###        H                                            
+                                                                                   H#####========      ooooooooo                #############         H                        H###        H                                            
+                                                                                   H#####                                       #############=====  =====   |M        |        H###        H                                            
+                                 w                                                 H#####        ###|M           |              #############             P                    H###        H                                            
+                                        ooo                                        H#####        ###              ###H          #############            ###                   H###        H                                            
+          oooo  B?B        ooo                                                     H#####        ###              ###H          #############            ###  |      M     |   H###        H         oo?oo                              
+                                        ###                 oooooooo               H#####        ###              ###H          #############            ###                   H###        H                                            
+                           ###          ###                              ooo       H#####        ###              ###H  s       #############            ###                   H###        H                                            
+   S   l    k         s    ###      s   ###### l  C                           k    H#####        ###              ###########V  #############            ###                #######        H  l   s         k    F                      
+#######################################################   k    b  s         #############        ###              ###########|  #############            ###                #######        #############################################
+#########################################################################~~~#############~~~~~~~~###~~~~~~~~~~~~~~###########~~~#############~~~~~~~~~~~~###~~~~~~~~~~~~~~~~#######~~~~~~~~#############################################
+#########################################################################~~~#############~~~~~~~~###~~~~~~~~~~~~~~###########~~~#############~~~~~~~~~~~~###~~~~~~~~~~~~~~~~#######~~~~~~~~#############################################

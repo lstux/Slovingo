@@ -31,10 +31,14 @@ constexpr int TRAM_ROOF = 20;
 constexpr int FOX_ANCHOR = 27;
 // Andrea : 4 images de course (planche Gemini), seulement sur l'ecran titre
 constexpr int RABBIT_RUN_FRAMES = 4;
+constexpr float CLIMB_V = 1.6f;
+constexpr float PLATFORM_V = 0.8f, PLATFORM_VV = 0.6f;
+constexpr int PLATFORM_W = 48, PLATFORM_H = 8;
 
 // animations de la planche du renard / d'Andrea (une ligne par animation)
-enum { A_IDLE, A_RUN, A_JUMP, A_FALL, A_HURT, A_WIN };
-const int ANIM_LEN[] = {4, 6, 1, 1, 1, 2};
+// A_CLIMB : 7e ligne de la planche si elle existe, sinon l'image de saut retournee a chaque pas
+enum { A_IDLE, A_RUN, A_JUMP, A_FALL, A_HURT, A_WIN, A_CLIMB };
+const int ANIM_LEN[] = {4, 6, 1, 1, 1, 2, 2};
 
 const uint16_t WHITE = 0xFFFF, BLACK = 0x0000, SHADOW = 0x18C3;
 const uint16_t YELLOW = 0xFF2A, ORANGE = 0xFB00, DARKBLUE = 0x1926;
@@ -46,14 +50,33 @@ bool overlap(float ax, float ay, float aw, float ah, float bx, float by, float b
 }  // namespace
 
 // ---------------------------------------------------------------- mise en route
-void Game::begin(Audio* audio) {
+void Game::begin(Audio* audio, Storage* storage) {
   audio_ = audio;
+  if (storage) storage_ = storage;
+  if (storage_) {
+    SaveData d;
+    if (storage_->load(d) && d.magic == SaveData().magic && d.version == 1) save_ = d;
+  }
+  if (save_.unlocked < 1) save_.unlocked = 1;
+  if (save_.unlocked > NUM_LEVELS) save_.unlocked = NUM_LEVELS;
+  if (sel_ >= save_.unlocked) sel_ = save_.unlocked - 1;
   state_ = S_TITLE;
   stateTime_ = 0;
-  audio_->music(0);
-  // le niveau 1 sert de decor a l'ecran titre
-  startLevel(0, true);
+  audio_->music(ALL_LEVELS[sel_]->music);
+  // le niveau choisi sert de decor a l'ecran titre
+  startLevel(sel_, true);
   camX_ = 0;
+}
+
+void Game::levelCleared() {
+  int i = levelIndex_;
+  int secs = levelTime_ / 60;
+  if (i < 8) {
+    if (save_.bestTime[i] == 0 || secs < save_.bestTime[i]) save_.bestTime[i] = (uint16_t)secs;
+    if (levelHearts_ > save_.bestHearts[i]) save_.bestHearts[i] = (uint8_t)(levelHearts_ > 255 ? 255 : levelHearts_);
+  }
+  if (i + 2 > save_.unlocked) save_.unlocked = (uint8_t)(i + 2 > NUM_LEVELS ? NUM_LEVELS : i + 2);
+  if (storage_) storage_->save(save_);
 }
 
 int Game::spawn(EType t, float x, float y) {
@@ -97,6 +120,16 @@ void Game::startLevel(int index, bool fresh) {
       case 'C': k = spawn(E_CHECK, tx, ty + TILE - 48); ent_[k].w = 16; ent_[k].h = 48; break;
       case 'F': k = spawn(E_GOAL, tx, ty + TILE - 48); ent_[k].w = 52; ent_[k].h = 48; break;
       case 'T': k = spawn(E_TRAM, tx, ty + TILE - 48); ent_[k].w = 96; ent_[k].h = 48; ent_[k].dir = 1; break;
+      case 'M':
+      case 'V':
+        k = spawn(E_PLATFORM, tx, ty);
+        ent_[k].w = PLATFORM_W;
+        ent_[k].h = PLATFORM_H;
+        ent_[k].state = s.kind == 'V';
+        ent_[k].dir = 1;   // l'ascenseur ('V') attend en bas qu'on monte dessus
+        break;
+      case 'b': k = spawn(E_BOTTLE, tx + 3, ty + 2); ent_[k].w = 10; ent_[k].h = 14; break;
+      case 's': k = spawn(E_SQUIRREL, tx + 1, ty + 4); ent_[k].w = 14; ent_[k].h = 12; ent_[k].dir = -1; break;
       case 'l': k = spawn(E_BENCH, tx, ty); break;
       case 'k': k = spawn(E_FLOWERS, tx, ty); break;
       default: break;
@@ -115,9 +148,9 @@ void Game::startLevel(int index, bool fresh) {
   updateCamera(true);
 }
 
-void Game::debugTeleport(float x) {
+void Game::debugTeleport(float x, float feetY) {
   checkX_ = x;
-  checkY_ = lvl_.startY;
+  checkY_ = feetY >= 0 ? feetY : lvl_.startY;
   p_.x = x;
   p_.y = checkY_ - PH;
   p_.vx = p_.vy = 0;
@@ -138,10 +171,20 @@ void Game::step(const Input& in) {
     case S_TITLE:
       camX_ += 0.6f;
       if (camX_ > lvl_.pixelW() - SCREEN_W) camX_ = 0;
+      if (save_.unlocked > 1 && (in.hit(BTN_LEFT) || in.hit(BTN_RIGHT))) {
+        int n = sel_ + (in.hit(BTN_RIGHT) ? 1 : -1);
+        if (n >= 0 && n < save_.unlocked && n < NUM_LEVELS) {
+          sel_ = n;
+          startLevel(sel_, true);
+          camX_ = 0;
+          audio_->music(lvl_.def->music);
+          audio_->play(SFX_BUMP);
+        }
+      }
       if (in.hit(BTN_START) || in.hit(BTN_A)) {
         lives_ = 3;
         hearts_ = 0;
-        startLevel(0, true);
+        startLevel(sel_, true);
         state_ = S_INTRO;
         stateTime_ = 0;
         audio_->music(-1);
@@ -152,7 +195,7 @@ void Game::step(const Input& in) {
       if (stateTime_ > (respawn_ ? 70 : 130) || (stateTime_ > 30 && in.hit(BTN_A | BTN_START))) {
         state_ = S_PLAY;
         stateTime_ = 0;
-        audio_->music(0);
+        audio_->music(lvl_.def->music);
       }
       break;
     case S_PLAY:
@@ -167,7 +210,7 @@ void Game::step(const Input& in) {
     case S_PAUSE:
       if (in.hit(BTN_START)) {
         state_ = S_PLAY;
-        audio_->music(0);
+        audio_->music(lvl_.def->music);
         audio_->play(SFX_PAUSE);
       } else if (in.hit(BTN_SELECT)) {
         begin(audio_);
@@ -204,7 +247,7 @@ void Game::step(const Input& in) {
           state_ = S_INTRO;
         } else {
           state_ = S_END;
-          audio_->music(0);
+          audio_->music(lvl_.def->music);
         }
         stateTime_ = 0;
       }
@@ -229,6 +272,11 @@ void Game::updatePlay(const Input& in) {
 
 void Game::updatePlayer(const Input& in) {
   Player& p = p_;
+  if (p.climbing || tryStartClimb(in)) {
+    if (p.invuln > 0) p.invuln--;
+    updateClimb(in);
+    return;
+  }
   bool left = in.down(BTN_LEFT), right = in.down(BTN_RIGHT);
   bool run = in.down(BTN_B);
   float maxv = run ? RUN_MAX : WALK_MAX;
@@ -300,6 +348,79 @@ void Game::updatePlayer(const Input& in) {
   p.animFrame = (p.animTime / speed) % ANIM_LEN[a];
 }
 
+// ---------------------------------------------------------------- echelles
+bool Game::tryStartClimb(const Input& in) {
+  Player& p = p_;
+  if (p.invuln > INVULN - 20) return false;
+  int bottom = ifloor(p.y) + PH;
+  // colonne de l'echelle : celle du centre du corps, sinon celle d'un des bords
+  int cols[3] = {(ifloor(p.x) + PW / 2) >> 4, ifloor(p.x) >> 4, (ifloor(p.x) + PW - 1) >> 4};
+  int cx = -1;
+  for (int k = 0; k < 3 && cx < 0; k++) {
+    int c = cols[k];
+    if (in.down(BTN_UP)) {
+      bool found = false;
+      // une echelle derriere le corps (pas seulement au-dessus de la tete)
+      for (int yy = bottom - 4; yy >= ifloor(p.y) + 12; yy -= 8)
+        if (lvl_.at(c, yy >> 4) == T_LADDER) found = true;
+      // en haut d'une echelle, deja debout dessus : rien a monter
+      if (found && p.onGround && lvl_.ladderTop(c, bottom >> 4) && lvl_.at(c, (bottom - 1) >> 4) != T_LADDER)
+        found = false;
+      if (found) cx = c;
+    } else if (in.down(BTN_DOWN) && p.onGround && lvl_.ladderTop(c, bottom >> 4)) {
+      cx = c;
+      p.y += 4;
+    }
+  }
+  if (cx < 0) return false;
+  p.climbing = true;
+  p.vx = p.vy = 0;
+  p.onGround = false;
+  p.riding = -1;
+  p.x = cx * TILE + TILE / 2 - PW / 2.0f;
+  p.anim = A_CLIMB;
+  return true;
+}
+
+void Game::updateClimb(const Input& in) {
+  Player& p = p_;
+  if (in.hit(BTN_A)) {  // on saute de l'echelle
+    p.climbing = false;
+    p.vy = -4.5f;
+    p.vx = in.down(BTN_LEFT) ? -2.0f : (in.down(BTN_RIGHT) ? 2.0f : 0.0f);
+    if (p.vx) p.facingLeft = p.vx < 0;
+    audio_->play(SFX_JUMP);
+    return;
+  }
+  float dy = in.down(BTN_UP) ? -CLIMB_V : (in.down(BTN_DOWN) ? CLIMB_V : 0.0f);
+  int cx = (ifloor(p.x) + PW / 2) >> 4;
+  if (dy < 0 && lvl_.kindAt(cx, ifloor(p.y + dy) >> 4) == K_SOLID) dy = 0;  // plafond
+  p.y += dy;
+  p.climbDist += dy < 0 ? -dy : dy;
+  int bottom = ifloor(p.y) + PH;
+  if (dy > 0) {  // en bas : on pose le pied
+    uint8_t t = lvl_.at(cx, bottom >> 4);
+    TileKind k = Level::kind(t);
+    if (t != T_LADDER && (k == K_SOLID || k == K_ONEWAY)) {
+      p.y = (bottom >> 4) * TILE - PH;
+      p.climbing = false;
+      p.onGround = true;
+      return;
+    }
+  }
+  bool onLadder = lvl_.at(cx, (bottom - 1) >> 4) == T_LADDER || lvl_.at(cx, (ifloor(p.y) + PH / 2) >> 4) == T_LADDER;
+  if (!onLadder) {
+    if (lvl_.ladderTop(cx, bottom >> 4)) {  // en haut : debout sur l'echelle
+      p.y = (bottom >> 4) * TILE - PH;
+      p.onGround = true;
+    }
+    p.climbing = false;
+    return;
+  }
+  p.anim = A_CLIMB;
+  p.animFrame = ((int)(p.climbDist / 8)) % 2;
+}
+
 bool Game::solidAt(int px, int py) const {
   return lvl_.kindAt(px >> 4, py >> 4) == K_SOLID;
 }
@@ -338,7 +459,8 @@ void Game::movePlayerY(float dy, float prevBottom) {
     int ty = ifloor(bottom) >> 4;
     for (int tx = l; tx <= r; tx++) {
       TileKind k = lvl_.kindAt(tx, ty);
-      if (k == K_SOLID || (k == K_ONEWAY && prevBottom <= ty * TILE + 0.01f)) {
+      bool top = k == K_ONEWAY || (k == K_LADDER && lvl_.ladderTop(tx, ty));
+      if (k == K_SOLID || (top && prevBottom <= ty * TILE + 0.01f)) {
         p.y = ty * TILE - PH;
         p.vy = 0;
         p.onGround = true;
@@ -346,12 +468,14 @@ void Game::movePlayerY(float dy, float prevBottom) {
         return;
       }
     }
-    // toit du tram (plateforme mobile)
+    // toit du tram, passerelles mobiles
     for (int i = 0; i < nent_; i++) {
       Entity& e = ent_[i];
-      if (e.type != E_TRAM) continue;
-      float roof = e.y + TRAM_ROOF;
-      if (prevBottom <= roof + 0.5f && bottom >= roof && p.x + PW > e.x + 4 && p.x < e.x + e.w - 4) {
+      if (e.type != E_TRAM && e.type != E_PLATFORM) continue;
+      float roof = platformTop(e);
+      float tol = e.type == E_PLATFORM ? 2.0f : 0.5f;
+      int inset = e.type == E_PLATFORM ? 0 : 4;
+      if (prevBottom <= roof + tol && bottom >= roof && p.x + PW > e.x + inset && p.x < e.x + e.w - inset) {
         p.y = roof - PH;
         p.vy = 0;
         p.onGround = true;
@@ -376,6 +500,10 @@ void Game::movePlayerY(float dy, float prevBottom) {
       }
     }
   }
+}
+
+float Game::platformTop(const Entity& e) const {
+  return e.type == E_TRAM ? e.y + TRAM_ROOF : e.y;
 }
 
 void Game::bumpTile(int tx, int ty) {
@@ -475,6 +603,99 @@ void Game::updateEntities() {
         }
         break;
       }
+      case E_PLATFORM: {
+        // l'ascenseur reste en haut tant que le renard est dessus
+        if (e.state == 1 && e.dir > 0 && e.y < e.baseY && p_.riding == i && e.timer < 30) e.timer = 30;
+        if (e.timer > 0) {  // petite pause aux butees
+          e.timer--;
+          break;
+        }
+        float dx = 0, dy = 0;
+        int tl = ifloor(e.x) >> 4;
+        if (e.state == 0) {
+          dx = PLATFORM_V * e.dir;
+          float lead = e.dir > 0 ? e.x + e.w + dx : e.x + dx;
+          int ltx = ifloor(lead) >> 4, lty = ifloor(e.y) >> 4;
+          if (lvl_.mark(ltx, lty) || lvl_.kindAt(ltx, lty) == K_SOLID) {
+            e.dir = -e.dir;
+            e.timer = 30;
+            break;
+          }
+        } else {
+          // ascenseur : attend en bas qu'on monte dessus, monte, puis redescend tout seul
+          bool atBase = e.dir > 0 && fabsf(e.y - e.baseY) < 0.5f;
+          if (atBase && e.y >= e.baseY) {
+            e.y = e.baseY;
+            if (p_.riding != i) break;
+            e.dir = -1;
+          }
+          if (e.dir > 0 && e.y + PLATFORM_VV >= e.baseY) {  // de retour en bas
+            dy = e.baseY - e.y;
+            e.y = e.baseY;
+            if (p_.riding == i && !p_.climbing) p_.y = e.y - PH;
+            break;
+          }
+          dy = PLATFORM_VV * e.dir;
+          float lead = e.dir > 0 ? e.y + e.h + dy : e.y + dy;
+          int lty = ifloor(lead) >> 4;
+          if (lvl_.mark(tl, lty) || lvl_.kindAt(tl, lty) == K_SOLID || lty < 0 || lty >= lvl_.h) {
+            // arret pile sur la grille : le dessus de la passerelle au ras de la roche voisine
+            if (e.dir < 0) e.y = (float)((lty + 1) * TILE);
+            if (p_.riding == i && !p_.climbing) p_.y = e.y - PH;
+            e.dir = -e.dir;
+            e.timer = 40;
+            break;
+          }
+        }
+        e.x += dx;
+        e.y += dy;
+        if (p_.riding == i && !p_.climbing) {
+          if (dx) movePlayerX(dx);
+          p_.y = e.y - PH;
+        }
+        break;
+      }
+      case E_SQUIRREL:
+        if (e.state == 0) {
+          e.vy += GRAVITY;
+          if (e.vy > MAX_FALL) e.vy = MAX_FALL;
+          // en l'air : avance ; a terre : attend puis bondit vers le renard
+          float nx = e.x + e.vx;
+          int frontX = e.vx < 0 ? ifloor(nx) : ifloor(nx) + e.w - 1;
+          int ftx = frontX >> 4, fty = (ifloor(e.y) + e.h - 1) >> 4;
+          if (e.vx && (lvl_.kindAt(ftx, fty) == K_SOLID || lvl_.mark(ftx, fty))) e.vx = -e.vx;
+          else e.x = nx;
+          float prevB = e.y + e.h;
+          e.y += e.vy;
+          int bty = (ifloor(e.y) + e.h) >> 4;
+          int bl = ifloor(e.x) >> 4, br = (ifloor(e.x) + e.w - 1) >> 4;
+          bool landed = false;
+          for (int tx = bl; tx <= br && !landed; tx++) {
+            TileKind k = lvl_.kindAt(tx, bty);
+            bool top = k == K_ONEWAY || (k == K_LADDER && lvl_.ladderTop(tx, bty));
+            if (e.vy >= 0 && (k == K_SOLID || (top && prevB <= bty * TILE + 0.01f))) landed = true;
+          }
+          if (landed) {
+            e.y = bty * TILE - e.h;
+            e.vy = 0;
+            e.vx = 0;
+            if (++e.timer > 70 && fabsf(p_.x - e.x) < 150 && fabsf(p_.y - e.y) < 90) {
+              e.dir = p_.x < e.x ? -1 : 1;
+              e.vx = 1.3f * e.dir;
+              e.vy = -4.2f;
+              e.timer = 0;
+            }
+          }
+          if (e.y > lvl_.pixelH() || lvl_.kindAt((ifloor(e.x) + 7) >> 4, (ifloor(e.y) + e.h - 2) >> 4) == K_WATER)
+            e.type = E_NONE;
+        } else if (--e.timer <= 0) {
+          fx(E_SPARK, e.x, e.y - 4);
+          e.type = E_NONE;
+        }
+        break;
+      case E_BOTTLE:
+        e.timer++;
+        break;
       case E_POP:
         e.vy += 0.3f;
         e.y += e.vy;
@@ -511,6 +732,12 @@ void Game::interact() {
     for (int tx = l; tx <= r; tx++)
       if (lvl_.kindAt(tx, ty) == K_HAZARD && overlap(px, py, PW, PH, tx * TILE + 1, ty * TILE + 7, 14, 9))
         hurtPlayer(tx * TILE + 8);
+  // l'eau du torrent : plouf
+  if (lvl_.kindAt((ifloor(px) + PW / 2) >> 4, (ifloor(py) + PH - 4) >> 4) == K_WATER) {
+    fx(E_DUST, px + PW / 2 - 8, (float)(((ifloor(py) + PH - 4) >> 4) * TILE - 12));
+    killPlayer();
+    return;
+  }
 
   for (int i = 0; i < nent_; i++) {
     Entity& e = ent_[i];
@@ -522,8 +749,18 @@ void Game::interact() {
           e.type = E_NONE;
         }
         break;
+      case E_BOTTLE:
+        if (overlap(px, py, PW, PH, e.x, e.y, e.w, e.h)) {
+          if (p.hp < 3) p.hp++;
+          audio_->play(SFX_CHECK);
+          fx(E_SPARK, e.x - 3, e.y - 2);
+          fx(E_TEXT, e.x - 14, e.y - 14, "Voda!");
+          e.type = E_NONE;
+        }
+        break;
       case E_PIGEON:
       case E_WASP:
+      case E_SQUIRREL:
         if (e.state != 0) break;
         if (overlap(px + 1, py + 2, PW - 2, PH - 2, e.x, e.y, e.w, e.h)) {
           if (p.vy > 0 && py + PH - p.vy <= e.y + 6) {
@@ -568,7 +805,9 @@ void Game::interact() {
         if (overlap(px, py, PW, PH, e.x, e.y, e.w, e.h)) {
           state_ = S_CLEAR;
           stateTime_ = 0;
+          levelCleared();
           p.vx = 0;
+          p.climbing = false;
           p.anim = A_WIN;
           p.animTime = 0;
           p.facingLeft = false;
@@ -592,6 +831,7 @@ void Game::hurtPlayer(float fromX) {
     return;
   }
   p.invuln = INVULN;
+  p.climbing = false;
   p.vx = (p.x + PW / 2 < fromX) ? -2.5f : 2.5f;
   p.vy = -3.5f;
   p.onGround = false;
@@ -607,6 +847,7 @@ void Game::killPlayer() {
   p_.vx = 0;
   p_.anim = A_HURT;
   p_.riding = -1;
+  p_.climbing = false;
   audio_->music(-1);
   audio_->play(SFX_DIE);
 }
@@ -650,8 +891,8 @@ void Game::drawWorld(Band& b) {
   int ground = lvl_.pixelH() - 2 * TILE - cy;
   b.wrapRow(*th.mid, cx / 2, ground - th.mid->h);
   // sous le niveau de la rue : terre sombre (les trous ne montrent pas le ciel)
-  b.fillRect(0, ground, SCREEN_W, SCREEN_H - ground, 0x2945);
-  b.fillRect(0, ground + 20, SCREEN_W, SCREEN_H - ground - 20, 0x18C3);
+  b.fillRect(0, ground, SCREEN_W, SCREEN_H - ground, th.under);
+  b.fillRect(0, ground + 20, SCREEN_W, SCREEN_H - ground - 20, th.under2);
 
   // decor et objets derriere le joueur
   for (int i = 0; i < nent_; i++) {
@@ -670,6 +911,7 @@ void Game::drawWorld(Band& b) {
       if (t == T_EMPTY || tx < 0 || tx >= lvl_.w) continue;
       int dy = ty * TILE - cy;
       if (bumpT_ > 0 && tx == bumpTx_ && ty == bumpTy_) dy -= (bumpT_ > 4 ? 8 - bumpT_ : bumpT_);
+      if (t == T_WATER_TOP && ((frame_ / 16 + tx) & 1)) t = T_WATER_TOP2;  // vaguelettes
       b.blit(ts, (t % 8) * TILE, (t / 8) * TILE, TILE, TILE, tx * TILE - cx, dy);
     }
   }
@@ -713,25 +955,40 @@ void Game::drawEntity(Band& b, const Entity& e) {
       b.frame(spr_pruzina, e.timer > 0 ? 1 : 0, sx - 1, sy - 6);
       break;
     case E_CHECK:
-      b.frame(spr_lampa, e.state ? 1 : 0, sx, sy);
+      b.frame(*lvl_.def->theme->check, e.state ? 1 : 0, sx, sy);
       break;
     case E_GOAL: {
-      b.frame(spr_zastavka, 0, sx, sy);
-      // Andrea attend a l'arret
       bool cleared = state_ == S_CLEAR;
       int row = cleared ? A_WIN : A_IDLE;
       int f = cleared ? (stateTime_ / 14) % 2 : (e.timer / 14) % 4;
-      b.frame(spr_rabbit, row * spr_rabbit.cols + f, sx + 20, sy, true);
+      if (lvl_.def->npc[0]) {
+        // pan Orol sur son rocher, Andrea a cote
+        b.frame(spr_rabbit, row * spr_rabbit.cols + f, sx, sy, true);
+        b.frame(spr_orol, cleared && stateTime_ > 40 ? (stateTime_ / 20) % 2 : 0, sx + 26, sy);
+      } else {
+        // Andrea attend a l'arret de tram
+        b.frame(spr_zastavka, 0, sx, sy);
+        b.frame(spr_rabbit, row * spr_rabbit.cols + f, sx + 20, sy, true);
+      }
       break;
     }
+    case E_PLATFORM:
+      b.frame(spr_platforma, 0, sx, sy);
+      break;
+    case E_BOTTLE:
+      b.frame(spr_flasa, 0, sx - 3, sy - 2 - ((frame_ / 20) % 2));
+      break;
+    case E_SQUIRREL:
+      b.frame(spr_vevericka, e.state ? 2 : (e.vy < 0 || e.vx ? 1 : 0), sx - 1, sy - 4, e.dir < 0);
+      break;
     case E_TRAM:
       b.frame(spr_elektricka, 0, sx, sy, e.dir < 0);
       break;
     case E_BENCH:
-      b.frame(spr_lavicka, 0, sx, sy);
+      b.frame(*lvl_.def->theme->decor, 0, sx, sy);
       break;
     case E_FLOWERS:
-      b.frame(spr_lavicka, 1, sx, sy);
+      b.frame(*lvl_.def->theme->decor, 1, sx, sy);
       break;
     case E_DUST:
       b.frame(spr_fx, 2 - e.timer / 6, sx, sy);
@@ -754,10 +1011,17 @@ void Game::drawPlayer(Band& b) {
   int hx = (int)lroundf(p.x + PW / 2.0f) - cx;
   int feet = (int)lroundf(p.y + PH) - cy;
   int row = p.anim, f = p.animFrame;
+  bool flip = p.facingLeft;
   if (state_ == S_CLEAR) f = (stateTime_ / 14) % 2;
   if (state_ == S_DYING) row = A_HURT, f = 0;
-  int sx = p.facingLeft ? hx - (spr_fox.fw - 1 - FOX_ANCHOR) : hx - FOX_ANCHOR;
-  b.frame(spr_fox, row * spr_fox.cols + f, sx, feet - 47, p.facingLeft);
+  if (row == A_CLIMB && spr_fox.img->h / spr_fox.fh <= A_CLIMB) {
+    // pas encore d'images d'echelle : la pose du saut, retournee a chaque pas
+    row = A_JUMP;
+    flip = f != 0;
+    f = 0;
+  }
+  int sx = flip ? hx - (spr_fox.fw - 1 - FOX_ANCHOR) : hx - FOX_ANCHOR;
+  b.frame(spr_fox, row * spr_fox.cols + f, sx, feet - 47, flip);
 }
 
 void Game::drawHud(Band& b) {
@@ -794,14 +1058,22 @@ void Game::drawTitle(Band& b) {
   b.fillRect(0, 82, SCREEN_W, 2, ORANGE);
   centerText(b, font_title, 30, "ZAJKA RUN", ORANGE, BLACK);
   centerText(b, font_small, 66, "Košice  →  Bratislava", WHITE, BLACK);
-  if ((frame_ / 30) % 2 == 0) centerText(b, font_big, 104, "Stlač START", WHITE, BLACK);
+  if (save_.unlocked > 1) {
+    // choix du niveau : < SVET 1-2 · Slovensky raj >
+    char s[64];
+    snprintf(s, sizeof s, "%s  SVET 1-%d · %s  %s", sel_ > 0 ? "‹" : " ", sel_ + 1, ALL_LEVELS[sel_]->name,
+             sel_ + 1 < save_.unlocked ? "›" : " ");
+    b.fillRect(0, 88, SCREEN_W, 16, 0x18E6);
+    centerText(b, font_small, 89, s, YELLOW, BLACK);
+  }
+  if ((frame_ / 30) % 2 == 0) centerText(b, font_big, 108, "Stlač START", WHITE, BLACK);
   b.fillRect(0, SCREEN_H - 14, SCREEN_W, 14, 0x18E6);
   centerText(b, font_small, SCREEN_H - 13, "Slovingo · Zajka Friends", 0xBDF7, -1);
   if (volumeShow_) drawOverlay(b);
 }
 
 void Game::drawOverlay(Band& b) {
-  char s[48];
+  char s[64];
   switch (state_) {
     case S_INTRO: {
       if (respawn_) {
@@ -812,9 +1084,10 @@ void Game::drawOverlay(Band& b) {
         b.text(font_big, 154, 106, s, WHITE, BLACK);
         break;
       }
-      b.fillRect(0, 70, SCREEN_W, 96, DARKBLUE);
+      bool rec = levelIndex_ < 8 && save_.bestTime[levelIndex_];
+      b.fillRect(0, 70, SCREEN_W, rec ? 112 : 96, DARKBLUE);
       b.fillRect(0, 70, SCREEN_W, 2, ORANGE);
-      b.fillRect(0, 164, SCREEN_W, 2, ORANGE);
+      b.fillRect(0, rec ? 180 : 164, SCREEN_W, 2, ORANGE);
       snprintf(s, sizeof s, "SVET 1-%d", levelIndex_ + 1);
       centerText(b, font_small, 78, s, YELLOW, BLACK);
       centerText(b, font_title, 92, lvl_.def->name, WHITE, BLACK);
@@ -822,6 +1095,11 @@ void Game::drawOverlay(Band& b) {
       b.frame(spr_hud, 3, 140, 148);
       snprintf(s, sizeof s, "×%d", lives_);
       b.text(font_small, 152, 145, s, WHITE, BLACK);
+      if (rec) {
+        int bt = save_.bestTime[levelIndex_];
+        snprintf(s, sizeof s, "Rekord  %d:%02d  ·  medovníky : %d", bt / 60, bt % 60, save_.bestHearts[levelIndex_]);
+        centerText(b, font_small, 163, s, YELLOW, BLACK);
+      }
       break;
     }
     case S_PAUSE:
@@ -841,7 +1119,9 @@ void Game::drawOverlay(Band& b) {
       if (stateTime_ > 40) {
         for (int i = 0; i < nent_; i++) {
           if (ent_[i].type != E_GOAL) continue;
-          int ax = (int)ent_[i].x - (int)camX_ + 36, ay = (int)ent_[i].y - (int)camY_ - 26;
+          // la bulle sort de la bouche de pan Orol, ou d'Andrea a l'arret de tram
+          int ax = (int)ent_[i].x - (int)camX_ + (lvl_.def->npc[0] ? 44 : 36);
+          int ay = (int)ent_[i].y - (int)camY_ - 26;
           const char* hint = lvl_.def->hint;
           int w = textWidth(font_small, hint) + 12;
           int bx = ax - w / 2;
@@ -870,7 +1150,8 @@ void Game::drawOverlay(Band& b) {
     case S_END:
       b.fillRect(0, 60, SCREEN_W, 110, DARKBLUE);
       centerText(b, font_big, 70, "Pokračovanie nabudúce…", WHITE, BLACK);
-      centerText(b, font_small, 100, "Ďalšia zastávka : Slovenský raj", 0xBDF7, -1);
+      snprintf(s, sizeof s, "Ďalšia zastávka : %s", lvl_.def->next);
+      centerText(b, font_small, 100, s, 0xBDF7, -1);
       snprintf(s, sizeof s, "Medovníky : %d", hearts_);
       centerText(b, font_small, 120, s, YELLOW, -1);
       if (stateTime_ > 90) centerText(b, font_small, 146, "Stlač START", WHITE, -1);
