@@ -60,8 +60,8 @@ tourne à 60 Hz fixes, l'affichage autour de 30 images/s.
   `python3 tools/build_assets.py`. Un nouveau fichier `levels/1-2_xxx.txt` devient le niveau suivant.
 - **Les graphismes** : voir `art/PROMPTS.md` (prompts Gemini / ChatGPT, état de chaque
   image, puis `tools/import_ai.py` pour les importer ; les images IA d'origine sont gardées
-  dans `art/sources/`). Fonds, tuiles, medovník, pigeon et guêpe viennent de Gemini ; le
-  reste est encore provisoire (`tools/make_placeholder_art.py`, et `tools/make_sprites.py`
+  dans `art/sources/`). Décors, tuiles et objets viennent de Gemini ; les
+  personnages sont encore provisoires (`tools/make_placeholder_art.py`, et `tools/make_sprites.py`
   pour les personnages). Attention : relancer ces deux scripts écrase les images importées.
 - **La physique** : constantes en tête de `src/game/game.cpp` (vitesse, gravité, saut...).
 

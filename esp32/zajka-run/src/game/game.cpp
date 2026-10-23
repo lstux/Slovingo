@@ -25,6 +25,8 @@ constexpr float SPRING_V = 8.0f, SPRING_V_HOLD = 9.4f;
 constexpr int COYOTE = 6, JUMP_BUFFER = 7;
 constexpr int INVULN = 90;
 constexpr int HEARTS_PER_LIFE = 50;
+// tram : ligne du toit dans l'image 96x48 (sous le pantographe), mesuree sur art/objects/elektricka_96x48.png
+constexpr int TRAM_ROOF = 20;
 
 // animations de la planche du renard / d'Andrea (une ligne par animation)
 enum { A_IDLE, A_RUN, A_JUMP, A_FALL, A_HURT, A_WIN };
@@ -344,7 +346,7 @@ void Game::movePlayerY(float dy, float prevBottom) {
     for (int i = 0; i < nent_; i++) {
       Entity& e = ent_[i];
       if (e.type != E_TRAM) continue;
-      float roof = e.y + 10;
+      float roof = e.y + TRAM_ROOF;
       if (prevBottom <= roof + 0.5f && bottom >= roof && p.x + PW > e.x + 4 && p.x < e.x + e.w - 4) {
         p.y = roof - PH;
         p.vy = 0;
@@ -465,7 +467,7 @@ void Game::updateEntities() {
         e.x += dx;
         if (p_.riding == i) {
           movePlayerX(dx);
-          p_.y = e.y + 10 - PH;
+          p_.y = e.y + TRAM_ROOF - PH;
         }
         break;
       }
@@ -555,7 +557,7 @@ void Game::interact() {
         break;
       case E_TRAM:
         if (p.riding != i && p.invuln == 0 &&
-            overlap(px + 2, py + 4, PW - 4, PH - 6, e.x + 4, e.y + 16, e.w - 8, e.h - 18))
+            overlap(px + 2, py + 4, PW - 4, PH - 6, e.x + 4, e.y + TRAM_ROOF + 6, e.w - 8, e.h - TRAM_ROOF - 8))
           hurtPlayer(e.x + e.w / 2);
         break;
       case E_GOAL:

@@ -150,6 +150,29 @@ def fit_frame(fr, fw, fh, colors, pad_bottom=1):
     return outline(cell)
 
 
+def fit_strip(frames, fw, fh, colors, pad_bottom=1):
+    """Comme fit_frame, mais une seule echelle pour toutes les images : les tailles et les
+    hauteurs relatives sont gardees (ressort comprime, petit nuage, etc.)."""
+    strip_h = max(f.height for f in frames)
+    boxes = []
+    for f in frames:
+        bb = f.getbbox() or (0, 0, 1, 1)
+        boxes.append(bb)
+    max_w = max(bb[2] - bb[0] for bb in boxes)
+    top = min(bb[1] for bb in boxes)
+    bot = max(bb[3] for bb in boxes)
+    s = min((fh - pad_bottom - 1) / (bot - top), (fw - 2) / max_w)
+    cells = []
+    for f, bb in zip(frames, boxes):
+        part = f.crop((bb[0], top, bb[2], bot))
+        nw, nh = max(1, int(round(part.width * s))), max(1, int(round(part.height * s)))
+        part = quantize_rgba(shrink(part, nw, nh), colors)
+        cell = Image.new("RGBA", (fw, fh), (0, 0, 0, 0))
+        cell.alpha_composite(part, ((fw - nw) // 2, fh - pad_bottom - nh))
+        cells.append(outline(cell))
+    return cells
+
+
 def mirror_loop(img):
     """Image + son reflet : raccord parfait quand le fond boucle a l'horizontale."""
     out = Image.new("RGBA", (img.width * 2, img.height))
@@ -196,6 +219,8 @@ def main():
     ap.add_argument("--key", default=None)
     ap.add_argument("--mirror", action="store_true", help="far/mid : ajoute le reflet pour boucler sans raccord")
     ap.add_argument("--strip-ground", action="store_true", help="sprite/object : retire un trait de sol")
+    ap.add_argument("--uniform", action="store_true",
+                    help="sprite/object : meme echelle pour toutes les images (garde les tailles relatives)")
     ap.add_argument("--cells", default=None,
                     help="tiles : tuile=ligne,colonne[,f] ... ex. '1=0,1 3=0,1,L 4=0,1,R 6=0,5 5=0,5,f' "
                          "(f : retournee, L/R : ajoute un bord gauche/droit) quand l'IA n'a pas respecte l'ordre")
@@ -268,10 +293,14 @@ def main():
         sheet = big
     # efface la ligne puis place les nouvelles images
     sheet.paste(Image.new("RGBA", (sheet.width, fh), (0, 0, 0, 0)), (0, row * fh))
-    for i, fr in enumerate(frames):
-        if a.strip_ground:
-            fr = strip_ground(fr)
-        sheet.paste(fit_frame(fr, fw, fh, a.colors or 48), (i * fw, row * fh))
+    if a.strip_ground:
+        frames = [strip_ground(fr) for fr in frames]
+    if a.uniform:
+        cells = fit_strip(frames, fw, fh, a.colors or 48)
+    else:
+        cells = [fit_frame(fr, fw, fh, a.colors or 48) for fr in frames]
+    for i, cell in enumerate(cells):
+        sheet.paste(cell, (i * fw, row * fh))
     sheet.save(sheet_path)
     print(f"ecrit {os.path.relpath(sheet_path, ROOT)} : ligne {row}, {len(frames)} image(s) de {fw}x{fh}")
     if a.kind == "sprite":

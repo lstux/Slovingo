@@ -13,8 +13,8 @@ Chaque image du jeu peut être remplacée par une image générée, sans toucher
 | `objects/holub` pigeon | fait (Gemini) | `sources/holub_gemini.jpg` |
 | `objects/osa` guêpe | fait (Gemini) | `sources/osa_gemini.jpg` |
 | `sprites/fox` renard | **à faire** (provisoire) | rendu des SVG |
-| `sprites/rabbit` Andrea | **à faire** (provisoire) | rendu des SVG |
-| `objects/pruzina`, `lampa`, `zastavka`, `elektricka`, `lavicka`, `fx` | **à faire** (provisoires) | dessinés à la main |
+| `sprites/rabbit` Andrea | **à faire** (provisoire, déjà en tenue d'été) | rendu des SVG |
+| `objects/pruzina`, `lampa`, `zastavka`, `elektricka`, `lavicka`, `fx` | fait (Gemini) | `sources/<nom>_gemini.jpg` |
 | `objects/hud` icônes 8×8 | garder (trop petit pour une IA) | dessiné à la main |
 
 ## Marche à suivre
@@ -24,7 +24,7 @@ Chaque image du jeu peut être remplacée par une image générée, sans toucher
 3. L'importer avec la commande donnée sous le prompt : l'outil détoure le magenta, découpe les images d'animation, réduit à la bonne taille et à une palette courte.
 4. `python3 tools/build_assets.py`, puis vérifier dans le simulateur : `make -C sim && build/sim --bot --every 120 --out /tmp/zr`.
 
-Si l'IA ajoute un trait de sol sous un objet : `--strip-ground`. Si elle mélange l'ordre des tuiles : `--cells` (voir la réimportation des tuiles en bas de page).
+Si l'IA ajoute un trait de sol sous un objet : `--strip-ground`. Si les images n'ont pas la même taille exprès (ressort comprimé, petit nuage) : `--uniform`. Si elle mélange l'ordre des tuiles : `--cells` (voir la réimportation des tuiles en bas de page).
 
 ## Le renard (joindre `art/characters/fox-reference.png`)
 
@@ -90,15 +90,15 @@ Sprite sheet for a side-view platform game, the character in side view facing ri
 
 `python3 tools/import_ai.py sprite fox win art/sources/fox_win.png --frames 2`
 
-## Andrea (joindre `art/characters/andrea-head-reference.png`)
+## Andrea (joindre `art/characters/andrea-reference.png`)
 
-Andrea n'est pas la pilote de MathPulse : on ne reprend que la tête. Elle n'a besoin que de trois lignes : `idle` (à l'arrêt), `win` (arrivée), `run` (écran titre).
+Andrea n'est pas la pilote de MathPulse : la référence la montre en tenue d'été (`rabbit-full.svg`). Elle n'a besoin que de trois lignes : `idle` (à l'arrêt), `win` (arrivée), `run` (écran titre).
 
 ### Andrea : idle (4 images)
 
 ```
 16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 40 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
-Use ONLY THE HEAD of the attached reference image, exactly as drawn: grey rabbit with long upright ears (pink inside), white blaze widening into a white muzzle, dark eyes, small Y-shaped nose, grey whiskers, two front teeth. She is Andrea, an ANTHROPOMORPHIC rabbit teenage girl from Košice who stands and walks UPRIGHT ON TWO LEGS like a human, NOT a four-legged animal. Casual summer outfit: a mint green t-shirt, denim shorts, red sneakers, a small yellow shoulder bag.
+Keep EXACTLY the same character as the attached reference image: same clothes, colours, proportions and face. She is Andrea, an ANTHROPOMORPHIC rabbit teenage girl from Košice who stands and walks UPRIGHT ON TWO LEGS like a human, NOT a four-legged animal. Grey fur, long upright ears (pink inside), white blaze widening into a white muzzle, dark eyes, small Y-shaped nose, grey whiskers, two front teeth. Summer outfit: a mint green t-shirt, blue denim shorts, red sneakers with white soles, a small yellow bag on a shoulder strap.
 Sprite sheet for a side-view platform game, the character in side view facing right: a 4-frame IDLE animation (waiting at a tram stop, looking around, one ear twitching), all frames in a single horizontal row, evenly spaced with wide gaps, same size, feet on the same baseline. The character is about 1.5 times taller than wide and each frame must read clearly at 32x48 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow..
 ```
 
@@ -108,7 +108,7 @@ Sprite sheet for a side-view platform game, the character in side view facing ri
 
 ```
 16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 40 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
-Use ONLY THE HEAD of the attached reference image, exactly as drawn: grey rabbit with long upright ears (pink inside), white blaze widening into a white muzzle, dark eyes, small Y-shaped nose, grey whiskers, two front teeth. She is Andrea, an ANTHROPOMORPHIC rabbit teenage girl from Košice who stands and walks UPRIGHT ON TWO LEGS like a human, NOT a four-legged animal. Casual summer outfit: a mint green t-shirt, denim shorts, red sneakers, a small yellow shoulder bag.
+Keep EXACTLY the same character as the attached reference image: same clothes, colours, proportions and face. She is Andrea, an ANTHROPOMORPHIC rabbit teenage girl from Košice who stands and walks UPRIGHT ON TWO LEGS like a human, NOT a four-legged animal. Grey fur, long upright ears (pink inside), white blaze widening into a white muzzle, dark eyes, small Y-shaped nose, grey whiskers, two front teeth. Summer outfit: a mint green t-shirt, blue denim shorts, red sneakers with white soles, a small yellow bag on a shoulder strap.
 Sprite sheet for a side-view platform game, the character in side view facing right: a 2-frame VICTORY animation (waving one arm high, big smile), all frames in a single horizontal row, evenly spaced with wide gaps, same size, feet on the same baseline. The character is about 1.5 times taller than wide and each frame must read clearly at 32x48 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow..
 ```
 
@@ -118,13 +118,13 @@ Sprite sheet for a side-view platform game, the character in side view facing ri
 
 ```
 16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 40 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
-Use ONLY THE HEAD of the attached reference image, exactly as drawn: grey rabbit with long upright ears (pink inside), white blaze widening into a white muzzle, dark eyes, small Y-shaped nose, grey whiskers, two front teeth. She is Andrea, an ANTHROPOMORPHIC rabbit teenage girl from Košice who stands and walks UPRIGHT ON TWO LEGS like a human, NOT a four-legged animal. Casual summer outfit: a mint green t-shirt, denim shorts, red sneakers, a small yellow shoulder bag.
+Keep EXACTLY the same character as the attached reference image: same clothes, colours, proportions and face. She is Andrea, an ANTHROPOMORPHIC rabbit teenage girl from Košice who stands and walks UPRIGHT ON TWO LEGS like a human, NOT a four-legged animal. Grey fur, long upright ears (pink inside), white blaze widening into a white muzzle, dark eyes, small Y-shaped nose, grey whiskers, two front teeth. Summer outfit: a mint green t-shirt, blue denim shorts, red sneakers with white soles, a small yellow bag on a shoulder strap.
 Sprite sheet for a side-view platform game, the character in side view facing right: a 6-frame RUNNING cycle (arms swinging, legs alternating, ears bouncing), all frames in a single horizontal row, evenly spaced with wide gaps, same size, feet on the same baseline. The character is about 1.5 times taller than wide and each frame must read clearly at 32x48 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow..
 ```
 
 `python3 tools/import_ai.py sprite rabbit run art/sources/andrea_run.png --frames 6`
 
-## Objets restants
+## Déjà faits (pour régénérer si besoin)
 
 ### Ressort (`objects/pruzina_16x16`, 2 images)
 
@@ -133,7 +133,7 @@ Sprite sheet for a side-view platform game, the character in side view facing ri
 A spring pad for a side-view platform game, seen exactly from the side: a red bouncy top plate on a silver metal coil spring standing on a dark grey base. 2 frames in a single horizontal row, evenly spaced with wide gaps: relaxed (spring extended), then compressed (spring squashed, plate low). Same base position and scale. Each frame must read clearly at 16x16 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
 ```
 
-`python3 tools/import_ai.py object pruzina art/sources/pruzina.png --frames 2`
+`python3 tools/import_ai.py object pruzina art/sources/pruzina_gemini.jpg --frames 2 --uniform`
 
 ### Lampadaire (point de passage) (`objects/lampa_16x48`, 2 images)
 
@@ -142,7 +142,7 @@ A spring pad for a side-view platform game, seen exactly from the side: a red bo
 A historic cast-iron street lamp from an old Central European town centre, dark green-black painted iron, a slender fluted post on a wide base, a four-sided glass lantern on top with a small crown. Seen exactly from the side, tall and thin (proportions 1 wide by 3 tall). 2 frames in a single horizontal row, evenly spaced with wide gaps: unlit (grey glass), then lit (warm yellow glass with a few glow pixels around it). Same scale, base on the same baseline. Each frame must read clearly at 16x48 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
 ```
 
-`python3 tools/import_ai.py object lampa art/sources/lampa.png --frames 2`
+`python3 tools/import_ai.py object lampa art/sources/lampa_gemini.jpg --frames 2 --strip-ground --uniform`
 
 ### Arrêt de tram (`objects/zastavka_16x48`, 1 image)
 
@@ -151,16 +151,18 @@ A historic cast-iron street lamp from an old Central European town centre, dark 
 A tram stop pole in a Slovak city, seen exactly from the side: a thin grey metal pole, at the top a round yellow sign with a dark blue rim showing a simple tram pictogram, and lower down a small white timetable panel with grey lines. No letters on the signs. Tall and thin (proportions 1 wide by 3 tall). A single image, centred. It must read clearly at 16x48 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
 ```
 
-`python3 tools/import_ai.py object zastavka art/sources/zastavka.png --frames 1`
+`python3 tools/import_ai.py object zastavka art/sources/zastavka_gemini.jpg`
 
 ### Tram (`objects/elektricka_96x48`, 1 image)
+
+Si le toit n'est plus à la même hauteur dans l'image, ajuster `TRAM_ROOF` en tête de `src/game/game.cpp` (ligne du toit, sous le pantographe).
 
 ```
 16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 40 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
 A classic Czechoslovak Tatra T3 tram, seen exactly from the side (pure side elevation, no perspective), facing right: rounded front and rear ends, cream upper body, red lower band and skirt, a row of dark blue windows with small highlights, two sets of double doors, two bogies with dark wheels, a diamond pantograph raised on the roof. No numbers, no logos. Proportions exactly 2 wide by 1 tall, including the pantograph. A single image, centred. It must read clearly at 96x48 pixels. Flat solid magenta #FF00FF background everywhere, no rails, no ground line, no shadow.
 ```
 
-`python3 tools/import_ai.py object elektricka art/sources/elektricka.png --frames 1`
+`python3 tools/import_ai.py object elektricka art/sources/elektricka_gemini.jpg`
 
 ### Banc et bac à fleurs (`objects/lavicka_32x16`, 2 images)
 
@@ -169,7 +171,7 @@ A classic Czechoslovak Tatra T3 tram, seen exactly from the side (pure side elev
 Two street decoration props for a side-view platform game, seen exactly from the side, in a single horizontal row with a wide gap between them: first a wooden park bench with brown slats and black cast-iron legs; second a long wooden flower box filled with green leaves and small red, yellow and white flowers. Both the same height and on the same baseline, each twice as wide as tall. Each must read clearly at 32x16 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
 ```
 
-`python3 tools/import_ai.py object lavicka art/sources/lavicka.png --frames 2`
+`python3 tools/import_ai.py object lavicka art/sources/lavicka_gemini.jpg --frames 2`
 
 ### Effets (poussière, étincelle) (`objects/fx_16x16`, 5 images)
 
@@ -178,9 +180,8 @@ Two street decoration props for a side-view platform game, seen exactly from the
 Small visual effects for a platform game, 5 frames in a single horizontal row, evenly spaced with wide gaps, all the same size: frames 1 to 3 are a small off-white dust puff growing and fading (small round cloud, bigger cloud, thin broken ring); frames 4 and 5 are a pale yellow four-pointed sparkle star, small then large. Each frame must read clearly at 16x16 pixels. Flat solid magenta #FF00FF background everywhere.
 ```
 
-`python3 tools/import_ai.py object fx art/sources/fx.png --frames 5`
+`python3 tools/import_ai.py object fx art/sources/fx_gemini.jpg --frames 5 --uniform`
 
-## Déjà faits (pour régénérer si besoin)
 
 ### Fond lointain
 
