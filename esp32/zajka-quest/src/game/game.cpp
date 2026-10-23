@@ -9,8 +9,9 @@ const uint16_t WHITE = 0xFFFF, BLACK = 0x0000;
 const uint16_t YELLOW = 0xFF2A, ORANGE = 0xFB00, DARKBLUE = 0x1926, GREY = 0xBDF7;
 const uint16_t SKY_TOP = 0x2A4E, SKY_LOW = 0x5C9B, STONE = 0x8C51, STONE_DARK = 0x6B4D;
 
-// planches provisoires du renard et d'Andrea (32 x 48, reprises de Zajka Run) : ligne 0 = repos
-constexpr int IDLE_ROW = 0, IDLE_FRAMES = 4;
+// le renard et Andrea de l'ecran titre : les planches de Zajka Run (ligne 0 = repos) ;
+// le renard est dans des cases de 48 x 48, la tete a x = 27
+constexpr int IDLE_ROW = 0, IDLE_FRAMES = 4, FOX_ANCHOR = 27;
 constexpr int FADE_HALF = 14;  // images pour fermer le rideau, autant pour le rouvrir
 }  // namespace
 
@@ -248,7 +249,7 @@ void Game::drawBackdrop(Band& b) {
 
 void Game::drawTitle(Band& b) {
   int f = (frame_ / 12) % IDLE_FRAMES;
-  b.frame(spr_fox, IDLE_ROW * spr_fox.cols + f, 120, 132);
+  b.frame(spr_fox, IDLE_ROW * spr_fox.cols + f, 136 - FOX_ANCHOR, 132);
   b.frame(spr_rabbit, IDLE_ROW * spr_rabbit.cols + (f + 2) % IDLE_FRAMES, 168, 132, true);
   b.fillRect(0, 26, SCREEN_W, 58, 0x18E6);
   b.fillRect(0, 26, SCREEN_W, 2, ORANGE);

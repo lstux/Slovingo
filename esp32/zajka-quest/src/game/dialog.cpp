@@ -266,10 +266,19 @@ void Dialog::step(const Input& in, Audio* audio) {
 // ---------------------------------------------------------------- rendu
 void Dialog::drawBox(Band& b, const char* name) {
   int sx = shake_ ? ((shake_ / 2) % 2 ? 2 : -2) : 0;
+  // portrait (art/portraits/), pose sur le bord de la boite, a gauche ; le nom a cote
+  const Image8* face = cur_ ? PORTRAITS[cur_->speaker] : nullptr;
+  int nameX = BOX_X + 6;
+  if (face) {
+    b.fillRect(BOX_X + 4, BOX_Y - 52, 52, 52, ORANGE);
+    b.fillRect(BOX_X + 6, BOX_Y - 50, 48, 48, DARKBLUE);
+    b.blit(*face, 0, 0, face->w, face->h, BOX_X + 6, BOX_Y - 50);
+    nameX = BOX_X + 60;
+  }
   if (name && *name) {
     int w = textWidth(font_small, name) + 14;
-    b.fillRect(BOX_X + 6 + sx, BOX_Y - 15, w, 16, ORANGE);
-    b.text(font_small, BOX_X + 13 + sx, BOX_Y - 14, name, WHITE, BLACK);
+    b.fillRect(nameX + sx, BOX_Y - 15, w, 16, ORANGE);
+    b.text(font_small, nameX + 7 + sx, BOX_Y - 14, name, WHITE, BLACK);
   }
   b.fillRect(BOX_X + sx, BOX_Y, BOX_W, BOX_H, DARKBLUE);
   b.fillRect(BOX_X + sx, BOX_Y, BOX_W, 2, ORANGE);
@@ -284,7 +293,7 @@ void Dialog::drawBox(Band& b, const char* name) {
 
 void Dialog::render(Band& b) {
   if (mode_ == M_DONE || !cur_) return;
-  if (b.y0 + b.h <= BOX_Y - 16) return;  // la boite n'occupe que le bas de l'ecran
+  if (b.y0 + b.h <= BOX_Y - 52) return;  // la boite (et son portrait) n'occupe que le bas de l'ecran
   char nm[48];
   const char* who = cur_->speaker == SPK_FOX ? name_ : SPEAKER_NAMES[cur_->speaker];
   resolve(nm, sizeof nm, who, name_);

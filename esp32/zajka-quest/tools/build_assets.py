@@ -300,6 +300,20 @@ def main():
         o.sheet(name, p)
     for name, ttf, size, thr in FONTS:
         o.font(name, ttf, size, thr)
+    # portraits de la boite de dialogue (art/portraits/<nom>_48x48.png) : nullptr si absent
+    portraits = {}
+    for p in sorted(glob.glob(os.path.join(ART, "portraits", "*_48x48.png"))):
+        who = os.path.basename(p).split("_")[0]
+        spk = NPCS.get(who)
+        if spk is None:
+            raise SystemExit(f"art/portraits : personnage inconnu « {who} » (voir NPCS)")
+        o.image(f"portrait_{c_ident(who)}", Image.open(p))
+        portraits[spk] = f"&portrait_{c_ident(who)}"
+    order = ["SPK_NONE", "SPK_NARRATOR", "SPK_FOX", "SPK_ANDREA", "SPK_MATO", "SPK_KATKA", "SPK_BABKA",
+             "SPK_OROL", "SPK_JEZKOVA", "SPK_HUMAN", "SPK_JAN", "SPK_MAREK", "SPK_MOUSE", "SPK_CHICK"]
+    o.data.append("const Image8* const PORTRAITS[SPK_COUNT] = { "
+                  + ", ".join(portraits.get(k, "nullptr") for k in order) + " };\n")
+    o.decl.append("extern const Image8* const PORTRAITS[SPK_COUNT];")
     # tuiles et cartes
     o.data.append("static const uint8_t tile_kinds[%d] = { %s };\n" % (
         len(TILESET), ", ".join(TILE_KINDS[k] for _, _, k in TILESET)))

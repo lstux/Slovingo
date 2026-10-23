@@ -93,15 +93,17 @@ maps/*.txt            cartes en texte (légende en tête de chaque fichier)
 story/bonus.txt       répliques secrètes (bonus de compréhension), propres au jeu
 art/tiles/            planche de tuiles 16 × 16 (ordre : TILESET dans tools/build_assets.py)
 art/walk/             planches de marche 16 × 24 (lignes bas, haut, gauche, droite)
-art/sprites/          personnages 32 × 48 de l'écran titre (ceux de Run)
+art/portraits/        portraits 48 × 48 de la boîte de dialogue
+art/sprites/          le renard et Andrea de l'écran titre (planches Gemini de Zajka Run)
+art/PROMPTS.md        les prompts Gemini / ChatGPT de toutes les images, et comment les importer
 tools/                générateurs (Python 3 + Pillow, numpy) ; build_assets.py régénère src/game/gen/
 sim/                  simulateur PC : même code de jeu, captures PPM et son WAV
 ```
 
-Tuiles et planches de marche sont dessinées par `tools/make_placeholder_art.py`, en attendant
-de vraies images. `tools/make_sprites.py` et `tools/import_ai.py` sont encore ceux de Run
-(planches de profil 32 × 48) ; ils seront étendus aux tuiles, aux planches 4 directions et aux
-portraits.
+Tuiles, planches de marche et portraits sont pour l'instant dessinés par
+`tools/make_placeholder_art.py` (les portraits viennent des têtes SVG de Slovingo). Pour les
+remplacer par des images générées : `art/PROMPTS.md` donne un prompt complet par image et la
+commande `tools/import_ai.py` qui l'importe (`tileset`, `walk`, `portrait`).
 
 ## Les cartes
 

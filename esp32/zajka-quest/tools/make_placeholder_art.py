@@ -8,6 +8,7 @@ IA les remplacent fichier par fichier, aux memes dimensions.
     art/walk/fox_16x24.png      le renard en vue de dessus : lignes bas, haut, gauche, droite ;
     art/walk/andrea_16x24.png   colonnes debout, pied gauche, pied droit
     art/walk/human_16x24.png    un adulte (passants et voyageurs, en attendant de vrais personnages)
+    art/portraits/<nom>_48x48   portraits de la boite de dialogue : les tetes SVG de Slovingo
 
     python3 tools/make_placeholder_art.py && python3 tools/build_assets.py
 """
@@ -498,8 +499,26 @@ def character(name, art, pal, tail=None):
     print(f"ecrit art/walk/{name}_16x24.png", sheet.size)
 
 
+def portraits():
+    """Portraits 48 x 48 depuis les tetes SVG (art/characters/fox-head.svg, rabbit-head.svg)."""
+    from import_ai import crop_alpha, outline, quantize_rgba, shrink
+    from svgpose import Renderer
+    os.makedirs(os.path.join(ART, "portraits"), exist_ok=True)
+    for name, svg in (("fox", "fox-head.svg"), ("andrea", "rabbit-head.svg")):
+        head = crop_alpha(Image.fromarray(Renderer(os.path.join(ART, "characters", svg)).render(400)))
+        side = max(head.width, head.height)
+        sq = Image.new("RGBA", (side, side), (0, 0, 0, 0))
+        sq.alpha_composite(head, ((side - head.width) // 2, side - head.height))
+        img = outline(quantize_rgba(shrink(sq, 46, 46), 32))
+        out = Image.new("RGBA", (48, 48), (0, 0, 0, 0))
+        out.alpha_composite(img, (1, 1))
+        out.save(os.path.join(ART, "portraits", f"{name}_48x48.png"))
+        print(f"ecrit art/portraits/{name}_48x48.png")
+
+
 if __name__ == "__main__":
     tiles()
+    portraits()
     character("fox", FOX, FOX_PAL, FOX_TAIL_DOWN)
     character("andrea", ANDREA, ANDREA_PAL)
     character("human", HUMAN, HUMAN_PAL)
