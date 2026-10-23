@@ -11,6 +11,7 @@ const uint16_t SKY_TOP = 0x2A4E, SKY_LOW = 0x5C9B, STONE = 0x8C51, STONE_DARK = 
 
 // planches provisoires du renard et d'Andrea (32 x 48, reprises de Zajka Run) : ligne 0 = repos
 constexpr int IDLE_ROW = 0, IDLE_FRAMES = 4;
+constexpr int FADE_HALF = 14;  // images pour fermer le rideau, autant pour le rouvrir
 }  // namespace
 
 // ---------------------------------------------------------------- mise en route
@@ -44,24 +45,74 @@ void Game::step(const Input& in) {
       }
       break;
     case S_CHAPTER:
-      // plus tard : entree dans la carte de Kosice ; pour l'instant, retour au titre
-      if (stateTime_ > 30 && (in.hit(BTN_START) || in.hit(BTN_B))) {
+      if (stateTime_ > 30 && (in.hit(BTN_START) || in.hit(BTN_A))) {
         audio_->play(SFX_PAUSE);
-        begin(audio_);
+        world_.loadStart(MAP_KOSICE_HLAVNA);
+        audio_->music(world_.map().music);
+        setState(S_WORLD);
       }
+      break;
+    case S_WORLD:
+      switch (world_.step(in)) {
+        case WE_WARP:
+          warp_ = world_.pendingWarp();
+          audio_->play(SFX_CHECK);
+          setState(S_FADE);
+          break;
+        case WE_BUMP:
+          audio_->play(SFX_BUMP);
+          break;
+        case WE_TALK:
+          lastTalk_ = world_.npc(world_.talkNpc()).who;
+          audio_->play(SFX_COIN);  // les dialogues arrivent a l'etape suivante
+          break;
+        default:
+          break;
+      }
+      break;
+    case S_FADE:
+      if (stateTime_ == FADE_HALF && warp_) {
+        int from = world_.mapIndex();
+        world_.load(warp_->target, warp_->tx, warp_->ty, warp_->dir);
+        if (world_.map().music != ALL_MAPS[from]->music) audio_->music(world_.map().music);
+        warp_ = nullptr;
+      }
+      if (stateTime_ >= 2 * FADE_HALF) setState(S_WORLD);
       break;
   }
 }
 
 // ---------------------------------------------------------------- rendu
 void Game::renderBand(Band& b) {
-  drawBackdrop(b);
-  if (state_ == S_TITLE) drawTitle(b);
-  else drawChapter(b);
+  switch (state_) {
+    case S_TITLE:
+      drawBackdrop(b);
+      drawTitle(b);
+      break;
+    case S_CHAPTER:
+      drawBackdrop(b);
+      drawChapter(b);
+      break;
+    case S_WORLD:
+      world_.render(b);
+      break;
+    case S_FADE: {
+      world_.render(b);
+      int t = stateTime_ <= FADE_HALF ? stateTime_ : 2 * FADE_HALF - stateTime_;
+      drawFade(b, t * (SCREEN_H / 2) / FADE_HALF);
+      break;
+    }
+  }
   if (volumeShow_ > 0) drawVolume(b);
 }
 
-// Decor provisoire : ciel en degrade et paves, en attendant les tuiles de la rue Hlavna.
+// Rideau : deux bandes noires qui se rejoignent au milieu de l'ecran.
+void Game::drawFade(Band& b, int covered) {
+  b.fillRect(0, 0, SCREEN_W, covered, BLACK);
+  b.fillRect(0, SCREEN_H - covered, SCREEN_W, covered, BLACK);
+}
+
+// Decor de l'ecran titre (provisoire) : ciel en degrade et paves.
 void Game::drawBackdrop(Band& b) {
   for (int y = b.y0; y < b.y0 + b.h; y++) {
     uint16_t c;
@@ -97,7 +148,7 @@ void Game::drawChapter(Band& b) {
   centerText(b, font_small, 78, "KAPITOLA 1", YELLOW, BLACK);
   centerText(b, font_title, 92, "Košice", WHITE, BLACK);
   centerText(b, font_small, 128, "To si ty?", GREY, BLACK);
-  if (stateTime_ > 30) centerText(b, font_small, 146, "Pokračovanie čoskoro…", GREY, -1);
+  if (stateTime_ > 30 && (frame_ / 30) % 2 == 0) centerText(b, font_small, 146, "Stlač A", GREY, -1);
 }
 
 void Game::drawVolume(Band& b) {

@@ -4,6 +4,7 @@
 //   make -C sim                                        compile build/sim
 //   build/sim --script sim/demo.txt --out /tmp/zq      rejoue un script (voir demo.txt)
 //   build/sim --frames 600 --every 120 --out /tmp/zq   une capture toutes les 2 s
+//   ZQ_TRACE=1 build/sim --script ...                  affiche chaque case du renard
 //   build/sim --course                                 resume du cours embarque, glyphes manquants
 #include <stdio.h>
 #include <stdlib.h>
@@ -119,6 +120,8 @@ static const char* stateName(GameState s) {
   switch (s) {
     case S_TITLE: return "titre";
     case S_CHAPTER: return "chapitre";
+    case S_WORLD: return "monde";
+    case S_FADE: return "fondu";
   }
   return "?";
 }
@@ -126,7 +129,8 @@ static const char* stateName(GameState s) {
 int main(int argc, char** argv) {
   std::string out = "/tmp/zajka-quest", script;
   std::vector<int> shots;
-  std::vector<std::string> expect;  // etats attendus, dans l'ordre (--expect titre,chapitre)
+  // etats et cartes attendus, dans l'ordre (--expect titre,chapitre,carte:kosice_tram)
+  std::vector<std::string> expect;
   int frames = 0, every = 0;
   bool wav = false;
   for (int i = 1; i < argc; i++) {
@@ -176,6 +180,9 @@ int main(int argc, char** argv) {
   int16_t abuf[AUDIO_RATE / 60 + 1];
   GameState last = game.state();
   std::vector<std::string> seen{stateName(last)};
+  const char* lastMap = nullptr;  // carte affichee (monde ou fondu)
+  Speaker lastTalk = SPK_NONE;
+  int lastTx = -1, lastTy = -1;
   for (int f = 1; f <= frames; f++) {
     uint16_t raw = 0;
     for (auto& s : segs)
@@ -190,6 +197,25 @@ int main(int argc, char** argv) {
       printf("image %5d : %s -> %s\n", f, stateName(last), stateName(game.state()));
       last = game.state();
       seen.push_back(stateName(last));
+    }
+    if (game.state() == S_WORLD || game.state() == S_FADE) {
+      const World& w = game.world();
+      if (w.map().id != lastMap) {
+        lastMap = w.map().id;
+        printf("image %5d : carte %s (%d, %d)\n", f, lastMap, w.player().tx, w.player().ty);
+        seen.push_back(std::string("carte:") + lastMap);
+      }
+      // ZQ_TRACE=1 : la case du renard a chaque changement (pour ecrire les scripts)
+      if (getenv("ZQ_TRACE") && (w.player().tx != lastTx || w.player().ty != lastTy))
+        printf("image %5d : case (%d, %d)\n", f, w.player().tx, w.player().ty);
+      if (game.lastTalk() != lastTalk) {
+        lastTalk = game.lastTalk();
+        const char* who = lastTalk == SPK_FOX ? "renard" : SPEAKER_NAMES[lastTalk];
+        printf("image %5d : parle a %s\n", f, who);
+        seen.push_back(std::string("parle:") + who);
+      }
+      lastTx = w.player().tx;
+      lastTy = w.player().ty;
     }
     bool shot = (every && f % every == 0);
     for (int s : shots) shot |= (s == f);

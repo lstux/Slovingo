@@ -1,0 +1,27 @@
+# Zajka Quest, chapitre 1 : Kosice, la rue Hlavna et l'arret du tram.
+# Tuiles (legende complete : TILESET dans tools/build_assets.py) :
+#   . , paves    _ trottoir    " herbe    * massif de fleurs    ^ toits    H facade    h porte
+#   = rails      E tram        e porte du tram    Z abri de l'arret    l banc    i lampadaire
+#   T tronc      O feuillage (passe devant les personnages)    f fontaine
+# Chiffres : reperes decrits ci-dessous (« on x » : la tuile sous le repere ; sinon « ground »).
+name: Hlavná ulica
+ground: .
+music: 0
+1: warp kosice_tram 9 5 up on e
+2: start right
+---
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+HHHhHHHHHHHhHHHHHHHHHHHHHhHHHHHHHHhHHHHH
+HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+________________________________________
+_.......O..........,.......O...........,
+_..i....T....l.........f...T...l....i...
+_...."""""..........fff.......""""".....
+_...."*"*"...........,........"*"*".....
+_..i.....,.....l...........l.........i..
+_...2.....................,.............
+_____i_____Z___________________Z__i_____
+====================EEE1EEEE============
+====================EEEEEEEE============
+========================================
+________________________________________
