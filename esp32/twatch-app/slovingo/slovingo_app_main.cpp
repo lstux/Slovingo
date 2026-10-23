@@ -269,7 +269,8 @@ static int slv_item_cnt = 0;
  */
 static slv_screen_t slv_screen = SCR_LOADING;
 #ifdef SLV_BIG_SCREEN
-static lv_obj_t *slv_map_cont = NULL;          /* the map on the right of the map screen */
+static lv_obj_t *slv_map_cont = NULL;          /* the map next to the text panel of the map screen */
+static lv_coord_t slv_page_x = 0;              /* x of the page: 0, or the width of the map in portrait */
 static SpiRamJsonDocument *slv_map = NULL;     /* map.json of the course, NULL when it has none */
 static SpiRamJsonDocument *slv_map_new = NULL; /* a map the worker brought, taken over by the lvgl task */
 #endif
@@ -368,9 +369,43 @@ static void slv_textarea_event_cb( lv_obj_t * obj, lv_event_t event );
 #define SLV_MAP_DEFAULT_W   134
 #define SLV_MAP_DEFAULT_H   240
 
+/* height the map may take: the whole screen in landscape, above the footer in portrait */
+static lv_coord_t slv_map_avail_h( void ) {
+#ifdef SLV_PORTRAIT
+    return( lv_disp_get_ver_res( NULL ) - THEME_ICON_SIZE );
+#else
+    return( lv_disp_get_ver_res( NULL ) );
+#endif
+}
+
+/* the biggest background of the map.json that fits; false when it has none (the map is then a plain colour) */
+static bool slv_map_bg( const char **src, lv_coord_t *w, lv_coord_t *h ) {
+    bool found = false;
+
+    *src = "";
+    *w = lv_disp_get_hor_res( NULL ) < lv_disp_get_ver_res( NULL ) ? 156 : SLV_MAP_DEFAULT_W;
+    *h = slv_map_avail_h();
+    if ( !slv_map )
+        return( false );
+    for ( JsonObject bg : (*slv_map)["bgs"].as<JsonArray>() ) {
+        int bh = bg["h"] | 0;
+        int bw = bg["w"] | 0;
+        if ( bh > 0 && bw > 0 && bh <= slv_map_avail_h() && ( !found || bh > *h ) ) {
+            *src = bg["src"] | "";
+            *w = bw;
+            *h = bh;
+            found = true;
+        }
+    }
+    return( found );
+}
+
 static lv_coord_t slv_map_w( void ) {
-    int w = slv_map ? (int)( (*slv_map)["w"] | SLV_MAP_DEFAULT_W ) : SLV_MAP_DEFAULT_W;
-    return( w < 80 ? 80 : ( w > 160 ? 160 : w ) );
+    const char *src;
+    lv_coord_t w, h;
+
+    slv_map_bg( &src, &w, &h );
+    return( w < 80 ? 80 : ( w > 170 ? 170 : w ) );
 }
 
 /* a title is "Series (4/5) - What it is about": the series is already named above, keep the end */
@@ -454,7 +489,7 @@ static void slv_slide_obj( lv_obj_t *obj, lv_coord_t to, int dir ) {
 }
 
 static void slv_slide_in( int dir ) {
-    slv_slide_obj( slv_page, 0, dir );
+    slv_slide_obj( slv_page, slv_page_x, dir );
     if ( slv_map_cont )
         slv_slide_obj( slv_map_cont, lv_obj_get_x( slv_map_cont ), dir );
 }
@@ -862,7 +897,14 @@ static int slv_playable_count( JsonObject sheet ) {
  * ---------------------------------------------------------------------- */
 
 #define SLV_NONE            255
-#ifdef SLV_BIG_SCREEN
+#if defined( SLV_BIG_SCREEN ) && defined( SLV_PORTRAIT )
+    /* 240 px wide, 280 px high above the footer: shorter lines, more of them */
+    #define SLV_RD_TEXT_CHARS   380
+    #define SLV_RD_DIALOG_CHARS 300
+    #define SLV_RD_DIALOG_LINES 6
+    #define SLV_RD_TABLE_ROWS   6
+    #define SLV_CARD_PAD        5
+#elif defined( SLV_BIG_SCREEN )
     #define SLV_RD_TEXT_CHARS   440     /* characters of text on a page */
     #define SLV_RD_DIALOG_CHARS 360     /* characters of dialogue on a page */
     #define SLV_RD_DIALOG_LINES 5
@@ -2434,15 +2476,21 @@ static void slv_map_compute( void ) {
 static void slv_map_build( void ) {
     lv_coord_t hor = lv_disp_get_hor_res( NULL );
     lv_coord_t ver = lv_disp_get_ver_res( NULL );
-    lv_coord_t w = slv_map_w();
-    lv_coord_t h = (*slv_map)["h"] | SLV_MAP_DEFAULT_H;
+    const char *bg = "";
+    lv_coord_t w = 0;
+    lv_coord_t h = 0;
     JsonArray steps = (*slv_map)["steps"];
 
-    if ( h < 100 || h > ver )
-        h = ver;
+    slv_map_bg( &bg, &w, &h );
+    (void)hor;
+    (void)ver;
     slv_map_cont = lv_cont_create( slv_tile, NULL );
     lv_obj_set_size( slv_map_cont, w, h );
+#ifdef SLV_PORTRAIT
+    lv_obj_set_pos( slv_map_cont, 0, 0 );
+#else
     lv_obj_set_pos( slv_map_cont, hor - w, ( ver - h ) / 2 );
+#endif
     lv_obj_set_style_local_bg_color( slv_map_cont, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, lv_color_hex( 0x1C3A2E ) );
     lv_obj_set_style_local_bg_opa( slv_map_cont, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, LV_OPA_COVER );
     lv_obj_set_style_local_border_width( slv_map_cont, LV_CONT_PART_MAIN, LV_STATE_DEFAULT, 0 );
@@ -2452,7 +2500,6 @@ static void slv_map_build( void ) {
     lv_cont_set_layout( slv_map_cont, LV_LAYOUT_OFF );
 
     /* the background was brought to the cache with the map */
-    const char *bg = (*slv_map)["bg"] | "";
     size_t size = 0;
     uint8_t *jpg = ( *bg && slv_pic_cnt < SLV_MAX_PICS ) ? slovingo_image_load( slovingo_config.url, bg, &size ) : NULL;
     if ( jpg ) {
@@ -2535,9 +2582,39 @@ static void slv_map_build( void ) {
 }
 
 /* the text panel at the left of the map: where the player is, and the way on */
+#ifdef SLV_PORTRAIT
+/* a narrow button with a symbol of the default font (the slovingo fonts have none) */
+static lv_obj_t *slv_add_icon_button( const char *symbol, uint32_t color ) {
+    lv_obj_t *btn = lv_btn_create( slv_page, NULL );
+
+    lv_obj_set_size( btn, slv_content_w(), 36 );
+    lv_obj_add_style( btn, LV_BTN_PART_MAIN, ws_get_button_style() );
+    lv_obj_set_event_cb( btn, slv_item_event_cb );
+    slv_btn_look( btn );
+    slv_tint( btn, color );
+    lv_label_set_text( lv_label_create( btn, NULL ), symbol );
+    if ( slv_item_cnt < SLV_MAX_ITEMS )
+        slv_item[ slv_item_cnt++ ] = btn;
+    return( btn );
+}
+#endif
+
 static void slv_map_panel( void ) {
     JsonArray steps = (*slv_map)["steps"];
     char text[ 96 ];
+
+#ifdef SLV_PORTRAIT
+    /* narrow column beside the map: the fox, where the player is, the way on in two icons */
+    lv_img_set_src( lv_img_create( slv_page, NULL ), &slv_fox_neutral_40 );
+    slovingo_sanitize( steps[ slv_map_current ]["title"] | "", text, sizeof( text ) );
+    lv_label_set_align( slv_add_label( text, false ), LV_LABEL_ALIGN_CENTER );
+    snprintf( text, sizeof( text ), "%d / %d", slv_map_done, slv_map_total );
+    lv_label_set_align( slv_add_label( text, false ), LV_LABEL_ALIGN_CENTER );
+    slv_add_progress( slv_map_total ? slv_map_done * 100 / slv_map_total : 0 );
+    slv_add_icon_button( LV_SYMBOL_PLAY, 0x1F4E79 );
+    slv_add_icon_button( LV_SYMBOL_LIST, 0x34405A );
+    return;
+#endif
 
     slovingo_sanitize( steps[ slv_map_current ]["title"] | "", text, sizeof( text ) );
     slv_add_head( &slv_fox_neutral_40, text, true, false );
@@ -2569,6 +2646,10 @@ static void slv_show( slv_screen_t screen ) {
     if ( screen == SCR_LOADING && ( slv_screen != SCR_LOADING || !slv_loading_since ) )
         slv_loading_since = lv_tick_get() ? lv_tick_get() : 1;
 #endif
+#ifdef SLV_BIG_SCREEN
+    if ( screen == SCR_MAP && !slv_map_ready() )    /* a course without a map: the list is the home page */
+        screen = SCR_GROUPS;
+#endif
     slv_screen = screen;
     slv_pending = false;
     slv_advance_at = 0;
@@ -2576,12 +2657,23 @@ static void slv_show( slv_screen_t screen ) {
     slv_url_textarea = NULL;
     slv_built_lbl = NULL;
 #ifdef SLV_BIG_SCREEN
-    /* the map screen: text panel on the left over the whole height, the map on the right */
-    if ( screen == SCR_MAP && slv_map_ready() )
-        lv_obj_set_size( slv_page, lv_disp_get_hor_res( NULL ) - slv_map_w(), lv_disp_get_ver_res( NULL ) );
-    else
-        lv_obj_set_size( slv_page, lv_disp_get_hor_res( NULL ), lv_disp_get_ver_res( NULL ) - THEME_ICON_SIZE );
-    lv_obj_set_pos( slv_page, 0, 0 );
+    /* the map screen: a text panel beside the map (left of it in landscape, right of it in portrait) */
+    lv_coord_t hor = lv_disp_get_hor_res( NULL );
+    lv_coord_t ver = lv_disp_get_ver_res( NULL );
+
+    slv_page_x = 0;
+    if ( screen == SCR_MAP ) {
+#ifdef SLV_PORTRAIT
+        slv_page_x = slv_map_w();
+        lv_obj_set_size( slv_page, hor - slv_page_x, ver - THEME_ICON_SIZE );
+#else
+        lv_obj_set_size( slv_page, hor - slv_map_w(), ver );
+#endif
+    }
+    else {
+        lv_obj_set_size( slv_page, hor, ver - THEME_ICON_SIZE );
+    }
+    lv_obj_set_pos( slv_page, slv_page_x, 0 );
     if ( slv_map_cont ) {
         lv_anim_del( slv_map_cont, NULL );
         lv_obj_del( slv_map_cont );
@@ -2609,13 +2701,6 @@ static void slv_show( slv_screen_t screen ) {
         slv_set_nav( slv_cur_group > 0, slv_cur_group + 1 < slv_group_cnt );
     memset( slv_rd_more, 0, sizeof( slv_rd_more ) );
 
-#ifdef SLV_BIG_SCREEN
-    if ( screen == SCR_MAP && !slv_map_ready() ) {
-        screen = SCR_GROUPS;
-        slv_screen = SCR_GROUPS;
-        lv_obj_set_size( slv_page, lv_disp_get_hor_res( NULL ), lv_disp_get_ver_res( NULL ) - THEME_ICON_SIZE );
-    }
-#endif
     switch ( screen ) {
         case SCR_LOADING:
             slv_add_bouncing_fox();

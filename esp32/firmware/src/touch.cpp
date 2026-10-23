@@ -84,6 +84,9 @@ static bool cal_load( void ) {
     file.close();
     if ( error || !doc.containsKey( "x0" ) )
         return( false );
+    /* a calibration made for another rotation (or an older file without it: landscape) does not apply */
+    if ( (int)( doc["rot"] | 1 ) != BOARD_ROTATION )
+        return( false );
     cal.swap = doc["swap"] | false;
     cal.x0 = doc["x0"];
     cal.x1 = doc["x1"];
@@ -97,6 +100,7 @@ static void cal_save( void ) {
     if ( !file )
         return;
     StaticJsonDocument<256> doc;
+    doc["rot"] = BOARD_ROTATION;
     doc["swap"] = cal.swap;
     doc["x0"] = cal.x0;
     doc["x1"] = cal.x1;

@@ -20,10 +20,22 @@
     #define SD_CMD_PIN          11
     #define SD_D0_PIN           13
 
-    /** @brief rotation de l'ecran : 1 = paysage, 3 = paysage a l'envers (a changer si l'image est a l'envers) */
-    #define BOARD_ROTATION      1
-    #define BOARD_WIDTH         320
-    #define BOARD_HEIGHT        240
+    /**
+     * @brief rotation de l'ecran
+     *
+     * Portrait (-D SLV_PORTRAIT=1) : 0, ou 2 si l'image est a l'envers.
+     * Paysage : 1, ou 3 si l'image est a l'envers.
+     * Apres un changement le tactile se recalibre tout seul (la calibration enregistree dit pour quelle rotation elle vaut).
+     */
+    #ifdef SLV_PORTRAIT
+        #define BOARD_ROTATION      0
+        #define BOARD_WIDTH         240
+        #define BOARD_HEIGHT        320
+    #else
+        #define BOARD_ROTATION      1
+        #define BOARD_WIDTH         320
+        #define BOARD_HEIGHT        240
+    #endif
 
     /** @brief power the board and the peripherals, call first in setup() */
     void board_init( void );

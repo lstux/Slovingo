@@ -15,6 +15,14 @@ sans copie. `src/compat/` remplace les quelques fonctions du firmware de la mont
 | retour haptique | aucun (pas de moteur) |
 | flèche de retour de l'écran d'accueil | éteint l'appareil (voir ci-dessous) |
 
+## Orientation
+
+Portrait (240×320) par défaut : `-D SLV_PORTRAIT=1` dans `platformio.ini`. Retirer cette ligne donne le paysage
+(320×240). En portrait la page est aussi large que celle de la montre, avec 80 px de plus en hauteur ; sur la carte, le fond
+est à gauche et une colonne étroite à droite (renard, série en cours, progression, deux icônes : ▶ continuer, liste).
+Les images (224×150 max) et les fonds de carte (156×280 en portrait, 134×240 en paysage) sont préparés par
+`export_api.py` pour les deux orientations.
+
 ## Interface grand écran
 
 `-D SLV_BIG_SCREEN=1` (dans `platformio.ini`, absent du build de la montre) active dans le code de l'app :
@@ -24,6 +32,7 @@ dialogue 5 répliques, tableau 5 lignes, voir `SLV_RD_*` en tête de `slovingo_a
 glissement de 220 ms quand une page ou un écran change (swipe, flèches, boutons, question suivante).
 Elle ajoute aussi l'exercice **« relier »** (type `match` du cours) : deux colonnes, on touche un mot puis sa
 traduction ; la paire juste devient verte, une erreur clignote en rouge, et le point est pour une série sans erreur.
+Le bouton « Vider le cache » au bas de la liste des cours efface les fichiers téléchargés (`slv*.json`, `slv*.jpg` ; pas les réglages, la progression ni la calibration).
 Retirer le flag redonne exactement l'interface de la montre (qui ne joue pas les `match`).
 
 **Carte d'accueil** : si l'API du cours a une carte (`"map": true` dans `index.json`, fichiers `map.json` et `img/map.jpg`
@@ -84,8 +93,8 @@ sans progression ni réglages enregistrés.
 - **Calibration du tactile** : quatre croix s'affichent, touche-les (au stylet, c'est plus précis).
   Le résultat est enregistré dans `/touch_cal.json`. Pour recommencer : maintenir le bouton OK
   (GPIO 21) pendant la mise sous tension.
-- **Image à l'envers** : passer `BOARD_ROTATION` de 1 à 3 dans `src/board.h`, recompiler, puis refaire
-  la calibration (bouton OK maintenu au démarrage), l'ancienne ne vaut plus.
+- **Image à l'envers** : passer `BOARD_ROTATION` à 2 (portrait) ou 3 (paysage) dans `src/board.h`, recompiler. Le tactile se
+  recalibre tout seul au démarrage suivant (la calibration enregistrée dit pour quelle rotation elle vaut).
 - **Éteindre** : la flèche de retour de l'écran d'accueil coupe l'alimentation sur batterie ; sur USB
   la carte se met en sommeil profond et le bouton OK la réveille.
 

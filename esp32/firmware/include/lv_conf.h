@@ -23,7 +23,7 @@ typedef void * lv_obj_user_data_t;
 
 /* ecran 320x240, couleur 16 bits, les octets sont echanges par pushColors() de TFT_eSPI */
 #define LV_HOR_RES_MAX          320
-#define LV_VER_RES_MAX          240
+#define LV_VER_RES_MAX          320
 #define LV_COLOR_DEPTH          16
 #define LV_COLOR_16_SWAP        0
 
