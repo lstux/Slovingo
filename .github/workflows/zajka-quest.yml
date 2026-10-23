@@ -32,18 +32,21 @@ jobs:
           path: ~/.platformio
           key: pio-${{ runner.os }}-${{ hashFiles('esp32/zajka-quest/platformio.ini') }}
 
-      - name: Simulateur PC (cours embarque, parcours du chapitre 1)
+      - name: Simulateur PC (cours embarque, chapitre 1 en entier, reprise)
         run: |
           make -C sim
           ./build/sim --course
           mkdir -p /tmp/zq
-          ./build/sim --script sim/walk.txt --auto --save /tmp/zq.sav --out /tmp/zq \
-            --expect titre,chapitre,carte:kosice_hlavna,carte:kosice_tram,dialogue:fin,parle:Andrea,dialogue:fin,bonus:2,carte:kosice_hlavna
-          # la partie reprend la ou elle a ete enregistree
-          ./build/sim --script sim/resume.txt --save /tmp/zq.sav --out /tmp/zq --expect reprise,bonus:2,carte:kosice_hlavna
+          # le chapitre 1 : passant, tram (episodes 1 a 5), chez la tante (6), le pommier, la fin
+          ./build/sim --script sim/chapter.txt --auto --save /tmp/zq.sav --out /tmp/zq --expect \
+            titre,chapitre,carte:kosice_hlavna,parle:passant,carte:kosice_tram,parle:Andrea,bonus:2,parle:Andrea,bonus:4,parle:Andrea,bonus:5,parle:Andrea,bonus:6,parle:Andrea,bonus:8,carte:kosice_teta,parle:Andrea,bonus:9,fin,titre
+          # la partie reprend sous le pommier, avec ses repliques secretes
+          ./build/sim --script sim/resume.txt --auto --save /tmp/zq.sav --out /tmp/zq --expect reprise,bonus:9,carte:kosice_teta,fin
           # sans traduction ouverte ni erreur, et seulement alors, les repliques secretes
-          ./build/sim --script sim/walk.txt --auto-peek --out /tmp/zq --expect parle:Andrea,dialogue:fin,bonus:0
-          ./build/sim --script sim/walk.txt --auto-wrong --out /tmp/zq --expect parle:Andrea,dialogue:fin,bonus:0
+          ./build/sim --script sim/chapter.txt --auto-peek --out /tmp/zq --expect carte:kosice_teta,parle:Andrea,bonus:0,fin
+          ./build/sim --script sim/chapter.txt --auto-wrong --out /tmp/zq --expect carte:kosice_teta,parle:Andrea,bonus:0,fin
+          # aller-retour rue / tram apres le premier episode
+          ./build/sim --script sim/walk.txt --auto --out /tmp/zq --expect carte:kosice_tram,parle:Andrea,bonus:2,carte:kosice_hlavna
 
       - name: PlatformIO
         run: pip install platformio

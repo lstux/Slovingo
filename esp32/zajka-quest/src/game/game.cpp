@@ -12,23 +12,17 @@ const uint16_t SKY_TOP = 0x2A4E, SKY_LOW = 0x5C9B, STONE = 0x8C51, STONE_DARK = 
 // planches provisoires du renard et d'Andrea (32 x 48, reprises de Zajka Run) : ligne 0 = repos
 constexpr int IDLE_ROW = 0, IDLE_FRAMES = 4;
 constexpr int FADE_HALF = 14;  // images pour fermer le rideau, autant pour le rouvrir
-
-// Episode 1 « To si ty? » : les premieres repliques du narrateur plantent le decor en entrant dans
-// le tram, le reste se joue en parlant a Andrea.
-const Episode& episode1() { return *COURSE_EPISODES[0]; }
-int introLength(const Episode& ep) {
-  int n = 0;
-  while (n < ep.nDialog && ep.dialog[n].speaker == SPK_NARRATOR) n++;
-  return n;
-}
 }  // namespace
 
 // ---------------------------------------------------------------- mise en route
 void Game::begin(Audio* audio, Storage* storage) {
   audio_ = audio;
   storage_ = storage;
-  introDone_ = metAndrea_ = false;
-  bonusUsed_ = 0;
+  stage_ = 0;
+  flags_ = 0;
+  for (int& b : bonus_) b = 0;
+  after_ = AFTER_NOTHING;
+  banner_ = 0;
   lastTalk_ = SPK_NONE;
   hasSave_ = false;
   if (storage_ && storage_->read(&saved_, sizeof saved_) && saved_.valid() && saved_.map < NUM_MAPS) {
@@ -49,8 +43,9 @@ void Game::save() {
   d.tx = (uint8_t)world_.player().tx;
   d.ty = (uint8_t)world_.player().ty;
   d.dir = world_.player().dir;
-  d.flags = (introDone_ ? SF_INTRO_DONE : 0) | (metAndrea_ ? SF_MET_ANDREA : 0);
-  d.bonus = (uint8_t)bonusUsed_;
+  d.stage = (uint8_t)stage_;
+  d.flags = flags_;
+  for (int i = 0; i < SAVE_EPISODES; i++) d.bonus[i] = (uint8_t)bonus_[i];
   d.check = d.sum();
   if (storage_->write(&d, sizeof d)) {
     saved_ = d;
@@ -62,8 +57,9 @@ void Game::save() {
 void Game::newGame() {
   if (storage_ && hasSave_) storage_->erase();
   hasSave_ = false;
-  introDone_ = metAndrea_ = false;
-  bonusUsed_ = 0;
+  stage_ = 0;
+  flags_ = 0;
+  for (int& b : bonus_) b = 0;
   audio_->play(SFX_PAUSE);
   audio_->music(-1);
   setState(S_CHAPTER);
@@ -71,13 +67,14 @@ void Game::newGame() {
 
 bool Game::continueGame() {
   if (!hasSave_) return false;
-  introDone_ = saved_.flags & SF_INTRO_DONE;
-  metAndrea_ = saved_.flags & SF_MET_ANDREA;
-  bonusUsed_ = saved_.bonus;
+  stage_ = saved_.stage;
+  flags_ = saved_.flags;
+  for (int i = 0; i < SAVE_EPISODES; i++) bonus_[i] = saved_.bonus[i];
   world_.load(saved_.map, saved_.tx, saved_.ty, (Dir)saved_.dir);
   audio_->play(SFX_PAUSE);
   audio_->music(world_.map().music);
   setState(S_WORLD);
+  storyEnteredMap();  // ex. : une partie arretee juste apres l'episode 5 repart vers la tante
   return true;
 }
 
@@ -120,6 +117,7 @@ void Game::step(const Input& in) {
   stateTime_++;
   if (volumeShow_ > 0) volumeShow_--;
   if (savedShow_ > 0) savedShow_--;
+  if (banner_ > 0 && state_ != S_FADE) banner_--;
   if (in.hit(BTN_VOLUME)) {
     audio_->setVolume((audio_->volume() + 1) % 5);
     volumeShow_ = 90;
@@ -149,7 +147,11 @@ void Game::step(const Input& in) {
           break;
         case WE_TALK:
           lastTalk_ = world_.npc(world_.talkNpc()).who;
-          talkTo(lastTalk_);
+          talks_++;
+          storyTalk(world_.talkNpc());
+          break;
+        case WE_INSPECT:
+          storyInspect(world_.inspectX(), world_.inspectY());
           break;
         default:
           break;
@@ -165,14 +167,21 @@ void Game::step(const Input& in) {
       if (stateTime_ >= 2 * FADE_HALF) {
         setState(S_WORLD);
         save();
-        enteredMap();
+        storyEnteredMap();
       }
       break;
     case S_DIALOG:
       dialog_.step(in, audio_);
       if (!dialog_.active()) {
         setState(S_WORLD);
+        storyDialogDone();  // peut changer d'etat (passage impose, fin du chapitre)
         save();
+      }
+      break;
+    case S_END:
+      if (stateTime_ > 120 && (in.hit(BTN_A) || in.hit(BTN_START))) {
+        audio_->play(SFX_PAUSE);
+        begin(audio_, storage_);
       }
       break;
   }
@@ -196,6 +205,9 @@ void Game::renderBand(Band& b) {
       world_.render(b);
       dialog_.render(b);
       break;
+    case S_END:
+      drawEnd(b);
+      break;
     case S_FADE: {
       world_.render(b);
       int t = stateTime_ <= FADE_HALF ? stateTime_ : 2 * FADE_HALF - stateTime_;
@@ -203,6 +215,7 @@ void Game::renderBand(Band& b) {
       break;
     }
   }
+  if (banner_ > 0 && (state_ == S_WORLD || state_ == S_DIALOG || state_ == S_FADE)) drawBanner(b);
   if (savedShow_ > 0 && (state_ == S_WORLD || state_ == S_DIALOG) && b.y0 < 20) {
     // petit rappel en haut a droite : la partie vient d'etre enregistree
     int w = textWidth(font_small, "Uložené") + 12;
@@ -210,44 +223,6 @@ void Game::renderBand(Band& b) {
     b.text(font_small, SCREEN_W - w + 2, 5, "Uložené", WHITE, -1);
   }
   if (volumeShow_ > 0) drawVolume(b);
-}
-
-// ---------------------------------------------------------------- histoire du chapitre 1
-void Game::say(const Line* lines, int n, bool withBonus) {
-  if (n <= 0) return;
-  const Episode& ep = episode1();
-  if (withBonus) dialog_.start(lines, n, COURSE_DEFAULT_NAME, ep.bonus, ep.nBonus, &bonusUsed_);
-  else dialog_.start(lines, n, COURSE_DEFAULT_NAME);
-  setState(S_DIALOG);
-}
-
-// En arrivant sur une carte : le narrateur plante le decor du tram, la premiere fois.
-void Game::enteredMap() {
-  const Episode& ep = episode1();
-  if (world_.mapIndex() == MAP_KOSICE_TRAM && !introDone_) {
-    introDone_ = true;
-    say(ep.dialog, introLength(ep), false);
-  }
-}
-
-void Game::talkTo(Speaker who) {
-  const Episode& ep = episode1();
-  if (who == SPK_ANDREA) {
-    if (!metAndrea_) {
-      metAndrea_ = true;
-      int k = introLength(ep);
-      say(ep.dialog + k, ep.nDialog - k, true);
-    } else {
-      // ensuite, Andrea redit sa derniere replique de l'episode
-      for (int i = ep.nDialog - 1; i >= 0; i--)
-        if (ep.dialog[i].speaker == SPK_ANDREA) {
-          say(&ep.dialog[i], 1, false);
-          break;
-        }
-    }
-    return;
-  }
-  audio_->play(SFX_BUMP);  // personne d'autre n'a encore de repliques
 }
 
 // Rideau : deux bandes noires qui se rejoignent au milieu de l'ecran.

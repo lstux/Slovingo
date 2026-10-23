@@ -33,6 +33,9 @@ struct MapMark {
   int8_t target;     // porte : index de la carte d'arrivee dans ALL_MAPS
   uint8_t tx, ty;    // porte : case d'arrivee
   Speaker npc;       // PNJ : qui c'est
+  uint8_t sayEp;     // PNJ de passage : numero d'episode (1 = COURSE_EPISODES[0]) de ses repliques,
+  uint8_t sayFrom;   //   premiere « replique en plus » qu'il dit
+  uint8_t sayCount;  //   et combien (0 : rien a dire tout seul, c'est l'histoire qui decide)
 };
 
 struct MapDef {
@@ -45,6 +48,7 @@ struct MapDef {
   const MapMark* marks;
   uint8_t nMarks;
   int8_t music;
+  uint8_t night;     // 1 : la carte est affichee de nuit (couleurs assombries, bleutees)
 };
 
 constexpr int MAX_NPC = 16;
@@ -57,9 +61,11 @@ struct Walker {
   int steps = 0;       // pas faits (alterne la jambe)
   const Sheet* sheet = nullptr;
   Speaker who = SPK_NONE;
+  const MapMark* mark = nullptr;  // PNJ : son repere sur la carte (repliques de passage...)
 };
 
-enum WorldEvent : uint8_t { WE_NONE, WE_WARP, WE_TALK, WE_BUMP };
+// WE_INSPECT : A face a une case sans personnage (inspectX / inspectY), pour l'histoire.
+enum WorldEvent : uint8_t { WE_NONE, WE_WARP, WE_TALK, WE_BUMP, WE_INSPECT };
 
 class World {
  public:
@@ -78,6 +84,9 @@ class World {
   int npcCount() const { return nnpc_; }
   const MapMark* pendingWarp() const { return warp_; }
   int talkNpc() const { return talk_; }
+  int inspectX() const { return inspectX_; }
+  int inspectY() const { return inspectY_; }
+  int tileAt(int tx, int ty) const;  // tuile de base (TL_...), 0 hors de la carte
 
  private:
   bool walkable(int tx, int ty) const;
@@ -98,6 +107,7 @@ class World {
   bool waitRelease_ = false;  // apres une porte : on attend que la croix soit relachee
   const MapMark* warp_ = nullptr;
   int talk_ = -1;
+  int inspectX_ = -1, inspectY_ = -1;
 };
 
 extern const MapDef* const ALL_MAPS[];

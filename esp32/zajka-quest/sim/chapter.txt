@@ -1,0 +1,40 @@
+# Le chapitre 1 en entier : rue Hlavna (un passant), le tram (episodes 1 a 5 avec Andrea),
+# le soir chez sa tante (episode 6), la nuit sous le pommier, ecran de fin.
+# A lancer avec --auto : le robot mene les conversations et l'horloge du script s'arrete pendant
+# ce temps (« debut fin boutons » : L R U D A B S=START E=SELECT, en images hors dialogue).
+# Verifie par la CI :
+#   build/sim --script sim/chapter.txt --auto --save /tmp/zq.sav --expect titre,chapitre,
+#     carte:kosice_hlavna,parle:passant,carte:kosice_tram,parle:Andrea,bonus:2,parle:Andrea,bonus:4,
+#     parle:Andrea,bonus:5,parle:Andrea,bonus:6,parle:Andrea,bonus:8,carte:kosice_teta,
+#     parle:Andrea,bonus:9,fin,titre
+10 12 S
+60 62 A
+# rue Hlavna : de (4, 9) a droite jusqu'au passant (18, 8), on lui parle, puis jusqu'a (23, 9)
+100 299 R
+320 322 U
+340 342 A
+360 440 R
+# en bas jusqu'a la porte du tram (23, 11)
+460 500 D
+# dans le tram (le Narrateur, puis) : en haut jusqu'a (9, 2), a droite jusqu'a (11, 2), face a Andrea
+540 575 U
+600 626 R
+650 652 U
+# cinq conversations : les episodes 1 a 5 ; a la fin du 5, on descend avec Andrea chez sa tante
+670 672 A
+700 702 A
+730 732 A
+760 762 A
+790 792 A
+shot 830
+# chez la tante (le Narrateur, puis) : de (10, 13) en haut jusqu'a (10, 6), Andrea est a droite
+840 935 U
+950 951 R
+965 967 A
+# episode 6 joue : en haut (10, 5), a droite le long de l'allee jusqu'a (17, 5), le pommier au-dessus
+990 1000 U
+1020 1120 R
+1140 1141 U
+1160 1162 A
+# ecran de fin, puis retour au titre
+1300 1302 A

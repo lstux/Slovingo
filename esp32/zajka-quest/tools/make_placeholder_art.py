@@ -7,6 +7,7 @@ IA les remplacent fichier par fichier, aux memes dimensions.
     art/tiles/kosice.png        tuiles 16 x 16, 16 par ligne, dans l'ordre de TILESET
     art/walk/fox_16x24.png      le renard en vue de dessus : lignes bas, haut, gauche, droite ;
     art/walk/andrea_16x24.png   colonnes debout, pied gauche, pied droit
+    art/walk/human_16x24.png    un adulte (passants et voyageurs, en attendant de vrais personnages)
 
     python3 tools/make_placeholder_art.py && python3 tools/build_assets.py
 """
@@ -180,6 +181,51 @@ def draw_tile(name):
             d.line([(0, y), (15, y)], fill=hexc("#5c6068"))
         d.ellipse([5, 9, 10, 14], fill=hexc("#4a4d54"))
         d.rectangle([7, 0, 8, 11], fill=hexc("#f4d03f"))
+    elif name in ("maison", "porte_maison"):
+        d.rectangle([0, 0, 15, 15], fill=hexc("#e6e0d0"))       # crepi clair
+        d.line([(0, 15), (15, 15)], fill=hexc("#b8b0a0"))
+        if name == "maison":
+            d.rectangle([4, 3, 11, 11], fill=hexc("#8a6a4a"))   # volets
+            d.rectangle([5, 4, 10, 10], fill=hexc("#ffd970"))   # fenetre allumee (c'est le soir)
+            d.line([(7, 4), (7, 10)], fill=hexc("#8a6a4a"))
+            d.line([(5, 7), (10, 7)], fill=hexc("#8a6a4a"))
+        else:
+            d.rectangle([4, 2, 11, 15], fill=hexc("#5a3a22"))
+            d.rectangle([5, 3, 10, 15], fill=hexc("#704a2c"))
+            d.point((9, 9), fill=hexc("#f4d03f"))
+            d.rectangle([3, 14, 12, 15], fill=hexc("#9a8f84"))
+    elif name == "cloture":
+        grass(d, 11)
+        d.rectangle([0, 6, 15, 7], fill=hexc("#8e6a44"))
+        d.rectangle([0, 11, 15, 12], fill=hexc("#8e6a44"))
+        for x in (1, 6, 11):
+            d.rectangle([x, 2, x + 2, 15], fill=hexc("#b08a5a"))
+            d.point((x + 1, 2), fill=hexc("#d8b884"))
+    elif name == "portail":
+        d.rectangle([0, 0, 15, 15], fill=hexc("#c9b99c"))       # gravier de l'allee
+        for x, y in [(3, 4), (10, 2), (6, 9), (12, 12), (2, 13)]:
+            d.point((x, y), fill=hexc("#a8987c"))
+        d.rectangle([0, 0, 1, 15], fill=hexc("#8e6a44"))        # montants du portail ouvert
+        d.rectangle([14, 0, 15, 15], fill=hexc("#8e6a44"))
+    elif name == "allee":
+        grass(d, 12)
+        d.rectangle([3, 0, 12, 15], fill=hexc("#c9b99c"))
+        for x, y in [(5, 4), (10, 2), (7, 9), (11, 12), (4, 13)]:
+            d.point((x, y), fill=hexc("#a8987c"))
+    elif name == "pommier":
+        grass(d, 13)
+        d.ellipse([3, 11, 12, 15], fill=hexc("#4a6a32"))
+        d.rectangle([6, 0, 9, 13], fill=hexc("#6a4a2e"))
+        d.line([(7, 0), (7, 12)], fill=hexc("#84603a"))
+    elif name == "feuillage_pommier":
+        for cx, cy, rr in [(8, 8, 7), (4, 9, 4), (12, 9, 4), (8, 4, 5)]:
+            d.ellipse([cx - rr, cy - rr, cx + rr, cy + rr], fill=hexc("#3f8a3a"))
+        for cx, cy in [(5, 6), (11, 7), (8, 11), (3, 10), (12, 4)]:
+            d.rectangle([cx, cy, cx + 1, cy + 1], fill=hexc("#e8443a"))  # pommes
+    elif name == "buisson":
+        grass(d, 14)
+        d.ellipse([1, 3, 14, 15], fill=hexc("#2f7a34"))
+        d.ellipse([4, 4, 10, 9], fill=hexc("#4f9a44"))
     else:
         raise SystemExit(f"tuile sans dessin : {name}")
     return im
@@ -309,10 +355,65 @@ ANDREA = {
              "....kjjjjjk....."],
 }
 
+# Un adulte humain (passants, voyageurs) : cheveux bruns, veste grise, pantalon sombre.
+HUMAN_PAL = {"k": "#1a1a2e", "h": "#5a3a22", "s": "#f0c8a0", "S": "#d8a880", "e": "#111111",
+             "c": "#7a8290", "C": "#5a6270", "w": "#f4f4f4", "n": "#2e3440", "b": "#3a2a1e"}
+HUMAN = {
+    "down": ["........",
+             "........",
+             "....kkkk",
+             "...khhhh",
+             "..khhhhh",
+             "..khssss",
+             "..kssess",
+             "..kssssS",
+             "...kssss",
+             "....kkSS",
+             "..kkcccc",
+             ".kcccwcc",
+             ".kcccwcc",
+             ".ksccwcc",
+             "..kCCCCC",
+             "..knnnnn"],
+    "up": ["........",
+           "........",
+           "....kkkk",
+           "...khhhh",
+           "..khhhhh",
+           "..khhhhh",
+           "..khhhhh",
+           "..khhhhh",
+           "...khhhh",
+           "....kkSS",
+           "..kkcccc",
+           ".kcccccc",
+           ".kcccccc",
+           ".ksccccc",
+           "..kCCCCC",
+           "..knnnnn"],
+    "left": ["................",
+             "................",
+             ".....kkkk.......",
+             "....khhhhk......",
+             "...khhhhhhk.....",
+             "...kssshhhk.....",
+             "..ksesshhhk.....",
+             "..kssssshk......",
+             "...kSsssk.......",
+             "....kkSk........",
+             "....kccccck.....",
+             "...kcccccck.....",
+             "...kcwcccck.....",
+             "...kscccccck....",
+             "....kCCCCCk.....",
+             "....knnnnnk....."],
+}
+
 # jambes : debout, pied gauche en avant, pied droit en avant (vue de face : 8 colonnes en miroir)
 LEGS_FRONT = {
     "fox": {"leg": "n", "shoe": "w"},
     "andrea": {"leg": "r", "shoe": "s"},
+    "human": {"leg": "n", "shoe": "b"},
 }
 
 
@@ -401,3 +502,4 @@ if __name__ == "__main__":
     tiles()
     character("fox", FOX, FOX_PAL, FOX_TAIL_DOWN)
     character("andrea", ANDREA, ANDREA_PAL)
+    character("human", HUMAN, HUMAN_PAL)

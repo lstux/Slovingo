@@ -13,7 +13,7 @@ const Sheet* sheetFor(Speaker s) {
   switch (s) {
     case SPK_FOX: return &walk_fox;
     case SPK_ANDREA: return &walk_andrea;
-    default: return &walk_andrea;  // en attendant les autres planches
+    default: return &walk_human;  // en attendant les autres planches
   }
 }
 
@@ -50,6 +50,7 @@ void World::load(int mapIndex, int tx, int ty, Dir dir) {
     n.dir = m.dir;
     n.who = m.npc;
     n.sheet = sheetFor(m.npc);
+    n.mark = &m;
   }
   turn_ = bumpWait_ = 0;
   waitRelease_ = true;  // sinon, la croix encore tenue ramenerait le renard dans la porte
@@ -74,6 +75,11 @@ bool World::walkable(int tx, int ty) const {
   return npcAt(tx, ty) < 0;
 }
 
+int World::tileAt(int tx, int ty) const {
+  if (tx < 0 || ty < 0 || tx >= map_->w || ty >= map_->h) return 0;
+  return map_->base[ty * map_->w + tx];
+}
+
 int World::npcAt(int tx, int ty) const {
   for (int i = 0; i < nnpc_; i++)
     if (npc_[i].tx == tx && npc_[i].ty == ty) return i;
@@ -92,6 +98,7 @@ void World::moveWalker(Walker& w, int speed) {
 WorldEvent World::step(const Input& in) {
   warp_ = nullptr;
   talk_ = -1;
+  inspectX_ = inspectY_ = -1;
   if (bumpWait_ > 0) bumpWait_--;
   if (p_.left > 0) {
     moveWalker(p_, in.down(BTN_B) ? RUN_SPEED : WALK_SPEED);
@@ -135,7 +142,11 @@ WorldEvent World::step(const Input& in) {
     }
     if (p_.left == 0 && in.hit(BTN_A)) {
       int n = npcAt(p_.tx + DX[p_.dir], p_.ty + DY[p_.dir]);
-      if (n >= 0) {
+      if (n < 0) {
+        inspectX_ = p_.tx + DX[p_.dir];
+        inspectY_ = p_.ty + DY[p_.dir];
+        ev = WE_INSPECT;
+      } else {
         talk_ = n;
         // le PNJ se tourne vers le renard
         static const Dir opposite[4] = {DIR_UP, DIR_DOWN, DIR_RIGHT, DIR_LEFT};
@@ -208,4 +219,17 @@ void World::render(Band& b) {
     }
   for (int i = 0; i < n; i++) drawWalker(b, *order[i]);
   if (map_->over) drawTiles(b, map_->over, true);
+  if (map_->night) {
+    // nuit : chaque couleur a moitie, avec un peu de bleu
+    int n = SCREEN_W * b.h;
+    for (int i = 0; i < n; i++) {
+      uint16_t c = b.buf[i];
+      uint16_t r = (c >> 11) & 31, g = (c >> 5) & 63, bl = c & 31;
+      r = r * 2 / 5;
+      g = g * 9 / 20;
+      bl = bl * 3 / 5 + 4;
+      if (bl > 31) bl = 31;
+      b.buf[i] = (uint16_t)((r << 11) | (g << 5) | bl);
+    }
+  }
 }

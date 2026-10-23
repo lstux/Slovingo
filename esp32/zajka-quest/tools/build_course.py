@@ -41,8 +41,15 @@ DEFAULT_COURSE = os.path.normpath(os.path.join(ROOT, "..", "..", "langs", "sk-fr
 sys.path.insert(0, HERE)
 from build_assets import CHARSET  # noqa: E402  (les caracteres que les polices savent dessiner)
 
-# Le prototype ne prend que l'episode 1 ; ajouter ici les fiches suivantes au fil des chapitres.
-EPISODES = ["10_Series_01_Kosice_01_to-si-ty"]
+# Les fiches jouees, dans l'ordre du jeu (COURSE_EPISODES[0] = la premiere). Chapitre 1 : Kosice.
+EPISODES = [
+    "10_Series_01_Kosice_01_to-si-ty",
+    "10_Series_01_Kosice_02_ako-sa-mas",
+    "10_Series_01_Kosice_03_co-tu-robis",
+    "10_Series_01_Kosice_04_pamatas-sa",
+    "10_Series_01_Kosice_05_v-elektricke",
+    "10_Series_01_Kosice_06_extra",
+]
 
 # emoji du cours -> constante Speaker de src/game/course.h, nom affiche dans la boite de dialogue
 SPEAKERS = [
@@ -230,10 +237,13 @@ def add_choices(ep, warn):
                 continue
             wrong = []
             for alt in e["choicesSk"]:
+                # un mot deja dans la phrase donnerait « Aj ja ťa ťa vidím » : on l'ecarte
+                if re.search(r"(?<!\w)" + re.escape(alt) + r"(?!\w)", c["sk"], re.I):
+                    continue
                 cand = pat.sub(lambda m: alt[0].upper() + alt[1:] if m.group(0)[0].isupper() else alt, c["sk"], 1)
                 if norm(cand) != norm(c["sk"]) and cand not in wrong:
                     wrong.append(cand)
-            if len(wrong) >= 2:
+            if wrong:
                 c["choice"] = ("CH_PICK", e["id"], [c["sk"]] + wrong[:2])
                 break
 

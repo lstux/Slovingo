@@ -7,6 +7,8 @@ Reprend l'outil de Zajka Run (memes formats Image8 / Sheet / Font) et y ajoute :
   art/tiles/<theme>.png       planche de tuiles 16 x 16, 16 par ligne, dans l'ordre de TILESET
   art/walk/<nom>_16x24.png    planches de marche (lignes bas, haut, gauche, droite ; 3 images)
   maps/<id>.txt               cartes en texte : une lettre par tuile (TILESET), chiffres = reperes
+                              (start, warp, npc ; « npc human down say 2 0-1 » : le personnage dit
+                              les « repliques en plus » 0 et 1 de l'episode 2 ; « night: 1 » : de nuit)
 
 Images : PNG RGBA -> 8 bits indexes, palette RGB565 (<= 255 couleurs + 0 = transparent).
 Les fichiers generes sont commites : la compilation PlatformIO n'a pas besoin de Python/PIL.
@@ -60,13 +62,22 @@ TILESET = [
     ("W", "paroi", "S"),
     ("w", "caisse", "S"),
     ("|", "barre", "S"),
+    # maison de la tante d'Andrea (episode 6)
+    ("D", "maison", "S"),
+    ("d", "porte_maison", "S"),
+    ("#", "cloture", "S"),
+    ("g", "portail", "W"),
+    (":", "allee", "W"),
+    ("J", "pommier", "S"),
+    ("A", "feuillage_pommier", "O"),
+    ("k", "buisson", "S"),
 ]
 TILE_INDEX = {c: i for i, (c, _, _) in enumerate(TILESET)}
 TILE_KINDS = {"W": "TK_WALK", "S": "TK_SOLID", "O": "TK_OVER"}
 TILES_PER_ROW = 16
 THEMES = ["kosice"]
 DIRS = {"down": "DIR_DOWN", "up": "DIR_UP", "left": "DIR_LEFT", "right": "DIR_RIGHT"}
-NPCS = {"andrea": "SPK_ANDREA", "mato": "SPK_MATO", "katka": "SPK_KATKA", "babka": "SPK_BABKA",
+NPCS = {"andrea": "SPK_ANDREA", "fox": "SPK_FOX", "mato": "SPK_MATO", "katka": "SPK_KATKA", "babka": "SPK_BABKA",
         "jan": "SPK_JAN", "marek": "SPK_MAREK", "human": "SPK_HUMAN"}
 
 
@@ -224,15 +235,22 @@ def build_map(o, path, map_ids):
                 on = m[m.index("on") + 1] if "on" in m else ground
                 kind, args = m[0], m[1:m.index("on")] if "on" in m else m[1:]
                 if kind == "start":
-                    cmarks.append(f"{{M_START, {x}, {y}, {DIRS[args[0]]}, -1, 0, 0, SPK_NONE}}")
+                    cmarks.append(f"{{M_START, {x}, {y}, {DIRS[args[0]]}, -1, 0, 0, SPK_NONE, 0, 0, 0}}")
                 elif kind == "warp":
                     tgt, tx, ty, tdir = args
                     if tgt not in map_ids:
                         raise SystemExit(f"{where} : porte {ch} vers une carte inconnue « {tgt} »")
-                    cmarks.append(f"{{M_WARP, {x}, {y}, {DIRS[tdir]}, {map_ids.index(tgt)}, {tx}, {ty}, SPK_NONE}}")
+                    cmarks.append(f"{{M_WARP, {x}, {y}, {DIRS[tdir]}, {map_ids.index(tgt)}, {tx}, {ty}, SPK_NONE, 0, 0, 0}}")
                 elif kind == "npc":
-                    who, d = args
-                    cmarks.append(f"{{M_NPC, {x}, {y}, {DIRS[d]}, -1, 0, 0, {NPCS[who]}}}")
+                    who, d = args[:2]
+                    ep, first, count = 0, 0, 0
+                    if len(args) > 2:
+                        if args[2] != "say" or len(args) != 5:
+                            raise SystemExit(f"{where} : repere {ch} : « npc qui orientation say episode n[-m] » attendu")
+                        ep = int(args[3])
+                        a, _, b = args[4].partition("-")
+                        first, count = int(a), (int(b) if b else int(a)) - int(a) + 1
+                    cmarks.append(f"{{M_NPC, {x}, {y}, {DIRS[d]}, -1, 0, 0, {NPCS[who]}, {ep}, {first}, {count}}}")
                 else:
                     raise SystemExit(f"{where} : repere {ch} de type inconnu « {kind} »")
                 ch = on
@@ -252,8 +270,9 @@ def build_map(o, path, map_ids):
         over_ref = f"{name}_over"
     o.data.append(f"static const MapMark {name}_marks[{max(1, len(cmarks))}] = {{ " + ", ".join(cmarks or ["{}"]) + " };\n")
     music = int(meta.get("music", "-1"))
+    night = int(meta.get("night", "0"))
     o.data.append(f"const MapDef {name} = {{ {c_str(mid)}, {c_str(meta.get('name', mid))}, &tileset_{meta.get('theme', 'kosice')}, "
-                  f"{w}, {h}, {name}_base, {over_ref}, {name}_marks, {len(cmarks)}, {music} }};\n")
+                  f"{w}, {h}, {name}_base, {over_ref}, {name}_marks, {len(cmarks)}, {music}, {night} }};\n")
     return name, rows, marks
 
 
@@ -284,6 +303,8 @@ def main():
     # tuiles et cartes
     o.data.append("static const uint8_t tile_kinds[%d] = { %s };\n" % (
         len(TILESET), ", ".join(TILE_KINDS[k] for _, _, k in TILESET)))
+    for i, (_, tname, _) in enumerate(TILESET):
+        o.decl.append(f"constexpr int TL_{c_ident(tname).upper()} = {i};")
     for th in THEMES:
         o.image(f"tiles_{th}", Image.open(os.path.join(ART, "tiles", f"{th}.png")))
         o.data.append(f"const Tileset tileset_{th} = {{ &tiles_{th}, tile_kinds, {len(TILESET)} }};\n")

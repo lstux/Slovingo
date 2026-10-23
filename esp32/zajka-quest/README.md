@@ -5,23 +5,34 @@ Une aventure en vue de dessus dans l'univers de [Zajka Friends](https://github.c
 les lieux et parle aux personnages. C'est le pendant calme de [Zajka Run](../zajka-run/) : on peut
 finir le jeu sans comprendre le slovaque, mais le comprendre rend le voyage plus riche.
 
-> **État : prototype.** Écran titre, carte du chapitre 1, la rue Hlavná et l'intérieur du tram,
-> où l'on retrouve Andrea : le dialogue de l'épisode 1 (« To si ty? ») se joue en entier, avec
-> la traduction à la demande et deux choix de réplique. La partie est sauvegardée. Les
-> graphismes sont provisoires.
+> **État : le chapitre 1 (Košice) se joue en entier**, des retrouvailles dans le tram à la nuit
+> sous le pommier, soit les six fiches de la série Košice du cours. La partie est sauvegardée.
+> Les graphismes sont provisoires.
+
+## Le chapitre 1 : Košice
+
+| lieu | ce qui s'y passe |
+|---|---|
+| rue Hlavná | on y commence ; deux passants disent des « répliques en plus » du cours ; on monte dans le tram à l'arrêt |
+| le tram | le Narrateur plante le décor ; chaque fois qu'on parle à Andrea, l'épisode suivant : 1 « To si ty? », 2 « Ako sa máš? », 3 « Čo tu robíš? », 4 « Pamätáš sa na Tatry? », 5 « V električke » ; quatre voyageurs ont aussi leurs répliques. À la fin du 5, on descend avec Andrea |
+| chez sa tante, le soir | le Narrateur, puis l'épisode 6 « Dobrú noc » avec Andrea ; on va dormir sous le pommier (A face au tronc) : fin du chapitre |
+
+Le titre de chaque épisode s'affiche quand il commence. L'écran de fin compte les répliques
+secrètes gagnées. L'histoire est écrite dans `src/game/story.cpp`.
 
 ## Sauvegarde
 
 La partie s'enregistre toute seule dans la NVS de l'ESP32 (espace `zquest`), en passant une
-porte et à la fin de chaque conversation : carte, case et orientation du renard, avancement du
-chapitre, répliques secrètes gagnées. Un petit « Uložené » s'affiche en haut à droite.
+porte et à la fin de chaque conversation : carte, case et orientation du renard, épisodes joués,
+répliques secrètes gagnées par épisode. Une sauvegarde d'une version précédente du jeu est
+ignorée. Un petit « Uložené » s'affiche en haut à droite.
 À l'écran titre, s'il y a une partie : **Pokračovať** (continuer) ou **Nová hra** (nouvelle
 partie, après confirmation « Vymazať uloženú hru? », A : oui, B : non).
 
 ## Le dialogue
 
-En montant dans le tram, le Narrateur plante le décor (les premières répliques de l'épisode).
-Parler à Andrea (A, face à elle) joue la suite. Ensuite, elle redit sa dernière réplique.
+Parler à quelqu'un : A, face à lui. Quand il n'y a plus d'épisode à jouer avec Andrea, elle
+redit sa dernière réplique.
 
 - **A** termine la phrase qui s'écrit, puis passe à la suivante (tenu : plus vite).
 - **SELECT** passe du slovaque à la traduction française, puis à l'aide du cours (« + »).
@@ -75,6 +86,7 @@ src/game/             le jeu, sans Arduino ; gfx, audio et input sont repris de 
 src/game/world.*      le monde : cartes en tuiles, déplacement case par case, PNJ, portes, caméra
 src/game/dialog.*     la boîte de dialogue : texte lettre par lettre, SK/FR/aide, choix de réplique
 src/game/save.*       le bloc de sauvegarde (la console l'écrit en NVS, le simulateur en mémoire)
+src/game/story.cpp    l'histoire du chapitre 1 : qui joue quel épisode, où, et dans quel ordre
 src/game/course.h     structures du contenu du cours (répliques, mots, exercices)
 src/game/gen/         données générées (images, polices, cours) : ne pas éditer
 maps/*.txt            cartes en texte (légende en tête de chaque fichier)
@@ -110,7 +122,9 @@ wwwwwwwww1wwwwwwwwww
 
 Les lettres et leur genre (on marche dessus, solide, passe devant les personnages) sont dans
 `TILESET`, en tête de `tools/build_assets.py`. Un chiffre renvoie à la ligne « chiffre: » de
-l'en-tête : `start` (départ), `warp` (porte) ou `npc` (personnage). `build_assets.py` vérifie
+l'en-tête : `start` (départ), `warp` (porte) ou `npc` (personnage ; `npc human down say 2 0-1`
+lui fait dire les « répliques en plus » 0 et 1 de l'épisode 2). `night: 1` affiche la carte de
+nuit. `build_assets.py` vérifie
 que chaque porte arrive sur une case libre. Après une porte, le renard attend que la croix soit
 relâchée avant de repartir.
 
@@ -126,8 +140,8 @@ python3 tools/build_course.py --dump          # voir ce qui est lu
 python3 tools/build_course.py                 # régénérer après un changement du cours
 ```
 
-Les fiches converties sont listées dans `EPISODES` en tête du script (pour l'instant l'épisode 1
-de la série Košice). Le script garde le dialogue (`! 🦊 …`, `> traduction`, `> mot = sens`,
+Les fiches converties sont listées dans `EPISODES` en tête du script (les six fiches de la série
+Košice). Le script garde le dialogue (`! 🦊 …`, `> traduction`, `> mot = sens`,
 `+ aide`), les « répliques en plus », les nouveaux mots et les exercices `qcm`, `listen` et
 `order`. `[USER_NAME]` devient le nom choisi par le joueur (par défaut celui de `lang.json`).
 
@@ -137,16 +151,16 @@ de la série Košice). Le script garde le dialogue (`! 🦊 …`, `> traduction`
 python3 tools/build_assets.py      # après un changement dans art/
 make -C sim
 build/sim --course                 # résumé du cours embarqué, glyphes manquants dans la police
-build/sim --script sim/walk.txt --auto --save /tmp/zq.sav --out /tmp/zq \
-    --expect titre,chapitre,carte:kosice_tram,parle:Andrea,dialogue:fin,bonus:2,carte:kosice_hlavna
-build/sim --script sim/resume.txt --save /tmp/zq.sav --expect reprise,bonus:2   # reprise de la partie
-build/sim --script sim/walk.txt --auto-peek ...   # ouvre la traduction à chaque choix : pas de bonus
-build/sim --script sim/walk.txt --auto-wrong ...  # se trompe une fois à chaque choix : pas de bonus
+build/sim --script sim/chapter.txt --auto --save /tmp/zq.sav --out /tmp/zq \
+    --expect carte:kosice_tram,parle:Andrea,bonus:2,carte:kosice_teta,bonus:9,fin   # le chapitre
+build/sim --script sim/resume.txt --auto --save /tmp/zq.sav --expect reprise,bonus:9,fin   # reprise
+build/sim --script sim/chapter.txt --auto-peek ...   # ouvre la traduction à chaque choix : pas de bonus
+build/sim --script sim/chapter.txt --auto-wrong ...  # se trompe une fois à chaque choix : pas de bonus
 ZQ_TRACE=1 build/sim --script mon_script.txt      # affiche chaque case du renard
 ```
 
 Un script liste des plages d'images et des boutons (`100 102 S` = START des images 100 à 102)
 et `shot 200` pour une capture. `--expect` vérifie que le jeu passe par ces états (`titre`,
-`chapitre`, `monde`, `fondu`, `dialogue`), ces cartes (`carte:…`), ces conversations
+`chapitre`, `monde`, `fondu`, `dialogue`, `fin`), ces cartes (`carte:…`), ces conversations
 (`parle:…`, `dialogue:fin`) et ce nombre de répliques secrètes (`bonus:…`), dans l'ordre. Avec
 `--auto`, un robot mène les conversations et l'horloge du script s'arrête pendant ce temps.

@@ -5,11 +5,15 @@ ground: -
 music: -1
 1: warp kosice_hlavna 23 10 up on e
 2: npc andrea down on s
+3: npc human down say 2 0-1 on s
+4: npc human down say 4 0 on s
+5: npc human up say 3 0-1 on s
+6: npc human up say 1 1 on s
 ---
 WWWWWWWWWWWWWWWWWWWW
-Wss-ss-ss-s2-ss-ss-W
+Wss-3s-ss-s2-ss-4s-W
 W--|------------|--W
 W------------------W
 W--|------------|--W
-Wss-ss-ss-ss-ss-ss-W
+Wss-6s-ss-ss-5s-ss-W
 wwwwwwwww1wwwwwwwwww

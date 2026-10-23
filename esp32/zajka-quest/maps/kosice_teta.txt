@@ -1,0 +1,25 @@
+# Zajka Quest, chapitre 1 : le soir, devant la maison de la tante d'Andrea (episode 6, « Dobru noc »).
+#   ^ toit    D maison    d porte    # cloture    g portail ouvert    : allee    " herbe
+#   J pommier (tronc)    A son feuillage (passe devant)    k buisson    _ trottoir    . paves    = rails
+name: U tety
+ground: "
+music: -1
+night: 1
+1: start up on =
+2: npc andrea left
+---
+^^^^^^^^^^^^^^^^^^^^^^
+DDDDDDDDDdDDDDDDDDDDDD
+#""""""""":""""""""""#
+#"k""""""":"""""AAA""#
+#""""""""":"""""AJA""#
+#"""""""""::::::"""""#
+#""""k"""":2""""""k""#
+#""""""""":""""""""""#
+##########g###########
+__________:___________
+......................
+......................
+======================
+==========1===========
+__________Z___________

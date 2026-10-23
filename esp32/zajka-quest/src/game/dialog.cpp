@@ -213,18 +213,26 @@ void Dialog::step(const Input& in, Audio* audio) {
   if (mode_ == M_CHOICE) {
     const Choice& c = *cur_->choice;
     int n = c.n < MAX_OPT ? c.n : MAX_OPT;
-    int cols = n > 3 ? 2 : 1;
+    // options a l'ecran, dans l'ordre d'affichage (un morceau deja place disparait)
+    int vis[MAX_OPT], nv = 0;
+    for (int i = 0; i < n; i++)
+      if (!(c.type == CH_ORDER && gone_[i])) vis[nv++] = i;
+    int cols = nv > 3 ? 2 : 1;
     int move = 0;
     if (in.hit(BTN_DOWN)) move = cols;
     if (in.hit(BTN_UP)) move = -cols;
-    if (cols == 2 && in.hit(BTN_RIGHT)) move = 1;
-    if (cols == 2 && in.hit(BTN_LEFT)) move = -1;
-    if (move) {
-      // on saute les options deja prises
-      for (int k = 0; k < n; k++) {
-        cursor_ = ((cursor_ + move) % n + n) % n;
-        if (!gone_[cursor_]) break;
+    if (in.hit(BTN_RIGHT)) move = 1;
+    if (in.hit(BTN_LEFT)) move = -1;
+    if (move && nv > 0) {
+      int k = 0;
+      while (k < nv && vis[k] != cursor_) k++;
+      if (k == nv) k = 0;
+      // on avance dans ce sens jusqu'a une option encore libre
+      for (int step = 0; step < nv; step++) {
+        k = ((k + move) % nv + nv) % nv;
+        if (!gone_[vis[k]]) break;
       }
+      cursor_ = vis[k];
     }
     if (in.hit(BTN_A)) pick(audio);
     return;
@@ -310,7 +318,10 @@ void Dialog::render(Band& b) {
         y += ROW_H;
       }
     }
-    int cols = n > 3 ? 2 : 1;
+    int nv = 0;
+    for (int i = 0; i < n; i++)
+      if (!(c.type == CH_ORDER && gone_[i])) nv++;
+    int cols = nv > 3 ? 2 : 1;
     int colW = TEXT_W / cols;
     int slot = 0;
     for (int i = 0; i < n; i++) {

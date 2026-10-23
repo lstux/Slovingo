@@ -9,3 +9,20 @@
 [10_Series_01_Kosice_01_to-si-ty]
 🐰 Stále vieš po slovensky! | Tu parles toujours slovaque !
 🐰 Hovoríš ako Slovák! | Tu parles comme un Slovaque !
+
+[10_Series_01_Kosice_02_ako-sa-mas]
+🐰 Tvoja slovenčina je stále dobrá! | Ton slovaque est toujours bon !
+🐰 Super, všetkému rozumieš! | Super, tu comprends tout !
+
+[10_Series_01_Kosice_03_co-tu-robis]
+🐰 Sám na prázdninách? Si odvážny! | Tout seul en vacances ? Tu es courageux !
+
+[10_Series_01_Kosice_04_pamatas-sa]
+🐰 Pamätáš si to dobre! | Tu t'en souviens bien !
+
+[10_Series_01_Kosice_05_v-elektricke]
+🐰 Dobre, si trochu jednoduchý. | Bon, tu es un peu simple.
+🐰 Hovoríš ako Košičan! | Tu parles comme quelqu'un de Košice !
+
+[10_Series_01_Kosice_06_extra]
+🐰 Spi dobre, líška. | Dors bien, renard.

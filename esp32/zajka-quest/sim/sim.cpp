@@ -126,6 +126,7 @@ static const char* stateName(GameState s) {
     case S_WORLD: return "monde";
     case S_FADE: return "fondu";
     case S_DIALOG: return "dialogue";
+    case S_END: return "fin";
   }
   return "?";
 }
@@ -192,7 +193,7 @@ int main(int argc, char** argv) {
   GameState last = game.state();
   std::vector<std::string> seen{stateName(last)};
   const char* lastMap = nullptr;  // carte affichee (monde ou fondu)
-  Speaker lastTalk = SPK_NONE;
+  int lastTalks = 0;
   int lastTx = -1, lastTy = -1;
   // Avec --auto, le robot mene les conversations et l'horloge du script s'arrete pendant ce
   // temps : les images du script ne comptent que hors dialogue.
@@ -221,14 +222,14 @@ int main(int argc, char** argv) {
             peeked = true;
           } else if (autoWrong && !erred) {
             // une option qui n'est pas la bonne, puis A
-            if (d.cursor() == d.correctOption()) raw = BTN_DOWN;
+            if (d.cursor() == d.correctOption()) raw = BTN_RIGHT;
             else {
               if (getenv("ZQ_TRACE")) printf("image %5d : erreur voulue (curseur %d, bon %d)\n", f, d.cursor(), d.correctOption());
               raw = BTN_A;
               erred = true;
             }
           } else if (d.cursor() != d.correctOption()) {
-            raw = BTN_DOWN;
+            raw = BTN_RIGHT;
           } else {
             raw = BTN_A;
           }
@@ -245,7 +246,8 @@ int main(int argc, char** argv) {
       pcm.insert(pcm.end(), abuf, abuf + AUDIO_RATE / 60);
     }
     if (game.state() != last) {
-      printf("image %5d : %s -> %s\n", f, stateName(last), stateName(game.state()));
+      if (autoDialog) printf("image %5d (script %d) : %s -> %s\n", f, t, stateName(last), stateName(game.state()));
+      else printf("image %5d : %s -> %s\n", f, stateName(last), stateName(game.state()));
       if (last == S_TITLE && game.state() == S_WORLD) {
         printf("image %5d : reprise de la partie, %d replique(s) secrete(s)\n", f, game.bonusFound());
         seen.push_back("reprise");
@@ -260,9 +262,11 @@ int main(int argc, char** argv) {
       last = game.state();
       seen.push_back(stateName(last));
     }
-    if (game.lastTalk() != lastTalk) {
-      lastTalk = game.lastTalk();
-      const char* who = lastTalk == SPK_FOX ? "renard" : SPEAKER_NAMES[lastTalk];
+    if (game.talks() != lastTalks) {
+      lastTalks = game.talks();
+      Speaker sp = game.lastTalk();
+      const char* who = sp == SPK_FOX ? "renard" : SPEAKER_NAMES[sp];
+      if (!*who) who = "passant";
       printf("image %5d : parle a %s\n", f, who);
       seen.push_back(std::string("parle:") + who);
     }

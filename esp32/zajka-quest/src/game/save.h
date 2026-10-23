@@ -14,11 +14,13 @@ class Storage {
 };
 
 constexpr uint32_t SAVE_MAGIC = 0x3153515A;  // « ZQS1 »
-constexpr uint8_t SAVE_VERSION = 1;
+constexpr uint8_t SAVE_VERSION = 2;  // 2 : chapitre Kosice complet (une sauvegarde v1 est ignoree)
+constexpr int SAVE_EPISODES = 8;
 
 enum SaveFlag : uint8_t {
-  SF_INTRO_DONE = 1 << 0,  // le Narrateur a plante le decor du tram
-  SF_MET_ANDREA = 1 << 1,  // le dialogue de l'episode 1 a ete joue
+  SF_TRAM_INTRO = 1 << 0,  // le Narrateur a plante le decor du tram (episode 1)
+  SF_TETA_INTRO = 1 << 1,  // ... et celui du jardin de la tante (episode 6)
+  SF_SLEPT = 1 << 2,       // la nuit sous le pommier : fin du chapitre 1
 };
 
 struct SaveData {
@@ -27,9 +29,10 @@ struct SaveData {
   uint8_t map = 0;        // index dans ALL_MAPS
   uint8_t tx = 0, ty = 0;
   int8_t dir = 0;
+  uint8_t stage = 0;      // episodes joues en entier
   uint8_t flags = 0;
-  uint8_t bonus = 0;      // repliques secretes gagnees
-  uint8_t reserved = 0;
+  uint8_t bonus[SAVE_EPISODES] = {};  // repliques secretes gagnees, par episode
+  uint8_t reserved[5] = {};  // 24 octets avant la somme : pas de bourrage non initialise
   uint32_t check = 0;     // somme de controle des champs precedents
 
   uint32_t sum() const {
