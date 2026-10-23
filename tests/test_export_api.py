@@ -158,6 +158,33 @@ class WatchExportTest(unittest.TestCase):
         sheet = json.loads((out / "sheets" / "series-kitsurvie-salutations.json").read_text(encoding="utf-8"))
         self.assertEqual([b["t"] for b in sheet["blocks"]], ["p", "h", "table", "card"])
 
+    def test_map_is_exported_with_its_background(self):
+        from PIL import Image
+        (self.lang_dir / "img").mkdir(exist_ok=True)
+        Image.new("RGB", (768, 1376), (30, 120, 60)).save(self.lang_dir / "img" / "map_background.jpg")
+        out = Path(self.tmp.name) / "out5"
+        index = export_api.export(self.lang_dir, out, 20_000)
+        self.assertTrue(index["map"])
+        data = json.loads((out / "map.json").read_text(encoding="utf-8"))
+        self.assertEqual([bg["src"] for bg in data["bgs"]], ["img/map-280.jpg", "img/map-240.jpg"])
+        for bg, (width, height) in zip(data["bgs"], export_api.MAP_BG_SIZES):
+            self.assertLessEqual(bg["w"], width)
+            self.assertLessEqual(bg["h"], height)
+            self.assertTrue((out / bg["src"]).is_file())
+        ids = [st["id"] for st in data["steps"]]
+        self.assertIn("series-kitsurvie", ids)
+        self.assertEqual(ids[-1], "final-exam")
+        step = data["steps"][ids.index("series-kitsurvie")]
+        self.assertEqual(step["s"], ["series-kitsurvie-salutations"])
+        self.assertTrue(0 <= step["x"] <= 100 and 0 <= step["y"] <= 100)
+
+    def test_map_without_background_or_images(self):
+        out = Path(self.tmp.name) / "out6"
+        export_api.export(self.lang_dir, out, 20_000, with_images=False)
+        data = json.loads((out / "map.json").read_text(encoding="utf-8"))
+        self.assertNotIn("bgs", data)
+        self.assertTrue(data["steps"])
+
     def test_flatten(self):
         self.assertEqual(export_api.flatten("[[fr:Bravo]] **ok** [[ahoj]]"), "Bravo ok ahoj")
 

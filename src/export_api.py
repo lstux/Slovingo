@@ -36,7 +36,7 @@ Sheet block format ("t" = type, minified JSON):
                                                       lit = word-by-word, nt = notes
     {"t":"list","items":[..],"o":false}               list (o = ordered)
 
-    {"t":"img","src":"img/<id>-0.jpg","x":"Caption","w":280,"h":140}
+    {"t":"img","src":"img/<id>-0.jpg","x":"Caption","w":224,"h":150}
                                                       illustration: a small baseline JPEG
                                                       exported next to the sheets (see below)
 
@@ -46,7 +46,14 @@ exported, shrunk to fit IMAGE_MAX_W x IMAGE_MAX_H and re-encoded as baseline JPE
 the image is left out (with a warning) and the export goes on. Clients that do not know
 the "img" block ignore it.
 
-Dropped on purpose: horizontal rules, maps. Inline markup
+The adventure map of the home page is exported too (optional, see export_map()): index.json has
+"map": true and map.json holds the steps (one per series) with their position in percent of the
+background, shrunk to every size of MAP_BG_SIZES (img/map-<h>.jpg); the client takes the largest that fits:
+
+    {"bgs":[{"src":"img/map-280.jpg","w":156,"h":280},{"src":"img/map-240.jpg","w":134,"h":240}],"threshold":85,
+     "steps":[{"id":"series-rodina","t":"series","title":"Rodina","x":38,"y":80,"s":["series-rodina-ma-famille",..]},..]}
+
+Dropped on purpose: horizontal rules, the map decorations. Inline markup
 ([[word]], [[fr:text]], **bold**) is flattened to plain text.
 
 Exercises are copied as generated (same fields as exercises.json), minus
@@ -74,9 +81,13 @@ from smd2data import build_sheet_json  # noqa: E402
 DEFAULT_MAX_SHEET_BYTES = 20_000
 
 # Illustrations are drawn on a 320x240 screen next to a few lines of text.
-IMAGE_MAX_W = 280
-IMAGE_MAX_H = 140
+IMAGE_MAX_W = 224       # fits a 240 px wide portrait screen as well as a landscape one
+IMAGE_MAX_H = 150
 IMAGE_QUALITY = 72
+
+# Background of the adventure map, drawn next to a text panel: one size per screen layout
+# (portrait 240x320: 280 px high above the footer; landscape 320x240: 240 px high), largest first.
+MAP_BG_SIZES = ((156, 280), (134, 240))
 
 # [[fr:text]] / [[word]] (speakable markup) and **bold**.
 _SPEAKABLE_RE = re.compile(r"\[\[(?:[a-z]{2,3}:)?(.*?)\]\]", re.DOTALL)
@@ -102,8 +113,12 @@ class ImageExporter:
         self.count = 0
         self.bytes = 0
 
-    def export(self, src: str, caption: str, name: str) -> dict[str, Any] | None:
-        """The "img" block for one illustration, or None when it cannot be exported."""
+    def export(self, src: str, caption: str, name: str,
+               box: tuple[int, int] | None = None) -> dict[str, Any] | None:
+        """The "img" block for one illustration, or None when it cannot be exported.
+
+        box: largest size of the shrunk picture (default IMAGE_MAX_W x IMAGE_MAX_H).
+        """
         if not self.enabled or not src:
             return None
         if re.match(r"^[a-z][a-z0-9+.-]*://", src, re.IGNORECASE):
@@ -134,7 +149,7 @@ class ImageExporter:
                     img = background
                 else:
                     img = img.convert("RGB")
-                img.thumbnail((IMAGE_MAX_W, IMAGE_MAX_H), Image.LANCZOS)
+                img.thumbnail(box or (IMAGE_MAX_W, IMAGE_MAX_H), Image.LANCZOS)
                 target = self.out_dir / "img" / f"{name}.jpg"
                 target.parent.mkdir(parents=True, exist_ok=True)
                 # baseline (not progressive): the light clients decode it with a tiny decoder
@@ -282,6 +297,39 @@ def compact_greeting(lang_cfg: dict[str, Any]) -> dict[str, str]:
     return greeting
 
 
+def export_map(lang_dir: Path, lang_cfg: dict[str, Any], out_dir: Path, images: ImageExporter) -> bool:
+    """Write map.json (the adventure map of the home page) and its background; True when written.
+
+    Optional like the images: a course without steps, or a map generator that fails, just has no map.
+    """
+    try:
+        from map_generator import build_map_json, find_map_background
+        data = build_map_json(lang_dir / "md", lang_cfg)
+    except Exception as exc:
+        print(f"warning: map not exported ({exc})", file=sys.stderr)
+        return False
+
+    steps = [
+        {"id": st["id"], "t": st["type"], "title": flatten(st["title"]), "x": st["x"], "y": st["y"], "s": st["sheets"]}
+        for st in data["steps"]
+    ]
+    if not steps:
+        return False
+
+    out: dict[str, Any] = {"threshold": data["config"]["validationThreshold"], "steps": steps}
+    background = find_map_background(lang_dir / "img")
+    if background:
+        bgs = []
+        for width, height in MAP_BG_SIZES:
+            block = images.export(background, "", f"map-{height}", box=(width, height))
+            if block:
+                bgs.append({"src": block["src"], "w": block["w"], "h": block["h"]})
+        if bgs:
+            out["bgs"] = bgs
+    (out_dir / "map.json").write_text(dumps(out), encoding="utf-8")
+    return True
+
+
 def export(lang_dir: Path, out_dir: Path, max_sheet_bytes: int, with_images: bool = True) -> dict[str, Any]:
     lang_cfg = json.loads((lang_dir / "lang.json").read_text(encoding="utf-8"))
     md_files = sorted((lang_dir / "md").glob("*.md"))
@@ -338,6 +386,8 @@ def export(lang_dir: Path, out_dir: Path, max_sheet_bytes: int, with_images: boo
     cheers = compact_cheers(lang_cfg)
     if cheers:
         index["cheers"] = cheers
+    if export_map(lang_dir, lang_cfg, out_dir, images):
+        index["map"] = True
     (out_dir / "index.json").write_text(dumps(index), encoding="utf-8")
     if images.count:
         print(f"API export: {images.count} image(s), {images.bytes} bytes -> {out_dir / 'img'}")
