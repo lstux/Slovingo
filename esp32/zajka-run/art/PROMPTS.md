@@ -357,7 +357,7 @@ Sprite sheet for a side-view platform game, the character in side view facing ri
 
 ## Andrea (joindre `art/characters/andrea-reference.png`)
 
-Andrea est jouable dans les niveaux suivants : ses cases font 48×48, comme le renard. Le moteur lit la taille dans le nom du fichier de la planche (`rabbit_48x48.png`).
+Andrea est jouable dans les niveaux suivants : ses cases font 48×48, comme le renard. Le moteur lit la taille dans le nom du fichier de la planche (`rabbit_48x48.png`). Lignes à faire : idle (4), win (2), run (4, le moteur attend 4 images), jump (1), fall (1), hurt (1), climb (2).
 
 **Avant la première importation** : créer `art/sprites/rabbit_48x48.png` (3 lignes de 48 px de haut, 6 cases de 48 px de large, fond transparent), puis supprimer `art/sprites/rabbit_32x48.png` pour qu'il n'en reste qu'une. Les images déjà importées en 32×48 ne seront plus utilisées.
 
@@ -383,16 +383,60 @@ a 2-frame VICTORY animation (waving one arm high, big smile).
 
 `python3 tools/import_ai.py sprite rabbit win art/sources/andrea_win.png --frames 2`
 
-### Andrea : run (6 images)
+### Andrea : run (4 images)
 
 ```
 16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 40 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
 Keep EXACTLY the same character as the attached reference image: same clothes, colours, proportions and face. She is Andrea, an ANTHROPOMORPHIC rabbit teenage girl from Košice who stands and walks UPRIGHT ON TWO LEGS like a human, NOT a four-legged animal. Keep the SAME body proportions as the reference: short legs, big head, about 2.5 heads tall. Grey fur, long upright ears (pink inside), white blaze widening into a white muzzle, dark eyes, small Y-shaped nose, grey whiskers, two front teeth. Summer outfit only, NOT a spacesuit, NOT a jumpsuit, no helmet: a mint green t-shirt, blue denim shorts, red sneakers with white soles, a small yellow bag on a shoulder strap.
 Sprite sheet for a side-view platform game, the character in side view facing right. All frames in a single horizontal row, evenly spaced with wide gaps, same size, feet on the same baseline. Each frame is a 48x48 square and must read clearly at 48x48 pixels (the character fills the square, feet on the bottom edge). Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
-a 6-frame RUNNING cycle (arms swinging, legs alternating, ears bouncing).
+a 4-frame RUNNING cycle (arms swinging, legs alternating, ears bouncing).
 ```
 
-`python3 tools/import_ai.py sprite rabbit run art/sources/andrea_run.png --frames 6`
+`python3 tools/import_ai.py sprite rabbit run art/sources/andrea_run.png --frames 4`
+
+### Andrea : jump (1 image)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 40 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Keep EXACTLY the same character as the attached reference image: same clothes, colours, proportions and face. She is Andrea, an ANTHROPOMORPHIC rabbit teenage girl from Košice who stands and walks UPRIGHT ON TWO LEGS like a human, NOT a four-legged animal. Keep the SAME body proportions as the reference: short legs, big head, about 2.5 heads tall. Grey fur, long upright ears (pink inside), white blaze widening into a white muzzle, dark eyes, small Y-shaped nose, grey whiskers, two front teeth. Summer outfit only, NOT a spacesuit, NOT a jumpsuit, no helmet: a mint green t-shirt, blue denim shorts, red sneakers with white soles, a small yellow bag on a shoulder strap.
+Sprite sheet for a side-view platform game, the character in side view facing right. All frames in a single horizontal row, evenly spaced with wide gaps, same size, feet on the same baseline. Each frame is a 48x48 square and must read clearly at 48x48 pixels (the character fills the square, feet on the bottom edge). Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+a single JUMP frame (rising, one knee up, both arms raised, compact pose with knees bent). Only one frame.
+```
+
+`python3 tools/import_ai.py sprite rabbit jump art/sources/andrea_jump.png --frames 1`
+
+### Andrea : fall (1 image)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 40 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Keep EXACTLY the same character as the attached reference image: same clothes, colours, proportions and face. She is Andrea, an ANTHROPOMORPHIC rabbit teenage girl from Košice who stands and walks UPRIGHT ON TWO LEGS like a human, NOT a four-legged animal. Keep the SAME body proportions as the reference: short legs, big head, about 2.5 heads tall. Grey fur, long upright ears (pink inside), white blaze widening into a white muzzle, dark eyes, small Y-shaped nose, grey whiskers, two front teeth. Summer outfit only, NOT a spacesuit, NOT a jumpsuit, no helmet: a mint green t-shirt, blue denim shorts, red sneakers with white soles, a small yellow bag on a shoulder strap.
+Sprite sheet for a side-view platform game, the character in side view facing right. All frames in a single horizontal row, evenly spaced with wide gaps, same size, feet on the same baseline. Each frame is a 48x48 square and must read clearly at 48x48 pixels (the character fills the square, feet on the bottom edge). Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+a single FALL frame (in the air, falling, arms up and out, legs apart). Only one frame.
+```
+
+`python3 tools/import_ai.py sprite rabbit fall art/sources/andrea_fall.png --frames 1`
+
+### Andrea : hurt (1 image)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 40 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Keep EXACTLY the same character as the attached reference image: same clothes, colours, proportions and face. She is Andrea, an ANTHROPOMORPHIC rabbit teenage girl from Košice who stands and walks UPRIGHT ON TWO LEGS like a human, NOT a four-legged animal. Keep the SAME body proportions as the reference: short legs, big head, about 2.5 heads tall. Grey fur, long upright ears (pink inside), white blaze widening into a white muzzle, dark eyes, small Y-shaped nose, grey whiskers, two front teeth. Summer outfit only, NOT a spacesuit, NOT a jumpsuit, no helmet: a mint green t-shirt, blue denim shorts, red sneakers with white soles, a small yellow bag on a shoulder strap.
+Sprite sheet for a side-view platform game, the character in side view facing right. All frames in a single horizontal row, evenly spaced with wide gaps, same size, feet on the same baseline. Each frame is a 48x48 square and must read clearly at 48x48 pixels (the character fills the square, feet on the bottom edge). Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+a single HURT frame (surprised, eyes squeezed shut, body leaning back, one arm up). Only one frame.
+```
+
+`python3 tools/import_ai.py sprite rabbit hurt art/sources/andrea_hurt.png --frames 1`
+
+### Andrea : climb (2 images)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 40 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Keep EXACTLY the same character as the attached reference image: same clothes, colours, proportions and face. She is Andrea, an ANTHROPOMORPHIC rabbit teenage girl from Košice who stands and walks UPRIGHT ON TWO LEGS like a human, NOT a four-legged animal. Keep the SAME body proportions as the reference: short legs, big head, about 2.5 heads tall. Grey fur, long upright ears (pink inside), white blaze widening into a white muzzle, dark eyes, small Y-shaped nose, grey whiskers, two front teeth. Summer outfit only, NOT a spacesuit, NOT a jumpsuit, no helmet: a mint green t-shirt, blue denim shorts, red sneakers with white soles, a small yellow bag on a shoulder strap.
+Sprite sheet for a side-view platform game, the character in side view facing right. All frames in a single horizontal row, evenly spaced with wide gaps, same size, feet on the same baseline. Each frame is a 48x48 square and must read clearly at 48x48 pixels (the character fills the square, feet on the bottom edge). Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+a 2-frame CLIMBING animation seen from BEHIND, climbing a ladder (left arm and right leg up, then right arm and left leg up), back of the t-shirt and backpack straps visible. Do not draw the ladder.
+```
+
+`python3 tools/import_ai.py sprite rabbit climb art/sources/andrea_climb.png --frames 2`
 
 ## Déjà faits (pour régénérer si besoin)
 
