@@ -41,12 +41,22 @@ jobs:
       - name: PlatformIO
         run: pip install platformio
 
-      - name: Build firmware
-        run: pio run
+      - name: Build firmware (ESP-IDF, celui qui demarre depuis le .fw)
+        run: pio run -e odroid-go-idf
+
+      - name: Build firmware (Arduino, flashage USB seulement)
+        run: pio run -e odroid-go
 
       - uses: actions/upload-artifact@v4
         with:
           name: ZajkaRun-odroid-go
+          path: |
+            esp32/zajka-run/.pio/build/odroid-go-idf/ZajkaRun.fw
+            esp32/zajka-run/.pio/build/odroid-go-idf/firmware.bin
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ZajkaRun-odroid-go-arduino
           path: |
             esp32/zajka-run/.pio/build/odroid-go/ZajkaRun.fw
             esp32/zajka-run/.pio/build/odroid-go/firmware.bin
