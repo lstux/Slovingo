@@ -13,11 +13,11 @@ Chaque image du jeu peut être remplacée par une image générée, sans toucher
 | `objects/holub` pigeon | fait (Gemini) | `sources/holub_gemini.jpg` |
 | `objects/osa` guêpe | fait (Gemini) | `sources/osa_gemini.jpg` |
 | `sprites/fox` renard (cases 48×48) | fait (Gemini) | `sources/fox_<anim>_gemini.jpg` |
-| `sprites/rabbit` Andrea | fait en 32×48 (Gemini) ; **à refaire en 48×48** (voir la section Andrea) | `sources/rabbit_<anim>_gemini.jpg` |
+| `sprites/rabbit` Andrea | fait en 32×48 (Gemini) ; **à refaire en 48×48** (voir la section Andrea) ; chute `sources/andrea_fall.jpg` reçue, import en attente | `sources/rabbit_<anim>_gemini.jpg` |
 | `objects/pruzina`, `lampa`, `zastavka`, `elektricka`, `lavicka`, `fx` | fait (Gemini) | `sources/<nom>_gemini.jpg` |
 | `objects/hud` icônes 8×8 | garder (trop petit pour une IA) | dessiné à la main |
-| `sucho/far`, `sucho/mid`, `sucho/tiles` (niveau 1-2) | **à faire** (provisoires) | `make_placeholder_levels.py` |
-| `objects/tryska`, `zahradnik` | **à faire** (provisoires) | `make_placeholder_levels.py` |
+| `sucho/far`, `sucho/mid`, `sucho/tiles` (niveau 1-2) | fait (Gemini) | `sources/sucho_*_gemini.jpg` |
+| `objects/tryska`, `zahradnik` | fait (Gemini) | `sources/tryska_gemini.jpg`, `sources/zahradnik_gemini.jpg` |
 | `raj/far`, `raj/mid`, `raj/tiles` (niveau 1-3) | **à faire** (provisoires) | `make_placeholder_raj.py` |
 | `objects/platforma`, `flasa`, `vevericka`, `orol`, `rozcestnik`, `les` | **à faire** (provisoires) | `make_placeholder_raj.py` |
 | `tatry/far`, `tatry/mid`, `tatry/tiles` (niveau 1-4) | **à faire** (provisoires) | `make_placeholder_levels.py` |
