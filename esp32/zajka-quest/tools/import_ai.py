@@ -330,7 +330,7 @@ def import_tileset(a, key, theme="kosice"):
             raise SystemExit(f"tuile inconnue « {name} » (voir TILESET dans tools/build_assets.py)")
         cell_rc = (i // gc, i % gc)
         if ground or kinds[name] == "O":
-            t = fit_object(remove_rules(keyed[cell_rc]))
+            t = fit_object(keyed[cell_rc] if a.no_rules else remove_rules(keyed[cell_rc]))
             if ground:
                 if ground not in index:
                     raise SystemExit(f"tuile de fond inconnue « {ground} »")
@@ -400,6 +400,7 @@ def main():
     ap.add_argument("--frames", type=int, default=1)
     ap.add_argument("--colors", type=int, default=0)
     ap.add_argument("--no-key", action="store_true")
+    ap.add_argument("--no-rules", action="store_true", help="tileset : ne pas effacer les traits fins (un lampadaire noir n'est pas un trait de grille)")
     ap.add_argument("--tol", type=int, default=0, help="avec --key : distance (somme des ecarts RGB) sous laquelle un pixel est du fond")
     ap.add_argument("--key", default=None)
     ap.add_argument("--mirror", action="store_true", help="far/mid : ajoute le reflet pour boucler sans raccord")
