@@ -38,7 +38,10 @@ SCREEN_W_MIN = 320
 OUTLINE = (26, 26, 46, 255)
 
 
-def key_out(img, key=None, tol=150):
+KO = {}
+
+
+def key_out(img, key=None, tol=150, strict=False):
     """Rend transparent le fond uni (magenta par defaut, sinon la couleur des coins),
     puis retire le liseré de couleur de fond laissé par l'anticrénelage."""
     a = np.array(img.convert("RGBA")).astype(np.int32)
@@ -55,7 +58,13 @@ def key_out(img, key=None, tol=150):
     # « magentitude » : de combien r et b depassent g (fond magenta), ou distance a la cle
     is_mag = key[1] < 80 and key[0] > 180 and key[2] > 180
     mag = np.minimum(rgb[..., 0], rgb[..., 2]) - rgb[..., 1] if is_mag else 255 - d
-    alpha = np.where((d < tol) | (mag > 90), 0, 255)
+    if strict and not is_mag:
+        # fond d'une teinte approchee (--tol) : seuls les pixels proches de la cle partent, les bruns
+        # et les rouges d'un objet ne doivent pas etre pris pour du fond ; le liseré proche est nettoye
+        mag = np.where(d < tol + 40, 100, 0)
+        alpha = np.where(d < tol, 0, 255)
+    else:
+        alpha = np.where((d < tol) | (mag > 90), 0, 255)
     a[..., 3] = alpha
     # despill : un pixel opaque encore teinte par le fond prend la couleur moyenne de ses voisins sains
     opaque = alpha > 0
@@ -311,7 +320,7 @@ def import_tileset(a, key, theme="kosice"):
     sheet = Image.open(path).convert("RGBA")
     src = Image.open(a.args[0]).convert("RGBA")
     raw = grid_cells(src, gc, gr, margin=0.04)          # textures : on garde les pixels tels quels
-    keyed = grid_cells(src if a.no_key else key_out(src, key), gc, gr, margin=0.02)
+    keyed = grid_cells(src if a.no_key else key_out(src, key, **KO), gc, gr, margin=0.02)
     done = []
     for i, spec in enumerate(names):
         if spec == "-":
@@ -353,7 +362,7 @@ def import_walk(a, key):
     if gr != 4 or gc != 3:
         raise SystemExit("walk : l'image doit etre une grille de 4 lignes (sens) x 3 colonnes (debout, pied, autre pied)")
     src = Image.open(path).convert("RGBA")
-    src = remove_rules(src if a.no_key else key_out(src, key))
+    src = remove_rules(src if a.no_key else key_out(src, key, **KO))
     frames = grid_frames(src, gr, gc)
     # meme echelle pour les 12 images (hauteur mediane = 23 px), centre de la tete a x = 8
     cells = fit_character(frames, 16, 24, a.colors or 24, 0, 8, height_px=a.height_px or 23)
@@ -370,7 +379,7 @@ def import_walk(a, key):
 def import_portrait(a, key):
     name, path = a.args
     src = Image.open(path).convert("RGBA")
-    src = crop_alpha(remove_rules(src if a.no_key else key_out(src, key)))
+    src = crop_alpha(remove_rules(src if a.no_key else key_out(src, key, **KO)))
     # buste : on garde le haut, carre, la tete en haut
     side = min(src.width, src.height)
     src = src.crop(((src.width - side) // 2, 0, (src.width - side) // 2 + side, side))
@@ -391,6 +400,7 @@ def main():
     ap.add_argument("--frames", type=int, default=1)
     ap.add_argument("--colors", type=int, default=0)
     ap.add_argument("--no-key", action="store_true")
+    ap.add_argument("--tol", type=int, default=0, help="avec --key : distance (somme des ecarts RGB) sous laquelle un pixel est du fond")
     ap.add_argument("--key", default=None)
     ap.add_argument("--mirror", action="store_true", help="far/mid : ajoute le reflet pour boucler sans raccord")
     ap.add_argument("--strip-ground", action="store_true", help="sprite/object : retire un trait de sol")
@@ -411,6 +421,8 @@ def main():
                     help="walk : sens de chaque ligne de l'image (defaut : bas, gauche, droite, haut, comme RPG Maker)")
     a = ap.parse_args()
     key = tuple(int(a.key[i:i + 2], 16) for i in (0, 2, 4)) if a.key else None
+    global KO
+    KO = {"tol": a.tol, "strict": True} if (a.tol and a.key) else {}
     if a.kind == "tileset":
         return import_tileset(a, key)
     if a.kind == "walk":
@@ -423,7 +435,7 @@ def main():
         w, h = SIZES[a.kind]
         if a.kind in ("far", "mid"):
             # hauteur fixe, largeur libre (le fond boucle) : rien n'est rogne
-            img = src if (a.kind == "far" or a.no_key) else key_out(src, key)
+            img = src if (a.kind == "far" or a.no_key) else key_out(src, key, **KO)
             nw = max(SCREEN_W_MIN, int(round(img.width * h / img.height)))
             img = img.resize((nw, h), Image.LANCZOS)
             al = np.array(img)
@@ -434,7 +446,7 @@ def main():
             img = quantize_rgba(img, a.colors or 200)
         elif a.cells:
             img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
-            src = src if a.no_key else key_out(src, key)
+            src = src if a.no_key else key_out(src, key, **KO)
             cells = grid_cells(src)
             for spec in a.cells.split():
                 idx, rc = spec.split("=")
@@ -453,7 +465,7 @@ def main():
                 img.paste(Image.fromarray(ta), ((n % 8) * 16, (n // 8) * 16))
             img = quantize_rgba(img, a.colors or 96)
         else:  # tiles : grille 8 x 4 de tuiles dans l'ordre attendu
-            img = src if a.no_key else key_out(src, key)
+            img = src if a.no_key else key_out(src, key, **KO)
             img = shrink(img, w, h)
             img = quantize_rgba(img, a.colors or 96)
         out = os.path.join(ART, a.theme, a.kind + ".png")
@@ -473,7 +485,7 @@ def main():
     fw, fh = map(int, re.search(r"_(\d+)x(\d+)\.png$", sheet_path).groups())
     sheet = Image.open(sheet_path).convert("RGBA")
     src = Image.open(path).convert("RGBA")
-    src = src if a.no_key else key_out(src, key)
+    src = src if a.no_key else key_out(src, key, **KO)
     src = remove_rules(src)
     if a.strip_ground:
         src = strip_ground(src)

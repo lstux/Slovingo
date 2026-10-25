@@ -248,3 +248,10 @@ Chaque série du cours apportera ses lieux (tuiles à ajouter à `TILESET`, avec
 modèle) et ses personnages : Maťo (ours) et Katka (marmotte) dès le chapitre 5, Babka Zuzana
 (brebis), Ján (écureuil), Marek (blaireau). Chacun aura sa planche de marche et son portrait,
 avec les mêmes prompts en changeant la description.
+
+## Notes d'import (premiers essais Gemini)
+
+- Gemini rend souvent un magenta terne (ex. `#C2428D`) au lieu de `#FF00FF` : relever la couleur d'un coin et
+  importer avec `--key C2428D --tol 115` (plus la tolérance est basse, plus les bruns/rouges de l'objet sont gardés).
+- Les lignes « gauche » et « droite » du renard sortent parfois dans le même sens : recomposer la source
+  (ligne droite = case 1 miroir + cases 2 et 3 qui regardent à droite, ligne gauche = son miroir), puis importer.
