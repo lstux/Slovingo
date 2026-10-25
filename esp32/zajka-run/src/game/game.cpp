@@ -198,6 +198,10 @@ void Game::step(const Input& in) {
           audio_->play(SFX_BUMP);
         }
       }
+      if (in.hit(BTN_SELECT)) {
+        rabbit_ = !rabbit_;
+        audio_->play(SFX_BUMP);
+      }
       if (in.hit(BTN_START) || in.hit(BTN_A)) {
         lives_ = 3;
         hearts_ = 0;
@@ -1214,14 +1218,15 @@ void Game::drawPlayer(Band& b) {
   bool flip = p.facingLeft;
   if (state_ == S_CLEAR) f = (stateTime_ / 14) % 2;
   if (state_ == S_DYING) row = A_HURT, f = 0;
-  if (row == A_CLIMB && spr_fox.img->h / spr_fox.fh <= A_CLIMB) {
+  const Sheet& sh = rabbit_ ? spr_rabbit : spr_fox;  // meme format de cases (48x48) et memes lignes
+  if (row == A_CLIMB && sh.img->h / sh.fh <= A_CLIMB) {
     // pas encore d'images d'echelle : la pose du saut, retournee a chaque pas
     row = A_JUMP;
     flip = f != 0;
     f = 0;
   }
-  int sx = flip ? hx - (spr_fox.fw - 1 - FOX_ANCHOR) : hx - FOX_ANCHOR;
-  b.frame(spr_fox, row * spr_fox.cols + f, sx, feet - 47, flip);
+  int sx = flip ? hx - (sh.fw - 1 - FOX_ANCHOR) : hx - FOX_ANCHOR;
+  b.frame(sh, row * sh.cols + f, sx, feet - 47, flip);
 }
 
 void Game::drawHud(Band& b) {

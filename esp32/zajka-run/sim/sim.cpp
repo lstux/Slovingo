@@ -135,6 +135,7 @@ int main(int argc, char** argv) {
   bool useBot = false, wav = false;
   float startX = -1, startY = -1;
   int level = 0;
+  bool rabbit = false;
   std::string savePath;
   for (int i = 1; i < argc; i++) {
     std::string a = argv[i];
@@ -147,6 +148,7 @@ int main(int argc, char** argv) {
     else if (a == "--start-x") startX = atof(argv[++i]);
     else if (a == "--start-y") startY = atof(argv[++i]);
     else if (a == "--level") level = atoi(argv[++i]) - 1;
+    else if (a == "--andrea") rabbit = true;
     else if (a == "--save") savePath = argv[++i];
     else if (a == "--shots") {
       char* s = argv[++i];
@@ -175,6 +177,7 @@ int main(int argc, char** argv) {
   static Game game;
   static FileStorage* storage = savePath.empty() ? nullptr : new FileStorage(savePath);
   game.selectLevel(level);
+  game.selectCharacter(rabbit);
   game.begin(&audio, storage);
   game.selectLevel(level);  // meme si la sauvegarde ne l'a pas encore debloque
   Input in;

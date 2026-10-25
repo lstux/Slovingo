@@ -69,6 +69,7 @@ class Game {
   static constexpr int MAX_ENT = 200;
 
   void begin(Audio* audio, Storage* storage = nullptr);
+  void selectCharacter(bool rabbit) { rabbit_ = rabbit; }  // simulateur : Andrea (true) ou le renard
   void selectLevel(int i) { sel_ = i; }  // simulateur : niveau choisi sur l'ecran titre
   void step(const Input& in);               // 1/60 s
   void renderBand(Band& b);
@@ -137,6 +138,7 @@ class Game {
   Storage* storage_ = nullptr;
   SaveData save_;
   int sel_ = 0;          // niveau choisi sur l'ecran titre
+  bool rabbit_ = false; // personnage jouable : false = le renard, true = Andrea (SELECT sur l'ecran titre)
   struct Crumble {
     int16_t tx, ty, t;
   };
