@@ -1,0 +1,7 @@
+# Name,   Type, SubType, Offset,  Size
+# Utilise seulement quand on flashe en USB (pio run -t upload) : avec le .fw, c'est le lanceur
+# d'origine qui place l'application (partition « app », ota_0) et la sauvegarde (« nvs »).
+nvs,      data, nvs,     0x9000,  0x4000,
+otadata,  data, ota,     0xd000,  0x2000,
+phy_init, data, phy,     0xf000,  0x1000,
+app,      app,  ota_0,   0x10000, 0x300000,
