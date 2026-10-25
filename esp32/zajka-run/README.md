@@ -26,11 +26,17 @@ puis l'orage arrivent (éclairs et tonnerre), **chaînes** à grimper, **ébouli
 **rafales de vent** qui repoussent le renard, pierres qui tombent, lac glacé, et le chatár
 du refuge à l'arrivée.
 
-**Andrea** (la lapine) est jouable aussi : sur l'écran titre, **SELECT** passe du renard à
-Andrea. Elle a les mêmes mouvements que le renard (course, saut, échelle, choc).
+**Andrea** (la lapine) rejoint la partie à l'arrivée du niveau 1 (« Ahoj! To si ty? »). À partir du
+niveau 2, les deux avancent ensemble : le personnage non contrôlé suit le trace du premier, avec un
+petit retard. **SELECT** (en jeu) passe de l'un à l'autre. Chacun a sa capacité : le renard court et
+grimpe, Andrea **vole** en tombant (tenir A : chute lente, ses oreilles en parachute).
+
+Un coup qui tue le personnage contrôlé le fait basculer sur l'autre, sans perdre de vie : le premier
+revient au bout de 2-3 secondes, à côté de celui qui court. Les vies et les medovníky sont communs ;
+si les deux sont tombés, on perd une vie comme d'habitude.
 
 La progression est sauvegardée (niveaux débloqués, meilleur temps et medovníky par niveau) ;
-sur l'écran titre, gauche/droite choisit le niveau. Le choix du personnage n'est pas encore sauvegardé.
+sur l'écran titre, gauche/droite choisit le niveau. Le personnage actif n'est pas sauvegardé : on repart du renard.
 
 ## Commandes
 
@@ -40,7 +46,7 @@ sur l'écran titre, gauche/droite choisit le niveau. Le choix du personnage n'es
 | A | sauter (tenir pour sauter plus haut, rebondir plus haut sur un ennemi ou un ressort) |
 | B | courir (indispensable pour le grand trou) |
 | START | pause |
-| SELECT (écran titre) | changer de personnage : renard ou Andrea |
+| SELECT (en jeu, à partir du niveau 2) | changer de personnage : renard ou Andrea |
 | SELECT (en pause) | retour à l'écran titre |
 | VOLUME | volume (5 niveaux) |
 | MENU (tenir 1 s) | retour au lanceur du firmware d'origine |
@@ -110,7 +116,7 @@ tourne à 60 Hz fixes, l'affichage autour de 30 images/s.
 ```sh
 make -C sim
 build/sim --bot --every 120 --out /tmp/zr          # le robot joue, une capture toutes les 2 s
-build/sim --andrea --bot --out /tmp/zr             # le robot joue avec Andrea
+build/sim --level 2 --andrea --bot --out /tmp/zr   # niveau 2 : Andrea est le personnage actif, le renard la suit
 build/sim --bot --start-x 2950 --out /tmp/zr       # démarre près de l'arrivée
 build/sim --level 2 --start-x 1300 --start-y 272 --script s.txt --out /tmp/zr   # niveau 2, position donnée
 build/sim --save /tmp/zr.sav ...                    # sauvegarde dans un fichier

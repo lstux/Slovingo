@@ -32,6 +32,8 @@ constexpr int FOX_ANCHOR = 27;
 // Andrea : 4 images de course (planche Gemini), seulement sur l'ecran titre
 constexpr int RABBIT_RUN_FRAMES = 4;
 constexpr float CLIMB_V = 1.6f;
+// Andrea plane : A tenu en tombant, chute lente (oreilles en parachute)
+constexpr float GLIDE_GRAVITY = 0.05f, GLIDE_FALL = 1.5f;
 constexpr float PLATFORM_V = 0.8f, PLATFORM_VV = 0.6f;
 constexpr int PLATFORM_W = 48, PLATFORM_H = 8;
 constexpr int CRUMBLE_DELAY = 32, CRUMBLE_BACK = 300;   // images avant l'effondrement, avant le retour
@@ -162,6 +164,10 @@ void Game::startLevel(int index, bool fresh) {
   p_ = Player();
   p_.x = checkX_ + 1;
   p_.y = checkY_ - PH;
+  compHp_ = 3;
+  compDown_ = 0;
+  switched_ = false;
+  resetTrail();
   updateCamera(true);
 }
 
@@ -171,7 +177,59 @@ void Game::debugTeleport(float x, float feetY) {
   p_.x = x;
   p_.y = checkY_ - PH;
   p_.vx = p_.vy = 0;
+  resetTrail();
   updateCamera(true);
+}
+
+// ---------------------------------------------------------------- compagnon
+void Game::resetTrail() {
+  Snap s;
+  s.x = p_.x;
+  s.y = p_.y;
+  s.anim = (uint8_t)p_.anim;
+  s.frame = (uint8_t)p_.animFrame;
+  s.left = p_.facingLeft;
+  for (int i = 0; i < TRAIL_LEN; i++) trail_[i] = s;
+  trailHead_ = 0;
+}
+
+void Game::recordTrail() {
+  Snap& s = trail_[trailHead_];
+  s.x = p_.x;
+  s.y = p_.y;
+  s.anim = (uint8_t)p_.anim;
+  s.frame = (uint8_t)p_.animFrame;
+  s.left = p_.facingLeft;
+  trailHead_ = (trailHead_ + 1) % TRAIL_LEN;
+}
+
+// position du personnage actif, 'age' images plus tot
+Snap Game::trailAt(int age) const {
+  int i = (trailHead_ - 1 - age + 2 * TRAIL_LEN) % TRAIL_LEN;
+  return trail_[i];
+}
+
+// bascule sur le compagnon, la ou il se trouve sur le trace ; les points de vie suivent chaque personnage
+void Game::switchChar(bool onDeath) {
+  Snap s = trailAt(TRAIL_DELAY);
+  int hp = p_.hp;
+  p_.hp = compHp_;
+  compHp_ = hp;
+  p_.x = s.x;
+  p_.y = s.y;
+  p_.vx = p_.vy = 0;
+  p_.onGround = false;
+  p_.coyote = p_.jumpBuf = 0;
+  p_.climbing = false;
+  p_.riding = -1;
+  p_.squash = 0;
+  p_.facingLeft = s.left;
+  p_.anim = A_IDLE;
+  p_.animTime = p_.animFrame = 0;
+  p_.invuln = onDeath ? 60 : 0;   // pas de coup immediat sur la meme bete
+  rabbit_ = !rabbit_;
+  if (onDeath) compDown_ = REVIVE_FRAMES;
+  audio_->play(SFX_BUMP);
 }
 
 // ---------------------------------------------------------------- boucle logique
@@ -198,11 +256,8 @@ void Game::step(const Input& in) {
           audio_->play(SFX_BUMP);
         }
       }
-      if (in.hit(BTN_SELECT)) {
-        rabbit_ = !rabbit_;
-        audio_->play(SFX_BUMP);
-      }
       if (in.hit(BTN_START) || in.hit(BTN_A)) {
+        if (sel_ == 0) rabbit_ = false;   // au niveau 1 le renard joue seul : Andrea arrive a la fin
         lives_ = 3;
         hearts_ = 0;
         startLevel(sel_, true);
@@ -226,6 +281,7 @@ void Game::step(const Input& in) {
         audio_->play(SFX_PAUSE);
         break;
       }
+      if (in.hit(BTN_SELECT) && duo() && compDown_ == 0) switchChar(false);
       updatePlay(in);
       break;
     case S_PAUSE:
@@ -252,6 +308,9 @@ void Game::step(const Input& in) {
           p_.x = checkX_ + 1;
           p_.y = checkY_ - PH;
           p_.invuln = INVULN;
+          compHp_ = 3;
+          compDown_ = 0;
+          resetTrail();
           updateCamera(true);
           state_ = S_INTRO;
           stateTime_ = 0;
@@ -284,12 +343,20 @@ void Game::step(const Input& in) {
 
 void Game::updatePlay(const Input& in) {
   levelTime_++;
+  switched_ = false;
   updatePlayer(in);
+  recordTrail();
+  if (compDown_ > 0 && --compDown_ == 0) {   // le personnage tombe revient, a cote de l'autre
+    compHp_ = 3;
+    Snap s = trailAt(TRAIL_DELAY);
+    fx(E_SPARK, s.x + PW / 2 - 6, s.y + PH - 20);
+    audio_->play(SFX_CHECK);
+  }
   updateCrumbles();
   updateEntities();
   interact();
   updateWeather();
-  if (p_.y > lvl_.pixelH() + 8) killPlayer();
+  if (p_.y > lvl_.pixelH() + 8 && !switched_) killPlayer();
   updateCamera(false);
 }
 
@@ -343,8 +410,15 @@ void Game::updatePlayer(const Input& in) {
   }
   holdA_ = in.down(BTN_A);
   bool hold = holdA_ && p.vy < 0;
-  p.vy += hold ? GRAVITY_HOLD : GRAVITY;
-  if (p.vy > MAX_FALL) p.vy = MAX_FALL;
+  // Andrea : A tenu en tombant = vol plane, chute lente
+  bool glide = rabbit_ && holdA_ && p.vy >= 0 && !p.onGround;
+  if (glide) {
+    p.vy += GLIDE_GRAVITY;
+    if (p.vy > GLIDE_FALL) p.vy = GLIDE_FALL;
+  } else {
+    p.vy += hold ? GRAVITY_HOLD : GRAVITY;
+    if (p.vy > MAX_FALL) p.vy = MAX_FALL;
+  }
 
   bool wasGround = p.onGround;
   float prevBottom = p.y + PH;
@@ -847,7 +921,7 @@ void Game::interact() {
     return;
   }
 
-  for (int i = 0; i < nent_; i++) {
+  for (int i = 0; i < nent_ && !switched_; i++) {
     Entity& e = ent_[i];
     if (e.type == E_NONE) continue;
     switch (e.type) {
@@ -981,6 +1055,12 @@ void Game::hurtPlayer(float fromX) {
 
 void Game::killPlayer() {
   if (state_ != S_PLAY) return;
+  if (duo() && compDown_ == 0) {   // l'autre est debout : on bascule, sans perdre de vie
+    switchChar(true);
+    switched_ = true;
+    fx(E_TEXT, p_.x - 6, p_.y - 16, "Hop!");
+    return;
+  }
   state_ = S_DYING;
   stateTime_ = 0;
   p_.vy = -6.5f;
@@ -1105,7 +1185,10 @@ void Game::drawWorld(Band& b) {
       continue;
     drawEntity(b, e);
   }
-  if (state_ != S_TITLE) drawPlayer(b);
+  if (state_ != S_TITLE) {
+    if (duo()) drawFollower(b);
+    drawPlayer(b);
+  }
   for (int i = 0; i < nent_; i++) {
     const Entity& e = ent_[i];
     if (e.type == E_DUST || e.type == E_SPARK || e.type == E_TEXT) drawEntity(b, e);
@@ -1211,14 +1294,26 @@ void Game::drawEntity(Band& b, const Entity& e) {
 void Game::drawPlayer(Band& b) {
   const Player& p = p_;
   if (p.invuln > 0 && p.invuln < INVULN - 20 && (frame_ / 3) % 2 && state_ == S_PLAY) return;  // clignote
-  int cx = (int)camX_, cy = (int)camY_;
-  int hx = (int)lroundf(p.x + PW / 2.0f) - cx;
-  int feet = (int)lroundf(p.y + PH) - cy;
   int row = p.anim, f = p.animFrame;
   bool flip = p.facingLeft;
   if (state_ == S_CLEAR) f = (stateTime_ / 14) % 2;
   if (state_ == S_DYING) row = A_HURT, f = 0;
-  const Sheet& sh = rabbit_ ? spr_rabbit : spr_fox;  // meme format de cases (48x48) et memes lignes
+  drawChar(b, rabbit_, row, f, flip, p.x, p.y);
+}
+
+// le compagnon : son image est celle du trace, 10 images plus tot (il n'est pas dans la logique)
+void Game::drawFollower(Band& b) {
+  if (compDown_ > 0) return;
+  Snap s = trailAt(TRAIL_DELAY);
+  drawChar(b, !rabbit_, s.anim, s.frame, s.left, s.x, s.y);
+}
+
+// dessine le renard (rabbit = false) ou Andrea ; (x, y) = coin haut-gauche de la boite de collision
+void Game::drawChar(Band& b, bool rabbit, int row, int f, bool flip, float x, float y) {
+  int cx = (int)camX_, cy = (int)camY_;
+  int hx = (int)lroundf(x + PW / 2.0f) - cx;
+  int feet = (int)lroundf(y + PH) - cy;
+  const Sheet& sh = rabbit ? spr_rabbit : spr_fox;  // meme format de cases (48x48) et memes lignes
   if (row == A_CLIMB && sh.img->h / sh.fh <= A_CLIMB) {
     // pas encore d'images d'echelle : la pose du saut, retournee a chaque pas
     row = A_JUMP;

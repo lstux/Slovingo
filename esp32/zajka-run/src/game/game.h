@@ -49,6 +49,13 @@ struct Entity {
 
 enum GameState : uint8_t { S_TITLE, S_INTRO, S_PLAY, S_PAUSE, S_DYING, S_CLEAR, S_GAMEOVER, S_END };
 
+// Position et pose d'un personnage, pour le trace du compagnon (sans collisions)
+struct Snap {
+  float x = 0, y = 0;
+  uint8_t anim = 0, frame = 0;
+  bool left = false;
+};
+
 struct Player {
   float x = 0, y = 0, vx = 0, vy = 0;
   bool onGround = false;
@@ -69,7 +76,7 @@ class Game {
   static constexpr int MAX_ENT = 200;
 
   void begin(Audio* audio, Storage* storage = nullptr);
-  void selectCharacter(bool rabbit) { rabbit_ = rabbit; }  // simulateur : Andrea (true) ou le renard
+  void selectCharacter(bool rabbit) { rabbit_ = rabbit; }  // simulateur : Andrea (true) ou le renard (avant le debut)
   void selectLevel(int i) { sel_ = i; }  // simulateur : niveau choisi sur l'ecran titre
   void step(const Input& in);               // 1/60 s
   void renderBand(Band& b);
@@ -84,6 +91,7 @@ class Game {
   const Entity* entities(int& n) const { n = nent_; return ent_; }
   float camX() const { return camX_; }
   void debugTeleport(float x, float feetY = -1);  // simulateur : place le renard (et le point de passage)
+  bool companionDown() const { return compDown_ > 0; }
 
  private:
   // logique
@@ -112,6 +120,14 @@ class Game {
   void drawWorld(Band& b);
   void drawEntity(Band& b, const Entity& e);
   void drawPlayer(Band& b);
+  void drawFollower(Band& b);
+  void drawChar(Band& b, bool rabbit, int row, int f, bool flip, float x, float y);
+  // duo : a partir du niveau 2, les deux personnages avancent ensemble
+  bool duo() const { return levelIndex_ >= 1; }
+  void resetTrail();
+  void recordTrail();
+  Snap trailAt(int age) const;
+  void switchChar(bool onDeath);
   void drawHud(Band& b);
   void drawTitle(Band& b);
   void drawOverlay(Band& b);
@@ -138,7 +154,15 @@ class Game {
   Storage* storage_ = nullptr;
   SaveData save_;
   int sel_ = 0;          // niveau choisi sur l'ecran titre
-  bool rabbit_ = false; // personnage jouable : false = le renard, true = Andrea (SELECT sur l'ecran titre)
+  bool rabbit_ = false;  // personnage actif : false = le renard, true = Andrea (rejointe a la fin du niveau 1)
+  // compagnon : l'autre personnage suit le trace du personnage actif, avec un retard de TRAIL_DELAY images
+  static constexpr int TRAIL_LEN = 32, TRAIL_DELAY = 10;
+  static constexpr int REVIVE_FRAMES = 150;   // 2,5 s avant le retour du personnage tombe
+  Snap trail_[TRAIL_LEN];
+  int trailHead_ = 0;
+  int compHp_ = 3;      // points de vie du compagnon (echanges avec ceux du personnage actif)
+  int compDown_ = 0;    // images avant le retour du compagnon tombe (0 = debout)
+  bool switched_ = false;  // un personnage vient de tomber : ne pas traiter le reste de la logique
   struct Crumble {
     int16_t tx, ty, t;
   };
