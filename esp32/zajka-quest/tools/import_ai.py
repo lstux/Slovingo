@@ -362,7 +362,8 @@ def import_walk(a, key):
     if gr != 4 or gc != 3:
         raise SystemExit("walk : l'image doit etre une grille de 4 lignes (sens) x 3 colonnes (debout, pied, autre pied)")
     src = Image.open(path).convert("RGBA")
-    src = remove_rules(src if a.no_key else key_out(src, key, **KO))
+    src = src if a.no_key else key_out(src, key, **KO)
+    src = src if a.no_rules else remove_rules(src)
     frames = grid_frames(src, gr, gc)
     # meme echelle pour les 12 images (hauteur mediane = 23 px), centre de la tete a x = 8
     cells = fit_character(frames, 16, 24, a.colors or 24, 0, 8, height_px=a.height_px or 23)
