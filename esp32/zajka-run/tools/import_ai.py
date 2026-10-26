@@ -73,6 +73,53 @@ def key_out(img, key=None, tol=150, mag_cut=90, tint_cut=25):
     return Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))
 
 
+def stitch_strips(src, n):
+    """Image en n bandes superposees (fond magenta entre elles) -> une seule bande, bout a bout.
+    Chaque bande est rognee a son contenu et alignee par le bas (le sol)."""
+    a = np.array(src.convert("RGB")).astype(np.int32)
+    H = a.shape[0]
+    bg = (np.minimum(a[..., 0], a[..., 2]) - a[..., 1]) > 150
+    parts = []
+    for k in range(n):
+        y0, y1 = k * H // n, (k + 1) * H // n
+        ys = np.where((~bg[y0:y1]).mean(1) > 0.01)[0]
+        parts.append(a[y0 + ys[0]:y0 + ys[-1] + 1])
+    hmax = max(p.shape[0] for p in parts)
+    out = []
+    for p in parts:
+        pad = np.tile(np.array([255, 0, 255]), (hmax - p.shape[0], p.shape[1], 1))
+        out.append(np.concatenate([pad, p], 0))
+    return Image.fromarray(np.concatenate(out, 1).astype(np.uint8)).convert("RGBA")
+
+
+def clear_sky(src):
+    """Remplace par du magenta le ciel bleu/nuages peint dans l'image (connecte au bord haut ou au magenta),
+    pour que le fond lointain du niveau reste visible derriere."""
+    from collections import deque
+    a = np.array(src.convert("RGB")).astype(np.int32)
+    H, W = a.shape[:2]
+    r, g, b = a[..., 0], a[..., 1], a[..., 2]
+    sky = (b >= r - 5) & (b > 150) & ((np.minimum(r, b) - g) <= 90)
+    mag = (np.minimum(r, b) - g) > 150
+    seen = np.zeros((H, W), bool)
+    q = deque()
+    for y in range(H):
+        for x in range(W):
+            if sky[y, x] and (y == 0 or (y > 0 and mag[y - 1, x]) or (x > 0 and mag[y, x - 1]) or
+                              (x < W - 1 and mag[y, x + 1])):
+                seen[y, x] = True
+                q.append((y, x))
+    while q:
+        y, x = q.popleft()
+        for dy, dx in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            ny, nx = y + dy, x + dx
+            if 0 <= ny < H and 0 <= nx < W and sky[ny, nx] and not seen[ny, nx]:
+                seen[ny, nx] = True
+                q.append((ny, nx))
+    a[seen] = (255, 0, 255)
+    return Image.fromarray(a.astype(np.uint8)).convert("RGBA")
+
+
 def crop_alpha(img):
     bb = img.getbbox()
     return img.crop(bb) if bb else img
@@ -282,6 +329,8 @@ def main():
     ap.add_argument("--frames", type=int, default=1)
     ap.add_argument("--colors", type=int, default=0)
     ap.add_argument("--no-key", action="store_true")
+    ap.add_argument("--strips", type=int, default=1, help="mid : l'image contient N bandes superposees a mettre bout a bout")
+    ap.add_argument("--clear-sky", action="store_true", help="mid : retire le ciel bleu peint dans l'image")
     ap.add_argument("--mag-cut", type=int, default=90, help="seuil du fond magenta (monter pour garder du rose vif)")
     ap.add_argument("--tint-cut", type=int, default=25, help="seuil de correction des bords teintes de magenta")
     ap.add_argument("--key", default=None)
@@ -304,6 +353,10 @@ def main():
 
     if a.kind in SIZES:
         src = Image.open(a.args[0]).convert("RGBA")
+        if a.strips > 1:
+            src = stitch_strips(src, a.strips)
+        if a.clear_sky:
+            src = clear_sky(src)
         w, h = SIZES[a.kind]
         if a.kind in ("far", "mid"):
             # hauteur fixe, largeur libre (le fond boucle) : rien n'est rogne

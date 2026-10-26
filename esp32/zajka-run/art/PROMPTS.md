@@ -18,7 +18,7 @@ Chaque image du jeu peut être remplacée par une image générée, sans toucher
 | `objects/hud` icônes 8×8 | garder (trop petit pour une IA) | dessiné à la main |
 | `sucho/far`, `sucho/mid`, `sucho/tiles` (niveau 1-2) | fait (Gemini) | `sources/sucho_*_gemini.jpg` |
 | `objects/tryska`, `zahradnik` | fait (Gemini) | `sources/tryska_gemini.jpg`, `sources/zahradnik_gemini.jpg` |
-| `raj/far`, `raj/mid`, `raj/tiles` (niveau 1-3) | **à faire** (provisoires) | `make_placeholder_raj.py` |
+| `raj/far`, `raj/mid`, `raj/tiles` (niveau 1-3) | fait (Gemini ; mid en 2 bandes, `--strips 2`) | `sources/raj_*_gemini.jpg` |
 | `objects/platforma`, `flasa`, `vevericka`, `orol`, `rozcestnik`, `les` | **à faire** (provisoires) | `make_placeholder_raj.py` |
 | `tatry/far`, `tatry/mid`, `tatry/tiles` (niveau 1-4) | **à faire** (provisoires) | `make_placeholder_levels.py` |
 | `objects/kamen`, `chata`, `chatar`, `hory` | **à faire** (provisoires) | `make_placeholder_levels.py` |
@@ -57,10 +57,10 @@ The scene is the centre of Košice during a drought. TOP strip, left to right: a
 ```
 
 ```
-python3 tools/import_ai.py mid art/sources/sucho_mid_gemini.jpg --theme sucho
+python3 tools/import_ai.py mid art/sources/sucho_mid_gemini.jpg --theme sucho --strips 2 --clear-sky
 ```
 
-Gemini ignore le format 4:1 (il rend environ 2,4:1, soit un fond de 349 px de large). Ce prompt demande donc **deux bandes superposées** : je les découpe et je les mets bout à bout (couche d'environ 1000 px de large).
+Gemini ignore le format 4:1 (il rend environ 2,4:1, soit un fond de 349 px de large). Ce prompt demande donc **deux bandes superposées** : je les découpe et je les mets bout à bout (couche d'environ 900-1150 px de large). `--clear-sky` retire le ciel bleu que Gemini peint parfois derrière les bâtiments.
 
 ### Tuiles (`sucho/tiles.png`)
 
@@ -119,7 +119,7 @@ The scene is a limestone gorge in the Slovak Paradise national park (the Suchá 
 ```
 
 ```
-python3 tools/import_ai.py mid art/sources/raj_mid_gemini.jpg --theme raj
+python3 tools/import_ai.py mid art/sources/raj_mid_gemini.jpg --theme raj --strips 2
 ```
 
 ### Tuiles (`raj/tiles.png`)
