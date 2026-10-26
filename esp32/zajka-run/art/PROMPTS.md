@@ -357,7 +357,7 @@ Sprite sheet for a side-view platform game, the character in side view facing ri
 
 ## Andrea (joindre `art/characters/andrea-reference.png`)
 
-Andrea est jouable dans les niveaux suivants : ses cases font 48×48, comme le renard. Le moteur lit la taille dans le nom du fichier de la planche (`rabbit_48x48.png`). Lignes à faire : idle (4), win (2), run (6, comme ANIM_LEN dans game.cpp), jump (1), fall (1), hurt (1), climb (2).
+Andrea est jouable dans les niveaux suivants : ses cases font 48×48, comme le renard. Le moteur lit la taille dans le nom du fichier de la planche (`rabbit_48x48.png`). Lignes à faire : idle (4), win (2), run (6, comme ANIM_LEN dans game.cpp), jump (1), fall (1), hurt (1), climb (2), glide (2, planeur à oreilles en parachute ; sans cette ligne le moteur garde la pose de chute).
 
 **Avant la première importation** : créer `art/sprites/rabbit_48x48.png` (3 lignes de 48 px de haut, 6 cases de 48 px de large, fond transparent), puis supprimer `art/sprites/rabbit_32x48.png` pour qu'il n'en reste qu'une. Les images déjà importées en 32×48 ne seront plus utilisées.
 
@@ -415,6 +415,16 @@ a single FALL frame seen from the side, body UPRIGHT and VERTICAL, dropping stra
 ```
 
 `python3 tools/import_ai.py sprite rabbit fall art/sources/andrea_fall.png --frames 1`
+
+### Andrea : glide (2 images, planeur)
+
+Pour le vol plané (A tenu en tombant) : les oreilles déployées comme un parachute.
+
+> Sprite sheet for a side-view platform game, the character in side view facing right. All frames in a single horizontal row, evenly spaced with wide gaps, same size, feet on the same baseline. Each frame is a 48x48 square and must read clearly at 48x48 pixels (the character fills the square, feet on the bottom edge). Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+>
+> 2-frame GLIDE animation of the rabbit (Andrea) floating down with her long ears opened wide and held up like a parachute canopy, arms spread out to the sides, legs relaxed and dangling, body upright and vertical. Frame 1: ears fully open. Frame 2: ears slightly flapping, lower. Only the body and ears; NOT lying down and NOT horizontal.
+
+`python3 tools/import_ai.py sprite rabbit glide art/sources/andrea_glide.png --frames 2 --grid 1x2 --strip-ground`
 
 ### Andrea : hurt (1 image)
 

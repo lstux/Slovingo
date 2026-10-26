@@ -44,8 +44,9 @@ constexpr int ROCK_PERIOD = 150;
 
 // animations de la planche du renard / d'Andrea (une ligne par animation)
 // A_CLIMB : 7e ligne de la planche si elle existe, sinon l'image de saut retournee a chaque pas
-enum { A_IDLE, A_RUN, A_JUMP, A_FALL, A_HURT, A_WIN, A_CLIMB };
-const int ANIM_LEN[] = {4, 6, 1, 1, 1, 2, 2};
+// A_GLIDE : Andrea, oreilles en parachute ; 8e ligne de la planche, sinon la pose de chute
+enum { A_IDLE, A_RUN, A_JUMP, A_FALL, A_HURT, A_WIN, A_CLIMB, A_GLIDE };
+const int ANIM_LEN[] = {4, 6, 1, 1, 1, 2, 2, 2};
 
 const uint16_t WHITE = 0xFFFF, BLACK = 0x0000, SHADOW = 0x18C3;
 const uint16_t YELLOW = 0xFF2A, ORANGE = 0xFB00, DARKBLUE = 0x1926;
@@ -435,7 +436,7 @@ void Game::updatePlayer(const Input& in) {
   // animation
   int a;
   if (p.invuln > INVULN - 20) a = A_HURT;
-  else if (!p.onGround) a = p.vy < 0 ? A_JUMP : A_FALL;
+  else if (!p.onGround) a = glide ? A_GLIDE : (p.vy < 0 ? A_JUMP : A_FALL);
   else if (fabsf(p.vx) > 0.15f) a = A_RUN;
   else a = A_IDLE;
   if (a != p.anim) {
@@ -1318,6 +1319,10 @@ void Game::drawChar(Band& b, bool rabbit, int row, int f, bool flip, float x, fl
     // pas encore d'images d'echelle : la pose du saut, retournee a chaque pas
     row = A_JUMP;
     flip = f != 0;
+    f = 0;
+  }
+  if (row == A_GLIDE && sh.img->h / sh.fh <= A_GLIDE) {   // pas encore de planche de vol : la chute
+    row = A_FALL;
     f = 0;
   }
   int sx = flip ? hx - (sh.fw - 1 - FOX_ANCHOR) : hx - FOX_ANCHOR;

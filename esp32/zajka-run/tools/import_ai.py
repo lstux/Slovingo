@@ -28,7 +28,7 @@ from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ART = os.path.join(ROOT, "art")
-ANIMS = ["idle", "run", "jump", "fall", "hurt", "win", "climb"]
+ANIMS = ["idle", "run", "jump", "fall", "hurt", "win", "climb", "glide"]
 SIZES = {"far": (480, 240), "mid": (640, 148), "tiles": (128, 64)}  # far/mid : hauteur fixe, largeur libre
 SCREEN_W_MIN = 320
 OUTLINE = (26, 26, 46, 255)
