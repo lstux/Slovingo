@@ -552,6 +552,52 @@ A small flying enemy for a side-view platform game: a cartoon wasp with yellow a
 
 `python3 tools/import_ai.py object osa art/sources/osa_gemini.jpg --frames 2`
 
+### Ennemis plus grands (pigeon, guêpe, écureuil)
+
+Les ennemis de 16-24 px sont trop petits à côté des personnages de 48×48. Nouvelles tailles :
+pigeon **48×32** (3 images), guêpe **32×32** (2 images), écureuil **32×32** (3 images).
+Une fois les images reçues, je règle aussi les zones de contact et les décalages dans `game.cpp`
+(les ennemis deviennent plus faciles à toucher).
+
+**Pigeon** (`objects/holub_48x32`)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 32 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+A cute enemy for a side-view platform game: a plump grey city pigeon with an iridescent green-purple neck, orange eye and big bright pink feet, seen exactly from the side, facing right. 3 frames in a single horizontal row, evenly spaced with wide gaps: walking frame 1, walking frame 2 (other foot forward, head bobbing), then a third frame where the pigeon is squashed flat with dizzy cross eyes. Same scale, feet on the same baseline. The pigeon fills its frame. Each frame is 3 wide by 2 tall (proportions 3:2) and must read clearly at 48x32 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+```
+
+```
+git rm art/objects/holub_24x16.png
+python3 -c "from PIL import Image; Image.new('RGBA',(144,32)).save('art/objects/holub_48x32.png')"
+python3 tools/import_ai.py object holub art/sources/holub_big_gemini.jpg --frames 3 --strip-ground
+```
+
+**Guêpe** (`objects/osa_32x32`)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 24 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+A flying enemy for a side-view platform game: a cartoon wasp with yellow and black stripes, a black head with a big white eye highlight and a slightly angry look, a visible stinger, seen from the side and facing right. 2 frames of wing flapping in a single horizontal row, evenly spaced with wide gaps: wings up, wings down. Same scale. The wasp fills its frame. Each frame is a square and must read clearly at 32x32 pixels. Flat solid magenta #FF00FF background everywhere, no shadow.
+```
+
+```
+git rm art/objects/osa_16x16.png
+python3 -c "from PIL import Image; Image.new('RGBA',(64,32)).save('art/objects/osa_32x32.png')"
+python3 tools/import_ai.py object osa art/sources/osa_big_gemini.jpg --frames 2
+```
+
+**Écureuil** (`objects/vevericka_32x32`)
+
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 24 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+A cute enemy for a side-view platform game: a Eurasian red squirrel with a big bushy red tail and ear tufts, seen from the side, facing right. 3 frames in a single horizontal row, evenly spaced with wide gaps, same scale: sitting upright, then jumping (stretched out in mid-air), then squashed flat with dizzy cross eyes. The squirrel fills its frame. Each frame is a square and must read clearly at 32x32 pixels. Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+```
+
+```
+git rm art/objects/vevericka_16x16.png
+python3 -c "from PIL import Image; Image.new('RGBA',(96,32)).save('art/objects/vevericka_32x32.png')"
+python3 tools/import_ai.py object vevericka art/sources/vevericka_big_gemini.jpg --frames 3 --uniform
+```
+
 ### Réimporter les personnages
 
 Gemini rend souvent les planches en grille et change les proportions d'une génération à

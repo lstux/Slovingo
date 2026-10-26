@@ -38,7 +38,7 @@ class Audio {
   volatile uint8_t sfxHead_ = 0, sfxTail_ = 0;
   volatile int wantMusic_ = -1;
   int music_ = -2;
-  int vol_ = 2;
+  int vol_ = 0;   // 0 = muet : on demarre en silence (VOLUME pour monter)
   // sequenceur de musique
   int32_t stepLeft_ = 0;
   int row_ = 0;

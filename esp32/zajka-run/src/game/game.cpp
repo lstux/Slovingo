@@ -36,7 +36,7 @@ constexpr float CLIMB_V = 1.6f;
 constexpr float GLIDE_GRAVITY = 0.05f, GLIDE_FALL = 1.5f;
 constexpr float PLATFORM_V = 0.8f, PLATFORM_VV = 0.6f;
 constexpr int PLATFORM_W = 48, PLATFORM_H = 8;
-constexpr int CRUMBLE_DELAY = 32, CRUMBLE_BACK = 300;   // images avant l'effondrement, avant le retour
+constexpr int CRUMBLE_DELAY = 50, CRUMBLE_BACK = 300;   // images avant l'effondrement, avant le retour
 constexpr int JET_PERIOD = 200, JET_SPUTTER = 110, JET_FULL = 140, JET_H = 64;
 constexpr float JET_V = 6.0f, JET_V_HOLD = 6.6f;   // tenir A pour passer le mur de la vasque
 constexpr int WIND_W = 8 * 16, WIND_H = 10 * 16, WIND_PERIOD = 240, WIND_ON = 150;
@@ -1270,7 +1270,14 @@ void Game::drawEntity(Band& b, const Entity& e) {
       b.frame(spr_vevericka, e.state ? 2 : (e.vy < 0 || e.vx ? 1 : 0), sx - 1, sy - 4, e.dir < 0);
       break;
     case E_TRAM:
-      b.frame(spr_elektricka, 0, sx, sy, e.dir < 0);
+      if (e.dir < 0) {
+        // le tram repart dans l'autre sens : le corps est retourne, mais le pantographe reste a sa place
+        const Image8& im = *spr_elektricka.img;
+        b.blit(im, 0, TRAM_ROOF, im.w, im.h - TRAM_ROOF, sx, sy + TRAM_ROOF, true);
+        b.blit(im, 0, 0, im.w, TRAM_ROOF, sx, sy, false);
+      } else {
+        b.frame(spr_elektricka, 0, sx, sy);
+      }
       break;
     case E_BENCH:
       b.frame(*lvl_.def->theme->decor, 0, sx, sy);
