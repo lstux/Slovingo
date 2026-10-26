@@ -52,12 +52,15 @@ python3 tools/import_ai.py far art/sources/sucho_far_gemini.jpg --theme sucho --
 
 ```
 16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 64 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
-Side-scrolling game background layer, ULTRA-WIDE panorama with an aspect ratio of exactly 4:1 (about 2560x640 pixels), seen straight from the side. The left edge and the right edge must join seamlessly so the image can repeat. The centre of Košice during a drought: on the left a park with trees whose leaves have turned yellow from the heat; in the middle the cream-coloured neo-baroque State Theatre of Košice with its green copper dome and arched windows, and in front of it the singing fountain (Spievajúca fontána), a wide stone basin that is completely EMPTY and dry, with its metal nozzles sticking out; on the right the Košice railway station building with a clock. Dry yellowed grass along the bottom edge; the bottom edge of the image is the ground. Everything above the roofs and tree tops is flat solid magenta #FF00FF.
+A side-scrolling game background layer made of TWO horizontal strips stacked one above the other, filling the whole image, separated by a thick flat solid magenta #FF00FF band. Each strip is a very wide panorama (about 3.5:1), seen straight from the side, with the ground line at the same height in both strips. The two strips are two consecutive halves of ONE continuous scene: the right end of the TOP strip continues seamlessly into the left end of the BOTTOM strip, and the right end of the BOTTOM strip joins seamlessly with the left end of the TOP strip (the same yellow trees at both seams), so the whole can repeat.
+The scene is the centre of Košice during a drought. TOP strip, left to right: a park with trees whose leaves have turned yellow from the heat, then the cream-coloured neo-baroque State Theatre of Košice with its green copper dome and arched windows, and in front of it the singing fountain (Spievajúca fontána), a wide stone basin that is completely EMPTY and dry, with its metal nozzles sticking out. BOTTOM strip, left to right: the dry park with benches and a few yellow trees, then the Košice railway station building with a clock, then yellowed trees again at the right end. Dry yellowed grass along the bottom edge of each strip; the bottom edge of each strip is the ground. Everything above the roofs and tree tops is flat solid magenta #FF00FF.
 ```
 
 ```
 python3 tools/import_ai.py mid art/sources/sucho_mid_gemini.jpg --theme sucho
 ```
+
+Gemini ignore le format 4:1 (il rend environ 2,4:1, soit un fond de 349 px de large). Ce prompt demande donc **deux bandes superposées** : je les découpe et je les mets bout à bout (couche d'environ 1000 px de large).
 
 ### Tuiles (`sucho/tiles.png`)
 
@@ -111,7 +114,8 @@ python3 tools/import_ai.py far art/sources/raj_far_gemini.jpg --theme raj --mirr
 
 ```
 16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 64 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
-Side-scrolling game background layer, very wide panorama (aspect ratio about 4:1), seen straight from the side. A limestone gorge in the Slovak Paradise national park (the Suchá Belá gorge): tall pale grey-cream limestone cliffs and rock towers with vertical cracks, moss on the ledges, dark green spruce trees growing on top of the cliffs and at their feet, two thin white waterfalls falling down the rock face. A dense line of spruce forest along the bottom edge; the bottom edge of the image is the forest floor. Everything above the cliff tops and tree tops is flat solid magenta #FF00FF.
+A side-scrolling game background layer made of TWO horizontal strips stacked one above the other, filling the whole image, separated by a thick flat solid magenta #FF00FF band. Each strip is a very wide panorama (about 3.5:1), seen straight from the side, with the forest floor at the same height in both strips. The two strips are two consecutive halves of ONE continuous scene: the right end of the TOP strip continues seamlessly into the left end of the BOTTOM strip, and the right end of the BOTTOM strip joins seamlessly with the left end of the TOP strip (the same dark spruce trees at both seams), so the whole can repeat.
+The scene is a limestone gorge in the Slovak Paradise national park (the Suchá Belá gorge). TOP strip, left to right: dark green spruce forest, then pale grey-cream limestone cliffs starting to rise, with moss on the ledges and a first thin white waterfall falling down the rock face. BOTTOM strip, left to right: tall limestone cliffs and rock towers with vertical cracks, a second thin white waterfall, dark green spruce trees growing on top of the cliffs, then spruce forest again at the right end. A dense line of spruce forest along the bottom edge of each strip; the bottom edge of each strip is the forest floor. Everything above the cliff tops and tree tops is flat solid magenta #FF00FF.
 ```
 
 ```
@@ -418,11 +422,14 @@ a single FALL frame seen from the side, body UPRIGHT and VERTICAL, dropping stra
 
 ### Andrea : glide (2 images, planeur)
 
-Pour le vol plané (A tenu en tombant) : les oreilles déployées comme un parachute.
+Pour le vol plané (A tenu en tombant) : les oreilles déployées comme un parachute. Joindre `art/characters/andrea-reference.png`.
 
-> Sprite sheet for a side-view platform game, the character in side view facing right. All frames in a single horizontal row, evenly spaced with wide gaps, same size, feet on the same baseline. Each frame is a 48x48 square and must read clearly at 48x48 pixels (the character fills the square, feet on the bottom edge). Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
->
-> 2-frame GLIDE animation of the rabbit (Andrea) floating down with her long ears opened wide and held up like a parachute canopy, arms spread out to the sides, legs relaxed and dangling, body upright and vertical. Frame 1: ears fully open. Frame 2: ears slightly flapping, lower. Only the body and ears; NOT lying down and NOT horizontal.
+```
+16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 40 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
+Keep EXACTLY the same character as the attached reference image: same clothes, colours, proportions and face. She is Andrea, an ANTHROPOMORPHIC rabbit teenage girl from Košice who stands and walks UPRIGHT ON TWO LEGS like a human, NOT a four-legged animal. Keep the SAME body proportions as the reference: short legs, big head, about 2.5 heads tall. Grey fur, long upright ears (pink inside), white blaze widening into a white muzzle, dark eyes, small Y-shaped nose, grey whiskers, two front teeth. Summer outfit only, NOT a spacesuit, NOT a jumpsuit, no helmet: a mint green t-shirt, blue denim shorts, red sneakers with white soles, a small yellow bag on a shoulder strap.
+Sprite sheet for a side-view platform game, the character in side view facing right. All frames in a single horizontal row, evenly spaced with wide gaps, same size, feet on the same baseline. Each frame is a 48x48 square and must read clearly at 48x48 pixels (the character fills the square, feet on the bottom edge). Flat solid magenta #FF00FF background everywhere, no ground line, no shadow.
+a 2-frame GLIDE animation: Andrea floating gently down through the air with her two long ears opened wide and held up above her head like a parachute canopy, the ears spread apart in a V shape and slightly curved, arms spread out to the sides for balance, legs relaxed and dangling, body UPRIGHT and VERTICAL (NOT lying down, NOT horizontal). Frame 1: ears fully open and high. Frame 2: ears slightly lower and flapping. Do not draw any real parachute, only her ears.
+```
 
 `python3 tools/import_ai.py sprite rabbit glide art/sources/andrea_glide.png --frames 2 --grid 1x2 --strip-ground`
 
