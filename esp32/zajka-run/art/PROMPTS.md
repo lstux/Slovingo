@@ -10,8 +10,8 @@ Chaque image du jeu peut être remplacée par une image générée, sans toucher
 | `kosice/mid.png` rue Hlavná, Dóm | fait (Gemini) | `sources/kosice_mid_gemini.jpg` |
 | `kosice/tiles.png` tuiles | fait (Gemini, cases réaffectées) | `sources/kosice_tiles_gemini.jpg` |
 | `objects/medovnik` | fait (Gemini) | `sources/medovnik_gemini.jpg` |
-| `objects/holub` pigeon | fait (Gemini) | `sources/holub_gemini.jpg` |
-| `objects/osa` guêpe | fait (Gemini) | `sources/osa_gemini.jpg` |
+| `objects/holub` pigeon 48×32 | fait (Gemini, import avec `--mag-cut 140 --tint-cut 100` pour garder les pattes roses) | `sources/holub_big_gemini.jpg` |
+| `objects/osa` guêpe 32×32 | fait (Gemini) | `sources/osa_big_gemini.jpg` |
 | `sprites/fox` renard (cases 48×48) | fait (Gemini) | `sources/fox_<anim>_gemini.jpg` |
 | `sprites/rabbit` Andrea | fait en 32×48 (Gemini) ; **à refaire en 48×48** (voir la section Andrea) ; chute `sources/andrea_fall.jpg` reçue, import en attente | `sources/rabbit_<anim>_gemini.jpg` |
 | `objects/pruzina`, `lampa`, `zastavka`, `elektricka`, `lavicka`, `fx` | fait (Gemini) | `sources/<nom>_gemini.jpg` |
@@ -556,7 +556,7 @@ A small flying enemy for a side-view platform game: a cartoon wasp with yellow a
 
 Les ennemis de 16-24 px sont trop petits à côté des personnages de 48×48. Nouvelles tailles :
 pigeon **48×32** (3 images), guêpe **32×32** (2 images), écureuil **32×32** (3 images).
-Une fois les images reçues, je règle aussi les zones de contact et les décalages dans `game.cpp`
+Images reçues et importées ; les zones de contact et les décalages sont réglés dans `game.cpp`. À l'origine, je règle aussi les zones de contact et les décalages dans `game.cpp`
 (les ennemis deviennent plus faciles à toucher).
 
 **Pigeon** (`objects/holub_48x32`)
@@ -569,7 +569,7 @@ A cute enemy for a side-view platform game: a plump grey city pigeon with an iri
 ```
 git rm art/objects/holub_24x16.png
 python3 -c "from PIL import Image; Image.new('RGBA',(144,32)).save('art/objects/holub_48x32.png')"
-python3 tools/import_ai.py object holub art/sources/holub_big_gemini.jpg --frames 3 --strip-ground
+python3 tools/import_ai.py object holub art/sources/holub_big_gemini.jpg --frames 3 --mag-cut 140 --tint-cut 100
 ```
 
 **Guêpe** (`objects/osa_32x32`)

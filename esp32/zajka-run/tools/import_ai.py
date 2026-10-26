@@ -34,7 +34,7 @@ SCREEN_W_MIN = 320
 OUTLINE = (26, 26, 46, 255)
 
 
-def key_out(img, key=None, tol=150):
+def key_out(img, key=None, tol=150, mag_cut=90, tint_cut=25):
     """Rend transparent le fond uni (magenta par defaut, sinon la couleur des coins),
     puis retire le liseré de couleur de fond laissé par l'anticrénelage."""
     a = np.array(img.convert("RGBA")).astype(np.int32)
@@ -51,11 +51,11 @@ def key_out(img, key=None, tol=150):
     # « magentitude » : de combien r et b depassent g (fond magenta), ou distance a la cle
     is_mag = key[1] < 80 and key[0] > 180 and key[2] > 180
     mag = np.minimum(rgb[..., 0], rgb[..., 2]) - rgb[..., 1] if is_mag else 255 - d
-    alpha = np.where((d < tol) | (mag > 90), 0, 255)
+    alpha = np.where((d < tol) | (mag > mag_cut), 0, 255)
     a[..., 3] = alpha
     # despill : un pixel opaque encore teinte par le fond prend la couleur moyenne de ses voisins sains
     opaque = alpha > 0
-    tinted = opaque & (mag > 25)
+    tinted = opaque & (mag > tint_cut)
     clean = opaque & ~tinted
     if tinted.any():
         acc = np.zeros(rgb.shape, np.float64)
@@ -282,6 +282,8 @@ def main():
     ap.add_argument("--frames", type=int, default=1)
     ap.add_argument("--colors", type=int, default=0)
     ap.add_argument("--no-key", action="store_true")
+    ap.add_argument("--mag-cut", type=int, default=90, help="seuil du fond magenta (monter pour garder du rose vif)")
+    ap.add_argument("--tint-cut", type=int, default=25, help="seuil de correction des bords teintes de magenta")
     ap.add_argument("--key", default=None)
     ap.add_argument("--mirror", action="store_true", help="far/mid : ajoute le reflet pour boucler sans raccord")
     ap.add_argument("--strip-ground", action="store_true", help="sprite/object : retire un trait de sol")
@@ -305,7 +307,7 @@ def main():
         w, h = SIZES[a.kind]
         if a.kind in ("far", "mid"):
             # hauteur fixe, largeur libre (le fond boucle) : rien n'est rogne
-            img = src if (a.kind == "far" or a.no_key) else key_out(src, key)
+            img = src if (a.kind == "far" or a.no_key) else key_out(src, key, mag_cut=a.mag_cut, tint_cut=a.tint_cut)
             nw = max(SCREEN_W_MIN, int(round(img.width * h / img.height)))
             img = img.resize((nw, h), Image.LANCZOS)
             al = np.array(img)
@@ -316,7 +318,7 @@ def main():
             img = quantize_rgba(img, a.colors or 200)
         elif a.cells:
             img = Image.new("RGBA", (w, h), (0, 0, 0, 0))
-            src = src if a.no_key else key_out(src, key)
+            src = src if a.no_key else key_out(src, key, mag_cut=a.mag_cut, tint_cut=a.tint_cut)
             cells = grid_cells(src)
             for spec in a.cells.split():
                 idx, rc = spec.split("=")
@@ -335,7 +337,7 @@ def main():
                 img.paste(Image.fromarray(ta), ((n % 8) * 16, (n // 8) * 16))
             img = quantize_rgba(img, a.colors or 96)
         else:  # tiles : grille 8 x 4 de tuiles dans l'ordre attendu
-            img = src if a.no_key else key_out(src, key)
+            img = src if a.no_key else key_out(src, key, mag_cut=a.mag_cut, tint_cut=a.tint_cut)
             img = shrink(img, w, h)
             img = quantize_rgba(img, a.colors or 96)
         out = os.path.join(ART, a.theme, a.kind + ".png")
@@ -355,7 +357,7 @@ def main():
     fw, fh = map(int, re.search(r"_(\d+)x(\d+)\.png$", sheet_path).groups())
     sheet = Image.open(sheet_path).convert("RGBA")
     src = Image.open(path).convert("RGBA")
-    src = src if a.no_key else key_out(src, key)
+    src = src if a.no_key else key_out(src, key, mag_cut=a.mag_cut, tint_cut=a.tint_cut)
     src = remove_rules(src)
     if a.strip_ground:
         src = strip_ground(src)

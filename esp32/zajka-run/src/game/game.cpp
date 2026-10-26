@@ -122,8 +122,8 @@ void Game::startLevel(int index, bool fresh) {
     int k = -1;
     switch (s.kind) {
       case 'o': k = spawn(E_HEART, tx + 2, ty + 2); ent_[k].w = 12; ent_[k].h = 12; break;
-      case 'p': k = spawn(E_PIGEON, tx, ty + 4); ent_[k].w = 18; ent_[k].h = 12; ent_[k].vx = -0.5f; break;
-      case 'w': k = spawn(E_WASP, tx + 2, ty + 3); ent_[k].w = 12; ent_[k].h = 10; break;
+      case 'p': k = spawn(E_PIGEON, tx - 9, ty - 8); ent_[k].w = 34; ent_[k].h = 24; ent_[k].vx = -0.5f; break;
+      case 'w': k = spawn(E_WASP, tx - 3, ty); ent_[k].w = 22; ent_[k].h = 16; break;
       case 'P': k = spawn(E_SPRING, tx + 1, ty + 6); ent_[k].w = 14; ent_[k].h = 10; break;
       case 'C': k = spawn(E_CHECK, tx, ty + TILE - 48); ent_[k].w = 16; ent_[k].h = 48; break;
       case 'F': k = spawn(E_GOAL, tx, ty + TILE - 48); ent_[k].w = 52; ent_[k].h = 48; break;
@@ -137,7 +137,7 @@ void Game::startLevel(int index, bool fresh) {
         ent_[k].dir = 1;   // l'ascenseur ('V') attend en bas qu'on monte dessus
         break;
       case 'b': k = spawn(E_BOTTLE, tx + 3, ty + 2); ent_[k].w = 10; ent_[k].h = 14; break;
-      case 's': k = spawn(E_SQUIRREL, tx + 1, ty + 4); ent_[k].w = 14; ent_[k].h = 12; ent_[k].dir = -1; break;
+      case 's': k = spawn(E_SQUIRREL, tx - 2, ty - 4); ent_[k].w = 20; ent_[k].h = 20; ent_[k].dir = -1; break;
       case 'J':
         k = spawn(E_JET, tx, ty);
         ent_[k].w = 12;
@@ -978,7 +978,7 @@ void Game::interact() {
       case E_SQUIRREL:
         if (e.state != 0) break;
         if (overlap(px + 1, py + 2, PW - 2, PH - 2, e.x, e.y, e.w, e.h)) {
-          if (p.vy > 0 && py + PH - p.vy <= e.y + 6) {
+          if (p.vy > 0 && py + PH - p.vy <= e.y + 8) {
             // on lui saute dessus
             e.state = 1;
             e.timer = 30;
@@ -1211,11 +1211,11 @@ void Game::drawEntity(Band& b, const Entity& e) {
       b.frame(spr_medovnik, (frame_ / 4) % 4, sx - 2, sy - 2);
       break;
     case E_PIGEON:
-      if (e.state == 0) b.frame(spr_holub, (e.timer / 10) % 2, sx - 3, sy - 4, e.vx < 0);
-      else b.frame(spr_holub, 2, sx - 3, sy - 4, e.vx < 0);
+      if (e.state == 0) b.frame(spr_holub, (e.timer / 10) % 2, sx - 7, sy - 8, e.vx < 0);
+      else b.frame(spr_holub, 2, sx - 7, sy - 8, e.vx < 0);
       break;
     case E_WASP:
-      b.frame(spr_osa, (frame_ / 3) % 2, sx - 2, sy - 3, e.dir < 0);
+      b.frame(spr_osa, (frame_ / 3) % 2, sx - 5, sy - 8, e.dir < 0);
       break;
     case E_SPRING:
       b.frame(spr_pruzina, e.timer > 0 ? 1 : 0, sx - 1, sy - 6);
@@ -1267,7 +1267,7 @@ void Game::drawEntity(Band& b, const Entity& e) {
       b.frame(spr_flasa, 0, sx - 3, sy - 2 - ((frame_ / 20) % 2));
       break;
     case E_SQUIRREL:
-      b.frame(spr_vevericka, e.state ? 2 : (e.vy < 0 || e.vx ? 1 : 0), sx - 1, sy - 4, e.dir < 0);
+      b.frame(spr_vevericka, e.state ? 2 : (e.vy < 0 || e.vx ? 1 : 0), sx - 6, sy - 12, e.dir < 0);
       break;
     case E_TRAM:
       if (e.dir < 0) {
