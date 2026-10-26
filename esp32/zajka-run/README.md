@@ -109,6 +109,11 @@ tourne à 60 Hz fixes, l'affichage autour de 30 images/s.
   `make_placeholder_raj.py`, qui ne touchent jamais une image IA importée.
 - **Les graphismes** : Andrea a une planche de cases 48×48 (`art/sprites/rabbit_48x48.png`),
   même format que le renard : 7 lignes (idle, run, jump, fall, hurt, win, climb).
+- **Les secrets** : `x` = faux mur (dessiné comme le sol, on le traverse ; les cases voisines forment un
+  seul passage, révélé en y entrant), `O` = medovník dans un faux mur, `u` = bloc caché (invisible,
+  se révèle en le cognant par en dessous : 5 medovníky). Le compteur « Tajomstvá n/total » s'affiche
+  à la fin du niveau et le meilleur score est sauvegardé avec la progression (sauvegarde v3 :
+  les anciennes sauvegardes sont ignorées). Le simulateur accepte `--after N` (continue N images après l'arrivée).
 - **La physique** : constantes en tête de `src/game/game.cpp` (vitesse, gravité, saut...).
 
 ## Tester sur PC

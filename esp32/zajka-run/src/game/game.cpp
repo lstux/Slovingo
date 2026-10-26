@@ -63,7 +63,7 @@ void Game::begin(Audio* audio, Storage* storage) {
   if (storage) storage_ = storage;
   if (storage_) {
     SaveData d;
-    if (storage_->load(d) && d.magic == SaveData().magic && d.version == 1) save_ = d;
+    if (storage_->load(d) && d.magic == SaveData().magic && d.version == SaveData().version) save_ = d;
   }
   if (save_.unlocked < 1) save_.unlocked = 1;
   if (save_.unlocked > NUM_LEVELS) save_.unlocked = NUM_LEVELS;
@@ -82,6 +82,7 @@ void Game::levelCleared() {
   if (i < 8) {
     if (save_.bestTime[i] == 0 || secs < save_.bestTime[i]) save_.bestTime[i] = (uint16_t)secs;
     if (levelHearts_ > save_.bestHearts[i]) save_.bestHearts[i] = (uint8_t)(levelHearts_ > 255 ? 255 : levelHearts_);
+    if (secretsFound_ > save_.bestSecrets[i]) save_.bestSecrets[i] = (uint8_t)secretsFound_;
   }
   if (i + 2 > save_.unlocked) save_.unlocked = (uint8_t)(i + 2 > NUM_LEVELS ? NUM_LEVELS : i + 2);
   if (storage_) storage_->save(save_);
@@ -153,6 +154,8 @@ void Game::startLevel(int index, bool fresh) {
     }
   }
   respawn_ = false;
+  memset(secrets_, 0, sizeof(secrets_));
+  secretsFound_ = 0;
   ncrumbles_ = 0;
   weatherLevel_ = 0;
   flash_ = thunderIn_ = 0;
@@ -594,9 +597,16 @@ void Game::movePlayerY(float dy, float prevBottom) {
     for (int k = 0; k < 3; k++) {
       int tx = order[k];
       if (tx < l || tx > r) continue;
-      if (lvl_.kindAt(tx, ty) == K_SOLID && ty >= 0) {
+      uint8_t tt = lvl_.at(tx, ty);
+      if ((lvl_.kindAt(tx, ty) == K_SOLID || tt == T_HIDDEN) && ty >= 0) {
         p.y = (ty + 1) * TILE;
         p.vy = 0.5f;
+        if (tt == T_HIDDEN) {   // un bloc cache : il devient un bloc bonus, avec 5 medovniky
+          lvl_.set(tx, ty, T_BONUS);
+          secretsFound_++;
+          for (int k = 0; k < 4; k++) collectHeart(tx * TILE, ty * TILE - 12, true);
+          fx(E_TEXT, tx * TILE - 12, ty * TILE - 26, "Tajné!");
+        }
         bumpTile(tx, ty);
         return;
       }
@@ -634,6 +644,32 @@ void Game::bumpTile(int tx, int ty) {
       audio_->play(SFX_STOMP);
     }
   }
+}
+
+// entre dans un faux mur : tout le passage secret se revele
+void Game::revealSecrets() {
+  if (lvl_.nsecrets == 0) return;
+  int l = ifloor(p_.x) >> 4, r = (ifloor(p_.x) + PW - 1) >> 4;
+  int t = ifloor(p_.y) >> 4, b = (ifloor(p_.y) + PH - 1) >> 4;
+  for (int ty = t; ty <= b; ty++) {
+    for (int tx = l; tx <= r; tx++) {
+      if (lvl_.at(tx, ty) != T_SECRET) continue;
+      int id = lvl_.regionAt(tx, ty);
+      if (id <= 0 || secrets_[id].revealed) continue;
+      secrets_[id] = SecretRegion{true, (int)frame_, (int16_t)tx, (int16_t)ty};
+      secretsFound_++;
+      audio_->play(SFX_LIFE);
+      fx(E_TEXT, p_.x - 14, p_.y - 16, "Tajné!");
+    }
+  }
+}
+
+// un medovnik ou une bouteille dans un passage secret encore ferme n'est pas dessine
+bool Game::hiddenBySecret(const Entity& e) const {
+  if (e.type != E_HEART && e.type != E_BOTTLE) return false;
+  int tx = (int)(e.x + e.w / 2) >> 4, ty = (int)(e.y + e.h / 2) >> 4;
+  if (lvl_.at(tx, ty) != T_SECRET) return false;
+  return !secrets_[lvl_.regionAt(tx, ty)].revealed;
 }
 
 void Game::collectHeart(float x, float y, bool popped) {
@@ -907,6 +943,7 @@ void Game::updateEntities() {
 
 void Game::interact() {
   Player& p = p_;
+  revealSecrets();
   float px = p.x, py = p.y;
   // pointes
   int l = ifloor(px) >> 4, r = (ifloor(px) + PW - 1) >> 4;
@@ -1162,7 +1199,17 @@ void Game::drawWorld(Band& b) {
   for (int ty = ty0; ty <= ty1; ty++) {
     for (int tx = tx0; tx <= tx1; tx++) {
       uint8_t t = lvl_.at(tx, ty);
-      if (t == T_EMPTY || tx < 0 || tx >= lvl_.w) continue;
+      if (t == T_EMPTY || t == T_HIDDEN || tx < 0 || tx >= lvl_.w) continue;
+      if (t == T_SECRET) {
+        const SecretRegion& sr = secrets_[lvl_.regionAt(tx, ty)];
+        if (sr.revealed) {
+          // le mur s'efface en vague a partir de l'endroit ou l'on est entre
+          int age = (int)frame_ - sr.t0, d = abs(tx - sr.ox) + abs(ty - sr.oy);
+          if (age >= 5 * d + 10) continue;
+          if (age >= 5 * d && (frame_ / 2) % 2) continue;
+        }
+        t = lvl_.lookAt(tx, ty);
+      }
       int dy = ty * TILE - cy;
       if (bumpT_ > 0 && tx == bumpTx_ && ty == bumpTy_) dy -= (bumpT_ > 4 ? 8 - bumpT_ : bumpT_);
       if (t == T_WATER_TOP && ((frame_ / 16 + tx) & 1)) t = T_WATER_TOP2;  // vaguelettes
@@ -1182,7 +1229,7 @@ void Game::drawWorld(Band& b) {
     const Entity& e = ent_[i];
     if (e.type == E_NONE || e.type == E_BENCH || e.type == E_FLOWERS || e.type == E_CHECK ||
         e.type == E_GOAL || e.type == E_TRAM || e.type == E_DUST || e.type == E_SPARK || e.type == E_TEXT ||
-        e.type == E_HUT)
+        e.type == E_HUT || hiddenBySecret(e))
       continue;
     drawEntity(b, e);
   }
@@ -1447,7 +1494,7 @@ void Game::drawOverlay(Band& b) {
         }
       }
       if (stateTime_ > 90) {
-        b.fillRect(60, 30, 200, 74, DARKBLUE);
+        b.fillRect(60, 30, 200, (lvl_.nsecrets + lvl_.nhidden) > 0 ? 90 : 74, DARKBLUE);
         b.fillRect(60, 30, 200, 2, ORANGE);
         centerText(b, font_big, 36, "Výborne!", YELLOW, BLACK);
         snprintf(s, sizeof s, "Medovníky : %d", levelHearts_);
@@ -1455,7 +1502,12 @@ void Game::drawOverlay(Band& b) {
         int secs = levelTime_ / 60;
         snprintf(s, sizeof s, "Čas : %d:%02d", secs / 60, secs % 60);
         centerText(b, font_small, 76, s, WHITE, -1);
-        if (stateTime_ > 150 && (frame_ / 30) % 2 == 0) centerText(b, font_small, 90, "Stlač A", 0xBDF7, -1);
+        int total = lvl_.nsecrets + lvl_.nhidden;
+        if (total > 0) {
+          snprintf(s, sizeof s, "Tajomstvá : %d/%d", secretsFound_, total);
+          centerText(b, font_small, 90, s, secretsFound_ == total ? YELLOW : WHITE, -1);
+        }
+        if (stateTime_ > 150 && (frame_ / 30) % 2 == 0) centerText(b, font_small, total > 0 ? 104 : 90, "Stlač A", 0xBDF7, -1);
       }
       break;
     }

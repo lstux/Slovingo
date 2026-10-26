@@ -3,6 +3,8 @@
 #   z rafales de vent (zone de 8 cases sur 10 au-dessus)  r pierres qui tombent  ~ lac de montagne
 #   R la chata (refuge)  F arrivée (le chatár et Andrea). La pluie, la nuit et les éclairs
 #   arrivent au fil du niveau (weather: 1).
+#   x : faux mur (passage secret, on le traverse)   O : medovník dans un faux mur
+#   u : bloc caché (invisible, se révèle quand on le cogne par en dessous)
 name: Vysoké Tatry
 subtitle: Búrka
 hint: Dobrý deň. Zajtra bude búrka.
@@ -22,9 +24,9 @@ next: Ždiar
                                                                  H#######              ######      z                                                         H#######======   z                                                             
                                                                  H#######              ######XXXXX#######                                                    H#######        ======   l                                                     
                                    B?B                           H#######              ######     #######=====        z  k C                                 H#######              ########H                                                
-                                               oooooooooo        H#######              ######     #######       =====########H                               H#######              ########H                                                
-                          oooo                                   H#######              ######     #######            ########H                oooooooo       H#######              ########H                                                
-                                                              k  H#######              ######     #######            ########H                               H#######              ########H                                                
+                                               oooooooooo        Hxxxx###              ######     #######       =====########H                               H#######              ########H                                                
+                          oooo                                   HxOOx###              ######     #######            ########H                oooooooo       H#######              ########H                                                
+                     u                                        k  HxOOO###              ######     #######            ########H                               H#######              ########H                                                
                oooo              l    ########XXXXXXXXXXXX###############              ######     #######            ########H    ooooo                      H#######              ########H          oooooooo                              
                               ################            ###############              ######     #######            ########H           ####XXXXXXXXXX##############              ########H                                                
                     s ########################            ###############              ######     #######            ########H           ####          ##############              ########H         ==========                             

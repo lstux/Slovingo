@@ -134,7 +134,7 @@ int main(int argc, char** argv) {
   int frames = 0, every = 0;
   bool useBot = false, wav = false;
   float startX = -1, startY = -1;
-  int level = 0;
+  int level = 0, afterEnd = 0;
   bool rabbit = false;
   std::string savePath;
   for (int i = 1; i < argc; i++) {
@@ -149,6 +149,7 @@ int main(int argc, char** argv) {
     else if (a == "--start-y") startY = atof(argv[++i]);
     else if (a == "--level") level = atoi(argv[++i]) - 1;
     else if (a == "--andrea") rabbit = true;
+    else if (a == "--after") afterEnd = atoi(argv[++i]);
     else if (a == "--save") savePath = argv[++i];
     else if (a == "--shots") {
       char* s = argv[++i];
@@ -224,8 +225,9 @@ int main(int argc, char** argv) {
       savePPM(out + name);
     }
     if (useBot && (game.state() == S_END || game.state() == S_CLEAR)) {
-      printf("fin atteinte a l'image %d\n", f);
-      break;
+      static int endAt = 0;
+      if (!endAt) { endAt = f; printf("fin atteinte a l'image %d\n", f); }
+      if (f >= endAt + afterEnd) break;
     }
   }
   if (wav) saveWav(out + "/audio.wav", pcm);

@@ -43,6 +43,8 @@ enum TileId : uint8_t {
   T_WATER_TOP2 = 17,
   T_CRUMBLE = 18,     // sol craquele / eboulis : s'effondre quand on reste dessus
   T_CRUMBLE_HIT = 19, // le meme qui se fissure (affichage seulement)
+  T_SECRET = 20,      // faux mur 'x' : dessine comme le sol voisin, mais on le traverse (passage secret)
+  T_HIDDEN = 21,      // bloc cache 'u' : invisible, se revele quand on le cogne par en dessous
 };
 
 enum TileKind : uint8_t { K_AIR, K_SOLID, K_ONEWAY, K_HAZARD, K_LADDER, K_WATER };
@@ -58,6 +60,9 @@ struct Level {
   int w = 0, h = 0;
   uint8_t tiles[MAX_LEVEL_W * MAX_LEVEL_H];
   uint8_t marks[MAX_LEVEL_W * MAX_LEVEL_H];  // butees invisibles '|'
+  uint8_t look[MAX_LEVEL_W * MAX_LEVEL_H];   // faux murs : la tuile de sol qu'ils imitent
+  uint8_t region[MAX_LEVEL_W * MAX_LEVEL_H]; // faux murs : numero du passage secret (1..15), 0 = aucun
+  int nsecrets = 0, nhidden = 0;             // passages secrets et blocs caches du niveau
   Spawn spawns[160];
   int nspawns = 0;
   int startX = 32, startY = 160;
@@ -72,6 +77,11 @@ struct Level {
   void set(int tx, int ty, uint8_t t) {
     if (tx >= 0 && tx < w && ty >= 0 && ty < h) tiles[ty * w + tx] = t;
   }
+  int regionAt(int tx, int ty) const {
+    if (tx < 0 || tx >= w || ty < 0 || ty >= h) return 0;
+    return region[ty * w + tx];
+  }
+  uint8_t lookAt(int tx, int ty) const { return look[ty * w + tx]; }
   bool mark(int tx, int ty) const {
     if (tx < 0 || tx >= w || ty < 0 || ty >= h) return true;
     return marks[ty * w + tx] != 0;

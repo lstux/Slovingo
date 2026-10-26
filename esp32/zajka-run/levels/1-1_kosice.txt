@@ -3,6 +3,8 @@
 #           o medovnik  S depart  C lampadaire (point de passage)  F arret de tram (fin)
 #           p pigeon  w guepe  P ressort  T tram  | butee invisible (tram, ennemis)
 #           l banc  k bac a fleurs (decor)
+#   x : faux mur (passage secret, on le traverse)   O : medovník dans un faux mur
+#   u : bloc caché (invisible, se révèle quand on le cogne par en dessous)
 name: Košice
 subtitle: Hlavná ulica
 hint: Ahoj! To si ty?
@@ -19,7 +21,7 @@ next: Slovenský raj
                ooo                                                                            oooo      oo                                                                       oooooo                             
                                                                                              ======    ====                                             ooo                                                         
                               oo             ooo                                                                                                       o   o           w                                            
-              B?B?B                   oo    =====  oo                                                                 B?B   oooo         ???          o     o                      BB                               
+              B?B?B                   oo    =====  oo                  u                                              B?B   oooo         ???          o     o   u                  BB                               
          oooo                  B     o  o                                                                                                                                         BBBB                              
                               BB                                                                                                  B                                              BBBBBB                             
    S  l                p     BBB          k       ^^^^   p   P    k   p     C   l   |  T                        |  k              B   p         l             C     p      p    BBBBBBBB    k       F               

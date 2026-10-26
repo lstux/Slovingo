@@ -2,6 +2,8 @@
 # Légende de Košice, plus : H échelle  ~ eau  M passerelle mobile horizontale (entre deux |)
 #   V passerelle mobile verticale (entre deux | dans sa colonne)  s écureuil  b bouteille d'eau
 #   C rozcestník (point de passage)  l fougère  k souche  F arrivée (pán Orol et Andrea)
+#   x : faux mur (passage secret, on le traverse)   O : medovník dans un faux mur
+#   u : bloc caché (invisible, se révèle quand on le cogne par en dessous)
 name: Slovenský raj
 subtitle: Roklina Suchá Belá
 hint: Dobrý deň. Kam idete?
@@ -23,10 +25,10 @@ next: Vysoké Tatry
                                                                                    H#####                                       #############=====  =====   |M        |        H###        H                                            
                                  w                                                 H#####        ###|M           |              #############             P                    H###        H                                            
                                         ooo                                        H#####        ###              ###H          #############            ###                   H###        H                                            
-          oooo  B?B        ooo                                                     H#####        ###              ###H          #############            ###  |      M     |   H###        H         oo?oo                              
-                                        ###                 oooooooo               H#####        ###              ###H          #############            ###                   H###        H                                            
-                           ###          ###                              ooo       H#####        ###              ###H  s       #############            ###                   H###        H                                            
-   S   l    k         s    ###      s   ###### l  C                           k    H#####        ###              ###########V  #############            ###                #######        H  l   s         k    F                      
+          oooo  B?B     u  ooo                                                     H#####        ###              ###H          #############            ###  |      M     |   H###        H         oo?oo                              
+                                        ###                 oooooooo               Hxxxx#        ###              ###H          #############            ###                   H###        H                                            
+                           ###          ###                              ooo       HxOOO#        ###              ###H  s       #############            ###                   H###        H                                            
+   S   l    k         s    ###      s   ###### l  C                           k    HxOOO#        ###              ###########V  #############            ###                #######        H  l   s         k    F                      
 #######################################################   k    b  s         #############        ###              ###########|  #############            ###                #######        #############################################
 #########################################################################~~~#############~~~~~~~~###~~~~~~~~~~~~~~###########~~~#############~~~~~~~~~~~~###~~~~~~~~~~~~~~~~#######~~~~~~~~#############################################
 #########################################################################~~~#############~~~~~~~~###~~~~~~~~~~~~~~###########~~~#############~~~~~~~~~~~~###~~~~~~~~~~~~~~~~#######~~~~~~~~#############################################

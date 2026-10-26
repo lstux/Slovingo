@@ -23,9 +23,10 @@ enum EType : uint8_t {
 // Sauvegarde : niveaux debloques, meilleurs temps et medovniky par niveau.
 struct SaveData {
   uint32_t magic = 0x5A52554E;  // "ZRUN"
-  uint8_t version = 2, unlocked = 1, pad[2] = {0, 0};
+  uint8_t version = 3, unlocked = 1, pad[2] = {0, 0};
   uint16_t bestTime[8] = {0};   // en secondes, 0 = jamais termine
   uint8_t bestHearts[8] = {0};
+  uint8_t bestSecrets[8] = {0};   // passages secrets trouves par niveau
 };
 
 // Stockage de la sauvegarde, fourni par la plateforme (NVS sur la console, fichier sur PC).
@@ -111,6 +112,8 @@ class Game {
   void hurtPlayer(float fromX);
   void killPlayer();
   void bumpTile(int tx, int ty);
+  void revealSecrets();
+  bool hiddenBySecret(const Entity& e) const;
   void collectHeart(float x, float y, bool popped);
   int spawn(EType t, float x, float y);
   void fx(EType t, float x, float y, const char* text = nullptr);
@@ -166,6 +169,14 @@ class Game {
   struct Crumble {
     int16_t tx, ty, t;
   };
+  // passages secrets du niveau : faux murs qui disparaissent quand on y entre
+  struct SecretRegion {
+    bool revealed;
+    int t0;
+    int16_t ox, oy;
+  };
+  SecretRegion secrets_[16];
+  int secretsFound_ = 0;
   Crumble crumbles_[24];
   int ncrumbles_ = 0;
   int weatherLevel_ = 0;  // 0 rien, 1 pluie, 2 pluie et nuit
