@@ -13,14 +13,14 @@ Chaque image du jeu peut être remplacée par une image générée, sans toucher
 | `objects/holub` pigeon 48×32 | fait (Gemini, import avec `--mag-cut 140 --tint-cut 100` pour garder les pattes roses) | `sources/holub_big_gemini.jpg` |
 | `objects/osa` guêpe 32×32 | fait (Gemini) | `sources/osa_big_gemini.jpg` |
 | `sprites/fox` renard (cases 48×48) | fait (Gemini) | `sources/fox_<anim>_gemini.jpg` |
-| `sprites/rabbit` Andrea | fait en 32×48 (Gemini) ; **à refaire en 48×48** (voir la section Andrea) ; chute `sources/andrea_fall.jpg` reçue, import en attente | `sources/rabbit_<anim>_gemini.jpg` |
+| `sprites/rabbit` Andrea | fait en 48×48 (Gemini) ; vol plané importé (`sources/andrea_glide.jpg`) | `sources/rabbit_<anim>_gemini.jpg` |
 | `objects/pruzina`, `lampa`, `zastavka`, `elektricka`, `lavicka`, `fx` | fait (Gemini) | `sources/<nom>_gemini.jpg` |
 | `objects/hud` icônes 8×8 | garder (trop petit pour une IA) | dessiné à la main |
 | `sucho/far`, `sucho/mid`, `sucho/tiles` (niveau 1-2) | fait (Gemini) | `sources/sucho_*_gemini.jpg` |
 | `objects/tryska`, `zahradnik` | fait (Gemini) | `sources/tryska_gemini.jpg`, `sources/zahradnik_gemini.jpg` |
 | `raj/far`, `raj/mid`, `raj/tiles` (niveau 1-3) | fait (Gemini ; mid en 2 bandes, `--strips 2`) | `sources/raj_*_gemini.jpg` |
 | `objects/platforma`, `flasa`, `vevericka`, `orol`, `rozcestnik`, `les` | **à faire** (provisoires) | `make_placeholder_raj.py` |
-| `tatry/far`, `tatry/mid`, `tatry/tiles` (niveau 1-4) | **à faire** (provisoires) | `make_placeholder_levels.py` |
+| `tatry/far`, `tatry/mid`, `tatry/tiles` (niveau 1-4) | fait (Gemini ; mid en 2 images empilées, `--strips 2` ; tuiles : cases réaffectées, eau profonde et herbe recalées après import) | `sources/tatry_*_gemini.jpg`, `tatry_mid_a/b.jpg` |
 | `objects/kamen`, `chata`, `chatar`, `hory` | **à faire** (provisoires) | `make_placeholder_levels.py` |
 | `sprites/fox` ligne `climb` (échelle) | **à faire** (pose du saut en attendant) | — |
 
@@ -237,7 +237,8 @@ Side-scrolling game background layer, very wide panorama (aspect ratio about 4:1
 ```
 
 ```
-python3 tools/import_ai.py mid art/sources/tatry_mid_gemini.jpg --theme tatry
+# deux images (suite l'une de l'autre) empilées dans tatry_mid_gemini.jpg :
+python3 tools/import_ai.py mid art/sources/tatry_mid_gemini.jpg --theme tatry --strips 2 --clear-sky
 ```
 
 ### Tuiles (`tatry/tiles.png`)
@@ -248,7 +249,9 @@ Game tileset sheet, exactly 8 columns by 4 rows of square tiles, each tile 16x16
 ```
 
 ```
-python3 tools/import_ai.py tiles art/sources/tatry_tiles_gemini.jpg --theme tatry
+python3 tools/import_ai.py tiles art/sources/tatry_tiles_gemini.jpg --theme tatry \
+  --cells "1=0,1 2=0,2 3=0,1,L 4=0,1,R 5=0,2,L 6=0,2,R 7=0,7 8=1,0 9=1,1 10=1,2 11=1,3 12=1,2 13=1,4 14=1,5 15=2,0 17=2,1 18=2,4 19=2,5"
+# puis : l'herbe (tuiles 1, 3, 4) est remontée en haut de la case, et l'eau profonde (16) refaite à partir du bas de la tuile 15
 ```
 
 ### Pierre qui tombe (`objects/kamen_16x16`, 2 images)
@@ -422,7 +425,7 @@ a single FALL frame seen from the side, body UPRIGHT and VERTICAL, dropping stra
 
 ### Andrea : glide (2 images, planeur)
 
-Pour le vol plané (A tenu en tombant) : les oreilles déployées comme un parachute. Joindre `art/characters/andrea-reference.png`.
+Pour le vol plané (A tenu en tombant) : les oreilles légèrement écartées et qui battent (version retenue : oreilles de taille normale, la 2e image avec une oreille rabattue). Joindre `art/characters/andrea-reference.png`.
 
 ```
 16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 40 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
@@ -431,7 +434,7 @@ Sprite sheet for a side-view platform game, the character in side view facing ri
 a 2-frame GLIDE animation: Andrea floating gently down through the air with her two long ears opened wide and held up above her head like a parachute canopy, the ears spread apart in a V shape and slightly curved, arms spread out to the sides for balance, legs relaxed and dangling, body UPRIGHT and VERTICAL (NOT lying down, NOT horizontal). Frame 1: ears fully open and high. Frame 2: ears slightly lower and flapping. Do not draw any real parachute, only her ears.
 ```
 
-`python3 tools/import_ai.py sprite rabbit glide art/sources/andrea_glide.png --frames 2 --grid 1x2 --strip-ground`
+`python3 tools/import_ai.py sprite rabbit glide art/sources/andrea_glide.jpg --frames 2 --grid 1x2 --strip-ground`
 
 ### Andrea : hurt (1 image)
 
