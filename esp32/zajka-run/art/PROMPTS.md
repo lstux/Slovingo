@@ -19,7 +19,7 @@ Chaque image du jeu peut être remplacée par une image générée, sans toucher
 | `sucho/far`, `sucho/mid`, `sucho/tiles` (niveau 1-2) | fait (Gemini) | `sources/sucho_*_gemini.jpg` |
 | `objects/tryska`, `zahradnik` | fait (Gemini) | `sources/tryska_gemini.jpg`, `sources/zahradnik_gemini.jpg` |
 | `raj/far`, `raj/mid`, `raj/tiles` (niveau 1-3) | fait (Gemini ; mid en 2 bandes, `--strips 2`) | `sources/raj_*_gemini.jpg` |
-| `objects/platforma`, `flasa`, `vevericka`, `orol`, `rozcestnik`, `les` | **à faire** (provisoires) | `make_placeholder_raj.py` |
+| `objects/platforma`, `flasa`, `vevericka`, `orol`, `rozcestnik`, `les` | fait (Gemini ; `rozcestnik` importé avec `--grid 2x2 --pick 1,2 --uniform` : Gemini a rendu 4 cases) | `sources/{platforma,flasa,vevericka_big,orol,rozcestnik,les}_gemini.jpg` |
 | `tatry/far`, `tatry/mid`, `tatry/tiles` (niveau 1-4) | fait (Gemini ; mid en 2 images empilées, `--strips 2` ; tuiles : cases réaffectées, eau profonde et herbe recalées après import) | `sources/tatry_*_gemini.jpg`, `tatry_mid_a/b.jpg` |
 | `objects/kamen`, `chata`, `chatar`, `hory` | fait (Gemini ; `chata` importé avec `--keep-rules`, sans `--strip-ground`) | `sources/{kamen,chata,chatar,hory}_gemini.jpg` |
 | `sprites/fox` ligne `climb` (échelle) | fait (Gemini, de dos) | `sources/fox_climb_gemini.jpg` |
