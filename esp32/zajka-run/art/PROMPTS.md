@@ -22,7 +22,7 @@ Chaque image du jeu peut être remplacée par une image générée, sans toucher
 | `objects/platforma`, `flasa`, `vevericka`, `orol`, `rozcestnik`, `les` | **à faire** (provisoires) | `make_placeholder_raj.py` |
 | `tatry/far`, `tatry/mid`, `tatry/tiles` (niveau 1-4) | fait (Gemini ; mid en 2 images empilées, `--strips 2` ; tuiles : cases réaffectées, eau profonde et herbe recalées après import) | `sources/tatry_*_gemini.jpg`, `tatry_mid_a/b.jpg` |
 | `objects/kamen`, `chata`, `chatar`, `hory` | fait (Gemini ; `chata` importé avec `--keep-rules`, sans `--strip-ground`) | `sources/{kamen,chata,chatar,hory}_gemini.jpg` |
-| `sprites/fox` ligne `climb` (échelle) | **à faire** (pose du saut en attendant) | — |
+| `sprites/fox` ligne `climb` (échelle) | fait (Gemini, de dos) | `sources/fox_climb_gemini.jpg` |
 
 ## Marche à suivre
 
@@ -212,7 +212,6 @@ Sprite sheet for a side-view platform game: the character seen from BEHIND, clim
 python3 tools/import_ai.py sprite fox climb art/sources/fox_climb_gemini.jpg --frames 2 --head-px 17.5 --anchor-x 27
 ```
 
-Tant que cette ligne manque, le jeu montre la pose du saut, retournée à chaque barreau.
 
 ## Niveau 1-4 : Vysoké Tatry, l'orage (à faire)
 
