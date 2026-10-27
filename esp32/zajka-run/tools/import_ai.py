@@ -330,6 +330,7 @@ def main():
     ap.add_argument("--colors", type=int, default=0)
     ap.add_argument("--no-key", action="store_true")
     ap.add_argument("--strips", type=int, default=1, help="mid : l'image contient N bandes superposees a mettre bout a bout")
+    ap.add_argument("--keep-rules", action="store_true", help="sprite/object : ne pas effacer les lignes sombres qui traversent l'image (batiments sombres)")
     ap.add_argument("--clear-sky", action="store_true", help="mid : retire le ciel bleu peint dans l'image")
     ap.add_argument("--mag-cut", type=int, default=90, help="seuil du fond magenta (monter pour garder du rose vif)")
     ap.add_argument("--tint-cut", type=int, default=25, help="seuil de correction des bords teintes de magenta")
@@ -411,7 +412,8 @@ def main():
     sheet = Image.open(sheet_path).convert("RGBA")
     src = Image.open(path).convert("RGBA")
     src = src if a.no_key else key_out(src, key, mag_cut=a.mag_cut, tint_cut=a.tint_cut)
-    src = remove_rules(src)
+    if not a.keep_rules:
+        src = remove_rules(src)
     if a.strip_ground:
         src = strip_ground(src)
     if a.grid:

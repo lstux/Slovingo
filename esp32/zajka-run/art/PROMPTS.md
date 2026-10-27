@@ -21,7 +21,7 @@ Chaque image du jeu peut être remplacée par une image générée, sans toucher
 | `raj/far`, `raj/mid`, `raj/tiles` (niveau 1-3) | fait (Gemini ; mid en 2 bandes, `--strips 2`) | `sources/raj_*_gemini.jpg` |
 | `objects/platforma`, `flasa`, `vevericka`, `orol`, `rozcestnik`, `les` | **à faire** (provisoires) | `make_placeholder_raj.py` |
 | `tatry/far`, `tatry/mid`, `tatry/tiles` (niveau 1-4) | fait (Gemini ; mid en 2 images empilées, `--strips 2` ; tuiles : cases réaffectées, eau profonde et herbe recalées après import) | `sources/tatry_*_gemini.jpg`, `tatry_mid_a/b.jpg` |
-| `objects/kamen`, `chata`, `chatar`, `hory` | **à faire** (provisoires) | `make_placeholder_levels.py` |
+| `objects/kamen`, `chata`, `chatar`, `hory` | fait (Gemini ; `chata` importé avec `--keep-rules`, sans `--strip-ground`) | `sources/{kamen,chata,chatar,hory}_gemini.jpg` |
 | `sprites/fox` ligne `climb` (échelle) | **à faire** (pose du saut en attendant) | — |
 
 ## Marche à suivre
@@ -273,7 +273,7 @@ A mountain hut (horská chata) in the High Tatras for a side-view platform game,
 ```
 
 ```
-python3 tools/import_ai.py object chata art/sources/chata_gemini.jpg --strip-ground
+python3 tools/import_ai.py object chata art/sources/chata_gemini.jpg --keep-rules
 ```
 
 ### Chatár, le gardien du refuge (`objects/chatar_32x48`, 2 images)
