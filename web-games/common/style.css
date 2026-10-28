@@ -1,0 +1,31 @@
+:root { color-scheme: dark; --bg:#14141f; --panel:#1e1e2e; --ink:#f2ecd8; --dim:#9a96a8; --accent:#f0a830; --btn:#2c2c42; --btnon:#f0a830; }
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font: 15px/1.4 system-ui, sans-serif; overflow: hidden; }
+body { display: flex; flex-direction: column; }
+header { display: flex; align-items: center; gap: 12px; padding: 6px 12px; background: var(--panel); font-size: 13px; }
+header a, header button { color: var(--ink); background: none; border: 1px solid #3a3a55; border-radius: 6px; padding: 3px 10px; font: inherit; text-decoration: none; cursor: pointer; }
+header .title { font-weight: 700; margin-right: auto; }
+main { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; position: relative; }
+#screen { image-rendering: pixelated; image-rendering: crisp-edges; background: #000; touch-action: none; outline: none; }
+#start { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(10,10,20,.82); font-size: 20px; cursor: pointer; text-align: center; padding: 20px; }
+#start.hidden { display: none; }
+#help { position: absolute; right: 12px; top: 8px; max-width: 360px; background: var(--panel); border: 1px solid #3a3a55; border-radius: 8px; padding: 10px 14px; font-size: 13px; z-index: 5; }
+#help.hidden { display: none; }
+#help table { border-collapse: collapse; width: 100%; }
+#help td { padding: 2px 6px; }
+#help td:first-child { color: var(--accent); white-space: nowrap; }
+kbd { background: var(--btn); border-radius: 4px; padding: 0 5px; }
+/* boutons tactiles : visibles seulement sur ecrans tactiles */
+#pad { display: none; justify-content: space-between; align-items: center; padding: 8px 14px 14px; user-select: none; -webkit-user-select: none; touch-action: none; }
+@media (pointer: coarse) { #pad { display: flex; } header .hide-touch { display: none; } }
+#pad.always { display: flex; }
+#pad [data-dpad] { width: 150px; height: 150px; border-radius: 50%; background: var(--btn); position: relative; touch-action: none; }
+#pad [data-dpad]::before { content: "✥"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 56px; color: var(--dim); }
+#pad [data-dpad].on { background: #3a3a5c; }
+#pad .mid { display: flex; flex-direction: column; gap: 10px; }
+#pad .mid button { width: 78px; height: 34px; font-size: 12px; }
+#pad .acts { display: flex; gap: 16px; align-items: flex-end; }
+#pad button { background: var(--btn); color: var(--ink); border: 0; border-radius: 50%; width: 76px; height: 76px; font: 700 20px system-ui; touch-action: none; }
+#pad .mid button { border-radius: 17px; }
+#pad button.on { background: var(--btnon); color: #111; }
+#pad .acts button[data-btn=A] { margin-bottom: 36px; }

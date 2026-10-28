@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Zajka Run</title>
+<link rel="stylesheet" href="../common/style.css">
+</head>
+<body>
+<div id="app" style="display:contents">
+<header>
+  <span class="title">Zajka Run</span>
+  <button id="helpbtn" class="hide-touch">Touches</button>
+  <button id="fs">Plein écran</button>
+  <a href="../index.html">Jeux</a>
+</header>
+<main id="stage">
+  <canvas id="screen" width="320" height="240" tabindex="0"></canvas>
+  <div id="start">Touchez ou appuyez sur une touche<br>pour jouer (avec le son)</div>
+  <div id="help" class="hidden">
+    <table>
+      <tr><td><kbd>←</kbd> <kbd>→</kbd> / <kbd>A</kbd> <kbd>D</kbd></td><td>courir</td></tr>
+      <tr><td><kbd>↑</kbd> <kbd>↓</kbd> / <kbd>W</kbd> <kbd>S</kbd></td><td>échelles, menu</td></tr>
+      <tr><td><kbd>Espace</kbd> / <kbd>K</kbd></td><td>sauter, valider (A)</td></tr>
+      <tr><td><kbd>Maj</kbd> / <kbd>J</kbd> / <kbd>X</kbd></td><td>courir plus vite (B)</td></tr>
+      <tr><td><kbd>Entrée</kbd> / <kbd>P</kbd></td><td>Start : pause</td></tr>
+      <tr><td><kbd>Tab</kbd> / <kbd>C</kbd></td><td>Select : changer de personnage</td></tr>
+      <tr><td><kbd>V</kbd></td><td>volume</td></tr>
+    </table>
+    <p>Manette : croix / stick, A, B, Start, Select. La sauvegarde est dans ce navigateur.</p>
+  </div>
+</main>
+<div id="pad">
+  <div data-dpad></div>
+  <div class="mid"><button data-btn="SELECT">SELECT</button><button data-btn="START">START</button><button data-btn="VOLUME">VOL</button></div>
+  <div class="acts"><button data-btn="B">B</button><button data-btn="A">A</button></div>
+</div>
+</div>
+<script src="../common/gfx.js"></script>
+<script src="../common/audio.js"></script>
+<script src="../common/input.js"></script>
+<script src="../common/platform.js"></script>
+<script src="../common/shell.js"></script>
+<script src="data/assets.js"></script>
+<script src="data/audio_data.js"></script>
+<script src="js/level.js"></script>
+<script src="js/assets.js"></script>
+<script src="js/game.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
