@@ -50,6 +50,8 @@ python3 tools/import_ai.py far art/sources/sucho_far_gemini.jpg --theme sucho --
 
 ### Le parc du théâtre et la gare (`sucho/mid.png`)
 
+Fait en deux temps : la bande du haut (théâtre + fontaine à sec) a été refaite seule (`sources/sucho_theatre_gemini.jpg`, réduite à l'échelle ×0,52 et empilée sur la bande du bas de l'image d'origine `sources/sucho_mid_v1_gemini.jpg` pour donner `sources/sucho_mid_gemini.jpg`).
+
 ```
 16-bit pixel art in the style of a Super Nintendo platformer. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 64 colours). No text, no labels, no grid, no frames or boxes around the images, no border, no watermark.
 A side-scrolling game background layer made of TWO horizontal strips stacked one above the other, filling the whole image, separated by a thick flat solid magenta #FF00FF band. Each strip is a very wide panorama (about 3.5:1), seen straight from the side, with the ground line at the same height in both strips. The two strips are two consecutive halves of ONE continuous scene: the right end of the TOP strip continues seamlessly into the left end of the BOTTOM strip, and the right end of the BOTTOM strip joins seamlessly with the left end of the TOP strip (the same yellow trees at both seams), so the whole can repeat.
