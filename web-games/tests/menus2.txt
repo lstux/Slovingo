@@ -1,0 +1,13 @@
+# Ecran titre avec une partie enregistree : Pokracovat / Nova hra, confirmation (a lancer avec --save,
+# apres un premier parcours qui a enregistre la partie).
+shot 5
+10 12 D
+shot 20
+30 32 A
+shot 40
+50 52 B
+shot 60
+70 72 U
+shot 80
+90 92 A
+shot 100

@@ -38,7 +38,13 @@ def _match_brace(text, start):
 
 
 def _unquote(s):
-    return re.sub(r'\\(.)', lambda m: {"n": "\n", "t": "\t"}.get(m.group(1), m.group(1)), s[1:-1])
+    """Chaine C : \\n, \\t, \\" et les codes octaux (\\001 = le marqueur du nom du joueur)."""
+    def esc(m):
+        g = m.group(1)
+        if g[0] in "01234567":
+            return chr(int(g, 8))
+        return {"n": "\n", "t": "\t"}.get(g, g)
+    return re.sub(r'\\([0-7]{1,3}|.)', esc, s[1:-1])
 
 
 def _parse_body(body):

@@ -1,0 +1,36 @@
+# Ecran titre, chapitre, un panneau lu (Slovnik), le menu START (trois onglets, defilement), le volume.
+# Meme format que les scripts de esp32/zajka-quest/sim/ (debut fin boutons ; shot N).
+shot 5
+10 12 S
+shot 40
+60 62 A
+shot 100
+# panneau « mesto » (2, 8) : a gauche jusqu'a (2, 9), en haut, A (comme chapter.txt)
+100 135 L
+150 151 U
+165 167 A
+shot 170
+shot 190
+200 202 A
+shot 210
+# menu START : onglet Batoh, puis Slovnik, puis Ciel (SELECT : traduction), puis retour
+220 222 S
+shot 230
+240 242 R
+shot 250
+260 262 R
+shot 270
+280 282 E
+shot 290
+300 302 D
+310 312 L
+shot 330
+340 342 V
+shot 345
+360 362 B
+shot 380
+# le renard marche (B : il court), tourne sur place, se cogne
+400 440 B
+400 440 L
+460 470 U
+shot 480

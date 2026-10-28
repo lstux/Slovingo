@@ -19,13 +19,13 @@ kbd { background: var(--btn); border-radius: 4px; padding: 0 5px; }
 #pad { display: none; justify-content: space-between; align-items: center; padding: 8px 14px 14px; user-select: none; -webkit-user-select: none; touch-action: none; }
 @media (pointer: coarse) { #pad { display: flex; } header .hide-touch { display: none; } }
 #pad.always { display: flex; }
-#pad [data-dpad] { width: 150px; height: 150px; border-radius: 50%; background: var(--btn); position: relative; touch-action: none; }
+#pad [data-dpad] { flex: none; width: 150px; height: 150px; border-radius: 50%; background: var(--btn); position: relative; touch-action: none; }
 #pad [data-dpad]::before { content: "✥"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 56px; color: var(--dim); }
 #pad [data-dpad].on { background: #3a3a5c; }
 #pad .mid { display: flex; flex-direction: column; gap: 10px; }
 #pad .mid button { width: 78px; height: 34px; font-size: 12px; }
 #pad .acts { display: flex; gap: 16px; align-items: flex-end; }
-#pad button { background: var(--btn); color: var(--ink); border: 0; border-radius: 50%; width: 76px; height: 76px; font: 700 20px system-ui; touch-action: none; }
+#pad button { flex: none; background: var(--btn); color: var(--ink); border: 0; border-radius: 50%; width: 76px; height: 76px; font: 700 20px system-ui; touch-action: none; }
 #pad .mid button { border-radius: 17px; }
 #pad button.on { background: var(--btnon); color: #111; }
 #pad .acts button[data-btn=A] { margin-bottom: 36px; }
