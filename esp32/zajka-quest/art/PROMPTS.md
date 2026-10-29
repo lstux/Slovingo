@@ -154,8 +154,8 @@ A tileset for a town in Slovakia during a drought: a grid of 2 rows x 4 columns 
 ## Objets du sac (16 × 16)
 
 Ils s'affichent dans le sac (menu START), dans le message « Do batohu » et, pour les gouttes d'eau,
-posés par terre. Importer chaque case avec `import_ai.py tileset` n'a pas de sens ici : découper à
-la main ou redessiner sur les icônes de `art/items/` (16 × 16, fond transparent).
+posés par terre. Import : `python3 tools/import_ai.py icons art/sources/sac.png --grid 2x3 --no-rules --names "listok voda kvapka batoh mapa listky"`
+(icônes 16 × 16, fond transparent, dans `art/items/`).
 
 ```
 16-bit pixel art icons for an RPG inventory, in the style of Pokémon Gold (Super Nintendo era). Crisp chunky pixels, hard edges, no anti-aliasing, thick dark outlines, limited palette (about 24 colours). No text, no labels, no numbers, no watermark.
@@ -220,8 +220,9 @@ dessin suffit, le jeu le réutilise dans les quatre sens.
 Two tiny cute animals of a town park, side by side, each centred in its own square cell of a grid of EXACTLY 1 row x 2 columns (no more, no fewer), thick bold shapes, filling at least 80% of the height of its cell: a small grey mouse with pink ears sitting up, and a fluffy yellow chick. Both seen from the front, looking a little thirsty and sad. Each must read clearly at 16x12 pixels. No ground, no shadow. Flat solid magenta #FF00FF background everywhere, no ground, no shadow.
 ```
 
-Pour l'instant, à découper à la main dans `art/walk/mouse_16x24.png` et `chick_16x24.png`
-(dessin en bas de la case, 16 × 12).
+`python3 tools/import_ai.py animals art/sources/animaux.png --grid 1x2 --no-rules --names "mouse chick"`
+(dessin 16 × 12 en bas de chaque case, répété dans `art/walk/mouse_16x24.png` et `chick_16x24.png`).
+Si Gemini rend 2 × 2 images (deux fois chaque animal), rogner la ligne du haut avant l'import.
 
 ## Portraits de la boîte de dialogue (48 × 48)
 

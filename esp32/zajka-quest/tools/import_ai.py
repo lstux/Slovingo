@@ -15,6 +15,9 @@ python3 tools/build_assets.py, puis le simulateur. Les prompts sont dans art/PRO
     # une planche de marche 16 x 24 (art/walk/<nom>_16x24.png), dans l'ordre de l'image source
     python3 tools/import_ai.py walk fox art/sources/fox_walk.png --grid 4x3 --rows down,left,right,up
     # un portrait 48 x 48 pour la boite de dialogue (art/portraits/<nom>_48x48.png)
+    # les icones du sac (art/items/<id>.png) et les petits animaux (art/walk/<nom>_16x24.png)
+    python3 tools/import_ai.py icons art/sources/sac.png --grid 2x3 --names "listok voda kvapka batoh mapa listky"
+    python3 tools/import_ai.py animals art/sources/animaux.png --grid 1x2 --names "mouse chick"
     python3 tools/import_ai.py portrait andrea art/sources/andrea_portrait.png
     # une ligne d'animation des personnages de l'ecran titre (planches de Zajka Run)
     python3 tools/import_ai.py sprite fox idle art/sources/fox_idle.png --grid 2x2 --head-px 17.5 --anchor-x 27
@@ -353,6 +356,55 @@ def import_tileset(a, key, theme="kosice"):
     print("Une tuile « nom@fond » prend le fond tel qu'il est : importer les textures avant les objets.")
 
 
+def _cells_keyed(a, key):
+    gr, gc = (int(v) for v in a.grid.lower().split("x"))
+    names = a.names.split()
+    if len(names) > gr * gc:
+        raise SystemExit(f"{len(names)} noms pour {gr * gc} cases")
+    src = Image.open(a.args[0]).convert("RGBA")
+    cells = grid_cells(src if a.no_key else key_out(src, key, **KO), gc, gr, margin=0.03)
+    return names, cells, gc
+
+
+def import_icons(a, key):
+    """Icones 16 x 16 des objets du sac : art/items/<id>.png, une par case, dans l'ordre des noms."""
+    if not a.names or not a.grid:
+        raise SystemExit("icons : --grid LIGNESxCOLONNES et --names « id id ... » sont necessaires")
+    names, cells, gc = _cells_keyed(a, key)
+    for i, name in enumerate(names):
+        if name == "-":
+            continue
+        t = quantize_rgba(fit_object(cells[(i // gc, i % gc)] if a.no_rules else remove_rules(cells[(i // gc, i % gc)])), a.colors or 24)
+        out = os.path.join(ART, "items", f"{name}.png")
+        t.save(out)
+        print(f"ecrit {os.path.relpath(out, ROOT)}")
+
+
+def import_animals(a, key):
+    """Petits animaux : un dessin 16 x 12 en bas de chaque case 16 x 24, repete aux 12 cases de la
+    planche art/walk/<nom>_16x24.png (le jeu le reutilise dans les quatre sens)."""
+    if not a.names or not a.grid:
+        raise SystemExit("animals : --grid LIGNESxCOLONNES et --names « nom nom ... » sont necessaires")
+    names, cells, gc = _cells_keyed(a, key)
+    for i, name in enumerate(names):
+        if name == "-":
+            continue
+        fr = crop_alpha(remove_rules(cells[(i // gc, i % gc)]))
+        h = a.height_px or 12
+        sc = min(h / fr.height, 16 / fr.width)
+        nw, nh = max(1, int(round(fr.width * sc))), max(1, int(round(fr.height * sc)))
+        part = quantize_rgba(shrink(fr, nw, nh), a.colors or 16)
+        cell = Image.new("RGBA", (16, 24), (0, 0, 0, 0))
+        cell.alpha_composite(part, ((16 - nw) // 2, 24 - 1 - nh))
+        sheet = Image.new("RGBA", (48, 96), (0, 0, 0, 0))
+        for r in range(4):
+            for c in range(3):
+                sheet.alpha_composite(cell, (c * 16, r * 24))
+        out = os.path.join(ART, "walk", f"{name}_16x24.png")
+        sheet.save(out)
+        print(f"ecrit {os.path.relpath(out, ROOT)}")
+
+
 def import_walk(a, key):
     name, path = a.args
     rows = a.rows.split(",")
@@ -395,7 +447,7 @@ def import_portrait(a, key):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("kind", choices=["tileset", "walk", "portrait", "sprite"])
+    ap.add_argument("kind", choices=["tileset", "walk", "portrait", "sprite", "icons", "animals"])
     ap.add_argument("args", nargs="+")
     ap.add_argument("--theme", default="kosice")
     ap.add_argument("--frames", type=int, default=1)
@@ -429,6 +481,10 @@ def main():
         return import_tileset(a, key)
     if a.kind == "walk":
         return import_walk(a, key)
+    if a.kind == "icons":
+        return import_icons(a, key)
+    if a.kind == "animals":
+        return import_animals(a, key)
     if a.kind == "portrait":
         return import_portrait(a, key)
 
