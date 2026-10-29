@@ -6,3 +6,5 @@ kvapka | kvapka | une goutte d'eau
 batoh | batoh | le sac à dos
 mapa | mapa | la carte
 listky | lístky na vlak | les billets de train
+flasa | fľaša | la bouteille
+bunda | bunda | la veste

@@ -11,6 +11,7 @@ IA les remplacent fichier par fichier, aux memes dimensions.
     art/portraits/<nom>_48x48   portraits de la boite de dialogue : les tetes SVG de Slovingo
 
     python3 tools/make_placeholder_art.py && python3 tools/build_assets.py
+    python3 tools/make_placeholder_art.py --new     # seulement ce qui manque (ne touche pas aux images IA)
 """
 import os
 import random
@@ -285,19 +286,105 @@ def draw_tile(name):
             d.rectangle([3, 3, 12, 15], fill=hexc("#c8c8d0"))
             d.rectangle([4, 4, 7, 11], fill=hexc("#9cc7e4"))
             d.rectangle([8, 4, 11, 11], fill=hexc("#9cc7e4"))
+    elif name == "sapin":
+        grass(d, 21)
+        d.rectangle([7, 12, 8, 15], fill=hexc("#5a3e26"))
+        for y0, hw, c in ((9, 6, "#1f5a30"), (5, 5, "#26703a"), (1, 4, "#2f8a46")):
+            for k in range(0, 5):
+                w = max(1, hw - (4 - k) * 1)
+            d.polygon([(8, y0 - 1), (8 - hw, y0 + 5), (8 + hw, y0 + 5)], fill=hexc(c), outline=hexc("#17421f"))
+        d.point((7, 4), fill=hexc("#58b36c"))
+    elif name == "sentier":
+        d.rectangle([0, 0, 15, 15], fill=hexc("#a8885c"))
+        for x, y in [(2, 2), (9, 1), (5, 6), (12, 8), (3, 11), (10, 13), (14, 4)]:
+            d.rectangle([x, y, x + 1, y], fill=hexc("#8a6c44"))
+        for x, y in [(6, 3), (13, 11), (1, 8)]:
+            d.point((x, y), fill=hexc("#c8aa7c"))
+    elif name == "rocher":
+        grass(d, 22)
+        d.ellipse([1, 4, 14, 15], fill=hexc("#8a8a90"), outline=hexc("#4a4a52"))
+        d.ellipse([3, 5, 9, 9], fill=hexc("#aeaeb4"))
+        d.line([(9, 9), (12, 12)], fill=hexc("#6a6a72"))
+    elif name == "falaise":
+        d.rectangle([0, 0, 15, 15], fill=hexc("#6e6258"))
+        for y in (3, 8, 12):
+            d.line([(0, y), (15, y)], fill=hexc("#544a42"))
+        for x, y in [(3, 1), (10, 5), (6, 10), (13, 14), (1, 6)]:
+            d.rectangle([x, y, x + 2, y], fill=hexc("#80736a"))
+    elif name == "ruisseau":
+        d.rectangle([0, 0, 15, 15], fill=hexc("#4b93cf"))
+        for x, y in [(2, 3), (9, 7), (4, 12), (12, 2)]:
+            d.line([(x, y), (x + 3, y)], fill=hexc("#a6d4f4"))
+        d.line([(0, 15), (15, 15)], fill=hexc("#3a78b0"))
+    elif name == "eau_gorge":
+        d.rectangle([0, 0, 15, 15], fill=hexc("#2f6f9a"))
+        for x, y in [(1, 2), (8, 5), (3, 10), (11, 12)]:
+            d.line([(x, y), (x + 4, y)], fill=hexc("#8cc4e4"))
+        for x, y in [(5, 7), (13, 1)]:
+            d.rectangle([x, y, x + 1, y], fill=hexc("#e8f6ff"))
+    elif name == "planche":
+        d.rectangle([0, 0, 15, 15], fill=hexc("#2f6f9a"))               # l'eau voit entre les planches
+        for y0 in (0, 5, 10):
+            d.rectangle([0, y0, 15, y0 + 3], fill=hexc("#b07a3c"), outline=hexc("#6a4222"))
+            d.line([(1, y0 + 1), (14, y0 + 1)], fill=hexc("#cc9658"))
+            d.point((2, y0 + 2), fill=hexc("#2e2e34"))
+            d.point((13, y0 + 2), fill=hexc("#2e2e34"))
+        d.line([(7, 0), (6, 2), (8, 3)], fill=hexc("#4a2e16"))           # fendue : elle ne tiendra qu'un pas
+        d.line([(9, 10), (10, 12), (8, 13)], fill=hexc("#4a2e16"))
+    elif name == "rebrik":
+        d.rectangle([0, 0, 15, 15], fill=hexc("#544a42"))
+        d.rectangle([3, 0, 4, 15], fill=hexc("#b07a3c"))
+        d.rectangle([11, 0, 12, 15], fill=hexc("#b07a3c"))
+        for y in (1, 5, 9, 13):
+            d.rectangle([3, y, 12, y + 1], fill=hexc("#d09a54"))
+    elif name == "most":
+        d.rectangle([0, 0, 15, 15], fill=hexc("#a07040"))
+        for x in (3, 8, 13):
+            d.line([(x, 2), (x, 13)], fill=hexc("#6a4222"))
+        d.rectangle([0, 0, 15, 2], fill=hexc("#7a5230"))
+        d.rectangle([0, 13, 15, 15], fill=hexc("#7a5230"))
+        for x in (1, 8, 14):
+            d.rectangle([x, 0, x + 1, 3], fill=hexc("#3e2a18"))
+            d.rectangle([x, 12, x + 1, 15], fill=hexc("#3e2a18"))
+    elif name == "dalle":
+        d.rectangle([0, 0, 15, 15], fill=hexc("#9a9288"))
+        d.line([(0, 7), (15, 7)], fill=hexc("#6e665e"))
+        d.line([(0, 15), (15, 15)], fill=hexc("#6e665e"))
+        d.line([(5, 0), (5, 7)], fill=hexc("#6e665e"))
+        d.line([(11, 8), (11, 15)], fill=hexc("#6e665e"))
+        for x, y in [(2, 2), (9, 4), (7, 11), (13, 13)]:
+            d.point((x, y), fill=hexc("#b4aca0"))
+    elif name == "ohnisko":
+        grass(d, 23)
+        for x, y in [(3, 10), (6, 12), (9, 12), (12, 10), (4, 13), (11, 13)]:
+            d.rectangle([x, y, x + 2, y + 2], fill=hexc("#7a7a82"), outline=hexc("#4a4a52"))
+        d.polygon([(8, 2), (12, 9), (10, 11), (6, 11), (4, 9)], fill=hexc("#f07a2a"))
+        d.polygon([(8, 5), (10, 9), (9, 10), (7, 10), (6, 9)], fill=hexc("#f8d850"))
+        d.rectangle([5, 11, 11, 12], fill=hexc("#5a3e26"))
     else:
         raise SystemExit(f"tuile sans dessin : {name}")
     return im
 
 
-def tiles():
+def tiles(only_new=False):
+    """Toute la planche, ou (--new) seulement les tuiles pas encore dessinees : une tuile qui a deja
+    des pixels (dessinee a la main ou par IA) n'est jamais ecrasee."""
     rows = (len(TILESET) + TILES_PER_ROW - 1) // TILES_PER_ROW
     sheet = Image.new("RGBA", (TILES_PER_ROW * T, rows * T), (0, 0, 0, 0))
+    path = os.path.join(ART, "tiles", "kosice.png")
+    if only_new and os.path.exists(path):
+        old = Image.open(path).convert("RGBA")
+        sheet.paste(old, (0, 0))
+    drawn = []
     for i, (_, name, _) in enumerate(TILESET):
-        sheet.paste(draw_tile(name), ((i % TILES_PER_ROW) * T, (i // TILES_PER_ROW) * T))
+        box = ((i % TILES_PER_ROW) * T, (i // TILES_PER_ROW) * T, (i % TILES_PER_ROW) * T + T, (i // TILES_PER_ROW) * T + T)
+        if only_new and i > 0 and sheet.crop(box).getbbox():
+            continue
+        sheet.paste(draw_tile(name), box[:2])
+        drawn.append(name)
     os.makedirs(os.path.join(ART, "tiles"), exist_ok=True)
-    sheet.save(os.path.join(ART, "tiles", "kosice.png"))
-    print("ecrit art/tiles/kosice.png", sheet.size)
+    sheet.save(path)
+    print("ecrit art/tiles/kosice.png", sheet.size, ("(nouvelles : " + " ".join(drawn) + ")") if only_new else "")
 
 
 # ------------------------------------------------------------------ personnages 16 x 24
@@ -561,7 +648,7 @@ def creature(name, rows, pal):
     """Petit animal (souris, poussin) : un dessin de 16 x 12 en bas de la case, le meme dans les
     quatre sens, qui sautille un peu pour marcher."""
     sheet = Image.new("RGBA", (16 * 3, 24 * 4), (0, 0, 0, 0))
-    base = paint(["." * 16] * 12 + rows, pal)
+    base = paint(["." * 16] * (24 - len(rows)) + rows, pal)
     for r in range(4):
         for c in range(3):
             img = base if c == 0 else base.transform(base.size, Image.AFFINE, (1, 0, 0, 0, 1, 1))
@@ -598,6 +685,38 @@ CHICK = ["................",
          "......o..o......",
          ".....oo..oo....."]
 CHICK_PAL = {"k": "#1a1a2e", "y": "#f8d850", "o": "#f08a2a", "e": "#111111"}
+
+
+OROL = ["................",
+        "......kkkk......",
+        ".....kwwwwk.....",
+        "....kwwewwwk....",
+        "....kwwwwyykk...",
+        ".....kwwwyykk...",
+        "....kkbbbkkk....",
+        "...kbbbbbbbbk...",
+        "..kbbBBbbBBbbk..",
+        "..kbbBbbbbBbbk..",
+        "..kbbbbbbbbbbk..",
+        "...kbbbbbbbbk...",
+        "....kbbbbbbk....",
+        ".....kyyykyyk...",
+        ".....kkk.kkk....",
+        "................"]
+OROL_PAL = {"k": "#1a1a2e", "w": "#f4f0e4", "b": "#8a5a30", "B": "#5a3a1c", "y": "#f4c030", "e": "#111111"}
+BIRD = [".....kkkk.......",
+        "....kbbbbk......",
+        "...kbebbbbk.....",
+        "..kyybbbbbbk....",
+        "...kkbbbbbbbk...",
+        "....kbrrbbbbk.k.",
+        "....kbrrbbbbkkk.",
+        ".....kbbbbbk....",
+        "......kkkkk.....",
+        ".......o.o......",
+        "................",
+        "................"]
+BIRD_PAL = {"k": "#1a1a2e", "b": "#5a88c8", "r": "#e8604a", "y": "#f4c030", "e": "#111111", "o": "#f08a2a"}
 
 
 def item_icons():
@@ -640,9 +759,24 @@ def item_icons():
     d.rectangle([4, 6, 14, 13], fill=hexc("#5fb894"), outline=K)
     d.line([(6, 9), (12, 9)], fill=hexc("#2e6a4f"))
     drawn["listky"] = im
+    im, d = new()                                   # bouteille d'eau (la gourde remplie au ruisseau)
+    d.rectangle([6, 1, 9, 3], fill=hexc("#e8443a"), outline=K)
+    d.rounded_rectangle([4, 4, 11, 14], 2, fill=hexc("#cfe8f4"), outline=K)
+    d.rectangle([5, 7, 10, 13], fill=hexc("#4f9fd8"))
+    d.line([(6, 5), (6, 6)], fill=hexc("#ffffff"))
+    drawn["flasa"] = im
+    im, d = new()                                   # veste
+    d.polygon([(5, 2), (11, 2), (14, 5), (14, 13), (11, 13), (11, 6), (10, 14), (6, 14), (5, 6), (5, 13), (2, 13), (2, 5)],
+              fill=hexc("#e8603a"), outline=K)
+    d.line([(8, 3), (8, 14)], fill=K)
+    d.rectangle([7, 2, 9, 3], fill=hexc("#f4d03f"))
+    drawn["bunda"] = im
     for name, img in drawn.items():
-        img.save(os.path.join(ART, "items", f"{name}.png"))
-    print("ecrit art/items/ :", " ".join(drawn))
+        path = os.path.join(ART, "items", f"{name}.png")
+        if os.path.exists(path):  # ne jamais ecraser un dessin deja fait (IA)
+            continue
+        img.save(path)
+    print("ecrit art/items/ :", " ".join(n for n in drawn))
 
 
 def portraits():
@@ -663,6 +797,13 @@ def portraits():
 
 
 if __name__ == "__main__":
+    if "--new" in sys.argv:
+        # ce qui manque seulement : les tuiles pas encore dessinees, les personnages et objets absents
+        tiles(only_new=True)
+        for name, rows, pal in (("orol", OROL, OROL_PAL), ("bird", BIRD, BIRD_PAL)):
+            if not os.path.exists(os.path.join(ART, "walk", f"{name}_16x24.png")):
+                creature(name, rows, pal)
+        sys.exit(0)
     tiles()
     item_icons()
     portraits()
@@ -671,3 +812,5 @@ if __name__ == "__main__":
     character("human", HUMAN, HUMAN_PAL)
     creature("mouse", MOUSE, MOUSE_PAL)
     creature("chick", CHICK, CHICK_PAL)
+    creature("orol", OROL, OROL_PAL)
+    creature("bird", BIRD, BIRD_PAL)

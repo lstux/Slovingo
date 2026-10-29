@@ -114,3 +114,45 @@ Choď na železničnú stanicu. | Va à la gare.
 Kúpte si lístky pri okienku. | Achetez vos billets au guichet.
 [ciel_vlak]
 Nastúp do vlaku. | Monte dans le train.
+
+# ---------------------------------------------------------------- chapitre 3 : Slovenský raj
+
+[vtak_ticho]
+🐦 ... | ...
+
+[andrea_najprv_potok]
+🐰 Najprv nájdi potok. Počuješ? | D'abord, trouve le ruisseau. Tu entends ?
+
+[andrea_najprv_pit]
+🐰 Najprv sa napi. | D'abord, bois un coup.
+
+[napil_si_sa]
+💬 Napil si sa z potoka. Voda je dobrá. | Tu as bu au ruisseau. L'eau est bonne.
+
+[andrea_dosky]
+🐰 Pozor na dosky! Každá vydrží len jeden krok. | Attention aux planches ! Chacune ne tient qu'un seul pas.
++ Une planche cède dès que tu la quittes. Prévois ton chemin avant de marcher.
+
+[andrea_tomba]
+🐰 Nepozeraj dole! Poď zase. | Ne regarde pas en bas ! Recommence.
+
+[andrea_pod_sem]
+🐰 Poď sem! | Viens ici !
+
+[andrea_najprv_orol]
+🐰 Najprv pán Orol. Poď! | D'abord monsieur Orol. Viens !
+
+[ciel_les]
+Choď cez les. | Traverse la forêt.
+[ciel_potok]
+Nájdi potok. Počuješ? | Trouve le ruisseau. Tu entends ?
+[ciel_napi]
+Napi sa z potoka. | Bois au ruisseau.
+[ciel_roklina]
+Choď do rokliny. | Va à la gorge.
+[ciel_dosky]
+Prejdi cez dosky. Nevracaj sa. | Traverse les planches. Ne reviens pas en arrière.
+[ciel_orol]
+Porozprávaj sa s pánom Orlom. | Va parler à monsieur Orol.
+[ciel_tabor]
+Choď k potoku. Je večer. | Va au ruisseau. C'est le soir.

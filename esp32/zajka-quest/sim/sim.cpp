@@ -10,6 +10,7 @@
 //   build/sim --save /tmp/zq.sav ...                    garde la sauvegarde dans un fichier (reprise)
 //   build/sim --chapter 2 --script sim/chapter2.txt --auto   commence au chapitre 2
 //   build/sim --course                                 resume du cours embarque, glyphes manquants
+//   Un script peut aussi mener le renard case par case (lignes « go R7 D3 tU A W30 P ») : voir parseGo.
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -141,6 +142,55 @@ static int checkCourse() {
   return bad == 0 && COURSE_NUM_EPISODES > 0 ? 0 : 1;
 }
 
+
+// ---------------------------------------------------------------- script « go » : le renard marche case par case
+// Une ligne « go » est une suite de commandes separees par des espaces :
+//   R7 L2 U3 D1   marcher de 7 cases a droite, etc. (s'arrete avant si la carte change ; abandonne si bloque)
+//   tU            effleurer une direction : tourner le renard sans avancer (pour faire face a un PNJ)
+//   A             presser A (parler, lire, inspecter)
+//   W30           attendre 30 images
+//   P             capture d'ecran
+// Les dialogues sont menes par --auto ; le script attend la fin d'un dialogue ou d'un fondu.
+struct GoCmd {
+  char kind;  // 'M' marcher, 'T' tourner, 'A', 'W', 'P'
+  int dir;    // 0 L, 1 R, 2 U, 3 D
+  int n;
+};
+
+static int dirIndex(char c) { return c == 'L' ? 0 : c == 'R' ? 1 : c == 'U' ? 2 : c == 'D' ? 3 : -1; }
+static const uint16_t DIR_BTN[4] = {BTN_LEFT, BTN_RIGHT, BTN_UP, BTN_DOWN};
+
+static void parseGo(const char* line, std::vector<GoCmd>& out) {
+  std::string s(line);
+  size_t i = 0;
+  while (i < s.size()) {
+    while (i < s.size() && (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == '\r')) i++;
+    if (i >= s.size()) break;
+    char c = s[i++];
+    GoCmd g{0, 0, 1};
+    if (c == 't' && i < s.size()) {
+      g.kind = 'T';
+      g.dir = dirIndex(s[i++]);
+    } else if (dirIndex(c) >= 0) {
+      g.kind = 'M';
+      g.dir = dirIndex(c);
+      g.n = 0;
+      while (i < s.size() && isdigit((unsigned char)s[i])) g.n = g.n * 10 + (s[i++] - '0');
+      if (g.n == 0) g.n = 1;
+    } else if (c == 'A' || c == 'P') {
+      g.kind = c;
+    } else if (c == 'W') {
+      g.kind = 'W';
+      g.n = 0;
+      while (i < s.size() && isdigit((unsigned char)s[i])) g.n = g.n * 10 + (s[i++] - '0');
+    } else {
+      fprintf(stderr, "script go : commande inconnue « %c »\n", c);
+      continue;
+    }
+    out.push_back(g);
+  }
+}
+
 static const char* stateName(GameState s) {
   switch (s) {
     case S_TITLE: return "titre";
@@ -187,6 +237,7 @@ int main(int argc, char** argv) {
     }
   }
   std::vector<Seg> segs;
+  std::vector<GoCmd> goCmds;
   if (!script.empty()) {
     FILE* f = fopen(script.c_str(), "r");
     if (!f) {
@@ -198,11 +249,14 @@ int main(int argc, char** argv) {
       int a, b;
       char btn[32];
       if (line[0] == '#') continue;
-      if (sscanf(line, "shot %d", &a) == 1) shots.push_back(a);
+      if (strncmp(line, "go ", 3) == 0) parseGo(line + 3, goCmds);
+      else if (sscanf(line, "shot %d", &a) == 1) shots.push_back(a);
       else if (sscanf(line, "%d %d %31s", &a, &b, btn) == 3) segs.push_back({a, b, parseButtons(btn)});
     }
     fclose(f);
   }
+  const bool goMode = !goCmds.empty();
+  if (goMode) frames = 1 << 28;  // le script va jusqu'au bout de ses commandes
   if (frames == 0) {
     for (int s : shots) frames = frames > s ? frames : s;
     for (auto& s : segs) frames = frames > s.to ? frames : s.to;
@@ -225,12 +279,91 @@ int main(int argc, char** argv) {
   // Avec --auto, le robot mene les conversations et l'horloge du script s'arrete pendant ce
   // temps : les images du script ne comptent que hors dialogue.
   int t = 0, guard = 0;
+  size_t gi = 0;  // script go : commande en cours
+  int gcount = -1, gstall = 0, gx = 0, gy = 0, gpause = 0, goEnd = 0;
+  const char* gmap = nullptr;
+  bool gfail = false;
   bool wasChoosing = false, peeked = false, erred = false;
   const Line* choiceLine = nullptr;
-  for (int f = 1; t < frames && guard < frames * 20; f++, guard++) {
+  for (int f = 1; t < frames && guard < (goMode ? 4000000 : frames * 20); f++, guard++) {
     uint16_t raw = 0;
     bool talking = autoDialog && (game.state() == S_DIALOG || game.state() == S_NOTE);
-    if (!talking) {
+    if (!talking && goMode) {
+      // le script « go » : une commande a la fois, rien tant que le monde n'est pas libre
+      t++;
+      if (gi >= goCmds.size()) {
+        if (++goEnd > 40) break;
+      } else if (game.state() == S_CHAPTER) {
+        if (f % 10 == 0 && in.held == 0) raw = BTN_A;  // la carte du chapitre : on part
+      } else if (game.state() == S_WORLD) {
+        const GoCmd& g = goCmds[gi];
+        const World& w = game.world();
+        if (gpause > 0) {
+          gpause--;
+        } else if (g.kind == 'M') {
+          if (gcount < 0) {
+            gcount = 0;
+            gstall = 0;
+            gmap = w.map().id;
+            gx = w.player().tx;
+            gy = w.player().ty;
+          }
+          if (w.map().id != gmap) {  // une porte : la commande est finie
+            gi++;
+            gcount = -1;
+            gpause = 6;
+          } else {
+            if (w.player().tx != gx || w.player().ty != gy) {
+              gx = w.player().tx;
+              gy = w.player().ty;
+              gcount++;
+              gstall = 0;
+            } else if (++gstall > 90) {
+              printf("image %5d : script go bloque (commande %d : %c%d, %d case(s) faite(s)) en (%d, %d)\n", f, (int)gi + 1, "LRUD"[g.dir], g.n, gcount, gx, gy);
+              gfail = true;
+              gi++;
+              gcount = -1;
+              gpause = 6;
+            }
+            if (gcount >= g.n) {  // la derniere case est entamee : on lache la croix, le pas s'acheve
+              if (w.player().left == 0) {
+                gi++;
+                gcount = -1;
+                gpause = 6;
+              }
+            } else {
+              raw = DIR_BTN[g.dir];
+            }
+          }
+        } else if (g.kind == 'T') {
+          if (gcount < 0) gcount = 0;
+          if (gcount < 4) raw = DIR_BTN[g.dir];
+          if (++gcount > 12) {
+            gi++;
+            gcount = -1;
+            gpause = 4;
+          }
+        } else if (g.kind == 'A') {
+          if (gcount < 0) gcount = 0;
+          if (gcount < 3) raw = BTN_A;
+          if (++gcount > 6) {
+            gi++;
+            gcount = -1;
+            gpause = 4;
+          }
+        } else if (g.kind == 'W') {
+          if (gcount < 0) gcount = 0;
+          if (++gcount > g.n) {
+            gi++;
+            gcount = -1;
+          }
+        } else if (g.kind == 'P') {
+          shots.push_back(t);
+          gi++;
+          gcount = -1;
+        }
+      }
+    } else if (!talking) {
       t++;
       for (auto& s : segs)
         if (t >= s.from && t <= s.to) raw |= s.btn;
@@ -334,7 +467,11 @@ int main(int argc, char** argv) {
     }
   }
   if (wav) saveWav(out + "/audio.wav", pcm);
-  printf("%d images, etat final : %s, %d sauvegarde(s)\n", frames, stateName(game.state()), storage.writes());
+  printf("%d images, etat final : %s, %d sauvegarde(s)\n", goMode ? t : frames, stateName(game.state()), storage.writes());
+  if (gfail) {
+    printf("ECHEC : le script go est reste bloque\n");
+    return 1;
+  }
   if (!expect.empty()) {
     // les etats attendus doivent apparaitre dans cet ordre (d'autres peuvent s'intercaler)
     size_t k = 0;

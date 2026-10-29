@@ -1,6 +1,6 @@
 // Outils communs de l'histoire : conversations, episodes du cours, objets, panneaux, passages
 // imposes, fin de chapitre. Ce qui se passe ou est ecrit chapitre par chapitre :
-// chapter1.cpp (Kosice), chapter2.cpp (Sucho).
+// chapter1.cpp (Kosice), chapter2.cpp (Sucho), chapter3.cpp (Slovensky raj).
 #include <stdio.h>
 #include <string.h>
 
@@ -34,7 +34,7 @@ int Game::bonusTotal(int chapter) const {
   return n;
 }
 
-int Game::goal() const { return chapter_ == 0 ? ch1Goal() : ch2Goal(); }
+int Game::goal() const { return chapter_ == 0 ? ch1Goal() : chapter_ == 1 ? ch2Goal() : ch3Goal(); }
 
 // ---------------------------------------------------------------- conversations
 // bonusEpisode >= 0 : ses choix peuvent gagner les repliques secretes de cet episode.
@@ -121,30 +121,39 @@ void Game::storyPickup(const MapMark& m) {
 // ---------------------------------------------------------------- aiguillage par chapitre
 void Game::storyEnteredMap() {
   if (chapter_ == 0) ch1EnteredMap();
-  else ch2EnteredMap();
+  else if (chapter_ == 1) ch2EnteredMap();
+  else ch3EnteredMap();
 }
 
 void Game::storyTalk(int npc) {
   const Walker& w = world_.npc(npc);
   if (chapter_ == 0) ch1Talk(w);
-  else ch2Talk(w);
+  else if (chapter_ == 1) ch2Talk(w);
+  else ch3Talk(w);
 }
 
 void Game::storyInspect(int tx, int ty) {
   if (chapter_ == 0) ch1Inspect(tx, ty);
-  else ch2Inspect(tx, ty);
+  else if (chapter_ == 1) ch2Inspect(tx, ty);
+  else ch3Inspect(tx, ty);
 }
 
 void Game::storyZone(const MapMark& m) {
   if (chapter_ == 0) ch1Zone(m);
-  else ch2Zone(m);
+  else if (chapter_ == 1) ch2Zone(m);
+  else ch3Zone(m);
 }
 
-bool Game::storyWarp(const MapMark& m) { return chapter_ == 0 ? ch1Warp(m) : ch2Warp(m); }
+bool Game::storyWarp(const MapMark& m) { return chapter_ == 0 ? ch1Warp(m) : chapter_ == 1 ? ch2Warp(m) : ch3Warp(m); }
+
+void Game::storyStep(int tx, int ty) {
+  if (chapter_ == 2) ch3Step(tx, ty);
+}
 
 void Game::storyRefresh() {
   if (chapter_ == 0) ch1Refresh();
-  else ch2Refresh();
+  else if (chapter_ == 1) ch2Refresh();
+  else ch3Refresh();
 }
 
 void Game::storyDialogDone() {
@@ -153,10 +162,12 @@ void Game::storyDialogDone() {
   if (a == AFTER_EPISODE) {
     stage_++;
     if (chapter_ == 0) ch1EpisodeDone();
-    else ch2EpisodeDone();
+    else if (chapter_ == 1) ch2EpisodeDone();
+    else ch3EpisodeDone();
   } else if (a == AFTER_EVENT) {
     if (chapter_ == 0) ch1Event(afterEvent_);
-    else ch2Event(afterEvent_);
+    else if (chapter_ == 1) ch2Event(afterEvent_);
+    else ch3Event(afterEvent_);
   } else if (a == AFTER_SLEEP) {
     endChapter();
   }
@@ -206,8 +217,8 @@ void Game::drawBanner(Band& b) {
 }
 
 void Game::drawEnd(Band& b) {
-  static const char* const PLACES[] = {"KOŠICE", "SUCHO"};
-  static const char* const NEXT[] = {"Ďalšia kapitola : Sucho", "Ďalšia kapitola : Slovenský raj"};
+  static const char* const PLACES[] = {"KOŠICE", "SUCHO", "SLOVENSKÝ RAJ"};
+  static const char* const NEXT[] = {"Ďalšia kapitola : Sucho", "Ďalšia kapitola : Slovenský raj", "Pokračovanie nabudúce : Tatry"};
   b.fill(0x0841);
   b.fillRect(0, 50, SCREEN_W, 2, 0xFB00);
   b.fillRect(0, 188, SCREEN_W, 2, 0xFB00);

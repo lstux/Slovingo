@@ -24,6 +24,7 @@ struct ChapterInfo {
 const ChapterInfo CHAPTERS[NUM_CHAPTERS] = {
     {"Košice", "To si ty?", MAP_KOSICE_HLAVNA},
     {"Sucho", "Je horúco", MAP_SUCHO_ZAHRADA},
+    {"Slovenský raj", "Kam teraz?", MAP_RAJ_STANICA},
 };
 
 // FR d'un mot du Slovnik (vocabulaire du cours), ou ""
@@ -229,6 +230,7 @@ void Game::step(const Input& in) {
         default:
           break;
       }
+      if (state_ == S_WORLD && world_.stepped()) storyStep(world_.player().tx, world_.player().ty);
       break;
     case S_FADE:
       if (stateTime_ == FADE_HALF && warp_) {
@@ -407,6 +409,7 @@ void Game::renderBand(Band& b) {
       break;
     case S_WORLD:
       world_.render(b);
+      if (chapter_ == 2) ch3Hud(b);
       break;
     case S_DIALOG:
       world_.render(b);

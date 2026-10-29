@@ -1,0 +1,26 @@
+# Zajka Quest, chapitre 3 : la gare de Spisska Nova Ves, a l'entree du Paradis slovaque (episode 1 de Raj, « Kam teraz? »).
+#   ^ toit    H mur    h porte    N quai    R train    r porte du train    " herbe    p sentier    S sapin
+#   l banc    i lampadaire    P panneau
+name: Spišská Nová Ves
+ground: N
+music: -1
+1: start up
+2: warp raj_les 2 10 right on p
+3: npc andrea down
+4: npc human left say 13 0-1
+5: sign mapa on P
+6: sign les on P
+---
+SSSS^^^^^^^^^^^^^^^SSSSSSSSS
+SSSSHHHHHHHhHHHHHHHSSSSSSSSS
+SSSNNNNNNNNNNNNNNNNNNSSSSSSS
+SSSNN5NNNNiNNNlNiNNNN""""""S
+SSSNNNNNNNNNNNNNNNNNN"6""""S
+SSSNNNNNNNNNNNNNNNNNNpppppp2
+SSSNNNNNNNNNNNNNN4NNN""""""S
+SSSNNNNNNNNNNNNNNNNNN""""""S
+SSSNNNNNNNNNNNNNNNNNNSSSSSSS
+SSSNNNN13NNNNNNNNNNNNSSSSSSS
+SSSRRRRrRRRRRRRRRRRRRSSSSSSS
+SSSSSSSSSSSSSSSSSSSSSSSSSSSS
+SSSSSSSSSSSSSSSSSSSSSSSSSSSS

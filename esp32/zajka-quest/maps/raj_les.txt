@@ -1,0 +1,40 @@
+# Zajka Quest, chapitre 3 : la foret silencieuse, puis le ruisseau (episodes 2 et 3 de Raj).
+#   S sapin    o rocher    " herbe    p sentier    q ruisseau (on y boit)    P panneau
+name: Les
+ground: "
+music: -1
+1: warp raj_stanica 26 5 left on p
+2: warp raj_roklina 1 8 right on p
+%: zone les1 on p
+&: zone potok on p
+3: sign ticho on P
+4: sign tieň on P
+5: sign vtáky on P
+7: npc bird down say 14 0-1
+8: npc bird left say 14 0-1
+9: npc bird down say 14 0-1
+$: npc human down say 15 0-1
+;: sign potok on P
+---
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+SSSSSSSSSSSSS"""SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+SSSSSSSSSSSSS"4"SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+SSSSSSSSSSSSS"p"SSSSSSSSSSSSSSSSSSSSSS2SSSSqqSSS
+SSSSSSSSSSSSS"p"SoSSSSSSSSSSSSSSS"""""p""""qqSSS
+SSSSSSSSS"""""p"""""""SSSSSSSSSSS"""""p""""qqSSS
+SSSSSSSSS"ppppppppppp"SSSSSSSSSSS""o""p"$""qqSSS
+SSSSSSSSS"p"""""""""p"SSSSSSSSSSS"""""p""""qqSSS
+SSSSSSSoS"p"oS""""""p"SoSSSSS"""""""""p""""qqSSS
+""""""""7"p"SS"pppppp"SSSSSSS"ppp""&""p""""qqSSS
+1pp%ppppppp"SS""""""p"SSSSSSS"p9"""""""""""qqSSS
+"""""p""""""SSSSSSS"p"SSSSoSS"p"So"""""""""qqSSS
+SSSo"p"SSSSSSSSSSSS"p"8"""""""p"S""""""";""qqSSS
+SSSS"p"SoSSSSSSSSSS"ppppppppppp"S"""""""o""qqSSS
+SSSS"p"SSSSSSSSSSSS"""""p"""""""S""""""""""qqSSS
+SSSS"p"SSSSSSSSSSSSSSSS"p"SSoSSSS""""""""""qqSSS
+SSSS"3"SSSSSSSSSSSSSSSS"p"SSSSSSSSSSSSSSSSSqqSSS
+SSSS"""SSSSSSSSSSSSSSSS"p"SSSSSSSSSSSSSSSSSqqSSS
+SSSSSSSSSSSSSSSSSSSSSSS"5"SSSSSSSSSSSSSSSSSSSSSS
+SSSSSSSSSSSSSSSSSSSSSSS"""SSSSSSSSSSSSSSSSSSSSSS
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS

@@ -86,13 +86,25 @@ TILESET = [
     ("N", "sol_gare", "W"),
     ("R", "train", "S"),
     ("r", "porte_train", "W"),
+    # chapitre 3 : Slovensky raj (foret, ruisseau, gorge aux echelles et aux planches, camp de nuit)
+    ("S", "sapin", "S"),
+    ("p", "sentier", "W"),
+    ("o", "rocher", "S"),
+    ("C", "falaise", "S"),
+    ("q", "ruisseau", "S"),
+    ("v", "eau_gorge", "W"),     # on n'y marche pas : on tombe (chapter3.cpp)
+    ("L", "planche", "W"),       # cede quand le renard la quitte
+    ("u", "rebrik", "W"),
+    ("n", "most", "W"),
+    ("a", "dalle", "W"),
+    ("Q", "ohnisko", "S"),
 ]
 TILE_INDEX = {c: i for i, (c, _, _) in enumerate(TILESET)}
 TILE_KINDS = {"W": "TK_WALK", "S": "TK_SOLID", "O": "TK_OVER"}
 TILES_PER_ROW = 16
 THEMES = ["kosice"]
 DIRS = {"down": "DIR_DOWN", "up": "DIR_UP", "left": "DIR_LEFT", "right": "DIR_RIGHT"}
-NPCS = {"andrea": "SPK_ANDREA", "fox": "SPK_FOX", "mouse": "SPK_MOUSE", "chick": "SPK_CHICK", "mato": "SPK_MATO", "katka": "SPK_KATKA", "babka": "SPK_BABKA",
+NPCS = {"andrea": "SPK_ANDREA", "fox": "SPK_FOX", "mouse": "SPK_MOUSE", "chick": "SPK_CHICK", "bird": "SPK_BIRD", "orol": "SPK_OROL", "mato": "SPK_MATO", "katka": "SPK_KATKA", "babka": "SPK_BABKA",
         "jan": "SPK_JAN", "marek": "SPK_MAREK", "human": "SPK_HUMAN"}
 
 
@@ -396,7 +408,7 @@ def main():
         o.image(f"portrait_{c_ident(who)}", Image.open(p))
         portraits[spk] = f"&portrait_{c_ident(who)}"
     order = ["SPK_NONE", "SPK_NARRATOR", "SPK_FOX", "SPK_ANDREA", "SPK_MATO", "SPK_KATKA", "SPK_BABKA",
-             "SPK_OROL", "SPK_JEZKOVA", "SPK_HUMAN", "SPK_JAN", "SPK_MAREK", "SPK_MOUSE", "SPK_CHICK"]
+             "SPK_OROL", "SPK_JEZKOVA", "SPK_HUMAN", "SPK_JAN", "SPK_MAREK", "SPK_MOUSE", "SPK_CHICK", "SPK_BIRD"]
     o.data.append("const Image8* const PORTRAITS[SPK_COUNT] = { "
                   + ", ".join(portraits.get(k, "nullptr") for k in order) + " };\n")
     o.decl.append("extern const Image8* const PORTRAITS[SPK_COUNT];")

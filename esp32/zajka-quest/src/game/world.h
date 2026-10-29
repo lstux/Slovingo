@@ -97,6 +97,9 @@ class World {
   Walker& npc(int i) { return npc_[i]; }
   const Walker& npc(int i) const { return npc_[i]; }
   int npcCount() const { return nnpc_; }
+  // l'histoire change une tuile de la carte (une planche qui cede) ; effacé au chargement d'une carte
+  void setTile(int tx, int ty, int tile);
+  bool stepped() const { return stepped_; }  // le renard vient d'arriver sur une case (steppedX / steppedY)
   const MapMark* pendingWarp() const { return warp_; }
   const MapMark* event() const { return event_; }
   int talkNpc() const { return talk_; }
@@ -111,7 +114,7 @@ class World {
   void moveWalker(Walker& w, int speed);
   void placeFollower();
   void updateCamera();
-  void drawTiles(Band& b, const uint8_t* layer, bool skipEmpty);
+  void drawTiles(Band& b, const uint8_t* layer, bool skipEmpty, bool isBase = false);
   void drawWalker(Band& b, const Walker& w);
 
   const MapDef* map_ = nullptr;
@@ -128,6 +131,10 @@ class World {
   const MapMark* warp_ = nullptr;
   const MapMark* event_ = nullptr;
   const uint8_t* picked_ = nullptr;
+  static constexpr int MAX_OVR = 48;
+  uint8_t ovrX_[MAX_OVR] = {}, ovrY_[MAX_OVR] = {}, ovrT_[MAX_OVR] = {};  // tuiles changees par l'histoire
+  int nOvr_ = 0;
+  bool stepped_ = false;
   int talk_ = -1;
   int inspectX_ = -1, inspectY_ = -1;
   uint32_t frame_ = 0;

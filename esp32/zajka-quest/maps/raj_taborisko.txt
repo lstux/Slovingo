@@ -1,0 +1,25 @@
+# Zajka Quest, chapitre 3 : le soir, au camp pres du ruisseau (episode 6 de Raj, « Pri potoku »).
+#   " herbe    Q feu de camp    q ruisseau    o rocher    S sapin
+name: Pri potoku
+ground: "
+music: -1
+night: 1
+1: warp raj_orol 28 6 left on "
+2: start right
+---
+SSSSSSSSSSSSSSSSSSSSSSSS
+SSSSSSSSSSSSSSSSSSSSSSSS
+SSSSSSSSSSSSSSSSSSqqSSSS
+SS"""""""o""""""""qqSSSS
+SS""""""""""""""""qqSSSS
+SS"""o""""""""o"""qqSSSS
+SS""""""""""""""""qqSSSS
+SS""""""""""""""""qqSSSS
+1""2""""""Q"""""""qqSSSS
+SS""""""""""""""""qqSSSS
+SS"o""""""""""""""qqSSSS
+SS""""""""""""""""qqSSSS
+SS""""o""""""""o""qqSSSS
+SS""""""""""""""""qqSSSS
+SSSSSSSSSSSSSSSSSSqqSSSS
+SSSSSSSSSSSSSSSSSSSSSSSS

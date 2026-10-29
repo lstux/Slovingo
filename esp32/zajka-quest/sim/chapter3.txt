@@ -1,0 +1,20 @@
+# Le chapitre 3 en entier (a lancer avec --chapter 3 --auto) : la gare (episode 1), la foret
+# silencieuse (episode 2), le ruisseau (episode 3, on boit, Andrea), la gorge (episode 4, le champ de
+# planches : une seule solution), pan Orol (episode 5), le camp du soir (episode 6), l'ecran de fin.
+# le chapitre, puis la gare : en haut jusqu'au quai du fond, puis a droite jusqu'au sentier et a la porte vers la foret
+go W10 U4 R20
+# la foret : la zone de l'episode 2, le sentier jusqu'au ruisseau (zone de l'episode 3)
+go R1 R7 U4 R10 D7 R10 U4 R5 W20
+# on va jusqu'au bord du ruisseau, on boit, on parle a Andrea (derriere nous)
+go R7 A W20 tL A W20
+# retour au sentier, jusqu'a la gorge
+go L4 U6 W20
+# la gorge : le seuil (episode 4), la dalle de depart, puis le champ de planches (14 planches)
+go R1 W20 R5
+go R1 U2 R5 D1 R2 D3 R1 W10
+# l'echelle, le pont, Andrea de l'autre cote, la porte vers le pan Orol
+go R2 U7 R12 A W20 R5
+# pan Orol
+go R16 W20 R12
+# le camp
+go W200

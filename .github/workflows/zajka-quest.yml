@@ -32,7 +32,7 @@ jobs:
           path: ~/.platformio
           key: pio-${{ runner.os }}-${{ hashFiles('esp32/zajka-quest/platformio.ini') }}
 
-      - name: Simulateur PC (cours embarque, chapitres 1 et 2 en entier, reprise)
+      - name: Simulateur PC (cours embarque, chapitres 1 a 3 en entier, reprise)
         run: |
           make -C sim
           ./build/sim --course
@@ -43,11 +43,15 @@ jobs:
           # la partie reprend au debut du chapitre 2
           ./build/sim --script sim/resume.txt --auto --save /tmp/zq.sav --out /tmp/zq --expect reprise,carte:sucho_zahrada
           # chapitre 2 : jardin, rue, parc (gouttes d'eau), centre, gare, fin
-          ./build/sim --chapter 2 --script sim/chapter2.txt --auto --out /tmp/zq --expect "chapitre,carte:sucho_zahrada,bonus:2,objet:voda,carte:sucho_cesta,mots:1,bonus:3,carte:sucho_park,bonus:4,objet:kvapkax5,parle:passant,parle:Andrea,bonus:6,objet:batoh,carte:sucho_cesta,carte:sucho_hlavna,bonus:7,carte:sucho_stanica,objet:lístky na vlak,fin,titre"
+          ./build/sim --chapter 2 --script sim/chapter2.txt --auto --out /tmp/zq --expect "chapitre,carte:sucho_zahrada,bonus:2,objet:voda,carte:sucho_cesta,mots:1,bonus:3,carte:sucho_park,bonus:4,objet:kvapkax5,parle:passant,parle:Andrea,bonus:6,objet:batoh,carte:sucho_cesta,carte:sucho_hlavna,bonus:7,carte:sucho_stanica,objet:lístky na vlak,fin,chapitre"
+          # chapitre 3 : gare, foret silencieuse, ruisseau, gorge (champ de planches), pan Orol, camp, fin
+          ./build/sim --chapter 3 --script sim/chapter3.txt --auto --out /tmp/zq --expect "chapitre,carte:raj_stanica,carte:raj_les,objet:fľaša,parle:Andrea,carte:raj_roklina,parle:Andrea,carte:raj_orol,objet:bunda,carte:raj_taborisko,fin"
           # sans traduction ouverte ni erreur, et seulement alors, les repliques secretes
           ./build/sim --script sim/chapter.txt --auto-peek --out /tmp/zq --expect carte:kosice_teta,parle:Andrea,bonus:0,fin
           ./build/sim --script sim/chapter.txt --auto-wrong --out /tmp/zq --expect carte:kosice_teta,parle:Andrea,bonus:0,fin
           ./build/sim --chapter 2 --script sim/chapter2.txt --auto-peek --out /tmp/zq --expect carte:sucho_stanica,bonus:0,fin
+          ./build/sim --chapter 3 --script sim/chapter3.txt --auto-peek --out /tmp/zq --expect carte:raj_taborisko,bonus:0,fin
+          ./build/sim --chapter 3 --script sim/chapter3.txt --auto-wrong --out /tmp/zq --expect carte:raj_taborisko,bonus:0,fin
 
       - name: PlatformIO
         run: pip install platformio

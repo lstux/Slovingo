@@ -16,6 +16,8 @@ const Sheet* sheetFor(Speaker s) {
     case SPK_ANDREA: return &walk_andrea;
     case SPK_MOUSE: return &walk_mouse;
     case SPK_CHICK: return &walk_chick;
+    case SPK_BIRD: return &walk_bird;
+    case SPK_OROL: return &walk_orol;
     default: return &walk_human;  // en attendant les autres planches
   }
 }
@@ -63,6 +65,8 @@ void World::load(int mapIndex, int tx, int ty, Dir dir) {
     n.sheet = sheetFor(m.npc);
     n.mark = &m;
   }
+  nOvr_ = 0;
+  stepped_ = false;
   turn_ = bumpWait_ = 0;
   waitRelease_ = true;  // sinon, la croix encore tenue ramenerait le renard dans la porte
   warp_ = event_ = nullptr;
@@ -131,13 +135,29 @@ void World::placeFollower() {
 
 bool World::walkable(int tx, int ty) const {
   if (tx < 0 || ty < 0 || tx >= map_->w || ty >= map_->h) return false;
-  if (map_->tiles->kinds[map_->base[ty * map_->w + tx]] == TK_SOLID) return false;
+  if (map_->tiles->kinds[tileAt(tx, ty)] == TK_SOLID) return false;
   return npcAt(tx, ty, false) < 0;  // on passe a travers celui qui nous suit
 }
 
 int World::tileAt(int tx, int ty) const {
   if (tx < 0 || ty < 0 || tx >= map_->w || ty >= map_->h) return 0;
+  for (int i = nOvr_ - 1; i >= 0; i--)
+    if (ovrX_[i] == tx && ovrY_[i] == ty) return ovrT_[i];
   return map_->base[ty * map_->w + tx];
+}
+
+void World::setTile(int tx, int ty, int tile) {
+  if (tx < 0 || ty < 0 || tx >= map_->w || ty >= map_->h) return;
+  for (int i = 0; i < nOvr_; i++)
+    if (ovrX_[i] == tx && ovrY_[i] == ty) {
+      ovrT_[i] = (uint8_t)tile;
+      return;
+    }
+  if (nOvr_ >= MAX_OVR) return;
+  ovrX_[nOvr_] = (uint8_t)tx;
+  ovrY_[nOvr_] = (uint8_t)ty;
+  ovrT_[nOvr_] = (uint8_t)tile;
+  nOvr_++;
 }
 
 int World::npcAt(int tx, int ty, bool withFollower) const {
@@ -165,6 +185,7 @@ WorldEvent World::step(const Input& in) {
   warp_ = event_ = nullptr;
   talk_ = -1;
   inspectX_ = inspectY_ = -1;
+  stepped_ = false;
   frame_++;
   if (bumpWait_ > 0) bumpWait_--;
   int speed = in.down(BTN_B) ? RUN_SPEED : WALK_SPEED;
@@ -172,6 +193,7 @@ WorldEvent World::step(const Input& in) {
   if (p_.left > 0) {
     moveWalker(p_, speed);
     if (p_.left == 0) {
+      stepped_ = true;
       // arrive sur une case : une porte, un objet, une zone ?
       for (int i = 0; i < map_->nMarks; i++) {
         const MapMark& m = map_->marks[i];
@@ -291,7 +313,7 @@ void World::updateCamera() {
   }
 }
 
-void World::drawTiles(Band& b, const uint8_t* layer, bool skipEmpty) {
+void World::drawTiles(Band& b, const uint8_t* layer, bool skipEmpty, bool isBase) {
   const Image8& img = *map_->tiles->img;
   int cols = img.w / TILE;
   int ty0 = (camY_ + b.y0) >> 4, ty1 = (camY_ + b.y0 + b.h - 1) >> 4;
@@ -299,7 +321,7 @@ void World::drawTiles(Band& b, const uint8_t* layer, bool skipEmpty) {
   for (int ty = ty0; ty <= ty1; ty++) {
     for (int tx = tx0; tx <= tx1; tx++) {
       int t = 0;
-      if (tx >= 0 && ty >= 0 && tx < map_->w && ty < map_->h) t = layer[ty * map_->w + tx];
+      if (tx >= 0 && ty >= 0 && tx < map_->w && ty < map_->h) t = isBase ? tileAt(tx, ty) : layer[ty * map_->w + tx];
       if (t == 0 && skipEmpty) continue;
       int dx = tx * TILE - camX_, dy = ty * TILE - camY_;
       if (t == 0) b.fillRect(dx, dy, TILE, TILE, 0x0000);
@@ -316,7 +338,7 @@ void World::drawWalker(Band& b, const Walker& w) {
 }
 
 void World::render(Band& b) {
-  drawTiles(b, map_->base, false);
+  drawTiles(b, map_->base, false, true);
   // objets a ramasser : posés sur leur case, ils sautillent un peu
   for (int i = 0; i < map_->nMarks; i++) {
     const MapMark& m = map_->marks[i];

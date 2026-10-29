@@ -2,7 +2,7 @@
 // Ecran titre (continuer / nouvelle partie), carte de chapitre, le monde (world.h), les
 // dialogues (dialog.h), le menu START (Batoh : objets, Slovnik : mots trouves, Ciel : objectif).
 // La partie est sauvegardee toute seule (save.h) en passant une porte et apres chaque conversation.
-// L'histoire de chaque chapitre est dans chapter1.cpp, chapter2.cpp (outils communs : story.cpp).
+// L'histoire de chaque chapitre est dans chapter1.cpp, chapter2.cpp, chapter3.cpp (outils communs : story.cpp).
 #pragma once
 #include <stdint.h>
 
@@ -18,7 +18,7 @@
 // S_END : fin du chapitre.
 enum GameState : uint8_t { S_TITLE, S_CHAPTER, S_WORLD, S_FADE, S_DIALOG, S_END, S_NOTE, S_MENU };
 
-constexpr int NUM_CHAPTERS = 2;
+constexpr int NUM_CHAPTERS = 3;
 
 class Game {
  public:
@@ -71,6 +71,7 @@ class Game {
   void storyDialogDone();
   bool storyWarp(const MapMark& m);  // false : l'histoire retient le renard (Andrea : « Najprv... »)
   void storyRefresh();  // qui est la, qui suit (apres un chargement de carte ou un changement)
+  void storyStep(int tx, int ty);  // le renard vient d'arriver sur cette case
   void playEpisode(int ep, int from, int to, After after, bool banner, int event = 0);
   void say(const Line* lines, int n, int bonusEpisode, After after, int event = 0);
   void sayScript(int script, After after = AFTER_NOTHING, int event = 0);
@@ -102,6 +103,19 @@ class Game {
   void ch2Refresh();
   bool ch2Warp(const MapMark& m);
   int ch2Goal() const;
+
+  // ---- chapitre 3 : Slovensky raj (chapter3.cpp)
+  void ch3EnteredMap();
+  void ch3Talk(const Walker& w);
+  void ch3Inspect(int tx, int ty);
+  void ch3Zone(const MapMark& m);
+  void ch3Event(int event);
+  void ch3EpisodeDone();
+  void ch3Refresh();
+  bool ch3Warp(const MapMark& m);
+  void ch3Step(int tx, int ty);
+  void ch3Hud(Band& b);  // l'oreille de la foret (« Pocujes ? ») : plus on approche du ruisseau, plus on entend
+  int ch3Goal() const;
 
   Audio* audio_ = nullptr;
   GameState state_ = S_TITLE;
@@ -139,4 +153,6 @@ class Game {
   After after_ = AFTER_NOTHING;    // ce qui suit la conversation en cours
   int afterEvent_ = 0;             // AFTER_EVENT : quel evenement du chapitre
   int banner_ = 0, bannerEp_ = 0;  // titre de l'episode qui commence (images restantes)
+  int plankX_ = -1, plankY_ = -1;  // chapitre 3 : la planche sur laquelle se trouve le renard
+  int listen_ = 0;                 // chapitre 3 : barres de l'oreille (0 a 5)
 };

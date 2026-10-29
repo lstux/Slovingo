@@ -24,6 +24,7 @@ enum Speaker : uint8_t {
   SPK_MAREK,     // 🦡 Marek
   SPK_MOUSE,     // 🐭 (figurant)
   SPK_CHICK,     // 🐥 (figurant)
+  SPK_BIRD,      // 🐦 (figurant : les oiseaux de la foret)
   SPK_COUNT
 };
 

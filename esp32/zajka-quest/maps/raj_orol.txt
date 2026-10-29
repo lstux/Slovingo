@@ -1,0 +1,24 @@
+# Zajka Quest, chapitre 3 : au bout de la gorge, pan Orol (episode 5 de Raj, « Na konci rokliny »).
+#   " herbe    p sentier    o rocher    a dalle    S sapin    P panneau
+name: Koniec rokliny
+ground: "
+music: -1
+1: warp raj_roklina 34 3 left on p
+2: warp raj_taborisko 3 8 right on p
+%: zone orol on p
+3: npc orol down id orol on a
+4: sign skala on P
+5: sign v_horách on P
+---
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+SSSSSSSSSSSSSS"""""""""""""SSS
+SSSS"""""""o""""""""""o"""""""
+""""o"""""""""""o"""a3a""""o""
+""""""""""4"""""""""aaa"""""""
+1pppppppppppppppp%ppppppppppp2
+""o""""""""""""""""""""5""o"""
+SS"""""o""""o"""""""""""o"""""
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+SSSSSSSSSSSSSSSSSSSSSSSSSSSSSS

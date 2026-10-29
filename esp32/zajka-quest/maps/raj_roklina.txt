@@ -1,0 +1,32 @@
+# Zajka Quest, chapitre 3 : la gorge (episode 4 de Raj, « Rebriky »). Le puzzle : le champ de planches.
+#   a dalle (on peut s'y arreter)    L planche (cede quand le renard la quitte)    v eau (on tombe)
+#   q eau profonde    C falaise    u echelle    n pont    P panneau
+# Le champ de planches (x 8 a 15, y 6 a 11) a une seule solution, verifiee par tools/check_planches.py.
+name: Roklina
+ground: a
+music: -1
+1: warp raj_les 38 4 down on a
+2: warp raj_orol 1 6 right on a
+%: zone roklina on a
+3: npc andrea left id andrea_roklina on a
+4: npc human right say 16 0-1 on a
+5: sign roklina on P
+6: sign rebrík on P
+7: sign most on P
+8: sign hore on P
+9: sign dole on P
+---
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCqqqqqqqqqqaaaaaaC
+CCCCCCCCCCCCCCCCC7nnnnnnnnnnnaa3aaa2
+CCCCCCCCCCCCCCCCCCuqqqqqqqqqqaaaaaaC
+CCCCCCCCqqqqqqqqCCuCCCCCCCCCCCCCCCCC
+CCCCCCCCLLLLLLvLCCu8CCCCCCCCCCCCCCCC
+aa5aaaaqLvLvvLLLCCuCCCCCCCCCCCCCCCCC
+1a%aaaaaLLvLvLvLC9uCCCCCCCCCCCCCCCCC
+aaaa4aaqLLLLLvLLCCu6CCCCCCCCCCCCCCCC
+CCCCCCCCLLLLLLvLaaaaCCCCCCCCCCCCCCCC
+CCCCCCCCLLLLLLvLCaaaCCCCCCCCCCCCCCCC
+CCCCCCCCqqqqqqqqCCCCCCCCCCCCCCCCCCCC
+CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC

@@ -56,6 +56,12 @@ EPISODES = [
     "10_Series_02_Sucho_04_co-budeme-robit",
     "10_Series_02_Sucho_05_fontana",
     "10_Series_02_Sucho_06_extra",
+    "10_Series_03_Raj_01_kam-teraz",
+    "10_Series_03_Raj_02_pocujes",
+    "10_Series_03_Raj_03_je-tu-voda",
+    "10_Series_03_Raj_04_rebriky",
+    "10_Series_03_Raj_05_roklina",
+    "10_Series_03_Raj_06_extra",
 ]
 
 # emoji du cours -> constante Speaker de src/game/course.h, nom affiche dans la boite de dialogue
@@ -74,6 +80,7 @@ SPEAKERS = [
     ("🦡", "SPK_MAREK", "Marek"),
     ("🐭", "SPK_MOUSE", ""),
     ("🐥", "SPK_CHICK", ""),
+    ("🐦", "SPK_BIRD", ""),
 ]
 EXERCISE_TYPES = {"qcm": "EX_QCM", "listen": "EX_LISTEN", "order": "EX_ORDER"}
 FONT_CHARS = set(CHARSET)

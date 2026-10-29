@@ -43,3 +43,21 @@
 
 [10_Series_02_Sucho_05_fontana]
 🐰 Hovoríš ako pravý Slovák. | Tu parles comme un vrai Slovaque.
+
+[10_Series_03_Raj_01_kam-teraz]
+🐰 Rýchlo sa učíš! | Tu apprends vite !
+
+[10_Series_03_Raj_02_pocujes]
+🐰 Dobre počuješ! | Tu entends bien !
+
+[10_Series_03_Raj_03_je-tu-voda]
+🐰 Dobre, napi sa ešte. | Bon, bois encore un peu.
+
+[10_Series_03_Raj_04_rebriky]
+🐰 Nebojíš sa. Super. | Tu n'as pas peur. Super.
+
+[10_Series_03_Raj_05_roklina]
+🦅 Hovoríte veľmi pekne. | Vous parlez très bien.
+
+[10_Series_03_Raj_06_extra]
+🐰 Dobrú noc, líška. | Bonne nuit, renard.
