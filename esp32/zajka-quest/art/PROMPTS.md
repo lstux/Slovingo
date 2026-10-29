@@ -138,7 +138,7 @@ Three small objects, each one centred in its own square cell of a grid of 1 row 
 
 ```
 16-bit pixel art for a top-down RPG in the style of Pokémon Gold and Zelda: A Link to the Past (Super Nintendo), seen from above at a slight 3/4 angle. Crisp chunky pixels, hard edges, no anti-aliasing, no blur, limited palette (about 32 colours), hot dry summer light. No text, no labels, no numbers, no watermark.
-A tileset for a town in Slovakia during a drought: a grid of 2 rows x 4 columns of SQUARE tiles separated by thin black lines, each one must read clearly at 16x16 pixels. In reading order:
+A tileset for a town in Slovakia during a drought: a grid of 2 rows x 4 columns of SQUARE tiles separated by thin black lines, each one must read clearly at 16x16 pixels. Every tile fills its whole square, edge to edge. In reading order:
 1. an empty square stone fountain basin, its bottom dry and cracked, on grey cobblestones;
 2. shallow blue pond water (seamless);
 3. dry cracked mud at the bottom of a dried-out pond (seamless);
@@ -158,8 +158,14 @@ posés par terre. Importer chaque case avec `import_ai.py tileset` n'a pas de se
 la main ou redessiner sur les icônes de `art/items/` (16 × 16, fond transparent).
 
 ```
-16-bit pixel art icons for an RPG inventory, in the style of Pokémon Gold (Super Nintendo era). Crisp chunky pixels, hard edges, no anti-aliasing, a dark outline, limited palette. No text, no labels, no numbers, no watermark.
-Six small icons, each centred in its own square cell of a grid of 2 rows x 3 columns, on a flat solid magenta #FF00FF background, no shadow, no grid lines; each must read clearly at 16x16 pixels. In reading order: a yellow tram ticket; a small plastic bottle of water; a single blue water drop; a yellow-orange backpack; a folded paper map with a red route; two green train tickets.
+16-bit pixel art icons for an RPG inventory, in the style of Pokémon Gold (Super Nintendo era). Crisp chunky pixels, hard edges, no anti-aliasing, thick dark outlines, limited palette (about 24 colours). No text, no labels, no numbers, no watermark.
+Six chunky, exaggerated icons, each one centred in its own square cell of a grid of EXACTLY 2 rows x 3 columns (no more, no fewer), on a flat solid magenta #FF00FF background: no ground, no shadow, no grid lines. Each icon fills at least 80% of its cell and must read clearly at 16x16 pixels. In reading order:
+1. a yellow tram ticket;
+2. a small plastic bottle of water;
+3. a single blue water drop;
+4. a yellow-orange backpack;
+5. a folded paper map with a red route;
+6. two green train tickets.
 ```
 
 ## Les personnages qui marchent (16 × 24)
@@ -211,7 +217,7 @@ dessin suffit, le jeu le réutilise dans les quatre sens.
 
 ```
 16-bit pixel art in the style of Pokémon Gold (Super Nintendo era). Crisp chunky pixels, hard edges, no anti-aliasing, a dark outline, limited palette (about 16 colours). No text, no labels, no grid lines, no watermark.
-Two tiny cute animals of a town park, side by side, each centred in its own square cell of a grid of 1 row x 2 columns: a small grey mouse with pink ears sitting up, and a fluffy yellow chick. Both seen from the front, looking a little thirsty and sad. Each must read clearly at 16x12 pixels. Flat solid magenta #FF00FF background everywhere, no ground, no shadow.
+Two tiny cute animals of a town park, side by side, each centred in its own square cell of a grid of EXACTLY 1 row x 2 columns (no more, no fewer), thick bold shapes, filling at least 80% of the height of its cell: a small grey mouse with pink ears sitting up, and a fluffy yellow chick. Both seen from the front, looking a little thirsty and sad. Each must read clearly at 16x12 pixels. No ground, no shadow. Flat solid magenta #FF00FF background everywhere, no ground, no shadow.
 ```
 
 Pour l'instant, à découper à la main dans `art/walk/mouse_16x24.png` et `chick_16x24.png`
