@@ -231,6 +231,7 @@ void Game::step(const Input& in) {
           break;
       }
       if (state_ == S_WORLD && world_.stepped()) storyStep(world_.player().tx, world_.player().ty);
+      if (state_ == S_WORLD) idleHint();
       break;
     case S_FADE:
       if (stateTime_ == FADE_HALF && warp_) {
@@ -279,6 +280,23 @@ void Game::step(const Input& in) {
       }
       break;
   }
+}
+
+// Le joueur tourne en rond : apres IDLE_HINT images sans que l'objectif change, on le lui rappelle
+// (le meme texte que « Ciel » dans le menu START), puis de nouveau un peu plus tard.
+void Game::idleHint() {
+  constexpr int IDLE_HINT = 75 * 60, IDLE_AGAIN = 150 * 60;
+  int g = goal();
+  if (g != idleGoal_) {
+    idleGoal_ = g;
+    idle_ = 0;
+    return;
+  }
+  if (++idle_ < IDLE_HINT) return;
+  idle_ = IDLE_HINT - IDLE_AGAIN;
+  const Line& l = SCRIPTS[g].lines[0];
+  audio_->play(SFX_PAUSE);
+  note("Cieľ", l.sk, l.fr);
 }
 
 // ---------------------------------------------------------------- petit message
@@ -409,6 +427,7 @@ void Game::renderBand(Band& b) {
       break;
     case S_WORLD:
       world_.render(b);
+      if (chapter_ == 1) ch2Hud(b);
       if (chapter_ == 2) ch3Hud(b);
       break;
     case S_DIALOG:

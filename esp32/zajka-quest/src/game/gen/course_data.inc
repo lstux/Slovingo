@@ -73,7 +73,7 @@ static const Exercise ep0_exercises[10] = {
   {EX_ORDER, "order-ty-si-tu-v-ko-iciach-v-elektri-ke", "Ty si tu? V Košiciach? V električke?", "Tu es là ? À Košice ? Dans le tram ?", nullptr, nullptr, 0, ep0_x9_tsk, ep0_x9_tfr, 3},
 };
 static const Line ep0_bonus[2] = {
-  {SPK_ANDREA, "Stále vieš po slovensky!", "Tu parles toujours slovaque !", nullptr, 0, nullptr, nullptr},
+  {SPK_ANDREA, "Ešte stále vieš po slovensky!", "Tu parles toujours slovaque !", nullptr, 0, nullptr, nullptr},
   {SPK_ANDREA, "Hovoríš ako Slovák!", "Tu parles comme un Slovaque !", nullptr, 0, nullptr, nullptr},
 };
 static const Episode ep0 = { "10_Series_01_Kosice_01_to-si-ty", "Košice", 1, 1, "To si ty?", "Košice",
@@ -157,12 +157,12 @@ static const char* const ep2_dialog_c1_items[4] = { "Nie,", "bývam v Lyone.", "
 static const Choice ep2_dialog_c1 = { CH_ORDER, "order-nie-b-vam-v-lyone-som-tu-na-pr-zdnin-ch", ep2_dialog_c1_items, 4 };
 static const Gloss ep2_dialog_g2[1] = { {"Sám", "seul"} };
 static const Gloss ep2_dialog_g3[2] = { {"Áno", "oui"}, {"sám", "seul"} };
-static const char* const ep2_dialog_c3_items[3] = { "Áno, sám.", "Áno, asi.", "Áno, vie." };
-static const Choice ep2_dialog_c3 = { CH_PICK, "qcm-s-m", ep2_dialog_c3_items, 3 };
+static const char* const ep2_dialog_c3_items[3] = { "Áno, sám.", "Áno, sama.", "Áno, sami." };
+static const Choice ep2_dialog_c3 = { CH_PICK, "fix", ep2_dialog_c3_items, 3 };
 static const Gloss ep2_dialog_g4[4] = { {"A", "et"}, {"tvoja mama", "ta maman"}, {"o tom", "de ça"}, {"vie", "sait"} };
 static const Gloss ep2_dialog_g5[2] = { {"Vie", "elle sait"}, {"Asi", "je crois, sans doute"} };
-static const char* const ep2_dialog_c5_items[3] = { "Vie. Asi.", "Vie. Sám.", "Vie. Čo." };
-static const Choice ep2_dialog_c5 = { CH_PICK, "qcm-asi", ep2_dialog_c5_items, 3 };
+static const char* const ep2_dialog_c5_items[3] = { "Vie. Asi.", "Viem. Asi.", "Vedia. Asi." };
+static const Choice ep2_dialog_c5 = { CH_PICK, "fix", ep2_dialog_c5_items, 3 };
 static const Gloss ep2_dialog_g6[1] = { {"Fajn", "ok, bon"} };
 static const Line ep2_dialog[7] = {
   {SPK_ANDREA, "Čo tu robíš? Bývaš v Košiciach?", "Qu'est-ce que tu fais ici ? Tu habites à Košice ?", ep2_dialog_g0, 3, nullptr, nullptr},
@@ -227,8 +227,8 @@ static const Episode ep2 = { "10_Series_01_Kosice_03_co-tu-robis", "Košice", 1,
   ep2_dialog, 7, ep2_extra, 2, ep2_words, 10, ep2_exercises, 10, ep2_bonus, 1 };
 
 static const Gloss ep3_dialog_g0[2] = { {"Pamätáš sa", "tu te souviens"}, {"na Tatry", "des Tatras"} };
-static const char* const ep3_dialog_c0_items[3] = { "Pamätáš sa na Tatry?", "Pamätám sa na Tatry?", "Všetko na Tatry?" };
-static const Choice ep3_dialog_c0 = { CH_PICK, "qcm-pam-t-sa", ep3_dialog_c0_items, 3 };
+static const char* const ep3_dialog_c0_items[3] = { "Pamätáš sa na Tatry?", "Pamätám sa na Tatry?", "Pamätá sa na Tatry?" };
+static const Choice ep3_dialog_c0 = { CH_PICK, "fix", ep3_dialog_c0_items, 3 };
 static const Gloss ep3_dialog_g1[4] = { {"Pamätám sa", "je me souviens"}, {"na všetko", "de tout"}, {"Aj na to", "même de ça"}, {"ako som sa ťa bála", "comme j'avais peur de toi"} };
 static const Gloss ep3_dialog_g2[3] = { {"Veď", "mais enfin"}, {"som bol", "j'étais"}, {"milý", "gentil"} };
 static const Gloss ep3_dialog_g3[4] = { {"Bol", "tu l'étais"}, {"To bolo", "c'était"}, {"na tom", "là-dedans"}, {"divné", "bizarre"} };
@@ -314,12 +314,12 @@ static const Gloss ep4_dialog_g1[3] = { {"Košice sú super", "Košice, c'est su
 static const Gloss ep4_dialog_g2[4] = { {"viem po slovensky", "je sais le slovaque"}, {"Skoro všetko", "presque tout"}, {"pamätám sa na", "je me souviens de"}, {"každé slovo", "chaque mot"} };
 static const Gloss ep4_dialog_g3[5] = { {"Líšky", "les renards"}, {"veľa", "beaucoup"}, {"rozprávajú", "ils parlent"}, {"A sú komplikované", "et ils sont compliqués"}, {"ako mimozemšťania", "comme des extraterrestres"} };
 static const Gloss ep4_dialog_g4[3] = { {"Ale", "mais"}, {"ja som", "moi, je suis"}, {"tvoj kamarát", "ton copain"} };
-static const char* const ep4_dialog_c4_items[3] = { "Ale ja som tvoj kamarát!", "Ale ja som tvoj kostol!", "Ale ja som tvoj dóm!" };
-static const Choice ep4_dialog_c4 = { CH_PICK, "qcm-kamar-t", ep4_dialog_c4_items, 3 };
+static const char* const ep4_dialog_c4_items[3] = { "Ale ja som tvoj kamarát!", "Ale ja som tvoja kamarátka!", "Ale ja som tvoj kostol!" };
+static const Choice ep4_dialog_c4 = { CH_PICK, "fix", ep4_dialog_c4_items, 3 };
 static const Gloss ep4_dialog_g5[3] = { {"Áno", "oui"}, {"Ale", "mais"}, {"si líška", "tu es un renard"} };
 static const Gloss ep4_dialog_g6[3] = { {"Ja", "moi"}, {"Ja som", "moi, je suis"}, {"jednoduchý", "simple"} };
-static const char* const ep4_dialog_c6_items[3] = { "Ja? Ja som jednoduchý!", "Ja? Ja som komplikované!", "Ja? Ja som milý!" };
-static const Choice ep4_dialog_c6 = { CH_PICK, "qcm-jednoduch", ep4_dialog_c6_items, 3 };
+static const char* const ep4_dialog_c6_items[3] = { "Ja? Ja som jednoduchý!", "Ja? Ja som jednoduchá!", "Ja? Ja som jednoduché!" };
+static const Choice ep4_dialog_c6 = { CH_PICK, "fix", ep4_dialog_c6_items, 3 };
 static const Gloss ep4_dialog_g7[1] = { {"Nie", "non"} };
 static const Gloss ep4_dialog_g8[1] = { {"Aha", "ah, d'accord"} };
 static const Gloss ep4_dialog_g9[1] = { {"Vidíš", "tu vois"} };
@@ -395,7 +395,7 @@ static const Exercise ep4_exercises[12] = {
   {EX_ORDER, "order-to-je-moja-zast-vka-po", "To je moja zastávka. Poď!", "C'est mon arrêt. Viens !", nullptr, nullptr, 0, ep4_x11_tsk, ep4_x11_tfr, 3},
 };
 static const Line ep4_bonus[2] = {
-  {SPK_ANDREA, "Dobre, si trochu jednoduchý.", "Bon, tu es un peu simple.", nullptr, 0, nullptr, nullptr},
+  {SPK_ANDREA, "Nie si až taký jednoduchý!", "Tu n'es pas si simple que ça !", nullptr, 0, nullptr, nullptr},
   {SPK_ANDREA, "Hovoríš ako Košičan!", "Tu parles comme quelqu'un de Košice !", nullptr, 0, nullptr, nullptr},
 };
 static const Episode ep4 = { "10_Series_01_Kosice_05_v-elektricke", "Košice", 1, 5, "V električke", "Košice",
@@ -453,7 +453,7 @@ static const Exercise ep5_exercises[9] = {
   {EX_ORDER, "order-nemus-teta-o-tebe-nevie", "Nemusíš. Teta o tebe nevie.", "Tu n'as pas à avoir peur. Ma tante ne sait pas que tu es là.", nullptr, nullptr, 0, ep5_x8_tsk, ep5_x8_tfr, 3},
 };
 static const Line ep5_bonus[1] = {
-  {SPK_ANDREA, "Spi dobre, líška.", "Dors bien, renard.", nullptr, 0, nullptr, nullptr},
+  {SPK_ANDREA, "Dobre sa vyspi, líška.", "Dors bien, renard.", nullptr, 0, nullptr, nullptr},
 };
 static const Episode ep5 = { "10_Series_01_Kosice_06_extra", "Košice", 1, 6, "Dobrú noc", "Košice",
   ep5_dialog, 12, nullptr, 0, nullptr, 0, ep5_exercises, 9, ep5_bonus, 1 };
@@ -550,8 +550,8 @@ static const char* const ep7_dialog_c7_items[3] = { "Aha.", "Som", "líška." };
 static const Choice ep7_dialog_c7 = { CH_ORDER, "order-aha-som-l-ka", ep7_dialog_c7_items, 3 };
 static const Gloss ep7_dialog_g8[4] = { {"Správne", "exact"}, {"líščí je to", "« líščí », c'est ce"}, {"čo patrí líške", "qui appartient au renard"}, {"líščí chvost", "une queue de renard"} };
 static const Gloss ep7_dialog_g9[4] = { {"Takže", "donc"}, {"môj chvost", "ma queue"}, {"je líščí", "est de renard"}, {"A ja som líška", "et moi, je suis un renard"} };
-static const char* const ep7_dialog_c9_items[3] = { "Takže môj chvost je líščí. A ja som líška.", "Takže môj hovorím je líščí. A ja som líška.", "Takže môj presne je líščí. A ja som líška." };
-static const Choice ep7_dialog_c9 = { CH_PICK, "qcm-chvost", ep7_dialog_c9_items, 3 };
+static const char* const ep7_dialog_c9_items[3] = { "Takže môj chvost je líščí. A ja som líška.", "Takže môj chvost je zajačí. A ja som líška.", "Takže môj chvost je líščí. A ja som zajac." };
+static const Choice ep7_dialog_c9 = { CH_PICK, "fix", ep7_dialog_c9_items, 3 };
 static const Gloss ep7_dialog_g10[1] = { {"Presne", "exactement"} };
 static const Gloss ep7_dialog_g11[3] = { {"Teraz", "maintenant"}, {"to chápem", "je comprends"}, {"Skoro", "presque"} };
 static const Line ep7_dialog[12] = {
@@ -699,14 +699,14 @@ static const Episode ep8 = { "10_Series_02_Sucho_03_chyba-mi-voda", "Sucho", 2, 
   ep8_dialog, 7, ep8_extra, 2, ep8_words, 10, ep8_exercises, 11, ep8_bonus, 1 };
 
 static const Gloss ep9_dialog_g0[2] = { {"Čo", "quoi"}, {"budeme robiť", "nous allons faire"} };
-static const char* const ep9_dialog_c0_items[3] = { "Čo budeme robiť?", "Čo ideme robiť?", "Čo spí robiť?" };
-static const Choice ep9_dialog_c0 = { CH_PICK, "qcm-budeme", ep9_dialog_c0_items, 3 };
+static const char* const ep9_dialog_c0_items[3] = { "Čo budeme robiť?", "Čo budem robiť?", "Čo bude robiť?" };
+static const Choice ep9_dialog_c0 = { CH_PICK, "fix", ep9_dialog_c0_items, 3 };
 static const Gloss ep9_dialog_g1[2] = { {"Hľadať vodu", "chercher de l'eau"}, {"Inde", "ailleurs"} };
 static const Gloss ep9_dialog_g2[1] = { {"Kde", "où"} };
 static const Gloss ep9_dialog_g3[4] = { {"Na západe", "à l'ouest"}, {"je Slovenský raj", "il y a le Paradis slovaque"}, {"Tam sú", "là-bas, il y a"}, {"potoky", "des ruisseaux"} };
 static const Gloss ep9_dialog_g4[2] = { {"Slovenský raj", "le Paradis slovaque"}, {"To je ďaleko", "c'est loin"} };
-static const char* const ep9_dialog_c4_items[3] = { "Slovenský raj? To je ďaleko!", "Slovenský raj? To je inde!", "Slovenský raj? To je len!" };
-static const Choice ep9_dialog_c4 = { CH_PICK, "qcm-aleko", ep9_dialog_c4_items, 3 };
+static const char* const ep9_dialog_c4_items[3] = { "Slovenský raj? To je ďaleko!", "Slovenský raj? To je blízko!", "Slovenský raj? To je ďaleký!" };
+static const Choice ep9_dialog_c4 = { CH_PICK, "fix", ep9_dialog_c4_items, 3 };
 static const Gloss ep9_dialog_g5[2] = { {"Veľmi", "très"}, {"ďaleko", "loin"} };
 static const Gloss ep9_dialog_g6[2] = { {"A škola", "et l'école"}, {"A tvoja teta", "et ta tante"} };
 static const char* const ep9_dialog_c6_items[3] = { "A škola?", "A tvoja", "teta?" };
@@ -897,15 +897,18 @@ static const Exercise ep11_exercises[8] = {
   {EX_ORDER, "order-dobr-de-dva-l-stky-na-vlak-pros-m", "Dobrý deň. Dva lístky na vlak, prosím.", "Bonjour. Deux billets de train, s'il vous plaît.", nullptr, nullptr, 0, ep11_x6_tsk, ep11_x6_tfr, 4},
   {EX_ORDER, "order-dva-l-stky-astn-cestu", "Dva lístky. Šťastnú cestu.", "Deux billets. Bon voyage.", nullptr, nullptr, 0, ep11_x7_tsk, ep11_x7_tfr, 3},
 };
+static const Line ep11_bonus[1] = {
+  {SPK_ANDREA, "Dobrý cestovateľ!", "Un bon voyageur !", nullptr, 0, nullptr, nullptr},
+};
 static const Episode ep11 = { "10_Series_02_Sucho_06_extra", "Sucho", 2, 6, "Na stanici", "Sucho",
-  ep11_dialog, 12, nullptr, 0, nullptr, 0, ep11_exercises, 8, nullptr, 0 };
+  ep11_dialog, 12, nullptr, 0, nullptr, 0, ep11_exercises, 8, ep11_bonus, 1 };
 
 static const Gloss ep12_dialog_g0[4] = { {"Vlak stojí", "le train s'arrête"}, {"v Spišskej Novej Vsi", "à Spišská Nová Ves"}, {"vystupujú", "ils descendent"}, {"Je horúco", "il fait chaud"} };
 static const Gloss ep12_dialog_g1[2] = { {"Kam", "où (vers où)"}, {"teraz", "maintenant"} };
 static const Gloss ep12_dialog_g2[3] = { {"Poď", "viens"}, {"za mnou", "derrière moi"}, {"Mám mapu", "j'ai une carte"} };
 static const Gloss ep12_dialog_g3[3] = { {"Ty", "toi"}, {"vždy", "toujours"}, {"máš mapu", "tu as une carte"} };
-static const char* const ep12_dialog_c3_items[3] = { "Ty vždy máš mapu.", "Ty tak máš mapu.", "Ty pomaly máš mapu." };
-static const Choice ep12_dialog_c3 = { CH_PICK, "qcm-v-dy", ep12_dialog_c3_items, 3 };
+static const char* const ep12_dialog_c3_items[3] = { "Ty vždy máš mapu.", "Ty vždy mám mapu.", "Ty vždy má mapu." };
+static const Choice ep12_dialog_c3 = { CH_PICK, "fix", ep12_dialog_c3_items, 3 };
 static const Gloss ep12_dialog_g4[4] = { {"A ty", "et toi"}, {"vždy", "toujours"}, {"máš otázky", "tu as des questions"}, {"Poď", "viens"} };
 static const Gloss ep12_dialog_g5[3] = { {"Počkaj", "attends"}, {"Idem", "je vais"}, {"pomaly", "lentement"} };
 static const char* const ep12_dialog_c5_items[3] = { "Počkaj! Idem pomaly!", "Počkaj! Idem rýchlo!", "Počkaj! Idem vždy!" };
@@ -978,8 +981,8 @@ static const Gloss ep13_dialog_g0[3] = { {"Idú cez les", "ils traversent la for
 static const Gloss ep13_dialog_g1[3] = { {"Je to", "c'est"}, {"ešte", "encore"}, {"ďaleko", "loin"} };
 static const Gloss ep13_dialog_g2[4] = { {"Nie", "non"}, {"Ale", "mais"}, {"ticho", "chut, silence"}, {"Počuješ", "tu entends"} };
 static const Gloss ep13_dialog_g3[2] = { {"Nič", "rien"}, {"nepočujem", "je n'entends pas"} };
-static const char* const ep13_dialog_c3_items[3] = { "Nič nepočujem.", "Niekde nepočujem.", "Ticho nepočujem." };
-static const Choice ep13_dialog_c3 = { CH_PICK, "qcm-ni", ep13_dialog_c3_items, 3 };
+static const char* const ep13_dialog_c3_items[3] = { "Nič nepočujem.", "Nič počujem.", "Niekde nepočujem." };
+static const Choice ep13_dialog_c3 = { CH_PICK, "fix", ep13_dialog_c3_items, 3 };
 static const Gloss ep13_dialog_g4[4] = { {"Presne", "exactement"}, {"Ticho", "le silence"}, {"Aj vtáky", "même les oiseaux"}, {"mlčia", "se taisent"} };
 static const Gloss ep13_dialog_g5[2] = { {"To nie je", "ce n'est pas"}, {"dobré", "bon"} };
 static const Gloss ep13_dialog_g6[3] = { {"Nie", "non"}, {"Ale počkaj", "mais attends"}, {"Počuješ to", "tu entends ça"} };
@@ -1121,7 +1124,7 @@ static const Exercise ep14_exercises[11] = {
   {EX_ORDER, "order-tu-je-f-a-a-vody-m-e-pi", "Tu je fľaša vody. Môžeš piť.", "Voilà une bouteille d'eau. Tu peux boire.", nullptr, nullptr, 0, ep14_x10_tsk, ep14_x10_tfr, 3},
 };
 static const Line ep14_bonus[1] = {
-  {SPK_ANDREA, "Dobre, napi sa ešte.", "Bon, bois encore un peu.", nullptr, 0, nullptr, nullptr},
+  {SPK_ANDREA, "Dobre, dnes si šéf ty.", "Bon, aujourd'hui c'est toi le chef.", nullptr, 0, nullptr, nullptr},
 };
 static const Episode ep14 = { "10_Series_03_Raj_03_je-tu-voda", "Raj", 3, 3, "Je tu voda!", "Raj",
   ep14_dialog, 9, ep14_extra, 2, ep14_words, 10, ep14_exercises, 11, ep14_bonus, 1 };
@@ -1204,7 +1207,7 @@ static const Exercise ep15_exercises[12] = {
   {EX_ORDER, "order-po-ak-spadne-chyt-m-a", "Poď. Ak spadneš, chytím ťa.", "Viens. Si tu tombes, je te rattrape.", nullptr, nullptr, 0, ep15_x11_tsk, ep15_x11_tfr, 3},
 };
 static const Line ep15_bonus[1] = {
-  {SPK_ANDREA, "Nebojíš sa. Super.", "Tu n'as pas peur. Super.", nullptr, 0, nullptr, nullptr},
+  {SPK_ANDREA, "Ty sa vôbec nebojíš!", "Tu n'as pas peur du tout !", nullptr, 0, nullptr, nullptr},
 };
 static const Episode ep15 = { "10_Series_03_Raj_04_rebriky", "Raj", 3, 4, "Rebríky", "Raj",
   ep15_dialog, 12, ep15_extra, 2, ep15_words, 10, ep15_exercises, 12, ep15_bonus, 1 };
@@ -1271,7 +1274,7 @@ static const Exercise ep16_exercises[12] = {
   {EX_ORDER, "order-neviem-v-tatr-ch-vraj-pr-tu-nie", "Neviem. V Tatrách vraj prší. Tu nie.", "Je ne sais pas. Dans les Tatras, il paraît qu'il pleut. Ici, non.", nullptr, nullptr, 0, ep16_x11_tsk, ep16_x11_tfr, 3},
 };
 static const Line ep16_bonus[1] = {
-  {SPK_OROL, "Hovoríte veľmi pekne.", "Vous parlez très bien.", nullptr, 0, nullptr, nullptr},
+  {SPK_OROL, "Hovoríte veľmi pekne po slovensky.", "Vous parlez très bien slovaque.", nullptr, 0, nullptr, nullptr},
 };
 static const Episode ep16 = { "10_Series_03_Raj_05_roklina", "Raj", 3, 5, "Na konci rokliny", "Raj",
   ep16_dialog, 12, nullptr, 0, nullptr, 0, ep16_exercises, 12, ep16_bonus, 1 };
@@ -1565,7 +1568,7 @@ static const Line gl5[1] = {
   {SPK_NARRATOR, "Lístok je už označený.", "Le ticket est déjà composté.", nullptr, 0, nullptr, nullptr},
 };
 static const Line gl6[1] = {
-  {SPK_NARRATOR, "Električka stojí. Nastupuje revízor.", "Le tram s'arrête. Un contrôleur monte.", nullptr, 0, nullptr, nullptr},
+  {SPK_NARRATOR, "Električka zastavuje. Nastupuje revízor.", "Le tram s'arrête. Un contrôleur monte.", nullptr, 0, nullptr, nullptr},
 };
 static const Line gl7[1] = {
   {SPK_ANDREA, "Pozor, revízor! Máš lístok?", "Attention, le contrôleur ! Tu as un ticket ?", nullptr, 0, nullptr, nullptr},
@@ -1601,7 +1604,7 @@ static const Line gl15[1] = {
   {SPK_NONE, "Choď spať pod jabloň.", "Va dormir sous le pommier.", nullptr, 0, nullptr, nullptr},
 };
 static const Line gl16[1] = {
-  {SPK_NONE, "Kapitola je hotová.", "Le chapitre est terminé.", nullptr, 0, nullptr, nullptr},
+  {SPK_NONE, "Koniec kapitoly.", "Fin du chapitre.", nullptr, 0, nullptr, nullptr},
 };
 static const Line gl17[1] = {
   {SPK_ANDREA, "Najprv do parku. Tam je jazierko.", "D'abord le parc. Il y a l'étang.", nullptr, 0, nullptr, nullptr},
@@ -1613,12 +1616,12 @@ static const Line gl19[1] = {
   {SPK_MOUSE, "Voda... Máš vodu?", "De l'eau... Tu as de l'eau ?", nullptr, 0, nullptr, nullptr},
 };
 static const Line gl20[1] = {
-  {SPK_MOUSE, "To je málo. Ešte, prosím.", "C'est peu. Encore, s'il te plaît.", nullptr, 0, nullptr, nullptr},
+  {SPK_MOUSE, "To je málo. Ešte trochu, prosím.", "C'est peu. Encore un peu, s'il te plaît.", nullptr, 0, nullptr, nullptr},
 };
-static const char* const gl21_c0_items[3] = { "Tu je voda. Pre všetkých.", "Tu je mapa. Pre všetkých.", "Tu je vlak. Pre všetkých." };
+static const char* const gl21_c0_items[3] = { "Tu máte vodu. Pre všetkých.", "Tu máte mapu. Pre všetkých.", "Tu máte vlak. Pre všetkých." };
 static const Choice gl21_c0 = { CH_PICK, "lines", gl21_c0_items, 3 };
 static const Line gl21[3] = {
-  {SPK_FOX, "Tu je voda. Pre všetkých.", "Voilà de l'eau. Pour tout le monde.", nullptr, 0, nullptr, &gl21_c0},
+  {SPK_FOX, "Tu máte vodu. Pre všetkých.", "Voilà de l'eau. Pour tout le monde.", nullptr, 0, nullptr, &gl21_c0},
   {SPK_MOUSE, "Ďakujeme!", "Merci !", nullptr, 0, nullptr, nullptr},
   {SPK_CHICK, "Ďakujeme!", "Merci !", nullptr, 0, nullptr, nullptr},
 };
@@ -1668,19 +1671,19 @@ static const Line gl35[1] = {
   {SPK_ANDREA, "Najprv sa napi.", "D'abord, bois un coup.", nullptr, 0, nullptr, nullptr},
 };
 static const Line gl36[1] = {
-  {SPK_NARRATOR, "Napil si sa z potoka. Voda je dobrá.", "Tu as bu au ruisseau. L'eau est bonne.", nullptr, 0, nullptr, nullptr},
+  {SPK_NARRATOR, "\001 pije z potoka. Voda je studená a dobrá.", "\001 boit au ruisseau. L'eau est fraîche et bonne.", nullptr, 0, nullptr, nullptr},
 };
 static const Line gl37[1] = {
   {SPK_ANDREA, "Pozor na dosky! Každá vydrží len jeden krok.", "Attention aux planches ! Chacune ne tient qu'un seul pas.", nullptr, 0, "Une planche cède dès que tu la quittes. Prévois ton chemin avant de marcher.", nullptr},
 };
 static const Line gl38[1] = {
-  {SPK_ANDREA, "Nepozeraj dole! Poď zase.", "Ne regarde pas en bas ! Recommence.", nullptr, 0, nullptr, nullptr},
+  {SPK_ANDREA, "Nepozeraj dole! Ešte raz.", "Ne regarde pas en bas ! Encore une fois.", nullptr, 0, nullptr, nullptr},
 };
 static const Line gl39[1] = {
   {SPK_ANDREA, "Poď sem!", "Viens ici !", nullptr, 0, nullptr, nullptr},
 };
 static const Line gl40[1] = {
-  {SPK_ANDREA, "Najprv pán Orol. Poď!", "D'abord monsieur Orol. Viens !", nullptr, 0, nullptr, nullptr},
+  {SPK_ANDREA, "Najprv k pánovi Orlovi. Poď!", "D'abord chez monsieur Orol. Viens !", nullptr, 0, nullptr, nullptr},
 };
 static const Line gl41[1] = {
   {SPK_NONE, "Choď cez les.", "Traverse la forêt.", nullptr, 0, nullptr, nullptr},
@@ -1695,7 +1698,7 @@ static const Line gl44[1] = {
   {SPK_NONE, "Choď do rokliny.", "Va à la gorge.", nullptr, 0, nullptr, nullptr},
 };
 static const Line gl45[1] = {
-  {SPK_NONE, "Prejdi cez dosky. Nevracaj sa.", "Traverse les planches. Ne reviens pas en arrière.", nullptr, 0, nullptr, nullptr},
+  {SPK_NONE, "Prejdi po doskách. Nevracaj sa.", "Traverse les planches. Ne reviens pas en arrière.", nullptr, 0, nullptr, nullptr},
 };
 static const Line gl46[1] = {
   {SPK_NONE, "Porozprávaj sa s pánom Orlom.", "Va parler à monsieur Orol.", nullptr, 0, nullptr, nullptr},

@@ -39,6 +39,7 @@ class Game {
   int wordsFound() const;
   bool hasSave() const { return hasSave_; }
   int goal() const;                               // objectif du moment (SC_CIEL_...)
+  void idleHint();                                // rappel de l'objectif si le joueur tourne en rond
   void debugChapter(int chapter) { startChapter(chapter); }  // simulateur : commencer a ce chapitre
 
  private:
@@ -114,6 +115,7 @@ class Game {
   void ch3Refresh();
   bool ch3Warp(const MapMark& m);
   void ch3Step(int tx, int ty);
+  void ch2Hud(Band& b);  // les gouttes d'eau trouvees (« Kvapky 3/5 »)
   void ch3Hud(Band& b);  // l'oreille de la foret (« Pocujes ? ») : plus on approche du ruisseau, plus on entend
   int ch3Goal() const;
 
@@ -155,4 +157,6 @@ class Game {
   int banner_ = 0, bannerEp_ = 0;  // titre de l'episode qui commence (images restantes)
   int plankX_ = -1, plankY_ = -1;  // chapitre 3 : la planche sur laquelle se trouve le renard
   int listen_ = 0;                 // chapitre 3 : barres de l'oreille (0 a 5)
+  int idle_ = 0;                   // images sans que l'objectif change : au bout d'un moment, un rappel
+  int idleGoal_ = -1;
 };

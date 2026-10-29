@@ -1,0 +1,13 @@
+# Choix du renard écrits à la main, quand ceux tirés des exercices du cours sont tous corrects
+# ou n'apprennent rien : « bonne réplique (exactement celle du cours) || fausse || fausse ».
+# Les fausses réponses visent le point de grammaire de la réplique (genre, personne, négation).
+Áno, sám. || Áno, sama. || Áno, sami.
+Vie. Asi. || Viem. Asi. || Vedia. Asi.
+Pamätáš sa na Tatry? || Pamätám sa na Tatry? || Pamätá sa na Tatry?
+Ja? Ja som jednoduchý! || Ja? Ja som jednoduchá! || Ja? Ja som jednoduché!
+Ale ja som tvoj kamarát! || Ale ja som tvoja kamarátka! || Ale ja som tvoj kostol!
+Takže môj chvost je líščí. A ja som líška. || Takže môj chvost je zajačí. A ja som líška. || Takže môj chvost je líščí. A ja som zajac.
+Čo budeme robiť? || Čo budem robiť? || Čo bude robiť?
+Slovenský raj? To je ďaleko! || Slovenský raj? To je blízko! || Slovenský raj? To je ďaleký!
+Ty vždy máš mapu. || Ty vždy mám mapu. || Ty vždy má mapu.
+Nič nepočujem. || Nič počujem. || Niekde nepočujem.

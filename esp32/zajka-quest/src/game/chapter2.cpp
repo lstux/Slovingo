@@ -12,6 +12,8 @@
 //
 // Andrea retient le renard tant que l'etape d'avant n'est pas faite (« Najprv do parku... »).
 // stage_ = episodes joues en entier (0 a 6) ; flags_ = F2_...
+#include <stdio.h>
+
 #include "game.h"
 #include "gen/assets.h"
 #include "gen/scripts.h"
@@ -27,6 +29,7 @@ enum { EV2_STATION = 1, EV2_NOTE, EV2_NOTE_READ, EV2_DROPS, EV2_TICKETS, EV2_BOA
 
 constexpr int EP_FIRST = 6;  // index global du premier episode du chapitre
 constexpr int DROPS_NEEDED = 5;
+const uint16_t WHITE = 0xFFFF, DARKBLUE = 0x1926, SKYBLUE = 0x4D7F;
 
 const Episode& ep(int i) { return *COURSE_EPISODES[EP_FIRST + i]; }
 
@@ -154,4 +157,17 @@ void Game::ch2EpisodeDone() {
     give(ITEM_MAPA, 1, false);
     give(ITEM_BATOH);
   }
+}
+
+// Pendant la recherche : les gouttes deja trouvees, en bas a gauche (« Kvapky 3/5 »).
+void Game::ch2Hud(Band& b) {
+  if (stage_ != 3 || flag(F2_GIVEN)) return;
+  const int x0 = 8, y0 = SCREEN_H - 30;
+  if (b.y0 + b.h <= y0 - 4) return;
+  int n = itemCount(ITEM_KVAPKA);
+  char buf[24];
+  snprintf(buf, sizeof buf, "Kvapky %d/%d", n > DROPS_NEEDED ? DROPS_NEEDED : n, DROPS_NEEDED);
+  int w = textWidth(font_small, buf) + 12;
+  b.fillRect(x0 - 4, y0 - 4, w, 22, DARKBLUE);
+  b.text(font_small, x0 + 2, y0 - 1, buf, n >= DROPS_NEEDED ? SKYBLUE : WHITE, -1);
 }

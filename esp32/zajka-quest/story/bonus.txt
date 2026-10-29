@@ -7,7 +7,7 @@
 # Format : une ligne « [fiche] », puis « emoji texte slovaque | traduction française ».
 
 [10_Series_01_Kosice_01_to-si-ty]
-🐰 Stále vieš po slovensky! | Tu parles toujours slovaque !
+🐰 Ešte stále vieš po slovensky! | Tu parles toujours slovaque !
 🐰 Hovoríš ako Slovák! | Tu parles comme un Slovaque !
 
 [10_Series_01_Kosice_02_ako-sa-mas]
@@ -21,11 +21,11 @@
 🐰 Pamätáš si to dobre! | Tu t'en souviens bien !
 
 [10_Series_01_Kosice_05_v-elektricke]
-🐰 Dobre, si trochu jednoduchý. | Bon, tu es un peu simple.
+🐰 Nie si až taký jednoduchý! | Tu n'es pas si simple que ça !
 🐰 Hovoríš ako Košičan! | Tu parles comme quelqu'un de Košice !
 
 [10_Series_01_Kosice_06_extra]
-🐰 Spi dobre, líška. | Dors bien, renard.
+🐰 Dobre sa vyspi, líška. | Dors bien, renard.
 
 [10_Series_02_Sucho_01_je-horuco]
 🐰 Dobré ráno, ospalec! | Bonjour, la marmotte !
@@ -44,6 +44,9 @@
 [10_Series_02_Sucho_05_fontana]
 🐰 Hovoríš ako pravý Slovák. | Tu parles comme un vrai Slovaque.
 
+[10_Series_02_Sucho_06_extra]
+🐰 Dobrý cestovateľ! | Un bon voyageur !
+
 [10_Series_03_Raj_01_kam-teraz]
 🐰 Rýchlo sa učíš! | Tu apprends vite !
 
@@ -51,13 +54,13 @@
 🐰 Dobre počuješ! | Tu entends bien !
 
 [10_Series_03_Raj_03_je-tu-voda]
-🐰 Dobre, napi sa ešte. | Bon, bois encore un peu.
+🐰 Dobre, dnes si šéf ty. | Bon, aujourd'hui c'est toi le chef.
 
 [10_Series_03_Raj_04_rebriky]
-🐰 Nebojíš sa. Super. | Tu n'as pas peur. Super.
+🐰 Ty sa vôbec nebojíš! | Tu n'as pas peur du tout !
 
 [10_Series_03_Raj_05_roklina]
-🦅 Hovoríte veľmi pekne. | Vous parlez très bien.
+🦅 Hovoríte veľmi pekne po slovensky. | Vous parlez très bien slovaque.
 
 [10_Series_03_Raj_06_extra]
 🐰 Dobrú noc, líška. | Bonne nuit, renard.

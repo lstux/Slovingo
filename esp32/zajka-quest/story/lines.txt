@@ -33,7 +33,7 @@
 💬 Lístok je už označený. | Le ticket est déjà composté.
 
 [revizor_nastupuje]
-💬 Električka stojí. Nastupuje revízor. | Le tram s'arrête. Un contrôleur monte.
+💬 Električka zastavuje. Nastupuje revízor. | Le tram s'arrête. Un contrôleur monte.
 
 [andrea_pozor]
 🐰 Pozor, revízor! Máš lístok? | Attention, le contrôleur ! Tu as un ticket ?
@@ -64,7 +64,7 @@ Označ si lístok a ukáž ho revízorovi. | Composte ton ticket et montre-le au
 [ciel_jablon]
 Choď spať pod jabloň. | Va dormir sous le pommier.
 [ciel_hotovo]
-Kapitola je hotová. | Le chapitre est terminé.
+Koniec kapitoly. | Fin du chapitre.
 
 # ---------------------------------------------------------------- chapitre 2 : Sucho
 
@@ -78,10 +78,10 @@ Kapitola je hotová. | Le chapitre est terminé.
 🐭 Voda... Máš vodu? | De l'eau... Tu as de l'eau ?
 
 [zvierata_malo]
-🐭 To je málo. Ešte, prosím. | C'est peu. Encore, s'il te plaît.
+🐭 To je málo. Ešte trochu, prosím. | C'est peu. Encore un peu, s'il te plaît.
 
 [zvierata_dakujeme]
-🦊 Tu je voda. Pre všetkých. | Voilà de l'eau. Pour tout le monde. || Tu je mapa. Pre všetkých. || Tu je vlak. Pre všetkých.
+🦊 Tu máte vodu. Pre všetkých. | Voilà de l'eau. Pour tout le monde. || Tu máte mapu. Pre všetkých. || Tu máte vlak. Pre všetkých.
 🐭 Ďakujeme! | Merci !
 🐥 Ďakujeme! | Merci !
 
@@ -127,20 +127,20 @@ Nastúp do vlaku. | Monte dans le train.
 🐰 Najprv sa napi. | D'abord, bois un coup.
 
 [napil_si_sa]
-💬 Napil si sa z potoka. Voda je dobrá. | Tu as bu au ruisseau. L'eau est bonne.
+💬 [USER_NAME] pije z potoka. Voda je studená a dobrá. | [USER_NAME] boit au ruisseau. L'eau est fraîche et bonne.
 
 [andrea_dosky]
 🐰 Pozor na dosky! Každá vydrží len jeden krok. | Attention aux planches ! Chacune ne tient qu'un seul pas.
 + Une planche cède dès que tu la quittes. Prévois ton chemin avant de marcher.
 
 [andrea_tomba]
-🐰 Nepozeraj dole! Poď zase. | Ne regarde pas en bas ! Recommence.
+🐰 Nepozeraj dole! Ešte raz. | Ne regarde pas en bas ! Encore une fois.
 
 [andrea_pod_sem]
 🐰 Poď sem! | Viens ici !
 
 [andrea_najprv_orol]
-🐰 Najprv pán Orol. Poď! | D'abord monsieur Orol. Viens !
+🐰 Najprv k pánovi Orlovi. Poď! | D'abord chez monsieur Orol. Viens !
 
 [ciel_les]
 Choď cez les. | Traverse la forêt.
@@ -151,7 +151,7 @@ Napi sa z potoka. | Bois au ruisseau.
 [ciel_roklina]
 Choď do rokliny. | Va à la gorge.
 [ciel_dosky]
-Prejdi cez dosky. Nevracaj sa. | Traverse les planches. Ne reviens pas en arrière.
+Prejdi po doskách. Nevracaj sa. | Traverse les planches. Ne reviens pas en arrière.
 [ciel_orol]
 Porozprávaj sa s pánom Orlom. | Va parler à monsieur Orol.
 [ciel_tabor]

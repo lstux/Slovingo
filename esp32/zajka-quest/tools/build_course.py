@@ -37,6 +37,7 @@ ROOT = os.path.dirname(HERE)
 GEN = os.path.join(ROOT, "src", "game", "gen")
 BONUS = os.path.join(ROOT, "story", "bonus.txt")
 LINES = os.path.join(ROOT, "story", "lines.txt")
+CHOICES = os.path.join(ROOT, "story", "choices.txt")
 DEFAULT_COURSE = os.path.normpath(os.path.join(ROOT, "..", "..", "langs", "sk-fr-friends"))
 
 sys.path.insert(0, HERE)
@@ -236,11 +237,33 @@ def norm(s):
     return re.sub(r"\s+", " ", s).strip().lower()
 
 
+_FIXED = None
+
+
+def fixed_choices():
+    """story/choices.txt : « bonne || fausse || fausse », pour remplacer un choix mal tire des exercices."""
+    global _FIXED
+    if _FIXED is None:
+        _FIXED = {}
+        if os.path.exists(CHOICES):
+            for line in open(CHOICES, encoding="utf-8"):
+                line = line.strip()
+                if not line or line.startswith("#"):
+                    continue
+                opts = [o.strip() for o in line.split("||")]
+                _FIXED[norm(opts[0])] = opts
+    return _FIXED
+
+
 def add_choices(ep, warn):
-    """Repliques du renard -> choix tires des exercices order, puis qcm."""
+    """Repliques du renard -> choix de story/choices.txt, sinon tires des exercices order, puis qcm."""
     for c in ep["dialog"]:
         c["choice"] = None
         if c["speaker"] != "SPK_FOX":
+            continue
+        fx = fixed_choices().get(norm(c["sk"]))
+        if fx:
+            c["choice"] = ("CH_PICK", "fix", [c["sk"]] + [clean(o, warn) for o in fx[1:3]])
             continue
         for e in ep["exercises"]:
             if e["type"] == "EX_ORDER" and norm(e["sk"]) == norm(c["sk"]) and len(e["tokensSk"]) >= 2:
