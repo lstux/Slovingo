@@ -29,13 +29,20 @@ in lang.json:
         "positions": {"series-rodina": [31, 70]},
         "icons":     {"rodina": "🏠", "final": "🏆"},
         "final_title": "Générique",
-        "direction": "down"
+        "direction": "down",
+        "exclude":   ["kronika"],
+        "exclude_title": "Kronika"
     }
 
 "direction" sets where the route goes: "down" (default, from the top to the
 castle at the bottom), "up", "right" (left to right) or "left" (right to
 left). Overrides in "positions" are written in the default "down" frame and
 are transformed like the generated ones.
+
+"exclude" lists subgroup prefixes whose series get no step on the map
+("kronika" drops kronika_stur, kronika_snp...). Their sheets stay in the
+sheet list below the map; a direct-access link to the first of them,
+labelled "exclude_title" (or categories.series), is added to the resources.
 
 The last step is the "credits" series (99_Credits_01_Title.md): see
 build_map_json(). Its icon is map.icons.final (default 🏰), its label
@@ -180,6 +187,8 @@ def build_map_json(md_dir: Path, lang_cfg: dict[str, Any]) -> dict[str, Any]:
     icons = {**DEFAULT_ICONS, **map_cfg.get("icons", {})}
     subgroup_labels = lang_cfg.get("subgroups", {})
     category_labels = lang_cfg.get("categories", {})
+    excluded_prefixes = tuple(map_cfg.get("exclude", []))
+    first_excluded: str | None = None
 
     intro_sheets: list[str] = []
     credits_sheets: list[str] = []
@@ -195,6 +204,9 @@ def build_map_json(md_dir: Path, lang_cfg: dict[str, Any]) -> dict[str, Any]:
         elif category == "credits":
             credits_sheets.append(meta["id"])
         elif category == "series" and meta["subgroup"]:
+            if excluded_prefixes and meta["subgroup"].startswith(excluded_prefixes):
+                first_excluded = first_excluded or meta["subgroup"]
+                continue
             number = series_number(path)
             if number is None:
                 continue
@@ -272,6 +284,14 @@ def build_map_json(md_dir: Path, lang_cfg: dict[str, Any]) -> dict[str, Any]:
         {"id": category, "title": category_labels.get(category, category.capitalize())}
         for category in other_categories
     ]
+    if first_excluded:
+        resources.append(
+            {
+                "id": "series",
+                "subgroup": first_excluded,
+                "title": map_cfg.get("exclude_title") or category_labels.get("series", "Séries"),
+            }
+        )
 
     return {
         "steps": steps,

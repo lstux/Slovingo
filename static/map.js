@@ -1178,7 +1178,11 @@ function buildResourcesNav(resources) {
         link.href = "#/";
         link.addEventListener("click", (event) => {
             event.preventDefault();
-            const section = document.querySelector(`.index-section[data-category="${resource.id}"]`);
+            // A resource may target one subgroup (first series left off the map).
+            const selector = resource.subgroup
+                ? `.index-section[data-category="${resource.id}"][data-subgroup="${resource.subgroup}"]`
+                : `.index-section[data-category="${resource.id}"]`;
+            const section = document.querySelector(selector);
             if (section) {
                 const outer = section.closest("details.all-sheets");
                 if (outer) {

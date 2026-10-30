@@ -1070,6 +1070,9 @@ function renderGroupSection(group, nextCardNumber) {
     section.className = "index-section";
     section.dataset.theme = themeForGroup(group);
     section.dataset.category = group.category;
+    if (group.subgroup) {
+        section.dataset.subgroup = group.subgroup;
+    }
 
     const summary = document.createElement("summary");
     const heading = document.createElement("h2");

@@ -117,7 +117,9 @@ dans `lang.json`, sauf pour personnaliser. Clé facultative :
 "map": {
   "positions": {"series-rodina": [31, 70]},
   "icons":     {"rodina": "🏠", "final": "🏆"},
-  "final_title": "Générique"
+  "final_title": "Générique",
+  "exclude":   ["kronika"],
+  "exclude_title": "Kronika"
 }
 ```
 
@@ -125,6 +127,11 @@ dans `lang.json`, sauf pour personnaliser. Clé facultative :
 - `icons` : une icône par sous-groupe, et `final` pour la dernière étape
   (par défaut 🏰).
 - `final_title` : libellé de la dernière étape (sinon `categories.credits`).
+- `exclude` : séries **hors carte**, par début de nom de sous-groupe
+  (`"kronika"` retire `kronika_stur`, `kronika_snp`…). Leurs fiches restent dans
+  la liste des fiches sous la carte, et un lien d'accès direct vers la première
+  d'entre elles s'ajoute aux ressources, avec le libellé `exclude_title` (sinon
+  `categories.series`).
 
 ### La série finale : `99_Credits_01_Titre.md`
 
