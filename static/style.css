@@ -694,8 +694,11 @@ footer {
    ========================================================================== */
 
 .fiche-illustration {
-    position: relative;
     margin: 26px 0;
+}
+
+.fiche-illustration-frame {
+    position: relative;
     border-radius: var(--radius-lg);
     overflow: hidden;
     isolation: isolate;
@@ -716,22 +719,28 @@ footer {
     object-fit: cover;
 }
 
+/* Légende sous la photo, discrète ; le crédit (« Source : … »,
+   « photo : … ») encore plus effacé que la description. */
 .fiche-illustration figcaption {
-    position: absolute;
-    left: 0; right: 0; bottom: 0;
-    margin: 0;
-    padding: 40px 16px 12px;
-    background: linear-gradient(to top, rgb(0 0 0 / 0.68), transparent);
-    color: #fff;
-    font-size: 0.85em;
+    margin: 6px 4px 0;
+    color: var(--text-soft);
+    font-size: 0.8em;
     line-height: 1.4;
     text-align: left;
 }
 
+.fiche-illustration-credit {
+    font-size: 0.85em;
+    opacity: 0.7;
+    /* passe à la ligne d'un bloc plutôt que coupée en plein milieu */
+    display: inline-block;
+}
+
 @media (max-width: 600px) {
-    .fiche-illustration { margin: 20px 0; min-height: 120px; }
+    .fiche-illustration { margin: 20px 0; }
+    .fiche-illustration-frame { min-height: 120px; }
     .fiche-illustration img { max-height: 220px; }
-    .fiche-illustration figcaption { font-size: 0.8em; }
+    .fiche-illustration figcaption { font-size: 0.75em; }
 }
 
 

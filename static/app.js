@@ -539,17 +539,46 @@ function renderBlockquote(block) {
     return quote;
 }
 
+// Trailing photo credit inside a caption, shown more discreetly than the
+// description: "… Source : Wikimedia Commons" or "… (photo : X, CC BY 4.0, …)".
+const CAPTION_CREDIT_RE =
+    /^(.*?)[\s.,;–—-]*(\((?:photo|foto|source|zdroj|crédit|credit|bild|quelle)\s*:[^()]*\)|\b(?:photo|foto|source|zdroj|crédit|credit|bild|quelle)\s*:.*)$/is;
+
+function splitCaptionCredit(caption) {
+    const m = CAPTION_CREDIT_RE.exec(caption);
+    if (!m || !m[1].trim()) return { text: caption, credit: "" };
+    let text = m[1].trim();
+    if (!/[.!?…:»"]$/.test(text)) text += ".";
+    return { text, credit: m[2].trim().replace(/^\((.*)\)$/s, "$1") };
+}
+
 function renderImage(block) {
     const figure = document.createElement("figure");
     figure.className = "fiche-illustration";
+    // The frame holds the photo (and the theme band shown while the
+    // image is missing); the caption sits below it, never over the photo.
+    const frame = document.createElement("div");
+    frame.className = "fiche-illustration-frame";
     const img = document.createElement("img");
     img.src = block.src;
     img.alt = block.caption || "";
     img.loading = "lazy";
-    figure.appendChild(img);
+    frame.appendChild(img);
+    figure.appendChild(frame);
     if (block.caption) {
+        const { text, credit } = splitCaptionCredit(block.caption);
         const caption = document.createElement("figcaption");
-        caption.innerHTML = renderText(block.caption);
+        const main = document.createElement("span");
+        main.className = "fiche-illustration-text";
+        main.innerHTML = renderText(text);
+        caption.appendChild(main);
+        if (credit) {
+            const small = document.createElement("span");
+            small.className = "fiche-illustration-credit";
+            small.innerHTML = renderText(credit);
+            caption.appendChild(document.createTextNode(" "));
+            caption.appendChild(small);
+        }
         figure.appendChild(caption);
     }
     return figure;
