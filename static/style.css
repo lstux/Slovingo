@@ -715,8 +715,10 @@ footer {
     display: block;
     width: 100%;
     height: auto;
-    max-height: 320px;
-    object-fit: cover;
+    /* L'image s'affiche toujours en entier (illustrations comprises) ;
+       seules les images très hautes sont limitées, sans recadrage. */
+    max-height: 70vh;
+    object-fit: contain;
 }
 
 /* Légende sous la photo, discrète ; le crédit (« Source : … »,
@@ -739,7 +741,6 @@ footer {
 @media (max-width: 600px) {
     .fiche-illustration { margin: 20px 0; }
     .fiche-illustration-frame { min-height: 120px; }
-    .fiche-illustration img { max-height: 220px; }
     .fiche-illustration figcaption { font-size: 0.75em; }
 }
 
