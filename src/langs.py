@@ -48,7 +48,7 @@ SSH_BASE = "git@github.com:lstux"
 # Known courses: code -> short description (shown in the menu).
 COURSES = {
     "sk-fr": "Slovaque pour francophones",
-    "sk-fr-kids": "Slovaque pour enfants (Zajka)",
+    "sk-fr-kids": "Slovaque pour enfants (Zajko)",
     "sk-fr-friends": "Slovaque, version amis",
     "fr-sk": "Français pour slovaques",
     "bzh-fr": "Breton pour francophones",

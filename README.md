@@ -8,8 +8,8 @@ Learn a language without an app, without an account, without a server. Just text
 
 - **[Slovak for French speakers](https://lstux.github.io/Slovingo-sk-fr/)** — *Ahoj Slovenčina!*
 - **[French for Slovak speakers](https://lstux.github.io/Slovingo-fr-sk/)** — *Dis bonjour!*
-- **[Slovak for French kids (8–12)](https://lstux.github.io/Slovingo-sk-fr-kids/)** — *Zajka*
-- **[Slovak for French teens (12–16)](https://lstux.github.io/Slovingo-sk-fr-friends/)** — *Zajka Friends*
+- **[Slovak for French kids (8–12)](https://lstux.github.io/Slovingo-sk-fr-kids/)** — *Zajko*
+- **[Slovak for French teens (12–16)](https://lstux.github.io/Slovingo-sk-fr-friends/)** — *Zajko Friends*
 - **[German for French kids (8+)](https://lstux.github.io/Slovingo-de-fr-kids/)** — *Fuchsbau*
 
 ## 🎯 Why Slovingo

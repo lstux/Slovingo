@@ -8,8 +8,8 @@ Apprendre une langue sans appli, sans compte, sans serveur. Juste des fiches tex
 
 - **[Slovaque pour francophones](https://lstux.github.io/Slovingo-sk-fr/)** — *Ahoj Slovenčina!*
 - **[Français pour slovacophones](https://lstux.github.io/Slovingo-fr-sk/)** — *Dis bonjour!*
-- **[Slovaque pour enfants francophones (8-12 ans)](https://lstux.github.io/Slovingo-sk-fr-kids/)** — *Zajka*
-- **[Slovaque pour ados francophones (12-16 ans)](https://lstux.github.io/Slovingo-sk-fr-friends/)** — *Zajka Friends*
+- **[Slovaque pour enfants francophones (8-12 ans)](https://lstux.github.io/Slovingo-sk-fr-kids/)** — *Zajko*
+- **[Slovaque pour ados francophones (12-16 ans)](https://lstux.github.io/Slovingo-sk-fr-friends/)** — *Zajko Friends*
 - **[Allemand pour enfants francophones (à partir de 8 ans)](https://lstux.github.io/Slovingo-de-fr-kids/)** — *Fuchsbau*
 
 ## 🎯 Pourquoi Slovingo

@@ -8,8 +8,8 @@ Uč sa jazyk bez aplikácie, bez účtu, bez servera. Len textové kartičky a P
 
 - **[Slovenčina pre frankofónov](https://lstux.github.io/Slovingo-sk-fr/)** — *Ahoj Slovenčina!*
 - **[Francúzština pre Slovákov](https://lstux.github.io/Slovingo-fr-sk/)** — *Dis bonjour!*
-- **[Slovenčina pre frankofónske deti (8–12)](https://lstux.github.io/Slovingo-sk-fr-kids/)** — *Zajka*
-- **[Slovenčina pre frankofónskych tínedžerov (12–16)](https://lstux.github.io/Slovingo-sk-fr-friends/)** — *Zajka Friends*
+- **[Slovenčina pre frankofónske deti (8–12)](https://lstux.github.io/Slovingo-sk-fr-kids/)** — *Zajko*
+- **[Slovenčina pre frankofónskych tínedžerov (12–16)](https://lstux.github.io/Slovingo-sk-fr-friends/)** — *Zajko Friends*
 - **[Nemčina pre frankofónske deti (od 8 rokov)](https://lstux.github.io/Slovingo-de-fr-kids/)** — *Fuchsbau*
 
 ## 🎯 Prečo Slovingo
