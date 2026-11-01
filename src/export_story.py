@@ -267,7 +267,7 @@ figure.geo .geomap { height: 220px; border-radius: 10px; overflow: hidden; borde
 figure.photo img { max-height: 45vh; }
 section .scene-end { clear: both; }
 .geomap-step span { display: none; }
-@media (max-width: 520px) { body { font-size: 17px; } nav.toc { columns: 1; } }
+@media (max-width: 520px) { body { font-size: 17px; } nav.toc { columns: 1; } figure img { max-width: 75%; } }
 """
 
 JS = """
