@@ -188,7 +188,7 @@ def run_build(
     runtime_lang_cfg = {k: v for k, v in lang_cfg.items() if k != "generator"}
     # 4.5 Whole story on one page (opt-in: a `story` section in lang.json).
     #     The home screen links to it when lang.json carries story_page.
-    story_page = build_story(data, lang_cfg)
+    story_page = build_story(data, lang_cfg, map_data)
     runtime_lang_cfg.pop("story_page", None)
     if story_page:
         (dist_dir / "histoire.html").write_text(story_page, encoding="utf-8")
