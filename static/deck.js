@@ -204,7 +204,10 @@ function deckBuildDialogueNode(lines) {
         text.className = "deck-line-text";
         text.innerHTML = renderText(block.phrase);
         // A tap re-reads this line only.
-        text.addEventListener("click", () => deckReplayDialogueLine(line));
+        text.addEventListener("click", (e) => {
+            if (e.target.closest("input")) return;
+            deckReplayDialogueLine(line);
+        });
         bubble.append(who, text, deckBuildDetailNode(block, { naturalOnly: true }));
         line.appendChild(bubble);
         box.appendChild(line);
@@ -362,8 +365,14 @@ function buildStepElement(step, index) {
     step.nodes.forEach((n) => body.appendChild(n));
     stepEl.appendChild(body);
 
+    // [ASK_USER_NAME] markers -> real name inputs (as in the normal sheet view).
+    replaceAskUserNameInputs(stepEl);
+
     if (step.kind === "phrase") {
-        body.querySelector(".deck-phrase-text").addEventListener("click", () => playPhrase(index));
+        body.querySelector(".deck-phrase-text").addEventListener("click", (e) => {
+            if (e.target.closest("input")) return; // typing a name must not trigger playback
+            playPhrase(index);
+        });
     }
     return stepEl;
 }
