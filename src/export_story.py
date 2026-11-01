@@ -16,11 +16,12 @@ Opt-in, per course, in lang.json:
         "intro": "…",                             // optional, a short paragraph
         "user_name": "Eric",                      // replaces [USER_NAME]
         "exclude_subgroups": ["kronika_*"],       // fnmatch patterns
-        "headings": ["Le dialogue", "La suite de l'épisode"],
+        "headings": ["Le dialogue", "Scène *"],   // fnmatch patterns
         "chapter_label": "Kapitola",
         "show_translations": "Afficher les traductions",
         "hide_translations": "Masquer les traductions",
         "back": "Retour au cours",
+        "translations_default": false,             // true = translations shown at first
         "listen_chapter": "Écouter le chapitre",    // optional
         "stop_listening": "Pause"                  // optional
     }
@@ -157,7 +158,7 @@ def build_story(data: dict, lang_cfg: dict, map_data: dict | None = None) -> str
                             geo_points.append({"lat": pt["lat"], "lon": pt["lon"], "label": label})
                 if t == "heading":
                     current = block.get("text", "")
-                elif t == "audio-card" and current in headings:
+                elif t == "audio-card" and current and any(fnmatch.fnmatch(current, h) for h in headings):
                     phrase = _clean(block.get("phrase", ""), user_name)
                     if not phrase:
                         continue
@@ -277,8 +278,8 @@ function apply(on) {
   document.body.classList.toggle('all-fr', on);
   btn.textContent = on ? btn.dataset.hide : btn.dataset.show;
 }
-let on = false;
-try { on = localStorage.getItem(KEY) === '1'; } catch (e) {}
+let on = DEFAULT_FR;
+try { const v = localStorage.getItem(KEY); if (v !== null) on = v === '1'; } catch (e) {}
 apply(on);
 btn.addEventListener('click', () => {
   on = !on; apply(on);
@@ -437,7 +438,7 @@ def render_html(chapters, cfg, site, chapter_label, lang_code, cover=None, tts=N
                                f"<span class=\"body\"><span class=\"t\">{e(ln['text'])}</span>{fr}</span></p>")
             out.append("<div class=\"scene-end\"></div>")
         out.append("</section>")
-    out.append(f"<footer>{e(course)}</footer></main><dialog class=\"lightbox\" id=\"lightbox\"><img alt=\"\"><p></p></dialog><script src=\"geomap.js\"></script><script>const TTS = {json.dumps(tts, ensure_ascii=False)};{JS}</script></body></html>")
+    out.append(f"<footer>{e(course)}</footer></main><dialog class=\"lightbox\" id=\"lightbox\"><img alt=\"\"><p></p></dialog><script src=\"geomap.js\"></script><script>const TTS = {json.dumps(tts, ensure_ascii=False)};const DEFAULT_FR = {'true' if cfg.get('translations_default') else 'false'};{JS}</script></body></html>")
     return "\n".join(out)
 
 
