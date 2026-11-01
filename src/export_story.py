@@ -20,13 +20,20 @@ Opt-in, per course, in lang.json:
         "chapter_label": "Kapitola",
         "show_translations": "Afficher les traductions",
         "hide_translations": "Masquer les traductions",
-        "back": "Retour au cours"
+        "back": "Retour au cours",
+        "listen_chapter": "Écouter le chapitre",    // optional
+        "stop_listening": "Pause"                  // optional
     }
 
 Without a "story" key nothing is generated. Only the audio cards under one
 of the `headings` (the dialogue sections) are kept; the speaker names come
 from the sheet's character list ("Les personnages"), and an illustration
 (img/illus_*) of a sheet is shown at its place in the story.
+
+The page is listenable: the speaker's emoji is a button that reads the line,
+and each chapter has a "listen" button reading it all. It uses the browser's
+speech synthesis with the learner's settings from the course (same
+localStorage key: voice, rate, pitch, per-character voices, pause).
 
 Usage (normally called by build.py):
     python3 src/export_story.py --lang-dir ../slovingo-sk-fr-friends
@@ -191,7 +198,10 @@ def build_story(data: dict, lang_cfg: dict, map_data: dict | None = None) -> str
                 marks.append({"x": step["x"], "y": step["y"], "n": number[sub], "id": sub,
                               "label": labels.get(sub, step.get("title", sub)), "icon": step.get("icon", "")})
         cover = {"src": map_data["config"]["background"], "marks": marks}
-    return render_html(chapters, cfg, site, chapter_label, target_code, cover)
+    tts = {"code": (target.get("tts_code") if isinstance(target, dict) else None) or target_code,
+           "hint": (target.get("voice_hint") if isinstance(target, dict) else None) or "",
+           "prefix": site.get("storage_prefix") or "slovingo"}
+    return render_html(chapters, cfg, site, chapter_label, target_code, cover, tts)
 
 
 CSS = """
@@ -219,9 +229,21 @@ h2 small { display: block; font-size: .8rem; letter-spacing: .15em; text-transfo
 h3 { font-size: 1.05rem; margin: 2.2rem 0 .8rem; color: var(--soft); font-style: italic; font-weight: normal; text-align: center; }
 h3::before, h3::after { content: " · "; }
 figure { margin: 1.2rem 0; } figure img { width: 100%; height: auto; border-radius: 10px; display: block; }
-p.l { margin: .45rem 0; cursor: pointer; }
-p.l .who { font-variant: small-caps; letter-spacing: .03em; font-weight: bold; }
-p.n { font-style: italic; color: var(--soft); }
+p.l { margin: .55rem 0; cursor: pointer; display: flex; gap: .6rem; align-items: flex-start;
+  border-radius: 10px; padding: .15rem .3rem; transition: background .2s; }
+p.l .av { flex: none; width: 2.3rem; height: 2.3rem; border-radius: 50%; border: 1px solid var(--line);
+  background: light-dark(#fff, #26231f); font-size: 1.3rem; line-height: 1; cursor: pointer; padding: 0;
+  display: flex; align-items: center; justify-content: center; margin-top: .1rem; }
+p.l .av:hover { border-color: var(--accent); }
+body.no-tts p.l .av { cursor: default; }
+p.l .body { flex: 1; min-width: 0; }
+p.l .who { display: block; font: bold 12px/1.2 system-ui, sans-serif; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--soft); }
+p.l.speaking { background: light-dark(#fff3cf, #3a3322); }
+p.n { font-style: italic; color: var(--soft); padding-left: 2.9rem; }
+button.listen { display: block; margin: .2rem auto 1rem; color: var(--accent); background: none;
+  border: 1px solid var(--line); border-radius: 999px; padding: .4rem 1rem; font: 14px/1.3 system-ui, sans-serif; cursor: pointer; }
+body.no-tts button.listen { display: none; }
 p.l .fr { display: none; font: italic 15px/1.5 system-ui, sans-serif; color: var(--fr); margin-top: .1rem; }
 p.l.open .fr, body.all-fr p.l .fr { display: block; }
 footer { margin-top: 4rem; text-align: center; color: var(--soft); font: 13px/1.5 system-ui, sans-serif; }
@@ -261,12 +283,92 @@ document.querySelectorAll('[data-geo]').forEach((el) => {
   if (window.Geomap) window.Geomap.mount(el, JSON.parse(el.dataset.geo));
 });
 document.querySelectorAll('p.l').forEach((p) => p.addEventListener('click', () => p.classList.toggle('open')));
+
+// ---- Listening (browser speech synthesis, same settings as the course) ----
+const synth = window.speechSynthesis;
+function settings() {
+  const d = { voiceURI: null, rate: 0.9, pitch: 1, dialoguePauseDuration: 2, characterVoices: {} };
+  try { return Object.assign(d, JSON.parse(localStorage.getItem(TTS.prefix + '-settings')) || {}); }
+  catch (e) { return d; }
+}
+function findVoice(uri) {
+  const vs = synth.getVoices();
+  if (!vs.length) return null;
+  if (uri) { const c = vs.find((v) => v.voiceURI === uri); if (c) return c; }
+  const code = (TTS.code || '').toLowerCase(), pre = code.split('-')[0];
+  const norm = (v) => v.lang.toLowerCase().replace(/_/g, '-');
+  return vs.find((v) => norm(v) === code) || vs.find((v) => norm(v).split('-')[0] === pre)
+    || (TTS.hint && vs.find((v) => v.name.toLowerCase().includes(TTS.hint.toLowerCase()))) || null;
+}
+function refreshAvailability() {
+  document.body.classList.toggle('no-tts', !('speechSynthesis' in window) || !findVoice(settings().voiceURI));
+}
+let token = 0, activeBtn = null, resume = new Map();
+function stopAll() {
+  token++;
+  if (synth) synth.cancel();
+  document.querySelectorAll('p.l.speaking').forEach((p) => p.classList.remove('speaking'));
+  if (activeBtn) { activeBtn.textContent = '▶ ' + activeBtn.dataset.play; activeBtn = null; }
+}
+function speakLine(p, done) {
+  const s = settings(), sp = p.dataset.speaker;
+  const o = (sp && s.characterVoices && s.characterVoices[sp]) || {};
+  const u = new SpeechSynthesisUtterance(p.querySelector('.t').textContent);
+  u.lang = TTS.code;
+  u.rate = o.rate != null ? o.rate : s.rate;
+  u.pitch = o.pitch != null ? o.pitch : s.pitch;
+  const v = findVoice(o.voiceURI != null ? o.voiceURI : s.voiceURI);
+  if (v) u.voice = v;
+  const my = token;
+  p.classList.add('speaking');
+  let fired = false;
+  const end = () => { if (fired) return; fired = true; p.classList.remove('speaking'); if (my === token) done(); };
+  u.onend = end; u.onerror = end;
+  synth.speak(u);
+}
+function playFrom(lines, i, btn) {
+  if (i >= lines.length) { resume.delete(btn); stopAll(); return; }
+  resume.set(btn, i);
+  const my = token;
+  lines[i].scrollIntoView({ block: 'center', behavior: 'smooth' });
+  speakLine(lines[i], () => {
+    if (my !== token) return;
+    const pause = Math.max(0, Number(settings().dialoguePauseDuration) || 0) * 1000;
+    setTimeout(() => { if (my === token) playFrom(lines, i + 1, btn); }, pause);
+  });
+}
+if ('speechSynthesis' in window) {
+  refreshAvailability();
+  synth.addEventListener('voiceschanged', refreshAvailability);
+  document.querySelectorAll('button.listen').forEach((btn) => {
+    btn.textContent = '▶ ' + btn.dataset.play;
+    btn.addEventListener('click', () => {
+      const was = activeBtn === btn;
+      stopAll();
+      if (was) { btn.textContent = '▶ ' + btn.dataset.play; return; }
+      const lines = [...btn.closest('section').querySelectorAll('p.l')];
+      activeBtn = btn; btn.textContent = '⏸ ' + btn.dataset.pause;
+      playFrom(lines, resume.get(btn) || 0, btn);
+    });
+  });
+  document.querySelectorAll('p.l .av').forEach((b) => b.addEventListener('click', (ev) => {
+    ev.stopPropagation();
+    if (document.body.classList.contains('no-tts')) return;
+    stopAll();
+    speakLine(b.closest('p.l'), () => {});
+  }));
+  window.addEventListener('pagehide', stopAll);
+} else {
+  document.body.classList.add('no-tts');
+}
 """
 
 
-def render_html(chapters, cfg, site, chapter_label, lang_code, cover=None) -> str:
+def render_html(chapters, cfg, site, chapter_label, lang_code, cover=None, tts=None) -> str:
     e = html.escape
     title = cfg.get("title", "L'histoire complète")
+    listen_line = cfg.get("listen_line", "Écouter")
+    tts = tts or {}
     course = site.get("short_name") or site.get("title") or ""
     out = [f"<!DOCTYPE html><html lang=\"{e(lang_code)}\"><head><meta charset=\"utf-8\">",
            "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
@@ -294,6 +396,8 @@ def render_html(chapters, cfg, site, chapter_label, lang_code, cover=None) -> st
     out.append("</nav>")
     for i, ch in enumerate(chapters, 1):
         out.append(f"<section id=\"{e(ch['id'])}\"><h2><small>{e(chapter_label)} {i}</small>{e(ch['label'])}</h2>")
+        out.append(f"<button class=\"listen\" type=\"button\" data-play=\"{e(cfg.get('listen_chapter', 'Écouter le chapitre'))}\" "
+                   f"data-pause=\"{e(cfg.get('stop_listening', 'Pause'))}\"></button>")
         if ch.get("geo"):
             out.append(f"<figure class=\"geo\"><div class=\"geomap\" data-geo='{e(json.dumps(ch['geo'], ensure_ascii=False))}'></div></figure>")
         for sc in ch["scenes"]:
@@ -308,13 +412,16 @@ def render_html(chapters, cfg, site, chapter_label, lang_code, cover=None) -> st
             for ln in sc["lines"]:
                 fr = f"<span class=\"fr\">{e(ln['fr'])}</span>" if ln["fr"] else ""
                 if ln["speaker"] == NARRATOR or not ln["name"] and not ln["speaker"]:
-                    out.append(f"<p class=\"l n\">{e(ln['text'])}{fr}</p>")
+                    out.append(f"<p class=\"l n\"><span class=\"body\"><span class=\"t\">{e(ln['text'])}</span>{fr}</span></p>")
                 else:
-                    who = e(ln["name"]) if ln["name"] else e(ln["speaker"] or "")
-                    out.append(f"<p class=\"l\"><span class=\"who\">{who}</span> — {e(ln['text'])}{fr}</p>")
+                    sp = ln["speaker"] or ""
+                    who = f"<span class=\"who\">{e(ln['name'])}</span>" if ln["name"] else ""
+                    out.append(f"<p class=\"l\" data-speaker=\"{e(sp)}\"><button class=\"av\" type=\"button\" "
+                               f"aria-label=\"{e(listen_line)}\">{e(sp)}</button>"
+                               f"<span class=\"body\">{who}<span class=\"t\">{e(ln['text'])}</span>{fr}</span></p>")
             out.append("<div class=\"scene-end\"></div>")
         out.append("</section>")
-    out.append(f"<footer>{e(course)}</footer></main><script src=\"geomap.js\"></script><script>{JS}</script></body></html>")
+    out.append(f"<footer>{e(course)}</footer></main><script src=\"geomap.js\"></script><script>const TTS = {json.dumps(tts, ensure_ascii=False)};{JS}</script></body></html>")
     return "\n".join(out)
 
 
