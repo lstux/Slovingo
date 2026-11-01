@@ -1199,6 +1199,57 @@ let ttsWarningShown = false;
 let nativeTtsWarningShown = false;
 
 /**
+ * Language matching for TTS voices. Platforms are inconsistent about
+ * `voice.lang`: "sk-SK", "sk_SK" (Android), or ISO 639-2 codes such as
+ * "slk-SVK" / "fra-FRA" / "deu-DEU" (some Android engines, e.g. RHVoice).
+ * Returns the 2-letter primary code when it can be worked out.
+ */
+const TTS_ISO3_TO_2 = {
+    slk: "sk", slo: "sk", fra: "fr", fre: "fr", deu: "de", ger: "de", eng: "en",
+    ces: "cs", cze: "cs", pol: "pl", spa: "es", ita: "it", por: "pt", nld: "nl",
+    dut: "nl", rus: "ru", ukr: "uk", hun: "hu", ron: "ro", rum: "ro", bre: "br",
+};
+
+function ttsPrimaryLang(lang) {
+    const primary = String(lang || "").toLowerCase().replace(/_/g, "-").split("-")[0];
+    return TTS_ISO3_TO_2[primary] || primary;
+}
+
+/** True when `voice` speaks the language of `ttsCode` (e.g. "sk-SK" or "sk"). */
+function voiceMatchesLang(voice, ttsCode) {
+    const wanted = ttsPrimaryLang(ttsCode);
+    return !!wanted && ttsPrimaryLang(voice.lang) === wanted;
+}
+
+/**
+ * Fill a voice <select>: first the voices of the course language, then
+ * every other voice of the device (nothing is hidden), each labelled
+ * with its language and whether it is local or network-based.
+ */
+function fillVoiceSelect(select, ttsCode, autoText, otherText) {
+    select.innerHTML = "";
+    const makeOption = (text, value) => {
+        const o = document.createElement("option");
+        o.textContent = text;
+        o.value = value;
+        return o;
+    };
+    select.appendChild(makeOption(autoText, ""));
+    const voices = ("speechSynthesis" in window ? window.speechSynthesis.getVoices() : []).slice();
+    const label = (v) => `${v.name} (${v.lang}${v.localService ? "" : ", network"})`;
+    const mine = voices.filter((v) => voiceMatchesLang(v, ttsCode));
+    const others = voices.filter((v) => !voiceMatchesLang(v, ttsCode))
+        .sort((x, y) => x.lang.localeCompare(y.lang) || x.name.localeCompare(y.name));
+    mine.forEach((v) => select.appendChild(makeOption(label(v), v.voiceURI)));
+    if (others.length) {
+        const group = document.createElement("optgroup");
+        group.label = otherText;
+        others.forEach((v) => group.appendChild(makeOption(label(v), v.voiceURI)));
+        select.appendChild(group);
+    }
+}
+
+/**
  * Find the voice to speak with. If the person picked a specific one
  * in Settings (SETTINGS.voiceURI), honor it as long as it's still
  * available; otherwise auto-detect: exact tts_code -> same language
@@ -1238,11 +1289,11 @@ function findVoice(kind, preferredVoiceURI) {
     const ttsPrefix = ttsCode.split("-")[0];
 
     if (ttsCode) {
-        const exact = voices.find((v) => v.lang.toLowerCase() === ttsCode);
+        const exact = voices.find((v) => v.lang.toLowerCase().replace(/_/g, "-") === ttsCode);
         if (exact) return exact;
     }
     if (ttsPrefix) {
-        const prefixed = voices.find((v) => v.lang.toLowerCase().startsWith(ttsPrefix));
+        const prefixed = voices.find((v) => voiceMatchesLang(v, ttsPrefix));
         if (prefixed) return prefixed;
     }
     const hint = (langCfg.voice_hint || "").toLowerCase();
