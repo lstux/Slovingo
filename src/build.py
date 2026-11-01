@@ -48,6 +48,7 @@ from gen_icons import companions_from_config, draw_flag_icon, find_emoji_font
 from gen_manifest import build_manifest
 from gen_service_worker import render as render_service_worker
 from map_generator import build_map_json, find_map_background
+from export_story import build_story
 from smd2data import SheetNameError, build_sheet_json
 
 # Static front-end files copied as-is into dist/ -- shared across
@@ -185,6 +186,14 @@ def run_build(
     for dirname in STATIC_DIRS:
         shutil.copytree(static_dir / dirname, dist_dir / dirname, dirs_exist_ok=True)
     runtime_lang_cfg = {k: v for k, v in lang_cfg.items() if k != "generator"}
+    # 4.5 Whole story on one page (opt-in: a `story` section in lang.json).
+    #     The home screen links to it when lang.json carries story_page.
+    story_page = build_story(data, lang_cfg)
+    runtime_lang_cfg.pop("story_page", None)
+    if story_page:
+        (dist_dir / "histoire.html").write_text(story_page, encoding="utf-8")
+        runtime_lang_cfg["story_page"] = "histoire.html"
+        print(f"Story: {dist_dir}/histoire.html")
     (dist_dir / "lang.json").write_text(
         json.dumps(runtime_lang_cfg, ensure_ascii=False, indent=2), encoding="utf-8"
     )

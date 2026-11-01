@@ -1054,6 +1054,15 @@ function renderHome() {
             allSheets.open = true;
         }
     });
+    // The whole story on one page (export_story.py), for readers who
+    // already speak the language: one link under the map.
+    if (LANG.story_page) {
+        const story = document.createElement("a");
+        story.className = "story-link";
+        story.href = LANG.story_page;
+        story.textContent = uiLabel("read_story", "📖 Read the whole story");
+        content.appendChild(story);
+    }
     // Running counter for .index-num, shared across every group on the
     // page -- matches v1, which numbered sheets continuously along the
     // whole curriculum rather than restarting at 1 in each series.
