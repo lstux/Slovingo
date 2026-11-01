@@ -400,12 +400,45 @@ def build_word_frequency(texts: Iterable[str]) -> Counter:
     conventions-and-principles: bugs found during testing are fixed
     inline)."""
     freq: Counter = Counter()
-    for text in texts:
-        for token in tokenize(text):
+    all_tokens = [tokenize(text) for text in texts]
+    for tokens in all_tokens:
+        KNOWN_NAMES.update(strip_punct(tokens[i]).lower()
+                           for i in range(len(tokens)) if _mid_sentence_capital(tokens, i))
+    for tokens in all_tokens:
+        for i, token in enumerate(tokens):
             word = strip_punct(token).lower()
-            if word and not is_placeholder(word):
+            if word and not is_placeholder(word) and not is_proper_noun(tokens, i):
                 freq[word] += 1
     return freq
+
+
+SENTENCE_END = (".", "!", "?", "…", ":", "«", "„", "“", "\"")
+
+
+# Names seen capitalised in the middle of a sentence somewhere in the
+# corpus (filled by build_word_frequency): lets "Lola" be recognised as a
+# name even where it starts a sentence.
+KNOWN_NAMES: set[str] = set()
+
+
+def _mid_sentence_capital(tokens: list[str], i: int) -> bool:
+    if i == 0:
+        return False
+    word = strip_punct(tokens[i])
+    if not word or not word[0].isupper():
+        return False
+    return not (tokens[i - 1].endswith(SENTENCE_END) or tokens[i][0] in "«„“\"(")
+
+
+def is_proper_noun(tokens: list[str], i: int) -> bool:
+    """A name -- Lola, Levoča, Andrea: a capitalised word that doesn't
+    start a sentence (or a quote), or one already seen that way. As a
+    blank it tests nothing, and as a distractor ("lola") it reads oddly,
+    so it is neither."""
+    word = strip_punct(tokens[i])
+    if word and word[0].isupper() and word.lower() in KNOWN_NAMES:
+        return True
+    return _mid_sentence_capital(tokens, i)
 
 
 def is_placeholder(token: str) -> bool:
@@ -448,7 +481,9 @@ def choose_blank_index(tokens: list[str], selection_freq: Counter, preferred: li
     distractor restriction: picking which word to blank is a different
     concern from restricting which *wrong* answers are fair game.
     """
-    candidates = [i for i in range(1, len(tokens)) if not is_placeholder(tokens[i])] or [0]
+    candidates = [i for i in range(1, len(tokens))
+                  if not is_placeholder(tokens[i]) and not is_proper_noun(tokens, i)] or \
+                 [i for i in range(1, len(tokens)) if not is_placeholder(tokens[i])] or [0]
     if preferred:
         pref = set(preferred)
         vocab_idx = [i for i in candidates if strip_punct(tokens[i]).lower() in pref]
@@ -456,7 +491,7 @@ def choose_blank_index(tokens: list[str], selection_freq: Counter, preferred: li
             return min(vocab_idx, key=lambda i: selection_freq.get(strip_punct(tokens[i]).lower(), 0))
     idx = max(candidates, key=lambda i: selection_freq.get(strip_punct(tokens[i]).lower(), 0))
     if selection_freq.get(strip_punct(tokens[idx]).lower(), 0) <= 1:
-        middle = [i for i in range(1, len(tokens) - 1) if not is_placeholder(tokens[i])] or candidates
+        middle = [i for i in candidates if i < len(tokens) - 1] or candidates
         idx = min(middle, key=lambda i: len(strip_punct(tokens[i])))
     return idx
 
