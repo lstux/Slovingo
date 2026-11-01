@@ -125,3 +125,19 @@ Tout ce qui s'affiche vient du `lang.json` du cours, rien n'est à saisir côté
 
 Sans `cover`, la carte garde le drapeau ; sans `pitch`, la description d'une ligne. Les champs sont
 aussi dans `courses.json` (`group`, `group_label`, `cover`, `pitch`, `audience`).
+
+## Statut et dépôt
+
+Chaque cours indique son niveau de maturité dans `lang.json`, sous `site.status` :
+
+| Valeur | Sens |
+|---|---|
+| `draft` | idée posée, contenu incomplet |
+| `build` | contenu ou illustrations en cours d'écriture |
+| `review` | contenu complet, relecture par une locutrice en attente ou en cours |
+| `beta` | utilisable, des testeurs s'en servent, retours en cours |
+| `ready` | relu, illustré, stable |
+
+La page de sélection affiche ce statut en pastille (libellé en anglais) et un lien « Dépôt GitHub »
+vers `https://github.com/lstux/Slovingo-<code>`, calculé par le build. Un statut absent ou inconnu
+produit un avertissement et pas de pastille. `courses.json` contient les champs `status` et `repo`.

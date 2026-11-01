@@ -46,6 +46,12 @@
   .tag { background: var(--line); border-radius: 999px; padding: .05rem .55rem; }
   .pals { font-size: 1rem; }
   .last { font-size: .8rem; color: var(--c, var(--accent)); font-weight: 600; }
+  .badge { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .03em; text-transform: uppercase;
+    border-radius: 999px; padding: .08rem .55rem; color: #fff; background: var(--muted); }
+  .badge.ready { background: #2e7d32; } .badge.review { background: #1565c0; } .badge.beta { background: #ef6c00; }
+  .badge.build { background: #6d4c41; } .badge.draft { background: #757575; }
+  .repo { display: inline-block; margin: .35rem 0 0 .4rem; font-size: .85rem; color: var(--muted); text-decoration: underline; }
+  .repo:focus-visible { outline: 3px solid var(--accent); }
   @media (max-width: 420px) { a.course { flex-direction: column; border-left-width: 1px; border-top: 6px solid var(--c, var(--accent)); }
     .thumb { width: 100%; height: 9rem; } .txt { padding: 0 .9rem .8rem; } }
   #status { color: var(--muted); }
@@ -130,6 +136,9 @@
     if (c.companions && c.companions.length) {
       var p = document.createElement("span"); p.className = "pals"; p.textContent = c.companions.join(" "); meta.appendChild(p);
     }
+    if (c.status) {
+      var b = document.createElement("span"); b.className = "badge " + c.status; b.textContent = c.status; meta.appendChild(b);
+    }
     if (c.id === last) {
       var l = document.createElement("span"); l.className = "last"; l.textContent = "Dernier cours"; meta.appendChild(l);
     }
@@ -139,6 +148,12 @@
     a.appendChild(txt);
     a.addEventListener("click", function () { remember(c.id); });
     li.appendChild(a);
+    if (c.repo) {
+      var r = document.createElement("a");
+      r.className = "repo"; r.href = c.repo; r.target = "_blank"; r.rel = "noopener";
+      r.textContent = "Dépôt GitHub";
+      li.appendChild(r);
+    }
     return li;
   }
 

@@ -114,6 +114,9 @@ def read_course_ids(launcher_dir: Path, requested: list[str] | None) -> list[str
     return ids
 
 
+STATUSES = ["draft", "build", "review", "beta", "ready"]
+
+
 def make_cover(src: Path, dest: Path, width: int = 520) -> str | None:
     """Shrink a course's cover image for the launcher cards (JPEG, `width` px wide)."""
     if not src.is_file() or not PIL_AVAILABLE:
@@ -186,6 +189,14 @@ def build_course(code: str, content_root: Path, static_dir: Path, base_path: str
     cover = make_cover(lang_dir / site["cover"], dest) if site.get("cover") else None
     if cover:
         entry["cover"] = f"{code}/{cover}"
+    # Maturity of the course, set in lang.json (site.status), and its GitHub repo
+    # (lstux/Slovingo-<code>, the naming used for all course repos).
+    status = str(site.get("status", "")).lower()
+    if status not in STATUSES:
+        print(f"WARNING: {code}: site.status {site.get('status')!r} is not one of {STATUSES}; no badge", file=sys.stderr)
+        status = ""
+    entry["status"] = status
+    entry["repo"] = f"https://github.com/lstux/Slovingo-{code}"
     if (dest / "api" / "index.json").is_file():
         entry["api"] = f"{code}/api/index.json"  # light JSON API of the course (export_api.py)
     return entry
