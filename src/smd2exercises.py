@@ -403,26 +403,60 @@ def build_word_frequency(texts: Iterable[str]) -> Counter:
     for text in texts:
         for token in tokenize(text):
             word = strip_punct(token).lower()
-            if word:
+            if word and not is_placeholder(word):
                 freq[word] += 1
     return freq
 
 
-def choose_blank_index(tokens: list[str], selection_freq: Counter) -> int:
-    """Pick which word to blank: the most frequent one in the corpus
-    among candidates (skipping the first token, often capitalised and
-    sentence-specific). Falls back to the shortest word in the middle
-    of the sentence when nothing stands out (a still-small corpus).
+def is_placeholder(token: str) -> bool:
+    """[USER_NAME], [ASK_USER_NAME]... are filled in at display time:
+    never a blank, never an answer."""
+    return "[" in token or "]" in token
+
+
+def blank_vocab_words(pairs: list[tuple[str, str]], side: int, selection_freq: Counter) -> list[str]:
+    """Content words of the sheet's vocabulary tables, on one side
+    (0 = l1, 1 = l2): the words the sheet actually teaches, so the
+    best things to blank. Short words and the corpus' most frequent
+    words (articles, "je", "a"...) are left out: they are what the
+    old frequency-only choice kept blanking."""
+    frequent = {w for w, _ in selection_freq.most_common(FREQUENT_WORDS_CONSIDERED)}
+    words = []
+    for pair in pairs:
+        for token in tokenize(pair[side]):
+            w = strip_punct(token).lower()
+            # Elided forms (l'envers, d'emploi) are left out: as a blank
+            # or a distractor they read as half a word.
+            if len(w) >= 3 and w not in frequent and not is_placeholder(w) and "'" not in w and "’" not in w:
+                words.append(w)
+    return dedupe_keep_order(words)
+
+
+def choose_blank_index(tokens: list[str], selection_freq: Counter, preferred: list[str] | None = None) -> int:
+    """Pick which word to blank, skipping the first token (often
+    capitalised and sentence-specific) and placeholders like
+    [USER_NAME]:
+
+    1. a word of the sheet's own vocabulary (`preferred`), the rarest
+       one in the corpus if several -- that is what the sheet teaches;
+    2. otherwise the most frequent word in the corpus (a grammatical
+       word, a fair trap);
+    3. otherwise the shortest word in the middle of the sentence (a
+       still-small corpus).
 
     Uses corpus-wide frequency regardless of the "already seen"
-    distractor restriction: picking a grammatically common word to
-    blank is a different concern from restricting which *wrong*
-    answers are fair game.
+    distractor restriction: picking which word to blank is a different
+    concern from restricting which *wrong* answers are fair game.
     """
-    candidates = list(range(1, len(tokens))) or [0]
+    candidates = [i for i in range(1, len(tokens)) if not is_placeholder(tokens[i])] or [0]
+    if preferred:
+        pref = set(preferred)
+        vocab_idx = [i for i in candidates if strip_punct(tokens[i]).lower() in pref]
+        if vocab_idx:
+            return min(vocab_idx, key=lambda i: selection_freq.get(strip_punct(tokens[i]).lower(), 0))
     idx = max(candidates, key=lambda i: selection_freq.get(strip_punct(tokens[i]).lower(), 0))
     if selection_freq.get(strip_punct(tokens[idx]).lower(), 0) <= 1:
-        middle = list(range(1, len(tokens) - 1)) or candidates
+        middle = [i for i in range(1, len(tokens) - 1) if not is_placeholder(tokens[i])] or candidates
         idx = min(middle, key=lambda i: len(strip_punct(tokens[i])))
     return idx
 
@@ -534,10 +568,14 @@ def generate_fill_blank(
     l1_local_freq = build_word_frequency(s["l1"] for s in sheet["sentences"])
     l2_local_freq = build_word_frequency(s["l2"] for s in sheet["sentences"])
 
+    pairs = sheet.get("vocab_pairs", [])
+    l1_vocab = blank_vocab_words(pairs, 0, l1_selection_freq)
+    l2_vocab = blank_vocab_words(pairs, 1, l2_selection_freq)
+
     exercises = []
     for s in sheet["sentences"]:
-        l1_blank = _build_blank(s["l1"], l1_selection_freq, l1_primary_freq, l1_global_freq, l1_local_freq)
-        l2_blank = _build_blank(s["l2"], l2_selection_freq, l2_primary_freq, l2_global_freq, l2_local_freq)
+        l1_blank = _build_blank(s["l1"], l1_selection_freq, l1_primary_freq, l1_global_freq, l1_local_freq, l1_vocab)
+        l2_blank = _build_blank(s["l2"], l2_selection_freq, l2_primary_freq, l2_global_freq, l2_local_freq, l2_vocab)
         if l1_blank is None or l2_blank is None:
             continue
 
@@ -558,16 +596,26 @@ def generate_fill_blank(
 
 def _build_blank(
     text: str, selection_freq: Counter, primary_freq: Counter, global_freq: Counter,
-    local_freq: Counter | None = None,
+    local_freq: Counter | None = None, vocab: list[str] | None = None,
 ) -> dict[str, Any] | None:
     tokens = tokenize(text)
     if len(tokens) < MIN_TOKENS_FOR_BLANK:
         return None
-    idx = choose_blank_index(tokens, selection_freq)
+    idx = choose_blank_index(tokens, selection_freq, vocab)
     missing = strip_punct(tokens[idx])
-    if not missing:
+    if not missing or is_placeholder(missing):
         return None
-    choices = pick_frequency_distractors(missing, primary_freq, global_freq, FILL_BLANK_CHOICES, local_freq)
+    choices = None
+    if vocab and missing.lower() in vocab:
+        # A vocabulary word gets vocabulary distractors from the same
+        # sheet (a "je" among "kemp / stan / návod" would give it away),
+        # minus the words of the sentence itself.
+        in_sentence = {strip_punct(t).lower() for t in tokens}
+        pool = [w for w in vocab if w != missing.lower() and w not in in_sentence]
+        if len(pool) >= FILL_BLANK_CHOICES:
+            choices = random.sample(pool, FILL_BLANK_CHOICES)
+    if choices is None:
+        choices = pick_frequency_distractors(missing, primary_freq, global_freq, FILL_BLANK_CHOICES, local_freq)
     if choices is None:
         return None
     return {"blank_index": idx, "missing": missing, "choices": choices}
