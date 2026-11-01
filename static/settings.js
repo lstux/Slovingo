@@ -404,17 +404,12 @@ function renderAudioSettingsSection() {
     rows.push(voiceRow);
 
     const populateVoiceOptions = () => {
-        voiceSelect.innerHTML = "";
-        const auto = el("option", { text: (LANG.ui && LANG.ui.voice_automatic) || "Automatic", attrs: { value: "" } });
-        voiceSelect.appendChild(auto);
-
-        const ttsPrefix = (LANG.target_lang.tts_code || "").split("-")[0].toLowerCase();
-        const voices = ("speechSynthesis" in window ? window.speechSynthesis.getVoices() : [])
-            .filter((v) => v.lang.toLowerCase().startsWith(ttsPrefix));
-        voices.forEach((voice) => {
-            const option = el("option", { text: `${voice.name} (${voice.lang})`, attrs: { value: voice.voiceURI } });
-            voiceSelect.appendChild(option);
-        });
+        fillVoiceSelect(
+            voiceSelect,
+            LANG.target_lang.tts_code || "",
+            (LANG.ui && LANG.ui.voice_automatic) || "Automatic",
+            (LANG.ui && LANG.ui.voice_other) || "Other voices",
+        );
         voiceSelect.value = SETTINGS.voiceURI || "";
     };
     populateVoiceOptions();
@@ -443,15 +438,12 @@ function renderAudioSettingsSection() {
         rows.push(nativeRow);
 
         const populateNativeVoiceOptions = () => {
-            nativeSelect.innerHTML = "";
-            nativeSelect.appendChild(el("option", { text: (LANG.ui && LANG.ui.voice_automatic) || "Automatic", attrs: { value: "" } }));
-
-            const nativePrefix = (LANG.native_lang.tts_code || "").split("-")[0].toLowerCase();
-            const nativeVoices = ("speechSynthesis" in window ? window.speechSynthesis.getVoices() : [])
-                .filter((v) => v.lang.toLowerCase().startsWith(nativePrefix));
-            nativeVoices.forEach((voice) => {
-                nativeSelect.appendChild(el("option", { text: `${voice.name} (${voice.lang})`, attrs: { value: voice.voiceURI } }));
-            });
+            fillVoiceSelect(
+                nativeSelect,
+                LANG.native_lang.tts_code || "",
+                (LANG.ui && LANG.ui.voice_automatic) || "Automatic",
+                (LANG.ui && LANG.ui.voice_other) || "Other voices",
+            );
             nativeSelect.value = SETTINGS.nativeVoiceURI || "";
         };
         populateNativeVoiceOptions();
