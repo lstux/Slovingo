@@ -1,3 +1,10 @@
 {
-  "courses": ["sk-fr-kids", "de-fr-kids", "fr-sk-kids", "sk-fr", "sk-fr-friends", "fr-sk"]
+  "courses": [
+    "sk-fr-kids",
+    "sk-fr-friends",
+    "sk-fr",
+    "de-fr-kids",
+    "fr-sk-kids",
+    "fr-sk"
+  ]
 }

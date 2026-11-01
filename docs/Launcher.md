@@ -107,3 +107,21 @@ d'accueil.
 Le workflow `.github/workflows/pages.yml` publie depuis `main` (push, chaque nuit
 vers 3 h UTC, ou à la main). Il faut que la source de GitHub Pages soit réglée
 sur « GitHub Actions » dans les paramètres du repo.
+
+## Présentation des cours (groupes et cartes)
+
+La page d'accueil regroupe les cours par **langue apprise** (`target_lang.code`), en groupes
+repliables (tous fermés au départ). L'ordre vient de `launcher/course-ids.json` : celui des
+cours dans un groupe, et celui des groupes (première apparition).
+
+Tout ce qui s'affiche vient du `lang.json` du cours, rien n'est à saisir côté moteur :
+
+| Champ | Rôle |
+|---|---|
+| `target_lang.group_label` | titre du groupe, `"<nom côté élève> - <nom dans la langue apprise>"` (ex. `"Slovaque - Slovenčina"`, `"Francúzština - Français"`, `"Allemand - Deutsch"`). Sans lui : `target_lang.name` |
+| `site.cover` | image du cours (chemin dans le cours), réduite à 520 px de large dans `<cours>/launcher-cover.jpg` |
+| `site.pitch` | quelques phrases de présentation (sinon `site.description`) |
+| `site.audience` | petite étiquette : « 8-12 ans », « Adultes »… |
+
+Sans `cover`, la carte garde le drapeau ; sans `pitch`, la description d'une ligne. Les champs sont
+aussi dans `courses.json` (`group`, `group_label`, `cover`, `pitch`, `audience`).

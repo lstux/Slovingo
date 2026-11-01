@@ -114,6 +114,20 @@ def read_course_ids(launcher_dir: Path, requested: list[str] | None) -> list[str
     return ids
 
 
+def make_cover(src: Path, dest: Path, width: int = 520) -> str | None:
+    """Shrink a course's cover image for the launcher cards (JPEG, `width` px wide)."""
+    if not src.is_file() or not PIL_AVAILABLE:
+        print(f"WARNING: cover {src} not usable, the card keeps the flag", file=sys.stderr)
+        return None
+    from PIL import Image
+    im = Image.open(src).convert("RGB")
+    if im.width > width:
+        im = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
+    name = "launcher-cover.jpg"
+    im.save(dest / name, "JPEG", quality=82, optimize=True)
+    return name
+
+
 def build_course(code: str, content_root: Path, static_dir: Path, base_path: str, work_root: Path, out: Path) -> dict:
     """Build one course under out/<code>/ and return its launcher entry."""
     src = content_root / code
@@ -156,6 +170,22 @@ def build_course(code: str, content_root: Path, static_dir: Path, base_path: str
         "companions": companions_from_config(cfg) if kids else [],
         "theme_color": site.get("theme_color", ""),
     }
+    # Optional presentation fields, set by the course itself in lang.json:
+    #   site.cover     image of the course (path inside the course), shrunk for the launcher
+    #   site.pitch     a few sentences presenting the story
+    #   site.audience  short tag ("8-12 ans")
+    #   target_lang.group_label  heading of the launcher group ("Slovaque - Slovenčina");
+    #                  courses are grouped by target_lang.code
+    tl = cfg["target_lang"]
+    entry["group"] = tl.get("code") or code
+    entry["group_label"] = tl.get("group_label") or tl.get("name", "").capitalize() or entry["group"]
+    if site.get("pitch"):
+        entry["pitch"] = site["pitch"]
+    if site.get("audience"):
+        entry["audience"] = site["audience"]
+    cover = make_cover(lang_dir / site["cover"], dest) if site.get("cover") else None
+    if cover:
+        entry["cover"] = f"{code}/{cover}"
     if (dest / "api" / "index.json").is_file():
         entry["api"] = f"{code}/api/index.json"  # light JSON API of the course (export_api.py)
     return entry

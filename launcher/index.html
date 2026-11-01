@@ -22,17 +22,32 @@
   main { max-width: 34rem; margin: 0 auto; padding: 2rem 16px 3rem; }
   h1 { margin: 0 0 .25rem; font-size: 2rem; }
   .sub { margin: 0 0 1.5rem; color: var(--muted); }
-  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
-  a.course { display: flex; gap: .9rem; align-items: center; padding: .9rem 1rem; text-decoration: none;
-    color: inherit; background: var(--card); border: 1px solid var(--line);
-    border-left: 6px solid var(--c, var(--accent)); border-radius: 14px; box-shadow: var(--shadow); }
+  details.group { margin: 0 0 .9rem; background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    box-shadow: var(--shadow); }
+  details.group > summary { list-style: none; cursor: pointer; padding: .9rem 1rem; display: flex; align-items: center;
+    gap: .7rem; font-weight: 700; font-size: 1.15rem; border-radius: 16px; }
+  details.group > summary::-webkit-details-marker { display: none; }
+  details.group > summary .gflag { font-size: 1.6rem; line-height: 1; }
+  details.group > summary .count { margin-left: auto; font-size: .8rem; font-weight: 600; color: var(--muted); }
+  details.group > summary::after { content: "▾"; color: var(--muted); transition: transform .2s; }
+  details.group[open] > summary::after { transform: rotate(180deg); }
+  details.group > summary:focus-visible { outline: 3px solid var(--accent); }
+  ul { list-style: none; margin: 0; padding: 0 .75rem .75rem; display: grid; gap: .7rem; }
+  a.course { display: flex; gap: .9rem; align-items: stretch; text-decoration: none; overflow: hidden;
+    color: inherit; background: var(--bg); border: 1px solid var(--line);
+    border-left: 6px solid var(--c, var(--accent)); border-radius: 14px; }
   a.course:active, a.course:focus-visible { outline: 3px solid var(--c, var(--accent)); outline-offset: 2px; }
-  .flag { font-size: 2.2rem; line-height: 1; flex: none; }
-  .txt { min-width: 0; }
-  .txt strong { display: block; font-size: 1.1rem; }
-  .txt span { display: block; color: var(--muted); font-size: .92rem; }
-  .pals { font-size: 1.1rem; margin-top: .15rem; }
+  .thumb { flex: none; width: 7.5rem; background: var(--line) center / cover no-repeat; display: flex;
+    align-items: center; justify-content: center; font-size: 2.4rem; }
+  .txt { min-width: 0; padding: .7rem .8rem .7rem 0; }
+  .txt strong { display: block; font-size: 1.05rem; }
+  .txt .pitch { display: block; color: var(--muted); font-size: .88rem; margin-top: .15rem; }
+  .meta { margin-top: .3rem; font-size: .8rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .2rem .6rem; align-items: center; }
+  .tag { background: var(--line); border-radius: 999px; padding: .05rem .55rem; }
+  .pals { font-size: 1rem; }
   .last { font-size: .8rem; color: var(--c, var(--accent)); font-weight: 600; }
+  @media (max-width: 420px) { a.course { flex-direction: column; border-left-width: 1px; border-top: 6px solid var(--c, var(--accent)); }
+    .thumb { width: 100%; height: 9rem; } .txt { padding: 0 .9rem .8rem; } }
   #status { color: var(--muted); }
 </style>
 </head>
@@ -41,7 +56,7 @@
   <h1>Slovingo</h1>
   <p class="sub">Choisis ton cours</p>
   <p id="status">Chargement…</p>
-  <ul id="list" hidden></ul>
+  <div id="list" hidden></div>
 </main>
 <script>
 (function () {
@@ -59,48 +74,72 @@
   }
 
   function render(courses, last) {
+    var groups = [], byId = {};
     courses.forEach(function (c) {
-      var li = document.createElement("li");
-      var a = document.createElement("a");
-      a.className = "course";
-      a.href = c.id + "/";
-      if (c.theme_color) a.style.setProperty("--c", c.theme_color);
-
-      var flag = document.createElement("div");
-      flag.className = "flag";
-      flag.textContent = c.flag || "📘";
-
-      var txt = document.createElement("div");
-      txt.className = "txt";
-      var title = document.createElement("strong");
-      title.textContent = c.title || c.id;
-      txt.appendChild(title);
-      if (c.description) {
-        var d = document.createElement("span");
-        d.textContent = c.description;
-        txt.appendChild(d);
-      }
-      if (c.companions && c.companions.length) {
-        var p = document.createElement("div");
-        p.className = "pals";
-        p.textContent = c.companions.join(" ");
-        txt.appendChild(p);
-      }
-      if (c.id === last) {
-        var l = document.createElement("div");
-        l.className = "last";
-        l.textContent = "Dernier cours";
-        txt.appendChild(l);
-      }
-
-      a.appendChild(flag);
-      a.appendChild(txt);
-      a.addEventListener("click", function () { remember(c.id); });
-      li.appendChild(a);
-      listEl.appendChild(li);
+      var g = c.group || c.id;
+      if (!byId[g]) { byId[g] = { label: c.group_label || g, flag: c.flag, items: [] }; groups.push(byId[g]); }
+      byId[g].items.push(c);
+    });
+    groups.forEach(function (g) {
+      var det = document.createElement("details");
+      det.className = "group";
+      var sum = document.createElement("summary");
+      var fl = document.createElement("span");
+      fl.className = "gflag"; fl.textContent = g.flag || "📘";
+      var lab = document.createElement("span");
+      lab.textContent = g.label;
+      var cnt = document.createElement("span");
+      cnt.className = "count"; cnt.textContent = g.items.length;
+      sum.appendChild(fl); sum.appendChild(lab); sum.appendChild(cnt);
+      det.appendChild(sum);
+      var ul = document.createElement("ul");
+      g.items.forEach(function (c) { ul.appendChild(card(c, last)); });
+      det.appendChild(ul);
+      listEl.appendChild(det);
     });
     statusEl.hidden = true;
     listEl.hidden = false;
+  }
+
+  function card(c, last) {
+    var li = document.createElement("li");
+    var a = document.createElement("a");
+    a.className = "course";
+    a.href = c.id + "/";
+    if (c.theme_color) a.style.setProperty("--c", c.theme_color);
+
+    var th = document.createElement("div");
+    th.className = "thumb";
+    if (c.cover) th.style.backgroundImage = "url('" + c.cover + "')";
+    else th.textContent = c.flag || "📘";
+
+    var txt = document.createElement("div");
+    txt.className = "txt";
+    var title = document.createElement("strong");
+    title.textContent = c.title || c.id;
+    txt.appendChild(title);
+    var blurb = c.pitch || c.description;
+    if (blurb) {
+      var d = document.createElement("span");
+      d.className = "pitch"; d.textContent = blurb;
+      txt.appendChild(d);
+    }
+    var meta = document.createElement("div");
+    meta.className = "meta";
+    if (c.audience) { var t = document.createElement("span"); t.className = "tag"; t.textContent = c.audience; meta.appendChild(t); }
+    if (c.companions && c.companions.length) {
+      var p = document.createElement("span"); p.className = "pals"; p.textContent = c.companions.join(" "); meta.appendChild(p);
+    }
+    if (c.id === last) {
+      var l = document.createElement("span"); l.className = "last"; l.textContent = "Dernier cours"; meta.appendChild(l);
+    }
+    if (meta.childNodes.length) txt.appendChild(meta);
+
+    a.appendChild(th);
+    a.appendChild(txt);
+    a.addEventListener("click", function () { remember(c.id); });
+    li.appendChild(a);
+    return li;
   }
 
   fetch("courses.json")
