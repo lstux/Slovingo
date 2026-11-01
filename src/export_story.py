@@ -175,10 +175,11 @@ def build_story(data: dict, lang_cfg: dict, map_data: dict | None = None) -> str
             src = image.get("src") or ""
             illus = src if "illus_" in src else None
             photo = None
-            if src and not illus and not src.startswith("TODO"):
+            if src and not src.startswith("TODO"):
                 text, credit = _split_credit(_clean(image.get("caption") or "", user_name))
                 photo = {"src": src, "caption": text, "credit": credit}
-            scenes.append({"id": sheet["id"], "title": title, "lines": lines, "image": illus, "photo": photo})
+            scenes.append({"id": sheet["id"], "title": title, "lines": lines,
+                           "image": photo if illus else None, "photo": None if illus else photo})
         if scenes:
             geo = None
             if geo_points:
@@ -229,19 +230,25 @@ h2 { font-size: 1.5rem; margin: 3.5rem 0 .3rem; text-align: center; }
 h2 small { display: block; font-size: .8rem; letter-spacing: .15em; text-transform: uppercase; color: var(--soft); }
 h3 { font-size: 1.05rem; margin: 2.2rem 0 .8rem; color: var(--soft); font-style: italic; font-weight: normal; text-align: center; }
 h3::before, h3::after { content: " · "; }
-figure { margin: 1.2rem 0; } figure img { width: 100%; height: auto; border-radius: 10px; display: block; }
-p.l { margin: .55rem 0; cursor: pointer; display: flex; gap: .6rem; align-items: flex-start;
-  border-radius: 10px; padding: .15rem .3rem; transition: background .2s; }
-p.l .av { flex: none; width: 2.3rem; height: 2.3rem; border-radius: 50%; border: 1px solid var(--line);
+figure { margin: 1.2rem 0; text-align: center; }
+figure img { max-width: 100%; max-height: 70vh; width: auto; height: auto; border-radius: 10px; display: block; margin: 0 auto; }
+figure.zoomable img { cursor: zoom-in; }
+dialog.lightbox { outline: none; border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 96vh; overflow: visible; }
+dialog.lightbox::backdrop { background: rgb(0 0 0 / .85); }
+dialog.lightbox img { max-width: 96vw; max-height: 80vh; border-radius: 8px; display: block; margin: 0 auto; }
+dialog.lightbox p { color: #eee; font: 14px/1.4 system-ui, sans-serif; text-align: center; margin: .6rem auto 0; max-width: 40rem; }
+dialog.lightbox p small { opacity: .7; }
+p.l { margin: .25rem 0; cursor: pointer; display: flex; gap: .6rem; align-items: flex-start;
+  border-radius: 10px; padding: .1rem .3rem; transition: background .2s; line-height: 1.5; }
+p.l .av { flex: none; width: 2.2rem; height: 2.2rem; border-radius: 50%; border: 1px solid var(--line);
   background: light-dark(#fff, #26231f); font-size: 1.3rem; line-height: 1; cursor: pointer; padding: 0;
   display: flex; align-items: center; justify-content: center; margin-top: .1rem; }
 p.l .av:hover { border-color: var(--accent); }
 body.no-tts p.l .av { cursor: default; }
 p.l .body { flex: 1; min-width: 0; }
-p.l .who { display: block; font: bold 12px/1.2 system-ui, sans-serif; letter-spacing: .06em;
-  text-transform: uppercase; color: var(--soft); }
 p.l.speaking { background: light-dark(#fff3cf, #3a3322); }
-p.n { font-style: italic; color: var(--soft); padding-left: 2.9rem; }
+p.n { font-style: italic; color: var(--text); opacity: .85; padding-left: .9rem; margin: .5rem 0;
+  border-left: 3px solid var(--accent); border-radius: 0; }
 button.listen { display: block; margin: .2rem auto 1rem; color: var(--accent); background: none;
   border: 1px solid var(--line); border-radius: 999px; padding: .4rem 1rem; font: 14px/1.3 system-ui, sans-serif; cursor: pointer; }
 body.no-tts button.listen { display: none; }
@@ -257,13 +264,10 @@ footer { margin-top: 4rem; text-align: center; color: var(--soft); font: 13px/1.
 .cover a:hover { background: #0b4ea2; color: #fff; }
 figure.geo { margin: 1rem 0 1.5rem; }
 figure.geo .geomap { height: 220px; border-radius: 10px; overflow: hidden; border: 1px solid var(--line); }
-figure.photo { float: right; width: 40%; margin: .3rem 0 .6rem 1rem; }
-figure.photo img { border-radius: 8px; }
-figure.photo figcaption { font: 12px/1.35 system-ui, sans-serif; color: var(--soft); margin-top: .3rem; }
-figure.photo figcaption small { opacity: .75; }
+figure.photo img { max-height: 45vh; }
 section .scene-end { clear: both; }
 .geomap-step span { display: none; }
-@media (max-width: 520px) { body { font-size: 17px; } nav.toc { columns: 1; } figure.photo { width: 45%; } }
+@media (max-width: 520px) { body { font-size: 17px; } nav.toc { columns: 1; } }
 """
 
 JS = """
@@ -284,6 +288,16 @@ document.querySelectorAll('[data-geo]').forEach((el) => {
   if (window.Geomap) window.Geomap.mount(el, JSON.parse(el.dataset.geo));
 });
 document.querySelectorAll('p.l').forEach((p) => p.addEventListener('click', () => p.classList.toggle('open')));
+
+// ---- Zoom on images (the caption and credit appear only there) ----
+const lb = document.getElementById('lightbox');
+document.querySelectorAll('figure.zoomable img').forEach((img) => img.addEventListener('click', () => {
+  lb.querySelector('img').src = img.src;
+  const cap = lb.querySelector('p'); cap.textContent = img.dataset.caption || '';
+  if (img.dataset.credit) { const sm = document.createElement('small'); sm.textContent = ' ' + img.dataset.credit; cap.appendChild(sm); }
+  lb.showModal();
+}));
+lb.addEventListener('click', () => lb.close());
 
 // ---- Listening (browser speech synthesis, same settings as the course) ----
 const synth = window.speechSynthesis;
@@ -404,25 +418,26 @@ def render_html(chapters, cfg, site, chapter_label, lang_code, cover=None, tts=N
         for sc in ch["scenes"]:
             out.append(f"<h3>{e(sc['title'])}</h3>")
             if sc["image"]:
-                out.append(f"<figure><img src=\"{e(sc['image'])}\" alt=\"\" loading=\"lazy\"></figure>")
+                ph = sc["image"]
+                out.append(f"<figure class=\"zoomable\"><img src=\"{e(ph['src'])}\" alt=\"{e(ph['caption'])}\" "
+                           f"data-caption=\"{e(ph['caption'])}\" data-credit=\"{e(ph['credit'])}\" loading=\"lazy\"></figure>")
             elif sc.get("photo"):
                 ph = sc["photo"]
-                credit = f" <small>{e(ph['credit'])}</small>" if ph["credit"] else ""
-                out.append(f"<figure class=\"photo\"><img src=\"{e(ph['src'])}\" alt=\"{e(ph['caption'])}\" loading=\"lazy\">"
-                           f"<figcaption>{e(ph['caption'])}{credit}</figcaption></figure>")
+                out.append(f"<figure class=\"photo zoomable\"><img src=\"{e(ph['src'])}\" alt=\"{e(ph['caption'])}\" "
+                           f"data-caption=\"{e(ph['caption'])}\" data-credit=\"{e(ph['credit'])}\" loading=\"lazy\"></figure>")
             for ln in sc["lines"]:
                 fr = f"<span class=\"fr\">{e(ln['fr'])}</span>" if ln["fr"] else ""
                 if ln["speaker"] == NARRATOR or not ln["name"] and not ln["speaker"]:
                     out.append(f"<p class=\"l n\"><span class=\"body\"><span class=\"t\">{e(ln['text'])}</span>{fr}</span></p>")
                 else:
                     sp = ln["speaker"] or ""
-                    who = f"<span class=\"who\">{e(ln['name'])}</span>" if ln["name"] else ""
+                    tip = e(ln["name"] or listen_line)
                     out.append(f"<p class=\"l\" data-speaker=\"{e(sp)}\"><button class=\"av\" type=\"button\" "
-                               f"aria-label=\"{e(listen_line)}\">{e(sp)}</button>"
-                               f"<span class=\"body\">{who}<span class=\"t\">{e(ln['text'])}</span>{fr}</span></p>")
+                               f"title=\"{tip}\" aria-label=\"{tip}\">{e(sp)}</button>"
+                               f"<span class=\"body\"><span class=\"t\">{e(ln['text'])}</span>{fr}</span></p>")
             out.append("<div class=\"scene-end\"></div>")
         out.append("</section>")
-    out.append(f"<footer>{e(course)}</footer></main><script src=\"geomap.js\"></script><script>const TTS = {json.dumps(tts, ensure_ascii=False)};{JS}</script></body></html>")
+    out.append(f"<footer>{e(course)}</footer></main><dialog class=\"lightbox\" id=\"lightbox\"><img alt=\"\"><p></p></dialog><script src=\"geomap.js\"></script><script>const TTS = {json.dumps(tts, ensure_ascii=False)};{JS}</script></body></html>")
     return "\n".join(out)
 
 
