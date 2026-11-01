@@ -33,7 +33,8 @@ from the sheet's character list ("Les personnages"), and an illustration
 The page is listenable: the speaker's emoji is a button that reads the line,
 and each chapter has a "listen" button reading it all. It uses the browser's
 speech synthesis with the learner's settings from the course (same
-localStorage key: voice, rate, pitch, per-character voices, pause).
+localStorage key: voice, rate, pitch, per-character voices; the pause between
+lines is capped at 0.6 s, a story reads better than a drill).
 
 Usage (normally called by build.py):
     python3 src/export_story.py --lang-dir ../slovingo-sk-fr-friends
@@ -333,7 +334,7 @@ function playFrom(lines, i, btn) {
   lines[i].scrollIntoView({ block: 'center', behavior: 'smooth' });
   speakLine(lines[i], () => {
     if (my !== token) return;
-    const pause = Math.max(0, Number(settings().dialoguePauseDuration) || 0) * 1000;
+    const pause = Math.min(0.6, Math.max(0, Number(settings().dialoguePauseDuration) || 0)) * 1000; // reading: short pause
     setTimeout(() => { if (my === token) playFrom(lines, i + 1, btn); }, pause);
   });
 }
