@@ -1677,6 +1677,55 @@ function initializeSpeakableElements() {
 
 function applyTheme(theme) {
     document.body.dataset.theme = theme;
+    updateBandPhoto();
+}
+
+// A theme whose style_<key>.jpg exists shows that photo as it is (no grey,
+// no colour tint, no pattern): see .band--photo in style.css. Without the
+// file, the band keeps its tint and pattern. The check is a plain image
+// preload of the URL the theme's CSS points to, cached per URL.
+const bandPhotoStatus = new Map(); // url -> true | false | Promise
+let bandPhotoToken = 0;
+
+function bandPhotoUrl() {
+    const el = document.querySelector(".band__photo");
+    if (!el) {
+        return null;
+    }
+    const match = /url\(["']?([^"')]+)["']?\)/.exec(getComputedStyle(el).backgroundImage || "");
+    return match ? match[1] : null;
+}
+
+function updateBandPhoto() {
+    const band = document.querySelector(".band");
+    if (!band) {
+        return;
+    }
+    const token = ++bandPhotoToken;
+    const url = bandPhotoUrl();
+    if (!url) {
+        band.classList.remove("band--photo");
+        return;
+    }
+    const known = bandPhotoStatus.get(url);
+    if (known === true || known === false) {
+        band.classList.toggle("band--photo", known);
+        return;
+    }
+    band.classList.remove("band--photo");
+    const probe = known || new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = url;
+    });
+    bandPhotoStatus.set(url, probe);
+    probe.then((ok) => {
+        bandPhotoStatus.set(url, ok);
+        if (token === bandPhotoToken) {
+            band.classList.toggle("band--photo", ok);
+        }
+    });
 }
 
 function setKicker(text) {

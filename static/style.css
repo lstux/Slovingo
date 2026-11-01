@@ -509,6 +509,21 @@ footer {
     opacity: calc(var(--pattern-opacity) * var(--pattern-scale));
 }
 
+/* Quand le thème a sa vraie photo (style_<clé>.jpg présent, détecté par
+   app.js), on la montre telle quelle : pas de gris, pas de teinte, pas de
+   motif. Seule une ombre douce en bas garde le titre lisible. */
+.band--photo .band__photo {
+    filter: none;
+}
+.band--photo .band__tint {
+    background: linear-gradient(to top, rgb(0 0 0 / 0.55), rgb(0 0 0 / 0.08) 75%);
+    mix-blend-mode: normal;
+    opacity: 1;
+}
+.band--photo .band__pattern {
+    display: none;
+}
+
 /* Le bandeau ne s'arrête pas net : il se dissout dans la page. */
 .band::after {
     content: "";
