@@ -1,6 +1,0 @@
-.pio/
-build/
-.vscode/
-*.fw
-sdkconfig.odroid-go-idf
-sdkconfig.odroid-go

@@ -341,6 +341,7 @@ const IMAGE_FORMATS = new Set(['png', 'jpg', 'jpeg', 'gif', 'webp', 'bmp', 'svg'
 // ============================================================================
 
 let langDir = null;
+let mdDir = null;
 let jsonDir = null;
 let imgDir = null;
 let sheets = new Map();
@@ -355,7 +356,12 @@ document.getElementById('btn-open').addEventListener('click', openLangDir);
 async function openLangDir() {
     try {
         langDir = await window.showDirectoryPicker();
-        jsonDir = await langDir.getDirectoryHandle('json');
+        // Sources .md en priorité ; json/ (ancien format compilé) en repli.
+        mdDir = await langDir.getDirectoryHandle('md').catch(() => null);
+        jsonDir = mdDir ? null : await langDir.getDirectoryHandle('json').catch(() => null);
+        if (!mdDir && !jsonDir) {
+            throw new Error(`ni md/ ni json/ dans « ${langDir.name} » — choisis un dossier langs/<paire>`);
+        }
         imgDir = await langDir.getDirectoryHandle('img').catch(() => null);
 
         await loadSheets();
@@ -368,6 +374,25 @@ async function openLangDir() {
 
 async function loadSheets() {
     sheets.clear();
+
+    if (mdDir) {
+        const entries = [];
+        for await (const entry of mdDir.values()) {
+            if (entry.kind === 'file' && entry.name.endsWith('.md')) entries.push(entry);
+        }
+        entries.sort((a, b) => a.name.localeCompare(b.name));
+        for (const entry of entries) {
+            const meta = parseSheetFilename(entry.name);
+            if (!meta) continue;  // credits.md, README, etc.
+            try {
+                const text = await (await entry.getFile()).text();
+                sheets.set(entry.name, { ...meta, ...parseSheetHeader(text) });
+            } catch (err) {
+                console.error(`Erreur en lisant ${entry.name}:`, err);
+            }
+        }
+        return;
+    }
 
     if (!jsonDir) return;
 
@@ -384,6 +409,50 @@ async function loadSheets() {
             console.error(`Erreur en lisant ${entry.name}:`, err);
         }
     }
+}
+
+// ============================================================================
+// Markdown parsing (miroir de src/smd2data.py : parse_sheet_filename / parse_sheet)
+// ============================================================================
+
+const IMAGE_RE = /^@\s+(\S+)\s*\|\s*(.+)$/;
+const IMAGE_MARKDOWN_RE = /^!\[([^\]]*)\]\(([^\s)]+)(?:\s+["']([^"']*)["'])?\s*\)$/;
+
+function parseSheetFilename(name) {
+    const parts = name.replace(/\.md$/, '').split('_');
+    let orders, category, middle, title;
+    if (parts.length === 4) {
+        [orders, category, middle, title] = [[parts[0], parts[2]], parts[1], [], parts[3]];
+    } else if (parts.length >= 6) {
+        orders = [parts[0], parts[2], parts[parts.length - 2]];
+        category = parts[1];
+        middle = parts.slice(3, -2);
+        title = parts[parts.length - 1];
+    } else {
+        return null;
+    }
+    if (!orders.every(o => /^\d+$/.test(o))) return null;
+    return {
+        category: category.toLowerCase(),
+        subgroup: middle.length ? middle.join('_').toLowerCase() : null,
+        title_slug: title.toLowerCase(),
+    };
+}
+
+function parseSheetHeader(text) {
+    const lines = text.split(/\r?\n/);
+    let i = 0;
+    while (i < lines.length && !lines[i].trim()) i++;
+    if (i >= lines.length || !lines[i].trim().startsWith('# ')) return { title: null, image: null };
+    const title = lines[i].trim().slice(2).trim();
+    i++;
+    while (i < lines.length && !lines[i].trim()) i++;
+    const line = (lines[i] || '').trim();
+    let m = line.match(IMAGE_RE);
+    if (m) return { title, image: { src: m[1], caption: m[2] } };
+    m = line.match(IMAGE_MARKDOWN_RE);
+    if (m) return { title, image: { src: m[2], caption: m[3] || m[1] } };
+    return { title, image: null };
 }
 
 // ============================================================================
@@ -413,6 +482,10 @@ async function checkImageStatus(src) {
         }
     }
 
+    if (src.startsWith('TODO')) {
+        return { status: 'missing', reason: 'image à choisir (TODO)' };
+    }
+
     return { status: 'unknown', reason: `format inconnu: ${src}` };
 }
 
@@ -433,7 +506,7 @@ async function testExternalImage(url) {
 async function renderContent() {
     if (!sheets.size) {
         document.getElementById('content').innerHTML = `
-            <p class="dropzone-hint">Aucune fiche trouvée dans le dossier json/.</p>
+            <p class="dropzone-hint">Aucune fiche avec image trouvée dans ${mdDir ? 'md/' : 'json/'}.</p>
         `;
         return;
     }
@@ -505,7 +578,7 @@ async function renderCard(name, sheet, isDuplicate, groupSources) {
     else if (status.status === 'external') stats.external++;
     else if (status.status === 'missing') stats.missing++;
 
-    const ficheId = name.replace(/\.content\.json$/, '');
+    const ficheId = name.replace(/\.content\.json$|\.md$/, '');
     const statusIcon = getStatusIcon(status.status);
     const statusLabel = getStatusLabel(status.status);
 

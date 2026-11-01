@@ -1,6 +1,0 @@
-# Reprise d'une partie enregistree (a lancer apres chapter.txt, avec le meme --save) :
-#   build/sim --script sim/chapter.txt --auto --save /tmp/zq.sav ...
-#   build/sim --script sim/resume.txt --auto --save /tmp/zq.sav --expect reprise,carte:sucho_zahrada
-# START sur « Pokracovat » : le chapitre 2 reprend dans le jardin, Andrea derriere le renard.
-10 12 S
-shot 40
