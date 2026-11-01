@@ -176,7 +176,7 @@ def build_course(code: str, content_root: Path, static_dir: Path, base_path: str
     # Optional presentation fields, set by the course itself in lang.json:
     #   site.cover     image of the course (path inside the course), shrunk for the launcher
     #   site.pitch     a few sentences presenting the story
-    #   site.audience  short tag ("8-12 ans")
+    #   site.audience  short tag ("À partir de 8 ans")
     #   target_lang.group_label  heading of the launcher group ("Slovaque - Slovenčina");
     #                  courses are grouped by target_lang.code
     tl = cfg["target_lang"]
