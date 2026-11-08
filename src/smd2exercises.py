@@ -319,7 +319,7 @@ def find_stale_manual_exercises(record: dict[str, Any]) -> list[dict[str, Any]]:
 
 def pick_shape_matched_distractors(
     answer: str, primary_pool: list[str], fallback_pool: list[str], n: int,
-    category_pool: list[str] | None = None,
+    category_pool: list[str] | None = None, sheet_pool: list[str] | None = None,
 ) -> list[str] | None:
     """Pick n distractors of the same shape (word/phrase) as `answer`,
     drawn from pools tried in priority order and topped up from the
@@ -334,21 +334,36 @@ def pick_shape_matched_distractors(
     2. `primary_pool` -- e.g. already-seen vocabulary for a series sheet;
     3. `fallback_pool` -- the whole corpus.
 
+    `sheet_pool` (the sheet's other vocabulary) comes after the primary
+    pool: it is what the very first sheets, with nothing seen yet, fall
+    back on. And before falling back on the whole corpus, words
+    from the table, the sheet or the primary pool are taken even if
+    their shape differs: on the very first sheets, a familiar word of
+    another shape is a far better distractor than an unknown word from
+    the last chapter ("dobrý deň" against "ahoj", not against "vražda").
+
     Returns None if there still aren't enough candidates after all
-    three pools.
+    the pools.
     """
     shape = word_shape(answer)
     answer_l = answer.lower()
 
     candidates: list[str] = []
     seen = {answer_l}
-    for pool in (category_pool or []), primary_pool, fallback_pool:
+    stages = [
+        ((category_pool or []), True),
+        (primary_pool, True),
+        ((sheet_pool or []), True),
+        ((category_pool or []) + primary_pool + (sheet_pool or []), False),
+        (fallback_pool, True),
+    ]
+    for pool, same_shape in stages:
         if len(candidates) >= n:
             break
         extra = dedupe_keep_order(
-            w for w in pool if w.lower() not in seen and word_shape(w) == shape
+            w for w in pool if w.lower() not in seen and (not same_shape or word_shape(w) == shape)
         )
-        candidates += extra
+        candidates += extra[: max(0, n - len(candidates))] if not same_shape else extra
         seen |= {w.lower() for w in extra}
 
     if len(candidates) < n:
@@ -456,7 +471,11 @@ def blank_vocab_words(pairs: list[tuple[str, str]], side: int, selection_freq: C
     frequent = {w for w, _ in selection_freq.most_common(FREQUENT_WORDS_CONSIDERED)}
     words = []
     for pair in pairs:
-        for token in tokenize(pair[side]):
+        # A gloss's notes in brackets -- "aide ! (impératif)",
+        # "de rien (vouvoiement)", "enchanté(e)" -- are not words the
+        # sheet teaches: they are dropped before cutting into words.
+        text = re.sub(r"\([^)]*\)", " ", pair[side])
+        for token in tokenize(text):
             w = strip_punct(token).lower()
             # Elided forms (l'envers, d'emploi) are left out: as a blank
             # or a distractor they read as half a word.
@@ -562,6 +581,7 @@ def generate_qcm(
         choices_l1 = pick_shape_matched_distractors(
             l1,
             category_pool=[p_l1 for p_l1, p_l2 in table if p_l2.lower() != l2.lower()],
+            sheet_pool=[p_l1 for p_l1, p_l2 in local_pairs if p_l2.lower() != l2.lower()],
             primary_pool=[p_l1 for p_l1, p_l2 in primary if p_l2.lower() != l2.lower()],
             fallback_pool=[p_l1 for p_l1, p_l2 in glob if p_l2.lower() != l2.lower()],
             n=QCM_CHOICES - 1,
@@ -569,6 +589,7 @@ def generate_qcm(
         choices_l2 = pick_shape_matched_distractors(
             l2,
             category_pool=[p_l2 for p_l1, p_l2 in table if p_l1.lower() != l1.lower()],
+            sheet_pool=[p_l2 for p_l1, p_l2 in local_pairs if p_l1.lower() != l1.lower()],
             primary_pool=[p_l2 for p_l1, p_l2 in primary if p_l1.lower() != l1.lower()],
             fallback_pool=[p_l2 for p_l1, p_l2 in glob if p_l1.lower() != l1.lower()],
             n=QCM_CHOICES - 1,
