@@ -227,6 +227,7 @@ const state = {
     mistakes: [],
     byType: {},                 // { qcm: {correct, total}, "fill-blank": {...}, ... }
     sheetId: null,               // single-sheet session -- progress recording key
+    review: false,               // "Révision" session: pool rebuilt from what was already seen
     sheetTitle: "",
     sessionSize: 10,
     direction: "l1-l2",
@@ -606,6 +607,8 @@ function routeExercises(hash) {
 
     if (path === "#/exercises/session") {
         startSessionFromQuery(query);
+    } else if (path === "#/exercises/review") {
+        startReviewSession(query);
     } else {
         renderSelectionScreen();
     }
@@ -644,6 +647,7 @@ function recordSession(sheetId, score, total, byType) {
 }
 
 function resetProgress() {
+    if (typeof resetReviewMistakes === "function") resetReviewMistakes();
     try {
         localStorage.removeItem(progressKey());
     } catch (err) {
@@ -696,6 +700,8 @@ async function renderSelectionScreen() {
             text: uiLabel("exercise_selection_hint", "Check one or more sheets (or a whole group), then start a mixed quiz."),
         }),
     ]);
+    const reviewBtn = buildReviewButton("exo-review-btn");
+    if (reviewBtn) header.insertBefore(reviewBtn, header.firstChild);
     header.appendChild(renderQuickFilters(sections));
     content.appendChild(header);
 
@@ -1049,7 +1055,8 @@ function startSessionFromQuery(query) {
         return;
     }
 
-    state.allExercises = validIds.flatMap((id) => EXERCISES.sheets[id].exercises);
+    state.allExercises = validIds.flatMap((id) => EXERCISES.sheets[id].exercises.map((ex) => ({ ...ex, _sheet: id })));
+    state.review = false;
     // Expand exercises with count > 1 (each copy will get fresh RANDOM values)
     state.allExercises = expandExerciseCount(state.allExercises);
     state.sheetId = validIds.length === 1 ? validIds[0] : null;
@@ -1089,6 +1096,12 @@ function startSessionFromQuery(query) {
         hidePagerNav();
     }
 
+    buildSessionScreen();
+    startPool();
+}
+
+/** The session page itself: title, progress bar, question area. */
+function buildSessionScreen() {
     const content = document.getElementById("content");
     content.innerHTML = "";
     content.appendChild(buildSessionToolbar());
@@ -1097,8 +1110,127 @@ function startSessionFromQuery(query) {
     ]));
     content.appendChild(el("div", { className: "exo-progress-text", attrs: { id: "exo-progress" } }));
     content.appendChild(el("div", { className: "exo-card-area", attrs: { id: "exo-card-area" } }));
+}
 
+// ============================================================================
+// Révision: a session over everything already seen
+// ============================================================================
+
+/** @returns {string|null} The key under which an exercise's misses are kept. */
+function reviewKey(ex) {
+    return ex && ex._sheet && ex.id ? `${ex._sheet}::${ex.id}` : null;
+}
+
+/**
+ * "#/exercises/review?n=20": exercises from every sheet already seen
+ * (opened or practiced, see reviewSheetIds() in progress.js). Missed
+ * questions come back first, then sheets are drawn by need -- see
+ * buildReviewPool(). Types, direction and answer mode come from
+ * Settings, as for any session.
+ * @param {URLSearchParams} query
+ */
+function startReviewSession(query) {
+    state.activeTypes = new Set(SETTINGS.defaultTypes);
+    state.direction = SETTINGS.defaultDirection;
+    state.answerMode = SETTINGS.defaultAnswerMode;
+    state.sessionSize = query.get("n") ? parseInt(query.get("n"), 10) : SETTINGS.defaultQuestionCount;
+
+    const ids = reviewSheetIds();
+    state.review = true;
+    state.sheetId = null;
+    state.allExercises = expandExerciseCount(
+        ids.flatMap((id) => EXERCISES.sheets[id].exercises.map((ex) => ({ ...ex, _sheet: id }))),
+    );
+
+    applyTheme("default");
+    setKicker("");
+    state.sheetTitle = uiLabel("review_title", "Review");
+    setPageTitle(state.sheetTitle);
+    setToolbarButtons({});
+    setExercisesButtonMode("selection");
+    hidePagerNav();
+
+    buildSessionScreen();
+    if (!ids.length) {
+        document.getElementById("exo-card-area").appendChild(el("p", {
+            className: "exo-error",
+            text: uiLabel("review_empty", "Nothing to review yet: open a first sheet!"),
+        }));
+        return;
+    }
     startPool();
+}
+
+/** How much a sheet needs reviewing: never practiced, missed, or long ago. */
+function reviewSheetWeight(sheetId) {
+    const progress = getSheetProgress(sheetId);
+    if (!progress || !progress.last) return 3;
+    const ratio = progress.last.total ? progress.last.score / progress.last.total : 0;
+    const days = (Date.now() - new Date(progress.last.date).getTime()) / 86400000;
+    return 1 + (1 - ratio) * 4 + Math.min(Math.max(days, 0) / 7, 2);
+}
+
+/**
+ * Pick n exercises for a review session out of `pool`:
+ * 1. questions missed before (up to 40% of the session), most missed first;
+ * 2. then, one at a time, a sheet drawn at random by reviewSheetWeight()
+ *    and, in it, an exercise of the type least used so far;
+ * the result is interleaved so one type doesn't run several times in a row.
+ */
+function buildReviewPool(pool, n) {
+    const mistakes = loadReviewMistakes();
+    const picked = [];
+    const used = new Set();
+    const typeCount = {};
+    const take = (ex) => {
+        picked.push(ex);
+        used.add(ex);
+        typeCount[ex.type] = (typeCount[ex.type] || 0) + 1;
+    };
+
+    const seenKeys = new Set();
+    const missed = shuffle(pool.filter((ex) => {
+        const key = reviewKey(ex);
+        if (!key || !mistakes[key] || seenKeys.has(key)) return false;
+        seenKeys.add(key);
+        return true;
+    })).sort((a, b) => mistakes[reviewKey(b)].misses - mistakes[reviewKey(a)].misses);
+    missed.slice(0, Math.ceil(n * 0.4)).forEach(take);
+
+    const bySheet = new Map();
+    pool.forEach((ex) => {
+        if (used.has(ex)) return;
+        if (!bySheet.has(ex._sheet)) bySheet.set(ex._sheet, []);
+        bySheet.get(ex._sheet).push(ex);
+    });
+    const weights = new Map([...bySheet.keys()].map((id) => [id, reviewSheetWeight(id)]));
+
+    while (picked.length < n && bySheet.size) {
+        let r = Math.random() * [...weights.values()].reduce((a, b) => a + b, 0);
+        let sheetId = null;
+        for (const [id, w] of weights) {
+            r -= w;
+            sheetId = id;
+            if (r <= 0) break;
+        }
+        const left = bySheet.get(sheetId);
+        const least = Math.min(...left.map((ex) => typeCount[ex.type] || 0));
+        const candidates = left.filter((ex) => (typeCount[ex.type] || 0) === least);
+        const ex = candidates[Math.floor(Math.random() * candidates.length)];
+        take(ex);
+        left.splice(left.indexOf(ex), 1);
+        if (!left.length) {
+            bySheet.delete(sheetId);
+            weights.delete(sheetId);
+        }
+    }
+
+    const buckets = new Map();
+    shuffle(picked).forEach((ex) => {
+        if (!buckets.has(ex.type)) buckets.set(ex.type, []);
+        buckets.get(ex.type).push(ex);
+    });
+    return interleaveNoRepeat(buckets);
 }
 
 /**
@@ -1221,7 +1353,9 @@ function startPool() {
 
     if (typeof stopCelebration === "function") stopCelebration();
 
-    state.exercises = buildBalancedPool(pool, state.sessionSize || 10);
+    state.exercises = state.review
+        ? buildReviewPool(pool, state.sessionSize || 10)
+        : buildBalancedPool(pool, state.sessionSize || 10);
     state.score = 0;
     state.mistakes = [];
     state.byType = {};
@@ -1479,6 +1613,9 @@ function markAnswer(container, isCorrect, view, userAnswer) {
     } else {
         state.mistakes.push({ view, userAnswer });
     }
+    // Kept for the next "Révision", whatever the session.
+    const key = reviewKey(state.exercises[state.current]);
+    if (key) noteReviewAnswer(key, isCorrect);
 
     const canReplay = ttsAvailable();
     // Matching pairs: no sound at the check (the view's audio is a single
@@ -2046,6 +2183,8 @@ function renderSummary() {
     if (state.sheetId) {
         recordSession(state.sheetId, state.score, total, state.byType);
     }
+    // A review counts as a day of practice (streak), not as a sheet score.
+    if (state.review && typeof recordSheetVisit === "function") recordSheetVisit();
     const updated = state.sheetId ? getSheetProgress(state.sheetId) : null;
 
     const summary = el("div", { className: "exo-card exo-summary" }, [
@@ -2101,7 +2240,11 @@ function renderSummary() {
     }
 
     const actions = el("div", { className: "exo-summary-actions" }, [
-        el("button", { className: "exo-next", text: uiLabel("session_restart_button", "🔁 Start over"), onclick: () => startPool() }),
+        el("button", {
+            className: "exo-next",
+            text: state.review ? uiLabel("review_again_button", "🔁 Another review") : uiLabel("session_restart_button", "🔁 Start over"),
+            onclick: () => startPool(),
+        }),
         el("button", {
             className: "exo-secondary", text: uiLabel("exercise_new_selection_button", "⬅ New selection"),
             onclick: () => { window.location.hash = "#/exercises"; },
@@ -2127,4 +2270,30 @@ if (typeof window !== "undefined") {
     window.EXERCISE_TYPES = EXERCISE_TYPES;
     window.ALL_TYPES = ALL_TYPES;
     window.orderTokensFor = orderTokensFor;
+}
+
+
+/**
+ * The "🔁 Review" button (home page, top of the exercises menu): one
+ * click, SETTINGS.defaultQuestionCount questions over everything
+ * already seen. Null while nothing has been seen yet.
+ * @param {string} className
+ * @returns {HTMLElement|null}
+ */
+function buildReviewButton(className) {
+    if (!reviewSheetIds().length) return null;
+    const n = SETTINGS.defaultQuestionCount || 20;
+    const missed = countReviewMistakes();
+    const link = el("a", {
+        className,
+        attrs: { href: `#/exercises/review?n=${n}` },
+    }, [
+        el("span", { className: "review-btn-label", text: uiLabel("review_button", "🔁 Review") }),
+        el("span", {
+            className: "review-btn-detail",
+            text: uiLabel("review_button_detail", "{n} questions on everything seen so far").replace("{n}", n)
+                + (missed ? " · " + uiLabel("review_button_missed", "{m} to go over").replace("{m}", missed) : ""),
+        }),
+    ]);
+    return link;
 }

@@ -1054,6 +1054,12 @@ function renderHome() {
             allSheets.open = true;
         }
     });
+    // "Révision": one click, exercises over everything already seen
+    // (exercises.js), for the days without a new sheet.
+    if (typeof buildReviewButton === "function") {
+        const review = buildReviewButton("review-link");
+        if (review) content.appendChild(review);
+    }
     // The whole story on one page (export_story.py), for readers who
     // already speak the language: one link under the map.
     if (LANG.story_page) {
