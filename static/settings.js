@@ -831,6 +831,23 @@ function renderDataSettingsSection() {
         },
     });
 
+    // "Révision": forget the missed questions only (scores, visited
+    // sheets and streak stay).
+    const missedCount = typeof countReviewMistakes === "function" ? countReviewMistakes() : 0;
+    const resetMistakesBtn = el("button", {
+        className: "settings-danger-btn",
+        text: ((LANG.ui && LANG.ui.reset_review_mistakes) || "\ud83e\uddf9 Forget my missed questions ({m})").replace("{m}", missedCount),
+        onclick: () => {
+            const message = (LANG.ui && LANG.ui.reset_review_mistakes_confirm)
+                || "Forget the missed questions the Review brings back? Your scores stay.";
+            if (window.confirm(message)) {
+                resetReviewMistakes();
+                renderSettingsScreen();
+            }
+        },
+    });
+    if (!missedCount) resetMistakesBtn.disabled = true;
+
     const resetSettingsBtn = el("button", {
         className: "settings-danger-btn",
         text: (LANG.ui && LANG.ui.reset_settings) || "\u21a9\ufe0f Reset settings to defaults",
@@ -846,7 +863,7 @@ function renderDataSettingsSection() {
     // Backup / restore (backup.js): export and import settings + progress as JSON.
     const backupControls = typeof renderBackupControls === "function" ? renderBackupControls() : [];
 
-    return settingsSection((LANG.ui && LANG.ui.settings_data) || "Data", [...backupControls, resetProgressBtn, resetSettingsBtn]);
+    return settingsSection((LANG.ui && LANG.ui.settings_data) || "Data", [...backupControls, resetMistakesBtn, resetProgressBtn, resetSettingsBtn]);
 }
 
 // ============================================================================

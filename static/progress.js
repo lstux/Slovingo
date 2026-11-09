@@ -219,3 +219,79 @@ function getLastSheetId() {
         return null;
     }
 }
+
+// ============================================================================
+// Révision : fiches déjà vues et questions ratées
+// ============================================================================
+
+/** @returns {string} Clé localStorage des questions ratées ({"sheetId::exId": {misses, date}}). */
+function reviewMistakesKey() {
+    const prefix = (LANG && LANG.site && LANG.site.storage_prefix) || "slovingo";
+    return `${prefix}-review-mistakes`;
+}
+
+/** @returns {object} Les questions ratées, par clé "sheetId::exerciseId". */
+function loadReviewMistakes() {
+    try {
+        return JSON.parse(localStorage.getItem(reviewMistakesKey())) || {};
+    } catch (err) {
+        return {};
+    }
+}
+
+/** @returns {number} Nombre de questions ratées encore à revoir. */
+function countReviewMistakes() {
+    return Object.keys(loadReviewMistakes()).length;
+}
+
+/**
+ * Note une réponse pour la révision : une question ratée y entre (ou y
+ * remonte, jusqu'à 3), une question réussie y descend d'un cran et en
+ * sort à 0. Appelé à chaque réponse, dans n'importe quelle séance.
+ * @param {string} key "sheetId::exerciseId"
+ * @param {boolean} correct
+ */
+function noteReviewAnswer(key, correct) {
+    try {
+        const store = loadReviewMistakes();
+        const entry = store[key];
+        if (correct) {
+            if (!entry) return;
+            entry.misses -= 1;
+            if (entry.misses <= 0) delete store[key];
+        } else {
+            store[key] = { misses: Math.min(3, (entry ? entry.misses : 0) + 1), date: new Date().toISOString() };
+        }
+        localStorage.setItem(reviewMistakesKey(), JSON.stringify(store));
+    } catch (err) {
+        // ignore
+    }
+}
+
+/** Oublie les questions ratées, sans toucher au reste de la progression. */
+function resetReviewMistakes() {
+    try {
+        localStorage.removeItem(reviewMistakesKey());
+    } catch (err) {
+        // ignore
+    }
+}
+
+/**
+ * Les fiches « déjà vues » qui ont des exercices : ouvertes ou
+ * pratiquées, dans l'ordre du cours.
+ * @returns {string[]}
+ */
+function reviewSheetIds() {
+    if (typeof DATA === "undefined" || !DATA || typeof EXERCISES === "undefined" || !EXERCISES) return [];
+    const visited = getVisitedSheets();
+    const practiced = loadProgressStore();
+    const ids = [];
+    DATA.groups.forEach((group) => {
+        group.sheets.forEach((sheet) => {
+            if (!EXERCISES.sheets[sheet.id]) return;
+            if (visited[sheet.id] || (practiced[sheet.id] && practiced[sheet.id].last)) ids.push(sheet.id);
+        });
+    });
+    return ids;
+}

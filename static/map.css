@@ -539,6 +539,28 @@
 }
 .story-link:hover { background: rgb(0 0 0 / 0.04); }
 
+/* "Révision" on the home page: the main button under the map. */
+.review-link, .exo-review-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    margin: 18px auto 0;
+    width: fit-content;
+    max-width: 100%;
+    padding: 10px 22px;
+    border-radius: 18px;
+    background: var(--accent, #2f6f4f);
+    color: light-dark(#fff, #1b1b1b);
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.15);
+}
+.review-link:hover, .exo-review-btn:hover { filter: brightness(1.08); }
+.review-link .review-btn-label, .exo-review-btn .review-btn-label { font-weight: 700; font-size: 1.05rem; }
+.review-link .review-btn-detail, .exo-review-btn .review-btn-detail { font-size: 0.85rem; opacity: 0.9; }
+.review-link + .story-link { margin-top: 10px; }
+
 .all-sheets {
     margin-top: 1rem;
 }
@@ -628,3 +650,4 @@
         animation: none !important;
     }
 }
+.exo-review-btn { margin: 4px auto 16px; }

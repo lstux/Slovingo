@@ -249,6 +249,14 @@ Clé facultative `playback_speed_native` : libellé du curseur de vitesse de la
 voix native dans les Réglages, avec `{lang}` remplacé par `native_lang.name`
 (défaut : `"Playback speed ({lang})"`, par exemple `"Vitesse de lecture ({lang})"`).
 
+Clés de la **Révision** (bouton sur la page d'accueil et en haut du menu
+Exercices : une séance sur toutes les fiches déjà ouvertes ou pratiquées, les
+questions ratées en premier) : `review_button`, `review_button_detail`
+(`{n}` = nombre de questions), `review_button_missed` (`{m}` = questions
+ratées à revoir), `review_title`, `review_again_button`, `review_empty`, et
+dans les Réglages `reset_review_mistakes` (`{m}`) et
+`reset_review_mistakes_confirm`.
+
 **Clés manquantes.** Chaque texte d'interface a un repli en anglais écrit dans
 le code : une clé absente de `ui` ne casse rien, l'apprenant voit simplement de
 l'anglais. Pour que ça ne passe plus inaperçu, `build.py` affiche un

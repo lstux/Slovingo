@@ -56,6 +56,7 @@ function backupKeys() {
         progress: progressKey(),
         visitDays: `${p}-last-visits`,
         visitedSheets: `${p}-visited-sheets`,
+        reviewMistakes: `${p}-review-mistakes`,
         lastSheet: `${p}-last-sheet`,
         lastSeriesSheet: `${p}-last-series-sheet`,
         settings: `${p}-settings`,
@@ -100,6 +101,7 @@ function buildBackup() {
         progress: {
             exercises: readJsonKey(k.progress, {}),
             visitedSheets: readJsonKey(k.visitedSheets, {}),
+            reviewMistakes: readJsonKey(k.reviewMistakes, {}),
             visitDays: Object.keys(readJsonKey(k.visitDays, {})).sort(),
             lastSheetId: (lastSheet && lastSheet.sheetId) || null,
             lastSeriesSheetId: (lastSeries && lastSeries.sheetId) || null,
@@ -199,6 +201,9 @@ function normalizeBackup(raw) {
     const progress = {
         exercises,
         visitedSheets: isPlainObject(p.visitedSheets) ? p.visitedSheets : {},
+        reviewMistakes: isPlainObject(p.reviewMistakes)
+            ? Object.fromEntries(Object.entries(p.reviewMistakes).filter(([, e]) => isPlainObject(e) && Number.isFinite(e.misses) && e.misses > 0))
+            : {},
         visitDays: days.filter((d) => typeof d === "string" && /^\d{4}-\d{2}-\d{2}$/.test(d)),
         lastSheetId: typeof p.lastSheetId === "string" ? p.lastSheetId : null,
         lastSeriesSheetId: typeof p.lastSeriesSheetId === "string" ? p.lastSeriesSheetId : null,
@@ -288,6 +293,14 @@ function mergeProgress(local, imported) {
         progress: {
             exercises,
             visitedSheets: { ...local.visitedSheets, ...imported.visitedSheets },
+            // Missed questions: the union, the higher count when both have it.
+            reviewMistakes: Object.fromEntries(
+                [...new Set([...Object.keys(local.reviewMistakes || {}), ...Object.keys(imported.reviewMistakes || {})])].map((key) => {
+                    const a = (local.reviewMistakes || {})[key];
+                    const b = (imported.reviewMistakes || {})[key];
+                    return [key, !a ? b : !b ? a : (b.misses > a.misses ? b : a)];
+                }),
+            ),
             visitDays: [...new Set([...local.visitDays, ...imported.visitDays])].sort(),
             lastSheetId: local.lastSheetId || imported.lastSheetId,
             lastSeriesSheetId: local.lastSeriesSheetId || imported.lastSeriesSheetId,
@@ -313,6 +326,7 @@ function applyBackup(normalized) {
 
     localStorage.setItem(k.progress, JSON.stringify(progress.exercises));
     localStorage.setItem(k.visitedSheets, JSON.stringify(progress.visitedSheets));
+    localStorage.setItem(k.reviewMistakes, JSON.stringify(progress.reviewMistakes));
     localStorage.setItem(k.visitDays, JSON.stringify(Object.fromEntries(progress.visitDays.map((d) => [d, true]))));
     if (progress.lastSheetId) localStorage.setItem(k.lastSheet, JSON.stringify({ sheetId: progress.lastSheetId }));
     if (progress.lastSeriesSheetId) localStorage.setItem(k.lastSeriesSheet, JSON.stringify({ sheetId: progress.lastSeriesSheetId }));
