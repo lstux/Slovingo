@@ -1144,7 +1144,7 @@ function startReviewSession(query) {
 
     applyTheme("default");
     setKicker("");
-    state.sheetTitle = uiLabel("review_title", "Review");
+    state.sheetTitle = uiLabel("review_button", "🔁 Review").replace(/^\S+\s+/, "");
     setPageTitle(state.sheetTitle);
     setToolbarButtons({});
     setExercisesButtonMode("selection");
@@ -1152,10 +1152,7 @@ function startReviewSession(query) {
 
     buildSessionScreen();
     if (!ids.length) {
-        document.getElementById("exo-card-area").appendChild(el("p", {
-            className: "exo-error",
-            text: uiLabel("review_empty", "Nothing to review yet: open a first sheet!"),
-        }));
+        location.hash = "#/exercises";
         return;
     }
     startPool();
@@ -2242,7 +2239,7 @@ function renderSummary() {
     const actions = el("div", { className: "exo-summary-actions" }, [
         el("button", {
             className: "exo-next",
-            text: state.review ? uiLabel("review_again_button", "🔁 Another review") : uiLabel("session_restart_button", "🔁 Start over"),
+            text: state.review ? uiLabel("review_button", "🔁 Review") : uiLabel("session_restart_button", "🔁 Start over"),
             onclick: () => startPool(),
         }),
         el("button", {
@@ -2291,8 +2288,7 @@ function buildReviewButton(className) {
         el("span", { className: "review-btn-label", text: uiLabel("review_button", "🔁 Review") }),
         el("span", {
             className: "review-btn-detail",
-            text: uiLabel("review_button_detail", "{n} questions on everything seen so far").replace("{n}", n)
-                + (missed ? " · " + uiLabel("review_button_missed", "{m} to go over").replace("{m}", missed) : ""),
+            text: String(n) + (missed ? " · \u2757" + missed : ""),
         }),
     ]);
     return link;

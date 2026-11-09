@@ -838,12 +838,8 @@ function renderDataSettingsSection() {
         className: "settings-danger-btn",
         text: ((LANG.ui && LANG.ui.reset_review_mistakes) || "\ud83e\uddf9 Forget my missed questions ({m})").replace("{m}", missedCount),
         onclick: () => {
-            const message = (LANG.ui && LANG.ui.reset_review_mistakes_confirm)
-                || "Forget the missed questions the Review brings back? Your scores stay.";
-            if (window.confirm(message)) {
-                resetReviewMistakes();
-                renderSettingsScreen();
-            }
+            resetReviewMistakes();
+            renderSettingsScreen();
         },
     });
     if (!missedCount) resetMistakesBtn.disabled = true;
