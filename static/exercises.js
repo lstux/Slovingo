@@ -1772,6 +1772,7 @@ function renderFillBlank(view) {
                     const correct = choice === view.answer;
                     blank.classList.add(correct ? "exo-choice-correct" : "exo-choice-wrong");
                     btn.classList.add(correct ? "exo-choice-correct" : "exo-choice-wrong");
+                    if (!correct) highlightCorrectChoice(choicesEl, view.answer);
                     markAnswer(container, correct, view, choice);
                 },
             });
@@ -1779,7 +1780,12 @@ function renderFillBlank(view) {
         });
         container.appendChild(choicesEl);
     } else {
-        container.appendChild(renderTypeInput(container, view, (value) => { blank.textContent = value; }));
+        container.appendChild(renderTypeInput(container, view, (value, correct) => {
+            blank.textContent = value;
+            blank.classList.add(correct ? "exo-choice-correct" : "exo-choice-wrong");
+            // Wrong: the right word appears in green next to the red one.
+            if (!correct) blank.after(el("span", { className: "exo-blank exo-blank-fix exo-choice-correct", text: view.answer }));
+        }));
     }
 
     return container;
@@ -1893,6 +1899,14 @@ function renderOrder(view) {
         const userAnswer = placed.join(" ");
         const correct = normalizeAnswer(userAnswer) === normalizeAnswer(view.answer);
         answerStrip.classList.add(correct ? "exo-choice-correct" : "exo-choice-wrong");
+        if (!correct) {
+            // The right order, in green, right under the wrong one.
+            const solution = el("div", { className: "exo-order-answer exo-order-solution exo-choice-correct" });
+            String(view.answer).split(/\s+/).filter(Boolean).forEach((word) => {
+                solution.appendChild(el("span", { className: "exo-order-chip exo-order-chip-answer", text: word }));
+            });
+            answerStrip.after(solution);
+        }
         markAnswer(container, correct, view, userAnswer);
     };
 
@@ -2139,7 +2153,8 @@ function renderTypeInput(container, view, onValidate) {
             submit.disabled = true;
             const correct = normalizeAnswer(value) === normalizeAnswer(view.answer);
             input.classList.add(correct ? "exo-choice-correct" : "exo-choice-wrong");
-            if (onValidate) onValidate(correct ? view.answer : value);
+            if (onValidate) onValidate(correct ? view.answer : value, correct);
+            else if (!correct) wrap.appendChild(el("span", { className: "exo-type-fix exo-choice-correct", text: view.answer }));
             markAnswer(container, correct, view, value);
         },
     });

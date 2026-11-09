@@ -399,6 +399,18 @@ label.index-card {
     animation: exo-nope .3s;
 }
 
+/* Right answer shown next to a wrong one. */
+.exo-blank-fix { margin-left: 4px; }
+.exo-type-fix {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid;
+    font-weight: bold;
+}
+.exo-order-solution { margin-top: 6px; border-style: solid; }
+
 @keyframes exo-nope {
     25% { translate: -5px 0; }
     50% { translate: 4px 0; }
