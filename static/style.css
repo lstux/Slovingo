@@ -636,6 +636,17 @@ footer {
 }
 
 .toolbar button:hover { border-color: var(--accent); }
+.toolbar .nav-review-badge {
+    display: inline-block;
+    margin-left: 6px;
+    min-width: 1.4em;
+    padding: 0 6px;
+    border-radius: var(--pill);
+    background: var(--accent);
+    color: light-dark(#fff, #1b1b1b);
+    font-size: 0.78rem;
+    line-height: 1.5;
+}
 .toolbar button:active { transform: scale(0.96); }
 
 #search {
@@ -1613,7 +1624,7 @@ a.settings-backup-btn { box-sizing: border-box; text-decoration: none; }
     .settings-row { flex-wrap: wrap; }
 
     /* Toolbar mobile : icônes seuls, pas de texte */
-    .toolbar button span[data-ui] { display: none !important; }
+    .toolbar button span[data-ui], .toolbar .nav-review-text { display: none !important; }
     .toolbar button { padding: 0 10px; min-width: 42px; }
 
     /* Cacher les boutons avec la classe exo-toolbar-hidden */

@@ -316,7 +316,42 @@ function openImageLightbox(src) {
  *   #/sheet/<id>         -- one sheet
  *   #/exercises          -- exercises (placeholder for now)
  */
+/**
+ * Toolbar "Révision" button: one click, exercises over everything
+ * already seen. Shown once a sheet has been opened; the emoji alone on
+ * mobile, with a badge for the missed questions to go over.
+ */
+function updateReviewNavButton() {
+    const btn = document.getElementById("nav-review");
+    if (!btn) return;
+    const seen = typeof reviewSheetIds === "function" && reviewSheetIds().length > 0;
+    btn.style.display = seen ? "" : "none";
+    if (!seen) return;
+    const label = uiLabel("review_button", "\ud83d\udd01 Review");
+    const m = label.match(/^(\S+)\s+(.*)$/);
+    const missed = typeof countReviewMistakes === "function" ? countReviewMistakes() : 0;
+    btn.textContent = "";
+    btn.append(m ? m[1] : label);
+    if (m) {
+        const text = document.createElement("span");
+        text.className = "nav-review-text";
+        text.textContent = " " + m[2];
+        btn.append(text);
+    }
+    if (missed) {
+        const badge = document.createElement("span");
+        badge.className = "nav-review-badge";
+        badge.textContent = String(missed);
+        btn.append(badge);
+    }
+    btn.title = m ? m[2] : label;
+    btn.onclick = () => {
+        window.location.hash = `#/exercises/review?n=${SETTINGS.defaultQuestionCount || 20}`;
+    };
+}
+
 function route() {
+    updateReviewNavButton();
     // Leaving the exercises screen (Home, a sheet, Settings, or even
     // another exercises route) must not let a pending auto-advance
     // timer from exercises.js fire later into content route() has
@@ -1054,12 +1089,6 @@ function renderHome() {
             allSheets.open = true;
         }
     });
-    // "Révision": one click, exercises over everything already seen
-    // (exercises.js), for the days without a new sheet.
-    if (typeof buildReviewButton === "function") {
-        const review = buildReviewButton("review-link");
-        if (review) content.appendChild(review);
-    }
     // The whole story on one page (export_story.py), for readers who
     // already speak the language: one link under the map.
     if (LANG.story_page) {
