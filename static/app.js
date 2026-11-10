@@ -158,6 +158,7 @@ async function boot() {
     }
 
     initializeSpeechSynthesis();
+    initMuteButton();
 
     document.getElementById("nav-home").addEventListener("click", () => {
         window.location.hash = "#/";
@@ -1422,6 +1423,11 @@ function stripSpeakerForSpeech(text, speaker) {
 
 function speak(text, rate, pitch, voiceURI, highlightElement, onEnd, kind) {
     const isNative = kind === "native";
+    // Muted with the header button: stay silent, no warning, no alert.
+    if (typeof soundMuted === "function" && soundMuted()) {
+        if (onEnd) onEnd();
+        return;
+    }
     if (!("speechSynthesis" in window)) {
         alert("Speech synthesis is not available on this device.");
         if (onEnd) onEnd();
@@ -1471,6 +1477,35 @@ function speak(text, rate, pitch, voiceURI, highlightElement, onEnd, kind) {
     currentUtterance.onerror = fireOnEnd;
 
     window.speechSynthesis.speak(currentUtterance);
+}
+
+/**
+ * Header 🔊/🔇 button: mutes (or restores) all speech. The choice is
+ * kept in Settings; muting also cuts what is playing right now, and
+ * hides the voice-dependent exercise type (see typePlayable()).
+ */
+function initMuteButton() {
+    const button = document.getElementById("nav-mute");
+    if (!button) return;
+    const render = () => {
+        const muted = soundMuted();
+        const label = muted
+            ? uiLabel("sound_unmute", "Turn sound on")
+            : uiLabel("sound_mute", "Mute sound");
+        button.textContent = muted ? "🔇" : "🔊";
+        button.setAttribute("aria-pressed", muted ? "true" : "false");
+        button.setAttribute("aria-label", label);
+        button.title = label;
+    };
+    button.addEventListener("click", () => {
+        saveSettings({ soundMuted: !soundMuted() });
+        if (soundMuted()) {
+            stopSpeaking();
+        }
+        render();
+        window.dispatchEvent(new Event("sound:changed"));
+    });
+    render();
 }
 
 function stopSpeaking() {
@@ -1629,6 +1664,7 @@ function initializeDialoguePlayback(contentElement) {
  * Mode: "auto" = play all in sequence with pauses, "manual" = wait for user
  */
 function playDialogue(audioCards) {
+    if (typeof soundMuted === "function" && soundMuted()) return;
     let currentIndex = 0;
     let isPlaying = true;
     let continueButton = null;
@@ -1641,6 +1677,10 @@ function playDialogue(audioCards) {
     };
     
     const playNextCard = () => {
+        // Muted while the dialogue was playing: stop the sequence.
+        if (soundMuted()) {
+            isPlaying = false;
+        }
         if (currentIndex >= audioCards.length || !isPlaying) {
             isPlaying = false;
             clearContinueButton();

@@ -405,7 +405,8 @@ function mountDeckFox(stepEl) {
 
 /** Whether a target-language voice can be used (no alert, no warning). */
 function canSpeakTarget() {
-    return "speechSynthesis" in window && typeof targetVoiceAvailable !== "undefined" && targetVoiceAvailable;
+    return "speechSynthesis" in window && typeof targetVoiceAvailable !== "undefined" && targetVoiceAvailable
+        && !(typeof soundMuted === "function" && soundMuted());
 }
 
 /**

@@ -41,7 +41,13 @@ const DEFAULT_SETTINGS = {
     autoAdvanceEnabled: true,       // move to the next exercise by itself on a correct answer
     autoAdvanceDelay: 2,            // delay before doing so (seconds)
     celebrationEnabled: true,       // confetti / fireworks on the end-of-session score
+    soundMuted: false,              // header 🔊/🔇 button: no TTS at all, no listen exercises
 };
+
+/** Whether the learner has muted all speech (header button). */
+function soundMuted() {
+    return !!(SETTINGS && SETTINGS.soundMuted);
+}
 
 /**
  * The active settings, merged over DEFAULT_SETTINGS. Populated by

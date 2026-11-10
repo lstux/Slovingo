@@ -256,6 +256,12 @@ suivi du nom, par exemple `"🔁 Révision"`) et, dans les Réglages,
 `reset_review_mistakes` (`{m}` = nombre de questions ratées mémorisées, par
 exemple `"🧹 Oublier mes questions ratées ({m})"`).
 
+Clés du **bouton de son** (🔊/🔇 en haut à droite, à côté du compteur de série :
+il coupe toute la synthèse vocale et masque les exercices d'écoute ; le choix est
+gardé dans les Réglages) : `sound_mute` (par exemple `"Couper le son"`),
+`sound_unmute` (`"Remettre le son"`) et `sound_off_exercises` (infobulle du type
+« écoute » grisé, par exemple `"Écoute indisponible : le son est coupé"`).
+
 **Clés manquantes.** Chaque texte d'interface a un repli en anglais écrit dans
 le code : une clé absente de `ui` ne casse rien, l'apprenant voit simplement de
 l'anglais. Pour que ça ne passe plus inaperçu, `build.py` affiche un

@@ -673,6 +673,20 @@ footer {
     border-color: var(--accent) !important;
 }
 
+/* Mute button: icon only, sits just left of the streak badge at the right.
+   Same size as the other icon buttons of the toolbar on small screens. */
+.toolbar .nav-mute-btn {
+    margin-left: auto;
+    min-width: 42px;
+    padding: 0 10px;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+.toolbar .nav-mute-btn[aria-pressed="true"] { opacity: 0.7; }
+/* The streak badge follows the mute button: tighter padding so both still
+   fit on the row of the other buttons (desktop and phone). */
+.nav-mute-btn + .streak-badge { margin-left: 0; padding: 6px 4px; }
+
 /* Streak badge - aligné à droite */
 .streak-badge {
     margin-left: auto;

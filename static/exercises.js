@@ -298,7 +298,8 @@ function speakSafe(text, rate, pitch, voiceURI, highlightElement, onEnd) {
 
 /** targetVoiceAvailable is a global declared in app.js. */
 function ttsAvailable() {
-    return typeof targetVoiceAvailable !== "undefined" && targetVoiceAvailable;
+    return typeof targetVoiceAvailable !== "undefined" && targetVoiceAvailable
+        && !(typeof soundMuted === "function" && soundMuted());
 }
 
 // ============================================================================
@@ -961,7 +962,7 @@ function renderTypeCheckboxes(selectedSet, onChange) {
             onChange();
         });
         const label = el("label", {
-            attrs: { title: disabled ? "Listening disabled: no voice available on this device" : typeLabel(type) },
+            attrs: { title: disabled ? (soundMuted() ? uiLabel("sound_off_exercises", "Listening disabled: sound is off") : "Listening disabled: no voice available on this device") : typeLabel(type) },
         }, [input, document.createTextNode(` ${typeIcon(type)}`)]);
         if (disabled) label.classList.add("exo-type-disabled");
         row.appendChild(label);
@@ -1545,6 +1546,10 @@ function cancelExerciseAutoAdvance() {
 
 function goToExercise(index) {
     cancelExerciseAutoAdvance();
+    // Sound muted mid-session: skip the listen questions still queued.
+    while (index < state.exercises.length && !typePlayable(state.exercises[index].type)) {
+        index += 1;
+    }
     state.current = index;
     if (index >= state.exercises.length) {
         renderSummary();
@@ -2308,3 +2313,11 @@ function buildReviewButton(className) {
     ]);
     return link;
 }
+
+// Sound muted/unmuted from the header button: the exercise selection
+// screen greys (or restores) the voice-dependent types.
+window.addEventListener("sound:changed", () => {
+    if ((window.location.hash || "") === "#/exercises" && typeof route === "function") {
+        route();
+    }
+});
