@@ -226,7 +226,7 @@
     position: absolute;
     left: var(--fox-x, 20%);
     top: var(--fox-y, -12%);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, var(--fox-anchor, -50%));
     z-index: 5;
     font-size: 2.4rem;
     line-height: 1;
@@ -242,6 +242,7 @@
 }
 .map-fox__face { width: 2.6rem; height: 2.6rem; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25)); }
 .map-fox__face--hare { margin-left: -0.5rem; }
+.map-fox--picture { --fox-anchor: -22%; } /* feet near the step, head kept inside the map */
 .map-fox__duo { width: 4.4rem; height: 4.4rem; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25)); }
 
 /* The fox bobs while it walks. Keeps the centring transform. */
@@ -250,8 +251,8 @@
 }
 
 @keyframes fox-walk {
-    0%, 100% { transform: translate(-50%, -50%); }
-    50% { transform: translate(-50%, calc(-50% - 5px)); }
+    0%, 100% { transform: translate(-50%, var(--fox-anchor, -50%)); }
+    50% { transform: translate(-50%, calc(var(--fox-anchor, -50%) - 5px)); }
 }
 
 /* The fox jumps into a sheet of the bubble: over the bubble, shrinking
@@ -259,7 +260,7 @@
 .map-fox.is-diving {
     z-index: 8;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.3);
+    transform: translate(-50%, var(--fox-anchor, -50%)) scale(0.3);
     transition:
         left var(--fox-duration) ease-in,
         top var(--fox-duration) ease-in,
@@ -319,9 +320,9 @@
 }
 
 @keyframes fox-hop {
-    0%, 100% { transform: translate(-50%, -50%); }
-    40% { transform: translate(-50%, calc(-50% - 16px)) scale(1.1); }
-    70% { transform: translate(-50%, calc(-50% - 4px)); }
+    0%, 100% { transform: translate(-50%, var(--fox-anchor, -50%)); }
+    40% { transform: translate(-50%, calc(var(--fox-anchor, -50%) - 16px)) scale(1.1); }
+    70% { transform: translate(-50%, calc(var(--fox-anchor, -50%) - 4px)); }
 }
 
 /* A node whose state just changed pops once. */
