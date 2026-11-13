@@ -373,6 +373,7 @@ function route() {
 
     const hash = window.location.hash || "#/";
     const sheetMatch = hash.match(/^#\/sheet\/(.+)$/);
+    const collectionMatch = hash.match(/^#\/collection\/(.+)$/);
 
     if (sheetMatch) {
         renderSheet(decodeURIComponent(sheetMatch[1]));
@@ -382,6 +383,8 @@ function route() {
         } else {
             renderExercisesPlaceholder();
         }
+    } else if (collectionMatch && typeof renderCollection === "function") {
+        renderCollection(decodeURIComponent(collectionMatch[1]));
     } else if (hash === "#/settings") {
         renderSettingsScreen();
     } else {
@@ -1098,6 +1101,11 @@ function renderHome() {
         story.href = LANG.story_page;
         story.textContent = uiLabel("read_story", "📖 Read the whole story");
         content.appendChild(story);
+    }
+    // One button per collection (vocabulary, Kronika...), detected from
+    // the data: collections.js.
+    if (typeof renderCollectionLinks === "function") {
+        renderCollectionLinks(content);
     }
     // Running counter for .index-num, shared across every group on the
     // page -- matches v1, which numbered sheets continuously along the

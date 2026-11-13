@@ -208,6 +208,39 @@ partout où l'override existait précisément pour ça. Vérifie ta propre
 `lang.json` si tu as un doute — voir les issues liées à ce document dans les
 dépôts concernés.
 
+## collections — pages d'index (optionnel)
+
+Le moteur détecte tout seul les **collections** : des ensembles de fiches
+qui ne font pas partie du parcours, présentés sur une page de cartes (la
+miniature carrée de l'illustration de la fiche + son titre). Un bouton par
+collection apparaît sous la carte d'accueil ; la page est `#/collection/<id>`.
+
+Détection automatique :
+
+- une catégorie autre que `introduction`, `series`, `annex`, `credits` qui
+  compte au moins 2 fiches (`vocabulary`, plus tard `conjugation`…) ;
+- un préfixe de sous-groupe partagé par au moins 2 sous-groupes
+  (`kronika_stur`, `kronika_pionieri` → collection `kronika`).
+
+Le nom affiché vient de `categories[<catégorie>]` (ou de `subgroups[<préfixe>]`),
+sinon de la clé avec une majuscule. Pour le changer, le cacher, ou tout couper :
+
+```json
+"collections": {
+  "kronika": "Kronika (histoire)",
+  "dialog": { "hide": true }
+}
+```
+
+`"collections": false` supprime toutes les pages d'index. L'identifiant est la
+catégorie ou le préfixe.
+
+**Miniatures** : au build, `src/thumbs.py` fait un carré de 320 px (recadré au
+centre, WebP) de la première image de chaque fiche, dans `dist/thumbs/`
+(`sheet.thumb` dans `data.json`). Pillow est facultatif : sans lui, le build le
+signale et la page utilise l'image d'origine recadrée en CSS (plus lourde, mais
+ça marche). Les images distantes (URL) et les SVG n'ont pas de miniature.
+
 ## subgroup_themes
 
 Associe un sous-groupe à un **thème visuel** (couleurs, motif, photo

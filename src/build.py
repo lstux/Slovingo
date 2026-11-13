@@ -50,6 +50,7 @@ from gen_service_worker import render as render_service_worker
 from map_generator import build_map_json, find_map_background
 from export_story import build_story
 from smd2data import SheetNameError, build_sheet_json
+from thumbs import add_thumbnails
 
 # Static front-end files copied as-is into dist/ -- shared across
 # every language, not generated from content.
@@ -63,6 +64,7 @@ STATIC_FILES = [
     "credits.css", "credits.js",  # Scrolling film credits (the final series)
     "geomap.css", "geomap.js",  # Geographic maps in sheets ("% lat, lon" blocks)
     "deck.css", "deck.js",  # Step-by-step view of series sheets
+    "collections.css", "collections.js",  # Index pages (vocabulary, Kronika...)
 ]
 
 # Static directories copied wholesale into dist/ (third-party code
@@ -166,9 +168,14 @@ def run_build(
     )
     exercises = assemble.build_exercises_json(metas, json_dir)
     dist_dir.mkdir(parents=True, exist_ok=True)
+    # 3.1 Square thumbnails of the sheets' illustrations (collection pages).
+    #     Optional: needs Pillow, skipped with a warning otherwise.
+    n_thumbs = add_thumbnails(data, img_dir, dist_dir)
     (dist_dir / "data.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     (dist_dir / "exercises.json").write_text(json.dumps(exercises, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Assembled: {dist_dir}/data.json, {dist_dir}/exercises.json")
+    if n_thumbs:
+        print(f"Thumbnails: {n_thumbs} sheet(s) in {dist_dir / 'thumbs'}")
 
     # 3.5 Adventure Map metadata.
     map_data = build_map_json(md_dir, lang_cfg)
