@@ -232,6 +232,12 @@ sinon de la clé avec une majuscule. Pour le changer, le cacher, ou tout couper 
 }
 ```
 
+Quand les fiches d'une collection viennent de plusieurs sous-groupes (les
+sous-séries de Kronika), la page les affiche par sections ouvertes, avec le
+nom du sous-groupe en titre (sans le préfixe « Kronika : »), sans page
+dédiée. Une collection à sous-groupe unique (le vocabulaire) reste une grille
+plate.
+
 `"collections": false` supprime toutes les pages d'index. L'identifiant est la
 catégorie ou le préfixe.
 

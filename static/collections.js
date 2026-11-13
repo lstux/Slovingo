@@ -79,7 +79,7 @@ function detectCollections() {
     byCategory.forEach((item) => {
         if (item.entries.length >= 2) {
             const label = (LANG.categories && LANG.categories[item.key]) || capitalizeFirst(item.key);
-            found.push({ id: item.key, label, firstIndex: item.firstIndex, entries: item.entries });
+            found.push({ id: item.key, key: item.key, label, firstIndex: item.firstIndex, entries: item.entries });
         }
     });
     byPrefix.forEach((item) => {
@@ -87,7 +87,7 @@ function detectCollections() {
             // A prefix equal to a category id would clash in the URL.
             const id = byCategory.has(item.key) ? `${item.key}-2` : item.key;
             const label = (LANG.subgroups && LANG.subgroups[item.key]) || capitalizeFirst(item.key);
-            found.push({ id, label, firstIndex: item.firstIndex, entries: item.entries });
+            found.push({ id, key: item.key, label, firstIndex: item.firstIndex, entries: item.entries });
         }
     });
 
@@ -184,6 +184,19 @@ function renderCollectionCard(entry) {
     return card;
 }
 
+/**
+ * Heading of one sub-series section: the subgroup's label, minus the
+ * collection's own name when it starts with it ("Kronika : Pionieri" under
+ * the "Kronika" page -> "Pionieri").
+ */
+function collectionSectionTitle(collection, group) {
+    const full = subgroupLabelFor(group) || group.subgroup || "";
+    const names = [collection.label, collection.key].filter(Boolean)
+        .map((name) => name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+    const stripped = full.replace(new RegExp(`^(?:${names.join("|")})\\s*[:\\-\u2013\u2014]\\s*`, "i"), "").trim();
+    return stripped || full;
+}
+
 /** Render `#/collection/<id>`; an unknown id goes back to the home screen. */
 function renderCollection(collectionId) {
     const collection = detectCollections().find((c) => c.id === collectionId);
@@ -206,8 +219,30 @@ function renderCollection(collectionId) {
     heading.textContent = collection.label;
     content.appendChild(heading);
 
-    const grid = document.createElement("div");
-    grid.className = "collection-grid";
-    collection.entries.forEach((entry) => grid.appendChild(renderCollectionCard(entry)));
-    content.appendChild(grid);
+    // Sheets from several subgroups (the Kronika sub-series): one titled
+    // section per subgroup, all open, on this same page. A single group
+    // (vocabulary) stays one flat grid with no section titles.
+    const sections = [];
+    collection.entries.forEach((entry) => {
+        const last = sections[sections.length - 1];
+        if (last && last.group.subgroup === entry.group.subgroup) {
+            last.entries.push(entry);
+        } else {
+            sections.push({ group: entry.group, entries: [entry] });
+        }
+    });
+    const titled = new Set(sections.map((s) => s.group.subgroup || "")).size > 1;
+
+    sections.forEach((section) => {
+        if (titled) {
+            const title = document.createElement("h3");
+            title.className = "collection-section-title";
+            title.textContent = collectionSectionTitle(collection, section.group);
+            content.appendChild(title);
+        }
+        const grid = document.createElement("div");
+        grid.className = "collection-grid";
+        section.entries.forEach((entry) => grid.appendChild(renderCollectionCard(entry)));
+        content.appendChild(grid);
+    });
 }

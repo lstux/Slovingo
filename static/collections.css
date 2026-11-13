@@ -29,6 +29,14 @@
     margin: 4px 0 14px;
 }
 
+.collection-section-title {
+    margin: 22px 0 10px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid var(--line);
+    font-size: 1.05em;
+}
+.collection-heading + .collection-section-title { margin-top: 6px; }
+
 .collection-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
