@@ -132,7 +132,8 @@ function summaryCheer(correct, total) {
  * memory, so only a fresh start of the app resets it.
  *
  * The phrases come from lang.json "mascots.greetings", either a list or an
- * object by time of day ({"morning": [...], "day": [...], "evening": [...]},
+ * object by time of day ({"morning": [...], "day": [...], "evening": [...],
+ * optional "night": [...]},
  * plus "any" for phrases that fit every hour). Each phrase is {"t": target
  * language, "n": translation, "who": "hare" | "fox" (default "hare")}.
  * Without that list, the course's single "greeting" line is used. No
@@ -152,7 +153,9 @@ function greetingChoices(now = new Date()) {
         list = cfg;
     } else {
         const h = now.getHours();
-        const slot = h >= 5 && h < 12 ? "morning" : h >= 12 && h < 18 ? "day" : "evening";
+        let slot = h >= 5 && h < 12 ? "morning" : h >= 12 && h < 18 ? "day" : "evening";
+        // Late at night (22 h - 5 h), "night" if the course has it, else "evening".
+        if ((h >= 22 || h < 5) && Array.isArray(cfg.night) && cfg.night.length) slot = "night";
         list = [].concat(cfg[slot] || [], cfg.any || []);
     }
     return list.filter((g) => g && g.t);

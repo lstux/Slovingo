@@ -362,7 +362,7 @@ Pillow, l'original est utilisé tel quel. La liste trouvée est écrite dans `da
   la hase entre par le bord de l'écran avec une bulle, reste quelques secondes puis
   repart. Revenir à l'accueil depuis une fiche ou des exercices ne la fait pas revenir.
   Une phrase est tirée au hasard : dans une liste simple, ou par moment de la journée
-  (`morning` 5 h–12 h, `day` 12 h–18 h, `evening` le reste, plus `any` pour toute heure).
+  (`morning` 5 h–12 h, `day` 12 h–18 h, `evening` le reste, `night` facultatif pour 22 h–5 h — sans lui, c'est `evening` —, plus `any` pour toute heure).
   `t` est dans la langue cible, `n` sa traduction (facultative), `who` vaut `hare`
   (défaut) ou `fox`. `[USER_NAME]` est remplacé par le prénom (et retiré, avec sa
   virgule, s'il n'y en a pas). Toucher la bulle lit `t` à voix haute ; toucher la
