@@ -50,6 +50,11 @@
     margin-bottom: 8px;
 }
 .exo-duo .exo-rabbit { margin-bottom: 0; }
+/* The hare's long ears take half her frame: a larger frame for her and a
+   slightly smaller one for the fox bring their heads to about the same size. */
+.exo-duo .exo-rabbit .exo-face { width: 116px; height: 116px; }
+.exo-duo .exo-duo-fox .exo-face { width: 86px; height: 86px; }
+.exo-duo .exo-duo-fox { margin-left: -14px; }
 .exo-duo-fox .exo-face {
     transform-origin: 50% 90%;
     animation: exo-duo-fox-in .7s cubic-bezier(.2, .8, .3, 1) .2s backwards,
