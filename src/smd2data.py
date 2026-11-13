@@ -43,6 +43,12 @@ SPEAKABLE_RE = re.compile(r"\{\{(.+?)\}\}")
 IMAGE_RE = re.compile(r"^@\s+(\S+)\s*\|\s*(.+)$")
 IMAGE_MARKDOWN_RE = re.compile(r"^!\[([^\]]*)\]\(([^\s)]+)(?:\s+[\"']([^\"']*)[\"'])?\s*\)$")
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+)$")
+# Mascot callout: "@@ hare:think | text" (text optional, mood defaults to
+# "content"). "rabbit" is accepted for the hare.
+MASCOT_RE = re.compile(
+    r"^@@\s*(fox|hare|rabbit)(?::(content|bravo|think|comfort))?\s*(?:\|\s*(.*?))?\s*$",
+    re.IGNORECASE,
+)
 # Geographic map block: "% lat, lon | label | z15 | topo" (one pin per
 # line), optionally opened by "%~ title" (route) or "%: title" (pins
 # only). See parse_geomap() and docs/Format-SMD.txt section 5.
@@ -418,6 +424,21 @@ def parse_content(
             geomap_block, index = parse_geomap(lines, index)
             if geomap_block["points"]:
                 blocks.append(geomap_block)
+            continue
+
+        # Mascot callout: "@@ who:mood | text" -> a face with a speech bubble.
+        mascot_match = MASCOT_RE.match(stripped)
+        if mascot_match:
+            flush_list()
+            who, mood, text = mascot_match.groups()
+            who = who.lower()
+            blocks.append({
+                "type": "mascot",
+                "who": "hare" if who == "rabbit" else who,
+                "mood": (mood or "content").lower(),
+                "text": resolve_speakable(text) if text else "",
+            })
+            index += 1
             continue
 
         # Illustration mid-content. The leading illustration (right

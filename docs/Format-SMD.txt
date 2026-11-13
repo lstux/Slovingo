@@ -212,6 +212,27 @@ Rendu : le bloc devient {"type": "geomap", "title", "route", "zoom", "layer", "p
 
 ---
 
+5 bis. Mascotte qui parle
+
+Fait intervenir le renard ou la hase dans la fiche : son visage, avec une bulle à côté (un « Le savais-tu ? », une astuce, un clin d'œil).
+
+@@ hare:think | Le savais-tu ? En slovaque, il n'y a pas d'articles !
+@@ fox:bravo | Bien joué, tu connais maintenant les jours de la semaine.
+@@ fox:bravo
+
+Règles :
+- "@@", puis la mascotte : fox (renard) ou hare (hase ; "rabbit" est accepté).
+- ":humeur" facultatif : content (défaut), think, bravo, comfort.
+- "| texte" facultatif : le contenu de la bulle. Il accepte **gras**, *italique* et {{...}} comme le reste du texte. Sans texte, le visage seul est affiché, centré.
+- Une ligne "@@" mal formée (mascotte ou humeur inconnue) reste affichée telle quelle, comme un paragraphe : facile à repérer.
+- Pas de collision avec l'illustration : "@" doit être suivi d'un espace, "@@" non.
+
+Le visage est celui du cours s'il en fournit un (img/mascots/, voir docs/Lang-json.md, section mascots), sinon le SVG par défaut du moteur. En mode pas à pas, la bulle s'affiche comme un paragraphe. Dans l'API des clients légers (montre), seul le texte est gardé, comme un paragraphe.
+
+Rendu : {"type": "mascot", "who": "fox" | "hare", "mood", "text"} dans data.json.
+
+---
+
 Résumé de la syntaxe
  
 Syntaxe| Signification
@@ -224,6 +245,7 @@ autres ">"| Traduction littérale / décomposition
 "{{fr:...}}"| Élément prononçable en langue native (préfixe = code ISO)
 émoji en tête de "!"| Marqueur de locuteur (dialogues)
 "@ url \| légende" ou "![alt](url)"| Illustration
+"@@ fox:think \| texte"| Mascotte qui parle (bulle)
  
 ---
  

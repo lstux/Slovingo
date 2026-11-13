@@ -777,12 +777,43 @@ function buildScene(steps, state, config) {
     steps.forEach((step, index) => nodes.appendChild(buildNode(step, index, state.steps[index])));
     section.appendChild(nodes);
 
-    const fox = el("div", "map-fox", "🦊");
+    const fox = buildTraveller();
     fox.id = "map-fox";
     fox.setAttribute("aria-hidden", "true");
     section.appendChild(fox);
 
     return section;
+}
+
+/**
+ * Who walks the map. By default the fox and the hare together (they
+ * travel as a pair): the course's "duo-walk" picture when it has one,
+ * else the two default faces side by side. lang.json
+ * "mascots": {"map": "fox"} keeps the fox alone, as the old emoji.
+ * Still called "map-fox" (id, class) so the walking code is unchanged.
+ */
+function buildTraveller() {
+    const cfg = (typeof LANG !== "undefined" && LANG && LANG.mascots) || {};
+    if (cfg.map === "fox" || typeof mascotSrc !== "function") {
+        return el("div", "map-fox", "🦊");
+    }
+    const box = el("div", "map-fox map-fox--duo");
+    const pic = (src, cls) => {
+        const img = el("img", `mascot-pic ${cls}`);
+        img.src = src;
+        img.alt = "";
+        img.draggable = false;
+        return img;
+    };
+    const duo = courseMascot("duo-walk");
+    if (duo) {
+        box.classList.add("map-fox--picture");
+        box.appendChild(pic(duo, "map-fox__duo"));
+    } else {
+        box.appendChild(pic(mascotSrc("fox", "content"), "map-fox__face"));
+        box.appendChild(pic(mascotSrc("hare", "content"), "map-fox__face map-fox__face--hare"));
+    }
+    return box;
 }
 
 /**

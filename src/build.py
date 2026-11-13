@@ -51,6 +51,7 @@ from map_generator import build_map_json, find_map_background
 from export_story import build_story
 from smd2data import SheetNameError, build_sheet_json
 from thumbs import add_thumbnails
+from mascots import add_mascots
 
 # Static front-end files copied as-is into dist/ -- shared across
 # every language, not generated from content.
@@ -171,11 +172,15 @@ def run_build(
     # 3.1 Square thumbnails of the sheets' illustrations (collection pages).
     #     Optional: needs Pillow, skipped with a warning otherwise.
     n_thumbs = add_thumbnails(data, img_dir, dist_dir)
+    # 3.2 Course-specific mascot pictures (img/mascots/), default SVGs otherwise.
+    n_mascots = add_mascots(data, img_dir, dist_dir)
     (dist_dir / "data.json").write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
     (dist_dir / "exercises.json").write_text(json.dumps(exercises, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Assembled: {dist_dir}/data.json, {dist_dir}/exercises.json")
     if n_thumbs:
         print(f"Thumbnails: {n_thumbs} sheet(s) in {dist_dir / 'thumbs'}")
+    if n_mascots:
+        print(f"Mascots: {n_mascots} course picture(s)")
 
     # 3.5 Adventure Map metadata.
     map_data = build_map_json(md_dir, lang_cfg)

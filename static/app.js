@@ -127,7 +127,7 @@ async function boot() {
             fetchJson("exercises.json"),
         ]);
     } catch (err) {
-        content.innerHTML = `<p class="loading">Failed to load data: ${escapeHtml(String(err))}</p>`;
+        showMascotMessage(`Failed to load data: ${String(err)}`);
         return;
     }
 
@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", boot);
  * data-lightbox-enabled flag to avoid double-binding.
  */
 function enableImageLightbox() {
-    document.querySelectorAll("img:not(.image-lightbox__img)").forEach((img) => {
+    document.querySelectorAll("img:not(.image-lightbox__img):not(.exo-face):not(.mascot-pic)").forEach((img) => {
         if (!img.dataset.lightboxEnabled) {
             img.style.cursor = "pointer";
             img.addEventListener("click", () => openImageLightbox(img.src));
@@ -392,6 +392,10 @@ function route() {
     }
     window.scrollTo(0, 0);
     enableImageLightbox();
+    // The hare's hello, once per launch, if the app opens on the home screen.
+    if (typeof maybeGreetOnLaunch === "function") {
+        maybeGreetOnLaunch(!sheetMatch && !collectionMatch && !hash.startsWith("#/exercises") && hash !== "#/settings");
+    }
 }
 
 // ============================================================================
@@ -536,6 +540,8 @@ function renderBlock(block) {
             return renderAudioCard(block);
         case "geomap":
             return renderGeomap(block);
+        case "mascot":
+            return renderMascotNote(block.who, block.mood, block.text ? renderText(block.text) : "");
         default: {
             console.warn(`Unknown content block type: ${block.type}`);
             const fallback = document.createElement("p");
@@ -566,6 +572,46 @@ function renderList(block) {
         list.appendChild(li);
     });
     return list;
+}
+
+/**
+ * A mascot face with a speech bubble beside it (or the face alone when
+ * there is nothing to say). Used by the SMD "@@ who:mood | text" block
+ * and by the screens where something went missing (404, no data...).
+ * The picture comes from mascotSrc() (exo-mascots.js): the course's own,
+ * else the default SVG.
+ * @param {string} who   "fox" | "hare" ("rabbit" accepted)
+ * @param {string} mood  "content" | "bravo" | "think" | "comfort"
+ * @param {string} html  bubble content, already rendered ("" = no bubble)
+ * @returns {HTMLElement}
+ */
+function renderMascotNote(who, mood, html) {
+    const w = who === "rabbit" ? "hare" : who;
+    const box = document.createElement("div");
+    box.className = `mascot-note mascot-note--${w}` + (html ? "" : " mascot-note--alone");
+    const img = document.createElement("img");
+    img.className = "mascot-pic";
+    img.alt = "";
+    img.setAttribute("aria-hidden", "true");
+    img.draggable = false;
+    img.src = typeof mascotSrc === "function" ? mascotSrc(w, mood) : `mascots/${w === "hare" ? "rabbit" : w}-${mood}.svg`;
+    box.appendChild(img);
+    if (html) {
+        const bubble = document.createElement("div");
+        bubble.className = "mascot-note__bubble";
+        bubble.innerHTML = html;
+        box.appendChild(bubble);
+    }
+    return box;
+}
+
+/** Replace #content with the fox, thinking, and a short message. */
+function showMascotMessage(text, mood = "think") {
+    const content = document.getElementById("content");
+    content.innerHTML = "";
+    const note = renderMascotNote("fox", mood, escapeHtml(text));
+    note.classList.add("mascot-note--screen");
+    content.appendChild(note);
 }
 
 function renderBlockquote(block) {
@@ -1040,12 +1086,7 @@ function renderNotFound(sheetId) {
     updateToolbarForSheetView(false);
     setExercisesButtonMode("selection");
     hidePagerNav();
-    const content = document.getElementById("content");
-    content.innerHTML = "";
-    const p = document.createElement("p");
-    p.className = "loading";
-    p.textContent = `Sheet not found: ${sheetId}`;
-    content.appendChild(p);
+    showMascotMessage(uiLabel("sheet_not_found", "Sheet not found: {id}").replace("{id}", sheetId));
 }
 
 // ============================================================================
@@ -1232,12 +1273,7 @@ function renderExercisesPlaceholder() {
     setExercisesButtonMode("selection");
     hidePagerNav();
 
-    const content = document.getElementById("content");
-    content.innerHTML = "";
-    const p = document.createElement("p");
-    p.className = "loading";
-    p.textContent = (LANG.ui && LANG.ui.exercises_coming_soon) || "Coming soon.";
-    content.appendChild(p);
+    showMascotMessage((LANG.ui && LANG.ui.exercises_coming_soon) || "Coming soon.");
 }
 
 // ============================================================================

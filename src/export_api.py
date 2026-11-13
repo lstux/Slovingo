@@ -200,6 +200,10 @@ def compact_block(block: dict[str, Any]) -> dict[str, Any] | None:
             "o": bool(block.get("ordered")),
             "items": [flatten(i) for i in block.get("items", [])],
         }
+    if kind == "mascot":
+        # The face is a front-end touch; what the mascot says is kept as text.
+        text = flatten(block.get("text"))
+        return {"t": "p", "x": text} if text else None
     return None  # hr, map, anything unknown
 
 

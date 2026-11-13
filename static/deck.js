@@ -249,7 +249,7 @@ function buildDeckSteps(sheet) {
 
         if (block.type === "image" || block.type === "hr") return;
 
-        const isPlainText = ["paragraph", "list", "blockquote"].includes(block.type);
+        const isPlainText = ["paragraph", "list", "blockquote", "mascot"].includes(block.type);
         if (isPlainText) {
             // Short paragraphs of one section share a screen, up to a
             // comfortable reading length. The intro picture's screen takes
@@ -312,14 +312,13 @@ function buildDeckSteps(sheet) {
 }
 
 /**
- * The rabbit of the end screen, the link to this sheet's exercises, and
+ * The fox and the hare of the end screen, the link to this sheet's exercises, and
  * the way on to the next sheet.
  */
 function buildEndNodes(sheet) {
     const nodes = [];
-    if (typeof el === "function" && typeof mascotFace === "function") {
-        nodes.push(el("div", { className: "exo-rabbit", attrs: { "data-mood": "bravo", "aria-hidden": "true" } },
-            [mascotFace("rabbit", "bravo")]));
+    if (typeof el === "function" && typeof mascotDuo === "function") {
+        nodes.push(mascotDuo("bravo"));
     }
     if (sheet && sheet.id) {
         // Same link as the exercises line under a sheet in page mode.

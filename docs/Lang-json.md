@@ -315,6 +315,60 @@ python3 src/check_ui_keys.py --lang-dir langs/<cours> --template   # + extrait J
 python3 src/check_ui_keys.py --lang-dir langs/<cours> --strict     # code de sortie 1 s'il en manque (CI)
 ```
 
+## mascots — le renard et la hase (optionnel)
+
+Le moteur fournit des visages par défaut (SVG) pour ses deux mascottes, le renard et la
+hase, en quatre humeurs : `content`, `think`, `bravo`, `comfort`. On les voit dans les
+exercices (le renard réagit à chaque réponse), sur l'écran de résultat et à la fin d'une
+fiche en mode pas à pas (le duo, selon le score), sur la carte (le duo qui avance), sur
+les écrans où il manque quelque chose (fiche introuvable, données non chargées : le
+renard pensif), dans les fiches avec la syntaxe `@@` (voir docs/Format-SMD.txt) et à
+l'ouverture de l'application (voir `greetings` plus bas).
+
+**Les images du cours.** Pour avoir les « vrais » personnages de la série, déposer des
+images dans `img/mascots/` du cours, nommées `<qui>-<humeur>.<ext>` :
+
+| Fichier | Rôle |
+|---------|------|
+| `fox-content.png`, `fox-think.png`, `fox-bravo.png`, `fox-comfort.png` | le renard |
+| `hare-content.png`, `hare-think.png`, `hare-bravo.png`, `hare-comfort.png` | la hase (`rabbit-…` accepté) |
+| `duo-walk.png` | les deux ensemble, qui marchent, pour la carte |
+
+Formats : PNG (de préférence, fond transparent), WebP, JPEG ou SVG. Portraits carrés en
+buste, la tête entière dans le cadre. Chaque image manquante garde le SVG par défaut :
+on peut n'en fournir qu'une partie. Au build, avec Pillow, chaque image est réduite à
+320 px et convertie en WebP (transparence gardée) dans `dist/mascots-course/` ; sans
+Pillow, l'original est utilisé tel quel. La liste trouvée est écrite dans `data.json`
+(clé `mascot_pictures`). Un fichier au nom inconnu est ignoré avec un avertissement.
+
+**Le bloc `mascots` de lang.json** règle le reste ; tout est facultatif :
+
+```json
+"mascots": {
+  "map": "duo",
+  "greetings": {
+    "morning": [ { "t": "Dobré ráno, [USER_NAME]!", "n": "Bonjour, [USER_NAME] !" } ],
+    "day":     [ { "t": "Ahoj, [USER_NAME]! Ideme na to?", "n": "Salut ! On y va ?" } ],
+    "evening": [ { "t": "Dobrý večer!", "n": "Bonsoir !", "who": "fox" } ],
+    "any":     [ { "t": "Vitaj späť!", "n": "Bon retour !" } ]
+  }
+}
+```
+
+- `map` : `"duo"` (défaut) fait avancer le renard et la hase ensemble sur la carte (l'image
+  `duo-walk` du cours, sinon les deux visages côte à côte) ; `"fox"` garde le renard seul
+  (l'emoji 🦊).
+- `greetings` : à l'ouverture de l'application, et seulement si elle s'ouvre sur l'accueil,
+  la hase entre par le bord de l'écran avec une bulle, reste quelques secondes puis
+  repart. Revenir à l'accueil depuis une fiche ou des exercices ne la fait pas revenir.
+  Une phrase est tirée au hasard : dans une liste simple, ou par moment de la journée
+  (`morning` 5 h–12 h, `day` 12 h–18 h, `evening` le reste, plus `any` pour toute heure).
+  `t` est dans la langue cible, `n` sa traduction (facultative), `who` vaut `hare`
+  (défaut) ou `fox`. `[USER_NAME]` est remplacé par le prénom (et retiré, avec sa
+  virgule, s'il n'y en a pas). Toucher la bulle lit `t` à voix haute ; toucher la
+  mascotte la fait partir. **Sans `greetings`, la ligne `greeting` ci-dessous est
+  utilisée** ; sans l'une ni l'autre, personne n'entre.
+
 ## greeting — la ligne de bienvenue (optionnel)
 
 Phrase d'accueil des clients légers (écran d'accueil de la montre), dans la langue cible
@@ -353,7 +407,7 @@ aucune phrase.
 | `ok` | 50 à 69 % |
 | `retry` | moins de 50 % |
 
-Dans l'application web, la 🐰 de l'écran de résultat « dit » la phrase dans une bulle
+Dans l'application web, la hase de l'écran de résultat (avec le renard à côté) « dit » la phrase dans une bulle
 sous elle : `t` en gras, `n` en plus petit. Toucher la bulle lit `t` à voix haute (voix
 de la langue cible, si la synthèse vocale est disponible). Sans `cheers`, ou avec un
 palier vide, il n'y a pas de bulle.

@@ -690,7 +690,7 @@ async function renderSelectionScreen() {
 
     const sections = buildExerciseSections();
     if (!sections.length) {
-        content.appendChild(el("p", { text: uiLabel("exercise_pool_empty", "No exercises available yet.") }));
+        showMascotMessage(uiLabel("exercise_pool_empty", "No exercises available yet."));
         return;
     }
 
