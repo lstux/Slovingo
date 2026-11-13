@@ -408,6 +408,10 @@ function canSpeakTarget() {
         && !(typeof soundMuted === "function" && soundMuted());
 }
 
+/** Shortest time a dialogue line stays alone before the next one appears. */
+const DIALOGUE_LINE_MIN_MS = 1200;
+const DIALOGUE_LINE_MS_PER_CHAR = 45;
+
 /**
  * Read one dialogue line aloud (in its character's voice), then reveal
  * its translation. onDone runs after the reveal, if still wanted.
@@ -415,12 +419,22 @@ function canSpeakTarget() {
 function deckReadDialogueLine(d, line, isAlive, onDone) {
     const textEl = line.querySelector(".deck-line-text");
     const detail = line.querySelector(".deck-phrase-detail");
+    const text = textEl.textContent.replace(/\s+/g, " ").trim();
+    // Each line stays on its own long enough to be read, even when no voice
+    // reads it (sound off, no voice, or a speech engine that gives up at
+    // once): without this, the whole dialogue would pop up in one go.
+    const started = Date.now();
+    const minShow = DIALOGUE_LINE_MIN_MS + text.length * DIALOGUE_LINE_MS_PER_CHAR;
+    let revealed = false;
     const reveal = () => {
-        if (!isAlive()) return;
+        if (!isAlive() || revealed) return;
+        revealed = true;
         clearTimeout(d.revealTimer);
         detail.classList.add("is-shown");
         deckFox("content", "nod");
-        if (onDone) onDone();
+        if (!onDone) return;
+        const wait = Math.max(0, minShow - (Date.now() - started));
+        setTimeout(() => { if (isAlive()) onDone(); }, wait);
     };
 
     if (!canSpeakTarget()) {
@@ -429,7 +443,6 @@ function deckReadDialogueLine(d, line, isAlive, onDone) {
     }
 
     deckFox("think", null);
-    const text = textEl.textContent.replace(/\s+/g, " ").trim();
     const voice = effectiveCharacterVoice(line.dataset.speaker);
     d.revealTimer = setTimeout(reveal, 3000 + text.length * 150);
     speak(text, voice.rate, voice.pitch, voice.voiceURI, textEl, reveal);
