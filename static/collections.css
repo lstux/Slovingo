@@ -39,27 +39,21 @@
 
 .collection-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 22px 18px;
 }
 
 .collection-card {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    padding: 8px;
-    border-radius: var(--radius);
-    border: 1px solid var(--line);
-    background: var(--surface);
+    gap: 4px;
+    padding: 2px;
     color: inherit;
     text-decoration: none;
-    transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+    transition: transform .15s ease;
 }
 .collection-card:hover,
-.collection-card:focus-visible {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgb(0 0 0 / 0.12);
-}
+.collection-card:focus-visible { transform: translateY(-2px); }
 
 /* Square frame: the thumbnail is already 1:1, but without Pillow the
    build leaves the 16:9 original and this crops it. */
@@ -69,17 +63,25 @@
     width: 100%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    border-radius: calc(var(--radius) - 3px);
-    background: var(--line);
 }
+/* The picture melts into the page: opacity fades to transparent on all
+   four edges (two linear masks, intersected). */
 .collection-thumb img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    --fade: 22%;
+    -webkit-mask-image:
+        linear-gradient(to right, transparent, #000 var(--fade), #000 calc(100% - var(--fade)), transparent),
+        linear-gradient(to bottom, transparent, #000 var(--fade), #000 calc(100% - var(--fade)), transparent);
+    -webkit-mask-composite: source-in;
+    mask-image:
+        linear-gradient(to right, transparent, #000 var(--fade), #000 calc(100% - var(--fade)), transparent),
+        linear-gradient(to bottom, transparent, #000 var(--fade), #000 calc(100% - var(--fade)), transparent);
+    mask-composite: intersect;
 }
-.collection-thumb-vector { background: #fff; }
 .collection-thumb-vector img {
     object-fit: contain;
     padding: 8%;
