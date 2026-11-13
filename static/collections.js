@@ -111,6 +111,21 @@ function detectCollections() {
 }
 
 /**
+ * True when a collection page already stands for a map "resource" link
+ * (the links under the map that scroll to a category or subgroup of the
+ * sheet list): the home screen then shows the collection's button only.
+ * @param {{id: string, subgroup?: string}} resource A map.json resource.
+ */
+function collectionCoversResource(resource) {
+    return detectCollections().some((collection) =>
+        resource.subgroup
+            ? collection.entries.some((e) => e.group.category === "series" && e.group.subgroup === resource.subgroup
+                || e.group.subgroup === resource.subgroup && e.group.category === resource.id)
+            : collection.id === resource.id && collection.entries.every((e) => e.group.category === resource.id)
+    );
+}
+
+/**
  * Home view: one button per collection, under the map and the story link.
  * @param {HTMLElement} container The home view's content element.
  */

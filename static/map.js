@@ -1166,6 +1166,10 @@ function buildBubble(section) {
  * @returns {HTMLElement|null} null if the course has no such category.
  */
 function buildResourcesNav(resources) {
+    // A collection page (collections.js) replaces the scroll-to-section link.
+    if (typeof collectionCoversResource === "function") {
+        resources = resources.filter((resource) => !collectionCoversResource(resource));
+    }
     if (!resources.length) {
         return null;
     }
