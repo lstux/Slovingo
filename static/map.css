@@ -243,7 +243,7 @@
 .map-fox__face { width: 2.6rem; height: 2.6rem; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25)); }
 .map-fox__face--hare { margin-left: -0.5rem; }
 .map-fox--picture { --fox-anchor: -22%; } /* feet near the step, head kept inside the map */
-.map-fox__duo { width: 4.4rem; height: 4.4rem; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25)); }
+.map-fox__duo { width: auto; height: 4.4rem; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25)); }
 
 /* The fox bobs while it walks. Keeps the centring transform. */
 .map-fox.is-walking {
@@ -647,7 +647,7 @@
     }
     .map-fox--duo { font-size: 1rem; }
     .map-fox__face { width: 2.2rem; height: 2.2rem; }
-    .map-fox__duo { width: 3.8rem; height: 3.8rem; }
+    .map-fox__duo { width: auto; height: 3.8rem; }
 
     .direct-access-list {
         flex-direction: column;
