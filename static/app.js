@@ -1491,7 +1491,12 @@ function speak(text, rate, pitch, voiceURI, highlightElement, onEnd, kind) {
     const effectiveRate = rate === undefined ? defaultRate : rate;
     const effectivePitch = pitch === undefined ? (SETTINGS ? SETTINGS.pitch : 1.0) : pitch;
 
-    stopSpeaking();
+    // Cancel only what is really playing: on some Chrome builds (Android
+    // above all) a cancel() right before speak() kills the new utterance
+    // too ("interrupted"), and nothing is ever heard.
+    const synth = window.speechSynthesis;
+    const wasBusy = synth.speaking || synth.pending;
+    if (wasBusy) stopSpeaking();
     currentUtterance = new SpeechSynthesisUtterance(text);
     currentUtterance.lang = (isNative ? LANG.native_lang : LANG.target_lang).tts_code;
     currentUtterance.rate = effectiveRate;
@@ -1518,9 +1523,41 @@ function speak(text, rate, pitch, voiceURI, highlightElement, onEnd, kind) {
         if (onEnd) onEnd();
     };
     currentUtterance.onend = fireOnEnd;
-    currentUtterance.onerror = fireOnEnd;
+    currentUtterance.onerror = (event) => {
+        // "interrupted"/"canceled" = we stopped it ourselves: not a failure.
+        const code = event && event.error;
+        if (code && code !== "interrupted" && code !== "canceled") showTtsError(code);
+        fireOnEnd();
+    };
 
-    window.speechSynthesis.speak(currentUtterance);
+    const utterance = currentUtterance;
+    const go = () => {
+        if (currentUtterance !== utterance) return; // replaced meanwhile
+        // Chrome sometimes leaves the engine paused (tab in background,
+        // phone locked): speak() then queues silently forever.
+        if (synth.paused) synth.resume();
+        synth.speak(utterance);
+    };
+    // Give the engine a moment to settle after a cancel().
+    if (wasBusy) setTimeout(go, 80); else go();
+}
+
+/**
+ * The speech engine refused to speak (event.error other than our own
+ * cancels): say so once per launch, with the browser's reason, so a
+ * silent device can be told from a muted one.
+ */
+let ttsErrorShown = false;
+function showTtsError(code) {
+    if (ttsErrorShown) return;
+    ttsErrorShown = true;
+    console.warn("Speech synthesis error:", code);
+    const template = (LANG.ui && LANG.ui.tts_error) || "The voice could not be played ({error}).";
+    const toast = document.createElement("div");
+    toast.className = "tts-toast";
+    toast.textContent = template.replace("{error}", code);
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 8000);
 }
 
 /**

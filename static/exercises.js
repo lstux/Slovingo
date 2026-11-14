@@ -1682,6 +1682,9 @@ function markAnswer(container, isCorrect, view, userAnswer) {
 
     const maybeAdvance = () => {
         if (advanceToken !== autoAdvanceToken) return;
+        // A wrong answer never moves on by itself, even when the replay
+        // of the right answer ends (or fails at once).
+        if (!willAutoAdvance) return;
         if (delayElapsed && ttsFinished) {
             goToExercise(state.current + 1);
         }
