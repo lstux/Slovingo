@@ -68,6 +68,7 @@ from pathlib import Path
 from typing import Any
 
 import smd2exercises as sx
+from order_tokens import PUNCT as _PUNCT
 from smd2data import SheetNameError
 
 
@@ -228,6 +229,14 @@ def refresh_parasite(ex: dict[str, Any], pool: set[tuple[str, str]], rng: random
     if not parasite[0] and not parasite[1]:
         return None  # target alone, on purpose
     if parasite in pool:
+        return None
+    # A few loose words taken from a sentence of the sheet (order_tokens.py)
+    # rather than a whole sentence: kept as long as that sentence still
+    # holds them.
+    def _words(text: str) -> set[str]:
+        return {w.strip(_PUNCT).lower() for w in text.split()} - {""}
+    p1, p2 = _words(parasite[0]), _words(parasite[1])
+    if any(p1 <= _words(a) and p2 <= _words(b) for a, b in pool):
         return None
     target_pair = (ex["l1"], ex["l2"])
     candidates = sorted(p for p in pool if p != target_pair)

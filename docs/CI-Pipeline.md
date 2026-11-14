@@ -105,6 +105,21 @@ python3 src/sync_exercises.py --lang-dir langs/fr-sk --apply    # écrit
   prend sa nouvelle version si on la reconnaît, sinon la phrase de la
   fiche qui partage le moins de mots avec la phrase cible.
 
+  Des mots parasites isolés (quelques mots d'une phrase de la fiche,
+  ajoutés par `src/order_tokens.py`) sont gardés tant que cette phrase
+  les contient encore.
+
+**Exercices d'ordre en gros blocs.** `src/order_tokens.py` redécoupe en
+mots les exercices « remettre dans l'ordre » dont les cases sont des
+blocs de plusieurs mots (garde les groupes de deux mots qui commencent
+par un petit mot de liaison : « na západe. », « du thé »), et ajoute
+quelques mots parasites tirés d'une autre phrase du fichier :
+
+```bash
+python3 src/order_tokens.py --lang-dir ../Slovingo-sk-fr-friends --parasites 2-3          # aperçu
+python3 src/order_tokens.py --lang-dir ../Slovingo-sk-fr-kids --parasites 1-2 --apply     # écrit
+```
+
 Réglage par fichier, avec une clé `"sync"` au premier niveau du fichier :
 
 | Valeur | Effet |
