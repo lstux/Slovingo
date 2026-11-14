@@ -1453,11 +1453,20 @@ function resolveListenView(ex) {
  * chip -- falling back to a naive split(" ") otherwise.
  */
 function orderTokensFor(ex, sentenceField, tokensField) {
-    if (Array.isArray(ex[tokensField]) && ex[tokensField].length) {
-        return ex[tokensField];
-    }
-    return (ex[sentenceField] || "").split(" ").filter(Boolean);
+    const chips = Array.isArray(ex[tokensField]) && ex[tokensField].length
+        ? ex[tokensField]
+        : (ex[sentenceField] || "").split(" ");
+    // Safety net, whatever the exercise file says: a chip of more than
+    // ORDER_MAX_CHIP_WORDS words is cut into words, so a sentence is never
+    // reordered as two or three big blocks.
+    return chips.flatMap((chip) => {
+        const words = String(chip).split(/\s+/).filter(Boolean);
+        return words.length > ORDER_MAX_CHIP_WORDS ? words : [words.join(" ")];
+    }).filter(Boolean);
 }
+
+/** Longest chip kept whole in an order exercise ("na západe.", "du thé"). */
+const ORDER_MAX_CHIP_WORDS = 2;
 
 /**
  * "Remettre les mots dans l'ordre" -- rebuild the target sentence by

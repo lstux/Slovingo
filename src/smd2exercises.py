@@ -90,6 +90,11 @@ def strip_punct(word: str) -> str:
     return word.strip(PUNCT_CHARS)
 
 
+from order_tokens import bare as bare_word, parasite_words  # noqa: E402
+
+ORDER_PARASITES = (2, 3)  # parasite words added to each order exercise
+
+
 def tokenize(text: str) -> list[str]:
     return text.split()
 
@@ -712,9 +717,9 @@ def generate_listen(
 
 def generate_order(sheet: dict[str, Any]) -> list[dict[str, Any]]:
     """Build one "put the words in order" exercise per sentence. Each exercise
-    has the target sentence as l1/l2, but tokens_l1/tokens_l2 are polluted with
-    tokens from another random sentence in the sheet, making the reordering task
-    harder (more noise to filter).
+    has the target sentence as l1/l2, one chip per word, followed by a few
+    parasite words (ORDER_PARASITES) from another sentence of the sheet,
+    making the reordering task harder (some noise to filter).
 
     Reconstruct l1/l2 from their own shuffled tokens (see exercises.js,
     resolveOrderView()) -- no distractor pool needed, unlike the other
@@ -737,14 +742,21 @@ def generate_order(sheet: dict[str, Any]) -> list[dict[str, Any]]:
             valid_sentences.append((s, tokens_l1, tokens_l2))
 
     for i, (target, target_tokens_l1, target_tokens_l2) in enumerate(valid_sentences):
-        # Try to find another sentence to pollute tokens with
-        candidates = [j for j in range(len(valid_sentences)) if j != i]
+        # A few parasite words (ORDER_PARASITES) from the other sentence of
+        # the sheet sharing the fewest words with the target -- the same
+        # rule as order_tokens.py uses on hand-written files, so generated
+        # and hand-written exercises play alike.
+        candidates = [valid_sentences[j] for j in range(len(valid_sentences)) if j != i]
         if candidates:
-            j = random.choice(candidates)
-            parasite, parasite_tokens_l1, parasite_tokens_l2 = valid_sentences[j]
-            # Mix tokens: target + parasite
-            mixed_tokens_l1 = target_tokens_l1 + parasite_tokens_l1
-            mixed_tokens_l2 = target_tokens_l2 + parasite_tokens_l2
+            target_words = {bare_word(w) for w in target_tokens_l2}
+            fewest = min(len(target_words & {bare_word(w) for w in c[2]}) for c in candidates)
+            parasite = random.choice([c for c in candidates
+                                      if len(target_words & {bare_word(w) for w in c[2]}) == fewest])[0]
+            n = random.randint(*ORDER_PARASITES)
+            extra_l2 = parasite_words(target["l2"], parasite["l2"], n, random)
+            extra_l1 = parasite_words(target["l1"], parasite["l1"], len(extra_l2) or n, random)
+            mixed_tokens_l1 = target_tokens_l1 + extra_l1
+            mixed_tokens_l2 = target_tokens_l2 + extra_l2
         else:
             # No other sentence available, use target alone
             mixed_tokens_l1 = target_tokens_l1

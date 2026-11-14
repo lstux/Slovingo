@@ -109,7 +109,7 @@ python3 src/sync_exercises.py --lang-dir langs/fr-sk --apply    # écrit
   ajoutés par `src/order_tokens.py`) sont gardés tant que cette phrase
   les contient encore.
 
-**Exercices d'ordre en gros blocs.** `src/order_tokens.py` redécoupe en
+**Exercices d'ordre en gros blocs.** Les exercices générés au build sont déjà mot à mot, avec 2 ou 3 mots parasites, et l'application coupe en mots toute case de plus de deux mots. Pour remettre aussi à plat les fichiers écrits à la main, `src/order_tokens.py` redécoupe en
 mots les exercices « remettre dans l'ordre » dont les cases sont des
 blocs de plusieurs mots (garde les groupes de deux mots qui commencent
 par un petit mot de liaison : « na západe. », « du thé »), et ajoute
