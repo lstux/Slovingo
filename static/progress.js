@@ -278,19 +278,19 @@ function resetReviewMistakes() {
 }
 
 /**
- * Les fiches « déjà vues » qui ont des exercices : ouvertes ou
- * pratiquées, dans l'ordre du cours.
+ * Les fiches « déjà vues » qui ont des exercices : seulement celles
+ * où l'on a fait des exercices (pas les simples ouvertures), dans
+ * l'ordre du cours.
  * @returns {string[]}
  */
 function reviewSheetIds() {
     if (typeof DATA === "undefined" || !DATA || typeof EXERCISES === "undefined" || !EXERCISES) return [];
-    const visited = getVisitedSheets();
     const practiced = loadProgressStore();
     const ids = [];
     DATA.groups.forEach((group) => {
         group.sheets.forEach((sheet) => {
             if (!EXERCISES.sheets[sheet.id]) return;
-            if (visited[sheet.id] || (practiced[sheet.id] && practiced[sheet.id].last)) ids.push(sheet.id);
+            if (practiced[sheet.id] && practiced[sheet.id].last) ids.push(sheet.id);
         });
     });
     return ids;

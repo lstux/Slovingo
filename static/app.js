@@ -319,7 +319,7 @@ function openImageLightbox(src) {
  */
 /**
  * Toolbar "Révision" button: one click, exercises over everything
- * already seen. Shown once a sheet has been opened; the emoji alone on
+ * already seen. Shown once exercises have been done on a sheet; the emoji alone on
  * mobile, with a badge for the missed questions to go over.
  */
 function updateReviewNavButton() {

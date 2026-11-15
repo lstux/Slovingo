@@ -1124,7 +1124,7 @@ function reviewKey(ex) {
 
 /**
  * "#/exercises/review?n=20": exercises from every sheet already seen
- * (opened or practiced, see reviewSheetIds() in progress.js). Missed
+ * (practiced only, see reviewSheetIds() in progress.js). Missed
  * questions come back first, then sheets are drawn by need -- see
  * buildReviewPool(). Types, direction and answer mode come from
  * Settings, as for any session.
