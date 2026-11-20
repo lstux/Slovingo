@@ -57,3 +57,49 @@ authentifications : la synchro automatique est espacée d'au moins 20 s.
 
 Fichiers : `static/pocketbase/pbstore.js` (client PocketBase, partagé avec les WebApps)
 et `static/pocketbase/pocketbase.js` (fusion, réglages, textes fr/en/sk/de).
+
+## Notifications (optionnelles aussi)
+
+Rappels et entraînements envoyés sur le téléphone, **uniquement pour les élèves connectés à la synchro**.
+Il faut une option de build en plus et un petit service sur le serveur.
+
+### Dans l'app
+
+Réglages → Données → bloc de synchro, une fois connecté : « Notifications sur cet appareil », puis
+
+- **Rappel** si aucune fiche depuis N jours, à une heure choisie (au plus une fois tous les N jours) ;
+- **Sauve ta série** : rappel à une heure choisie si la série est en cours et que rien n'a été fait aujourd'hui ;
+- **Heures d'entraînement** : horaires + jours de la semaine ; la notification ouvre une révision de 5 questions ;
+- **Envoyer un test** : arrive dans la minute.
+
+Les réglages sont **propres à chaque appareil et à chaque cours** (pas de doublons entre téléphone et tablette).
+Sur iPhone (iOS 16.4+), l'app doit d'abord être ajoutée à l'écran d'accueil. Se déconnecter coupe les
+notifications de l'appareil.
+
+### Mise en place
+
+1. **Clés VAPID**, une fois (ne plus jamais les changer : les abonnements en dépendent) :
+   ```bash
+   python3 -m venv /opt/slovingo-push/venv && /opt/slovingo-push/venv/bin/pip install pywebpush
+   cp tools/slovingo_push.py /opt/slovingo-push/
+   /opt/slovingo-push/venv/bin/python /opt/slovingo-push/slovingo_push.py genkeys --out /etc/slovingo-push/vapid.pem
+   ```
+   La commande affiche la **clé publique**.
+2. **Build** avec cette clé (elle implique `--pocketbase`) :
+   ```bash
+   python3 src/publish.py --langs-root langs --execute --pocketbase-url https://store.example.org --vapid-public-key <clé publique>
+   ```
+   (même option pour `build.py` et `build_site.py`).
+3. **Service d'envoi**, toutes les minutes : `tools/slovingo-push/env.example` → `/etc/slovingo-push/env`
+   (URL PocketBase, compte **superuser**, chemin de la clé privée, `mailto:` de contact), puis
+   `slovingo-push.service` et `slovingo-push.timer` dans `/etc/systemd/system/`, un utilisateur système
+   `slovingo-push` propriétaire de `/etc/slovingo-push/`, et `systemctl enable --now slovingo-push.timer`.
+   Essai sans rien envoyer : `slovingo_push.py run --dry-run`.
+
+Rien à changer dans PocketBase (mêmes lignes `kv` : `notify.<cours>.<appareil>`) ni dans nginx ; le serveur doit
+pouvoir joindre les services de push (Google, Mozilla, Apple). Les abonnements expirés (404/410) sont effacés
+automatiquement. Une notification en retard de moins de 10 minutes est quand même envoyée, jamais deux fois
+(état dans `/var/lib/slovingo-push/state.json`). Les heures suivent le fuseau de l'appareil de l'élève.
+
+Fichiers : `static/pocketbase/notify.js` (réglages, abonnement), `static/pocketbase/sw-push.js` (importé par le
+service worker), `tools/slovingo_push.py` (envoi), `tools/slovingo-push/` (exemples systemd).

@@ -243,6 +243,10 @@ def main() -> None:
         help="See build.py",
     )
     parser.add_argument(
+        "--vapid-public-key", metavar="KEY",
+        help="See build.py",
+    )
+    parser.add_argument(
         "--skip-build", action="store_true",
         help="Deploy dist/ as it already is, without rebuilding first",
     )
@@ -298,6 +302,7 @@ def main() -> None:
                     lang_dir, args.static_dir,
                     force_exercises=args.force_exercises, force_icons=args.force_icons,
                     pocketbase=args.pocketbase or bool(args.pocketbase_url), pocketbase_url=args.pocketbase_url,
+                    vapid_public_key=args.vapid_public_key,
                 )
                 print()
         except (SheetNameError, ValueError) as exc:

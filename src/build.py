@@ -77,6 +77,10 @@ STATIC_DIRS = ["vendor", "mascots"]
 # static/pocketbase/, loaded after backup.js, precached by the service worker.
 # pbstore.js first: pocketbase.js extends its PBStore class.
 POCKETBASE_FILES = ("pocketbase/pbstore.js", "pocketbase/pocketbase.js")
+# Push notifications (build.py --vapid-public-key): settings in the page,
+# handlers imported by the service worker.
+NOTIFY_FILES = ("pocketbase/notify.js",)
+NOTIFY_SW_FILES = ("pocketbase/sw-push.js",)
 
 ICON_SPECS = [
     ("icon-192.png", 192, 0.72),
@@ -101,6 +105,7 @@ def run_build(
     force_icons: bool = False,
     pocketbase: bool = False,
     pocketbase_url: str | None = None,
+    vapid_public_key: str | None = None,
 ) -> None:
     """Run the full local pipeline for one language dir.
 
@@ -117,6 +122,8 @@ def run_build(
             in dist/ otherwise.
         pocketbase_url: Default server address shown in the sync form
             (written to lang.json); None keeps the script's own default.
+        vapid_public_key: Enables push notifications (implies pocketbase):
+            the server's VAPID public key, written to lang.json.
     """
     md_dir = lang_dir / "md"
     json_dir = lang_dir / "json"
@@ -215,9 +222,17 @@ def run_build(
     shutil.rmtree(dist_dir / "pocketbase", ignore_errors=True)
     runtime_lang_cfg.pop("pocketbase", None)
     pocketbase_assets: tuple[str, ...] = ()
+    sw_scripts: tuple[str, ...] = ()
+    if vapid_public_key:
+        pocketbase = True
     if pocketbase:
         shutil.copytree(static_dir / "pocketbase", dist_dir / "pocketbase")
-        pocketbase_assets = POCKETBASE_FILES
+        pocketbase_assets = POCKETBASE_FILES + (NOTIFY_FILES if vapid_public_key else ())
+        if not vapid_public_key:
+            for name in NOTIFY_FILES + NOTIFY_SW_FILES:
+                (dist_dir / name).unlink(missing_ok=True)
+        else:
+            sw_scripts = NOTIFY_SW_FILES
         index_path = dist_dir / "index.html"
         index_html = index_path.read_text(encoding="utf-8")
         marker = '<script src="backup.js"></script>\n'
@@ -225,8 +240,13 @@ def run_build(
             raise ValueError("index.html has no backup.js script tag to hook the PocketBase scripts after")
         tags = "".join(f'<script src="{name}"></script>\n' for name in pocketbase_assets)
         index_path.write_text(index_html.replace(marker, marker + tags, 1), encoding="utf-8")
+        pb_cfg = {}
         if pocketbase_url:
-            runtime_lang_cfg["pocketbase"] = {"url": pocketbase_url}
+            pb_cfg["url"] = pocketbase_url
+        if vapid_public_key:
+            pb_cfg["vapid"] = vapid_public_key
+        if pb_cfg:
+            runtime_lang_cfg["pocketbase"] = pb_cfg
         print(f"PocketBase: sync included ({', '.join(pocketbase_assets)})")
     # 4.5 Whole story on one page (opt-in: a `story` section in lang.json).
     #     The home screen links to it when lang.json carries story_page.
@@ -258,7 +278,7 @@ def run_build(
     (dist_dir / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
-    (dist_dir / "service-worker.js").write_text(render_service_worker(lang_cfg, pocketbase_assets), encoding="utf-8")
+    (dist_dir / "service-worker.js").write_text(render_service_worker(lang_cfg, pocketbase_assets + sw_scripts, sw_scripts), encoding="utf-8")
     print(f"PWA: manifest.json and service-worker.js written to {dist_dir}")
 
     icons_dir = dist_dir / "icons"
@@ -301,6 +321,10 @@ def main() -> None:
         "--pocketbase-url", metavar="URL",
         help="Server address pre-filled in the sync form (implies --pocketbase)",
     )
+    parser.add_argument(
+        "--vapid-public-key", metavar="KEY",
+        help="Enable push notifications with this VAPID public key (implies --pocketbase; see docs/PocketBase.md)",
+    )
     args = parser.parse_args()
 
     lang_dirs = discover_lang_dirs(args.langs_root) if args.langs_root else [args.lang_dir]
@@ -314,6 +338,7 @@ def main() -> None:
                 lang_dir, args.static_dir,
                 force_exercises=args.force_exercises, force_icons=args.force_icons,
                 pocketbase=args.pocketbase or bool(args.pocketbase_url), pocketbase_url=args.pocketbase_url,
+                vapid_public_key=args.vapid_public_key,
             )
             print()
     except (SheetNameError, ValueError) as exc:

@@ -72,6 +72,7 @@ __EXTRA_ASSETS__
   SCOPE + "icons/icon-512.png",
 ];
 
+__EXTRA_SW__
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_VERSION).then((cache) =>

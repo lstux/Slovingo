@@ -66,6 +66,21 @@ class BuildTest(unittest.TestCase):
         self.assertIn("pocketbase/pocketbase.js", (dist / "service-worker.js").read_text(encoding="utf-8"))
         self.assertEqual(json.loads((dist / "lang.json").read_text(encoding="utf-8"))["pocketbase"], {"url": "https://pb.example"})
 
+    def test_pocketbase_without_vapid_has_no_notifications(self):
+        dist = self.build(pocketbase=True)
+        self.assertFalse((dist / "pocketbase" / "notify.js").exists())
+        self.assertFalse((dist / "pocketbase" / "sw-push.js").exists())
+        self.assertNotIn("importScripts", (dist / "service-worker.js").read_text(encoding="utf-8"))
+
+    def test_vapid_enables_notifications(self):
+        dist = self.build(vapid_public_key="BPUBKEY")
+        html = (dist / "index.html").read_text(encoding="utf-8")
+        self.assertLess(html.index("pocketbase/pocketbase.js"), html.index("pocketbase/notify.js"))
+        sw = (dist / "service-worker.js").read_text(encoding="utf-8")
+        self.assertIn('importScripts("pocketbase/sw-push.js");', sw)
+        self.assertIn('SCOPE + "pocketbase/sw-push.js",', sw)
+        self.assertEqual(json.loads((dist / "lang.json").read_text(encoding="utf-8"))["pocketbase"], {"vapid": "BPUBKEY"})
+
     def test_rebuild_without_option_removes_it(self):
         self.build(pocketbase=True, pocketbase_url="https://pb.example")
         dist = self.build()
@@ -99,6 +114,8 @@ class BundleTest(unittest.TestCase):
 
     def test_flag_and_url(self):
         self.assertIn("--pocketbase", self.run_course(pocketbase=True))
+        cmd = self.run_course(vapid_public_key="BKEY")
+        self.assertEqual(cmd[cmd.index("--vapid-public-key") + 1], "BKEY")
         cmd = self.run_course(pocketbase_url="https://pb.example")
         self.assertEqual(cmd[cmd.index("--pocketbase-url") + 1], "https://pb.example")
 
