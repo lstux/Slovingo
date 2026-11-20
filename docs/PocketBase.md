@@ -16,6 +16,7 @@ python3 src/publish.py --langs-root langs --execute --pocketbase-url https://sto
 - `--pocketbase-url URL` : inclut la synchro **et** pré-remplit l'adresse du serveur
   dans le formulaire (écrite dans le `lang.json` de `dist/`, clé `pocketbase.url`).
   Sans elle, le formulaire propose `https://store.lslinux.org`.
+- `src/build_site.py` (bundle de plusieurs cours sous un même site) accepte les mêmes deux options et les transmet à chaque cours : ils partagent alors une origine, donc une seule connexion.
 - Un build sans l'option supprime `dist/pocketbase/` : rien ne reste d'un build précédent.
 
 Ce que fait l'option : copie `static/pocketbase/` dans `dist/`, ajoute les deux
