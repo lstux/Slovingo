@@ -131,8 +131,13 @@ def make_cover(src: Path, dest: Path, width: int = 520) -> str | None:
     return name
 
 
-def build_course(code: str, content_root: Path, static_dir: Path, base_path: str, work_root: Path, out: Path) -> dict:
-    """Build one course under out/<code>/ and return its launcher entry."""
+def build_course(code: str, content_root: Path, static_dir: Path, base_path: str, work_root: Path, out: Path,
+                 pocketbase: bool = False, pocketbase_url: str | None = None) -> dict:
+    """Build one course under out/<code>/ and return its launcher entry.
+
+    pocketbase / pocketbase_url: passed to build.py (optional sync, see docs/PocketBase.md).
+    All courses of a bundle share one origin, hence one login.
+    """
     src = content_root / code
     if not (src / "lang.json").is_file():
         raise SystemExit(f"{src}/lang.json not found: is the course checked out?")
@@ -145,10 +150,12 @@ def build_course(code: str, content_root: Path, static_dir: Path, base_path: str
     apply_bundle_settings(cfg, base_path, code)
     lang_path.write_text(json.dumps(cfg, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    subprocess.run(
-        [sys.executable, str(SRC_DIR / "build.py"), "--lang-dir", str(lang_dir), "--static-dir", str(static_dir)],
-        check=True,
-    )
+    build_cmd = [sys.executable, str(SRC_DIR / "build.py"), "--lang-dir", str(lang_dir), "--static-dir", str(static_dir)]
+    if pocketbase_url:
+        build_cmd += ["--pocketbase-url", pocketbase_url]
+    elif pocketbase:
+        build_cmd.append("--pocketbase")
+    subprocess.run(build_cmd, check=True)
 
     # Optional light JSON API (older engines may not have the script).
     export_api = SRC_DIR / "export_api.py"
@@ -227,6 +234,8 @@ def main() -> None:
     parser.add_argument("--base-path", required=True, help="Where the site is served, e.g. /Slovingo/")
     parser.add_argument("--out", type=Path, required=True, help="Output directory (must not exist or be empty)")
     parser.add_argument("--courses", nargs="+", help="Course codes (default: launcher/course-ids.json)")
+    parser.add_argument("--pocketbase", action="store_true", help="Include the optional PocketBase sync in every course (see build.py)")
+    parser.add_argument("--pocketbase-url", metavar="URL", help="Server address pre-filled in the sync form (implies --pocketbase)")
     args = parser.parse_args()
 
     base_path = normalize_base_path(args.base_path)
@@ -242,7 +251,10 @@ def main() -> None:
         for code in ids:
             print(f"== {code} -> {base_path}{code}/")
             try:
-                entries.append(build_course(code, args.content_root, args.static_dir, base_path, Path(tmp), args.out))
+                entries.append(build_course(
+                    code, args.content_root, args.static_dir, base_path, Path(tmp), args.out,
+                    pocketbase=args.pocketbase, pocketbase_url=args.pocketbase_url,
+                ))
             except (Exception, SystemExit) as exc:
                 # One broken course must not prevent publishing the others.
                 shutil.rmtree(args.out / code, ignore_errors=True)
