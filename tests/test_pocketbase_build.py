@@ -5,11 +5,13 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "src"))
 
 import build  # noqa: E402
+import build_site  # noqa: E402
 import gen_service_worker  # noqa: E402
 
 LANG = {
@@ -70,6 +72,35 @@ class BuildTest(unittest.TestCase):
         self.assertFalse((dist / "pocketbase").exists())
         self.assertNotIn("pocketbase", (dist / "index.html").read_text(encoding="utf-8"))
         self.assertNotIn("pocketbase", json.loads((dist / "lang.json").read_text(encoding="utf-8")))
+
+
+class BundleTest(unittest.TestCase):
+    """build_site.build_course passes the PocketBase options on to build.py."""
+
+    def run_course(self, **kwargs):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "content" / "sk-fr").mkdir(parents=True)
+            (root / "content" / "sk-fr" / "lang.json").write_text(json.dumps(LANG), encoding="utf-8")
+            (root / "work").mkdir()
+            calls = []
+            with mock.patch.object(build_site.subprocess, "run", side_effect=lambda cmd, **kw: calls.append(cmd)), \
+                 mock.patch.object(build_site, "read_launcher_entry", create=True, return_value={}):
+                try:
+                    build_site.build_course("sk-fr", root / "content", ROOT / "static", "/S/", root / "work", root / "out", **kwargs)
+                except Exception:
+                    pass  # only the first command (build.py) matters here
+            return next(c for c in calls if "build.py" in c[1])
+
+    def test_default_has_no_flag(self):
+        cmd = self.run_course()
+        self.assertNotIn("--pocketbase", cmd)
+        self.assertNotIn("--pocketbase-url", cmd)
+
+    def test_flag_and_url(self):
+        self.assertIn("--pocketbase", self.run_course(pocketbase=True))
+        cmd = self.run_course(pocketbase_url="https://pb.example")
+        self.assertEqual(cmd[cmd.index("--pocketbase-url") + 1], "https://pb.example")
 
 
 if __name__ == "__main__":
