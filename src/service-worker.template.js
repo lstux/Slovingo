@@ -34,6 +34,7 @@ const CORE_ASSETS = [
   SCOPE + "progress.js",
   SCOPE + "settings.js",
   SCOPE + "backup.js",
+__EXTRA_ASSETS__
   SCOPE + "celebrate.js",
   SCOPE + "style.css",
   SCOPE + "exercises.css",

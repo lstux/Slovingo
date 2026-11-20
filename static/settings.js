@@ -864,8 +864,10 @@ function renderDataSettingsSection() {
 
     // Backup / restore (backup.js): export and import settings + progress as JSON.
     const backupControls = typeof renderBackupControls === "function" ? renderBackupControls() : [];
+    // Optional PocketBase sync (pocketbase.js, only present in builds made with --pocketbase).
+    const syncControls = typeof renderSyncControls === "function" ? [renderSyncControls()] : [];
 
-    return settingsSection((LANG.ui && LANG.ui.settings_data) || "Data", [...backupControls, resetMistakesBtn, resetProgressBtn, resetSettingsBtn]);
+    return settingsSection((LANG.ui && LANG.ui.settings_data) || "Data", [...backupControls, ...syncControls, resetMistakesBtn, resetProgressBtn, resetSettingsBtn]);
 }
 
 // ============================================================================
