@@ -235,6 +235,14 @@ def main() -> None:
     parser.add_argument("--force-exercises", action="store_true", help="See build.py")
     parser.add_argument("--force-icons", action="store_true", help="See build.py")
     parser.add_argument(
+        "--pocketbase", action="store_true",
+        help="See build.py",
+    )
+    parser.add_argument(
+        "--pocketbase-url", metavar="URL",
+        help="See build.py",
+    )
+    parser.add_argument(
         "--skip-build", action="store_true",
         help="Deploy dist/ as it already is, without rebuilding first",
     )
@@ -289,6 +297,7 @@ def main() -> None:
                 run_build(
                     lang_dir, args.static_dir,
                     force_exercises=args.force_exercises, force_icons=args.force_icons,
+                    pocketbase=args.pocketbase or bool(args.pocketbase_url), pocketbase_url=args.pocketbase_url,
                 )
                 print()
         except (SheetNameError, ValueError) as exc:
