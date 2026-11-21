@@ -11,7 +11,7 @@ self.addEventListener("push", (event) => {
     body: data.body || "",
     tag: data.tag || "slovingo",
     icon: scope + "icons/icon-192.png",
-    badge: scope + "icons/icon-192.png",
+    badge: scope + "icons/badge-96.png",   // white on transparent: Android only uses its shape
     data: { url: data.url || scope },
   }));
 });

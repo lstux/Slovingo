@@ -55,6 +55,33 @@ GRADIENT_STOPS = [
 ]
 
 
+def draw_notification_badge(size: int = 96) -> "Image.Image":
+    """Badge of the push notifications (build.py --vapid-public-key only).
+
+    Android shows a notification's badge (status bar, notification header)
+    from its transparency alone, tinted white or with the app color: an opaque
+    image becomes a plain square. Hence a white speech bubble with a globe cut
+    out, on a transparent background. Drawn large then scaled down.
+    """
+    import math
+    big = 768
+    mask = Image.new("L", (big, big), 0)
+    d = ImageDraw.Draw(mask)
+    d.rounded_rectangle((60, 90, 708, 580), radius=150, fill=255)   # bubble
+    d.polygon([(190, 540), (150, 700), (330, 575)], fill=255)       # its tail
+    cx, cy, r, w = 384, 335, 175, 34                                 # globe, cut out
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), outline=0, width=w)
+    d.ellipse((cx - r * 0.45, cy - r, cx + r * 0.45, cy + r), outline=0, width=w)
+    d.line((cx, cy - r, cx, cy + r), fill=0, width=w)
+    d.line((cx - r, cy, cx + r, cy), fill=0, width=w)
+    for dy in (-0.55, 0.55):
+        y, half = cy + dy * r, math.sqrt(1 - dy * dy) * r
+        d.line((cx - half, y, cx + half, y), fill=0, width=w)
+    badge = Image.new("RGBA", (size, size), (255, 255, 255, 0))
+    badge.putalpha(mask.resize((size, size), Image.LANCZOS))
+    return badge
+
+
 def find_emoji_font() -> str:
     for candidate in EMOJI_FONT_CANDIDATES:
         if Path(candidate).exists():

@@ -44,7 +44,7 @@ from pathlib import Path
 import assemble
 import check_ui_keys
 import smd2exercises
-from gen_icons import companions_from_config, draw_flag_icon, find_emoji_font
+from gen_icons import companions_from_config, draw_flag_icon, draw_notification_badge, find_emoji_font
 from gen_manifest import build_manifest
 from gen_service_worker import render as render_service_worker
 from map_generator import build_map_json, find_map_background
@@ -81,6 +81,9 @@ POCKETBASE_FILES = ("pocketbase/pbstore.js", "pocketbase/pocketbase.js")
 # handlers imported by the service worker.
 NOTIFY_FILES = ("pocketbase/notify.js",)
 NOTIFY_SW_FILES = ("pocketbase/sw-push.js",)
+# Notification badge (white on transparent), generated unless already there
+# -- swap in your own artwork like the other icons.
+NOTIFY_BADGE = "icons/badge-96.png"
 
 ICON_SPECS = [
     ("icon-192.png", 192, 0.72),
@@ -278,7 +281,7 @@ def run_build(
     (dist_dir / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
-    (dist_dir / "service-worker.js").write_text(render_service_worker(lang_cfg, pocketbase_assets + sw_scripts, sw_scripts), encoding="utf-8")
+    (dist_dir / "service-worker.js").write_text(render_service_worker(lang_cfg, pocketbase_assets + sw_scripts + ((NOTIFY_BADGE,) if sw_scripts else ()), sw_scripts), encoding="utf-8")
     print(f"PWA: manifest.json and service-worker.js written to {dist_dir}")
 
     icons_dir = dist_dir / "icons"
@@ -297,6 +300,11 @@ def run_build(
         icon.convert("RGB").save(out, "PNG")
         icon_written += 1
     print(f"Icons: {icon_written} written, {icon_skipped} kept as-is")
+    if sw_scripts:   # push notifications: their badge
+        badge_path = dist_dir / NOTIFY_BADGE
+        if not badge_path.exists() or force_icons:
+            draw_notification_badge(96).save(badge_path, "PNG")
+            print(f"Icons: {NOTIFY_BADGE} written")
 
 
 def main() -> None:

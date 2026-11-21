@@ -71,6 +71,7 @@ class BuildTest(unittest.TestCase):
         self.assertFalse((dist / "pocketbase" / "notify.js").exists())
         self.assertFalse((dist / "pocketbase" / "sw-push.js").exists())
         self.assertNotIn("importScripts", (dist / "service-worker.js").read_text(encoding="utf-8"))
+        self.assertFalse((dist / "icons" / "badge-96.png").exists())
 
     def test_vapid_enables_notifications(self):
         dist = self.build(vapid_public_key="BPUBKEY")
@@ -80,6 +81,21 @@ class BuildTest(unittest.TestCase):
         self.assertIn('importScripts("pocketbase/sw-push.js");', sw)
         self.assertIn('SCOPE + "pocketbase/sw-push.js",', sw)
         self.assertEqual(json.loads((dist / "lang.json").read_text(encoding="utf-8"))["pocketbase"], {"vapid": "BPUBKEY"})
+        badge = dist / "icons" / "badge-96.png"
+        self.assertTrue(badge.exists())
+        self.assertIn('SCOPE + "icons/badge-96.png",', sw)
+        from PIL import Image
+        with Image.open(badge) as im:   # transparent background, white shape
+            self.assertEqual((im.size, im.mode), ((96, 96), "RGBA"))
+            self.assertEqual(im.getpixel((0, 0))[3], 0)
+            self.assertEqual(im.getpixel((48, 15))[:4], (255, 255, 255, 255))
+
+    def test_own_badge_is_kept(self):
+        dist = self.lang / "dist"
+        (dist / "icons").mkdir(parents=True)
+        (dist / "icons" / "badge-96.png").write_bytes(b"mine")
+        self.build(vapid_public_key="BPUBKEY")
+        self.assertEqual((dist / "icons" / "badge-96.png").read_bytes(), b"mine")
 
     def test_rebuild_without_option_removes_it(self):
         self.build(pocketbase=True, pocketbase_url="https://pb.example")
