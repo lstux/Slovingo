@@ -984,12 +984,13 @@ function renderTypeCheckboxes(selectedSet, onChange) {
 /** Direction selector (native->target / target->native / both). */
 function renderDirectionSelector(current, onChange) {
     const select = el("select", { className: "exo-direction-select" });
-    const nativeAbbr = ((LANG.native_lang.tts_code || LANG.native_lang.name || "").split("-")[0]).toUpperCase();
-    const targetAbbr = ((LANG.target_lang.tts_code || LANG.target_lang.name || "").split("-")[0]).toUpperCase();
+    // Flags only: nothing to translate.
+    const native = LANG.native_lang.flag;
+    const target = LANG.target_lang.flag;
     const options = [
-        { value: "l1-l2", label: `${LANG.native_lang.flag}→${LANG.target_lang.flag} ${nativeAbbr}→${targetAbbr}` },
-        { value: "l2-l1", label: `${LANG.target_lang.flag}→${LANG.native_lang.flag} ${targetAbbr}→${nativeAbbr}` },
-        { value: "both", label: "🔀 Both directions" },
+        { value: "l1-l2", label: `${native}→${target}` },
+        { value: "l2-l1", label: `${target}→${native}` },
+        { value: "both", label: `${native}⇄${target}` },
     ];
     options.forEach(({ value, label }) => {
         const option = el("option", { text: label, attrs: { value } });

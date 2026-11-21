@@ -19,7 +19,7 @@
  *
  * Needs, at call time: backup.js (buildBackup, normalizeBackup, applyBackup,
  * backupKeys, backupStoragePrefix), exercises.js (el), settings.js
- * (renderSettingsScreen), pbstore.js (PBStore), and lang.json's optional
+ * (renderSettingsScreen, settingsSection), pbstore.js (PBStore), and lang.json's optional
  * `pocketbase: { url }` written by the build.
  * Same-origin courses share one login (PBStore sharedAuth).
  */
@@ -230,7 +230,15 @@ function pbStart() {
 // Settings screen glue
 // ----------------------------------------------------------------------------
 
-/** The "Sync" block of Settings > Data (called from settings.js when this file is loaded). */
+/** The "Sync" section of Settings (called from settings.js when this file is loaded). */
+function renderSyncSection() {
+    const section = settingsSection(pbText("title"), [renderSyncControls()]);
+    const pb = new PBSlovingo();
+    section.dataset.summary = pb.connected ? pb.email : "";
+    return section;
+}
+
+/** The content of the "Sync" section. */
 function renderSyncControls() {
     const pb = new PBSlovingo();
     const box = el("div", { className: "settings-row" });
@@ -239,7 +247,6 @@ function renderSyncControls() {
         if (!s) { s = el("p", { className: "pb-status" }); box.appendChild(s); }
         s.textContent = text; s.style.color = err ? "var(--danger, #c0392b)" : "";
     };
-    box.appendChild(el("h3", { text: pbText("title") }));
 
     if (pb.connected) {
         const last = Number(localStorage.getItem(pbLastKey()));

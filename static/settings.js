@@ -262,14 +262,28 @@ function renderSettingsScreen() {
     const content = document.getElementById("content");
     content.innerHTML = "";
 
-    content.appendChild(renderProfileSection());
-    content.appendChild(renderThemeSettingsSection());
-    content.appendChild(renderAudioSettingsSection());
-    content.appendChild(renderDialoguePlaybackSection());
+    // Collapsible sections (open/closed remembered per course). While closed,
+    // a section's title line shows its current values, read from its own
+    // controls: no extra text to translate.
+    content.appendChild(settingsFold("profile", renderProfileSection(), { open: true }));
+    content.appendChild(settingsFold("appearance", renderThemeSettingsSection(), {
+        summary: (s) => settingsValues(s, ["select*"]),
+    }));
+    const audio = renderAudioSettingsSection();
+    settingsNest(audio, "dialogue", renderDialoguePlaybackSection());
     const characterSection = renderCharacterSettingsSection();
-    if (characterSection) content.appendChild(characterSection);
-    content.appendChild(renderExerciseSettingsSection());
-    content.appendChild(renderDataSettingsSection());
+    if (characterSection) settingsNest(audio, "characters", characterSection);
+    content.appendChild(settingsFold("audio", audio, {
+        summary: (s) => settingsValues(s, [":scope > .settings-row select", ":scope > .settings-row-slider .settings-readout"]),
+    }));
+    content.appendChild(settingsFold("exercises", renderExerciseSettingsSection(), {
+        summary: (s) => settingsValues(s, ["input[type=number]", ".exo-direction-select"]),
+    }));
+    // Optional PocketBase sync (pocketbase.js, only in builds made with --pocketbase).
+    if (typeof renderSyncSection === "function") {
+        content.appendChild(settingsFold("sync", renderSyncSection(), { summary: (s) => s.dataset.summary || "" }));
+    }
+    content.appendChild(settingsFold("data", renderDataSettingsSection()));
     const courseSwitchSection = renderCourseSwitchSection();
     if (courseSwitchSection) content.appendChild(courseSwitchSection);
 }
@@ -291,6 +305,66 @@ function renderCourseSwitchSection() {
         attrs: { href: launcherUrl + "?choose" },
     });
     return settingsSection((LANG.site && LANG.site.title) || label, [link]);
+}
+
+const settingsOpenKey = () => `${(LANG.site && LANG.site.storage_prefix) || "slovingo"}-settings-open`;
+
+function settingsOpenState() {
+    try { return JSON.parse(localStorage.getItem(settingsOpenKey())) || {}; } catch (e) { return {}; }
+}
+
+function rememberOpen(id, open) {
+    const state = settingsOpenState();
+    state[id] = open;
+    try { localStorage.setItem(settingsOpenKey(), JSON.stringify(state)); } catch (e) { /* storage unavailable */ }
+}
+
+/**
+ * "value · value": the first control matching each selector (all of them when
+ * the selector ends with "*"): selected option text, input value or readout.
+ */
+function settingsValues(root, selectors) {
+    return selectors.flatMap((sel) => (sel.endsWith("*") ? [...root.querySelectorAll(sel.slice(0, -1))] : [root.querySelector(sel)])).map((node) => {
+        if (!node) return "";
+        if (node.tagName === "SELECT") return node.selectedOptions[0] ? node.selectedOptions[0].textContent.trim() : "";
+        if (node.tagName === "INPUT") return node.value;
+        return node.textContent.trim();
+    }).filter(Boolean).join(" · ");
+}
+
+/**
+ * Turn a settingsSection() into a collapsible <details> of the same look.
+ * opts.open: open by default (until the learner toggles it);
+ * opts.summary(details): text shown on the title line while closed.
+ */
+function settingsFold(id, section, opts = {}) {
+    const details = el("details", { className: "settings-section settings-fold" });
+    const summary = el("summary");
+    const title = section.querySelector(":scope > h2");
+    const hint = el("span", { className: "settings-fold-hint" });
+    if (title) summary.appendChild(title);
+    summary.appendChild(hint);
+    details.appendChild(summary);
+    while (section.firstChild) details.appendChild(section.firstChild);
+    const state = settingsOpenState();
+    details.open = id in state ? state[id] : Boolean(opts.open);
+    const refresh = () => { hint.textContent = !details.open && opts.summary ? opts.summary(details) : ""; };
+    refresh();
+    details.addEventListener("toggle", () => { rememberOpen(id, details.open); refresh(); });
+    return details;
+}
+
+/** Put another settingsSection() inside `parent` as a collapsible sub-part (closed by default). */
+function settingsNest(parent, id, section) {
+    const details = el("details", { className: "settings-sub" });
+    const title = section.querySelector(":scope > h2");
+    details.appendChild(el("summary", { text: title ? title.textContent : "" }));
+    if (title) title.remove();
+    while (section.firstChild) details.appendChild(section.firstChild);
+    const key = `${id}`;
+    details.open = Boolean(settingsOpenState()[key]);
+    details.addEventListener("toggle", () => rememberOpen(key, details.open));
+    parent.appendChild(details);
 }
 
 function settingsSection(titleText, children) {
@@ -864,10 +938,8 @@ function renderDataSettingsSection() {
 
     // Backup / restore (backup.js): export and import settings + progress as JSON.
     const backupControls = typeof renderBackupControls === "function" ? renderBackupControls() : [];
-    // Optional PocketBase sync (pocketbase.js, only present in builds made with --pocketbase).
-    const syncControls = typeof renderSyncControls === "function" ? [renderSyncControls()] : [];
 
-    return settingsSection((LANG.ui && LANG.ui.settings_data) || "Data", [...backupControls, ...syncControls, resetMistakesBtn, resetProgressBtn, resetSettingsBtn]);
+    return settingsSection((LANG.ui && LANG.ui.settings_data) || "Data", [...backupControls, resetMistakesBtn, resetProgressBtn, resetSettingsBtn]);
 }
 
 // ============================================================================
