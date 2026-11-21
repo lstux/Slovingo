@@ -1,0 +1,11 @@
+# /etc/systemd/system/slovingo-push.timer -- every minute
+[Unit]
+Description=Slovingo push notifications, every minute
+
+[Timer]
+OnCalendar=*-*-* *:*:05
+AccuracySec=5s
+Persistent=false
+
+[Install]
+WantedBy=timers.target
