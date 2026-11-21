@@ -230,6 +230,28 @@ function pbStart() {
 // Settings screen glue
 // ----------------------------------------------------------------------------
 
+/** A few styles for the sync block (kept here: style.css stays untouched without --pocketbase). */
+function pbInjectStyle() {
+    if (document.getElementById("pb-style")) return;
+    const css = document.createElement("style");
+    css.id = "pb-style";
+    css.textContent = `
+.settings-row.pb-block { flex-direction: column; align-items: stretch; gap: 6px; }
+.pb-block h3 { margin: 4px 0 0; font-size: 1rem; }
+.pb-block p { margin: 0; }
+.pb-block .settings-input { display: block; width: 100%; box-sizing: border-box; font: inherit; padding: 8px 10px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--bg); color: var(--text); }
+.pb-note, .pb-status { font-size: .85em; opacity: .8; }
+.pb-notify { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+.pb-line { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-weight: 500; }
+.pb-block input[type=time], .pb-block input[type=number] { font: inherit; padding: 4px 6px; border-radius: var(--radius); border: 1px solid var(--line); background: var(--bg); color: var(--text); }
+.pb-slot { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.pb-day { min-width: 2em; padding: 4px 6px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--text); font: inherit; cursor: pointer; }
+.pb-day[aria-pressed=true] { background: var(--accent); border-color: var(--accent); color: #fff; }
+`;
+    document.head.appendChild(css);
+}
+
+
 /** The "Sync" section of Settings (called from settings.js when this file is loaded). */
 function renderSyncSection() {
     const section = settingsSection(pbText("title"), [renderSyncControls()]);
@@ -240,8 +262,9 @@ function renderSyncSection() {
 
 /** The content of the "Sync" section. */
 function renderSyncControls() {
+    pbInjectStyle();
     const pb = new PBSlovingo();
-    const box = el("div", { className: "settings-row" });
+    const box = el("div", { className: "settings-row pb-block" });
     const status = (text, err) => {
         let s = box.querySelector(".pb-status");
         if (!s) { s = el("p", { className: "pb-status" }); box.appendChild(s); }
@@ -264,14 +287,19 @@ function renderSyncControls() {
             nowBtn.disabled = false;
         });
         const outBtn = el("button", { className: "settings-backup-btn", text: pbText("disconnect"), attrs: { type: "button" } });
-        outBtn.addEventListener("click", () => { pb.logout(); renderSettingsScreen(); });
+        outBtn.addEventListener("click", async () => {
+            outBtn.disabled = true;
+            if (typeof pbNotifyOff === "function") await pbNotifyOff();   // notify.js: stop this device's notifications
+            pb.logout(); renderSettingsScreen();
+        });
         box.append(nowBtn, outBtn);
+        if (typeof renderNotifyControls === "function" && LANG.pocketbase && LANG.pocketbase.vapid) box.appendChild(renderNotifyControls());
     } else {
         box.appendChild(el("p", { text: pbText("intro") }));
         const url = el("input", { className: "settings-input", attrs: { type: "text", value: pbServerUrl(), "aria-label": pbText("server"), placeholder: pbText("server"), autocapitalize: "off", spellcheck: "false" } });
         const mail = el("input", { className: "settings-input", attrs: { type: "email", "aria-label": pbText("email"), placeholder: pbText("email"), autocomplete: "username", autocapitalize: "off" } });
         const pw = el("input", { className: "settings-input", attrs: { type: "password", "aria-label": pbText("password"), placeholder: pbText("password"), autocomplete: "current-password" } });
-        [url, mail, pw].forEach((i) => { i.style.cssText = "display:block;width:100%;box-sizing:border-box;margin-top:8px"; box.appendChild(i); });
+        [url, mail, pw].forEach((i) => box.appendChild(i));
         const go = el("button", { className: "settings-backup-btn", text: pbText("connect"), attrs: { type: "button" } });
         go.addEventListener("click", async () => {
             if (!mail.value.trim() || !pw.value) return;

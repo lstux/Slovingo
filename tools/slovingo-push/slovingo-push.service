@@ -1,0 +1,12 @@
+# /etc/systemd/system/slovingo-push.service -- see docs/PocketBase.md
+[Unit]
+Description=Slovingo push notifications (one pass)
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=slovingo-push
+EnvironmentFile=/etc/slovingo-push/env
+StateDirectory=slovingo-push
+Environment=STATE_FILE=/var/lib/slovingo-push/state.json
+ExecStart=/opt/slovingo-push/venv/bin/python /opt/slovingo-push/slovingo_push.py run

@@ -132,7 +132,8 @@ def make_cover(src: Path, dest: Path, width: int = 520) -> str | None:
 
 
 def build_course(code: str, content_root: Path, static_dir: Path, base_path: str, work_root: Path, out: Path,
-                 pocketbase: bool = False, pocketbase_url: str | None = None) -> dict:
+                 pocketbase: bool = False, pocketbase_url: str | None = None,
+                 vapid_public_key: str | None = None) -> dict:
     """Build one course under out/<code>/ and return its launcher entry.
 
     pocketbase / pocketbase_url: passed to build.py (optional sync, see docs/PocketBase.md).
@@ -155,6 +156,8 @@ def build_course(code: str, content_root: Path, static_dir: Path, base_path: str
         build_cmd += ["--pocketbase-url", pocketbase_url]
     elif pocketbase:
         build_cmd.append("--pocketbase")
+    if vapid_public_key:
+        build_cmd += ["--vapid-public-key", vapid_public_key]
     subprocess.run(build_cmd, check=True)
 
     # Optional light JSON API (older engines may not have the script).
@@ -236,6 +239,7 @@ def main() -> None:
     parser.add_argument("--courses", nargs="+", help="Course codes (default: launcher/course-ids.json)")
     parser.add_argument("--pocketbase", action="store_true", help="Include the optional PocketBase sync in every course (see build.py)")
     parser.add_argument("--pocketbase-url", metavar="URL", help="Server address pre-filled in the sync form (implies --pocketbase)")
+    parser.add_argument("--vapid-public-key", metavar="KEY", help="Enable push notifications (implies --pocketbase, see build.py)")
     args = parser.parse_args()
 
     base_path = normalize_base_path(args.base_path)
@@ -254,6 +258,7 @@ def main() -> None:
                 entries.append(build_course(
                     code, args.content_root, args.static_dir, base_path, Path(tmp), args.out,
                     pocketbase=args.pocketbase, pocketbase_url=args.pocketbase_url,
+                    vapid_public_key=args.vapid_public_key,
                 ))
             except (Exception, SystemExit) as exc:
                 # One broken course must not prevent publishing the others.

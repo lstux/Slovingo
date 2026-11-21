@@ -21,7 +21,7 @@ from typing import Any
 TEMPLATE_PATH = Path(__file__).parent / "service-worker.template.js"
 
 
-def render(lang_cfg: dict[str, Any], extra_assets: tuple[str, ...] = ()) -> str:
+def render(lang_cfg: dict[str, Any], extra_assets: tuple[str, ...] = (), extra_scripts: tuple[str, ...] = ()) -> str:
     text = TEMPLATE_PATH.read_text(encoding="utf-8")
     prefix = lang_cfg["site"]["storage_prefix"]
     cache_version = f"{prefix}-v1"
@@ -30,6 +30,7 @@ def render(lang_cfg: dict[str, Any], extra_assets: tuple[str, ...] = ()) -> str:
     extra = "".join(f'  SCOPE + "{name}",\n' for name in extra_assets)
     return (
         text.replace("__EXTRA_ASSETS__\n", extra)
+        .replace("__EXTRA_SW__\n", "".join(f'importScripts("{name}");\n' for name in extra_scripts))
         .replace("__CACHE_VERSION__", cache_version)
         .replace("__CACHE_PREFIX__", cache_prefix)
         .replace("__SCOPE__", scope)
