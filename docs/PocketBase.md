@@ -101,5 +101,9 @@ pouvoir joindre les services de push (Google, Mozilla, Apple). Les abonnements e
 automatiquement. Une notification en retard de moins de 10 minutes est quand même envoyée, jamais deux fois
 (état dans `/var/lib/slovingo-push/state.json`). Les heures suivent le fuseau de l'appareil de l'élève.
 
+Badge (petite icône de la barre d'état) : `icons/badge-96.png`, bulle blanche avec un globe sur fond transparent, généré au build (Android n'en garde que la forme). Il n'est pas écrasé s'il existe : tu peux mettre ton propre dessin, blanc sur fond transparent.
+
+Textes des notifications : `TEXTS` dans `tools/slovingo_push.py` (fr/en/sk/de, langue maternelle du cours, anglais sinon) ; titre = titre du cours.
+
 Fichiers : `static/pocketbase/notify.js` (réglages, abonnement), `static/pocketbase/sw-push.js` (importé par le
 service worker), `tools/slovingo_push.py` (envoi), `tools/slovingo-push/` (exemples systemd).
