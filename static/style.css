@@ -1343,6 +1343,58 @@ button.index-card {
     font-size: var(--step-1);
 }
 
+/* Collapsible sections (settingsFold / settingsNest in settings.js). */
+.settings-fold > summary,
+.settings-sub > summary {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.settings-fold > summary::-webkit-details-marker,
+.settings-sub > summary::-webkit-details-marker { display: none; }
+
+.settings-fold > summary h2 { margin: 0; flex: 0 0 auto; }
+
+.settings-fold-hint {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: right;
+    color: var(--text-soft);
+    font-size: .9em;
+}
+
+.settings-fold > summary::after,
+.settings-sub > summary::after {
+    content: "›";
+    flex: 0 0 auto;
+    margin-left: auto;
+    color: var(--text-soft);
+    font-size: 1.3em;
+    line-height: 1;
+    transition: transform .15s ease;
+}
+
+.settings-fold-hint + * { margin-left: 0; }
+.settings-fold[open] > summary::after,
+.settings-sub[open] > summary::after { transform: rotate(90deg); }
+.settings-fold[open] > summary { margin-bottom: 14px; }
+.settings-section.settings-fold { margin-bottom: 14px; }
+
+.settings-sub {
+    border-top: 1px solid var(--line);
+    padding: 10px 0 0;
+    margin-top: 10px;
+}
+
+.settings-sub > summary { font-weight: 600; }
+.settings-sub[open] > summary { margin-bottom: 8px; }
+
 .settings-row {
     display: flex;
     align-items: center;
