@@ -90,7 +90,7 @@ def strip_punct(word: str) -> str:
     return word.strip(PUNCT_CHARS)
 
 
-from order_tokens import bare as bare_word, parasite_words  # noqa: E402
+from order_tokens import bare as bare_word, parasite_words, gather_parasites, glue_punct  # noqa: E402
 
 ORDER_PARASITES = (2, 3)  # parasite words added to each order exercise
 
@@ -715,7 +715,7 @@ def generate_listen(
     return exercises
 
 
-def generate_order(sheet: dict[str, Any]) -> list[dict[str, Any]]:
+def generate_order(sheet: dict[str, Any], fallback_sentences: list[dict[str, Any]] | None = None) -> list[dict[str, Any]]:
     """Build one "put the words in order" exercise per sentence. Each exercise
     has the target sentence as l1/l2, one chip per word, followed by a few
     parasite words (ORDER_PARASITES) from another sentence of the sheet,
@@ -747,20 +747,24 @@ def generate_order(sheet: dict[str, Any]) -> list[dict[str, Any]]:
         # rule as order_tokens.py uses on hand-written files, so generated
         # and hand-written exercises play alike.
         candidates = [valid_sentences[j] for j in range(len(valid_sentences)) if j != i]
+        target_words = {bare_word(w) for w in target_tokens_l2}
+        others = []
         if candidates:
-            target_words = {bare_word(w) for w in target_tokens_l2}
             fewest = min(len(target_words & {bare_word(w) for w in c[2]}) for c in candidates)
             parasite = random.choice([c for c in candidates
                                       if len(target_words & {bare_word(w) for w in c[2]}) == fewest])[0]
-            n = random.randint(*ORDER_PARASITES)
-            extra_l2 = parasite_words(target["l2"], parasite["l2"], n, random)
-            extra_l1 = parasite_words(target["l1"], parasite["l1"], len(extra_l2) or n, random)
-            mixed_tokens_l1 = target_tokens_l1 + extra_l1
-            mixed_tokens_l2 = target_tokens_l2 + extra_l2
-        else:
-            # No other sentence available, use target alone
-            mixed_tokens_l1 = target_tokens_l1
-            mixed_tokens_l2 = target_tokens_l2
+            # The chosen sentence may have no usable word (short sentences,
+            # capitals): the others are tried next, then the sentences of
+            # the series / course, so no exercise ends up without parasite.
+            others = [parasite] + sorted(
+                (c[0] for c in candidates if c[0] is not parasite),
+                key=lambda c: len(target_words & {bare_word(w) for w in tokenize(c["l2"])}))
+        others += [f for f in (fallback_sentences or []) if isinstance(f, dict) and f.get("l1") and f.get("l2")]
+        n = random.randint(*ORDER_PARASITES)
+        extra_l2 = gather_parasites(target["l2"], [c["l2"] for c in others], n, random)
+        extra_l1 = gather_parasites(target["l1"], [c["l1"] for c in others], len(extra_l2) or n, random)
+        mixed_tokens_l1 = glue_punct(target_tokens_l1) + extra_l1
+        mixed_tokens_l2 = glue_punct(target_tokens_l2) + extra_l2
 
         exercises.append({
             "id": f"order-{slugify(target['l2'])}",
@@ -893,7 +897,7 @@ def build_exercises_for_corpus(records: list[dict[str, Any]]) -> dict[str, dict[
             exercises += generate_qcm(record, primary_pairs, global_pairs)
             exercises += generate_fill_blank(record, primary_sentences, global_sentences)
             exercises += generate_listen(record, primary_sentences, global_sentences)
-            exercises += generate_order(record)
+            exercises += generate_order(record, list(primary_sentences) + list(global_sentences))
             exercises += generate_match_vocab(record, primary_pairs, global_pairs)
             exercises += generate_match_sentences(record, primary_sentences, global_sentences)
 
