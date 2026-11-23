@@ -105,19 +105,33 @@ python3 src/sync_exercises.py --lang-dir langs/fr-sk --apply    # écrit
   prend sa nouvelle version si on la reconnaît, sinon la phrase de la
   fiche qui partage le moins de mots avec la phrase cible.
 
-  Des mots parasites isolés (quelques mots d'une phrase de la fiche,
-  ajoutés par `src/order_tokens.py`) sont gardés tant que cette phrase
-  les contient encore.
+  Des mots parasites isolés (au plus 3 par côté, ajoutés par
+  `src/order_tokens.py`) sont gardés tels quels, d'où qu'ils viennent.
 
-**Exercices d'ordre en gros blocs.** Les exercices générés au build sont déjà mot à mot, avec 2 ou 3 mots parasites, et l'application coupe en mots toute case de plus de deux mots. Pour remettre aussi à plat les fichiers écrits à la main, `src/order_tokens.py` redécoupe en
-mots les exercices « remettre dans l'ordre » dont les cases sont des
-blocs de plusieurs mots (garde les groupes de deux mots qui commencent
-par un petit mot de liaison : « na západe. », « du thé »), et ajoute
-quelques mots parasites tirés d'une autre phrase du fichier :
+**Exercices d'ordre : un mot par case, jamais sans parasite.** Aucun
+exercice « remettre dans l'ordre » ne doit rester sans mot parasite,
+dans aucun cours (moins sur les cours kids, mais jamais aucun).
+
+- Les exercices générés au build sont mot à mot, avec 2 ou 3 mots
+  parasites pris dans une autre phrase de la fiche, sinon de la série ou
+  du cours.
+- L'application coupe en mots toute case de plus de deux mots.
+- Pour les fichiers écrits à la main, `src/order_tokens.py` :
+  - redécoupe en mots les cases faites de blocs de plusieurs mots (garde
+    les groupes de deux mots qui commencent par un petit mot de liaison :
+    « na západe. », « du thé ») ;
+  - colle toute case de ponctuation seule (« ! », « ? ») au mot d'avant ;
+  - ajoute des mots parasites là où un côté n'en a aucun : mots isolés
+    en minuscules, sans ponctuation, jamais un mot de la phrase ni une
+    autre forme d'un de ses mots (*polievku* pour *Polievka*), pris dans
+    le même fichier, sinon dans les autres fiches de la série, sinon
+    dans tout le cours ;
+  - ne réécrit que les exercices modifiés, en gardant la mise en forme
+    du fichier. Un second passage ne change plus rien.
 
 ```bash
 python3 src/order_tokens.py --lang-dir ../Slovingo-sk-fr-friends --parasites 2-3          # aperçu
-python3 src/order_tokens.py --lang-dir ../Slovingo-sk-fr-kids --parasites 1-2 --apply     # écrit
+python3 src/order_tokens.py --lang-dir ../Slovingo-sk-fr-kids --parasites 1-2 --apply     # écrit (cours kids : 1-2)
 ```
 
 Réglage par fichier, avec une clé `"sync"` au premier niveau du fichier :

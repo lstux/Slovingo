@@ -74,12 +74,30 @@ def rechip(target_chips: list[str]) -> list[str]:
         if len(chip.split()) == 1 or keeps_group(chip):
             out.append(chip)
         else:
-            out.extend(chip.split())
+            # French spaces its punctuation ("Salut !"): a lone "!" is no
+            # chip, it stays glued to its word ("Salut !", "va ?").
+            for word in chip.split():
+                if out and not word.strip(PUNCT) and len(chip.split()) > 1:
+                    out[-1] += " " + word
+                else:
+                    out.append(word)
+    return out
+
+
+def glue_punct(chips: list[str]) -> list[str]:
+    """A chip that is only punctuation ("!", "?") joins the chip before it."""
+    out: list[str] = []
+    for chip in chips:
+        if out and not chip.strip(PUNCT + " "):
+            out[-1] += " " + chip
+        else:
+            out.append(chip)
     return out
 
 
 def is_blocky(target_chips: list[str]) -> bool:
-    return any(len(c.split()) > 1 and not keeps_group(c) for c in target_chips)
+    """Some chip holds several words ("Košice ?" is one word and its mark)."""
+    return any(len([w for w in c.split() if w.strip(PUNCT)]) > 1 and not keeps_group(c) for c in target_chips)
 
 
 def parasite_words(target: str, source: str, n: int, rng: random.Random) -> list[str]:
@@ -157,9 +175,14 @@ def rework(ex: dict[str, Any], tiers: list[list[tuple[str, str]]], n_range: tupl
         return None
     blocky = is_blocky(s1[0]) or is_blocky(s2[0])
     p1, p2 = s1[1], s2[1]
-    if not blocky and p1 and p2:
-        return None  # word by word, with parasites: left alone
     t1, t2 = (rechip(s1[0]), rechip(s2[0])) if blocky else (s1[0], s2[0])
+    t1, t2 = glue_punct(t1), glue_punct(t2)
+    # Parasites too: glued to the word before, or dropped if they lead.
+    p1 = glue_punct([c for i, c in enumerate(p1) if i or c.strip(PUNCT + " ")])
+    p2 = glue_punct([c for i, c in enumerate(p2) if i or c.strip(PUNCT + " ")])
+    glued = (t1, t2, p1, p2) != (s1[0], s2[0], s1[1], s2[1])
+    if not blocky and not glued and p1 and p2:
+        return None  # word by word, with parasites: left alone
     if not p1 or not p2:
         sources = ranked_sources(ex, tiers)
         n = rng.randint(*n_range)
@@ -167,7 +190,9 @@ def rework(ex: dict[str, Any], tiers: list[list[tuple[str, str]]], n_range: tupl
             p2 = gather_parasites(ex["l2"], [src[1] for src in sources], n, rng)
         if not p1:
             p1 = gather_parasites(ex["l1"], [src[0] for src in sources], len(p2) or n, rng)
-    if not blocky and (p1, p2) == (s1[1], s2[1]):
+    if not blocky and not glued and (p1, p2) == (s1[1], s2[1]):
+        return None
+    if (t1 + p1, t2 + p2) == (ex.get("tokens_l1"), ex.get("tokens_l2")):
         return None
     new = json.loads(json.dumps(ex))
     new["tokens_l1"] = t1 + p1
@@ -185,7 +210,9 @@ def rewrite(text: str, data: dict[str, Any], changed: list[tuple[dict[str, Any],
     for old, new in changed:
         line = json.dumps(old, ensure_ascii=False)
         if out.count(line) != 1:
-            return json.dumps(data, ensure_ascii=False, indent=2) + "\n"
+            lines = text.splitlines()
+            indent = len(lines[1]) - len(lines[1].lstrip(" ")) if len(lines) > 1 else 2
+            return json.dumps(data, ensure_ascii=False, indent=indent or 2) + "\n"
         out = out.replace(line, json.dumps(new, ensure_ascii=False))
     return out
 

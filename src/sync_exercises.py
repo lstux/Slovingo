@@ -208,6 +208,9 @@ def sentence_pairs(record: dict[str, Any]) -> set[tuple[str, str]]:
     return pairs
 
 
+LOOSE_PARASITES = 3
+
+
 def refresh_parasite(ex: dict[str, Any], pool: set[tuple[str, str]], rng: random.Random) -> dict[str, Any] | None:
     """A copy of order exercise `ex` whose parasite words (the extra
     sentence mixed into its tokens) are taken from the sheet's current
@@ -230,9 +233,12 @@ def refresh_parasite(ex: dict[str, Any], pool: set[tuple[str, str]], rng: random
         return None  # target alone, on purpose
     if parasite in pool:
         return None
-    # A few loose words taken from a sentence of the sheet (order_tokens.py)
-    # rather than a whole sentence: kept as long as that sentence still
-    # holds them.
+    # A few loose words (order_tokens.py, up to LOOSE_PARASITES per side)
+    # rather than a whole sentence: kept as they are, wherever they were
+    # taken from (this sheet, its series or the whole course) -- they are
+    # just noise words, with nothing to follow.
+    if len(split1[1]) <= LOOSE_PARASITES and len(split2[1]) <= LOOSE_PARASITES:
+        return None
     def _words(text: str) -> set[str]:
         return {w.strip(_PUNCT).lower() for w in text.split()} - {""}
     p1, p2 = _words(parasite[0]), _words(parasite[1])
